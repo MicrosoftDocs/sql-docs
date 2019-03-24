@@ -1,7 +1,7 @@
 ---
 title: "View the Extended Events Equivalents to SQL Trace Event Classes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/04/2017"
+ms.date: "03/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -24,32 +24,33 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  You can use the following procedure to view the Extended Events events and actions that are equivalent to each SQL Trace event and its associated columns.  
   
-## To view the Extended Events equivalents to SQL Trace events using Query Editor  
-  
--   From Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], run the following query:  
-  
-    ```sql  
-    USE MASTER;  
-    GO  
-    SELECT DISTINCT  
-       tb.trace_event_id,  
-       te.name AS 'Event Class',  
-       em.package_name AS 'Package',  
-       em.xe_event_name AS 'XEvent Name',  
-       tb.trace_column_id,  
-       tc.name AS 'SQL Trace Column',  
-       am.xe_action_name as 'Extended Events action'  
-    FROM (sys.trace_events te LEFT OUTER JOIN sys.trace_xe_event_map em  
-       ON te.trace_event_id = em.trace_event_id) LEFT OUTER JOIN sys.trace_event_bindings tb  
-       ON em.trace_event_id = tb.trace_event_id LEFT OUTER JOIN sys.trace_columns tc  
-       ON tb.trace_column_id = tc.trace_column_id LEFT OUTER JOIN sys.trace_xe_action_map am  
-       ON tc.trace_column_id = am.trace_column_id  
-    ORDER BY te.name, tc.name  
-    ```  
-  
- When you view the results, note the following:  
-  
--   If all columns return NULL except for the Event Class column, this indicates that the event class was not migrated from SQL Trace.  
+## To view the Extended Events equivalents to SQL Trace events using Query Editor
+
+- From Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], run the following query:
+
+   ```sql
+   USE MASTER;
+   GO
+   SELECT DISTINCT
+      tb.trace_event_id,
+      te.name            AS 'Event Class',
+      em.package_name    AS 'Package',
+      em.xe_event_name   AS 'XEvent Name',
+      tb.trace_column_id,
+      tc.name            AS 'SQL Trace Column',
+      am.xe_action_name  AS 'Extended Events action'
+   FROM
+                      sys.trace_events         te
+      LEFT OUTER JOIN sys.trace_xe_event_map   em ON te.trace_event_id  = em.trace_event_id
+      LEFT OUTER JOIN sys.trace_event_bindings tb ON em.trace_event_id  = tb.trace_event_id
+      LEFT OUTER JOIN sys.trace_columns        tc ON tb.trace_column_id = tc.trace_column_id
+      LEFT OUTER JOIN sys.trace_xe_action_map  am ON tc.trace_column_id = am.trace_column_id
+   ORDER BY te.name, tc.name
+   ```
+
+When you view the results, note the following:  
+
+- If all columns return NULL except for the Event Class column, this indicates that the event class was not migrated from SQL Trace.  
   
 -   If only the value in the Extended Events action column is NULL, this indicates that either of the following conditions is true:  
   

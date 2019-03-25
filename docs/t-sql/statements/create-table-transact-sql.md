@@ -1075,13 +1075,13 @@ Before creating a partitioned table by using CREATE TABLE, you must first create
 - CHECK constraints cannot be defined on **text**, **ntext**, or **image** columns.
 
 ## Additional Constraint information
-- An index created for a constraint cannot be dropped by using `DROP INDEX`; the constraint must be dropped by using ALTER TABLE. An index created for and used by a constraint can be rebuilt by using `ALTER INDEX ... REBUILD`. For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
+- An index created for a constraint cannot be dropped by using `DROP INDEX`; the constraint must be dropped by using `ALTER TABLE`. An index created for and used by a constraint can be rebuilt by using `ALTER INDEX ... REBUILD`. For more information, see [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
 - Constraint names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md), except that the name cannot start with a number sign (#). If *constraint_name* is not supplied, a system-generated name is assigned to the constraint. The constraint name appears in any error message about constraint violations.
-- When a constraint is violated in an INSERT, UPDATE, or DELETE statement, the statement is ended. However, when SET XACT_ABORT is set to OFF, the transaction, if the statement is part of an explicit transaction, continues to be processed. When SET XACT_ABORT is set to ON, the whole transaction is rolled back. You can also use the ROLLBACK TRANSACTION statement with the transaction definition by checking the @@ERROR system function.
+- When a constraint is violated in an `INSERT`, `UPDATE`, or `DELETE` statement, the statement is ended. However, when `SET XACT_ABORT` is set to OFF, the transaction, if the statement is part of an explicit transaction, continues to be processed. When `SET XACT_ABORT` is set to ON, the whole transaction is rolled back. You can also use the `ROLLBACK TRANSACTION` statement with the transaction definition by checking the `@@ERROR` system function.
 - When `ALLOW_ROW_LOCKS = ON` and `ALLOW_PAGE_LOCK = ON`, row-, page-, and table-level locks are allowed when you access the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] chooses the appropriate lock and can escalate the lock from a row or page lock to a table lock. When `ALLOW_ROW_LOCKS = OFF` and `ALLOW_PAGE_LOCK = OFF`, only a table-level lock is allowed when you access the index.
 - If a table has FOREIGN KEY or CHECK CONSTRAINTS and triggers, the constraint conditions are evaluated before the trigger is executed.
 
-For a report on a table and its columns, use **sp_help** or **sp_helpconstraint**. To rename a table, use **sp_rename**. For a report on the views and stored procedures that depend on a table, use [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) and [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).
+For a report on a table and its columns, use `sp_help` or `sp_helpconstraint`. To rename a table, use `sp_rename`. For a report on the views and stored procedures that depend on a table, use [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) and [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).
 
 ## Nullability rules within a table definition
 The nullability of a column determines whether that column can allow a null value (NULL) as the data in that column. NULL is not zero or blank: NULL means no entry was made or an explicit NULL was supplied, and it typically implies that the value is either unknown or not applicable.
@@ -1098,7 +1098,7 @@ When column nullability is not explicitly specified, column nullability follows 
 
 When neither of the ANSI_NULL_DFLT options is set for the session and the database is set to the default (ANSI_NULL_DEFAULT is OFF), the default of NOT NULL is assigned.
 
-If the column is a computed column, its nullability is always automatically determined by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To find out the nullability of this type of column, use the COLUMNPROPERTY function with the **AllowsNull** property.
+If the column is a computed column, its nullability is always automatically determined by the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. To find out the nullability of this type of column, use the `COLUMNPROPERTY` function with the **AllowsNull** property.
 
 > [!NOTE]
 > The SQL Server ODBC driver and SQL Server OLE DB driver both default to having ANSI_NULL_DFLT_ON set to ON. ODBC and OLE DB users can configure this in ODBC data sources, or with connection attributes or properties set by the application.
@@ -1111,13 +1111,13 @@ To evaluate how changing the compression state will affect a table, an index, or
 
 ## Permissions
 
-Requires `CREATE TABLE` permission in the database and ALTER permission on the schema in which the table is being created.
+Requires `CREATE TABLE` permission in the database and `ALTER` permission on the schema in which the table is being created.
 
-If any columns in the `CREATE TABLE` statement are defined to be of a user-defined type, REFERENCES permission on the user-defined type is required.
+If any columns in the `CREATE TABLE` statement are defined to be of a user-defined type, `REFERENCES` permission on the user-defined type is required.
 
-If any columns in the `CREATE TABLE` statement are defined to be of a CLR user-defined type, either ownership of the type or REFERENCES permission on it is required.
+If any columns in the `CREATE TABLE` statement are defined to be of a CLR user-defined type, either ownership of the type or `REFERENCES` permission on it is required.
 
-If any columns in the `CREATE TABLE` statement have an XML schema collection associated with them, either ownership of the XML schema collection or REFERENCES permission on it is required.
+If any columns in the `CREATE TABLE` statement have an XML schema collection associated with them, either ownership of the XML schema collection or `REFERENCES` permission on it is required.
 
 Any user can create temporary tables in tempdb.
 
@@ -1499,8 +1499,8 @@ CREATE TABLE t1
 
 CREATE TABLE t2 
 (
-        c1 int, 
-        c2 int INDEX ix_1 NONCLUSTERED
+    c1 int, 
+    c2 int INDEX ix_1 NONCLUSTERED
 );
 
 CREATE TABLE t3 
@@ -1516,11 +1516,11 @@ Creates a table with an anonymously named compound primary key. This is useful t
 
 ```sql
 CREATE TABLE #tmp
- (
+(
     c1 int,
     c2 int,
     PRIMARY KEY CLUSTERED ([c1], [c2])
- )
+);
 GO
 ```
 
@@ -1539,19 +1539,31 @@ The problem arises from the fact that while the temp table name is uniquified, t
 Session A creates a global temp table ##test in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 and adds 1 row
 
 ```sql
-CREATE TABLE ##test ( a int, b int);
-INSERT INTO ##test values (1,1);
+CREATE TABLE ##test (
+    a int, 
+    b int
+);
+INSERT INTO ##test 
+VALUES (1,1);
 
 --Obtain object ID for temp table ##test
 SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
+```
 
----Result
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
 1253579504
+```
 
----Obtain global temp table name for a given object ID 1253579504 in tempdb (2)
+Obtain global temp table name for a given object ID 1253579504 in tempdb (2)
+```sql
 SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
+```
 
----Result
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
 ##test
 ```
 
@@ -1559,7 +1571,11 @@ Session B connects to [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] test
 
 ```sql
 SELECT * FROM ##test
----Results
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
 1,1
 ```
 
@@ -1567,7 +1583,10 @@ Session C connects to another database in [!INCLUDE[ssSDSfull](../../includes/ss
 
 ```sql
 SELECT * FROM ##test
----Results
+```
+Which generates the following error:
+
+```
 Msg 208, Level 16, State 0, Line 1
 Invalid object name '##test'
 ```
@@ -1581,21 +1600,20 @@ SELECT * FROM tempdb.sys.database_files
 ```
 
 ## See Also
-
-- [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
-- [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
-- [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [Data Types](../../t-sql/data-types/data-types-transact-sql.md)
-- [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)
-- [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
-- [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
-- [DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)
-- [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)
-- [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)
-- [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
-- [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
-- [sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
-- [sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)
-- [sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
-- [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)
+[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
+[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)    
+[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)    
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
+[Data Types](../../t-sql/data-types/data-types-transact-sql.md)    
+[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)    
+[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)    
+[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)    
+[DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)    
+[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)    
+[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)    
+[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)    
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)    
+[sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)    
+[sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)    
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
+[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    

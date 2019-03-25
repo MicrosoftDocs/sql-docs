@@ -107,7 +107,7 @@ In this step, you will configure the SQL Server computer as a guarded host regis
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. Manually copy the host key file, generated in the previous step, to the HGS machine. The below instructions assume your file name is hostkey.cer and you are coping it to your Desktop on the HGS machine.
+5. Manually copy the host key file, generated in the previous step, to the HGS machine. The below instructions assume your file name is hostkey.cer and you are copying it to your Desktop on the HGS machine.
 
 6. On the HGS computer, open an elevated Windows PowerShell console and register the host key of your SQL Server computer with HGS:
 

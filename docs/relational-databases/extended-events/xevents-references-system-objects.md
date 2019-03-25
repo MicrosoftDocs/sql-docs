@@ -16,9 +16,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Articles that describe how various system objects support extended events are listed here in the present article.
+The present article provides links to other articles that relate to extended events. They are articles that describe the following:
 
-A final section lists articles that describe how other parts of SQL Server use extended events.
+- System objects that provide support for the extended events feature.
+- Parts of SQL Server itself that use extended events.
+- Aspects of extended events that are particular to Azure SQL Database in the cloud.
+
+The lists are not necessary complete.
 
 ## System tables
 
@@ -31,14 +35,6 @@ A final section lists articles that describe how other parts of SQL Server use e
 - [Extended Events Catalog Views (Transact-SQL)](../system-catalog-views/extended-events-catalog-views-transact-sql.md)
 
 - [sys.server_event_sessions (Transact-SQL)](../system-catalog-views/sys-server-event-sessions-transact-sql.md)
-
-- [sys.database_event_session_targets (Azure SQL Database)](../system-catalog-views/sys-database-event-session-targets-azure-sql-database.md)
-
-- [sys.database_event_session_fields (Azure SQL Database)](../system-catalog-views/sys-database-event-session-fields-azure-sql-database.md)
-
-- [sys.database_event_session_events (Azure SQL Database)](../system-catalog-views/sys-database-event-session-events-azure-sql-database.md)
-
-- [sys.database_event_session_actions (Azure SQL Database)](../system-catalog-views/sys-database-event-session-actions-azure-sql-database.md)
 
 - [sys.server_event_session_actions (Transact-SQL)](../system-catalog-views/sys-server-event-session-actions-transact-sql.md)
 
@@ -62,4 +58,14 @@ This list is not meant to be complete.
 
 - [Extended Events for Stretch Database](../../sql-server/stretch-database/extended-events-for-stretch-database.md)
 
+## Azure SQL Database and extended events
+
 - [Extended events in Azure SQL Database](/azure/sql-database/sql-database-xevent-db-diff-from-svr)
+
+- [sys.database_event_session_targets (Azure SQL Database)](../system-catalog-views/sys-database-event-session-targets-azure-sql-database.md)
+
+- [sys.database_event_session_fields (Azure SQL Database)](../system-catalog-views/sys-database-event-session-fields-azure-sql-database.md)
+
+- [sys.database_event_session_events (Azure SQL Database)](../system-catalog-views/sys-database-event-session-events-azure-sql-database.md)
+
+- [sys.database_event_session_actions (Azure SQL Database)](../system-catalog-views/sys-database-event-session-actions-azure-sql-database.md)

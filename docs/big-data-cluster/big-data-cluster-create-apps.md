@@ -134,6 +134,10 @@ To try this, copy the above lines of code into two files in the directory `addpy
 mssqlctl app create --spec ./addpy
 ```
 
+> [!NOTE]
+> The `spec.yaml` file specifies both a `poolsize` and a number of `replicas`. The number of `replicas` specifies the number of copies of the service need to be deployed. The `poolsize` specifies the number of dedicated pools you want to create per replica. These settings have an impact on the amount of requests the deployment can handle in parallel. The maximum number of requests at one given time is equals to `replicas` times `poolsize`, i.e if you have 5 replicas and 2 pools per replica the deployment can handle 10 requests in parallel. See the image below for a graphical representation of `replicas` and `poolsize`:
+![Poolsize and replicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+
 You can check if the app is deployed using the list command:
 
 ```bash

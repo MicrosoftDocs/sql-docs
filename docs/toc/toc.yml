@@ -6693,7 +6693,7 @@
         - name: Use the PowerShell provider for XEvents
           href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
       - name: References
-        href: ../relational-databases/extended-events/xevent-references-system-objects.md
+        href: ../relational-databases/extended-events/xevents-references-system-objects.md
     - name: SQL Trace
       href: ../relational-databases/sql-trace/sql-trace.md
       items:

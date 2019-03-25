@@ -22,7 +22,7 @@ The present article provides links to other articles that relate to extended eve
 - Parts of SQL Server itself that use extended events.
 - Aspects of extended events that are particular to Azure SQL Database in the cloud.
 
-The lists are not necessary complete.
+The lists are not necessarily complete.
 
 ## System tables
 

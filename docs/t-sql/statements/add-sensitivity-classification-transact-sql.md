@@ -1,6 +1,6 @@
 ---
 title: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql

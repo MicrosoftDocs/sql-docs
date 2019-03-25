@@ -1,7 +1,7 @@
 ---
 title: "Backup and Restore of Analysis Services Databases | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: "03/25/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -30,7 +30,7 @@ manager: craigg
   
  For a full backup that includes source data, you have to back up the database which contains detail data. Specifically, if you are using ROLAP or DirectQuery database storage, detail data is stored in an external SQL Server relational database that is distinct from the Analysis Services database. Otherwise, if all objects are tabular or multidimensional, the Analysis Services backup will include both the metadata and source data.  
   
- One clear benefit of automating backup is that the data snapshot will always be as up-to-date as the automated frequency of backup specifies. Automated schedulers ensure that backups are not forgotten. Restoring a database can also be automated, and can be a good way to replicate data, but be sure to back up the encryption key file on the instance you replicate to. The synchronization feature is dedicated to replication of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, but only for the data that is out of date. All of the features mentioned here can be implemented through the user interface, by way of XML/A commands or programmatically run through AMO. For more information about backup strategies, see [Backup Strategies with SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81888).  
+ One clear benefit of automating backup is that the data snapshot will always be as up-to-date as the automated frequency of backup specifies. Automated schedulers ensure that backups are not forgotten. Restoring a database can also be automated, and can be a good way to replicate data, but be sure to back up the encryption key file on the instance you replicate to. The synchronization feature is dedicated to replication of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, but only for the data that is out of date. All of the features mentioned here can be implemented through the user interface, by way of XML/A commands or programmatically run through AMO.  
   
  This topic includes the following sections:  
   

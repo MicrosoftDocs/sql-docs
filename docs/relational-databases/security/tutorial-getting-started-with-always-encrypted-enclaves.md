@@ -86,18 +86,19 @@ In this step, you will configure the SQL Server computer as a guarded host regis
 >[!NOTE]
 >Host key attestation is only recommended for use in test environments. You should use TPM attestation for production environments.
 
-1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and install the Guarded Host feature, which will also install Hyper-V (if it is not installed already).
+1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and retrieve the name of your computer by accessing the computername variable.
+
+   ```powershell
+   $env:computername 
+   ```
+
+2. Install the Guarded Host feature, which will also install Hyper-V (if it is not installed already).
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
    ```
 
-2. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
-3. Retrieve the value of the below variable to determine the name of your SQL Server computer.
-
-   ```powershell
-   $env:computername 
-   ```
+3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
 
 4. Sign in to the SQL Server computer as an administrator again, open an elevated Windows PowerShell console, generate a unique host key, and export the resulting public key to a file.
 
@@ -106,14 +107,15 @@ In this step, you will configure the SQL Server computer as a guarded host regis
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. Copy the host key file, generated in the previous step, to the HGS machine. The below instructions assume your file name is hostkey.cer and you are coping it to your Desktop on the HGS machine.
+5. Manually copy the host key file, generated in the previous step, to the HGS machine. The below instructions assume your file name is hostkey.cer and you are copying it to your Desktop on the HGS machine.
+
 6. On the HGS computer, open an elevated Windows PowerShell console and register the host key of your SQL Server computer with HGS:
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. On the SQL Server computer, run the following command in an elevated Windows PowerShell console, to tell the SQL Server computer where to attest. Make sure you specify the IP address or the DNS name of your HGS computer. 
+7. On the SQL Server computer, run the following command in an elevated Windows PowerShell console, to tell the SQL Server computer where to attest. Make sure you specify the IP address or the DNS name of your HGS computer in both address locations. 
 
    ```powershell
    # use http, and not https

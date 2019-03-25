@@ -6643,50 +6643,57 @@
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
         - name: Add a Collection Item to a Collection Set (T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
-    - name: Extended events
+    - name: Extended events (XEvents) overview
       href: ../relational-databases/extended-events/extended-events.md
       items:
-      - name: "Quickstart: Extended events in SQL Server"
-        href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-      - name: Configure
+      - name: Quickstarts
         items:
-        - name: Manage Event Sessions
-          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
-        - name: Advanced Viewing of Target Data f
+        - name: "Quickstart: Extended events in SQL Server"
+          href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - name: Tutorials
+        items:
+        - name: Advanced viewing of target data from XEvents
           href: ../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+        - name: Convert a SQL trace script to a session
+          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+      - name: Concepts
+        items:
         - name: Packages
           href: ../relational-databases/extended-events/sql-server-extended-events-packages.md
         - name: Targets
           href: ../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md
-        - name: Event Tracing for Windows Target
+        - name: Event tracing for Windows target
           href: ../relational-databases/extended-events/event-tracing-for-windows-target.md
         - name: Engine
           href: ../relational-databases/extended-events/sql-server-extended-events-engine.md
-        - name:  Sessions
+        - name: Sessions
           href: ../relational-databases/extended-events/sql-server-extended-events-sessions.md
+        - name: XEvents equivalents to SQL trace event classes
+          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+        - name: Tools
+          href: ../relational-databases/extended-events/extended-events-tools.md
+      - name: How-to guides
+        items:
+        - name: Manage XEvent sessions
+          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
         - name: Alter a session
           href: ../relational-databases/extended-events/alter-an-extended-events-session.md
-        - name: SELECTs & JOINs From System Views
+        - name: SELECTs and JOINs from system views
           href: ../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
-        - name: Extended Events Equivalents to SQL Trace Event Classes
-          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
-        - name: Convert a SQL Trace Script to a session
-          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
-        - name: Determine Which Queries Are Holding Locks
+        - name: Determine which queries are holding locks
           href: ../relational-databases/extended-events/determine-which-queries-are-holding-locks.md
         - name: Find objects with locks
           href: ../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md
-        - name: Monitor System Activity
+        - name: Monitor system activity
           href: ../relational-databases/extended-events/monitor-system-activity-using-extended-events.md
-      - name: Tools
-        href: ../relational-databases/extended-events/extended-events-tools.md
-        items:
-        - name: Use the SSMS XEvent Profiler
+        - name: Use the SSMS XEvent profiler
           href: ../relational-databases/extended-events/use-the-ssms-xe-profiler.md
-        - name: Use the system_health Session
+        - name: Use the system_health session
           href: ../relational-databases/extended-events/use-the-system-health-session.md
-        - name: Use the PowerShell Provider for Extended Events
+        - name: Use the PowerShell provider for XEvents
           href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
+      - name: References
+        href: ../relational-databases/extended-events/xevents-references-system-objects.md
     - name: SQL Trace
       href: ../relational-databases/sql-trace/sql-trace.md
       items:
@@ -8432,8 +8439,8 @@
     items:
     - name: Download SSDT
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: Changelog for SSDT
-      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: Release notes for SSDT
+      href: ../ssdt/release-notes-ssdt.md
     - name: Previous releases of SSDT & SSDT-BI
       href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
     - name: Azure Active Directory support

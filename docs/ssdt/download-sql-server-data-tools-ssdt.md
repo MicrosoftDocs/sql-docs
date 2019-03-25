@@ -1,4 +1,4 @@
----
+﻿---
 title: "Download SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/19/2019
@@ -53,7 +53,7 @@ Release number: 15.9.0
 Build Number: 14.0.16186.0  
 Release date: January 28, 2019  
 
-For a complete list of changes, see the [changelog](changelog-for-sql-server-data-tools-ssdt.md).
+For a complete list of changes, see the [Release notes for SQL Server Data Tools (SSDT)](release-notes-ssdt.md).
 
 SSDT for Visual Studio 2017 has the same [system requirements](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs) as Visual Studio.  
 

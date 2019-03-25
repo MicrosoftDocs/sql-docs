@@ -79,7 +79,7 @@ To learn more about additional partners, see [monitoring][mon_partners], [manage
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/sql-safe-overview
 [azure_youtube]: https://mva.microsoft.com/en-US/training-courses/is-your-lack-of-a-disaster-recovery-site-keeping-you-up-at-night-8680?l=oF7YrFH1_7504984382
 [necec_youtube]: https://www.youtube.com/watch?v=9La3Cw1Q1Jk
-[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ 
+[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ
 [sios_youtube]: https://www.youtube.com/watch?v=U3M44gJNWQE
 
 <!--Twitter links-->

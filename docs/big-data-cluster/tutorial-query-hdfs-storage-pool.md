@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to query HDFS data in a SQL Server 2
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -1,11 +1,16 @@
 {
     "redirections": [
         {
-           "source_path": "docs/relational-databases/database-features.md",
-           "redirect_url": "/sql/relational-databases/databases/databases",
-           "redirect_document_id": false 
-        },       
-        {
+            "source_path": "docs/toc/redirectfrom-reference-10.md",
+            "redirect_url": "/sql/sql-server/applies-to-includes",
+            "redirect_document_id": false
+         },
+         {
+            "source_path": "docs/relational-databases/database-features.md",
+            "redirect_url": "/sql/relational-databases/databases/databases",
+            "redirect_document_id": false 
+         },       
+          {
             "source_path": "docs/relational-databases/polybase/polybase-type-mapping.md",
             "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
             "redirect_document_id": false 

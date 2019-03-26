@@ -71,8 +71,8 @@ To execute a query that sends a value that targets an encrypted column, for exam
 1.	Make sure Always Encrypted is enabled for the database connection for the Query Editor window, from which you are running your `SELECT` query. This will instruct the .NET Framework Data Provider for SQL Server (used by SSMS) to encrypt parameterized Transact-SQL variables (see below) targeting encrypted columns. See [Enabling and disabling Always Encrypted for a database](#en-dis) below.   
 2.	Make sure you can access all column master keys configured for encrypted columns. For example, if your column master key is a certificate, you need to make sure the certificate is deployed on the machine, SSMS is running on. Or, if your column master key is a key stored in Azure Key Vault, you need to make sure you have permissions to access the key (Also, you might be prompted to sign in to Azure.)   
 3.	Ensure Parameterization for Always Encrypted is enabled for the Query Editor window. (Requires at least SSMS version 17.0.) Declare a Transact-SQL variable and initialize it with a value, you want to send (insert, update or filter by) to the database. See [Parameterization for Always Encrypted](#param) below for details.   
-    >   [!NOTE]
-    >   As Always Encrypted support a limited subset of type conversions, in many cases it is required that data type of a Transact-SQL variable is the same as the type of the target database column, it targets.   
+    > [!NOTE]
+    > As Always Encrypted support a limited subset of type conversions, in many cases it is required that data type of a Transact-SQL variable is the same as the type of the target database column, it targets.   
 4.	Run your query sending the value of the Transact-SQL variable to the database. SSMS will convert the variable to a query parameter and it will encrypt its value before sending it to the database.   
 
 *Example*   
@@ -89,12 +89,12 @@ To enable Always Encrypted for a database connection, specify `Column Encryption
 To disable Always Encrypted for a database connection, specify `Column Encryption Setting=Disabled` or simply remove the setting of **Column Encryption Setting** from the **Additional Properties** tab of the **Connect to Server** dialog (its default value is **Disabled**).   
 
 > [!TIP]
->  To toggle between Always Encrypted being enabled and disabled for an existing Query Editor window:   
->  1.	Right-click anywhere in the Query Editor window.
->  2.	Select **Connection** > **Change Connection ...**, 
->  3.	Click **Options** >>,
->  4.	Select the **Additional Properties** tab and type `Column Encryption Setting=Enabled` (to enable the Always Encrypted behavior) or remove the setting (to disable the Always Encrypted behavior).   
->  5.	Click **Connect**.   
+> To toggle between Always Encrypted being enabled and disabled for an existing Query Editor window:   
+> 1.	Right-click anywhere in the Query Editor window.
+> 2.	Select **Connection** > **Change Connection ...**, 
+> 3.	Click **Options** >>,
+> 4.	Select the **Additional Properties** tab and type `Column Encryption Setting=Enabled` (to enable the Always Encrypted behavior) or remove the setting (to disable the Always Encrypted behavior).   
+> 5.	Click **Connect**.   
    
 ### <a name="param"></a>Parameterization for Always Encrypted   
  
@@ -129,7 +129,7 @@ To enable/disable Parameterization for Always Encrypted for future Query Editor 
 
 If you execute a query in a Query Editor window that uses a database connection with Always Encrypted enabled, but parameterization is not enabled for the Query Editor window, you will be prompted to enable it.   
 > [!NOTE]
->   Parameterization for Always Encrypted works only in Query Editor windows that use database connections with Always Encrypted enabled (see [Enabling and disabling Always Encrypted for a database](#en-dis)). No Transact-SQL variables will be parameterized if the Query Editor window uses a database connection without Always Encrypted enabled.   
+> Parameterization for Always Encrypted works only in Query Editor windows that use database connections with Always Encrypted enabled (see [Enabling and disabling Always Encrypted for a database](#en-dis)). No Transact-SQL variables will be parameterized if the Query Editor window uses a database connection without Always Encrypted enabled.   
 
 #### How Parameterization for Always Encrypted works   
 
@@ -180,7 +180,7 @@ Another example below, shows two variables that meet pre-requisite conditions fo
 ![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
 > [!NOTE]
->   As Always Encrypted supports a limited subset of type conversions, in many cases it is required that the data type of a Transact-SQL variable is the same as the type of the target database column, it targets. For example, assuming type of the `SSN` column in the `Patients` table is `char(11)`, the below query will fail, as the type of the `@SSN` variable, which is `nchar(11)`, does not match the type of the column.   
+> As Always Encrypted supports a limited subset of type conversions, in many cases it is required that the data type of a Transact-SQL variable is the same as the type of the target database column, it targets. For example, assuming type of the `SSN` column in the `Patients` table is `char(11)`, the below query will fail, as the type of the `@SSN` variable, which is `nchar(11)`, does not match the type of the column.   
 
 ```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
@@ -197,7 +197,7 @@ WHERE [SSN] = @SSN;
     column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
 
 > [!NOTE]
->   Without parameterization, the entire query, including type conversions, is processed inside SQL Server/Azure SQL Database. With parameterization enabled, some type conversions are performed by .NET Framework inside SQL Server Management Studio. Due to differences between the .NET Framework type system and the SQL Server type system (e.g. different precision of some types, such as float), a query executed with parameterization enabled can produce different results than the query executed without parameterization enabled. 
+> Without parameterization, the entire query, including type conversions, is processed inside SQL Server/Azure SQL Database. With parameterization enabled, some type conversions are performed by .NET Framework inside SQL Server Management Studio. Due to differences between the .NET Framework type system and the SQL Server type system (e.g. different precision of some types, such as float), a query executed with parameterization enabled can produce different results than the query executed without parameterization enabled. 
 
 #### Permissions      
 
@@ -226,8 +226,8 @@ The **New Column Master Key** dialog allows you to generate a column master key 
     - **Key Store Provider (CNG)** - indicates a key store that is accessible via a key store provider (KSP) that implements the Cryptography Next Generation (CNG) API. Typically, this type of a store is a hardware security module (HSM). After you select this option, you will need to pick a KSP. **Microsoft Software Key Store Provider** is selected by default. If you want to use a column master key stored in an HSM, select a KSP for your device (it must be installed and configured on the computer before you open the dialog).
     -	**Cryptographic Service Provider (CAPI)** - a key store that is accessible via a cryptographic service provider (CSP) that implements the Cryptography API (CAPI). Typically, such a store is a hardware security module (HSM). After you select this option, you will need to pick a CSP.  If you want to use a column master key stored in an HSM, select a CSP for your device (it must be installed and configured on the computer before you open the dialog).
     
-    >   [!NOTE]
-    >   Since CAPI is a deprecated API, the Cryptographic Service Provider (CAPI) option is disabled by default. You can enable by creating the CAPI Provider Enabled DWORD value under the **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** key in Windows Registry, and setting it to 1. You should use CNG instead of CAPI, unless your key store does not support CNG.
+    > [!NOTE]
+    > Since CAPI is a deprecated API, the Cryptographic Service Provider (CAPI) option is disabled by default. You can enable by creating the CAPI Provider Enabled DWORD value under the **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** key in Windows Registry, and setting it to 1. You should use CNG instead of CAPI, unless your key store does not support CNG.
    
     For more information about the above key stores, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 

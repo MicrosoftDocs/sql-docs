@@ -52,7 +52,7 @@ manager: craigg
     > [!NOTE]  
     >  If you need more room to type your query, press SHIFT+ALT+ENTER, to switch to full-screen mode.  
   
-11. In Solution Explorer, right-click **SQLQuery1**, and then click **Rename**. Type **Check Workorders****.sql** as the new name for the query and press ENTER.  
+11. In Solution Explorer, right-click **SQLQuery1**, and then click **Rename**. Type **Check Workorders.sql** as the new name for the query and press ENTER.  
   
 12. To save your solution and script project, on the **File** menu, click **Save All**.  
   

@@ -4,16 +4,16 @@ ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
-ms.technology: 
+ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [full-text search]"
   - "full-text search [SQL Server], deprecated features"
   - "full-text queries [SQL Server], proximity"
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -51,6 +51,6 @@ Monitor your use of deprecated features by using the **SQL Server:Deprecated Fea
 |sp_detach_db option:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|None.|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service action values: resource_usage has no function.|None|sp_fulltext_service @action=resource_usage|200|  
   
- *The **SQL Server:Deprecated Features** object does not monitor occurrences of CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
+ &#42;The **SQL Server:Deprecated Features** object does not monitor occurrences of CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
   
   

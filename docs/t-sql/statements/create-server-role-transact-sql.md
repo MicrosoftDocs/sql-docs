@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "user-defined server roles [SQL Server]"
   - "roles, server"
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE SERVER ROLE (Transact-SQL)

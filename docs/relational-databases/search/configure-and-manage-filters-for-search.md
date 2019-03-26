@@ -1,18 +1,17 @@
 ---
 title: "Configure and Manage Filters for Search | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], filters"
   - "filters [full-text search]"
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -34,10 +33,14 @@ Binary documents can be stored in a single **varbinary(max)** or **image** colum
 
 ## Installed filters 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installs its own XML and HTML filters. In addition, any filters for [!INCLUDE[msCoName](../../includes/msconame-md.md)] proprietary formats (.doc, .xdoc, .ppt, and so on) that are already installed on the operating system are also loaded by  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To identify the filters that are currently loaded on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the [sp_help_fulltext_system_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md) stored procedure, as follows:  
-  
+
 ```sql
 EXEC sp_help_fulltext_system_components 'filter';   
 ```  
+
+> [!NOTE]
+> Even with the latest version of the Office Filter Pack that provides .xlsx support, SQL Server does not support Strict Open XML Spreadsheets.  No error will be returned, SQL Server will simply fail to index the contents of any Strict Open XML Spreadsheets.
+
 ## Non-Microsoft filters
 Before you can use filters for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] formats, however, you must manually load them into the server instance. For information about installing additional filters, see [View or Change Registered Filters and Word Breakers](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   

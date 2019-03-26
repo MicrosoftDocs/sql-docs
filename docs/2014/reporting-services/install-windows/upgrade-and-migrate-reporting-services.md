@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Upgrade and Migrate Reporting Services
   This topic is an overview of the upgrade and migration options for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. There are two general approaches to upgrading a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment:  
@@ -54,8 +54,8 @@ manager: craigg
 > [!TIP]
 >  For the latest information regarding issues with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see the following:  
 > 
->  -   [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
-> -   [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkID=391254).  
+>  -   [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/?LinkID=296445).  
+> -   [SQL Server 2014 Reporting Services Tips, Tricks, and Troubleshooting](https://go.microsoft.com/fwlink/?LinkID=391254).  
 > -   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor. For more information, see [Reporting Services Upgrade Issues &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) and [How to: Install Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).  
   
  ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic:](#bkmk_top)  
@@ -149,7 +149,7 @@ manager: craigg
   
     3.  Other client tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and Books Online are not upgraded. To obtain new versions of the tools, you can add them when you run Setup. Earlier versions will co-exist alongside [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versions. If you installed samples, the earlier version will remain. Setup does not support upgrade for the SQL Server samples.  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkID=325512).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512).  
   
 6.  Setup reuses the service entry in Service Control Manager for the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Server service. This service entry includes the Report Server Windows service account.  
   
@@ -299,11 +299,11 @@ manager: craigg
 > [!NOTE]  
 >  For more information on SharePoint database-attach upgrade, see the following:  
   
--   [Overview of the upgrade process to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [Overview of the upgrade process to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [Clean up preparations before an upgrade to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Clean up preparations before an upgrade to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [Upgrade databases from SharePoint 2010 to SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Upgrade databases from SharePoint 2010 to SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
  ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In this topic:](#bkmk_top)  
   

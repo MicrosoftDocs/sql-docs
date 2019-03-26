@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "literals [Integration Services]"
   - "mapping literals [Integration Services]"
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Literals (SSIS)
@@ -111,6 +111,6 @@ manager: craigg
 >  In an expression, a Boolean literal must be delimited by spaces.  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
   
   

@@ -14,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Custom Report Item Class Libraries
-  Custom report items use classes from the `Microsoft.ReportDesigner` namespace. The classes used to implement a custom report item can be grouped into two main categories: unique classes designed to support custom report item infrastructure, and managed wrapper classes that encapsulate the functionality of relevant Report Definition Language (RDL) elements. For a code sample on how to use these classes, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+  Custom report items use classes from the `Microsoft.ReportDesigner` namespace. The classes used to implement a custom report item can be grouped into two main categories: unique classes designed to support custom report item infrastructure, and managed wrapper classes that encapsulate the functionality of relevant Report Definition Language (RDL) elements. For a code sample on how to use these classes, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## Custom Report Item Infrastructure Classes  
  The following classes are used to implement a custom report item.  

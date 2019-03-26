@@ -1,5 +1,5 @@
 ---
-title: How to generate forecasts and predictions using machine learning models in SQL Server | Microsoft Docs
+title: Generate forecasts and predictions using machine learning models - SQL Server Machine Learning Services
 description: Use rxPredict, or sp_rxPredict for real-time scoring, or PREDICT T-SQL for native scoring for predictions and forecasting in R and Pythin in SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
@@ -94,7 +94,7 @@ Serializing a model to a binary format is useful, but not required if you are sc
 If you are using the [standalone server](r-server-standalone.md) or a [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), you have other options besides stored procedures and T-SQL functions for generating predictions quickly. Both the standalone server and Machine Learning Server support the concept of a *web service* for code deployment. You can bundle an R or Python pre-trained model as a web service, called at run time to evaluate new data inputs. For more information, see these articles:
 
 + [What are web services in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [What is operationalization?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)
++ [What is operationalization?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
 + [Deploy a Python model as a web service with azureml-model-management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Publish an R code block or a real-time model as a new web service](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [mrsdeploy package for R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)

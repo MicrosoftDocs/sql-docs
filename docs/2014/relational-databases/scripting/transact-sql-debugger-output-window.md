@@ -7,8 +7,6 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.output"
 helpviewer_keywords: 
   - "Output Window [Transact-SQL]"
   - "Output Window [SQL Server Management Studio]"
@@ -33,5 +31,3 @@ manager: craigg
   
 ## See Also  
  [Transact-SQL Debugger](transact-sql-debugger.md)  
-  
-  

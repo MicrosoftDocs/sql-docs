@@ -24,10 +24,10 @@ manager: craigg
  SPN registration is not required if the service runs under a predefined managed service account created by a domain administrator. Note that depending on the functional level of your domain, registering an SPN can require domain administrator permissions.  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** is a diagnostic tool that helps troubleshoot Kerberos related connectivity issues with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  This topic contains the following sections:  
   
@@ -61,7 +61,7 @@ manager: craigg
 -   Analysis Services delegates a user identity when retrieving data from a SQL Server relational database for tabular databases using DirectQuery mode. This is the only scenario in which Analysis Services will delegate the user identity to another service.  
   
 ##  <a name="bkmk_SPNSyntax"></a> SPN format for Analysis Services  
- Use **setspn** to register an SPN. On newer operating systems, **setspn** is installed as a system utility. For more information, see [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx).  
+ Use **setspn** to register an SPN. On newer operating systems, **setspn** is installed as a system utility. For more information, see [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx).  
   
  The following table describes each part of an Analysis Services SPN.  
   
@@ -125,7 +125,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
 ```  
   
 ##  <a name="bkmk_spnNamed"></a> SPN registration for a named instance  
- Named instances of Analysis Services use dynamic port assignments that are detected by the SQL Server Browser service. When using a named instance, register an SPN for both the SQL Server Browser Service and the Analysis Services named instance. For more information, see [An SPN for the SQL Server Browser service is required when you establish a connection to a named instance of SQL Server Analysis Services or of SQL Server](http://support.microsoft.com/kb/950599).  
+ Named instances of Analysis Services use dynamic port assignments that are detected by the SQL Server Browser service. When using a named instance, register an SPN for both the SQL Server Browser Service and the Analysis Services named instance. For more information, see [An SPN for the SQL Server Browser service is required when you establish a connection to a named instance of SQL Server Analysis Services or of SQL Server](https://support.microsoft.com/kb/950599).  
   
  **Example of SPN syntax for the SQL Browser Service running as LocalService**  
   
@@ -144,10 +144,10 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
 Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>  
 ```  
   
- Recall that nodes in an Analysis Services cluster are required to use the default port (TCP 2383) and run under the same domain user account so that each node has the same SID. See [How to Cluster SQL Server Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) for more information.  
+ Recall that nodes in an Analysis Services cluster are required to use the default port (TCP 2383) and run under the same domain user account so that each node has the same SID. See [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) for more information.  
   
 ##  <a name="bkmk_spnHTTP"></a> SPN registration for SSAS instances configured for HTTP access  
- Depending on solution requirements, you might have configured Analysis Services for HTTP access. If your solution includes IIS as a middle tier component, and Kerberos authentication is a solution requirement, you might need to manually register an SPN for IIS. For more information, see "Configure the settings on the computer running IIS" in [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409).  
+ Depending on solution requirements, you might have configured Analysis Services for HTTP access. If your solution includes IIS as a middle tier component, and Kerberos authentication is a solution requirement, you might need to manually register an SPN for IIS. For more information, see "Configure the settings on the computer running IIS" in [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](https://support.microsoft.com/kb/917409).  
   
  In terms of SPN registration for the Analysis Services instance, there is no difference between an instance configured for TCP or HTTP. The connection to Analysis Services from IIS, using the MSMDPUMP ISAPI extension, is always TCP.  
   
@@ -161,16 +161,16 @@ Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>
  An Analysis Services instance can only listen on a single port. Using multiple ports is not supported. For more information about port configuration, see [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 ## See Also  
- [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576)   
- [Mutual Authentication Using Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](http://support.microsoft.com/kb/917409)   
- [Service Principal Names (SPNs) SetSPN Syntax (Setspn.exe)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [What SPN do I use and how does it get there?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
- [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
- [Service Accounts Step-by-Step Guide](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
+ [Microsoft BI Authentication and Identity Delegation](https://go.microsoft.com/fwlink/?LinkID=286576)   
+ [Mutual Authentication Using Kerberos](https://go.microsoft.com/fwlink/?LinkId=299283)   
+ [How to configure SQL Server 2008 Analysis Services and SQL Server 2005 Analysis Services to use Kerberos authentication](https://support.microsoft.com/kb/917409)   
+ [Service Principal Names (SPNs) SetSPN Syntax (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [What SPN do I use and how does it get there?](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
+ [Service Accounts Step-by-Step Guide](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
  [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [How to use SPNs when you configure Web applications that are hosted on Internet Information Services](http://support.microsoft.com/kb/929650)   
- [what's new in service accounts](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
- [Configure Kerberos authentication for SharePoint 2010 Products (white paper)](http://technet.microsoft.com/library/ff829837.aspx)  
+ [How to use SPNs when you configure Web applications that are hosted on Internet Information Services](https://support.microsoft.com/kb/929650)   
+ [what's new in service accounts](https://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [Configure Kerberos authentication for SharePoint 2010 Products (white paper)](https://technet.microsoft.com/library/ff829837.aspx)  
   
   

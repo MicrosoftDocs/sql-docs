@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Enterprise Information Management using SSIS, MDS, and DQS Together [Tutorial]
@@ -25,13 +22,13 @@ manager: craigg
   
 -   SQL Server Master Data Services  
   
- SQL Server Integration Services (SSIS) provides a powerful, extensible platform for integrating data from various sources in a comprehensive extract, transform, and load (ETL) solution that supports business workflows, a data warehouse, or master data management. See [Integration Services Overview](http://msdn.microsoft.com/library/ms141263\(SQL.105\).aspx) topic for a quick overview and typical uses of SSIS.  
+ SQL Server Integration Services (SSIS) provides a powerful, extensible platform for integrating data from various sources in a comprehensive extract, transform, and load (ETL) solution that supports business workflows, a data warehouse, or master data management. See [Integration Services Overview](https://msdn.microsoft.com/library/ms141263\(SQL.105\).aspx) topic for a quick overview and typical uses of SSIS.  
   
- SQL Server Data Quality Services (DQS) enables you to cleanse, match, standardize, and enrich data, so you can deliver trusted information for business intelligence, a data warehouse, and transaction processing workloads. See [Introducing Data Quality Services](http://msdn.microsoft.com/library/ff877917.aspx) topic for the business need for DQS and how DQS answers the need.  
+ SQL Server Data Quality Services (DQS) enables you to cleanse, match, standardize, and enrich data, so you can deliver trusted information for business intelligence, a data warehouse, and transaction processing workloads. See [Introducing Data Quality Services](https://msdn.microsoft.com/library/ff877917.aspx) topic for the business need for DQS and how DQS answers the need.  
   
  SQL Server Master Data Services (MDS) provides a central data hub that ensures that the integrity of information and consistency of data is constant across different applications. See [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md) topic for brief descriptions of important features of MDS.  
   
- See [Cleansing and Matching Master Data using EIM Technologies](http://msdn.microsoft.com/library/hh403491.aspx) whitepapers for a comprehensive guidance on implementing an EIM solution using these Microsoft EIM technologies together and watch [Enterprise Information Management (EIM): Bringing together SSIS, DQS, and MDS](http://go.microsoft.com/fwlink/?LinkId=258672) video for a cool demonstration of an EIM scenario.  
+ See [Cleansing and Matching Master Data using EIM Technologies](https://msdn.microsoft.com/library/hh403491.aspx) whitepapers for a comprehensive guidance on implementing an EIM solution using these Microsoft EIM technologies together and watch [Enterprise Information Management (EIM): Bringing together SSIS, DQS, and MDS](https://go.microsoft.com/fwlink/?LinkId=258672) video for a cool demonstration of an EIM scenario.  
   
  In this tutorial, you learn how to use SSIS, MDS, and DQS together to implement a sample Enterprise Information Management (EIM) solution. First, you use DQS to create a knowledgebase that contains knowledge about the data (metadata), cleanse the data in an Excel file by using the knowledge base, and match the data to identify and remove duplicates in the data. Next, you use the MDS Add-in for Excel to upload the cleansed and matched data to MDS. Then, you automate the whole process by using an SSIS solution. The SSIS solution in this tutorial reads the input data from an Excel file, but you can extend it to read from various sources such as Oracle, Teradata, DB2, and Windows Azure SQL Database.  
   
@@ -49,19 +46,19 @@ manager: craigg
   
          See [SQL Server 2012 Installation Guide](../database-engine/install-windows/installation-for-sql-server.md) for details about installing the product.  
   
-2.  [Configure MDS using Master Data Services Configuration Manager](http://msdn.microsoft.com/library/ee633884.aspx)  
+2.  [Configure MDS using Master Data Services Configuration Manager](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     Use the Configuration Manager to create and configure a Master Data Services database. After you create the MDS database, create a web application for MDS in a web site (for example: [http://localhost/MDS](http://localhost/MDS)) and associate the MDS database with the MDS web application. Note that, to create an MDS web application, you should have IIS installed on your computer. See [Web Application Requirements (Master Data Services)](http://msdn.microsoft.com/library/ee633744.aspx) and [Database Requirements (Master Data Services)](http://msdn.microsoft.com/library/ee633767.aspx) for details about the prerequisites for configuring MDS database and web application.  
+     Use the Configuration Manager to create and configure a Master Data Services database. After you create the MDS database, create a web application for MDS in a web site (for example: [http://localhost/MDS](http://localhost/MDS)) and associate the MDS database with the MDS web application. Note that, to create an MDS web application, you should have IIS installed on your computer. See [Web Application Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) and [Database Requirements (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) for details about the prerequisites for configuring MDS database and web application.  
   
-3.  [Install and Configure DQS using Data Quality Server Installer](http://msdn.microsoft.com/library/hh231682.aspx). Click **Start**, click **All Programs**, click **Microsoft SQL Server 2014**, click **Data Quality Services**, and then click **Data Quality Server Installer**.  
+3.  [Install and Configure DQS using Data Quality Server Installer](https://msdn.microsoft.com/library/hh231682.aspx). Click **Start**, click **All Programs**, click **Microsoft SQL Server 2014**, click **Data Quality Services**, and then click **Data Quality Server Installer**.  
   
 4.  Microsoft Excel 2010 (32-bit is preferred).  
   
-5.  Install **Master Data Services Add-in for Excel** (32-bit or 64-bit based on the version of Excel you have on your computer) from [here](http://www.microsoft.com/download/details.aspx?id=29064). To find the version of Excel installed on your computer, run **Excel**, click **File** on menu bar and click **Help** to see the version in the right pane. Note that you need to install Visual Studio 2010 Tools for Office Runtime before installing the Excel Add-in.  
+5.  Install **Master Data Services Add-in for Excel** (32-bit or 64-bit based on the version of Excel you have on your computer) from [here](https://www.microsoft.com/download/details.aspx?id=29064). To find the version of Excel installed on your computer, run **Excel**, click **File** on menu bar and click **Help** to see the version in the right pane. Note that you need to install Visual Studio 2010 Tools for Office Runtime before installing the Excel Add-in.  
   
 6.  (Optional) Create an account with [Windows Azure Marketplace](https://datamarket.azure.com/). One of the tasks in the tutorial requires you to have an **Azure Marketplace** (originally named **Data Market**) account. You can skip this task if you want and proceed with the next task.  
   
-7.  Download the Suppliers.xls file from [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=271504).  
+7.  Download the Suppliers.xls file from [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=271504).  
   
 8.  DQS does not allow you to export the cleansing or matching results to an Excel file if you are using **64-bit version of Excel**. This issue is a known issue. To work around the issue, do the following:  
   

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Integration Services packages, about packages"
   - "Integration Services packages"
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Packages
@@ -109,8 +109,8 @@ manager: craigg
   
 ## Related Content  
   
--   [Implementing SQL Server Integration Services with Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [Implementing SQL Server Integration Services with Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
   
--   [How to: Configure SQL Server Integration Services Package for Microsoft Dynamics AX](http://msdn.microsoft.com/library/bb986852)  
+-   [How to: Configure SQL Server Integration Services Package for Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
   
   

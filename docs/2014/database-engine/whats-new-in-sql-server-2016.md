@@ -28,7 +28,7 @@ manager: craigg
   
   
 ###  <a name="AzureVM"></a> Host a SQL Server Database in a Windows Azure Virtual Machine  
- Use the [Deploy a SQL Server Database to a Windows Azure Virtual Machine](http://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Wizard to host a database from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in a Windows Azure Virtual Machine.  
+ Use the [Deploy a SQL Server Database to a Windows Azure Virtual Machine](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) Wizard to host a database from an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in a Windows Azure Virtual Machine.  
   
   
 ###  <a name="Backup"></a> Backup and Restore Enhancements  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], transactions"
   - "transactions [Integration Services]"
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Transactions
@@ -36,7 +36,7 @@ manager: craigg
   
 ## External Resources  
   
--   Blog entry, [How to Use Transactions in SQL Server Integration Services SSIS](http://go.microsoft.com/fwlink/?LinkId=157783), on www.mssqltips.com  
+-   Blog entry, [How to Use Transactions in SQL Server Integration Services SSIS](https://go.microsoft.com/fwlink/?LinkId=157783), on www.mssqltips.com  
   
 ## See Also  
  [Inherited Transactions](../../2014/integration-services/inherited-transactions.md)   

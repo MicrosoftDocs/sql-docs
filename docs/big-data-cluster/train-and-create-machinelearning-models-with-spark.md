@@ -9,6 +9,7 @@ ms.reviewer: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
@@ -83,7 +84,7 @@ data = data_all.select(select_cols)
 
 ## Step 4 - Split as training and test set
 
-Use 75% of rows to train the model and rest of the 25% to evaluate the model. Additionally, persist the train and test data sets to HDFS storage. The step is not necessary,but shown to demonstrate saving and loading with ORC format. Other formats, for example, `Parquet `may also be used.
+Use 75% of rows to train the model and rest of the 25% to evaluate the model. Additionally, persist the train and test data sets to HDFS storage. The step is not necessary,but shown to demonstrate saving and loading with ORC format. Other formats, for example, `Parquet` may also be used.
 
 Post this step you should see two directories created with the name AdultCensusIncomeTrain and AdultCensusIncomeTest
 

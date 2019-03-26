@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Script with the rs.exe Utility and the Web Service
   Developers and report server administrators can perform operations on a report server through the use of the **rs** utility (RS.exe). Using this utility, you can programmatically administer a report server using scripts written with [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
@@ -27,7 +27,7 @@ manager: craigg
   
  [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
- [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## See Also  
  [Script Deployment and Administrative Tasks](script-deployment-and-administrative-tasks.md)   

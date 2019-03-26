@@ -19,9 +19,11 @@ ms.author: genemi
 manager: craigg
 ---
 # Features Supported by the Editions of SQL Server 2014
-  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
-> **NOTE:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](http://go.microsoft.com/fwlink/?LinkId=190955).  
+
+
+  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
+
+ > **NOTE:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
 > **NOTE:** For features supported by Evaluation and Developer editions see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise feature set.  
   

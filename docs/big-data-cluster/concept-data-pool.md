@@ -8,6 +8,7 @@ manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
@@ -27,6 +28,7 @@ Data pools enable the creation of scale-out data marts, where external data from
 
 ## Next steps
 
-To learn more about the SQL Server big data clusters, see the following overview:
+To learn more about the SQL Server big data clusters, see the following resources:
 
 - [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

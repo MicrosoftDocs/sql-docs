@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "updating statistics"
   - "statistics [SQL Server], updating"
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -44,10 +44,10 @@ manager: craigg
 |Relationship|Elements|  
 |------------------|--------------|  
 |**Parent element**|[Table Element for Schema &#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**Child elements**|[Create Element &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` element. For more information, see the [Database Engine Tuning Advisor XML schema](http://go.microsoft.com/fwlink/?linkid=43100).|  
+|**Child elements**|[Create Element &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` element. For more information, see the [Database Engine Tuning Advisor XML schema](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## Remarks  
- This element is of the **RecommendationTypecomplexType** name in the Database Engine Tuning Advisor XML schema. It is used to specify indexes for a hypothetical configuration. Do not confuse this `Recommendation` element with the other types that can be used to specify partitioning (`RecommendationPType`) or views (`RecommendationViewType`). For information about these other `Recommendation` element types, see the [Database Engine Tuning Advisor XML schema](http://go.microsoft.com/fwlink/?linkid=43100).  
+ This element is of the **RecommendationTypecomplexType** name in the Database Engine Tuning Advisor XML schema. It is used to specify indexes for a hypothetical configuration. Do not confuse this `Recommendation` element with the other types that can be used to specify partitioning (`RecommendationPType`) or views (`RecommendationViewType`). For information about these other `Recommendation` element types, see the [Database Engine Tuning Advisor XML schema](https://go.microsoft.com/fwlink/?linkid=43100).  
   
 ## Example  
  For a usage example of this element, see the [XML Input File Sample with User-specified Configuration &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Export Column Transformation Editor"
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Export Column Transformation Editor (Columns Page)

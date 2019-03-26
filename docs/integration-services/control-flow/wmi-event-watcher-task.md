@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "WQL [Integration Services]"
   - "WMI Event Watcher task [Integration Services]"
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # WMI Event Watcher Task

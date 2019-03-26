@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Configure SSIS Logs dialog box"
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure SSIS Logs Dialog Box

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "deprecation [SQL Server], performance counters"
   - "Deprecated Features object"
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Deprecated Features Object

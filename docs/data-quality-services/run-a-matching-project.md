@@ -12,8 +12,8 @@ f1_keywords:
   - "sql13.dqs.matchingproject.matching.f1"
   - "sql13.dqs.matchingproject.export.f1"
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Run a Matching Project

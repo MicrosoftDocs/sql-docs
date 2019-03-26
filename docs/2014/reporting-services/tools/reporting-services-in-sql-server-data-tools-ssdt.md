@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Business Intelligence Development Studio, Reporting Services in"
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Reporting Services in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] environment with enhancements that are specific to business intelligence solutions. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] is included with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -34,7 +34,7 @@ manager: craigg
 ##  <a name="bkmk_ReportServerProjects"></a> Report Server Projects  
  When you install [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], the following project templates are made available in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Report Server Project.** When you select a Report Server Project, Report Designer opens. A Report Server Project is a Business Intelligence Projects template installed by [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] that is available from the **New Project** dialog box. For more information, see [Add a New or Existing Report to a Report Project &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md).Report Server project properties apply to all reports and all shared data sources in a [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] project. These properties include the URL for the report server and the folder names for reports and shared data sources. Use the **Project Property Pages** dialog box to view the current property values. To open this dialog box, on the **Project** menu, click *\<project name>* **Properties**.  
+-   **Report Server Project.** When you select a Report Server Project, Report Designer opens. A Report Server Project is a Business Intelligence Projects template installed by [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] that is available from the **New Project** dialog box. For more information, see [Add a New or Existing Report to a Report Project &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md).Report Server project properties apply to all reports and all shared data sources in a [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] project. These properties include the URL for the report server and the folder names for reports and shared data sources. Use the **Project Property Pages** dialog box to view the current property values. To open this dialog box, on the **Project** menu, click _\<project name>_ **Properties**.  
   
 -   **Report Server Project Wizard.** When you select a Report Server Wizard Project, a report server project is automatically created, and the Report Wizard opens. In the wizard, you can create a report by following instructions on each page to create a connection string to a data source, set data source credentials, design a query, add a table or matrix data region, specify report data and groups, pick a font and color style, publish the report to a report server, and preview the report locally. After you create a report with the wizard, you can change the report data and the report designer by using Report Designer in the Report Server project.  
   

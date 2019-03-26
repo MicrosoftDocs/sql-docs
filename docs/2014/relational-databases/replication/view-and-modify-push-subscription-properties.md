@@ -134,7 +134,7 @@ manager: craigg
 7.  (Optional) To view the new settings, call the <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> method to reload the properties for the subscription.  
   
 ## See Also  
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
+ [View Information and Perform Tasks using Replication Monitor](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  
   

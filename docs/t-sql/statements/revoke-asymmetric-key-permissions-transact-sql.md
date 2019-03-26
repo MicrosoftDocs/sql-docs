@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], permissions"
   - "REVOKE statement, asymmetric keys"
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Asymmetric Key Permissions (Transact-SQL)
@@ -46,7 +46,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  *permission*  
  Specifies a permission that can be revoked on an assembly. Listed below.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  Specifies the asymmetric key on which the permission is being revoked. The scope qualifier **::** is required.  
   
  *database_principal*  

@@ -122,10 +122,10 @@ manager: craigg
   
 |Platform|Estimating fdhost.exe memory requirements in MB-*F*<sup>1</sup>|Formula for calculating max server memory-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **=minimum(** *T* **,** 2000**)-*`F`*-** 500|  
-|x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **-** *F* **-** 500|  
+|x86|_F_ **=** _Number of crawl ranges_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000**)-*`F`*-** 500|  
+|x64|_F_ **=** _Number of crawl ranges_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as *T***-** sigma**(***F*i**)**.  
+ <sup>1</sup> If multiple full populations are in progress, calculate the fdhost.exe memory requirements of each separately, as *F1*, *F2*, and so forth. Then calculate *M* as _T_**-** sigma**(**_F_i**)**.  
   
  <sup>2</sup> 500 MB is an estimate of the memory required by other processes in the system. If the system is doing additional work, increase this value accordingly.  
   
@@ -197,7 +197,7 @@ GO
   
  For security reasons, filters are loaded by filter daemon host processes. A server instance uses a multithreaded process for all multithreaded filters and a single-threaded process for all single-threaded filters. When a document that uses a multithreaded filter contains an embedded document that uses a single-threaded filter, the Full-Text Engine launches a single-threaded process for the embedded document. For example, on encountering a Word document that contains a PDF document, the Full-Text Engine uses the multithreaded process for the Word content and launches a single-threaded process for the PDF content. A single-threaded filter might not work well in this environment, however, and could destabilize the filtering process. In certain circumstances where such embedding is common, destabilization might lead to filtering-process crashes. When this occurs, the Full-Text Engine re-routes any failed document (for example, a Word document that contains embedded PDF content) to the single-threaded filtering process. If re-routing occurs frequently, it results in performance degradation of the full-text indexing process.  
   
- To work around this problem, mark the filter for the container document (Word in this case) as a single-threaded filter. You can change the filter registry value to mark a given filter as a single-threaded filter. To mark a filter as a single-threaded filter, you need to set the **ThreadingModel** registry value for the filter to `Apartment Threaded`. For information about single-threaded apartments, see the white paper [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159).  
+ To work around this problem, mark the filter for the container document (Word in this case) as a single-threaded filter. You can change the filter registry value to mark a given filter as a single-threaded filter. To mark a filter as a single-threaded filter, you need to set the **ThreadingModel** registry value for the filter to `Apartment Threaded`. For information about single-threaded apartments, see the white paper [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159).  
   
   
   

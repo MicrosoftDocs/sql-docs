@@ -88,7 +88,7 @@ manager: craigg
   
  [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] extends SharePoint Server 2013 to add server-side data refresh processing, data providers, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery, and management support for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks and Excel workbooks with advanced data models.  
   
- The installer package is available as part of the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] feature pack. The feature pack can be downloaded from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] download center at [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft® SharePoint®](http://go.microsoft.com/fwlink/?LinkID=296473) ( HYPERLINK "<http://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <http://go.microsoft.com/fwlink/?LinkID=296473>).  
+ The installer package is available as part of the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] feature pack. The feature pack can be downloaded from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] download center at [Microsoft® SQL Server® 2014 PowerPivot® for Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) ( HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
   
  ![SSAS PowerPivot Mode 2 Server Deployment](../../../2014/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "SSAS PowerPivot Mode 2 Server Deployment")  
   
@@ -163,7 +163,7 @@ manager: craigg
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> Three-Tier Scale-Out Deployment  
  This topology illustrates a scale-out deployment that runs the same shared service on multiple servers, servicing a larger volume of requests and providing greater processing power for PowerPivot data or Reporting Services reports. In the diagram below, there are three application server clusters, each running a different combination of shared services. In a SharePoint environment, service discovery and availability is built into the farm. Load balancing across multiple physical servers running the same shared service application is part of the shared service architecture.  
   
- When deploying a multi-server farm, be sure to follow the instructions in this SharePoint article: [Multiple Servers for a three-tier farm (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?linkID=219834).  
+ When deploying a multi-server farm, be sure to follow the instructions in this SharePoint article: [Multiple Servers for a three-tier farm (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?linkID=219834).  
   
  ![5-server toplogy](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-server toplogy")  
   

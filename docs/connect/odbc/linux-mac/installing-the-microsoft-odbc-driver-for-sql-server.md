@@ -75,7 +75,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### SUSE Linux Enterprise Server 11SP4 and 12
+### SUSE Linux Enterprise Server 11SP4, 12, and 15
 
 ```
 sudo su
@@ -89,6 +89,10 @@ zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 #SUSE Linux Enterprise Server 12
 zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
+#SUSE Linux Enterprise Server 15
+zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+SUSEConnect -p sle-module-legacy/15/x86_64
+
 exit
 sudo ACCEPT_EULA=Y zypper install msodbcsql17
 # optional: for bcp and sqlcmd
@@ -100,7 +104,7 @@ source ~/.bashrc
 sudo zypper install unixODBC-devel
 ``` 
 
-### Ubuntu 14.04, 16.04, 17.10 and 18.04
+### Ubuntu 14.04, 16.04, 17.10, and 18.04
 ```
 sudo su 
 curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -114,11 +118,11 @@ curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sou
 #Ubuntu 16.04
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
-#Ubuntu 17.10
-curl https://packages.microsoft.com/config/ubuntu/17.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
 #Ubuntu 18.04
 curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+
+#Ubuntu 18.10
+curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -133,15 +137,15 @@ sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
 > - Driver version 17.2 or higher is required for Ubuntu 18.04 support.
-> - The unixodbc-dev package 2.3.1 is not available on Ubuntu 14.04.   
+> - Driver version 17.3 or higher is required for Ubuntu 18.10 support.   
 
-### OS X 10.11 (El Capitan), macOS 10.12 (Sierra), and macOS 10.13 (High Sierra)
+### OS X 10.11 (El Capitan), macOS 10.12 (Sierra), macOS 10.13 (High Sierra), and macOS 10.14 (Mojave)
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql17 mssql-tools
+brew install msodbcsql17 mssql-tools
 ```
 
 ## Microsoft ODBC Driver 13.1 for SQL Server 
@@ -284,7 +288,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
+brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 ```
 
 ## Microsoft ODBC Driver 13 for SQL Server

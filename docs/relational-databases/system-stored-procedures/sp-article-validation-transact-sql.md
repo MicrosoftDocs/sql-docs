@@ -39,13 +39,13 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication in which the article exists. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article to validate. *article* is **sysname**, with no default.  
   
- [ **@rowcount_only=**] *type_of_check_requested*  
+`[ @rowcount_only = ] type_of_check_requested`
  Specifies if only the rowcount for the table is returned. *type_of_check_requested* is **smallint**, with a default of **1**.  
   
  If **0**, perform a rowcount and a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 compatible checksum.  
@@ -54,7 +54,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  If **2**, perform a rowcount and binary checksum.  
   
- [ **@full_or_fast=**] *full_or_fast*  
+`[ @full_or_fast = ] full_or_fast`
  Is the method used to calculate the rowcount. *full_or_fast* is **tinyint**, and can be one of these values.  
   
 |**Value**|**Description**|  
@@ -63,16 +63,16 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|Performs fast count from **sysindexes.rows**. Counting rows in **sysindexes** is faster than counting rows in the actual table. However, **sysindexes** is updated lazily, and the rowcount may not be accurate.|  
 |**2** (default)|Performs conditional fast counting by first trying the fast method. If fast method shows differences, reverts to full method. If *expected_rowcount* is NULL and the stored procedure is being used to get the value, a full COUNT(*) is always used.|  
   
- [ **@shutdown_agent=**] *shutdown_agent*  
+`[ @shutdown_agent = ] shutdown_agent`
  Specifies if the Distribution agent should shut down immediately upon completion of the validation. *shutdown_agent* is **bit**, with a default of **0**. If **0**, the Distribution Agent does not shut down. If **1**, the Distribution Agent shuts down after the article is validated.  
   
- [ **@subscription_level=**] *subscription_level*  
+`[ @subscription_level = ] subscription_level`
  Specifies whether or not the validation is picked up by a set of subscribers. *subscription_level* is **bit**, with a default of **0**. If **0**, validation is applied to all Subscribers. If **1**, validation is only applied to a subset of the Subscribers specified by calls to **sp_marksubscriptionvalidation** in the current open transaction.  
   
- [ **@reserved=**] *reserved*  
+`[ @reserved = ] reserved`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**= ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
@@ -90,7 +90,7 @@ sp_article_validation [ @publication = ] 'publication'
  Only users with SELECT ALL permissions on the source table for the article being validated can execute **sp_article_validation**.  
   
 ## See Also  
- [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)   
+ [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   

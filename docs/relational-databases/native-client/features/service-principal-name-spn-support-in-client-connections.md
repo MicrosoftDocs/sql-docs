@@ -67,7 +67,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The new connection behavior is implemented by the client; therefore, it is not specific to a version of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## Linked Servers and Delegation  
- When linked servers are created, the **@provstr** parameter of [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) can be used to specify the server and failover partner SPNs. The benefits of doing this are the same as specifiying SPNs in client connection strings: It is simpler and more reliable to establish connections that use Kerberos authentication.  
+ When linked servers are created, the **@provstr** parameter of [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) can be used to specify the server and failover partner SPNs. The benefits of doing this are the same as specifying SPNs in client connection strings: It is simpler and more reliable to establish connections that use Kerberos authentication.  
   
  Delegation with linked servers requires Kerberos authentication.  
   

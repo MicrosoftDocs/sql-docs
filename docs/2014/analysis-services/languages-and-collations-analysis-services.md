@@ -88,7 +88,7 @@ manager: craigg
   
 -   0x0416 or 1046 for **Portuguese (Brazil)**.  
   
- To view a longer list, see [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Encoding and Code Pages](http://msdn.microsoft.com/goglobal/bb688114.aspx).  
+ To view a longer list, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Encoding and Code Pages](https://msdn.microsoft.com/goglobal/bb688114.aspx).  
   
 > [!NOTE]  
 >  The `Language` property does not determine the language for returning system messages, or which strings appear in the user interface. Errors, warnings, and messages are localized into all languages supported in Office and Office 365 and are used automatically when the client connection specifies one of the supported locales.  
@@ -98,7 +98,7 @@ manager: craigg
   
  Collations control the case-sensitivity of all strings in a bicameral language script, with the exception of object identifiers. If you use upper and lower case characters in an object identifier, be forewarned that the case-sensitivity of object identifiers is not determined by the collation, but by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. For object identifiers composed in English script, object identifiers are always case-insensitive, regardless of collation. Cyrillic and other bicameral languages do the opposite (always case-sensitive). See [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) for details.  
   
- Collation in Analysis Services is compatible with that of the SQL Server relational database engine, assuming you maintain parity in the sort options you select for each service. For example, if the relational database is accent sensitive, you should configure the cube the same way. Problems can occur when collations settings diverge. For an example and workarounds, see [Blanks in a Unicode string have different processing outcomes based on collation](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). To learn more about collation and the database engine, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ Collation in Analysis Services is compatible with that of the SQL Server relational database engine, assuming you maintain parity in the sort options you select for each service. For example, if the relational database is accent sensitive, you should configure the cube the same way. Problems can occur when collations settings diverge. For an example and workarounds, see [Blanks in a Unicode string have different processing outcomes based on collation](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). To learn more about collation and the database engine, see [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ###  <a name="bkmk_collationtype"></a> Collation Types  
  Analysis Services supports two collation types:  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "packages [Integration Services], creating"
   - "SQL Server Integration Services packages, creating"
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create Packages in SQL Server Data Tools
@@ -41,7 +41,7 @@ manager: craigg
   
  The following procedures describe how to create or delete a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- For a video that demonstrates how to create a basic package using the default package template, see [Creating a Basic Package (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=131023).  
+ For a video that demonstrates how to create a basic package using the default package template, see [Creating a Basic Package (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131023).  
   
 ### To create a package in SQL Server Data Tools using the Package Template  
   

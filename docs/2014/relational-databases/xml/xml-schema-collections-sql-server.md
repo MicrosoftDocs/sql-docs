@@ -185,11 +185,11 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
  Individual XML schemas within the collection can be obtained as `xml` data type instances by specifying the target namespace as the third argument to **XML_SCHEMA_NAMESPACE()**. This is shown in the following example.  
   
 ### Example: Output a Specified Schema from an XML Schema Collection  
- The following statement outputs the XML schema with the target namespace "<http://www.microsoft.com/books>" from the XML schema collection "myCollection" within the relational schema, dbo.  
+ The following statement outputs the XML schema with the target namespace "<https://www.microsoft.com/books>" from the XML schema collection "myCollection" within the relational schema, dbo.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'http://www.microsoft.com/books')  
+N'https://www.microsoft.com/books')  
 ```  
   
 ### Querying XML Schemas  

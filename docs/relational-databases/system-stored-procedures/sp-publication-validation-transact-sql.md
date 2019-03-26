@@ -36,7 +36,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [**@publication=**] **'***publication'*  
+ [**@publication=**] **'**_publication'_  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -60,7 +60,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [ **@shutdown_agent=**] *shutdown_agent*  
  Is whether the Distribution Agent should shut down immediately upon completion of the validation. *shutdown_agent* is **bit**, with a default of **0**. If **0**, the replication agent does not shut down. If **1**, the replication agent shuts down after the last article is validated.  
   
- [ **@publisher** = ] **'***publisher***'**  
+ [ **@publisher** = ] **'**_publisher_**'**  
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

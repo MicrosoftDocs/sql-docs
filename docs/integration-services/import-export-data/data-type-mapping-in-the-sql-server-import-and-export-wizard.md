@@ -3,13 +3,12 @@ title: "Data Type Mapping in the SQL Server Import and Export Wizard | Microsoft
 ms.custom: ""
 ms.date: "01/11/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Type Mapping in the SQL Server Import and Export Wizard
@@ -17,8 +16,8 @@ manager: craigg
   
 ##  <a name="wizardMapping"></a> How does the wizard map data types between source and destination?
 The wizard uses mapping files that are installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to map data types from one database system or version to another. For example, it can map from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types to Oracle data types. By default, the mapping files in XML format are installed in the following folders.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\** (for 64-bit)
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\** (for 32-bit).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\** (for 64-bit)
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (for 32-bit).  
   
  If you edit an existing mapping file, or add a new mapping file to the folder, you have to close and reopen the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard or [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] to load the new or changed mapping file.  
  
@@ -35,7 +34,7 @@ Here's a portion of the XML mapping file that maps from SQL Server data types (o
   
 <dtm:DataTypeMappings  
     xmlns:dtm="https://www.microsoft.com/SqlServer/Dts/DataTypeMapping.xsd"   
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
     SourceType="System.Data.SqlClient.SqlConnection"   
     MinSourceVersion="*"   
     MaxSourceVersion="*"   

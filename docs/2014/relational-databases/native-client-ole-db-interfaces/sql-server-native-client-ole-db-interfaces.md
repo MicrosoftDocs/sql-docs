@@ -21,7 +21,7 @@ manager: craigg
   
  This [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider programming reference does not document all of the OLE DB interfaces and methods, only those interfaces and methods that exhibit provider-specific behavior when using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider.  
   
- For a full description of the core OLE DB interfaces and methods, see the [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ For a full description of the core OLE DB interfaces and methods, see the [OLE DB Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## In This Section  
   

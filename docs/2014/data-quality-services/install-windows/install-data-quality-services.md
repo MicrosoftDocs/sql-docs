@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Install Data Quality Services
@@ -69,7 +69,7 @@ manager: craigg
 |Make your data available for DQS operations|Make sure that you can access your source data for the DQS operations, and can export the processed data to a table in a database.|[Access Data for the DQS Operations](access-data-for-the-dqs-operations.md)|  
   
 ## See Also  
- [Video: Install and Configure DQS](http://go.microsoft.com/fwlink/?LinkId=238241)   
+ [Video: Install and Configure DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [Upgrade SQLCLR Assemblies After .NET Framework Update](upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Upgrade Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -77,6 +77,6 @@ manager: craigg
  [Install SQL Server 2014 BI Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)   
  [Uninstall SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)   
  [Data Quality Services](../data-quality-services.md)   
- [Troubleshoot Installation and Configuration Issues in DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
+ [Troubleshoot Installation and Configuration Issues in DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   

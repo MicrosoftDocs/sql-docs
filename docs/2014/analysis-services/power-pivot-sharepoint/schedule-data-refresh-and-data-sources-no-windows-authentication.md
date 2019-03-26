@@ -109,7 +109,7 @@ manager: craigg
   
 11. Type the Oracle User ID and Oracle Password and then click **OK**.  
   
- For more information, see section "To Create a target application for SQL Server Authentication" in [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ For more information, see section "To Create a target application for SQL Server Authentication" in [Use Secure Store with SQL Server Authentication (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
   
 ## To Configure the PowerPivot Service Application  
   
@@ -160,8 +160,8 @@ manager: craigg
   
 ## More Information  
   
--   [Configure the Secure Store Service in SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
+-   [Configure the Secure Store Service in SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
--   See the "Scheduled Data Refresh" section of [PowerPivot Data Refresh with SharePoint 2013 and SQL Server 2012 SP1 (Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
+-   See the "Scheduled Data Refresh" section of [PowerPivot Data Refresh with SharePoint 2013 and SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   

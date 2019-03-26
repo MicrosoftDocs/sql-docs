@@ -35,7 +35,7 @@ manager: craigg
   
 ## Handling Large Files  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Windows Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. [Windows Azure storage SLA's](http://go.microsoft.com/fwlink/?LinkId=271619) have maximum processing times for blobs that you can take into consideration.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup operation uses multiple threads to optimize data transfer to Windows Azure Blob storage services.  However the performance depends on various factors, such as ISV bandwidth and size of the database. If you plan to back up large databases or filegroups from an on-premise SQL Server database, it is recommended that you do some throughput testing first. [Windows Azure storage SLA's](https://go.microsoft.com/fwlink/?LinkId=271619) have maximum processing times for blobs that you can take into consideration.  
   
 -   Using the `WITH COMPRESSION` option as recommended in the **Managing Backup** section, it is very important when backing up large files.  
   

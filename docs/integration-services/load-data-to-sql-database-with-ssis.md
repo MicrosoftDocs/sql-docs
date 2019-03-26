@@ -5,11 +5,10 @@ documentationcenter: NA
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.technology: integration-services
-ms.devlang: NA
 ms.topic: conceptual
 ms.custom: loading
 ms.date: 08/20/2018
-ms.author: douglasl
+ms.author: janinez
 author: douglaslMS
 manager: craigg-msft
 ---

@@ -45,7 +45,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
 ```  
   
 ## Arguments  
- **N'** *plan_guide_name* **'**  
+ **N'** _plan_guide_name_ **'**  
  Specifies the plan guide that is being dropped, enabled, or disabled. *plan_guide_name* is resolved to the current database. If not specified, *plan_guide_name* defaults to NULL.  
   
  DROP  

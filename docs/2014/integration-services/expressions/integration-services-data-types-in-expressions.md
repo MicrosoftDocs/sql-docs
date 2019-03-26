@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], data types"
   - "data types [Integration Services], expressions"
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Data Types in Expressions
@@ -99,8 +99,8 @@ manager: craigg
   
 ## Related Content  
   
--   Technical article, [SSIS Expression Cheat Sheet](http://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
+-   Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
   
--   Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+-   Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
   

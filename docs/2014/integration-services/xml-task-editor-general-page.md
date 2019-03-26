@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords: 
   - "XML Task Editor"
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # XML Task Editor (General Page)
   Use the **General Node** of the **XML Task Editor** dialog box to specify the operation type and configure the operation.  
   
- To learn about this task, see [XML Task](control-flow/xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
+ To learn about this task, see [XML Task](control-flow/xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
   
 ## Static Options  
  **OperationType**  

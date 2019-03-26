@@ -56,7 +56,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  This sample also demonstrates using the "Allow partially trusted callers" attribute to indicate that the Result Set assembly is a library which may be safely called from other assemblies. This approach is a little more complex but much more secure than registering the calling assembly using the unsafe permission. It is more secure because registering the calling assembly as safe the calling assembly limits affecting resources off the server and prevents damage to the integrity of the server.  
   
- The build instructions for this sample assume that the source code files are in a directory called c:\samples.  If you use another directory, you will have to modify the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. The [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts also requires the AdventureWorks database. You can download the AdventureWorks sample database from the [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ The build instructions for this sample assume that the source code files are in a directory called c:\samples.  If you use another directory, you will have to modify the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts. The [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts also requires the AdventureWorks database. You can download the AdventureWorks sample database from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
   
  To build and run the sample, paste the first code listing into a file called ResultSet.cs and compile with csc /target:library ResultSet.cs.  
   

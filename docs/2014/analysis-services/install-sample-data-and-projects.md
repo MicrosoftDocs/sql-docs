@@ -24,7 +24,7 @@ manager: craigg
   
      Analysis Services is available in these editions only: Evaluation, Enterprise, Business Intelligence, Standard.  
   
-     Note that SQL Server Express editions do not include Analysis Services. [Download the Evaluation edition](http://go.microsoft.com/fwlink/?LinkId=392824) if you want to try out the software free of charge.  
+     Note that SQL Server Express editions do not include Analysis Services. [Download the Evaluation edition](https://go.microsoft.com/fwlink/?LinkId=392824) if you want to try out the software free of charge.  
   
      By default, Analysis Services is installed as a multidimensional instance, which you can override by choosing Tabular Server Mode in the server configuration page of the Installation Wizard. If you want to run both server modes, rerun SQL Server Setup on the same computer to install a second instance of Analysis Services in the other mode.  
   
@@ -37,7 +37,7 @@ manager: craigg
 ## Step 2: Download SQL Server Data Tools - Business Intelligence for Visual Studio 2012  
  In this release, SQL Server Data Tools is downloaded and installed separately from other SQL Server features. The designers and project templates used to create BI models and reports are now available as a free web download.  
   
--   [Download the Business Intelligence version of SQL Server Data Tools](http://go.microsoft.com/fwlink/p/?LinkID=322038). The file is saved to the Downloads folder. Run setup to install the tool.  
+-   [Download the Business Intelligence version of SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). The file is saved to the Downloads folder. Run setup to install the tool.  
   
      Reboot the computer to complete the installation.  
   
@@ -50,7 +50,7 @@ manager: craigg
   
  To install this database, do the following:  
   
-1.  Download the [AdventureWorkDW2012](http://go.microsoft.com/fwlink/p/?LinkID=221770) database from the product samples page on codeplex.  
+1.  Download the [AdventureWorkDW2012](https://go.microsoft.com/fwlink/p/?LinkID=221770) database from the product samples page on codeplex.  
   
      The database file name is AdvntureWorksDW2012_Data.mdf. The file should be in the Downloads folder on your computer.  
   
@@ -89,7 +89,7 @@ manager: craigg
   
  The project file for Lesson 4 is particularly important because it provides the basis for not only that lesson, but all the subsequent lessons that follow. In contrast with the previous project files, where the steps in the tutorial result in an exact copy of the completed project files, the Lesson 4 sample project includes new model information that is not found in the model you built in lessons 1 through 3. Lesson 4 assumes that you are starting with a sample project file that is available in the following download.  
   
-1.  Download the [Analysis Services Tutorial SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) on the product samples page on codeplex.  
+1.  Download the [Analysis Services Tutorial SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) on the product samples page on codeplex.  
   
      The 2012 tutorials are valid for the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release.  
   

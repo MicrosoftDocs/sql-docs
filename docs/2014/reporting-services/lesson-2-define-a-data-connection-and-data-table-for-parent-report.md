@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Lesson 2: Define a Data Connection and Data Table for Parent Report
   After you create a new website project using the ASP.NET website template for Visual C#, your next step is to create a data connection and a data table for the parent report. In this tutorial the data connection is to the AdventureWorks2008 database. You also have the option of connecting to the AdventureWorks2012 database.  
@@ -23,7 +23,7 @@ manager: craigg
   
      This adds a new XSD file **DataSet1.xsd** to the project and opens the DataSet Designer.  
   
-3.  From the Toolbox window, drag a **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
+3.  From the Toolbox window, drag a **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
   
 4.  On the **Choose Your Data Connection** page, click **New Connection**.  
   
@@ -53,7 +53,7 @@ manager: craigg
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-     You can also create the query by clicking **Query Builder**, and then verify the query by clicking **Execute Query**. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about installing the **AdventureWorks2008** version of AdventureWorks, see [Walkthrough: Installing the AdventureWorks Database](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
+     You can also create the query by clicking **Query Builder**, and then verify the query by clicking **Execute Query**. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about installing the **AdventureWorks2008** version of AdventureWorks, see [Walkthrough: Installing the AdventureWorks Database](https://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx).  
   
 11. On the **Choose Methods to Generate** page, be sure to uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**, and then click **Finish**.  
   

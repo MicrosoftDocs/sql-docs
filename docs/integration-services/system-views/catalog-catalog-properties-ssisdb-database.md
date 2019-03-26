@@ -1,15 +1,15 @@
 ---
 title: "catalog.catalog_properties (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "12/11/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.catalog_properties (SSISDB Database)
@@ -38,7 +38,7 @@ manager: craigg
 |**VALIDATION_TIMEOUT**|Validations are stopped if they do not complete in the number of seconds specified by this property.|  
 |**SERVER_CUSTOMIZED_LOGGING_LEVEL**|The default customized logging level for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. If you have not created any customized logging levels, this property may not appear in the view.|
 |**SERVER_LOGGING_LEVEL**|The default logging level for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.|
-|**SERVER_OPERATION_ENCRYPTION_LEVEL**|When the value is 1 (`PER_EXECUTION`), the certificate and symmetric key used for protecting sensitive execution parameters and execution logs are created for each *execution*. When the value is 2 (`PER_PROJECT`), the certificate and symmetric key are created one time for each *project*. For more info about this property, see the Remarks for the SSIS stored procedure [catalog.cleanup_server_log](..\system-stored-procedures\catalog-cleanup-server-log.md#remarks).|
+|**SERVER_OPERATION_ENCRYPTION_LEVEL**|When the value is 1 (`PER_EXECUTION`), the certificate and symmetric key used for protecting sensitive execution parameters and execution logs are created for each *execution*. When the value is 2 (`PER_PROJECT`), the certificate and symmetric key are created one time for each *project*. For more info about this property, see the Remarks for the SSIS stored procedure [catalog.cleanup_server_log](../system-stored-procedures/catalog-cleanup-server-log.md#remarks).|
 |**VERSION_CLEANUP_ENABLED**|When the value is `TRUE`, only the **MAX_PROJECT_VERSIONS** number of project versions are stored in the catalog and all other project versions are deleted. When the value is **FALSE**, all project versions are stored in the catalog. Note: a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] job performs the operation cleanup.|
 |||
   

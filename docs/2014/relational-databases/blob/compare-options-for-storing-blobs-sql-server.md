@@ -50,7 +50,7 @@ manager: craigg
 |**Relational access to file attributes**|No|No|**Yes**|  
   
 ##  <a name="CompareRBS"></a> Comparing FILESTREAM and Remote BLOB Store (RBS)  
- For a comparison of these two features, see this blog post from the RBS team: [SQL Server Remote BLOB Store and FILESTREAM feature comparison](http://go.microsoft.com/fwlink/?LinkId=210317).  
+ For a comparison of these two features, see this blog post from the RBS team: [SQL Server Remote BLOB Store and FILESTREAM feature comparison](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
 ##  <a name="more"></a> More Information  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  

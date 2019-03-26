@@ -11,7 +11,7 @@ ms.topic: "reference"
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Accessing the WMI Provider Programmatically
   This topic is under construction.  

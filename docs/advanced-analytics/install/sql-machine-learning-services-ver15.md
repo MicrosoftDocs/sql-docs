@@ -1,5 +1,6 @@
 ---
-title: Differences in SQL Server 2019 Machine Learning Services installation | Microsoft Docs
+title: Differences in SQL Server 2019 - SQL Server Machine Learning Services
+description: Learn what's new for R and Python SQL Server machine learning extensions in the SQL Server 2019 preview release.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/08/2018  
@@ -51,7 +52,7 @@ As before, additional configuration is still required for *implied authenticatio
 
 ## Symbolic link created by Setup
 
-A symbolic link is created to the current default **R_SERVICES**  and **PYTHON_SERIVCES** as part of SQL Server Setup. If you don't want to create this link, an alternative is to grant 'all application packages' read permission to the hierarchy leading up to the folder.
+A symbolic link is created to the current default **R_SERVICES**  and **PYTHON_SERVICES** as part of SQL Server Setup. If you don't want to create this link, an alternative is to grant 'all application packages' read permission to the hierarchy leading up to the folder.
 
 
 ## See also

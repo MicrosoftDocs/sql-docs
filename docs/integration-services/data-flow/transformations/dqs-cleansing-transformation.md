@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data correction"
   - "correct data"
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # DQS Cleansing Transformation
@@ -82,7 +82,7 @@ manager: craigg
  Select an existing DQS knowledge base for the connected data source. For more information about the DQS knowledge base, see [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
  **Encrypt connection**  
- Specifiy whether to encrypt the connection, in order to encrypt the data transfer between the DQS Server and [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+ Specify whether to encrypt the connection, in order to encrypt the data transfer between the DQS Server and [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
  **Available domains**  
  Lists the available domains for the selected knowledge base. There are two types of domains: single domains, and composite domains that contain two or more single domains.  

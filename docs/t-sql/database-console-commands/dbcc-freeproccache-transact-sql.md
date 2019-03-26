@@ -22,7 +22,7 @@ helpviewer_keywords:
   - "procedure cache [SQL Server]"
   - "clearing procedure cache"
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
@@ -126,7 +126,7 @@ DBCC FREEPROCCACHE can be cancelled during execution.
   
 ## Limitations and Restrictions for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE can not run within a transaction.
-DBCC FREEPROCCAHCE is not supported in an EXPLAIN statement.
+DBCC FREEPROCCACHE is not supported in an EXPLAIN statement.
   
 ## Metadata for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 A new row is added to the sys.pdw_exec_requests system view when DBCC FREEPROCCACHE is run.

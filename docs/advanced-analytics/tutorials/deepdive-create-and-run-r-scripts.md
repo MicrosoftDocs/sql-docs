@@ -1,5 +1,6 @@
 ---
-title: Compute summary statistics (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Compute summary statistics RevoScaleR tutorial - SQL Server Machine Learning
+description: Tutorial walkthrough on how to compute statistical summary statistics using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -57,7 +58,7 @@ To see how a compute context works, generate summary statistics on the sqlFraudD
 
 **Results**
 
-```
+```R
 Summary Statistics Results for: ~gender + balance + numTrans + numIntlTrans + creditLine
 Data: sqlFraudDS (RxSqlServerData Data Source)
 Number of valid observations: 10000

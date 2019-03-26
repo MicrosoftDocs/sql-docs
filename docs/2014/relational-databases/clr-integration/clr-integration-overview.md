@@ -50,7 +50,7 @@ manager: craigg
  Extended stored procedures can be built to perform functionality not possible with [!INCLUDE[tsql](../../../includes/tsql-md.md)] stored procedures. Extended stored procedures can, however, compromise the integrity of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] process, while managed code that is verified to be type-safe cannot. Further, memory management, scheduling of threads and fibers, and synchronization services are more deeply integrated between the managed code of the CLR and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. With CLR integration, you have a more secure way than extended stored procedures to write the stored procedures you need to perform tasks not possible in [!INCLUDE[tsql](../../../includes/tsql-md.md)]. For more information about CLR integration and extended stored procedures, see [Performance of CLR Integration](clr-integration-architecture-performance.md).  
   
 ## See Also  
- [Installing the .NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Installing the .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architecture of CLR Integration](../../database-engine/dev-guide/architecture-of-clr-integration.md)   
  [Data Access from CLR Database Objects](data-access/data-access-from-clr-database-objects.md)   
  [Getting Started with CLR Integration](database-objects/getting-started-with-clr-integration.md)  

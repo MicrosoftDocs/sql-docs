@@ -1,27 +1,26 @@
 ---
-title: "Step 4: Testing the Lesson 2 Tutorial Package | Microsoft Docs"
+title: "Step 4: Test the Lesson 2 tutorial package | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/03/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
-# Lesson 2-4 - Testing the Lesson 2 Tutorial Package
-With the Foreach Loop container and the Flat File connection manager now configured, the Lesson 2 package can iterate through the collection of 14 flat files in the Sample Data folder. Each time a file name is found that matches the specified file name criteria, the Foreach Loop container populates the user-defined variable with the file name. This variable, in turn, updates the ConnectionString property of the Flat File connection manager, and a connection to the new flat file is made. The Foreach Loop container then runs the unmodified data flow task against the data in the new flat file before connecting to the next file in the folder.  
-  
-Use the following procedure to test the new looping functionality that you have added to your package.  
+# Lesson 2-4: Test the Lesson 2 tutorial package
+
+With the Foreach Loop container and the Flat File connection manager now configured, the Lesson 2 package can iterate through the 14 flat files in the Sample Data folder. Each time a file name matches the specified criterion, the Foreach Loop container populates the user-defined variable with the file name. This variable, in turn, updates the ConnectionString property of the Flat File connection manager, which connects to that flat file. The Foreach Loop container then runs the unmodified data flow task against the data in that flat file.  
   
 > [!NOTE]  
-> If you ran the package from Lesson 1, you will need to delete the records from dbo.NewFactCurrencyRate in AdventureWorksDW2012 before you run the package from this lesson or the package will fail with errors indicating a Violation of Primary Key constraint. You will receive the same errors if you run the package by selecting Debug/Start Debugging (or press F5) because both Lesson 1 and Lesson 2 will run. Lesson 2 will attempt to insert records already inserted in Lesson 1.  
+> If you ran the package from Lesson 1, you need to delete the records from the dbo.NewFactCurrencyRate table in the AdventureWorksDW2012 database before you run the package from this lesson. Lesson 2 attempts to insert records already inserted in Lesson 1, which causes an error.  
   
-## Checking the Package Layout  
-Before you test the package you should verify that the control and data flows in the Lesson 2 package contains the objects shown in the following diagrams. The data flow should be identical to the data flow in lesson 1.  
+## Check the package layout  
+Before you test the package, verify that the control and data flows in the Lesson 2 package contains the objects shown in the following diagrams. Lesson 2's data flow is the same as Lesson 1.  
   
 **Control Flow**  
   
@@ -31,19 +30,19 @@ Before you test the package you should verify that the control and data flows in
   
 ![Data flow in package](../integration-services/media/task9lesson1data.gif "Data flow in package")  
   
-### To test the Lesson 2 tutorial package  
+## Test the Lesson 2 tutorial package  
   
-1.  In **Solution Explorer**, right-click **Lesson 2.dtsx** and click **Execute Package**.  
+1.  In **Solution Explorer**, right-click **Lesson 2.dtsx** and select **Execute Package**.  
   
-    The package will run. You can verify the status of each loop in the Output window, or by clicking on the **Progress** tab. For example, you can see that 1097 lines were added to the destination table from the file Currency_VEB.txt.  
+    The package runs. You can verify the status of each loop in the **Output** window, or by selecting the **Progress** tab. For example, you can see that 1,097 rows were added to the destination table from the file Currency_VEB.txt.  
   
-2.  After the package has completed running, on the **Debug** menu, click **Stop Debugging**.  
+2.  After the package has completed running, on the **Debug** menu, select **Stop Debugging**.  
   
-## Next Lesson  
-[Lesson 5: Add SSIS Package Configurations for the Package Deployment Model](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+## Go to next lesson  
+[Lesson 3: Add logging with SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
-## See Also  
-[Execution of Projects and Packages](~/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
+## See also  
+[Execution of projects and packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   
   

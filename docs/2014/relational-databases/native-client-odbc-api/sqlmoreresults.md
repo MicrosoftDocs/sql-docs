@@ -155,7 +155,7 @@ EXIT:
 ```  
   
 ## See Also  
- [SQLMoreResults Function](http://go.microsoft.com/fwlink/?LinkId=59357)   
+ [SQLMoreResults Function](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -155,7 +155,7 @@ manager: craigg
   
  These visualizations are temporary, and are closed without saving when you exit the session with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Therefore, if you need to export these visualizations to another application for presentation or further analysis, use the **Copy** commands provided in each tab or pane of the viewer interface.  
   
- The Data Mining Add-ins for Excel also provides a Visio template that you can use to represent your models in a Visio diagram and annotate and modify the diagram using Visio tools. For more information, see [Microsoft SQL Server 2008 SP2 Data Mining Add-ins for Microsoft Office 2007](http://go.microsoft.com/fwlink/?LinkID=123146).  
+ The Data Mining Add-ins for Excel also provides a Visio template that you can use to represent your models in a Visio diagram and annotate and modify the diagram using Visio tools. For more information, see [Microsoft SQL Server 2008 SP2 Data Mining Add-ins for Microsoft Office 2007](https://go.microsoft.com/fwlink/?LinkID=123146).  
   
 
   

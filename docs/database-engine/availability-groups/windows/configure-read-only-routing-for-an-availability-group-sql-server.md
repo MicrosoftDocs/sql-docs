@@ -2,7 +2,7 @@
 title: "Configure read-only routing for an availability group"
 description: "Automatically route all read-only traffic to a secondary replica using read-only routing for your Always On availability group - using Transact-SQL (T-SQL), or PowerShell."
 ms.custom: "seodec18"
-ms.date: "08/14/2017"
+ms.date: "02/25/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -60,12 +60,14 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
 -   One or more availability replicas must be configured to accept read-only in the secondary role (that is, to be [readable secondary replicas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)). For more information, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 -   You must be connected to the server instance that hosts the current primary replica.  
+
+-   If using a SQL Login, make sure the account is configured correctly. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group (SQL Server)](logins-and-jobs-for-availability-group-databases.md).
   
 ###  <a name="RORReplicaProperties"></a> What Replica Properties Do you Need to Configure to Support Read-Only Routing?  
   
 -   For each readable secondary replica that is to support read-only routing, you need to specify a *read-only routing URL*. This URL takes effect only when the local replica is running under the secondary role. The read-only routing URL must be specified on a replica-by-replica basis, as needed. Each read-only routing URL is used for routing read-intent connection requests to a specific readable secondary replica. Typically, every readable secondary replica is assigned a read-only routing URL.  
   
-     For information about calculating the read-only routing URL for an availability replica, see [Calculating read_only_routing_url for Always On](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     For information about calculating the read-only routing URL for an availability replica, see [Calculating read_only_routing_url for Always On](https://web.archive.org/web/20170512023255/https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   For each availability replica that you want to support read-only routing when it is the primary replica, you need to specify a *read-only routing list*. A given read-only routing list takes effect only when the local replica is running under the primary role. This list must be specified on a replica-by-replica basis, as needed. Typically, each read-only routing list would contain every read-only routing URL, with the URL of the local replica at the end of the list.  
   
@@ -95,7 +97,7 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
   
     -   To configure read-only routing for the secondary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the SECONDARY_ROLE option, as follows:  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://***system-address***:***port***')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='**TCP**://**_system-address_**:**_port_**')**  
   
          The parameters of the read-only routing URL are as follows:  
   
@@ -113,7 +115,7 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
   
     -   To configure read-only routing for the primary role, in the ADD REPLICA or MODIFY REPLICA WITH clause, specify the PRIMARY_ROLE option, as follows:  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('***server***'** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('**_server_**'** [ **,**...*n* ] **))**  
   
          where, *server* identifies a server instance that hosts a read-only secondary replica in the availability group.  
   
@@ -183,13 +185,13 @@ GO
   
 2.  When adding an availability replica to an availability group, use the **New-SqlAvailabilityReplica** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityReplica** cmdlet. The relevant parameters are as follows:  
   
-    -   To configure read-only routing for the secondary role, specify the **ReadonlyRoutingConnectionUrl"***url***"** parameter.  
+    -   To configure read-only routing for the secondary role, specify the **ReadonlyRoutingConnectionUrl"**_url_**"** parameter.  
   
          where, *url* is the connectivity fully-qualified domain name (FQDN) and port to use when routing to the replica for read-only connections. For example:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          For more information, see [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
-    -   To configure connection access for the primary role, specify **ReadonlyRoutingList"***server***"** [ **,**...*n* ], where *server* identifies a server instance that hosts a read-only secondary replica in the availability group. For example:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   To configure connection access for the primary role, specify **ReadonlyRoutingList"**_server_**"** [ **,**...*n* ], where *server* identifies a server instance that hosts a read-only secondary replica in the availability group. For example:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  You must set the read-only routing URL of a replica before configuring its read-only routing list.  
@@ -277,7 +279,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -    [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
--    [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)  
+-    [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
 
 **Additional content**
 

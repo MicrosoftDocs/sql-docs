@@ -69,7 +69,7 @@ manager: craigg
 ## See Also  
  [Manage Logins in the Publication Access List](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
  [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)   
- [Secure a Replication Topology](../../../relational-databases/replication/security/secure-a-replication-topology.md)   
+ [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)  
   
   

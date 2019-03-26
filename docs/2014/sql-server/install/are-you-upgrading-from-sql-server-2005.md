@@ -8,14 +8,14 @@ ms.technology:
   - "database-engine"
 ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
-author: douglaslms
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Are you upgrading from SQL Server 2005?
   The end of extended support for SQL Server 2005 is one reason to upgrade now to a newer version of SQL Server and to Azure SQL Database. Upgrading enables you to maintain security and compliance, achieve breakthrough performance, and optimize your data platform infrastructure.  
   
- For more info, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
+ For more info, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
 ## Why upgrade?  
   
@@ -67,16 +67,16 @@ manager: craigg
         > [!IMPORTANT]  
         >  You can't upgrade a SQL Server 2005 server to a SQL Server 2014 server in place. You have to install SQL Server 2014, then migrate your SQL Server 2005 databases to the new installation.  
   
-    -   To get the more detailed "Technical Upgrade Guide"  in PDF format, [click here](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf).  
+    -   To get the more detailed "Technical Upgrade Guide"  in PDF format, [click here](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf).  
   
--   For more info, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
+-   For more info, guidance, and tools to plan and automate your upgrade or migration, see [SQL Server 2005 end of support](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/).  
   
 ## Get SQL Server 2014  
  To download an evaluation copy of SQL Server 2014, [click here](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2014).  
   
 ## See Also  
- [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
- [SQL Server 2005 end of support](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
+ [SQL Server 2014](https://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
+ [SQL Server 2005 end of support](https://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
  [Upgrade from SQL Server 2005 to SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

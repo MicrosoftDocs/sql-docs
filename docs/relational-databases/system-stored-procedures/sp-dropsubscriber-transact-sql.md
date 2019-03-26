@@ -37,10 +37,10 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## Arguments  
- [ **@subscriber=** ] **'***subscriber***'**  
+ [ **@subscriber=** ] **'**_subscriber_**'**  
  Is the name of the Subscriber to be dropped. *subscriber* is **sysname**, with no default.  
   
- [ **@reserved=** ] **'***reserved***'**  
+ [ **@reserved=** ] **'**_reserved_**'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@ignore_distributor =** ] *ignore_distributor*  

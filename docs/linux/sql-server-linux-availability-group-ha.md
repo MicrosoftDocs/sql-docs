@@ -53,12 +53,13 @@ This configuration consists of three synchronous replicas. By default, it provid
 
 An availability group with three synchronous replicas can provide read-scale, high availability, and data protection. The following table describes availability behavior. 
 
-| |read-scale|High availability & </br> data protection | Data protection
-|:---|---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|Primary outage | Manual failover. Might have data loss. New primary is R/W. |Automatic failover. New primary is R/W. |Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. 
-|One secondary replica outage  | Primary is R/W. No automatic failover if primary fails. |Primary is R/W. No automatic failover if primary fails as well. | Primary is not available for user transactions. 
-<sup>*</sup> Default
+| |read-scale|High availability & </br> data protection | Data protection|
+|:---|---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
+|Primary outage | Manual failover. Might have data loss. New primary is R/W. |Automatic failover. New primary is R/W. |Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. |
+|One secondary replica outage  | Primary is R/W. No automatic failover if primary fails. |Primary is R/W. No automatic failover if primary fails as well. | Primary is not available for user transactions. |
+
+<sup>\*</sup> Default
 
 <a name="twoSynch"></a>
 
@@ -70,15 +71,16 @@ This configuration enables data protection. Like the other availability group co
 
 An availability group with two synchronous replicas provides read-scale and data protection. The following table describes availability behavior. 
 
-| |read-scale |Data protection
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Primary outage | Manual failover. Might have data loss. New primary is R/W.| Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary.
-|One secondary replica outage  |Primary is R/W, running exposed to data loss. |Primary is not available for user transactions until secondary recovers.
-<sup>*</sup> Default
+| |read-scale |Data protection|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Primary outage | Manual failover. Might have data loss. New primary is R/W.| Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary.|
+|One secondary replica outage  |Primary is R/W, running exposed to data loss. |Primary is not available for user transactions until secondary recovers.|
 
->[!NOTE]
->The preceding scenario is the behavior prior to SQL Server 2017 CU 1. 
+<sup>\*</sup> Default
+
+> [!NOTE]
+> The preceding scenario is the behavior prior to SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 
@@ -93,38 +95,39 @@ An availability group with two (or more) synchronous replicas and a configuratio
 
 In the availability group diagram, a primary replica pushes configuration data to both the secondary replica and the configuration only replica. The secondary replica also receives user data. The configuration only replica does not receive user data. The secondary replica is in synchronous availability mode. The configuration only replica does not contain the databases in the availability group - only metadata about the availability group. Configuration data on the configuration only replica is committed synchronously.
 
->[!NOTE]
->An availabilility group with configuration only replica is new for SQL Server 2017 CU1. All instances of SQL Server in the availability group must be SQL Server 2017 CU1 or later. 
+> [!NOTE]
+> An availabilility group with configuration only replica is new for SQL Server 2017 CU1. All instances of SQL Server in the availability group must be SQL Server 2017 CU1 or later. 
 
 The default value for `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0. The following table describes availability behavior. 
 
-| |High availability & </br> data protection | Data protection
-|:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
-|Primary outage | Automatic failover. New primary is R/W. | Automatic failover. New primary is not available for user transactions. 
-|Secondary replica outage | Primary is R/W, running exposed to data loss (if primary fails and cannot be recovered). No automatic failover if primary fails as well. | Primary is not available for user transactions. No replica to fail over to if primary fails as well. 
-|Configuration only replica outage | Primary is R/W. No automatic failover if primary fails as well. | Primary is R/W. No automatic failover if primary fails as well. 
-|Synchronous secondary + configuration only replica outage| Primary is not available for user transactions. No automatic failover. | Primary is not available for user transactions. No replica to failover to if primary fails as well. 
-<sup>*</sup> Default
+| |High availability & </br> data protection | Data protection|
+|:---|---|---|
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
+|Primary outage | Automatic failover. New primary is R/W. | Automatic failover. New primary is not available for user transactions. |
+|Secondary replica outage | Primary is R/W, running exposed to data loss (if primary fails and cannot be recovered). No automatic failover if primary fails as well. | Primary is not available for user transactions. No replica to fail over to if primary fails as well. |
+|Configuration only replica outage | Primary is R/W. No automatic failover if primary fails as well. | Primary is R/W. No automatic failover if primary fails as well. |
+|Synchronous secondary + configuration only replica outage| Primary is not available for user transactions. No automatic failover. | Primary is not available for user transactions. No replica to failover to if primary fails as well. |
 
->[!NOTE]
->The instance of SQL Server that hosts the configuration only replica can also host other databases. It can also participate as a configuration only database for more than one availability group. 
+<sup>\*</sup> Default
+
+> [!NOTE]
+> The instance of SQL Server that hosts the configuration only replica can also host other databases. It can also participate as a configuration only database for more than one availability group. 
 
 ## Requirements
 
-* All replicas in an availability group with a configuration only replica must be SQL Server 2017 CU 1 or later.
-* Any edition of SQL Server can host a configuration only replica, including SQL Server Express. 
-* The availability group needs at least one secondary replica - in addition to the primary replica.
-* Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to three replicas, SQL Server Enterprise Edition allows up to 9.
+- All replicas in an availability group with a configuration only replica must be SQL Server 2017 CU 1 or later.
+- Any edition of SQL Server can host a configuration only replica, including SQL Server Express. 
+- The availability group needs at least one secondary replica - in addition to the primary replica.
+- Configuration only replicas do not count towards the maximum number of replicas per instance of SQL Server. SQL Server standard edition allows up to three replicas, SQL Server Enterprise Edition allows up to 9.
 
 ## Considerations
 
-* No more than one configuration only replica per availability group. 
-* A configuration only replica cannot be a primary replica.
-* You cannot modify the availability mode of a configuration only replica. To change from a configuration only replica to a synchronous or asynchronous secondary replica, remove the configuration only replica, and add a secondary replica with the required availability mode. 
-* A configuration only replica is synchronous with the availability group metadata. There is no user data. 
-* An availability group with one primary replica and one configuration only replica, but no secondary replica is not valid. 
-* You cannot create an availability group on an instance of SQL Server Express edition. 
+- No more than one configuration only replica per availability group. 
+- A configuration only replica cannot be a primary replica.
+- You cannot modify the availability mode of a configuration only replica. To change from a configuration only replica to a synchronous or asynchronous secondary replica, remove the configuration only replica, and add a secondary replica with the required availability mode. 
+- A configuration only replica is synchronous with the availability group metadata. There is no user data. 
+- An availability group with one primary replica and one configuration only replica, but no secondary replica is not valid. 
+- You cannot create an availability group on an instance of SQL Server Express edition. 
 
 <a name="pacemakerNotify"></a>
 
@@ -144,8 +147,8 @@ For example, An availability group with three synchronous replicas - one primary
 
 In this scenario, two replicas have to respond for the failover to be triggered. For successful automatic failover after a primary replica outage, both secondary replicas need to be up-to-date and respond to the pre-promote notification. If they are online and synchronous, they have the same sequence number. The availability group promotes one of them. If only one of the secondary replicas responds to the pre-promote action, the resource agent cannot guarantee that the secondary that responded has the highest sequence_number, and a failover is not triggered.
 
->[!IMPORTANT]
->When `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0 there is risk of data loss. During a primary replica outage, the resource agent does not automatically trigger a failover. You can either wait for primary to recover, or manually fail over using `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
+> [!IMPORTANT]
+> When `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 0 there is risk of data loss. During a primary replica outage, the resource agent does not automatically trigger a failover. You can either wait for primary to recover, or manually fail over using `FORCE_FAILOVER_ALLOW_DATA_LOSS`.
 
 You can choose to override the default behavior, and prevent the availability group resource from setting `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` automatically.
 
@@ -161,8 +164,8 @@ To revert to default value, based on the availability group configuration run:
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 ```
 
->[!NOTE]
->When you run the preceding commands, the primary is temporarily demoted to secondary, then promoted again. The resource update causes all replicas to stop and restart. The new value for`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is only  set once replicas are restarted, not instantaneously.
+> [!NOTE]
+> When you run the preceding commands, the primary is temporarily demoted to secondary, then promoted again. The resource update causes all replicas to stop and restart. The new value for`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is only  set once replicas are restarted, not instantaneously.
 
 ## See also
 

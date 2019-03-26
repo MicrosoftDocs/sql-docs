@@ -67,7 +67,7 @@ manager: craigg
 |Documented SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
 ## See Also  
- [SQLBrowseConnect Function](http://go.microsoft.com/fwlink/?LinkId=59329)   
+ [SQLBrowseConnect Function](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

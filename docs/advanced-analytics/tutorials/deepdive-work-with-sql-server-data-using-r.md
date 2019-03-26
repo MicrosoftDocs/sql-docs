@@ -1,5 +1,6 @@
 ---
-title: Create a database and permissions (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Create a database and permissions for RevoScaleR tutorials - SQL Server Machine Learning
+description: Tutorial walkthrough on how to create a SQL Server database for R tutorials..
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -41,7 +42,7 @@ This tutorial requires a database for storing data and code. If you are not an a
   
 **Windows user**
   
-```SQL
+```sql
  -- Create server user based on Windows account
 USE master
 GO
@@ -55,7 +56,7 @@ CREATE USER [<user_name>] FOR LOGIN [<DOMAIN>\<user_name>] WITH DEFAULT_SCHEMA=[
 
 **SQL login**
 
-```SQL
+```sql
 -- Create new SQL login
 USE master
 GO
@@ -73,7 +74,7 @@ This tutorial demonstrates R script and DDL operations, including creating and d
 
 This example assumes a SQL login (DDUser01), but if you created a Windows login, use that instead.
 
-```SQL
+```sql
 USE RevoDeepDive
 GO
 
@@ -88,9 +89,9 @@ This section lists some common issues that you might run across in the course of
 
 - **How can I verify database connectivity and check SQL queries?**
   
-    Before you run R code using the server, you might want to check that the database can be reached from your R development environment. Both [Server Explorer in Visual Studio](https://msdn.microsoft.com/library/x603htbk.aspx) and [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) are free tools with powerful database connectivity and management features.
+    Before you run R code using the server, you might want to check that the database can be reached from your R development environment. Both [Server Explorer in Visual Studio](https://docs.microsoft.com/previous-versions/x603htbk(v=vs.140)) and [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) are free tools with powerful database connectivity and management features.
   
-    If you don't want to install additional database management tools, you can create a test connection to the SQL Server instance by using the [ODBC Data Source Administrator](https://msdn.microsoft.com/library/ms714024.aspx) in Control Panel. If the database is configured correctly and you enter the correct user name and password, you should be able to see the database you just created and select it as your default database.
+    If you don't want to install additional database management tools, you can create a test connection to the SQL Server instance by using the [ODBC Data Source Administrator](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) in Control Panel. If the database is configured correctly and you enter the correct user name and password, you should be able to see the database you just created and select it as your default database.
   
     Common reasons for connection failures include remote connections are not enabled for the server, and Named Pipes protocol is not enabled. You can find more troubleshooting tips in this article: [Troubleshoot Connecting to the SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   

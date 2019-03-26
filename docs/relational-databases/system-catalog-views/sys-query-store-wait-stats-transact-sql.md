@@ -40,7 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 |**avg_query_wait_time_ms**|**float**|Average wait duration for the query plan per execution within the aggregation interval and wait category (reported in milliseconds).|
 |**last_query_wait_time_ms**|**bigint**|Last wait duration for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**min_query_wait_time_ms**|**bigint**|Minimum `CPU wait` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
-|**max_query_wait_time_ms**|**bigint**|Maximum '`CPU wait`` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
+|**max_query_wait_time_ms**|**bigint**|Maximum `CPU wait` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**stdev_query_wait_time_ms**|**float**|`Query wait` duration standard deviation for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 
 ## Wait categories mapping table
@@ -78,7 +78,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 
 ## Permissions
 
- Requires the **VIEW DATABASE STATE** permission.  
+ Requires the `VIEW DATABASE STATE` permission.  
   
 ## See Also
 

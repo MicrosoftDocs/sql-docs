@@ -1,41 +1,41 @@
 ---
-title: "Step 3: Testing the Lesson 6 Package | Microsoft Docs"
+title: "Step 3: Test the Lesson 6 package | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
-# Lesson 6-3 - Testing the Lesson 6 Package
-At run time, your package will obtain the value for the Directory property from the VarFolderName parameter.  
+# Lesson 6-3: Test the Lesson 6 package
+At run time, your package gets the value for the **Directory** property from the **VarFolderName** parameter.  
   
-To verify that the package updates the Directory property with the new value during run time, simply execute the package. Because only three sample data files were copied to the new directory, the data flow will run only three times, rather than iterate through the 14 files in the original folder.  
+To verify that the package updates the **Directory** property, execute the package. Because you copied three sample data files to the new directory, the data flow runs three times.
   
-## Checking the Package Layout  
-Before you test the package you should verify that the control and data flows in the Lesson 6 package contains the objects shown in the following diagrams. The control flow should be identical to the control flow in lesson 5. The data flow should be identical to the data flow in lesson 5.  
+## Check the package layout  
+Before you test the package, verify that the control and data flows in the Lesson 6 package are similar to the objects shown in the following diagrams:   
   
 **Control Flow**  
   
-![Control Flow](../integration-services/media/task3lesson6control.jpg "Control Flow")  
+![Control Flow](../integration-services/media/task4lesson2control.gif "Control Flow")  
   
 **Data Flow**  
   
-![Data Flow](../integration-services/media/task3lesson6data.jpg "Data Flow")  
+![Data Flow](../integration-services/media/task5lesson5data.gif "Data Flow")  
   
-### TO test the Lesson 6 tutorial package  
+## Test the Lesson 6 package  
   
-1.  On the Debug menu, click Start Debugging.  
+1.  On the **Debug** menu, select **Start Debugging**.  
   
-2.  After the package has completed running, on the Debug menu, and then click Stop Debugging.  
+2.  After the package has completed running, on the **Debug** menu, select **Stop Debugging**.  
   
-## Next Task in Lesson  
-[Step 4: Deploying the Lesson 6 Package](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+## Go to next task
+[Step 4: Deploy the Lesson 6 package](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   
   

@@ -1,5 +1,5 @@
 ---
-title: MicrosoftML R function library in SQL Server Machine Learning | Microsoft Docs
+title: MicrosoftML R function library - SQL Server Machine Learning Services
 description: Introduction to the MicrosoftML function library in SQL Server 2016 R Services and SQL Server 2017 Machine Learning Services with R.
 ms.prod: sql
 ms.technology: machine-learning
@@ -13,51 +13,131 @@ manager: cgronlun
 # MicrosoftML (R library in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The **MicrosoftML** package is an R function library from Microsoft that provides machine learning algorithms. It is included in several products, including SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (with R), Microsoft Machine Learning Server, Microsoft R Client, and several virtual machine images on Azure. 
+**MicrosoftML** is an R function library from Microsoft providing high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data.
 
 The machine learning APIs were developed by Microsoft for internal machine learning applications, and have been refined over the years to support high performance on big data, using multicore processing and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
 
-In SQL Server 2017, support was added for the Python language. The [microsoftml package for Python](../python/ref-py-microsoftml.md) contains functions equivalent to those in the MicrosoftML package for R. 
+## Full reference documentation
 
-## Machine learning algorithms
+The **MicrosoftML** library is distributed in multiple Microsoft products, but usage is the same whether you get the library in SQL Server or another product. Because the functions are the same, [documentation for individual RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
--  Linear models: `rxFastLinear` is a linear learner based on stochastic dual coordinate ascent that can be used for binary classification or regression. The model supports L1 and L2 regularization.
+## Versions and platforms
 
-- Decision tree and decision forest models: `rxFastTree` is a boosted decision tree algorithm originally known as FastRank, which was developed for use in Bing. It is one of the fastest and most popular learners. Supports binary classification and regression.
+The **MicrosoftML** library is based on R 3.4.3 and available only when you install one of the following Microsoft products or downloads:
 
-  `rxFastForest` is a logistic regression model based on the random forest method. It is similar to the `rxLogit` function in RevoScaleR, but supports L1 and L2 regularization. Supports binary classification and regression.
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
++ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [Microsoft Machine Learning Server 9.2.0 or later](https://docs.microsoft.com/machine-learning-server/)
++ [Microsoft R client](set-up-a-data-science-client.md)
 
-- Logistic regression: `rxLogisticRegression` is a logistic regression model similar to the `rxLogit` function in RevoScaleR, with additional support for L1 and L2 regularization. Supports binary or multiclass classification.
+> [!NOTE]
+> Full product release versions are Windows-only, starting with SQL Server 2017. Linux support for **MicrosoftML** is new in [SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md).
 
-- Neural networks: The `rxNeuralNet` function supports binary classification, multiclass classification, and regression using neural networks. Customizable and supports convoluted networks with GPU acceleration, using a single GPU.
+## Package dependencies
 
-- Anomaly detection.  The `rxOneClassSvm` function is based on the SVM method but is optimized for binary classification in unbalanced data sets.
+Algorithms in **MicrosoftML** depend on [RevoScaleR](ref-r-revoscaler.md) for:
 
-## Transformation functions
++ Data source objects. Data consumed by **MicrosoftML** functions are created using **RevoScaleR** functions.
++ Remote computing (shifting function execution to a remote SQL Server instance). The **RevoScaleR** library provides functions for creating and activating a remote compute context for SQL server.
 
-MicrosoftML includes numerous specialized functions that are useful for transforming data and extracting features.
+In most cases, you will load the packages together whenever you are using **MicrosoftML**.
 
-- Text processing capabilities include the `featurizeText` and `getSentiment` functions. You can count n-grams, detect the language used, or perform text normalization. You can also perform common text cleaning operations such as stopword removal, or generate hashed or count-based features from text.
+## Functions by category
 
-- Feature selection and feature transformation functions, such as  `selectFeatures` or `getSentiment`, analyze data and create features that are most useful for modeling.
+This section lists the functions by category to give you an idea of how each one is used. You can also use the [table of contents](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)  to find functions in alphabetical order.
 
-- Work with categorical variables by using such as `categorical` or `categoricalHash`, which convert categorical values into indexed arrays for better performance.
- 
-- Functions specific to image processing and analytics, such as `extractPixels` or `featurizeImage`, let you get the most information about of images and process images faster.
+<a name="ml-algorithms"></a>
 
-For more information, see [MicrosoftML functions](https://msdn.microsoft.com/microsoft-r/microsoftml/microsoftml).
+## 1-Machine learning algorithms
+
+| Function name | Description |
+|---------------|-------------|
+|[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | An implementation of FastRank, an efficient implementation  of the MART gradient boosting algorithm.  |
+|[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | A random forest and Quantile regression forest  implementation using [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees).  |
+|[rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/logisticregression) | Logistic regression using L-BFGS.  |
+|[rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm) | One class support vector machines.  
+|[rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) | Binary, multi-class, and regression neural net.  |
+|[rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear) | Stochastic dual coordinate ascent optimization for linear binary classification and regression. |
+|[rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble) | Trains a number of models of various kinds to obtain better predictive performance than could be obtained from a single model.|
+
+<a name="ml-transforms"></a>
+
+## 2-Transformation functions
+
+| Function name | Description |
+|---------------|-------------|
+|[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | Transformation to create a single vector-valued column from multiple columns.  |
+|[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | Create indicator vector using categorical transform with dictionary.  |
+|[categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalhash) | Converts the categorical value into an indicator array by hashing. |
+|[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | Produces a bag of counts of sequences of consecutive words, called n-grams, from a given corpus of text. It offers language detection, tokenization, stopwords removing, text normalization and feature generation.  |
+|[getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | Scores natural language text and creates a column that contains probabilities that the sentiments in the text are positive.|
+|[ngram](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/ngram) | allows defining arguments for count-based and hash-based feature extraction.|
+|[selectColumns](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | Selects a set of columns to retrain, dropping all others. |
+|[selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectfeatures) | Selects features from the specified variables using a specified mode.|
+|[loadImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loadimage) | Loads image data.|
+|[resizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/resizeimage) | Resizes an image to a specified dimension using a specified resizing method.|
+|[extractPixels](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/extractpixels) | Extracts the pixel values from an image.|
+|[featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | Featurizes an image using a pre-trained deep neural network model.|
+
+
+## 3-Scoring and training functions
+
+| Function name | Description |
+|---------------|-------------|
+|[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | Runs the scoring library either from SQL Server, using the stored procedure, or from R code enabling real-time scoring to provide much faster prediction performance.|
+|[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | Transforms data from an input data set to an output data set.|
+|[mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mlmodel) | Provides a summary of a Microsoft R Machine Learning model.|
+
+
+## 4-Loss functions for classification and regression
+
+| Function name | Description |
+|---------------|-------------|
+|[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Specifications for exponential classification loss function. | 
+|[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Specifications for log classification loss function.  |
+|[hingeLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Specifications for hinge classification loss function. | 
+|[smoothHingeLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Specifications for smooth hinge classification loss function.  |
+| [poissonLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Specifications for poisson regression loss function. | 
+|[squaredLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | Specifications for squared regression loss function.   |   
+
+## 5-Feature selection functions
+
+| Function name | Description |
+|---------------|-------------|
+|[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | Specification for feature selection in count mode. |
+|[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | Specification for feature selection in mutual information mode. |
+
+## 6-Ensemble modeling functions
+
+| Function name | Description |
+|---------------|-------------|
+|[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | Creates a list containing the function name and arguments to train a Fast Tree model with [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
+|[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | Creates a list containing the function name and arguments to train a Fast Forest model with [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
+|[fastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fastlinear) | Creates a list containing the function name and arguments to train a Fast Linear model with [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
+|[logisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/logisticregression) | Creates a list containing the function name and arguments to train a  Logistic Regression model with [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
+|[oneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/oneclasssvm) | Creates a list containing the function name and arguments to train a OneClassSvm model with [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble).|
+
+## 7-Neural networking functions
+
+| Function name | Description |
+|---------------|-------------|
+|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Specifies optimization algorithms for the [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) machine learning algorithm.|
+
+
+## 8-Package state functions
+
+| Function name | Description |
+|---------------|-------------|
+|[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | An environment object used to store package-wide state. |
+
 
 ## How to use MicrosoftML
 
-This section describes how to locate and load the package. The MicrosoftML package for R is installed by default with Microsoft R Server 9.1.0 and in SQL Server 2017.
+Functions in **MicrosoftML** are callable in R code encapsulated in stored procedures. Most developers build **MicrosoftML** solutions locally, and then migrate finished R code to stored procedures as a deployment exercise.
 
-It is also available for use with SQL Server 2016, if you upgrade the R components for the instance, by using the Microsoft R Server installer as described here: [Upgrade an instance of SQL Server using binding](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+The **MicrosoftML** package for R is installed "out-of-the-box" in SQL Server 2017. It is also available for use with SQL Server 2016 if you upgrade the R components for the instance: [Upgrade an instance of SQL Server using binding](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
-The package is not loaded by default; thus, you must explicitly load the package as part of your code to use its functions.
-
-### Calling MicrosoftML functions from R in SQL Server
-
-In your R code, load the MicrosoftML package and call its functions, like any other package.
+The package is not loaded by default. As a first step, load the **MicrosoftML** package, and then load **RevoScaleR** if you need to use remote compute contexts or related connectivity or data source objects. Then, reference the individual functions you need.
 
 ```R
 library(microsoftml);
@@ -65,11 +145,10 @@ library(RevoScaleR);
 logisticRegression(args);
 ```
 
-The MicrosoftML package is fully integrated with the data processing pipeline provided by the RevoScaleR package. Thus, you can use the MicrosoftML package in any Windows-based compute context, including an instance of SQL Server that has machine learning extensions enabled.
+## See also
 
-However, MicrosoftML requires a reference to RevoScaleR and its functions in order to use remote compute contexts.
-
-## See Also
-
-[R tutorials](../tutorials/sql-server-r-tutorials.md)
-
++ [R tutorials](../tutorials/sql-server-r-tutorials.md)
++ [Learn to use compute contexts](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [R for SQL developers: Train and operationalize a model](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
++ [R reference (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

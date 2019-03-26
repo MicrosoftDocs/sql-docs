@@ -7,9 +7,10 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
+manager: craigg
 manager: craigg
 ---
 # Store JSON documents in SQL Server or SQL Database

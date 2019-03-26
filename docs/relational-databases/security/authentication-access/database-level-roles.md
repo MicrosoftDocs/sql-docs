@@ -1,7 +1,7 @@
 ---
 title: "Database-Level Roles | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/29/2017"
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -41,6 +41,7 @@ manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database-Level Roles
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   To easily manage the permissions in your databases, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides several *roles* which are security principals that group other principals. They are like ***groups*** in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows operating system. Database-level roles are database-wide in their permissions scope.  
@@ -86,8 +87,8 @@ These database roles exist only in the virtual master database. Their permission
 
 |Role name|Description|  
 |--------------------|-----------------|
-**dbmanager** | Can create and delete databases. A member of the dbmanager role that creates a database, becomes the owner of that databasee which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the dbmanager role do not necessarily have permission to access databases that they do not own.
-**loginmanager** | Can create and delete logins in the virtual master database.  
+|**dbmanager** | Can create and delete databases. A member of the dbmanager role that creates a database, becomes the owner of that databasee which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the dbmanager role do not necessarily have permission to access databases that they do not own.|
+|**loginmanager** | Can create and delete logins in the virtual master database.|
 
 > [!NOTE]
 > The server-level principal and the Azure Active Directory Administrator (if configured) have all permissions in the [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 

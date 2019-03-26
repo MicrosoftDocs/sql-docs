@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Turn on Reporting Services events for the SharePoint trace log (ULS)
   Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] servers in SharePoint mode can write [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] events to the SharePoint Unified Logging Service (ULS) trace log. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] specific categories are available on the Monitoring page of SharePoint Central Administration.  
@@ -142,11 +142,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  There are also many tools you can download which will allow you read ULS logs. For example, the [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com/) or [SharePoint ULS Log Viewer](http://ulsviewer.codeplex.com/workitem/list/basic). Both are available on CodePlex.  
   
- For more information on how to use PowerShell to view log data, see [View diagnostic logs (SharePoint Server 2010)](http://technet.microsoft.com/library/ff463595.aspx)  
+ For more information on how to use PowerShell to view log data, see [View diagnostic logs (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx)  
   
 ##  <a name="bkmk_trace"></a> Trace Log Location  
  The Trace Log files are usually found in the folder **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** but you can verify or change the path from the **Diagnostic Logging** page in SharePoint Central Administration.  
   
- For more information and steps to configure diagnostic logging on a SharePoint server in SharePoint 2010 Central Administration, see [Configure diagnostic logging settings (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423).  
+ For more information and steps to configure diagnostic logging on a SharePoint server in SharePoint 2010 Central Administration, see [Configure diagnostic logging settings (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
   
   

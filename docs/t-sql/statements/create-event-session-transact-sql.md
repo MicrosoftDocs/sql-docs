@@ -177,7 +177,7 @@ ON SERVER
  Specifies options to use with the event session.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value.  
+ Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. The maximum amount cannot exceed 2 GB (less than 2048 MB). However, using memory  values in GB range is not recommended.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  Specifies the event retention mode to use for handling event loss.  

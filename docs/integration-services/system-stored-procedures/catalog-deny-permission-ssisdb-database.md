@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.deny_permission (SSISDB Database)
@@ -28,7 +28,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 ## Arguments  
  [ @object_type = ] *object_type*  
- The type of securable object. Securable objects types include folder (`1`), project (`2`), environment (`3`), and operation (`4`).The *object_type* is **smallint***.*  
+ The type of securable object. Securable objects types include folder (`1`), project (`2`), environment (`3`), and operation (`4`).The *object_type* is **smallint**_._  
   
  [ @object_id = ] *object_id*  
  The unique identifier (ID) or primary key of the securable object. The *object_id* is **bigint**.  

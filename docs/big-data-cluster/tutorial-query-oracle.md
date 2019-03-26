@@ -7,6 +7,8 @@ ms.author: jroth
 manager: craigg
 ms.date: 12/12/2018
 ms.topic: tutorial
+ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
@@ -25,11 +27,11 @@ In this tutorial, you learn how to:
 
 ## <a id="prereqs"></a> Prerequisites
 
-* [Deploy a big data cluster on Kubernetes](deployment-guidance.md).
-* [Install Azure Data Studio and the SQL Server 2019 extension](deploy-big-data-tools.md).
-* [Load sample data into the cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big data tools](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
 
 ## Create an Oracle table
 

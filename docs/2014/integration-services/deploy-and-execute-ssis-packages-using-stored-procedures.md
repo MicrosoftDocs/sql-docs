@@ -8,8 +8,8 @@ ms.technology:
   - "integration-services"
 ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Deploy and Execute SSIS Packages using Stored Procedures

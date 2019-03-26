@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)
   A dataset specifies the data that you want to use from a data connection. A dataset is based on a data connection that has been saved in the report as an embedded data source or a reference to a shared data source on a report server. The dataset includes a query that specifies a set of fields. As you drag these fields to the design surface, you create expressions that evaluate to the actual data when the report runs.  
@@ -70,7 +70,7 @@ manager: craigg
   
 -   A result set from any registered and configured [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider.  
   
--   Data from a report model that has been designed for a specific data source, with predefined entities, entity relationships, and fields. For more information, see "**Using Report** Models as Data Sources" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+-   Data from a report model that has been designed for a specific data source, with predefined entities, entity relationships, and fields. For more information, see "**Using Report** Models as Data Sources" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
  When the report is processed at run time, the actual result set returned for a query may have zero or more rows. It is also possible that the columns defined in the query may be missing from the data source. Null values from the data source are mapped to the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] value `System.DBNull.Value`.  
   
@@ -146,7 +146,7 @@ manager: craigg
 |Fields|Fields from the query command<br /><br /> Calculated fields are not part of the dataset definition|View fields, but cannot change them<br /><br /> The field collection is static based on the query at the time you added the shared dataset to the report. To update, click **Refresh Fields** in the **Dataset Properties** dialog box. The actual field collection is whatever the current query in the definition returns.<br /><br /> Add calculated fields|  
 |Dataset|Data options such as case sensitivity|Override data options in the instance|  
   
- For more information about creating datasets, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) and [Reporting Services Tools](../tools/reporting-services-tools.md) in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+ For more information about creating datasets, see [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) and [Reporting Services Tools](../tools/reporting-services-tools.md) in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
 ##  <a name="SortGroupFilter"></a> Filtering, Sorting, and Grouping Data in a Dataset  
  Data in a dataset comes from running a query command on an external data source. The query command syntax for a data extension determines whether data can be sorted or grouped. Sorting and grouping takes place in the query before the data is retrieved for a report. Filtering takes place after the data is retrieved for a report.  
@@ -212,7 +212,7 @@ manager: craigg
  During report processing, when the query for a dataset runs, the result set may contain no rows. In the rendered report, a data region linked to an empty dataset displays as an empty data region. You can specify text to display in the rendered report in place of the empty data region. You can also specify a message for subreports when the queries for all datasets produce no data at run time. For more information, see [Set a No Data Message for a Data Region &#40;Report Builder and SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="Options"></a> Setting Dataset Options  
- For data sources that support international data, you might need to adjust properties for a dataset that affect the sort order, international character properties, and case sensitivity. These properties include case, kanatype, width, accent, and collation. For more information, see "International Considerations for Databases and Database Engine Applications" and "Working with Collations" in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335). For more information about how to set these properties, see [Dataset Properties Dialog Box, Options &#40;Report Builder&#41;](dataset-properties-dialog-box-options-report-builder.md).  
+ For data sources that support international data, you might need to adjust properties for a dataset that affect the sort order, international character properties, and case sensitivity. These properties include case, kanatype, width, accent, and collation. For more information, see "International Considerations for Databases and Database Engine Applications" and "Working with Collations" in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=98335). For more information about how to set these properties, see [Dataset Properties Dialog Box, Options &#40;Report Builder&#41;](dataset-properties-dialog-box-options-report-builder.md).  
   
 ## See Also  
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   

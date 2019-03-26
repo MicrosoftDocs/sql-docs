@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Partition Processing Destination Editor"
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Partition Processing Destination Editor (Connection Manager Page)

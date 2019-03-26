@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "sequence execution options [Integration Services]"
   - "containers [Integration Services], precedence constraints"
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Precedence Constraints
@@ -89,7 +89,7 @@ manager: craigg
      This topic provides information on how to set the default behavior for precedence constraints, and how to connect executables using the default precedence constraints, see.  
   
 ## Related Content  
- Technical article, [SSIS Expression Examples](http://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
+ Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
 ## See Also  
  [Add Expressions to Precedence Constraints](../add-expressions-to-precedence-constraints.md)   

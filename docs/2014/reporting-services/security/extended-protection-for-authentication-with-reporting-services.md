@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Extended Protection for Authentication with Reporting Services
   Extended Protection is a set of enhancements to recent versions of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows operating system. Extended protection enhances how credentials and authentication can be protected by applications. The feature itself does not directly provide protection against specific attacks such as credential forwarding, but it provides an infrastructure for applications such as [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to enforce Extended Protection for Authentication.  
   
- The main authentication enhancements that are part of extended protection are service binding and channel binding. Channel binding uses a channel binding token (CBT), to verify that the channel established between two end points was not compromised. Service binding uses Service Principal Names (SPN) to validate the intended destination of authentication tokens. For more background information about extended protection, see [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922).  
+ The main authentication enhancements that are part of extended protection are service binding and channel binding. Channel binding uses a channel binding token (CBT), to verify that the channel established between two end points was not compromised. Service binding uses Service Principal Names (SPN) to validate the intended destination of authentication tokens. For more background information about extended protection, see [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922).  
   
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supports and enforces Extended Protection that has been enabled in the operating system and configured in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. By default, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication and could therefore benefit from Extended Protection support in the operating system and the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extended protection features.  
   
 > [!IMPORTANT]  
->  By default, Windows does not enable Extended Protection. For information about how to enable Extended Protection in Windows, see [Extended Protection for Authentication](http://go.microsoft.com/fwlink/?LinkID=178431). Both the operating system and client authentication stack must support Extended Protection so that authentication succeeds. For older operating systems you may need to install more than one update for a complete, Extended Protection ready computer. For information on recent developments with Extended Protection, see [updated information with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=183362).  
+>  By default, Windows does not enable Extended Protection. For information about how to enable Extended Protection in Windows, see [Extended Protection for Authentication](https://go.microsoft.com/fwlink/?LinkID=178431). Both the operating system and client authentication stack must support Extended Protection so that authentication succeeds. For older operating systems you may need to install more than one update for a complete, Extended Protection ready computer. For information on recent developments with Extended Protection, see [updated information with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=183362).  
   
 ## Reporting Services Extended Protection Overview  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] supports and enforces extended protection that has been enabled in the operating system. If the operating system does not support extended protection or the feature in the operating system has not been enabled, the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extended protection feature will fail authentication. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Extended Protection also requires an SSL Certificate. For more information, see [Configure SSL Connections on a Native Mode Report Server](configure-ssl-connections-on-a-native-mode-report-server.md)  
@@ -158,9 +158,9 @@ manager: craigg
   
 ## See Also  
  [Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
- [Extended Protection for Authentication Overview](http://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrated Windows Authentication with Extended Protection](http://go.microsoft.com/fwlink/?LinkId=179922)   
- [Microsoft Security Advisory: Extended protection for authentication](http://go.microsoft.com/fwlink/?LinkId=179923)   
+ [Extended Protection for Authentication Overview](https://go.microsoft.com/fwlink/?LinkID=177943)   
+ [Integrated Windows Authentication with Extended Protection](https://go.microsoft.com/fwlink/?LinkId=179922)   
+ [Microsoft Security Advisory: Extended protection for authentication](https://go.microsoft.com/fwlink/?LinkId=179923)   
  [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)   
  [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)   
  [SetExtendedProtectionSettings Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  

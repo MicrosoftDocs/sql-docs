@@ -68,7 +68,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Specifies the number of values supplied by *boundary_value*, not to exceed 14,999. The number of partitions created is equal to *n* + 1. The values do not have to be listed in order. If the values are not in order, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] sorts them, creates the function, and returns a warning that the values are not provided in order. The Database Engine returns an error if *n* includes any duplicate values.  
   
  **LEFT** | RIGHT  
- Specifies to which side of each boundary value interval, left or right, the *boundary_value* [ **,***...n* ] belongs, when interval values are sorted by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in ascending order from left to right. If not specified, LEFT is the default.  
+ Specifies to which side of each boundary value interval, left or right, the *boundary_value* [ **,**_...n_ ] belongs, when interval values are sorted by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in ascending order from left to right. If not specified, LEFT is the default.  
   
 ## Remarks  
  The scope of a partition function is limited to the database that it is created in. Within the database, partition functions reside in a separate namespace from the other functions.  
@@ -101,7 +101,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |**Values**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### B. Creating a RANGE RIGHT partition function on an int column  
- The following partition function uses the same values for *boundary_value* [ **,***...n* ] as the previous example, except it specifies RANGE RIGHT.  
+ The following partition function uses the same values for *boundary_value* [ **,**_...n_ ] as the previous example, except it specifies RANGE RIGHT.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

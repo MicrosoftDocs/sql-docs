@@ -5,9 +5,10 @@ description: This tutorial demonstrates how to ingest data into the data pool of
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
@@ -27,11 +28,11 @@ In this tutorial, you learn how to:
 
 ## <a id="prereqs"></a> Prerequisites
 
-* [Deploy a big data cluster on Kubernetes](deployment-guidance.md).
-* [Install Azure Data Studio and the SQL Server 2019 extension](deploy-big-data-tools.md).
-* [Load sample data into the cluster](#sampledata).
-
-[!INCLUDE [Load sample data](../includes/big-data-cluster-load-sample-data.md)]
+- [Big data tools](deploy-big-data-tools.md)
+   - **kubectl**
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+- [Load sample data into your big data cluster](tutorial-load-sample-data.md)
 
 ## Create an external table in the data pool
 
@@ -43,7 +44,15 @@ The following steps create an external table in the data pool named **web_clicks
 
    ![SQL Server master instance query](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. Create an external table named **web_clickstreams_spark_results** in the data pool. The `SqlDataPool` data source is a special data source type that can be used from the master instance of any big data cluster.
+1. Create an external data source to the data pool if it does not already exist.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. Create an external table named **web_clickstreams_spark_results** in the data pool.
 
    ```sql
    USE Sales
@@ -58,7 +67,7 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 2.2, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 2.4, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Start a Spark streaming job
 
@@ -77,6 +86,8 @@ The next step is to create a Spark streaming job that loads web clickstream data
    ```text
    /jar/mssql-spark-lib-assembly-1.0.jar
    ```
+
+1. In the **Main Class** field, enter `FileStreaming`.
 
 1. In the **Arguments** field, enter the following text, specifying the password to the SQL Server master instance in the `<your_password>` placeholder. 
 
@@ -111,7 +122,7 @@ The following steps show that the Spark streaming job loaded the data from HDFS 
 
    ![Spark job history](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
 
-1. Return to the SQL Server master instance query window that you opened at the beginning of this tutorial..
+1. Return to the SQL Server master instance query window that you opened at the beginning of this tutorial.
 
 1. Run the following query to inspect the ingested data.
 

@@ -5,7 +5,6 @@ ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "configmgr-client"
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 author: craigg-msft
@@ -70,7 +69,7 @@ manager: craigg
 -   RUS - Russian  
   
 ## SQL Server Licensing Options  
- For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=190955) Web site.  
+ For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pricing and licensing options, see the [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) Web site.  
   
 ## See Also  
  [Microsoft SQL Server Privacy Statement](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   

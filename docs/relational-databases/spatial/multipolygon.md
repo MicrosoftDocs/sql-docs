@@ -37,21 +37,21 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   All instances comprising the **MultiPolygon** instance are accepted **Polygon** instances. For more information on accepted **Polygon** instances, see [Polygon](../../relational-databases/spatial/polygon.md).  
   
- The following examples show accepted **MultiPolygon** instances.  
+The following examples show accepted **MultiPolygon** instances.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 ```  
   
- The following example shows a MultiPolygon instance that will throw a `System.FormatException`.  
+The following example shows a MultiPolygon instance that will throw a `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3)))';  
 ```  
   
- The second instance in the MultiPolygon is a LineString instance and not an accepted Polygon instance.  
+The second instance in the MultiPolygon is a LineString instance and not an accepted Polygon instance.  
   
 ### Valid Instances  
  A **MultiPolygon** instance is valid if it is an empty **MultiPolygon** instance or if it meets the following criteria.  
@@ -60,29 +60,31 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
   
 2.  None of the **Polygon** instances comprising the **MultiPolygon** instance overlap.  
   
- The following example shows two valid **MultiPolygon** instances and one invalid **MultiPolygon** instance.  
+The following example shows two valid **MultiPolygon** instances and one invalid **MultiPolygon** instance.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
 DECLARE @g2 geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1, 3 3, 1 3, 1 1)))';  
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` is valid because the two **Polygon** instances touch only at a tangent point. `@g3` is not valid because the interiors of the two **Polygon** instances overlap each other.  
+`@g2` is valid because the two **Polygon** instances touch only at a tangent point. `@g3` is not valid because the interiors of the two **Polygon** instances overlap each other.  
   
 ## Examples  
- The following example shows the creation of a `geometry``MultiPolygon` instance and returns the Well-Known Text (WKT) of the second component.  
+### Example A.
+The following example shows the creation of a `geometry``MultiPolygon` instance and returns the Well-Known Text (WKT) of the second component.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON(((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1)), ((9 9, 9 10, 10 9, 9 9)))');  
 SELECT @g.STGeometryN(2).STAsText();  
 ```  
   
- This example instantiates an empty `MultiPolygon` instance.  
+## Example B.
+This example instantiates an empty `MultiPolygon` instance.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  

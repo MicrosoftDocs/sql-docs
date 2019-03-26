@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "JSON, exporting"
   - "exporting JSON"
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

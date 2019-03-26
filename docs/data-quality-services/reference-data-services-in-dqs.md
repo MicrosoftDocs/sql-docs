@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Reference Data Services in DQS
@@ -53,7 +53,7 @@ manager: craigg
   
 1.  **Configuring the reference data provider details in DQS**: Before you can use reference data in DQS, you must configure reference data service details in DQS.  
   
-    1.  If you are using Marketplace, provide a valid Marketplace account key, browse to the [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) data category in Marketplace, and subscribe to the required providers.  
+    1.  If you are using Marketplace, provide a valid Marketplace account key, browse to the [Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) data category in Marketplace, and subscribe to the required providers.  
   
     2.  If you are using a direct online reference data provider, you must add direct reference data provider details in DQS before you can use it.  
   

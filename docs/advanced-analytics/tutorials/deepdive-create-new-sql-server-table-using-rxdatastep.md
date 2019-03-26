@@ -1,5 +1,6 @@
 ---
-title: Create new SQL Server table using rxDataStep (SQL Server and RevoScaleR tutorial) | Microsoft Docs
+title: Create new SQL Server table using RevoScaleR rxDataStep - SQL Server Machine Learning
+description: Tutorial walkthrough on how to create a SQL Server table using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -51,7 +52,7 @@ The XDF format is an XML standard developed for high-dimensional data and is the
 
 **Results**
 
-```
+```R
 Var 1: ArrDelay, Type: integer, Low/High: (-86, 1490)
 Var 2: CRSDepTime, Type: numeric, Storage: float32, Low/High: (0.0167, 23.9833)
 Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Saturday Sunday

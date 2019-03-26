@@ -1,7 +1,7 @@
 ---
 title: "Upgrade PowerPivot for SharePoint | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: "03/25/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -16,7 +16,7 @@ manager: craigg
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 | SharePoint 2013  
   
- For release notes, see [SQL Server 2014 Release Notes](http://go.microsoft.com/fwlink/?LinkID=296445).  
+ For release notes, see [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
 
   
@@ -47,7 +47,7 @@ manager: craigg
   
  **SharePoint 2010:**  
   
--   If the existing installation is running SharePoint 2010, install the SharePoint 2010 Service Pack 2 before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. For more information, see [Service Pack 2 for Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672). Use the PowerShell command `(Get-SPfarm).BuildVersion.ToString()` to verify the version. To reference the build version to release date, see [SharePoint 2010 Build Numbers](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
+-   If the existing installation is running SharePoint 2010, install the SharePoint 2010 Service Pack 2 before upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. For more information, see [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672). Use the PowerShell command `(Get-SPfarm).BuildVersion.ToString()` to verify the version. To reference the build version to release date, see [SharePoint 2010 Build Numbers](http://www.toddklindt.com/blog/Lists/Posts/Post.aspx?ID=224).  
   
  
   
@@ -68,7 +68,7 @@ manager: craigg
   
 2.  Restart the server.  
   
-3.  Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint add-in (**spPowerPivot.msi**) on each server in the SharePoint 2013 farm to install the data providers. The exception is servers where you ran the SQL Server setup wizard, which also upgrades data providers. For more information, see [Download Microsoft SQL Server 2014 PowerPivot for Microsoft SharePoint 2013,](http://www.microsoft.com/download/details.aspx?id=40737) and  [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Run the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint add-in (**spPowerPivot.msi**) on each server in the SharePoint 2013 farm to install the data providers. The exception is servers where you ran the SQL Server setup wizard, which also upgrades data providers. For more information, see [Install or Uninstall the PowerPivot for SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 4.  **Run the PowerPivot for SharePoint 2013 Configuration** tool on one of the SharePoint application servers to configure the SharePoint farm with the updated solution files that the add-in installed. You cannot use Central SharePoint Administration for this step. For more information, see the following:  
   
@@ -122,7 +122,7 @@ manager: craigg
   
  ![powerpivot for sharepoint 2010 upgrade](../../../2014/sql-server/install/media/as-powepivot-upgrade-flow-sharepoint2010.png "powerpivot for sharepoint 2010 upgrade")  
   
-1.  Download [Service Pack 2 for Microsoft SharePoint 2010](http://www.microsoft.com/download/details.aspx?id=39672) and apply it on all servers in the farm. Verify that SharePoint SP2 installation succeeded. In Central Administration, on the Upgrade and Migration page, open the Check product and patch installation status page to view status messages related to SP2.  
+1.  Download [Service Pack 2 for Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) and apply it on all servers in the farm. Verify that SharePoint SP2 installation succeeded. In Central Administration, on the Upgrade and Migration page, open the Check product and patch installation status page to view status messages related to SP2.  
   
 2.  Verify that the SharePoint 2010 Administration Windows service is running.  
   
@@ -160,7 +160,7 @@ manager: craigg
   
          Click **Yes** to overwrite the workbooks with newer versions. Otherwise, click **No** to return to the home page. Save the workbooks to a different location so that you have a copy, and then return to this step when you are ready to continue.  
   
-         For more information about customizing workbooks used in the dashboard, see [Customizing the PowerPivot Management Dashboard](http://go.microsoft.com/fwlink/?linkID=229639).  
+         For more information about customizing workbooks used in the dashboard, see [Customizing the PowerPivot Management Dashboard](https://go.microsoft.com/fwlink/?linkID=229639).  
   
     5.  Review the actions in the task list and exclude any that you do not want the tool to perform. All actions are included by default. To remove an action, select it in the task list, and then clear the **Include this action in the task list** checkbox on the Parameters page.  
   

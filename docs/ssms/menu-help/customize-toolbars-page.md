@@ -7,8 +7,7 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.customize.toolbars"
+f1_keywords:
   - "sql13.swb.vs.customizetool.f1"
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: "stevestein"
@@ -49,4 +48,3 @@ Specifies whether shortcut key combinations appear in ToolTips for commands on t
   
 **Keyboard**  
 Displays the **Keyboard** pane of the **Options** dialog box, which allows you to change and define shortcut key combinations for commands.  
-  

@@ -6,6 +6,7 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
+helpviewer_keywords: 
   - "query plans [SQL Server]"
   - "execution plans [SQL Server]"
   - "query profiling"
@@ -86,7 +87,12 @@ When running an extended event session that uses the *query_thread_profile* even
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 includes a revised version of lightweight profiling with minimal overhead. Lightweight profiling can also be enabled globally using [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) for the versions stated above in *Applies to*. A new DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) is introduced to return the query execution plan for in-flight requests.
 
-Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, if lightweight profiling is not enabled globally then the new [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) argument **QUERY_PLAN_PROFILE** can be used to enable lightweight profiling at the query level, for any session. When a query that contains this new hint finishes, a new ***query_plan_profile*** extended event is also output that provides an actual execution plan XML similar to the *query_post_execution_showplan* extended event. A sample session using this extended event can be configured as in the below example:
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, if lightweight profiling is not enabled globally then the new [USE HINT query hint](../../t-sql/queries/hints-transact-sql-query.md#use_hint) argument **QUERY_PLAN_PROFILE** can be used to enable lightweight profiling at the query level, for any session. When a query that contains this new hint finishes, a new ***query_plan_profile*** extended event is also output that provides an actual execution plan XML similar to the *query_post_execution_showplan* extended event. 
+
+> [!NOTE]
+> The *query_plan_profile* extended event also leverages lightweight profiling even if the query hint is not used. 
+
+A sample session using the *query_plan_profile* extended event can be configured like the example below:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.chooseadatasource.f1"
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)
@@ -106,7 +106,7 @@ manager: craigg
  Provide the user's password for the database connection when a workgroup information file is associated with the database. However, if the database is protected with a single password for all users, you must provide this value in the **Data Link Properties** dialog box, which is accessed by clicking **Advanced**.  
   
  **Advanced**  
- You may want to specify advanced options, such as the database password or a non-default workgroup information file, by using the **Data Link Properties** dialog box. For more information about OLE DB provider properties, search in the Data Access section of the [MSDN library](http://go.microsoft.com/fwlink/?linkid=62553).  
+ You may want to specify advanced options, such as the database password or a non-default workgroup information file, by using the **Data Link Properties** dialog box. For more information about OLE DB provider properties, search in the Data Access section of the [MSDN library](https://go.microsoft.com/fwlink/?linkid=62553).  
   
 ### Data Source = Flat File Source  
  See the following topics for information about the options for a flat file data source.  

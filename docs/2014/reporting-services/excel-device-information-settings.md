@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Excel Device Information Settings
   The following table lists the device information settings for rendering in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] format.  

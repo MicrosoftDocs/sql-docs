@@ -55,7 +55,7 @@ manager: craigg
   
 8.  In the **Add/Remove Snap-in** window, click **OK**.  
   
-9. Expand **Computer Management (***\<computer name>***)**, and **Services and Applications**.  
+9. Expand **Computer Management (**_\<computer name>_**)**, and **Services and Applications**.  
   
 10. Right-click **SQL Server Configuration Manager**, and then click **New Window from here**.  
   

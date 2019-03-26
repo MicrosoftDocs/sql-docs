@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "variables [Integration Services], about variables"
   - "values [Integration Services]"
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Variables

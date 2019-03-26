@@ -34,13 +34,13 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@subscriber=**] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
   
- [ **@subscriber_db=**] **'***subscriber_db***'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

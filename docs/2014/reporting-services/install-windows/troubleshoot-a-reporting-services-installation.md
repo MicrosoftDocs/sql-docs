@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Troubleshoot a Reporting Services Installation
   If you cannot install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] because of errors that occur during setup, use the instructions in this topic to address the conditions that are most likely to cause installation errors.  
   
- For The latest information regarding issues with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Reporting Services SQL Server 2012 Tips Tricks, and Troubleshooting](http://go.microsoft.com/fwlink/?LinkId=221297)  
+ For The latest information regarding issues with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Reporting Services SQL Server 2012 Tips Tricks, and Troubleshooting](https://go.microsoft.com/fwlink/?LinkId=221297)  
   
- For information about other errors and issues related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] see [Troubleshoot SSRS issues and errors.](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
+ For information about other errors and issues related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] see [Troubleshoot SSRS issues and errors.](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)  
   
- Review the [Online Release Notes](http://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
+ Review the [Online Release Notes](https://go.microsoft.com/fwlink/?linkid=236893) in case the issue you encounter is described in the release notes.  
   
  This topic contains the following information:  
   
@@ -159,9 +159,9 @@ manager: craigg
   
  **Workaround:** This issue is not specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] but is related to the configuration of permissions in your overall SharePoint installation. The following is a list of suggested:  
   
--   Review the SharePoint topic on development environments. [Setting Up the Development Environment for SharePoint 2010 on Windows Vista, Windows 7, and Windows Server 2008](http://msdn.microsoft.com/library/ee554869\(office.14\).aspx)  
+-   Review the SharePoint topic on development environments. [Setting Up the Development Environment for SharePoint 2010 on Windows Vista, Windows 7, and Windows Server 2008](https://msdn.microsoft.com/library/ee554869\(office.14\).aspx)  
   
--   Review the forum post: [Central Administration returns blank page after installation on Windows 7](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   Review the forum post: [Central Administration returns blank page after installation on Windows 7](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   The Service account you are using for SharePoint services such as the SharePoint 2010 Central Administration Service, should have administrative privileges in the local operating system.  
   
@@ -268,7 +268,7 @@ manager: craigg
 ##  <a name="bkmk_additional"></a> Additional Resources  
  The following are additional resources you can review to assist you with trouble shooting issues:  
   
--   TechNet Wiki: Trouble Shooting topics [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint Integrated Mode](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   TechNet Wiki: Trouble Shooting topics [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint Integrated Mode](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
 -   [Forum: SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   

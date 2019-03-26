@@ -133,7 +133,7 @@ manager: craigg
   
     -   **Set Default** Sets the value to the default value that is defined for the column if all foreign key columns for the table have defaults defined for them.  
   
-4.  On the **File** menu, click **Save***table name*.  
+4.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a foreign key**  

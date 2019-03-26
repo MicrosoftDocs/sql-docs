@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Integration Services, data types"
   - "SQL Server Integration Services, data types"
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Data Types
@@ -247,7 +247,7 @@ manager: craigg
  For information on mapping data types in the data flow, see [Working with Data Types in the Data Flow](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## Related Content  
- Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  
+ Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  
   
 ## See Also  
  [Data in Data Flows](data-in-data-flows.md)  

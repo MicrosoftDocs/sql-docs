@@ -103,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   Merge Agent: specify a value for the **-Hostname** parameter at the command line or through an agent profile. For more information about the Merge Agent, see [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). For more information about agent profiles, see [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## Initializing a Subscription to a Publication with Parameterized Filters  
- When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## Using the Appropriate Filtering Options  
  There are two key areas over which you have control when using parameterized filters:  
@@ -168,7 +168,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Articles can exist in only one publication; articles cannot be republished.  
   
--   The publication must allow Subscribers to initiate the snapshot process. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   The publication must allow Subscribers to initiate the snapshot process. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ##### Additional Considerations for Join Filters  
   

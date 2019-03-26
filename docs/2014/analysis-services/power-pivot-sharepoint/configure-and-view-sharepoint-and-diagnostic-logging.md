@@ -80,7 +80,7 @@ manager: craigg
   
  The following instructions include links to popular SharePoint ULS Log Viewers that you can download from Codeplex.  
   
-1.  Go to [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) or [SharePoint ULS Log Viewer](http://go.microsoft.com/fwlink/?LinkId=150052) on the Codeplex site.  
+1.  Go to [SharePoint LogViewer](http://sharepointlogviewer.codeplex.com) or [SharePoint ULS Log Viewer](https://go.microsoft.com/fwlink/?LinkId=150052) on the Codeplex site.  
   
 2.  Click the **Downloads** tab.  
   

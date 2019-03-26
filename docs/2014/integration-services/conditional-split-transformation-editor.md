@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Conditional Split Transformation Editor"
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Conditional Split Transformation Editor

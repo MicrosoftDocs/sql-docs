@@ -1,7 +1,7 @@
 ---
 title: "PowerPivot Availability and Disaster Recovery (SQL Server 2014) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: "03/25/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -42,7 +42,7 @@ manager: craigg
   
 -   **(3)** Excel Calculation Services runs one each application server and allows the service application to run across application servers. Therefore if a single application server goes offline, Excel Calculation Services will still be available.  
   
--   **(4)** and **(6)** Instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins SharePoint mode run on servers outside the SharePoint farm, this includes the Windows Service **SQL Server Analysis Services (POWERPIVOT)**. Each of these instances is registered with Excel Services **(3)**. Excel Services manages load balancing of requests to the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] servers. The [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 architecture enables you to have multiple servers for [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] so you can easily add more instances as needed. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
+-   **(4)** and **(6)** Instances of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ins SharePoint mode run on servers outside the SharePoint farm, this includes the Windows Service **SQL Server Analysis Services (POWERPIVOT)**. Each of these instances is registered with Excel Services **(3)**. Excel Services manages load balancing of requests to the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] servers. The [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 architecture enables you to have multiple servers for [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] so you can easily add more instances as needed. For more information, see [Manage Excel Services data model settings (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
 -   **(5)** The SQL Server databases used for content, configuration, and application databases. This includes the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] service application database. Your DR plan should include the database layer. In this design the databases run on the same server as **(4)** one of the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instances. **(4)** and **(5)** could also be on different servers.  
   
@@ -70,7 +70,7 @@ manager: craigg
 -   **(6)** Some form of SQL Server database backup or redundancy.  
   
 ##  <a name="bkmk_sql_server_technologies"></a> PowerPivot service application database and SQL Server availability and recovery technologies  
- Include the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] service application database in you SharePoint high availability planning. The default name of the database is `DefaultPowerPivotServiceApplicationDB-<GUID>`. The following is a summary of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] availability technologies and recommendations when used with the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] database. For more information, see [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx).  
+ Include the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] service application database in you SharePoint high availability planning. The default name of the database is `DefaultPowerPivotServiceApplicationDB-<GUID>`. The following is a summary of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] availability technologies and recommendations when used with the [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] database. For more information, see [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx).  
   
 ||Comments|  
 |-|--------------|  
@@ -83,20 +83,18 @@ manager: craigg
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log Shipping  
   
- For more information on how to plan a cold standby scenario with [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], see [PowerPivot Disaster Recovery](http://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
+ For more information on how to plan a cold standby scenario with [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], see [PowerPivot Disaster Recovery](https://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).  
   
 ## Verification  
  For guidance and scripts to help you verify a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] deployment before and after a disaster recovery cycle, see [CheckList: Use PowerShell to Verify PowerPivot for SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).  
   
 ##  <a name="bkmk_more_resources"></a> Links to more information  
   
--   [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](http://technet.microsoft.com/library/jj841106.aspx)  
+-   [Supported high availability and disaster recovery options for SharePoint databases (SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx)  
   
--   [Plan for disaster recovery (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
+-   [Plan for disaster recovery (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
   
--   [SQL Server Cloud backup and recovery white paper](http://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
-  
--   [Microsoft® SQL Server Backup to Microsoft Windows® Azure®Tool](http://www.microsoft.com/download/details.aspx?id=40740)  
+-   [Microsoft® SQL Server Backup to Microsoft Windows® Azure®Tool](https://www.microsoft.com/download/details.aspx?id=40740)  
   
  **Community content**  
   

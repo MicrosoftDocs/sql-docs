@@ -24,7 +24,7 @@ manager: craigg
   
 -   Complete a full database consistency check ([DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)).  
   
--   Implement the user actions that are defined in [MSSQLSERVER_824](http://go.microsoft.com/fwlink/?LinkId=81397).  
+-   Implement the user actions that are defined in [MSSQLSERVER_824](https://go.microsoft.com/fwlink/?LinkId=81397).  
   
 ## For More Information  
  [Manage the suspect_pages Table &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md)  

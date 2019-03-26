@@ -1,7 +1,7 @@
 ---
 title: "table_constraint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/11/2018"
+ms.date: "03/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "table_constraint"
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ALTER TABLE table_constraint (Transact-SQL)
@@ -48,7 +48,7 @@ manager: craigg
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -158,7 +158,7 @@ manager: craigg
  Can be specified for FOREIGN KEY constraints and CHECK constraints. If this clause is specified for a constraint, the constraint is not enforced when replication agents perform insert, update, or delete operations.  
 
  CONNECTION
- Specifies the pair of node tables that the given edge constraint is allowed to connect.  
+ Specifies the pair of node tables that the given edge constraint is allowed to connect. ON DELETE specifies what happens to the rows in the edge table, when the nodes which were connected via the edge(s) in this edge table are deleted. 
  
  DEFAULT  
  Specifies the default value for the column. DEFAULT definitions can be used to provide values for a new column in the existing rows of data. DEFAULT definitions cannot be added to columns that have a **timestamp** data type, an IDENTITY property, an existing DEFAULT definition, or a bound default. If the column has an existing default, the default must be dropped before the new default can be added. If a default value is specified for a user-defined type column, the type should support an implicit conversion from *constant_expression* to the user-defined type. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  

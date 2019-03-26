@@ -53,7 +53,7 @@ manager: craigg
     |Define a fill factor|Expand the **Fill Specification** category and type an integer from 0 to 100 in the **Fill factor** box. For more information about fill factors and their uses, see [Specify Fill Factor for an Index](../indexes/specify-fill-factor-for-an-index.md).|  
     |Change the column order|Select **Columns**, and then click the ellipses **(...)** to the right of the property. In the  **Index Columns** dialog box, remove the columns from the primary key. Then add the columns back in the order you want. To remove a column from the key, simply remove the column name from the **Column** name list.|  
   
-4.  On the **File** menu, click **Save***table name*.  
+4.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a primary key**  

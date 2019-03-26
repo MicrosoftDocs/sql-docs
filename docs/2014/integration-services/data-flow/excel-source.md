@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
   - "sources [Integration Services], Excel"
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Excel Source
@@ -39,15 +39,15 @@ manager: craigg
 ## Usage Considerations  
  The Excel Connection Manager uses the [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 and its supporting Excel ISAM (Indexed Sequential Access Method) driver to connect and read and write data to Excel data sources.  
   
- Many existing [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base articles document the behavior of this provider and driver, and although these articles are not specific to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] or its predecessor Data Transformation Services, you may want to know about certain behaviors that can lead to unexpected results. For general information on the use and behavior of the Excel driver, see [HOWTO: Use ADO with Excel Data from Visual Basic or VBA](http://support.microsoft.com/kb/257819).  
+ Many existing [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base articles document the behavior of this provider and driver, and although these articles are not specific to [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] or its predecessor Data Transformation Services, you may want to know about certain behaviors that can lead to unexpected results. For general information on the use and behavior of the Excel driver, see [HOWTO: Use ADO with Excel Data from Visual Basic or VBA](https://support.microsoft.com/kb/257819).  
   
  The following behaviors of the Jet provider with the Excel driver can lead to unexpected results when reading data from an Excel data source.  
   
 -   **Data sources**. The source of data in an Excel workbook can be a worksheet, to which the $ sign must be appended (for example, Sheet1$), or a named range (for example, MyRange). In a SQL statement, the name of a worksheet must be delimited (for example, [Sheet1$]) to avoid a syntax error caused by the $ sign. The Query Builder automatically adds these delimiters. When you specify a worksheet or range, the driver reads the contiguous block of cells starting with the first non-empty cell in the upper-left corner of the worksheet or range. Therefore you cannot have empty rows in the source data, or an empty row between title or header rows and the data rows.  
   
--   **Missing values**. The Excel driver reads a certain number of rows (by default, 8 rows) in the specified source to guess at the data type of each column. When a column appears to contain mixed data types, especially numeric data mixed with text data, the driver decides in favor of the majority data type, and returns null values for cells that contain data of the other type. (In a tie, the numeric type wins.) Most cell formatting options in the Excel worksheet do not seem to affect this data type determination. You can modify this behavior of the Excel driver by specifying Import Mode. To specify Import Mode, add `IMEX=1` to the value of Extended Properties in the connection string of the Excel connection manager in the **Properties** window. For more information, see [PRB: Excel Values Returned as NULL Using DAO OpenRecordset](http://support.microsoft.com/kb/194124).  
+-   **Missing values**. The Excel driver reads a certain number of rows (by default, 8 rows) in the specified source to guess at the data type of each column. When a column appears to contain mixed data types, especially numeric data mixed with text data, the driver decides in favor of the majority data type, and returns null values for cells that contain data of the other type. (In a tie, the numeric type wins.) Most cell formatting options in the Excel worksheet do not seem to affect this data type determination. You can modify this behavior of the Excel driver by specifying Import Mode. To specify Import Mode, add `IMEX=1` to the value of Extended Properties in the connection string of the Excel connection manager in the **Properties** window. For more information, see [PRB: Excel Values Returned as NULL Using DAO OpenRecordset](https://support.microsoft.com/kb/194124).  
   
--   **Truncated text**. When the driver determines that an Excel column contains text data, the driver selects the data type (string or memo) based on the longest value that it samples. If the driver does not discover any values longer than 255 characters in the rows that it samples, it treats the column as a 255-character string column instead of a memo column. Therefore, values longer than 255 characters may be truncated. To import data from a memo column without truncation, you must make sure that the memo column in at least one of the sampled rows contains a value longer than 255 characters, or you must increase the number of rows sampled by the driver to include such a row. You can increase the number of rows sampled by increasing the value of **TypeGuessRows** under the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** registry key. For more information, see [PRB: Transfer of Data from Jet 4.0 OLEDB Source Fails w/ Error](http://support.microsoft.com/kb/281517).  
+-   **Truncated text**. When the driver determines that an Excel column contains text data, the driver selects the data type (string or memo) based on the longest value that it samples. If the driver does not discover any values longer than 255 characters in the rows that it samples, it treats the column as a 255-character string column instead of a memo column. Therefore, values longer than 255 characters may be truncated. To import data from a memo column without truncation, you must make sure that the memo column in at least one of the sampled rows contains a value longer than 255 characters, or you must increase the number of rows sampled by the driver to include such a row. You can increase the number of rows sampled by increasing the value of **TypeGuessRows** under the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** registry key. For more information, see [PRB: Transfer of Data from Jet 4.0 OLEDB Source Fails w/ Error](https://support.microsoft.com/kb/281517).  
   
 -   **Data types**. The Excel driver recognizes only a limited set of data types. For example, all numeric columns are interpreted as doubles (DT_R8), and all string columns (other than memo columns) are interpreted as 255-character Unicode strings (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] maps the Excel data types as follows:  
   
@@ -104,14 +104,14 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [Importing data from 64-bit Excel in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673), on hrvoje.piasevoli.com  
+-   Blog entry, [Importing data from 64-bit Excel in SSIS](https://go.microsoft.com/fwlink/?LinkId=217673), on hrvoje.piasevoli.com  
   
--   Blog entry, [Excel in Integration Services, Part 1 of 3: Connections and Components](http://go.microsoft.com/fwlink/?LinkId=217674), on dougbert.com  
+-   Blog entry, [Excel in Integration Services, Part 1 of 3: Connections and Components](https://go.microsoft.com/fwlink/?LinkId=217674), on dougbert.com  
   
--   Blog entry, [Excel in Integration Services, Part 2 of 3: Tables and Data Types](http://go.microsoft.com/fwlink/?LinkId=217675), on dougbert.com.  
+-   Blog entry, [Excel in Integration Services, Part 2 of 3: Tables and Data Types](https://go.microsoft.com/fwlink/?LinkId=217675), on dougbert.com.  
   
--   Blog entry, [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](http://go.microsoft.com/fwlink/?LinkId=217676), on dougbert.com.  
+-   Blog entry, [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676), on dougbert.com.  
   
--   Blog entry, [Using XLSX files in SSIS](http://go.microsoft.com/fwlink/?LinkId=233704), on sqlservergeeks.com.  
+-   Blog entry, [Using XLSX files in SSIS](https://go.microsoft.com/fwlink/?LinkId=233704), on sqlservergeeks.com.  
   
   

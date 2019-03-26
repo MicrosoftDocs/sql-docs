@@ -1,10 +1,10 @@
 ---
-title: Install SQL Server machine learning R and Python components without internet access | Microsoft Docs
-description: Offline or disconnected Machine Learning R and Python setup on isolated SQL Server instance.
+title: Install R language and Python components without internet access - SQL Server Machine Learning
+description: Offline or disconnected Machine Learning R and Python setup on isolated SQL Server instance behind a network firewall.
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 10/01/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -17,8 +17,8 @@ By default, installers connect to Microsoft download sites to get required and u
 
 In-database analytics consist of database engine instance, plus additional components for R and Python integration, depending on the version of SQL Server. 
 
-+ SQL Server 2017 includes R and Python. 
-+ SQL Server 2016 is R-only. 
++ SQL Server 2017 includes R and Python 
++ SQL Server 2016 is R-only.
 
 On an isolated server, machine learning and R/Python language-specific features are added through CAB files. 
 
@@ -70,7 +70,9 @@ One way to get an .iso file containing the installation media is through [Visual
 
 ## Transfer files
 
-Copy the SQL Server installation media (.iso or .cab) and in-database analytics CAB files to the target computer. Place the CAB files and installation media file in the same folder on the target machine, such as **Downloads** or the setup user's %temp* folder.
+Copy the SQL Server installation media (.iso or .cab) and in-database analytics CAB files to the target computer. Place the CAB files and installation media file in the same folder on the target machine, such as the setup user's %TEMP* folder.
+
+The %TEMP% folder is required for Python CAB files. For R, you can use %TEMP% or set the myrcachedirectory parameter to the CAB path.
 
 The following screenshot shows SQL Server 2017 CAB and ISO files. SQL Server 2016 downloads look different: fewer files (no Python), and the installation media file name is for 2016.
 
@@ -116,9 +118,22 @@ We recommend that you apply the latest cumulative update to both the database en
 
 6. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features.
 
-  ![](media/cumulative-update-feature-selection.png)
+  ![Select features from the feature tree](media/cumulative-update-feature-selection.png "feature list")
 
 5. Continue through the wizard, accepting the licensing terms for R and Python distributions. During installation, you are prompted to choose the folder location containing the updated CAB files.
+
+## Set environment variables
+
+For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+
+1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+
+2. Create a new User or System variable. 
+
+  + Set variable name to `MKL_CBWR`
+  + Set the variable value to `AUTO`
+
+This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
 
 ## Post-install configuration
 

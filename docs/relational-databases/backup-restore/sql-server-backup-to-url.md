@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Backup to URL | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/17/2017"
+ms.date: "03/25/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -13,7 +13,7 @@ ms.author: mikeray
 manager: craigg
 ---
 # SQL Server Backup to URL
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   This topic introduces the concepts, requirements and components necessary to use the Microsoft Azure Blob storage service as a backup destination. The backup and restore functionality are same or similar to when using DISK or TAPE, with a few differences. These differences and a few code examples are included in this topic.  
   
@@ -302,19 +302,19 @@ $policyName = $prefixName + 'policy' # the name of the SAS policy
 $resourceGroupName=$prefixName + 'rg'   
 
 # adds an authenticated Azure account for use in the session   
-Login-AzureRmAccount
+Connect-AzAccount
 
 # set the tenant, subscription and environment for use in the rest of   
-Set-AzureRmContext -SubscriptionName $subscriptionName   
+Set-AzContext -SubscriptionName $subscriptionName   
 
 # create a new resource group - comment out this line to use an existing resource group  
-New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
+New-AzResourceGroup -Name $resourceGroupName -Location $locationName   
 
 # Create a new ARM storage account - comment out this line to use an existing ARM storage account  
-New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
+New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
 
 # Get the access keys for the ARM storage account  
-$accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
+$accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
 
 # Create a new storage account context using an ARM storage account  
 $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].value 
@@ -340,7 +340,7 @@ $tSql | clip
 Write-Host $tSql  
 ```  
 
-After succesfully running the script, copy the `CREATE CREDENTIAL` command to a query tool, connect to an instancance of SQL Server and run the command to create the credential with the Shared Access Signature. 
+After successfully running the script, copy the `CREATE CREDENTIAL` command to a query tool, connect to an instancance of SQL Server and run the command to create the credential with the Shared Access Signature. 
 
 ###  <a name="credential"></a> Create a Credential  
  The following examples create [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials for authentication to the Microsoft Azure Blob storage service. Do one of the following. 

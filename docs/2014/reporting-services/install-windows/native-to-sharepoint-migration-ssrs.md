@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Native to SharePoint Migration (SSRS)
   You cannot upgrade or convert from one [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server mode to another. For example, you cannot upgrade or convert a Native mode report server to SharePoint mode. You cannot copy the report server databases between modes because they use different database schemas. You can migrate the content from one report server to another. The tools you use depend on the type of report server mode that is configured for the source and destination servers.  
@@ -20,7 +20,7 @@ manager: craigg
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services Migration tool  
  The tool supports content migration from a native mode Deployment to a SharePoint mode deployment. The tool does not support migration from SharePoint mode to SharePoint mode or from SharePoint mode to Native mode.  
   
- For more information, see [Reporting Services Migration Tool](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+ For more information, see [Reporting Services Migration Tool](https://www.microsoft.com/download/details.aspx?id=29560) (https://www.microsoft.com/download/details.aspx?id=29560).  
   
 ## Use Script to migrate content  
  If the migration tool does not meet your needs, you can manually migrate the report server data. The following is a summary of the steps to complete to migrate report items from a one [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment ot another. The approach supports either Native or SharePoint mode as the source or destination servers.  

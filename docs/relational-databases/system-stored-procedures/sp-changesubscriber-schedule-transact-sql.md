@@ -43,7 +43,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## Arguments  
- [ **@subscriber=**] **'***subscriber***'**  
+ [ **@subscriber=**] **'**_subscriber_**'**  
  Is the name of the Subscriber. *subscriber* is **sysname**. The name of the Subscriber must be unique in the database, must not already exist, and cannot be NULL.  
   
  [ **@agent_type=**] *type*  
@@ -79,7 +79,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  [ **@active_end_date=**] *active_end_date*  
  Is the date when the distribution task stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with a default of **99991231**, which means December 31, 9999.  
   
- [ **@publisher**= ] **'***publisher***'**  
+ [ **@publisher**= ] **'**_publisher_**'**  
  Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

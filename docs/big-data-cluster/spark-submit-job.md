@@ -7,7 +7,8 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
-ms.date: 12/07/2018
+ms.prod: sql
+ms.technology: big-data-cluster
 ---
 
 # Submit Spark jobs on SQL Server big data clusters in Azure Data Studio
@@ -28,7 +29,7 @@ There are several ways to open Spark job submission dialog. The ways include Das
 
 + Click **New Spark Job** in the dashboard to open the Spark job submission dialog.
 
-    ![Submit menu by clicking dashboard ](./media/submit-spark-job/new-spark-job.png)
+    ![Submit menu by clicking dashboard](./media/submit-spark-job/new-spark-job.png)
  
 + Right-click on the cluster in the Object Explorer and select **Submit Spark Job** from the context menu. Spark job submission dialog will open.  
  

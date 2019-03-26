@@ -222,7 +222,7 @@ manager: craigg
   
  Installing the provider will allow workbooks that reference MSOLAP.4 in the data connection string to work as expected on a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot server. Installing the SQL Server 2008 R2 OLE DB provider is an alternative approach to upgrading workbooks that were created in an earlier version of PowerPivot for Excel.  
   
- You can download the provider from [SQL Server 2008 R2 Feature Pack page](http://go.microsoft.com/fwlink/?LinkId=159570). Look for **Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**, and then download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program.  
+ You can download the provider from [SQL Server 2008 R2 Feature Pack page](https://go.microsoft.com/fwlink/?LinkId=159570). Look for **Microsoft® Analysis Services OLE DB Provider for Microsoft® SQL Server® 2008 R2**, and then download the x64 Package of the `SQLServer2008_ASOLEDB10.msi` installation program.  
   
  For more information about installing the provider, including verification steps, see [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   

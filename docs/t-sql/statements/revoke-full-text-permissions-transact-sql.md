@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], permissions"
   - "full-text stoplist [SQL Server], permissions"
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # REVOKE Full-Text Permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   
- ON FULLTEXT CATALOG **::***full-text_catalog_name*  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Specifies the full-text catalog on which the permission is being revoked. The scope qualifier **::** is required.  
   
- ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Specifies the full-text stoplist on which the permission is being revoked. The scope qualifier **::** is required.  
   
  *database_principal*  

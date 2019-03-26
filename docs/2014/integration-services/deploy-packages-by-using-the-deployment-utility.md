@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "dependencies [Integration Services]"
   - "deploying packages [Integration Services], installing"
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Deploy Packages by Using the Deployment Utility

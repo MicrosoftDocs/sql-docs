@@ -8,8 +8,8 @@ ms.technology:
   - "integration-services"
 ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect to Integration Services

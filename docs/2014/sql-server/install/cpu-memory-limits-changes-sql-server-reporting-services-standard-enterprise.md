@@ -21,7 +21,7 @@ manager: craigg
 ### Description  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services Standard and Enterprise supports a maximum of 64 gigabytes of system memory. You may need to reconfigure your current system settings to align with the new limits.  
   
- For more information about CPU and memory limits for other editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md), and [Memory Supported by the Editions of SQL Server](http://go.microsoft.com/fwlink/?LinkId=212633).  
+ For more information about CPU and memory limits for other editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md), and [Memory Supported by the Editions of SQL Server](https://go.microsoft.com/fwlink/?LinkId=212633).  
   
 ## Corrective Action  
  You may need to reconfigure your current system settings to align with the new CPU and memory limits. For more information, see [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql), and [Server Memory Server Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  

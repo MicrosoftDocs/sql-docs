@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "incremental loads [SQL Server change data capture]"
   - "change data capture [SQL Server], Integration Services and"
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Change Data Capture (SSIS)
@@ -89,9 +89,9 @@ manager: craigg
 ## Samples of Change Data Capture Packages  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides two samples that demonstrate how to use change data capture in packages. For more information, see the following topics:  
   
--   [Readme_Change Data Capture for Specified Interval Package Sample](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Readme_Change Data Capture for Specified Interval Package Sample](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Readme_Change Data Capture since Last Request Package Sample](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Readme_Change Data Capture since Last Request Package Sample](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## Related Tasks  
   
@@ -112,6 +112,6 @@ manager: craigg
 -   [Perform an Incremental Load of Multiple Tables](perform-an-incremental-load-of-multiple-tables.md)  
   
 ## Related Content  
- Blog entry, [SSIS Design Pattern - Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
+ Blog entry, [SSIS Design Pattern - Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
   
   

@@ -111,7 +111,7 @@ manager: craigg
      Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Data Directories page to specify non-default installation directories. To install to default directories, click **Next**.  
   
     > [!IMPORTANT]  
-    >  If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Further, installing SQL Server with the Data Directories on the root folder of a drive or a mount point will fail. For more information, please review [SQL Server support for mounted volumes.](http://support.microsoft.com/kb/819546/en-us)  
+    >  If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Further, installing SQL Server with the Data Directories on the root folder of a drive or a mount point will fail. For more information, please review [SQL Server support for mounted volumes.](https://support.microsoft.com/kb/819546/en-us)  
   
      For more information, see [Database Engine Configuration - Data Directories](../../sql-server/install/database-engine-configuration-data-directories.md).  
   
@@ -124,7 +124,7 @@ manager: craigg
      Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration - Data Directories page to specify non-default installation directories. To install to default directories, click **Next**.  
   
     > [!IMPORTANT]  
-    >  If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Further, installing SQL Server with the Data Directories on the root folder of a drive or a mount point will fail. For more information, please review [SQL Server support for mounted volumes.](http://support.microsoft.com/kb/819546/en-us)  
+    >  If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Further, installing SQL Server with the Data Directories on the root folder of a drive or a mount point will fail. For more information, please review [SQL Server support for mounted volumes.](https://support.microsoft.com/kb/819546/en-us)  
   
      For more information, see [Analysis Services Configuration - Data Directories](../../sql-server/install/analysis-services-configuration-data-directories.md).  
   

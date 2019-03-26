@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwdestination.advanced.f1"
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SAP BW Destination Editor (Advanced Page)

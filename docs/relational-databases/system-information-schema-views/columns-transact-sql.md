@@ -26,12 +26,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Returns one row for each column that can be accessed by the current user in the current database.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA***.**view_name*.  
+ To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA**_.view_name_.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(**128**)**|Table qualifier.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of schema that contains the table.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**TABLE_NAME**|**nvarchar(**128**)**|Table name.|  
 |**COLUMN_NAME**|**nvarchar(**128**)**|Column name.|  
 |**ORDINAL_POSITION**|**int**|Column identification number.|  
@@ -51,7 +51,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**COLLATION_SCHEMA**|**nvarchar(**128**)**|Always returns NULL.|  
 |**COLLATION_NAME**|**nvarchar(**128**)**|Returns the unique name for the collation if the column is character data or **text** data type. Otherwise, NULL is returned.|  
 |**DOMAIN_CATALOG**|**nvarchar(**128**)**|If the column is an alias data type, this column is the database name in which the user-defined data type was created. Otherwise, NULL is returned.|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|If the column is a user-defined data type, this column returns the name of the schema of the user-defined data type. Otherwise, NULL is returned.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of a data type. The only reliable way to find the schema of a type is to use the TYPEPROPERTY function.|  
+|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|If the column is a user-defined data type, this column returns the name of the schema of the user-defined data type. Otherwise, NULL is returned.<br /><br /> **&#42;&#42; Important &#42;&#42;** Do not use INFORMATION_SCHEMA views to determine the schema of a data type. The only reliable way to find the schema of a type is to use the TYPEPROPERTY function.|  
 |**DOMAIN_NAME**|**nvarchar(**128**)**|If the column is a user-defined data type, this column is the name of the user-defined data type. Otherwise, NULL is returned.|  
   
 ## Remarks  

@@ -69,7 +69,7 @@ manager: craigg
  For DMX OPENQUERY statements, local cubes, and mining models, the credentials of the current user will be used even if you choose the service account option. The service account option is not supported for out-of-line bindings.  
   
 > [!NOTE]  
->  Errors can occur when processing a data mining model from a cube if the service account does not have administrator permissions on the Analysis Services instance. For more information, see [Mining Structure: Issue while Processing when DataSource is OLAP Cube](http://go.microsoft.com/fwlink/?LinkId=251610).  
+>  Errors can occur when processing a data mining model from a cube if the service account does not have administrator permissions on the Analysis Services instance. For more information, see [Mining Structure: Issue while Processing when DataSource is OLAP Cube](https://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Use the credentials of the current user**  
  Select this option to have the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object use the security credentials of the current user for out-of-line bindings, DMX OPENQUERY, local cubes, and mining models.  

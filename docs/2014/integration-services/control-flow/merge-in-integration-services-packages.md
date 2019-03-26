@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "MERGE statement [SQL Server]"
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # MERGE in Integration Services Packages
@@ -29,7 +29,7 @@ manager: craigg
   
  The remainder of this topic discusses some additional uses for the MERGE statement.  
   
- For a sample destination component that supports the use of the MERGE statement, see the CodePlex community sample, [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215).  
+ For a sample destination component that supports the use of the MERGE statement, see the CodePlex community sample, [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215).  
   
 ## Using MERGE  
  Typically, you use the MERGE statement when you want to apply changes that include inserts, updates, and deletions from one table to another table. Prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], this process required both a Lookup transformation and multiple OLE DB Command transformations. The Lookup transformation performed a row-by-row lookup to determine whether each row was new or changed. The OLE DB Command transformations then performed the necessary INSERT, UPDATE, and DELETE operations. Beginning in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], a single MERGE statement can replace both the Lookup transformation and the corresponding OLE DB Command transformations.  

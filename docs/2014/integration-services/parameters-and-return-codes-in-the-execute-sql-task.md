@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "parameterized SQL statements [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Parameters and Return Codes in the Execute SQL Task
@@ -152,7 +152,7 @@ manager: craigg
 |Connection type|EXEC syntax|  
 |---------------------|-----------------|  
 |EXCEL and OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
 |ADO|If IsQueryStoredProcedure is set to `False`, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> If IsQueryStoredProcedure is set to `True`, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|If IsQueryStoredProcedure is set to `False`, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> If IsQueryStoredProcedure is set to `True`, `uspGetBillOfMaterials`|  
   
@@ -170,7 +170,7 @@ manager: craigg
 |Connection type|EXEC syntax|  
 |---------------------|-----------------|  
 |EXCEL and OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
 |ADO|If IsQueryStoreProcedure is set to `False`, `EXEC ? = myStoredProcedure 1`<br /><br /> If IsQueryStoreProcedure is set to `True`, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure is set to `True`.<br /><br /> `myStoredProcedure`|  
   
@@ -192,9 +192,9 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [Stored procedures with output parameters](http://go.microsoft.com/fwlink/?LinkId=157786), on blogs.msdn.com  
+-   Blog entry, [Stored procedures with output parameters](https://go.microsoft.com/fwlink/?LinkId=157786), on blogs.msdn.com  
   
--   CodePlex sample, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com  
+-   CodePlex sample, [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com  
   
 ## See Also  
  [Execute SQL Task](control-flow/execute-sql-task.md)   

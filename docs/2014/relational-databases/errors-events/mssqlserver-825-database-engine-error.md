@@ -27,7 +27,7 @@ manager: craigg
 |Message Text|A read of the file '%ls' at offset %#016I64x succeeded after failing %d time(s) with error: %ls. Additional messages in the SQL Server error log and system event log may provide more detail. This error condition threatens database integrity and must be corrected. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors; for more information, see SQL Server Books Online.|  
   
 ## Explanation  
- This message indicates that the read operation had to be reissued at least one time, and indicates a major problem with the disk hardware. This message does not currently indicate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] problem, but the disk problem could cause data loss or database corruption if it is not resolved. The system event log may contain related events that help to diagnose the problem. For more information about I/O errors, see [Microsoft SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?LinkId=69370).  
+ This message indicates that the read operation had to be reissued at least one time, and indicates a major problem with the disk hardware. This message does not currently indicate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] problem, but the disk problem could cause data loss or database corruption if it is not resolved. The system event log may contain related events that help to diagnose the problem. For more information about I/O errors, see [Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370).  
   
 ## User Action  
  The following actions may help you identify and resolve the underlying problem:  

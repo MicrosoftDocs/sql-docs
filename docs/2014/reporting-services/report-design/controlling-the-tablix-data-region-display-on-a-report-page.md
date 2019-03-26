@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Controlling the Tablix Data Region Display on a Report Page (Report Builder and SSRS)
   This topic describes properties for a tablix data region that you can modify to change the way a tablix data region appears when you view it in a report.  

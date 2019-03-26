@@ -5,9 +5,10 @@ description: Learn how to configure minikube for SQL Server 2019 big data cluste
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
@@ -17,10 +18,9 @@ This article describes how to configure **minikube** on a single machine for SQL
 
 ## Prerequisites
 
-- To run a Minikube cluster for SQL Server 2019 (preview) for big data clusters, it is recommended that your machine have at least 32 GB of RAM.
+- 32 GB of memory (recommended 64 GB).
 
-   > [!TIP] 
-   > If the machine has only the minimum recommended memory, then configure the deployment of the cluster to have only 1 compute pool instance, 1 data pool instance, and 1 storage pool instance. This configuration should only be used for evaluation environments where the durability and availability of the data is unimportant. See the [deployment documentation](deployment-guidance.md#define-environment-variables) for more information on the environment variables to set to configure the number of replicas for data pools, compute pools, and storage pools.
+- If the machine has only the minimum recommended memory, then configure the deployment of the cluster to have only 1 compute pool instance, 1 data pool instance, and 1 storage pool instance. This configuration should only be used for evaluation environments where the durability and availability of the data is unimportant. See the [deployment documentation](deployment-guidance.md#env) for more information on the environment variables to set to configure the number of replicas for data pools, compute pools, and storage pools.
 
 - VT-x or AMD-v virtualization must be enabled in your computer's BIOS.
 

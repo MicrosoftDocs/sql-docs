@@ -7,8 +7,6 @@ ms.prod_service: "sql-tools"
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.openwith"
 helpviewer_keywords: 
   - "Open With dialog box"
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
@@ -41,4 +39,3 @@ To specify a default editor (and language encoding options, if applicable) for t
   
 ## See Also  
 [Associating File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
-  

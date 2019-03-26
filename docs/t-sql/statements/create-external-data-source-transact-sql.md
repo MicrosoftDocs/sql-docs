@@ -162,7 +162,7 @@ For Azure Data Lake Store, location specifies the URI for connecting to your Azu
 
 
 **SHARD_MAP_MANAGER**   
- For SHARD_MAP_MANAGER, specifies the logical server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
+ For SHARD_MAP_MANAGER, specifies the SQL Database server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -183,7 +183,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 For a step-by-step tutorial, see [Getting started with elastic queries for sharding (horizontal partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
 **RDBMS**   
-For RDBMS, specifies the logical server name of the remote database in Azure SQL Database.  
+For RDBMS, specifies the SQL Database server name of the remote database in Azure SQL Database.  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -203,7 +203,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 For a step-by-step tutorial on RDBMS, see [Getting started with cross-database queries (vertical partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-This type is used for bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage and container. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL. `CREADENTIAL` is required if the blob object is not public. For example: 
+This type is used for bulk operations only, `LOCATION` must be valid the URL to Azure Blob storage and container. Do not put **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL. `CREDENTIAL` is required if the blob object is not public. For example: 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (	TYPE = BLOB_STORAGE, 
@@ -399,7 +399,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## Examples: Azure SQL Database
 
 ### E. Create a Shard map manager external data source
-To create an external data source to reference a SHARD_MAP_MANAGER, specify the logical server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
+To create an external data source to reference a SHARD_MAP_MANAGER, specify the SQL Database server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -419,7 +419,7 @@ WITH (
 ```
 
 ### F. Create an RDBMS external data source
-To create an external data source to reference a RDBMS, specifies the logical server name of the remote database in Azure SQL Database.
+To create an external data source to reference a RDBMS, specifies the SQL Database server name of the remote database in Azure SQL Database.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -440,7 +440,7 @@ WITH (
 ## Examples: Azure SQL Data Warehouse
 
 ### G. Create external data source to reference Azure Data Lake Store
-Azure Data lake Store connectivity is based on your ADLS URI and your Azure Acitve directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+Azure Data lake Store connectivity is based on your ADLS URI and your Azure Active directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.

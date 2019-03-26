@@ -63,7 +63,7 @@ manager: craigg
   
 3.  Right-click the **Server Roles** folder and select **New Server Role...**.  
   
-4.  In the **New Server Role -***server_role_name* dialog box, on the **General** page, enter a name for the new server role in the **Server role name** box.  
+4.  In the **New Server Role -**_server_role_name_ dialog box, on the **General** page, enter a name for the new server role in the **Server role name** box.  
   
 5.  In the **Owner** box, enter the name of the server principal that will own the new role. Alternately, click the ellipsis **(...)** to open the **Select Server Login or Role** dialog box.  
   

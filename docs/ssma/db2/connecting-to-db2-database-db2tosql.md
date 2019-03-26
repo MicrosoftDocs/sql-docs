@@ -101,7 +101,7 @@ Metadata about the DB2 database is not automatically refreshed. The metadata in 
   
 ## Next Step  
   
--   The next step in the migration process is to [Connecting to SQL Server](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e).  
+-   The next step in the migration process is to [Connecting to SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e).  
   
 ## See Also  
 [Migrating DB2 Databases to SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Specify Mark as Date Table| Microsoft Docs"
+title: "Specify Mark as Date Table in Analysis Services tabular models| Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -46,6 +46,6 @@ manager: kfile
   
 ## See Also  
  [Calculations](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [Time-intelligence Functions (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [Time-intelligence Functions (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   

@@ -5,15 +5,14 @@ ms.date: "03/17/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store object"
   - "SQL Server:Query Store"
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Query Store Object

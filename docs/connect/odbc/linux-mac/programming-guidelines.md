@@ -15,28 +15,28 @@ manager: craigg
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
+The programming features of the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on macOS and Linux are based on ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client is based on ODBC in Windows Data Access Components ([ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 An ODBC application can use Multiple Active Result Sets (MARS) and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specific features by including `/usr/local/include/msodbcsql.h` after including the unixODBC headers (`sql.h`, `sqlext.h`, `sqltypes.h`, and `sqlucode.h`). Then use the same symbolic names for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-specific items that you would use in your Windows ODBC applications.
 
 ## Available Features  
-The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)) are valid when using the ODBC driver on macOS and Linux:  
+The following sections from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client documentation for ODBC ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) are valid when using the ODBC driver on macOS and Linux:  
 
--   [Communicating with SQL Server (ODBC)](http://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Communicating with SQL Server (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
 -   [Connection and query timeout support](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [Cursors](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [Date/Time Improvements (ODBC)](http://msdn.microsoft.com/library/bb677319.aspx)  
--   [Executing Queries (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
+-   [Date/Time Improvements (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
+-   [Executing Queries (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
 -   [Handling Errors and Messages](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Kerberos authentication](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
--   [Large CLR User-Defined Types (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
--   [Performing Transactions (ODBC) (except distributed transactions)](http://msdn.microsoft.com/library/ms131706.aspx)  
--   [Processing Results (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
+-   [Large CLR User-Defined Types (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
+-   [Performing Transactions (ODBC) (except distributed transactions)](https://msdn.microsoft.com/library/ms131706.aspx)  
+-   [Processing Results (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Running Stored Procedures](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
--   [Sparse Columns Support (ODBC)](http://msdn.microsoft.com/library/cc280357.aspx)
+-   [Sparse Columns Support (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
 -   [SSL encryption](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Table Valued Parameters](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [UTF-8 and UTF-16 for command and data API](http://msdn.microsoft.com/library/ff878241.aspx)
+-   [UTF-8 and UTF-16 for command and data API](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [Using Catalog Functions](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## Unsupported Features
@@ -52,7 +52,7 @@ The following features are not available in this release of the ODBC driver on m
 -   Distributed Transactions (SQL_ATTR_ENLIST_IN_DTC attribute is not supported)  
 -   Database Mirroring  
 -   FILESTREAM  
--   Profiling ODBC driver performance, discussed in [SQLSetConnectAttr](http://go.microsoft.com/fwlink/?LinkId=234099), and the following performance-related connection attributes:  
+-   Profiling ODBC driver performance, discussed in [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099), and the following performance-related connection attributes:  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
@@ -60,7 +60,7 @@ The following features are not available in this release of the ODBC driver on m
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
 -   SQLBrowseConnect  
--   C interval types such as SQL_C_INTERVAL_YEAR_TO_MONTH (documented in [Data Type Identifiers and Descriptors](http://msdn.microsoft.com/library/ms716351(VS.85).aspx))
+-   C interval types such as SQL_C_INTERVAL_YEAR_TO_MONTH (documented in [Data Type Identifiers and Descriptors](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
 -   The SQL_CUR_USE_ODBC value of the SQL_ATTR_ODBC_CURSORS attribute of the SQLSetConnectAttr function.
 
 ## Character Set Support
@@ -117,7 +117,7 @@ In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates
 1.  You can make a dedicated administrator connection (DAC) using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] authentication and **host,port**. A member of the Sysadmin role first needs to discover the DAC port. See [Diagnostic Connection for Database Administrators](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port) to discover how. For example, if the DAC port were 33000, you could connect to it with `sqlcmd` as follows:  
 
     ```
-    sqlcmd –U <user> -P <pwd> -S <host>,33000
+    sqlcmd -U <user> -P <pwd> -S <host>,33000
     ```
 
     > [!NOTE]  

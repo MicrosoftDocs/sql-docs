@@ -8,8 +8,8 @@ ms.technology:
   - "integration-services"
 ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure the Integration Services Service as a Cluster Resource
@@ -73,7 +73,7 @@ manager: craigg
   
 4.  On the **File** menu, point to **New**, and then click **Resource**.  
   
-5.  On the **New Resource** page of the Resource Wizard, type a name and select **“Generic Service”** as the **Service Type**. Do not change the value of **Group**. Click **Next**.  
+5.  On the **New Resource** page of the Resource Wizard, type a name and select **"Generic Service"** as the **Service Type**. Do not change the value of **Group**. Click **Next**.  
   
 6.  On the **Possible Owners** page, add or remove the nodes of the cluster as the possible owners of the resource. Click **Next**.  
   

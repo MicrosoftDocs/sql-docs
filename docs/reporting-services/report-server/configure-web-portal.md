@@ -22,7 +22,7 @@ To use the web portal, you must satisfy the following prerequisites:
 
 - You must have a minimally configured report server. For more information about minimally configuring a report server, see [Configure a Report Server](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
 
-- Your report server must run in native mode. You cannot use the web portal with a report server that is configured for SharePoint integrated mode. In SQL Server 2012 you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items to the new report server. This process is typically referred to as a ‘migration’. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
+- Your report server must run in native mode. You cannot use the web portal with a report server that is configured for SharePoint integrated mode. In SQL Server 2012 you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items to the new report server. This process is typically referred to as a 'migration'. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
 - You must also have Internet Explorer 11 or later with scripting enabled. For more information, see [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).
 
@@ -75,7 +75,7 @@ You can create a custom brand package to alter the colors used for the web porta
 
 2. Open Internet Explorer.
 
-3. Enter the web portal URL. By default, it is http://\<**your-server-name**>/reports, but if you installed Reporting Services as a named instance, the default URL will be http://\<**your-server-name**>/reports\<**_instancename**>.
+3. Enter the web portal URL. By default, it is https://\<**your-server-name**>/reports, but if you installed Reporting Services as a named instance, the default URL will be https://\<**your-server-name**>/reports\<**_instancename**>.
 
 4. Select **Site Settings**.
 
@@ -94,4 +94,4 @@ You can create a custom brand package to alter the colors used for the web porta
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Configure a Native Mode Report Server for Local Administration](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
- More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

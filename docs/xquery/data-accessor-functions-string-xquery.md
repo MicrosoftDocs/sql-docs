@@ -5,8 +5,7 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -55,7 +54,7 @@ fn:string($arg as item()?) as xs:string
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
  /PD:ProductDescription/PD:Features  
 ')  
 FROM Production.ProductModel  
@@ -65,9 +64,9 @@ WHERE ProductModelID=19
  This is the partial result:  
   
 ```  
-<PD:Features xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+<PD:Features xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
    These are the product highlights.   
-   <p1:Warranty xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+   <p1:Warranty xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     <p1:WarrantyPeriod>3 years</p1:WarrantyPeriod>  
     <p1:Description>parts and labor</p1:Description>  
    </p1:Warranty>  
@@ -79,7 +78,7 @@ WHERE ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
  string(/PD:ProductDescription[1]/PD:Features[1])  
 ')  
 FROM Production.ProductModel  

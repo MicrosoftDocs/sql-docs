@@ -66,7 +66,7 @@ In some cases, the topic is used by a product or service, but all of the argumen
  
 ## Get help from the MSDN forum  
   
-For online help, see the [MSDN Transact-SQL Forum](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql).  
+For online help, see the [MSDN Transact-SQL Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql).  
  
 ## See other language references
 

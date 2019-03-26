@@ -13,9 +13,11 @@
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
+        "ZonePivotGroups": "Toc",
         "Conceptual": "Content",
         "ManagedReference": "Content",
-        "RestApi": "Content"
+        "RestApi": "Content",
+        "LandingData": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
@@ -48,6 +50,10 @@
     }
   ],
   "branch_target_mapping": {
+    "release-sqlseattle": [
+      "Publish",
+      "PDF"
+    ],
     "live": [
       "Publish",
       "PDF"
@@ -60,6 +66,8 @@
   "need_generate_pdf_url_template": true,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
+  "enable_branch_build_custom_validation": true,
+  "enable_pull_request_custom_validation": true,
   "Targets": {
     "Pdf": {
       "template_folder": "_themes.pdf"

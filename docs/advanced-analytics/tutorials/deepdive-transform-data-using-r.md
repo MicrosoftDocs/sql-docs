@@ -1,39 +1,38 @@
 ---
-title: Transform data using R (SQL and R deep dive)| Microsoft Docs
+title: Transform data using RevoScaleR rxDataStep - SQL Server Machine Learning
+description: Tutorial walkthrough on how to transform data using the R language on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/27/2018  
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ---
-# Transform data using R (SQL and R deep dive)
+# Transform data using R (SQL Server and RevoScaleR tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article is part of the Data Science Deep Dive tutorial, on how to use [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-The **RevoScaleR** package provides multiple functions for transforming data at various stages of your analysis:
+In this lesson, learn about the **RevoScaleR** functions for transforming data at various stages of your analysis.
 
-- **rxDataStep** can be used to create and transform subsets of data.
+> [!div class="checklist"]
+> * Use **rxDataStep** to create and transform a data subset
+> * Use **rxImport** to transform in-transit data to or from an XDF file or an in-memory data frame during import
 
-- **rxImport** supports transforming data as data is being imported to or from an XDF file or an in-memory data frame.
-
-- Although not specifically for data movement, the functions **rxSummary**, **rxCube**, **rxLinMod**, and **rxLogit** all support data transformations.
-
-In this section, you learn how to use these functions. Let's start with [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep).
+Although not specifically for data movement, the functions **rxSummary**, **rxCube**, **rxLinMod**, and **rxLogit** all support data transformations.
 
 ## Use rxDataStep to transform variables
 
-The **rxDataStep** function processes data one chunk at a time, reading from one data source and writing to another. You can specify the columns to transform, the transformations to load, and so forth.
+The [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) function processes data one chunk at a time, reading from one data source and writing to another. You can specify the columns to transform, the transformations to load, and so forth.
 
-To make this example interesting, let's use a function from another R package to transform the data.  The **boot** package is one of the "recommended" packages, meaning that **boot** is included with every distribution of R, but is not loaded automatically on start-up. Therefore, the package should already be available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance that you've been using with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+To make this example interesting, let's use a function from another R package to transform the data. The **boot** package is one of the "recommended" packages, meaning that **boot** is included with every distribution of R, but is not loaded automatically on start-up. Therefore, the package should already be available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance configured for R integration.
 
-From the **boot** package, use the  function `inv.logit`, which computes the inverse of a logit. That is, the `inv.logit` function converts a logit back to a probability on the [0,1] scale.
+From the **boot** package, use the  function **inv.logit**, which computes the inverse of a logit. That is, the **inv.logit** function converts a logit back to a probability on the [0,1] scale.
 
 > [!TIP] 
-> Another way to  get predictions in this scale would be to set the *type* parameter to **response** in the original call to rxPredict.
+> Another way to  get predictions in this scale would be to set the *type* parameter to **response** in the original call to **rxPredict**.
 
 1. Start by creating a data source to hold the data destined for the table, `ccScoreOutput`.
   
@@ -75,38 +74,29 @@ From the **boot** package, use the  function `inv.logit`, which computes the inv
   
 6. Call **rxGetVarInfo** to view a summary of the variables in the new data set.
   
-    ```R
-    rxGetVarInfo(sqlOutScoreDS2)
-    ```
+```R
+rxGetVarInfo(sqlOutScoreDS2)
+```
 
-    **Results**
-    
-    *Var 1: ccFraudLogitScore, Type: numeric*
-    
-    *Var 2: state, Type: character*
-    
-    *Var 3: gender, Type: character*
-    
-    *Var 4: cardholder, Type: character*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: ccFraudProb, Type: numeric*
+**Results**
+
+```R
+Var 1: ccFraudLogitScore, Type: numeric
+Var 2: state, Type: character
+Var 3: gender, Type: character
+Var 4: cardholder, Type: character
+Var 5: balance, Type: integer
+Var 6: numTrans, Type: integer
+Var 7: numIntlTrans, Type: integer
+Var 8: creditLine, Type: integer
+Var 9: ccFraudProb, Type: numeric
+```
 
 The original logit scores are preserved, but a new column, *ccFraudProb*, has been added, in which the logit scores are represented as values between 0 and 1.
 
 Notice that the factor variables have been written to the table `ccScoreOutput2` as character data. To use them as factors in subsequent analyses, use the parameter *colInfo* to specify the levels.
 
-## Next step
+## Next steps
 
-[Load data into memory using rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)
-
-## Previous step
-
-[Create and run R scripts](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
+> [!div class="nextstepaction"]
+> [Load data into memory using rxImport](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)

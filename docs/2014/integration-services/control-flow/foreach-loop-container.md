@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "08/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.foreachloopcontainer.f1"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "foreach enumerators [Integration Services]"
   - "containers [Integration Services], Foreach Loop"
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Foreach Loop Container
@@ -94,7 +93,7 @@ manager: craigg
 -   <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>  
   
 ## Related Content  
- Blog entry, [SSIS For Each Node List Enumerator](http://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
+ Blog entry, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
   
 ## See Also  
  [Control Flow](control-flow.md)   

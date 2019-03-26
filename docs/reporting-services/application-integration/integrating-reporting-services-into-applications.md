@@ -4,12 +4,11 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
-
-
 ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
+
 ---
 # Integrating Reporting Services into Applications
 
@@ -50,4 +49,4 @@ For deciding on using URL access or the SOAP APIs, see [Choosing between URL acc
 
 For information on the SQL Server 2017 Reporting Services REST API, see [Develop with the REST APIs for Reporting Services](../developer/rest-api.md).
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

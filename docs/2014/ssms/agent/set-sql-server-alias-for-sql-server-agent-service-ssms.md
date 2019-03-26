@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server], traces"
@@ -24,8 +23,8 @@ manager: craigg
   
 2.  Execute **sp_trace_setfilter** to configure the type of information to retrieve for the event being traced.  
   
-> [!IMPORTANT]  
->  Unlike regular stored procedures, parameters of all [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stored procedures (**sp_trace_*xx***) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure will return an error.  
+> [!IMPORTANT]
+>  Unlike regular stored procedures, parameters of all [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stored procedures (<strong>sp_trace_*xx*</strong>) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure will return an error.  
   
 ## See Also  
  [Filter a Trace](../../relational-databases/sql-trace/filter-a-trace.md)   

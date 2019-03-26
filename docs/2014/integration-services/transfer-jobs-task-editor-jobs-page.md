@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Jobs Task Editor"
 ms.assetid: e72b1dc7-8cda-4ee6-abb5-d438370f04df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Transfer Jobs Task Editor (Jobs Page)
@@ -40,7 +40,7 @@ manager: craigg
 |**False**|Copy only the specified jobs.|  
   
  **JobsList**  
- Click the browse button **(…)** to select the jobs to copy. At least one job must be selected.  
+ Click the browse button **(...)** to select the jobs to copy. At least one job must be selected.  
   
 > [!NOTE]  
 >  Specify the **SourceConnection** before selecting jobs to copy.  

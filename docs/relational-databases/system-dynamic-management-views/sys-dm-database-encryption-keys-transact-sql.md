@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -31,16 +31,20 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID of the database.|  
 |encryption_state|**int**|Indicates whether the database is encrypted or not encrypted.<br /><br /> 0 = No database encryption key present, no encryption<br /><br /> 1 = Unencrypted<br /><br /> 2 = Encryption in progress<br /><br /> 3 = Encrypted<br /><br /> 4 = Key change in progress<br /><br /> 5 = Decryption in progress<br /><br /> 6 = Protection change in progress (The certificate or asymmetric key that is encrypting the database encryption key is being changed.)|  
-|create_date|**datetime**|Displays the date the encryption key was created.|  
-|regenerate_date|**datetime**|Displays the date the encryption key was regenerated.|  
-|modify_date|**datetime**|Displays the date the encryption key was modified.|  
-|set_date|**datetime**|Displays the date the encryption key was applied to the database.|  
-|opened_date|**datetime**|Shows when the database key was last opened.|  
+|create_date|**datetime**|Displays the date (in UTC) the encryption key was created.|  
+|regenerate_date|**datetime**|Displays the date (in UTC) the encryption key was regenerated.|  
+|modify_date|**datetime**|Displays the date (in UTC) the encryption key was modified.|  
+|set_date|**datetime**|Displays the date (in UTC) the encryption key was applied to the database.|  
+|opened_date|**datetime**|Shows when (in UTC) the database key was last opened.|  
 |key_algorithm|**nvarchar(32)**|Displays the algorithm that is used for the key.|  
 |key_length|**int**|Displays the length of the key.|  
 |encryptor_thumbprint|**varbinary(20)**|Shows the thumbprint of the encryptor.|  
-|encryptor_type|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describes the encryptor.|  
-|percent_complete|**real**|Percent complete of the database encryption state change. This will be 0 if there is no state change.|  
+|encryptor_type|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describes the encryptor.|  
+|percent_complete|**real**|Percent complete of the database encryption state change. This will be 0 if there is no state change.|
+|encryption_state_desc|**nvarchar(32)**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br> String that indicates whether the database is encrypted or not encrypted.<br><br>NONE<br><br>UNENCRYPTED<br><br>ENCRYPTED<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br>Indicates the current state of the encryption scan. <br><br>0 = No scan has been initiated, TDE is not enabled<br><br>1 = Scan is in progress.<br><br>2 = Scan is in progress but has been suspended, user can resume.<br><br>3 = Scan has been successfully completed, TDE is enabled and encryption is complete.<br><br>4 = Scan was aborted for some reason, manual intervention is required. Contact Microsoft Support for more assistance.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br>String that indicates the current state of the encryption scan.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>COMPLETE<br><br>ABORTED|
+|encryption_scan_modify_date|**datetime**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br> Displays the date (in UTC) the encryption scan state was last modified.|
   
 ## Permissions
 

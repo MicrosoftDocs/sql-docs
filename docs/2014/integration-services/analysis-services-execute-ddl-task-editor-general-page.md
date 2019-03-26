@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Analysis Services Execute DDL Task Editor"
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Analysis Services Execute DDL Task Editor (General Page)
@@ -36,7 +36,7 @@ manager: craigg
  [Analysis Services Execute DDL Task Editor &#40;DDL Page&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [Expressions Page](expressions/expressions-page.md)   
  [Control Flow](control-flow/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [XML for Analysis  &#40;XMLA&#41; Reference](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

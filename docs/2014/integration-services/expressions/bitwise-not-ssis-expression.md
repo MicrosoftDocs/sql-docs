@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bitwise NOT (~)"
   - "~ (bitwise NOT)"
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ~ (Bitwise Not) (SSIS Expression)

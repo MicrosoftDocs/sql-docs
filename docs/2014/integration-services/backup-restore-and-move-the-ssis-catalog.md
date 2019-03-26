@@ -8,14 +8,14 @@ ms.technology:
   - "integration-services"
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Backup, Restore, and Move the SSIS Catalog
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] includes the SSISDB database. You query views in the SSISDB database to inspect objects, settings, and operational data that are stored in the **SSISDB** catalog. This topic provides instructions for backing up and restoring the database.  
   
- The **SSISDB** catalog stores the packages that you’ve deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](catalog/ssis-catalog.md).  
+ The **SSISDB** catalog stores the packages that you've deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. For more information about the catalog, see [SSIS Catalog](catalog/ssis-catalog.md).  
   
 ##  <a name="backup"></a> To Back up the SSIS Database  
   
@@ -33,7 +33,7 @@ manager: craigg
   
     ```  
   
-3.  Back up the SSISDB database by using the **Backup Database** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [How to: Back Up a Database (SQL Server Management Studio)](http://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Back up the SSISDB database by using the **Backup Database** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. For more information, see [How to: Back Up a Database (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Generate the CREATE LOGIN script for ##MS_SSISServerCleanupJobLogin##, by doing the following. For more information, see [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
@@ -57,7 +57,7 @@ manager: craigg
   
 ### To Restore the SSIS Database  
   
-1.  If you are restoring the SSISDB database to an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance where the SSISDB catalog was never created, enable common language runtime (clr) by running the sp_configure stored procedure. For more information, see [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) and [clr enabled Option](http://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  If you are restoring the SSISDB database to an [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance where the SSISDB catalog was never created, enable common language runtime (clr) by running the sp_configure stored procedure. For more information, see [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) and [clr enabled Option](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -106,7 +106,7 @@ manager: craigg
   
     -   **Method 1**  
   
-         Use this method if you’ve already performed a backup of the database master key, and you have the password used to encrypt the master key.  
+         Use this method if you've already performed a backup of the database master key, and you have the password used to encrypt the master key.  
   
         ```  
                Restore master key from file = 'c:\temp\RCTestInstKey'  

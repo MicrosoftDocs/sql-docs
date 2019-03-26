@@ -173,7 +173,5 @@ In SQL Server Data Tools, external tables are displayed in a separate folder **E
 
 ## Next steps
 
-Explore more ways to use and monitor PolyBase in the following articles:
-
-[Type mapping with PolyBase](../relational-databases/polybase/polybase-type-mapping.md).  
+For more information about PolyBase, see the [What is PolyBase?](../relational-databases/polybase/polybase-guide.md). 
 

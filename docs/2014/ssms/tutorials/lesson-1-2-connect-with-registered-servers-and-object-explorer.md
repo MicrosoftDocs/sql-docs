@@ -31,7 +31,7 @@ manager: craigg
   
 5.  In the **Registered server name** box, type [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-6.  On the **Connection Properties** tab, in the **Connect to database** list, select **\<Browse server…>**.  
+6.  On the **Connection Properties** tab, in the **Connect to database** list, select **\<Browse server...>**.  
   
 7.  In the **Browse for Databases** dialog box, click **Yes**.  
   

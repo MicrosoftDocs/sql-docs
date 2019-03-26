@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "DTS [Integration Services], about Integration Services"
   - "data integration [Integration Services]"
   - "Data Transformation Services"
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SQL Server Integration Services
@@ -37,8 +37,8 @@ You can use the graphical [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.
 For info about installing SQL Server Integration Services with SQL Server, and about additional downloads you may want or need, see [Install Integration Services](install-windows/install-integration-services.md).
 
 ##  ![info_tip](../sql-server/media/info-tip.png) Resources
--   [Get help in the SSIS forum](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
--   [Get help on Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+-   [Get help in the SSIS forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
+-   [Get help on Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
 -   [Follow the SSIS team blog](https://blogs.msdn.microsoft.com/ssis/)
 -   [Report issues & request features](https://feedback.azure.com/forums/908035-sql-server)
 -   [Get the docs on your PC](../sql-server/sql-server-help-installation.md)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SSIS Script component, coding"
   - "VSTA"
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Coding and Debugging the Script Component
@@ -201,7 +201,7 @@ public class ScriptMain : UserComponent
   
 ## External Resources  
   
--   Blog entry, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661), on blogs.msdn.com.  
+-   Blog entry, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661), on blogs.msdn.com.  
   
 ## See Also  
  [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  

@@ -3,13 +3,12 @@ title: "Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)

@@ -1,7 +1,8 @@
 ---
-title: Azure Data Studio SQL Server Import Extension | Microsoft Docs
-description: SQL Server Import extension (preview) for Azure Data Studio
-ms.custom: "tools|sos"
+title: SQL Server Import Extension
+titleSuffix: Azure Data Studio
+description: Install and use the SQL Server Import extension (preview) for Azure Data Studio
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
@@ -15,7 +16,7 @@ manager: craigg
 
 The SQL Server Import extension (preview) converts .txt and .csv files into a SQL table. This wizard utilizes a Microsoft Research framework known as [Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) to intelligently parse the file with minimal user input. It is a powerful framework for data wrangling, and it is the same technology that powers Flash Fill in Microsoft Excel
 
-To learn more about the SSMS version of this feature, you can read [this article](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-flat-file-wizard).
+To learn more about the SSMS version of this feature, you can read [this article](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard).
 
 
 ## Install the SQL Server Import extension
@@ -48,7 +49,7 @@ To learn more about the SSMS version of this feature, you can read [this article
     ![open import wizard](media/sql-server-import-extension/import-wizard-modify-columns.png)
 3. This page gives a summary of the actions chosen. You can also see whether your table inserted successfully or not. 
 
-    You can either click **Done,** **Previous** if you need to make changes, or **Import new file** to quickly import another file.
+    You can either click **Done, Previous** if you need to make changes, or **Import new file** to quickly import another file.
     ![open import wizard](media/sql-server-import-extension/import-wizard-summary.png)
 1. Verify if your table successfully imported by refreshing your target database or running a SELECT query on the table name.
 

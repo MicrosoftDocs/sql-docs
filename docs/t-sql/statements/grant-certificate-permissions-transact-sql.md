@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "permissions [SQL Server], certificates"
   - "GRANT statement, certificates"
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Certificate Permissions (Transact-SQL)
@@ -39,7 +39,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be granted on a certificate. Listed below.  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  Specifies the certificate on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

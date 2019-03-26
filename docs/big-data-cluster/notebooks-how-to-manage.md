@@ -1,12 +1,15 @@
 ---
-title: How to manage notebooks in Azure Data Studio | Microsoft Docs
-description:
+title: Manage notebooks in Azure Data Studio
+titleSuffix: SQL Server 2019 big data clusters
+description: Learn how to manage notebooks in Azure Data Studio. This includes opening notebooks, saving them, and changing your big data cluster connection.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 10/02/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
+ms.technology: big-data-cluster
+ms.custom: seodec18
 ---
 
 # How to manage notebooks in Azure Data Studio
@@ -17,8 +20,11 @@ This article shows you how to open and save notebook files in Azure Data Studio 
 
 This article assumes that you already have a notebook that you want to use in Azure Data Studio. If you want to create a notebook, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md). To use notebooks in Azure Data Studio, you must meet the following prerequisites:
 
-- [Install the latest big data tools for SQL Server 2019 preview](deploy-big-data-tools.md).
 - [Deploy a big data cluster](quickstart-big-data-cluster-deploy.md).
+- [SQL Server 2019 big data tools](deploy-big-data-tools.md):
+   - **Azure Data Studio**
+   - **SQL Server 2019 extension**
+   - **kubectl**
 
 ## Open a notebook
 

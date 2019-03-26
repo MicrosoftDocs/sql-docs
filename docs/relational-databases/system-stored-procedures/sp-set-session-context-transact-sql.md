@@ -31,13 +31,13 @@ Sets a key-value pair in the session context.
 ## Syntax  
   
 ```  
-sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'  
+sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'  
     [ , [ @read_only = ] { 0 | 1 } ]  
 [ ; ]  
 ```  
   
 ## Arguments  
- [ @key= ] 'key'  
+ [ @key= ] N'key'  
  The key being set, of type **sysname**. The maximum key size is 128 bytes.  
   
  [ @value= ] 'value'  
@@ -52,7 +52,7 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
 ## Remarks  
  Like other stored procedures, only literals and variables (not expressions or function calls) can be passed as parameters.  
   
- The total size of the session context is limited to 256 kb. If set a value that causes this limit to be exceeded, the statement fails. You can monitor overall memory usage in [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
+ The total size of the session context is limited to 1 MB. If you set a value that causes this limit to be exceeded, the statement fails. You can monitor overall memory usage in [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
  You can monitor overall memory usage by querying [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) as follows: `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
@@ -60,14 +60,14 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  The following example shows how to set  and then return a sessions context key named language with a value of English.  
   
 ```  
-EXEC sp_set_session_context 'language', 'English';  
+EXEC sys.sp_set_session_context @key = N'language', @value = 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
  The following example demonstrates the use of the optional read-only flag.  
   
 ```  
-EXEC sp_set_session_context 'user_id', 4, @read_only = 1;  
+EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
 ## See Also  

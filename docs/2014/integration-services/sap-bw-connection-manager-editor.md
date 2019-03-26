@@ -8,8 +8,8 @@ ms.technology:
   - "integration-services"
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SAP BW Connection Manager Editor
@@ -28,7 +28,7 @@ manager: craigg
   
     -   Double-click the SAP BW connection manager.  
   
-         —or—  
+         -or-  
   
     -   Right-click the SAP BW connection manager, and then select **Edit**.  
   

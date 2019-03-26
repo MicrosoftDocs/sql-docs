@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], Dimension Processing"
   - "dimensions [Analysis Services], processing"
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Dimension Processing Destination
@@ -44,7 +44,7 @@ manager: craigg
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topic:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  For more information about how to set the properties, see [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
@@ -155,7 +155,7 @@ manager: craigg
 |**ReportAndStop**|Report the error and stop processing.|  
   
  **Error log path**  
- Type the path of the error log, or click the **browse(…)** button to select a destination.  
+ Type the path of the error log, or click the **browse(...)** button to select a destination.  
   
  **Browse (...)**  
  Select a path for the error log.  

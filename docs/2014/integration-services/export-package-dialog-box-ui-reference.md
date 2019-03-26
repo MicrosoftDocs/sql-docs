@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Export Package dialog box"
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Export Package Dialog Box UI Reference
@@ -48,10 +48,10 @@ manager: craigg
  If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse button **(…)** and locate the folder in which to store the package.  
+ Type the package path, or click the browse button **(...)** and locate the folder in which to store the package.  
   
  **Protection level**  
- Click the browse button **(…)** and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Click the browse button **(...)** and update the protection level in the **Package Protection Level** dialog box. For more information, see [Package and Project Protection Level Dialog Box](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## See Also  
  [Save Copy of Package](../../2014/integration-services/save-copy-of-package.md)   

@@ -58,7 +58,7 @@ manager: kfile
   
 -   The City attribute as an attribute relationship to the Customer attribute.  
   
- For navigating data in the cube, you can also create a user-defined hierarchy that does not represent a natural hierarchy in the data (which is called an *ad hoc* or *reporting* hierarchy). For example, you could create a user-defined hierarchy based on `{Age, Gender}`. Users do not see any difference in how the two hierarchies behave, although the natural hierarchy benefits from aggregating and indexing structures — hidden from the user — that account for the natural relationships in the source data.  
+ For navigating data in the cube, you can also create a user-defined hierarchy that does not represent a natural hierarchy in the data (which is called an *ad hoc* or *reporting* hierarchy). For example, you could create a user-defined hierarchy based on `{Age, Gender}`. Users do not see any difference in how the two hierarchies behave, although the natural hierarchy benefits from aggregating and indexing structures - hidden from the user - that account for the natural relationships in the source data.  
   
  The **SourceAttribute** property of a level determines which attribute is used to describe the level. The **KeyColumns** property on the attribute specifies the column in the data source view that supplies the members. The **NameColumn** property on the attribute can specify a different name column for the members.  
   

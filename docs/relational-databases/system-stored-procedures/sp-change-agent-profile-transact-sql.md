@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_change_agent_profile"
@@ -35,13 +34,13 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## Arguments  
- [ **@profile_id=** ] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile. *profile_id* is **int**, with no default.  
   
- [ **@property=** ] **'***property***'**  
+`[ @property = ] 'property'`
  Is the name of the property. *property* is **sysname**, with no default.  
   
- [ **@value=** ] **'***value***'**  
+`[ @value = ] 'value'`
  Is the new value of the property. *value* is **nvarchar(3000)**, with no default.  
   
  This table describes the profile properties that can be changed.  

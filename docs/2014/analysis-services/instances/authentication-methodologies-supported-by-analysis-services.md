@@ -27,7 +27,7 @@ manager: craigg
   
  Notice that Claims authentication is not supported. You cannot use a Windows Claims token to access Analysis Services. The Analysis Services client libraries only work with Windows security principles. If your BI solution includes claims identities, you will need Windows identity shadow accounts for each user, or use stored credentials to access Analysis Services data.  
   
- For more information about BI and Analysis Services authentication flows, see [Microsoft BI Authentication and Identity Delegation](http://go.microsoft.com/fwlink/?LinkID=286576).  
+ For more information about BI and Analysis Services authentication flows, see [Microsoft BI Authentication and Identity Delegation](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
 ##  <a name="bkmk_auth"></a> Understanding your authentication alternatives  
  Connecting to an Analysis Services database requires a Windows user or group identity and associated permissions. The identity might be a general purpose login used by anyone who needs to view a report, but a more likely scenario includes the identity of individual users.  
@@ -57,7 +57,7 @@ manager: craigg
   
  EffectiveUserName is a connection string property used for passing identity information to Analysis Services. PowerPivot for SharePoint uses it to record user activity in the usage logs. Excel Services and PerformancePoint Services can use it to retrieve data used by workbooks or dashboards in SharePoint. It can also be used in custom applications or scripts that perform operations on an Analysis Services instance.  
   
- For more information about using EffectiveUserName in SharePoint, see [Use Analysis Services EffectiveUserName in SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=311905).  
+ For more information about using EffectiveUserName in SharePoint, see [Use Analysis Services EffectiveUserName in SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkId=311905).  
   
  **Basic Authentication and Anonymous User**  
   
@@ -71,10 +71,10 @@ manager: craigg
   
  Most middle tier application services include functionality for storing a user name and password subsequently used to retrieve data from a down-level data store, such as Analysis Services or the SQL Server relational engine. As such, stored credentials provide a fifth alternative for retrieving data. Limitations with this approach include maintenance overhead associated with keeping user names and passwords up to date, and the use of a single identity on the connection. If your solution requires the identity of the original caller, then stored credentials would not be a viable alternative.  
   
- For more information about stored credentials, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) and [Use Excel Services with Secure Store Service in SharePoint Server 2013](http://go.microsoft.com/fwlink/?LinkID=309869).  
+ For more information about stored credentials, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) and [Use Excel Services with Secure Store Service in SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869).  
   
 ## See Also  
- [Using Impersonation with Transport Security](http://go.microsoft.com/fwlink/?LinkId=311727)   
+ [Using Impersonation with Transport Security](https://go.microsoft.com/fwlink/?LinkId=311727)   
  [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [SPN registration for an Analysis Services instance](spn-registration-for-an-analysis-services-instance.md)   

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "SSIS Script task, variables"
   - "variables [Integration Services], Script task"
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Using Variables in the Script Task
@@ -111,6 +111,6 @@ public class ScriptMain
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

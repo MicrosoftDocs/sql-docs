@@ -47,7 +47,7 @@ manager: craigg
  **Add to DSV**  
  (Optional) Select a data source view contained in the project if you want to add the table to an existing data source.  
   
- This option is useful if you want to keep all related tables for a model—such as training data, prediction source data, and query results—in the same data source.  
+ This option is useful if you want to keep all related tables for a model-such as training data, prediction source data, and query results-in the same data source.  
   
 ## See Also  
  [Prediction Query Builder &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   

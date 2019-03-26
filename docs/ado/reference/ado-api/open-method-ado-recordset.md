@@ -55,7 +55,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Using the **Open** method on a **Recordset** object opens a cursor that represents records from a base table, the results of a query, or a previously saved **Recordset**.  
   
- Use the optional *Source* argument to specify a data source using one of the following: a **Command** object variable, an SQL statement, a stored procedure, a table name, a URL, or a complete file path name. If *Source* is a file path name, it can be a full path ("c:\dir\file.rst"), a relative path ("..\file.rst"), or a URL ("http://files/file.rst").  
+ Use the optional *Source* argument to specify a data source using one of the following: a **Command** object variable, an SQL statement, a stored procedure, a table name, a URL, or a complete file path name. If *Source* is a file path name, it can be a full path ("c:\dir\file.rst"), a relative path ("..\file.rst"), or a URL ("<https://files/file.rst>").  
   
  It is not a good idea to use the *Source* argument of the **Open** method to perform an action query that does not return records because there is no easy way to determine whether the call succeeded. The **Recordset** returned by such a query will be closed. To perform a query that does not return records, such as a SQL INSERT statement, call the [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) method of a **Command** object or the [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) method of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object instead.  
   

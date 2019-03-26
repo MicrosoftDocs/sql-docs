@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "RESTORE statement, arguments"
   - "RESTORE statement"
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # RESTORE Statements - Arguments (Transact-SQL)
@@ -71,7 +71,7 @@ This topic documents the arguments that are described in the Syntax sections of 
   
  For a database that uses the full or bulk-logged recovery model, after using RESTORE DATABASE to restore one or more files, filegroups, and/or pages, typically, you must apply the transaction log to the files containing the restored data; applying the log makes those files consistent with the rest of the database. The exceptions to this are as follows:  
   
--   If the files being restored were read-only before they were last backed up—then a transaction log does not have to be applied, and the RESTORE statement informs you of this situation.  
+-   If the files being restored were read-only before they were last backed up-then a transaction log does not have to be applied, and the RESTORE statement informs you of this situation.  
   
 -   If the backup contains the primary filegroup and a partial restore is being performed. In this case, the restore log is not needed because the log is restored automatically from the backup set.  
   
@@ -128,7 +128,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> }
  Is the logical name, which must follow the rules for identifiers, of the backup device(s) created by **sp_addumpdevice** from which the database is restored. If supplied as a variable (**@**_logical\_backup\_device\_name\_var_), the backup device name can be specified either as a string constant (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
  {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Allows backups to be restored from the named disk or tape device. The device types of disk and tape should be specified with the actual name (for example, complete path and file name) of the device: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` or `TAPE ='\\\\.\TAPE0'`. If specified as a variable (**@**_physical\_backup\_device\_name\_var_), the device name can be specified either as a string constant (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') or as a variable of character string data type, except for the **ntext** or **text** data types.  
+ Allows backups to be restored from the named disk or tape device. The device types of disk and tape should be specified with the actual name (for example, complete path and file name) of the device: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` or `TAPE ='\\\\.\TAPE0'`. If specified as a variable (**@**_physical\_backup\_device\_name\_var_), the device name can be specified either as a string constant (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
  If using a network server with a UNC name (which must contain machine name), specify a device type of disk. For more information about how to use UNC names, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -250,7 +250,7 @@ CREDENTIAL
  Used only when restoring a backup from the Microsoft Azure Blob storage service.  
   
 > [!NOTE]  
->  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
+>  With [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], you can only restore from a single device when restoring from URL. In order to restore from multiple devices when restoring from URL you must use [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)) and you must use Shared Access Signature (SAS) tokens. For more information, see [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) and [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
   
  REPLACE  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -386,7 +386,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  CONTINUE_AFTER_ERROR  
  Specifies that the restore operation is to continue after an error is encountered.  
   
- If a backup contains damaged pages, it is best to repeat the restore operation using an alternative backup that does not contain the errors—for example, a backup taken before the pages were damaged. As a last resort, however, you can restore a damaged backup using the CONTINUE_AFTER_ERROR option of the restore statement and try to salvage the data.  
+ If a backup contains damaged pages, it is best to repeat the restore operation using an alternative backup that does not contain the errors-for example, a backup taken before the pages were damaged. As a last resort, however, you can restore a damaged backup using the CONTINUE_AFTER_ERROR option of the restore statement and try to salvage the data.  
   
 ##### FILESTREAM Options  
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
@@ -399,7 +399,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 ##### Monitoring Options  
  These options enable you to monitor the transfer of data transfer from the backup device.  
   
- STATS [ **=** *percentage* ]  
+ STATS [ **=** _percentage_ ]  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) and [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Displays a message each time another percentage completes, and is used to gauge progress. If *percentage* is omitted, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] displays a message after each 10 percent is completed (approximately).  
@@ -579,20 +579,20 @@ Use KEEP_REPLICATION when setting up replication to work with log shipping. It p
 > [!NOTE]  
 >  The PARTIAL option is supported only by RESTORE DATABASE.  
   
- The following table lists the WITH options that are used by one or more statements and indicates which statements support each option. A check mark (√) indicates that an option is supported; a dash (—) indicates that an option is not supported.  
+ The following table lists the WITH options that are used by one or more statements and indicates which statements support each option. A check mark (√) indicates that an option is supported; a dash (-) indicates that an option is not supported.  
   
 |WITH option|RESTORE|RESTORE FILELISTONLY|RESTORE HEADERONLY|RESTORE LABELONLY|RESTORE REWINDONLY|RESTORE VERIFYONLY|  
 |-----------------|-------------|--------------------------|------------------------|-----------------------|------------------------|------------------------|  
-|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|—|√|  
-|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|—|√|  
-|FILE<sup>1</sup>|√|√|√|—|—|√|  
-|LOADHISTORY|—|—|—|—|—|√|  
-|MEDIANAME|√|√|√|√|—|√|  
-|MEDIAPASSWORD|√|√|√|√|—|√|  
-|MOVE|√|—|—|—|—|√|  
-|PASSWORD|√|√|√|—|—|√|  
-|{ REWIND &#124; NOREWIND }|√|Only REWIND|Only REWIND|Only REWIND|—|√|  
-|STATS|√|—|—|—|—|√|  
+|{ CHECKSUM<br /><br /> &#124; NO_CHECKSUM }|√|√|√|√|-|√|  
+|{ CONTINUE_AFTER_ERROR<br /><br /> &#124; STOP_ON_ERROR }|√|√|√|√|-|√|  
+|FILE<sup>1</sup>|√|√|√|-|-|√|  
+|LOADHISTORY|-|-|-|-|-|√|  
+|MEDIANAME|√|√|√|√|-|√|  
+|MEDIAPASSWORD|√|√|√|√|-|√|  
+|MOVE|√|-|-|-|-|√|  
+|PASSWORD|√|√|√|-|-|√|  
+|{ REWIND &#124; NOREWIND }|√|Only REWIND|Only REWIND|Only REWIND|-|√|  
+|STATS|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=**_backup\_set\_file\_number_, which is distinct from {FILE | FILEGROUP}.  

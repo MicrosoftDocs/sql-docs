@@ -11,9 +11,9 @@ f1_keywords:
   - "10153"
   - "sql12.rtp.rptdesigner.calculatedseriesproperties.markers.f1"
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Calculated Series Properties Dialog Box, Markers (Report Builder and SSRS)
   Select **Markers** on the **Calculated Series Properties** dialog box to define how markers are displayed on each data point of a series. Markers are available only for certain chart types. The following chart types support markers: Area, Bar, Column, Line, Polar, and Scatter. For more information about chart features, see [Chart Types &#40;Report Builder and SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  

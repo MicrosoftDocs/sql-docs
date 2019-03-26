@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "10/07/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Snapshot Agent, security"
@@ -23,7 +22,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Replication Agent Security Model
-  The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Manage Logins and Passwords in Replication](manage-logins-and-passwords-in-replication.md).  
+  The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Manage Logins and Passwords in Replication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
 > [!IMPORTANT]  
 >  When a member of the **sysadmin** fixed server role configures replication, replication agents can be configured to impersonate the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent account. This is done by not specifying a login and password for a replication agent; however, we do not recommend this approach. Instead, as a security best practice, we recommend that you specify an account for each agent that has the minimum permissions that are described in the section "Permissions That Are Required by Agents" later in this topic.  
@@ -87,7 +86,7 @@ manager: craigg
   
 ## See Also  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](security-and-protection-replication.md)   
+ [SQL Server Replication Security](view-and-modify-replication-security-settings.md)   
  [Secure the Snapshot Folder](secure-the-snapshot-folder.md)  
   
   

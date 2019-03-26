@@ -139,7 +139,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- The following query builds on this information. The query returns three columns: the ID of the node, the complete rule, and the product on the right-hand side of the itemset—that is, the product that is predicted to be associated with some other products as part of an itemset.  
+ The following query builds on this information. The query returns three columns: the ID of the node, the complete rule, and the product on the right-hand side of the itemset-that is, the product that is predicted to be associated with some other products as part of an itemset.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  

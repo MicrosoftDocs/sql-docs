@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "jobs [Integration Services]"
   - "SQL Server Agent [Integration Services]"
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Execute SQL Server Agent Job Task
@@ -37,6 +37,6 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

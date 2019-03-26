@@ -49,7 +49,7 @@ manager: craigg
   
 8.  In the **Maximum Rows** box, type `10`.  
   
-9. In the **Caption** box, type `Drillthrough to Order Details…`.  
+9. In the **Caption** box, type `Drillthrough to Order Details...`.  
   
      These settings limit the number of rows returned and specify the caption that appears in the client application menu. The following image shows these settings in the **AdditionalProperties** box.  
   

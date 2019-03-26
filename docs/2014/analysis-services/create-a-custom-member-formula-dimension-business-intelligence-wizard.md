@@ -15,7 +15,7 @@ ms.author: owend
 manager: craigg
 ---
 # Create a Custom Member Formula (Dimension) (Business Intelligence Wizard)
-  Use the **Create a Custom Member Formula** page to select a dimension to which the Business Intelligence Wizard will associate attributes with custom member formula columns—columns that contain Multidimensional Expressions (MDX) statements that define member values for that attribute.  
+  Use the **Create a Custom Member Formula** page to select a dimension to which the Business Intelligence Wizard will associate attributes with custom member formula columns-columns that contain Multidimensional Expressions (MDX) statements that define member values for that attribute.  
   
 ## Options  
  **Dimension**  

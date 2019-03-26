@@ -21,11 +21,11 @@ After you create a new website project using the ASP.NET website template for Vi
   
     This adds a new XSD file **DataSet1.xsd** to the project and opens the DataSet Designer.  
   
-3.  From the Toolbox window, drag a **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx.aspx)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
+3.  From the Toolbox window, drag a **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
   
 4.  On the **Choose Your Data Connection** page, select **New Connection**.  
   
-5.  If this is the first time you’ve created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
+5.  If this is the first time you've created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
   
 6.  In the **Add Connection** dialog box, perform the following steps:  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services, installing"
@@ -16,8 +15,8 @@ helpviewer_keywords:
   - "installing Integration Services"
   - "Setup [Integration Services]"
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Install Integration Services

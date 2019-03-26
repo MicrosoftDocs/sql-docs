@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Script component [Integration Services], about Script component"
   - "Script component [Integration Services]"
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Script Component
@@ -95,7 +95,7 @@ manager: craigg
 ### Configuring the Script Component Programmatically  
  For more information about the properties that you can set in the **Properties** window or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -171,7 +171,7 @@ manager: craigg
  **Inputs and outputs**  
  Select an input or output on the left to view its properties in the table on the right. Properties available for editing vary according to the selection. Many of the properties displayed are read-only. For more information on the individual properties, see the following topics.  
   
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

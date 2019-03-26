@@ -44,7 +44,7 @@ manager: craigg
   
  The space character is a 'special case' because it can be represented as a single-byte (SBCS) or double-byte character set (DBCS) in Unicode. In the relational engine, two compound strings separated by a space -- one using SBCS, the other in DBCS -- are considered identical. In Analysis Services, during processing, the same two compound strings are not identical, and the second instance will be flagged as a duplicate.  
   
- For more details and suggested workarounds, see [Blanks in a Unicode string have different processing outcomes based on collation](http://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
+ For more details and suggested workarounds, see [Blanks in a Unicode string have different processing outcomes based on collation](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx).  
   
 ##  <a name="bkmk_recos"></a> Common collation recommendations  
  Analysis Services always presents the full list of all available languages and collations; it does not filter the collations based on the language you selected. Be sure to choose a workable combination.  

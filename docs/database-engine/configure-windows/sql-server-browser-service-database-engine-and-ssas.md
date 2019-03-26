@@ -125,5 +125,5 @@ manager: craigg
   
 ## See Also  
  [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)  
-  
+ [Hide an Instance of SQL Server Database Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
   

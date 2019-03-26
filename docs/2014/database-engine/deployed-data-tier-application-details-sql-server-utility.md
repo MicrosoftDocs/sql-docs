@@ -54,7 +54,7 @@ manager: craigg
   
     -   Green down arrow - The health state for at least one filegroup or log file group is underutilized, and no filegroup or log file group is overutilized.  
   
-    -   Red up arrow - The health state for at least one filegroup or the log file group is overutilized. Note that if a database is in “emergency” state, the health state will display overutilized log file space.  
+    -   Red up arrow - The health state for at least one filegroup or the log file group is overutilized. Note that if a database is in "emergency" state, the health state will display overutilized log file space.  
   
      To view or change the file space policy limits, click on the **Storage Utilization** tab.  
   
@@ -80,7 +80,7 @@ manager: craigg
   
 -   Recovery Model: (Simple, Full, or Bulk-Logged)  
   
--   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) topic in SQL Server Books Online. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) topic in SQL Server Books Online.  
+-   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) topic in SQL Server Books Online. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) topic in SQL Server Books Online.  
   
  CPU Utilization tab  
  The CPU utilization tab shows side-by-side graphs of historical data for data-tier application and computer CPU utilization.  
@@ -98,7 +98,7 @@ manager: craigg
 -   1 Year, displayed in 1-month intervals.  
   
  Storage Utilization tab  
- The Storage Utilization tab has a tree view that displays storage utilization details for database files and log files that belong to the data-tier application selected in the list view. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) topic in SQL Server Books Online. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) topic in SQL Server Books Online.  
+ The Storage Utilization tab has a tree view that displays storage utilization details for database files and log files that belong to the data-tier application selected in the list view. Note that time data show the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) topic in SQL Server Books Online. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) topic in SQL Server Books Online.  
   
  Display can be grouped by filegroup or by volume. To use the filegroup tree view, select the **Filegroup** radio button in the **Group files by:** selection.  
   
@@ -118,7 +118,7 @@ manager: craigg
   
 -   Green down arrow - File space utilization for at least one data file in the filegroup is underutilized, and no files in the filegroup are overutilized.  
   
--   Red up arrow - File space utilization for all data files in the filegroup are overutilized. Note that if a database is in “emergency” state, the health state will display overutilized log file space.  
+-   Red up arrow - File space utilization for all data files in the filegroup are overutilized. Note that if a database is in "emergency" state, the health state will display overutilized log file space.  
   
  To view files by volume, select the **Volume** radio button in the **Group files by:** selection. The graph of storage utilization history displays file space used by all data files and all log files on the storage volume. Expand the tree to view details for individual database data files and log files.  
   
@@ -157,7 +157,7 @@ manager: craigg
   
 -   Recovery Model: (Simple, Full, or Bulk-Logged)  
   
--   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=164071) topic in SQL Server Books Online. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=141713) topic in SQL Server Books Online.  
+-   Last Reported Time: This column shows the UCP local date and time using the datetime data type. For more information, see the [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) topic in SQL Server Books Online. When using the Utility object model, note that SSMS uses the datetimeoffset data type. For more information, see the [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) topic in SQL Server Books Online.  
   
 ## See Also  
  [Managed Instance Details &#40;SQL Server Utility&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

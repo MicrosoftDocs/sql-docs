@@ -5,8 +5,7 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -51,7 +50,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
   
 ```  
 SELECT Instructions.query('         
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
   <ProductModel PMID= "{ sql:column("Production.ProductModel.ProductModelID") }"         
   ProductModelName = "{ sql:column("Production.ProductModel.Name") }" >         
    <TotalLaborHrs>         
@@ -81,7 +80,7 @@ WHERE Instructions is not NULL
 SELECT ProductModelID,         
         Name,         
         Instructions.value('declare namespace   
-      AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
+      AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
     sum(//AWMI:Location/@LaborHours)', 'float') as TotalLaborHours         
 FROM Production.ProductModel         
 WHERE Instructions is not NULL          
@@ -111,7 +110,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   Sequences that mix types across base type boundaries are not supported.  
   
--   The sum((xs:double(“INF”), xs:double(“-INF”))) raises a domain error.  
+-   The sum((xs:double("INF"), xs:double("-INF"))) raises a domain error.  
   
 ## See Also  
  [XQuery Functions against the xml Data Type](../xquery/xquery-functions-against-the-xml-data-type.md)  

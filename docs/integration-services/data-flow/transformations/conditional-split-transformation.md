@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Conditional Split transformation"
   - "route rows to different outputs [Integration Services]"
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Conditional Split Transformation
@@ -50,7 +50,7 @@ manager: craigg
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -87,7 +87,7 @@ manager: craigg
  Type a name for the default output, or use the default.  
   
  **Configure error output**  
- Specify how to handle errors by using the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box.  
+ Specify how to handle errors by using the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box.  
   
 ## See Also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   

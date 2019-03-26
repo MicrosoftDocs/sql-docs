@@ -12,10 +12,10 @@ f1_keywords:
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Dataset Properties Dialog Box, Options (Report Builder)
-  Select **Options** on the **DatasetProperties** dialog box to change data options, such as collation options and treating subtotals as detail data, for the query. For more information about collations, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md) in [SQL Server Books Online](http://go.microsoft.com/fwlink/?linkid=98335).  
+  Select **Options** on the **DatasetProperties** dialog box to change data options, such as collation options and treating subtotals as detail data, for the query. For more information about collations, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md) in [SQL Server Books Online](https://go.microsoft.com/fwlink/?linkid=98335).  
   
  Data options that are part of a shared dataset definition on the report server affect all reports that use the shared dataset. You can override options for the shared dataset after it is added to a report. These changes affect only the report in which they are defined.  
   

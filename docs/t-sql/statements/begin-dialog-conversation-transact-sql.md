@@ -57,13 +57,13 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 ```  
   
 ## Arguments  
- **@** *dialog_handle*  
+ **@** _dialog_handle_  
  Is a variable used to store the system-generated dialog handle for the new dialog that is returned by the BEGIN DIALOG CONVERSATION statement. The variable must be of type **uniqueidentifier**.  
   
  FROM SERVICE *initiator_service_name*  
  Specifies the service that initiates the dialog. The name specified must be the name of a service in the current database. The queue specified for the initiator service receives messages returned by the target service and messages created by Service Broker for this conversation.  
   
- TO SERVICE **'***target_service_name***'**  
+ TO SERVICE **'**_target_service_name_**'**  
  Specifies the target service with which to initiate the dialog. The *target_service_name* is of type **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] uses a byte-by-byte comparison to match the *target_service_name* string. In other words, the comparison is case-sensitive and does not take into account the current collation.  
   
  *service_broker_guid*  
@@ -86,13 +86,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  Specifies the contract that this conversation follows. The contract must exist in the current database. If the target service does not accept new conversations on the contract specified, [!INCLUDE[ssSB](../../includes/sssb-md.md)] returns an error message on the conversation. When this clause is omitted, the conversation follows the contract named **DEFAULT**.  
   
- RELATED_CONVERSATION **=***related_conversation_handle*  
+ RELATED_CONVERSATION **=**_related_conversation_handle_  
  Specifies the existing conversation group that the new dialog is added to. When this clause is present, the new dialog belongs to the same conversation group as the dialog specified by *related_conversation_handle*. The *related_conversation_handle*must be of a type implicitly convertible to type **uniqueidentifier**. The statement fails if the *related_conversation_handle* does not reference an existing dialog.  
   
- RELATED_CONVERSATION_GROUP **=***related_conversation_group_id*  
+ RELATED_CONVERSATION_GROUP **=**_related_conversation_group_id_  
  Specifies the existing conversation group that the new dialog is added to. When this clause is present, the new dialog will be added to the conversation group specified by *related_conversation_group_id*. The *related_conversation_group_id*must be of a type implicitly convertible to type **uniqueidentifier**. If *related_conversation_group_id*does not reference an existing conversation group, the service broker creates a new conversation group with the specified *related_conversation_group_id* and relates the new dialog to that conversation group.  
   
- LIFETIME **=***dialog_lifetime*  
+ LIFETIME **=**_dialog_lifetime_  
  Specifies the maximum amount of time the dialog will remain open. For the dialog to complete successfully, both endpoints must explicitly end the dialog before the lifetime expires. The *dialog_lifetime* value must be expressed in seconds. Lifetime is of type **int**. When no LIFETIME clause is specified, the dialog lifetime is the maximum value of the **int** data type.  
   
  ENCRYPTION  

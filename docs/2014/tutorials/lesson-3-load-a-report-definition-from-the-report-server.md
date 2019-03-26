@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Lesson 3: Load a Report Definition from the Report Server
   After you have created your project and generated the classes from the RDL schema, you are ready to load a report definition from the report server.  
@@ -37,7 +36,7 @@ manager: craigg
         string reportPath =   
             "/AdventureWorks 2012 Sample Reports/Company Sales 2012";  
   
-        // Retrieve the report defintion   
+        // Retrieve the report definition   
         // from the report server  
         byte[] bytes =   
             _reportService.GetItemDefinition(reportPath);  
@@ -66,7 +65,7 @@ manager: craigg
         Dim reportPath As String = _  
             "/AdventureWorks 2012 Sample Reports/Company Sales 2012"  
   
-        'Retrieve the report defintion   
+        'Retrieve the report definition   
         'from the report server  
         Dim bytes As Byte() = _  
             m_reportService.GetItemDefinition(reportPath)  

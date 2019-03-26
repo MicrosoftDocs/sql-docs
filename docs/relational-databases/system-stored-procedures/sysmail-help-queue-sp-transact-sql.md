@@ -34,7 +34,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## Arguments  
- [ **@queue_type** = ] **'***queue_type***'**  
+ [ **@queue_type** = ] **'**_queue_type_**'**  
  Optional argument deletes e-mails of the type specified as the *queue_type*. *queue_type* is **nvarchar(6)** with no default. Valid entries are **mail** and **status**.  
   
 ## Return Code Values  

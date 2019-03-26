@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # GetDatabaseVersionDisplayName Method (WMI)
   Gets the display name for a given report server database version string.  

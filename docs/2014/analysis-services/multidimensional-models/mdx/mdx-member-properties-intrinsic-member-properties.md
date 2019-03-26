@@ -21,7 +21,7 @@ manager: craigg
   
  Depending on how you construct the query, and on the client application you are using to execute queries, member properties may or may not be visible in the result set. If you are using SQL Server Management Studio to test or run queries, you can double-click a member in the result set to open the Member Properties dialog box, showing the values for each intrinsic member property.  
   
- For an introduction to using and viewing dimension member properties, see [Viewing SSAS Member Properties within an MDX Query Window in SSMS](http://go.microsoft.com/fwlink/?LinkId=317362).  
+ For an introduction to using and viewing dimension member properties, see [Viewing SSAS Member Properties within an MDX Query Window in SSMS](https://go.microsoft.com/fwlink/?LinkId=317362).  
   
 > [!NOTE]  
 >  As a provider that is compliant with the OLAP section of the OLE DB specification dated March 1999 (2.6), [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the intrinsic member properties listed in this topic.  
@@ -58,7 +58,7 @@ manager: craigg
 |--------------|-----------------|  
 |`ID`|The internally maintained ID for the member.|  
 |`Key`|The value of the member key in the original data type. MEMBER_KEY is for backward-compatibility.  MEMBER_KEY has the same value as KEY0 for non-composite keys, and MEMBER_KEY property is null for composite keys.|  
-|`KEYx`|The key for the member, where x is the zero-based ordinal of the key. KEY0 is available for composite and non-composite keys, but primarily used for composite keys.<br /><br /> For composite keys, KEY0, KEY1, KEY2, and so on, collectively form the composite key. You can use each one independently in a query to return that portion of the composite key. For example, specifying KEY0 returns the first part of the composite key, specifying KEY1 returns the next part of the composite key, and so on.<br /><br /> If the key is non-composite, then KEY0 is equivalent to `Key`.<br /><br /> Note that `KEYx` can be used in context as well as without context. For this reason, it appears in both lists.<br /><br /> For an example of how to use this member property, see [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
+|`KEYx`|The key for the member, where x is the zero-based ordinal of the key. KEY0 is available for composite and non-composite keys, but primarily used for composite keys.<br /><br /> For composite keys, KEY0, KEY1, KEY2, and so on, collectively form the composite key. You can use each one independently in a query to return that portion of the composite key. For example, specifying KEY0 returns the first part of the composite key, specifying KEY1 returns the next part of the composite key, and so on.<br /><br /> If the key is non-composite, then KEY0 is equivalent to `Key`.<br /><br /> Note that `KEYx` can be used in context as well as without context. For this reason, it appears in both lists.<br /><br /> For an example of how to use this member property, see [A Simple MDX Tidbit: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
 |`Name`|The name of the member.|  
   
 ### PROPERTIES Syntax for Context Sensitive Properties  
@@ -82,7 +82,7 @@ manager: craigg
  The following table lists the non-context sensitive intrinsic properties supported by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
->  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the `MEMBERS` schema rowset, see [MDSCHEMA_MEMBERS Rowset](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md).  
+>  Columns in the MEMBERS schema rowset support the intrinsic member properties listed in the following table. For more information about the `MEMBERS` schema rowset, see [MDSCHEMA_MEMBERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Property|Description|  
 |--------------|-----------------|  
@@ -95,7 +95,7 @@ manager: craigg
 |`HIERARCHY_UNIQUE_NAME`|The unique name of the hierarchy. If the member belongs to more than one hierarchy, there is one row for each hierarchy to which the member belongs. For providers that generate unique names by qualification, each component of this name is delimited.|  
 |`IS_DATAMEMBER`|A Boolean that indicates whether the member is a data member.|  
 |`IS_PLACEHOLDERMEMBER`|A Boolean that indicates whether the member is a placeholder.|  
-|`KEYx`|The key for the member, where x is the zero-based ordinal of the key. KEY0 is available for composite and non-composite keys.<br /><br /> If the key is non-composite, then KEY0 is equivalent to `Key`.<br /><br /> For composite keys, KEY0, KEY1, KEY2, and so on, collectively form the composite key. You can reference each one independently in a query to return that portion of the composite key. For example, specifying KEY0 returns the first part of the composite key, specifying KEY1 returns the next part of the composite key, and so on.<br /><br /> Note that `KEYx` can be used in context as well as without context. For this reason, it appears in both lists.<br /><br /> For an example of how to use this member property, see [A Simple MDX Tidbit: Key0, Key1, Key2](http://go.microsoft.com/fwlink/?LinkId=317364).|  
+|`KEYx`|The key for the member, where x is the zero-based ordinal of the key. KEY0 is available for composite and non-composite keys.<br /><br /> If the key is non-composite, then KEY0 is equivalent to `Key`.<br /><br /> For composite keys, KEY0, KEY1, KEY2, and so on, collectively form the composite key. You can reference each one independently in a query to return that portion of the composite key. For example, specifying KEY0 returns the first part of the composite key, specifying KEY1 returns the next part of the composite key, and so on.<br /><br /> Note that `KEYx` can be used in context as well as without context. For this reason, it appears in both lists.<br /><br /> For an example of how to use this member property, see [A Simple MDX Tidbit: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
 |`LCID` *x*|The translation of the member caption in the locale ID hexadecimal value, where *x* is the locale ID decimal value (for example, LCID1009 as English-Canada). This is only available if the translation has the caption column bound to the data source.|  
 |`LEVEL_NUMBER`|The distance of the member from the root of the hierarchy. The root level is zero.|  
 |`LEVEL_UNIQUE_NAME`|The unique name of the level to which the member belongs. For providers that generate unique names by qualification, each component of this name is delimited.|  

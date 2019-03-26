@@ -1,6 +1,6 @@
 ---
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 4/24/2018
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.custom: ""
@@ -12,6 +12,7 @@ ms.author: mikeray
 manager: craigg
 ---
 # SQL Server privacy supplement
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
@@ -24,7 +25,7 @@ This article summarizes the behavior of different data objects used within SQL S
 - SQL Server Migration Assistant
 - MS-SQL Extension
 
-Definition of *Permitted usage Scenarios*. For the context of this article, Microsoft defines “Permitted Usages Scenarios” as actions or activities that are initiated by Microsoft.
+Definition of *Permitted usage Scenarios*. For the context of this article, Microsoft defines "Permitted Usages Scenarios" as actions or activities that are initiated by Microsoft.
 
 ## Access control
 
@@ -37,12 +38,13 @@ Credential-related information used to secure logins, users, or accounts within 
 
 ### Permitted usage scenarios
 
-|Scenario  |Access restrictions  |Retention requirements |
+|Scenario |Access restrictions |Retention requirements |
 |---------|---------|---------|
-|These credentials never leave the user machine via Usage Feedback.     |-         |-         |
-|Crash Dumps may contain Access Control Data.     |-         |Crash Dumps: Maximum 30 days.         |
-|These credentials never leave the user machine via User Feedback unless customer injects it manually    |Limit to Microsoft internal use with no third-party access.         |User Feedback: Max 1 year         |
- |
+|These credentials never leave the user machine via Usage Feedback. |- |- |
+|Crash Dumps may contain Access Control Data. |- |Crash Dumps: Maximum 30 days. |
+|These credentials never leave the user machine via User Feedback unless customer injects it manually |Limit to Microsoft internal use with no third-party access. |User Feedback: Max 1 year|
+|&nbsp;|&nbsp;|&nbsp;|
+
 ## Customer content
 
 Customer content is defined as data stored within user tables, directly or indirectly. The data includes statistics or user literals within query texts that might be stored within user tables.
@@ -54,6 +56,7 @@ Customer content is defined as data stored within user tables, directly or indir
 - Query texts containing literal values.
 
 ### Permitted usage scenarios
+
 |Scenario  |Access restrictions  |Retention requirements |
 |---------|---------|---------|
 |This data does not leave the user machine via Usage Feedback. |- |- |
@@ -131,8 +134,8 @@ Microsoft does examine application name values set by other programs that use SQ
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
 |May be used by Microsoft to improve features and or fix bugs in current features.|Limit to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years |
-|May be used to make suggestions to the customer.  For example, “Based on your usage of the product, consider using feature *X* since it would perform better.” |Microsoft can expose the data to the original customer, for example through dashboards. |Customer Data Security Logs: Min 3 years - Max 6 years |
-May be used by Microsoft for future product planning. |Microsoft may share this information with other hardware and software vendors to improve how their products run with Microsoft software. |Min 90 days - Max 3 years|
+|May be used to make suggestions to the customer.  For example, "Based on your usage of the product, consider using feature *X* since it would perform better." |Microsoft can expose the data to the original customer, for example through dashboards. |Customer Data Security Logs: Min 3 years - Max 6 years |
+|May be used by Microsoft for future product planning. |Microsoft may share this information with other hardware and software vendors to improve how their products run with Microsoft software. |Min 90 days - Max 3 years|
 |May be used by Microsoft to provide cloud-based services based on emitted Usage Feedback. For example, a customer dashboard showing feature usage across all SQL Server installations in an organization. |Microsoft can expose the data to the original customer, for example, through dashboards. |Min 90 days - Max 3 years |
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 |May use database name and application name to categorize databases and applications into known categories, for example, those that may be running software provided by Microsoft or other companies.|Limit to Microsoft internal with no third-party access.|Min 90 days - Max 3 years |
@@ -155,6 +158,6 @@ Data that describes or is used to configure servers, databases, tables, and othe
 
 ## Telemetry controls
 
-Instructions on how telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
+Instructions on how telemetry can be turned on/off in product can be referenced here - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

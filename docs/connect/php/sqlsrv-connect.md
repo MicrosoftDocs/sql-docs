@@ -48,7 +48,7 @@ A PHP connection resource. If a connection cannot be successfully created and op
 If values for the *UID* and *PWD* keys are not specified in the optional *$connectionInfo* parameter, the connection will be attempted using Windows Authentication. For more information about connecting to the server, see [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) and [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
   
 ## Example  
-The following example creates and opens a connection using Windows Authentication. The example assumes that SQL Server and the [AdventureWorks](http://www.codeplex.com/SqlServerSamples) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The following example creates and opens a connection using Windows Authentication. The example assumes that SQL Server and the [AdventureWorks](https://www.codeplex.com/SqlServerSamples) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  

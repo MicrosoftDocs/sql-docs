@@ -1,5 +1,5 @@
 ---
-title: "Calculated Columns | Microsoft Docs"
+title: "Calculated columns in Analysis Services tabular models | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -12,7 +12,7 @@ manager: kfile
 ---
 # Calculated Columns
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Calculated columns, in tabular models, enable you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column’s row level values. The calculated column can then be used in a report, PivotTable, or PivotChart as would any other column.  
+  Calculated columns, in tabular models, enable you to add new data to your model. Instead of pasting or importing values into the column, you create a DAX formula that defines the column's row level values. The calculated column can then be used in a report, PivotTable, or PivotChart as would any other column.  
  
   
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection managers [Integration Services], Flat File"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "flat files"
   - "flat file connections [Integration Services]"
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Flat File Connection Manager
@@ -50,7 +49,7 @@ manager: craigg
   
 -   Specify a text qualifier character. Each column can be configured to recognize a text qualifier.  
   
-     The use of a qualifier character to embed a qualifier character into a qualified string is now supported. The double instance of a text qualifier is interpreted as a literal, single instance of that string. For example, if the text qualifier is a single quote and the input data is ‘abc’, ‘def’, ‘g’hi’, the output data is abc, def, g’hi.  
+     The use of a qualifier character to embed a qualifier character into a qualified string is now supported. The double instance of a text qualifier is interpreted as a literal, single instance of that string. For example, if the text qualifier is a single quote and the input data is 'abc', 'def', 'g'hi', the output data is abc, def, g'hi.  
   
 -   Set properties such as the name, data type, and maximum width on individual columns.  
   

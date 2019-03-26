@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: "reference"
 apiname: 
   - "LocalDBStartInstance"
@@ -105,10 +104,10 @@ HRESULT LocalDBStartInstance(
   
 |Buffer|Buffer size|Rationale|Action|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|User wants to start the instance and doesn’t need a pipe name.|Starts an instance (no pipe return and no required buffer size return).|  
+|NULL|NULL|User wants to start the instance and doesn't need a pipe name.|Starts an instance (no pipe return and no required buffer size return).|  
 |NULL|Present|User asks for the output buffer size. (In the next call the user will probably ask for an actual start.)|Returns a required buffer size (no start and no pipe return). Result is S_OK.|  
 |Present|NULL|Not allowed; incorrect input.|Returned result is LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Present|Present|User wants to start the instance and needs the pipe name to connect to it after it is started.|Checks the buffer size, starts the instance, and returns the pipe name in the buffer. <br />The buffer size argument returns the length of the “server=” string, not including terminating nulls.|  
+|Present|Present|User wants to start the instance and needs the pipe name to connect to it after it is started.|Checks the buffer size, starts the instance, and returns the pipe name in the buffer. <br />The buffer size argument returns the length of the "server=" string, not including terminating nulls.|  
   
  For a code sample that uses LocalDB API, see [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   

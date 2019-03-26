@@ -55,6 +55,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SQLBindParameter Function](http://go.microsoft.com/fwlink/?LinkId=59328)  
+ [SQLBindParameter Function](https://go.microsoft.com/fwlink/?LinkId=59328)  
   
   

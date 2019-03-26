@@ -6,7 +6,7 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 08/16/2018
+ms.date: 01/15/2019
 ---
 
 # Server Properties (Advanced Page) - Reporting Services
@@ -79,24 +79,6 @@ The default report processing timeout value, in seconds, for all reports managed
 **SystemSnapshotLimit**  
 The maximum number of snapshots that are stored for a report. Valid values are **-1** through **2**,**147**,**483**,**647**. If the value is **-1**, there is no snapshot limit.  
 
-**EnableIntegratedSecurity**  
-Determines whether Windows-integrated security is supported for report data source connections. The default is **True**. The valid values are as follows:
-
-|Values|Description|
-|---------|---------|
-|**True**|Windows-integrated security is enabled.|
-|**False**|Windows-integrated security is not enabled. Report data sources that are configured to use Windows-integrated security will not run.|
-
-**EnableLoadReportDefinition**  
-Select this option to specify whether users can perform an unplanned report execution from a Report Builder report. Setting this option determines the value of the **EnableLoadReportDefinition** property on the report server.  
-
-If you clear this option, the property is set to False. Report server won't generate clickthrough reports for reports that use a report model as a data source. Any calls to the LoadReportDefinition method are blocked.  
-
-Turning off this option mitigates a threat whereby a malicious user launches a denial of service attack by overloading the report server with LoadReportDefinition requests.  
-
-**EnableRemoteErrors**  
-Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
-
 **AccessControlAllowCredentials**  
 Indicates whether the response to the client request can be exposed when the 'credentials' flag is set to true. The default value is **false**.
 
@@ -115,11 +97,33 @@ A comma-separated list of headers that the server will expose to clients. The de
 **AccessControlMaxAge**
 Specifies the number of seconds the results of the preflight request can be cached. The default value is 600 (10 minutes).
 
+**AllowedResourceExtensionsForUpload** ***(Power BI Report Server only)***
+Set extensions of resources that can be uploaded to the report server. Extensions for built-in file types like &ast;.rdl and &ast;.pbix are not required to be included. Default is “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”. 
+
+
 **EditSessionCacheLimit**  
 Specifies the number of data cache entries that can be active in a report edit session. The default number is 5.  
 
 **EditSessionTimeout**  
 Specifies the number of seconds until a report edit session times out. The default value is 7200 seconds (two hours).  
+
+**EnableIntegratedSecurity**  
+Determines whether Windows-integrated security is supported for report data source connections. The default is **True**. The valid values are as follows:
+
+|Values|Description|
+|---------|---------|
+|**True**|Windows-integrated security is enabled.|
+|**False**|Windows-integrated security is not enabled. Report data sources that are configured to use Windows-integrated security will not run.|
+
+**EnableLoadReportDefinition**  
+Select this option to specify whether users can perform an unplanned report execution from a Report Builder report. Setting this option determines the value of the **EnableLoadReportDefinition** property on the report server.  
+
+If you clear this option, the property is set to False. Report server won't generate clickthrough reports for reports that use a report model as a data source. Any calls to the LoadReportDefinition method are blocked.  
+
+Turning off this option mitigates a threat whereby a malicious user launches a denial of service attack by overloading the report server with LoadReportDefinition requests.  
+
+**EnableRemoteErrors**  
+Includes external error information (for example, error information about report data sources) with the error messages that are returned for users who request reports from remote computers. Valid values are **true** and **false**. The default value is **false**. For more information, see [Enable Remote Errors &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
 **EnableCustomVisuals** ***(Power BI Report Server only)***
 To enable the display of Power BI custom visuals. Values are True/False. *Default is True.*  
@@ -151,6 +155,9 @@ Set for how long you want the schedule refresh to time out. *Default is 120.*
 **ShowDownloadMenu** 
 Enables the client tools download menu. *Default is true.*
 
+**SupportedHyperlinkSchemes** ***(Power BI Report Server only)***
+Sets a comma separated list of the URI schemes allowed to be defined on Hyperlink actions that are allowed to be rendered or “&ast;” to enable all hyperlink schemes. For example, setting “http,https” would allow hyperlinks to “https://www. contoso.com”, but would remove hyperlinks to “mailto:bill@contoso.com” or “javascript:window.open(‘www.contoso.com’, ‘_blank’)”. Default is “&ast;”.
+
 **TimeInitialDelaySeconds**
 Set for how long you want the initial time to be delayed in seconds. *Default is 60.*
 
@@ -176,4 +183,4 @@ Indicates whether to send detailed error messages to the client computer when us
 [Script Deployment and Administrative Tasks](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 [Enable and Disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "running packages [Integration Services]"
   - "programmatically load and run packages [SSIS]"
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Loading and Running a Local Package Programmatically
@@ -168,7 +168,7 @@ Class EventListener
     ByVal helpFile As String, ByVal helpContext As Integer, _  
     ByVal idofInterfaceWithError As String) As Boolean  
   
-    ' Add application–specific diagnostics here.  
+    ' Add application-specific diagnostics here.  
     Console.WriteLine("Error in {0}/{1} : {2}", source, subComponent, description)  
     Return False  
   

@@ -1,7 +1,7 @@
 ---
 title: "Object Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: 01/19/2019
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -18,10 +18,11 @@ ms.author: sstein
 manager: craigg
 ---
 # Object Catalog Views (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  This section contains the following catalog views.  
-  
+This section contains links to the following catalog views.
+
 |||  
 |-|-|  
 |[sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)|[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
@@ -39,7 +40,7 @@ manager: craigg
 |[sys.hash_indexes](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)|[sys.synonyms](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)|  
 |[sys.identity_columns](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)|[sys.table_types](../../relational-databases/system-catalog-views/sys-table-types-transact-sql.md)|  
 |[sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|[sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)|
-[sys.trigger_event_types](../../relational-databases/system-catalog-views/sys-trigger-event-types-transact-sql.md)|[sys.key_constraints](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)|
+|[sys.trigger_event_types](../../relational-databases/system-catalog-views/sys-trigger-event-types-transact-sql.md)|[sys.key_constraints](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)|
 |[sys.trigger_events](../../relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)|[sys.masked_columns](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)|
 |[sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)|[sys.memory_optimized_tables_internal_attributes](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)|
 |[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)|[sys.numbered_procedure_parameters](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)|
@@ -47,7 +48,7 @@ manager: craigg
   
 ## See Also  
  [System Catalog Views](catalog-views-transact-sql.md)
- [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

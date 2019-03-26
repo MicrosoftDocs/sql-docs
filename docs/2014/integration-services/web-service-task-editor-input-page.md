@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Web Service Task Editor"
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Web Service Task Editor (Input Page)
@@ -29,7 +29,7 @@ manager: craigg
  Select a Web method from the list for the task to execute.  
   
  **WebMethodDocumentation**  
- Type a description of Web method, or the click the browse button **(…)** and then type the description in the **Web Method Documentation** dialog box.  
+ Type a description of Web method, or the click the browse button **(...)** and then type the description in the **Web Method Documentation** dialog box.  
   
  **Name**  
  Lists the names of the inputs to the Web method.  

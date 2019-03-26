@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SCD transformation"
   - "updating slowly changing dimensions"
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Slowly Changing Dimension Transformation
@@ -63,7 +63,7 @@ manager: craigg
 |------------|-----------------|----------------------------|  
 |**Changing Attributes Updates Output**|The record in the lookup table is updated. This output is used for changing attribute rows.|An OLE DB Command transformation updates the record using an UPDATE statement.|  
 |**Fixed Attribute Output**|The values in rows that must not change do not match values in the lookup table. This output is used for fixed attribute rows.|No default data flow is created. If the transformation is configured to continue after it encounters changes to fixed attribute columns, you should create a data flow that captures these rows.|  
-|**Historical Attributes Inserts Output**|The lookup table contains at least one matching row. The row marked as “current” must now be marked as "expired". This output is used for historical attribute rows.|Derived Column transformations create columns for the expired row and the current row indicators. An OLE DB Command transformation updates the record that must now be marked as "expired". The row with the new column values is directed to the New Output, where the row is inserted and marked as "current".|  
+|**Historical Attributes Inserts Output**|The lookup table contains at least one matching row. The row marked as "current" must now be marked as "expired". This output is used for historical attribute rows.|Derived Column transformations create columns for the expired row and the current row indicators. An OLE DB Command transformation updates the record that must now be marked as "expired". The row with the new column values is directed to the New Output, where the row is inserted and marked as "current".|  
 |**Inferred Member Updates Output**|Rows for inferred dimension members are inserted. This output is used for inferred member rows.|An OLE DB Command transformation updates the record using an SQL UPDATE statement.|  
 |**New Output**|The lookup table contains no matching rows. The row is added to the dimension table. This output is used for new rows and changes to historical attributes rows.|A Derived Column transformation sets the current row indicator, and an OLE DB destination inserts the row.|  
 |**Unchanged Output**|The values in the lookup table match the row values. This output is used for unchanged rows.|No default data flow is created because the Slowly Changing Dimension transformation performs no work. If you want to capture these rows, you should create a data flow for this output.|  
@@ -84,7 +84,7 @@ manager: craigg
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -102,6 +102,6 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [Optimizing the Slowly Changing Dimension Wizard](http://go.microsoft.com/fwlink/?LinkId=199481), on blogs.msdn.com.  
+-   Blog entry, [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481), on blogs.msdn.com.  
   
   

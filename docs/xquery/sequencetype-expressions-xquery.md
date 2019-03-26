@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -39,7 +38,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  If the **?** occurrence indicator is not specified, `sequence of` returns True only when the `Expression` type matches the `Type` specified and `Expression` returns a singleton.  
   
- **Note** The plus symbol (**+**) and the asterisk (**\***) occurrence indicators are not supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Note** The plus symbol (**+**) and the asterisk (**&#42;**) occurrence indicators are not supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  The following examples illustrate the use of the**instance of** XQuery operator.  
   
@@ -98,7 +97,7 @@ go
   
 ```  
 SELECT CatalogDescription.query('  
-   declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+   declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
    data(/PD:ProductDescription[1]/@ProductModelID) instance of xs:string  
 ') as Result  
 FROM Production.ProductModel  
@@ -111,7 +110,7 @@ WHERE ProductModelID = 19
   
 ```  
 SELECT Instructions.query('  
-   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    /AWMI:root[1]/AWMI:Location[1]/@LocationID instance of attribute(LocationID,xs:integer)  
 ') as Result  
 FROM Production.ProductModel  
@@ -124,7 +123,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT CatalogDescription.query('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      /PD:ProductDescription[1] instance of element(PD:ProductDescription, PD:ProductDescription?)  
     ') as Result  
 FROM  Production.ProductModel  
@@ -193,8 +192,8 @@ drop xml schema collection SC
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="myNS" xmlns:ns="myNS"  
-xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-      <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+      <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
       <simpleType name="myType">  
            <restriction base="s:varchar">  
                   <maxLength value="20"/>  
@@ -210,7 +209,7 @@ Go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
    data(/ns:root[1]) instance of ns:myType')  
 go  
@@ -221,7 +220,7 @@ go
 ```  
 DECLARE @var XML(SC)  
 SET @var = '<root xmlns="myNS">My data</root>'  
-SELECT @var.query('declare namespace sqltypes = "http://schemas.microsoft.com/sqlserver/2004/sqltypes";  
+SELECT @var.query('declare namespace sqltypes = "https://schemas.microsoft.com/sqlserver/2004/sqltypes";  
 declare namespace ns="myNS";   
 data(/ns:root[1]) instance of sqltypes:varchar?')  
 go  
@@ -339,7 +338,7 @@ select @x.query('"2" cast as xs:integer?')
  In the following query, **data()** returns the typed value of the ProductModelID attribute, a string type. The `cast as`operator converts the value to xs:integer.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
 SELECT CatalogDescription.query('  
    data(/PD:ProductDescription[1]/@ProductModelID) cast as xs:integer?  
 ') as Result  

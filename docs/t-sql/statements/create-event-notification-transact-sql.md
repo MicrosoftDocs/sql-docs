@@ -96,7 +96,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >  This option is not available in a contained database.  
   
 ## Remarks  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] includes a message type and contract specifically for event notifications. Therefore, a Service Broker initiating service does not have to be created because one already exists that specifies the following contract name: `http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] includes a message type and contract specifically for event notifications. Therefore, a Service Broker initiating service does not have to be created because one already exists that specifies the following contract name: `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  The target service that receives event notifications must honor this preexisting contract.  
   
@@ -138,7 +138,7 @@ GO
 --the event notifications contract.  
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
-([http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]);  
+([https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]);  
 GO  
 --Create a route on the service to define the address   
 --to which Service Broker sends messages for the service.  

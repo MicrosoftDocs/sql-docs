@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dqproject.newdqproject.f1"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "create,data quality project"
   - "data quality project,create"
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Data Quality Project

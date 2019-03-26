@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Enable and Disable Client-Side Printing for Reporting Services
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX control, **RSClientPrint**, provides client-side printing for reports viewed in a browser. The control displays a custom print dialog box that supports features common to other print dialog boxes. The features include print preview, page selections for specifying specific pages and ranges, page margins, and orientation. Although client-side printing is enabled by default, you can disable the feature to prevent it from being used.  
@@ -84,7 +84,7 @@ Dim rs As New ReportingService()
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
         setProp.Name = "EnableClientPrinting"  
-        setProp.Value = “False”   
+        setProp.Value = "False"   
         props(0) = setProp  
         Try  
             rs.SetSystemProperties(props)  

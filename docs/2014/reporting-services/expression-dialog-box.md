@@ -13,9 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Expression dialog box [Reporting Services]"
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Expression Dialog Box
   Use the **Expression** dialog box to write [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] expressions for report item properties. You can use expressions to set many properties, including color, font, and borders. At run time, the report processor evaluates expressions and substitutes the result for the value of the property.  
@@ -31,7 +31,7 @@ manager: craigg
 ## Expression Constructs  
  Expressions begin with an equal sign (=) and can include constants, literals, operators, and references to built-in fields, built-in collections, built-in functions, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] run-time library functions, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] common language runtime classes, and custom functions. The following list describes the categories and values you can add to an expression.  
   
- **Set expression for:**  *\<PropertyName>*  
+ **Set expression for:**  _\<PropertyName>_  
  The name of the property that you are defining an expression for. You can also set this property, by name, in the Properties pane.  
   
  **Constants**  
@@ -45,7 +45,7 @@ manager: craigg
  **Parameters**  
  Provides a list of report parameters.  
   
- **Fields(** *\<selected Dataset>* **)**  
+ **Fields(** _\<selected Dataset>_ **)**  
  Displays the list of fields for the dataset selected in the Datasets category. Double-click a field to copy the field to the **Expression** box.  
   
  **Datasets**  

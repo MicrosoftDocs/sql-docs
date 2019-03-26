@@ -39,7 +39,7 @@ For the latest IIS news, visit [IIS Home](https://www.iis.net/).
 For peer-to-peer support, visit the [IIS Forums](https://forums.iis.net/).  
   
 ## PHP Support Resources  
-[PHP for Windows Documentation](http://windows.php.net/)  
+[PHP for Windows Documentation](https://windows.php.net/)  
   
 For the latest information about PHP, visit [http://www.php.net/](http://www.php.net).  
   

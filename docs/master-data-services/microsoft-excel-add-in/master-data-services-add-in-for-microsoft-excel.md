@@ -23,15 +23,14 @@ manager: craigg
  In the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can use Data Quality Services (DQS) to match data before loading it into MDS. This helps to prevent duplicate data in MDS.  
 
 ## Downloads 
->*  Download the Master Data Services Add-in for Excel for SQL Server 2016 SP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836866). 
->* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017 CTP1 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867). This add-in also works for SQL Server 2017 RC1.
-
+>*  Download the Master Data Services Add-in for Excel for SQL Server 2016 SP2 from [this Microsoft Download Center page](https://www.microsoft.com/download/details.aspx?id=56838). 
+>* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
  
   
 ## Terms  
  When working with the Add-in, you may encounter the following terms. For more information about these concepts, see [Master Data Services Overview &#40;MDS&#41;](../../master-data-services/master-data-services-overview-mds.md).  
   
--   The *MDS repository* is where all master data is stored. It is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that is configured to store MDS data. To work with data from the repository, you load data it into Excel; when you’re done working with it, you publish changes back to the repository. Administrators can add new entities and attributes to the repository.  
+-   The *MDS repository* is where all master data is stored. It is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that is configured to store MDS data. To work with data from the repository, you load data it into Excel; when you're done working with it, you publish changes back to the repository. Administrators can add new entities and attributes to the repository.  
   
 -   *MDS-managed data* is data that is stored in the MDS repository and that you load into Excel, where the data is displayed as highlighted rows. You can add data that is not MDS-managed to your worksheet, and it is not affected when you refresh the MDS-managed data.  
   

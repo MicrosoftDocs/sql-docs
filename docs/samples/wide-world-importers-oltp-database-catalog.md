@@ -131,9 +131,9 @@ The database schema has been code-generated based on a series of metadata tables
 ### Table design
 
 - All tables have single column primary keys for join simplicity.
-- All schemas, tables, columns, indexes, and check constraints have a Description extended property that can be used to identify the purpose of the object or column. Memory-optimized tables are an exception to this since they don’t currently support extended properties.
+- All schemas, tables, columns, indexes, and check constraints have a Description extended property that can be used to identify the purpose of the object or column. Memory-optimized tables are an exception to this since they don't currently support extended properties.
 - All foreign keys are automatically indexed unless there is another non-clustered index that has the same left-hand component.
-- Auto-numbering in tables is based on sequences. These sequences are easier to work with across linked servers and similar environments than IDENTITY columns. Memory-optimized tables use IDENTITY columns since they don’t support in SQL Server 2016.
+- Auto-numbering in tables is based on sequences. These sequences are easier to work with across linked servers and similar environments than IDENTITY columns. Memory-optimized tables use IDENTITY columns since they don't support in SQL Server 2016.
 - A single sequence (TransactionID) is used for these tables: CustomerTransactions, SupplierTransactions, and StockItemTransactions. This demonstrates how a set of tables can have a single sequence.
 - Some columns have appropriate default values.
 
@@ -158,7 +158,7 @@ These are the procedures used by a client application, such as a Web front-end.
 |Procedure|Purpose|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|Allows a person (from `Application.People`) to have access to the website.|
-|ChangePassword|Changes a user’s password (for users that are not using external authentication mechanisms).|
+|ChangePassword|Changes a user's password (for users that are not using external authentication mechanisms).|
 |InsertCustomerOrders|Allows inserting one or more customer orders (including the order lines).|
 |InvoiceCustomerOrders|Takes a list of orders to be invoiced and processes the invoices.|
 |RecordColdRoomTemperatures|Takes a sensor data list, as a table-valued parameter (TVP), and applies the data to the `Warehouse.ColdRoomTemperatures` temporal table.|
@@ -181,7 +181,7 @@ Simulates a workload that inserts sales and purchases. The main stored procedure
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Recreates the procedures needed for data load simulation. This is needed for bringing data up to the current date.|
 |Configuration_RemoveDataLoadSimulationProcedures|This removes the procedures again after data simulation is complete.|
-|DeactiveTemporalTablesBeforeDataLoad|Removes the temporal nature of all temporal tables and where applicable, applies a trigger so that changes can be made as though they were being applied at an earlier date than the sys-temporal tables allow.|
+|DeactivateTemporalTablesBeforeDataLoad|Removes the temporal nature of all temporal tables and where applicable, applies a trigger so that changes can be made as though they were being applied at an earlier date than the sys-temporal tables allow.|
 |PopulateDataToCurrentDate|Used to bring the data up to the current date. Should be run before any other configuration options after restoring the database from an initial backup.|
 |ReactivateTemporalTablesAfterDataLoad|Re-establishes the temporal tables, including checking for data consistency. (Removes the associated triggers).|
 
@@ -192,17 +192,17 @@ These procedures are used to configure the sample. They are used to apply enterp
 
 |Procedure|Purpose|
 |-----------------------------|---------------------|
-|AddRoleMemberIfNonexistant|Adds a member to a role if the member isn’t already in the role|
+|AddRoleMemberIfNonexistant|Adds a member to a role if the member isn't already in the role|
 |Configuration_ApplyAuditing|Adds auditing. Server auditing is applied for standard edition databases; additional database auditing is added for enterprise edition.|
 |Configuration_ApplyColumnstoreIndexing|Applies columnstore indexing to `Sales.OrderLines` and `Sales.InvoiceLines` and reindexes appropriately.|
 |Configuration_ApplyFullTextIndexing|Applies fulltext indexes to `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, and `Warehouse.StockItems`. Replaces `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` with replacement procedures that use fulltext indexing.|
-|Configuration_ApplyPartitioning|Applies table partitioning to `Sales.CustomerTransactions and `Purchasing.SupplierTransactions`, and rearranges the indexes to suit.|
+|Configuration_ApplyPartitioning|Applies table partitioning to `Sales.CustomerTransactions` and `Purchasing.SupplierTransactions`, and rearranges the indexes to suit.|
 |Configuration_ApplyRowLevelSecurity|Applies row level security to filter customers by sales territory related roles.|
 |Configuration_ConfigureForEnterpriseEdition|Applies columnstore indexing, full text, in-memory, polybase, and partitioning.|
 |Configuration_EnableInMemory|Adds a memory-optimized filegroup (when not working in Azure), replaces `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` with in-memory equivalents, and migrates the data, recreates the `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` table types with memory-optimized equivalents, drops and recreates the procedures `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, and `Website.RecordColdRoomTemperatures` that uses these table types.|
 |Configuration_RemoveAuditing|Removes the auditing configuration.|
 |Configuration_RemoveRowLevelSecurity|Removes the row level security configuration (this is needed for changes to the associated tables).|
-|CreateRoleIfNonExistant|Creates a database role if it doesn’t already exist.|
+|CreateRoleIfNonExistant|Creates a database role if it doesn't already exist.|
 
 
 ### Sequences Schema

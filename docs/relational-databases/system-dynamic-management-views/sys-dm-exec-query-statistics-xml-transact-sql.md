@@ -40,34 +40,25 @@ sys.dm_exec_query_statistics_xml(session_id)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## Table Returned
+
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID of the session. Not nullable.|
 |request_id|**int**|ID of the request. Not nullable.|
-|sql_handle|**varbinary(64)**|Hash map of SQL text of the request. Nullable.|
-|plan_handle|**varbinary(64)**|Hash map of query plan. Nullable.|
-|query_plan|**xml**|Showplan XML with partial statistics. Nullable.|
+|sql_handle|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure that the query is part of. Nullable.|
+|plan_handle|**varbinary(64)**|Is a token that uniquely identifies a query execution plan for a batch that is currently executing. Nullable.|
+|query_plan|**xml**|Contains the runtime Showplan representation of the query execution plan that is specified with *plan_handle* containing partial statistics. The Showplan is in XML format. One plan is generated for each batch that contains, for example ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, stored procedure calls, and user-defined function calls. Nullable.|
 
 ## Remarks
-This system function is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
+This system function is available starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. See KB [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-This system function works under both **standard** and **lightweight** query execution statistics profiling infrastructure.  
-  
-**Standard** statistics profiling infrastructure can be enabled by using:
-  -  [SET STATISTICS XML ON](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [SET STATISTICS PROFILE ON](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  the `query_post_execution_showplan` extended event.  
-  
-**Lightweight** statistics profiling infrastructure is available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and can be enabled:
-  -  Globally by using trace flag 7412.
-  -  Using the [*query_thread_profile*](http://support.microsoft.com/kb/3170113) extended event.
-  
-> [!NOTE]
-> Once enabled by trace flag 7412, lightweight profiling will be enabled to any consumer of the query execution statistics profiling infrastructure instead of standard profiling, such as the DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> However, standard profiling is still used for SET STATISTICS XML, *Include Actual Plan* action in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], and `query_post_execution_showplan` xEvent.
+This system function works under both **standard** and **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-> [!IMPORTANT]
-> In TPC-C like workload tests, enabling the lightweight statistics profiling infrastructure adds a 1.5 to 2 percent overhead. In contrast, the standard statistics profiling infrastructure can add up to 90 percent overhead for the same workload scenario.
+Under the following conditions, no Showplan output is returned in the **query_plan** column of the returned table for **sys.dm_exec_query_statistics_xml**:  
+  
+-   If the query plan that corresponds to the specified *session_id* is no longer executing, the **query_plan** column of the returned table is null. For example, this condition may occur if there is a time delay between when the plan handle was captured and when it was used with **sys.dm_exec_query_statistics_xml**.  
+    
+Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_statistics_xml** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates error 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL.   
 
 ## Permissions  
  Requires `VIEW SERVER STATE` permission on the server.  

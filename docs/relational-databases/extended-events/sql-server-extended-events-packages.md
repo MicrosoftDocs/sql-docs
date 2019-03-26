@@ -17,6 +17,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Extended Events Packages
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   A package is a container for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events objects. There are three kinds of Extended Events packages, which include the following:  
@@ -92,7 +93,7 @@ where name = 'keyword_map'
 >  Keywords map closely to the current grouping of SQL Trace events.  
   
 ### Targets  
- Targets are event consumers. Targets process events, either synchronously on the thread that fires the event or asynchronously on a system provided thread. Extended Events provides several targets that you can use as appropriate for directing event output. For more information, see [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+ Targets are event consumers. Targets process events, either synchronously on the thread that fires the event or asynchronously on a system provided thread. Extended Events provides several targets that you can use as appropriate for directing event output. For more information, see [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 ### Actions  
  An action is a programmatic response or series of responses to an event. Actions are bound to an event, and each event may have a unique set of actions.  
@@ -214,6 +215,6 @@ where name = 'lock_mode'
 ## See Also  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

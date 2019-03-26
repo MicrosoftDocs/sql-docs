@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Add Variable dialog box"
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add Variable

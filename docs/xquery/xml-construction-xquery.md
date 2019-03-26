@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -20,8 +19,8 @@ helpviewer_keywords:
   - "XML [SQL Server], construction"
   - "XQuery, XML construction"
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # XML Construction (XQuery)
@@ -74,7 +73,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Although constructing elements from constant expressions, as shown in this example, is useful, the true power of this XQuery language feature is the ability to construct XML that dynamically extracts data from a database. You can use curly braces to specify query expressions. In the resulting XML, the expression is replaced by its value. For example, the following query constructs a <`NewRoot`> element with one child element (<`e`>). The value of element <`e`> is computed by specifying a path expression inside curly braces ("{ … }").  
+ Although constructing elements from constant expressions, as shown in this example, is useful, the true power of this XQuery language feature is the ability to construct XML that dynamically extracts data from a database. You can use curly braces to specify query expressions. In the resulting XML, the expression is replaced by its value. For example, the following query constructs a <`NewRoot`> element with one child element (<`e`>). The value of element <`e`> is computed by specifying a path expression inside curly braces ("{ ... }").  
   
 ```sql
 DECLARE @x xml;  
@@ -136,7 +135,7 @@ SELECT @y;
   
 ```sql
 SELECT Instructions.query('  
-    declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation>  
            { /AWMI:root/AWMI:Location[1]/AWMI:step }  
         </FirstLocation>   
@@ -149,10 +148,10 @@ WHERE ProductModelID=7;
   
 ```xml
 <FirstLocation>  
-  <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
+  <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
-  <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
+  <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Attach <AWMI:tool>Trim Jig TJ-26</AWMI:tool> to the upper and lower right corners of the aluminum sheet.   
   </AWMI:step>  
    ...  
@@ -258,7 +257,7 @@ SELECT @y;
   
 ```sql
 SELECT Instructions.query('  
-    declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation   
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
          SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
@@ -273,7 +272,7 @@ where ProductModelID=7;
   
 ```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
-  <AWMI:step …   
+  <AWMI:step ...   
   </AWMI:step>  
   ...  
 </FirstLocation>  
@@ -430,7 +429,7 @@ select @x.query( '
   
 ```sql
 SELECT Instructions.query('  
-        <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+        <FirstLocation xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
          SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
            { /AWMI:root/AWMI:Location[1]/AWMI:step }  
@@ -440,12 +439,12 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Note that creating a new namespace prefix in this way will override any pre-existing namespace declaration for this prefix. For example, the namespace declaration, `AWMI="http://someURI"`, in the query prolog is overridden by the namespace declaration in the <`FirstLocation`> element.  
+ Note that creating a new namespace prefix in this way will override any pre-existing namespace declaration for this prefix. For example, the namespace declaration, `AWMI="https://someURI"`, in the query prolog is overridden by the namespace declaration in the <`FirstLocation`> element.  
   
 ```sql
 SELECT Instructions.query('  
-declare namespace AWMI="http://someURI";  
-        <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
+declare namespace AWMI="https://someURI";  
+        <FirstLocation xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
          SetupHrs = "{ (/AWMI:root/AWMI:Location[1]/@SetupHours)[1] }" >  
            { /AWMI:root/AWMI:Location[1]/AWMI:step }  
@@ -498,7 +497,7 @@ declare @x xml
 set @x=''  
 select @x.query('  
   
-declare namespace myNS="   http://       
+declare namespace myNS="   https://       
  abc/  
 xyz  
   
@@ -548,7 +547,7 @@ test
   
 ```sql
 SELECT Instructions.query('  
-  declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <?myProcessingInstr abc="value" ?>,   
    <FirstLocation   
         WorkCtrID = "{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
@@ -570,7 +569,7 @@ where ProductModelID=7;
 <FirstLocation WorkCtrID="10" SetupHrs="0.5">  
   <!-- some comment -->  
   <?myPI some processing instructions ?>  
-  <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">I  
+  <AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">I  
   nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
     ...  
@@ -634,7 +633,7 @@ text{"Some text "},
   
 ```sql
 SELECT Instructions.query('  
-  declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+  declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    element FirstLocation   
      {  
         attribute LocationID { (/AWMI:root/AWMI:Location[1]/@LocationID)[1] },  

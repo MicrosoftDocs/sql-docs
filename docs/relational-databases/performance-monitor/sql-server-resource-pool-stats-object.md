@@ -5,15 +5,14 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reosurce Pool Stats object"
   - "SQLServer: Resource Pool Stats object"
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Resource Pool Stats Object

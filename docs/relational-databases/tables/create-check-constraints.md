@@ -49,7 +49,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 1.  In **Object Explorer**, expand the table to which you want to add a check constraint, right-click **Constraints** and click **New Constraint**.  
   
-2.  In the **Check Constraints** dialog box, click in the **Expression** field and then click the ellipses **(…)**.  
+2.  In the **Check Constraints** dialog box, click in the **Expression** field and then click the ellipses **(...)**.  
   
 3.  In the **Check Constraint Expression** dialog box, type the SQL expressions for the check constraint. For example, to limit the entries in the `SellEndDate` column of the `Product` table to a value that is either greater than or equal to the date in the `SellStartDate` column or is a NULL value, type:  
   

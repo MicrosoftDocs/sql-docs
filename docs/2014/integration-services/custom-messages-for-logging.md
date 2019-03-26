@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SSIS packages, logs"
   - "custom messages for logging [Integration Services]"
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Custom Messages for Logging
@@ -256,7 +256,7 @@ manager: craigg
 |`XMLOperation`|Provides information about the operation that the task performs|  
   
 ## Related Content  
- Blog entry, [Logging custom events for Integration Services tasks](http://go.microsoft.com/fwlink/?LinkId=150580), on dougbert.com.  
+ Blog entry, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=150580), on dougbert.com.  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  

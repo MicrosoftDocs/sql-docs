@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services tutorial lesson 1: Create a new tabular model project | Microsoft Docs"
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Create a tabular model project
 
@@ -44,18 +45,18 @@ This article is the first lesson in a tabular model authoring tutorial. To compl
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       
-    If you don’t see SQL Server 2017 / Azure Analysis Services (1400) in the Compatibility level listbox, you’re not using the latest version of SQL Server Data Tools. To get the latest version, see [Install SQL Server Data tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
+    If you don't see SQL Server 2017 / Azure Analysis Services (1400) in the Compatibility level listbox, you're not using the latest version of SQL Server Data Tools. To get the latest version, see [Install SQL Server Data tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
       
   
 ## Understanding the SSDT tabular model authoring environment  
 
-Now that you’ve created a new tabular model project, let’s take a moment to explore the tabular model authoring environment in Visual Studio.  
+Now that you've created a new tabular model project, let's take a moment to explore the tabular model authoring environment in Visual Studio.  
   
 After your project is created, it opens in Visual Studio. On the right side, in **Tabular Model Explorer**, you see a tree view of the objects in your model. Since you haven't yet imported data, the folders are empty. You can right-click an object folder to perform actions, similar to the menu bar. As you step through this tutorial, you use the Tabular Model Explorer to navigate different objects in your model project.
 
 ![as-lesson1-tme](../tutorial-tabular-1400/media/as-lesson1-tme.png)
 
-Click the **Solution Explorer** tab. Here, you see your **Model.bim** file. If you don’t see the designer window to the left (the empty window with the Model.bim tab), in **Solution Explorer**, under **AW Internet Sales Project**, double-click the **Model.bim** file. The Model.bim file contains the metadata for your model project. 
+Click the **Solution Explorer** tab. Here, you see your **Model.bim** file. If you don't see the designer window to the left (the empty window with the Model.bim tab), in **Solution Explorer**, under **AW Internet Sales Project**, double-click the **Model.bim** file. The Model.bim file contains the metadata for your model project. 
 
 ![as-lesson1-se](../tutorial-tabular-1400/media/as-lesson1-se.png)
   

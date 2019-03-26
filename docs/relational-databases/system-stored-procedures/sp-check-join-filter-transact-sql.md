@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "filter_TSQL"
@@ -41,13 +40,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## Arguments  
- [ **@filtered_table**= ] **'***filtered_table***'**  
+ [ **@filtered_table**= ] **'**_filtered_table_**'**  
  Is the name of a filtered table. *filtered_table* is **nvarchar(400)**, with no default.  
   
- [ **@join_table**= ] **'***join_table***'**  
+ [ **@join_table**= ] **'**_join_table_**'**  
  Is the name of a table being joined to *filtered_table*. *join_table* is **nvarchar(400)**, with no default.  
   
- [ **@join_filterclause** = ] **'***join_filterclause***'**  
+ [ **@join_filterclause** = ] **'**_join_filterclause_**'**  
  Is the join filter clause being tested. *join_filterclause* is **nvarchar(1000)**, with no default.  
   
 ## Result Sets  

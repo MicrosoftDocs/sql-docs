@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "administrators [Master Data Services], about administrators"
@@ -45,7 +44,7 @@ manager: craigg
   
 |Administrator Type|Description|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] system administrator|Permissions assigned in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] have no effect on the administrator’s access.<br /><br /> Automatically has **Update** permission to all models.<br /><br /> Automatically has access to all functional areas.<br /><br /> In mdm.tblUser, the value in the **ID** column is **1**.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] system administrator|Permissions assigned in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] have no effect on the administrator's access.<br /><br /> Automatically has **Update** permission to all models.<br /><br /> Automatically has access to all functional areas.<br /><br /> In mdm.tblUser, the value in the **ID** column is **1**.|  
 |Model administrator|Permissions assigned in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determine whether or not the user is a model administrator.<br /><br /> Can be a model administrator based on permissions assigned explicitly or permissions inherited from a group.<br /><br /> Is an administrator only for models that have **Update** permission assigned to top-level model object, and no other permissions.<br /><br /> Has access only to functional areas that access is granted to.<br /><br /> In mdm.tblUser, the value in the **ID** column is not **1**.|  
   
 ## See Also  

@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "02/28/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.afpdelcltask.f1"
   - "sql11.dts.designer.afpdelcltask.f1"
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure HDInsight Delete Cluster Task

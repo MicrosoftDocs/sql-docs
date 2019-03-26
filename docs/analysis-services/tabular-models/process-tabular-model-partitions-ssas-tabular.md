@@ -1,5 +1,5 @@
 ---
-title: "Process Tabular Model Partitions | Microsoft Docs"
+title: "Process Analysis Services tabular model partitions | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -20,7 +20,7 @@ manager: kfile
   
 2.  In the **Partitions** dialog box, in **Partitions**, click on the Process button.  
   
-3.  In the **Process Parition(s)** dialog box, in the **Mode** listbox, select one of the following process modes:  
+3.  In the **Process Partition(s)** dialog box, in the **Mode** listbox, select one of the following process modes:  
   
     |Mode|Description|  
     |----------|-----------------|  

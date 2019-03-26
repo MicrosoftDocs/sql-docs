@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Bulk Insert Task Editor"
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Bulk Insert Task Editor (Connection Page)
@@ -54,7 +54,7 @@ manager: craigg
   
 ### Format = Use File  
  **FormatFile**  
- Type the path of the format file or click the ellipsis button **(…)** to locate the format file.  
+ Type the path of the format file or click the ellipsis button **(...)** to locate the format file.  
   
 ### Format = Specify  
  `RowDelimiter`  

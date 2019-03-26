@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports reporting information for tables on linked servers by accepting a two-part name for the *CatalogName* parameter: *Linked_Server_Name.Catalog_Name*.  
   
 ## See Also  
- [SQLTablePrivileges Function](http://go.microsoft.com/fwlink/?LinkId=59373\)   
+ [SQLTablePrivileges Function](https://go.microsoft.com/fwlink/?LinkId=59373\)   
  [ODBC API Implementation Details](~/relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

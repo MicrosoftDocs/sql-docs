@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Dimension Processing Destination Editor"
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Dimension Processing Destination Editor (Advanced Page)
@@ -87,7 +87,7 @@ manager: craigg
 |**ReportAndStop**|Report the error and stop processing.|  
   
  **Error log path**  
- Type the path of the error log, or click the **browse(…)** button to select a destination.  
+ Type the path of the error log, or click the **browse(...)** button to select a destination.  
   
  **Browse (...)**  
  Select a path for the error log.  

@@ -22,9 +22,9 @@ manager: craigg
   
  For more information about the state error codes, see the following topics:  
   
--   [Appendix A: ODBC Error Codes](http://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Appendix A: ODBC Error Codes](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
--   [SQLSTATE Mappings](http://go.microsoft.com/fwlink/?LinkId=89355)  
+-   [SQLSTATE Mappings](https://go.microsoft.com/fwlink/?LinkId=89355)  
   
 ## See Also  
  [Handling Errors and Messages](handling-errors-and-messages.md)  

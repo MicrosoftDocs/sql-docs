@@ -53,7 +53,7 @@ In this example you will see how to execute an [INSERT](../../t-sql/statements/i
   
 To use TinyTDS with Azure, it is recommended that you execute several `SET` statements to change how the current session handles specific information. Recommended `SET` statements are provided in the code sample. For example, `SET ANSI_NULL_DFLT_ON` will allow new columns created to allow null values even if the nullability status of the column is not explicitly stated.  
   
-To align with the Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md) format, use the [strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) function to cast to the corresponding datetime format.  
+To align with the Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md) format, use the [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) function to cast to the corresponding datetime format.  
   
 ``` ruby
     require 'tiny_tds'  

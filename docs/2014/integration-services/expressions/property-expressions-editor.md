@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.propertyexpressionseditor.f1"
 helpviewer_keywords: 
   - "Property Expressions Editor dialog box"
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Property Expressions Editor
@@ -29,7 +28,7 @@ manager: craigg
 > [!NOTE]  
 >  The names of user-defined and system variables are case-sensitive.  
   
- **Expression (…)**  
+ **Expression (...)**  
  Click the ellipsis to open the **Expression Builder** dialog box. For more information, see [Expression Builder](expression-builder.md).  
   
  **Delete**  

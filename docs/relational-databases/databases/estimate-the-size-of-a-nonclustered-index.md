@@ -5,8 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql  
 ms.reviewer: ""
 ms.prod_service: database-engine, sql-database
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], index size"

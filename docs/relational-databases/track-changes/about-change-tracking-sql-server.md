@@ -1,12 +1,10 @@
 ---
 title: "About Change Tracking (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data changes [SQL Server]"
@@ -15,8 +13,8 @@ helpviewer_keywords:
   - "change tracking [SQL Server]"
   - "data [SQL Server], changing"
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
-author: "rothja"
-ms.author: "jroth"
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

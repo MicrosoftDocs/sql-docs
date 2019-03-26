@@ -33,23 +33,23 @@ Each DBMS defines its own SQL types. Each ODBC driver exposes only those SQL dat
 |------------------------------|------------------------------------|------------------------------|  
 |SQL_CHAR|CHAR(*n*)|Character string of fixed string length *n*.|  
 |SQL_VARCHAR|VARCHAR(*n*)|Variable-length character string with a maximum string length *n*.|  
-|SQL_LONGVARCHAR|LONG VARCHAR|Variable length character data. Maximum length is data source–dependent.[9]|  
+|SQL_LONGVARCHAR|LONG VARCHAR|Variable length character data. Maximum length is data source-dependent.[9]|  
 |SQL_WCHAR|WCHAR(*n*)|Unicode character string of fixed string length *n*|  
 |SQL_WVARCHAR|VARWCHAR(*n*)|Unicode variable-length character string with a maximum string length *n*|  
-|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode variable-length character data. Maximum length is data source–dependent|  
+|SQL_WLONGVARCHAR|LONGWVARCHAR|Unicode variable-length character data. Maximum length is data source-dependent|  
 |SQL_DECIMAL|DECIMAL(*p*,*s*)|Signed, exact, numeric value with a precision of at least *p* and scale *s.* (The maximum precision is driver-defined.) (1 <= *p* <= 15; *s* <= *p*).[4]|  
 |SQL_NUMERIC|NUMERIC(*p*,*s*)|Signed, exact, numeric value with a precision *p* and scale *s* (1 <= *p* <= 15; *s* <= *p*).[4]|  
-|SQL_SMALLINT|SMALLINT|Exact numeric value with precision 5 and scale 0  (signed:  –32,768 <= *n* <= 32,767, unsigned:  0 <= *n* <= 65,535)[3].|  
-|SQL_INTEGER|INTEGER|Exact numeric value with precision 10 and scale 0  (signed:  –2[31] <= *n* <= 2[31] – 1, unsigned:  0 <= *n* <= 2[32] – 1)[3].|  
-|SQL_REAL|REAL|Signed, approximate, numeric value with a binary precision 24 (zero or absolute value 10[–38] to 10[38]).|  
+|SQL_SMALLINT|SMALLINT|Exact numeric value with precision 5 and scale 0  (signed:  -32,768 <= *n* <= 32,767, unsigned:  0 <= *n* <= 65,535)[3].|  
+|SQL_INTEGER|INTEGER|Exact numeric value with precision 10 and scale 0  (signed:  -2[31] <= *n* <= 2[31] - 1, unsigned:  0 <= *n* <= 2[32] - 1)[3].|  
+|SQL_REAL|REAL|Signed, approximate, numeric value with a binary precision 24 (zero or absolute value 10[-38] to 10[38]).|  
 |SQL_FLOAT|FLOAT(*p*)|Signed, approximate, numeric value with a binary precision of at least *p*. (The maximum precision is driver-defined.)[5]|  
-|SQL_DOUBLE|DOUBLE PRECISION|Signed, approximate, numeric value with a binary precision 53 (zero or absolute value 10[–308] to 10[308]).|  
+|SQL_DOUBLE|DOUBLE PRECISION|Signed, approximate, numeric value with a binary precision 53 (zero or absolute value 10[-308] to 10[308]).|  
 |SQL_BIT|BIT|Single bit binary data.[8]|  
-|SQL_TINYINT|TINYINT|Exact numeric value with precision 3 and scale 0  (signed:  –128 <= *n* <= 127,  unsigned:  0 <= *n* <= 255)[3].|  
-|SQL_BIGINT|BIGINT|Exact numeric value with precision 19 (if signed) or 20 (if unsigned) and scale 0  (signed:  –2[63] <= *n* <= 2[63] – 1,  unsigned: 0 <= *n* <= 2[64] – 1)[3],[9].|  
+|SQL_TINYINT|TINYINT|Exact numeric value with precision 3 and scale 0  (signed:  -128 <= *n* <= 127,  unsigned:  0 <= *n* <= 255)[3].|  
+|SQL_BIGINT|BIGINT|Exact numeric value with precision 19 (if signed) or 20 (if unsigned) and scale 0  (signed:  -2[63] <= *n* <= 2[63] - 1,  unsigned: 0 <= *n* <= 2[64] - 1)[3],[9].|  
 |SQL_BINARY|BINARY(*n*)|Binary data of fixed length *n*.[9]|  
 |SQL_VARBINARY|VARBINARY(*n*)|Variable length binary data of maximum length *n*. The maximum is set by the user.[9]|  
-|SQL_LONGVARBINARY|LONG VARBINARY|Variable length binary data. Maximum length is data source–dependent.[9]|  
+|SQL_LONGVARBINARY|LONG VARBINARY|Variable length binary data. Maximum length is data source-dependent.[9]|  
 |SQL_TYPE_DATE[6]|DATE|Year, month, and day fields, conforming to the rules of the Gregorian calendar. (See [Constraints of the Gregorian Calendar](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), later in this appendix.)|  
 |SQL_TYPE_TIME[6]|TIME(*p*)|Hour, minute, and second fields, with valid values for hours of 00 to 23, valid values for minutes of 00 to 59, and valid values for seconds of 00 to 61. Precision *p* indicates the seconds precision.|  
 |SQL_TYPE_TIMESTAMP[6]|TIMESTAMP(*p*)|Year, month, day, hour, minute, and second fields, with valid values as defined for the DATE and TIME data types.|  
@@ -72,7 +72,7 @@ Each DBMS defines its own SQL types. Each ODBC driver exposes only those SQL dat
   
  [1]   This is the value returned in the DATA_TYPE column by a call to **SQLGetTypeInfo**.  
   
- [2]   This is the value returned in the NAME and CREATE PARAMS column by a call to **SQLGetTypeInfo**. The NAME column returns the designation—for example, CHAR—whereas the CREATE PARAMS column returns a comma-separated list of creation parameters such as precision, scale, and length.  
+ [2]   This is the value returned in the NAME and CREATE PARAMS column by a call to **SQLGetTypeInfo**. The NAME column returns the designation-for example, CHAR-whereas the CREATE PARAMS column returns a comma-separated list of creation parameters such as precision, scale, and length.  
   
  [3]   An application uses **SQLGetTypeInfo** or **SQLColAttribute** to determine whether a particular data type or a particular column in a result set is unsigned.  
   

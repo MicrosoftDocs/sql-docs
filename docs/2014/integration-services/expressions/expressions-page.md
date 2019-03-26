@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.expressionspage.f1"
 helpviewer_keywords: 
   - "Expressions Page dialog box"
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Expressions Page
@@ -24,7 +23,7 @@ manager: craigg
  To learn more about writing expressions and using property expressions, see [Integration Services &#40;SSIS&#41; Expressions](integration-services-ssis-expressions.md) and [Use Property Expressions in Packages](use-property-expressions-in-packages.md).  
   
 ## Options  
- **Expressions (…)**  
+ **Expressions (...)**  
  Click the ellipsis to open the **Property Expressions Editor** dialog box. For more information, see [Property Expressions Editor](property-expressions-editor.md).  
   
  **\<property name>**  

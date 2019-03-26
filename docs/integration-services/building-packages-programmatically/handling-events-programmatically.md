@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], events"
   - "IDTSEvents interface"
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Handling Events Programmatically
@@ -244,6 +244,6 @@ End Module
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Event Handlers](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

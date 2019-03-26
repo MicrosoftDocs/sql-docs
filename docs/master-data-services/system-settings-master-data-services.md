@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Master Data Services, system settings"
@@ -55,7 +54,7 @@ manager: craigg
 |**Number of rows per batch**|**RowsPerBatch**|The number of records to retrieve in each batch by the web service. The default value is **50**.|  
 ||**ApplicationName**|The text that is displayed in event logs. The default value is **MDM**.|  
 ||**SiteTitle**|The text that is displayed in the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web browser's title bar. The default value is **Master Data Manager**.|  
-|**Log retention in Days**|**LogRentionDays**|The number of days after which the logs will be deleted. The default value is -1 and indicates the log tables will not be cleaned.<br /><br /> If the value is 0, log tables retain only today’s data. Data logs for the previous days are truncated.<br /><br /> If the value is greater than 0, the log data is retained for the number of days specified by the value.|  
+|**Log retention in Days**|**LogRentionDays**|The number of days after which the logs will be deleted. The default value is -1 and indicates the log tables will not be cleaned.<br /><br /> If the value is 0, log tables retain only today's data. Data logs for the previous days are truncated.<br /><br /> If the value is greater than 0, the log data is retained for the number of days specified by the value.|  
   
 ##  <a name="Versions"></a> Version Management Settings  
   
@@ -78,7 +77,7 @@ manager: craigg
   
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Number of members in the hierarchy by default**|**HierarchyChildNodeLimit**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members that are displayed in each hierarchy node before **…more…** is displayed. You can click **…more…** to show the next group of members. The default value is **50**.|  
+|**Number of members in the hierarchy by default**|**HierarchyChildNodeLimit**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the maximum number of members that are displayed in each hierarchy node before **...more...** is displayed. You can click **...more...** to show the next group of members. The default value is **50**.|  
 |**Show names in hierarchy by default**|**ShowNamesInHierarchy**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> The default value is **Yes** or **1**, which indicates that the name and code of each member are displayed. Change to **No** or **2** to display the code only.|  
 |**Number of domain-based attributes in list**|**DBAListRowLimit**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. The default value is **50**. If more than 50 members exist, a searchable dialog is displayed instead.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. The default value is **0.3**. Set the value closer to **1** to return a match that is closer to the search criteria. Set to **1** for an exact match.|  
@@ -104,11 +103,11 @@ manager: craigg
   
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Master Data Manager URL for notifications**|**MDMRootURL**|The URL for the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, which is used in the link in email notifications, for example `http://constoso/mds`.|  
+|**Master Data Manager URL for notifications**|**MDMRootURL**|The URL for the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] web application, which is used in the link in email notifications, for example `https://constoso/mds`.|  
 |**Notification email interval**|**NotificationInterval**|The frequency, in seconds, that email notifications are sent. The default value is **120** seconds (2 minutes).|  
 |**Number of notifications in a single email**|**NotificationsPerEmail**|The maximum number of validation issues that will be listed in a single notification email. Additional issues, if they exist, are not included in the email, but are available in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
 |**Default email format**|**EmailFormat**|The format for all email notifications. The default value is **HTML** or **1**. The database setting of **2** indicates **Text**.<br /><br /> Note: You can override this for an individual user in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], by changing and saving the **Email format** on the user's **General** tab.|  
-|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](http://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN library.|  
+|**Regular expression for email address**|**EmailRegExPattern**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the regular expression used to validate the email address entered on a user's **General** tab. For more information about regular expressions, see [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) in the MSDN library.|  
 |**Database Mail account**|**EmailProfilePrincipalAccount**|Displays the Database Mail account to use when sending email notifications. The default profile is **mds_email_user**.|  
 |**Database Mail profile**|**DatabaseMailProfile**|The Database Mail profile to use when sending email notifications. The default value is blank.|  
 ||**ValidationIssueHTML**|In HTML format, the text of the email users get when a business rule fails validation.|  
@@ -123,6 +122,12 @@ manager: craigg
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
 ||**SecurityMemberProcessInterval**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. The default value is **3600** seconds (60 minutes).|  
+
+##  <a name="Performance"></a> Performance Settings  
+
+|Configuration Manager Setting|System Setting|Description|  
+|-----------------------------------|--------------------|-----------------|  
+|**Enable performance improvement setting**|**PerformanceImprovementEnable**|We default to enable this setting (**Set to 1**) that load permission related page will have a good performance. But in this situation create/modify entities, attributes, users, or groups will have a low performance. To avoid this, you can disable this setting (**Set to 0**). After change this setting. You must run command "**EXEC [mdm].[udpPerformanceToggleSwitch];**" to make sure that the view and data is correct.|  
   
  For more information, see [Immediately Apply Member Permissions &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

@@ -65,7 +65,7 @@ WHERE ListPrice between 11.00 and 20.00;
 Lower                 Upper                  LowerUpper  
 --------------------  ---------------------  --------------------  
 minipump              MINIPUMP               minipump  
-taillights – battery  TAILLIGHTS – BATTERY   taillights - battery
+taillights - battery  TAILLIGHTS - BATTERY   taillights - battery
 ```  
   
 ## See Also  

@@ -54,7 +54,7 @@ When expanded, shows the **Name** and **Description** property fields.
 Shows the name of the XML index. When a new one is created, it is given a default name based on the table in the active window in Table Designer. You can change the name at any time.  
   
 **Description**  
-Describe the index. To write a more detailed description, click **Description** and then click the ellipsis button (**…**) that appears to the right of the property field. This provides a larger area in which to write text.  
+Describe the index. To write a more detailed description, click **Description** and then click the ellipsis button (**...**) that appears to the right of the property field. This provides a larger area in which to write text.  
   
 **Table Designer Category**  
 When expanded, shows information about the properties of this XML index.  

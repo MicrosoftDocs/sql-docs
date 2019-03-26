@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "void ExecuteNonQuery() method"
@@ -40,7 +38,7 @@ manager: craigg
 public SqlXmlCommand(string cnString)  
 ```  
   
- Where `cnString` is the ADO or OLEDB connection string that identifies the server, database, and the login information—for example, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ Where `cnString` is the ADO or OLEDB connection string that identifies the server, database, and the login information-for example, `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
   
  In the connection string, the `Provider` must be SQLOLEDB and the `Data Provider` should not be included in the provider string).  
   

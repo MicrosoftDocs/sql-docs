@@ -5,8 +5,7 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -50,7 +49,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ```  
 select ProductModelID, Name, Instructions.query('  
   declare namespace AWMI=  
-    "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+    "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   for   $Location in /AWMI:root/AWMI:Location  
   where $Location/@LaborHours =  
           min( /AWMI:root/AWMI:Location/@LaborHours )  

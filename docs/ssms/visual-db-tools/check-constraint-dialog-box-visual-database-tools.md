@@ -36,7 +36,7 @@ Remove the selected constraint from the table. To cancel the addition of a check
 Expand to show the **Expression** property field.  
   
 **Expression**  
-Displays the expression for the selected check constraint. For new constraints, you must enter the expression before exiting this box. You can also edit existing check constraints. For more information, see [Working with Constraints (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Displays the expression for the selected check constraint. For new constraints, you must enter the expression before exiting this box. You can also edit existing check constraints. For more information, see [Working with Constraints (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
   
 **Identity Category**  
 Expand to show properties for **Name** and **Description**.  
@@ -45,7 +45,7 @@ Expand to show properties for **Name** and **Description**.
 Shows the name of the selected check constraint. To change the name of this constraint, type the text directly in the property field.  
   
 **Description**  
-Describing this check constraint. You can edit the description by typing into the property field or you can click the ellipsis button (**…**) that appears to the right of the property field and edit the description in the **Description Property** dialog box.  
+Describing this check constraint. You can edit the description by typing into the property field or you can click the ellipsis button (**...**) that appears to the right of the property field and edit the description in the **Description Property** dialog box.  
   
 **Table Designer Category**  
 Expand to show properties for **Check Existing Data on Creation or Re-enabling**, **Enforce For Inserts And Updates**, and **Enforce Replication**.  
@@ -60,6 +60,6 @@ Specify whether the constraint is enforced when data is inserted into or updated
 Indicates whether to enforce the constraint when a replication agent performs an insert or update on this table.  
   
 ## See Also  
-[Working with Constraints (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Working with Constraints (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Indexes - Keys Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

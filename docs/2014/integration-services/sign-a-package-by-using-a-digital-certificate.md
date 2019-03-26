@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "signing packages [Integration Services]"
   - "signatures [Integration Services]"
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Sign a Package by Using a Digital Certificate
@@ -27,11 +27,11 @@ manager: craigg
   
     -   Obtain a certificate from a public, commercial certification authority that issues certificates.  
   
-    -   Obtain a certificate from a certificate server, that enables an organization to internally issue certificates. You have to add the root certificate that is used to sign the certificate to the **Trusted Root Certification Authorities** store. To add the root certificate, you can use the Certificates snap-in for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC). For more information, see the topic, "[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)," in the MSDN library.  
+    -   Obtain a certificate from a certificate server, that enables an organization to internally issue certificates. You have to add the root certificate that is used to sign the certificate to the **Trusted Root Certification Authorities** store. To add the root certificate, you can use the Certificates snap-in for the [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC). For more information, see the topic, "[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)," in the MSDN library.  
   
-    -   Create your own certificate for testing purposes only. The Certificate Creation Tool (Makecert.exe) generates X.509 certificates for testing purposes. For more information, see the topic, "[Certificate Creation Tool (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)," in the MSDN Library.  
+    -   Create your own certificate for testing purposes only. The Certificate Creation Tool (Makecert.exe) generates X.509 certificates for testing purposes. For more information, see the topic, "[Certificate Creation Tool (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)," in the MSDN Library.  
   
-     For more information about certificates, see the online Help for the Certificates snap-in. For more information about how to sign digital assets, see the topic, "[Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)," in the MSDN Library.  
+     For more information about certificates, see the online Help for the Certificates snap-in. For more information about how to sign digital assets, see the topic, "[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)," in the MSDN Library.  
   
 -   Make sure that the certificate has been enabled for code signing. To determine whether a certificate is enabled for code signing, review the properties of the certificate in the Certificates snap-in.  
   

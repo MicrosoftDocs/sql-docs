@@ -46,16 +46,16 @@ manager: craigg
 ## RBS Requirements  
  - RBS requires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise for the main database server in which the BLOB metadata is stored.  However, if you use the supplied FILESTREAM provider, you can store the BLOBs themselves on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard. To connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RBS requires at least ODBC driver version 11 for [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] and ODBC Driver version 13 for [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. Drivers are available at [Download ODBC Driver for SQL Server](https://msdn.microsoft.com/library/mt703139.aspx).    
   
- RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190).  
+ RBS includes a FILESTREAM provider that lets you use RBS to store BLOBs on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you want use RBS to store BLOBs in a different storage solution, you have to use a third party RBS provider developed for that storage solution, or develop a custom RBS provider using the RBS API. A sample provider that stores BLOBs in the NTFS file system is available as a learning resource on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190).  
   
 ## RBS Security  
- The SQL Remote Blob Storage Team Blog is a good source of information about this feature. The RBS security model is described in the post at [RBS Security Model](http://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx).  
+ The SQL Remote Blob Storage Team Blog is a good source of information about this feature. The RBS security model is described in the post at [RBS Security Model](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx).  
   
 ### Custom providers  
  When you use a custom provider to store BLOBs outside of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], make sure that you protect the stored BLOBs with permissions and encryption options that are appropriate to the storage medium used by the custom provider.  
   
 ### Credential store symmetric key  
- If a provider requires the setup and use of a secret stored within the credential store, RBS uses a symmetric key to encrypt the  provider secrets which a client may use to gain authorization to the provider’s blob store.  
+ If a provider requires the setup and use of a secret stored within the credential store, RBS uses a symmetric key to encrypt the  provider secrets which a client may use to gain authorization to the provider's blob store.  
   
 -   RBS 2016 uses an **AES_128** symmetric key. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] does not allow the creation of new **TRIPLE_DES** keys except for backwards compatibility reasons. For more information, see [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
@@ -65,16 +65,16 @@ manager: craigg
 `SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` If the output from that statement shows that **TRIPLE_DES** is still used, then you should rotate this key.  
   
 ### Rotating the symmetric key  
- When using RBS, you should periodically rotate the credential store symmetric key. This is a common security best practice to meet organizational security policies.  One way to rotate the RBS credential store symmetric key, is to use the [script below](#Key_rotation) in the RBS database.  You can also use this script to migrate to stronger encryption strength properties, such as algorithm or key length. Backup your database prior to key rotation.  At the script’s conclusion, it has some verification steps.  
+ When using RBS, you should periodically rotate the credential store symmetric key. This is a common security best practice to meet organizational security policies.  One way to rotate the RBS credential store symmetric key, is to use the [script below](#Key_rotation) in the RBS database.  You can also use this script to migrate to stronger encryption strength properties, such as algorithm or key length. Backup your database prior to key rotation.  At the script's conclusion, it has some verification steps.  
 If your security policies require different key properties (e.g., algorithm or key length) from the ones provided, then the script may be used as a template. Modify the key properties in two places: 1) the creation of the temporary key 2) the creation of the permanent key.  
   
 ##  <a name="rbsresources"></a> RBS resources  
   
  **RBS samples**  
- The RBS samples available on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) demonstrate how to develop an RBS application, and how to develop and install a custom RBS provider.  
+ The RBS samples available on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) demonstrate how to develop an RBS application, and how to develop and install a custom RBS provider.  
   
  **RBS blog**  
- The [RBS blog](http://go.microsoft.com/fwlink/?LinkId=210315) provides additional information to help you understand, deploy, and maintain RBS.  
+ The [RBS blog](https://go.microsoft.com/fwlink/?LinkId=210315) provides additional information to help you understand, deploy, and maintain RBS.  
   
 ##  <a name="Key_rotation"></a> Key rotation script  
  This example creates a stored procedure named `sp_rotate_rbs_symmetric_credential_key` to replace the currently used RBS credential store symmetric key  

@@ -37,7 +37,7 @@ Before you install SSMA, make sure that the computer meets the following require
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.  
   
--   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.0 or a later version. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.0 is available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product media. You can also obtain it from the [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.0 or a later version. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.0 is available on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] product media. You can also obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   Oracle Client 9.0 or a later version, and connectivity to the Oracle databases that you want to migrate. The Oracle client version must be the same version as, or a later version than, the Oracle database version.  
   
@@ -48,7 +48,7 @@ Before you install SSMA, make sure that the computer meets the following require
 -   4 GB RAM recommended.  
   
 ## Installing the SSMA for Oracle Client  
-SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](http://aka.ms/ssmafororacle).  
+SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmafororacle).  
   
 After you download the latest version, you must extract the installation files from before you can install SSMA.  
   

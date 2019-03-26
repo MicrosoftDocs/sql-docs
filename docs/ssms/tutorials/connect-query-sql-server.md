@@ -14,6 +14,7 @@ ms.technology: ssms
 ---
 
 # Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio
+
 This tutorial teaches you how to use SQL Server Management Studio (SSMS) to connect to your SQL Server instance and run some basic Transact-SQL (T-SQL) commands. The article demonstrates how to do the following:
 
 > [!div class="checklist"]	
@@ -57,14 +58,14 @@ If you don't have access to a SQL Server instance, select your platform from the
 ### Examples of successful connections
 To verify that your SQL Server connection succeeded, expand and explore the objects within **Object Explorer**. These objects will be different depending on the type of server you're connected to. 
 
-- Connecting to an on-prem SQL server - in this case NODE5\SQL2016ST: 
-  ![Connecting to an on-prem server](media/connect-query-sql-server/connect-on-prem.png)
+- Connecting to an on-premises SQL server - in this case NODE5\SQL2016ST: 
+  ![Connecting to an on-premises server](media/connect-query-sql-server/connect-on-prem.png)
 
 - Connecting to SQL Azure DB - in this case msftestserver.database.windows.net:
   ![Connecting to a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > In this tutorial, you previously used *Windows Authentication* to connect to your on-prem SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-prem authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
+  > In this tutorial, you previously used *Windows Authentication* to connect to your on-premises SQL server, but this method is not supported for SQL Azure DB. As such, this image shows using SQL Authentication to connect to the SQL Azure DB. For more information, see [SQL on-premises authentication](../../relational-databases/security/choose-an-authentication-mode.md) and [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
 ## Create a database
 Create a database named TutorialDB by doing the following: 

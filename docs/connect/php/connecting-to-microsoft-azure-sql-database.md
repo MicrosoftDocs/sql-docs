@@ -15,5 +15,5 @@ manager: craigg
 # Connecting to Microsoft Azure SQL Database
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-For more information on connecting to Azure SQL Databases, see [How to Access Azure SQL Database from PHP](http://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
+For more information on connecting to Azure SQL Databases, see [How to Access Azure SQL Database from PHP](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
   

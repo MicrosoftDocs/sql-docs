@@ -35,7 +35,7 @@ In this task, you learn how and when to disable or hide attribute hierarchies.
 [Sorting Attribute Members Based on a Secondary Attribute](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
 In this task, you learn how to sort dimension members based on a secondary attribute, to achieve the sort order that you want.  
   
-[Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
 In this task, you learn how to define member properties for attributes and to specify aggregation relationships between them. For more information, see [Define Attribute Relationships](../analysis-services/multidimensional-models/attribute-relationships-define.md) and [User Hierarchy Properties](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
 [Defining the Unknown Member and Null Processing Properties](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  

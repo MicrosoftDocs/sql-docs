@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetOrderValue Method (ClientNetworkProtocol Class)"
@@ -47,6 +46,6 @@ object.SetOrderValue(OrderValue)
 ## Remarks  
   
 ## See Also  
- [Client Protocols Properties (Order Tab)](http://technet.microsoft.com/library/ms187884.aspx)  
+ [Client Protocols Properties (Order Tab)](https://technet.microsoft.com/library/ms187884.aspx)  
   
   

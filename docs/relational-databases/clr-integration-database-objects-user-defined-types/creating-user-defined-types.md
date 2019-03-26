@@ -37,7 +37,7 @@ Reconfigure
 ## Example  
  The following code listing defines the Point UDT, which is described in detail in [Coding User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- The complete code listings for the other examples discussed in this section can be obtained by installing the CLR samples. For instructions on installing these samples, see [SQL Server Database Engine Samples](http://msftengprodsamples.codeplex.com/).  
+ The complete code listings for the other examples discussed in this section can be obtained by installing the CLR samples. For instructions on installing these samples, see [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xevents
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Trace, convert script to extended events"
@@ -34,7 +33,7 @@ manager: craigg
   
 2.  Obtain the ID of the trace. To do this, use the following query:  
   
-    ```  
+    ```sql
     SELECT * FROM sys.traces;  
     GO  
     ```  
@@ -49,7 +48,7 @@ manager: craigg
     > [!NOTE]  
     >  In this example, the trace ID for the default trace (1) is used.  
   
-    ```  
+    ```sql
     USE MASTER;  
     GO  
     DECLARE @trace_id int;  
@@ -76,7 +75,7 @@ manager: craigg
   
     3.  Use the following query to identify the correct data fields to use for the events that you identified in the previous step. The query shows the Extended Events data fields in the "event_field" column. In the query, replace *<event_name>* with the name of an event that you specified in the previous step.  
   
-        ```  
+        ```sql
         SELECT xp.name package_name, xe.name event_name  
            ,xc.name event_field, xc.description  
         FROM sys.trace_xe_event_map AS em  
@@ -97,7 +96,7 @@ manager: craigg
   
 1.  Add statements to create the event session, replacing s*ession_name* with the name that you want to use for the Extended Events session.  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [Session_Name] ON SERVER;  
     CREATE EVENT SESSION [Session_Name]  
@@ -124,7 +123,7 @@ manager: craigg
   
      To convert this to the Extended Events equivalent, the sqlserver.sp_statement_starting and the sqlserver.sp_statement_completed events are added, with a list of actions. Predicate statements are included as WHERE clauses.  
   
-    ```  
+    ```sql
     ADD EVENT sqlserver.sp_statement_starting  
        (ACTION  
           (  
@@ -150,9 +149,9 @@ manager: craigg
        )  
     ```  
   
-3.  Add the asynchronous file target, replacing the file paths with the location where you want to save the ouput. When specifying the file target, you must include a log file and metadata file path file.  
+3.  Add the asynchronous file target, replacing the file paths with the location where you want to save the output. When specifying the file target, you must include a log file and metadata file path file.  
   
-    ```  
+    ```sql
     ADD TARGET package0.asynchronous_file_target(  
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
@@ -161,7 +160,7 @@ manager: craigg
   
 1.  You can use the sys.fn_xe_file_target_read_file function to view the output. To do this, run the following query, replacing the file paths with the paths that you specified:  
   
-    ```  
+    ```sql
     SELECT *, CAST(event_data as XML) AS 'event_data_XML'  
     FROM sys.fn_xe_file_target_read_file('c:\temp\ExtendedEventsStoredProcs*.xel', 'c:\temp\ExtendedEventsStoredProcs*.xem', NULL, NULL);  
   
@@ -172,7 +171,7 @@ manager: craigg
   
      For more information about the sys.fn_xe_file_target_read_file function, see [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
-    ```  
+    ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
        DROP EVENT SESSION [session_name] ON SERVER;  
     CREATE EVENT SESSION [session_name]  
@@ -208,7 +207,7 @@ manager: craigg
   
 ## Example  
   
-```  
+```sql
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
    DROP EVENT SESSION [session_name] ON SERVER;  
 CREATE EVENT SESSION [session_name]  

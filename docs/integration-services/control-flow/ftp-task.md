@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "FTP task [Integration Services]"
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # FTP Task
@@ -34,7 +34,7 @@ manager: craigg
   
  When accessing a local file or a local directory, the FTP task uses a File connection manager or path information stored in a variable. In contrast, when accessing a remote file or a remote directory, the FTP task uses a directly specified path on the remote server, as specified in the FTP connection manager, or path information stored in a variable. For more information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) and [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
   
- This means that the FTP task can receive multiple files and delete multiple remote files; but the task can send only one file and delete only one local file if it uses a connection manager, because a File connection manager can access only one file. To access multiple local files, the FTP task must use a variable to provide the path information. For example, a variable that contains "C:\Test\\*.txt" provides a path that supports deleting or sending all the files that have a .txt extension in the Test directory.  
+ This means that the FTP task can receive multiple files and delete multiple remote files; but the task can send only one file and delete only one local file if it uses a connection manager, because a File connection manager can access only one file. To access multiple local files, the FTP task must use a variable to provide the path information. For example, a variable that contains "C:\Test\&#42;.txt" provides a path that supports deleting or sending all the files that have a .txt extension in the Test directory.  
   
  To send multiple files and access multiple local files and directories, you can also execute the FTP task multiple times by including the task in a Foreach Loop. The Foreach Loop can enumerate across files in a directory using the For Each File enumerator. For more information, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
   
@@ -67,7 +67,7 @@ manager: craigg
 ## Related Tasks  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
  For more information about programmatically setting these properties, see <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
@@ -145,7 +145,7 @@ manager: craigg
   
 #### IsRemotePathVariable = False  
  **RemotePath**  
- Select an existing FTP connection manager, or click \<**New connection…**> to create a connection manager.  
+ Select an existing FTP connection manager, or click \<**New connection...**> to create a connection manager.  
   
  **Related Topics:** [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -159,7 +159,7 @@ manager: craigg
   
 #### IsLocalPathVariable = False  
  **LocalPath**  
- Select an existing File connection manager, or click \<**New connection…**> to create a connection manager.  
+ Select an existing File connection manager, or click \<**New connection...**> to create a connection manager.  
   
  **Related Topics**: [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

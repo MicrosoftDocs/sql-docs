@@ -37,9 +37,9 @@ After configuring your InfiniBand network adapters, client processes can connect
   
 For example, if your PDW region name is MyPDW and the appliance name is MyAPS, the dwloader server specification for loading data is one of the following:  
   
--   `dwloader –S MYPDW-SQLCTL01.MyAPS.pdw.local`  
+-   `dwloader -S MYPDW-SQLCTL01.MyAPS.pdw.local`  
   
--   `dwloader –S MYPDW-SQLCTL01`  
+-   `dwloader -S MYPDW-SQLCTL01`  
   
 ## <a name="BeforeBegin"></a>Before You Begin  
   
@@ -156,9 +156,9 @@ To meet your own business requirements, you can also join the client server to y
   
 1.  In the Network Connections window, right-click on one of the network slots for the Mellanox Adapter and select Properties.  
   
-2.  Click on the Advanced… button.  
+2.  Click on the Advanced... button.  
   
-3.  In the Advanced TCP/IP Settings window, if the Append these DNS Suffixes (in order) option is not greyed out, check the box called Append these DNS suffixes (in order):, select the appliance domain suffix, and click Add…. The appliance domain suffix is `appliance_domain.local`  
+3.  In the Advanced TCP/IP Settings window, if the Append these DNS Suffixes (in order) option is not greyed out, check the box called Append these DNS suffixes (in order):, select the appliance domain suffix, and click Add.... The appliance domain suffix is `appliance_domain.local`  
   
 4.  If the Append these DNS suffixes (in order): option is greyed out, you can add the APS domain to this server by modifying the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient.  
   
@@ -177,5 +177,5 @@ To meet your own business requirements, you can also join the client server to y
     -   MyPDW-SQLCTL01  
   
 ## See Also  
-[Acquire and Configure a Loading Server ](acquire-and-configure-loading-server.md)  
+[Acquire and Configure a Loading Server](acquire-and-configure-loading-server.md)  
   

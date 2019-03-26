@@ -13,7 +13,7 @@ ms.author: owend
 manager: craigg
 ---
 # Create and Manage Measures (SSAS Tabular)
-  A measure is a formula that is created for use in a report or Excel PivotTable (or PivotChart). Measures can be based on standard aggregation functions, such as COUNT or SUM, or you can define your own formula by using DAX. The tasks in this topic describe how to create and manage measures by using a table’s measure grid.  
+  A measure is a formula that is created for use in a report or Excel PivotTable (or PivotChart). Measures can be based on standard aggregation functions, such as COUNT or SUM, or you can define your own formula by using DAX. The tasks in this topic describe how to create and manage measures by using a table's measure grid.  
   
  This topic includes the following tasks:  
   
@@ -28,7 +28,7 @@ manager: craigg
 -   [To delete a measure](#bkmk_delete)  
   
 ## Tasks  
- To create and manage measures, you will use a table’s measure grid. You can view the measure grid for a table in the model designer in Data View only. You cannot create measures or view the measure grid when in Diagram View; however, you can view existing measures in Diagram View. To show the measure grid for a table, click the **Table** menu, and then click **Show Measure Grid**.  
+ To create and manage measures, you will use a table's measure grid. You can view the measure grid for a table in the model designer in Data View only. You cannot create measures or view the measure grid when in Diagram View; however, you can view existing measures in Diagram View. To show the measure grid for a table, click the **Table** menu, and then click **Show Measure Grid**.  
   
 ###  <a name="bkmk_create_stand"></a> To create a measure using a standard aggregation formula  
   

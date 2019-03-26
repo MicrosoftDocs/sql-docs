@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Message Queue Task Editor"
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Message Queue Task Editor (Receive Page)
@@ -45,7 +45,7 @@ manager: craigg
   
 ### MessageType = Data file message  
  **SaveFileAs**  
- Type the path of the file to use, or click the ellipsis button **(…)** and then locate the file.  
+ Type the path of the file to use, or click the ellipsis button **(...)** and then locate the file.  
   
  **Overwrite**  
  Indicate whether to overwrite the data in an existing file when saving the contents of a data file message. The default is `False`.  
@@ -66,7 +66,7 @@ manager: craigg
   
 #### Filter = From package  
  **Identifier**  
- If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
+ If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(...)** and then specify the package.  
   
  **Related Topics:** [Select a Package](control-flow/select-a-package.md)  
   
@@ -80,7 +80,7 @@ manager: craigg
 |**From package**|The message receives only messages from the specified package. Selecting the value displays the dynamic option, **Identifier**.|  
   
  **Variable**  
- Type the variable name, or click \<**New variable…**> and then configure a new variable.  
+ Type the variable name, or click \<**New variable...**> and then configure a new variable.  
   
  **Related Topics:** [Add Variable](../../2014/integration-services/add-variable.md)  
   
@@ -92,7 +92,7 @@ manager: craigg
   
 #### Filter = From package  
  **Identifier**  
- If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
+ If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(...)** and then specify the package.  
   
  **Related Topics:** [Select a Package](control-flow/select-a-package.md)  
   
@@ -125,7 +125,7 @@ manager: craigg
  Unless the **Compare** option is set to **None**, provide the string to which the message is compared.  
   
  **Variable**  
- Type the name of the variable to hold the received message, or click \<**New variable…**> and then configure a new variable.  
+ Type the name of the variable to hold the received message, or click \<**New variable...**> and then configure a new variable.  
   
  **Related Topics:** [Add Variable](../../2014/integration-services/add-variable.md)  
   

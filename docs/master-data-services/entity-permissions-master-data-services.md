@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "entities [Master Data Services], permissions"
@@ -24,7 +23,7 @@ manager: craigg
   
 -   All of the entity's attributes, including **Name** and **Code**, for both leaf and consolidated members.  
   
--   All of the entity’s collections.  
+-   All of the entity's collections.  
   
 -   Explicit hierarchy memberships and relationships.  
   

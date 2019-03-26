@@ -33,7 +33,7 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
   
  Large numbers of retries are indicative of concurrency issues; call [!INCLUDE[msCoName](../../includes/msconame-md.md)] Support.  
   
- For more information about memory-optimized, nonclustered indexes, see [SQL Server In-Memory OLTP Internals Overview](http://t.co/T6zToWc6y6), page 17.  
+ For more information about memory-optimized, nonclustered indexes, see [SQL Server In-Memory OLTP Internals Overview](https://t.co/T6zToWc6y6), page 17.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

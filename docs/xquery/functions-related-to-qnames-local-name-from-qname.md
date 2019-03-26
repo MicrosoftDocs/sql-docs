@@ -5,8 +5,7 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -44,7 +43,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
   
 -   Stores a sample XML instance in the table. Using the **query()** method of the xml data type, the query expression is executed to retrieve the local name part of the QName type value from the instance.  
   
-```  
+```sql
 DROP TABLE T  
 go  
 DROP XML SCHEMA COLLECTION SC  
@@ -59,19 +58,19 @@ go
 CREATE TABLE T (xmlCol XML(SC))  
 go  
 -- following OK  
-insert into T values ('<root xmlns="QNameXSD" xmlns:a="http://someURI">a:someLocalName</root>')  
+insert into T values ('<root xmlns="QNameXSD" xmlns:a="https://someURI">a:someLocalName</root>')  
  go  
 -- Retrieve the local name.   
 SELECT xmlCol.query('declare default element namespace "QNameXSD"; local-name-from-QName(/root[1])')  
 FROM T  
 -- Result = someLocalName  
--- You can retrive namespace URI part from the QName using the namespace-uri-from-QName() function  
+-- You can retrieve namespace URI part from the QName using the namespace-uri-from-QName() function  
 SELECT xmlCol.query('declare default element namespace "QNameXSD"; namespace-uri-from-QName(/root[1])')  
 FROM T  
--- Result = http://someURI  
+-- Result = https://someURI  
 ```  
   
 ## See Also  
- [Functions Related to QNames &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [Functions Related to QNames &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

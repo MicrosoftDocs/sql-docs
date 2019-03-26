@@ -1,5 +1,5 @@
 ---
-title: "Collation Precedence (Transact-SQL) | Microsoft Docs"
+title: "Collation Precedence | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.author: carlrab
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Collation Precedence (Transact-SQL)
+# Collation Precedence
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Collation precedence, also known as collation coercion rules, determines the following:  
@@ -37,10 +37,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   The collation that is used by collation-sensitive operators that use character string inputs but do not return a character string, such as LIKE and IN.  
   
- The collation precedence rules apply only to the character string data types: **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext**. Objects that have other data types do not participate in collation evaluations.  
+The collation precedence rules apply only to the character string data types: **char**, **varchar**, **text**, **nchar**, **nvarchar**, and **ntext**. Objects that have other data types do not participate in collation evaluations.  
   
 ## Collation Labels  
- The following table lists and describes the four categories in which the collations of all objects are identified. The name of each category is called the collation label.  
+The following table lists and describes the four categories in which the collations of all objects are identified. The name of each category is called the collation label.  
   
 |Collation label|Types of objects|  
 |---------------------|----------------------|  
@@ -50,11 +50,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |No-collation|Indicates that the value of an expression is the result of an operation between two strings that have conflicting collations of the implicit collation label. The expression result is defined as not having a collation.|  
   
 ## Collation Rules  
- The collation label of a simple expression that references only one character string object is the collation label of the referenced object.  
+The collation label of a simple expression that references only one character string object is the collation label of the referenced object.  
   
- The collation label of a complex expression that references two operand expressions with the same collation label is the collation label of the operand expressions.  
+The collation label of a complex expression that references two operand expressions with the same collation label is the collation label of the operand expressions.  
   
- The collation label of the final result of a complex expression that references two operand expressions with different collations is based on the following rules:  
+The collation label of the final result of a complex expression that references two operand expressions with different collations is based on the following rules:  
   
 -   Explicit takes precedence over implicit. Implicit takes precedence over Coercible-default:  
   
@@ -76,7 +76,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
      No-collation + Explicit X = Explicit  
   
- The following table summarizes the rules.  
+The following table summarizes the rules.  
   
 |Operand coercion label|Explicit X|Implicit X|Coercible-default|No-collation|  
 |----------------------------|----------------|----------------|------------------------|-------------------|  
@@ -85,7 +85,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**Coercible-default**|Result is Explicit X|Result is Implicit X|Result is Coercible-default|Result is No-collation|  
 |**No-collation**|Result is Explicit X|Result is No-collation|Result is No-collation|Result is No-collation|  
   
- The following additional rules also apply to collation precedence:  
+The following additional rules also apply to collation precedence:  
   
 -   You cannot have multiple COLLATE clauses on an expression that is already an explicit expression. For example, the following `WHERE` clause is not valid because a `COLLATE` clause is specified for an expression that is already an explicit expression:  
   
@@ -93,9 +93,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Code page conversions for **text** data types are not allowed. You cannot cast a **text** expression from one collation to another if they have the different code pages. The assignment operator cannot assign values when the collation of the right text operand has a different code page than the left text operand.  
   
- Collation precedence is determined after data type conversion. The operand from which the resulting collation is taken can be different from the operand that supplies the data type of the final result. For example, consider the following batch:  
+Collation precedence is determined after data type conversion. The operand from which the resulting collation is taken can be different from the operand that supplies the data type of the final result. For example, consider the following batch:  
   
-```  
+```sql  
 CREATE TABLE TestTab  
    (PrimaryKey int PRIMARY KEY,  
     CharCol char(10) COLLATE French_CI_AS  
@@ -106,12 +106,12 @@ FROM TestTab
 WHERE CharCol LIKE N'abc'  
 ```  
   
- The Unicode data type of the simple expression `N'abc'` has a higher data type precedence. Therefore, the resulting expression has the Unicode data type assigned to `N'abc'`. However, the expression `CharCol` has a collation label of Implicit, and `N'abc'` has a lower coercion label of Coercible-default. Therefore, the collation that is used is the `French_CI_AS` collation of `CharCol`.  
+The Unicode data type of the simple expression `N'abc'` has a higher data type precedence. Therefore, the resulting expression has the Unicode data type assigned to `N'abc'`. However, the expression `CharCol` has a collation label of Implicit, and `N'abc'` has a lower coercion label of Coercible-default. Therefore, the collation that is used is the `French_CI_AS` collation of `CharCol`.  
   
 ### Examples of Collation Rules  
  The following examples show how the collation rules work. To run the examples, create the following test table.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -127,7 +127,7 @@ GO
 #### Collation Conflict and Error  
  The predicate in the following query has collation conflict and generates an error.  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol;  
@@ -143,7 +143,7 @@ Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_A
 #### Explicit Label vs. Implicit Label  
  The predicate in the following query is evaluated in collation `greek_ci_as` because the right expression has the Explicit label. This takes precedence over the Implicit label of the left expression.  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol COLLATE greek_ci_as;  
@@ -160,9 +160,9 @@ id          GreekCol             LatinCol
 ```  
   
 #### No-Collation Labels  
- The `CASE` expressions in the following queries have a No-collation label; therefore, they cannot appear in the select list or be operated on by collation-sensitive operators. However, the expressions can be operated on by collation-insensitive operators.  
+The `CASE` expressions in the following queries have a No-collation label; therefore, they cannot appear in the select list or be operated on by collation-sensitive operators. However, the expressions can be operated on by collation-insensitive operators.  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END)   
 FROM TestTab;  
 ```  
@@ -174,7 +174,7 @@ Msg 451, Level 16, State 1, Line 1
 Cannot resolve collation conflict for column 1 in SELECT statement.  
 ```  
   
-```  
+```sql  
 SELECT PATINDEX((CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END), 'a')  
 FROM TestTab;  
 ```  
@@ -186,7 +186,7 @@ Msg 446, Level 16, State 9, Server LEIH2, Line 1
 Cannot resolve collation conflict for patindex operation.  
 ```  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END) COLLATE Latin1_General_CI_AS   
 FROM TestTab;  
 ```  
@@ -201,23 +201,23 @@ a
 ```  
   
 ## Collation Sensitive and Collation Insensitive  
- Operators and functions are either collation sensitive or insensitive.  
+Operators and functions are either collation sensitive or insensitive.  
   
- Collation sensitive  
- This means that specifying a No-collation operand is a compile-time error. The expression result cannot be No-collation.  
+Collation sensitive  
+This means that specifying a No-collation operand is a compile-time error. The expression result cannot be No-collation.  
   
- Collation insensitive  
- This means that the operands and result can be No-collation.  
+Collation insensitive  
+This means that the operands and result can be No-collation.  
   
 ### Operators and Collation  
- The comparison operators, and the MAX, MIN, BETWEEN, LIKE, and IN operators, are collation sensitive. The string used by the operators is assigned the collation label of the operand that has the higher precedence. The UNION operator is also collation sensitive, and all string operands and the final result is assigned the collation of the operand with the highest precedence. The collation precedence of the UNION operands and result are evaluated column by column.  
+The comparison operators, and the MAX, MIN, BETWEEN, LIKE, and IN operators, are collation sensitive. The string used by the operators is assigned the collation label of the operand that has the higher precedence. The UNION statement is also collation sensitive, and all string operands and the final result is assigned the collation of the operand with the highest precedence. The collation precedence of the UNION operand and result are evaluated column by column.  
   
- The assignment operator is collation insensitive and the right expression is cast to the left collation.  
+The assignment operator is collation insensitive and the right expression is cast to the left collation.  
   
- The string concatenation operator is collation sensitive, the two string operands and the result are assigned the collation label of the operand with the highest collation precedence. The UNION ALL and CASE operators are collation insensitive, and all string operands and the final results are assigned the collation label of the operand with the highest precedence. The collation precedence of the UNION ALL operands and result are evaluated column by column.  
+The string concatenation operator is collation sensitive, the two string operands and the result are assigned the collation label of the operand with the highest collation precedence. The UNION ALL and CASE statements are collation insensitive, and all string operands and the final results are assigned the collation label of the operand with the highest precedence. The collation precedence of the UNION ALL operands and result are evaluated column by column.  
   
 ### Functions and Collation  
- THE CAST, CONVERT, and COLLATE functions are collation sensitive for **char**, **varchar**, and **text** data types. If the input and output of the CAST and CONVERT functions are character strings, the output string has the collation label of the input string. If the input is not a character string, the output string is Coercible-default and assigned the collation of the current database for the connection, or the database that contains the user-defined function, stored procedure, or trigger in which the CAST or CONVERT is referenced.  
+THE CAST, CONVERT, and COLLATE functions are collation sensitive for **char**, **varchar**, and **text** data types. If the input and output of the CAST and CONVERT functions are character strings, the output string has the collation label of the input string. If the input is not a character string, the output string is Coercible-default and assigned the collation of the current database for the connection, or the database that contains the user-defined function, stored procedure, or trigger in which the CAST or CONVERT is referenced.  
   
  For the built-in functions that return a string but do not take a string input, the result string is Coercible-default and is assigned either the collation of the current database, or the collation of the database that contains the user-defined function, stored procedure, or trigger in which the function is referenced.  
   

@@ -78,7 +78,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name refers to a reserved system pool**  
- The pool names “INTERNAL” and “DEFAULT” are reserved for system pools.  It is not valid to explicitly bind a database to either of these.  If a system pool name is entered, the following error is returned:  
+ The pool names "INTERNAL" and "DEFAULT" are reserved for system pools.  It is not valid to explicitly bind a database to either of these.  If a system pool name is entered, the following error is returned:  
 *Resource Pool %s is a system resource pool.  System resource pools may not be explicitly bound to a database using this procedure.*  
   
 ```  

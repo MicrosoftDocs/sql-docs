@@ -5,7 +5,6 @@ ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "Sql12.swb.sqlimail.newaccount.f1"
@@ -73,11 +72,11 @@ manager: craigg
 ###  <a name="Welcome"></a> Welcome Page  
  This page describes the steps to configuring Database Mail.  
   
- **Do not show this page again** – Check this to skip this welcome page from displaying in the future.  
+ **Do not show this page again** - Check this to skip this welcome page from displaying in the future.  
   
  **Next** - Proceeds to the **Select a configuration task** page.  
   
- **Cancel** – Terminates the wizard without configuring Database Mail  
+ **Cancel** - Terminates the wizard without configuring Database Mail  
   
  
   
@@ -389,7 +388,7 @@ manager: craigg
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Use the **Send Test E-Mail from***<instance_name>* page to send an e-mail message using the specified Database Mail profile. Only members of the **sysadmin** fixed server role can send test e-mail using this page.  
+ Use the **Send Test E-Mail from**_<instance_name>_ page to send an e-mail message using the specified Database Mail profile. Only members of the **sysadmin** fixed server role can send test e-mail using this page.  
   
  **Database Mail Profile**  
  Select a Database Mail profile from the list. This is a required field. If no profiles are shown, there are no profiles or you do not have permission to a profile. Use the **Database Mail Configuration Wizard** to create and configure profiles. If no profiles are listed, use the Database Mail Configuration Wizard to create a profile for your use.  
@@ -409,7 +408,7 @@ manager: craigg
  The **mailitem_id** of the test e-mail message.  
   
  **Troubleshoot**  
- Click to open Books Online to the [Troubleshooting Database Mail](http://msdn.microsoft.com/library/ms188663.aspx)topic.  
+ Click to open Books Online to the [Troubleshooting Database Mail](https://msdn.microsoft.com/library/ms188663.aspx)topic.  
   
 
   

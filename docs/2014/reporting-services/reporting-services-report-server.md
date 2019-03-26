@@ -24,7 +24,7 @@ helpviewer_keywords:
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Reporting Services Report Server
   This topic is an overview of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server, the central component of a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation. It consists of a pair of processing engines plus a collection of special-purpose extensions that handle authentication, data processing, rendering, and delivery operations. A [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server runs in one of two deployment modes; Native mode or SharePoint mode. See the [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport) section for a comparison of features.  
@@ -37,9 +37,9 @@ manager: craigg
   
  **Windows Azure**: For information on using [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] with Windows Azure Virtual Machines, see the following:  
   
--   [SQL Server Business Intelligence in Windows Azure Virtual Machines](http://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
+-   [SQL Server Business Intelligence in Windows Azure Virtual Machines](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
--   [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](http://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
+-   [Use PowerShell to Create a Windows Azure VM With a Native Mode Report Server](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
   
 ##  <a name="bkmk_top"></a> In this topic  
   
@@ -74,7 +74,7 @@ manager: craigg
   
 -   **SharePoint mode**: where a report server is installed as part of a SharePoint server farm.  Deploy and configure SharePoint mode by using PowerShell commands or SharePoint content management pages.  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items or report server database from the older versioned report server to the new report server. This process is typically referred to as a ‘migration’. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md)  
+ In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] you cannot switch a report server from one mode to the other. If you want to change the type of report server that your environment uses, you must install the desired mode of report server and then copy or move the report items or report server database from the older versioned report server to the new report server. This process is typically referred to as a 'migration'. The steps needed to migrate depend on the mode you are migrating to and the version you are migrating from. For more information, see [Upgrade and Migrate Reporting Services](install-windows/upgrade-and-migrate-reporting-services.md)  
   
 ##  <a name="bkmk_featuresupport"></a> Feature Comparison of SharePoint and Native Mode  
   
@@ -177,6 +177,6 @@ manager: craigg
  [Implementing a Security Extension](extensions/security-extension/implementing-a-security-extension.md)   
  [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [How to Administer SSRS using PowerShell (Curated Answer)](http://go.microsoft.com/fwlink/?LinkId=321992)  
+ [How to Administer SSRS using PowerShell (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321992)  
   
   

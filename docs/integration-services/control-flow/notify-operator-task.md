@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "notifications [Integration Services]"
   - "SQL Server Agent [Integration Services]"
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Notify Operator Task
@@ -34,6 +34,6 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

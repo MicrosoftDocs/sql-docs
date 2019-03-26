@@ -22,4 +22,4 @@ manager: craigg
 * [Step 3: Proof of concept connecting to SQL using pymssql](../../../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## Documentation
-* [pymssql documentation](http://pymssql.org)  
+* [pymssql documentation](https://pymssql.org)  

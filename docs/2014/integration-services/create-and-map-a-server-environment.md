@@ -13,12 +13,12 @@ f1_keywords:
   - "sql12.ssis.ssms.isenvprop.permissions.f1"
   - "sql12.ssis.ssms.isenvprop.general.f1"
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create and Map a Server Environment
-  You create a server environment to specify runtime values for packages contained in a project you’ve deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  
+  You create a server environment to specify runtime values for packages contained in a project you've deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  
   
 > [!IMPORTANT]  
 >  For a given execution, a package can execute only with the values contained in a single server environment.  
@@ -62,7 +62,7 @@ manager: craigg
 7.  To script the environment, click **Script**. By default, the script displays in a new Query Editor window.  
   
     > [!TIP]  
-    >  You need to click **Script** after you’ve made one or changes to the environment properties, such as adding a variable, and before you click **OK** in the **Environment Properties** dialog box. Otherwise, a script is not generated.  
+    >  You need to click **Script** after you've made one or changes to the environment properties, such as adding a variable, and before you click **OK** in the **Environment Properties** dialog box. Otherwise, a script is not generated.  
   
 8.  Click **OK** to save your changes to the environment properties.  
   

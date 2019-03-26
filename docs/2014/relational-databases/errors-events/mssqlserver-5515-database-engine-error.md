@@ -30,6 +30,6 @@ manager: craigg
  The specified container directory for the FILESTREAM file cannot be opened.  
   
 ## User Action  
- For the error cause, see the specific Windows status code. For more information, see the [Events and Errors Message Center](http://go.microsoft.com/fwlink/?linkid=47660).  
+ For the error cause, see the specific Windows status code. For more information, see the [Events and Errors Message Center](https://go.microsoft.com/fwlink/?linkid=47660).  
   
   

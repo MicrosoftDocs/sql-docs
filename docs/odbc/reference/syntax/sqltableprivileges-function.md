@@ -33,13 +33,13 @@ manager: craigg
 ```  
   
 SQLRETURN SQLTablePrivileges(  
-     SQLHSTMT      StatementHandle,  
-     SQLCHAR *     CatalogName,  
-     SQLSMALLINT   NameLength1,  
-     SQLCHAR *     SchemaName,  
-     SQLSMALLINT   NameLength2,  
-     SQLCHAR *     TableName,  
-     SQLSMALLINT   NameLength3);  
+     SQLHSTMT      StatementHandle,  
+     SQLCHAR *     CatalogName,  
+     SQLSMALLINT   NameLength1,  
+     SQLCHAR *     SchemaName,  
+     SQLSMALLINT   NameLength2,  
+     SQLCHAR *     TableName,  
+     SQLSMALLINT   NameLength3);  
 ```  
   
 ## Arguments  
@@ -124,7 +124,7 @@ SQLRETURN SQLTablePrivileges(
 |TABLE_NAME (ODBC 1.0)|3|Varchar not NULL|Table name.|  
 |GRANTOR (ODBC 1.0)|4|Varchar|Name of the user who granted the privilege; NULL if not applicable to the data source.<br /><br /> For all rows in which the value in the GRANTEE column is the owner of the object, the GRANTOR column will be "_SYSTEM".|  
 |GRANTEE (ODBC 1.0)|5|Varchar not NULL|Name of the user to whom the privilege was granted.|  
-|PRIVILEGE (ODBC 1.0)|6|Varchar not NULL|The table privilege. May be one of the following or a data source–specific privilege.<br /><br /> SELECT: The grantee is permitted to retrieve data for one or more columns of the table.<br /><br /> INSERT: The grantee is permitted to insert new rows containing data for one or more columns into the table.<br /><br /> UPDATE: The grantee is permitted to update the data in one or more columns of the table.<br /><br /> DELETE: The grantee is permitted to delete rows of data from the table.<br /><br /> REFERENCES: The grantee is permitted to refer to one or more columns of the table within a constraint (for example, a unique, referential, or table check constraint).<br /><br /> The scope of action permitted the grantee by a given table privilege is data source–dependent. For example, the UPDATE privilege might permit the grantee to update all columns in a table on one data source and only those columns for which the grantor has the UPDATE privilege on another data source.|  
+|PRIVILEGE (ODBC 1.0)|6|Varchar not NULL|The table privilege. May be one of the following or a data source-specific privilege.<br /><br /> SELECT: The grantee is permitted to retrieve data for one or more columns of the table.<br /><br /> INSERT: The grantee is permitted to insert new rows containing data for one or more columns into the table.<br /><br /> UPDATE: The grantee is permitted to update the data in one or more columns of the table.<br /><br /> DELETE: The grantee is permitted to delete rows of data from the table.<br /><br /> REFERENCES: The grantee is permitted to refer to one or more columns of the table within a constraint (for example, a unique, referential, or table check constraint).<br /><br /> The scope of action permitted the grantee by a given table privilege is data source-dependent. For example, the UPDATE privilege might permit the grantee to update all columns in a table on one data source and only those columns for which the grantor has the UPDATE privilege on another data source.|  
 |IS_GRANTABLE (ODBC 1.0)|7|Varchar|Indicates whether the grantee is permitted to grant the privilege to other users; "YES", "NO", or NULL if unknown or not applicable to the data source.<br /><br /> A privilege is either grantable or not grantable but not both. The result set returned by **SQLColumnPrivileges** will never contain two rows for which all columns except the IS_GRANTABLE column contain the same value.|  
   
 ## Code Example  

@@ -20,12 +20,13 @@ manager: kfile
   
 -   **Processing Method** This setting controls whether the deployed objects are processed after deployment and the type of processing that will be performed. There are three processing options:  
   
-    -   Default processing (default)  
+    -   Default processing (default) detects the process state of database objects, and performs processing necessary to deliver unprocessed or partially processed objects to a fully processed state.
   
-    -   Full processing  
+    -   Full processing processes an object and all the objects that it contains. When Process Full is executed against an object that has already been processed, Analysis Services drops all data in the object, and then processes the object. 
   
-    -   None  
-  
+    -   None means no processing is performed.
+
+
 -   **Writeback Table Options** If writeback is enabled in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, this setting defines how writeback is handled. There are three writeback table options:  
   
     -   By default, if a writeback table exists, it will be used. If a writeback table does not exist, a new writeback table will be created.  
@@ -49,11 +50,11 @@ manager: kfile
   
 -   Run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard interactively. On the **Processing Options** page, specify the processing options for the project being deployed.  
   
-     —or—  
+     -or-  
   
 -   Run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt and set the wizard to run in answer file mode. For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     —or—  
+     -or-  
   
 -   Modify the \<*project name*>.deploymentoptions file by using any text editor.  
   

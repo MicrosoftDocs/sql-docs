@@ -26,7 +26,7 @@ manager: craigg
 ### Slipstream Functionality  
  The Product Update feature replaces the Slipstream functionality that was available in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1. Therefore the command-line parameters, /*PCUSource* and /*CUSource*, associated with Slipstream functionality should no longer be used. The parameters will continue to work, but may be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Setup. The /*UpdateSource* parameter combines the functionality of the Slipstream parameters, /*PCUSource* and /*CUSource*.  
   
- For more information about Slipstream functionality that was available in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, see [Slipstream a SQL Server Update](http://go.microsoft.com/fwlink/?LinkId=219945) (http://go.microsoft.com/fwlink/?LinkId=219945).  
+ For more information about Slipstream functionality that was available in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1, see [Slipstream a SQL Server Update](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945).  
   
 ## See Also  
  [Backward Compatibility](../../2014/getting-started/backward-compatibility.md)  

@@ -24,7 +24,7 @@ manager: craigg
 
  This section contains the F1 Help topics for the dialogs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
-> [!NOTE]  
+> [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager cannot configure versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## Services  
@@ -77,6 +77,6 @@ manager: craigg
  [SQL Server Services](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server Network Configuration](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [SQL Native Client 11.0 Configuration](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
- [Choosing a Network Protocol](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [Choosing a Network Protocol](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

@@ -24,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 > [!NOTE]  
 >  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] is one of the sample databases in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- The **myTeam** table is contains the following columns.  
+ The **myTeam** table contains the following columns.  
   
 |Column|Data type|Nullability|Description|  
 |------------|---------------|-----------------|-----------------|  

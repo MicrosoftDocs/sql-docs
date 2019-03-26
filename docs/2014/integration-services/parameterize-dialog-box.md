@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.parameter.f1"
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Parameterize Dialog Box

@@ -18,7 +18,7 @@ helpviewer_keywords:
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # GenerateDatabaseCreationScript Method (WMI MSReportServer_ConfigurationSetting)
   Generates a SQL Script that can be used to create a report server database.  

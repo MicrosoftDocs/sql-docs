@@ -63,17 +63,17 @@ manager: craigg
  **Advanced**  
  Click to create additional URLs for the current application instance.  
   
-> [!NOTE]  
+> [!NOTE]
 >  If you have existing SSL Bindings and URL Reservations and you want to change the SSL Binding, for example use a different certificate or hostheader, then it is recommended you complete the following steps in order:  
->   
+> 
 >  1.  First remove all URL Reservations.  
 > 2.  Then remove all SSL Bindings.  
 > 3.  Then recreate the URLs and the SSL bindings.  
->   
+> 
 >  The previous steps can be completed using [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager.  
->   
+> 
 >  Microsoft Windows supports one binding for each IP address to Port combination. If you configure a report server to use a specific hostheader value and the certificate on the Port to IP address combination is also issued to a different hostheader value, you will see in your browser, a warning indicating the certificate does not match the URL that is being used.  
->   
+> 
 >  To correct the issue, delete all bindings and then create new bindings with unique settings or configure the Reporting Services URL registrations with wildcards.  
   
 ## See Also  

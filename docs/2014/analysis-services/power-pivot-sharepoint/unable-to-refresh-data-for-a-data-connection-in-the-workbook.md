@@ -35,7 +35,7 @@ manager: craigg
   
  The workbook you are attempting to open might have been created in the SQL Server 2008 R2 version of PowerPivot for Excel. Most likely, the Analysis Services data provider that is specified in the data connection string is not present on the computer that is handling the request.  
   
- If this is the case, you will find this message in the ULS log: “Refresh failed for ‘PowerPivot Data’ in the workbook ‘\<URL to workbook>’”, followed by “Unable to get a connection”.  
+ If this is the case, you will find this message in the ULS log: "Refresh failed for 'PowerPivot Data' in the workbook '\<URL to workbook>'", followed by "Unable to get a connection".  
   
  To determine the version of the workbook, open it in Excel and check which data provider is specified in the connection string. A SQL Server 2008 R2 workbook uses MSOLAP.4 as its data provider.  
   
@@ -57,7 +57,7 @@ manager: craigg
   
  To work around this problem, join the computer to the same domain as the PowerPivot server, or install a domain controller on your local computer. The second solution, installing the domain controller, will require you to create local domain accounts for all services and users. You will need to configure service accounts and SharePoint permissions for the accounts you define.  
   
- Installing a domain controller on your computer is useful if your objective is to use PowerPivot for SharePoint in an offline state. For detailed instructions on how to use PowerPivot offline, see the blog entry for "Taking your PowerPivot server off the network" on [http://www.powerpivotgeek.com](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ Installing a domain controller on your computer is useful if your objective is to use PowerPivot for SharePoint in an offline state. For detailed instructions on how to use PowerPivot offline, see the blog entry for "Taking your PowerPivot server off the network" on [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Scenario 4: Unstable server**  
   

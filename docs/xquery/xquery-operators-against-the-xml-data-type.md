@@ -5,8 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "operators [XQuery]"
   - "xml data type [SQL Server], XQuery"
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: "douglaslMS"
-ms.author: "douglasl"
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # XQuery Operators Against the xml Data Type
@@ -41,8 +40,8 @@ manager: craigg
   
 ```sql
 WITH XMLNAMESPACES (  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
-'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS ACI,  
+'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS ACT)  
 SELECT ContactID   
 FROM   Person.Contact  
 WHERE  AdditionalContactInfo.value('  
@@ -59,7 +58,7 @@ WHERE  AdditionalContactInfo.value('
 ```sql
 SELECT ProductModelID, Instructions.query('  
      declare namespace   
- AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+ AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
      for $i in (/AWMI:root/AWMI:Location)[1]  
      return   
        <Location LocationID="{ ($i/@LocationID) }"  
@@ -78,7 +77,7 @@ where ProductModelID=7
   
 ```sql
 SELECT CatalogDescription.query('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]  
      return  
            $P  

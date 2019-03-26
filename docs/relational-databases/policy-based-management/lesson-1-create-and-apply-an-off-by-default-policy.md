@@ -3,13 +3,13 @@ title: "Lesson 1: Create and Apply an Off By Default Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
+ms.technology: security
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: performance
 ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Lesson 1: Create and Apply an Off By Default Policy
@@ -73,7 +73,7 @@ To complete this tutorial, you need SQL Server Management Studio, and access to 
   
 6.  In the **Target Details** area, you will see additional information in the **Message** column if an error occurs. In the **Message** column, click **View** to see a report that contains the results of the check for each facet property that was checked. 
 
-    ![View results of policy evaluation ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![View results of policy evaluation](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  The policy description is displayed at the bottom of the page, and the **Additional help** section displays the hyperlink that you have configured for the policy. Click the message hyperlink to open the Web page that you specified when you created the policy.   
 

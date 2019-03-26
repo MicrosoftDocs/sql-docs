@@ -64,7 +64,7 @@ manager: craigg
 |`Visible`|Determines the visibility of the cube.|  
   
 > [!NOTE]  
->  For more information about setting values for the ErrorConfiguration property when working with null values and other data integrity issues, see [Handling Data Integrity Issues in Analysis Services 2005](http://go.microsoft.com/fwlink/?LinkId=81891).  
+>  For more information about setting values for the ErrorConfiguration property when working with null values and other data integrity issues, see [Handling Data Integrity Issues in Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 ## See Also  
  [Proactive Caching &#40;Partitions&#41;](partitions-proactive-caching.md)  

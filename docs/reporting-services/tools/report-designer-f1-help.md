@@ -17,7 +17,7 @@ ms.author: maghan
   This section provides F1 Help for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Designer wizards, views, and dialog boxes in [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. Alternatively, you can open the F1 Help while working with the dialog box by pressing F1 or by clicking the Help button displayed in the dialog box.  
   
 ## See Also  
-+ [Install SQL Server Data Tools - Business Intelligence for Visual Studio](http://msdn.microsoft.com/library/68ed2924-9104-4c79-974f-0e87212ec2e1)
++ [Install SQL Server Data Tools - Business Intelligence for Visual Studio](https://msdn.microsoft.com/library/68ed2924-9104-4c79-974f-0e87212ec2e1)
 + [Feature Refernce (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)
 + [Reporting Services Reports (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md) 
    

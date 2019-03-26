@@ -7,8 +7,6 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "vs.debug.breakpt.location.file"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint location"
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
@@ -39,5 +37,3 @@ manager: craigg
  [Specify a Breakpoint Action](specify-a-breakpoint-action.md)   
  [Specify a Breakpoint Condition](specify-a-breakpoint-condition.md)   
  [Specify a Breakpoint Filter](specify-a-breakpoint-filter.md)  
-  
-  

@@ -64,7 +64,7 @@ When encryption properties of a table are modified, `sp_refresh_parameter_encryp
 
 To refresh a server-level DDL trigger, execute this stored procedure from the context of any database.
 
->  [!NOTE]   
+> [!NOTE]
 >  Any signatures that are associated with the object are dropped when you run `sp_refresh_parameter_encryption`.
 
 ## Permissions

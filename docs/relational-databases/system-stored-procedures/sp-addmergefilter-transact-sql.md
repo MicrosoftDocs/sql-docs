@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addmergefilter"
@@ -41,42 +40,42 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication in which the merge filter is being added. *publication* is **sysname**, with no default.  
   
- [ **@article=** ] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article on which the merge filter is being added. *article* is **sysname**, with no default.  
   
- [ **@filtername=** ] **'***filtername***'**  
+`[ @filtername = ] 'filtername'`
  Is the name of the filter. *filtername* is a required parameter. *filtername*is **sysname**, with no default.  
   
- [ **@join_articlename=** ] **'***join_articlename***'**  
+`[ @join_articlename = ] 'join_articlename'`
  Is the parent article to which the child article, specified by *article*, must be joined using the join clause specified by *join_filterclause*, in order to determine the rows in the child article that meet the filter criterion of the merge filter. *join_articlename* is **sysname**, with no default. The article must be in the publication given by *publication*.  
   
- [ **@join_filterclause=** ] *join_filterclause*  
+`[ @join_filterclause = ] join_filterclause`
  Is the join clause that must be used to join the child article specified by *article*and parent article specified by *join_article*, in order to determine the rows qualifying the merge filter. *join_filterclause* is **nvarchar(1000)**.  
   
- [ **@join_unique_key=** ] *join_unique_key*  
+`[ @join_unique_key = ] join_unique_key`
  Specifies if the join between child article *article*and parent article *join_article*is one-to-many, one-to-one, many-to-one, or many-to-many. *join_unique_key* is **int**, with a default of 0. **0** indicates a many-to-one or many-to-many join. **1** indicates a one-to-one or one-to-many join. This value is **1** when the joining columns form a unique key in *join_article*, or if *join_filterclause* is between a foreign key in *article* and a primary key in *join_article*.  
   
 > [!CAUTION]  
 >  Only set this parameter to **1** if you have a constraint on the joining column in the underlying table for the parent article that guarantees uniqueness. If *join_unique_key* is set to **1** incorrectly, non-convergence of data may occur.  
   
- [ **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default **0**.  
   
  **0** specifies that changes to the merge article will not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error will occur and no changes will be made.  
   
  **1** specifies that changes to the merge article may cause the snapshot to be invalid, and if there are existing subscriptions that would require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.  
   
- [ **@force_reinit_subscription=** ] *force_reinit_subscription*  
+`[ @force_reinit_subscription = ] force_reinit_subscription`
  Acknowledges that the action taken by this stored procedure may require existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit**, with a default of 0.  
   
  **0** specifies that changes to the merge article will not cause the subscription to be reinitialized. If the stored procedure detects that the change would require subscriptions to be reinitialized, an error will occur and no changes will be made.  
   
  **1** specifies that changes to the merge article will cause existing subscriptions to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- [ **@filter_type=** ] *filter_type*  
+`[ @filter_type = ] filter_type`
  Specifies the type of filter being added. *filter_type* is **tinyint**, and can be one of the following values.  
   
 |Value|Description|  

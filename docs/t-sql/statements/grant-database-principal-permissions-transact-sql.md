@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "GRANT statement, roles"
   - "application roles [SQL Server], permissions"
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -91,7 +91,7 @@ GRANT permission [ ,...n ]
  Specifies an application role.  
   
  *Database_user_mapped_to_Windows_User*  
- pecifies a database user mapped to a Windows user.  
+ Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
   

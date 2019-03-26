@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "Excel [Integration Services]"
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Working with Excel Files with the Script Task
@@ -73,7 +73,7 @@ manager: craigg
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the **ExcelFile** variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the **ExcelFile** variable.  
   
 3.  Click **ReadWriteVariables** and enter the property value using one of the following methods:  
   
@@ -81,7 +81,7 @@ manager: craigg
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the **ExcelFileExists** variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the **ExcelFileExists** variable.  
   
 4.  Click **Edit Script** to open the script editor.  
   
@@ -143,7 +143,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the **ExcelTable** and **ExcelFile** variables.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the **ExcelTable** and **ExcelFile** variables.  
   
 3.  Click **ReadWriteVariables** and enter the property value using one of the following methods:  
   
@@ -151,7 +151,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the **ExcelTableExists** variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the **ExcelTableExists** variable.  
   
 4.  Click **Edit Script** to open the script editor.  
   
@@ -250,7 +250,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFolder variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFolder variable.  
   
 3.  Click **ReadWriteVariables** and enter the property value using one of the following methods:  
   
@@ -258,7 +258,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFiles variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFiles variable.  
   
 4.  Click **Edit Script** to open the script editor.  
   
@@ -325,7 +325,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFile variable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the ExcelFile variable.  
   
 3.  Click **ReadWriteVariables** and enter the property value using one of the following methods:  
   
@@ -333,7 +333,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, select the ExcelTablesvariable.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, select the ExcelTablesvariable.  
   
 4.  Click **Edit Script** to open the script editor.  
   
@@ -438,7 +438,7 @@ public class ScriptMain
   
          -or-  
   
-    -   Click the ellipsis (**…**) button next to the property field, and in the **Select variables** dialog box, selecting the variables.  
+    -   Click the ellipsis (**...**) button next to the property field, and in the **Select variables** dialog box, selecting the variables.  
   
 5.  Click **Edit Script** to open the script editor.  
   

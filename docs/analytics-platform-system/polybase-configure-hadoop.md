@@ -18,10 +18,10 @@ The article explains how to use PolyBase on an APS appliance to query external d
 
 PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). Hadoop follows the "Major.Minor.Version" pattern for its new releases, and all versions within a supported Major and Minor release are supported. The following Hadoop providers are supported:
  - Hortonworks HDP 1.3 on Linux/Windows Server  
- - Hortonworks HDP 2.1 – 2.6 on Linux
+ - Hortonworks HDP 2.1 - 2.6 on Linux
  - Hortonworks HDP 2.1 - 2.3 on Windows Server  
  - Cloudera CDH 4.3 on Linux  
- - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
+ - Cloudera CDH 5.1 - 5.5, 5.9 - 5.13 on Linux
 
 ### Configure Hadoop connectivity
 
@@ -194,7 +194,6 @@ In SQL Server Data Tools, external tables are displayed in a separate folder **E
 
 ## Next steps
 
-Explore more ways to configure PolyBase in the following articles:
-
-[PolyBase configuration and security for Hadoop ](../relational-databases/polybase/polybase-configuration.md).  
+For Hadoop security settings see [configure Hadoop security](polybase-configure-hadoop-security.md).<br>
+For more information about PolyBase, see the [What is PolyBase?](../relational-databases/polybase/polybase-guide.md). 
  

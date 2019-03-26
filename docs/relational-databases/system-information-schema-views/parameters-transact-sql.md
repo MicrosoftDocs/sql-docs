@@ -26,12 +26,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   Returns one row for each parameter of a user-defined function or stored procedure that can be accessed by the current user in the current database. For functions, this view also returns one row with return value information.  
   
- To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.***view_name*.  
+ To retrieve information from these views, specify the fully qualified name of **INFORMATION_SCHEMA.**_view_name_.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar(**128**)**|Catalog name of the routine for which this is a parameter.|  
-|**SPECIFIC_SCHEMA**|**nvarchar(**128**)**|Name of the schema of the routine for which this is a parameter.<br /><br /> **\*\* Important \*\*** Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**SPECIFIC_SCHEMA**|**nvarchar(**128**)**|Name of the schema of the routine for which this is a parameter.<br /><br /> <strong>\*\* Important \*\*</strong> Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**SPECIFIC_NAME**|**nvarchar(**128**)**|Name of the routine for which this is a parameter.|  
 |**ORDINAL_POSITION**|**int**|Ordinal position of the parameter starting at 1. For the return value of a function, this is a 0.|  
 |**PARAMETER_MODE**|**nvarchar(**10**)**|Returns IN if an input parameter, OUT if an output parameter, and INOUT if an input/output parameter.|  
@@ -61,7 +61,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**SCOPE_NAME**|**nvarchar(**128**)**|NULL. Reserved for future use.|  
   
 ## See Also  
- [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Information Schema Views &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

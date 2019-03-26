@@ -19,7 +19,7 @@ manager: craigg
   **SQLCloseCursor** replaces [SQLFreeStmt](sqlfreestmt.md) with an *Option* value of SQL_CLOSE. On receipt of **SQLCloseCursor**, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver discards pending result set rows. Note that the statement's column and parameter bindings (if any exist) are left unaltered by **SQLCloseCursor**.  
   
 ## See Also  
- [SQLCloseCursor](http://go.microsoft.com/fwlink/?LinkId=59331)   
+ [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

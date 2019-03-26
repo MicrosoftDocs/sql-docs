@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropmergepartition_TSQL"
@@ -36,13 +35,13 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**] = **'***publication***'**  
+ [ **@publication**] = **'**_publication_**'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@suser_sname**= ] **'***suser_sname***'**  
+ [ **@suser_sname**= ] **'**_suser_sname_**'**  
  Is the value of the [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) function at the Subscriber used to define the partition. *suser_sname* is **sysname**, with no default.  
   
- [ **@host_name** = ] **'***host_name***'**  
+ [ **@host_name** = ] **'**_host_name_**'**  
  Is the value of the [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) function at the Subscriber used to define the partition. *host_name* is **sysname**, with no default.  
   
 ## Return Code Values  

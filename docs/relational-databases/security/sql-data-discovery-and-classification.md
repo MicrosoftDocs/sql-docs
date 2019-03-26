@@ -26,16 +26,16 @@ Discovering and classifying your most sensitive data (business, financial, healt
 
 ## <a id="subheading-1"></a>Overview
 Data Discovery & Classification introduces a set of advanced services, forming a new SQL Information Protection paradigm aimed at protecting the data, not just the database:
-* **Discovery & recommendations** – The classification engine scans your database and identifies columns containing potentially sensitive data. It then provides you an easy way to review and apply the appropriate classification recommendations, as well as to manually classify columns.
-* **Labeling** – Sensitivity classification labels can be persistently tagged on columns.
+* **Discovery & recommendations** - The classification engine scans your database and identifies columns containing potentially sensitive data. It then provides you an easy way to review and apply the appropriate classification recommendations, as well as to manually classify columns.
+* **Labeling** - Sensitivity classification labels can be persistently tagged on columns.
 * **Visibility** - The database classification state can be viewed in a detailed report that can be printed/exported to be used for compliance & auditing purposes, as well as other needs.
 
 ## <a id="subheading-2"></a>Discovering, classifying & labeling sensitive columns
 The following section describes the steps for discovering, classifying, and labeling columns containing sensitive data in your database, as well as viewing the current classification state of your database and exporting reports.
 
 The classification includes two metadata attributes:
-* Labels – The main classification attributes, used to define the sensitivity level of the data stored in the column.  
-* Information Types – Provide additional granularity into the type of data stored in the column.
+* Labels - The main classification attributes, used to define the sensitivity level of the data stored in the column.  
+* Information Types - Provide additional granularity into the type of data stored in the column.
 
 <br>
 **To classify your SQL Server database:**

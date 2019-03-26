@@ -1,7 +1,7 @@
 ---
 title: "Understanding XA Transactions | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "01/21/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -39,9 +39,9 @@ The following additional guidelines apply to tightly coupled transactions:
 
 - When you use XA transactions together with Microsoft Distributed Transaction Coordinator (MS DTC), you may notice that the current version of MS DTC doesn't support tightly coupled XA branch behavior. For example, MS DTC has a one-to-one mapping between an XA branch transaction ID (XID) and an MS DTC transaction ID and the work that is performed by loosely coupled XA branches is isolated from one another.  
   
-     The hotfix provided at [MSDTC and Tightly Coupled Transactions](http://support.microsoft.com/kb/938653) enables the support for tightly coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see one another's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     The hotfix provided at [MSDTC and Tightly Coupled Transactions](https://support.microsoft.com/kb/938653) enables support for tightly-coupled XA branches where multiple XA branches with same global transaction ID (GTRID) are mapped to a single MS DTC transaction ID. This support enables multiple tightly coupled XA branches to see each other's changes in the resource manager, such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- A [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows the applications to use tightly coupled XA transactions, which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:  
+- A [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) flag allows applications to use tightly-coupled XA transactions which have different XA branch transaction IDs (BQUAL) but have the same global transaction ID (GTRID) and format ID (FormatID). In order to use that feature, you must set the [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) on the flags parameter of the XAResource.start method:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -55,12 +55,12 @@ The following steps are required if you want to use XA data sources together wit
 > The JDBC distributed transaction components are included in the xa directory of the JDBC driver installation. These components include the xa_install.sql and sqljdbc_xa.dll files.  
 
 > [!NOTE]  
-> Starting with SQL Server 2019 public preview CTP 2.0, the JDBC XA distributed transaction components are included in the SQL Server engine which can be enabled or disabled with a system stored procedure. 
-> To enable the required components to perform XA distributed transactions using the JDBC driver, execute following stored procedure.
+> Starting with SQL Server 2019 public preview CTP 2.0, the JDBC XA distributed transaction components are included in the SQL Server engine, and can be enabled or disabled with a system stored procedure.
+> To enable the required components to perform XA distributed transactions using the JDBC driver, execute the following stored procedure.
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> To disable the previously installed components, execute following stored procedure. 
+> To disable the previously installed components, execute the following stored procedure.
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -78,7 +78,7 @@ On Windows Vista and later:
   
 4. Click the **Security** tab on the **Local DTC Properties** dialog box.  
   
-5. Select the **Enable XA Transactions** check box, and then click **OK**. This will cause a MS DTC service restart.  
+5. Select the **Enable XA Transactions** check box, and then click **OK**. This will cause an MS DTC service restart.
   
 6. Click **OK** again to close the **Properties** dialog box, and then close **Component Services**.  
   
@@ -99,11 +99,11 @@ You can configure the JDBC driver distributed transaction components by followin
   
 You can configure only one version of the sqljdbc_xa.dll assembly on each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance at a time. Applications may need to use different versions of the JDBC driver to connect to the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by using the XA connection. In that case, sqljdbc_xa.dll, which comes with the newest JDBC driver, must be installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
-There are three ways to verify the version of sqljdbc_xa.dll is currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance:  
+There are three ways to verify the version of sqljdbc_xa.dll currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance:
   
 1. Open the LOG directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer that will participate in distributed transactions. Select and open the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "ERRORLOG" file. Search for "Using 'SQLJDBC_XA.dll' version ..." phrase in the "ERRORLOG" file.  
   
-2. Open the Binn directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer that will participate in distributed transactions. Select sqljdbc_xa.dll assembly.  
+2. Open the Binn directory of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer that will participate in distributed transactions. Select the sqljdbc_xa.dll assembly.
 
     - On Windows Vista or later: Right-click sqljdbc_xa.dll and then select Properties. Then click the **Details** tab. The **File Version** field shows the version of sqljdbc_xa.dll that is currently installed on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
@@ -112,7 +112,7 @@ There are three ways to verify the version of sqljdbc_xa.dll is currently instal
 ### <a name="BKMK_ServerSide"></a> Configuring server-side timeout settings for automatic rollback of unprepared transactions  
 
 > [!WARNING]  
-> This server-side option is new with Microsoft JDBC Driver 4.2 (and higher) for SQL Server. To get the updated behavior, make sure the sqljdbc_xa.dll on the server is updated. For more information on setting client side timeouts, see [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> This server-side option is new with Microsoft JDBC Driver 4.2 (and higher) for SQL Server. To get the updated behavior, make sure the sqljdbc_xa.dll on the server is updated. For more information on setting client side timeouts, see [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 There are two registry settings (DWORD values) to control the timeout behavior of distributed transactions:  
   
@@ -123,11 +123,11 @@ There are two registry settings (DWORD values) to control the timeout behavior o
 These settings are SQL Server instance specific and should be created under the following registry key:  
 
 ```bash
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout  
 ```
 
 > [!NOTE]  
-> For 32-bit SQL Server running in 64-bit machines, the registry settings should be created under the following key: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout`
+> For 32-bit SQL Server running in 64-bit machines, the registry settings should be created under the following key: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout`
   
 A timeout value is set for each transaction when it's started and the transaction is rolled back by the SQL Server if the timeout expires. The timeout is determined depending on these registry settings and depending on what the user has specified through XAResource.setTransactionTimeout(). A few examples on how these timeout values are interpreted as follows:  
   
@@ -141,18 +141,18 @@ A timeout value is set for each transaction when it's started and the transactio
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Means all transactions will have a 30 seconds timeout if the client doesn't specify any timeout. If client specifies any timeout, then the client’s timeout will be used as long as it is less than 60 seconds (the max value).  
+     Means all transactions will have a 30 seconds timeout if the client doesn't specify any timeout. If client specifies any timeout, then the client's timeout will be used as long as it is less than 60 seconds (the max value).  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     Means all transactions will have a 30 seconds timeout (the max value) if the client does not specify any timeout. If the client specifies any timeout, then the client’s timeout will be used as long as it is less than 30 seconds (the max value).  
+     Means all transactions will have a 30 seconds timeout (the max value) if the client does not specify any timeout. If the client specifies any timeout, then the client's timeout will be used as long as it is less than 30 seconds (the max value).  
   
 ### Upgrading sqljdbc_xa.dll
 
 When you install a new version of the JDBC driver, you should also use sqljdbc_xa.dll from the new version to upgrade sqljdbc_xa.dll on the server.  
   
 > [!IMPORTANT]  
-> You should upgrade sqljdbc_xa.dll during a maintenance window or when there are no MS DTC transactions in process.  
+> You should upgrade sqljdbc_xa.dll during a maintenance window or when there are no MS DTC transactions in progress.
   
 1. Unload sqljdbc_xa.dll using the [!INCLUDE[tsql](../../includes/tsql-md.md)] command **DBCC sqljdbc_xa (FREE)**.  
   

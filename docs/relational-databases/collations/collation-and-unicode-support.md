@@ -52,7 +52,7 @@ A collation specifies the bit patterns that represent each character in a data s
     
 [!INCLUDE[tsql](../../includes/tsql-md.md)] statement results can vary when the statement is run in the context of different databases that have different collation settings. If it is possible, use a standardized collation for your organization. This way, you do not have to explicitly specify the collation in every character or Unicode expression. If you must work with objects that have different collation and code page settings, code your queries to consider the rules of collation precedence. For more information, see [Collation Precedence (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-The options associated with a collation are case sensitivity, accent sensitivity, Kana-sensitivity, width sensitivity, variation-selector-sensitivity. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces an additional option for UTF-8 encoding. These options are specified by appending them to the collation name. For example, this collation `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` is case-sensitive, accent-sensitive, Kana-sensitive, width-sensitive, and UTF-8 encoded. As another example, this collation `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` is case-insensitive, accent-insensitive, Kana-sensitive, width-sensitive, variation-selector-sensitive and uses non-Unicode encoding. The following table describes the behavior associated with these various options.    
+The options associated with a collation are case sensitivity, accent sensitivity, Kana-sensitivity, width sensitivity, variation-selector-sensitivity. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces an additional option for [UTF-8](https://www.wikipedia.org/wiki/UTF-8) encoding. These options are specified by appending them to the collation name. For example, this collation `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` is case-sensitive, accent-sensitive, Kana-sensitive, width-sensitive, and UTF-8 encoded. As another example, this collation `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` is case-insensitive, accent-insensitive, Kana-sensitive, width-sensitive, variation-selector-sensitive and uses non-Unicode encoding. The following table describes the behavior associated with these various options.    
     
 |Option|Description|    
 |------------|-----------------|    
@@ -60,7 +60,7 @@ The options associated with a collation are case sensitivity, accent sensitivity
 |Accent-sensitive (_AS)|Distinguishes between accented and unaccented characters. For example, 'a' is not equal to 'ấ'. If this option is not selected, the collation is accent-insensitive. That is, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers the accented and unaccented versions of letters to be identical for sorting purposes. You can explicitly select accent insensitivity by specifying _AI.|    
 |Kana-sensitive (_KS)|Distinguishes between the two types of Japanese kana characters: Hiragana and Katakana. If this option is not selected, the collation is Kana-insensitive. That is, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers Hiragana and Katakana characters to be equal for sorting purposes. Omitting this option is the only method of specifying Kana-insensitivity.|    
 |Width-sensitive (_WS)|Distinguishes between full-width and half-width characters. If this option is not selected, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considers the full-width and half-width representation of the same character to be identical for sorting purposes. Omitting this option is the only method of specifying width-insensitivity.|    
-|Variation-selector-sensitive (_VSS) | Distinguishes between various ideographic variation selectors in Japanese collations Japanese_Bushu_Kakusu_140 and Japanese_XJIS_140 first introduced in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. A variation sequence consists of a base character plus an additional variation selector. If this _VSS option is not selected, the collation is variation selector insensitive, and the variation selector is not considered in the comparison. That is, SQL Server considers characters built upon the same base character with  differing variation selectors to be identical for sorting purposes. See also  [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/). <br/><br/> Variation selector sensitive (_VSS) collations are not supported in Full-text search indexes. Full-text search indexes support only Accent-Sensitive (_AS), Kana-sensitive (_KS), and Width-sensitive (_WS) options. SQL Server XML and CLR engines do not support (_VSS) Variation selectors.
+|Variation-selector-sensitive (_VSS) | Distinguishes between various ideographic variation selectors in Japanese collations Japanese_Bushu_Kakusu_140 and Japanese_XJIS_140 first introduced in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. A variation sequence consists of a base character plus an additional variation selector. If this _VSS option is not selected, the collation is variation selector insensitive, and the variation selector is not considered in the comparison. That is, SQL Server considers characters built upon the same base character with  differing variation selectors to be identical for sorting purposes. See also  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/). <br/><br/> Variation selector sensitive (_VSS) collations are not supported in Full-text search indexes. Full-text search indexes support only Accent-Sensitive (_AS), Kana-sensitive (_KS), and Width-sensitive (_WS) options. SQL Server XML and CLR engines do not support (_VSS) Variation selectors.
 |UTF-8 (_UTF8)|Enables UTF-8 encoded data to be stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If this option is not selected, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the default non-Unicode encoding format for the applicable data types.| 
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following collation sets:    
@@ -107,7 +107,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="Locale_Defn"></a> Locale    
-A locale is a set of information that is associated with a location or a culture. This can include the name and identifier of the spoken language, the script that is used to write the language, and cultural conventions. Collations can be associated with one or more locales. For more information, see [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx).    
+A locale is a set of information that is associated with a location or a culture. This can include the name and identifier of the spoken language, the script that is used to write the language, and cultural conventions. Collations can be associated with one or more locales. For more information, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  A code page is an ordered set of characters of a given script in which a numeric index, or code point value, is associated with each character. A Windows code page is typically referred to as a *character set* or *charset*. Code pages are used to provide support for the character sets and keyboard layouts that are used by different Windows system locales.     
@@ -115,7 +115,7 @@ A locale is a set of information that is associated with a location or a culture
  Sort order specifies how data values are sorted. This affects the results of data comparison. Data is sorted by using collations, and it can be optimized by using indexes.    
     
 ##  <a name="Unicode_Defn"></a> Unicode Support    
-Unicode is a standard for mapping code points to characters. Because it is designed to cover all the characters of all the languages of the world, there is no need for different code pages to handle different sets of characters. If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, then previously non-Unicode data types (**char** and **varchar**) become Unicode (UTF-8) data types. 
+Unicode is a standard for mapping code points to characters. Because it is designed to cover all the characters of all the languages of the world, there is no need for different code pages to handle different sets of characters. If you store character data that reflects multiple languages in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**) instead of non-Unicode data types (**char**, **varchar**, and **text**). Alternatively, starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], if a UTF-8 enabled collation (\_UTF8) is used, then previously non-Unicode data types (**char** and **varchar**) become Unicode (UTF-8) data types. 
 
 > [!NOTE]
 > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] does not change the behavior of previously existing Unicode (UTF-16) data types (**nchar**, **nvarchar**, and **ntext**).   
@@ -141,15 +141,20 @@ To use the UTF-8 collations available in [!INCLUDE[sql-server-2019](../../includ
     
     -   Version 100 collations    
     
-    -   Version 140 collations    
+    -   Version 140 collations   
+    
+    -   BIN2<sup>1</sup> binary collation
     
 -   The UTF8 flag cannot be applied to:    
     
     -   Version 90 collations that don't support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS)    
     
-    -   The BIN or BIN2 binary collations    
+    -   The BIN or BIN2<sup>2</sup> binary collations    
     
-    -   The SQL\* collations       
+    -   The SQL\* collations  
+    
+<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
+<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 To evaluate issues that are related to using Unicode or non-Unicode data types, test your scenario to measure performance differences in your environment. It is a good practice to standardize the collation that is used on systems across your organization, and deploy Unicode servers and clients wherever possible.    
     
@@ -253,10 +258,10 @@ These collations are supported in Database Engine indexes, memory-optimized tabl
 |Describes how to change the language of error messages and preferences for how date, time, and currency data are used and displayed.|[Set a Session Language](../../relational-databases/collations/set-a-session-language.md)|    
     
 ##  <a name="Related_Content"></a> Related Content    
-[SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)    
+[SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
-["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890) - No longer maintained   
-[Unicode Consortium Web site](http://go.microsoft.com/fwlink/?LinkId=48619)    
+["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - No longer maintained   
+[Unicode Consortium Web site](https://go.microsoft.com/fwlink/?LinkId=48619)    
     
 ## See Also    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     

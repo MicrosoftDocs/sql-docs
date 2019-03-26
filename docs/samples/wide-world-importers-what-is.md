@@ -17,7 +17,7 @@ This is an overview of the fictitious company Wide World Importers and the workf
 
 Wide World Importers (WWI) is a wholesale novelty goods importer and distributor operating from the San Francisco bay area.
 
-As a wholesaler, WWI’s customers are mostly companies who resell to individuals. WWI sells to retail customers across the United States including specialty stores, supermarkets, computing stores, tourist attraction shops, and some individuals. WWI also sells to other wholesalers via a network of agents who promote the products on WWI’s behalf. While all of WWI’s customers are currently based in the United States, the company is intending to push for expansion into other countries.
+As a wholesaler, WWI's customers are mostly companies who resell to individuals. WWI sells to retail customers across the United States including specialty stores, supermarkets, computing stores, tourist attraction shops, and some individuals. WWI also sells to other wholesalers via a network of agents who promote the products on WWI's behalf. While all of WWI's customers are currently based in the United States, the company is intending to push for expansion into other countries.
 
 WWI buys goods from suppliers including novelty and toy manufacturers, and other novelty wholesalers. They stock the goods in their WWI warehouse and reorder from suppliers as needed to fulfil customer orders. They also purchase large volumes of packaging materials, and sell these in smaller quantities as a convenience for the customers.
 
@@ -59,4 +59,4 @@ The company operates with a financial year that starts on November 1st.
 
 The license for the sample database and the sample code is described here: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-The sample database includes public data that has been loaded from data.gov and Natural EarthData. The terms of use are here: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+The sample database includes public data that has been loaded from data.gov and Natural EarthData. The terms of use are here: [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

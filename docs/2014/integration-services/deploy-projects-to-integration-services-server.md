@@ -8,8 +8,8 @@ ms.technology:
   - "integration-services"
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Deploy Projects to Integration Services Server
@@ -22,7 +22,7 @@ manager: craigg
   
  To deploy a project to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, complete the following tasks:  
   
-1.  Create an SSISDB catalog, if you haven’t already. For more information, see [Create the SSIS Catalog](catalog/ssis-catalog.md).  
+1.  Create an SSISDB catalog, if you haven't already. For more information, see [Create the SSIS Catalog](catalog/ssis-catalog.md).  
   
 2.  Convert the project to the project deployment model by running the **Integration Services Project Conversion Wizard** . For more information, see the instructions below: [To convert a project to the project deployment model](#convert)  
   

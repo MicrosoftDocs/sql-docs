@@ -57,7 +57,7 @@ There are several ways in which you can sort query results:
     ORDER BY price DESC  
     ```  
   
--   **You can sort by derived columns** For example, you can create a result set in which each row contains a book title — with the books that pay the highest royalty per copy appearing first. The resulting SQL might look like this:  
+-   **You can sort by derived columns** For example, you can create a result set in which each row contains a book title - with the books that pay the highest royalty per copy appearing first. The resulting SQL might look like this:  
   
     ```  
     SELECT title, price * royalty / 100 as royalty_per_unit  
@@ -69,7 +69,7 @@ There are several ways in which you can sort query results:
   
     To calculate a derived column, you can use SQL syntax, as in the preceding example, or you can use a user-defined function that returns a scalar value. For more information about user-defined functions, see the SQL Server documentation.  
   
--   **You can sort grouped rows** For example; you can create a result set in which each row describes a city, plus the number of authors in that city — with the cities containing many authors appearing first. The resulting SQL might look like this:  
+-   **You can sort grouped rows** For example; you can create a result set in which each row describes a city, plus the number of authors in that city - with the cities containing many authors appearing first. The resulting SQL might look like this:  
   
     ```  
     SELECT city, state, COUNT(*)  

@@ -21,9 +21,9 @@ manager: craigg
   
 |Column header|Data type|Description|  
 |-------------------|---------------|-----------------|  
-|period_type|**sysname**|Name of the period|  
-|period_type_desc|**tinyint**|The numeric value representing the type of period:<br /><br /> 1 = system-time period|  
-|object_id|**nvarchar(60)**|The text description of the type of column:<br /><br /> SYSTEM_TIME_PERIOD|  
+|name|**sysname**|Name of the period|  
+|period_type|**tinyint**|The numeric value representing the type of period:<br /><br /> 1 = system-time period|  
+|period_type_desc|**nvarchar(60)**|The text description of the type of column:<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|The id of the table containing the period_type column|  
 |start_column_id|**int**|The id of the column that defines the lower period boundary|  
 |end_column_id|**int**|The id of the column that defines the upper period boundary|  
@@ -32,7 +32,7 @@ manager: craigg
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## See Also  
- [System Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   

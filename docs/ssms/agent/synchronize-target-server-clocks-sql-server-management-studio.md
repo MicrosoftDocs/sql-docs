@@ -85,5 +85,5 @@ Requires membership in the **sysadmin** fixed server role.
     GO  
     ```  
   
-For more information, see [sp_resync_targetserver (Transact-SQL)](http://msdn.microsoft.com/40e44df7-d3e3-44ee-b149-08aba629a21f).  
+For more information, see [sp_resync_targetserver (Transact-SQL)](https://msdn.microsoft.com/40e44df7-d3e3-44ee-b149-08aba629a21f).  
   

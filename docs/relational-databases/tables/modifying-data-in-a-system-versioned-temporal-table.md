@@ -115,7 +115,7 @@ SWITCH TO [dbo].[Department] PARTITION 2;
   
 ```  
   
- If you try to perform PARTITION SWITCH from a table without period definition you’ll get error message: `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
+ If you try to perform PARTITION SWITCH from a table without period definition you'll get error message: `Msg 13577, Level 16, State 1, Line 25    ALTER TABLE SWITCH statement failed on table 'MyDB.dbo.Staging_Department_2015_09_26' because target table has SYSTEM_TIME PERIOD while source table does not have it.`  
   
 ## Updating data  
  You update data in the current table with a regular **UPDATE** statement. You can update data in the current table from the history table to for the "oops" scenario. However, you cannot update **PERIOD** columns and you cannot directly updated data in the history table while **SYSTEM_VERSIONING = ON**.   
@@ -141,7 +141,7 @@ Cannot update GENERATED ALWAYS columns in table 'TmpDev.dbo.Department'.
 ```  
   
 ### Updating the current table from the history table  
- You can use **UPDATE** on the current table to revert the actual row state to valid state at a specific point in time in the past (reverting to a “last good known row version”). The following example shows reverting to the values in the history table as of 2015-04-25 where the DeptID = 10.  
+ You can use **UPDATE** on the current table to revert the actual row state to valid state at a specific point in time in the past (reverting to a "last good known row version"). The following example shows reverting to the values in the history table as of 2015-04-25 where the DeptID = 10.  
   
 ```  
 UPDATE Department   

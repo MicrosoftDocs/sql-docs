@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "sort attributes [Integration Services]"
   - "output columns [Integration Services]"
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Sort Data for the Merge and Merge Join Transformations
@@ -33,7 +33,7 @@ manager: craigg
   
      The Sort transformation uses Windows collation to sort string values.  
   
-     —or—  
+     -or-  
   
 -   Use the Transact-SQL CAST operator to first cast **varchar** values to **nvarchar** values, and then use the Transact-SQL ORDER BY clause to sort the data.  
   

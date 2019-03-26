@@ -31,7 +31,7 @@ The following steps summarize how to specify PHP data types when retrieving data
     For information about the constants used to specify the PHP data type, see the PHPTYPEs section of [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## Example  
-The following example retrieves rows from the *Production.ProductReview* table of the AdventureWorks database. In each returned row, the *ReviewDate* field is retrieved as a string and the *Comments* field is retrieved as a stream. The stream data is displayed by using the PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) function.  
+The following example retrieves rows from the *Production.ProductReview* table of the AdventureWorks database. In each returned row, the *ReviewDate* field is retrieved as a string and the *Comments* field is retrieved as a stream. The stream data is displayed by using the PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) function.  
   
 The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   

@@ -1,6 +1,7 @@
 ---
-title: "Enter Passwords Page (Add Replica Wizard) | Microsoft Docs"
-ms.custom: ""
+title: "Enter Passwords Page (Add Replica Wizard) for availability groups"
+description: "A description of the properties found on the 'Enter Passwords Page' of the 'Add Replica' wizard in SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Enter Passwords Page (Add Replica Wizard)
+# Enter Passwords Page (Add Replica Wizard) for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This help topic describes the options of the **Enter Passwords** page. This topic applies to the [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

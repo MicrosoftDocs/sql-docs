@@ -7,8 +7,6 @@ ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
-f1_keywords: 
-  - "VS.ToolsOptionsPages.Text_Editor.Plain_Text.General"
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: craigg-msft
 ms.author: craigg

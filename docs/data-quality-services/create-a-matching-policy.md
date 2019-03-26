@@ -5,23 +5,22 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.kbmatchingmap.f1"
   - "sql13.dqs.kb.kbmatchingpolicy.f1"
   - "sql13.dqs.kb.kbmatchingresults.f1"
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Matching Policy
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  This topic describes how to build a matching policy in a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). You prepare for the matching process in DQS by running the Matching Policy activity on sample data. In this activity you create and test one or more matching rules in the policy, and then publish the knowledge base to make the matching rules publically available for use. There can be only one matching policy in a knowledge base, but that policy can contain multiple matching rules.  
+  This topic describes how to build a matching policy in a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). You prepare for the matching process in DQS by running the Matching Policy activity on sample data. In this activity you create and test one or more matching rules in the policy, and then publish the knowledge base to make the matching rules publicly available for use. There can be only one matching policy in a knowledge base, but that policy can contain multiple matching rules.  
   
  Matching policy creation is performed in three stages: a mapping process in which you identify the data source and map domains to columns, a matching policy process in which you create one or more matching rules and test each matching rule separately, and a matching results process in which you run all matching rules together, and if satisfied with them, add the policy to the knowledge base. Each of these processes is performed on a separate page of the Matching Policy activity wizard, enabling you to move back and forth to different pages, to re-run the process, and to close out of a specific matching policy process and return to the same stage of the process. After testing all rules together, if desired you can return to the **Matching Policy** page, tweak an individual rule, test it again separately, and then return to the **Matching Results** page to run all rules together once again. DQS provides you with statistics about the source data, the matching rules, and the matching results that enable you to make informed decisions about the matching policy, so you can refine it.  
   
@@ -40,15 +39,15 @@ manager: craigg
   
  The factors that you enter in a matching rule include the following:  
   
--   Weight: For each domain in the rule, enter a numerical weight that determines how the matching analysis for the domain will be compared to that for each other domain in the rule. The weight indicates the contribution of the field’s score to the overall matching score between two records. The calculated scores assigned to each source field are summed together for a composite matching score for the two records. For each field that is not a prerequisite (with a similarity of exact or similar), set the weight between 10 and 100. The sum of the weights of the domains that are not prerequisites must be equal to 100. If the value is a prerequisite, the weight is set to 0 and cannot be changed.  
+-   Weight: For each domain in the rule, enter a numerical weight that determines how the matching analysis for the domain will be compared to that for each other domain in the rule. The weight indicates the contribution of the field's score to the overall matching score between two records. The calculated scores assigned to each source field are summed together for a composite matching score for the two records. For each field that is not a prerequisite (with a similarity of exact or similar), set the weight between 10 and 100. The sum of the weights of the domains that are not prerequisites must be equal to 100. If the value is a prerequisite, the weight is set to 0 and cannot be changed.  
   
--   Similarity of Exact: Select **Exact** if the values in the same field of two different records must be identical for the values to be considered to be a match. If identical, the matching score for that domain will be set to “100”, and DQS will use that score and the scores for the other domains in the rule to determine the aggregate matching score. If not identical, the matching score for that domain will be set to “0”, and processing of the rule will proceed to the next condition. If you set up a matching rule for a numeric domain and you select **Similar**, you can enter a tolerance either as a percentage or an integer. For a domain of type date, you can enter a tolerance as a day, month, or year (integer) if you select **Similar**; there is no percentage tolerance for a date domain. If you select **Exact**, you do not have this option.  
+-   Similarity of Exact: Select **Exact** if the values in the same field of two different records must be identical for the values to be considered to be a match. If identical, the matching score for that domain will be set to "100", and DQS will use that score and the scores for the other domains in the rule to determine the aggregate matching score. If not identical, the matching score for that domain will be set to "0", and processing of the rule will proceed to the next condition. If you set up a matching rule for a numeric domain and you select **Similar**, you can enter a tolerance either as a percentage or an integer. For a domain of type date, you can enter a tolerance as a day, month, or year (integer) if you select **Similar**; there is no percentage tolerance for a date domain. If you select **Exact**, you do not have this option.  
   
 -   Similarity of Similar: Select **Similar** if two values in the same field of two different records can be considered a match even if the values are not identical. When DQS runs the rule, it will calculate a matching score for that domain, and will use that score and the scores for the other domains in the rule to determine the aggregate matching score. The minimum similarity between the values of a field is 60%. If the calculated matching score for a field of two records is less than 60, the similarity score is automatically set to 0. If you are setting up a matching rule for a numeric field, and you select **Similar**, you can enter a tolerance as a percentage or integer. If you are setting up a matching rule for a date field, and you select **Similar**, you can enter a numerical tolerance.  
   
 -   Prerequisite: Select **Prerequisite** to specify that the values in the same field in two different records must return a 100% match, or the records are not considered a match and the other clauses in the rule are disregarded. When **Prerequisite** is selected, the weight field for the domain is removed so that you cannot define a weight for the domain. You must reset one or more domain weights so that the sum of weights is equal to 100. Prerequisite domains do not contribute to the record matching score. The record matching score is determined by comparing the values in fields for which the Similarity is set to Similar or Exact. When you make a field a prerequisite, the Similarity for that domain is automatically set to Exact.  
   
- The minimum matching score is the threshold at or above which two records are considered to be a match (and the status for the records is set to “Matched”). Enter an integer value in increments of “1” or click the up or down arrow to increase or decrease the value in increments of “10”. The minimum value is 80. If the matching score is below 80, the two records are not considered a match. You cannot change the range of the minimum matching score in this page. The lowest min. matching score is 80. You can, however, change the lowest minimum matching score within the Administration page (if you are a DQS administrator).  
+ The minimum matching score is the threshold at or above which two records are considered to be a match (and the status for the records is set to "Matched"). Enter an integer value in increments of "1" or click the up or down arrow to increase or decrease the value in increments of "10". The minimum value is 80. If the matching score is below 80, the two records are not considered a match. You cannot change the range of the minimum matching score in this page. The lowest min. matching score is 80. You can, however, change the lowest minimum matching score within the Administration page (if you are a DQS administrator).  
   
  Creating a matching rule is an iterative process because you may need to change the relative weights of the domains in the rule, or the similarity or the prerequisite property for a domain, or the min. matching score for the rule, in order to achieve the results that you need. You may also find that you need to create multiple rules, each of which will be run to create the matching score. It may be difficult to achieve the result you need with only one rule. Multiple rules will provide different views of a required match. With multiple rules, you may be able to include fewer domains in each rule, use higher weights for each domain, and achieve better results. If the data is less accurate and less complete, you may need more rules to find required matches. If the data is more accurate and complete, you need fewer rules.  
   
@@ -77,7 +76,7 @@ manager: craigg
     > [!NOTE]  
     >  You can map your source data to a DQS domain while creating a matching policy only if the source data type is supported in DQS, and matches with the DQS domain data type. For information about supported data types in DQS, see [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-5.  Click the **plus (+)** control to add a row to the Mappings table or the **minus (–)** control to remove a row.  
+5.  Click the **plus (+)** control to add a row to the Mappings table or the **minus (-)** control to remove a row.  
   
 6.  Click **Preview data source** to see the data in the SQL Server table or view that you selected, or the Excel worksheet that you selected.  
   
@@ -108,7 +107,7 @@ manager: craigg
   
 6.  For **Similarity**, select **Similar** if two values in the same field of two different records can be considered a match even if not identical. Select **Exact** if two values in the same field of two different records must be identical to be considered to be a match. (For more information, see [How to Set Matching Rule Parameters](#MatchingRules).)  
   
-7.  For **Weight**, enter a value that determines the contribution of a domain’s matching score to the overall matching score for two records.  
+7.  For **Weight**, enter a value that determines the contribution of a domain's matching score to the overall matching score for two records.  
   
     > [!NOTE]  
     >  When you define a weight for a composite domain, you can enter a different weight for each single domain in the composite domain, in which case the composite domain is not given a separate weight, or you can enter a single weight for the composite domain, in which the single domains in the composite domain are not given separate weights.  
@@ -127,7 +126,7 @@ manager: craigg
   
     -   In **Filter**, select **Matched** to show all matched rows and their score. Rows that are not considered matches (that have a matching score less than the minimum matching score) are not shown in the matching results table. Select **Unmatched** to show all unmatched rows, not matched rows.  
   
-    -   In the **Percent Drop Down Box**, select a percentage from the drop-down list, in increments of “5”. All rows with a matching score that is greater than or equal to that percentage will be displayed in the matching results table.  
+    -   In the **Percent Drop Down Box**, select a percentage from the drop-down list, in increments of "5". All rows with a matching score that is greater than or equal to that percentage will be displayed in the matching results table.  
   
     -   If you double-click a record in the matching results table, DQS displays a **Matching Score Details** popup that displays the pivot record and source record (and the values in all their fields), the score between them, and a drill-down of the record matching. The drill-down displays the values in each field of the pivot record and source record so you can compare them, and shows the matching score that each field contributes to the overall matching score for the two records.  
   
@@ -159,7 +158,7 @@ manager: craigg
   
     -   In **Filter**, select **Matched** to show all matched rows and their score. Rows that are not considered matches (that have a matching score less than the minimum matching score) are not shown in the matching results table. Select **Unmatched** to show all unmatched rows, not matched rows.  
   
-    -   In the **Percent Drop Down Box**, select a percentage from the drop-down list, in increments of “5”. All rows with a matching score that is greater than or equal to that percentage will be displayed in the matching results table.  
+    -   In the **Percent Drop Down Box**, select a percentage from the drop-down list, in increments of "5". All rows with a matching score that is greater than or equal to that percentage will be displayed in the matching results table.  
   
     -   If you double-click a record in the matching results table, DQS displays a **Matching Score Details** popup that displays the pivot record and source record (and the values in all their fields), the score between them, and a drill-down of the record matching. The drill-down displays the values in each field of the pivot record and source record so you can compare them, and shows the matching score that each field contributes to the overall matching score for the two records.  
   
@@ -172,13 +171,13 @@ manager: craigg
   
 7.  If you are satisfied with the results of all rules, click **Finish** to complete the matching policy process, and then click one of the following:  
   
-    -   **Yes – Publish the knowledge base and exit**: The knowledge base will be published for the current user or others to use. The knowledge base will not be locked, the state of the knowledge base (in the knowledge base table) will be set to empty, and both the Domain Management and Knowledge Discovery activities will be available. You will be returned to the Open Knowledge Base screen.  
+    -   **Yes - Publish the knowledge base and exit**: The knowledge base will be published for the current user or others to use. The knowledge base will not be locked, the state of the knowledge base (in the knowledge base table) will be set to empty, and both the Domain Management and Knowledge Discovery activities will be available. You will be returned to the Open Knowledge Base screen.  
   
-    -   **No – Save the work on the knowledge base and exit**: Your work will be saved, the knowledge base will remained locked, and the state of the knowledge base will be set to **In work**. Both the Domain Management and Knowledge Discovery activities will be available. You will be returned to the home page.  
+    -   **No - Save the work on the knowledge base and exit**: Your work will be saved, the knowledge base will remained locked, and the state of the knowledge base will be set to **In work**. Both the Domain Management and Knowledge Discovery activities will be available. You will be returned to the home page.  
   
-    -   **Cancel – Stay on the current screen**: The popup will be closed and you will be returned to the Domain Management screen.  
+    -   **Cancel - Stay on the current screen**: The popup will be closed and you will be returned to the Domain Management screen.  
   
-8.  Click **Close** to save your work, and return to the DQS home page. The state of the knowledge base will show the string “Matching Policy – “, and the current state. If you clicked **Close** while you are in the **Matching Result** screen, the state will show: "Matching Policy - Results". If you clicked close while you are in the **Matching Policy** screen, the state will show: “Matching Policy - Matching Policy”. After clicking **Close**, to perform the **Knowledge Discovery** activity, you would have to return to the **Matching policy** activity, click **Finish**, and then click either **Yes** to publish the knowledge base or **No** to save the work on the knowledge base and exit.  
+8.  Click **Close** to save your work, and return to the DQS home page. The state of the knowledge base will show the string "Matching Policy - ", and the current state. If you clicked **Close** while you are in the **Matching Result** screen, the state will show: "Matching Policy - Results". If you clicked close while you are in the **Matching Policy** screen, the state will show: "Matching Policy - Matching Policy". After clicking **Close**, to perform the **Knowledge Discovery** activity, you would have to return to the **Matching policy** activity, click **Finish**, and then click either **Yes** to publish the knowledge base or **No** to save the work on the knowledge base and exit.  
   
     > [!NOTE]  
     >  If you click **Close** while a matching process is running, the matching process will not terminate when you click **Close**. You can reopen the knowledge base and see either that the process is still running, or if completed, that the results are displayed. If the process has not completed, the screen will display the progress.  

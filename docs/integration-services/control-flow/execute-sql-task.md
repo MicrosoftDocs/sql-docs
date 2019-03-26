@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "batches [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Execute SQL Task
@@ -60,7 +60,7 @@ manager: craigg
 >  Valid SQL statements written outside the Execute SQL task may not be parsed successfully by the Execute SQL task.  
   
 > [!NOTE]  
->  The Execute SQL Task uses the **RecognizeAll** ParseMode enumeration value. For more information, see [ManagedBatchParser Namespace](http://go.microsoft.com/fwlink/?LinkId=223617).  
+>  The Execute SQL Task uses the **RecognizeAll** ParseMode enumeration value. For more information, see [ManagedBatchParser Namespace](https://go.microsoft.com/fwlink/?LinkId=223617).  
   
 ## Send multiple statements in a batch  
  If you include multiple statements in an Execute SQL task, you can group them and run them as a batch. To signal the end of a batch, use the GO command. All the SQL statements between two GO commands are sent in a batch to the OLE DB provider to be run. The SQL command can include multiple batches separated by GO commands.  
@@ -175,9 +175,9 @@ To learn more about the Transact-SQL query language, see [Transact-SQL Reference
   
 #### SQLSourceType = Direct input  
  **SQLStatement**  
- Type the SQL statement to execute in the option box, or click the browse button (…) to type the SQL statement in the **Enter SQL Query** dialog box, or click **Build Query** to compose the statement using the **Query Builder** dialog box.  
+ Type the SQL statement to execute in the option box, or click the browse button (...) to type the SQL statement in the **Enter SQL Query** dialog box, or click **Build Query** to compose the statement using the **Query Builder** dialog box.  
   
- **Related Topics:** [Query Builder](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Related Topics:** [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### SQLSourceType = File connection  
  **FileConnection**  
@@ -189,7 +189,7 @@ To learn more about the Transact-SQL query language, see [Transact-SQL Reference
  **SourceVariable**  
  Select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## Parameter Mapping Page - Execute SQL Task Editor
 Use the **Parameter Mapping** page of the **Execute SQL Task Editor** dialog box to map variables to parameters in the SQL statement.  
@@ -272,10 +272,10 @@ SQL statements and stored procedures frequently use **input** parameters, **outp
   
 |Connection type|Parameter marker|Parameter name|Example SQL command|  
 |---------------------|----------------------|--------------------|-------------------------|  
-|ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
-|ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|EXCEL and OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
+|EXCEL and OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
 #### Use parameters with ADO.NET and ADO Connection Managers  
  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] and ADO connection managers have specific requirements for SQL commands that use parameters:  
@@ -376,7 +376,7 @@ SQL statements and stored procedures frequently use **input** parameters, **outp
 |Connection type|EXEC syntax|  
 |---------------------|-----------------|  
 |EXCEL and OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
 |ADO|If IsQueryStoredProcedure is set to **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> If IsQueryStoredProcedure is set to **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|If IsQueryStoredProcedure is set to **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> If IsQueryStoredProcedure is set to **True**, `uspGetBillOfMaterials`|  
   
@@ -434,12 +434,12 @@ This section describes how to use a parameterized SQL statement in the Execute S
   
     |Connection type|Parameter name|  
     |---------------------|--------------------|  
-    |ADO|Param1, Param2, …|  
+    |ADO|Param1, Param2, ...|  
     |ADO.NET and SQLMOBILE|\@\<parameter name>|  
-    |ODBC|1, 2, 3, …|  
-    |EXCEL and OLE DB|0, 1, 2, 3, …|  
+    |ODBC|1, 2, 3, ...|  
+    |EXCEL and OLE DB|0, 1, 2, 3, ...|  
   
-10. From the **Variable Name** list, select a variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+10. From the **Variable Name** list, select a variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 11. In the **Direction** list, specify if the parameter is an input, an output, or a return value.  
   
@@ -458,14 +458,14 @@ This section describes how to use a parameterized SQL statement in the Execute S
 ##  <a name="Return_codes"></a> Get the values of return codes  
  A stored procedure can return an integer value, called a return code, to indicate the execution status of a procedure. To implement return codes in the Execute SQL task, you use parameters of the **ReturnValue** type.  
   
- The following table lists by connection type some examples of EXEC commands that implement return codes. All examples use an **input** parameter. The rules for how to use parameter markers and parameter names are the same for all parameter types—**Input**, **Output**, and **ReturnValue**.  
+ The following table lists by connection type some examples of EXEC commands that implement return codes. All examples use an **input** parameter. The rules for how to use parameter markers and parameter names are the same for all parameter types-**Input**, **Output**, and **ReturnValue**.  
   
  Some syntax does not support parameter literals. In that case, you must provide the parameter value by using a variable.  
   
 |Connection type|EXEC syntax|  
 |---------------------|-----------------|  
 |EXCEL and OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> For more information about ODBC call syntax, see the topic, [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462), in the ODBC Programmer's Reference in the  MSDN Library.|  
 |ADO|If IsQueryStoreProcedure is set to **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> If IsQueryStoreProcedure is set to **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Set IsQueryStoreProcedure is set to **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -510,7 +510,7 @@ This section describes how to use a parameterized SQL statement in the Execute S
   
  An XML result set can map only to a variable with the **String** or **Object** data type. If the variable has the **String** data type, the Execute SQL task returns a string and the XML source can consume the XML data. If the variable has the **Object** data type, the Execute SQL task returns a Document Object Model (DOM) object.  
   
- A **Full result set** must map to a variable of the **Object** data type. The return result is a rowset object. You can use a Foreach Loop container to extract the table row values that are stored in the Object variable into package variables, and then use a Script Task to write the data stored in packages variables to a file. For a demonstration on how to do this using a Foreach Loop container and a Script Task, see the CodePlex sample, [Execute SQL Parameters and Result Sets](http://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com.  
+ A **Full result set** must map to a variable of the **Object** data type. The return result is a rowset object. You can use a Foreach Loop container to extract the table row values that are stored in the Object variable into package variables, and then use a Script Task to write the data stored in packages variables to a file. For a demonstration on how to do this using a Foreach Loop container and a Script Task, see the CodePlex sample, [Execute SQL Parameters and Result Sets](https://go.microsoft.com/fwlink/?LinkId=157863), on msftisprodsamples.codeplex.com.  
   
  The following table summarizes the data types of variables that can be mapped to result sets.  
   
@@ -548,7 +548,7 @@ This section describes how to create a mapping between a result set and a variab
   
 8.  To add a result set mapping, click **Add**.  
   
-9. From the **Variables Name** list, select a variable or create a new variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+9. From the **Variables Name** list, select a variable or create a new variable. For more information, see [Add, Delete, Change Scope of User-Defined Variable in a Package](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
   
 10. In the **Result Name** list, optionally, modify the name of the result set.  
   

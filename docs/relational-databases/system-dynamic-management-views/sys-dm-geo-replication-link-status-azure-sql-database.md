@@ -1,11 +1,9 @@
 ---
 title: "sys.dm_geo_replication_link_status (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/13/2016"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.date: "01/28/2019"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: conceptual
 f1_keywords: 
   - "dm_geo_replication_link_status"
@@ -23,6 +21,7 @@ manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This includes both primary and secondary databases. If more than one continuous replication link exists for a given primary database, this table contains a row for each of the relationships. The view is created in all databases, including the logical master. However, querying this view in the logical master returns an empty set.  
@@ -30,10 +29,10 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|Unique ID of the replication link.|  
-|partner_server|**sysname**|Name of the logical server containing the linked database.|  
-|partner_database|**sysname**|Name of the linked database on the linked logical server.|  
-|last_replication|**datetimeoffset**|The timestamp of the last transaction’s acknowledgement by the secondary based on the primary database clock. This value is available on the primary database only.|  
-|replication_lag_sec|**int**|Time difference in seconds between the last_replication value and the timestamp of that transaction’s commit on the primary based on the primary database clock.  This value is available on the primary database only.|  
+|partner_server|**sysname**|Name of the SQL Database server containing the linked database.|  
+|partner_database|**sysname**|Name of the linked database on the linked SQL Database server.|  
+|last_replication|**datetimeoffset**|The timestamp of the last transaction's acknowledgement by the secondary based on the primary database clock. This value is available on the primary database only.|  
+|replication_lag_sec|**int**|Time difference in seconds between the last_replication value and the timestamp of that transaction's commit on the primary based on the primary database clock.  This value is available on the primary database only.|  
 |replication_state|**tinyint**|The state of geo-replication for this database, one of:.<br /><br /> 1 = Seeding. The geo-replication target is being seeded but the two databases are not yet synchronized. Until seeding completes, you cannot connect to the secondary database. Removing secondary database from the primary will cancel the seeding operation.<br /><br /> 2 = Catch-up. The secondary database is  in a transactionally consistent state and is being constantly  synchronized with the primary database.<br /><br /> 4 = Suspended. This is not an active continuous-copy relationship. This state usually indicates that the bandwidth available for the interlink is insufficient for the level of transaction activity on the primary database. However, the continuous-copy relationship is still intact.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |role|**tinyint**|Geo-replication role, one of:<br /><br /> 0 = Primary. The database_id  refers to the primary database in the geo-replication partnership.<br /><br /> 1 = Secondary.  The database_id  refers to the primary database in the geo-replication partnership.|  

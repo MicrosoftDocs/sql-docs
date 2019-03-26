@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ALTER CERTIFICATE statement"
   - "certificates [SQL Server], modifying"
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "SSIS Script task, Foreach loops"
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Gathering a List for the ForEach Loop with the Script Task
@@ -242,6 +242,6 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## See Also  
  [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md)   
- [Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+ [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   

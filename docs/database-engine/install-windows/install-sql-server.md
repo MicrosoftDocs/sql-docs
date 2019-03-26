@@ -17,7 +17,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Install SQL Server
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  Beginning with [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] is only available as a 64-bit application. Here are important details about how to get SQL Server and how to install it.
@@ -32,7 +31,7 @@ manager: craigg
 
 * **Sample databases and sample code**: 
     * They are not installed as part of SQL Server setup by default 
-    * To install them for non-Express editions of SQL Server, see the [GitHub](http://github.com/Microsoft/sql-server-samples)
+    * To install them for non-Express editions of SQL Server, see the [GitHub](https://github.com/Microsoft/sql-server-samples)
     
 
 ## Get the installation media
@@ -64,7 +63,7 @@ manager: craigg
 |[Install SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md)|Describes how to install and configure the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Install SQL Server Replication](../../database-engine/install-windows/install-sql-server-replication.md)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication.|  
 |[Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)|Lists down the articles to install the Distributed Replay feature.|  
-|[Install SQL Server Management Tools with SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tools.|  
+|[Install SQL Server Management Tools with SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tools.|  
 |[Install SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|Describes the considerations for installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell components.|  
   
 

@@ -49,7 +49,7 @@ manager: craigg
  Depending on which algorithm you used to create the model, the root node has a varying number of child nodes. Child nodes have different meanings and contain different content, depending on the algorithm and the depth and complexity of the data.  
   
 ##  <a name="bkmk_Nodes"></a> Nodes in Mining Model Content  
- In a mining model, a node is a general-purpose container that stores a piece of information about all or part of the model. The structure of each node is always the same, and contains the columns defined by the data mining schema rowset. For more information, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md).  
+ In a mining model, a node is a general-purpose container that stores a piece of information about all or part of the model. The structure of each node is always the same, and contains the columns defined by the data mining schema rowset. For more information, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Each node includes metadata about the node, including an identifier that is unique within each model, the ID of the parent node, and the number of child nodes that the node has. The metadata identifies the model to which the node belongs, and the database catalog where that particular model is stored. Additional content provided in the node differs depending on the type of algorithm you used to create the model, and might include the following:  
   
@@ -165,7 +165,7 @@ manager: craigg
   
  For example, in a classification tree, the support value indicates the number of cases that have the described combination of attributes.  
   
- In a decision tree, the sum of support at each level of a tree sums to the support of its parent node. For example, if a model containing 1200 cases is divided equally by gender, and then subdivided equally by three values for Income—Low, Medium, and High—the child nodes of node (2), which are nodes (4), (5) and (6), always sum to the same number of cases as node (2).  
+ In a decision tree, the sum of support at each level of a tree sums to the support of its parent node. For example, if a model containing 1200 cases is divided equally by gender, and then subdivided equally by three values for Income-Low, Medium, and High-the child nodes of node (2), which are nodes (4), (5) and (6), always sum to the same number of cases as node (2).  
   
 |Node ID and node attributes|Support count|  
 |---------------------------------|-------------------|  
@@ -243,7 +243,7 @@ manager: craigg
   
 -   **Node probability** is always less than or equal to **marginal probability**.  
   
- For example, if the population of all customers in a decision tree is split equally by gender (and no values are missing), the probability of the child nodes should be .5. However, suppose that each of the nodes for gender is divided equally by income levels—High, Medium, and Low. In this case the MARGINAL_PROBABILITY score for each child node should always be .33 but the NODE_PROBABILTY value will be the product of all probabilities leading to that node and thus always less than the MARGINAL_PROBABILITY value.  
+ For example, if the population of all customers in a decision tree is split equally by gender (and no values are missing), the probability of the child nodes should be .5. However, suppose that each of the nodes for gender is divided equally by income levels-High, Medium, and Low. In this case the MARGINAL_PROBABILITY score for each child node should always be .33 but the NODE_PROBABILTY value will be the product of all probabilities leading to that node and thus always less than the MARGINAL_PROBABILITY value.  
   
 |Level of node/attribute and value|Marginal probability|Node probability|  
 |----------------------------------------|--------------------------|----------------------|  

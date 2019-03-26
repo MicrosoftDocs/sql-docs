@@ -60,8 +60,8 @@ Return type is depends on first argument (expression). If input argument is stri
 |-------|-------|
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
-|NVARCHAR(1…4000) |NVARCHAR(4000) |
-|VARCHAR(1…8000) |VARCHAR(8000) |
+|NVARCHAR(1...4000) |NVARCHAR(4000) |
+|VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
 

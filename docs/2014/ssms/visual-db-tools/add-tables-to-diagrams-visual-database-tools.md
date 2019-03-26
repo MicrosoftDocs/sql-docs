@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "inserting tables"
@@ -23,7 +23,7 @@ manager: craigg
   
      To create a table in your current diagram, click the **New Table** button on the toolbar.  
   
-     –or–  
+     -or-  
   
      Right-click in the diagram and select **New Table**.  
   

@@ -1,6 +1,7 @@
 ---
-title: "Availability replica is disconnected | Microsoft Docs"
-ms.custom: ""
+title: "Availability replica is disconnected in an availability group"
+description: "Identify possible causes for why a replica is disconnected within an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Availability replica is disconnected
+# Availability replica is disconnected within an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## Introduction  
@@ -31,7 +32,7 @@ manager: craigg
  This policy checks the connection state between availability replicas. The policy is in an unhealthy state when the connection state of the availability replica is DISCONNECTED. The policy is otherwise in a healthy state.  
   
 > [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability replica is disconnected](http://go.microsoft.com/fwlink/p/?LinkId=220857) on the TechNet Wiki.  
+>  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [Availability replica is disconnected](https://go.microsoft.com/fwlink/p/?LinkId=220857) on the TechNet Wiki.  
   
 ## Possible Causes  
  The secondary replica is not connected to the primary replica. The connected state is DISCONNECTED. This issue can be caused by the following:  

@@ -8,8 +8,8 @@ ms.technology:
   - "integration-services"
 ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Install and Uninstall OData Source Component
@@ -22,7 +22,7 @@ manager: craigg
   
 -   SQL Server Integration Services (to run packages outside Visual Studio)  
   
- To install the OData Source Component, download [SQL Server 2014 Feature Pack](http://go.microsoft.com/fwlink/p/?LinkId=391999) and run one of the following MSI files.  
+ To install the OData Source Component, download [SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkId=391999) and run one of the following MSI files.  
   
 -   ODataSourceForSQLServer2014-amd64.msi for 64bit platforms  
   

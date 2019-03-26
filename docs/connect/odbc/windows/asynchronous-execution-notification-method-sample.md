@@ -15,7 +15,7 @@ manager: craigg
 # Asynchronous Execution (Notification Method) Sample
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  The code samples in this topic demonstrate how to use the [Asynchronous Execution (Notification Method)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  The code samples in this topic demonstrate how to use the [Asynchronous Execution (Notification Method)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
   
  This function uses asynchronous notification to open five connections, and executes one query on a statement of each connection.  
   

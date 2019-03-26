@@ -37,22 +37,22 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## Arguments  
- [ **@job_id =**] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number of the job to apply to the specified target servers or target server groups. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job to apply to the specified the associated target servers or target server groups. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@target_server_groups =**]  **'***target_server_groups***'**  
+`[ @target_server_groups = ] 'target_server_groups'`
  A comma-separated list of target server groups to which the specified job is to be applied. *target_server_groups* is **nvarchar(2048)**, with a default of NULL.  
   
- [ **@target_servers=** ] **'***target_servers***'**  
+`[ @target_servers = ] 'target_servers'`
  A comma-separated list of target servers to which the specified job is to be applied. *target_servers*is **nvarchar(2048)**, with a default of NULL.  
   
- [ **@operation=** ]  **'***operation***'**  
+`[ @operation = ] 'operation'`
  Is whether the specified job should be applied to or removed from the specified target servers or target server groups. *operation*is **varchar(7)**, with a default of APPLY. Valid operations are **APPLY** and **REMOVE**.  
   
 ## Return Code Values  

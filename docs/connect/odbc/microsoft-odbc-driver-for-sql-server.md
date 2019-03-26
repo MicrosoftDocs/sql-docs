@@ -1,7 +1,7 @@
 ---
 title: "Microsoft ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
+ms.date: "02/04/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -40,6 +40,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Using Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Using Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
 - [Using Transparent Network IP Resolution](../../connect/odbc/using-transparent-network-ip-resolution.md)
+- [Using XA Transactions](../../connect/odbc/use-xa-with-dtc.md)
 
 ### Linux and macOS
 
@@ -68,5 +69,5 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 
 
 ## Community  
-- [Microsoft ODBC Driver For SQL Server Team blog](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [SQL Server Data Access Forum](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [Microsoft ODBC Driver For SQL Server Team blog](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

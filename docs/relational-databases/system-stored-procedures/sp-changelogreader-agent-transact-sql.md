@@ -5,8 +5,7 @@ ms.date: "06/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_changelogreader_agent"
@@ -39,31 +38,31 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## Arguments  
- [ **@job_login**= ] **'***job_login***'**  
+`[ @job_login = ] 'job_login'`
  Is the login for the account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. On Azure SQL Database Managed Instance, use a SQL Server account. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
   
- [ **@job_password**= ] **'***job_password***'**  
+`[ @job_password = ] 'job_password'`
  Is the password for the account under which the agent runs. *job_password* is **sysname**, with a default of NULL.  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
- [ **@publisher_security_mode**= ] *publisher_security_mode*  
+`[ @publisher_security_mode = ] publisher_security_mode`
  Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**= ] **'***publisher_login***'**  
+`[ @publisher_login = ] 'publisher_login'`
  Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with a default of NULL. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the Windows account specified in *job_login* is used when connecting to the Publisher.  
   
- [ **@publisher_password**= ] **'***publisher_password***'**  
+`[ @publisher_password = ] 'publisher_password'`
  Is the password used when connecting to the Publisher. *publisher_password* is **sysname**, with a default of NULL.  
   
 > [!IMPORTANT]  
 >  Do not use a blank password. Use a strong password. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
- [ **@publisher**= ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL. This parameter is only supported for non-SQL Server Publishers.  
   
 ## Return Code Values  

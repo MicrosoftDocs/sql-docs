@@ -139,4 +139,4 @@ Report definition (.rdl) files are automatically upgraded in the following ways:
 [Custom Report Items](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Upgrade a Report Server Database](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

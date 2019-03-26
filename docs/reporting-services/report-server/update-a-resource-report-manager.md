@@ -19,7 +19,7 @@ ms.author: maghan
   
 ### To update a resource  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Report Manager, navigate to or search for the resource you want to update.  
   
@@ -38,9 +38,9 @@ ms.author: maghan
  If the resource you are updating contains an image that is used in a report, you need to refresh the report to see the updated image.  
   
 ## See Also  
- [Contents Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Upload File Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Contents Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [Upload File Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Upload Files to a Folder](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Report Manager F1 Help](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Report Manager F1 Help](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

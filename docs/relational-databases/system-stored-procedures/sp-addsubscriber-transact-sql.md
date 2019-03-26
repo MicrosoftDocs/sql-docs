@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addsubscriber"
@@ -56,10 +55,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ```  
   
 ## Arguments  
- [ **@subscriber=**] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the server to be added as a valid Subscriber to the publications on this server. *subscriber* is **sysname**, with no default.  
   
- [ **@type=**] *type*  
+`[ @type = ] type`
  Is the type of Subscriber. *type* is **tinyint**, and can be one of these values.  
   
 |Value|Description|  
@@ -69,13 +68,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet database|  
 |**3**|OLE DB provider|  
   
- [ **@login=**] **'***login***'**  
+`[ @login = ] 'login'`
  Is the login ID for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. *login* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@password=**] **'***password***'**  
+`[ @password = ] 'password'`
  Is the password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. *password* is **nvarchar(524)**, with a default of NULL.  
   
 > [!IMPORTANT]  
@@ -84,25 +83,25 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@commit_batch_size=**] *commit_batch_size*  
+`[ @commit_batch_size = ] commit_batch_size`
  This parameter has been deprecated and is maintained for backward compatibility of scripts.  
   
 > [!NOTE]  
 >  When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@status_batch_size=**] *status_batch_size*  
+`[ @status_batch_size = ] status_batch_size`
  This parameter has been deprecated and is maintained for backward compatibility of scripts.  
   
 > [!NOTE]  
 >  When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@flush_frequency=**] *flush_frequency*  
+`[ @flush_frequency = ] flush_frequency`
  This parameter has been deprecated and is maintained for backward compatibility of scripts.  
   
 > [!NOTE]  
 >  When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@frequency_type=**] *frequency_type*  
+`[ @frequency_type = ] frequency_type`
  Is the frequency with which to schedule the replication agent. *frequency_type* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -125,7 +124,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@frequency_relative_interval=**] *frequency_relative_interval*  
+`[ @frequency_relative_interval = ] frequency_relative_interval`
  Is the date of the replication agent. This parameter is used when *frequency_type* is set to **32** (monthly relative). *frequency_relative_interval* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -139,13 +138,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`
  Is the recurrence factor used by *frequency_type*. *frequency_recurrence_factor* is **int**, with a default of **0**.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@frequency_subday=**] *frequency_subday*  
+`[ @frequency_subday = ] frequency_subday`
  Is how often to reschedule during the defined period. *frequency_subday* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -158,50 +157,50 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@frequency_subday_interval=**] *frequency_subday_interval*  
+`[ @frequency_subday_interval = ] frequency_subday_interval`
  Is the interval for *frequency_subday*. *frequency_subday_interval* is **int**, with a default of **5**.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
+`[ @active_start_time_of_day = ] active_start_time_of_day`
  Is the time of day when the replication agent is first scheduled, formatted as HHMMSS. *active_start_time_of_day* is **int**, with a default of **0**.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@active_end_time_of_day=**] *active_end_time_of_day*  
+`[ @active_end_time_of_day = ] active_end_time_of_day`
  Is the time of day when the replication agent stops being scheduled, formatted as HHMMSS. *active_end_time_of_day*is **int**, with a default of 235959, which means 11:59:59 P.M. as measured on a 24-hour clock.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@active_start_date=**] *active_start_date*  
+`[ @active_start_date = ] active_start_date`
  Is the date when the replication agent is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with a default of 0.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@active_end_date=**] *active_end_date*  
+`[ @active_end_date = ] active_end_date`
  Is the date when the replication agent stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with a default of 99991231, which means December 31, 9999.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@description=**] **'***description***'**  
+`[ @description = ] 'description'`
  Is a text description of the Subscriber. *description* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@security_mode=**] *security_mode*  
+`[ @security_mode = ] security_mode`
  Is the implemented security mode. *security_mode* is **int**, with a default of 1. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. **1** specifies Windows Authentication.  
   
 > [!NOTE]  
 >  This parameter has been deprecated and is maintained for backward compatibility of scripts. The property is now specified on a per-subscription basis when executing [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). When a value is specified, it will be used as a default when creating subscriptions at this Subscriber and a warning message will be returned.  
   
- [ **@encrypted_password=**] *encrypted_password*  
+`[ @encrypted_password = ] encrypted_password`
  This parameter has been deprecated and is provided for backward-compatibility only Setting *encrypted_password* to any value but **0** will result in an error.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when publishing from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

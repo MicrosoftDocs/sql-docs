@@ -1,5 +1,5 @@
 ---
-title: "Create and manage hierarchies | Microsoft Docs"
+title: "Create and manage hierarchies in Analysis Services tabular models | Microsoft Docs"
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -35,7 +35,7 @@ manager: kfile
   
 2.  Type a name for the hierarchy.  
   
- You can drag additional columns into your hierarchy’s parent level, which copies the columns. Drop the child level to place it where you want it to appear in the hierarchy.  
+ You can drag additional columns into your hierarchy's parent level, which copies the columns. Drop the child level to place it where you want it to appear in the hierarchy.  
   
 > [!NOTE]  
 >  The Create Hierarchy command is disabled in the context menu if you multi-select a measure along with one or more columns or you select columns from multiple tables.  
@@ -88,7 +88,7 @@ manager: kfile
 -   Or, click the parent hierarchy level, and then press Delete. This also removes all the child levels.  
   
 ## See Also  
- [Tabular Model Designer ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [Tabular Model Designer](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [Hierarchies](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [Measures](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   

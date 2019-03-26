@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "partitioned indexes [SQL Server], about partitioned indexes"
   - "index partitions"
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -123,11 +123,11 @@ In this way, the query optimizer can process the join faster, because the partit
   
 ## Related Content  
  You may find the following white papers on partitioned table and index strategies and implementations useful.  
--   [Partitioned Table and Index Strategies Using SQL Server 2008](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
--   [How to Implement an Automatic Sliding Window](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [Bulk Loading into a Partitioned Table](http://msdn.microsoft.com/library/cc966380.aspx)    
+-   [Partitioned Table and Index Strategies Using SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
+-   [How to Implement an Automatic Sliding Window](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
+-   [Bulk Loading into a Partitioned Table](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Project REAL: Data Lifecycle -- Partitioning](https://technet.microsoft.com/library/cc966424.aspx)    
--   [Query Processing Enhancements on Partitioned Tables and Indexes](http://msdn.microsoft.com/library/ms345599.aspx)    
--   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [Query Processing Enhancements on Partitioned Tables and Indexes](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   
   

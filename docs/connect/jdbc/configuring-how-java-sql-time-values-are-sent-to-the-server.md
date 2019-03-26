@@ -39,7 +39,7 @@ manager: craigg
   
  If you want to use the **datetime** and **smalldatetime**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types when working with java.sql.Time values, you should set the **sendTimeAsDatetime** connection property to **true**. If you want to use the **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type when working with java.sql.Time values, you should set the **sendTimeAsDatetime** connection property to **false**.  
   
- Be aware that sending java.sql.Time values into a parameter whose data type can also store the date, that default dates are different depending on whether the java.sql.Time value is sent as a **datetime** (1/1/1970) or **time** (1/1/1900) value. For more information about data conversions when sending data to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Using Date and Time Data](http://go.microsoft.com/fwlink/?LinkID=145211).  
+ Be aware that sending java.sql.Time values into a parameter whose data type can also store the date, that default dates are different depending on whether the java.sql.Time value is sent as a **datetime** (1/1/1970) or **time** (1/1/1900) value. For more information about data conversions when sending data to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Using Date and Time Data](https://go.microsoft.com/fwlink/?LinkID=145211).  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0, **sendTimeAsDatetime** is true by default. In a future release, the **sendTimeAsDatetime** connection property may be set to false by default.  
   

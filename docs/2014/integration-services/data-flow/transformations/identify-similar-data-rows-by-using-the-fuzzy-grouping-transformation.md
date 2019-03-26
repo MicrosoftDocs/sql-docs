@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Fuzzy Grouping transformation"
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "similar data rows [Integration Services]"
   - "fuzzy matches"
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Identify Similar Data Rows by Using the Fuzzy Grouping Transformation
@@ -78,6 +77,6 @@ manager: craigg
  [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Integration Services Transformations](integration-services-transformations.md)   
  [Integration Services Paths](../integration-services-paths.md)   
- [Data Flow Task]((../../control-flow/data-flow-task.md)  
+ [Data Flow Task](../../control-flow/data-flow-task.md)  
   
   

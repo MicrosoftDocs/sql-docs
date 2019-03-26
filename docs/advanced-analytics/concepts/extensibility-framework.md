@@ -1,10 +1,10 @@
 ---
-title: Extensibility architecture in SQL Server Machine Learning Services | Microsoft Docs
+title: Extensibility architecture for R language and Python script - SQL Server Machine Learning
 description: External code support for the SQL Server database engine, with dual architecture for running R and Python script on relational data.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/05/2018  
+ms.date: 10/17/2018  
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
@@ -48,7 +48,7 @@ Components include a **Launchpad** service used to invoke language-specific laun
 
 ## Launchpad
 
-The SQL Server Trusted Launchpad is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
+The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] is a service that manages and executes external scripts, similar to the way that the full-text indexing and query service launches a separate host for processing full-text queries. The Launchpad service can start only trusted launchers that are published by Microsoft, or that have been certified by Microsoft as meeting requirements for performance and resource management.
 
 | Trusted launchers | Extension | SQL Server versions |
 |-------------------|-----------|---------------------|
@@ -56,6 +56,8 @@ The SQL Server Trusted Launchpad is a service that manages and executes external
 | Pythonlauncher.dll for Python 3.5 | [Python extension](extension-python.md) | SQL Server 2017 |
 
 The [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service runs under its own user account. If you change the account that runs Launchpad, be sure to do so using SQL Server Configuration Manager, to ensure that changes are written to related files.
+
+A separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service is created for each database engine instance to which you have added SQL Server Machine Learning Services. There is one Launchpad service for each database engine instance, so if you have multiple instances with external script support, you will have a Launchpad service for each one. A database engine instance is bound to the Launchpad service created for it. All invocations of external script in a stored procedure or T-SQL result in the SQL Server service calling the Launchpad service created for the same instance.
 
 To execute tasks in a specific supported language, the Launchpad gets a secured worker account from the pool, and starts a satellite process to manage the external runtime. Each satellite process inherits the user account of the Launchpad and uses that worker account for the duration of script execution. If script uses parallel processes, they are created under the same, single worker account.
 

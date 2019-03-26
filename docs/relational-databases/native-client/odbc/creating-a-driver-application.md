@@ -106,7 +106,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- One design decision made early in the process of building an application is whether the application needs to have multiple ODBC calls outstanding at the same time. There are two methods for supporting multiple concurrent ODBC calls, which are described in the remaining topics in this section. For more information, see the [ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45250).  
+ One design decision made early in the process of building an application is whether the application needs to have multiple ODBC calls outstanding at the same time. There are two methods for supporting multiple concurrent ODBC calls, which are described in the remaining topics in this section. For more information, see the [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250).  
   
 ## In This Section  
   

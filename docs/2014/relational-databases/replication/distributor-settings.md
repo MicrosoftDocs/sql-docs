@@ -1,11 +1,10 @@
 ---
-title: "Distributor Settings | Microsoft Docs"
+title: "'Distributor Settings' dialog box | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.monitor.DistributorSettings.f1"
@@ -16,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Distributor Settings
+# SQL Server Replication 'Distributor Settings' dialog box
   The **Distributor Settings** dialog box enables you to change settings for Distributors that were added to the left pane in Replication Monitor.  
   
 ## Options  

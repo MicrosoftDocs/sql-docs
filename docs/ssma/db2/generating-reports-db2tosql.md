@@ -40,8 +40,8 @@ Use the following procedure to generate reports:
     ||||  
     |-|-|-|  
     |**Sl. No.**|**Command and Parameter**|**Output Description**|  
-    |1|verbose=”false”|Generates a summarized report of the activity.|  
-    |2|verbose=”true”|Generates a summarized and detailed status report for each activity.|  
+    |1|verbose="false"|Generates a summarized report of the activity.|  
+    |2|verbose="true"|Generates a summarized and detailed status report for each activity.|  
   
     > [!NOTE]  
     > The Report Verbosity Settings specified above are applicable for generate-assessment-report, convert-schema, migrate-data, convert-sql-statement commands.  
@@ -51,8 +51,8 @@ Use the following procedure to generate reports:
     ||||  
     |-|-|-|  
     |**Sl. No.**|**Command and Parameter**|**Output Description**|  
-    |1|report-errors=”false”|No details on error/ warning/ info messages.|  
-    |2|report-errors=”true”|Detailed error/ warning/ info messages.|  
+    |1|report-errors="false"|No details on error/ warning/ info messages.|  
+    |2|report-errors="true"|Detailed error/ warning/ info messages.|  
   
     > [!NOTE]  
     > The Error Reporting Settings specified above are applicable for generate-assessment-report, convert-schema, migrate-data, convert-sql-statement commands.  
@@ -80,7 +80,7 @@ Use the following procedure to generate reports:
 ### synchronize-target:  
 The command **synchronize-target** has **report-errors-to** parameter, which specifies the location of error report for the synchronization operation. Then, a file by name **TargetSynchronizationReport&lt;n&gt;.XML** is created at the specified location, where **&lt;n&gt;** is the unique file number that increments with a digit with each execution of the same command.  
   
-**Note:** If the folder path is given, then ‘report-errors-to’ parameter becomes an optional attribute for the command ‘synchronize-target’.  
+**Note:** If the folder path is given, then 'report-errors-to' parameter becomes an optional attribute for the command 'synchronize-target'.  
   
 ```  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -106,7 +106,7 @@ The command **synchronize-target** has **report-errors-to** parameter, which spe
 ### refresh-from-database:  
 The command **refresh-from-database** has **report-errors-to** parameter, which specifies the location of error report for the refresh operation. Then, a file by name **SourceDBRefreshReport&lt;n&gt;.XML** is created at the specified location, where **&lt;n&gt;** is the unique file number that increments with a digit with each execution of the same command.  
   
-**Note:** If the folder path is given, then ‘report-errors-to’ parameter becomes an optional attribute for the command ‘synchronize-target’.  
+**Note:** If the folder path is given, then 'report-errors-to' parameter becomes an optional attribute for the command 'synchronize-target'.  
   
 ```  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -132,5 +132,5 @@ The command **refresh-from-database** has **report-errors-to** parameter, which 
 -   fail-script  
   
 ## See Also  
-[Executing the SSMA Console](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+[Executing the SSMA Console](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

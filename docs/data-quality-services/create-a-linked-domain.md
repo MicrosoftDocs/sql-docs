@@ -5,14 +5,13 @@ ms.date: "11/08/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.linkeddomain.f1"
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Linked Domain
@@ -30,7 +29,7 @@ manager: craigg
 ### Controlling data flow to composite domains  
  Linked domains enable you to control the data flow between fields and composite domains. You can differentiate when data from one field flows into a composite domain, and when data from another, very similar field does not flow into the composite domain. You do so by specifying that of two linked domains, one is part of a composite domain, and one is not. From a domain perspective, linked domains are identical. They contain the same knowledge. However, from a composite-domain perspective, linked domains are different. One participates in the composite domain; the other does not.  
   
- An example is a record that contains the following fields: Customer First Name, Customer Last Name, and Father’s First Name. Suppose you map both customer first name and father’s first name to a First Name domain, and make the First Name domain and the Last Name domain a part of a Full Name composite domain. The problem is that the father’s first name will be added to the composite domain without a last name. If, however, you link each of the two first name fields to a domain, and link the two domains, then you can add the Customer First Name domain to the Full Name composite domain, and not add the Father’s First Name field to the composite domain, thereby preventing the Father’s First Name from being added to the composite domain.  
+ An example is a record that contains the following fields: Customer First Name, Customer Last Name, and Father's First Name. Suppose you map both customer first name and father's first name to a First Name domain, and make the First Name domain and the Last Name domain a part of a Full Name composite domain. The problem is that the father's first name will be added to the composite domain without a last name. If, however, you link each of the two first name fields to a domain, and link the two domains, then you can add the Customer First Name domain to the Full Name composite domain, and not add the Father's First Name field to the composite domain, thereby preventing the Father's First Name from being added to the composite domain.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -59,7 +58,7 @@ manager: craigg
   
 6.  If necessary, you can change the name or description of the linked domain in the Domain Properties tab.  
   
-7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="Map"></a> Map two fields to linked domains  
   

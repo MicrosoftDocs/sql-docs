@@ -32,8 +32,8 @@ manager: craigg
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**listener_id**|**int**|Listener’s internal ID. Is not nullable.<br /><br /> Primary key.|  
-|**ip_address**|**nvarchar48**|The listener IP address that is online and currently being listening to. Either IPv4 and IPv6 is allowed. If a listener possesses both types of addresses, they are listed separately. An IPv4 wildcard, is displayed as “0.0.0.0”. An IPv6 wildcard, is displayed as “::”.<br /><br /> Is not nullable.|  
+|**listener_id**|**int**|Listener's internal ID. Is not nullable.<br /><br /> Primary key.|  
+|**ip_address**|**nvarchar48**|The listener IP address that is online and currently being listening to. Either IPv4 and IPv6 is allowed. If a listener possesses both types of addresses, they are listed separately. An IPv4 wildcard, is displayed as "0.0.0.0". An IPv6 wildcard, is displayed as "::".<br /><br /> Is not nullable.|  
 |**is_ipv4**|**bit**|Type of IP address<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|The port number on which the listener is listening. Is not nullable.|  
 |**type**|**tinyint**|Listener type, one of:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Database mirroring<br /><br /> Is not nullable.|  

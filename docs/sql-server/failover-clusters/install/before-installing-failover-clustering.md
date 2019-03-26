@@ -28,27 +28,27 @@ manager: craigg
 |Describes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustering concepts, and provides links to associated content and tasks.|[Always On Failover Cluster Instances &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
 |Describes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover policy concepts, and provides links to configuring the failover policy to suit your organizational requirements.|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
 |Describes how to maintain and your existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster.|[Failover Cluster Instance Administration and Maintenance](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|Explains how to install [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] on a Windows Server Failover Cluster (WSFC).|[How to Cluster SQL Server Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|Explains how to install [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] on a Windows Server Failover Cluster (WSFC).|[How to Cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
  
   
 ##  <a name="BestPractices"></a> Best Practices  
   
--   Review [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Release Notes](http://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Review [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [Release Notes](https://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Install prerequisite software. Before running Setup to install or upgrade to [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], install the following prerequisites to reduce installation time. You can install prerequisite software on each failover cluster node and then restart nodes once before running Setup.  
   
-    -   Windows PowerShell is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. Windows PowerShell is a prerequisite for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If Windows PowerShell is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) page.  
+    -   Windows PowerShell is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup. Windows PowerShell is a prerequisite for installing [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] components and [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. If Windows PowerShell is not present on your computer, you can enable it by following the instructions on the [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) page.  
   
-    -   .NET Framework 3.5 SP1 is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup, but may be required while installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on older Windows operating systems. For more information, see [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Release Notes](http://go.microsoft.com/fwlink/?LinkId=296445).  
+    -   .NET Framework 3.5 SP1 is no longer installed by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup, but may be required while installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on older Windows operating systems. For more information, see [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Release Notes](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update package:** To avoid computer restart due to .NET Framework 4 installation during setup, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] setup requires a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] update to be installed on the computer.  If you are installing [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on Windows 7 SP1 or [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 this update is included. If you are installing on an older Windows operating system, download it from [Microsoft Update for .NET Framework 4.0 on Windows Vista and Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update package:** To avoid computer restart due to .NET Framework 4 installation during setup, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] setup requires a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] update to be installed on the computer.  If you are installing [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] on Windows 7 SP1 or [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 this update is included. If you are installing on an older Windows operating system, download it from [Microsoft Update for .NET Framework 4.0 on Windows Vista and Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
     -   .NET Framework 4: Setup installs .NET Framework 4 on a clustered operating system. To reduce installation time, you may consider installing .NET Framework 4 before you run Setup.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup support files. You can install these files by running SqlSupport.msi located on your [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installation media.  
   
--   Verify that antivirus software is not installed on your WSFC cluster. For more information, see the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base article, [Antivirus software may cause problems with cluster services](http://go.microsoft.com/fwlink/?LinkId=116986).  
+-   Verify that antivirus software is not installed on your WSFC cluster. For more information, see the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base article, [Antivirus software may cause problems with cluster services](https://go.microsoft.com/fwlink/?LinkId=116986).  
   
 -   When naming a cluster group for your failover cluster installation, you must not use any of the following characters in the cluster group name:  
   
@@ -72,7 +72,7 @@ manager: craigg
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup automatically sets dependencies between the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster group and the disks that will be in the failover cluster. Do not set dependencies for disks before Setup.  
   
-    -   During [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster installation, computer object (Active Directory computer accounts) for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Resource Name is created. In a [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] cluster, the cluster name account (computer account of the cluster itself) needs to have permissions to create computer objects. For more information, see [Configuring Accounts in Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx).  
+    -   During [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster installation, computer object (Active Directory computer accounts) for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Network Resource Name is created. In a [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] cluster, the cluster name account (computer account of the cluster itself) needs to have permissions to create computer objects. For more information, see [Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx).  
   
     -   If you are using SMB File share as a storage option, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup account must have SeSecurityPrivilege on the file server. To do this, using the Local Security Policy console on the file server, add the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup account to **Manage auditing and security log** rights.  
   
@@ -80,7 +80,7 @@ manager: craigg
   
 -   If the cluster solution includes geographically dispersed cluster nodes, additional items like network latency and shared disk support must be verified.  
   
-    -   For more information about [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)], see [Validating Hardware for a failover cluster](http://go.microsoft.com/fwlink/?LinkId=196817) and [Support Policy for Windows Failover Clusters](http://go.microsoft.com/fwlink/?LinkId=196818).  
+    -   For more information about [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] and [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)], see [Validating Hardware for a failover cluster](https://go.microsoft.com/fwlink/?LinkId=196817) and [Support Policy for Windows Failover Clusters](https://go.microsoft.com/fwlink/?LinkId=196818).  
   
 -   Verify that the disk where [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will be installed is not compressed or encrypted. If you attempt to install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to a compressed drive or an encrypted drive, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup fails.  
   
@@ -110,13 +110,13 @@ manager: craigg
   
     -   Formatting a drive after mounting additional drives is not supported.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource will fail to come online. For more information, see [Storage Types for Data Files](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) and [Database Engine Configuration - Data Directories](http://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation supports Local Disk only for installing the tempdb files. Ensure that the path specified for the tempdb data and log files is valid on all the cluster nodes. During failover, if the tempdb directories are not available on the failover target node, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] resource will fail to come online. For more information, see [Storage Types for Data Files](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) and [Database Engine Configuration - Data Directories](https://msdn.microsoft.com/library/9b1fa0fc-623b-479a-afc3-4f13bd850487).  
   
--   If you deploy a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster on iSCSI technology components, we recommend that you use appropriate caution. For more information, see [Support for SQL Server on iSCSI technology components](http://go.microsoft.com/fwlink/?LinkId=116960).  
+-   If you deploy a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster on iSCSI technology components, we recommend that you use appropriate caution. For more information, see [Support for SQL Server on iSCSI technology components](https://go.microsoft.com/fwlink/?LinkId=116960).  
   
--   For more information, see [SQL Server support policy for Microsoft Clustering](http://go.microsoft.com/fwlink/?LinkId=116958).  
+-   For more information, see [SQL Server support policy for Microsoft Clustering](https://go.microsoft.com/fwlink/?LinkId=116958).  
   
--   For more information about proper quorum drive configuration, see [Quorum Drive Configuration Information](http://go.microsoft.com/fwlink/?LinkId=196816).  
+-   For more information about proper quorum drive configuration, see [Quorum Drive Configuration Information](https://go.microsoft.com/fwlink/?LinkId=196816).  
   
 -   To install a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster when the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] source installation files and the cluster exist on different domains, copy the installation files to the current domain available to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster.  
   
@@ -139,7 +139,7 @@ manager: craigg
   
 -   Review content in [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   To enable Kerberos authentication with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [How to use Kerberos authentication in SQL Server](http://support.microsoft.com/kb/319723) in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
+-   To enable Kerberos authentication with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723) in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
   
 ##  <a name="Network"></a> Review Network, Port, and Firewall Considerations  
   
@@ -179,7 +179,7 @@ manager: craigg
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64-bit) x64*|Yes|Yes|Yes**|Yes**|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32-bit)|Yes|Yes|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] –bit) Developer (64|Yes|Yes|Yes**|Yes**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -bit) Developer (64|Yes|Yes|Yes**|Yes**|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32-bit)|Yes|Yes|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64-bit)|Yes|Yes|Yes|Yes|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32-bit)|Yes|Yes|||  
@@ -212,7 +212,7 @@ manager: craigg
      If you decide to use more than one IP address configured for the same subnet, you may experience client connection failures during [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] startup.  
   
 #### Related Content  
- For more information about [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] multi-site failover, see [Windows Server 2008 R2 Failover Clustering Site](http://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) and [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](http://go.microsoft.com/fwlink/?LinkId=177873).  
+ For more information about [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] multi-site failover, see [Windows Server 2008 R2 Failover Clustering Site](https://technet.microsoft.com/library/ff182338\(v=WS.10\).aspx) and [Design for a Clustered Service or Application in a Multi-Site Failover Cluster](https://go.microsoft.com/fwlink/?LinkId=177873).  
   
 ##  <a name="WSFC"></a> Configure Windows Server Failover Cluster  
   
@@ -222,7 +222,7 @@ manager: craigg
   
 -   WSFC must be able to verify that the failover clustered instance is running by using the IsAlive check. This requires connecting to the server by using a trusted connection. By default, the account that runs the cluster service is not configured as an administrator on nodes in the cluster, and the BUILTIN\Administrators group does not have permission to log into [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. These settings change only if you change permissions on the cluster nodes.  
   
--   Configure Domain Name Service (DNS) or Windows Internet Name Service (WINS). A DNS server or WINS server must be running in the environment where your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster will be installed. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup requires dynamic domain name service registration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP interface virtual reference. DNS server configuration should allow cluster nodes to dynamically register an online IP address map to Network Name. If the dynamic registration cannot be completed, Setup fails and the installation is rolled back. For more information, see [this knowledgebase article](http://support.microsoft.com/kb/947048)  
+-   Configure Domain Name Service (DNS) or Windows Internet Name Service (WINS). A DNS server or WINS server must be running in the environment where your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster will be installed. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup requires dynamic domain name service registration of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IP interface virtual reference. DNS server configuration should allow cluster nodes to dynamically register an online IP address map to Network Name. If the dynamic registration cannot be completed, Setup fails and the installation is rolled back. For more information, see [this knowledgebase article](https://support.microsoft.com/kb/947048)  
   
 ##  <a name="MSDTC"></a> Install [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator  
  Before installing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on a failover cluster, determine whether the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MSDTC) cluster resource must be created. If you are installing only the [!INCLUDE[ssDE](../../../includes/ssde-md.md)], the MSDTC cluster resource is not required. If you are installing the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] and SSIS, Workstation Components, or if you will use distributed transactions, you must install MSDTC. Note that MSDTC is not required for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-only instances.  
@@ -237,7 +237,7 @@ manager: craigg
   
 -   Use the cluster's default instance of MSDTC, else  
   
--   Use the local machine’s installed instance of MSDTC  
+-   Use the local machine's installed instance of MSDTC  
   
 > [!IMPORTANT]  
 >  If the MSDTC instance that is installed to the local cluster group of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fails, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not automatically attempt to use the default cluster instance or the local machine instance of MSDTC. You would need to completely remove the failed instance of MSDTC from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] group to use another instance of MSDTC. Likewise, if you create a mapping for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and the mapped instance of MSDTC fails, your distributed transactions will also fail. If you want [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to use a different instance of MSDTC, you must either add an instance of MSDTC to the local cluster group of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] or delete the mapping.  

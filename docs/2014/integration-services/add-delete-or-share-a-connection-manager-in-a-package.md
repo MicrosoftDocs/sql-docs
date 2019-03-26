@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "connection managers [Integration Services], adding"
   - "adding connection managers"
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add, Delete, or Share a Connection Manager in a Package
@@ -57,7 +57,7 @@ manager: craigg
   
     -   Click the connection manager type to add to the package.  
   
-         —or—  
+         -or-  
   
     -   If the type that you want to add is not listed, click **New Connection** to open the **Add SSIS Connection Manager** dialog box, select a connection manager type, and then click **OK**.  
   
@@ -124,7 +124,7 @@ manager: craigg
 4.  Optionally, right-click the connection manager in the **Solution Explorer** window under **Connection Managers** node (or) in the **Connection Managers** tab of the **SSIS Designer** window, click **Rename**, and then modify the default name of the connection manager.  
   
     > [!NOTE]  
-    >  In the **Connection Managers** tab of the **SSIS Designer** window, you won’t be able to overwrite the **(project)** prefix from the connection manager name. This is by design.  
+    >  In the **Connection Managers** tab of the **SSIS Designer** window, you won't be able to overwrite the **(project)** prefix from the connection manager name. This is by design.  
   
 ##  <a name="parameter"></a> To create a parameter for a connection manager property  
   

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "data flow engine [Integration Services]"
   - "languages [Integration Services]"
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Programming Overview
@@ -45,7 +45,7 @@ manager: craigg
  You can program [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages, custom tasks, and components in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] or in another code or text editor. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offers the developer many tools and features to simplify and accelerate the iterative cycles of coding, debugging, and testing. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] also makes deployment easier. However, you do not need [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] to compile and build [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] code projects. The [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK includes the [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] and [!INCLUDE[csprcs](../includes/csprcs-md.md)] compilers and related tools.  
   
 > [!IMPORTANT]  
->  By default, the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] is installed with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK is not. Unless the SDK is installed on the computer and the SDK documentation is included in the Books Online collection, links to SDK content in this section will not work. After you have installed the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK, you can add the SDK documentation to the Books Online collection and table of contents by following the instructions in [Add or Remove Product Documentation for SQL Server](http://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
+>  By default, the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] is installed with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], but the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK is not. Unless the SDK is installed on the computer and the SDK documentation is included in the Books Online collection, links to SDK content in this section will not work. After you have installed the [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK, you can add the SDK documentation to the Books Online collection and table of contents by following the instructions in [Add or Remove Product Documentation for SQL Server](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
   
  The [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Script task and Script component use [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) as an embedded scripting environment. VSTA supports [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic and [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   

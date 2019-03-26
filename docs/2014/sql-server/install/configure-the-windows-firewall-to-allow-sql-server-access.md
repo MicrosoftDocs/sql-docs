@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows Firewall ports"
@@ -31,7 +30,7 @@ manager: craigg
  To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a firewall, you must configure the firewall on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to allow access. The firewall is a component of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. You can also install a firewall from another company. This topic discusses how to configure the Windows firewall, but the basic principles apply to other firewall programs.  
   
 > [!NOTE]  
->  This topic provides an overview of firewall configuration and summarizes information of interest to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. For more information about the firewall and for authoritative firewall information, see the firewall documentation, such as [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
+>  This topic provides an overview of firewall configuration and summarizes information of interest to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. For more information about the firewall and for authoritative firewall information, see the firewall documentation, such as [Windows Firewall with Advanced Security and IPsec](https://go.microsoft.com/fwlink/?LinkID=116904).  
   
  Users familiar with the **Windows Firewall** item in Control Panel and with the Windows Firewall with Advanced Security Microsoft Management Console (MMC) snap-in and who know which firewall settings they want to configure can move directly to the topics in the following list:  
   
@@ -54,11 +53,11 @@ manager: craigg
   
  Choosing a firewall strategy is more complex than just deciding if a given port should be open or closed. When designing a firewall strategy for your enterprise, make sure that you consider all the rules and configuration options available to you. This topic does not review all the possible firewall options. We recommend that you review the following documents:  
   
- [Windows Firewall with Advanced Security Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=116080)  
+ [Windows Firewall with Advanced Security Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=116080)  
   
- [Windows Firewall with Advanced Security Design Guide](http://go.microsoft.com/fwlink/?LinkId=116904)  
+ [Windows Firewall with Advanced Security Design Guide](https://go.microsoft.com/fwlink/?LinkId=116904)  
   
- [Introduction to Server and Domain Isolation](http://go.microsoft.com/fwlink/?LinkId=116081)  
+ [Introduction to Server and Domain Isolation](https://go.microsoft.com/fwlink/?LinkId=116081)  
   
 ##  <a name="BKMK_default"></a> Default Firewall Settings  
  The first step in planning your firewall configuration is to determine the current status of the firewall for your operating system. If the operating system was upgraded from a previous version, the earlier firewall settings may have been preserved. Also, the firewall settings could have been changed by another administrator or by a Group Policy in your domain.  
@@ -74,7 +73,7 @@ manager: craigg
      The **Windows Firewall** item can be opened from Control Panel.  
   
     > [!IMPORTANT]  
-    >  Changes made in the **Windows Firewall** item in Control Panel only affect the current profile. Mobile devices, for example a laptop, should not use the **Windows Firewall** item in Control Panel as the profile might change when it is connected in a different configuration. Then the previously-configured profile will not be in effect. For more information about profiles, see [Windows Firewall with Advanced Security Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=116080).  
+    >  Changes made in the **Windows Firewall** item in Control Panel only affect the current profile. Mobile devices, for example a laptop, should not use the **Windows Firewall** item in Control Panel as the profile might change when it is connected in a different configuration. Then the previously-configured profile will not be in effect. For more information about profiles, see [Windows Firewall with Advanced Security Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=116080).  
   
      The **Windows Firewall** item in Control Panel allows you to configure basic options. These include the following:  
   
@@ -114,11 +113,11 @@ manager: craigg
   
      For more information about **netsh**, see the following links:  
   
-    -   [How to Use the Netsh.exe Tool and Command-Line Switches](http://support.microsoft.com/kb/242468)  
+    -   [How to Use the Netsh.exe Tool and Command-Line Switches](https://support.microsoft.com/kb/242468)  
   
-    -   [How to use the “netsh advfirewall firewall” context instead of the “netsh firewall” context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](http://support.microsoft.com/kb/947709)  
+    -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](https://support.microsoft.com/kb/947709)  
   
-    -   [The "netsh firewall" command together with the "profile=all" parameter does not configure the public profile on a Windows Vista-based computer](http://support.microsoft.com/kb/947213)  
+    -   [The "netsh firewall" command together with the "profile=all" parameter does not configure the public profile on a Windows Vista-based computer](https://support.microsoft.com/kb/947213)  
   
 ## Ports Used By [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The following tables can help you identify the ports being used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -167,8 +166,8 @@ manager: craigg
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|TCP port 2383 for the default instance|The standard port for the default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service|TCP port 2382 only needed for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] named instance|Client connection requests for a named instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] that do not specify a port number are directed to port 2382, the port on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser then redirects the request to the port that the named instance uses.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTP<br /><br /> (The PivotTable® Service uses HTTP or HTTPS)|TCP port 80|Used for an HTTP connection through a URL.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTPS<br /><br /> (The PivotTable® Service uses HTTP or HTTPS)|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses secure sockets layer (SSL).|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTP<br /><br /> (The PivotTable?? Service uses HTTP or HTTPS)|TCP port 80|Used for an HTTP connection through a URL.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configured for use through IIS/HTTPS<br /><br /> (The PivotTable?? Service uses HTTP or HTTPS)|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses secure sockets layer (SSL).|  
   
  If users access [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] through IIS and the Internet, you must open the port on which IIS is listening and specify that port in the client connection string. In this case, no ports have to be open for direct access to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The default port 2389, and port 2382, should be restricted together with all other ports that are not required.  
   
@@ -200,24 +199,24 @@ manager: craigg
 |--------------|----------|--------------|  
 |Windows Management Instrumentation<br /><br /> For more information about WMI, see [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)|WMI runs as part of a shared service host with ports assigned through DCOM. WMI might be using TCP port 135.<br /><br /> See [Special Considerations for Port 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager uses WMI to list and manage services. We recommend that you use the preconfigured rule group **Windows Management Instrumentation (WMI)**. For more information, see the [Interaction with Other Firewall Rules](#BKMK_other_rules) section below.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)|TCP port 135<br /><br /> See [Special Considerations for Port 135](#BKMK_port_135)|If your application uses distributed transactions, you might have to configure the firewall to allow [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) traffic to flow between separate MS DTC instances, and between the MS DTC and resource managers such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. We recommend that you use the preconfigured **Distributed Transaction Coordinator** rule group.<br /><br /> When a single shared MS DTC is configured for the entire cluster in a separate resource group you should add sqlservr.exe as an exception to the firewall.|  
-|The browse button in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] uses UDP to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service. For more information, see [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP port 1434|UDP is a connectionless protocol.<br /><br /> The firewall has a setting, which is named [UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](http://go.microsoft.com/fwlink/?LinkId=118371) which controls the behavior of the firewall with respect to unicast responses to a broadcast (or multicast) UDP request.  It has two behaviors:<br /><br /> If the setting is TRUE, no unicast responses to a broadcast are permitted at all. Enumerating services will fail.<br /><br /> If the setting is FALSE (default), unicast responses are permitted for 3 seconds. The length of time is not configurable. in a congested or high-latency network, or for heavily loaded servers, tries to enumerate instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might return a partial list, which might mislead users.|  
+|The browse button in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] uses UDP to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service. For more information, see [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP port 1434|UDP is a connectionless protocol.<br /><br /> The firewall has a setting, which is named [UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](https://go.microsoft.com/fwlink/?LinkId=118371) which controls the behavior of the firewall with respect to unicast responses to a broadcast (or multicast) UDP request.  It has two behaviors:<br /><br /> If the setting is TRUE, no unicast responses to a broadcast are permitted at all. Enumerating services will fail.<br /><br /> If the setting is FALSE (default), unicast responses are permitted for 3 seconds. The length of time is not configurable. in a congested or high-latency network, or for heavily loaded servers, tries to enumerate instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might return a partial list, which might mislead users.|  
 |IPsec traffic|UDP port 500 and UDP port 4500|If the domain policy requires network communications to be done through IPsec, you must also add UDP port 4500 and UDP port 500 to the exception list. IPsec is an option using the **New Inbound Rule Wizard** in the Windows Firewall snap-in. For more information, see [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) below.|  
-|Using Windows Authentication with Trusted Domains|Firewalls must be configured to allow authentication requests.|For more information, see [How to configure a firewall for domains and trusts](http://support.microsoft.com/kb/179442/).|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Clustering|Clustering requires additional ports that are not directly related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|For more information, see [Enable a network for cluster use](http://go.microsoft.com/fwlink/?LinkId=118372).|  
-|URL namespaces reserved in the HTTP Server API (HTTP.SYS)|Probably TCP port 80, but can be configured to other ports. For general information, see [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373).|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific information about reserving an HTTP.SYS endpoint using HttpCfg.exe, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
+|Using Windows Authentication with Trusted Domains|Firewalls must be configured to allow authentication requests.|For more information, see [How to configure a firewall for domains and trusts](https://support.microsoft.com/kb/179442/).|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Clustering|Clustering requires additional ports that are not directly related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|For more information, see [Enable a network for cluster use](https://go.microsoft.com/fwlink/?LinkId=118372).|  
+|URL namespaces reserved in the HTTP Server API (HTTP.SYS)|Probably TCP port 80, but can be configured to other ports. For general information, see [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373).|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific information about reserving an HTTP.SYS endpoint using HttpCfg.exe, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
   
 ##  <a name="BKMK_port_135"></a> Special Considerations for Port 135  
  When you use RPC with TCP/IP or with UDP/IP as the transport, inbound ports are frequently dynamically assigned to system services as required; TCP/IP and UDP/IP ports that are larger than port 1024 are used. These are frequently informally referred to as "random RPC ports." In these cases, RPC clients rely on the RPC endpoint mapper to tell them which dynamic ports were assigned to the server. For some RPC-based services, you can configure a specific port instead of letting RPC assign one dynamically. You can also restrict the range of ports that RPC dynamically assigns to a small range, regardless of the service. Because port 135 is used for many services it is frequently attacked by malicious users. When opening port 135, consider restricting the scope of the firewall rule.  
   
  For more information about port 135, see the following references:  
   
--   [Service overview and network port requirements for the Windows Server system](http://support.microsoft.com/kb/832017)  
+-   [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)  
   
--   [Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](http://support.microsoft.com/kb/839880)  
+-   [Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](https://support.microsoft.com/kb/839880)  
   
--   [Remote procedure call (RPC)](http://go.microsoft.com/fwlink/?LinkId=118375)  
+-   [Remote procedure call (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)  
   
--   [How to configure RPC dynamic port allocation to work with firewalls](http://support.microsoft.com/kb/154596/)  
+-   [How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/kb/154596/)  
   
 ##  <a name="BKMK_other_rules"></a> Interaction with Other Firewall Rules  
  The Windows Firewall uses rules and rule groups to establish its configuration. Each rule or rule group is generally associated with a particular program or service, and that program or service might modify or delete that rule without your knowledge. For example, the rule groups **World Wide Web Services (HTTP)** and **World Wide Web Services (HTTPS)** are associated with IIS. Enabling those rules will open ports 80 and 443, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that depend on ports 80 and 443 will function if those rules are enabled. However, administrators configuring IIS might modify or disable those rules. Therefore, if you are using port 80 or port 443 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you should create your own rule or rule group that maintains your desired port configuration independently of the other IIS rules.  
@@ -225,7 +224,7 @@ manager: craigg
  The Windows Firewall with Advanced Security MMC snap-in allows any traffic that matches any applicable allow rule. So if there are two rules that both apply to port 80 (with different parameters), traffic that matches either rule will be permitted. So if one rule allows traffic over port 80 from local subnet and one rule allows traffic from any address, the net effect is that all traffic to port 80 is permitted regardless of the source. To effectively manage access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], administrators should periodically review all firewall rules enabled on the server.  
   
 ##  <a name="BKMK_profiles"></a> Overview of Firewall Profiles  
- Firewall profiles are discussed in [Windows Firewall with Advanced Security Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=116080) in the section **Network location-aware host firewall**. To summarize, the operating systems identify and remember each of the networks to which they connect with regard to connectivity, connections, and category.  
+ Firewall profiles are discussed in [Windows Firewall with Advanced Security Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=116080) in the section **Network location-aware host firewall**. To summarize, the operating systems identify and remember each of the networks to which they connect with regard to connectivity, connections, and category.  
   
  There are three network location types in Windows Firewall with Advanced Security:  
   
@@ -315,9 +314,9 @@ manager: craigg
   
          The **-n** switch instructs **netstat** to numerically display the address and port number of active TCP connections. The **-a** switch instructs **netstat** to display the TCP and UDP ports on which the computer is listening.  
   
--   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=28590).  
+-   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=28590).  
   
 ## See Also  
- [Service overview and network port requirements for the Windows Server system](http://support.microsoft.com/kb/832017)  
+ [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)  
   
   

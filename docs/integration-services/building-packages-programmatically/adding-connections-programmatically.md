@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "SSIS connection managers"
   - "adding package connections"
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Adding Connections Programmatically
@@ -202,10 +202,10 @@ End Class
  `Number of connections in package: 2`  
   
 ## External Resources  
- Technical article, [Connection Strings](http://go.microsoft.com/fwlink/?LinkId=220743), on carlprothman.net.  
+ Technical article, [Connection Strings](https://go.microsoft.com/fwlink/?LinkId=220743), on carlprothman.net.  
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Create Connection Managers](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [Create Connection Managers](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

@@ -5,8 +5,7 @@ ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -28,7 +27,7 @@ manager: craigg
  For example, the following XQuery is specified against the Instructions column of **xml** type that stores manufacturing instructions as XML. The query retrieves the manufacturing instructions for the work center location `10`. The `query()` method of the **xml** data type is used to specify the XQuery.  
   
 ```  
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') AS Result   
 FROM  Production.ProductModel  
@@ -37,7 +36,7 @@ WHERE ProductModelID=7
   
  Note the following from the previous query:  
   
--   The XQuery prolog includes a namespace prefix (AWMI) declaration, `(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
+-   The XQuery prolog includes a namespace prefix (AWMI) declaration, `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
   
 -   The `declare namespace` keyword defines a namespace prefix that is used later in the query body.  
   
@@ -50,7 +49,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
          /PD:ProductDescription/PD:Summary   
     ') as Result  
 FROM Production.ProductModel  
@@ -60,7 +59,7 @@ where ProductModelID=19
  To improve query readability, you can declare namespaces by using WITH XMLNAMESPACES instead of declaring prefix and namespace binding in the query prolog by using `declare namespace`.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
   
 SELECT CatalogDescription.query('  
          /PD:ProductDescription/PD:Summary   
@@ -78,7 +77,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace  "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace  "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
         /ProductDescription/Summary   
     ') as Result  
 FROM  Production.ProductModel  
@@ -88,7 +87,7 @@ WHERE ProductModelID=19
  You can declare a default namespace by using WITH XMLNAMESPACES:  
   
 ```  
-WITH XMLNAMESPACES (DEFAULT 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription')  
+WITH XMLNAMESPACES (DEFAULT 'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription')  
 SELECT CatalogDescription.query('  
         /ProductDescription/Summary   
     ') as Result  

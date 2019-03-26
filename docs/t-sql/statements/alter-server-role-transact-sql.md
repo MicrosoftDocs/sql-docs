@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SERVER ROLE, ALTER"
   - "ALTER SERVER ROLE statement"
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -59,7 +59,7 @@ Adds the specified server principal to the server role. *server_principal* can b
 DROP MEMBER *server_principal*  
 Removes the specified server principal from the server role. *server_principal* can be a login or a user-defined server role. *server_principal* cannot be a fixed server role, a database role, or sa.  
   
-WITH NAME **=***new_server_role_name*  
+WITH NAME **=**_new_server_role_name_  
 Specifies the new name of the user-defined server role. This name cannot already exist in the server.  
   
 ## Remarks  
@@ -161,7 +161,7 @@ ALTER SERVER ROLE LargeRC ADD MEMBER Anna;
 ```  
   
 ### I. Remove a login from a resource class.  
-The following example drops Anna’s membership in the `LargeRC` server role.  
+The following example drops Anna's membership in the `LargeRC` server role.  
   
 ```  
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  

@@ -13,18 +13,18 @@ f1_keywords:
 helpviewer_keywords: 
   - "Variables Window dialog box"
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Variables Window
   Use the **Variables** window to create and modify user-defined variables and view system variables.  
   
- By default, the **Variables** window is located below the **Connection Managers** area in the SSIS Designer, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. If you don’t see the **Variables** window, click **Variables** on the **SSIS** menu to display the window.  
+ By default, the **Variables** window is located below the **Connection Managers** area in the SSIS Designer, in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. If you don't see the **Variables** window, click **Variables** on the **SSIS** menu to display the window.  
   
  You can optionally display the **Variables** window by mapping the View.Variables command to a key combination of your choosing on the **Keyboard** page of the **Options** dialog box.  
   
-> [!NOTE]  
+> [!NOTE]
 >  The values of the **Name** and **Namespace** properties must begin with an alphabetic character letter as defined by the Unicode Standard 2.0, or an underscore (_). Subsequent characters can be letters or numbers as defined in the Unicode Standard 2.0, or the underscore (\_).  
   
 ## Options  
@@ -106,7 +106,7 @@ manager: craigg
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md)   
- [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Integration Services &#40;SSIS&#41; Expressions](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   

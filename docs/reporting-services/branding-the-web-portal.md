@@ -1,10 +1,10 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
-ms.date: 11/17/2017
+ms.date: 12/06/2018 
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-
+description: In this article you learn about altering the appearance of the web portal by branding it to your business through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
@@ -14,7 +14,7 @@ ms.author: maghan
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package has been designed so you don’t need deep cascading style sheet (CSS) knowledge to create it.  
+You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.  
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
@@ -100,7 +100,7 @@ The first time you connect to a server with the Mobile Report Publisher, that ha
   
 ![ssRSBrandingMobileReportPublisher](../reporting-services/media/ssrsbrandingmobilereportpublisher.png)  
   
-You can then use that theme for any mobile reports that you create, even if they aren’t for the same server that you have the theme deployed on.   
+You can then use that theme for any mobile reports that you create, even if they aren't for the same server that you have the theme deployed on.   
   
 ### Using a logo
   
@@ -131,7 +131,7 @@ You can also **Download** or **Remove** the package. Removing the package will r
 ## metadata.xml example
   
     <?xml version="1.0" encoding="utf-8"?>  
-    <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
+    <SystemResourcePackage xmlns="https://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
         name="Multicolored example brand"  
@@ -236,4 +236,6 @@ You can also **Download** or **Remove** the package. Removing the package will r
         }  
     }  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+## Next steps
+
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

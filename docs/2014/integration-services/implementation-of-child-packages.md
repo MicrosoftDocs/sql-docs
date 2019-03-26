@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "child packages"
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Implementation of Child Packages
@@ -50,7 +50,7 @@ manager: craigg
   
 -   Running the individual SQL Server Agent job on the remote computer by using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], to make sure that the package runs.  
   
- For information about how to troubleshoot packages that you run from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs, see [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](http://support.microsoft.com/kb/918760) in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Support Knowledge Base.  
+ For information about how to troubleshoot packages that you run from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs, see [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760) in the [!INCLUDE[msCoName](../includes/msconame-md.md)] Support Knowledge Base.  
   
  The SQL Server Agent checks subsystem access for a proxy and gives access to the proxy every time the job step runs.  
   
@@ -62,8 +62,8 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [SSIS: Accessing variables in a parent package](http://go.microsoft.com/fwlink/?LinkId=257729), on consultingblogs.emc.com.  
+-   Blog entry, [SSIS: Accessing variables in a parent package](https://go.microsoft.com/fwlink/?LinkId=257729), on consultingblogs.emc.com.  
   
--   Blog entry, [SSIS: Should you execute child packages in-process or out-of-process?](http://go.microsoft.com/fwlink/?LinkId=220819), on consultingblogs.emc.com.  
+-   Blog entry, [SSIS: Should you execute child packages in-process or out-of-process?](https://go.microsoft.com/fwlink/?LinkId=220819), on consultingblogs.emc.com.  
   
   

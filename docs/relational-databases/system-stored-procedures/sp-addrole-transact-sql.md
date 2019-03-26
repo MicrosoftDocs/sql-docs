@@ -24,7 +24,7 @@ manager: craigg
 
   Creates a new database role in the current database.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  **sp_addrole** is included for compatibility with earlier versions of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and may not be supported in a future release. Use [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) instead.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -37,10 +37,10 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of the new database role. *role* is a **sysname**, with no default. *role* must be a valid identifier (ID) and must not already exist in the current database.  
   
- [ **@ownername =**] **'***owner***'**  
+`[ @ownername = ] 'owner'`
  Is the owner of the new database role. *owner* is a **sysname**, with a default of the current executing user. *owner* must be a database user or database role in the current database.  
   
 ## Return Code Values  

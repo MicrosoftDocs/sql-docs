@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Active Server Pages"
   - "updategrams [SQLXML], ASP applications"
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -99,7 +99,7 @@ Enter ContactID: <input type=text name="cid"><br>
 <%  
   else  
 %>  
-<form name="Contacts" action="http://localhost/AdventureWorks/Template/UpdateContact.xml" method="POST">  
+<form name="Contacts" action="https://localhost/AdventureWorks/Template/UpdateContact.xml" method="POST">  
 You may update customer information below.<br><br>  
 <!-- A comment goes here to separate the parts of the application or page. -->  
 <br>  
@@ -109,7 +109,7 @@ You may update customer information below.<br><br>
     ObjXML.setProperty "ServerHTTPRequest", TRUE  
   
     objXML.async=False  
-    objXML.Load("http://localhost/AdventureWorks/Template/GetContact.xml?cid=" & ContactID)  
+    objXML.Load("https://localhost/AdventureWorks/Template/GetContact.xml?cid=" & ContactID)  
     set objCustomer=objXML.documentElement.childNodes.Item(0)  
   
   ' In retrieving data from the database, if a value in the column is NULL there  

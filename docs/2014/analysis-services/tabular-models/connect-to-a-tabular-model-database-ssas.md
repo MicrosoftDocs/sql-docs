@@ -45,7 +45,7 @@ manager: craigg
   
 1.  In Central Administration, open the Configure service accounts page.  
   
-2.  Select the service application pool used by Excel Services. It might **Service Application Pool – SharePoint Web Services System** or a custom application pool. The managed account used by Excel Services will appear on the page.  
+2.  Select the service application pool used by Excel Services. It might **Service Application Pool - SharePoint Web Services System** or a custom application pool. The managed account used by Excel Services will appear on the page.  
   
      For SharePoint farms that include Reporting Services in SharePoint mode, get the account information for the Reporting Services service application as well.  
   

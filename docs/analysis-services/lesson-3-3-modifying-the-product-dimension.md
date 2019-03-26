@@ -52,7 +52,7 @@ You can add a named calculation to a table in a data source view. In the followi
   
 2.  In the **Attributes** pane of the **Dimension Structure** tab, select **Product Line**.  
   
-3.  In the Properties window on the right side of the screen, click the **NameColumn** property field at the bottom of the window, and then click the browse (**…**) button to open the **Name Column** dialog box. (You might need to click the **Properties** tab on the right side of the screen to open the Properties window.  
+3.  In the Properties window on the right side of the screen, click the **NameColumn** property field at the bottom of the window, and then click the browse (**...**) button to open the **Name Column** dialog box. (You might need to click the **Properties** tab on the right side of the screen to open the Properties window.  
   
 4.  Select **ProductLineName** at the bottom of the **Source column** list, and then click **OK**.  
   
@@ -60,7 +60,7 @@ You can add a named calculation to a table in a data source view. In the followi
   
 5.  In the **Attributes** pane of the **Dimension Structure** tab, select **Product Key**.  
   
-6.  In the Properties window, click the **NameColumn** property field, and then click the ellipsis browse (**…**) button to open the **Name Column** dialog box.  
+6.  In the Properties window, click the **NameColumn** property field, and then click the ellipsis browse (**...**) button to open the **Name Column** dialog box.  
   
 7.  Select **EnglishProductName** in the **Source column** list, and then click **OK**.  
   

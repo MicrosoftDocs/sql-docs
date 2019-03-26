@@ -38,7 +38,7 @@ When using Windows Authentication in a Kerberos environment, a client receives a
   
 If the token was improperly created or damaged during transmission, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot offer additional information about the problem.  
   
-When the user is a member of many groups or has many policies, the token may grow larger than normal to list them all. If the token grows larger than the **MaxTokenSize** value of the server computer, the client fails to connect with a General Network Error (GNE) and error 17832 can occur. This problem may affect only some users: users with many groups or policies. When the problem is the **MaxTokenSize** value of the server computer, error 17832 in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log will be accompanied by an error with state 9. For additional details about the Kerberos and **MaxTokenSize**, see [KB327825](http://support.microsoft.com/kb/327825).  
+When the user is a member of many groups or has many policies, the token may grow larger than normal to list them all. If the token grows larger than the **MaxTokenSize** value of the server computer, the client fails to connect with a General Network Error (GNE) and error 17832 can occur. This problem may affect only some users: users with many groups or policies. When the problem is the **MaxTokenSize** value of the server computer, error 17832 in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log will be accompanied by an error with state 9. For additional details about the Kerberos and **MaxTokenSize**, see [KB327825](https://support.microsoft.com/kb/327825).  
   
 ## User Action  
 To resolve this problem, increase the **MaxTokenSize** value of the server computer, to a size large enough to contain the largest token of any user in your organization. To research the correct token size for your organization, consider using the **Tokensz** application.  
@@ -46,7 +46,7 @@ To resolve this problem, increase the **MaxTokenSize** value of the server compu
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-**To change the MaxTokenSize** **on the server computer**  
+**To change the MaxTokenSize on the server computer**  
   
 1.  On the **Start** menu, click **Run**.  
   

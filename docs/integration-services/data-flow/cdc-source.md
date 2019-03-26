@@ -13,8 +13,8 @@ f1_keywords:
   - "sql13.ssis.designer.cdcsource.columns.f1"
   - "sql13.ssis.designer.cdcsource.errorhandling.f1"
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # CDC Source
@@ -240,6 +240,6 @@ use <cdc-enabled-database-name>
   
 ## Related Content  
   
--   Blog entry, [Processing Modes for the CDC Source](http://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), on mattmasson.com.  
+-   Blog entry, [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), on mattmasson.com.  
   
   

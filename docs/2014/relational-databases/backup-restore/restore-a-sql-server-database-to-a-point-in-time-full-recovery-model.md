@@ -126,7 +126,7 @@ manager: craigg
   
  **Basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax**  
   
- RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=*`time`*,** RECOVERY…  
+ RESTORE LOG *database_name* FROM <backup_device> WITH STOPAT **=*`time`*,** RECOVERY...  
   
  The recovery point is the latest transaction commit that occurred at or before the `datetime` value that is specified by *time*.  
   

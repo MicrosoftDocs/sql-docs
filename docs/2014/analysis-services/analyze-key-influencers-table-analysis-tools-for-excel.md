@@ -72,7 +72,7 @@ manager: craigg
  **Favors**  
  In the second report, the target values that you compare are listed in two columns, with the related factors listed in order of descending confidence.  
   
--   The **blue** bar shows attributes contributing to the outcome, "No” (=did not purchase).  
+-   The **blue** bar shows attributes contributing to the outcome, "No" (=did not purchase).  
   
 -   The **red** bar shows attributes contributing to the outcome, "Yes" (=purchased a bike).  
   

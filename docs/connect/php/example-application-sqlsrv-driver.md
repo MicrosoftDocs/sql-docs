@@ -24,7 +24,7 @@ The AdventureWorks Product Reviews example application is a Web application that
 1.  Install the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. For detailed information, see [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Copy the code listed later in this document into two files: adventureworks_demo.php and photo.php.  
 3.  Put the adventureworks_demo.php and photo.php files in the root directory of your Web server.  
-4.  Run the application by starting http://localhost/adventureworks_demo.php from your browser.  
+4.  Run the application by starting `https://localhost/adventureworks_demo.php` from your browser.  
   
 ## Requirements  
 To run the AdventureWorks Product Reviews example application, the following must be true for your computer:  
@@ -51,7 +51,7 @@ The AdventureWorks Product Reviews example application returns product informati
   
 Put the following code in a file named adventureworks_demo.php:  
   
-```  
+```php
 <!--=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
 Copyright (C) Microsoft Corporation.  All rights reserved.  
@@ -491,7 +491,7 @@ The photo.php script returns a product photo for a specified **ProductID**. This
   
 Put the following code in a file named photo.php:  
   
-```  
+```php
 <?php  
 /*=============  
 This file is part of a Microsoft SQL Server Shared Source Application.  
@@ -544,7 +544,7 @@ else
      die(print_r( sqlsrv_errors(), true));  
 }  
   
-/* Free the statement and connectin resources. */  
+/* Free the statement and connection resources. */  
 sqlsrv_free_stmt( $stmt );  
 sqlsrv_close( $conn );  
 ?>  

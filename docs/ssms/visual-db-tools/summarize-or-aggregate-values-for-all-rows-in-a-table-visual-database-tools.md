@@ -42,7 +42,7 @@ If you add a search condition, you can aggregate the subset of rows that meet th
   
 When you create a single aggregation value for all rows in a table, you display only the aggregate values themselves. For example, if you are totaling the value of the `price` column of the `titles` table, you would not also display individual titles, publisher names, and so on.  
  
- **!** If you are subtotaling — that is, creating groups — you can display column values for each group. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
+ **!** If you are subtotaling - that is, creating groups - you can display column values for each group. For details, see [Group Rows in Query Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md).  
 
 ## Aggregate values for all rows  
   

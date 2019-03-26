@@ -45,7 +45,7 @@ manager: craigg
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
- [Detach Element](../xmla/xml-elements-commands/detach-element.md)   
- [Attach Element](../xmla/xml-elements-commands/attach-element.md)  
+ [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

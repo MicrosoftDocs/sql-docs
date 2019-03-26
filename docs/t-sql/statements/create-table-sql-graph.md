@@ -80,7 +80,7 @@ Creating a node or edge table as a temporal table is not supported.
 
 Stretch database is not supported for node or edge table.
 
-Node or edge tables cannot be external tables (no polybase support for graph tables). 
+Node or edge tables cannot be external tables (no PolyBase support for graph tables). 
   
  
 ## Examples  

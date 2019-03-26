@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "Active Directory [Integration Services]"
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Querying the Active Directory with the Script Task
@@ -103,6 +103,6 @@ public void Main()
   
 ## External Resources  
   
--   Technical article, [Processing Active Directory Information in SSIS](http://go.microsoft.com/fwlink/?LinkId=199588), on social.technet.microsoft.com  
+-   Technical article, [Processing Active Directory Information in SSIS](https://go.microsoft.com/fwlink/?LinkId=199588), on social.technet.microsoft.com  
   
   

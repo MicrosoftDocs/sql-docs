@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: supportability
 ms.topic: conceptual
 topic_type: 
   - "apiref"
@@ -39,6 +38,6 @@ manager: craigg
  Two security audit events are also provided for Service Broker. For more information on those events, see [Audit Broker Login Event Class](audit-broker-login-event-class.md) and [Audit Broker Conversation Event Class](audit-broker-conversation-event-class.md).  
   
 ## See Also  
- [Security Audit Event Category](../../analysis-services/trace-events/security-audit-event-category.md)  
+ [Security Audit Event Category](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

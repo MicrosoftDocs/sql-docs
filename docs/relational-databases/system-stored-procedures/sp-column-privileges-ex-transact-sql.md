@@ -38,19 +38,19 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'***table_server***'**  
+ [ **@table_server =** ] **'**_table_server_**'**  
  Is the name of the linked server for which to return information. *table_server* is **sysname**, with no default.  
   
- [ **@table_name =** ] **'***table_name***'**  
+ [ **@table_name =** ] **'**_table_name_**'**  
  Is the name of the table that contains the specified column. *table_name* is **sysname**, with a default of NULL.  
   
- [ **@table_schema =** ] **'***table_schema***'**  
+ [ **@table_schema =** ] **'**_table_schema_**'**  
  Is the table schema. *table_schema* is **sysname**, with a default of NULL.  
   
- [ **@table_catalog =** ] **'***table_catalog***'**  
+ [ **@table_catalog =** ] **'**_table_catalog_**'**  
  Is the name of the database in which the specified *table_name* resides. *table_catalog* is **sysname**, with a default of NULL.  
   
- [ **@column_name =** ] **'***column_name***'**  
+ [ **@column_name =** ] **'**_column_name_**'**  
  Is the name of the column for which to provide privilege information. *column_name* is **sysname**, with a default of NULL (all common).  
   
 ## Result Sets  
@@ -58,7 +58,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Table qualifier name. Various DBMS products support three-part naming for tables (*qualifier***.***owner***.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment. This field can be NULL.|  
+|**TABLE_CAT**|**sysname**|Table qualifier name. Various DBMS products support three-part naming for tables (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment. This field can be NULL.|  
 |**TABLE_SCHEM**|**sysname**|Table owner name. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the name of the database user who created the table. This field always returns a value.|  
 |**TABLE_NAME**|**sysname**|Table name. This field always returns a value.|  
 |**COLUMN_NAME**|**sysname**|Column name, for each column of the **TABLE_NAME** returned. This field always returns a value.|  

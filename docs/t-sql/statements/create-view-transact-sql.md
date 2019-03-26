@@ -217,7 +217,7 @@ UNION ALL
 SELECT *  
 FROM Server2.CompanyData.dbo.Customers_66  
 UNION ALL  
---Select from mmeber table on Server3.  
+--Select from member table on Server3.  
 SELECT *  
 FROM Server3.CompanyData.dbo.Customers_99;  
 ```  
@@ -452,7 +452,7 @@ UNION ALL
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
 GO
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
+INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')    
 , ('231', 'FarEast'), ('280', 'NZ')  
 , ('321', 'EuroGroup'), ('442', 'UKArchip')  
 , ('475', 'India'), ('521', 'Afrique');  

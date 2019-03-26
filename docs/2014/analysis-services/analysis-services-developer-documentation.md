@@ -28,13 +28,13 @@ manager: craigg
  [Multidimensional Model Programming](multidimensional-models/multidimensional-model-programming.md)  
  Describes the development tasks and approaches for integrating multidimensional model objects in a custom solution.  
   
- [Analysis Services Schema Rowsets](schema-rowsets/analysis-services-schema-rowsets.md)  
+ [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  Describes the schema rowsets that provide information about server state, server operations, and database objects.  
   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Describes the ASSL extensions to XMLA. ASSL provides a data definition and manipulation language for Analysis Services multidimensional models that supplements the XMLA specification.  
   
- [XML for Analysis  &#40;XMLA&#41; Reference](xmla/xml-for-analysis-xmla-reference.md)  
+ [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Describes XMLA concepts that can help you understand how XMLA contributes to your custom solution. It also describes the level of compliance with the XMLA 1.1 specification.  
   
   

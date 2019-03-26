@@ -1,8 +1,7 @@
 ---
 title: "Manage and troubleshoot Stretch Database | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/27/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -11,8 +10,8 @@ helpviewer_keywords:
   - "managing Stretch Database"
   - "troubleshooting Stretch Database"
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
-author: MikeRayMSFT
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Manage and troubleshoot Stretch Database

@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], managing"
   - "managing packages [Integration Services]"
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Server
@@ -29,7 +28,7 @@ manager: craigg
 ## High Availability  
  Like other user databases, the `SSISDB` database does support database mirroring and replication. For more information about mirroring and replication, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- You can also provide high-availability of SSISDB and its contents by making use of SSIS and AlwaysOn Availability Groups. For more information, see this blog post by Matt Masson, [SSIS with AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
+ You can also provide high-availability of SSISDB and its contents by making use of SSIS and AlwaysOn Availability Groups. For more information, see this blog post by Matt Masson, [SSIS with AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
   
 ##  <a name="ssms"></a> Integration Services Server in SQL Server Management Studio  
  When you connect to an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that hosts the `SSISDB` database, you see the following objects in Object Explorer:  
@@ -53,6 +52,6 @@ manager: craigg
 -   [Run a Package on the SSIS Server Using SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
 ## Related Content  
- Blog entry, [SSIS with AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
+ Blog entry, [SSIS with AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873), at blogs.msdn.com.  
   
   

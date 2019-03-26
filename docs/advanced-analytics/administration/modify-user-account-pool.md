@@ -1,10 +1,10 @@
 ---
-title: Scale concurrent execution of external scripts in SQL Server Machine Learning Services | Microsoft Docs
-description: How to modify the user account pool to scale SQL Server Machine Learning Services.
+title: Scale concurrent execution of external scripts - SQL Server Machine Learning Services 
+description: Configure parallel or concurrent R and Python script execution in a user account pool to scale SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/04/2018  
+ms.date: 10/17/2018  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -16,8 +16,6 @@ manager: cgronlun
 As part of the installation process for [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], a new Windows *user account pool* is created to support execution of tasks by the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service. The purpose of these worker accounts is to isolate concurrent execution of external scripts by different SQL users.
 
 This article describes the default configuration and capacity for the worker accounts, and how to change the default configuration to scale the number of concurrent execution of external scripts in SQL Server Machine Learning Services.
-
-**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)], [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## Worker account group
 
@@ -48,7 +46,7 @@ Passwords associated with each user account are generated at random, but you can
 2. Double-click the SQL Server Launchpad service and stop the service if it is running.
 3.  On the **Service** tab, make sure that the Start Mode is set to Automatic. External scripts cannot start when the Launchpad is not running.
 4.  Click the **Advanced** tab and edit the value of **External Users Count** if necessary. This setting controls how many different SQL users can run external script sessions concurrently. The default is 20 accounts. The maximum number of users is 100.
-5. Optionally, you can set the option **Reset External Users Password** to _Yes_ if your organization has a policy that requires changing passwords on a regular basis. Doing this will regenerate the encrypted passwords that Launchpad maintains for the user accounts. For more information, see [Enforcing Password Policy](#bkmk_EnforcePolicy).
+5. Optionally, you can set the option **Reset External Users Password** to _Yes_ if your organization has a policy that requires changing passwords on a regular basis. Doing this will regenerate the encrypted passwords that Launchpad maintains for the user accounts. For more information, see [Enforcing Password Policy](../security/sql-server-launchpad-service-account.md#bkmk_EnforcePolicy).
 6.  Restart the Launchpad service.
 
 ## Managing workloads
@@ -59,9 +57,11 @@ When the same user executes multiple external scripts concurrently, all the sess
 
 The number of worker accounts that you can support, and the number of concurrent sessions that any single user can run, is limited only by server resources. Typically, memory is the first bottleneck that you will encounter when using the R runtime.
 
-The resources that can be used by Python or R scripts are governed by SQL Server. We recommend that you monitor resource usage using SQL Server DMVs, or look at performance counters on the associated Windows job object, and adjust server memory use accordingly. If you have SQL Server Enterprise Edition, you can allocate resources used for running external scripts by configuring an [external resource pool](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md).
+The resources that can be used by Python or R scripts are governed by SQL Server. We recommend that you monitor resource usage using SQL Server DMVs, or look at performance counters on the associated Windows job object, and adjust server memory use accordingly. If you have SQL Server Enterprise Edition, you can allocate resources used for running external scripts by configuring an [external resource pool](how-to-create-a-resource-pool.md).
 
-For additional information about managing machine learning task capacity, see these articles:
+## See also
+
+For additional information about configuring capacity, see these articles:
 
 - [SQL Server configuration for R Services](../../advanced-analytics/r/sql-server-configuration-r-services.md)
 - [Performance case study for R Services](../../advanced-analytics/r/performance-case-study-r-services.md)

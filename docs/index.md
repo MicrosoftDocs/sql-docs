@@ -3,17 +3,19 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL Documentation | Microsoft Docs
 description: Learn about SQL
-author: "barbkess"
-ms.author: "barbkess"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ms.topic: "hub-page"
-ms.technology:
-  - "database-engine"
+ms.prod: sql
+ms.technology: release-landing
+ms.date: 12/15/2018
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -23,7 +25,7 @@ ms.technology:
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Download SQL Server</span>
+                                    <span class="likeAnH3">Try SQL Server 2019 (preview)</span>
                                 </div>
                             </div>
                         </div>
@@ -89,9 +91,9 @@ ms.technology:
                                           <div class="cardText">
                                               <h3>SQL Server on Windows</h3>
                                               <ul class="noBullet">
-                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation/"><strong>On-premises</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?toc=..%2ftoc%2ftoc.json"><strong>On-premises</strong></a></li>
                                               <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>On an Azure VM</strong></a></li>
-                                              <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-2017/"><strong>What's new</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-ver15/"><strong>What's new</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -143,7 +145,7 @@ ms.technology:
                             <li class="fullSpan">
                                 <ul class="cardsC panelContent singlePanelContent cols cols4" style="display:flex!important;">
                                     <li>
-                                      <a href="/sql/lp/sql-server/install-sql-and-services/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/install-sql-and-services/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -162,7 +164,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/business-continuity/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/business-continuity/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -181,7 +183,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/secure-sql-server/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/secure-sql-server/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -200,7 +202,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/manage-monitor-tune/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/manage-monitor-tune/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -211,7 +213,7 @@ ms.technology:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Manage, monitor, and tune</h3>
-                                                          <p><b>Maintenance Plans, SQL Profiler,  Automatic Tunic, In-memory OLTP, Partitions, Statistics, Indexes, Cardinality Estimation </b>  </p>
+                                                          <p><b>Maintenance Plans, SQL Profiler,  Automatic Tuning, In-memory OLTP, Partitions, Statistics, Indexes, Cardinality Estimation </b>  </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -219,7 +221,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/load-move-data/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/load-move-data/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -238,7 +240,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/database-design/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/database-design/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -249,7 +251,7 @@ ms.technology:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Database design</h3>
-                                                          <p><b>Filestream, Filetable, Spatial Data, Views, Triggers, Graphs, Sequence Numbers, Stored Procedures, Track Changes </b> </p>
+                                                          <p><b>Filestream, Filetable, Graph, Sequence Numbers, Spatial Data,  Stored Procedures, Triggers,  Track Changes, Views </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -257,7 +259,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/query-data/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/query-data/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -268,7 +270,7 @@ ms.technology:
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Query data</h3>
-                                                          <p><b>Cursors, Synonyms, Scripting, Joins, User-defined Functions, Full-text Search </b></p>
+                                                          <p><b>Full-text search, Joins, Scripting, Synonyms, User-defined functions</b></p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -276,7 +278,7 @@ ms.technology:
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="/sql/lp/sql-server/sql-education-center/">
+                                      <a style="display: block;" href="/sql/lp/sql-server/sql-education-center/">
                                           <div class="cardSize">
                                               <div class="cardPadding">
                                                   <div class="card">
@@ -308,7 +310,7 @@ ms.technology:
                                                           <li><a class="barLink" href="/sql/relational-databases/database-features/">Relational database concepts</a></li>
                                                             <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">Connect with client applications on premises</a></li>
                                                             <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Azure SQL DB connectivity libraries</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB applications</a></li>
+                                                            <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview">Azure SQL DB applications</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -385,9 +387,9 @@ ms.technology:
                                                         <h3>Data Analytics</h3>
                                                         <ul class="noBullet">
                                                         <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
-                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">Polybase</a></li>
                                                             <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
                                                             <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">PolyBase</a></li>                                                            <li><a class="barLink" href="/sql/big-data-cluster/big-data-cluster-overview/">SQL Server 2019 big data clusters</a></li>
                                                        </ul>
                                                     </div>
                                                 </div>
@@ -401,8 +403,8 @@ ms.technology:
                                                   <div class="cardText">
                                                         <h3>AI and Machine Learning</h3>
                                                         <ul class="noBullet">
-                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Machine Learning Services</a></li>
-                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Server Machine Learning Services (R and Python)</a></li>
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/r/sql-server-r-services">SQL Server R Services</a></li>
                                                             <li><a class="barLink" href="/azure/machine-learning/">Azure Machine Learning</a></li>
                                                        </ul>
                                                     </div>
@@ -422,7 +424,7 @@ ms.technology:
         <h2>Keep in touch with us</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">
+                <a href="https://aka.ms/editsqldocs" data-linktype="external">
                     Contribute
                 </a>
             </li>
@@ -432,12 +434,12 @@ ms.technology:
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external">
                     Feedback
                 </a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external">
                     Survey
                 </a>
             </li>

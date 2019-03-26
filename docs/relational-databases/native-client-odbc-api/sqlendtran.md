@@ -24,6 +24,6 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## See Also  
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SQLEndTran Function](http://go.microsoft.com/fwlink/?LinkId=59342)  
+ [SQLEndTran Function](https://go.microsoft.com/fwlink/?LinkId=59342)  
   
   

@@ -40,7 +40,7 @@ ms.author: maghan
  The following example shows the format of the URL to the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] management WSDL file:  
   
 ```  
-http://server/reportserver/ReportService2010.asmx?wsdl  
+https://server/reportserver/ReportService2010.asmx?wsdl  
 ```  
   
  The following table describes each element in the URL.  

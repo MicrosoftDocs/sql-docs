@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Tutorial: Using the OData Source [SSIS]
@@ -37,7 +36,7 @@ manager: craigg
   
 4.  Double click the **OData Source** component to launch the **OData Source Editor** dialog box.  
   
-5.  Click **New…** to add a new OData Connection Manager.  
+5.  Click **New...** to add a new OData Connection Manager.  
   
 6.  Enter the OData service URL for **Service document location**. This can be the URL to the service document, or to a specific feed or entity. For the purpose of this tutorial, type [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   

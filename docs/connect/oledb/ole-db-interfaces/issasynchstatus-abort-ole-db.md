@@ -6,8 +6,7 @@ ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: connectivity
 ms.topic: "reference"
 apiname: 
   - "ISSAsynchStatus::Abort (OLE DB)"
@@ -41,7 +40,7 @@ HRESULT Abort(
  *eOperation*[in]  
  The operation to abort. The following value should be used:  
   
- DBASYNCHOP_OPEN—The request to cancel applies to the asynchronous opening or population of a rowset or to the asynchronous initialization of a data source object.  
+ DBASYNCHOP_OPEN-The request to cancel applies to the asynchronous opening or population of a rowset or to the asynchronous initialization of a data source object.  
   
 ## Return Code Values  
  S_OK  

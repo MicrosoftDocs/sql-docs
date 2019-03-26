@@ -94,11 +94,11 @@ Requires ALTER permission on the table or view. User must be a member of the **s
   
 #### To check the fragmentation of an index  
   
-1.  In Object Explorer, Expand the database that contains the table on which you want to check an index’s fragmentation.  
+1.  In Object Explorer, Expand the database that contains the table on which you want to check an index's fragmentation.  
   
 2.  Expand the **Tables** folder.  
   
-3.  Expand the table on which you want to check an index’s fragmentation.  
+3.  Expand the table on which you want to check an index's fragmentation.  
   
 4.  Expand the **Indexes** folder.  
   
@@ -304,12 +304,12 @@ For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/state
  
 ### Automatic index and statistics management
 
-Leverage solutions such as [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
+Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) to automatically manage index defragmentation and statistics updates for one or more databases. This procedure automatically chooses whether to rebuild or reorganize an index according to its fragmentation level, amongst other parameters, and update statistics with a linear threshold.
   
 ## See Also  
   [SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md)   
   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
-  [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+  [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
   [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
   [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
   

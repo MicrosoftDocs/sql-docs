@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/30/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Configure Distribution Wizard"
@@ -17,19 +16,15 @@ manager: craigg
 # Configure Distribution Wizard
   This section provides information on the following pages of the Configure Distribution Wizard:  
   
--   [Distributor](distributor.md)  
-  
+-   [Distributor](distributor.md)
 -   [Snapshot Folder](snapshot-folder.md)  
-  
 -   [Distribution Database](distribution-database.md)  
-  
 -   [Publishers](publishers.md)  
-  
 -   [Distributor Password](distributor-password.md)  
   
 ## See Also  
  [Configure Distribution](configure-distribution.md)   
  [Configure Publishing and Distribution](configure-publishing-and-distribution.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
+
   
   

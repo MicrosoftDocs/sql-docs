@@ -72,7 +72,7 @@ manager: craigg
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)|Provides descriptions and configuration steps for a model’s workspace database properties.|  
+|[Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md)|Provides descriptions and configuration steps for a model's workspace database properties.|  
   
 ## See Also  
  [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   

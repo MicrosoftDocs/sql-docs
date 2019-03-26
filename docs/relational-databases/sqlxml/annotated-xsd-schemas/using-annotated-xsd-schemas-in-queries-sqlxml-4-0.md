@@ -1,7 +1,7 @@
 ---
 title: "Using Annotated XSD Schemas in Queries (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], queries"
   - "templates [SQLXML], annotated XSD schemas in queries"
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

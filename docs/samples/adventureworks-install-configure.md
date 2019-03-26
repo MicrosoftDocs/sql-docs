@@ -18,7 +18,7 @@ AdventureWorks download links and installation instructions.
 
 ## Prerequisites
 
-- [SQL Server](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). For the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
+- [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) or [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). For the Full version of the sample, use SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). For the best results use the June 2016 release or later.
  
 ## Github links
@@ -96,5 +96,5 @@ If you do not yet have a SQL Server in Azure, navigate to the [Azure portal](htt
 
 
 ## See also
-[Tutorials for SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+[Tutorials for SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [Tutorials for SQL Server database engine](../relational-databases/database-engine-tutorials.md)

@@ -31,7 +31,7 @@ manager: craigg
   
  You can find the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feedback page in many ways.  
   
--   Go to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feedback [Web page](http://go.microsoft.com/fwlink/?linkid=34178).  
+-   Go to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] feedback [Web page](https://go.microsoft.com/fwlink/?linkid=34178).  
   
 -   On the Help toolbar of the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click the **Send Feedback** button, or select the **Community/Send Feedback** command.  
   
@@ -43,7 +43,7 @@ manager: craigg
   
 -   Access Help from the utility.  
   
--   Select the **Help** check box on the **Toolbars** tab of the **Tools/Customize…** command.  
+-   Select the **Help** check box on the **Toolbars** tab of the **Tools/Customize...** command.  
   
 ## Automatic Error and Usage Reporting  
  You can enable features to automatically report errors and to send data about how you use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] software and services. [!INCLUDE[msCoName](../includes/msconame-md.md)] uses this information to improve [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. All the data is confidential.  

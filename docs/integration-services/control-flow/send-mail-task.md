@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "messages [Integration Services]"
   - "sending messages"
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Send Mail Task
@@ -73,11 +73,11 @@ manager: craigg
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
 ## Related Tasks  
- For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## Related Content  
   
--   Technical article, [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
+-   Technical article, [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
   
 ## Send Mail Task Editor (General Page)
   Use the **General page** of the **Send Mail Task Editor** dialog box to name and describe the Send Mail task.  
@@ -96,7 +96,7 @@ manager: craigg
   
 ### Options  
  **SMTPConnection**  
- Select an SMTP connection manager in the list, or click **\<New connection…>** to create a new connection manager.  
+ Select an SMTP connection manager in the list, or click **\<New connection...>** to create a new connection manager.  
   
 > [!IMPORTANT]  
 >  The SMTP connection manager supports only anonymous authentication and Windows Authentication. It does not support basic authentication.  
@@ -140,19 +140,19 @@ manager: craigg
   
 #### MessageSourceType = Direct Input  
  **MessageSource**  
- Type the message text or click the browse button (…) and then type the message in the **Message source** dialog box.  
+ Type the message text or click the browse button (...) and then type the message in the **Message source** dialog box.  
   
 #### MessageSourceType = File connection  
  **MessageSource**  
- Select a File connection manager in the list or click \<**New connection…**> to create a new connection manager.  
+ Select a File connection manager in the list or click \<**New connection...**> to create a new connection manager.  
   
  **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### MessageSourceType = Variable  
  **MessageSource**  
- Select a variable in the list or click \<**New variable…**> to create a new variable.  
+ Select a variable in the list or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

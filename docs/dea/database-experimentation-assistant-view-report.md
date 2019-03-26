@@ -1,8 +1,8 @@
 ---
-title: View Analysis Reports with Database Experimentation Assistant for SQL Server upgrades
-description: View Analysis Reports with Database Experimentation Assistant
+title: View analysis reports in Database Experimentation Assistant for SQL Server upgrades
+description: View analysis reports in Database Experimentation Assistant
 ms.custom: ""
-ms.date: 10/12/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,31 +10,32 @@ ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ---
 
-# View analysis reports with Database Experimentation Assistant
-After you've [created your analysis report](database-experimentation-assistant-create-report.md), follow the steps in this article to view the report and gain performance insights provided by your A/B test.
+# View analysis reports in Database Experimentation Assistant
+
+After you [create your analysis report](database-experimentation-assistant-create-report.md) in Database Experimentation Assistant (DEA), complete the steps described in this article to view the report and gain performance insights provided by your A/B test.
 
 ## Select a server
 
-Open the tool and select the menu icon on the left side of the screen. Choose **Analysis Reports** next to the checklist icon to open the Analysis Reports window.
+In DEA, select the menu icon. In the expanded menu, select **Analysis Reports** next to the checklist icon to open the Analysis Reports window.
 
-From the **Analysis Reports** window, enter a SQL Server name that has an analysis database and select **Connect**. 
+Under **Analysis Reports**, enter the name of a computer running SQL Server that has an analysis database. Select **Connect**. 
 
-![Existing Report Connect](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+![Connect to an existing report](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-If you're missing any dependencies, the Prerequisites screen prompts you with links to install them. Install the requirements and select **Try again**.
+If you're missing any dependencies, the **Prerequisites** page prompts you with links to install them. Install the prerequisites, and then select **Try again**.
 
-![PreReq Screen](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
+![Prerequisites page](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
 ## Select an analysis report to view
 
-From the list of analysis reports, double-click a report name to open it.
+In the list of analysis reports, double-click a report to open it.
 
-![View existing Report](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
+![View existing report](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
 
 You can get insights into how well your workload is represented, as shown in this example chart:
 
@@ -42,44 +43,47 @@ You can get insights into how well your workload is represented, as shown in thi
 
 ## View and understand the analysis report
 
-This section walks you through viewing and understanding the report.
+This section walks you through the analysis report.
 
 ### Query categories
+
 Select different slices of the left pie chart to show only the queries that fall under that category.
 
-![Report Pie Slices](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+![Report pie slices](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
 
-- **Degraded queries**: queries whose performance was better in A than in B.  
-- **Errors**: queries that show errors in instance B but not in instance A.  
-- **Improved queries**: queries that ran better in instance B than in instance A.  
-- **Indeterminate queries**: queries whose performance change was uncertain.  
-- **Same**: queries whose performance stayed the same across instances A and B.
+- **Degraded queries**: Queries that performed better in A than in B.  
+- **Errors**: Queries that show errors in instance B but not in instance A.  
+- **Improved queries**: Queries that ran better in instance B than in instance A.  
+- **Indeterminate queries**: Queries that had an indeterminate performance change.  
+- **Same**: Queries in which performance stayed the same across instances A and B.
 
-### Individual query drilldown
+### Individual query drill-down
+
 You can select the query template links to see more detailed information about specific queries.
 
-![Query Drilldown](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+![Query drill-down](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
 
-Select a specific query to open that query’s comparison summary.
+Select a specific query to open a comparison summary for the query.
 
 ![Comparison Summary](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-You can also see the A and B instance the specific query ran on, as well as a template of what the query might look like. Also, a table displays query information specific to instances A and B.
+You can see the A and B instances that the query ran on. You can also see a template of what the query might look like. A table displays query information that is specific to instances A and B.
 
 ### Error queries
-The comparison summary report has an expandable section for **Error Information** and **Query Plan Information**, which shows the errors and plan information for both instances.
+
+The comparison summary report has expandable **Error Information** and **Query Plan Information** sections. The sections show the errors and plan information for both instances.
 
 Select the error (red) pie to show these types of errors:
-- **Existing errors**: errors that were in A
-- **New errors**: errors that were shown in B
-- **Resolved errors**: errors that were in A but not in B
+- **Existing errors**: Errors that were in A.
+- **New errors**: Errors that were in B.
+- **Resolved errors**: Errors that were in A but not in B.
 
-![Error Charts](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+![Error charts](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
 ## Next steps
 
-- [Run at command prompt](database-experimentation-assistant-run-command-prompt.md) shows you how you can generate an analysis report from the command prompt.
+- To learn how to generate an analysis report at a command prompt, see [Run at command prompt](database-experimentation-assistant-run-command-prompt.md).
 
-- For a 19-minute introduction and demonstration of DEA, watch the following video:
+- For a 19-minute introduction to DEA and demonstration, watch the following video:
 
   > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

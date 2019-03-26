@@ -167,7 +167,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Use the @@ROWCOUNT function to return the number of deleted rows to the client application. For more information, see [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## Error Handling  
- You can implement error handling for the DELETE statement by specifying the statement in a TRY…CATCH construct.  
+ You can implement error handling for the DELETE statement by specifying the statement in a TRY...CATCH construct.  
   
  The DELETE statement may fail if it violates a trigger or tries to remove a row referenced by data in another table with a FOREIGN KEY constraint. If the DELETE removes multiple rows, and any one of the removed rows violates a trigger or constraint, the statement is canceled, an error is returned, and no rows are removed.  
   
@@ -452,7 +452,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### N. Using a label and a query hint with the DELETE statement  
- This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ This query shows the basic syntax for using a query join hint with the DELETE statement. For more information on join hints and how to use the OPTION clause, see [OPTION Clause (Transact-SQL)](../queries/option-clause-transact-sql.md).
   
 ```sql
 -- Uses AdventureWorks  

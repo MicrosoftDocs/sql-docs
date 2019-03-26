@@ -23,7 +23,7 @@ manager: craigg
   
 2.  **Account Key** - Specify the account key for the specified storage account.  
   
-3.  **Use secure endpoints (HTTPS)** – This option utilizes encrypted communication and secure identification of a network web server.  
+3.  **Use secure endpoints (HTTPS)** - This option utilizes encrypted communication and secure identification of a network web server.  
   
 4.  **Save account key** - This option saves your password in an encrypted file.  
   

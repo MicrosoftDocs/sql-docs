@@ -5,8 +5,7 @@ ms.date: "04/01/2016"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: leolimsft
@@ -50,7 +49,7 @@ EXEC[stg].[udp_name_Leaf]
       @VersionName = N'VERSION_1',  
 @LogFlag = 1,  
 @BatchTag = N'batch1'  
-      @UserName=N’domain\user’  
+      @UserName=N'domain\user'  
   
 GO  
   

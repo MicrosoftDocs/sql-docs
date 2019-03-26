@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
@@ -32,7 +32,7 @@ EXEC sp_configure 'locks', 0;
   
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql)  
   
- [Microsoft Knowledge Base article 271509](http://go.microsoft.com/fwlink/?linkid=117788)  
+ [Microsoft Knowledge Base article 271509](https://go.microsoft.com/fwlink/?linkid=117788)  
   
 ## See Also  
  [Monitor and Enforce Best Practices by Using Policy-Based Management](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

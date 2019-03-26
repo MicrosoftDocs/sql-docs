@@ -104,8 +104,8 @@ CREATE MESSAGE TYPE
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
-     targetNamespace="http://Adventure-Works.com/schemas/expenseReport"  
-     xmlns:expense="http://Adventure-Works.com/schemas/expenseReport"  
+     targetNamespace="https://Adventure-Works.com/schemas/expenseReport"  
+     xmlns:expense="https://Adventure-Works.com/schemas/expenseReport"  
      elementFormDefault="qualified"  
    >   
     <xsd:complexType name="expenseReportType">  

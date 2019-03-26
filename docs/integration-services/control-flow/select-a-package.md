@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Select a Package dialog box"
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select a Package
@@ -51,7 +51,7 @@ manager: craigg
   
 ### Location = DTSX file  
  **File name**  
- Provide the path of a package or click the browse button **(…)** and locate the package.  
+ Provide the path of a package or click the browse button **(...)** and locate the package.  
   
 ## See Also  
  [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)  

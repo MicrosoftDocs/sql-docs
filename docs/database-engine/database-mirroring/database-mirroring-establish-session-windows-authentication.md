@@ -23,10 +23,10 @@ manager: craigg
   
  After the mirror database is prepared (see [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), you can establish a database mirroring session. The principal, mirror, and witness server instances must be separate server instances, which should be on separate host systems.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  We recommend that you configure database mirroring during off-peak hours because configuring mirroring can impact performance.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  A given server instance can participate in multiple concurrent database mirroring sessions with the same or different partners. A server instance can be a partner in some sessions and a witness in other sessions. The mirror server instance must be running the same edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the principal server instance. Database mirroring is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Also, we strongly recommend that they run on comparable systems that can handle identical workloads.  
   
 ### To establish a database mirroring session  
@@ -69,7 +69,7 @@ manager: craigg
   
      where _\<system-address>_ is a string that unambiguously identifies the destination computer system, and _\<port>_ is the port number used by the mirroring endpoint of the partner server instance. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
-     For example, on the mirror server instance, the following ALTER DATABASE statement sets the partner as the original principal server instance. The database name is **AdventureWorks**, the system address is DBSERVER1—the name of the partner's system—and the port used by the partner's database mirroring endpoint is 7022:  
+     For example, on the mirror server instance, the following ALTER DATABASE statement sets the partner as the original principal server instance. The database name is **AdventureWorks**, the system address is DBSERVER1-the name of the partner's system-and the port used by the partner's database mirroring endpoint is 7022:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -84,7 +84,7 @@ manager: craigg
   
      For more information, see step 4.  
   
-     For example, on the principal server instance, the following ALTER DATABASE statement sets the partner as the original mirror server instance. The database name is **AdventureWorks**, the system address is DBSERVER2—the name of the partner's system—and the port used by the partner's database mirroring endpoint is 7025:  
+     For example, on the principal server instance, the following ALTER DATABASE statement sets the partner as the original mirror server instance. The database name is **AdventureWorks**, the system address is DBSERVER2-the name of the partner's system-and the port used by the partner's database mirroring endpoint is 7025:  
   
     ```  
     ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  

@@ -18,6 +18,7 @@ manager: craigg
 # Troubleshoot Connecting to the SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+
 This is an exhaustive list of troubleshooting techniques to use when you cannot connect to the SQL Server Database Engine. These steps are not in the order of the most likely problems which you probably already tried. These steps are in order of the most basic problems to more complex problems. These steps assume that you are connecting to SQL Server from another computer by using the TCP/IP protocol, which is the most common situation. These steps are written for SQL Server 2016 with both the SQL Server and the client applications running Windows 10, however the steps generally apply to other versions of SQL Server and other operating systems with only slight modifications.
 
 These instructions are particularly useful when troubleshooting the "**Connect to Server**" error, which can be Error Number: 11001 (or 53), Severity: 20, State: 0, and error messages such as:
@@ -28,13 +29,13 @@ These instructions are particularly useful when troubleshooting the "**Connect t
 
 This error usually means that the SQL Server computer can't be found or that the TCP port number is either not known, or is not the correct port number, or is blocked by a firewall.
 
->  [!TIP]
+> [!TIP]
 >  An interactive troubleshooting page is available from [!INCLUDE[msCoName_md](../../includes/msconame-md.md)] Customer Support Services at [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server).
 
 ### Not included
 
-* This topic does not include information about SSPI errors. For SSPI errors, see [How to troubleshoot the "Cannot generate SSPI context" error message](http://support.microsoft.com/kb/811889).  
-* This topic does not include information about Kerberos errors. For help, see [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).
+* This topic does not include information about SSPI errors. For SSPI errors, see [How to troubleshoot the "Cannot generate SSPI context" error message](https://support.microsoft.com/kb/811889).  
+* This topic does not include information about Kerberos errors. For help, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
 * This topic does not include information about SQL Azure Connectivity. For help, see [Troubleshooting connectivity issues with Microsoft Azure SQL Database](https://support.microsoft.com/help/10085/troubleshooting-connectivity-issues-with-microsoft-azure-sql-database). 
 
 ## Gathering Information about the Instance of SQL Server
@@ -58,8 +59,8 @@ First you must gather basic information about the database engine.
     2.  In the Log Viewer, click the **Filter** button on the toolbar. In the **Message contains text** box, type **server is listening on**, click **Apply filter**, and then click **OK**.
     3.  A message similar to **Server is listening on [ 'any' \<ipv4> 1433]** should be listed. This message indicates that this instance of SQL Server is listening on all the IP addresses on this computer (for IP version 4) and is listening to TCP port 1433. (TCP port 1433 is usually the port used by the Database Engine. Only one instance of SQL Server can use a port, so if there is more than one instance of SQL Server installed, some instances must use other port numbers.) Make a note of the port number used by the instance of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] that you are trying to connect to. 
 
-    >    [!NOTE] 
-    >    IP address 127.0.0.1 is probably listed. It is called the loopback adapter address and can only be connected to from processes on the same computer. It can be useful for troubleshooting, but you can’t use it to connect from another computer.
+    > [!NOTE] 
+    > IP address 127.0.0.1 is probably listed. It is called the loopback adapter address and can only be connected to from processes on the same computer. It can be useful for troubleshooting, but you can't use it to connect from another computer.
 
 ## Enable Protocols
 
@@ -74,10 +75,10 @@ In some installations of SQL Server, connecting to the Database Engine from anot
 Connecting to SQL Server by using TCP/IP requires that Windows can establish the connection. Use the `ping` tool to test TCP.
 1.  On the Start menu, click **Run**. In the **Run** window type **cmd**, and then click **OK**. 
 2.  In the command prompt window, type `ping` and then the IP address of the computer that is running SQL Server. For example, `ping 192.168.1.101` using an IPv4 address, or `ping fe80::d51d:5ab5:6f09:8f48%11` using an IPv6 address. (You must replace the numbers after ping with the IP addresses on your computer which you gathered earlier.) 
-3.  If your network is properly configured you will receive a response such as **Reply from \<IP address>** followed by some additional information. If you receive an error such as **Destination host unreachable.** or **Request timed out.** then TCP/IP is not correctly configured. (Check that the IP address was correct and was correctly typed.) Errors at this point could indicate a problem with the client computer, the server computer, or something about the network such as a router. The internet has many resources for troubleshooting TCP/IP. A resonable place to start, is this article from 2006, [How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790).
+3.  If your network is properly configured you will receive a response such as **Reply from \<IP address>** followed by some additional information. If you receive an error such as **Destination host unreachable.** or **Request timed out.** then TCP/IP is not correctly configured. (Check that the IP address was correct and was correctly typed.) Errors at this point could indicate a problem with the client computer, the server computer, or something about the network such as a router. The internet has many resources for troubleshooting TCP/IP. A resonable place to start, is this article from 2006, [How to Troubleshoot Basic TCP/IP Problems](https://support.microsoft.com/kb/169790).
 4.  Next, if the ping test succeeded using the IP address, test that the computer name can be resolved to the TCP/IP address. On the client computer, in the command prompt window, type `ping` and then the computer name of the computer that is running SQL Server. For example, `ping newofficepc` 
 5.  If you could ping the ipaddress, but noww receive an error such as **Destination host unreachable.** or **Request timed out.** you might have old (stale) name resolution information cached on the client computer. Type `ipconfig /flushdns` to clear the DNS (Dynamic Name Resolution) cache. Then ping the computer by name again. With the DNS cache empty, the client computer will check for the newest information about the IP address for the server computer. 
-6.  If your network is properly configured you will receive a response such as **Reply from \<IP address>** followed by some additional information. If you can successfully ping the server computer by IP address but receive an error such as **Destination host unreachable.** or **Request timed out.** when pinging by computer name, then name resolution is not correctly configured. (For more information, see the 2006 article previously referenced, [How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790).) Successful name resolution is not required to connect to SQL Server, but if the computer name cannot be resolved to an IP address, then connections must be made specifying the IP address. This is not ideal, but name resolution can be fixed later.
+6.  If your network is properly configured you will receive a response such as **Reply from \<IP address>** followed by some additional information. If you can successfully ping the server computer by IP address but receive an error such as **Destination host unreachable.** or **Request timed out.** when pinging by computer name, then name resolution is not correctly configured. (For more information, see the 2006 article previously referenced, [How to Troubleshoot Basic TCP/IP Problems](https://support.microsoft.com/kb/169790).) Successful name resolution is not required to connect to SQL Server, but if the computer name cannot be resolved to an IP address, then connections must be made specifying the IP address. This is not ideal, but name resolution can be fixed later.
   
   
 ## Testing a Local Connection
@@ -92,13 +93,13 @@ Before troubleshooting a connection problem from another computer, first test yo
 |Default instance|The computer name|ACCNT27|
 |Named Instance|The computer name\instance name|ACCNT27\PAYROLL|
 
->  [!NOTE] 
+> [!NOTE]
 >  When connecting to a SQL Server from a client application on the same computer, the shared memory protocol is used. Shared memory is a type of local named pipe, so sometimes errors regarding pipes are encountered.
 
 If you receive an error at this point, you will have to resolve it before proceeding. There are many possible things that could be a problem. Your login might not be authorized to connect. Your default database might be missing.
 
->    [!NOTE] 
->    Some error messages passed to the client intentionally do not give enough information to troubleshoot the problem. This is a security feature to avoid providing an attacker with information about SQL Server. To view the complete information about the error, look in the SQL Server error log. The details are provided there. If you are receiving error **18456 Login failed for user**, Books Online topic [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contains additional information about error codes. And Aaron Bertrand's blog has a very extensive list of error codes at [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). You can view the error log with SSMS (if you can connect), in the Management section of the Object Explorer. Otherwise, you can view the error log with the Windows Notepad program. The default location varies with your version and can be changed during setup. The default location for [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+> [!NOTE]
+>    Some error messages passed to the client intentionally do not give enough information to troubleshoot the problem. This is a security feature to avoid providing an attacker with information about SQL Server. To view the complete information about the error, look in the SQL Server error log. The details are provided there. If you are receiving error **18456 Login failed for user**, Books Online topic [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contains additional information about error codes. And Aaron Bertrand's blog has a very extensive list of error codes at [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456). You can view the error log with SSMS (if you can connect), in the Management section of the Object Explorer. Otherwise, you can view the error log with the Windows Notepad program. The default location varies with your version and can be changed during setup. The default location for [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   If you can connect using shared memory, test connecting using TCP. You can force a TCP connection by specifying **tcp:** before the name. For example:
 
@@ -138,7 +139,7 @@ Both of these problems are related to the SQL Server Browser service, which prov
   * Start the SQL Server Browser service. Go back to the section **Gathering Information about the Instance of SQL Server**, section 1.d.
   * The SQL Server Browser service is being blocked by the firewall. Open UDP port 1434 in the firewall. Go back to the section **Opening a Port in the Firewall**. (Make sure you are opening a UDP port, not a TCP port. Those are different things.)
   * The UDP port 1434 information is being blocked by a router. UDP communication (user datagram protocol) is not designed to pass through routers. This keeps the network from getting filled with low priority traffic. You might be able to configure your router to forward UDP traffic, or you can decide to always provide the port number when you connect.
-  * If the client computer is using Windows 7 or Windows Server 2008, (or a more recent operating system,) the UDP traffic might be dropped by the client operating system because the response from the server is returned from a different IP address than was queried. This is a security feature blocking "loose source mapping." For more information, see the **Multiple Server IP Addresses** section of the Books Online topic [Troubleshooting: Timeout Expired](http://msdn.microsoft.com/library/ms190181.aspx). This is an article from SQL Server 2008 R2, but the principals still apply. You might be able to configure the client to use the correct IP address, or you can decide to always provide the port number when you connect.
+  * If the client computer is using Windows 7 or Windows Server 2008, (or a more recent operating system,) the UDP traffic might be dropped by the client operating system because the response from the server is returned from a different IP address than was queried. This is a security feature blocking "loose source mapping." For more information, see the **Multiple Server IP Addresses** section of the Books Online topic [Troubleshooting: Timeout Expired](https://msdn.microsoft.com/library/ms190181.aspx). This is an article from SQL Server 2008 R2, but the principals still apply. You might be able to configure the client to use the correct IP address, or you can decide to always provide the port number when you connect.
      
 3. Once you can connect using the IP address  (or IP address and instance name for a named instance), attempt to connect using the computer name (or computer name and instance name for a named instance). Put `tcp:` in front of the computer name to force a TCP/IP connection. For example, for the default instance on a computer named `ACCNT27`, use `tcp:ACCNT27` For a named instance called `PAYROLL`, on that computer use `tcp:ACCNT27\PAYROLL` If you can connect using the IP address but not using the computer name, then you have a name resolution problem. Go back to the section **Testing TCP/IP Connectivity**, section 4.
 

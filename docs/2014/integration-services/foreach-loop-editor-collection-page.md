@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.foreachloopcontainer.collection.f1"
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Foreach Loop Editor (Collection Page)
@@ -36,7 +36,7 @@ manager: craigg
 |**Foreach ADLS File Enumerator**|Enumerate files on ADLS with filters. Selecting this value displays the dynamic options in the section, **Foreach ADLS File Enumerator**.|
   
  **Expressions**  
- Click or expand **Expressions** to view the list of existing property expressions. Click the ellipsis button **(…)** to add a property expression for an enumerator property, or edit and evaluate an existing property expression.  
+ Click or expand **Expressions** to view the list of existing property expressions. Click the ellipsis button **(...)** to add a property expression for an enumerator property, or edit and evaluate an existing property expression.  
   
  **Related Topics:**  [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [Property Expressions Editor](expressions/property-expressions-editor.md), [Expression Builder](expressions/expression-builder.md)  
   
@@ -63,11 +63,11 @@ manager: craigg
  Specify the files to enumerate.  
   
 > [!NOTE]  
->  Use wildcard characters (*) to specify the files to include in the collection. For example, to include files with names that contain “abc”, use the following filter: \*abc\*.  
+>  Use wildcard characters (*) to specify the files to include in the collection. For example, to include files with names that contain "abc", use the following filter: \*abc\*.  
 >   
 >  When you specify a file name extension, the enumerator also returns files that have the same extension with additional characters appended. (This is the same behavior as that of the **dir** command in the operating system, which also compares 8.3 file names for backward compatibility.) This behavior of the enumerator could cause unexpected results. For example, you want to enumerate only Excel 2003 files, and you specify "*.xls". However, the enumerator will also return Excel 2007 files because those files have the extension, ".xlsx".  
 >   
->  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (…) to add the property expression. For more information about dynamically selecting specified files, see [SSIS–Dynamically set File Mask : FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154)  
+>  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (...) to add the property expression. For more information about dynamically selecting specified files, see [SSIS-Dynamically set File Mask : FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154)  
   
  **Fully qualified**  
  Select to retrieve the fully qualified path of file names. If wildcard characters are specified in the Files option, then the fully-qualified paths that are returned match the filter.  
@@ -158,7 +158,7 @@ manager: craigg
   
  The XPath expression that applies to the XML file is the outer XPath operation, stored in the OuterXPathString property. If the XPath enumeration type is set to `ElementCollection`, the Foreach NodeList enumerator can apply an inner XPath expression, stored in the InnerXPathString property, to a collection of element.  
   
- To learn more about working with XML documents and data, see "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
+ To learn more about working with XML documents and data, see "[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
   
  **DocumentSourceType**  
  Select the source type of the XML document. This property has the options listed in the following table.  
@@ -170,7 +170,7 @@ manager: craigg
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **DocumentSource**  
- If **DocumentSourceType** is set to **Direct input**, provide the XML code, or click the ellipsis (…) button to provide XML by using the **Document Source Edito**r dialog box.  
+ If **DocumentSourceType** is set to **Direct input**, provide the XML code, or click the ellipsis (...) button to provide XML by using the **Document Source Edito**r dialog box.  
   
  If **DocumentSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -285,9 +285,9 @@ Specifies whether to search recursively within the specified directory.
   
 ## External Resources  
   
--   Blog entry, [SSIS For Each Node List Enumerator](http://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
+-   Blog entry, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), on bidn.com.  
   
--   Blog entry, [SSIS–Dynamically set File Mask : FileSpec](http://go.microsoft.com/fwlink/?LinkId=238154), on beyondrelational.com.  
+-   Blog entry, [SSIS-Dynamically set File Mask : FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154), on beyondrelational.com.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   

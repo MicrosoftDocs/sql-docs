@@ -1,7 +1,8 @@
 ---
-title: Extend the functionality of Azure Data Studio | Microsoft Docs
-description: Learn about extending Azure Data Studio
-ms.custom: "tools|sos"
+title: Adding additional functionality thru extensibility
+titleSuffix: Azure Data Studio
+description: Learn about the extensibility model and key extensibility areas for extending the functionality of Azure Data Studio
+ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
@@ -62,7 +63,7 @@ Dashboard.tabs creates the tab sections inside the dashboard page. It expects an
 	"when": "connectionProvider == 'MSSQL' && !mssql:iscloud",
 	"alwaysShow": true,
 	"container": {
-		…
+		...
 	}
 }
 ]
@@ -77,13 +78,13 @@ Instead of specifying dashboard container inline (inside the dashboard.tab). You
 {
 	"id": "innerTab1",
 	"container": {
-		…
+		...
 	}
 },
 {
 	"id": "innerTab2",
 	"container": {
-	   …
+	   ...
 	}
 }
 ]
@@ -106,7 +107,7 @@ To refer to registered container, specify the id of the container
 
 `dashboard.insights`
 
-You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](https://docs.microsoft.com/en-us/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -133,7 +134,7 @@ There are currently four supported container types:
 
     ![Widgets container](media/extensibility/widgets-container.png)
 
-    The list of widgets that will be displayed in the container. It’s a flow layout. It accepts the list of widgets.
+    The list of widgets that will be displayed in the container. It's a flow layout. It accepts the list of widgets.
 
     ```json
     "container": {
@@ -235,7 +236,7 @@ There are currently four supported container types:
 					"dark": "./icons/tab1Icon_dark.svg"
 				}
 				"container": {
-					…
+					...
 				}
 			},
 			{
@@ -246,7 +247,7 @@ There are currently four supported container types:
 					"dark": "./icons/tab2Icon_dark.svg"
 				}
 				"container": {
-					…
+					...
 				}
 			}
 		]

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "type permissions [SQL Server]"
   - "denying permissions [SQL Server], types"
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Type Permissions (Transact-SQL)
@@ -49,7 +49,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Specifies a permission that can be denied on a type. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON TYPE **::** [ *schema_name***.** ] *type_name*  
+ ON TYPE **::** [ _schema_name_**.** ] *type_name*  
  Specifies the type on which the permission is being denied. The scope qualifier (**::**) is required. If *schema_name* is not specified, the default schema is used. If *schema_name* is specified, the schema scope qualifier (**.**) is required.  
   
  TO \<database_principal>  

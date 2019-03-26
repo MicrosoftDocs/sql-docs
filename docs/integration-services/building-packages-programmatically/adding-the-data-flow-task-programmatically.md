@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "data flow task [Integration Services], adding"
   - "MainPipe object"
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Adding the Data Flow Task Programmatically
@@ -72,7 +72,7 @@ End Module
 ```  
   
 ## External Resources  
- Blog entry, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
+ Blog entry, [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
   
 ## See Also  
  [Discovering Data Flow Components Programmatically](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  

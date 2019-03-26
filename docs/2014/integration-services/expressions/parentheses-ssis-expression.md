@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "() (parentheses operator)"
   - "evaluation order [Integration Services]"
   - "parentheses operator ()"
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # () (Parentheses) (SSIS Expression)

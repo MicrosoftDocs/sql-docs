@@ -1,7 +1,7 @@
 ---
 title: "What's new in SQL Server 2017 | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/19/2017"
+ms.date: "10/20/2017"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -16,10 +16,10 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 represents a major step towards making SQL Server a platform that gives you choices of development languages, data types, on-premises or cloud, and operating systems by bringing the power of SQL Server to Linux, Linux-based Docker containers, and Windows. This topic summarizes what is new for specific feature areas and includes links to additional details. For more information related to SQL Server on Linux, see [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)
 
-[![Download from Evaluation Center](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 Release - October 2017:](http://go.microsoft.com/fwlink/?LinkID=829477).
+[![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Try it out:** [Download SQL Server 2017 Release - October 2017:](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
-> In addition to the changes below, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [SQL Server 2017 Cumulative updates](http://aka.ms/sql2017cu).
+> In addition to the changes below, cumulative updates are released at regular intervals after the GA release. These cumulative updates provide many improvements and fixes. For information about the latest CU release, see [SQL Server 2017 Cumulative updates](https://aka.ms/sql2017cu).
 
 ## SQL Server 2017 Database Engine
 
@@ -27,7 +27,7 @@ SQL Server 2017 includes many new Database Engine features, enhancements, and pe
 - **CLR assemblies** can now be added to a whitelist, as a workaround for the `clr strict security` feature described in CTP 2.0. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md), and [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) are added to support the white list of trusted assemblies (RC1).  
 - **Resumable online index rebuild** resumes an online index rebuild operation from where it stopped after a failure (such as a failover to a replica or insufficient disk space), or pauses and later resumes an online index rebuild operation. See [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) and [Guidelines for online index operations](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - The **IDENTITY_CACHE** option for ALTER DATABASE SCOPED CONFIGURATION allows you to avoid gaps in the values of identity columns if a server restarts unexpectedly or fails over to a secondary server. See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
-- A new generation of query processing improvements that will adapt optimization strategies to your application workload’s runtime conditions. For this first version of the **adaptive query processing** feature family, we have three new improvements: **batch mode adaptive joins**, **batch mode memory grant feedback**, and **interleaved execution** for multi-statement table valued functions.  See [Adaptive query processing in SQL databases](../relational-databases/performance/adaptive-query-processing.md).
+- A new generation of query processing improvements that will adapt optimization strategies to your application workload's runtime conditions. For this first version of the **adaptive query processing** feature family, we have three new improvements: **batch mode adaptive joins**, **batch mode memory grant feedback**, and **interleaved execution** for multi-statement table valued functions.  See [Intelligent query processing in SQL databases](../relational-databases/performance/intelligent-query-processing.md).
 - **Automatic database tuning** provides insight into potential query performance problems, recommends solutions, and can automatically fix identified problems. See [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md). (CTP 2.0)
 - New **graph database capabilities** for modeling many-to-many relationships include new [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) syntax for creating node and edge tables, and the keyword [MATCH](../t-sql/queries/match-sql-graph.md) for queries. See [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md). (CTP 2.0)
 - An sp_configure option called `clr strict security` is enabled by default to enhance the security of CLR assemblies. See [CLR strict security](../database-engine/configure-windows/clr-strict-security.md). (CTP 2.0)
@@ -80,7 +80,7 @@ SQL Server Analysis Services 2017 introduces many enhancements for tabular model
 - DAX Editor for SSDT. (CTP 2.0)
 - Encoding hints, an advanced feature for optimizing data refresh of large in-memory tabular models. (CTP 1.3)
 - Support for the **1400 Compatibility level** for tabular models. To create new or upgrade existing tabular model projects to the 1400 compatibility level, download and install [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
-- A modern **Get Data** experience for tabular models at the 1400 compatibility level. See the [Analysis Services Team Blog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- A modern **Get Data** experience for tabular models at the 1400 compatibility level. See the [Analysis Services Team Blog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
 - **Hide Members** property to hide blank members in ragged hierarchies. (CTP 1.1)
 - New **Detail Rows** end-user action to **Show Details** for aggregated information. [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) and **DETAILROWS** functions for creating Detail Rows expressions. (CTP 1.1)
 - DAX **IN** operator for specifying multiple values. (CTP 1.1)

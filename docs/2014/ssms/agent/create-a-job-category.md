@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, categories"
@@ -42,7 +42,7 @@ manager: craigg
   
 3.  Right-click the **Jobs** folder and select **Manage Job Categories**.  
   
-4.  In the **Manage Job Categories***server_name* dialog box, click **Add**.  
+4.  In the **Manage Job Categories**_server_name_ dialog box, click **Add**.  
   
 5.  In the new dialog box, in the **Name** box, enter a name for the new job category.  
   
@@ -50,7 +50,7 @@ manager: craigg
   
 7.  Click **OK**.  
   
-8.  In the **Manage Job Categories***server_name* dialog box, click **Refresh** to ensure that the new job category is active. If everything looks as expected, close this dialog box.  
+8.  In the **Manage Job Categories**_server_name_ dialog box, click **Refresh** to ensure that the new job category is active. If everything looks as expected, close this dialog box.  
   
  For more information on these dialog boxes, see [Job Categories: Manage Job Categories](job-categories-manage-job-categories.md) and [Job Categories Properties and New Job Category](job-categories-properties-new-job-category.md).  
   

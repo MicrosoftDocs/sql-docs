@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: table-view-index
 ms.topic: conceptual
 helpviewer_keywords: 
   - "computed columns, define"
@@ -61,7 +60,7 @@ manager: craigg
   
 5.  Indicate whether the data is persisted by choosing **Yes** or **No** from the drop-down for the **Is Persisted** child property.  
   
-6.  On the **File** menu, click **Save***table name*.  
+6.  On the **File** menu, click **Save**_table name_.  
   
 #### To add a computed column definition to an existing column  
   

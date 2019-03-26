@@ -38,10 +38,10 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## Arguments  
- [ **@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Specifies the database to be verified. *dbname* is **sysname**.  
   
- [ **@autofix=**] **'auto'**  
+`[ @autofix = ] 'auto'`
  Gives ownership of the database and all database objects to the system administrator, and drops any user-created database users and nondefault permissions. *auto* is **nvarchar(4)**, with a default of NULL.  
   
 ## Return Code Values  

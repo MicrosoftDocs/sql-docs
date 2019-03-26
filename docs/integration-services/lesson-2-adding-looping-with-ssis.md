@@ -1,23 +1,24 @@
 ---
-title: "Lesson 2: Adding Looping with SSIS | Microsoft Docs"
+title: "Lesson 2: Add looping with SSIS | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "01/03/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
-# Lesson 2: Adding Looping with SSIS
-In [Lesson 1: Create a Project and Basic Package with SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), you created a package that extracted data from a single flat file source, transformed the data using Lookup transformations, and finally loaded the data into the **FactCurrency** fact table of the **AdventureWorksDW2012** sample database.  
+# Lesson 2: Add looping with SSIS
+
+In [Lesson 1: Create a project and basic package with SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), you created a package that extracts data from a single flat file source. The data is then transformed using Lookup transformations. Finally, the package loads the data into a copy of the **FactCurrencyRate** fact table in the **AdventureWorksDW2012** sample database.  
   
-However, it is rare for an extract, transform, and load (ETL) process to use a single flat file. A typical ETL process would extract data from multiple flat file sources. Extracting data from multiple sources requires an iterative control flow. One of the most anticipated features of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is the ability to easily add iteration or looping to packages.  
+An extract, transform, and load (ETL) process typically extracts data from multiple flat file sources. Extracting data from multiple sources requires an iterative control flow. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can easily add iteration or looping to packages.  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides two types of containers for looping through packages: the Foreach Loop container and the For Loop container. The Foreach Loop container uses an enumerator to perform the looping, whereas the For Loop container typically uses a variable expression. This lesson uses the Foreach Loop container.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides two types of containers for looping through packages: the Foreach Loop container and the For Loop container. The Foreach Loop container uses an enumerator for the looping, while the For Loop container typically uses a variable expression. This lesson uses the Foreach Loop container.  
   
 The Foreach Loop container enables a package to repeat the control flow for each member of a specified enumerator. With the Foreach Loop container, you can enumerate:  
   
@@ -27,9 +28,9 @@ The Foreach Loop container enables a package to repeat the control flow for each
   
 -   File and directory structures  
   
--   System, package and user variables  
+-   System, package, and user variables  
   
--   Enumerable objects contained in a variable  
+-   Enumerable objects in a variable  
   
 -   Items in a collection  
   
@@ -37,29 +38,29 @@ The Foreach Loop container enables a package to repeat the control flow for each
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO)  
   
-In this lesson, you will modify the simple ETL package created in Lesson 1 to take advantage of the Foreach Loop container. You will also set user-defined package variables to enable the tutorial package to iterate through all the flat files in the folder. If you have not completed the previous lesson, you can also copy the completed Lesson 1 package that is included with the tutorial.  
+In this lesson, you modify Lesson 1's example ETL package to use a Foreach Loop container, and set a user-defined package variable for the package. That variable is then used to iterate through the matching files in the sample folder.   
   
-In this lesson, you will not modify the data flow, only the control flow.  
+In this lesson, you won't modify the data flow, only the control flow.  
   
-> [!IMPORTANT]  
-> This tutorial requires the **AdventureWorksDW2012** sample database. For more information about how to install and deploy **AdventureWorksDW2012**, see [Reporting Services Product Samples on CodePlex](http://go.microsoft.com/fwlink/p/?LinkID=526910).  
-  
-## Lesson Tasks  
+> [!NOTE]  
+> If you haven't already, see the [Lesson 1 prerequisites](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+
+## Lesson tasks  
 This lesson contains the following tasks:  
   
--   [Step 1: Copying the Lesson 1 Package](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+-   [Step 1: Copy the Lesson 1 package](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [Step 2: Adding and Configuring the Foreach Loop Container](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [Step 2: Add and configure the Foreach Loop container](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Step 3: Modifying the Flat File Connection Manager](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Step 3: Modify the Flat File connection manager](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Step 4: Testing the Lesson 2 Tutorial Package](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Step 4: Test the Lesson 2 tutorial package](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
-## Start the Lesson  
-[Step 1: Copying the Lesson 1 Package](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+## Start the lesson  
+[Step 1: Copy the Lesson 1 package](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## See Also  
-[For Loop Container](../integration-services/control-flow/for-loop-container.md)  
+## See also  
+[For Loop container](../integration-services/control-flow/for-loop-container.md)  
   
   
   

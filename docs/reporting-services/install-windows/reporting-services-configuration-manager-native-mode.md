@@ -90,4 +90,4 @@ The Reporting Services Configuration Manager is installed automatically when you
 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)   
 [Configure and Administer a Report Server](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -4,14 +4,13 @@ ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
-
-
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
+
 # Create a Data Alert in Data Alert Designer
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
@@ -71,15 +70,15 @@ You create data alert definitions in Data Alert Designer. After you save the ale
   
 10. Type the comparison value.  
   
-11. Optionally, click the ellipsis **(…)** again.  
+11. Optionally, click the ellipsis **(...)** again.  
   
-     The ellipsis **(…)** appears on the line that contains the first clause.  
+     The ellipsis **(...)** appears on the line that contains the first clause.  
   
      An OR clause is added below and within the AND rule.  
   
 12. Optionally, click the down-arrow, select **Field Selection Mode**, and then select a column in the list.  
   
-     You will notice that the ellipsis **(…)** that you click to add OR clauses has disappeared.  
+     You will notice that the ellipsis **(...)** that you click to add OR clauses has disappeared.  
   
 13. Optionally, click **Add rule** again to add additional rules.  
   
@@ -122,4 +121,4 @@ You create data alert definitions in Data Alert Designer. After you save the ale
 [Data Alert Manager for Alerting Administrators](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Reporting Services Data Alerts](../reporting-services/reporting-services-data-alerts.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

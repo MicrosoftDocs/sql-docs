@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rep.configdistwizard.subscribers.f1"
@@ -35,7 +34,7 @@ manager: craigg
   
 ## See Also  
  [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)   
+
  [Subscribe to Publications](subscribe-to-publications.md)  
   
   

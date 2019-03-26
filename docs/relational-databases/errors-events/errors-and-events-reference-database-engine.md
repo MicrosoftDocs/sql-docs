@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ---
 # Errors and Events Reference (Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This section contains selected [!INCLUDE[ssDE](../../includes/ssde-md.md)] error messages that need further explanation.  
   
 ## In This Section  
@@ -32,8 +32,8 @@ manager: craigg
   
 |Resource|Description|  
 |--------------|-----------------|  
-|[SQL Server Community](http://go.microsoft.com/fwlink/?LinkId=42455)|This site has links to newsgroups and forums monitored by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] community. It also lists community information sources, such as blogs and Web sites. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] community is very helpful in answering questions, although an answer cannot be guaranteed.|  
-|[SQL Server Developer Center Community](http://go.microsoft.com/fwlink/?LinkId=42456)|This site focuses on the newsgroups, forums, and other community resources that are useful to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] developers.|  
-|[Microsoft Help and Support](http://go.microsoft.com/fwlink/?linkid=16419)|You can use this Web site to open a case with a [!INCLUDE[msCoName](../../includes/msconame-md.md)] support professional.|  
+|[SQL Server Community](https://go.microsoft.com/fwlink/?LinkId=42455)|This site has links to newsgroups and forums monitored by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] community. It also lists community information sources, such as blogs and Web sites. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] community is very helpful in answering questions, although an answer cannot be guaranteed.|  
+|[SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456)|This site focuses on the newsgroups, forums, and other community resources that are useful to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] developers.|  
+|[Microsoft Help and Support](https://go.microsoft.com/fwlink/?linkid=16419)|You can use this Web site to open a case with a [!INCLUDE[msCoName](../../includes/msconame-md.md)] support professional.|  
   
   

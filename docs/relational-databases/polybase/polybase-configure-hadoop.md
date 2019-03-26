@@ -29,11 +29,9 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 - PolyBase supports two Hadoop providers, Hortonworks Data Platform (HDP) and Cloudera Distributed Hadoop (CDH). Hadoop follows the "Major.Minor.Version" pattern for its new releases, and all versions within a supported Major and Minor release are supported. The following Hadoop providers are supported:
 
-  - Hortonworks HDP 1.3 on Linux/Windows Server  
-  - Hortonworks HDP 2.1 – 2.6 on Linux
-  - Hortonworks HDP 2.1 - 2.3 on Windows Server  
-  - Cloudera CDH 4.3 on Linux  
-  - Cloudera CDH 5.1 – 5.5, 5.9 - 5.13 on Linux
+  - Hortonworks HDP 1.3, 2.1-2.6, 3.0 on Linux
+  - Hortonworks HDP 1.3, 2.1-2.3 on Window Server
+  - Cloudera CDH 4.3, 5.1 - 5.5, 5.9 - 5.13 on Linux
 
 > [!NOTE]
 > PolyBase supports Hadoop encryption zones starting with SQL Server 2016 SP1 CU7 and SQL Server 2017 CU3. If you are using [PolyBase scale-out groups](polybase-scale-out-groups.md), all compute nodes must also be on a build that includes support for Haddop encryption zones.
@@ -69,7 +67,7 @@ To improve query performance, enable pushdown computation to your Hadoop cluster
 1. Find the file **yarn-site.xml** in the installation path of SQL Server. Typically, the path is:  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolybaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
    ```  
 
 1. On the Hadoop machine, find the analogous file in the Hadoop configuration directory. In the file, find and copy the value of the configuration key yarn.application.classpath.  
@@ -82,12 +80,15 @@ To improve query performance, enable pushdown computation to your Hadoop cluster
 
 To query the data in your Hadoop data source, you must define an external table to use in Transact-SQL queries. The following steps describe how to configure the external table.
 
-1. Create a master key on the database. This is required to encrypt the credential secret.
+1. Create a master key on the database, if one does not already exist. This is required to encrypt the credential secret.
 
-   ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-   ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## Arguments
+    PASSWORD ='password'
 
+    Is the password that is used to encrypt the master key in the database. password must meet the Windows password policy requirements of the computer that is hosting the instance of SQL Server.
 1. Create a database scoped credential for Kerberos-secured Hadoop clusters.
 
    ```sql
@@ -118,10 +119,10 @@ To query the data in your Hadoop data source, you must define an external table 
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
          FORMAT_OPTIONS (FIELD_TERMINATOR ='|',
-               USE_TYPE_DEFAULT = TRUE)  
+               USE_TYPE_DEFAULT = TRUE))
    ```
 
-4. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car senor data.
+4. Create an external table pointing to data stored in Hadoop with [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md). In this example, the external data contains car sensor data.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -191,7 +192,7 @@ The following query exports data from SQL Server to Hadoop. To do this, you firs
 
 ```sql
 -- Enable INSERT into external table  
-sp_configure ‘allow polybase export’, 1;  
+sp_configure 'allow polybase export', 1;  
 reconfigure  
   
 -- Create an external table.

@@ -17,11 +17,12 @@ helpviewer_keywords:
   - "installing Integration Services"
   - "Setup [Integration Services]"
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Install Integration Services
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a single Setup program to install any or all of its components, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Use Setup to install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] with or without other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components on a single computer.    
     
  This article highlights important considerations that you should know before you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Information in this article helps you evaluate the installation options so that your selections that result in a successful installation.    

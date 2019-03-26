@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "removing files"
   - "Maintenance Cleanup task"
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Maintenance Cleanup Task
@@ -37,7 +37,7 @@ manager: craigg
 -   [Maintenance Cleanup Task &#40;Maintenance Plan&#41;](../../relational-databases/maintenance-plans/maintenance-cleanup-task-maintenance-plan.md)  
   
 ## Related Tasks  
- For details about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For details about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

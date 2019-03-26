@@ -76,7 +76,7 @@ ms.author: maghan
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- For more information, see [Knowledge Base Article 913046](http://support.microsoft.com/?kbid=913046) on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web site.  
+ For more information, see [Knowledge Base Article 913046](https://support.microsoft.com/?kbid=913046) on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web site.  
   
 ##  <a name="bkmk_log_file_fields"></a> Log File Fields  
  The following fields can be found in a trace log:  
@@ -106,5 +106,5 @@ In previous releases of [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion
 ## See Also  
  [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Errors and Events Reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
- More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   

@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_articleview"
@@ -42,49 +41,49 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@view_name=**] **'***view_name***'**  
+`[ @view_name = ] 'view_name'`
  Is the name of the view that defines the published article. *view_name* is **nvarchar(386)**, with a default of NULL.  
   
- [ **@filter_clause=**] **'***filter_clause***'**  
+`[ @filter_clause = ] 'filter_clause'`
  Is a restriction (WHERE) clause that defines a horizontal filter. When entering the restriction clause, omit the WHERE keyword. *filter_clause* is **ntext**, with a default of NULL.  
   
- [ **@change_active =** ] *change_active*  
+`[ @change_active = ] change_active`
  Allows modifying the columns in publications that have subscriptions. *change_active* is an **int**, with a default of **0**. If **0**, columns are not changed. If **1**, views can be created or re-created on active articles that have subscriptions.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
   
  **1** specifies that changes to the article may cause the snapshot to be invalid, and if there are existing subscriptions that would require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.  
   
- [ **@force_reinit_subscription = ]** *force_reinit_subscription*  
+`[ @force_reinit_subscription = ] _force_reinit_subscription_`
  Acknowledges that the action taken by this stored procedure may require existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit** with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require subscriptions to be reinitialized, an error occurs and no changes are made.  
   
  **1** specifies that changes to the article causes existing subscription to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when publishing from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [ **@refreshsynctranprocs** = ] *refreshsynctranprocs*  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs`
  Is if the stored procedures used to synchronize replication are automatically recreated. *refreshsynctranprocs* is **bit**, with a default of 1.  
   
  **1** means that the stored procedures are re-created.  
   
  **0** means that the stored procedures are not re-created.  
   
- [ **@internal**= ] *internal*  
+`[ @internal = ] internal`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

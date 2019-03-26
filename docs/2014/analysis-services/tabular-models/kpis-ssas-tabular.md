@@ -42,7 +42,7 @@ manager: craigg
 ##  <a name="bkmk_example"></a> Example  
  The sales manager at Adventure Works wants to create a PivotTable that she can use to quickly display whether or not sales employees are meeting their sales quota for a given period (year). For each sales employee, she wants the PivotTable to display the actual sales amount in dollars, the sales quota amount in dollars, and a simple graphic display showing the status of whether or not each sales employee is below, at, or above their sales quota. She wants to be able to slice the data by year.  
   
- To do this, the sales manager enlists the help of her organization’s BI solution developer to add a Sales KPI to the AdventureWorks Tabular Model. The sales manager will then use [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] to connect to the Adventure Works Tabular Model as a data source and create a PivotTable with the fields (measures and KPI) and slicers to analyze whether or not the sales force is meeting their quotas.  
+ To do this, the sales manager enlists the help of her organization's BI solution developer to add a Sales KPI to the AdventureWorks Tabular Model. The sales manager will then use [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] to connect to the Adventure Works Tabular Model as a data source and create a PivotTable with the fields (measures and KPI) and slicers to analyze whether or not the sales force is meeting their quotas.  
   
  In the model, a measure on the SalesAmount column in the FactResellerSales table, which gives the actual sales amount in dollars for each sales employee is created. This measure will define the Base value of the KPI.  
   
@@ -65,7 +65,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Now that measures have been created to serve as the Base value and Target value of the KPI, the Sales measure is extended to a new Sales KPI. In the Sales KPI, the Target SalesAmountQuota measure is defined as the Target value. The Status threshold is defined as a range by percentage, the target of which is 100% meaning actual sales defined by the Sales measure met the quota amount defined in the Target SalesAmoutnQuota measure. Low and High percentages are defined on the status bar, and a graphic type is selected.  
   
- The sales manager can now create a PivotTable adding the KPI’s Base value, Target value, and Status to the Values field. The Employees column is added to the RowLabel field, and the CalendarYear column is added as a Slicer.  
+ The sales manager can now create a PivotTable adding the KPI's Base value, Target value, and Status to the Values field. The Employees column is added to the RowLabel field, and the CalendarYear column is added as a Slicer.  
   
  The sales manager can now slice by year the actual sales amount, sales quota amount, and status for each sales employee. She can analyze sales trends over years to determine whether or not she needs to adjust the sales quota for a sales employee.  
   

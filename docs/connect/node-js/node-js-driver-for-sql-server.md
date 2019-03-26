@@ -27,7 +27,7 @@ You can  connect to a SQL Database using Node.js on Windows, Linux, or Mac.
   
 ## Documentation  
   
-[Tedious module documentation on Github](http://tediousjs.github.io/tedious/)  
+[Tedious module documentation on Github](https://tediousjs.github.io/tedious/)  
   
 ## Community  
 * [Azure Node.js Developer Center](https://azure.microsoft.com/develop/nodejs/)  

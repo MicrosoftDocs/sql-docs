@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.dbpublishingwizard.choosestoredprocedures.f1"
@@ -77,6 +76,6 @@ manager: craigg
 ## See Also  
  [Create a Publication](publish/create-a-publication.md)   
  [Publish Data and Database Objects](publish/publish-data-and-database-objects.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
+
   
   

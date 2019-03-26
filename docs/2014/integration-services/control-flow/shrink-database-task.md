@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.shrinkdatabasetask.f1"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "database shrinking [Integration Services]"
   - "shrinking databases"
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Shrink Database Task

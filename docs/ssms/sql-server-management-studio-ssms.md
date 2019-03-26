@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.date: "10/15/2018"
+ms.date: "10/16/2018"
 ms.prod: sql
 ms.technology: ssms
 ms.reviewer: ""
@@ -16,9 +16,9 @@ manager: craigg
 ---
 # SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is an integrated environment for managing any SQL infrastructure. Use SSMS to access, configure, manage, administer, and develop all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Azure SQL Database, and SQL Data Warehouse. SSMS provides a single comprehensive utility that combines a broad group of graphical tools with a number of rich script editors to provide access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] for developers and database administrators of all skill levels.
-
-
 
  
  - [**Download SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md) 
@@ -43,7 +43,7 @@ manager: craigg
 
 ## Next steps  
 [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
-[Tutorial: Writing Transact-SQL Statements](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
+[Tutorial: Writing Transact-SQL Statements](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)  
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 

@@ -42,7 +42,7 @@ manager: craigg
  Each database object contains one or more cube objects. A cube is defined by its measures and dimensions. The measures and dimensions in a cube are derived from the tables and views in the data source view on which the cube is based, or which is generated from the measure and dimension definitions.  
   
 ## Object Inheritance  
- The ASSL object model contains many repeated element groups. For example, the element group, “`Dimensions` contain `Hierarchies`,” defines the dimension hierarchy of an element. Both `Cubes` and `MeasureGroups` contain the element group, "`Dimensions` contain `Hierarchies`."  
+ The ASSL object model contains many repeated element groups. For example, the element group, "`Dimensions` contain `Hierarchies`," defines the dimension hierarchy of an element. Both `Cubes` and `MeasureGroups` contain the element group, "`Dimensions` contain `Hierarchies`."  
   
  Unless explicitly overridden, an element inherits the details of these repeated element groups from the higher level. For example, the `Translations` for a `CubeDimension` are the same as the `Translations` for its ancestor element, `Cube`.  
   

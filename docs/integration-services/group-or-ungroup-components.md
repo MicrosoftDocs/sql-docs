@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "containers [Integration Services], grouping"
   - "grouping tasks"
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Group or Ungroup Components
@@ -56,6 +56,6 @@ manager: craigg
   
 ## See Also  
  [Add or Delete a Task or a Container in a Control Flow](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [Connect Tasks and Containers by Using a Default Precedence Constraint](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
+ [Connect Tasks and Containers by Using a Default Precedence Constraint](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

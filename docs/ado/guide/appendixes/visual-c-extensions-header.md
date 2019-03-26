@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
 ms.topic: conceptual
 dev_langs: 
@@ -20,7 +20,7 @@ manager: craigg
 # Visual C++ Extensions Header
 The following header, **icrsint.h**, details the interface that allow clients to retrieve fields from a **Recordset** into variables defined in a class derived from **CADORecordBinding**. You must specify an ADO binding macro for each field you intend to access.  
   
-```  
+```cpp
 #ifndef _ICRSINT_H_  
 #define _ICRSINT_H_  
   

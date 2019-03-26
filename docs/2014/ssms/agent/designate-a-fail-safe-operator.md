@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent jobs, operators"
@@ -53,9 +53,9 @@ manager: craigg
 1.  In **Object Explorer,** click the plus sign to expand the server that contains the SQL Server Agent operator that you want to designate as a fail-safe.  
   
 2.  Right-click **SQL Server Agent** and select **Properties**.  
-  
-3.  In the **SQL Server Agent Properties –***server_name* dialog box, under **Select a page**, select **Alert System**.  
-  
+
+3.  In the **SQL Server Agent Properties -**_server_name_ dialog box, under **Select a page**, select **Alert System**.  
+ 
 4.  Under **Fail-safe operator**, select **Enable fail-safe operator**.  
   
 5.  In the **Operator** list, select the operator that you want to make a fail-safe.  

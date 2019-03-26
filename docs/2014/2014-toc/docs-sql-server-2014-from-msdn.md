@@ -6,7 +6,6 @@ manager: craigg
 ms.prod: "sql-server-2014"
 ms.custom:
 ms.topic: article
-ms.workload: "On Demand"
 ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk

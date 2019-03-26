@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services 
 ms.topic: "reference"
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Building Packages Programmatically
@@ -86,9 +86,9 @@ manager: craigg
   
 ## External Resources  
   
--   CodePlex samples, [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
+-   CodePlex samples, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
   
--   Blog entry, [Performance profiling your custom extensions](http://go.microsoft.com/fwlink/?LinkId=238831), on blogs.msdn.com.  
+-   Blog entry, [Performance profiling your custom extensions](https://go.microsoft.com/fwlink/?LinkId=238831), on blogs.msdn.com.  
 
 ## See Also  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

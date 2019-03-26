@@ -69,7 +69,7 @@ manager: craigg
   
  **Create**  
   
- Use these templates to build custom models or data structures. You are not limited to the models supported by the wizards – you can use any data mining algorithm supported by the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you are connected to, including plug-in algorithms.  
+ Use these templates to build custom models or data structures. You are not limited to the models supported by the wizards - you can use any data mining algorithm supported by the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] that you are connected to, including plug-in algorithms.  
   
 -   Mining model  
   

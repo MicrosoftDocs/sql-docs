@@ -23,7 +23,7 @@ manager: craigg
 # Interval Data Type Precision
 Precision for an interval data type includes interval leading precision, interval precision, and seconds precision.  
   
- The leading field of an interval is a signed numeric. The maximum number of digits for the leading field is determined by a quantity called *interval leading precision,* which is a part of the data type declaration. For example, the declaration: INTERVAL HOUR(5) TO MINUTE has an interval leading precision of 5; the HOUR field can take values from –99999 through 99999. The interval leading precision is contained in the SQL_DESC_DATETIME_INTERVAL_PRECISION field of the descriptor record.  
+ The leading field of an interval is a signed numeric. The maximum number of digits for the leading field is determined by a quantity called *interval leading precision,* which is a part of the data type declaration. For example, the declaration: INTERVAL HOUR(5) TO MINUTE has an interval leading precision of 5; the HOUR field can take values from -99999 through 99999. The interval leading precision is contained in the SQL_DESC_DATETIME_INTERVAL_PRECISION field of the descriptor record.  
   
  The list of fields that an interval data type is made up of is called *interval precision*. It is not a numeric value, as the term "precision" might imply. For example, the interval precision of the type INTERVAL DAY TO SECOND is the list DAY, HOUR, MINUTE, SECOND. There is no descriptor field that holds this value; the interval precision can always be determined by the interval data type.  
   

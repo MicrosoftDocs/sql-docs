@@ -20,7 +20,7 @@ helpviewer_keywords:
   - "data flow [Integration Services], components"
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: douglaslMS
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
 ---
 # Selecting Input Columns Programmatically

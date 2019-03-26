@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Reporting Services Site Settings and Site Features(SharePoint Mode)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode has several site level custom features and site feature that can be managed from the SharePoint Site Settings page. The settings are site wide and affect all [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service applications. You must have Content Manager and System Administrator permissions to view this page.  
@@ -23,7 +23,7 @@ manager: craigg
   
 ## To open the Reporting Services Site Settings page  
   
-1.  From the SharePoint site’s **Site Actions** menu click **Site Settings**.  
+1.  From the SharePoint site's **Site Actions** menu click **Site Settings**.  
   
 2.  In the **Reporting Services** section, click **Reporting Services Site Settings**.  
   

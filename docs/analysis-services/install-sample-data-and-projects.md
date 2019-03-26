@@ -1,5 +1,5 @@
 ---
-title: "Install Sample Data and Projects | Microsoft Docs"
+title: "Install Analysis Services sample data and projects | Microsoft Docs"
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -42,7 +42,7 @@ Alternatively, you can browse data using the built-in MDX query designer that is
 ## Step 3: Install databases  
 An Analysis Services multidimensional model uses transactional data that you import from a relational database management system. For the purposes of this tutorial, you use the following relational database as your data source.  
   
--   **AdventureWorksDW2012 or later** – This is a relational data warehouse that runs on a Database Engine instance. It provides the original data  used by the Analysis Services databases and projects that you build and deploy throughout the tutorial. The tutorial assumes you are using AdventureWorksDW2012, however, later versions do work.
+-   **AdventureWorksDW2012 or later** - This is a relational data warehouse that runs on a Database Engine instance. It provides the original data  used by the Analysis Services databases and projects that you build and deploy throughout the tutorial. The tutorial assumes you are using AdventureWorksDW2012, however, later versions do work.
   
     You can use this sample database with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and later. In-general, you should use the sample database version matching your database engine version.
   
@@ -82,7 +82,7 @@ The tutorial includes sample projects so that you can compare your results again
   
     The tutorial projects work for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and later.  
   
-2.  Move the .zip file to a folder just below the root drive (for example, C:\Tutorial). This step mitigates the “Path too long” error that sometimes occurs if you attempt to unzip the files in the Downloads folder.  
+2.  Move the .zip file to a folder just below the root drive (for example, C:\Tutorial). This step mitigates the "Path too long" error that sometimes occurs if you attempt to unzip the files in the Downloads folder.  
   
 3.  Unzip the sample projects: right-click on the file and select **Extract All**. After extracting the files, you should have folders Lesson 1, 2, 3, 5, 6, 7, 8, 9, 10 Complete and Lesson 4 Start. 
   

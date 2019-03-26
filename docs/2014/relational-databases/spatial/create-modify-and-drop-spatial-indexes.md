@@ -1,11 +1,9 @@
 ---
 title: "Create, Modify, and Drop Spatial Indexes | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "dbe-spatial"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [SQL Server], creating"

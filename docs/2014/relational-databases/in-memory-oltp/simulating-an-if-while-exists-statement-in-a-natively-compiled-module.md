@@ -16,7 +16,7 @@ manager: craigg
   
 ```tsql  
 DECLARE @exists BIT = 0  
-SELECT TOP 1 @exists = 1 FROM MyTable WHERE …  
+SELECT TOP 1 @exists = 1 FROM MyTable WHERE ...  
 IF @exists = 1  
 ```  
   

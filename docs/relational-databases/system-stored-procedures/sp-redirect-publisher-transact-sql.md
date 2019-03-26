@@ -5,8 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_redirect_publisher_TSQL"
@@ -52,7 +51,7 @@ sp_redirect_publisher
  None  
   
 ## Remarks  
- **sp_redirect_publisher** is used to allow a replication publisher to be redirected to the current primary of an Always On availability group by associating the publisher/database pair with an availability group’s listener. Execute **sp_redirect_publisher** after the AG listener has been configured for the availability group that contains the published database.  
+ **sp_redirect_publisher** is used to allow a replication publisher to be redirected to the current primary of an Always On availability group by associating the publisher/database pair with an availability group's listener. Execute **sp_redirect_publisher** after the AG listener has been configured for the availability group that contains the published database.  
   
  If the publication database at the original publisher is removed from an availability group at the primary replica, execute **sp_redirect_publisher** without specifying a value for the *@redirected_publisher* parameter to remove the redirection for the publisher/database pair. For more information about redirecting the publisher when, see [Maintaining an AlwaysOn Publication Database &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   

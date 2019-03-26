@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.cdcsource.f1"
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # CDC Source
@@ -120,6 +119,6 @@ use <cdc-enabled-database-name>
   
 ## Related Content  
   
--   Blog entry, [Processing Modes for the CDC Source](http://go.microsoft.com/fwlink/?LinkId=242541), on mattmasson.com.  
+-   Blog entry, [Processing Modes for the CDC Source](https://go.microsoft.com/fwlink/?LinkId=242541), on mattmasson.com.  
   
   

@@ -81,7 +81,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   XML schema collection  
   
--   Object – The object class has the following members:  
+-   Object - The object class has the following members:  
   
     -   Aggregate  
   

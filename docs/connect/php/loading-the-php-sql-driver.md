@@ -1,7 +1,7 @@
 ---
 title: "Loading the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "02/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -23,6 +23,8 @@ This page provides instructions for loading the [!INCLUDE[ssDriverPHP](../../inc
 You can download the prebuilt drivers for your platform from the [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github project page. Each installation package contains SQLSRV and PDO_SQLSRV driver files in threaded and non-threaded variants. On Windows, they are also available in 32-bit and 64-bit variants. See [System Requirements for the Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) for a list of the driver files that are contained in each package. The driver file must match the PHP version, architecture, and threadedness of your PHP environment.
 
 On Linux and macOS, the drivers can alternatively be installed using PECL, as found in the [installation tutorial](../../connect/php/installation-tutorial-linux-mac.md).
+
+You can also build the drivers from source either when building PHP or by using `phpize`. If you choose to build the drivers from source, you have the option of building them statically into PHP instead of building them as shared extensions by adding `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (on Linux and macOS) or `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (on Windows) to the `./configure` command when building PHP. For more information on the PHP build system and `phpize`, see the [PHP documentation](http://php.net/manual/install.php).
   
 ## Moving the Driver File into Your Extension Directory  
 The driver file must be located in a directory where the PHP runtime can find it. It is easiest to put the driver file in your default PHP extension directory - to find the default directory, run `php -i | sls extension_dir` on Windows or `php -i | grep extension_dir` on Linux/macOS. If you are not using the default extension directory, specify a directory in the PHP configuration file (php.ini), using the **extension_dir** option. For example, on Windows, if you have put the driver file in your `c:\php\ext` directory, add the following line to php.ini:
@@ -72,9 +74,9 @@ To load the SQLSRV driver when PHP is started, first move a driver file into you
 3.  Restart the Web server.  
   
 > [!NOTE]  
-> To determine whether the driver has been successfully loaded, run a script that calls [phpinfo()](http://php.net/manual/en/function.phpinfo.php).  
+> To determine whether the driver has been successfully loaded, run a script that calls [phpinfo()](https://php.net/manual/en/function.phpinfo.php).  
   
-For more information about **php.ini** directives, see [Description of core php.ini directives](http://php.net/manual/en/ini.core.php).  
+For more information about **php.ini** directives, see [Description of core php.ini directives](https://php.net/manual/en/ini.core.php).  
   
 ## See Also  
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

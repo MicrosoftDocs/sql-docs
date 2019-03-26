@@ -47,7 +47,7 @@ DROP SCHEMA schema_name
   
 ## Arguments  
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the schema only if it already exists.  
   
@@ -71,7 +71,7 @@ DROP SCHEMA schema_name
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
     CREATE TABLE NineProngs (source int, cost int, partnumber int)  
     GRANT SELECT TO Anibal   
-    DENY SELECT TO Hung-Fu;  
+    DENY SELECT TO [Hung-Fu];  
 GO  
 ```  
   

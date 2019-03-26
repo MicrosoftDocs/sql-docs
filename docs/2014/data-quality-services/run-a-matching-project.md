@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.matchingproject.matching.f1"
   - "sql12.dqs.matchingproject.export.f1"
   - "sql12.dqs.matchingproject.map.f1"
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Run a Matching Project
@@ -57,7 +56,7 @@ manager: craigg
     > [!NOTE]  
     >  You can map your source data to a DQS domain only if the source data type is supported in DQS, and matches with the DQS domain data type. For information about supported data types in DQS, see [Supported SQL Server and SSIS Data Types for DQS Domains](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Click the **plus (+)** control to add a row to the Mappings table or the **minus (–)** control to remove a row.  
+4.  Click the **plus (+)** control to add a row to the Mappings table or the **minus (-)** control to remove a row.  
   
 5.  Click **Preview data source** to see the data in the SQL Server table or view that you selected, or the Excel worksheet that you selected.  
   
@@ -116,9 +115,9 @@ manager: craigg
   
      The following will be exported for matching results:  
   
-    -   A list of clusters and the matched records in each cluster, including the rule name and the score. The pivot record will be marked as “Pivot”. The clusters will appear first in the export list.  
+    -   A list of clusters and the matched records in each cluster, including the rule name and the score. The pivot record will be marked as "Pivot". The clusters will appear first in the export list.  
   
-    -   A list of the unmatched records, with “NULL” in the Score and Rule Name columns. These records will be appended to the export list after the clusters.  
+    -   A list of the unmatched records, with "NULL" in the Score and Rule Name columns. These records will be appended to the export list after the clusters.  
   
      The following will be exported for survivorship results:  
   

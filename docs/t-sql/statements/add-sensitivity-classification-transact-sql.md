@@ -1,7 +1,8 @@
 ---
 title: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ""
+ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
 ms.custom: ""
@@ -26,7 +27,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.  
 
@@ -82,13 +83,13 @@ Is an identifier associated with the information type. This is often used by cen
 ## Remarks  
 
 - Only one classification can be added to a single object. Adding a classification to an object that is already classified will overwrite the existing classification.
-- Multiple objects can be classified using a single `ADD SENSITIVITY CLASSIFICTION` statement.
+- Multiple objects can be classified using a single `ADD SENSITIVITY CLASSIFICATION` statement.
 - The system view [sys.sensitivity_classifications](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md) can be used to retrieve the sensitivity classification information for a database.
 
 
 ## Permissions
 
-Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFACTION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
+Requires ALTER ANY SENSITIVITY CLASSIFICATION permission. The ALTER ANY SENSITIVITY CLASSIFICATION is implied by the database permission ALTER, or by the server permission CONTROL SERVER.
 
 
 ## Examples  
@@ -114,10 +115,10 @@ ADD SENSITIVITY CLASSIFICATION TO
 
 ## See Also  
 
-[DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
+[DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
 [sys.sensitivity_classifications (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md)
 
 [Permissions (Database Engine)](https://docs.microsoft.com/sql/relational-databases/security/permissions-database-engine)
 
-[Getting started with SQL Information Protection](http://aka.ms/sqlip)
+[Getting started with SQL Information Protection](https://aka.ms/sqlip)

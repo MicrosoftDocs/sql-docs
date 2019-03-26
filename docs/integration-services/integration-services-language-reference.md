@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Language Reference
@@ -30,7 +30,7 @@ manager: craigg
  [Stored Procedures &#40;Integration Services Catalog&#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
  Call the stored procedures to add, remove, or modify [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] objects and settings.  
   
- [Functions &#40;Integration Services Catalog&#41;](http://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f)  
+ [Functions &#40;Integration Services Catalog&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f)  
  Call the functions to administer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects.  
   
   

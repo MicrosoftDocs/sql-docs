@@ -35,7 +35,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
  The policy state is healthy when the cluster state is in the normal quorum.  
   
 > [!NOTE]  
->  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [WSFC cluster service is offline](http://go.microsoft.com/fwlink/p/?LinkId=220849) on the TechNet Wiki.  
+>  For this release of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], information about possible causes and solutions is located at [WSFC cluster service is offline](https://go.microsoft.com/fwlink/p/?LinkId=220849) on the TechNet Wiki.  
   
 ## Possible Causes  
  This issue can be caused by a cluster service issue or by the loss of the quorum in the cluster.  

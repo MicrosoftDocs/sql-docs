@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "queries [Integration Services], about queries in packages"
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Queries
@@ -52,13 +52,13 @@ You can provide the SQL statement in the following ways:
   
  You can also provide direct input by typing the query in the task or data flow component dialog box or the Properties window.  
   
- For more information, see [Query Builder](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
+ For more information, see [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5).  
   
 ## SQL in Files  
  The SQL statement for the Execute SQL task can also reside in a separate file. For example, you can write queries using tools such as the Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], save the query to a file, and then read the query from the file when running a package. The file can contain only the SQL statements to run and comments. To use a SQL statement stored in a file, you must provide a file connection that specifies the file name and location. For more information, see [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md).  
   
 ## SQL in Variables  
- If the source of the SQL statement in the Execute SQL task is a variable, you provide the name of the variable that contains the query. The Value property of the variable contains the query text. You set the ValueType property of the variable to a string data type and then type or copy the SQL statement into the Value property. For more information, see [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ If the source of the SQL statement in the Execute SQL task is a variable, you provide the name of the variable that contains the query. The Value property of the variable contains the query text. You set the ValueType property of the variable to a string data type and then type or copy the SQL statement into the Value property. For more information, see [Integration Services &#40;SSIS&#41; Variables](../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
 
 ## Query Builder dialog box
 Use the **Query Builder** dialog box to create a query for use in the Execute SQL task, the OLE DB source and the OLE DB destination, and the Lookup transformation.  
@@ -77,7 +77,7 @@ Use the **Query Builder** dialog box to create a query for use in the Execute SQ
   
  To learn more about the Transact-SQL language and its syntax, see [Transact-SQL Reference &#40;Database Engine&#41;](../t-sql/transact-sql-reference-database-engine.md).  
   
- You can also use variables in a query to provide values to an input parameter, to capture values of output parameters, and to store return codes. To learn more about using variables in the queries that packages use, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md), [OLE DB Source](../integration-services/data-flow/ole-db-source.md), and [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). To learn more about using variables in the Execute SQL Task, see [Parameters and Return Codes in the Execute SQL Task](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) and [Result Sets in the Execute SQL Task](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
+ You can also use variables in a query to provide values to an input parameter, to capture values of output parameters, and to store return codes. To learn more about using variables in the queries that packages use, see [Execute SQL Task](../integration-services/control-flow/execute-sql-task.md), [OLE DB Source](../integration-services/data-flow/ole-db-source.md), and [Integration Services &#40;SSIS&#41; Queries](../integration-services/integration-services-ssis-queries.md). To learn more about using variables in the Execute SQL Task, see [Parameters and Return Codes in the Execute SQL Task](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) and [Result Sets in the Execute SQL Task](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109).  
   
  The Lookup and Fuzzy lookup transformations can also use variables with parameters and return codes. The information about the OLE DB source applies to these two transformations also.  
   

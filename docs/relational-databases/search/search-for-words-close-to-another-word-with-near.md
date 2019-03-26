@@ -1,10 +1,8 @@
 ---
 title: "Search for Words Close to Another Word with NEAR | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 dev_langs: 
@@ -18,8 +16,9 @@ helpviewer_keywords:
   - "full-text queries [SQL Server], proximity"
   - "queries [full-text search], proximity"
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -54,11 +53,11 @@ The basic syntax of **NEAR** is:
   
  {  
   
- *search_term* [ ,…*n* ]  
+ *search_term* [ ,...*n* ]  
   
  |  
   
- (*search_term* [ ,…*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -123,7 +122,7 @@ GO
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- You can't combine NEAR with a generation term (ISABOUT …) or a weighted term (FORMSOF …).  
+ You can't combine NEAR with a generation term (ISABOUT ...) or a weighted term (FORMSOF ...).  
   
 ##  <a name="Additional_Considerations"></a> More info about proximity searches  
    

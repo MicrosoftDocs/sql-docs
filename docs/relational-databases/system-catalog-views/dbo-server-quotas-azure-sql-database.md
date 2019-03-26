@@ -2,10 +2,8 @@
 title: "dbo.server_quotas (Azure SQL Database) | Microsoft Docs"
 ms.custom: 
 ms.date: "08/02/2016"
-ms.prod: 
+ms.service: sql-database 
 ms.reviewer: ""
-ms.prod_service: sql-database
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.server_quotas"
@@ -41,6 +39,6 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
  This view is available to all user roles with permissions to connect to the virtual **master** database.  
   
 ## See Also  
- [Managing Premium Databases](http://go.microsoft.com/fwlink/?LinkID=311927)  
+ [Managing Premium Databases](https://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

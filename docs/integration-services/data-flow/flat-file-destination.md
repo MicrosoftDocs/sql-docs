@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "text file writing [Integration Services]"
   - "destinations [Integration Services], Flat File"
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Flat File Destination
@@ -41,7 +41,7 @@ manager: craigg
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)  
   

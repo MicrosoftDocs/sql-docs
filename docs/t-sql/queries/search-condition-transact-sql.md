@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "logical operators [SQL Server], precedence"
   - "LIKE comparisons"
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -128,7 +128,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Is a column name, a constant, a function, a variable, a scalar subquery, or any combination of column names, constants, and functions connected by an operator or operators, or a subquery. The expression can also contain the CASE expression.  
   
 > [!NOTE]  
->  Non-Unicode string constants and variables use the code page that corresponds to the default collation of the database. Code page conversions can occurr when working with only non-Unicode character data and referencing the non-Unicode character data types **char**, **varchar**, and **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts non-Unicode string constants and variables to the code page that corresponds to the collation of the referenced column or specified using COLLATE, if that code page is different than the code page that corresponds to the default collation of the database. Any characters not found in the new code page will be translated to a similar character, if a [best-fit mapping](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) can be found, or else will be converted to the default replacement character of "?".  
+>  Non-Unicode string constants and variables use the code page that corresponds to the default collation of the database. Code page conversions can occur when working with only non-Unicode character data and referencing the non-Unicode character data types **char**, **varchar**, and **text**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converts non-Unicode string constants and variables to the code page that corresponds to the collation of the referenced column or specified using COLLATE, if that code page is different than the code page that corresponds to the default collation of the database. Any characters not found in the new code page will be translated to a similar character, if a [best-fit mapping](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) can be found, or else will be converted to the default replacement character of "?".  
 >  
 > When working with multiple code pages, character constants can be prefixed with the uppercase letter 'N', and Unicode variables can be used, to avoid code page conversions.  
   
@@ -184,7 +184,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  Specifies the search for an expression, based on whether the expression is included in or excluded from a list. The search expression can be a constant or a column name, and the list can be a set of constants or, more typically, a subquery. Enclose the list of values in parentheses. For more information, see [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Can be considered a restricted SELECT statement and is similar to \<query_expresssion> in the SELECT statement. The ORDER BY clause and the INTO keyword are not allowed. For more information, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Can be considered a restricted SELECT statement and is similar to \<query_expression> in the SELECT statement. The ORDER BY clause and the INTO keyword are not allowed. For more information, see [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
  Used with a comparison operator and a subquery. Returns TRUE for \<predicate> when all values retrieved for the subquery satisfy the comparison operation, or FALSE when not all values satisfy the comparison or when the subquery returns no rows to the outer statement. For more information, see [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  

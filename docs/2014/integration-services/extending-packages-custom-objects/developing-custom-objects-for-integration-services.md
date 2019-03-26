@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "custom user interface [Integration Services]"
   - "custom objects [Integration Services]"
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing Custom Objects for Integration Services
@@ -87,7 +85,7 @@ manager: craigg
 ## Providing a Custom User Interface  
  To allow users of your custom object to configure its properties, you may have to develop a custom user interface also. In those cases where a custom user interface is not strictly required, you may choose to create one to provide a more user-friendly interface than the default editor.  
   
- In a custom user interface project or assembly, you generally have two classes —a class that implements an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] interface for user interfaces for the specific type of custom object, and the Windows form that it displays to gather information from the user. The interfaces that you implement have only a few methods, and a custom user interface is not difficult to develop.  
+ In a custom user interface project or assembly, you generally have two classes -a class that implements an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] interface for user interfaces for the specific type of custom object, and the Windows form that it displays to gather information from the user. The interfaces that you implement have only a few methods, and a custom user interface is not difficult to develop.  
   
 > [!NOTE]  
 >  Many [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] log providers have a custom user interface that implements <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> and replaces the **Configuration** text box with a filtered drop-down list of available connection managers. However custom user interfaces for custom log providers are not implemented in this release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Specifying a value for the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> property of the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> has no effect.  
@@ -104,9 +102,9 @@ manager: craigg
   
 ## External Resources  
   
--   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](http://go.microsoft.com/fwlink/?LinkId=215662), on blogs.msdn.com.  
+-   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://go.microsoft.com/fwlink/?LinkId=215662), on blogs.msdn.com.  
   
-![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
+![Integration Services icon (small)](../media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
   
 ## See Also  
  [Persisting Custom Objects](persisting-custom-objects.md)   

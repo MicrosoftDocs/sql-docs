@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Managing Report Parts
   Beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], report parts can be published to report servers and re-used in other reports and by other users if they have the appropriate permissions.  
@@ -83,7 +83,7 @@ manager: craigg
     > [!IMPORTANT]  
     >  In each of these steps, ensure that the report parts are being reused in reports from trusted locations and users.  
   
--   Report parts use the same permission policies as the existing “Resource” item type. Within a folder, there is no differentiation between traditional resource items and report parts from a security inheritance perspective. The report part will inherit the same permission policy as the images in the same folder. When this distinction is needed, item level security can be configured for the desired report parts. Or, you can put report parts should be in separate folders that have the correct permissions configured.  
+-   Report parts use the same permission policies as the existing "Resource" item type. Within a folder, there is no differentiation between traditional resource items and report parts from a security inheritance perspective. The report part will inherit the same permission policy as the images in the same folder. When this distinction is needed, item level security can be configured for the desired report parts. Or, you can put report parts should be in separate folders that have the correct permissions configured.  
   
 ## See Also  
  [Report Parts and Datasets in Report Builder](../report-data/report-parts-and-datasets-in-report-builder.md)   

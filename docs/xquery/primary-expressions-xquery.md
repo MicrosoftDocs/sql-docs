@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -121,7 +120,7 @@ GO
 DECLARE @var XML  
 SET @var = '<root>1</root>'  
 SELECT @var.query('  
-DECLARE namespace x="http://X";  
+DECLARE namespace x="https://X";  
 for $x:i in /root return data($x:i)')  
 GO  
 ```  

@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-author: maggiesMSFT
-ms.author: maggies
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)
   You can control whether to repeat row and column headers on every page for a tablix data region that spans multiple pages. A tablix data region can be a table, matrix, or list.  
@@ -50,7 +50,7 @@ manager: craigg
   
 3.  Click the static member that corresponds to the static member (row or column) that you want to remain visible while scrolling. The Properties pane displays the **Tablix Member** properties.  
   
-     If you don’t see the Properties pane, click the **View** tab at the top of the Report Builder window and then click **Properties**.  
+     If you don't see the Properties pane, click the **View** tab at the top of the Report Builder window and then click **Properties**.  
   
 4.  In the Properties pane, set **RepeatOnNewPage** to True.  
   

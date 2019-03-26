@@ -24,7 +24,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -244,12 +244,12 @@ Run the package on your computer Integration Services.
 ## See Also  
 [Create a script task that uses the SSIS PDW destination adapter](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
-[Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Tutorial: Creating a Basic Package Using a Wizard](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
-[Getting Started (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[Dynamic Package Generation Sample](http://go.microsoft.com/fwlink/?LinkId=202413)  
-[Designing Your SSIS Packages for Parallelism (SQL Server Video)](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Microsoft SQL Server Community Examples: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
+[Designing and Implementing Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[Tutorial: Creating a Basic Package Using a Wizard](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Getting Started (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
+[Dynamic Package Generation Sample](https://go.microsoft.com/fwlink/?LinkId=202413)  
+[Designing Your SSIS Packages for Parallelism (SQL Server Video)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Microsoft SQL Server Community Examples: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Improving Incremental Loads with Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Slowly Changing Dimension Transformation](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
 [Bulk Insert Task](../integration-services/control-flow/bulk-insert-task.md)  

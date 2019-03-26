@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -47,7 +46,7 @@ expression1 or expression2
   
 ```  
 SELECT CatalogDescription.query('  
-     declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      for $F in /PD:ProductDescription/PD:Picture[PD:Size="small"   
                                                  and PD:Angle="front"]  
      return   
@@ -61,7 +60,7 @@ where ProductModelID=19
   
 ```  
 <PD:Picture   
-  xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
   <PD:Angle>front</PD:Angle>  
   <PD:Size>small</PD:Size>  
   <PD:ProductPhotoID>31</PD:ProductPhotoID>  

@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server Agent], creating"
@@ -63,7 +63,7 @@ manager: craigg
   
 2.  Click the plus sign to expand **SQL Server Agent**.  
   
-3.  Right-click the **Jobs** folder and select **New Job…**.  
+3.  Right-click the **Jobs** folder and select **New Job...**.  
   
 4.  In the **New Job** dialog box, on the **General** page, modify the general properties of the job. For more information on the available options on this page, see [Job Properties and New Job &#40;General Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

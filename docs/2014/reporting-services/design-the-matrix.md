@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptwizard.designmatrix.f1"
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Design the Matrix
   Use this page of the Report Wizard to select fields for the report.  

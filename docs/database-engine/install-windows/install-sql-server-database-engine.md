@@ -37,7 +37,7 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
 
 -   Full-Text Search - is an optional component  
   
--   Data Quality Services – is an optional component  
+-   Data Quality Services - is an optional component  
   
     > [!NOTE]  
     >  In this release, selecting the **Data Quality Services** check box in setup does not install the Data Quality Services (DQS) server. You will have to perform additional steps post installation to install DQS server. For more information, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
@@ -59,7 +59,7 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
 -   Documentation components  
   
 > [!NOTE]  
->  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md). See older samples on [CodePlex](http://go.microsoft.com/fwlink/?LinkId=87843).  
+>  By default, sample databases and sample code are not installed as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. To install sample databases and sample code, see [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md). See older samples on [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## See also  
  [Editions and supported features of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "removing packages"
   - "relocating packages"
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # dtutil Utility
@@ -258,7 +258,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 > [!NOTE]  
 >  The hash used in this example is not a real hash.  
   
- For more information, see the CertMgr section in [Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100).  
+ For more information, see the CertMgr section in [Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100).  
   
 ### Encrypt Examples  
  The following sample encrypts the file-based PackageToEncrypt.dtsx to the file-based EncryptedPackage.dts using full package encryption, with a password. The password that is used for the encryption is *EncPswd*.  

@@ -33,7 +33,7 @@ manager: craigg
 ```  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## Arguments  

@@ -73,7 +73,7 @@ manager: craigg
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  
 AS  
 BEGIN  
-  -- number of retries – tune based on the workload  
+  -- number of retries - tune based on the workload  
   DECLARE @retry INT = 10  
   
   WHILE (@retry > 0)  
@@ -85,7 +85,7 @@ BEGIN
       --       or  
   
       -- BEGIN TRANSACTION  
-      --   …  
+      --   ...  
       -- COMMIT TRANSACTION  
   
       SET @retry = 0  

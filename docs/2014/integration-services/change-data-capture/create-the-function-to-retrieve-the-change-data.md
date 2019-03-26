@@ -4,14 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],creating function"
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create the Function to Retrieve the Change Data
@@ -127,9 +126,9 @@ deallocate #hfunctions
   
 -   All of the requested columns of change data.  
   
--   A column named __CDC_OPERATION that uses a one- or two-character field to identify the operation that is associated with the row. The valid values for this field are as follows: ‘I’ for insert, ‘D’ for delete, ‘UO’ for update old values, and ‘UN’ for update new values.  
+-   A column named __CDC_OPERATION that uses a one- or two-character field to identify the operation that is associated with the row. The valid values for this field are as follows: 'I' for insert, 'D' for delete, 'UO' for update old values, and 'UN' for update new values.  
   
--   Update flags, when you request them, that appear as bit columns after the operation code and in the order that is specified in the *@update_flag_list* parameter. These columns are named by appending ‘_uflag’ to the associated column name.  
+-   Update flags, when you request them, that appear as bit columns after the operation code and in the order that is specified in the *@update_flag_list* parameter. These columns are named by appending '_uflag' to the associated column name.  
   
  If your package calls a wrapper function that queries for all changes, the wrapper function also returns the columns, __CDC_STARTLSN and \__CDC_SEQVAL. These two columns become the first and second columns, respectively, of the result set. The wrapper function also sorts the result set based on these two columns.  
   

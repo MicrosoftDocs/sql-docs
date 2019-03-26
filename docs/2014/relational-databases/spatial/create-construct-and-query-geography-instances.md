@@ -5,7 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "dbe-spatial"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geography data type [SQL Server]"
@@ -100,7 +99,7 @@ manager: craigg
 ###  <a name="gml"></a> Constructing a geography Instance from GML Text Input  
  The `geography` data type provides a method that generates a `geography` instance from GML, an XML representation of a `geography` instance. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports a subset of GML.  
   
- For more information on Geography Markup Language, see the OGC Specification: [OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ For more information on Geography Markup Language, see the OGC Specification: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **To construct any type of geography instance from GML input**  
  [GeomFromGML &#40;geography Data Type&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

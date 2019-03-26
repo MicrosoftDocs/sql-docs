@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Data Alert Designer
   You create and edit data alert definitions in Data Alert Designer. An alert definition is a collection of metadata, including the report data that you are interested in, the rules that report data must satisfy to create data alert instances and send data alert messages, the recipients of the alert message, and so forth.  
@@ -70,9 +70,9 @@ manager: craigg
 ### Rules and Clauses  
  The scope of data changes and the in the alert rules define the data changes that trigger the alert. The scope of the data changes are as follow:  
   
--   **Any data has**—at least one value in the data satisfies the rules that the condition specifies.  
+-   **Any data has**-at least one value in the data satisfies the rules that the condition specifies.  
   
--   **No data has**—no value in the data satisfied the rules that the condition specifies.  
+-   **No data has**-no value in the data satisfied the rules that the condition specifies.  
   
  A rule contains zero, one, or many clauses. Multiple rules are combined by the AND logical operator. A rule can include multiple clause combined by the OR operator if the column has the string data type. The following shows basic rules that use only one clause, multiple rules combined by using the AND operator, multiple rules that with one or more OR clauses.  
   
@@ -141,13 +141,13 @@ manager: craigg
 ### Schedule Settings  
  The schedule that you define for the data alert defines the recurrence pattern for sending the data alert message and when to start and stop sending the alert messages. The patterns are: once, minute, daily, and weekly. Although an alert has only one schedule you can create complex recurrence patterns that meet most business needs by using these intervals. The following are examples of common recurrence patterns to use in schedules:  
   
--   **Daily every 10 day(s)** — sends alerts once a day, every 10 days.  
+-   **Daily every 10 day(s)** - sends alerts once a day, every 10 days.  
   
--   **Weekly every 2 week(s) on Monday** — sends alerts every two weeks on Mondays only.  
+-   **Weekly every 2 week(s) on Monday** - sends alerts every two weeks on Mondays only.  
   
--   **Hourly every 12 hour(s)** — sends alerts every 12 hours.  
+-   **Hourly every 12 hour(s)** - sends alerts every 12 hours.  
   
--   **Minute every 30 minute(s)** — sends alerts every 30 minutes.  
+-   **Minute every 30 minute(s)** - sends alerts every 30 minutes.  
   
  The recurrence pattern specifies when the alert is sent. If the rules are met during the interval that the pattern specifies, the alert is not sent until the end of the interval.  
   

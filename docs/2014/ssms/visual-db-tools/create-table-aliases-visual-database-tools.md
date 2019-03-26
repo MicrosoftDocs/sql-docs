@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology:
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table aliases [SQL Server]"
@@ -19,7 +19,7 @@ manager: craigg
   
 -   You want to make the statement in the [SQL Pane](visual-database-tools.md) shorter and easier to read.  
   
--   You refer to the table name often in your query — such as in qualifying column names — and want to be sure you stay within a specific character-length limit for your query. (Some databases impose a maximum length for queries.)  
+-   You refer to the table name often in your query - such as in qualifying column names - and want to be sure you stay within a specific character-length limit for your query. (Some databases impose a maximum length for queries.)  
   
 -   You are working with multiple instances of the same table (such as in a self-join) and need a way to refer to one instance or the other.  
   

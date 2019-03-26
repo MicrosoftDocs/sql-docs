@@ -47,9 +47,9 @@ manager: craigg
   
  <sup>1</sup> You can also use the OLE DB Provider for ODBC.  
   
- <sup>2</sup> For more information about SQL Azure, see the web site [SQL Azure](http://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> For more information about SQL Azure, see the web site [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> For more information about SQL Server PDW, see the web site [SQL Server 2008 R2 Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> For more information about SQL Server PDW, see the web site [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
  <sup>4</sup> In some cases, using the MSDAORA OLE DB provider can result in connection errors, particularly with newer versions of Oracle. If you encounter any errors, we recommend that you use one of the other providers listed for Oracle.  
   

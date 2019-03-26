@@ -102,7 +102,7 @@ manager: craigg
 ##  <a name="type"></a> Effect of Column Type on Full-Text Search  
  Another consideration in language choice is related to how the data is represented. For data that is not stored in `varbinary(max)` column, no special filtering is performed. Rather, the text is generally passed through the word breaking component as-is.  
   
- Also, word breakers are designed mainly to process written text. So, if you have any type of markup (such as HTML) on your text, you may not get great linguistic accuracy during indexing and search. In that case, you have two choices—the preferred method is simply to store the text data in `varbinary(max)` column, and to indicate its document type so it may be filtered. If this is not an option, you may consider using the neutral word breaker and, if possible, adding markup data (such as 'br' in HTML) to your noise word lists.  
+ Also, word breakers are designed mainly to process written text. So, if you have any type of markup (such as HTML) on your text, you may not get great linguistic accuracy during indexing and search. In that case, you have two choices-the preferred method is simply to store the text data in `varbinary(max)` column, and to indicate its document type so it may be filtered. If this is not an option, you may consider using the neutral word breaker and, if possible, adding markup data (such as 'br' in HTML) to your noise word lists.  
   
 > [!NOTE]  
 >  Language based stemming does not come into play when you specify the neutral language.  

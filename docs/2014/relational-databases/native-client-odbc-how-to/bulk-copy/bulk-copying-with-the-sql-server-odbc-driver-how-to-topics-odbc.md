@@ -15,7 +15,7 @@ ms.author: genemi
 manager: craigg
 ---
 # Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)
-  When used with Microsoft® SQL Server™ 2005, the SQL Server ODBC driver supports the same bulk copy functions supported by the DB-Library API.  
+  When used with Microsoft?? SQL Server??? 2005, the SQL Server ODBC driver supports the same bulk copy functions supported by the DB-Library API.  
   
  For information about a breaking change in bulk copying beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], see [Performing Bulk Copy Operations &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -17,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services, programming"
   - "packages [Integration Services], programming"
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developer&#39;s Guide (Integration Services)
@@ -78,7 +76,7 @@ manager: craigg
   
 ## External Resources  
   
--   CodePlex samples, [Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
+-   CodePlex samples, [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204), on www.codeplex.com/MSFTISProdSamples  
   
 ## See Also  
  [SQL Server Integration Services](sql-server-integration-services.md)  

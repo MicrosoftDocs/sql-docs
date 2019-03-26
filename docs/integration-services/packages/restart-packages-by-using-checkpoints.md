@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "restarting packages"
   - "starting packages"
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Restart Packages by Using Checkpoints
@@ -37,7 +37,7 @@ manager: craigg
 > [!NOTE]  
 >  Using checkpoints and transactions in the same package could cause unexpected results. For example, when a package fails and restarts from a checkpoint, the package might repeat a transaction that has already been successfully committed.  
   
- Checkpoint data is not saved for For Loop and Foreach Loop containers. When a package is restarted, the For Loop and Foreach Loop containers and the child containers are run again. If a child container in the loop runs successfully, it is not recorded in the checkpoint file, instead it is rerun. For more information and a workaround, see [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](http://go.microsoft.com/fwlink/?LinkId=241633).  
+ Checkpoint data is not saved for For Loop and Foreach Loop containers. When a package is restarted, the For Loop and Foreach Loop containers and the child containers are run again. If a child container in the loop runs successfully, it is not recorded in the checkpoint file, instead it is rerun. For more information and a workaround, see [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](https://go.microsoft.com/fwlink/?LinkId=241633).  
   
  If the package is restarted the package configurations are not reloaded, instead the package uses the configuration information written to the checkpoint file. This ensures that the package uses the same configurations when it is rerun as the time it failed.  
   
@@ -107,6 +107,6 @@ manager: craigg
     
 ## External Resources  
   
--   Technical article, [Automatic Restart of SSIS packages after Failover or Failure](http://go.microsoft.com/fwlink/?LinkId=200407), on social.technet.microsoft.com  
+-   Technical article, [Automatic Restart of SSIS packages after Failover or Failure](https://go.microsoft.com/fwlink/?LinkId=200407), on social.technet.microsoft.com  
   
--   Support article, [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](http://go.microsoft.com/fwlink/?LinkId=241633), on support.microsoft.com.  
+-   Support article, [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](https://go.microsoft.com/fwlink/?LinkId=241633), on support.microsoft.com.  

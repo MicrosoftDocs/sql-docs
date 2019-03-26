@@ -5,14 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server 2016 XTP Databases"
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
-author: "dagiro"
-ms.author: "v-dagir"
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server XTP Databases

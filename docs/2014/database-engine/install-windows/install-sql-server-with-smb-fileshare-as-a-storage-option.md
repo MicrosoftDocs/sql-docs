@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
@@ -27,7 +26,7 @@ manager: craigg
   
 -   \\\ServerName\ShareName  
   
- For more information about Universal Naming Convention, see [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534).  
+ For more information about Universal Naming Convention, see [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534).  
   
  The loopback UNC path (a UNC path whose server name is localhost, 127.0.0.1, or the local machine name) is not supported. As a special case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using File Server Cluster which is hosted on the same node [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running is also not supported. To prevent this situation, it is recommended that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and File Server Cluster to be created on separated Windows Clusters.  
   
@@ -58,9 +57,9 @@ manager: craigg
   
 ### Installation options  
   
--   In setup UI “Database Engine Configuration” page, “Data Directories” tab, set the parameter “Data root directory as “\\\fileserver1\share1\”.  
+-   In setup UI "Database Engine Configuration" page, "Data Directories" tab, set the parameter "Data root directory as "\\\fileserver1\share1\".  
   
--   In command prompt installation, specify the “/INSTALLSQLDATADIR” as “\\\fileserver1\share1\”.  
+-   In command prompt installation, specify the "/INSTALLSQLDATADIR" as "\\\fileserver1\share1\".  
   
      Here is the sample syntax to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Standalone server using SMB file share option:  
   
@@ -82,22 +81,22 @@ manager: craigg
 |Operating System|SMB2 protocol version|Benefits to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Improved performance over previous SMB versions.<br /><br /> Durability, which helps recover from temporary network glitches.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, including Server Core|2.1|Support for large MTU, which benefits large data transfers, such as SQL backup and restore. This capability must be enabled by user. For more details on how to enable this capability, see [What’s New in SMB](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Significant performance improvements, specifically for SQL OLTP style workloads. These performance improvements require applying a hotfix. For more information on the hotfix, see [this](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320).|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], including Server Core|3.0|Support for transparent failover of file shares providing zero downtime with no administrator intervention required for SQL DBA or file server administrator in file server cluster configurations.<br /><br /> Support for IO using multiple network interfaces simultaneously, as well as tolerance to network interface failure.<br /><br /> Support for network interfaces with RDMA capabilities.<br /><br /> For more information on these features and Server Message Block, see [Server Message Block overview](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Support for Scale Out File Server (SoFS) with continuous availability.|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, including Server Core|3.2|Support for transparent failover of file shares providing zero downtime with no administrator intervention required for SQL DBA or file server administrator in file server cluster configurations.<br /><br /> Support for IO using multiple network interfaces simultaneously, as well as tolerance to network interface failure, using SMB Multichannel.<br /><br /> Support for network interfaces with RDMA capabilities using SMB Direct.<br /><br /> For more information on these features and Server Message Block, see [Server Message Block overview](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Support for Scale Out File Server (SoFS) with continuous availability.<br /><br /> Optimized for small random read/write I/O common to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Maximum Transmission Unit (MTU) is turned on by default, which significantly enhances performance in large sequential transfers like [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data warehouse and database backup or restore.|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1, including Server Core|2.1|Support for large MTU, which benefits large data transfers, such as SQL backup and restore. This capability must be enabled by user. For more details on how to enable this capability, see [What's New in SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Significant performance improvements, specifically for SQL OLTP style workloads. These performance improvements require applying a hotfix. For more information on the hotfix, see [this](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320).|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], including Server Core|3.0|Support for transparent failover of file shares providing zero downtime with no administrator intervention required for SQL DBA or file server administrator in file server cluster configurations.<br /><br /> Support for IO using multiple network interfaces simultaneously, as well as tolerance to network interface failure.<br /><br /> Support for network interfaces with RDMA capabilities.<br /><br /> For more information on these features and Server Message Block, see [Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Support for Scale Out File Server (SoFS) with continuous availability.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, including Server Core|3.2|Support for transparent failover of file shares providing zero downtime with no administrator intervention required for SQL DBA or file server administrator in file server cluster configurations.<br /><br /> Support for IO using multiple network interfaces simultaneously, as well as tolerance to network interface failure, using SMB Multichannel.<br /><br /> Support for network interfaces with RDMA capabilities using SMB Direct.<br /><br /> For more information on these features and Server Message Block, see [Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Support for Scale Out File Server (SoFS) with continuous availability.<br /><br /> Optimized for small random read/write I/O common to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Maximum Transmission Unit (MTU) is turned on by default, which significantly enhances performance in large sequential transfers like [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data warehouse and database backup or restore.|  
   
 ## Security Considerations  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent service account should have FULL CONTROL share permissions and NTFS permissions on the SMB share folders. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account can be a domain account or a system account if an SMB file server is used. For more information about share and NTFS permissions, see [Share and NTFS Permissions on a File Server](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535).  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent service account should have FULL CONTROL share permissions and NTFS permissions on the SMB share folders. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account can be a domain account or a system account if an SMB file server is used. For more information about share and NTFS permissions, see [Share and NTFS Permissions on a File Server](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
     >  The FULL CONTROL share permissions and NTFS permissions on the SMB share folders should be restricted to: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account and windows users with admin server roles.  
   
-     It is recommended to use domain account as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. If system account is used as a service account, grant the permissions for the machine account in the format: *<domain_name>***\\***<computer_name>***$**.  
+     It is recommended to use domain account as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. If system account is used as a service account, grant the permissions for the machine account in the format: _<domain_name>_**\\**_<computer_name>_**$**.  
   
     > [!NOTE]  
     >  -   During [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, it is required to specify domain account as a service account if SMB file share is specified as a storage option. With SMB file share, System account can only be specified as a service account post [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
-    > -   Virtual accounts cannot be authenticated to a remote location. All virtual accounts use the permission of machine account. Provision the machine account in the format *<domain_name>***\\***<computer_name>***$**.  
+    > -   Virtual accounts cannot be authenticated to a remote location. All virtual accounts use the permission of machine account. Provision the machine account in the format _<domain_name>_**\\**_<computer_name>_**$**.  
   
 -   The account used to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should have FULL CONTROL permissions on the SMB file share folder used as the data directory, or any other data folders (User database directory, user database log directory, TempDB directory, TempDB log directory, backup directory) during Cluster Setup.  
   
@@ -105,7 +104,7 @@ manager: craigg
   
 ## Known Issues  
   
--   After you detach a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. The issue is defined in [this KB article](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321). To work around this issue, see the **More Information** section in the KB article.  
+-   After you detach a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. The issue is defined in [this KB article](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). To work around this issue, see the **More Information** section in the KB article.  
   
 -   Some third parties, like NetApp device do not support all SQL Server API calls. With these you might get:   
     2015-06-04 13:14:19.97 spid9s      Error: 17053, Severity: 16, State: 1.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "configmgr-client"
+ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
@@ -29,7 +28,7 @@ manager: craigg
   
 -   Leading and trailing spaces are trimmed from any startup parameter.  
   
--   All startup parameters start with a – (dash) and the second value is a letter.  
+-   All startup parameters start with a - (dash) and the second value is a letter.  
   
 ## Required Parameters  
  The following parameters are required. They can be changed but not removed.  

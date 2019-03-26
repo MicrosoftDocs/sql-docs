@@ -8,21 +8,21 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Provide an OData Source Query at Runtime
  You can modify the OData Source query at runtime by adding an *expression* to the **[OData Source].[Query]** property of the Data Flow task.  
   
- The columns returned have to be the same columns that were returned at design time; otherwise, you get an error when the package is executed. Be sure to specify the same columns (in the same order) when using the $select query option. A safer alternative to using the $select option is to deselect the columns you don’t want directly from the Source Component UI.  
+ The columns returned have to be the same columns that were returned at design time; otherwise, you get an error when the package is executed. Be sure to specify the same columns (in the same order) when using the $select query option. A safer alternative to using the $select option is to deselect the columns you don't want directly from the Source Component UI.  
   
  There are a few different ways of dynamically setting the query value at runtime. Here are some of the more common methods.  
   
 ## Provide the query as a parameter  
  The following procedure shows how to expose the query used by an OData Source component as a parameter of the package.  
   
-1.  Right click on the **Data Flow task** and select the **Parameterize…** option.  
+1.  Right click on the **Data Flow task** and select the **Parameterize...** option.  
   
 2.  In the **Parameterize** dialog, select **[\<Name of the OData Source Component>].[Query]** for **Property**.  
   
@@ -47,11 +47,11 @@ manager: craigg
   
 2.  In the **Properties** window, highlight the **Expressions** property.  
   
-3.  Click the … (ellipsis) button to bring up the **Property Expressions Editor**.  
+3.  Click the ... (ellipsis) button to bring up the **Property Expressions Editor**.  
   
 4.  Select the **[OData Source].[Query]** property.  
   
-5.  Click the … (ellipsis) button for **Expression**.  
+5.  Click the ... (ellipsis) button for **Expression**.  
   
 6.  Enter the **expression**.  
   

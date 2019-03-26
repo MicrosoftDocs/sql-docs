@@ -17,7 +17,7 @@ manager: craigg
 ## Overview  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] has built in checks and troubleshooting, so in many cases internal failures are taken care of by [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] process itself.  
   
- Example of one such case is a deletion of a backup file resulting in a break of the log chain affecting recoverability – [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will identify the break in log chain and schedule a backup to be taken immediately. However we recommend that you monitor the status and address any errors that require manual intervention.  
+ Example of one such case is a deletion of a backup file resulting in a break of the log chain affecting recoverability - [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] will identify the break in log chain and schedule a backup to be taken immediately. However we recommend that you monitor the status and address any errors that require manual intervention.  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] logs events and errors using system stored procedures, system views and extended events. System views and stored procedures provide [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] configuration information, status of backup scheduled backups, and also the errors captured by Extended Events. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] uses Extended Events to capture the errors to use for troubleshooting. In addition to logging events, SQL Server Smart Admin Policies provide a health status which is used by an email notification job to provide notification or errors and issues. For more information see [Monitor SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
@@ -50,15 +50,15 @@ manager: craigg
   
 1.  **Errors when enabling or configuring [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Error: “ Failed to access the storage URL…. Provide a valid SQL Credential…” : You may see this and other similar errors referring to SQL Credentials.  In such cases, review the name of the SQL Credential you provided, and also the information stored in the SQL Credential – the storage account name, and the storage access key and make sure that they are current and valid.  
+     Error: " Failed to access the storage URL.... Provide a valid SQL Credential..." : You may see this and other similar errors referring to SQL Credentials.  In such cases, review the name of the SQL Credential you provided, and also the information stored in the SQL Credential - the storage account name, and the storage access key and make sure that they are current and valid.  
   
-     Error: “… cannot configure the database….because it is a system database”: You will see this error if you try to enable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a system database.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] does not support backups for system databases.  To configure backup for a system database use other SQL Server Backup technologies such as maintenance plans.  
+     Error: "... cannot configure the database....because it is a system database": You will see this error if you try to enable [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] for a system database.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] does not support backups for system databases.  To configure backup for a system database use other SQL Server Backup technologies such as maintenance plans.  
   
-     Error:” … Provide a retention period….” : You may see errors regarding the retention period if you either have not specified a retention period for the database or instance when you are configuring these values for the first time. You may also see an error if you provide a value other than a number between 1 and 30. The allowed value for the retention period is a number between 1 and 30.  
+     Error:" ... Provide a retention period...." : You may see errors regarding the retention period if you either have not specified a retention period for the database or instance when you are configuring these values for the first time. You may also see an error if you provide a value other than a number between 1 and 30. The allowed value for the retention period is a number between 1 and 30.  
   
 2.  **Email Notification Errors:**  
   
-     Error: “Database Mail is not enabled…” – You will see this error if you enable e-mail notifications, but Database Mail is not configured on the instance. You must configure Database Mail on the instance to be able to receive notification of the health status of [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For information about how to enable database mail, see [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md). You must also enable SQL Server Agent to use Database Mail for notifications. For more information, see [Before You Begin](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
+     Error: "Database Mail is not enabled..." - You will see this error if you enable e-mail notifications, but Database Mail is not configured on the instance. You must configure Database Mail on the instance to be able to receive notification of the health status of [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. For information about how to enable database mail, see [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md). You must also enable SQL Server Agent to use Database Mail for notifications. For more information, see [Before You Begin](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md#BeforeYouBegin).  
   
      Following is a list of error numbers you might see that are associated with email notifications:  
   
@@ -72,7 +72,7 @@ manager: craigg
   
     -   **Errors Related to SQL Connectivity:** These errors happen when there are issues connecting to SQL Server instance. The extended events expose these type of errors through the admin channel. Following are the two extended events that you might see for errors related to this type of connectivity issues:  
   
-         FileRetentionAdminXEvent with event_type = SqlError. For details of this error, look at the error_code, error_message and stack_trace of that event. The error_code is the SqlException’s error number.  
+         FileRetentionAdminXEvent with event_type = SqlError. For details of this error, look at the error_code, error_message and stack_trace of that event. The error_code is the SqlException's error number.  
   
          SmartBackupAdminXevent with the following messages/message prefixes:  
   

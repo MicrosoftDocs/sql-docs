@@ -26,7 +26,7 @@ You can create relationships between columns in different tables in the Diagram 
   
 3.  Two dialog boxes appear: **Foreign Key Relationship** and **Tables and Columns**, with the latter appearing in the foreground.  
   
-4.  **Relationship name** has a system-provided name in the format FK_*localtable*_*foreigntable*. You may change this value.  
+4.  **Relationship name** has a system-provided name in the format FK_*localtable*\_*foreigntable*. You may change this value.  
   
 5.  Verify that **Primary key table** specifies the correct table.  
   
@@ -44,6 +44,6 @@ You can create relationships between columns in different tables in the Diagram 
   
 ## See Also  
 [Tables and Columns Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
-[Working with Constraints (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
+[Working with Constraints (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Work with Tables in Database Diagram &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

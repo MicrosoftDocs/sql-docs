@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Web Service Task Editor"
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Web Service Task Editor (General Page)
@@ -23,7 +23,7 @@ manager: craigg
   
 ## Options  
  **HTTPConnection**  
- Select a connection manager in the list, or click \<**New connection…**> to create a new connection manager.  
+ Select a connection manager in the list, or click \<**New connection...**> to create a new connection manager.  
   
 > [!IMPORTANT]  
 >  The HTTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
@@ -31,7 +31,7 @@ manager: craigg
  **Related Topics:**  [HTTP Connection Manager](connection-manager/http-connection-manager.md), [HTTP Connection Manager Editor &#40;Server Page&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Type the fully qualified path of a WSDL file that is local to the computer, or click the browse button **(…)** and locate this file.  
+ Type the fully qualified path of a WSDL file that is local to the computer, or click the browse button **(...)** and locate this file.  
   
  If you have already manually downloaded the WSDL file to the computer, select this file. However, if the WSDL file has not yet been downloaded, follow these steps:  
   

@@ -5,8 +5,7 @@ ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -61,7 +60,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
 ```  
 SELECT Instructions.query('  
-declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
+declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" ;  
      namespace-uri(/AWMI:root[1]/AWMI:Location[1])') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
@@ -70,16 +69,16 @@ WHERE ProductModelID=7
  This is the result:  
   
 ```  
-http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
+https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
 ### B. Using namespace-uri() without argument in a predicate  
- The following query is specified against the CatalogDescription typed xml column. The expression returns all the element nodes whose namespace URI is `http://www.adventure-works.com/schemas/OtherFeatures`. The namespace-**uri()** function is specified without an argument and uses the context node.  
+ The following query is specified against the CatalogDescription typed xml column. The expression returns all the element nodes whose namespace URI is `https://www.adventure-works.com/schemas/OtherFeatures`. The namespace-**uri()** function is specified without an argument and uses the context node.  
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
-   /p1:ProductDescription//*[namespace-uri() = "http://www.adventure-works.com/schemas/OtherFeatures"]  
+declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+   /p1:ProductDescription//*[namespace-uri() = "https://www.adventure-works.com/schemas/OtherFeatures"]  
 ') as Result  
 FROM Production.ProductModel  
 WHERE ProductModelID=19  
@@ -88,13 +87,13 @@ WHERE ProductModelID=19
  This is partial result:  
   
 ```  
-<p1:wheel xmlns:p1="http://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
-<p2:saddle xmlns:p2="http://www.adventure-works.com/schemas/OtherFeatures">  
+<p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
+<p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
   <p3:i xmlns:p3="http://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
-…  
+...  
 ```  
   
- You can change the namespace URI in the previous query to `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. You will then receive all the element node children of the <`ProductDescription`> element whose namespace URI part of the expanded QName is `http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ You can change the namespace URI in the previous query to `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. You will then receive all the element node children of the <`ProductDescription`> element whose namespace URI part of the expanded QName is `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
   
 ### Implementation Limitations  
  These are the limitations:  
@@ -102,7 +101,7 @@ WHERE ProductModelID=19
 -   The **namespace-uri()** function returns instances of type xs:string instead of xs:anyURI.  
   
 ## See Also  
- [Functions on Nodes](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Functions on Nodes](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [local-name Function &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

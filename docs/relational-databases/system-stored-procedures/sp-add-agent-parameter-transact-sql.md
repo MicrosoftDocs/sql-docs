@@ -5,8 +5,7 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_agent_parameter_TSQL"
@@ -35,7 +34,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## Arguments  
- [ **@profile_id=** ] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile from the **MSagent_profiles** table in the **msdb** database. *profile_id* is **int**, with no default.  
   
  To find out what agent type this *profile_id* represents, find the *profile_id* in the [MSagent_profiles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) table, and note the *agent_type* field value. The values are as follows:  
@@ -48,7 +47,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|Merge Agent|  
 |**9**|Queue Reader Agent|  
   
- [ **@parameter_name=** ] **'***parameter_name***'**  
+`[ @parameter_name = ] 'parameter_name'`
  Is the name of the parameter. *parameter_name* is **sysname**, with no default. For a list of parameters already defined in system profiles, see [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md). For a complete list of valid parameters for each agent, see the following topics:  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
@@ -61,7 +60,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
- [ **@parameter_value=**] **'***parameter_value***'**  
+`[ @parameter_value = ] 'parameter_value'`
  Is the value to be assigned to the parameter. *parameter_value* is **nvarchar(255)**, with no default.  
   
 ## Return Code Values  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "New Subscription Wizard"
@@ -41,6 +40,6 @@ manager: craigg
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
- [Properties Reference &#40;Replication&#41;](properties-reference-replication.md)  
+
   
   

@@ -5,8 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.admin.config.general.f1"
@@ -15,8 +14,8 @@ helpviewer_keywords:
   - "cleansing threshold values"
   - "matching,threshold value"
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Configure Threshold Values for Cleansing and Matching

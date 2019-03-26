@@ -17,7 +17,7 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Configure a Native Mode Report Server for Local Administration (SSRS)
   Deploying a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) and [Manage a Reporting Services Native Mode Report Server](manage-a-reporting-services-native-mode-report-server.md).  
@@ -157,7 +157,7 @@ manager: craigg
   
 -   When you attempt to deploy report items to the local report server, you see an error message similar to the following in the **Error List** window:  
   
-    -   The permissions granted to user ‘Domain\\<user name\>’ are insufficient for performing this operation.  
+    -   The permissions granted to user 'Domain\\<user name\>' are insufficient for performing this operation.  
   
  **To run with elevated permissions each time you open SSDT:**  
   

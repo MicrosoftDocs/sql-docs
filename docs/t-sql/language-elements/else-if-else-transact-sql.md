@@ -112,7 +112,7 @@ GO
 ```  
   
 ### D. Using nested IF...ELSE statements  
- The following example shows how an IF … ELSE statement can be nested inside another. Set the `@Number` variable to `5`, `50`, and `500` to test each statement.  
+ The following example shows how an IF ... ELSE statement can be nested inside another. Set the `@Number` variable to `5`, `50`, and `500` to test each statement.  
   
 ```  
 DECLARE @Number int;  
@@ -132,7 +132,7 @@ GO
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### E: Using a query as part of a Boolean expression  
- The following example uses `IF…ELSE` to determine which of two responses to show the user, based on the weight of an item in the `DimProduct` table.  
+ The following example uses `IF...ELSE` to determine which of two responses to show the user, based on the weight of an item in the `DimProduct` table.  
   
 ```  
 -- Uses AdventureWorks  

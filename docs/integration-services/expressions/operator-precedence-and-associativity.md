@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "associativity [Integration Services]"
   - "precedence [Integration Services]"
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Operator Precedence and Associativity
@@ -23,10 +23,10 @@ manager: craigg
 |Operator symbol|Type of Operation|Associativity|  
 |---------------------|-----------------------|-------------------|  
 |( )|Expression|Left to right|  
-|–, !, ~|Unary|Right to left|  
+|-, !, ~|Unary|Right to left|  
 |casts|Unary|Right to left|  
 |*, / ,%|Multiplicative|Left to right|  
-|+, –|Additive|Left to right|  
+|+, -|Additive|Left to right|  
 |\<, >, \<=, >=|Relational|Left to right|  
 |==, !=|Equality|Left to right|  
 |&|Bitwise AND|Left to right|  

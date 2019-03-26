@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # TOKEN  (SSIS Expression)
@@ -26,7 +25,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
  A string that contains tokens separated by delimiters.  
   
  *delimiter_string*  
- A string that contains delimiter characters. For example, "; ,” contains three delimiter characters semi-colon, a blank space, and a comma.  
+ A string that contains delimiter characters. For example, "; ," contains three delimiter characters semi-colon, a blank space, and a comma.  
   
  *occurrence*  
  A signed or unsigned integer that specifies the token to be returned. For example, if you specify 3 as a value for this parameter, the third token in the string is returned.  
@@ -52,13 +51,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
 -   You can use variables and columns as values of all arguments in the expression.  
   
 ## Expression Examples  
- In the following example, the TOKEN function returns "a". The string “a little white dog” has 4 tokens “a”, “little”, “white”, “dog” separated by the delimiter " " (space character). The second argument, a delimiter string, specifies only one delimiter, the space character, to be used in splitting the input string into tokens. The last argument, 1, specifies that the first token to be returned. The first token is “a” in this sample string.  
+ In the following example, the TOKEN function returns "a". The string "a little white dog" has 4 tokens "a", "little", "white", "dog" separated by the delimiter " " (space character). The second argument, a delimiter string, specifies only one delimiter, the space character, to be used in splitting the input string into tokens. The last argument, 1, specifies that the first token to be returned. The first token is "a" in this sample string.  
   
 ```  
 TOKEN("a little white dog"," ",1)  
 ```  
   
- In the following example, the TOKEN function returns "dog". The delimiter string in this example contains 5 delimiters. The input string contains 4 tokens: “a”, “little”, “white”, “dog”.  
+ In the following example, the TOKEN function returns "dog". The delimiter string in this example contains 5 delimiters. The input string contains 4 tokens: "a", "little", "white", "dog".  
   
 ```  
 TOKEN("a:little|white dog","| ,.:",4)  
@@ -76,7 +75,7 @@ TOKEN("a little white dog"," ",99)
 TOKEN("a little white dog","|",1)  
 ```  
   
- In the following example, the TOKEN function returns “a”. It ignores all the leading space characters.  
+ In the following example, the TOKEN function returns "a". It ignores all the leading space characters.  
   
 ```  
 TOKEN("        a little white dog", " ", 1)  
@@ -88,7 +87,7 @@ TOKEN("        a little white dog", " ", 1)
 TOKEN("2009/01/01", "/"), 1  
 ```  
   
- In the following example, the TOKEN function returns the file name from the specified path. For example, if the value of User::Path is “c:\program files\data\myfile.txt”, the TOKEN function returns “myfile.txt”. The TOKENCOUNT function returns 4 and the TOKEN function return the 4th token, “myfile.txt”.  
+ In the following example, the TOKEN function returns the file name from the specified path. For example, if the value of User::Path is "c:\program files\data\myfile.txt", the TOKEN function returns "myfile.txt". The TOKENCOUNT function returns 4 and the TOKEN function return the 4th token, "myfile.txt".  
   
 ```  
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  

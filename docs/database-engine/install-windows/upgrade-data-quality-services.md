@@ -18,10 +18,10 @@ manager: craigg
 
 This article provides information on how to upgrade your existing installation of [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). As part of upgrading your [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server, you must also upgrade the DQS databases schema.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  -   You must back up your DQS databases before upgrading DQS to prevent any accidental data loss during the schema upgrade. For information about backing up DQS databases, see [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md).  
 > -   You can connect to [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Server by using the current or an earlier version of Data Quality Client or the [DQS Cleansing Transformation](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) in Integration Services to perform your data quality tasks.  
-> -   After upgrading Data Quality Services and Master Data Services, any earlier version of the Master Data Services Add-In for Excel will no longer work. You can download the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of Master Data Services Add-In for Excel from [here](http://go.microsoft.com/fwlink/?LinkID=506665).  
+> -   After upgrading Data Quality Services and Master Data Services, any earlier version of the Master Data Services Add-In for Excel will no longer work. You can download the [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] version of Master Data Services Add-In for Excel from [here](https://go.microsoft.com/fwlink/?LinkID=506665).  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   

@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |**counter_name**|**nchar(128)**|Name of the counter. To get more information about a counter, this is the name of the topic to select from the list of counters in [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
 |**instance_name**|**nchar(128)**|Name of the specific instance of the counter. Often contains the database name.|  
 |**cntr_value**|**bigint**|Current value of the counter.<br /><br /> **Note:** For per-second counters, this value is cumulative. The rate value must be calculated by sampling the value at discrete time intervals. The difference between any two successive sample values is equal to the rate for the time interval used.|  
-|**cntr_type**|**int**|Type of counter as defined by the Windows performance architecture. See [WMI Performance Counter Types](http://msdn2.microsoft.com/library/aa394569.aspx) on MSDN or your Windows Server documentation for more information on performance counter types.|  
+|**cntr_type**|**int**|Type of counter as defined by the Windows performance architecture. See [WMI Performance Counter Types](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) on Docs or your Windows Server documentation for more information on performance counter types.|  
 |**pdw_node_id**|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
   
 ## Remarks  

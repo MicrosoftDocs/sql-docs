@@ -24,7 +24,7 @@ manager: craigg
  Specify the Windows Azure storage account access key.  
   
  **Use secure endpoints (HTTPS)** check box  
- Select this option to make a secure connection to Windows Azure storage – recommended.  
+ Select this option to make a secure connection to Windows Azure storage - recommended.  
   
  **Save account key** check box  
  Select this check box if you want SQL Server to remember the access key for this storage account.  

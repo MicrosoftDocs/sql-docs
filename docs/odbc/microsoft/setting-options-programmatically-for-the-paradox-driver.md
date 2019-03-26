@@ -18,6 +18,7 @@ ms.author: genemi
 manager: craigg
 ---
 # Setting Options Programmatically for the Paradox Driver
+
 |Option|Description|Method|  
 |------------|-----------------|------------|  
 |Directory|Sets the targeted directory.|To set this option dynamically, use the **DEFAULTDIR** keyword in a call to [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  

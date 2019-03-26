@@ -63,7 +63,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|Indicates that the column is an extra column added for browsing information purposes and that it does not actually appear in the result set.|  
-|**column_ordinal**|**int NOT NULL**|Contains the ordinal position of the column in the result set. The first column’s position will be specified as 1.|  
+|**column_ordinal**|**int NOT NULL**|Contains the ordinal position of the column in the result set. The first column's position will be specified as 1.|  
 |**name**|**sysname NULL**|Contains the name of the column if a name can be determined. Otherwise, it will contain NULL.|  
 |**is_nullable**|**bit NOT NULL**|Contains the value 1 if the column allows NULLs, 0 if the column does not allow NULLs, and 1 if it cannot be determined if the column allows NULLs.|  
 |**system_type_id**|**int NOT NULL**|Contains the system_type_id of the data type of the column as specified in sys.types. For CLR types, even though the system_type_name column will return NULL, this column will return the value 240.|  

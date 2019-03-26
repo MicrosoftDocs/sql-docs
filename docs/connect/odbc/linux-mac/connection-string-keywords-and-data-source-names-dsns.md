@@ -26,7 +26,7 @@ This topic discusses how you can create a connection to a [!INCLUDE[ssNoVersion]
 See [DSN and Connection String Keywords and Attributes](../../../connect/odbc/dsn-connection-string-attribute.md) for all the connection string keywords and attributes supported on Linux and Mac
 
 > [!IMPORTANT]  
-> When connecting to a database that uses database mirroring (has a failover partner), do not specify the database name in the connection string. Instead, send a **use** *database_name* command to connect to the database before executing your queries.  
+> When connecting to a database that uses database mirroring (has a failover partner), do not specify the database name in the connection string. Instead, send a **use** _database_name_ command to connect to the database before executing your queries.  
   
 The value passed to the **Driver** keyword can be one of the following:  
   
@@ -47,12 +47,12 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-You can optionally specify the protocol and port to connect to the server. For example, **Server=tcp:***servername***,12345**. Note that the only protocol supported by the Linux and macOS drivers is `tcp`.
+You can optionally specify the protocol and port to connect to the server. For example, **Server=tcp:**_servername_**,12345**. Note that the only protocol supported by the Linux and macOS drivers is `tcp`.
 
 To connect to a named instance on a static port, use <b>Server=</b>*servername*,**port_number**. Connecting to a dynamic port is not supported.  
 
 Alternatively, you can add the DSN information to a template file, and execute the following command to add it to `~/.odbc.ini` :
- - **odbcinst -i -s -f** *template_file*  
+ - **odbcinst -i -s -f** _template_file_  
  
 You can verify that your driver is working by using `isql` to test the connection, or you can use this command:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
@@ -62,7 +62,7 @@ You can use Secure Sockets Layer (SSL) to encrypt connections to [!INCLUDE[ssNoV
 
 Enabling encryption increases security at the expense of performance.
 
-For more information, see [Encrypting Connections to SQL Server](http://go.microsoft.com/fwlink/?LinkId=220900) and [Using Encryption Without Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+For more information, see [Encrypting Connections to SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) and [Using Encryption Without Validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
 Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the server login credentials (user name and password) are always encrypted. The following table shows the effect of the **Encrypt** and **TrustServerCertificate** settings.  
 
@@ -71,7 +71,7 @@ Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the s
 |**Encrypt=no**|Server certificate is not checked.<br /><br />Data sent between client and server is not encrypted.|Server certificate is not checked.<br /><br />Data sent between client and server is not encrypted.|  
 |**Encrypt=yes**|Server certificate is checked.<br /><br />Data sent between client and server is encrypted.<br /><br />The name (or IP address) in a Subject Common Name (CN) or Subject Alternative Name (SAN) in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL certificate should exactly match the server name (or IP address) specified in the connection string.|Server certificate is not checked.<br /><br />Data sent between client and server is encrypted.|  
 
-By default, encrypted connections always verify the server’s certificate. However, if you connect to a server that has a self-signed certificate, also add the `TrustServerCertificate` option to bypass checking the certificate against the list of trusted certificate authorities:  
+By default, encrypted connections always verify the server's certificate. However, if you connect to a server that has a self-signed certificate, also add the `TrustServerCertificate` option to bypass checking the certificate against the list of trusted certificate authorities:  
 
 ```  
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  

@@ -25,7 +25,7 @@ manager: craigg
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|DUP_KEY|  
-|Message Text|CREATE UNIQUE INDEX terminated because a duplicate key was found for object name '%.*ls' and index name '%.\*ls'.  The duplicate key value is %ls.|  
+|Message Text|CREATE UNIQUE INDEX terminated because a duplicate key was found for object name '%.\*ls' and index name '%.\*ls'.  The duplicate key value is %ls.|  
   
 ## Explanation  
 This error occurs when you attempt to create a unique index and more than one row in the table contains the specified duplicate value. A unique index is created when you create an index and specify the UNIQUE keyword, or when you create a UNIQUE constraint. The table cannot contain any rows that have duplicate values in the columns defined in the index or constraint.  
@@ -54,7 +54,7 @@ Consider the following solutions.
   
 -   Select columns that are defined as NOT NULL when you choose columns for a unique index or constraint. This eliminates the possibility of a uniqueness violation caused when more than one row contains NULL in the key values.  
   
--   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, see Knowledge Base article 139444: [How to remove duplicate rows from a table in SQL Server](http://support.microsoft.com/kb/139444).  
+-   If the duplicate values are the result of data entry errors, manually correct the data and then create the index or constraint. For information about removing duplicate rows in a table, see Knowledge Base article 139444: [How to remove duplicate rows from a table in SQL Server](https://support.microsoft.com/kb/139444).  
   
 ## See Also  
 [CREATE INDEX &#40;Transact-SQL&#41;](~/t-sql/statements/create-index-transact-sql.md)  

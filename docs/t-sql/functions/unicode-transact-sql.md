@@ -43,14 +43,14 @@ UNICODE ( 'ncharacter_expression' )
  **int**  
   
 ## Remarks  
- In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the UNICODE function returns a UCS-2 codepoint in the range 0 through 0xFFFF. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later editions, when using SC collations, UNICODE returns a UTF-16 codepoint in the range 0 through 0x10FFFF.  
+ In versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] earlier than [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], the UNICODE function returns a UCS-2 codepoint in the range 0 through 0xFFFF. Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], when using [Supplementary Character (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) enabled collations, UNICODE returns a UTF-16 codepoint in the range 0 through 0x10FFFF.  
   
 ## Examples  
   
 ### A. Using UNICODE and the NCHAR function  
  The following example uses the `UNICODE` and `NCHAR` functions to print the UNICODE value of the first character of the `Åkergatan` 24-character string, and to print the actual first character, `Å`.  
   
-```  
+```sql  
 DECLARE @nstring nchar(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
@@ -66,7 +66,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ### B. Using SUBSTRING, UNICODE, and CONVERT  
  The following example uses the `SUBSTRING`, `UNICODE`, and `CONVERT` functions to print the character number, the Unicode character, and the UNICODE value of each of the characters in the string `Åkergatan 24`.  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

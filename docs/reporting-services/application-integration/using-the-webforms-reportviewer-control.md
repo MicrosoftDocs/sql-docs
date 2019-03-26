@@ -78,7 +78,7 @@ protected void Page_Init(object sender, EventArgs e)
   
         // Set the report server URL and report path  
         serverReport.ReportServerUrl =  
-            new Uri("http://<Server Name>/reportserver");  
+            new Uri("https://<Server Name>/reportserver");  
         serverReport.ReportPath =  
             "/AdventureWorks Sample Reports/Sales Order Detail";  
   
@@ -114,7 +114,7 @@ Partial Class _Default
   
             'Set the report server URL and report path  
             serverReport.ReportServerUrl = _  
-                New Uri("http://<Server Name>/reportserver")  
+                New Uri("https://<Server Name>/reportserver")  
             serverReport.ReportPath = _  
                 "/AdventureWorks Sample Reports/Sales Order Detail"  
   

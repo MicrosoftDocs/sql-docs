@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "network protocols [SQL Server], disabling"
@@ -61,7 +60,7 @@ manager: craigg
   
 2.  Start Windows PowerShell 2.0 from the taskbar, or click Start, then All Programs, then Accessories, then Windows PowerShell, then Windows PowerShell.  
   
-3.  Import the **sqlps** module by entering `Import-Module “sqlps”`  
+3.  Import the **sqlps** module by entering `Import-Module "sqlps"`  
   
 4.  Execute the following statements to enable both the TCP and named pipes protocols. Replace `<computer_name>` with the name of the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you are configuring a named instance, replace `MSSQLSERVER` with the instance name.  
   

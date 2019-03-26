@@ -21,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 The following guides are available. They discuss general concepts and apply to all versions of SQL Server, unless stated otherwise in the respective guide. 
 
-[Always On Availability Groups Troubleshooting and Monitoring Guide](http://msdn.microsoft.com/library/dn135328)  
+[Always On Availability Groups Troubleshooting and Monitoring Guide](https://msdn.microsoft.com/library/dn135328)  
 [Index Architecture and Design Guide](../relational-databases/sql-server-index-design-guide.md)  
 [Memory Management Architecture Guide](../relational-databases/memory-management-architecture-guide.md)  
 [Pages and Extents Architecture Guide](../relational-databases/pages-and-extents-architecture-guide.md)  

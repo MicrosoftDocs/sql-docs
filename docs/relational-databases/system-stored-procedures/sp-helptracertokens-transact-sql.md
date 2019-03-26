@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helptracertokens"
@@ -41,8 +40,8 @@ sp_helptracertokens [ @publication = ] 'publication'
  [ **@publisher=** ] **'***publisher***'**  
  The name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
   
-> [!NOTE]  
->  This parameter should only be specified for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+> [!NOTE]
+>  This parameter should only be specified for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
  [ **@publisher_db=** ] **'***publisher_db***'**  
  The name of the publication database. *publisher_db* is **sysname**, with a default value of NULL. This parameter is ignored if the stored procedure is executed at the Publisher.  

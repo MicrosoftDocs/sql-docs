@@ -35,8 +35,8 @@ helpviewer_keywords:
   - "conversation security [Service Broker]"
   - "remote service bindings [Service Broker], creating"
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE REMOTE SERVICE BINDING (Transact-SQL)

@@ -39,5 +39,5 @@ Specifies the number of rows to return when you are editing rows in a table. The
 Specifies the number of rows to be returned that is specified in the Query Editor script that is created. The default is 1000 rows.  
   
 ## See Also  
-[SQL Server Audit (Database Engine)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[SQL Server Audit (Database Engine)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

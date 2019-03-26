@@ -108,11 +108,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### Behavior of the disabled objects  
  **Indexes**  
   
- If the clustered index is disabled, or if a non-clustered index is forced, the following error is raised: "The query processor is unable to produce a plan because the index '%.\*ls' on table or view '%.\*ls' is disabled." To re-enable these objects, rebuild the indexes after upgrade by calling **ALTER INDEX ON … REBUILD**.  
+ If the clustered index is disabled, or if a non-clustered index is forced, the following error is raised: "The query processor is unable to produce a plan because the index '%.\*ls' on table or view '%.\*ls' is disabled." To re-enable these objects, rebuild the indexes after upgrade by calling **ALTER INDEX ON ... REBUILD**.  
   
  **Heaps**  
   
- If a table with a disabled heap is used, the following error is raised. To re-enable these objects, rebuild after upgrade by calling **ALTER INDEX ALL ON … REBUILD**.  
+ If a table with a disabled heap is used, the following error is raised. To re-enable these objects, rebuild after upgrade by calling **ALTER INDEX ALL ON ... REBUILD**.  
   
 ```  
 // ErrorNumber: 8674  
@@ -129,7 +129,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  **Check Constraints and Foreign Keys**  
   
- Disabled check constraints and foreign keys do not raise an error. However, the constraints are not enforced when rows are modified. To re-enable these objects, check the constraints after upgrading by calling **ALTER TABLE … CHECK CONSTRAINT**.  
+ Disabled check constraints and foreign keys do not raise an error. However, the constraints are not enforced when rows are modified. To re-enable these objects, check the constraints after upgrading by calling **ALTER TABLE ... CHECK CONSTRAINT**.  
   
  **Persisted Computed Columns**  
   

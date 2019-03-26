@@ -71,7 +71,7 @@ manager: craigg
   
     -   Set the value of the **@working_directory** parameter to the snapshot folder used by the principal.  
   
-4.  Specify the mirror name for the **–PublisherFailoverPartner** agent parameter. Agent This parameter is required for the following agents to identify the mirror after failover:  
+4.  Specify the mirror name for the **-PublisherFailoverPartner** agent parameter. Agent This parameter is required for the following agents to identify the mirror after failover:  
   
     -   Snapshot Agent (for all publications)  
   
@@ -93,7 +93,7 @@ manager: craigg
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     We recommend adding the **–PublisherFailoverPartner** to an agent profile, and then specifying the mirror name in the profile. For example, if you are configuring replication with stored procedures:  
+     We recommend adding the **-PublisherFailoverPartner** to an agent profile, and then specifying the mirror name in the profile. For example, if you are configuring replication with stored procedures:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  
@@ -157,7 +157,7 @@ manager: craigg
 |High-safety mode without automatic failover|All committed transactions are guaranteed to be hardened to disk on the mirror. The Log Reader Agent replicates only those transactions that are hardened on the mirror. If the mirror is unavailable, the principal disallows further activity in the database; therefore the Log Reader Agent has no transactions to replicate.|  
   
 ## See Also  
- [Replication Features and Tasks](../../relational-databases/replication/replication-features-and-tasks.md)   
+ [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)   
  [Log Shipping and Replication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

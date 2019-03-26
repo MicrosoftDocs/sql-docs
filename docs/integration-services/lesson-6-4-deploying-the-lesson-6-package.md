@@ -1,117 +1,113 @@
 ---
-title: "Step 4: Deploying the Lesson 6 Package | Microsoft Docs"
+title: "Step 4: Deploy the Lesson 6 package | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: "01/11/2019"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
-# Lesson 6-4 - Deploying the Lesson 6 Package
-Deploying the package involves adding the package to the SSISDB catalog in Integration Services on an instance of SQL Server. In this lesson you will add the Lesson 6 package to the SSISDB catalog, set the parameter, and execute the package. For this lesson you will use SQL Server Management Studio to add the Lesson 6 package to the SSISDB catalog, and deploy the package. After deploying the package you will modify the parameter to point to a new location then execute the package.  
+# Lesson 6-4: Deploy the Lesson 6 package
+
+Deploying the package involves adding the package to the SSISDB catalog in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] on an instance of SQL Server. In this lesson, you add the Lesson 6 package to the SSISDB catalog, set the new parameter, and execute the package. For this lesson, you use SQL Server Management Studio to add the Lesson 6 package to the SSISDB catalog, and deploy the package. After deploying the package, you modify the parameter to point to a new location and then run the package.   
+In this task, you:  
+
+1. Add the package to the SSISDB catalog in the SSIS node in SQL Server.  
   
-In this lesson you will:  
+2. Deploy the package.  
   
--   Add the package to the SSISDB catalog in the SSIS node in SQL Server.  
+3. Set the package parameter value.  
+
+4. Execute the package in SSMS.  
   
--   Deploy the package.  
+## Locate or add the SSISDB catalog  
   
--   Set the package parameter value.  
+1.  Select **Start** > **All Programs** > **Microsoft SQL Server 2017**, and then select **SQL Management Studio**.  
   
--   Execute the package in SSMS.  
+2.  On the **Connect to Server** dialog box, verify the default settings, and then select **Connect**. To connect, the **Server** name must be the name of the computer where SQL Server is installed. If the **Database Engine** is a named instance, the **Server** name must be the instance name in the format *\<computer_name>\\\<instance_name>*. 
   
-### To Locate or add the SSISDB catalog  
+3.  In **Object Explorer**, expand **Integration Services Catalogs**.  
   
-1.  Click Start, point to All Programs, point to Microsoft SQL Server 2012, and then click SQL Management Studio.  
+4.  If there are no catalogs listed under **Integration Services Catalogs**, then add the SSISDB catalog.  
   
-2.  On the Connect to Server dialog box, verify the default settings, and then click Connect. To connect, the Server name box must contain the name of the computer where SQL Server is installed. If the Database Engine is a named instance, the Server name box should also contain the instance name in the format <computer_name>\\<instance_name>.  
+5.  To add the SSISDB catalog, right-click **Integration Services Catalogs** and select **Create Catalog**.  
   
-3.  In Object Explorer expand Integration Services Catalogs.  
+6.  On the **Create Catalog** dialog box, select **Enable CLR Integration**.  
   
-4.  If there are no catalogs listed under Integration Services Catalogs then add the SSISDB catalog.  
+7.  In the **Password** box, enter a password and then enter it again in the **Retype Password** box. 
   
-5.  To Add the SSISDB catalog, right-click Integration Services Catalogs and click Create Catalog.  
+8.  Select **OK** to add the SSISDB catalog.  
   
-6.  On the Create Catalog dialog box select Enable CLR Integration.  
+## Add the package to the SSISDB catalog  
   
-7.  In the Password box, type a new password then type it again in the Retype Password box. Be sure to remember the password you type.  
+1.  In **Object Explorer**, right-click **SSISDB** and select **Create Folder**.  
   
-8.  Click OK to add the SSISDB catalog.  
+2.  In the **Create Folder** dialog box, enter SSIS Tutorial in the Folder name box, and select **OK**.  
   
-### To add the package to the SSISDB catalog  
+3.  Expand the **SSIS Tutorial** folder, right-click **Projects**, and select **Import Packages**.  
   
-1.  In Object Explorer, right-click SSISDB and click Create Folder.  
+4.  On the **Integration Services Project Conversion Wizard** **Introduction** page, select **Next**.  
   
-2.  In the Create Folder dialog box type SSIS Tutorial in the Folder name box and click OK.  
+5.  On the **Locate Packages** page, make sure that **File system** is selected in the **Source** list, then select **Browse**.  
   
-3.  Expand the SSIS Tutorial folder, right-click Projects, and click Import Packages.  
+6.  On the **Browse For Folder** dialog box, browse to the folder containing this SSIS Tutorial project, then select **OK**.  
   
-4.  On the Integration Services Project Conversion Wizard Introduction page click Next.  
+7.  Select **Next**.  
   
-5.  On the Locate Packages page, ensure that File system is selected in the Source list, then click Browse.  
+8.  On the Select Packages page, you should see all six packages from the SSIS Tutorial. In the **Packages** list, select **Lesson 6.dtsx**, then select **Next**.  
   
-6.  On the Browse For Folder dialog box, browse to the folder containing the SSIS Tutorial project, then click OK.  
+9. On the **Select Destination** page, enter **SSIS Tutorial Deployment** in the **Project Name** box then select **Next**.
+
+10. Select **Next** on each of the remaining wizard pages until you get to the **Review** page.  
   
-7.  Click Next.  
+11. On the **Review** page, select **Convert**.  
   
-8.  On the Select Packages page you should see all six packages from the SSIS Tutorial. In the Packages list, select Lesson 6.dtsx, then click Next.  
+12. After the conversion completes, select **Close**.  
   
-9. On the Select Destination page, type SSIS Tutorial Deployment in the Project Name box then click Next.  
+When you close the Integration Services Project Conversion Wizard, SSIS displays the Integration Services Deployment Wizard. You use this wizard now to deploy the Lesson 6 package.  
   
-10. Click Next on each of the remaining wizard pages until you get to the Review page.  
+1.  On the **Integration Services Deployment Wizard** **Introduction** page, review the steps for deploying the project, then select **Next**.  
   
-11. On the Review page, click Convert.  
+2.  On the **Select Destination** page, verify the server name is the instance of SQL Server containing the SSISDB catalog, and the path shows **SSIS Tutorial Deployment**, and then select **Next**.  
   
-12. When the conversion completes, click Close.  
+3.  On the **Review** page, review the **Summary** then select **Deploy**.  
   
-When you close the Integration Services Project Conversion Wizard, SSIS displays the Integration Services Deployment Wizard. You will use this wizard now to deploy the Lesson 6 package.  
+4.  When the deployment completes, select **Close**.  
   
-1.  On the Integration Services Deployment Wizard Introduction page, review the steps for deploying the project, then click Next.  
+5.  In **Object Explorer**, right-click **Integration Services Catalogs** and select **Refresh**.  
   
-2.  On the Select Destination page verify that the server name is the instance of SQL Server containing the SSISDB catalog and that the path shows SSIS Tutorial Deployment, then click Next.  
+6.  Expand **Integration Services Catalogs** then expand **SSISDB**. Continue to expand the tree under **SSIS Tutorial** until you have completely expanded the project. You should see **Lesson 6.dtsx** under the **Packages** node of the **SSIS Tutorial Deployment** node.  
   
-3.  On the Review page, review the Summary then click Deploy.  
+7.  To verify that the package is complete, right-click **Lesson 6.dtsx** and select **Configure**. On the **Configure** dialog box, select **Parameters**, and verify that there is an entry with **Lesson 6.dtsx** as the **Container**, **VarFolderName** as the **Name**, and the path to **New Sample Data** as the value, and then select **Close**.  
   
-4.  When the deployment completes, click Close.  
+## Create and populate a new sample data folder  
   
-5.  In Object Explorer, right-click Integration Services Catalogs and click Refresh.  
+1.  In **Windows Explorer**, at the root level of your drive (for example, **C:\\**), create a folder named **Sample Data Two**.  
   
-6.  Expand Integration Services Catalogs then expand SSISDB. Continue to Expand the tree under SSIS Tutorial until you have completely expanded the project. You should see Lesson 6.dtsx under the Packages node of the SSIS Tutorial Deployment node.  
+2.  Open the **Sample Data** folder from the [Lesson 1 prerequisites](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites) and then copy any three of the sample files.  
   
-To verify that the package is complete, right-click Lesson 6.dtsx and click Configure. On the Configure dialog box, select Parameters and verify that there is an entry with Lesson 6.dtsx as the Container, VarFolderName as the Name and the path to New Sample Data as the value, then click Close.  
+3.  Browse to the **Sample Data Two** folder and paste the copied files.  
   
-Before continuing create a new sample data folder, name it Sample Data Two, and copy any three of the original sample files into it.  
+## Change the package parameter to point to the new sample data  
   
-### To create and populate a new sample data folder  
+1.  In **Object Explorer**, right-click **Lesson 6.dtsx**, and select **Configure**.  
   
-1.  In Windows Explorer, at the root level of your drive (for example, C:\\), create a new folder named Sample Data Two.  
+2.  On the **Configure** dialog box, change the parameter value to the path to **Sample Data Two**, for example, **C:\\Sample Data Two**.  
   
-2.  Open the c:\Program Files\Microsoft SQL Server\110\Samples\Integration Services\Tutorial\Creating a Simple ETL Package\Sample Data folder and then copy any three of the sample files from the folder.  
+3.  Select **OK** to close the **Configure** dialog box.  
   
-3.  In the New Sample Data folder, paste the copied files.  
+## Test the Lesson 6 package deployment  
   
-### To change the package parameter to point to the new sample data  
+1.  In **Object Explorer**, right-click **Lesson 6.dtsx** and select **Execute**.  
   
-1.  In Object Explorer, right click Lesson 6.dtsx and click Configure.  
+2.  On the **Execute Package** dialog box, select **OK**.  
   
-2.  On the Configure dialog box, change the parameter value to the path to Sample Data Two. For example C:\Sample Data Two if you placed the new folder in the root folder on the C drive.  
+3.  On the message dialog box, select **Yes** to open the **Overview Report**.  
   
-3.  Click OK to close the Configure dialog box.  
-  
-### To test the Lesson 6 package deployment  
-  
-1.  In Object Explorer, right click Lesson 6.dtsx and click Execute.  
-  
-2.  On the Execute Package dialog box, click OK.  
-  
-3.  On the message dialog box click Yes to open Overview Report.  
-  
-The Overview report for the package is displayed showing the name of the package and a status summary. The Execution Overview section shows the result from each task in the package and the Parameters Used section shows the names and values of all parameters used in the package execution, including VarFolderName.  
-  
-  
+The **Overview Report** for the package displays the name of the package and a status summary. The **Execution Overview** section shows the result from each task in the package. The **Parameters Used** section shows the names and values of all parameters used in the package execution, including **VarFolderName**.  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: leolimsft
@@ -32,6 +31,6 @@ manager: craigg
 |Data: Filters|Maximum rows|Select the threshold for the number of rows being loaded, beyond which a filter warning will be posted.|  
 |Data: Filters|Maximum columns|Select the threshold for the number of columns being loaded, beyond which a filter warning will be posted.|  
 |Data: Cell Format|Change the color when: Attribute values change|Click to specify that the color of a cell will be changed if the attribute value in that cell changes when you refresh the Excel Add-in table with new data from the MDS repository.|  
-|Data: Cell Format|Change the color when: Members are added|Click to specify that the color of a row’s cells will be changed if a new member is added to the row when you refresh the Excel Add-in table with new data from the MDS repository.|  
+|Data: Cell Format|Change the color when: Members are added|Click to specify that the color of a row's cells will be changed if a new member is added to the row when you refresh the Excel Add-in table with new data from the MDS repository.|  
   
   

@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "statements [SQL Server], statistical information"
   - "XML [SQL Server], statement execution information"
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ SET STATISTICS XML { ON | OFF }
   
  \Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- The Showplan Schema can also be found at [this Web site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ The Showplan Schema can also be found at [this Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  SET STATISTICS PROFILE and SET STATISTICS XML are counterparts of each other. The former produces textual output; the latter produces XML output. In future versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], new query execution plan information will only be displayed through the SET STATISTICS XML statement, not the SET STATISTICS PROFILE statement.  
   

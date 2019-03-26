@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Report Server Content Management (SSRS Native Mode)
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], content management refers to the management of report server items. All items can be managed independently of each other through properties and security settings. Any item can be moved to a different location in the report server folder namespace. To manage items effectively, you need to know which tasks a content manager performs.  
@@ -113,7 +113,7 @@ manager: craigg
  The visibility of an item in a folder depends on both role assignments (that is, permission to view an item) and viewing options in effect for a folder. In Report Manager, you can set the Contents page to list view or details view. In some cases, a report or item may be hidden in list view. Be sure to view a folder in details view before deleting its contents.  
   
 ##  <a name="bkmk_Resources"></a> Resources  
- A resource is a managed item that is stored on a report server, but is not processed by a report server. Typically, a resource provides external content to report users. Examples include an image in a .jpg file, an ESRI shapefile that contains spatial data, or an HTML file that describes the business rules used in a report. The JPG, SHP, or HTML file is stored on the report server, but the report server passes the file directly to the browser rather than processing it first. For more information, see [Images &#40;Report Builder and SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) and the section “Adding Data to a Map” in [Maps &#40;Report Builder and SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
+ A resource is a managed item that is stored on a report server, but is not processed by a report server. Typically, a resource provides external content to report users. Examples include an image in a .jpg file, an ESRI shapefile that contains spatial data, or an HTML file that describes the business rules used in a report. The JPG, SHP, or HTML file is stored on the report server, but the report server passes the file directly to the browser rather than processing it first. For more information, see [Images &#40;Report Builder and SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) and the section "Adding Data to a Map" in [Maps &#40;Report Builder and SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
   
 ### Adding and Viewing a Resource  
  To add a resource to a report server, you upload or publish a file:  

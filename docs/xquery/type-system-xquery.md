@@ -5,8 +5,7 @@ ms.date: "08/10/2016"
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -50,7 +49,7 @@ manager: craigg
   
 ```  
 SELECT Instructions.query('  
-   DECLARE namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+   DECLARE namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    data(/AWMI:root[1]/AWMI:Location[@LocationID=10][1]/@LotSize)[1] instance of xs:decimal  
 ') AS Result  
 FROM Production.ProductModel  
@@ -132,7 +131,7 @@ SELECT @x.query('string(/root[1]) + 3')
   
 ```  
 SELECT Instructions.query('   
-DECLARE namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+DECLARE namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
              sum(data(//AWMI:Location/@LaborHours))   
 ') AS Result   
 FROM Production.ProductModel   

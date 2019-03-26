@@ -1,7 +1,7 @@
 ---
 title: "SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/04/2017"
+ms.date: "10/22/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -32,7 +32,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Controls the locking and row versioning behavior of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements issued by a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+Controls the locking and row versioning behavior of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements issued by a connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -66,19 +67,22 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   The READ COMMITTED isolation level with the READ_COMMITTED_SNAPSHOT database option set to ON.  
   
--   The SNAPSHOT isolation level.  
+-   The SNAPSHOT isolation level. For more information about snapshot isolation, see [Snapshot Isolation in SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server). 
   
  READ COMMITTED  
  Specifies that statements cannot read data that has been modified but not committed by other transactions. This prevents dirty reads. Data can be changed by other transactions between individual statements within the current transaction, resulting in nonrepeatable reads or phantom data. This option is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default.  
   
  The behavior of READ COMMITTED depends on the setting of the READ_COMMITTED_SNAPSHOT database option:  
   
--   If READ_COMMITTED_SNAPSHOT is set to OFF (the default), the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. The shared lock type determines when it will be released. Row locks are released before the next row is processed. Page locks are released when the next page is read, and table locks are released when the statement finishes.  
+-   If READ_COMMITTED_SNAPSHOT is set to OFF (the default on SQL Server), the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses shared locks to prevent other transactions from modifying rows while the current transaction is running a read operation. The shared locks also block the statement from reading rows modified by other transactions until the other transaction is completed. The shared lock type determines when it will be released. Row locks are released before the next row is processed. Page locks are released when the next page is read, and table locks are released when the statement finishes.  
   
-    > [!NOTE]  
-    >  If READ_COMMITTED_SNAPSHOT is set to ON, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions.  
-    >   
-    >  Snapshot isolation supports FILESTREAM data. Under snapshot isolation mode, FILESTREAM data read by any statement in a transaction will be the transactionally consistent version of the data that existed at the start of the transaction.  
+-   If READ_COMMITTED_SNAPSHOT is set to ON (the default on SQL Azure Database), the [!INCLUDE[ssDE](../../includes/ssde-md.md)] uses row versioning to present each statement with a transactionally consistent snapshot of the data as it existed at the start of the statement. Locks are not used to protect the data from updates by other transactions.
+
+> [!IMPORTANT]  
+> Choosing a transaction isolation level does not affect the locks acquired to protect data modifications. A transaction always gets an exclusive lock on any data it modifies, and holds that lock until the transaction completes, regardless of the isolation level set for that transaction. Additionally, an update made at the READ_COMMITTED isolation level uses update locks on the data rows selected, whereas an update made at the SNAPSHOT isolation level uses row versions to select rows to update. For read operations, transaction isolation levels primarily define the level of protection from the effects of modifications made by other transactions. See the [Transaction Locking and Row Versioning Guide](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide) for more information.
+
+> [!NOTE]  
+>  Snapshot isolation supports FILESTREAM data. Under snapshot isolation mode, FILESTREAM data read by any statement in a transaction will be the transactionally consistent version of the data that existed at the start of the transaction.  
   
  When the READ_COMMITTED_SNAPSHOT database option is ON, you can use the READCOMMITTEDLOCK table hint to request shared locking instead of row versioning for individual statements in transactions running at the READ COMMITTED isolation level.  
   

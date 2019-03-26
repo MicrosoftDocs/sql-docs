@@ -23,9 +23,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
     
 ### To prepare a statement once, and then execute it multiple times  
   
-1.  Call [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) to prepare the statement.  
+1.  Call [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) to prepare the statement.  
   
-2.  Optionally, call [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
+2.  Optionally, call [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
   
 3.  Optionally, for each parameter in the prepared statement:  
   
@@ -37,9 +37,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     -   If the statement has parameter markers, put the data values into the bound parameter buffer.  
   
-    -   Call [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) to execute the prepared statement.  
+    -   Call [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) to execute the prepared statement.  
   
-    -   If data-at-execution input parameters are used, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   If data-at-execution input parameters are used, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### To prepare a statement with column-wise parameter binding  
   
@@ -55,7 +55,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 2.  Call SQLPrepare to prepare the statement.  
   
-3.  Optionally, call [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
+3.  Optionally, call [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
   
 4.  Optionally, for each parameter in the prepared statement, call SQLDescribeParam to get parameter information.  
   

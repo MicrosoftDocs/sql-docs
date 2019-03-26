@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Foreach Loop containers"
   - "containers [Integration Services], Foreach Loop"
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure a Foreach Loop Container
@@ -60,7 +60,7 @@ manager: craigg
   
     -   To use the Foreach SMO enumerator, select an existing ADO.NET connection or click **New connection** in the **Connection** list, and then either type the string to use or click **Browse**. If you click **Browse**, in the **Select SMO Enumeration** dialog box, select the object type to enumerate and the enumeration type, and click **OK**.  
   
-6.  Optionally, click the browse button **(…)** in the **Expressions** text box on the **Collection** page to create expressions that update property values. For more information, see [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md).  
+6.  Optionally, click the browse button **(...)** in the **Expressions** text box on the **Collection** page to create expressions that update property values. For more information, see [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  The properties listed in the **Property** list varies by enumerator.  

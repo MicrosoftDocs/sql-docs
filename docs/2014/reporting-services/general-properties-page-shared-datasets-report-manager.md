@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # General Properties Page, Shared Datasets (Report Manager)
   Use the Shared Dataset page to view and manage properties for a shared dataset item.  

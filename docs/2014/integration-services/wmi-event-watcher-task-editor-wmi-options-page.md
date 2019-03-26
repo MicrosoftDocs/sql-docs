@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords: 
   - "WMI Event Watcher Task Editor"
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # WMI Event Watcher Task Editor (WMI Options Page)
   Use the **WMI Options** page of the **WMI Event Watcher Task Editor** dialog box to specify the source of the Windows Management Instrumentation Query Language (WQL) query and how the WMI Event Watcher task responds to Microsoft Windows Instrumentation (WMI) events.  
   
- To learn about this task, see [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md). For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
+ To learn about this task, see [WMI Event Watcher Task](control-flow/wmi-event-watcher-task.md). For more information about WMI Query Language (WQL), see the Windows Management Instrumentation topic, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045), in the MSDN Library.  
   
 ## Static Options  
  **WMIConnectionName**  
- Select a WMI connection manager in the list, or click \<**New WMI Connection…**> to create a new connection manager.  
+ Select a WMI connection manager in the list, or click \<**New WMI Connection...**> to create a new connection manager.  
   
  **Related Topics:** [WMI Connection Manager](connection-manager/wmi-connection-manager.md), [WMI Connection Manager Editor](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -58,7 +58,7 @@ manager: craigg
   
 ### WQLQuerySource = Direct input  
  **WQLQuerySource**  
- Provide a query, or click the ellipsis button (…) and enter a query using the **WQL Query** dialog box.  
+ Provide a query, or click the ellipsis button (...) and enter a query using the **WQL Query** dialog box.  
   
 ### WQLQuerySource = File connection  
  **WQLQuerySource**  

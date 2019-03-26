@@ -81,5 +81,5 @@ By default, members of the **sysadmin** fixed server role can edit information i
     GO  
     ```  
   
-For more information, see [sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3).  
+For more information, see [sp_update_alert (Transact-SQL)](https://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3).  
   

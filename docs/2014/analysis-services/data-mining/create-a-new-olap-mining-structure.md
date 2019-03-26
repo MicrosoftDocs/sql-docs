@@ -75,7 +75,7 @@ manager: craigg
   
         -   If you want to include the column as one of the predictable attributes for the model, select **Predict**.  
   
-        -   Any item that you include in the structure but do not specify as an input or predictable attribute is added to the structure with the flag `Ignore`; this means that the data is processed when you build the model but is not used in analysis, and is available only for drillthrough. This can be handy if you want to include details such as customer names but don’t want to use them in analysis.  
+        -   Any item that you include in the structure but do not specify as an input or predictable attribute is added to the structure with the flag `Ignore`; this means that the data is processed when you build the model but is not used in analysis, and is available only for drillthrough. This can be handy if you want to include details such as customer names but don't want to use them in analysis.  
   
      Click **Finish** to close the part of the wizard that works with nested tables. You can repeat the process to add multiple nested columns.  
   

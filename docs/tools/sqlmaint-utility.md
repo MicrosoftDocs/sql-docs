@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database maintenance plans [SQL Server]"
@@ -76,31 +75,31 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Specifies that the syntax diagram for **sqlmaint** be returned. This parameter must be used alone.  
   
- **-S** *server_name*[ **\\**_instance\_name_]  
+ **-S** _server_name_[ **\\**_instance\_name_]  
  Specifies the target instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specify _server\_name_ to connect to the default instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ to connect to a named instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] on that server. If no server is specified, **sqlmaint** connects to the default instance of [!INCLUDE[ssDE](../includes/ssde-md.md)] on the local computer.  
   
- **-U** *login_ID*  
+ **-U** _login_ID_  
  Specifies the login ID to use when connecting to the server. If not supplied, **sqlmaint** attempts to use [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Authentication. If *login_ID* contains special characters, it must be enclosed in double quotation marks ("); otherwise, the double quotation marks are optional.  
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication.  
   
- **-P** *password*  
+ **-P** _password_  
  Specifies the password for the login ID. Only valid if the **-U** parameter is also supplied. If *password* contains special characters, it must be enclosed in double quotation marks; otherwise, the double quotation marks are optional.  
   
 > [!IMPORTANT]  
 >  The password is not masked. When possible, use Windows Authentication.  
   
- **-D** *database_name*  
+ **-D** _database_name_  
  Specifies the name of the database in which to perform the maintenance operation. If *database_name* contains special characters, it must be enclosed in double quotation marks; otherwise, the double quotation marks are optional.  
   
- **-PlanName** *name*  
+ **-PlanName** _name_  
  Specifies the name of a database maintenance plan defined using the Database Maintenance Plan Wizard. The only information **sqlmaint** uses from the plan is the list of the databases in the plan. Any maintenance activities you specify in the other **sqlmaint** parameters are applied to this list of databases.  
   
- **-PlanID** *guid*  
+ **-PlanID** _guid_  
  Specifies the globally unique identifier (GUID) of a database maintenance plan defined using the Database Maintenance Plan Wizard. The only information **sqlmaint** uses from the plan is the list of the databases in the plan. Any maintenance activities you specify in the other **sqlmaint** parameters are applied to this list of databases. This must match a plan_id value in msdb.dbo.sysdbmaintplans.  
   
- **-Rpt** *text_file*  
+ **-Rpt** _text_file_  
  Specifies the full path and name of the file into which the report is to be generated. The report is also generated on the screen. The report maintains version information by adding a date to the file name. The date is generated as follows: at the end of the file name but before the period, in the form _*yyyyMMddhhmm*. *yyyy* = year, *MM* = month, *dd* = day, *hh* = hour, *mm* = minute.  
   
  If you run the utility at 10:23 A.M. on December 1, 1996, and this is the *text_file* value:  
@@ -117,10 +116,10 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  The full Universal Naming Convention (UNC) file name is required for *text_file* when **sqlmaint** accesses a remote server.  
   
- **-To**  *operator_name*  
+ **-To**  _operator_name_  
  Specifies the operator to whom the generated report is sent through SQL Mail.  
   
- **-HtmlRpt** *html_file*  
+ **-HtmlRpt** _html_file_  
  Specifies the full path and name of the file into which an HTML report is to be generated. **sqlmaint** generates the file name by appending a string of the format _*yyyyMMddhhmm* to the file name, just as it does for the **-Rpt** parameter.  
   
  The full UNC file name is required for *html_file* when **sqlmaint** accesses a remote server.  
@@ -128,7 +127,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-DelHtmlRpt** \<*time_period*>  
  Specifies that any HTML report in the report directory be deleted if the time interval after the creation of the report file exceeds \<*time_period*>. **-DelHtmlRpt** looks for files whose name fits the pattern generated from the *html_file* parameter. If *html_file* is c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint.htm, then **-DelHtmlRpt** causes **sqlmaint** to delete any files whose names match the pattern C:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint\*.htm and that are older than the specified \<*time_period*>.  
   
- **-RmUnusedSpace** *threshold_percent free_percent*  
+ **-RmUnusedSpace** _threshold_percent free_percent_  
  Specifies that unused space be removed from the database specified in **-D**. This option is only useful for databases that are defined to grow automatically. *Threshold_percent* specifies in megabytes the size that the database must reach before **sqlmaint** attempts to remove unused data space. If the database is smaller than the *threshold_percent*, no action is taken. *Free_percent* specifies how much unused space must remain in the database, specified as a percentage of the final size of the database. For example, if a 200-MB database contains 100 MB of data, specifying 10 for *free_percent* results in the final database size being 110 MB. Note that a database is not expanded if it is smaller than *free_percent* plus the amount of data in the database. For example, if a 108-MB database has 100 MB of data, specifying 10 for *free_percent* does not expand the database to 110 MB; it remains at 108 MB.  
   
  **-CkDB** | **-CkDBNoIdx**  
@@ -142,7 +141,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-CkCat**  
  Specifies that a DBCC CHECKCATALOG (Transact-SQL) statement be run in the database specified in **-D**. For more information, see [DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md).  
   
- **-UpdOptiStats** *sample_percent*  
+ **-UpdOptiStats** _sample_percent_  
  Specifies that the following statement be run on each table in the database:  
   
 ```  
@@ -153,7 +152,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
   
  For more information, see [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md).  
   
- **-RebldIdx** *free_space*  
+ **-RebldIdx** _free_space_  
  Specifies that indexes on tables in the target database should be rebuilt by using the *free_space* percent value as the inverse of the fill factor. For example, if *free_space* percentage is 30, then the fill factor used is 70. If a *free_space* percentage value of 100 is specified, then the indexes are rebuilt with the original fill factor value.  
   
  If the indexes are on computed columns, you must also specify the **-SupportComputedColumn** argument when you use **-RebldIdx**.  

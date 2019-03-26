@@ -1,11 +1,11 @@
 ---
-title: Tutorial on creating, training and scoring partition-based models in R (SQL Server Machine Learning Services) | Microsoft Docs
+title: Tutorial on creating, training and scoring partition-based models in R - SQL Server Machine Learning Services
 description: Learn how to model, train, and use partitioned data that is created dynamically when using the partition-based modeling capabilites of SQL Server machine learning.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
   
-ms.date: 10/02/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
@@ -38,11 +38,11 @@ To complete this tutorial, you must have the following:
 
 + A tool for T-SQL query execution, such as [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which you can [download and restore](sqldev-download-the-sample-data.md) to your local database engine instance. File size is approximately 90 MB.
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), which you can [download and restore](demo-data-nyctaxi-in-sql.md) to your local database engine instance. File size is approximately 90 MB.
 
 + SQL Server 2019 preview database engine instance, with Machine Learning Services and R integration.
 
-Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x".
+Check version by executing **`SELECT @@Version`** as a T-SQL query in a query tool. Output should be "Microsoft SQL Server 2019 (CTP 2.4) - 15.0.x".
 
 Check availability of R packages by returning a well-formatted list of all R packages currently installed with your database engine instance:
 
@@ -60,7 +60,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## Connect to the database
 
-Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYCTaxi_Sample database](sqldev-download-the-sample-data.md) exists. 
+Start Management Studio and connect to the database engine instance. In Object Explorer, verify the [NYCTaxi_Sample database](demo-data-nyctaxi-in-sql.md) exists. 
 
 ## Create CalculateDistance
 

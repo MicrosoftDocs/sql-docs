@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "File Transfer Protocol Task Editor"
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # FTP Task Editor (File Transfer Page)
@@ -68,7 +68,7 @@ manager: craigg
   
 ### IsRemotePathVariable = False  
  **RemotePath**  
- Select an existing FTP connection manager, or click \<**New connection…**> to create a connection manager.  
+ Select an existing FTP connection manager, or click \<**New connection...**> to create a connection manager.  
   
  **Related Topics:** [FTP Connection Manager](connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
@@ -82,7 +82,7 @@ manager: craigg
   
 ### IsLocalPathVariable = False  
  **LocalPath**  
- Select an existing File connection manager, or click \<**New connection…**> to create a connection manager.  
+ Select an existing File connection manager, or click \<**New connection...**> to create a connection manager.  
   
  **Related Topics**: [Flat File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   

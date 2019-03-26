@@ -10,7 +10,7 @@ ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: kfile
 ---
 # Using My Reports (Report Builder and SSRS)
   On a report server configured in native mode, the My Reports folder is a personal workspace that you can use to store and work with reports that you own. Other report server folders are public and typically require users to have advanced permissions to add to or modify folder contents. In contrast, the My Reports folder is a user-managed workspace. You can add or remove reports and folders and save linked reports with personalized settings.  
@@ -29,7 +29,7 @@ manager: craigg
   
 -   Create a personal linked report and store it in My Reports. Not all reports are available for linking. For more information, see [Create a Linked Report](../reports/create-a-linked-report.md).  
   
--   Upload a report definition (.rdl) file, report model (.smdl) file, or other files from the file system. You can upload any file, but the report server only processes report files that have an .rdl or .smdl file extension. For more information, see Report Definitions" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online and [Upload a File or Report &#40;Report Manager&#41;](../reports/upload-a-file-or-report-report-manager.md).  
+-   Upload a report definition (.rdl) file, report model (.smdl) file, or other files from the file system. You can upload any file, but the report server only processes report files that have an .rdl or .smdl file extension. For more information, see Report Definitions" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online and [Upload a File or Report &#40;Report Manager&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 -   Create and publish your own reports to My Reports. For more information, see [Report Design View &#40;Report Builder&#41;](report-design-view-report-builder.md).  
   

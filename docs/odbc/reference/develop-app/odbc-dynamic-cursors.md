@@ -35,6 +35,6 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
    ORDER BY Name, CustID  
 ```  
   
- This statement creates a second result set, the first rowset of which is the next rowset in the original result set — in this case, the set of rows in the Customers table. The cursor returns this rowset to the application.  
+ This statement creates a second result set, the first rowset of which is the next rowset in the original result set - in this case, the set of rows in the Customers table. The cursor returns this rowset to the application.  
   
  It is interesting to note that a dynamic cursor implemented in this manner actually creates many result sets, which allows it to detect changes to the original result set. The application never learns of the existence of these auxiliary result sets; it simply appears as if the cursor is able to detect changes to the original result set.

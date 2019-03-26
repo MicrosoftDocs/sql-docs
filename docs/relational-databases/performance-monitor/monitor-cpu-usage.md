@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server], CPU usage"
@@ -21,8 +20,8 @@ helpviewer_keywords:
   - "CPU [SQL Server], monitoring"
   - "monitoring server performance [SQL Server], CPU usage"
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Monitor CPU Usage

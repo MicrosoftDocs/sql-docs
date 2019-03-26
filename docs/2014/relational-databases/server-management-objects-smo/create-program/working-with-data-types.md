@@ -5,8 +5,6 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DataType object"
@@ -74,7 +72,7 @@ manager: craigg
 {   
 //Declare a DataType object variable and define the data type in the constructor.   
 DataType dt;   
-//For the decimal data type the following two arguements specify precision, and scale.   
+//For the decimal data type the following two arguments specify precision, and scale.   
 dt = new DataType(SqlDataType.Decimal, 10, 2);   
 }  
 ```  

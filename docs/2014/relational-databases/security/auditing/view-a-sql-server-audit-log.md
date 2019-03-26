@@ -43,7 +43,7 @@ manager: craigg
   
 2.  Expand the **Audits** folder.  
   
-3.  Right-click the audit log that you want to view and select **View Audit Logs**. This opens the **Log File Viewer –***server_name* dialog box. For more information, see [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Right-click the audit log that you want to view and select **View Audit Logs**. This opens the **Log File Viewer -**_server_name_ dialog box. For more information, see [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  When finished, click **Close**.  
   

@@ -1,10 +1,10 @@
 ---
-title: Firewall configuration for SQL Server Machine Learning Services | Microsoft Docs
-description: How to configure the firewall for SQL Server Machine Learning Services.
+title: Firewall configuration - SQL Server Machine Learning Services
+description: How to configure the firewall for outbound connections from SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/01/2018  
+ms.date: 10/17/2018  
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -17,9 +17,9 @@ This article lists firewall configuration considerations that the administrator 
 
 ## Default firewall rules
 
-By default, the SQL Server Setup disables outbound connections by creating firewall rules. 
+By default, the SQL Server Setup disables outbound connections by creating firewall rules.
 
-In SQL Server 2016 and 2017, these rules are based on local user accounts, where Setup created one outbound rule for **SQLRUserGroup** that denied network access to its members (each worker account was listed as a local principle subject to the rule.
+In SQL Server 2016 and 2017, these rules are based on local user accounts, where Setup created one outbound rule for **SQLRUserGroup** that denied network access to its members (each worker account was listed as a local principle subject to the rule. For more information about SQLRUserGroup, see [Security overview for the extensibility framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
 In SQL Server 2019, as part of the move to AppContainers, there are new firewall rules based on AppContainer SIDs: one for each of the 20 AppContainers created by SQL Server Setup. Naming conventions for the firewall rule name are **Block network access for AppContainer-00 in SQL Server instance MSSQLSERVER**, where 00 is the number of the AppContainer (00-20 by default), and MSSQLSERVER is the name of the SQL Server instance.
 

@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.selectapackage.f1"
 helpviewer_keywords: 
   - "Select a Package dialog box"
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select a Package
@@ -51,7 +50,7 @@ manager: craigg
   
 ### Location = DTSX file  
  **File name**  
- Provide the path of a package or click the browse button **(…)** and locate the package.  
+ Provide the path of a package or click the browse button **(...)** and locate the package.  
   
 ## See Also  
  [Message Queue Task](message-queue-task.md)  

@@ -44,7 +44,7 @@ manager: craigg
   
 -   User-defined functions can not return multiple result sets. Use a stored procedure if you need to return multiple result sets.  
   
--   Error handling is restricted in a user-defined function. A UDF does not support TRY…CATCH, @ERROR or RAISERROR.  
+-   Error handling is restricted in a user-defined function. A UDF does not support TRY...CATCH, @ERROR or RAISERROR.  
   
 -   User-defined functions cannot call a stored procedure, but can call an extended stored procedure.  
   

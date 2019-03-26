@@ -4,22 +4,21 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.toolboxcommon.F1"
   - "sql12.dts.designer.toolbox.F1"
   - "sql12.dts.designer.toolboxfavorites.F1"
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SSIS Toolbox
   All components that are installed on the local machine, including third-party components built for SQL Server 2008 and 2008 R2, now automatically appear in the new **SSIS Toolbox**. When you install additional components, right-click inside the toolbox and then click **Refresh Toolbox** to add the components.  
   
- You can easily access more information about a component from the toolbox, by clicking the component to view a description at the bottom of the toolbox. Click the Help button next to the description to display the Books Online topic. For certain components, you can also access samples that demonstrate how to configure and use the components. The samples are available on [MSDN](http://go.microsoft.com/fwlink/?LinkId=259189). To access the samples from the **SSIS Toolbox**, click the **Find Samples** link that appears below the description.  
+ You can easily access more information about a component from the toolbox, by clicking the component to view a description at the bottom of the toolbox. Click the Help button next to the description to display the Books Online topic. For certain components, you can also access samples that demonstrate how to configure and use the components. The samples are available on [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189). To access the samples from the **SSIS Toolbox**, click the **Find Samples** link that appears below the description.  
   
 > [!NOTE]  
 >  Unlike previous versions of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], you cannot remove installed components from the toolbox.  

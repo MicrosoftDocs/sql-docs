@@ -107,7 +107,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## 9. Send email when 'Agent Test Job’ succeeds 
+## 9. Send email when 'Agent Test Job' succeeds 
 
 ```
 EXEC msdb.dbo.sp_update_job 

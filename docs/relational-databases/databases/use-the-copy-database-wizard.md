@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.cdw.packageconfiguration.f1"
@@ -45,7 +44,6 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
 -   Schedule when to move or copy the database(s).  
   
 
-  
 ##  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   The Copy Database Wizard is not available in the Express edition.  
@@ -60,6 +58,8 @@ The Copy Database Wizard moves or copies databases and certain server objects ea
     
     -   Have data or log files stored in Microsoft Azure storage.
   
+-   When using [FileTables](../../relational-databases/blob/filetables-sql-server.md), you can't use the Copy Database Wizard on the same server because the wizard uses the same directory name.
+
 -   A database cannot be moved or copied to an earlier version of SQL Server.
   
 -   If you select the **Move** option, the wizard deletes the source database automatically after moving the database. The Copy Database Wizard does not delete a source database if you select the **Copy** option.  In addition, selected server objects are copied rather than moved to the destination; the database is the only object that is actually moved.
@@ -308,7 +308,7 @@ Regardless of whether you choose **Move** or **Copy**, **Detach and Attach** or 
      > **NOTE** You can launch the Copy Database Wizard from any database.  You can use the Copy Database Wizard from either the source or destination server.
   
 ### **A.  Move database using detach and attach method to an instance on a different physical server.  A login and SQL Server Agent job will be moved as well.**  
-The following example will move the `Sales` database, a Windows login named `contoso\Jennie` and a SQL Server Agent job named `Jennie’s Report` from a 2008 instance of SQL Server on `Server1` to a 2016 instance of SQL Server on `Server2`.  `Jennie’s Report` uses the `Sales` database.  `Sales` does not already exist on the destination server, `Server2`.  `Server1` will be re-assigned to a different team after the database move.
+The following example will move the `Sales` database, a Windows login named `contoso\Jennie` and a SQL Server Agent job named `Jennie's Report` from a 2008 instance of SQL Server on `Server1` to a 2016 instance of SQL Server on `Server2`.  `Jennie's Report` uses the `Sales` database.  `Sales` does not already exist on the destination server, `Server2`.  `Server1` will be re-assigned to a different team after the database move.
   
 6.	As noted in [Limitations and Restrictions](#Restrictions), above, a shell database will need to be created on the destination server when transferring a SQL Server Agent job that references a database that does not already exist on the destination server.  Create a shell database called `Sales` on the destination server. 
 
@@ -318,7 +318,7 @@ The following example will move the `Sales` database, a Windows login named `con
   
 9.	**Configure Destination Database** page:  The **Wizard** has identified that `Sales` already exists on the destination server, as created in **Step 6** above, and has appended `_new` to the **Destination database** name.  Delete `_new` from the **Destination database** text box.  If desired, change the **Filename**, and **Destination Folder**.  Select **Drop any database on the destination server with the same name, then continue with the database transfer, overwriting existing database files**.  Click **Next**.
   
-10.	**Select Server Objects** page: In the **Selected related objects:** panel, click the ellipsis button for **Object name Logins**.  Under **Copy Options** select **Copy only the selected logins:**.  Check the box for **Show all server logins**.  Check the **Login** box for `contoso\Jennie`.  Click **OK**.  In the **Available related objects:** panel select **SQL Server Agent jobs** and then click the **>** button.  In the **Selected related objects:** panel, click the ellipsis button for **SQL Server Agent jobs**.  Under **Copy Options** select **Copy only the selected jobs**.  Check the box for `Jennie’s Report`.  Click **OK**.  Click **Next**.  
+10.	**Select Server Objects** page: In the **Selected related objects:** panel, click the ellipsis button for **Object name Logins**.  Under **Copy Options** select **Copy only the selected logins:**.  Check the box for **Show all server logins**.  Check the **Login** box for `contoso\Jennie`.  Click **OK**.  In the **Available related objects:** panel select **SQL Server Agent jobs** and then click the **>** button.  In the **Selected related objects:** panel, click the ellipsis button for **SQL Server Agent jobs**.  Under **Copy Options** select **Copy only the selected jobs**.  Check the box for `Jennie's Report`.  Click **OK**.  Click **Next**.  
   
 11.	**Location of Source Database Files** page:  Click the ellipsis button for **File share on source server** and navigate to the location for the given Folder location.  For example, for Folder location `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` use `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` for **File share on source server**.  Click **Next**.
   
@@ -351,7 +351,7 @@ Consider executing the following T-SQL statements on the new host, `Server2`:
 Since `Server1` will be moved to a different team and the **Move** operation will not be repeated, consider executing the following steps:
      -    Deleting SSIS package `SalesFromServer1toServer2_Move` on `Server2`.
      -    Deleting SQL Server Agent job `SalesFromServer1toServer2_Move` on `Server2`.
-     -    Deleting SQL Server Agent job `Jennie’s Report` on `Server1`.
+     -    Deleting SQL Server Agent job `Jennie's Report` on `Server1`.
      -    Dropping login `contoso\Jennie` on `Server1`.
 
 

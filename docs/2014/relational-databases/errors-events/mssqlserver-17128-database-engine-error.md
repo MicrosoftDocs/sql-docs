@@ -27,9 +27,9 @@ manager: craigg
 |Message Text|initdata: No memory for kernel buffers.|  
   
 ## Explanation  
- The buffer pool’s initial memory allocations or reservations have failed, and SQL Server exits.  
+ The buffer pool's initial memory allocations or reservations have failed, and SQL Server exits.  
   
 ## User Action  
- Usually caused by starting SQL Server on an extremely small machine – far smaller than the minimum system requirements.  
+ Usually caused by starting SQL Server on an extremely small machine - far smaller than the minimum system requirements.  
   
   

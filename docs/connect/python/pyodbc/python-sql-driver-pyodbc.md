@@ -24,4 +24,4 @@ manager: craigg
 
 ## Documentation
 
-* [pyodbc documentation](http://mkleehammer.github.io/pyodbc/)  
+* [pyodbc documentation](https://mkleehammer.github.io/pyodbc/)  

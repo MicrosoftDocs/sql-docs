@@ -19,7 +19,7 @@ manager: craigg
   **SQLFreeStmt** is not recommended in ODBC 3.0 and later. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver supports all defined *Option* values for **SQLFreeStmt**. However, [SQLCloseCursor](sqlclosecursor.md), [SQLBindParameter](sqlbindparameter.md), [SQLBindCol](sqlbindcol.md), **SQLSetDescField**, and [SQLFreeHandle](sqlfreehandle.md) replace or duplicate the function of **SQLFreeStmt** and should be used instead.  
   
 ## See Also  
- [SQLFreeStmt Function](http://go.microsoft.com/fwlink/?LinkId=59346)   
+ [SQLFreeStmt Function](https://go.microsoft.com/fwlink/?LinkId=59346)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

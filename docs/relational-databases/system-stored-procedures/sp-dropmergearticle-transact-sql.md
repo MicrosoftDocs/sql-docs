@@ -5,8 +5,7 @@ ms.date: "05/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-  - "replication"
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropmergearticle"
@@ -39,10 +38,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+ [ **@publication=**] **'**_publication_**'**  
  Is the name of the publication from which to drop an article. *publication*is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+ [ **@article=**] **'**_article_**'**  
  Is the name of the article to drop from the given publication. *article*is **sysname**, with no default. If **all**, all existing articles in the specified merge publication are removed. Even if *article* is **all**, the publication still must be dropped separately from the article.  
   
  [ **@ignore_distributor=**] *ignore_distributor*  

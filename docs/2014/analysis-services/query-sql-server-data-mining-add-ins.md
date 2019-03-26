@@ -24,7 +24,7 @@ manager: craigg
   
  The **Query** wizard also provides an advanced editor for creating or modifying data mining models, for generating custom queries, or for working with structures not supported in the other tools, such as nested datasets.  
   
--   Use the text editor to type or paste in the Data Mining Extensions (DMX) statements you’ve created elsewhere.  
+-   Use the text editor to type or paste in the Data Mining Extensions (DMX) statements you've created elsewhere.  
   
 -   Use the interactive Query Builder to compose a custom DMX statement with the help of templates and dialog boxes.  
   

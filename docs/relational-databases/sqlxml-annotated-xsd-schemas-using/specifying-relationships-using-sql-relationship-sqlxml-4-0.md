@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "named relationships [SQLXML]"
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: douglasl
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

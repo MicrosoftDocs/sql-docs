@@ -4,12 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Define a State Variable
@@ -27,7 +26,7 @@ manager: craigg
 |`CS`|This marks the current processing range start point (Current Start).|  
 |`<cs-lsn>`|This is the last (Log Sequence Number) LSN processed in the previous CDC run.|  
 |`CE`|This marks the current processing range end point (Current End). The presence of the CE component in the CDC state is an indication that either a CDC package is currently processing or that a CDC package failed before fully processing its CDC processing range.|  
-|`<ce-lsn>`|This is the last LSN to be processed in the current CDC Run. It is always assumed that the last sequence number to be processed is the maximum (0xFFF…).|  
+|`<ce-lsn>`|This is the last LSN to be processed in the current CDC Run. It is always assumed that the last sequence number to be processed is the maximum (0xFFF...).|  
 |`IR`|This marks the initial processing range.|  
 |`<ir-start>`|This is an LSN of a change just before the initial load began.|  
 |`<ir-end>`|This is an LSN of a change just after the initial load ended.|  

@@ -6,7 +6,6 @@ ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
-  - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Mail [SQL Server], host databases"
@@ -14,8 +13,8 @@ helpviewer_keywords:
   - "mail host databases [SQL Server]"
   - "host databases [Database Mail]"
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Database Mail Messaging Objects

@@ -5,7 +5,7 @@ description: This article describes the controller of a SQL Server 2019 big data
 author: mihaelablendea 
 ms.author: mihaelab 
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -24,8 +24,8 @@ The controller service provides the following core functionality:
 - Expose monitoring tools to observe the state of the cluster
 - Expose troubleshooting tools to detect and repair unexpected issues
 - Manage cluster security: ensure secure cluster endpoints, manage users and roles, configure credentials for intra-cluster communication
-- Manage the workflow of upgrades so that they are implemented safely (not available in CTP 2.3)
-- Manage high availability and DR for statefull services in the cluster (not available in CTP 2.3)
+- Manage the workflow of upgrades so that they are implemented safely (not available in CTP 2.4)
+- Manage high availability and DR for statefull services in the cluster (not available in CTP 2.4)
 
 ## Deploying the controller service
 

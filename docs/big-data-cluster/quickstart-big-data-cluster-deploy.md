@@ -5,7 +5,7 @@ description: Walkthrough a deployment of SQL Server 2019 big data clusters (prev
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -154,7 +154,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> In CTP 2.3, you will see a security warning when accessing the web page, because big data clusters is currently using auto-generated SSL certificates.
+> In CTP 2.4, you will see a security warning when accessing the web page, because big data clusters is currently using auto-generated SSL certificates.
 
 ## Connect to the cluster
 

@@ -4,7 +4,7 @@ description: Describes how SQL Server customer usage and diagnostic data is coll
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"

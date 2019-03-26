@@ -34,10 +34,10 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## Arguments  
- [ **@group_name=** ] **'***group_name***'**  
+`[ @group_name = ] 'group_name'`
  The name of the group. *group_name* is **sysname**, with no default.  
   
- [ **@server_name=** ] **'***server_name***'**  
+`[ @server_name = ] 'server_name'`
  The name of the server that should be added to the specified group. *server_name* is **nvarchar(30)**, with no default.  
   
 ## Return Code Values  

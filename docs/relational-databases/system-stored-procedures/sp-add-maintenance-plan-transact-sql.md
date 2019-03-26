@@ -40,7 +40,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ```  
   
 ## Arguments  
- [ **@plan_name =**] **'***plan_name***'**  
+`[ @plan_name = ] 'plan_name'`
  Specifies the name of the maintenance plan to be added. *plan_name* is **varchar(128)**.  
   
  **@plan_id = '** *plan_id* **'**  

@@ -82,9 +82,9 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 4.  Manually fail over the AG to a (newly upgraded) local synchronous-commit secondary replica.  
   
-5.  Upgrade or update the local replica instance that formerly hosted the primary replica  
+5.  Upgrade or update the local replica instance that formerly hosted the primary replica.  
   
-6.  Configure automatic failover partners as desired  
+6.  Configure automatic failover partners as desired.
   
  If necessary, you can perform an extra manual failover to return the AG to its original configuration.  
  

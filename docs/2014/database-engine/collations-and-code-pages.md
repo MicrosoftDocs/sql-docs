@@ -25,7 +25,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  You cannot use order by or group by on index string columns that do not use BIN2 collation.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -54,7 +54,7 @@ GO
   
 -   (var)char columns in memory-optimized tables must use code page 1252 collation. This restriction does not apply to n(var)char columns. The following code retrieves all 1252 collations:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -64,7 +64,7 @@ GO
   
 -   Indexes on (n)(var)char columns can only be specified with BIN2 collations (see the first example). The following query retrieves all supported BIN2 collations:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -78,7 +78,7 @@ GO
   
 -   Truncation of UTF-16 data is not supported inside natively compiled stored procedures. This means that n(var)char(*n*) values cannot be converted to type n(var)char(*i*), if *i* < *n*, if the collation has _SC property. For example, the following is not supported:  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -92,7 +92,7 @@ GO
   
  The following example shows some of the implications and workarounds for the collation limitations in In-Memory OLTP. The example uses the Employees table specified above. This sample list all employees . Notice that for LastName, due to the binary collation, the upper case names are sorted before lower case. Therefore, 'Thomas' comes before 'nolan' because upper case characters have lower code points. FirstName has a case-insensitive collation. So, sorting is by letter of the alphabet, not code point of the characters.  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  

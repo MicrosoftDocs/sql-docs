@@ -48,7 +48,7 @@ manager: craigg
 ###  <a name="bkmk_CreateDatabase"></a> Create the database  
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] creates a database named IMOLTP_DB which will contain one or more memory-optimized tables. The path \<driveAndPath> must exist prior to running this command.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -82,7 +82,7 @@ For this example we will assume that from your calculations you determined that 
   
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code creates a resource pool named Pool_IMOLTP with half of the memory available for its use.  After the pool is created Resource Governor is reconfigured to include Pool_IMOLTP.  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -99,7 +99,7 @@ GO
   
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] defines a binding of the database IMOLTP_DB to the resource pool Pool_IMOLTP. The binding does not become effective until you bring the database online.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> Confirm the binding  
  Confirm the binding, noting the resource pool id for IMOLTP_DB. It should not be NULL.  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -118,7 +118,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> Make the binding effective  
  You must take the database offline and back online after binding it to the resource pool for binding to take effect. If your database was bound to an a different pool earlier, this removes the allocated memory from the previous resource pool and memory allocations for your memory-optimized table and indexes will now come from the resource pool newly bound with the database.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -142,7 +142,7 @@ GO
   
  **Sample Code**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -171,7 +171,7 @@ GO
   
  Once a database has been bound to a named resource pool, use the following query to see memory allocations across different resource pools.  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  

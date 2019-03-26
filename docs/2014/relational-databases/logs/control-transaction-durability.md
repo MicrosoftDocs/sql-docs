@@ -84,7 +84,7 @@ manager: craigg
 ###  <a name="bkmk_DbControl"></a> Database level control  
  You, the DBA, can control whether users can use delayed transaction durability on a database with the following statement. You must set the delayed durability setting with ALTER DATABASE.  
   
-```tsql  
+```sql  
 ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
@@ -100,7 +100,7 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
 ###  <a name="CompiledProcControl"></a> Atomic block level control - Natively Compiled Stored Procedures  
  The following code goes inside the atomic block.  
   
-```tsql  
+```sql  
 DELAYED_DURABILITY = { OFF | ON }  
 ```  
   
@@ -112,7 +112,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  **Example Code:**  
   
-```tsql  
+```sql  
 CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -135,7 +135,7 @@ END
 ###  <a name="bkmk_T-SQLControl"></a> COMMIT level control -[!INCLUDE[tsql](../../includes/tsql-md.md)]  
  The COMMIT syntax is extended so you can force delayed transaction durability. If DELAYED_DURABILITY is DISABLED or FORCED at the database level (see above) this COMMIT option is ignored.  
   
-```tsql  
+```sql  
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
   
 ```  

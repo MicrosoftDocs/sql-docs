@@ -37,7 +37,7 @@ manager: craigg
     >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT to the same value as MAX_MEMORY_PERCENT.   
     > See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) for more information.  
   
-    ```tsql  
+    ```sql  
   
     -- disable resource governor  
     ALTER RESOURCE GOVERNOR DISABLE  
@@ -101,7 +101,7 @@ This code snippet changes MAX_MEMORY_PERCENT for the resource pool PoolHk to 70%
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
 > See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) for more information.  
   
-```tsql  
+```sql  
   
 -- disable resource governor  
 ALTER RESOURCE GOVERNOR DISABLE  

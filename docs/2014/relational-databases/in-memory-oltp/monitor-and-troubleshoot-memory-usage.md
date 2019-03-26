@@ -143,7 +143,7 @@ manager: craigg
 #### Memory consumption by memory-optimized tables and indexes  
  You can find memory consumption for all user tables, indexes, and system objects by querying `sys.dm_db_xtp_table_memory_stats` as shown here.  
   
-```tsql  
+```sql  
 SELECT object_name(object_id) AS Name  
      , *  
    FROM sys.dm_db_xtp_table_memory_stats  
@@ -169,7 +169,7 @@ NULL       -2          192                           25                      16 
 #### Memory consumption by internal system structures  
  Memory is also consumed by system objects, such as, transactional structures, buffers for data and delta files, garbage collection structures, and more. You can find the memory used for these system objects by querying `sys.dm_xtp_system_memory_consumers` as shown here.  
   
-```tsql  
+```sql  
 SELECT memory_consumer_desc  
      , allocated_bytes/1024 AS allocated_bytes_kb  
      , used_bytes/1024 AS used_bytes_kb  
@@ -208,7 +208,7 @@ PGPOOL:  4K               0                    0                    0
 #### Memory consumption at run-time when accessing memory-optimized tables  
  You can determine the memory consumed by run time structures, such as the procedure cache with the following query: run this query to get the memory used by run-time structures such as for the procedure cache. All run-time structures are tagged with XTP.  
   
-```tsql  
+```sql  
 SELECT memory_object_address  
      , pages_in_bytes  
      , bytes_used  
@@ -241,7 +241,7 @@ memory_object_address pages_ in_bytes bytes_used type
 #### Memory consumed by [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine across the instance  
  Memory allocated to the [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine and the memory-optimized objects is managed the same way as any other memory consumer within a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The clerks of type MEMORYCLERK_XTP accounts for all the memory allocated to [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine. Use the following query to find all the memory used by the [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine.  
   
-```tsql  
+```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
 SELECT type  
      , name  

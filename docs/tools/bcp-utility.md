@@ -551,7 +551,7 @@ The examples below make use of the `WideWorldImporters` sample database for SQL 
 
 The script below creates an empty copy of the `WideWorldImporters.Warehouse.StockItemTransactions` table and then adds a primary key constraint.  Run the following T-SQL script in SQL Server Management Studio (SSMS)
 
-```tsql  
+```sql  
 USE WideWorldImporters;  
 GO  
 

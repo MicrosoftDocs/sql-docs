@@ -74,17 +74,22 @@ Observe the following guidelines when performing server upgrades or updates in o
   
 1.  Remove automatic failover on all synchronous-commit replicas  
   
-2.  Upgrade all remote secondary replica instances running asynchronous-commit secondary replicas  
+2.  Upgrade all asynchronous-commit secondary replica instances. 
   
-3.  Upgrade the all local replica secondary instances that are not currently running the primary replica  
+3.  Upgrade all remote synchronous-commit secondary replica instances. 
+
+4.  Upgrade all local synchronous-commit secondary replica instances. 
   
-4.  Manually fail over the AG to a local synchronous-commit secondary replica  
+4.  Manually fail over the AG to a (newly upgraded) local synchronous-commit secondary replica.  
   
 5.  Upgrade or update the local replica instance that formerly hosted the primary replica  
   
 6.  Configure automatic failover partners as desired  
   
  If necessary, you can perform an extra manual failover to return the AG to its original configuration.  
+ 
+   > [!NOTE]
+   > Upgrading a synchronous-commit replica and taking it offline will not delay transactions on the primary. Once the secondary replica is disconnected, transactions are committed on the primary without waiting for logs to harden on the secondary replica. 
   
 ## AG with One Remote Secondary Replica  
  If you have deployed an AG only for disaster recovery, you may need to fail over the AG to an asynchronous-commit secondary replica. Such configuration is illustrated by the following figure:  

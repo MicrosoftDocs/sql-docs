@@ -83,9 +83,6 @@ Nodes in the cluster are arranged into three logical planes: the control plane, 
 
 ![Architecture overview](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
-> [!TIP]
-> For a more in-depth look into big data cluster architecture and installation, see [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
-
 ### <a id="controlplane"></a> Control plane
 
 The control plane provides management and security for the cluster. It contains the Kubernetes master, the *SQL Server master instance*, and other cluster-level services such as the Hive Metastore and Spark Driver.
@@ -97,6 +94,9 @@ The compute plane provides computational resources to the cluster. It contains n
 ### <a id="dataplane"></a> Data plane
 
 The data plane is used for data persistence and caching. It contains the SQL data pool, and storage pool.  The SQL data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Server big data cluster data marts are persisted in the data pool. The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Server big data cluster are members of an HDFS cluster.
+
+> [!TIP]
+> For a more in-depth look into big data cluster architecture and installation, see [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## Next steps
 

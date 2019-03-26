@@ -95,6 +95,9 @@ The compute plane provides computational resources to the cluster. It contains n
 
 The data plane is used for data persistence and caching. It contains the SQL data pool, and storage pool.  The SQL data pool consists of one or more pods running SQL Server on Linux. It is used to ingest data from SQL queries or Spark jobs. SQL Server big data cluster data marts are persisted in the data pool. The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Server big data cluster are members of an HDFS cluster.
 
+> [!TIP]
+> For an in-depth look into big data cluster architecture and installation, see [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+
 ## Next steps
 
 SQL Server big data clusters is first available as a limited public preview through the SQL Server 2019

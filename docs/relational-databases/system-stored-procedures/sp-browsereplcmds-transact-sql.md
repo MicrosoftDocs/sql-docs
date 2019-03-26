@@ -39,28 +39,28 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## Arguments  
- [ **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
+`[ @xact_seqno_start = ] 'xact_seqno_start'`
  Specifies the lowest valued exact sequence number to return. *xact_seqno_start* is **nchar(22)**, with a default of 0x00000000000000000000.  
   
- [ **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
+`[ @xact_seqno_end = ] 'xact_seqno_end'`
  Specifies the highest exact sequence number to return. *xact_seqno_end* is **nchar(22)**, with a default of 0xFFFFFFFFFFFFFFFFFFFF.  
   
- [ **@originator_id =**] **'**_originator_id_**'**  
+`[ @originator_id = ] 'originator_id'`
  Specifies if commands with the specified *originator_id* are returned. *originator_id* is **int**, with a default of NULL.  
   
- [ **@publisher_database_id =**] **'**_publisher_database_id_**'**  
+`[ @publisher_database_id = ] 'publisher_database_id'`
  Specifies if commands with the specified *publisher_database_id* are returned. *publisher_database_id* is **int**, with a default of NULL.  
   
- [ **@article_id =**] **'**_article_id_**'**  
+`[ @article_id = ] 'article_id'`
  Specifies if commands with the specified *article_id* are returned. *article_id* is **int**, with a default of NULL.  
   
- [ **@command_id =**] *command_id*  
+`[ @command_id = ] command_id`
  Is the location of the command in [MSrepl_commands &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) to be decoded. *command_id* is **int**, with a default of NULL. If specified, all other parameters must be specified also, and *xact_seqno_start*must be identical to *xact_seqno_end*.  
   
- [ **@agent_id =**] *agent_id*  
+`[ @agent_id = ] agent_id`
  Specifies that only commands for a specific replication agent are returned. *agent_id* is **int**, with a default value of NULL.  
   
- [ **@compatibility_level =**] *compatibility_level*  
+`[ @compatibility_level = ] compatibility_level`
  Is the version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on which the *compatibility_level* is **int**, with a default value of 9000000.  
   
 ## Return Code Values  

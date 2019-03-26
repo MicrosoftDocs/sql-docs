@@ -69,7 +69,7 @@ For each OS-specific set of installation instructions, *highest package level* i
 
    + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
-   + [SUSE](#SUSE)
+   + [SUSE](#suse)
 
 ## Prerequisites
 

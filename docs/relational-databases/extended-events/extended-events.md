@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords: 
   - "extended events [SQL Server]"
   - "xe"

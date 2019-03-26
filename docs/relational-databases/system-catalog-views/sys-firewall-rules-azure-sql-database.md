@@ -1,6 +1,6 @@
 ---
 title: "sys.firewall_rules (Azure SQL Database) | Microsoft Docs"
-ms.date: "03/14/2017"
+ms.date: "03/26/2019"
 ms.prod: sql
 ms.technology: system-objects
 ms.topic: "language-reference"
@@ -36,13 +36,16 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |create_date|**DATETIME**|UTC date and time when the server-level firewall setting was created.<br /><br /> Note: UTC is an acronym for Coordinated Universal Time.|  
 |modify_date|**DATETIME**|UTC date and time when the server-level firewall setting was last modified.|  
   
-## Remarks  
+## Remarks
+
  To returns information about the database-level firewall settings associated with your Microsoft Azure SQL Database, use [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
   
-## Permissions  
+## Permissions
+
  Read-only access to this view is available to all users with permission to connect to the **master** database.  
   
 ## See Also
+
 [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 [sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
 [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  

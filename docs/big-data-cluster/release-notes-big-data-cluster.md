@@ -21,11 +21,12 @@ This article lists the updates and know issues for the most recent releases of S
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.4.
 
-### New features
+### What's New
 
-| New feature | Details |
+| New feature/update | Details |
 |:---|:---|
 | Guidance on GPU support for running deep learning with TensorFlow in Spark. | [Deploy a big data cluster with GPU support and run TensorFlow](spark-gpu-tensorflow.md) |
+| **SqlDataPool** and **SqlStoragePool** data sources are no longer created by default. | Create these manually as needed. See the [known issues](#externaltablesctp24). |
 | Spark runtime upgrade to Spark 2.4. | |
 
 ### Known issues
@@ -73,7 +74,20 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
-#### External tables
+#### <a id="externaltablesctp24"></a> External tables
+
+- Big data cluster deployment no longer creates the **SqlDataPool** and **SqlStoragePool** external data sources. You can create these data sources manually to support data virtualization to the data pool and storage pool.
+
+   ```sql
+   -- Create data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   ```
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
 

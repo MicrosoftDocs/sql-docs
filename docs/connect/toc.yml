@@ -2412,8 +2412,6 @@
       href: ../connect/jdbc/application-security.md
     - name: Using SSL Encryption
       href: ../connect/jdbc/using-ssl-encryption.md
-    - name: FIPS Mode
-      href: ../connect/jdbc/fips-mode.md
       items:
       - name: Understanding SSL Support
         href: ../connect/jdbc/understanding-ssl-support.md
@@ -2421,6 +2419,8 @@
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
       - name: Configuring the Client for SSL Encryption
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
+    - name: FIPS Mode
+      href: ../connect/jdbc/fips-mode.md
   - name: Improving Performance and Reliability with the JDBC Driver
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
     items:

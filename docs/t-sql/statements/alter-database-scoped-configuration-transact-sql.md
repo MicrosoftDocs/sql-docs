@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2019"
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -37,11 +37,12 @@ This statement enables several database configuration settings at the **individu
 - Enable or disable the identity cache at the database level.
 - Enable or disable a compiled plan stub to be stored in cache when a batch is compiled for the first time.
 - Enable or disable collection of execution statistics for natively compiled T-SQL modules.
-- Enable or disable online by default options for DDL statements that support the ONLINE= syntax.
-- Enable or disable resumable by default options for DDL statements that support the RESUMABLE= syntax.
-- Enable or disable the auto-drop functionality of global temporary tables. 
+- Enable or disable online by default options for DDL statements that support the `ONLINE =` syntax.
+- Enable or disable resumable by default options for DDL statements that support the `RESUMABLE =` syntax.
+- Enable or disable the auto-drop functionality of global temporary tables.
 - Enable or disable [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) features.
 - Enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).
+- Enable or disable the new `String or binary data would be truncated` error message.
 
 ![link icon](../../database-engine/configure-windows/media/topic-link.gif "link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -77,6 +78,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
+    | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
 }
 ```
 
@@ -180,11 +182,11 @@ Allows you to enable or disable batch mode adaptive joins at the database scope 
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]  (feature is in public preview)
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (feature is in public preview)
 
-Allows you to enable or disable T-SQL Scalar UDF inlining at the database scope while still maintaining database compatibility level 150 and higher. T-SQL Scalar UDF inlining a feature that is part of [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
+Allows you to enable or disable T-SQL Scalar UDF inlining at the database scope while still maintaining database compatibility level 150 and higher. T-SQL Scalar UDF inlining is part of the [Intelligent query processing](../../relational-databases/performance/intelligent-query-processing.md) feature family.
 
-> [!NOTE] 
+> [!NOTE]
 > For database compatibility level 140 or lower, this database scoped configuration has no effect.
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -286,6 +288,20 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 Allows you to enable or disable the [lightweight query profiling infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md). The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling mechanisms and is enabled by default.
+
+VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
+
+**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+
+Allows you to enable or disable the new `String or binary data would be truncated` error message. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new, more specific error message (2628) for this scenario:  
+
+`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
+
+When set to ON under database compatibility level 150, truncation errors raise the new error message 2628 to provide more context and simplify the troubleshooting process.
+
+When set to OFF under database compatibility level 150, truncation errors raise the previous error message 8152.
+
+For database compatibility level 140 or lower, error message 2628 remains an opt-in error message that requires [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled, and this database scoped configuration has no effect.
 
 ## <a name="Permissions"></a> Permissions
 

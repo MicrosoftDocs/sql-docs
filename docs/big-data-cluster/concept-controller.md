@@ -5,7 +5,7 @@ description: This article describes the controller of a SQL Server 2019 big data
 author: mihaelablendea 
 ms.author: mihaelab 
 manager: craigg
-ms.date: 02/28/2019
+ms.date:03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

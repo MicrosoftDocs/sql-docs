@@ -5,7 +5,7 @@ description: Learn how to install the mssqlctl tool for installing and managing 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/28/2019
+ms.date:03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

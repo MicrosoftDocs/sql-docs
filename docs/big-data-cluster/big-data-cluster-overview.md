@@ -83,6 +83,9 @@ Nodes in the cluster are arranged into three logical planes: the control plane, 
 
 ![Architecture overview](media/big-data-cluster-overview/architecture-diagram-planes.png)
 
+> [!TIP]
+> For a more in-depth look into big data cluster architecture and installation, see [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+
 ### <a id="controlplane"></a> Control plane
 
 The control plane provides management and security for the cluster. It contains the Kubernetes master, the *SQL Server master instance*, and other cluster-level services such as the Hive Metastore and Spark Driver.

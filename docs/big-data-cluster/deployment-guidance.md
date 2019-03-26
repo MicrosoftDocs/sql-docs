@@ -342,4 +342,7 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
 
 ## Next steps
 
-Try out some of the new capabilities and learn [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
+To learn more about the SQL Server big data clusters, see the following resources:
+
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

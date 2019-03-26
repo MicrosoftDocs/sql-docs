@@ -1,7 +1,7 @@
 ---
 title: "Local Audit for SQL Server Usage Feedback Collection | Microsoft Docs"
 ms.custom: ""
-ms.date:03/27/2018
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""

@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date:03/27/2018
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

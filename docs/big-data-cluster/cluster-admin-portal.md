@@ -5,7 +5,7 @@ description: Learn how to use the cluster administration portal to monitor SQL S
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date:03/27/2018
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

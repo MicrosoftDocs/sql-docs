@@ -36,27 +36,27 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## Arguments  
- [ **@login=**] **'**_login_**'**  
+`[ @login = ] 'login'`
  Is the system administrator login to use when creating new system objects in the Distribution database. *login* is **sysname**, with a default of NULL. This parameter is not required if *security_mode* is set to **1**, which is Windows Authentication.  
   
 > [!NOTE]  
 >  This parameter is ignored when you are upgrading to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions.  
   
- [ **@password=**] **'**_password_**'**  
+`[ @password = ] 'password'`
  Is the system administrator password to use when creating new system objects in the Distribution database. *password* is **sysname**, with a default of **''** (empty string). This parameter is not required if *security_mode* is set to **1**, which is Windows Authentication.  
   
 > [!NOTE]  
 >  This parameter is ignored when you are upgrading to SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions.  
   
- [ **@ver_old=**] **'**_old_version_**'**  
+`[ @ver_old = ] 'old_version'`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  This stored procedure is deprecated and will be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [ **@force_remove=**] **'**_force_removal_**'**  
+`[ @force_remove = ] 'force_removal'`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@security_mode=**] **'**_security_mode_**'**  
+`[ @security_mode = ] 'security_mode'`
  Is the login security mode to use when creating new system objects in the Distribution database. *security_mode* is **bit** with a default value of **0**. If **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication will be used. If **1**, Windows Authentication will be used.  
   
 > [!NOTE]  

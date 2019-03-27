@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Create, Alter, and Drop Secondary Selective XML Indexes

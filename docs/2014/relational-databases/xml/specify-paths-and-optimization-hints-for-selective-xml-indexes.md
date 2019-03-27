@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Specify Paths and Optimization Hints for Selective XML Indexes

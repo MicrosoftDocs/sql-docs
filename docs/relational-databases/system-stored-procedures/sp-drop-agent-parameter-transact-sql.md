@@ -33,10 +33,10 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## Arguments  
- [ **@profile_id=**] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile for which a parameter is to be dropped. *profile_id* is **int**, with no default.  
   
- [ **@parameter_name=**] **'***parameter_name***'**  
+`[ @parameter_name = ] 'parameter_name'`
  Is the name of the parameter to be dropped. *parameter_name* is **sysname**, with a default of **%**. If **%**, all parameters for the specified profile are dropped.  
   
 ## Return Code Values  

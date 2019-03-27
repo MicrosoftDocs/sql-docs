@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 09/10/2018  
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # R Services in SQL Server 2016

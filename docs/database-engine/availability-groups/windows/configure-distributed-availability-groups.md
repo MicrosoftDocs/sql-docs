@@ -15,15 +15,15 @@ manager: craigg
 # Configure a distributed Always On availability group  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-To create a distributed availability group, you must create an availability group and listener on each Windows Server Failover Cluster (WSFC). You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example does not cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements. 
+To create a distributed availability group, you must two availability groups each with its own listener. You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example doesn't cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements.
 
-For a technical overview of distributed availability groups, see [Distributed availability groups](distributed-availability-groups.md).   
+For a technical overview of distributed availability groups, see [Distributed availability groups](distributed-availability-groups.md).
 
 ## Prerequisites
 
 ### Set the endpoint listeners to listen to all IP addresses
 
-Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed availability group does not work properly. On each server that hosts a replica in the distributed availability group, configure the listener to `LISTENER_IP = ALL`. 
+Make sure the endpoints can communicate between the different availability groups in the distributed availability group. If one availability group is set to a specific network on the endpoint, the distributed availability group does not work properly. On each server that hosts a replica in the distributed availability group, set the listener to listen on all IP addresses (`LISTENER_IP = ALL`).
 
 #### Create a listener to listen to all IP addresses
 
@@ -54,7 +54,7 @@ GO
 ## Create first availability group
 
 ### Create the primary availability group on the first cluster  
-Create an availability group on the first WSFC.   In this example, the availability group is named `ag1` for the database `db1`. The primary replica of the primary availability group is known as the **global primary** in a distributed availability group. Server1 is the global primary in this example.        
+Create an availability group on the first Windows Server Failover Cluster (WSFC).   In this example, the availability group is named `ag1` for the database `db1`. The primary replica of the primary availability group is known as the **global primary** in a distributed availability group. Server1 is the global primary in this example.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -199,7 +199,7 @@ GO
 ```  
 
 ## <a name="failover"></a> Join the database on the secondary of the second availability group
-After the database on the secondary of the second availability group is in a restoring state you have to manually join it to the availability group.
+After the database on the secondary replica of the second availability group is in a restoring state, you have to manually join it to the availability group.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
@@ -209,7 +209,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 Only manual failover is supported at this time. To manually fail over a distributed availability group:
 
-1. Set the distribute availability group to synchronous commit. This ensures that data is not lost.
+1. To ensure that no data is lost, set the distributed availability group to synchronous commita.
 1. Wait until the distributed availability group is synchronized.
 1. On the global primary replica, set the distributed availability group role to `SECONDARY`.
 1. Test failover readiness.

@@ -42,6 +42,7 @@ The following table lists the release history for SQL Server 2019 preview CTP re
 
 | Release               | Version       | Release date |
 |-----------------------|---------------|--------------|
+| [CTP 2.4](#CTP24)     | 15.0.1300.359 | 2019-3-01    |
 | [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
 | [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |

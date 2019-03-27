@@ -1,7 +1,7 @@
 ---
 title: "Execution Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/25/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects

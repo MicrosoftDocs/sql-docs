@@ -334,7 +334,7 @@ If there is no *preview 5*, *preview 6*, *preview 7*, or *RC1* label it indicate
   - [New in Preview 7] Fixed performance regression in transfer from external tables.
   - [New in Preview 7] Fixed issue in `ServerConnection` thread-safety which was causing SMO to leak `SqlConnection` instances when targeting Azure SQL DB.
   - [New in Preview 7] Fixed an issue which was causing a `StringBuilder.FormatError` when trying to restore a database which had curly braces `{}` in its name.
-  - [New in RC1] Fixed an issue where GetDbComparer was incorrectly defaulting the collation to CI for ALL Azure DBs.
+  - [New in RC1] Fixed an issue where Azure databases in SMO were defaulting to Case-Insensitive collation for all string comparisons instead of using the specified collation for the database.
  
 - **AS**
   - Fixed an issue where the "Advanced Settings" to the AS Xevent UI was clipped

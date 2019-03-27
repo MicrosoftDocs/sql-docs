@@ -52,58 +52,58 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## Arguments  
- [ **@sub_table=**] **'**_sub_table_**'**  
+`[ @sub_table = ] 'sub_table'`
  Is the name of the Subscriber table. *sub_table* is **sysname**, with no default.  
   
- [ **@sub_table_owner=**] **'**_sub_table_owner_**'**  
+`[ @sub_table_owner = ] 'sub_table_owner'`
  Is the name of the owner of the Subscriber table. *sub_table_owner* is **sysname**, with no default.  
   
- [ **@publisher=**] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher server. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default. If NULL, the current database is used.  
   
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *Publication* is **sysname**, with no default.  
   
- [ **@ins_proc=**] **'**_ins_proc_**'**  
+`[ @ins_proc = ] 'ins_proc'`
  Is the name of the stored procedure that supports synchronous transaction inserts at the Publisher. *ins_proc* is **sysname**, with no default.  
   
- [ **@upd_proc=**] **'**_upd_proc_**'**  
+`[ @upd_proc = ] 'upd_proc'`
  Is the name of the stored procedure that supports synchronous transaction updates at the Publisher. *ins_proc* is **sysname**, with no default.  
   
- [ **@del_proc=**] **'**_del_proc_**'**  
+`[ @del_proc = ] 'del_proc'`
  Is the name of the stored procedure that supports synchronous transaction deletes at the Publisher. *ins_proc* is **sysname**, with no default.  
   
- [ **@cftproc =** ] **'**_cftproc_**'**  
+`[ @cftproc = ] 'cftproc'`
  Is the name of the auto-generated procedure used by publications that allow queued updating. *cftproc* is **sysname**, with no default. For publications that allow immediate updating, this value is NULL. This parameter applies to publications that allow queued updating (Queued Updating and Immediate Updating with Queued Updating as Failover).  
   
- [ **@proc_owner =** ] **'**_proc_owner_**'**  
+`[ @proc_owner = ] 'proc_owner'`
  Specifies the user account in the Publisher under which all the auto-generated stored procedures for updating publication (queued and/or immediate) were created. *proc_owner* is **sysname** with no default.  
   
- [ **@identity_col=**] **'**_identity_col_**'**  
+`[ @identity_col = ] 'identity_col'`
  Is the name of the identity column at the Publisher. *identity_col* is **sysname**, with a default of NULL.  
   
- [ **@ts_col=**] **'**_timestamp_col_**'**  
+`[ @ts_col = ] 'timestamp_col'`
  Is the name of the **timestamp** column at the Publisher. *timestamp_col* is **sysname**, with a default of NULL.  
   
- [ **@filter_clause=**] **'**_filter_clause_**'**  
+`[ @filter_clause = ] 'filter_clause'`
  Is a restriction (WHERE) clause that defines a horizontal filter. When entering the restriction clause, omit the keyword WHERE. *filter_clause*is **nvarchar(4000)**, with a default of NULL.  
   
- [ **@primary_key_bitmap =**] **'**_primary_key_bitmap_**'**  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'`
  Is a bit map of the primary key columns in the table. *primary_key_bitmap* is **varbinary(4000)**, with no default.  
   
- [ **@identity_support =** ] *identity_support*  
+`[ @identity_support = ] identity_support`
  Enables and disables automatic identity range handling when queued updating is used. *identity_support* is a **bit**, with a default of **0**. **0** means that there is no identity range support, **1** enables automatic identity range handling.  
   
- [ **@independent_agent =** ] *independent_agent*  
+`[ @independent_agent = ] independent_agent`
  Indicates whether there is a single Distribution Agent (an independent agent) for this publication, or one Distribution Agent per publication database and subscription database pair (a shared agent). This value reflects the value of the independent_agent property of the publication defined at the Publisher. *independent_agent* is a bit with a default of **0**. If **0**, the agent is a Shared Agent. If **1**, the agent is an independent agent.  
   
- [ **@distributor =** ] **'**_distributor_**'**  
+`[ @distributor = ] 'distributor'`
  Is the name of the Distributor. *distributor* is **sysname**, with no default.  
   
- [ **@pubversion**= ] *pubversion*  
+`[ @pubversion = ] pubversion`
  Indicates the version of the Publisher. *pubversion* is **int**, with a default of 1. **1** means that the Publisher version is [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 or earlier; **2** means that the Publisher is [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) or later. *pubversion* must be explicitly set to **2** when the Publisher version is [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 or later.  
   
 ## Return Code Values  

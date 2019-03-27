@@ -43,11 +43,11 @@ manager: craigg
   
  The following are the two scenarios for installing product updates:  
   
--   [Installing Updates for SQL Server 2014 During a New Installation](configure-sql-server-on-a-server-core-installation.md#bkmk_newinstall)  
+-   [Installing Updates for SQL Server 2014 During a New Installation](#installing-updates-during-a-new-installation) 
   
--   [Installing Updates for SQL Server 2014 After It Has Been Installed](configure-sql-server-on-a-server-core-installation.md#bkmk_alreadyinstall)  
+-   [Installing Updates for SQL Server 2014 After It Has Been Installed](#installing-updates-after-installation) 
   
-###  Installing updates during a new installation  
+### Installing updates during a new installation  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup supports only command prompt installations on Server Core operating system. For more information, see [Install SQL Server 2014 from the Command Prompt](install-sql-server-from-the-command-prompt.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup integrates the latest product updates with the main product installation so that the main product and its applicable updates are installed at the same time.  
@@ -60,7 +60,7 @@ manager: craigg
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="NT AUTHORITY\Network Service" /UpdateEnabled=True /UpdateSource="<SourcePath>" /IACCEPTSQLSERVERLICENSETERMS  
 ```  
   
-###  Installing updates after installation 
+### Installing updates after installation 
  On an installed instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], we recommend that you apply the latest security updates and critical updates including General Distribution Releases (GDRs), and Service Packs (SPs). Individual Cumulative updates and security updates should be adopted on a case-by-case, "as-needed" basis. Evaluate the update; if it's needed, then apply it.  
   
  Apply an update at a command prompt, replacing <package_name> with the name of your update package:  

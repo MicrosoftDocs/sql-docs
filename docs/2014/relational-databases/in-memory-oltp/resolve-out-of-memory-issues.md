@@ -18,11 +18,11 @@ manager: craigg
   
 |Topic|Overview|  
 |-----------|--------------|  
-| [Resolve database restore failures due to OOM ](#-resolve-database-restore-failures-due-to-oom)|What to do if you get the error message, "Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'."|  
-| [Resolve impact of low memory or OOM conditions on the workload](#-resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|What to do if you find low memory issues are negatively impacting performance.|  
-| [Resolve page allocation failures due to insufficient memory when sufficient memory is available](#-resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |What to do if you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. ..." when available memory is sufficient for the operation.|  
+| [Resolve database restore failures due to OOM](#resolve-database-restore-failures-due-to-oom) |What to do if you get the error message, "Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'."|  
+| [Resolve impact of low memory or OOM conditions on the workload](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|What to do if you find low memory issues are negatively impacting performance.|  
+| [Resolve page allocation failures due to insufficient memory when sufficient memory is available](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |What to do if you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. ..." when available memory is sufficient for the operation.|  
   
-##  Resolve database restore failures due to OOM  
+## Resolve database restore failures due to OOM  
  When you attempt to restore a database you may get the error message: "Restore operation failed for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'." Before you can successfully restore the database you must resolve the insufficient memory issue by making more memory available.  
   
  To resolve recovery failure due to OOM increase available memory using any or al of these means to temporarily increase memory available for the recovery operation.  
@@ -55,12 +55,12 @@ manager: craigg
   
     ```  
   
-     For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
+     For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#-percent-of-memory-available-for-memory-optimized-tables-and-indexes)
   
 -   Reconfigure **max server memory**.  
     For information on configuring **max server memory** see the topic [Optimizing Server Performance Using Memory Configuration Options](https://technet.microsoft.com/library/ms177455\(v=SQL.105\).aspx).  
   
-##  Resolve impact of low memory or OOM conditions on the workload  
+## Resolve impact of low memory or OOM conditions on the workload  
  Obviously, it is best to not get into a low memory or OOM (Out of Memory) situation. Good planning and monitoring can help avoid OOM situations. Still, the best planning does not always foresee what actually happens and you might end up with low memory or OOM. There are two steps to recovering from OOM:  
   
 1.  [Open a DAC (Dedicated Administrator Connection)](resolve-out-of-memory-issues.md#bkmk_opendac)  
@@ -92,7 +92,7 @@ manager: craigg
 ##### Increase value of MAX_MEMORY_PERCENT on the resource pool  
  If you have not created a named resource pool for your in-memory tables you should do that and bind your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] databases to it. See the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) for guidance on creating and binding your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] databases to a resource pool.  
   
- If your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database is bound to a resource pool you may be able to increase the percent of memory the pool can access. See the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) for guidance on changing the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT for a resource pool.  
+ If your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database is bound to a resource pool you may be able to increase the percent of memory the pool can access. See the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#-change-minmemorypercent-and-maxmemorypercent-on-an-existing-pool) for guidance on changing the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT for a resource pool.  
   
  Increase the value of MAX_MEMORY_PERCENT.   
 This code snippet changes MAX_MEMORY_PERCENT for the resource pool PoolHk to 70% of installed memory.  
@@ -119,16 +119,16 @@ GO
   
 ```  
   
- For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable).  
+ For information on maximum values for MAX_MEMORY_PERCENT see the topic section [Percent of memory available for memory-optimized tables and indexes](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#-percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### Install additional memory  
- Ultimately the best solution, if possible, is to install additional physical memory. If you do this, remember that you will probably be able to also increase the value of MAX_MEMORY_PERCENT (see the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)) since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] won't likely need more memory, allowing you to make most if not all of the newly installed memory available to the resource pool.  
+ Ultimately the best solution, if possible, is to install additional physical memory. If you do this, remember that you will probably be able to also increase the value of MAX_MEMORY_PERCENT (see the sub-topic [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#-change-minmemorypercent-and-maxmemorypercent-on-an-existing-pool)) since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] won't likely need more memory, allowing you to make most if not all of the newly installed memory available to the resource pool.  
   
 > [!IMPORTANT]  
 >  If the server is running on a VM and is not dedicated, set the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value.   
 > See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) for more information.  
   
-##  Resolve page allocation failures due to insufficient memory when sufficient memory is available  
+## Resolve page allocation failures due to insufficient memory when sufficient memory is available  
  If you get the error message, "Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See '<https://go.microsoft.com/fwlink/?LinkId=330673>' for more information." in the error log when the available physical memory is sufficient to allocate the page, it may be due to a disabled Resource Governor. When the Resource Governor is disabled MEMORYBROKER_FOR_RESERVE induces artificial memory pressure.  
   
  To resolve this you need to enable the Resource Governor.  

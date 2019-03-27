@@ -92,12 +92,12 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [default] With this setting, all transactions that commit on the database are fully durable, regardless of the commit level setting (DELAYED_DURABILITY=[ON | OFF]). There is no need for stored procedure change and recompilation. This allows you to ensure that no data is ever put at risk by delayed durability.  
   
  `ALLOWED`  
- With this setting, each transaction's durability is determined at the transaction level - DELAYED_DURABILITY = { *OFF* | ON }. See [Atomic block level control - Natively Compiled Stored Procedures](#-atomic-block-level-control---natively-compiled-stored-procedures) and [COMMIT level control - Transact-SQL](#commit-level-control---t-sql) for more information.  
+ With this setting, each transaction's durability is determined at the transaction level - DELAYED_DURABILITY = { *OFF* | ON }. See [Atomic block level control - Natively Compiled Stored Procedures](#atomic-block-level-control---natively-compiled-stored-procedures) and [COMMIT level control - Transact-SQL](#commit-level-control---t-sql) for more information.  
   
  `FORCED`  
  With this setting, every transaction that commits on the database is delayed durable. Whether the transaction specifies fully durable (DELAYED_DURABILITY = OFF) or makes no specification, the transaction is delayed durable. This setting is useful when delayed transaction durability is useful for a database and you do not want to change any application code.  
   
-###  Atomic block level control - Natively Compiled Stored Procedures  
+### Atomic block level control - Natively Compiled Stored Procedures  
  The following code goes inside the atomic block.  
   
 ```sql  

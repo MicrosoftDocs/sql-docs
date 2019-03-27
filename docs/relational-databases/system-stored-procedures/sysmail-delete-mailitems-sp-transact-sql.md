@@ -35,10 +35,10 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## Arguments  
- [ **@sent_before=** ] **'***sent_before***'**  
+`[ @sent_before = ] 'sent_before'`
  Deletes e-mails up to the date and time provided as the *sent_before* argument. *sent_before* is **datetime** with NULL as default. NULL indicates all dates.  
   
- [ **@sent_status=** ] **'***sent_status***'**  
+`[ @sent_status = ] 'sent_status'`
  Deletes e-mails of the type specified by *sent_status*. *sent_status* is **varchar(8)** with no default. Valid entries are **sent**, **unsent**, **retrying**, and **failed**. NULL indicates all statuses.  
   
 ## Return Code Values  

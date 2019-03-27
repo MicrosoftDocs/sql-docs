@@ -36,13 +36,13 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the policy that you want to rename. *name* is **sysname**, and must be specified if *policy_id* is NULL.  
   
- [ **@policy_id=** ] *policy_id*  
+`[ @policy_id = ] policy_id`
  Is the identifier for the policy that you want to rename. *policy_id* is **int**, and must be specified if *name* is NULL.  
   
- [ **@new_name=** ] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  Is the new name for the policy. *new_name* is **sysname**, and is required. Cannot be NULL or an empty string.  
   
 ## Return Code Values  

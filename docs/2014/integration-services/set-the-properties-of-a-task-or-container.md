@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "tasks [Integration Services], properties"
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Set the Properties of a Task or Container

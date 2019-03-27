@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services, firewalls"
   - "SSIS, firewalls"
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure a Windows Firewall for Access to the SSIS Service

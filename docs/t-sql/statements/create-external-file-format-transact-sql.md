@@ -232,7 +232,7 @@ Notes about the table:
  TRUE  
  When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:  
   
--   0 if the column is defined as a numeric column.
+-   0 if the column is defined as a numeric column. Decimal columns are not supported and will error.
   
 -   Empty string "" if the column is a string column.
   

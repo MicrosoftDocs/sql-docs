@@ -33,10 +33,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## Arguments  
- [ **@viewname**= ] **'***view_name***'**  
+`[ @viewname = ] 'view_name'`
  Is the name of the view to verify. *view_name* is **sysname**, with no default.  
   
- [ **@fhasnullcols**= ] *field_has_null_columns* OUTPUT  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT`
  Is the flag indicating whether the view index has columns that allow NULL. *view_name* is **sysname**, with no default. Returns a value of **1** if the view index has columns that allow NULL. Returns a value of **0** if the view does not contain columns that allow NULLS.  
   
 > [!NOTE]  

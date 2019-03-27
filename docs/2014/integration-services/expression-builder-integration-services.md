@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SSIS, expressions"
   - "tools [Integration Services], Expression Builder"
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Expression Builder (Integration Services)

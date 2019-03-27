@@ -36,10 +36,10 @@ sp_update_targetservergroup
 ```  
   
 ## Arguments  
- [ **@name =**] **'***current_name***'**  
+`[ @name = ] 'current_name'`
  The name of the target server group. *current_name* is **sysname**, with no default.  
   
- [ **@new_name =**] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  The new name for the target server group. *new_name* is **sysname**, with no default.  
   
 ## Return Code Values  

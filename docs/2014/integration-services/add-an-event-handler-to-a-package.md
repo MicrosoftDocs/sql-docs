@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "event handlers [Integration Services], creating"
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add an Event Handler to a Package

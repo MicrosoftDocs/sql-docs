@@ -38,10 +38,10 @@ sp_markpendingschemachange [@publication = ] 'publication'
  [**@publication=** ] **'***publication***'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@schemaversion=** ] *schemaversion*  
+`[ @schemaversion = ] schemaversion`
  Identifies a pending schema change. *schemaversion* is **int**, with a default value of **0**. Use [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) to list the pending schema changes for the publication.  
   
- [ **@status=** ] **'***status***'**  
+`[ @status = ] 'status'`
  Is whether a pending schema change will be skipped. *status* is **nvarchar(10)** with a default value of **active**. If the value of *status* is **skipped**, then the selected schema change will not be replicated.  
   
 ## Return Code Values  

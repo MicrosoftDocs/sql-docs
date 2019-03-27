@@ -141,15 +141,20 @@ To use the UTF-8 collations available in [!INCLUDE[sql-server-2019](../../includ
     
     -   Version 100 collations    
     
-    -   Version 140 collations    
+    -   Version 140 collations   
+    
+    -   BIN2<sup>1</sup> binary collation
     
 -   The UTF8 flag cannot be applied to:    
     
     -   Version 90 collations that don't support supplementary characters (\_SC) or variation-selector-sensitive (\_VSS)    
     
-    -   The BIN or BIN2 binary collations    
+    -   The BIN or BIN2<sup>2</sup> binary collations    
     
-    -   The SQL\* collations       
+    -   The SQL\* collations  
+    
+<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
+<sup>2</sup> Up to with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 To evaluate issues that are related to using Unicode or non-Unicode data types, test your scenario to measure performance differences in your environment. It is a good practice to standardize the collation that is used on systems across your organization, and deploy Unicode servers and clients wherever possible.    
     

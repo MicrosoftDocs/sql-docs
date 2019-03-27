@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+            "source_path": "docs/toc/redirectfrom-reference-10.md",
+            "redirect_url": "/sql/sql-server/applies-to-includes",
+            "redirect_document_id": false
+         },
+         {
+            "source_path": "docs/relational-databases/database-features.md",
+            "redirect_url": "/sql/relational-databases/databases/databases",
+            "redirect_document_id": false 
+         },       
+          {
             "source_path": "docs/relational-databases/polybase/polybase-type-mapping.md",
             "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
             "redirect_document_id": false 
@@ -2138,6 +2148,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/tools/sqlpackage-release-notes.md",
+            "redirect_url": "/sql/tools/release-notes-dacfx-sqlpackage",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md",
             "redirect_url": "/sql/tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor",
             "redirect_document_id": false
@@ -2773,6 +2788,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/ssdt/changelog-for-sql-server-data-tools-ssdt.md",
+            "redirect_url": "https://docs.microsoft.com/sql/ssdt/release-notes-ssdt",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/ssms/sql-server-management-studio-ssms-release-candidate.md",
             "redirect_url": "/sql/ssms/download-sql-server-management-studio-ssms",
             "redirect_document_id": false
@@ -3073,14 +3093,19 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/reporting-services/reporting-services-release-notes.md",
-            "redirect_url": "https://powerbi.microsoft.com/documentation/reportserver-release-notes/",
-            "redirect_document_id": false
+            "source_path": "docs/reporting-services/change-log-sql-server-reporting-services.md",
+            "redirect_url": "/sql/reporting-services/release-notes-reporting-services/",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/reporting-services/security/grant-user-access-to-a-report-server-report-manager.md",
             "redirect_url": "/sql/reporting-services/security/grant-user-access-to-a-report-server",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/application-integration/changelog.md",
+            "redirect_url": "/sql/reporting-services/application-integration/release-notes-ssrs-application-integration",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/release-notes/microsoft-sql-server.md",
@@ -5218,6 +5243,11 @@
       {
         "source_path": "docs/azure-data-studio/release-notes.md",
         "redirect_url": "/sql/azure-data-studio/release-notes-azure-data-studio",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/big-data-cluster/big-data-cluster-release-notes.md",
+        "redirect_url": "/sql/big-data-cluster/release-notes-big-data-cluster",
         "redirect_document_id": true
       },
       {
@@ -13809,6 +13839,41 @@
             "source_path": "docs/azure-data-studio/dashboards.md",
             "redirect_url": "/sql/azure-data-studio/insight-widgets",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssdt/sql-server-data-tools-license-terms-vs2017.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/sql-server-data-tools-license-terms-vs2017",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssms/sql-server-management-studio-license-terms.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/sql-server-management-studio-license-terms",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssdt/data-tier-application-framework-license-terms.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/data-tier-application-framework-license-terms",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssdt/sql-server-data-tools-license-terms.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/sql-server-data-tools-license-terms",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/powershell/sql-server-powershell-license-terms.md",
+            "redirect_url": "https://docs.microsoft.com/Legal/sql/sql-server-powershell-license-terms",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/ssdt/install-sql-server-data-tools.md",
+            "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssdt/removing-sql-server-data-tools-components.md",
+            "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_document_id": false
         }
     ]
 }

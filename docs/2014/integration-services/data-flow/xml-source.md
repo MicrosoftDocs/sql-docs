@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "XML source [Integration Services]"
   - "XML Source Editor"
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # XML Source

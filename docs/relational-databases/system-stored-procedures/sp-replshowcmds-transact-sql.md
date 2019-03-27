@@ -32,7 +32,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## Arguments  
- [ **@maxtrans** = ] *maxtrans*  
+`[ @maxtrans = ] maxtrans`
  Is the number of transactions about which to return information. *maxtrans* is **int**, with a default of **1**, which specifies the maximum number of transactions pending replication for which **sp_replshowcmds** returns information.  
   
 ## Result Sets  

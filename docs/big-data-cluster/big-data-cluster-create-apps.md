@@ -5,7 +5,7 @@ description: Deploy a Python or R script as an application on SQL Server 2019 bi
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -37,7 +37,7 @@ The following types of apps are supported:
 
 ## Capabilities
 
-In SQL Server 2019 (preview) CTP 2.3 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
+In SQL Server 2019 (preview) CTP 2.4 you can create, delete, describe, initialize, list run and update your application. The following table describes the application deployment commands that you can use with **mssqlctl**.
 
 |Command |Description |
 |:---|:---|
@@ -133,6 +133,10 @@ To try this, copy the above lines of code into two files in the directory `addpy
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> The `spec.yaml` file specifies both a `poolsize` and a number of `replicas`. The number of `replicas` specifies the number of copies of the service need to be deployed. The `poolsize` specifies the number of pools you want to create per replica. These settings have an impact on the amount of requests the deployment can handle in parallel. The maximum number of requests at one given time is equal to `replicas` times `poolsize`, i.e if you have 5 replicas and 2 pools per replica the deployment can handle 10 requests in parallel. See the image below for a graphical representation of `replicas` and `poolsize`:
+![Poolsize and replicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 You can check if the app is deployed using the list command:
 
@@ -249,7 +253,7 @@ spec.yaml
 
 ## Describe an app
 
-The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner.
+The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner. See [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
 
 ```json
 {
@@ -289,6 +293,6 @@ mssqlctl app delete --name add-app --version v1
 
 ## Next steps
 
-You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
+Explore how to integrate apps deployed on SQL Server big data clusters in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
 For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).

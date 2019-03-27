@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "Script task [Integration Services], HTML mail message"
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Sending an HTML Mail Message with the Script Task

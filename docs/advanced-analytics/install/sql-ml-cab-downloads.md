@@ -6,8 +6,8 @@ ms.technology: machine-learning
   
 ms.date: 01/19/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # CAB downloads for cumulative updates of SQL Server in-database analytics instances
@@ -86,10 +86,11 @@ For SQL Server 2016 R Services, baseline releases are either the RTM version or 
 
 |Release  |Download link  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU1-CU2**     |
-|Microsoft R Open     |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039)|
+|**SQL Server 2016 SP2 CU1-CU4**     |
+|Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
 |**SQL Server 2016 SP1 CU4-CU10**     |
+|**SQL Server 2016 SP2**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
 |**SQL Server 2016 SP1 CU1-CU3**     |

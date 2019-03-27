@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], comparing to Script component"
   - "Script component [Integration Services], comparing to Script task"
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Comparing the Script Task and the Script Component

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "Integration Services service, package management"
   - "services [Integration Services], package management"
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Package Management (SSIS Service)

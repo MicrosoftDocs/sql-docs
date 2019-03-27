@@ -34,10 +34,10 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## Arguments  
- [ **@credential_name=** ] **'***credential_name***'**  
+`[ @credential_name = ] 'credential_name'`
  The name of the credential to use to log in to the master server. The name provided must be the name of an existing credential. Either *credential_name* or *credential_id* must be specified.  
   
- [ **@credential_id=** ] *credential_id*  
+`[ @credential_id = ] credential_id`
  The identifier for the credential to use to log in to the master server. The identifier must be an identifier for an existing credential. Either *credential_name* or *credential_id* must be specified.  
   
 ## Return Code Values  

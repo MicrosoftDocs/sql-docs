@@ -64,19 +64,19 @@ manager: craigg
   
     -   The **Filter statement** text area includes the default text, which is in the form of:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   The default text cannot be changed; type the filter clause after the WHERE keyword using standard SQL syntax. The complete filter clause would appear like:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   A static row filter can include a user-defined function. The complete filter clause for a static row filter with a user-defined function would appear like:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   

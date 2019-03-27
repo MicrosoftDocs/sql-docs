@@ -35,7 +35,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## Arguments  
- [ **@database =** ] '*database*'  
+`[ @database = ] 'database'`
  Is the name of the log shipping primary database. *database* is **sysname**, with no default, and cannot be NULL.  
   
 ## Return Code Values  

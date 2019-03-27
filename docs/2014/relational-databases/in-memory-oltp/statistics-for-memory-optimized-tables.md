@@ -70,7 +70,7 @@ UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE
   
  To update statistics for all memory-optimized tables in the current database, run the following script:  
   
-```tsql  
+```sql  
 DECLARE @sql NVARCHAR(MAX) = N''  
   
 SELECT @sql += N'  
@@ -84,7 +84,7 @@ EXEC sp_executesql @sql
   
  The following sample reports when the statistics on memory-optimized tables were last updated. This information can help you decide if you need to update the statistics.  
   
-```tsql  
+```sql  
 select t.object_id, t.name, sp.last_updated as 'stats_last_updated'  
 from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm_db_stats_properties(t.object_id, s.stats_id) sp  
 where t.is_memory_optimized=1  

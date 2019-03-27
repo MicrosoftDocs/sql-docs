@@ -38,7 +38,7 @@ sp_fulltext_database [@action=] 'action'
 ```  
   
 ## Arguments  
- [ **@action=**] **'***action***'**  
+`[ @action = ] 'action'`
  Is the action to be performed. **action** is **varchar(20)**, and can be one of these values.  
   
 |Value|Description|  

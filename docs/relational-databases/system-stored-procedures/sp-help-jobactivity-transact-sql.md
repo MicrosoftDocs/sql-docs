@@ -35,16 +35,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## Arguments  
- [ **@job_id =**] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number. *job_id*is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name*is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@session_id** = ] *session_id*  
+`[ @session_id = ] session_id`
  The session id to report information about. *session_id* is **int**, with a default of NULL.  
   
 ## Return Code Values  

@@ -112,7 +112,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates a data type alias based on the system-supplied `varchar` data type. The `ssn` data type alias is used for columns holding 11-digit social security numbers (999-99-9999). The column cannot be NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

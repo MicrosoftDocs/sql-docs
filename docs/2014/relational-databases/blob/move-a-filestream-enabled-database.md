@@ -25,7 +25,7 @@ manager: craigg
   
 2.  Copy the following [!INCLUDE[tsql](../../includes/tsql-md.md)] script into the Query Editor, and then click **Execute**. This script displays the location of the physical database files that the FILESTREAM database uses.  
   
-    ```tsql  
+    ```sql  
     USE Archive  
     GO  
     SELECT type_desc, name, physical_name from sys.database_files  
@@ -33,7 +33,7 @@ manager: craigg
   
 3.  Copy the following [!INCLUDE[tsql](../../includes/tsql-md.md)] script into the Query Editor, and then click **Execute**. This code takes the `Archive` database offline.  
   
-    ```tsql  
+    ```sql  
     USE master  
     EXEC sp_detach_db Archive  
     GO  
@@ -43,7 +43,7 @@ manager: craigg
   
 5.  Copy the following [!INCLUDE[tsql](../../includes/tsql-md.md)] script into the Query Editor, and then click **Execute**. This script sets the `Archive` database online.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE Archive ON  
     PRIMARY ( NAME = Arch1,  
         FILENAME = 'c:\moved_location\archdat1.mdf'),  

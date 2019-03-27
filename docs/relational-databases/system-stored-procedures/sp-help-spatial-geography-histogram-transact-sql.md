@@ -35,18 +35,18 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## Arguments  
- [ **@tabname =**] **'***tabname***'**  
+`[ @tabname = ] 'tabname'`
  Is the qualified or nonqualified name of the table for which the spatial index has been specified.  
   
  Quotation marks are required only if a qualified table is specified. If a fully qualified name, including a database name, is provided, the database name must be the name of the current database. *tabname* is **sysname**, with no default.  
   
- [ **@colname =** ] **'***columnname***'**  
+`[ @colname = ] 'columnname'`
  Is the name of the spatial column specified. *columnname* is a **sysname**, with no default.  
   
- [ **@resolution =** ] **'***resolution***'**  
+`[ @resolution = ] 'resolution'`
  Is the resolution of the bounding box. Valid values are from 10 to 5000. *resolution* is a **tinyint**, with no default.  
   
- [ **@sample =** ] **'***sample***'**  
+`[ @sample = ] 'sample'`
  Is the percentage of the table that is used. Valid values are from 0 to 100. *tablesample* is a **float**. Default value is 100.  
   
 ## Property Value/Return Value  

@@ -36,16 +36,16 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL. The server must be configured for publishing. NULL for all Publishers.  
   
- [ **@publisherdb** = ] **'***publisher_db***'** ]  
+`[ @publisherdb = ] 'publisher_db' ]`
  Is the name of the publication database. *publisher_db* is **sysname**, with a default of NULL. NULL for all publication databases.  
   
- [ **@publication** = ] **'***publication***'** ]  
+`[ @publication = ] 'publication' ]`
  Is the name of the publication. *publication*is **sysname**, with a default of NULL. NULL for all publications.  
   
- [ **@tranid** = ] **'***tranid***'** ]  
+`[ @tranid = ] 'tranid' ]`
  Is the transaction ID. *tranid*is **sysname**, with a default of NULL. NULL for all transactions.  
   
  [**@queuetype=** ] **'***queuetype***'** ]  

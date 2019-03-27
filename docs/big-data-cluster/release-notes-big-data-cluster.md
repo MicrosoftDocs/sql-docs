@@ -23,7 +23,7 @@ The following sections describe the new features and known issues for big data c
 
 ### What's New
 
-| New feature/update | Details |
+| New feature or update | Details |
 |:---|:---|
 | Guidance on GPU support for running deep learning with TensorFlow in Spark. | [Deploy a big data cluster with GPU support and run TensorFlow](spark-gpu-tensorflow.md) |
 | **SqlDataPool** and **SqlStoragePool** data sources are no longer created by default. | Create these manually as needed. See the [known issues](#externaltablesctp24). |
@@ -73,6 +73,24 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
       Kubernetes master is running at https://172.50.253.99:6443
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
+
+#### Delete cluster fails
+
+When you attempt to delete a cluster with **mssqlctl**, it fails with the following error:
+
+```
+2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
+Error processing command: "TypeError"
+delete_namespaced_service() takes 3 positional arguments but 4 were given
+Makefile:61: recipe for target 'delete-cluster' failed
+make[2]: *** [delete-cluster] Error 1
+Makefile:223: recipe for target 'deploy-clean' failed
+make[1]: *** [deploy-clean] Error 2
+Makefile:203: recipe for target 'deploy-clean' failed
+make: *** [deploy-clean] Error 2
+```
+
+A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API, which currently breaks **mssqlctl**. This only happens if you have a newer Kubernetes python client installed. You can work around this problem by directly deleting the cluster using **kubectl** (`kubectl delete ns <ClusterName>`), or you can install the older version using `sudo pip install kubernetes==8.0.1`.
 
 #### <a id="externaltablesctp24"></a> External tables
 
@@ -138,9 +156,9 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.3.
 
-### New features
+### What's New
 
-| New feature | Details |
+| New feature or update | Details |
 | :---------- | :------ |
 | Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on SQL Server big data clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
 | Common CLI for application deployment and cluster management. | [How to deploy an app on SQL Server 2019 big data cluster (preview)](big-data-cluster-create-apps.md) |

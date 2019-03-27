@@ -34,7 +34,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## Arguments  
- [ **@policy_category=** ] **'***policy_category***'**  
+`[ @policy_category = ] 'policy_category'`
  Is the name of the policy category subscription that you want to delete. *policy_category* is **sysname**, and is required.  
   
  To obtain values for *policy_category*, query the msdb.dbo.syspolicy_policy_categories system view.  

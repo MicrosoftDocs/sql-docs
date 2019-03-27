@@ -38,10 +38,10 @@ sp_syscollector_start_collection_set
 ```  
   
 ## Arguments  
- [ **@collection_set_id =** ] *collection_set_id*  
+`[ @collection_set_id = ] collection_set_id`
  Is the unique local identifier for the collection set. *collection_set_id* is **int** with a default value of NULL. *collection_set_id* must have a value if *name* is NULL.  
   
- [ **@name =** ] '*name*'  
+`[ @name = ] 'name'`
  Is the name of the collection set. *name* is **sysname** with a default value of NULL. *name* must have a value if *collection_set_id* is NULL.  
   
 ## Return Code Values  

@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 03/17/2019  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Create SSIS and SSRS workflows with R on SQL Server

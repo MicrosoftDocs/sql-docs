@@ -9792,12 +9792,12 @@
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Anonymous Usage Data
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: Install sqlpackage
       href: ../tools/sqlpackage-download.md
     - name: Release notes
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: sqlpackage ref
       href: ../tools/sqlpackage.md
   - name: SQL Server Profiler

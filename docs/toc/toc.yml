@@ -6761,7 +6761,7 @@
          href: ../relational-databases/performance-monitor/monitor-disk-usage.md
        - name: Monitor CPU Usage
          href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
-       - name: Monitor Memory Usage
+       - name: Monitor Memory Usage 
          href: ../relational-databases/performance-monitor/monitor-memory-usage.md
        - name: Create a SQL Server Database Alert
          href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md

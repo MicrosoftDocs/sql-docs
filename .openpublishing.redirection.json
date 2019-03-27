@@ -2144,7 +2144,7 @@
         },
         {
             "source_path": "docs/tools/sqlpackage-release-notes.md",
-            "redirect_url": "/sql/tools/release-notes-dacfx-sqlpackage",
+            "redirect_url": "/sql/tools/release-notes-sqlpackage",
             "redirect_document_id": true
         },
         {

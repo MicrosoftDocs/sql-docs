@@ -23,7 +23,7 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 |macOS .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2069126)|February 1, 2019 | 18.1 |15.0.4316.1|
 |Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2069122)|February 1, 2019 | 18.1 |15.0.4316.1|
 
-For details about the latest release, see the [release notes](release-notes-dacfx-sqlpackage.md).
+For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
 
 ## Get sqlpackage for Windows
 

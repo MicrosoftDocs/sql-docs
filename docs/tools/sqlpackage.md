@@ -30,7 +30,7 @@ manager: "craigg"
   
 The **SqlPackage.exe** command line allows you to specify these actions along with action-specific parameters and properties.  
 
-**[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-dacfx-sqlpackage.md).
+**[Download the latest version](sqlpackage-download.md)**. For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
   
 ## Command-Line Syntax
 

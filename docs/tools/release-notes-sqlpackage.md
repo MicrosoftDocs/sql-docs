@@ -1,6 +1,6 @@
 ---
 title: DacFx and SqlPackage release notes | Microsoft Docs
-description: Microsoft sqlpackage release notes
+description: Release notes for Microsoft sqlpackage.
 ms.custom: "tools|sos"
 ms.date: 02/02/2019
 ms.prod: sql
@@ -11,11 +11,23 @@ author: pensivebrian
 ms.author: broneill
 manager: kenvh
 ---
-# Release notes for SqlPackage.exe of DacFx
+# Release notes for SqlPackage.exe
 
 **[Download the latest version](sqlpackage-download.md)**
 
-This article lists the features and fixes delivered by the released versions of SqlPackage.exe for the Microsoft Data-Tier Application Framework (DacFx).
+This article lists the features and fixes delivered by the released versions of SqlPackage.exe.
+
+<!--
+TODO:
+The Introduction text needs to add clarity regarding the relationship between
+'SqlPackage.exe' and 'DacFx' (the Microsoft 'Data-Tier Application Framework').
+One added sentence would be sufficient.
+
+Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
+
+I discussed this with SStein (SteveStein).
+Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
+-->
 
 ## 18.1 sqlpackage
 

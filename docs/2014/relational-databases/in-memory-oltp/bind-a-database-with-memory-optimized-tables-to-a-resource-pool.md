@@ -112,7 +112,7 @@ GO
   
  And now, the database is bound to the resource pool.  
   
-## Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool  
+## Change MIN MEMORY PERCENT and MAX MEMORY PERCENT on an existing pool  
  If you add additional memory to the server or the amount of memory needed for your memory-optimized tables changes, you may need to alter the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT. The following steps show you how to alter the value of MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on a resource pool. See the section below, for guidance on what values to use for MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT.  See the topic [Best Practices: Using In-Memory OLTP in a VM environment](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) for more information.  
   
 1.  Use `ALTER RESOURCE POOL` to change the value of both MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT.  

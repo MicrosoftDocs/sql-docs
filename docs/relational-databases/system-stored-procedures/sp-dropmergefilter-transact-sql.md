@@ -34,23 +34,23 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@filtername=**] **'**_filtername_**'**  
+`[ @filtername = ] 'filtername'`
  Is the name of the filter to be dropped. *filtername* is **sysname**, with no default.  
   
- [ **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Enables or disables the ability to have a snapshot invalidated. *force_invalidate_snapshot* is a **bit**, with a default **0**.  
   
  **0** specifies that changes to the merge article do not cause the snapshot to be invalid.  
   
  **1** means that changes to the merge article may cause the snapshot to be invalid. If that is the case, a value of **1** gives permission for the new snapshot to occur.  
   
- [ **@force_reinit_subscription**= ] *force_reinit_subscription*  
+`[ @force_reinit_subscription = ] force_reinit_subscription`
  Enables or disables the ability to mark a subscription as not valid. *force_reinit_subscription* is a **bit**, with a default **0**.  
   
  **0** specifies that changes to the merge article filter do not cause the subscriptions to be invalid.  

@@ -32,7 +32,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
- [ **@publisher**= ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 ## Result Sets  

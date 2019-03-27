@@ -3,7 +3,7 @@ title: What's new - SQL Server Machine Learning Services | Microsoft Docs
 description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
 ms.date: 03/27/2018
 ms.topic: conceptual
-ms.author: dphansen
+author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.custom: sqlseattle

@@ -6,7 +6,7 @@ ms.technology: machine-learning
 
 ms.date: 12/18/2018  
 ms.topic: tutorial
-ms.author: dphansen
+author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---

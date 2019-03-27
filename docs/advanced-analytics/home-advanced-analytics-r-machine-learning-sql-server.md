@@ -6,7 +6,7 @@ ms.technology: machine-learning
 
 ms.date: 01/10/2019
 ms.topic: overview
-ms.author: dphansen
+author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"

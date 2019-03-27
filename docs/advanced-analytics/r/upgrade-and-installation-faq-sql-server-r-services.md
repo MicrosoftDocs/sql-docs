@@ -7,7 +7,7 @@ ms.technology: machine-learning
 ms.date: 05/15/2018
 ms.topic: conceptual
 ms.author: davidph
-ms.author: dphansen
+author: dphansen
 manager: cgronlun
 ---
 # Upgrade and installation FAQ for SQL Server Machine Learning or R Server

@@ -6,7 +6,7 @@ ms.technology: machine-learning
 
 ms.date: 01/19/2019
 ms.topic: conceptual
-ms.author: dphansen
+author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---

@@ -4,7 +4,7 @@ ms.prod: sql
 ms.technology: 
 ms.date: 05/31/2018  
 ms.topic: conceptual
-ms.author: dphansen
+author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---

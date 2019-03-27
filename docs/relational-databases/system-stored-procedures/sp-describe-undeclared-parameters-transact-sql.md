@@ -97,6 +97,8 @@ sp_describe_undeclared_parameters
 -   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
   
 - If the statement references temporary tables.
+
+- The query includes the creation of a permanent table that is then queried.
   
  If \@tsql has no parameters, other than those declared in \@params, the procedure returns an empty result set.  
   

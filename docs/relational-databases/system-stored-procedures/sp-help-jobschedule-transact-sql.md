@@ -44,8 +44,9 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 `[ @job_name = ] 'job_name'`
  The name of the job. *job_name*is **sysname**, with a default of NULL.  
   
-> **NOTE:** Either *job_id* or *job_name* must be specified, but both cannot be specified.  
-  
+> [!NOTE]
+> Either *job_id* or *job_name* must be specified, but both cannot be specified.
+
 `[ @schedule_name = ] 'schedule_name'`
  The name of the schedule item for the job. *schedule_name*is **sysname**, with a default of NULL.  
   
@@ -146,5 +147,3 @@ GO
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

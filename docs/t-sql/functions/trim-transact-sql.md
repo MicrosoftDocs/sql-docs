@@ -1,7 +1,7 @@
 ---
 title: "TRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/20/2017"
+ms.date: "03/27/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: "jrasnick"
@@ -21,28 +21,33 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Removes the space character `char(32)` or other specified characters from the start or end of a string.  
  
 ## Syntax   
-```
+``` 
+-- Syntax for SQL Server and Azure SQL Database
 TRIM ( [ characters FROM ] string ) 
 ```
 [//]: # "[ BOTH | LEADING | TRAILING ] not yet available."
 
-## Arguments   
+```
+-- Syntax for Azure SQL Data Warehouse
+TRIM ( string )
+```
+## Arguments
 
-characters   
+characters
 Is a literal, variable, or function call of any non-LOB character type (`nvarchar`, `varchar`, `nchar`, or `char`) containing characters that should be removed. `nvarchar(max)` and `varchar(max)` types aren't allowed.
 
-string   
+string
 Is an expression of any character type (`nvarchar`, `varchar`, `nchar`, or `char`) where characters should be removed.
 
-## Return Types   
+## Return Types
 Returns a character expression with a type of string argument where the space character `char(32)` or other specified characters are removed from both sides. Returns `NULL` if input string is `NULL`.
 
-## Remarks   
+## Remarks
 By default `TRIM` function removes the space character `char(32)` from both sides. This behavior is equivalent to `LTRIM(RTRIM(@string))`. Behavior of `TRIM` function with specified characters is identical to behavior of `REPLACE` function where characters from start or end are replaced with empty strings.
 
 
@@ -75,5 +80,4 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Install SQL Server Machine Learning Services on Windows

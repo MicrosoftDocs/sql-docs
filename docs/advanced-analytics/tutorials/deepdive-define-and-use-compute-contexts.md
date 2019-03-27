@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Define and use compute contexts (SQL Server and RevoScaleR tutorial)

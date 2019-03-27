@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 10/19/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Lesson 2: Create data features using R and T-SQL

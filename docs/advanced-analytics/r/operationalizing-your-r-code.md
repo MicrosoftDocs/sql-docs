@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 03/15/2019  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Operationalize R code using stored procedures in SQL Server Machine Learning Services

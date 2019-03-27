@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/16/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Lesson 3: Train and save a model using T-SQL

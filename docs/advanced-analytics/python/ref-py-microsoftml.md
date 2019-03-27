@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 12/04/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # microsoftml (Python module in SQL Server)

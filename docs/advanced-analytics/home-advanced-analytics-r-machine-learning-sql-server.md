@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 01/10/2019
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---

@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 10/29/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Lesson 1: Explore and visualize the data

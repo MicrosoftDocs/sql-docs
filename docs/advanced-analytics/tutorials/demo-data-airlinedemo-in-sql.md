@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 10/22/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 #  Airline flight arrival demo data for SQL Server Python and R tutorials

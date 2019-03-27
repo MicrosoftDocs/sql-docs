@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Move data between SQL Server and XDF file (SQL Server and RevoScaleR tutorial)

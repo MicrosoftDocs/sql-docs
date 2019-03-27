@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 10/19/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 #  Iris demo data for Python and R tutorials in SQL Server 

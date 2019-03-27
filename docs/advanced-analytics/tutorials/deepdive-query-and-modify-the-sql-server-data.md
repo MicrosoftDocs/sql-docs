@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/27/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Query and modify the SQL Server data (SQL Server and RevoScaleR tutorial)

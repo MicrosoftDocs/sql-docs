@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 12/17/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Set up a data science client for R development on SQL Server

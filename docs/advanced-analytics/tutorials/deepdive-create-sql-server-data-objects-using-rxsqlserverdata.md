@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/26/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Create SQL Server data objects using RxSqlServerData (SQL Server and RevoScaleR tutorial)

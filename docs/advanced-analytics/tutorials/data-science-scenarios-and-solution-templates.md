@@ -5,8 +5,8 @@ ms.technology: machine-learning
 
 ms.date: 04/15/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Data science scenarios and solution templates

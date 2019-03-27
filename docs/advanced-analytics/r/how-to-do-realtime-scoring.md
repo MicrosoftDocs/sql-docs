@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 08/30/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # How to generate forecasts and predictions using machine learning models in SQL Server

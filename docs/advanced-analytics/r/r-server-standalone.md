@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 12/18/2018  
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+ms.author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # R Server (Standalone) and Machine Learning Server (Standalone) in SQL Server

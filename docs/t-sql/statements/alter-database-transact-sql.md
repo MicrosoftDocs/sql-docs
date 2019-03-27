@@ -624,13 +624,12 @@ Promotes a secondary database db1 on server `secondaryserver` to become the new 
 ALTER DATABASE db1 FAILOVER
 ```
 
-### E. Failover to a Geo-Replication Secondary with data-loss
+### E. Force Failover to a Geo-Replication Secondary with data loss
 
 Forces a secondary database db1 on server `secondaryserver` to become the new primary database when executed on server `secondaryserver`, in the event that the primary server becomes unavailable. This option may incur data loss. 
 
 ```sql
-ALTER DATABASE db1 FAILOVER
-WITH FORCE_FAILOVER_ALLOW_DATA_LOSS
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
 ```
 
 ### G. Update a single database to service tier S0 (standard edition, performance level 0)

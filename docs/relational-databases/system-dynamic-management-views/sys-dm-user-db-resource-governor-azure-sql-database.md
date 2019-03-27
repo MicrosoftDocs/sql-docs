@@ -23,6 +23,7 @@ manager: craigg
 monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # sys.dm_user_db_resource_governance (Transact-SQL)
+
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Returns resource governance configuration and capacity settings for an Azure SQL Database database.  
@@ -94,16 +95,14 @@ Users can access this dynamic management view for resource governance configurat
 ## Examples
 
 The following example returns instance maximum log rate data ordered by database name within the database server for a single or pooled database.
-  
+
 ```
 SELECT database_name,
        primary_max_log_rate
 FROM sys.dm_user_db_resource_governance
 ORDER BY database_name DESC;  
 ```
-  
+
 ## See Also
 
-
-  
-  
+- [sys.dm_resource_governor_resource_pools_history_ex](../system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)

@@ -124,3 +124,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 ```
 
 ## See Also
+
+- [sys.elastic_pool_resource_stats](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
+- [Resource Governor Resource Pool](../resource-governor/resource-governor-resource-pool.md)

@@ -39,8 +39,8 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 |**active_worker_count**|int|Total workers in current snapshot|
 |**delta_cpu_usage_ms**|int|CPU usage in milliseconds since last snapshot. Is not nullable.|
 |**delta_cpu_usage_preemptive_ms**|int|Preemptive win32 calls not govern by SQL CPU RG, since last snapshot|
-|**used_data_space_kb**|bigint|total space used in user databases associated with user pool|
-|**allocated_disk_space_kb**|bigint|total data file size of user databases in the associated with user pool|
+|**used_data_space_kb**|bigint|Total space used in user databases associated with user pool|
+|**allocated_disk_space_kb**|bigint|Total data file size of user databases in the associated with user pool|
 |**target_memory_kb**|bigint|The target amount of memory, in kilobytes, the resource pool is trying to attain. This is based on the current settings and server state. Is not nullable.|
 |**used_memory_kb**|bigint|The amount of memory used, in kilobytes, for the resource pool. Is not nullable.|
 |**cache_memory_kb**|bigint|The current total cache memory usage in kilobytes. Is not nullable.|
@@ -90,8 +90,9 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 |**avg_log_write_percent**|decimal(5,2)|Average write resource utilization in percentage of the limit of the pool.|
 |**avg_storage_percent**|decimal(5,2)|Average storage utilization in percentage of the storage limit of the pool.|
 |**avg_allocated_storage_percent**|decimal(5,2)|The percentage of data space allocated by all databases in the elastic pool. This is the ratio of data space allocated to data max size for the elastic pool. For more information see: File space management in SQL DB|
-|**max_worker_percent|decimal(5,2)|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|
+|**max_worker_percent**|decimal(5,2)|Maximum concurrent workers (requests) in percentage based on the limit of the pool.|
 |**max_session_percent**|decimal(5,2)|Maximum concurrent sessions in percentage based on the limit of the pool.|
+|||
 
 ## Permissions
 
@@ -99,7 +100,10 @@ This view requires VIEW DATABASE STATE permission.
 
 ## Remarks
 
-Users can access this dynamic management view to monitor near real time resource consumption for user workload pool as well as system internal pools of Azure SQL Database instance.   Most of the data surfaced by this DMV is intended for internal consumption and is subject to change.
+Users can access this dynamic management view to monitor near real time resource consumption for user workload pool as well as system internal pools of Azure SQL Database instance.
+
+> [!IMPORTANT]
+> Most of the data surfaced by this DMV is intended for internal consumption and is subject to change.
 
 ## Examples
 
@@ -125,5 +129,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## See Also
 
-- [sys.elastic_pool_resource_stats](../system-catalog-views/sys-elastic-pool-resource-stats-azure-sql-database.md)
-- [Resource Governor Resource Pool](../resource-governor/resource-governor-resource-pool.md)
+- [Translation log rate governance](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Single database DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
+- [Single database vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

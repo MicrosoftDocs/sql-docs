@@ -32,7 +32,7 @@ Returns resource governance configuration and capacity settings for an Azure SQL
 |-----------------|---------------|-----------------|  
 |**database_id**|int|ID of the database, unique within a Azure SQL Database server.|
 |**logical_database_guid**|uniqueidentifier|Logical guid for user database and stays through the life of a user database.  Rename or setting a database to a different SLO will not change the GUID. |
-|**physical_database_guid|uniqueidentifier**|Physical guid for a user database which stays through the life of the physical instance of the user database. Setting to a different SLO will cause this column to change.|
+|**physical_database_guid**|uniqueidentifier|Physical guid for a user database which stays through the life of the physical instance of the user database. Setting to a different SLO will cause this column to change.|
 |**server_name**|nvarchar|Logical server name.|
 |**database_name**|nvarchar|Logical database name.|
 |**slo_name**|nvarchar|Service level objective and hardware generation.|
@@ -83,6 +83,7 @@ Returns resource governance configuration and capacity settings for an Azure SQL
 |**volume_type_external_xstore_iops**|int|IOs per second cap for all remote storage accounts used by Azure SQL DB backups and telemetry for the instance.|
 |**volume_pfs_iops**|int|IOs per second cap for premium file storage.|
 |**volume_type_pfs_iops**|int|IOs per second cap for all premium file storage used by the instance.|
+|||
 
 ## Permissions
 
@@ -90,7 +91,10 @@ This view requires VIEW DATABASE STATE permission.
 
 ## Remarks
 
-Users can access this dynamic management view for resource governance configuration and capacity settings for an Azure SQL Database database. Most of the data surfaced by this DMV is intended for internal consumption and is subject to change.
+Users can access this dynamic management view for resource governance configuration and capacity settings for an Azure SQL Database database. 
+
+> [!IMPORTANT]
+> Most of the data surfaced by this DMV is intended for internal consumption and is subject to change.
 
 ## Examples
 
@@ -105,4 +109,6 @@ ORDER BY database_name DESC;
 
 ## See Also
 
-- [sys.dm_resource_governor_resource_pools_history_ex](../system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)
+- [Translation log rate governance](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Single database DTU resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
+- [Single database vCore resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

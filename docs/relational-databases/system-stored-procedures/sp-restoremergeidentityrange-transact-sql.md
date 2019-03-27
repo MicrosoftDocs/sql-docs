@@ -33,10 +33,10 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with default value of **all**. When specified, only identity ranges for that publication are restored.  
   
- [ **@article** = ] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default value of **all**. When specified, only identity ranges for that article are restored.  
   
 ## Return Code Values  

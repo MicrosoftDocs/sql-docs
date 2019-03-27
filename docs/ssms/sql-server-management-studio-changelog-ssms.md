@@ -29,6 +29,10 @@ Release Candidate 1 (RC1) is our latest public preview of SSMS 18.0. For the lat
 
 This section lists what's new in SSMS 18.0 RC1. For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 Preview - cumulative changelog through RC1](#ssms-180-preview---cumulative-changelog-through-rc1).
 
+**SSMS Improvements **
+- Enabling XMLA endpoint connectivity to PowerBI datasets – XMLA endpoints provide access to the Analysis Services engine in the Power BI Service. This allows tools such as SSMS and SQL Profiler to connect to Power BI datasets for monitoring, management, and debugging etc. For details see [XMLA endpoint connectivity](https://go.microsoft.com/fwlink/?linkid=2085204).
+
+
 - **SMO**
   - Added cascade delete support to "Edge Constraints" in both SMO and SSMS.
   - Added support for data classification "read-write" permissions.

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "inline XSD schema generation [SQL Server]"
   - "XMLDATA option"
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Generate an Inline XSD Schema

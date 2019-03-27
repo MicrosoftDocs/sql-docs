@@ -265,6 +265,6 @@ MEMORYCLERK_XTP      Default    64             0
   
 ## See Also  
  [Bind a Database with Memory-Optimized Tables to a Resource Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#-change-minmemorypercent-and-maxmemorypercent-on-an-existing-pool)  
+ [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-minmemorypercent-and-maxmemorypercent-on-an-existing-pool)  
   
   

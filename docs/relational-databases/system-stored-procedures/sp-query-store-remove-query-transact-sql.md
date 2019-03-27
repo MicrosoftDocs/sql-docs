@@ -38,7 +38,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## Arguments  
- [ **@query_id =** ] *query_id*  
+`[ @query_id = ] query_id`
  Is the id of the query to be removed from the query store. *query_id* is a **bigint**, with no default.  
   
 ## Return Code Values  

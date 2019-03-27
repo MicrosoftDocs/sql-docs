@@ -37,7 +37,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of a Windows user or group. The Windows user or group must be qualified with a Windows domain name in the form *Domain*\\*User*; for example, **London\Joeb**. *login* is **sysname**, with no default.  
   
 ## Return Code Values  

@@ -37,16 +37,16 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## Arguments  
- [ **@job_id =**] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number of the job from which to remove the specified target servers or target server groups. Either *job_id* or *job_name* must be specified, but both cannot be specified. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job from which to remove the specified target servers or target server groups. Either *job_id* or *job_name* must be specified, but both cannot be specified. *job_name* is **sysname**, with a default of NULL.  
   
- [ **@target_server_groups =**] **'***target_server_groups***'**  
+`[ @target_server_groups = ] 'target_server_groups'`
  A comma-separated list of target server groups to be removed from the specified job. *target_server_groups* is **nvarchar(1024)**, with a default of NULL.  
   
- [ **@target_servers =**] **'***target_servers***'**  
+`[ @target_servers = ] 'target_servers'`
  A comma-separated list of target servers to be removed from the specified job. *target_servers* is **nvarchar(1024)**, with a default of NULL.  
   
 ## Return Code Values  

@@ -34,10 +34,10 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## Arguments  
- [ **@account_id** = ] *account_id*  
+`[ @account_id = ] account_id`
  The ID number of the account to delete. *account_id* is **int**, with no default. Either *account_id* or *account_name* must be specified.  
   
- [ **@account_name** = ] **'***account_name***'**  
+`[ @account_name = ] 'account_name'`
  The name of the account to delete. *account_name* is **sysname**, with no default. Either *account_id* or *account_name* must be specified.  
   
 ## Return Code Values  

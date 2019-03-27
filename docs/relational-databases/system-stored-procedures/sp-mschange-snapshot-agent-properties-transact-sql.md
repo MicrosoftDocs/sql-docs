@@ -51,16 +51,16 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=** ] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication =** ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@frequency_type =** ] *frequency_type*  
+`[ @frequency_type = ] frequency_type`
  Is the frequency with which the Snapshot Agent is executed. *frequency_type* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -73,10 +73,10 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**20**|Monthly, relative to the frequency interval|  
 |**40**|When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent starts|  
   
- [ **@frequency_interval =** ] *frequency_interval*  
+`[ @frequency_interval = ] frequency_interval`
  Is the value to apply to the frequency set by *frequency_type*. *frequency_interval* is **int**, with no default.  
   
- [ **@frequency_subday =** ] *frequency_subday*  
+`[ @frequency_subday = ] frequency_subday`
  Is the units for *freq_subday_interval*. *frequency_subday* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -86,52 +86,52 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [ **@frequency_subday_interval=**] *frequency_subday_interval*  
+`[ @frequency_subday_interval = ] frequency_subday_interval`
  Is the interval for *frequency_subday*. *frequency_subday_interval* is **int**, with no default.  
   
- [ **@frequency_relative_interval =** ] *frequency_relative_interval*  
+`[ @frequency_relative_interval = ] frequency_relative_interval`
  Is the date the Snapshot Agent runs. *frequency_relative_interval* is **int**, with no default.  
   
- [ **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`
  Is the recurrence factor used by *frequency_type*. *frequency_recurrence_factor* is **int**, with no default.  
   
- [ **@active_start_date =** ] *active_start_date*  
+`[ @active_start_date = ] active_start_date`
  Is the date when the Snapshot Agent is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with no default.  
   
- [ **@active_end_date =** ] *active_end_date*  
+`[ @active_end_date = ] active_end_date`
  Is the date when the Snapshot Agent stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with no default.  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
+`[ @active_start_time_of_day = ] active_start_time_of_day`
  Is the time of day when the Snapshot Agent is first scheduled, formatted as HHMMSS. *active_start_time_of_day* is **int**, with no default.  
   
- [ **@active_end_time_of_day=**] *active_end_time_of_day*  
+`[ @active_end_time_of_day = ] active_end_time_of_day`
  Is the time of day when the Snapshot Agent stops being scheduled, formatted as HHMMSS. *active_end_time_of_day* is **int**, with no default.  
   
- [ **@snapshot_job_name =** ] **'**_snapshot_agent_name_**'**  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'`
  Is the name of an existing Snapshot Agent job name if an existing job is being used. *snapshot_agent_name* is **nvarchar(100)**, with no default.  
   
- [ **@publisher_security_mode**= ] *publisher_security_mode*  
+`[ @publisher_security_mode = ] publisher_security_mode`
  Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **int**, with no default. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**= ] **'**_publisher_login_**'**  
+`[ @publisher_login = ] 'publisher_login'`
  Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with no default. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and publisher*_**security_mode* is **1**, then the Windows account specified in *job_login* will be used when connecting to the Publisher.  
   
- [ **@publisher_password**= ] **'**_publisher_password_**'**  
+`[ @publisher_password = ] 'publisher_password'`
  Is the password used when connecting to the Publisher. *publisher_password* is **nvarchar(524)**, with no default.  
   
 > [!IMPORTANT]  
 >  Do not store authentication information in script files. To help improve security, we recommend that you provide login names and passwords at run time.  
   
- [ **@job_login**= ] **'**_job_login_**'**  
+`[ @job_login = ] 'job_login'`
  Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with no default. This Windows account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job. *This cannot be changed for a non-*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Publisher.*  
   
- [ **@job_password**= ] **'**_job_password_**'**  
+`[ @job_password = ] 'job_password'`
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with no default. You must supply this parameter when creating a new Snapshot Agent job.  
   
 > [!IMPORTANT]  
 >  Do not store authentication information in script files. To help improve security, we recommend that you provide login names and passwords at run time.  
   
- [ **@publisher_type**= ] **'**_publisher_type_**'**  
+`[ @publisher_type = ] 'publisher_type'`
  Specifies the Publisher type when the Publisher is not running in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  

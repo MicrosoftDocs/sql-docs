@@ -32,10 +32,10 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## Arguments  
- [ **@source_object=**] **'***source_object***'**  
+`[ @source_object = ] 'source_object'`
  Is the name of the source object. *source_object*is **nvarchar(386)**, with no default.  
   
- [ **@rowguid=**] **'***rowguid***'**  
+`[ @rowguid = ] 'rowguid'`
  Is the row identifier. *rowguid* is **uniqueidentifier**, with no default.  
   
 ## Return Code Values  

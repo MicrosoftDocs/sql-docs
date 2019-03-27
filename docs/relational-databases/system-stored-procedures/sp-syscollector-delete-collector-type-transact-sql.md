@@ -36,10 +36,10 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## Arguments  
- [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
+`[ @collector_type_uid = ] 'collector_type_uid'`
  Is the GUID for the collector type. *collector_type_uid* is **uniqueidentifier** and must have a value if *name* is NULL.  
   
- [ **@name =** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the collector type. *name* is **sysname** and must have a value if *collector_type_uid* is NULL.  
   
 ## Return Code Values  

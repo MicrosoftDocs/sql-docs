@@ -34,13 +34,13 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default of **%**, which returns the names of all articles.  
   
- [ **@filtername=**] **'***filtername***'**  
+`[ @filtername = ] 'filtername'`
  Is the name of the filter about which to return information. *filtername* is **sysname**, with a default of **%**, which returns information about all the filters defined on the article or publication.  
   
 ## Result Sets  

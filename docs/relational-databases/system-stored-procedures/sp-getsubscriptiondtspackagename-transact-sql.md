@@ -33,10 +33,10 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. **'***publication***'** is **sysname**, with no default.  
   
- [ **@subscriber=**] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is sysname, with a default of NULL.  
   
 ## Return Code Values  

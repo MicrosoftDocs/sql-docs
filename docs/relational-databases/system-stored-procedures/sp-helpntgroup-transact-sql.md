@@ -34,7 +34,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@ntname =** ] **'***name***'**  
+`[ @ntname = ] 'name'`
  Is the name of the Windows group. *name* is **sysname**, with a default of NULL. *name* must be a valid Windows group with access to the current database. If *name* is not specified, all Windows groups with access to the current database are included in the output.  
   
 ## Return Code Values  

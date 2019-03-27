@@ -35,17 +35,17 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## Arguments  
- [ **@schedule_id=** ] *schedule_id*  
+`[ @schedule_id = ] schedule_id`
  The schedule identification number of the schedule to delete. *schedule_id* is **int**, with a default of NULL.  
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
- [ **@schedule_name=** ] **'**_schedule_name_**'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to delete. *schedule_name* is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *schedule_id* or *schedule_name* must be specified, but both cannot be specified.  
   
- [ **@force_delete** = ] *force_delete*  
+`[ @force_delete = ] force_delete`
  Specifies whether the procedure should fail if the schedule is attached to a job. *Force_delete* is bit, with a default of **0**. When *force_delete* is **0**, the stored procedure fails if the schedule is attached to a job. When *force_delete* is **1**, the schedule is deleted regardless of whether the schedule is attached to a job.  
   
 ## Return Code Values  

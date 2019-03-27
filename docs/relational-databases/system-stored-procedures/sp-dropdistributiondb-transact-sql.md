@@ -32,7 +32,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## Arguments  
- [ **@database=**] **'**_database_**'**  
+`[ @database = ] 'database'`
  Is the database to drop. *database* is **sysname**, with no default.  
   
 ## Return Code Values  

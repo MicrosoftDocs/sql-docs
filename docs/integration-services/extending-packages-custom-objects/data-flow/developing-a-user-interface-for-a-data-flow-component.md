@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "custom user interface [Integration Services], custom data flow component"
   - "editors [Integration Services]"
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing a User Interface for a Data Flow Component

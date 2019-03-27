@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to query HDFS data in a SQL Server 2
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -39,18 +39,18 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
 
 1. In Azure Data Studio, connect to the SQL Server master instance of your big data cluster. For more information, see [Connect to the SQL Server master instance](connect-to-big-data-cluster.md#master).
 
-2. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
+1. Double-click on the connection in the **Servers** window to show the server dashboard for the SQL Server master instance. Select **New Query**.
 
    ![SQL Server master instance query](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. Run the following Transact-SQL command to change the context to the **Sales** database in the master instance.
+1. Run the following Transact-SQL command to change the context to the **Sales** database in the master instance.
 
    ```sql
    USE Sales
    GO
    ```
 
-4. Define the format of the CSV file to read from HDFS. Press F5 to run the statement.
+1. Define the format of the CSV file to read from HDFS. Press F5 to run the statement.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -64,7 +64,21 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
    );
    ```
 
-5. Create an external table that can read the `/clickstream_data` from the storage pool. The **SqlStoragePool** is accessible from the master instance of a big data cluster.
+1. Create an external data source to the storage pool if it does not already exist.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
+   ```
+
+1. Create an external table that can read the `/clickstream_data` from the storage pool. The **SqlStoragePool** is accessible from the master instance of a big data cluster.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

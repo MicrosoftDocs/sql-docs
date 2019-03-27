@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Precedence Constraint Editor dialog box"
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Precedence Constraint Editor

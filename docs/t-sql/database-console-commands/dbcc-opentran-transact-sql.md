@@ -42,7 +42,7 @@ DBCC OPENTRAN helps to identify active transactions that may be preventing log t
 ```sql
 DBCC OPENTRAN   
 [   
-    ( [ database_name | database_id | 0 ] ) ]  
+    ( [ database_name | database_id | 0 ] )   
     { [ WITH TABLERESULTS ]  
       [ , [ NO_INFOMSGS ] ]  
     }  

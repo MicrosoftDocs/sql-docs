@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], variables"
   - "xml data type [SQL Server], columns"
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Create XML Data Type Variables and Columns

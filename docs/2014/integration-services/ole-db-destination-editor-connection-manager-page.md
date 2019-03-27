@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "OLE DB Destination Editor"
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # OLE DB Destination Editor (Connection Manager Page)

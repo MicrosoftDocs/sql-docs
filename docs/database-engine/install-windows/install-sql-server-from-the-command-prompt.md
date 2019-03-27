@@ -1,7 +1,7 @@
 ---
 title: "Install SQL Server from the Command Prompt | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/11/2019"
+ms.date: "03/13/2019"
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ""
@@ -268,7 +268,7 @@ Use the following guidelines to develop installation commands that have correct 
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **Required**|Specifies the startup account for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Required](#Accounts)|Specifies the password for the startup account for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Optional**|Specifies the [startup](#Accounts) mode for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-|Python/Machine Learning Services (In-Database)|MPYCACHEDIRECTORY|Use this parameter to specify the Cache directory for Python feature support in SQL Server 2017 Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing Python components from the [command line on a computer without Internet access](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|Python/Machine Learning Services (In-Database)|MPYCACHEDIRECTORY|Reserved for future use. Use %TEMP% to store Python .CAB files for installation on a computer that does not have an internet connection. |  
 |R/Machine Learning Services (In-Database)|MRCACHEDIRECTORY|Use this parameter to specify the Cache directory for Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (Standalone), or R feature support in SQL Server 2017 Machine Learning Services or Machine Learning Server (Standalone). This setting is typically used when installing R components from the [command line on a computer without Internet access](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
   
 ###### Sample Syntax:  

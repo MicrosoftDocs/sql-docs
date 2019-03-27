@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "variables [Integration Services], adding"
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add, Delete, Change Scope of User-Defined Variable in a Package

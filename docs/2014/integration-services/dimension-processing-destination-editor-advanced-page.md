@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Dimension Processing Destination Editor"
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Dimension Processing Destination Editor (Advanced Page)

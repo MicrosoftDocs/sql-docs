@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "containers [Integration Services], logs"
   - "logs [Integration Services], containers"
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure Logging by Using a Saved Configuration File

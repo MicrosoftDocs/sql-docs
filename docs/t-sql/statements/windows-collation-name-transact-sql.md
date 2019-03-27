@@ -36,8 +36,9 @@ Specifies the Windows collation name in the COLLATE clause in [!INCLUDE[ssNoVers
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -67,9 +68,14 @@ Some examples are:
 **Omitted** specifies width-insensitive, **WS** specifies width-sensitive.
 
 *VariationSelectorSensitivity*  
-**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 **Omitted** specifies variation selector-insensitive, **VSS** specifies variation selector-sensitive.
+
+**UTF8**  
+**Applies to**: Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+
+Specifies UTF-8 enconding to be used for eligible data types. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Specifies the backward-compatible binary sort order to be used.
@@ -78,7 +84,6 @@ Specifies the backward-compatible binary sort order to be used.
 Specifies the binary sort order that uses code-point comparison semantics.
 
 ## Remarks
-
 Depending on the version of the collation, some code points may not have sort weights and/or uppercase/lowercase mappings defined. For example, compare the output of the `LOWER` function when it is given the same character, but in different versions of the same collation:
 
 ```sql

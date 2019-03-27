@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.ssis.ssms.isprojectvalidate.f1"
   - "sql13.ssis.ssms.ispackagevalidate.f1"
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Validate Dialog Box

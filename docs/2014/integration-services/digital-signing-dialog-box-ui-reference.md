@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Digital Signing dialog box"
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Digital Signing Dialog Box UI Reference

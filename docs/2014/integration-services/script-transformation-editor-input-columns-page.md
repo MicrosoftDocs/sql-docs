@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Script Transformation Editor"
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Script Transformation Editor (Input Columns Page)

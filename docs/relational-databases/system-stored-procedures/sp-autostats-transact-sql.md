@@ -39,10 +39,10 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## Arguments  
- [ **@tblname=** ] **'**_table_or_indexed_view_name_**'**  
+`[ @tblname = ] 'table_or_indexed_view_name'`
  Is the name of the table or indexed view to display the AUTO_UPDATE_STATISTICS option on. *table_or_indexed_view_name* is **nvarchar(776)**, with no default.  
   
- [ **@flagc=** ] **'**_stats_value_**'**  
+`[ @flagc = ] 'stats_value'`
  Updates the AUTO_UPDATE_STATISTICS option to one of these values:  
   
  **ON** = ON  
@@ -51,7 +51,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  When *stats_flag* is not specified, display the current AUTO_UPDATE_STATISTICS setting. *stats_value* is **varchar(10)**, with a default of NULL.  
   
- [ **@indname=** ] **'**_statistics_name_**'**  
+`[ @indname = ] 'statistics_name'`
  Is the name of the statistics to display or update the AUTO_UPDATE_STATISTICS option on. To display the statistics for an index, you can use the name of the index; an index and its corresponding statistics object have the same name.  
   
  *statistics_name* is **sysname**, with a default of NULL.  

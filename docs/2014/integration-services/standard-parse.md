@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "standard parse [Integration Services]"
   - "locales [Integration Services]"
 ms.assetid: dfe835b1-ea52-4e18-a23a-5188c5b6f013
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Standard Parse

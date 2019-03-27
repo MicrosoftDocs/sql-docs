@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Copy Column Transformation Editor"
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Copy Column Transformation Editor

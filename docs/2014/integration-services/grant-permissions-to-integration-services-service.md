@@ -8,8 +8,8 @@ ms.technology:
   - "integration-services"
 ms.topic: conceptual
 ms.assetid: 0c2caa68-7834-4ea0-bd77-4f3a7c86d634
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Grant Permissions to Integration Services Service

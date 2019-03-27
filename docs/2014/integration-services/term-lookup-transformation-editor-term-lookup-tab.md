@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Term Lookup Transformation Editor"
 ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Term Lookup Transformation Editor (Term Lookup Tab)

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Merge Join Transformation Editor"
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Merge Join Transformation Editor

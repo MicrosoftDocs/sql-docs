@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Flow Path Editor dialog box"
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Flow Path Editor (General Page)

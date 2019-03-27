@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 08/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Real-time scoring with sp_rxPredict in SQL Server machine learning

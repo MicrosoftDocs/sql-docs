@@ -6,8 +6,8 @@ ms.technology: machine-learning
   
 ms.date: 10/01/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Install SQL Server 2016 R Services

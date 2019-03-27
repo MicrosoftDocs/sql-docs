@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 12/10/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Data type mappings between Python and SQL Server

@@ -72,7 +72,7 @@ manager: craigg
   
  If you only need to query this data over the `/book/title` path and the `/book/subjects` path, you can create the following selective XML index:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   

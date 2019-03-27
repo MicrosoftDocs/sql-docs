@@ -66,7 +66,7 @@ manager: craigg
   
 4.  Obtain the name of stored procedure to remove in the current database. From Object Explorer, expand **Programmability** and then expand **Stored Procedures**. Alternatively, in the query editor, run the following statement.  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -77,7 +77,7 @@ manager: craigg
   
 5.  Copy and paste the following example into the query editor and insert a stored procedure name to delete from the current database.  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  

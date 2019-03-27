@@ -37,7 +37,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## Arguments  
- [ **@name_in_db =** ] **'***security_account***'**  
+`[ @name_in_db = ] 'security_account'`
  Is the name of database user or database role in the current database. *security_account* must exist in the current database. *security_account* is **sysname**, with a default of NULL. If *security_account* is not specified, **sp_helpuser** returns information about all database principals.  
   
 ## Return Code Values  

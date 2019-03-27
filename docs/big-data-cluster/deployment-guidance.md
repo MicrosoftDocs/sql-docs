@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server 2019 big data clusters (preview) on 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -82,7 +82,7 @@ The cluster configuration can be customized using a set of environment variables
 | **ACCEPT_EULA** | Yes | N/A | Accept the SQL Server license agreement (for example, 'Yes').  |
 | **CLUSTER_NAME** | Yes | N/A | The name of the Kubernetes namespace to deploy SQLServer big data cluster into. |
 | **CLUSTER_PLATFORM** | Yes | N/A | The platform the Kubernetes cluster is deployed. Can be `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP 2.3 only valued allowed is 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP 2.4 only valued allowed is 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | The number of data pool replicas to build out. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | The number of storage pool replicas to build out. |
 | **DOCKER_REGISTRY** | Yes | TBD | The private registry where the images used to deploy the cluster are stored. |
@@ -273,13 +273,13 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 10/31/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # NYC Taxi demo data for SQL Server Python and R tutorials

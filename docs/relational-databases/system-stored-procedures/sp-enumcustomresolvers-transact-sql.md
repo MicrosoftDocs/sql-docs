@@ -32,7 +32,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## Arguments  
- [ **@distributor =**] **'**_distributor_**'**  
+`[ @distributor = ] 'distributor'`
  Is the name of the Distributor where the custom resolver is located. *distributor* is **sysname**, with a default of NULL. *This parameter is deprecated and will be removed in a future release.*  
   
 ## Result Sets  

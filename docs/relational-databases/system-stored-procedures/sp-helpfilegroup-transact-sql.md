@@ -34,7 +34,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@filegroupname =** ] **'***name***'**  
+`[ @filegroupname = ] 'name'`
  Is the logical name of any filegroup in the current database. *name* is **sysname**, with a default of NULL. If *name* is not specified, all filegroups in the current database are listed and only the first result set shown in the Result Sets section is displayed.  
   
 ## Return Code Values  

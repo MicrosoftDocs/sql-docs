@@ -36,13 +36,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of NULL.  
   
- [ **@property =** ] **'**_property_**'**  
+`[ @property = ] 'property'`
  Is the publication property to change. *property* is **nvarchar(255)**.  
   
- [ **@value =** ] **'**_value_**'**  
+`[ @value = ] 'value'`
  Is the new property value. *value* is **nvarchar(255)**, with a default of NULL.  
   
  This table describes the properties of the publication that can be changed and restrictions on the values for those properties.  
@@ -113,7 +113,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Disables `DROP TABLE` DLL support for articles that are part of transactional replication. This is the **default** value for this property.|
 |**NULL** (default)||Returns the list of supported values for *property*.|  
   
-[ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
   - **0** specifies that changes to the article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
   - **1** specifies that changes to the article may cause the snapshot to be invalid. If there are existing subscriptions that would require a new snapshot, this value gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.   
@@ -124,7 +124,7 @@ See the Remarks section for the properties that, when changed, require the gener
   - **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  
   - **1** specifies that changes to the article cause the existing subscription to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
-[ **@publisher** = ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
   > [!NOTE]  

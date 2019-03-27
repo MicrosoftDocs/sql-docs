@@ -39,10 +39,10 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## Arguments  
- [ **@objname=**] **'***object_name***'**  
+`[ @objname = ] 'object_name'`
  Specifies the table on which to provide statistics information. *object_name* is **nvarchar(520)** and cannot be null. A one- or two-part name can be specified.  
   
- [ **@results=**] **'***value***'**  
+`[ @results = ] 'value'`
  Specifies the extent of information to provide. Valid entries are **ALL** and **STATS**. **ALL** lists statistics for all indexes and also columns that have statistics created on them; **STATS** only lists statistics not associated with an index. *value* is **nvarchar(5)** with a default of STATS.  
   
 ## Return Code Values  

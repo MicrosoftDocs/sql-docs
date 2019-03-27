@@ -37,10 +37,10 @@ sp_describe_undeclared_parameters
 ```  
   
 ## Arguments  
- [ **\@tsql =** ] **'**_Transact-SQL\_batch_**'**  
+`[ \@tsql = ] 'Transact-SQL\_batch'`
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
   
- [ **\@params =** ] **N'**_parameters_**'**  
+`[ \@params = ] N'parameters'`
  \@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similarly to the way sp_executesql works. *Parameters* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
   
  Is one string that contains the definitions of all parameters that have been embedded in *Transact-SQL_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. n is a placeholder that indicates additional parameter definitions. If the Transact-SQL statement or batch in the statement does not contain parameters, \@params is not required. The default value for this parameter is NULL.  

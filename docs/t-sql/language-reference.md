@@ -29,7 +29,7 @@ Some of the Microsoft tools that issue T-SQL commands are:
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
 - [sqlcmd](../tools/sqlcmd-utility.md).  
-- [Azure Data Studio (preview)](../azure-data-studio/what-is.md).  
+- [Azure Data Studio](../azure-data-studio/what-is.md).  
   
  
 ## Locate the Transact-SQL reference topics  

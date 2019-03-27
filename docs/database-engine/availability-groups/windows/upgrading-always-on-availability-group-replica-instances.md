@@ -89,7 +89,8 @@ Observe the following guidelines when performing server upgrades or updates in o
  If necessary, you can perform an extra manual failover to return the AG to its original configuration.  
  
    > [!NOTE]
-   > Upgrading a synchronous-commit replica and taking it offline will not delay transactions on the primary. Once the secondary replica is disconnected, transactions are committed on the primary without waiting for logs to harden on the secondary replica. 
+   > - Upgrading a synchronous-commit replica and taking it offline will not delay transactions on the primary. Once the secondary replica is disconnected, transactions are committed on the primary without waiting for logs to harden on the secondary replica. 
+   > - If `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is set to true, the Primary replica may be unavailabile for read/writes because no sync secondary replicas are present during the update process. 
   
 ## AG with One Remote Secondary Replica  
  If you have deployed an AG only for disaster recovery, you may need to fail over the AG to an asynchronous-commit secondary replica. Such configuration is illustrated by the following figure:  

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "column names [SQL Server]"
   - "XPath queries [SQL Server]"
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use PATH Mode with FOR XML

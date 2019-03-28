@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**ServerName**|**nvarchar**|Name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] being traced.|26||  
 |**SessionLoginName**|**Nvarchar**|Login name of the user who originated the session. For example, if you connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using Login1 and execute a statement as Login2, **SessionLoginName** shows Login1 and **LoginName** shows Login2. This column displays both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows logins.|64|Yes|  
 |**SPID**|**int**|ID of the session on which the event occurred.|12|Yes|  
-|**StartTime**|**datetime**|Time at which the event started, if available.|14|Yes|  
+|**StartTime**|**datetime**|StartTime of the related Audit Login event, if available.|14|Yes|  
 |**Success**|**int**|1 = success. 0 = failure. For example, a value of 1 indicates success of a permissions check and a value of 0 indicates failure of that check.|23|Yes|  
 |**Writes**|**bigint**|Number of logical write I/Os issued by the user during the connection.|17|Yes|  
 |**GroupID**|**int**|ID of the workload group where the SQL Trace event fires.|66|Yes|  

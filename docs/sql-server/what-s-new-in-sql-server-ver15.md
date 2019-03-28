@@ -530,7 +530,7 @@ In addition to new DAX functions, two new Dynamic Management Views are introduce
 - `TMSCHEMA_CALCULATION_GROUPS`  
 - `TMSCHEMA_CALCULATION_ITEMS`  
 
-#### Limitations in this relase:
+#### Limitations in this release:
 
 - The `ALLSELECTED DAX` function is not yet supported.
 - Row Level Security defined on the calculation-group table is not yet supported.
@@ -542,7 +542,7 @@ In addition to new DAX functions, two new Dynamic Management Views are introduce
 
 - The presence of calculation groups in a model may cause measures to return variant data types, which can cause refresh failures for calculated columns and tables that refer to measures.
 
-#### Compaitibility level
+#### Compatibility level
 
 Calculation groups require models be at the 1470 compatibility level, which is currently supported only in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 and later. At this time, calculation groups can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
 

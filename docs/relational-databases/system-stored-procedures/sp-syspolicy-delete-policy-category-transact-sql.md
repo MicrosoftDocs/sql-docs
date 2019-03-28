@@ -34,10 +34,10 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the policy category. *name* is **sysname**, and must be specified if *policy_category_id* is NULL.  
   
- [ **@policy_category_id=** ] *policy_category_id*  
+`[ @policy_category_id = ] policy_category_id`
  Is the identifier for the policy category. *policy_category_id* is **int**, and must be specified if *name* is NULL.  
   
 ## Return Code Values  

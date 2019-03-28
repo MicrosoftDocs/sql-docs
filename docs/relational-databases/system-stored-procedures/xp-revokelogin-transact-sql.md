@@ -37,7 +37,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the Windows user or group from which to revoke access. *login* must include the domain name, for example **[ADVWKS\sylvester1]**. *login* is **sysname**, with no default.  
   
 ## Return Code Values  

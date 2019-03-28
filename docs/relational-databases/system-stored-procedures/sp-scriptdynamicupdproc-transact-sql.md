@@ -32,7 +32,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## Arguments  
- [ **@artid=**] *artid*  
+`[ @artid = ] artid`
  Is the article ID. *artid* is **int**, with no default.  
   
 ## Result Sets  

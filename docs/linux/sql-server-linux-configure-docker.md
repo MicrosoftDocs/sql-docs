@@ -564,7 +564,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
     docker logs e69e056c702d
     ```
 
-- Make sure that you meet the minimum memory and disk requirements specified in the [Requirements](#requirements) section of this article.
+- Make sure that you meet the minimum memory and disk requirements specified in the [prerequisites](quickstart-install-connect-docker.md#requirements) section of the quickstart article.
 
 - If you are using any container management software, make sure it supports container processes running as root. The sqlservr process in the container runs as root.
 

@@ -2,9 +2,10 @@
 title: "Tutorial: Active Directory authentication for SQL Server on Linux"
 titleSuffix: SQL Server
 description: This tutorial provides the configuration steps for AAD authentication for SQL Server on Linux.
-author: meet-bhagdev
-ms.date: 02/23/2018
-ms.author: meetb 
+author: Dylan-MSFT
+ms.author: Dylan.Gray
+ms.reviewer: rothja
+ms.date: 03/28/2019
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -13,6 +14,7 @@ ms.technology: linux
 helpviewer_keywords: 
   - "Linux, AAD authentication"
 ---
+
 # Tutorial: Use Active Directory authentication with SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]

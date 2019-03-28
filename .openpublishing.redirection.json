@@ -5316,6 +5316,11 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "docs/linux/sql-server-linux-kubernetes-operator.md",
+        "redirect_url": "/sql/linux/sql-server-ag-kubernetes",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "docs/connect/odbc/windows/welcome-to-the-microsoft-odbc-driver-13-for-sql-server-on-windows.md",
         "redirect_url": "/sql/connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows",
         "redirect_document_id": false

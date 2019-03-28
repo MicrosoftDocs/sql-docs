@@ -33,7 +33,7 @@ manager: craigg
 ##  <a name="bkmk_ExampleTable"></a> Example memory-optimized table  
  Consider the following memory-optimized table schema:  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -80,7 +80,7 @@ GO
   
  Hash indexes achieve very fast equality lookups such as:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -89,7 +89,7 @@ SELECT * FROM t_hk
   
  Nonclustered indexes are faster for range lookups such as:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -98,7 +98,7 @@ SELECT * FROM t_hk
   
  If you are migrating a disk-based table you can use the following to determine the number of unique values for the index t1c2_index.  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -138,7 +138,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Non-clustered indexes are best when used for range lookups, as exemplified by the following query:  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

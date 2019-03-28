@@ -36,10 +36,10 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## Arguments  
- [ **@objname=** ] **'**_table_**'**  
+`[ @objname = ] 'table'`
  Is the table about which constraint information is returned. The table specified must be local to the current database. *table* is **nvarchar(776)**, with no default.  
   
- [ **@nomsg=**] **'**_no_message_**'**  
+`[ @nomsg = ] 'no_message'`
  Is an optional parameter that prints the table name. *no_message* is **varchar(5)**, with a default of **msg**. **nomsg** suppresses the printing.  
   
 ## Return Code Values  

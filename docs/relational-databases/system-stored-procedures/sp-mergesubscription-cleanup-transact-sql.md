@@ -37,13 +37,13 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher =**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db =**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication =**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 ## Return Code Values  

@@ -6,7 +6,7 @@ author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -191,7 +191,7 @@ The following two example notebooks demonstrate training two image classificatio
 Place the appropriate notebook file to your local machine, and then open and run it in Azure Data Studio using the PySpark3 kernel. Unless you have a specific need for an older version of CUDA or TensorFlow, choose CUDA 9/CUDNN 7/TensorFlow 1.12.0. For more information about how to use notebooks with big data clusters, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
 
 > [!NOTE]
-> Note that the notebooks install software in system locations. This is possible because notebooks currently run with root privileges in CTP 2.3.
+> Note that the notebooks install software in system locations. This is possible because notebooks currently run with root privileges in CTP 2.4.
 
 After installing NVIDIA GPU libraries and TensorFlow for GPU, the notebooks list GPU devices available. They then fit and evaluate a TensorFlow model to recognize handwritten digits using the MNIST data set. After checking available disk space, they download and run the CIFAR 10 image classification example from [https://github.com/tensorflow/models.git](https://github.com/tensorflow/models.git). By running the CIFAR 10 example on clusters having different GPUs, you can observe the speed increase offered by each generation of GPU available in Azure.
 

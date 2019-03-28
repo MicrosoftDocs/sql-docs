@@ -1,11 +1,16 @@
 {
     "redirections": [
         {
-           "source_path": "docs/relational-databases/database-features.md",
-           "redirect_url": "/sql/relational-databases/databases/databases",
-           "redirect_document_id": false 
-        },       
-        {
+            "source_path": "docs/toc/redirectfrom-reference-10.md",
+            "redirect_url": "/sql/sql-server/applies-to-includes",
+            "redirect_document_id": false
+         },
+         {
+            "source_path": "docs/relational-databases/database-features.md",
+            "redirect_url": "/sql/relational-databases/databases/databases",
+            "redirect_document_id": false 
+         },       
+          {
             "source_path": "docs/relational-databases/polybase/polybase-type-mapping.md",
             "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
             "redirect_document_id": false 
@@ -2141,6 +2146,11 @@
             "source_path": "docs/t-sql/lesson-3-1-deleting-database-objects.md",
             "redirect_url": "/sql/t-sql/lesson-3-deleting-database-objects",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/tools/sqlpackage-release-notes.md",
+            "redirect_url": "/sql/tools/release-notes-sqlpackage",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md",

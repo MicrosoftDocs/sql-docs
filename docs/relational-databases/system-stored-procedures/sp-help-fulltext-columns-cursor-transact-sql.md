@@ -39,13 +39,13 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## Arguments  
- [ **@cursor_return =**] *@cursor_variable* OUTPUT  
+`[ @cursor_return = ] @cursor_variable OUTPUT`
  Is the output variable of type **cursor**. The resulting cursor is a read-only, scrollable, dynamic cursor.  
   
- [ **@table_name =**] **'***table_name***'**  
+`[ @table_name = ] 'table_name'`
  Is the one- or two-part table name for which full-text index information is requested. *table_name* is **nvarchar(517)**, with a default value of NULL. If *table_name* is omitted, full-text index column information is retrieved for every full-text indexed table.  
   
- [ **@column_name =**] **'***column_name***'**  
+`[ @column_name = ] 'column_name'`
  Is the name of the column for which full-text index metadata is desired. *column_name* is **sysname** with a default value of NULL. If *column_name* is omitted or is NULL, full-text column information is returned for every full-text indexed column for *table_name*. If *table_name* is also omitted or is NULL, full-text index column information is returned for every full-text indexed column for all tables in the database.  
   
 ## Return Code Values  

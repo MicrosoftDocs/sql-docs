@@ -34,7 +34,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### Parameters  
- [ **@masking_mode=** ] *masking_mode*  
+`[ @masking_mode = ] masking_mode`
  Determines whether transparent data encryption log user data masking is enabled. *masking_mode* is **int**, and can be one of the following values:  
   
 -   0 = Disabled, user data appears in the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] activity logs.  

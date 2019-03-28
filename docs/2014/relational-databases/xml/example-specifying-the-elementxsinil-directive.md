@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ELEMENTXSINIL directive"
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Example: Specifying the ELEMENTXSINIL Directive

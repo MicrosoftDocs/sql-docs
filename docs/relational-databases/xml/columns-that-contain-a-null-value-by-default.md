@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [XML in SQL Server], null default value"
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Columns that Contain a Null Value By Default

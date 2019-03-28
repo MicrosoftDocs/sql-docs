@@ -37,10 +37,10 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## Arguments  
- [ **@secondary_server =** ] '*secondary_server*'  
+`[ @secondary_server = ] 'secondary_server'`
  Is the name of the secondary server. *secondary_server* is **sysname**, with no default.  
   
- [ **@secondary_database =** ] '*secondary_database*'  
+`[ @secondary_database = ] 'secondary_database'`
  Is the name of the secondary database. *secondary_database* is **sysname**, with no default.  
   
 ## Return Code Values  

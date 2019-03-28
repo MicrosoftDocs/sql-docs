@@ -32,13 +32,13 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## Arguments  
- [ **@source_object =**] **'***source_object***'**  
+`[ @source_object = ] 'source_object'`
  Is the name of the source object. *source_object* is **nvarchar(386)**, with no default.  
   
- [ **@rowguid=**] **'***rowguid***'**  
+`[ @rowguid = ] 'rowguid'`
  Is the row identifier for the delete type. *rowguid* is **uniqueidentifier**, with no default.  
   
- [ **@delete_type=**] *delete_type* **OUTPUT**  
+`[ @delete_type = ] delete_type OUTPUT`
  Is the code indicating the type of delete. *delete_type* is **int**, with no default. *delete_type* is also an OUTPUT parameter, and can be one of these values.  
   
 |Value|Description|  

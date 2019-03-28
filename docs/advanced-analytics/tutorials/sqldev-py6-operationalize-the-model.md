@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/02/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Run predictions using Python embedded in a stored procedure

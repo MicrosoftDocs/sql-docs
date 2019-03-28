@@ -32,10 +32,10 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## Arguments  
- [ **@profile_id=**] *profile_id*,  
+`[ @profile_id = ] profile_id,`
  Is the ID of the profile. *profile_id* is **int**, with no default.  
   
- [ **@parameter_name=**] **'***parameter_name***'**  
+`[ @parameter_name = ] 'parameter_name'`
  Is the name of the parameter. *parameter_name* is **sysname**, with no default. For system profiles, the parameters that can be changed depend on the type of agent. To find out what type of agent this *profile_id* represents, locate the *profile_id* column in the **Msagent_profiles** table, and note the *agent_type* value.  
   
 > [!NOTE]  
@@ -237,7 +237,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  To see what parameters have been defined for a given profile, run **sp_help_agent_profile** and note the *profile_name* associated with the *profile_id*. With the appropriate *profile_id*, next run **sp_help_agent_parameters** using that *profile_id* to see the parameters associated with the profile. Parameters can be added to a profile by executing [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- [ **@parameter_value=**] **'***parameter_value***'**  
+`[ @parameter_value = ] 'parameter_value'`
  Is the new value of the parameter. *parameter_value* is **nvarchar(255)**, with no default.  
   
 ## Return Code Values  

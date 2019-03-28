@@ -37,10 +37,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@sp_name =** ] **'**_name_**'**  
+`[ @sp_name = ] 'name'`
  Is the name of the procedure used to return catalog information. *name* is **nvarchar(390)**, with a default of NULL. Wildcard pattern matching is supported.  
   
- [ **@sp_owner =** ] **'**_schema_**'**  
+`[ @sp_owner = ] 'schema'`
  Is the name of the schema to which the procedure belongs. *schema* is **nvarchar(384)**, with a default of NULL. Wildcard pattern matching is supported. If *owner* is not specified, the default procedure visibility rules of the underlying DBMS apply.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the current schema contains a procedure with the specified name, that procedure is returned. If a nonqualified stored procedure is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] searches for the procedure in the following order:  
@@ -51,10 +51,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   The **dbo** schema in the current database.  
   
- [ **@qualifier =** ] **'**_qualifier_**'**  
+`[ @qualifier = ] 'qualifier'`
  Is the name of the procedure qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables in the form (_qualifier_**.**_schema_**.**_name_. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualifier* represents the database name. In some products, it represents the server name of the database environment of the table.  
   
- [ **@fUsePattern =** ] **'**_fUsePattern_**'**  
+`[ @fUsePattern = ] 'fUsePattern'`
  Determines whether the underscore (_), percent (%), or brackets [ ]) are interpreted as wildcard characters. *fUsePattern* is **bit**, with a default of 1.  
   
  **0** = Pattern matching is off.  

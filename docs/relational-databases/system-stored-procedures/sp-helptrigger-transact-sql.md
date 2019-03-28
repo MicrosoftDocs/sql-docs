@@ -36,10 +36,10 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## Arguments  
- [ **@tabname=** ] **'***table***'**  
+`[ @tabname = ] 'table'`
  Is the name of the table in the current database for which to return trigger information. *table* is **nvarchar(776)**, with no default.  
   
- [ **@triggertype=** ] **'***type***'**  
+`[ @triggertype = ] 'type'`
  Is the type of DML trigger to return information about. *type* is **char(6)**, with a default of NULL, and can be one of these values.  
   
 |Value|Description|  

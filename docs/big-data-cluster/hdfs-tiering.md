@@ -6,7 +6,7 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 02/29/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Configure HDFS tiering on SQL Server 2019 big data clusters
 
-HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview). At this time, CTP 2.3 only supports connecting to Azure Data Lake Storage Gen2, which is the focus of this article.
+HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview). At this time, CTP 2.4 only supports connecting to Azure Data Lake Storage Gen2, which is the focus of this article.
 
 ## HDFS tiering overview
 
@@ -73,7 +73,7 @@ The following steps mount the remote HDFS storage in Azure Data Lake into the lo
 1. Mount the remote HDFS storage in Azure using **mssqlctl storage mount create**. Replace the placeholder values before running the following command:
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --local-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -92,7 +92,7 @@ mssqlctl storage mount status
 To list the status of a mount at a specific path in HDFS, use the following command:
 
 ```bash
-mssqlctl storage mount status --local-path <mount-path-in-hdfs>
+mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Delete the mount
@@ -100,7 +100,7 @@ mssqlctl storage mount status --local-path <mount-path-in-hdfs>
 To delete the mount, use the **mssqlctl storage mount delete** command, and specify the mount path in HDFS:
 
 ```bash
-mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
+mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="issues"></a> Known issues and limitations

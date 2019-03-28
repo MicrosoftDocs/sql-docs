@@ -35,7 +35,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## Arguments  
- [ **@cache_directory =** ] **'***cache_directory***'**  
+`[ @cache_directory = ] 'cache_directory'`
  The directory in the file system where collected data is stored temporarily. *cache_directory* is **nvarchar(255)**, with a default value of NULL. If no value is specified, the default temporary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory is used.  
   
 ## Return Code Values  

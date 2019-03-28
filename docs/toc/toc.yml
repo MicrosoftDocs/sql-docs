@@ -7140,38 +7140,38 @@
       - name: How-to
         items:
         - name: Enable
-           href: ../relational-databases/resource-governor/enable-resource-governor.md
-        -  name: Disable
-           href: ../relational-databases/resource-governor/disable-resource-governor.md
-        -  name: Configure Resource Governor Using a Template
-           href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
-        -  name: View Resource Governor Properties
-           href: ../relational-databases/resource-governor/view-resource-governor-properties.md
-        -  name: Resource Pool
-           href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
-           items:
-           - name: Create
-             href: ../relational-databases/resource-governor/create-a-resource-pool.md
-           - name: Change  Settings
-             href: ../relational-databases/resource-governor/change-resource-pool-settings.md
-           - name: Delete
-             href: ../relational-databases/resource-governor/delete-a-resource-pool.md
-        -  name: Workload Group
-           href: ../relational-databases/resource-governor/resource-governor-workload-group.md
-           items:
-           - name: Create
-             href: ../relational-databases/resource-governor/create-a-workload-group.md
-           - name: Change  Settings
-             href: ../relational-databases/resource-governor/change-workload-group-settings.md
-           - name: Move
-             href: ../relational-databases/resource-governor/move-a-workload-group.md
-           - name: Delete
-             href: ../relational-databases/resource-governor/delete-a-workload-group.md
-        -  name: Classifier function
-           href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
-           items:
-           - name: Create & Test a Classifier User-Defined Function
-             href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
+          href: ../relational-databases/resource-governor/enable-resource-governor.md
+        - name: Disable
+          href: ../relational-databases/resource-governor/disable-resource-governor.md
+        - name: Configure Resource Governor Using a Template
+          href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
+        - name: View Resource Governor Properties
+          href: ../relational-databases/resource-governor/view-resource-governor-properties.md
+        - name: Resource Pool
+          href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
+          items:
+          - name: Create
+            href: ../relational-databases/resource-governor/create-a-resource-pool.md
+          - name: Change  Settings
+            href: ../relational-databases/resource-governor/change-resource-pool-settings.md
+          - name: Delete
+            href: ../relational-databases/resource-governor/delete-a-resource-pool.md
+        - name: Workload Group
+          href: ../relational-databases/resource-governor/resource-governor-workload-group.md
+          items:
+          - name: Create
+            href: ../relational-databases/resource-governor/create-a-workload-group.md
+          - name: Change  Settings
+            href: ../relational-databases/resource-governor/change-workload-group-settings.md
+          - name: Move
+            href: ../relational-databases/resource-governor/move-a-workload-group.md
+          - name: Delete
+            href: ../relational-databases/resource-governor/delete-a-workload-group.md
+        - name: Classifier function
+          href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
+          items:
+          - name: Create & Test a Classifier User-Defined Function
+            href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
     - name: Statistics
       href: ../relational-databases/statistics/statistics.md
       items:

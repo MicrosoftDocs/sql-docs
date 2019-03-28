@@ -35,10 +35,10 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## Arguments  
- [ **@policy_id=** ] *policy_id*  
+`[ @policy_id = ] policy_id`
  Is the identifier of the policy for which you want to delete the execution history. *policy_id* is **int**, and is required. Can be NULL.  
   
- [ **@oldest_date=** ] **'***oldest_date***'**  
+`[ @oldest_date = ] 'oldest_date'`
  Is the oldest date for which you want to keep policy execution history. Any execution history earlier than this date is deleted. *oldest_date* is **datetime**, and is required. Can be NULL.  
   
 ## Return Code Values  

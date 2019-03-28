@@ -34,7 +34,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## Arguments  
- [ **@attribute_id =** ] **'***attribute_id***'**  
+`[ @attribute_id = ] 'attribute_id'`
  Is the integer ID of the attribute. *attribute_id* is **int**, with a default of NULL.  
   
 ## Return Code Values  

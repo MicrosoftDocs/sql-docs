@@ -40,10 +40,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## Arguments  
- [ **@traceid=** ] *trace_id*  
+`[ @traceid = ] trace_id`
  Is the ID of the trace to be modified. *trace_id* is **int**, with no default. The user employs this *trace_id* value to identify, modify, and control the trace.  
   
- [ **@eventid=** ] *event_id*  
+`[ @eventid = ] event_id`
  Is the ID of the event to turn on. *event_id* is **int**, with no default.  
   
  This table lists the events that can be added to or removed from a trace.  
@@ -233,7 +233,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Indicates that SQL Server could not produce an execution plan for a query or batch that contained a plan guide. SQL Server attempted to generate an execution plan for this query or batch without applying the plan guide. An invalid plan guide may be the cause of this problem. You can validate the plan guide by using the sys.fn_validate_plan_guide system function.|  
 |235|Audit Fulltext||  
   
- [ **@columnid=** ] *column_id*  
+`[ @columnid = ] column_id`
  Is the ID of the column to be added for the event. *column_id* is **int**, with no default.  
   
  The following table lists the columns that can be added for an event.  

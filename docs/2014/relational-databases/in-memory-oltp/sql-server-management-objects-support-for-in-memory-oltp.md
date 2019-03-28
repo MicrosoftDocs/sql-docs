@@ -71,7 +71,7 @@ manager: craigg
   
 -   Microsoft.SqlServer.SqlEnum.dll  
   
-```tsql  
+```sql  
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
   

@@ -76,7 +76,7 @@ Specifies the relative importance of a request.  Importance is one of the follow
 
 Importance influences the order in which requests are scheduled, thus giving first access to resources and locks.
 
-If a user is a member of multiple roles with different resource classes assigned or matched in multiple classifiers, the user is given the highest resource class assignment. For mor information see, [workload classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)
+If a user is a member of multiple roles with different resource classes assigned or matched in multiple classifiers, the user is given the highest resource class assignment. For more information see, [workload classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)
 
 ## Permissions
 
@@ -95,7 +95,7 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 
 ## See Also
 
-[DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>  
+[DROP WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 Catalog view [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)</br>
 Catalog view [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
 [SQL Data Warehouse Classification](/azure/sql-data-warehouse/classification)

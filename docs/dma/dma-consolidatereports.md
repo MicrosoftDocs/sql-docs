@@ -67,7 +67,10 @@ This inventory can be in one of two forms:
 
 ### If using a CSV file
 > [!IMPORTANT]
-> Ensure that the inventory file is saved as a comma-separated (CSV) file.
+> Ensure that the inventory file is saved as a comma-separated (CSV) file
+
+> [!IMPORTANT]
+> For default instances, set the instance name to MSSQLServer.
 
 When using a csv file to import the data, ensure there are only two columns of data - **Instance Name** and **Database Name**, and that the columns don't have header rows.
  

@@ -33,9 +33,11 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 - [Big data cluster](#bigdatacluster)
   - Guidance on GPU support for running deep learning with TensorFlow in Spark.
   - Spark runtime upgrade to Spark 2.4.
+  - `INSERT INTO SELECT` support for the data pool.
+  - `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.
 
 - [Database engine](#databaseengine)
-  - New `query_post_execution_plan_profile` Extended Event.
+  - Truncation error message defaults to include table and column names, and truncated value. See [Truncation](#truncation).
   - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries.
   - Transparent Data Encryption (TDE) scan - suspend and resume.
 
@@ -51,6 +53,8 @@ The following sections describe the new features that have been introduced in pr
 
 - [GPU support for running deep learning with TensorFlow in Spark](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
 - Spark runtime upgrade to Spark 2.4. (CTP 2.4)
+- `INSERT INTO SELECT` support for the data pool.
+- `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.
 - [Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. (CTP 2.3)
 - [Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
@@ -103,7 +107,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 
 ### New DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
 
-The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats.md) and [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
+The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) and [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
 
 ```sql
 SELECT *
@@ -185,7 +189,7 @@ Scalar UDF inlining automatically transforms scalar user-defined functions (UDF)
 
 For more information, see [Scalar UDF inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md).
 
-### Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
+### <a name="truncation" />Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
 
 The error message ID 8152 `String or binary data would be truncated` is familiar to many [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] developers and administrators who develop or maintain data movement workloads; the error is raised during data transfers between a source and a destination with different schemas when the source data is too large to fit into the destination data type. This error message can be time-consuming to troubleshoot. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new, more specific error message (2628) for this scenario:  
 

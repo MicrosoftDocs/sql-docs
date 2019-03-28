@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "iterations [Integration Services]"
   - "For Loop containers"
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add Iteration to a Control Flow

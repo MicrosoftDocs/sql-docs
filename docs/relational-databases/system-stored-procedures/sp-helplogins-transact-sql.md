@@ -34,7 +34,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## Arguments  
- [ **@LoginNamePattern =** ] **'***login***'**  
+`[ @LoginNamePattern = ] 'login'`
  Is a login name. *login* is **sysname**, with a default of NULL. *login* must exist if specified. If *login* is not specified, information about all logins is returned.  
   
 ## Return Code Values  

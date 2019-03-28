@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "HTTP Connection Manager Editor"
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # HTTP Connection Manager Editor (Proxy Page)

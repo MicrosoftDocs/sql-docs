@@ -39,19 +39,19 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## Arguments  
- [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
+`[ @collector_type_uid = ] 'collector_type_uid'`
  Is the GUID for the collector type. *collector_type_uid* is **uniqueidentifier**, and if it is NULL it will be automatically created and returned as OUTPUT.  
   
- [ **@name =** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the collector type. *name* is **sysname** and must be specified.  
   
- [ **@parameter_schema =** ] **'***parameter_schema***'**  
+`[ @parameter_schema = ] 'parameter_schema'`
  Is the XML schema for this collector type. *parameter_schema* is **xml** and may be required by certain collector types. If it is not required, this argument can be NULL.  
   
- [ **@collection_package_id =** ] *collection_package_id*  
+`[ @collection_package_id = ] collection_package_id`
  Is a local unique identifier that points to the [!INCLUDE[ssIS](../../includes/ssis-md.md)] collection package used by the collection set. *collection_package_id* is **uniqueidentifer** and is required. To obtain the value for *collection_package_id*, query the dbo.syscollector_collector_types system view in the msdb database.  
   
- [ **@upload_package_id =** ] *upload_package_id*  
+`[ @upload_package_id = ] upload_package_id`
  Is a local unique identifier that points to the [!INCLUDE[ssIS](../../includes/ssis-md.md)] upload package used by the collection set. *upload_package_id* is **uniqueidentifier** and is required. To obtain the value for *upload_package_id*, query the dbo.syscollector_collector_types system view in the msdb database.  
   
 ## Return Code Values  

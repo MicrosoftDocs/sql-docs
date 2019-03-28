@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.Comfirm_Delete"
 ms.assetid: 091def94-6c9c-4afc-92dc-4c2f4c2cafa0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Confirm Delete Page

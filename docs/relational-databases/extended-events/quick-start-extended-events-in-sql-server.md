@@ -1,19 +1,20 @@
 ---
-title: "Quick Start: Extended events in SQL Server | Microsoft Docs"
+title: "Quickstart: Extended events in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Quick Start: Extended events in SQL Server
+# Quickstart: Extended events in SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 

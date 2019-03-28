@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "dates [Integration Services], YEAR"
   - "YEAR function"
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # YEAR (SSIS Expression)

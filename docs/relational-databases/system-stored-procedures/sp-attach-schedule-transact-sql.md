@@ -37,19 +37,19 @@ sp_attach_schedule
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number of the job to which the schedule is added. *job_id*is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job to which the schedule is added. *job_name*is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@schedule_id =** ] *schedule_id*  
+`[ @schedule_id = ] schedule_id`
  The schedule identification number of the schedule to set for the job. *schedule_id*is **int**, with a default of NULL.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to set for the job. *schedule_name*is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

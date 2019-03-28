@@ -22,7 +22,7 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 |Column Name|Data Type|Description|Range|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Unique ID of the classifier. Is not nullable||
-group_name|**sysname**|Name of the workload group the classifier is assigned to. Is not nullable. |Static Resource Classes</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br>Dynamic Resource Classes</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
+group_name|**sysname**|Name of the workload group the classifier is assigned to. Is not nullable. |Static Resource Classes</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Dynamic Resource Classes</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
 name|**sysname**|Name of the classifier. Must be unique to the instance. Is not nullable.||
 |importance|**sysname**|Is the relative importance of a request in this workload group and across workload groups for shared resources.  Importance specified in the classifier overrides the workload group importance setting.|low, below_normal, normal, above_normal, high |
 |create_time|**datetime**|Time the classifier was created. Is not nullable.||

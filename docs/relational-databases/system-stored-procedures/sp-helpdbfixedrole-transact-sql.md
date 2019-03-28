@@ -34,7 +34,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of a fixed database role. *role* is **sysname**, with a default of NULL. If *role* is specified, only information about that role is returned; otherwise, a list and description of all fixed database roles is returned.  
   
 ## Return Code Values  

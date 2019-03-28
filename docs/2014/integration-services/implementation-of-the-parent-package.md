@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "parent packages [Integration Services]"
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Implementation of the Parent Package

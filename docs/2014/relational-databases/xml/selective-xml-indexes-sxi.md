@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Selective XML Indexes (SXI)
@@ -72,7 +72,7 @@ manager: craigg
   
  If you only need to query this data over the `/book/title` path and the `/book/subjects` path, you can create the following selective XML index:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   

@@ -1,11 +1,16 @@
 {
     "redirections": [
         {
-           "source_path": "docs/relational-databases/database-features.md",
-           "redirect_url": "/sql/relational-databases/databases/databases",
-           "redirect_document_id": false 
-        },       
-        {
+            "source_path": "docs/toc/redirectfrom-reference-10.md",
+            "redirect_url": "/sql/sql-server/applies-to-includes",
+            "redirect_document_id": false
+         },
+         {
+            "source_path": "docs/relational-databases/database-features.md",
+            "redirect_url": "/sql/relational-databases/databases/databases",
+            "redirect_document_id": false 
+         },       
+          {
             "source_path": "docs/relational-databases/polybase/polybase-type-mapping.md",
             "redirect_url": "/sql/relational-databases/polybase/polybase-guide",
             "redirect_document_id": false 
@@ -2143,6 +2148,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/tools/sqlpackage-release-notes.md",
+            "redirect_url": "/sql/tools/release-notes-sqlpackage",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md",
             "redirect_url": "/sql/tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor",
             "redirect_document_id": false
@@ -2776,6 +2786,11 @@
             "source_path": "docs/ssdt/sql-server-data-tools-ssdt-release-candidate.md",
             "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssdt/changelog-for-sql-server-data-tools-ssdt.md",
+            "redirect_url": "https://docs.microsoft.com/sql/ssdt/release-notes-ssdt",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/ssms/sql-server-management-studio-ssms-release-candidate.md",

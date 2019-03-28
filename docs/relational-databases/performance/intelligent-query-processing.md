@@ -499,4 +499,4 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [Showplan logical and physical operators reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Joins](../../relational-databases/performance/joins.md)    
 [Demonstrating adaptive query processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Demonstrating intelligent QP](https://github.com/joesackmsft/Conferences/blob/master/IQPDemos/IQP_Demo_ReadMe.md)   
+[Demonstrating intelligent QP](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

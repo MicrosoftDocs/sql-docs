@@ -82,7 +82,7 @@ Returns snapshot at 15 seconds interval for last 30 minutes of resource pools 
 |**instance_cpu_percent|decimal(5,2)|CPU percent configured for the instance|
 |**instance_vcores**|decimal(5,2)|Number of vCores configured for the instance|
 |**delta_log_bytes_used**|decimal(5,2)|Total log generation (in bytes) at pool level since last snapshot|
-|**avg_login_rate_percent**|decimal(5,2)|Number of Logins since last snapshot, compard against Login Limit|
+|**avg_login_rate_percent**|decimal(5,2)|Number of Logins since last snapshot, compared against Login Limit|
 |**delta_vcores_used**|decimal(5,2)|Compute utilization in count of vCores since last snapshot.|
 |**cap_vcores_used_percent**|decimal(5,2)|Average compute utilization in percentage of the limit of the pool.|
 |**instance_vcores_used_percent**|decimal(5,2)|Average compute utilization in percentage of the limit of the SQL instance.|

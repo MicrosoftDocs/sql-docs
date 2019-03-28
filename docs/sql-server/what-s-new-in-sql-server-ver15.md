@@ -33,6 +33,8 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 - [Big data cluster](#bigdatacluster)
   - Guidance on GPU support for running deep learning with TensorFlow in Spark.
   - Spark runtime upgrade to Spark 2.4.
+  - `INSERT INTO SELECT` support for the data pool.
+  - `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.
 
 - [Database engine](#databaseengine)
   - New `query_post_execution_plan_profile` Extended Event.
@@ -51,6 +53,8 @@ The following sections describe the new features that have been introduced in pr
 
 - [GPU support for running deep learning with TensorFlow in Spark](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
 - Spark runtime upgrade to Spark 2.4. (CTP 2.4)
+- `INSERT INTO SELECT` support for the data pool.
+- `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.
 - [Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. (CTP 2.3)
 - [Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)

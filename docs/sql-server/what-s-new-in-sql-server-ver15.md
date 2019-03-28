@@ -103,7 +103,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 
 ### New DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
 
-The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats.md) and [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
+The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) and [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
 
 ```sql
 SELECT *

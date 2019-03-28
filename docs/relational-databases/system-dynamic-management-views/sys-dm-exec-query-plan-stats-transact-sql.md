@@ -74,7 +74,7 @@ Under the following conditions, a **simplified <sup>1</sup>** Showplan output is
     **AND**    
 -   The query is simple enough, usually categorized as part of an OLTP workload.
 
-<sup>1</sup> This refers to a Showplan that only contains the root node operator (SELECT). 
+<sup>1</sup> This refers to a Showplan that only contains the root node operator (SELECT). For [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 only this refers to the cached plan as available through sys.dm_exec_cached_plans.
 
 Under the following conditions, **no output is returned** from **sys.dm_exec_query_plan_stats**:
 
@@ -130,5 +130,5 @@ GO
 ## See Also
   [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Execution Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-transact-sql.md)  
 

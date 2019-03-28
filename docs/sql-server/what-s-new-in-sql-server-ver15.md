@@ -35,7 +35,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
   - Spark runtime upgrade to Spark 2.4.
 
 - [Database engine](#databaseengine)
-  - New `query_post_execution_plan_profile` Extended Event.
+  - Truncation error message defaults to include table and column names, and truncated value. See [Truncation](#truncation).
   - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries.
   - Transparent Data Encryption (TDE) scan - suspend and resume.
 
@@ -185,7 +185,7 @@ Scalar UDF inlining automatically transforms scalar user-defined functions (UDF)
 
 For more information, see [Scalar UDF inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md).
 
-### Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
+### Truncation error message improved to include table and column names, and truncated value (CTP 2.4)(#truncation)
 
 The error message ID 8152 `String or binary data would be truncated` is familiar to many [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] developers and administrators who develop or maintain data movement workloads; the error is raised during data transfers between a source and a destination with different schemas when the source data is too large to fit into the destination data type. This error message can be time-consuming to troubleshoot. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new, more specific error message (2628) for this scenario:  
 

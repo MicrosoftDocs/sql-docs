@@ -25,7 +25,7 @@ The Microsoft JDBC Driver for SQL Server supports running in JVMs configured to 
 
 ## FIPS Configured JVM
 
-Generally, applications can configure the java.security to use FIPS compliant crypto providers. Please see the documentation specific to your JVM for how to configure FIPS 140 compliance.
+Generally, applications can configure the `java.security` file to use FIPS compliant crypto providers. Please see the documentation specific to your JVM for how to configure FIPS 140 compliance.
 
 To see the approved modules for FIPS Configuration, refer to [Validated Modules in the Cryptographic Module Validation Program](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules).
 

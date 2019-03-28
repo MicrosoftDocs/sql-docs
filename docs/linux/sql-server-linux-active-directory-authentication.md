@@ -7,7 +7,7 @@ ms.author: Dylan.Gray
 ms.reviewer: rothja
 ms.date: 03/28/2019
 manager: craigg
-ms.topic: conceptual
+ms.topic: tutorial
 ms.prod: sql
 ms.custom: "sql-linux, seodec18"
 ms.technology: linux
@@ -27,12 +27,10 @@ This tutorial consists of the following tasks:
 > * Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
 > * Create AD user for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 > * Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
+> * Secure the keytab file
+> * Configure SQL Server to use the keytab file for Kerberos authentication
 > * Create AD-based logins in Transact-SQL
 > * Connect to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using AD Authentication
-
-> [!NOTE]
->
-> If you wish to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to use a third-party AD provider, please see [Use third-party Active Directory providers with SQL Server on Linux](./sql-server-linux-active-directory-third-party-providers.md).
 
 ## Prerequisites
 
@@ -45,6 +43,8 @@ Before you configure AD Authentication, you need to:
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## <a id="join"></a> Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
+
+You can see more detailed instructions on joining a Linux host with Active Directory domain controller on the <pre-requisite> page.
 
 Use the following steps to join a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to an Active Directory domain:
 

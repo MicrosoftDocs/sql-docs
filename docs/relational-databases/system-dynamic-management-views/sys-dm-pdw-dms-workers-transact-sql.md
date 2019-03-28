@@ -43,7 +43,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |source_info|**nvarchar(4000)**|For a reader, specification of the source tables and columns.||  
 |destination_info|**nvarchar(4000)**|For a writer, specification of the destination tables.||  
   
- For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic..  
+ For information about the maximum rows retained by this view, see the Metadata section in the [Capacity limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) topic..  
   
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

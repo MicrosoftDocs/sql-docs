@@ -89,7 +89,7 @@ Just as you created a system variable for the JDK executables, you can create a 
 
 ## External library
 
-In SQL Server 2019 CTP 2.4, you can use external libraries for the Java language on Windows and Linux. The same functionality will be available on Linux in an upcoming CTP. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+In SQL Server 2019 CTP 2.4, you can use external libraries for the Java language on Windows and Linux. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 Example of how to upload a .jar file with external library:
 

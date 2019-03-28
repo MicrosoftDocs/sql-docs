@@ -1,7 +1,7 @@
 ---
 title: "FIPS Mode in JDBC | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/12/2018"
+ms.date: "03/26/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "craigg"
@@ -14,39 +14,29 @@ manager: "kenvh"
 # FIPS Mode
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The Microsoft JDBC Driver for SQL Server supports *FIPS 140 Compliant Mode*. For Oracle / Sun JVM, refer to the [FIPS 140 Compliant Mode for SunJSSE](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html) section provided by Oracle to configure FIPS enabled JVM. 
+The Microsoft JDBC Driver for SQL Server supports running in JVMs configured to be *FIPS 140 Compliant*.
 
 #### Prerequisites
 
 - FIPS configured JVM
-- Appropriate SSL Certificate.
-- Appropriate policy files. 
-- Appropriate Configuration Parameters. 
-
+- Appropriate SSL Certificate
+- Appropriate policy files
+- Appropriate Configuration Parameters
 
 ## FIPS Configured JVM
 
-To see the approved modules for FIPS Configuration, refer to the [Validated FIPS 140-1 and FIPS 140-2 Cryptographic Modules](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
+Generally, applications can configure the `java.security` file to use FIPS compliant crypto providers. Please see the documentation specific to your JVM for how to configure FIPS 140 compliance.
 
-Vendors may have some additional steps to configure JVM with FIPS.
+To see the approved modules for FIPS Configuration, refer to [Validated Modules in the Cryptographic Module Validation Program](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules).
 
-### Ensure your JVM is in FIPS Mode
-To ensure your JVM is FIPS enabled, execute the following snippet: 
-
-```java
-public boolean isFIPS() throws Exception {
-    Provider jsse = Security.getProvider("SunJSSE");
-    return jsse != null && jsse.getInfo().contains("FIPS");
-}
-```
+Vendors may have some additional steps to configure a JVM with FIPS.
 
 ## Appropriate SSL Certificate
-In order to connect SQL Server in FIPS mode, a valid SSL Certificate is required. Install or import it in the Java Key Store on the client machine (JVM) where FIPS is enabled.
+In order to connect to SQL Server in FIPS mode, a valid SSL Certificate is required. Install or import it into the Java Key Store on the client machine (JVM) where FIPS is enabled.
 
 ### Importing SSL Certificate in Java KeyStore
-For FIPS, most likely you need to import the certificate (.cert) to either PKCS or in a provider-specific format. 
-Use the following snippet to import the SSL certificate and store it in a working directory with the appropriate KeyStore format. _TRUST\_STORE\_PASSWORD_ is your password for Java KeyStore. 
-
+For FIPS, most likely you need to import the certificate (.cert) in either PKCS or a provider-specific format.
+Use the following snippet to import the SSL certificate and store it in a working directory with the appropriate KeyStore format. _TRUST\_STORE\_PASSWORD_ is your password for Java KeyStore.
 
 ```java
 public void saveGenericKeyStore(
@@ -76,8 +66,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-
-The following example is importing an Azure SSL Certificate in PKCS12 format with BouncyCastle Provider. The certificate is imported in the working directory named _MyTrustStore\_PKCS12_ by using the following snippet:
+The following example is importing an Azure SSL Certificate in PKCS12 format with the BouncyCastle Provider. The certificate is imported in the working directory named _MyTrustStore\_PKCS12_ by using the following snippet:
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
@@ -99,4 +88,3 @@ To run the JDBC Driver in FIPS-compliant mode, configure connection properties a
 |fipsProvider|String|null|FIPS provider configured in JVM. For example, BCFIPS or SunPKCS11-NSS |Added in 6.1.2 (Stable release 6.2.2), deprecated in 6.4.0 - see the details [Here](https://github.com/Microsoft/mssql-jdbc/pull/460).|
 |trustStoreType|String|JKS|For FIPS mode set trust store type either PKCS12 or type defined by FIPS provider |Added in 6.1.2 (Stable release 6.2.2)||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-

@@ -222,5 +222,5 @@ public class AKV_600 {
 
 ## See Also
 
-[Azure Key Vault Sample Version 7.0.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
+[Azure Key Vault Sample Version 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Azure Key Vault Sample Version 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)

@@ -43,7 +43,7 @@
 - name: Big data cluster
   href: ../toc/redirectfrom-big-data-cluster.md ## /sql/big-data-cluster/big-data-cluster-overview
   items:
-  - name: Overview of big data cluster
+  - name: Overview
     items:
     - name: What are SQL Server big data clusters?
       href: ../big-data-cluster/big-data-cluster-overview.md
@@ -7134,7 +7134,7 @@
         href: ../relational-databases/performance/validate-plan-guides-after-upgrade.md
     - name: Resource governor
       items:
-      - name: Overview of resource govenor
+      - name: Overview
         href: ../relational-databases/resource-governor/resource-governor.md
         items:
       - name: How-to

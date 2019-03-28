@@ -63,7 +63,7 @@ Returns resource governance configuration and capacity settings for an Azure SQL
 |**checkpoint_rate_mbps**|int|Checkpoint bandwidth, in Mbps.|
 |**checkpoint_rate_io**|int|Checkpoint IO rate in IOs per second.|
 |**last_updated_date_utc**|datetime|Date and time of the last setting change or reconfiguration.|
-|**primary_group_id**|int|Primary user workload group id.|
+|**primary_group_id**|int|Primary user workload group ID.|
 |**primary_group_max_workers**|int|Worker limit at primary user workload group level.|
 |**primary_min_log_rate**|bigint|Minimum log rate (bytes per sec) at primary user workload group level.|
 |**primary_max_log_rate**|bigint|Maximum log rate (bytes per sec) at primary user workload group level.|

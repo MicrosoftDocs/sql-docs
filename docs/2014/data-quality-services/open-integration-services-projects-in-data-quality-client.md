@@ -32,8 +32,6 @@ manager: craigg
 ####  <a name="Permissions"></a> Permissions  
  You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to open an Integration Services project.  
   
- ![Arrow icon used with Back to Top link](../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Topic](#main)  
-  
 ##  <a name="Open"></a> Open an Integration Services Project  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -53,8 +51,6 @@ manager: craigg
 5.  Click **Next** to go to the **Export** tab where you can export the processed data to any of the following: a new table in the SQL Server database, a .csv file, or an Excel file. For detailed information about the **Export** tab, see [Export Stage](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Export) in [Cleanse Data Using DQS &#40;Internal&#41; Knowledge](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 6.  After exporting the data, click **Finish** to close the Integration Services project.  
-  
- ![Arrow icon used with Back to Top link](../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Topic](#main)  
   
 ## See Also  
  [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   

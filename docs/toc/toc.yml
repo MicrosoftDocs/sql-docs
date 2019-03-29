@@ -3981,6 +3981,8 @@
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Customer Experience Improvement Program (CEIP)
       href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
+    - name: Privacy supplement
+      href: ../sql-server/sql-server-privacy.md
     - name: Configure SQL Server to send feedback to Microsoft
       href: ../sql-server/sql-server-customer-feedback.md
   - name: Release notes

@@ -39,22 +39,22 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## Arguments  
- [ **@server=** ] **'**_server_**'**  
+`[ @server = ] 'server'`
  Is the name of the linked server to create. *server* is **sysname**, with no default.  
   
- [ **@srvproduct=** ] **'**_product_name_**'**  
+`[ @srvproduct = ] 'product_name'`
  Is the product name of the OLE DB data source to add as a linked server. *product_name* is **nvarchar(**128**)**, with a default of NULL. If **SQL Server**, *provider_name*, *data_source*, *location*, *provider_string*, and *catalog* do not have to be specified.  
   
- [ **@provider=** ] **'**_provider_name_**'**  
+`[ @provider = ] 'provider_name'`
  Is the unique programmatic identifier (PROGID) of the OLE DB provider that corresponds to this data source. *provider_name* must be unique for the specified OLE DB provider installed on the current computer. *provider_name* is **nvarchar(**128**)**, with a default of NULL; however, if *provider_name* is omitted, SQLNCLI is used. (Use SQLNCLI and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will redirect to the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider.) The OLE DB provider is expected to be registered with the specified PROGID in the registry.  
   
- [ **@datasrc=** ] **'**_data_source_**'**  
+`[ @datasrc = ] 'data_source'`
  Is the name of the data source as interpreted by the OLE DB provider. *data_source* is **nvarchar(**4000**)**. *data_source* is passed as the DBPROP_INIT_DATASOURCE property to initialize the OLE DB provider.  
   
- [ **@location=** ] **'**_location_**'**  
+`[ @location = ] 'location'`
  Is the location of the database as interpreted by the OLE DB provider. *location* is **nvarchar(**4000**)**, with a default of NULL. *location* is passed as the DBPROP_INIT_LOCATION property to initialize the OLE DB provider.  
   
- [ **@provstr=** ] **'**_provider_string_**'**  
+`[ @provstr = ] 'provider_string'`
  Is the OLE DB provider-specific connection string that identifies a unique data source. *provider_string* is **nvarchar(**4000**)**, with a default of NULL. *provstr* is either passed to IDataInitialize or set as the DBPROP_INIT_PROVIDERSTRING property to initialize the OLE DB provider.  
   
  When the linked server is created against the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the instance can be specified by using the SERVER keyword as SERVER=*servername*\\*instancename* to specify a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* is the name of the computer on which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running, and *instancename* is the name of the specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which the user will be connected.  
@@ -62,7 +62,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > [!NOTE]
 >  To access a mirrored database, a connection string must contain the database name. This name is necessary to enable failover attempts by the data access provider. The database can be specified in the **@provstr** or **@catalog** parameter. Optionally, the connection string can also supply a failover partner name.  
   
- [ **@catalog=** ] **'**_catalog_**'**  
+`[ @catalog = ] 'catalog'`
  Is the catalog to be used when a connection is made to the OLE DB provider. *catalog* is **sysname**, with a default of NULL. *catalog* is passed as the DBPROP_INIT_CATALOG property to initialize the OLE DB provider. When the linked server is defined against an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], catalog refers to the default database to which the linked server is mapped.  
   
 ## Return Code Values  

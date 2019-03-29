@@ -36,19 +36,19 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## Arguments  
- [ **@principal_id** = ] *principal_id*  
+`[ @principal_id = ] principal_id`
  The ID of the database user or role in the **msdb** database for the association to change. *principal_id* is **int**, with a default of NULL. Either *principal_id* or *principal_name* must be specified.  
   
- [ **@principal_name** = ] **'***principal_name***'**  
+`[ @principal_name = ] 'principal_name'`
  The name of the database user or role in the **msdb** database for the association to update. *principal_name* is **sysname**, with a default of NULL. Either *principal_id* or *principal_name* may be specified.  
   
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  The id of the profile for the association to change. *profile_id* is **int**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  The name of the profile for the association to change. *profile_name* is **sysname**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
- [ **@is_default** = ] **'***is_default***'**  
+`[ @is_default = ] 'is_default'`
  Is whether this profile is the default profile for the database user. A database user may only have one default profile. *is_default* is **bit**, with no default.  
   
 ## Return Code Values  

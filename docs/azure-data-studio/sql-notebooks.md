@@ -39,9 +39,9 @@ There are multiple ways to launch a new notebook.
 
 ## Supported kernels and attach to context
 
-The Notebook Installation in Azure Data Studio natively supports SQL Kernel. If you are a SQL developer and would like to use Notebooks then this would be your chosen Kernel. 
+The Notebook Installation in Azure Data Studio natively supports SQL Kernel. If you are a SQL developer and would like to use Notebooks, then this would be your chosen Kernel. 
 
-The SQL Kernel can also be used to connect to PostgreSQL server instances. If you are a PostgreSQL developer and would like to connect to your PostgreSQL Server then download the [**PostgreSQL extension**](postgres-extension.md) in the Azure Data Studio extension marketplace.
+The SQL Kernel can also be used to connect to PostgreSQL server instances. If you are a PostgreSQL developer and would like to connect to your PostgreSQL Server, then download the [**PostgreSQL extension**](postgres-extension.md) in the Azure Data Studio extension marketplace.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -79,16 +79,16 @@ Once the installation succeeds, you will find a notification in the Task History
 
 |Kernel|Description
 |:-----|:-----
-| SQL Kernel | Write SQL Code against your SQL Server.
+| SQL Kernel | Write SQL Code targeted at your relational database.
 |PySpark3 and PySpark Kernel| Write Python code using Spark compute from the cluster.
 |Spark Kernel|Write Scala and R code using Spark compute from the cluster.
 |Python Kernel|Write Python code for local development.
 
-`Attach to` provides the context for the Kernel to attach. If you are using SQL Kernel then you can `Attach to` any of your SQL Server instances.
+`Attach to` provides the context for the Kernel to attach. If you are using SQL Kernel, then you can `Attach to` any of your SQL Server instances.
 
 If you are using Python3 Kernel the `Attach to` is `localhost`. You can use this kernel for your local Python development.
 
-When you are connected to SQL Server 2019 big data cluster, the default `Attach to` is that end point of the cluster and will let you submit Python,Scala and R code using the Spark compute of the cluster.
+When you are connected to SQL Server 2019 big data cluster, the default `Attach to` is that end point of the cluster and will let you submit Python, Scala and R code using the Spark compute of the cluster.
 
 ### Code Cells and Markdown Cells
 
@@ -110,7 +110,7 @@ Clicking outside the text cell will show the markdown text.
 
 Notebooks open in Azure Data Studio are default **Trusted**.
 
-If you open a Notebook from some other source it will be opened in **Non Trusted** mode and then you can make it **Trusted**.
+If you open a Notebook from some other source, it will be opened in **Non Trusted** mode and then you can make it **Trusted**.
 
 ### Save 
 
@@ -157,7 +157,7 @@ import <package-name>
 
 When you run this command, `Module not found` is returned. If your package exists, then you will not get the error.
 
-If it returns a `Module not Found` error, then click on **Manage Packages** to launch the terminal . You can now install packages locally. Use the following commands to install the packages:
+If it returns a `Module not Found` error, then click on **Manage Packages** to launch the terminal. You can now install packages locally. Use the following commands to install the packages:
 
 ```bash
 ./pip install <package-name>

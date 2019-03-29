@@ -38,21 +38,22 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number. *job_id*is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'**_job_name_**'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name*is **sysname**, with a default of NULL.  
   
-> **NOTE:** Either *job_id* or *job_name* must be specified, but both cannot be specified.  
-  
- [ **@schedule_name=** ] **'**_schedule_name_**'**  
+> [!NOTE]
+> Either *job_id* or *job_name* must be specified, but both cannot be specified.
+
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule item for the job. *schedule_name*is **sysname**, with a default of NULL.  
   
- [ **@schedule_id=** ] *schedule_id*  
+`[ @schedule_id = ] schedule_id`
  The identification number of the schedule item for the job. *schedule_id*is **int**, with a default of NULL.  
   
- [ **@include_description=** ] *include_description*  
+`[ @include_description = ] include_description`
  Specifies whether to include the description of the schedule in the result set. *include_description* is **bit**, with a default of **0**. When *include_description* is **0**, the description of the schedule is not included in the result set. When *include_description* is **1**, the description of the schedule is included in the result set.  
   
 ## Return Code Values  
@@ -146,5 +147,3 @@ GO
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

@@ -50,15 +50,15 @@ sp_syscollector_create_collection_set
 ```  
   
 ## Arguments  
- [ **@name =** ] '*name*'  
+`[ @name = ] 'name'`
  Is the name of the collection set. *name* is **sysname** and cannot be an empty string or NULL.  
   
  *name* must be unique. For a list of current collection set names, query the syscollector_collection_sets system view.  
   
- [ **@target =** ] '*target*'  
+`[ @target = ] 'target'`
  Reserved for future use. *name* is **nvarchar(128)** with a default value of NULL.  
   
- [ **@collection_mode =** ] *collection_mode*  
+`[ @collection_mode = ] collection_mode`
  Specifies the manner in which the data is collected and stored. *collection_mode* is **smallint** and can have one of the following values:  
   
  0 - Cached mode. Data collection and upload are on separate schedules. Specify cached mode for continuous collection.  
@@ -67,24 +67,24 @@ sp_syscollector_create_collection_set
   
  The default value for *collection_mode* is 0. When *collection_mode* is 0, *schedule_uid* or *schedule_name* must be specified.  
   
- [ **@days_until_expiration =** ] *days_until_expiration*  
+`[ @days_until_expiration = ] days_until_expiration`
  Is the number of days that the collected data is saved in the management data warehouse. *days_until_expiration* is **smallint** with a default value of 730 (two years). *days_until_expiration* must be 0 or a positive integer.  
   
- [ **@proxy_id =** ] *proxy_id*  
+`[ @proxy_id = ] proxy_id`
  Is the unique identifier for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account. *proxy_id* is **int** with a default value of NULL. If specified, *proxy_name* must be NULL. To obtain *proxy_id*, query the sysproxies system table. The dc_admin fixed database role must have permission to access the proxy. For more information, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
- [ **@proxy_name =** ] '*proxy_name*'  
+`[ @proxy_name = ] 'proxy_name'`
  Is the name of the proxy account. *proxy_name* is **sysname** with a default value of NULL. If specified, *proxy_id* must be NULL. To obtain *proxy_name*, query the sysproxies system table.  
   
- [ **@schedule_uid =** ] '*schedule_uid*'  
+`[ @schedule_uid = ] 'schedule_uid'`
  Is the GUID that points to a schedule. *schedule_uid* is **uniqueidentifier** with a default value of NULL. If specified, *schedule_name* must be NULL. To obtain *schedule_uid*, query the sysschedules system table.  
   
  When *collection_mode* is set to 0, *schedule_uid* or *schedule_name* must be specified. When *collection_mode* is set to 1, *schedule_uid* or *schedule_name* is ignored if specified.  
   
- [ **@schedule_name =** ] '*schedule_name*'  
+`[ @schedule_name = ] 'schedule_name'`
  Is the name of the schedule. *schedule_name* is **sysname** with a default value of NULL. If specified, *schedule_uid* must be NULL. To obtain *schedule_name*, query the sysschedules system table.  
   
- [ **@logging_level =** ] *logging_level*  
+`[ @logging_level = ] logging_level`
  Is the logging level. *logging_level* is **smallint** with one of the following values:  
   
  0 - log execution information and [!INCLUDE[ssIS](../../includes/ssis-md.md)] events that track:  
@@ -107,13 +107,13 @@ sp_syscollector_create_collection_set
   
  The default value for *logging_level* is 1.  
   
- [ **@description =** ] '*description*'  
+`[ @description = ] 'description'`
  Is the description of the collection set. *description* is **nvarchar(4000)** with a default value of NULL.  
   
- [ **@collection_set_id =** ] *collection_set_id*  
+`[ @collection_set_id = ] collection_set_id`
  Is the unique local identifier for the collection set. *collection_set_id* is **int** with OUTPUT and is required.  
   
- [ **@collection_set_uid =** ] '*collection_set_uid*'  
+`[ @collection_set_uid = ] 'collection_set_uid'`
  Is the GUID for the collection set. *collection_set_uid* is **uniqueidentifier** with OUTPUT with a default value of NULL.  
   
 ## Return Code Values  

@@ -37,10 +37,10 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## Arguments  
- [ **@traceid=** ] *trace_id*  
+`[ @traceid = ] trace_id`
  Is the ID of the trace to be modified. *trace_id* is **int**, with no default. The user employs this *trace_id* value to identify, modify, and control the trace. For information about retrieving the *trace_id*, see [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
- [ **@status=** ] *status*  
+`[ @status = ] status`
  Specifies the action to implement on the trace. *status* is **int**, with no default.  
   
  The following table lists the status that may be specified.  

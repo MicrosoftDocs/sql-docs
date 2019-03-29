@@ -1,7 +1,7 @@
 ---
 title: "sys.external_libraries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 Supports the management of package libraries related to external runtimes such as R, Python, and Java.
 
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows platform are supported in SQL Server 2019 CTP 2.3. Support for Linux is planned for a later release.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4.
 
 ## sys.external_libraries
 

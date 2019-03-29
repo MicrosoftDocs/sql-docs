@@ -35,10 +35,10 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## Arguments  
- [ **@rmtsrvname =** ] **'***rmtsrvname***'**  
+`[ @rmtsrvname = ] 'rmtsrvname'`
  Is the name of a linked server that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login mapping applies to. *rmtsrvname* is **sysname**, with no default. *rmtsrvname* must already exist.  
   
- [ **@locallogin =** ] **'***locallogin***'**  
+`[ @locallogin = ] 'locallogin'`
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login on the local server that has a mapping to the linked server *rmtsrvname*. *locallogin* is **sysname**, with no default. A mapping for *locallogin* to *rmtsrvname* must already exist. If NULL, the default mapping created by **sp_addlinkedserver**, which maps all logins on the local server to logins on the linked server, is deleted.  
   
 ## Return Code Values  

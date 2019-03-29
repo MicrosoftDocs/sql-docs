@@ -879,7 +879,7 @@ GO
   
  This is `test.sql`, which tests the sample by executing the functions.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
   

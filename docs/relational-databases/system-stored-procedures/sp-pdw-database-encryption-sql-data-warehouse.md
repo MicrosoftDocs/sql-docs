@@ -27,7 +27,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### Parameters  
- [ **@enabled=** ] *enabled*  
+`[ @enabled = ] enabled`
  Determines whether transparent data encryption is enabled. *enabled* is **int**, and can be one of the following values:  
   
 -   0 = Disabled  

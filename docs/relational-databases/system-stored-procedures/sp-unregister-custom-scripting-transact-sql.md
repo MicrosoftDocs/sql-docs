@@ -34,7 +34,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## Arguments  
- [ **@type** = ] **'***type***'**  
+`[ @type = ] 'type'`
  Is the type of custom stored procedure or script being removed. *type* is **varchar(16)**, with no default, and can be one of the following values.  
   
 |Value|Description|  
@@ -44,10 +44,10 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 |**delete**|Registered custom stored procedure or script is executed when a DELETE statement is replicated.|  
 |**custom_script**|Registered custom stored procedure or script is executed at the end of the data definition language (DDL) trigger.|  
   
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Name of the publication for which the custom stored procedure or script is being removed. *publication* is **sysname**, with a default of NULL.  
   
- [ **@article** = ] **'***article***'**  
+`[ @article = ] 'article'`
  Name of the article for which the custom stored procedure or script is being removed. *article* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

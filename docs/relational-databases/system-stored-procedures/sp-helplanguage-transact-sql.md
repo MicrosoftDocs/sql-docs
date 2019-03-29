@@ -36,7 +36,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## Arguments  
- [ **@language=** ] **'***language***'**  
+`[ @language = ] 'language'`
  Is the name of the alternative language for which to display information. *language* is **sysname**, with a default of NULL. If *language* is specified, information about the specified language is returned. If language is not specified, information about all languages in the **sys.syslanguages** compatibility view is returned.  
   
 ## Return Code Values  

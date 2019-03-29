@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "computed columns, XML"
   - "XML [SQL Server], computed columns"
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use XML in Computed Columns

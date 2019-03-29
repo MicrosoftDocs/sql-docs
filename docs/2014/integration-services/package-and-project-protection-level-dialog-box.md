@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Package Protection Level dialog box"
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Package and Project Protection Level Dialog Box

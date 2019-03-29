@@ -91,7 +91,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ### A. Instantiating a geometry instance with an empty CompooundCurve  
  The following example shows how to create an empty `CompoundCurve` instance:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
@@ -99,21 +99,21 @@ SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');
 ### B. Declaring and instantiating a geometry instance using a CompoundCurve in the same statement  
  The following example shows how to declare and initialize a `geometry` instance with a `CompoundCurve`in the same statement:  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
 ```  
   
 ### C. Instantiating a geography instance with a CompoundCurve  
  The following example shows how to declare and initialize a `geography` instance with a `CompoundCurve`:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### D. Storing a square in a CompoundCurve instance  
  The following example uses two different ways to use a `CompoundCurve` instance to store a square.  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3), (1 3, 3 3),(3 3, 3 1), (3 1, 1 1))');  
 SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');  
@@ -125,7 +125,7 @@ SELECT @g1.STLength(), @g2.STLength();
 ### E. Instantiating a geometry instance using a CompoundCurve with multiple CircularStrings  
  The following example shows how to use two different `CircularString` instances to initialize a `CompoundCurve`.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARSTRING(4 2, 2 4, 0 2))');  
 SELECT @g.STLength();  
@@ -136,7 +136,7 @@ SELECT @g.STLength();
 ### F. Using a CompoundCurve to store a semicircle  
  The following example uses a `CompoundCurve` instance to store a semicircle.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))');  
 SELECT @g.STLength();  
@@ -145,7 +145,7 @@ SELECT @g.STLength();
 ### G. Storing multiple CircularString and LineString instances in a CompoundCurve  
  The following example shows how multiple `CircularString` and `LineString` instances can be stored by using a `CompoundCurve`.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('COMPOUNDCURVE((3 5, 3 3), CIRCULARSTRING(3 3, 5 1, 7 3), (7 3, 7 5), CIRCULARSTRING(7 5, 5 7, 3 5))');  
 SELECT @g.STLength();  
@@ -154,14 +154,14 @@ SELECT @g.STLength();
 ### H. Storing instances with Z and M values  
  The following example shows how to use a `CompoundCurve` instance to store a sequence of `CircularString` and `LineString` instances with both Z and M values.  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(7 5 4 2, 5 7 4 2, 3 5 4 2), (3 5 4 2, 8 7 4 2))');  
 ```  
   
 ### I. Illustrating why CircularString instances must be explicitly declared  
  The following example shows why `CircularString` instances must be explicitly declared. The programmer is trying to store a circle in a `CompoundCurve` instance.  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry;    
 DECLARE @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 2 4, 0 2))');  

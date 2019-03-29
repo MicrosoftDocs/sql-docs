@@ -34,7 +34,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name=**] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the server group to create. *name* is **sysname**, with no default. *name* cannot contain commas.  
   
 ## Return Code Values  

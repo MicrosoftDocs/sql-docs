@@ -83,7 +83,7 @@ Note the following:
 >   
 >  Be aware that both cases are subject to time-out error 8645 if the server has insufficient physical memory.  
   
-REQUEST_MAX_CPU_TIME_SEC =*value*  
+REQUEST_MAX_CPU_TIME_SEC = *value*  
 Specifies the maximum amount of CPU time, in seconds, that a request can use. *value* must be 0 or a positive integer. The default setting for *value* is 0, which means unlimited.  
   
 > [!NOTE]  
@@ -92,13 +92,13 @@ Specifies the maximum amount of CPU time, in seconds, that a request can use. *v
 > [!IMPORTANT]
 > Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 and [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, and using [trace flag 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor will abort a request when the maximum time is exceeded. 
   
-REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
+REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*  
 Specifies the maximum time, in seconds, that a query can wait for a memory grant (work buffer memory) to become available. *value* must be 0 or a positive integer. The default setting for *value*, 0, uses an internal calculation based on query cost to determine the maximum time.    
   
 > [!NOTE]  
 >  A query does not always fail when memory grant time-out is reached. A query will only fail if there are too many concurrent queries running. Otherwise, the query may only get the minimum memory grant, resulting in reduced query performance.  
   
-MAX_DOP =*value*  
+MAX_DOP = *value*  
 Specifies the maximum degree of parallelism (DOP) for parallel requests. *value* must be 0 or a positive integer. The allowed range for *value* is from 0 through 64. The default setting for *value*, 0, uses the global setting. MAX_DOP is handled as follows:  
   
 -   MAX_DOP as a query hint is effective as long as it does not exceed workload group MAX_DOP. If the MAXDOP query hint value exceeds the value that is configured by using the Resource Governor, the Database Engine uses the Resource Governor MAXDOP value.  
@@ -111,7 +111,7 @@ Specifies the maximum degree of parallelism (DOP) for parallel requests. *value*
   
 -   After DOP is configured, it can only be lowered on grant memory pressure. Workload group reconfiguration is not visible while waiting in the grant memory queue.  
   
-GROUP_MAX_REQUESTS =*value*  
+GROUP_MAX_REQUESTS = *value*  
 Specifies the maximum number of simultaneous requests that are allowed to execute in the workload group. *value* must be a 0 or a positive integer. The default setting for *value* is 0, and allows unlimited requests. When the maximum concurrent requests are reached, a user in that group can log in, but is placed in a wait state until concurrent requests are dropped below the value specified.  
   
 USING { *pool_name* | **"default"** }  

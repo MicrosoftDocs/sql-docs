@@ -66,12 +66,12 @@ Specifies the guaranteed average CPU bandwidth for all requests in the resource 
 MAX_CPU_PERCENT =*value*  
 Specifies the maximum average CPU bandwidth that all requests in resource pool will receive when there is CPU contention. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
-CAP_CPU_PERCENT =*value*  
+CAP_CPU_PERCENT =*value*   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 Specifies a hard cap on the CPU bandwidth that all requests in the resource pool will receive. Limits the maximum CPU bandwidth level to be the same as the specified value. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
-AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} 
+AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}      
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 Attach the resource pool to specific schedulers. The default value is AUTO.  
@@ -88,18 +88,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
     AND sc.scheduler_id < 1048576;  
 ```  
   
-MIN_MEMORY_PERCENT =*value*  
+MIN_MEMORY_PERCENT =*value*    
 Specifies the minimum amount of memory reserved for this resource pool that can not be shared with other resource pools. *value* is an integer with a default setting of 0 The allowed range for *value* is from 0 to 100.  
   
-MAX_MEMORY_PERCENT =*value*  
+MAX_MEMORY_PERCENT =*value*    
 Specifies the total server memory that can be used by requests in this resource pool. *value* is an integer with a default setting of 100. The allowed range for *value* is from 1 through 100.  
   
-MIN_IOPS_PER_VOLUME =*value*  
+MIN_IOPS_PER_VOLUME =*value*    
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 Specifies the minimum I/O operations per second (IOPS) per disk volume to reserve for the resource pool. The allowed range for *value* is from 0 through 2^31-1 (2,147,483,647). Specify 0 to indicate no minimum threshold for the pool. The default is 0.  
   
-MAX_IOPS_PER_VOLUME =*value*  
+MAX_IOPS_PER_VOLUME =*value*    
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 Specifies the maximum I/O operations per second (IOPS) per disk volume to allow for the resource pool. The allowed range for *value* is from 0 through 2^31-1 (2,147,483,647). Specify 0 to set an unlimited threshold for the pool. The default is 0.  

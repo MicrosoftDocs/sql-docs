@@ -1,7 +1,7 @@
 ---
 title: What's new - SQL Server Machine Learning Services | Microsoft Docs
 description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
-ms.date: 03/27/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -41,7 +41,7 @@ This release adds the top-requested features for R and Python machine learning o
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## New in SQL Server 2017
 
-This release adds [Python support and industry-leading machine learning algorithms](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), with language support for both Python and R. 
+This release adds [Python support and industry-leading machine learning algorithms](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renamed to reflect the new scope, SQL Server 2017 marks the introduction of [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), with language support for both Python and R. 
 
 For feature announcements all-up, see [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 

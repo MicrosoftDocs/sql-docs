@@ -3,7 +3,7 @@ title: SQL Server Configuration (R Services) - SQL Server Machine Learning Servi
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -161,10 +161,6 @@ For details, including sample code, see this tutorial: [SQL Optimization Tips an
 + [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     How to map soft-NUMA nodes to CPUs
-
-+ [Automatic soft-NUMA: It just runs faster (Bob Ward)](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
-
-   Describes history as well as implementation details, with performance on newer multi-core servers.
 
 ## Task-specific optimizations
 

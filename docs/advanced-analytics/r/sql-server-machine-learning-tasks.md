@@ -3,7 +3,7 @@ title: Machine learning lifecycle and the team process - SQL Server Machine Lear
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -16,7 +16,7 @@ Machine learning projects can be complex, because they require the skills and co
 
 > [!TIP]
 > 
-> Before you get started on a machine learning project, we recommend that you review the tools and best practices provided by the [Microsoft Team Data Science Process](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/), or TDSP. This process was created by machine learning consultants at Microsoft to consolidate best practices around planning and iterating on machine learning projects. The TDSP has its roots in industry standards such as CRISP-DM, but incorporates recent practices such as DevOps and visualization.
+> Before you get started on a machine learning project, we recommend that you review the tools and best practices provided by the [Microsoft Team Data Science Process](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview), or TDSP. This process was created by machine learning consultants at Microsoft to consolidate best practices around planning and iterating on machine learning projects. The TDSP has its roots in industry standards such as CRISP-DM, but incorporates recent practices such as DevOps and visualization.
 
 ## Machine learning life cycle
 

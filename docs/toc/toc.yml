@@ -6977,6 +6977,8 @@
           href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
         - name: Sample Database for In-Memory OLTP
           href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+        - name: Hardware for In-Memory OLTP
+          href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
       - name: Memory-Optimized Tables
         href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
         items:

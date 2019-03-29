@@ -13879,6 +13879,11 @@
             "source_path": "docs/ssdt/removing-sql-server-data-tools-components.md",
             "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md",
+            "redirect_url": "/sql/relational-databases/security/authentication-access/create-a-login",
+            "redirect_document_id": false
         }
     ]
 }

@@ -4269,7 +4269,7 @@
         href: ../database-engine/configure-windows/replication-xps-server-configuration-option.md
       - name: Configure the scan for startup procs
         href: ../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md
-      - name: Server Memorys
+      - name: Server Memory
         href: ../database-engine/configure-windows/server-memory-server-configuration-options.md
       - name: server trigger recursion
         href: ../database-engine/configure-windows/server-trigger-recursion-server-configuration-option.md
@@ -6977,6 +6977,8 @@
           href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
         - name: Sample Database for In-Memory OLTP
           href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+        - name: Hardware for In-Memory OLTP
+          href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
       - name: Memory-Optimized Tables
         href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
         items:

@@ -7952,6 +7952,8 @@
         href: ../relational-databases/security/strong-passwords.md
       - name: Row-Level Security
         href: ../relational-databases/security/row-level-security.md
+      - name: Dynamic Data Masking
+        href: ../relational-databases/security/dynamic-data-masking.md
       - name: Static Data Masking
         href: ../relational-databases/security/static-data-masking.md
       - name: Certificates & asymmetric keys

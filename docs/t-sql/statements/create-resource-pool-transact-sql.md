@@ -111,7 +111,7 @@ If the `MAX_IOPS_PER_VOLUME` for a pool is set to 0, the pool is not governed at
   
 The values for `MAX_CPU_PERCENT` and `MAX_MEMORY_PERCENT` must be greater than or equal to the values for `MIN_CPU_PERCENT` and `MIN_MEMORY_PERCENT`, respectively.  
   
-`CAP_CPU_PERCENT` differs from `MAX_CPU_PERCENT` in that workloads associated with the pool can use CPU capacity above the value of MAX_CPU_PERCENT if it is available, but not above the value of `CAP_CPU_PERCENT`.  
+`CAP_CPU_PERCENT` differs from `MAX_CPU_PERCENT` in that workloads associated with the pool can use CPU capacity above the value of `MAX_CPU_PERCENT` if it is available, but not above the value of `CAP_CPU_PERCENT`.  
   
 The total CPU percentage for each affinitized component (scheduler(s) or NUMA node(s)) should not exceed 100 percent.  
   
@@ -119,7 +119,9 @@ The total CPU percentage for each affinitized component (scheduler(s) or NUMA no
 Requires `CONTROL SERVER` permission.  
   
 ## Examples  
-### 1. Shows how to create a resource pool named `bigPool`. This pool uses the default Resource Governor settings.  
+### 1. Shows how to create a resource pool
+
+This example created a resource pool named "bigPool". This pool uses the default Resource Governor settings.  
   
 ```sql  
 CREATE RESOURCE POOL bigPool;  
@@ -128,7 +130,9 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-### 2. Set the CAP_CPU_PERCENT to a hard cap of 30 percent and sets AFFINITY SCHEDULER to a range of 0 to 63, 128 to 191. 
+### 2. Set the CAP_CPU_PERCENT to a hard cap and set AFFINITY SCHEDULER
+
+Set the CAP_CPU_PERCENT to a hard cap of 30 percent and sets AFFINITY SCHEDULER to a range of 0 to 63, 128 to 191. 
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -144,9 +148,9 @@ WITH (
       );  
 ```  
   
-### 3. Set MIN_IOPS_PER_VOLUME to \<some value> and MAX_IOPS_PER_VOLUME to \<some value>.   
+### 3. Set MIN_IOPS_PER_VOLUME and MAX_IOPS_PER_VOLUME   
 
-These values govern the physical I/O read and write operations that are available for the resource pool.  
+Set MIN_IOPS_PER_VOLUME to 20 and MAX_IOPS_PER_VOLUME to 100. These values govern the physical I/O read and write operations that are available for the resource pool.  
   
 **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -159,14 +163,12 @@ WITH (
 ```  
   
 ## See Also  
- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   
- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)   
- [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
- [Create a Resource Pool](../../relational-databases/resource-governor/create-a-resource-pool.md)  
+ [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)     
+ [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)     
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)     
+ [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)     
+ [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)     
+ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)     
+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)     
+ [Create a Resource Pool](../../relational-databases/resource-governor/create-a-resource-pool.md)    
   
-  
-

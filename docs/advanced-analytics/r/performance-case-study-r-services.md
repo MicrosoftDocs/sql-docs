@@ -3,7 +3,7 @@ title: Performance for SQL Server R Services - results and resources - SQL Serve
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 03/29/2019 
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -333,10 +333,8 @@ Many users have noted that there is a small pause as the R (or Python) runtime i
 
 For all these reasons, there is no single solution for mitigating this initial loading time, as the performance impact varies significantly depending on the task. For example, caching is performed for single-row scoring in batches; hence, successive scoring operations are much faster and neither the model nor the R runtime is reloaded. You can also use [native scoring](../sql-native-scoring.md) to avoid loading the R runtime entirely.
 
-For training large models, or scoring in large batches, the overhead might be minimal in comparison to the gains from avoiding data movement or from streaming and parallel processing. See these recent blogs and samples for additional performance guidance:
+For training large models, or scoring in large batches, the overhead might be minimal in comparison to the gains from avoiding data movement or from streaming and parallel processing. See this blog post for additional performance guidance:
 
-+ [Loan classification using SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [Early customer experiences with R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [Using R to detect fraud at 1 million transactions per second](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## Resources

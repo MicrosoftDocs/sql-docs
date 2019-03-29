@@ -29,6 +29,7 @@ The following sections describe the new features and known issues for big data c
 | **SqlDataPool** and **SqlStoragePool** data sources are no longer created by default. | Create these manually as needed. See the [known issues](#externaltablesctp24). |
 | `INSERT INTO SELECT` support for the data pool. | For an example, see [Tutorial: Ingest data into a SQL Server data pool with Transact-SQL](tutorial-data-pool-ingest-sql.md). |
 | `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option. | Forces or disables the use of the compute pool for queries on external tables. For example, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Updated AKS deployment recommendations. | When evaluating big data clusters on AKS, we now recommend using a single node of size **Standard_L8s**. |
 | Spark runtime upgrade to Spark 2.4. | |
 
 ### Known issues

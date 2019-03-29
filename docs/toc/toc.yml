@@ -7132,98 +7132,88 @@
     - name: Partitions
       href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
       items:
-      - name: How-to
-        items:
-        - name: Create
-          href: ../relational-databases/partitions/create-partitioned-tables-and-indexes.md
-        - name: Modify a Function
-          href: ../relational-databases/partitions/modify-a-partition-function.md
-        - name: Modify a Scheme
-          href: ../relational-databases/partitions/modify-a-partition-scheme.md
-        - name: Manage Partition Wizard F1 Help
-          href: ../relational-databases/partitions/manage-partition-wizard-f1-help.md
+      - name: Create
+        href: ../relational-databases/partitions/create-partitioned-tables-and-indexes.md
+      - name: Modify a Function
+        href: ../relational-databases/partitions/modify-a-partition-function.md
+      - name: Modify a Scheme
+        href: ../relational-databases/partitions/modify-a-partition-scheme.md
+      - name: Manage Partition Wizard F1 Help
+        href: ../relational-databases/partitions/manage-partition-wizard-f1-help.md
     - name: Plan guides
       href: ../relational-databases/performance/plan-guides.md
       items:
-      - name: How-to
+      - name: Create
+        href: ../relational-databases/performance/create-a-new-plan-guide.md
+      - name: Create or Parameterized Queries
+        href: ../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md
+      - name: Specify Query Parameterization Behavior
+        href: ../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md
+      - name: Apply a Fixed Query Plan
+        href: ../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md
+      - name: Attach Query Hints
+        href: ../relational-databases/performance/attach-query-hints-to-a-plan-guide.md
+      - name: Delete
+        href: ../relational-databases/performance/delete-a-plan-guide.md
+      - name: Enable or Disable
+        href: ../relational-databases/performance/enable-or-disable-a-plan-guide.md
+      - name: View Properties
+        href: ../relational-databases/performance/view-plan-guide-properties.md
+      - name: Use SQL Server Profiler to Create & Test Plan Guides
+        href: ../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
+      - name: Validate Plan Guides After Upgrade
+        href: ../relational-databases/performance/validate-plan-guides-after-upgrade.md
+    - name: Resource governor
+      href: ../relational-databases/resource-governor/resource-governor.md
+      items:
+      - name: Enable
+        href: ../relational-databases/resource-governor/enable-resource-governor.md
+      - name: Disable
+        href: ../relational-databases/resource-governor/disable-resource-governor.md
+      - name: Configure Resource Governor Using a Template
+        href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
+      - name: View Resource Governor Properties
+        href: ../relational-databases/resource-governor/view-resource-governor-properties.md
+      - name: Resource Pool
+        href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
         items:
         - name: Create
-          href: ../relational-databases/performance/create-a-new-plan-guide.md
-        - name: Create or Parameterized Queries
-          href: ../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md
-        - name: Specify Query Parameterization Behavior
-          href: ../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md
-        - name: Apply a Fixed Query Plan
-          href: ../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md
-        - name: Attach Query Hints
-          href: ../relational-databases/performance/attach-query-hints-to-a-plan-guide.md
+          href: ../relational-databases/resource-governor/create-a-resource-pool.md
+        - name: Change  Settings
+          href: ../relational-databases/resource-governor/change-resource-pool-settings.md
         - name: Delete
-          href: ../relational-databases/performance/delete-a-plan-guide.md
-        - name: Enable or Disable
-          href: ../relational-databases/performance/enable-or-disable-a-plan-guide.md
-        - name: View Properties
-          href: ../relational-databases/performance/view-plan-guide-properties.md
-        - name: Use SQL Server Profiler to Create & Test Plan Guides
-          href: ../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
-        - name: Validate Plan Guides After Upgrade
-          href: ../relational-databases/performance/validate-plan-guides-after-upgrade.md
-    - name: Resource governor
-      items:
-      - name: Overview
-        href: ../relational-databases/resource-governor/resource-governor.md
+          href: ../relational-databases/resource-governor/delete-a-resource-pool.md
+      - name: Workload Group
+        href: ../relational-databases/resource-governor/resource-governor-workload-group.md
         items:
-      - name: How-to
+        - name: Create
+          href: ../relational-databases/resource-governor/create-a-workload-group.md
+        - name: Change  Settings
+          href: ../relational-databases/resource-governor/change-workload-group-settings.md
+        - name: Move
+          href: ../relational-databases/resource-governor/move-a-workload-group.md
+        - name: Delete
+          href: ../relational-databases/resource-governor/delete-a-workload-group.md
+      - name: Classifier function
+        href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
         items:
-        - name: Enable
-          href: ../relational-databases/resource-governor/enable-resource-governor.md
-        - name: Disable
-          href: ../relational-databases/resource-governor/disable-resource-governor.md
-        - name: Configure Resource Governor Using a Template
-          href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
-        - name: View Resource Governor Properties
-          href: ../relational-databases/resource-governor/view-resource-governor-properties.md
-        - name: Resource Pool
-          href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
-          items:
-          - name: Create
-            href: ../relational-databases/resource-governor/create-a-resource-pool.md
-          - name: Change  Settings
-            href: ../relational-databases/resource-governor/change-resource-pool-settings.md
-          - name: Delete
-            href: ../relational-databases/resource-governor/delete-a-resource-pool.md
-        - name: Workload Group
-          href: ../relational-databases/resource-governor/resource-governor-workload-group.md
-          items:
-          - name: Create
-            href: ../relational-databases/resource-governor/create-a-workload-group.md
-          - name: Change  Settings
-            href: ../relational-databases/resource-governor/change-workload-group-settings.md
-          - name: Move
-            href: ../relational-databases/resource-governor/move-a-workload-group.md
-          - name: Delete
-            href: ../relational-databases/resource-governor/delete-a-workload-group.md
-        - name: Classifier function
-          href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
-          items:
-          - name: Create & Test a Classifier User-Defined Function
-            href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
+        - name: Create & Test a Classifier User-Defined Function
+          href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
     - name: Statistics
       href: ../relational-databases/statistics/statistics.md
       items:
-      - name: How-to
-        items:
-        - name: Create
-          href: ../relational-databases/statistics/create-statistics.md
-        - name: Modify
-          href: ../relational-databases/statistics/modify-statistics.md
-        - name: Delete
-          href: ../relational-databases/statistics/delete-statistics.md
-        - name: View Properties
-          href: ../relational-databases/statistics/view-statistics-properties.md
-        - name: Rename
-          href: ../relational-databases/statistics/rename-statistics.md
-        - name: Update
-          href: ../relational-databases/statistics/update-statistics.md
+      - name: Create
+        href: ../relational-databases/statistics/create-statistics.md
+      - name: Modify
+        href: ../relational-databases/statistics/modify-statistics.md
+      - name: Delete
+        href: ../relational-databases/statistics/delete-statistics.md
+      - name: View Properties
+        href: ../relational-databases/statistics/view-statistics-properties.md
+      - name: Rename
+        href: ../relational-databases/statistics/rename-statistics.md
+      - name: Update
+        href: ../relational-databases/statistics/update-statistics.md
 - name: Query data
   items:
   - name: Cursors

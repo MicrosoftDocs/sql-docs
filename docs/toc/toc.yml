@@ -51,6 +51,12 @@
       href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: Install
     items:
+    - name: Get Started
+      items:
+      - name: Deploy a big data cluster
+        href: ../big-data-cluster/deploy-get-started.md
+      - name: Load sample data
+        href: ../big-data-cluster/tutorial-load-sample-data.md
     - name: Install Tools
       items:
       - name: Install big data tools
@@ -71,20 +77,6 @@
         href: ../big-data-cluster/deploy-with-kubeadm.md
       - name: Minikube
         href: ../big-data-cluster/deploy-on-minikube.md
-  - name: Tutorials
-    items:
-    - name: 1_Load sample data
-      href: ../big-data-cluster/tutorial-load-sample-data.md
-    - name: 2_Query HDFS data
-      href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
-    - name: 3_Query Oracle data
-      href: ../big-data-cluster/tutorial-query-oracle.md
-    - name: 4_Load data pool with SQL
-      href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
-    - name: 5_Load data pool with Spark
-      href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
-    - name: 6_Run a Spark notebook
-      href: ../big-data-cluster/tutorial-notebook-spark.md
   - name: Concepts
     items:
     - name: Controller
@@ -105,16 +97,28 @@
     items:
     - name: Data virtualization
       items:
-      - name: Virtualize relational data
-        href: ../relational-databases/polybase/data-virtualization.md
-      - name: Virtualize CSV data
-        href: ../relational-databases/polybase/data-virtualization-csv.md
-      - name: HDFS tiering
-        href: ../big-data-cluster/hdfs-tiering.md
+      - name: Relational data
+        items: 
+        - name: Virtualize relational data
+          href: ../relational-databases/polybase/data-virtualization.md
+        - name: Query Oracle data
+          href: ../big-data-cluster/tutorial-query-oracle.md
+      - name: HDFS data
+        items:
+        - name: Virtualize CSV data
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: Query HDFS data
+          href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
+        - name: HDFS tiering
+          href: ../big-data-cluster/hdfs-tiering.md  
     - name: Data ingestion
       items:
       - name: Load data with curl
         href: ../big-data-cluster/data-ingestion-curl.md
+      - name: Load data with SQL
+        href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
+      - name: Load data with Spark
+        href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
       - name: Restore a database
         href: ../big-data-cluster/data-ingestion-restore-database.md
     - name: Deploy and consume apps
@@ -149,6 +153,8 @@
       items:
       - name: Notebooks overview
         href: ../big-data-cluster/notebooks-guidance.md
+      - name: Notebook tutorial
+        href: ../big-data-cluster/tutorial-notebook-spark.md
       - name: Manage existing notebooks
         href: ../big-data-cluster/notebooks-how-to-manage.md
     - name: Spark jobs
@@ -4263,7 +4269,7 @@
         href: ../database-engine/configure-windows/replication-xps-server-configuration-option.md
       - name: Configure the scan for startup procs
         href: ../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md
-      - name: Server Memorys
+      - name: Server Memory
         href: ../database-engine/configure-windows/server-memory-server-configuration-options.md
       - name: server trigger recursion
         href: ../database-engine/configure-windows/server-trigger-recursion-server-configuration-option.md
@@ -6971,6 +6977,8 @@
           href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
         - name: Sample Database for In-Memory OLTP
           href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+        - name: Hardware for In-Memory OLTP
+          href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
       - name: Memory-Optimized Tables
         href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
         items:
@@ -12267,6 +12275,8 @@
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md
       - name: sys.dm_exec_query_plan
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md
+      - name: sys.dm_exec_query_plan_stats
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md
       - name: sys.dm_exec_query_profiles
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md
       - name: sys.dm_exec_query_resource_semaphores

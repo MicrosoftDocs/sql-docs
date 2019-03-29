@@ -5367,7 +5367,7 @@
     - name: PHP Linux and Mac drivers installation tutorial
       href: ../connect/php/installation-tutorial-linux-mac.md
     - name: Release Notes
-      href: ../connect/php/release-notes-for-the-php-sql-driver.md
+      href: ../connect/php/release-notes-php-sql-driver.md
     - name: Support Resources
       href: ../connect/php/support-resources-for-the-php-sql-driver.md
     - name: About Code Samples

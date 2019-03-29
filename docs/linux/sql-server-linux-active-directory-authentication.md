@@ -48,8 +48,8 @@ You must join your SQL Server Linux host with an Active Directory domain control
 
 ## <a id="createuser"></a> Create AD user (or MSA) for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and set SPN
 
-  > [!NOTE]
-  > The next steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
+> [!NOTE]
+> The following steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
 
 1. On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. This example names the account "mssql," but the account name can be anything you like. You will be prompted to enter a new password for the account:
 

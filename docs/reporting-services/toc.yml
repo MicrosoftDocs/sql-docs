@@ -1406,8 +1406,6 @@
     href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
   - name: Delete Pincipal Profile
     href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
-  - name: WMI Provider Error 0x8007052f
-    href: ../relational-databases/wmi-provider-error-0x8007052f.md
 - name: WMI Provider Library Reference Overview
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
 - name: MSReportServer_Instance Class

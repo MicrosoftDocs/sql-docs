@@ -2153,6 +2153,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/tools/sqlpackage-release-notes.md",
+            "redirect_url": "/sql/tools/release-notes-sqlpackage",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md",
             "redirect_url": "/sql/tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor",
             "redirect_document_id": false
@@ -2180,6 +2185,11 @@
         {
             "source_path": "docs/tools/dta/ lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md",
             "redirect_url": "/sql/tools/dta/lesson-3-using-the-dta-command-prompt-utility",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/php/release-notes-for-the-php-sql-driver.md",
+            "redirect_url": "/sql/connect/php/release-notes-php-sql-driver",
             "redirect_document_id": false
         },
         {
@@ -13873,6 +13883,11 @@
         {
             "source_path": "docs/ssdt/removing-sql-server-data-tools-components.md",
             "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md",
+            "redirect_url": "/sql/relational-databases/security/authentication-access/create-a-login",
             "redirect_document_id": false
         }
     ]

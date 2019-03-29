@@ -19,6 +19,7 @@ ms.assetid:
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
+monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

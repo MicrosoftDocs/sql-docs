@@ -6977,6 +6977,8 @@
           href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
         - name: Sample Database for In-Memory OLTP
           href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+        - name: Hardware for In-Memory OLTP
+          href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
       - name: Memory-Optimized Tables
         href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
         items:
@@ -7950,6 +7952,8 @@
         href: ../relational-databases/security/strong-passwords.md
       - name: Row-Level Security
         href: ../relational-databases/security/row-level-security.md
+      - name: Dynamic Data Masking
+        href: ../relational-databases/security/dynamic-data-masking.md
       - name: Static Data Masking
         href: ../relational-databases/security/static-data-masking.md
       - name: Certificates & asymmetric keys
@@ -16556,6 +16560,8 @@
           href: ../t-sql/statements/restore-statements-labelonly-transact-sql.md
         - name: RESTORE MASTER KEY
           href: ../t-sql/statements/restore-master-key-transact-sql.md
+        - name: RESTORE SERVICE MASTER KEY
+          href: ../t-sql/statements/restore-service-master-key-transact-sql.md
         - name: RESTORE REWINDONLY
           href: ../t-sql/statements/restore-statements-rewindonly-transact-sql.md
         - name: RESTORE VERIFYONLY

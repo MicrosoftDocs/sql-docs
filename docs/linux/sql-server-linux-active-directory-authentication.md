@@ -38,8 +38,8 @@ Before you configure AD Authentication, you need to:
 
 * Set up an AD Domain Controller (Windows) on your network  
 * Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-  * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-  * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+  * [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
+  * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## <a id="join"></a> Join [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host to AD domain
@@ -51,7 +51,7 @@ You must join your SQL Server Linux host with an Active Directory domain control
 > [!NOTE]
 > The following steps use your [fully qualified domain name](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). If you are on **Azure**, you must **[create one](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** before you proceed.
 
-1. On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. This example names the account "mssql," but the account name can be anything you like. You will be prompted to enter a new password for the account:
+1. On your domain controller, run the [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell command to create a new AD user with a password that never expires. The following example names the account `mssql`, but the account name can be anything you like. You will be prompted to enter a new password for the account.
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -60,9 +60,9 @@ You must join your SQL Server Linux host with an Active Directory domain control
    ```
 
    > [!NOTE]
-   > It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can optionally reuse an existing AD account if you know the account's password (required to generate a keytab file in the next step).
+   > It is a security best practice to have a dedicated AD account for SQL Server, so that SQL Server's credentials aren't shared with other services using the same account. However, you can optionally reuse an existing AD account if you know the account's password (which is required to generate a keytab file in the next step).
 
-2. Set the ServicePrincipalName (SPN) for this account using the `setspn.exe` tool. The SPN must be formatted exactly as specified in the following example. You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host, and the TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use a different port number.
+2. Set the ServicePrincipalName (SPN) for this account using the **setspn.exe** tool. The SPN must be formatted exactly as specified in the following example. You can find the fully qualified domain name of the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host machine by running `hostname --all-fqdns` on the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] host. The TCP port should be 1433 unless you have configured [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to use a different port number.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -70,26 +70,30 @@ You must join your SQL Server Linux host with an Active Directory domain control
    ```
 
    > [!NOTE]
-   > If you receive an error, `Insufficient access rights`, then you need to check with a domain administrator that you have sufficient permissions to set an SPN on this account.
+   > If you receive an error, `Insufficient access rights`, check with your domain administrator that you have sufficient permissions to set an SPN on this account.
    >
-   > If you change the TCP port in the future, then you need to run the setspn command again with the new port number. You also need to add the new SPN to the SQL Server service keytab by following the steps in the next section.
+   > If you change the TCP port in the future, you must run the **setspn** command again with the new port number. You also need to add the new SPN to the SQL Server service keytab by following the steps in the next section.
 
 For more information, see [Register a Service Principal Name for Kerberos Connections](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## <a id="configurekeytab"></a> Configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] service keytab
 
-There are two alternative mechanisms for configuring the SQL Server service keytab files. First mechanism uses machine account (UPN), while second mechanism uses a Managed Service Account (MSA) in the keytab configuration. Both mechanisms are equally functional and are provided to support customer and environmental preferences.
+There are two different ways to configure the SQL Server service keytab files. The first option is to use a machine account (UPN), while second option uses a Managed Service Account (MSA) in the keytab configuration. Both mechanisms are equally functional, and you can choose the method that works best for your environment.
 
-In both alternatives the SPN created in earlier step is required. In both cases, the SPN must be registered in the keytab. 
+In both cases, the SPN created in the earlier step is required, and the SPN must be registered in the keytab.
 
-To configure the SQL Server service keytab file, follow the steps for SPN keytab entries configuration step followed by adding either UPN (Alternative 1) or MSA (Alternative 2) entries in the keytab file. 
+To configure the SQL Server service keytab file:
+
+1. Configure the SPN keytab entries in the next section.
+
+1. Then either add UPN ([option 1](#upn)) or MSA ([option 2](#msa)) entries in the keytab file by following the steps in their respective sections.
 
 > [!IMPORTANT]
-> If the password for the UPN/MSA is changed, or the password for the account the SPNs are assigned to is changed, the keytab will have to be updated with the new password and KVNO. Some services may also rotate the passwords automatically. We suggest reviewing such password rotation policy for the accounts in question and aligning them with scheduled maintenance activities to avoid unexpected downtime.
+> If the password for the UPN/MSA is changed or the password for the account that the SPNs are assigned to is changed, you must update the keytab with the new password and Key Version Number (KVNO). Some services might also rotate the passwords automatically. Review any password rotation policies for the accounts in question and align them with scheduled maintenance activities to avoid unexpected downtime.
 
 ### SPN keytab entries
 
-1. Check the Key Version Number (kvno) for the AD account created in the previous step. Usually it is 2, but it could be another integer if you changed the account's password multiple times. On the SQL Server host machine, run the following:
+1. Check the Key Version Number (KVNO) for the AD account created in the previous step. Usually it is 2, but it could be another integer if you changed the account's password multiple times. On the SQL Server host machine, run the following commands:
 
    ```bash
    kinit user@CONTOSO.COM
@@ -116,7 +120,7 @@ To configure the SQL Server service keytab file, follow the steps for SPN keytab
    > [!NOTE]
    > The **ktutil** tool does not validate the password, so make sure you enter it correctly.
 
-### Alternative 1: Using UPN to configure the keytab
+### <a id="upn"></a> Option 1: Using UPN to configure the keytab
 
 Add the machine account to your keytab with **ktutil**. The machine account (also called a UPN) is present in **/etc/krb5.keytab** in the form `<hostname>$@<realm.com>` (for example, `sqlhost$@CONTOSO.COM`). We will copy these entries from **/etc/krb5.keytab** to **mssql.keytab**.
 
@@ -166,7 +170,7 @@ Add the machine account to your keytab with **ktutil**. The machine account (als
    quit
    ```
 
-### Alternative 2:  Using MSA to configure the keytab
+### <a id="msa"></a> Option 2:  Using MSA to configure the keytab
 
 We need to create SQL Server's Kerberos keytab, and it should contain all SPNs registered in step 1, and the credentials for the MSA to which the SPNs are registered. After the SPN keytab entries are created, from a Linux machine that is domain joined run the following commands:
 
@@ -243,7 +247,7 @@ At this point you are ready to use AD based logins in SQL Server as follows.
    SELECT name FROM sys.server_principals;
    ```
 
-## Connect to SQL Server using AD Authentication
+## <a id="connect"></a> Connect to SQL Server using AD Authentication
 
 Log in to a client machine using your domain credentials. Now you can connect to SQL Server without reentering your password, by using AD Authentication. If you create a login for an AD group, any AD user who is a member of that group can connect in the same way.
 

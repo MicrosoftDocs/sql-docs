@@ -32,7 +32,7 @@ manager: craigg
 ####  <a name="Permissions"></a> Permissions  
  You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to open an Integration Services project.  
   
- ![Arrow icon used with Back to Top link](../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Topic](#Intro)  
+ ![Arrow icon used with Back to Top link](../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Topic](#main)  
   
 ##  <a name="Open"></a> Open an Integration Services Project  
   
@@ -54,10 +54,8 @@ manager: craigg
   
 6.  After exporting the data, click **Finish** to close the Integration Services project.  
   
- ![Arrow icon used with Back to Top link](../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Topic](#Intro)  
+ ![Arrow icon used with Back to Top link](../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Topic](#main)  
   
 ## See Also  
  [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Integration Services &#40;SSIS&#41; Projects](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  

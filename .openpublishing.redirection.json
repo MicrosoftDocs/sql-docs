@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+           "source_path": "docs/linux/sql-server-linux-active-directory-third-party-providers.md",
+           "redirect_url": "/sql/linux/sql-server-linux-active-directory-authentication",
+           "redirect_document_id": false
+        },       
+        {
             "source_path": "docs/toc/redirectfrom-reference-10.md",
             "redirect_url": "/sql/sql-server/applies-to-includes",
             "redirect_document_id": false

@@ -5,7 +5,7 @@ description:
 author: Dylan-MSFT
 ms.author: Dylan.Gray
 ms.reviewer: rothja
-ms.date: 03/28/2019
+ms.date: 04/01/2019
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -87,10 +87,10 @@ If either of these name checks fail, update your domain search list:
 
 1. Now check that your **/etc/resolv.conf** file contains a line like the following example:
 
-  ```/etc/resolv.conf
-  search contoso.com com  
-  nameserver **<AD domain controller IP address>**
-  ```
+   ```/etc/resolv.conf
+   search contoso.com com  
+   nameserver **<AD domain controller IP address>**
+   ```
 
 1. If you still can't ping the domain controller, find the fully qualified domain name and IP address of the domain controller. An example domain name is **DC1.CONTOSO.COM**. Add the following entry to **/etc/hosts**:
 
@@ -178,12 +178,13 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
 
    You should see the message, `Successfully enrolled machine in realm`.
 
-   > [!NOTE]
-   > - If you receive an error, "Necessary packages are not installed," then you should install those packages using your Linux distribution's package manager before running the realm join command again.
-   >
-   > - If you receive an error, "Insufficient permissions to join the   domain," then you need to check with a domain administrator that you have sufficient permissions to join Linux machines to your domain.
-   >
-   > - If you receive an error, "KDC reply did not match expectations," then you may not have specified the correct realm name for the user. Realm names are case-sensitive, usually uppercase, and can be identified with the command realm discover contoso.com.
+   The following table lists some error messages that you could receive and suggestions on resolving them:
+
+   | Error message | Recommendation |
+   |---|---|
+   | `Necessary packages are not installed` | Install those packages using your Linux distribution's package manager before running the realm join command again. |
+   | `Insufficient permissions to join the domain` | Check with a domain administrator that you have sufficient permissions to join Linux machines to your domain. |
+   | `KDC reply did not match expectations` | You may not have specified the correct realm name for the user. Realm names are case-sensitive, usually uppercase, and can be identified with the command realm discover contoso.com. |
 
    SQL Server uses SSSD and NSS for mapping user accounts and groups to security identifiers (SID's). SSSD must be configured and running for SQL Server to create AD logins successfully. Realmd usually does this automatically as part of joining the domain,but in some cases, you must do this separately.
 
@@ -206,9 +207,9 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
    ```
 
    > [!NOTE]
-   > - If id user@contoso.com returns, "No such user," make sure that the SSSD service started successfully by running the command sudo systemctl status sssd. If the service is running and you still see the "No such user" error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - If **id user@contoso.com** returns, `No such user`, make sure that the SSSD service started successfully by running the command `sudo systemctl status sssd`. If the service is running and you still see the "No such user" error, try enabling verbose logging for SSSD. For more information, see the Red Hat documentation for [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - If kinit user@CONTOSO.COM returns, "KDC reply did not match    expectations while getting initial credentials," make sure you    specified the realm in uppercase.
+   > - If **kinit user@CONTOSO.COM** returns, `KDC reply did not match expectations while getting initial credentials`, make sure you specified the realm in uppercase.
 
 For more information, see the Red Hat documentation for [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 
@@ -221,7 +222,7 @@ SQL Server does not use third party integrator’s code or library for any AD re
 > [!IMPORTANT]
 > Please see the recommendations for using the **mssql-conf** `network.disablesssd` configuration option in the configuration options section of [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md).
 
-Also, check that your **/etc/krb5.conf** is configured correctly. For most third-party Active Directory providers, this configuration is done automatically. However, check **/etc/krb5.conf** for the following values to prevent any future issues:
+Verify that your **/etc/krb5.conf** is configured correctly. For most third-party Active Directory providers, this configuration is done automatically. However, check **/etc/krb5.conf** for the following values to prevent any future issues:
 
 ```/etc/krb5.conf
 [libdefaults]

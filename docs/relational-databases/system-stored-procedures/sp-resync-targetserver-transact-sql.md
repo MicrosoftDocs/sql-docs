@@ -35,7 +35,7 @@ sp_resync_targetserver
 ```  
   
 ## Arguments  
- [ **@server_name =**] **'***server***'**  
+`[ @server_name = ] 'server'`
  The name of the server to resynchronize. *server* is **sysname**, with no default. If **ALL** is specified, all target servers are resynchronized.  
   
 ## Return Code Values  

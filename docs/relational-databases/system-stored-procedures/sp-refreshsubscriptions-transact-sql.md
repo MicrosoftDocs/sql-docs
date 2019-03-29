@@ -32,7 +32,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the publication for which to refresh subscriptions. *publication* is **sysname**, with no default.  
   
 ## Return Code Values  

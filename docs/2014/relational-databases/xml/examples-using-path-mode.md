@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "PATH FOR XML mode, examples"
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Examples: Using PATH Mode

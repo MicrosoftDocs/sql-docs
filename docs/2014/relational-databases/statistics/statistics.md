@@ -99,8 +99,6 @@ ORDER BY s.name;
 |-|  
 |**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#Top)  
-  
 ##  <a name="CreateStatistics"></a> When to Create Statistics  
  The query optimizer already creates statistics in the following ways:  
   
@@ -191,8 +189,6 @@ GO
   
  Because temporary statistics are stored in `tempdb`, a restart of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service causes all temporary statistics to disappear.  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#Top)  
-  
 ##  <a name="UpdateStatistics"></a> When to Update Statistics  
  The query optimizer determines when statistics might be out-of-date and then updates them when they are needed for a query plan. In some cases you can improve the query plan and therefore improve query performance by updating statistics more frequently than occur when AUTO_UPDATE_STATISTICS is on. You can update statistics with the UPDATE STATISTICS statement or the stored procedure sp_updatestats.  
   
@@ -222,8 +218,6 @@ GO
  Consider updating statistics after performing maintenance procedures that change the distribution of data, such as truncating a table or performing a bulk insert of a large percentage of the rows. This can avoid future delays in query processing while queries wait for automatic statistics updates.  
   
  Operations such as rebuilding, defragmenting, or reorganizing an index do not change the distribution of data. Therefore, you do not need to update statistics after performing ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG, or ALTER INDEX REORGANIZE operations. The query optimizer updates statistics when you rebuild an index on a table or view with ALTER INDEX REBUILD or DBCC DBREINDEX, however; this statistics update is a byproduct of re-creating the index. The query optimizer does not update statistics after DBCC INDEXDEFRAG or ALTER INDEX REORGANIZE operations.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#Top)  
   
 ##  <a name="DesignStatistics"></a> Queries That Use Statistics Effectively  
  Certain query implementations, such as local variables and complex expressions in the query predicate, can lead to suboptimal query plans. Following query design guidelines for using statistics effectively can help to avoid this. For more information about query predicates, see [Search Condition &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
@@ -322,8 +316,6 @@ GO
 ### Improving Cardinality Estimates with Plan Guides  
  For some applications, query design guidelines might not apply because you cannot change the query or using the RECOMPILE query hint might be cause too many recompiles. You can use plan guides to specify other hints, such as USE PLAN, to control the behavior of the query while investigating application changes with the application vendor. For more information about plan guides, see [Plan Guides](../performance/plan-guides.md).  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#Top)  
-  
 ## See Also  
  [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
@@ -334,5 +326,3 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Create Filtered Indexes](../indexes/create-filtered-indexes.md)  
-  
-  

@@ -2530,6 +2530,8 @@
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: Using Basic Data Types
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: Using SQL_variant Data Type
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: Using Spatial Datatypes
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: Understanding Transactions
@@ -2624,10 +2626,13 @@
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Using Statements with Stored Procedures
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Azure Key Vault sample version 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Azure Key Vault sample version 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: Azure Key Vault samples, for 7.0 and others
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Azure Key Vault sample version 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Azure Key Vault sample version 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 
 
 
@@ -5362,7 +5367,7 @@
     - name: PHP Linux and Mac drivers installation tutorial
       href: ../connect/php/installation-tutorial-linux-mac.md
     - name: Release Notes
-      href: ../connect/php/release-notes-for-the-php-sql-driver.md
+      href: ../connect/php/release-notes-php-sql-driver.md
     - name: Support Resources
       href: ../connect/php/support-resources-for-the-php-sql-driver.md
     - name: About Code Samples

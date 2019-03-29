@@ -40,7 +40,7 @@ sp_help_fulltext_system_components
  'all'  
  Returns information for all full-text components.  
   
- [ **@component_type=** ] *component_type*  
+`[ @component_type = ] component_type`
  Specifies the type of component. *component_type* can be one of the following:  
   
 -   **wordbreaker**  
@@ -53,7 +53,7 @@ sp_help_fulltext_system_components
   
  If a full path is specified, *param* must also be specified with the full path to the component DLL, or an error message is returned.  
   
- [ **@param=** ] *param*  
+`[ @param = ] param`
  Depending on component type, this is one of the following: a locale identifier (LCID), the file extension with "." prefix, the full component name of the protocol handler, or the full path to the component DLL.  
   
 ## Return Code Values  

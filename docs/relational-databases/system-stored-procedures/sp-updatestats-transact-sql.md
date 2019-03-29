@@ -39,7 +39,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (success) or 1 (failure)  
   
 ## Arguments  
- [ **@resample** =] **'resample'**  
+`[ @resample = ] 'resample'`
  Specifies that **sp_updatestats** will use the RESAMPLE option of the [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) statement. If **'resample'** is not specified, **sp_updatestats** updates statistics by using the default sampling. **resample** is **varchar(8)** with a default value of NO.  
   
 ## Remarks  

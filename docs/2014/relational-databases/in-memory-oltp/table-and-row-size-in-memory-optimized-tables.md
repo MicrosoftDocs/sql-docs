@@ -129,7 +129,7 @@ Memory-optimized table, consisting of indexes and rows.
   
  Consider an Orders table with the following definition:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -211,7 +211,7 @@ GO
   
  The actual memory allocated for and used by this table and its indexes can be obtained through the following query:  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

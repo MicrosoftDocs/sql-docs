@@ -38,25 +38,25 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=** ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@subscriber=** ] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with no default.  
   
- [ **@subscriber_db=** ] **'***subscriber_db***'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with no default.  
   
- [ **@property =** ] **'***property***'**  
+`[ @property = ] 'property'`
  Is the publication property to change. *property* is **sysname**, with no default.  
   
- [ **@value =** ] **'***value***'**  
+`[ @value = ] 'value'`
  Is the new property value. *value* is **nvarchar(524)**, with a default of NULL.  
   
  This table describes the properties of the Merge Agent job that can be changed and restrictions on the values for those properties.  

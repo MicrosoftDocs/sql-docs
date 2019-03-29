@@ -35,16 +35,16 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of **%**, which returns information on all Publishers.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with a default of **%**, which returns information on all Publisher databases.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**, which returns information on all publications.  
   
- [ **@publication_type=**] *publication_type*  
+`[ @publication_type = ] publication_type`
  Is the type of publication.*publication_type* is **int**, with a default of NULL. If supplied, *publication_type* must be one of the following values:  
   
 |Value|Description|  

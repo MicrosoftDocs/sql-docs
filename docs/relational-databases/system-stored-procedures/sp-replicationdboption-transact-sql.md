@@ -49,13 +49,13 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**subscribe**|Database is a subscription database.|  
 |**sync with backup**|Database is enabled for coordinated backup. For more information, see [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
- [ **@value=**] **'***value***'**  
+`[ @value = ] 'value'`
  Is whether to enable or disable the given replication database option. *value* is **sysname**, and can be **true** or **false**. When this value is **false** and *optname* is **merge publish**, subscriptions to the merge published database are also dropped.  
   
- [ **@ignore_distributor=**]  *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  Indicates whether this stored procedure is executed without connecting to the Distributor. *ignore_distributor* is **bit**, with a default of **0**, meaning the Distributor should be connected to and updated with the new status of the publishing database. The value **1** should be specified only if the Distributor is inaccessible and **sp_replicationdboption** is being used to disable publishing.  
   
- [ **@from_scripting=**]  *from_scripting*  
+`[ @from_scripting = ] from_scripting`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

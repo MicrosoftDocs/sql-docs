@@ -42,20 +42,20 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## Arguments  
- [ **@job_type=** ] **'**_job_type_**'**  
+`[ @job_type = ] 'job_type'`
  Type of job to modify. *job_type* is **nvarchar(20)** with a default of 'capture'. Valid inputs are 'capture' and 'cleanup'.  
   
- [ **@maxtrans** ] **=**_max_trans_  
+`[ @maxtrans ] = max_trans_`
  Maximum number of transactions to process in each scan cycle. *max_trans* is **int** with a default of NULL, which indicates no change for this parameter. If specified, the value must be a positive integer.  
   
  *max_trans* is valid only for capture jobs.  
   
- [ **@maxscans** ] **=**_max_scans_  
+`[ @maxscans ] = max_scans_`
  Maximum number of scan cycles to execute in order to extract all rows from the log. *max_scans* is **int** with a default of NULL, which indicates no change for this parameter.  
   
  *max_scan* is valid only for capture jobs.  
   
- [ **@continuous** ] **=**_continuous_  
+`[ @continuous ] = continuous_`
  Indicates whether the capture job is to run continuously (1), or run only once (0). *continuous* is **bit** with a default of NULL, which indicates no change for this parameter.  
   
  When *continuous* = 1, the [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) job scans the log and processes up to (*max_trans* \* *max_scans*) transactions. It then waits the number of seconds specified in *polling_interval* before beginning the next log scan.  
@@ -68,17 +68,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *continuous* is valid only for capture jobs.  
   
- [ **@pollinginterval** ] **=**_polling_interval_  
+`[ @pollinginterval ] = polling_interval_`
  Number of seconds between log scan cycles. *polling_interval* is **bigint** with a default of NULL, which indicates no change for this parameter.  
   
  *polling_interval* is valid only for capture jobs when *continuous* is set to 1.  
   
- [ **@retention** ] **=**_retention_  
+`[ @retention ] = retention_`
  Number of minutes that change rows are to be retained in change tables. *retention* is **bigint** with a default of NULL, which indicates no change for this parameter. The maximum value is 52494800 (100 years). If specified, the value must be a positive integer.  
   
  *retention* is valid only for cleanup jobs.  
   
- [ **@threshold=** ] **'**_delete threshold_**'**  
+`[ @threshold = ] 'delete threshold'`
  Maximum number of delete entries that can be deleted using a single statement on cleanup. *delete threshold* is **bigint** with a default of NULL, which indicates no change for this parameter. *delete threshold* is valid only for cleanup jobs.  
   
 ## Return Code Values  

@@ -80,7 +80,7 @@ manager: kfile
   
 -   **Data source type** The connection type, for example, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Choose this value from the drop-down list of connection types.  
   
--   **Connection information** Connection information includes the name and location of the data source, and connection properties that are specific to each data provider. The *connection string* is the text representation of connection information. For example, if the data source is a SQL Server database, you can specify the name of the database. For embedded data sources, you can also write expression-based connection strings that are evaluated at run time. For more information, see [Expression-based Connection Strings](#Expressions) later in this topic.  
+-   **Connection information** Connection information includes the name and location of the data source, and connection properties that are specific to each data provider. The *connection string* is the text representation of connection information. For example, if the data source is a SQL Server database, you can specify the name of the database. For embedded data sources, you can also write expression-based connection strings that are evaluated at run time. For more information, see [Expression-based Connection Strings](#bkmk_Expressions_in_connection_strings) later in this topic.  
   
 -   **Credentials** You provide the credentials that are needed to access the data. The data source owner must have granted you the appropriate permissions to access both the data source and the specific data on the data source. For example, to connect to the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sample database installed on a network server, you must have permission to connect to the server and also read-only permission to access the database.  
   
@@ -179,5 +179,3 @@ manager: kfile
  [Set Deployment Properties &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

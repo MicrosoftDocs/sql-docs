@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services samples | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 03/29/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -22,9 +22,9 @@ manager: kfile
 
 ## Sample solutions and databases  
 
-While no longer officially supported or updated, Adventure Works remains one of the most inclusive and robust sample datasets for learning about and testing Analysis Services. Analysis Services sample projects and databases, as well as examples in documenation, blog posts, and presentations use the Adventure Works 2014 sample data.
+While no longer officially supported, Adventure Works remains one of the most inclusive and robust sample datasets for learning about and testing Analysis Services. Analysis Services sample projects and databases, as well as examples in documenation, blog posts, and presentations use the Adventure Works sample data.
 
-[Download Adventure Works sample projects and databases on Codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
+[Download Adventure Works sample projects and databases on GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).
 
 A new collection of sample data, Wide World Importers, was introduced for SQL Server 2016. You can use Wide World Importers sample data to learn about and test Analysis Services; however, no tutorials, examples, or documentation are provided. The Wide World Importers dataset and schema do not support many of the features in Analysis Services. To learn more, see [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md).
 

@@ -1987,7 +1987,7 @@
     - name: DMX Syntax Conventions
         href: ../dmx/data-mining-extensions-dmx-syntax-conventions.md
     - name: DMX Tutorials
-        href: ../dmx/dmx-tutorials-analysis-services-data-mining.md
+      href: ../dmx/dmx-tutorials-analysis-services-data-mining.md
   - name: Multidimensional Expressions (MDX)
     href: ../mdx/analysis-services-language-reference.md
     items: 

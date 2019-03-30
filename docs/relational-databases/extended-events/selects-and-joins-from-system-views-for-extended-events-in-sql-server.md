@@ -246,7 +246,7 @@ SELECT
 		s.name              AS [Session-Name],
 		'3_EVENT_ACTION'    AS [Clause-Type],
 
-		e.package + '.' + a.name
+		a.package + '.' + a.name
 		                    AS [Parameter-Name],
 
 		'(Not_Applicable)'  AS [Parameter-Value]

@@ -29,8 +29,6 @@ manager: kfile
 ##  <a name="RenderingMHTML"></a> Rendering in MHTML  
  The HTML rendering extension can also render reports in MHTML (MIME Encapsulation of Aggregate HTML Documents). MHTML extends HTML to embed encoded objects, such as images, in the HTML document. Using the MHTML rendering extension, you can embed resources such as images, documents, or other binary files as MIME structures within the report HTML, into a single file. MHTML reports are also useful for embedding within e-mail messages because all resources are included with the report. Although it is actually the HTML rendering extension that renders MHTML, this functionality may also be referred to as the MHTML rendering extension.  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
 ##  <a name="BrowserSupport"></a> Browser Support  
  This rendering extension supports the following browser versions:  
   
@@ -41,8 +39,6 @@ manager: kfile
 -   Safari 3.0 and later  
   
  Due to cross browser considerations, the rendered report may vary slightly from browser to browser. For example, the text box contains a property called WritingMode. This property is not supported in Firefox.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="HTMLSpecificRenderingRules"></a> HTML-Specific Rendering Rules  
  The following HTML-specific rules are applied when rendering:  
@@ -60,8 +56,6 @@ manager: kfile
 -   All other rows and columns are allowed to grow depending on the size of each report item.  
   
 -   All coordinates and report item sizes are converted to millimeters. All other sizes, including style properties, retain their original units. Size and position differences smaller than .2mm are treated as 0mm.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="Interactivity"></a> Interactivity  
  Some interactive elements are supported in HTML. The following is a description of specific behaviors.  
@@ -86,18 +80,12 @@ manager: kfile
   
  Additional search and find functionality is provided by the ReportViewer Web Forms control.  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
 ##  <a name="DeviceInfo"></a> Device Information Settings  
  You can change some default settings for this renderer, including which mode to render in, by changing the device information settings. For more information, see [HTML Device Information Settings](../html-device-information-settings.md).  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ## See Also  
  [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering Report Items &#40;Report Builder and SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

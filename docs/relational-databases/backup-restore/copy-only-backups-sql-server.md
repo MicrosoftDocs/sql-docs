@@ -98,6 +98,6 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
  [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[Backup-SqlDatabase](https://technet.microsoft.com/library/mt683378.aspx)
+[Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
   

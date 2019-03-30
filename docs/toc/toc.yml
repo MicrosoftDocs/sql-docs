@@ -904,6 +904,8 @@
           href: ../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md
         - name: Pause or resume
           href: ../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md
+        - name: Establish session
+          href: ../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md
         - name: Connect clients
           href: ../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md
         - name:  Warning thresholds on performance
@@ -4122,6 +4124,8 @@
       href: ../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md
     - name: Enable the Lock Pages in Memory Option
       href: ../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md
+    - name: Hybrid Buffer Pool
+      href: ../database-engine/configure-windows/hybrid-buffer-pool.md
     - name: Change Server Authentication Mode
       href: ../database-engine/configure-windows/change-server-authentication-mode.md
     - name: SQL Writer Service
@@ -15286,6 +15290,8 @@
         href: ../t-sql/data-types/constants-transact-sql.md
       - name: Conversion
         href: ../t-sql/data-types/data-type-conversion-database-engine.md
+      - name: Nondeterministic Conversion
+        href: ../t-sql/data-types/nondeterministic-convert-date-literals.md
       - name: Precedence
         href: ../t-sql/data-types/data-type-precedence-transact-sql.md
       - name: Synonyms

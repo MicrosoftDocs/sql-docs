@@ -1985,7 +1985,7 @@
         - name: "/*...*/ (Comment)"
           href: ../dmx/slash-star-comment-dmx.md
     - name: DMX Syntax Conventions
-        href: ../dmx/data-mining-extensions-dmx-syntax-conventions.md
+      href: ../dmx/data-mining-extensions-dmx-syntax-conventions.md
     - name: DMX Tutorials
       href: ../dmx/dmx-tutorials-analysis-services-data-mining.md
   - name: Multidimensional Expressions (MDX)

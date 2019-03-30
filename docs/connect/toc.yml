@@ -2693,7 +2693,7 @@
     - name: Features of the Microsoft ODBC Driver for SQL Server on Windows
       href: ../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
     - name: Release Notes
-      href: ../connect/odbc/windows/release-notes.md
+      href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
     - name: System Requirements, Installation, and Driver Files
       href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
     - name: Feature Guides

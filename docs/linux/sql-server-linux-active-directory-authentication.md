@@ -84,14 +84,14 @@ In both cases, the SPN created in the earlier step is required, and the SPN must
 
 To configure the SQL Server service keytab file:
 
-1. Configure the SPN keytab entries in the next section.
+1. Configure the [SPN keytab entries](#spn) in the next section.
 
-1. Then either add UPN ([option 1](#upn)) or MSA ([option 2](#msa)) entries in the keytab file by following the steps in their respective sections.
+1. Then either [add UPN](#upn) (option 1) or [MSA](#msa) (option 2) entries in the keytab file by following the steps in their respective sections.
 
 > [!IMPORTANT]
 > If the password for the UPN/MSA is changed or the password for the account that the SPNs are assigned to is changed, you must update the keytab with the new password and Key Version Number (KVNO). Some services might also rotate the passwords automatically. Review any password rotation policies for the accounts in question and align them with scheduled maintenance activities to avoid unexpected downtime.
 
-### SPN keytab entries
+### <a id="spn"></a> SPN keytab entries
 
 1. Check the Key Version Number (KVNO) for the AD account created in the previous step. Usually it is 2, but it could be another integer if you changed the account's password multiple times. On the SQL Server host machine, run the following commands:
 
@@ -122,7 +122,7 @@ To configure the SQL Server service keytab file:
 
 ### <a id="upn"></a> Option 1: Using UPN to configure the keytab
 
-Add the machine account to your keytab with **ktutil**. The machine account (also called a UPN) is present in **/etc/krb5.keytab** in the form `<hostname>$@<realm.com>` (for example, `sqlhost$@CONTOSO.COM`). We will copy these entries from **/etc/krb5.keytab** to **mssql.keytab**.
+Add the machine account to your keytab with **ktutil**. The machine account (also called a UPN) is present in **/etc/krb5.keytab** in the form `<hostname>$@<realm.com>` (for example, `sqlhost$@CONTOSO.COM`). Copy these entries from **/etc/krb5.keytab** to **mssql.keytab**.
 
 1. Start **ktuil** with the following command:
 
@@ -172,39 +172,53 @@ Add the machine account to your keytab with **ktutil**. The machine account (als
 
 ### <a id="msa"></a> Option 2:  Using MSA to configure the keytab
 
-We need to create SQL Server's Kerberos keytab, and it should contain all SPNs registered in step 1, and the credentials for the MSA to which the SPNs are registered. After the SPN keytab entries are created, from a Linux machine that is domain joined run the following commands:
+For the MSA option, you must create SQL Server's Kerberos keytab. It should contain all of the [SPNs registered in the first step](#spn) and the credentials for the MSA to which the SPNs are registered. 
 
-```bash
-kinit <AD user>
-kvno <any SPN registered in step 1>
-   <spn>@CONTOSO.COM: kvno = <KVNO>
-```
+1. After the SPN keytab entries are created, run the following commands from a Linux machine that is domain joined:
 
-This step displays the KVNO for the user account assigned the SPN ownership. For this step to work, the SPN must have been assigned to the MSA account during its creation. If the SPN was not assigned to MSA, the KVNO displayed will be of current SPN owner account and be incorrect to use for configuration.  
+   ```bash
+   kinit <AD user>
+   kvno <any SPN registered in step 1>
+      <spn>@CONTOSO.COM: kvno = <KVNO>
+   ```
 
-```bash
-sudo ktutil
+   This step displays the KVNO for the user account assigned the SPN ownership. For this step to work, the SPN must have been assigned to the MSA account during its creation. If the SPN was not assigned to MSA, the KVNO displayed will be of current SPN owner account and be incorrect to use for configuration.  
 
-# Add the MSA
-ktutil: addent -password -p <MSA> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
-ktutil: addent -password -p <MSA> -k <kvno from command above> -e rc4-hmac
- 
-# For each SPN, run the two commands below
-ktutil: addent -password -p <SPN> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
-ktutil: addent -password -p <SPN> -k <kvno from command above> -e rc4-hmac
- 
-# Write the keytab to a file
-ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
-ktutil: quit
-```
+1. Start **ktutil**:
 
-When using the MSA approach, a configuration option needs to be set with the **mssql-conf** tool to specify the MSA to be used while accessing the keytab file. Ensure the values below are in **/var/opt/mssql/mssql.conf**.
+   ```bash
+   sudo ktutil
+   ```
 
-```bash
-sudo mssql-conf set network.privilegedadaccount <MSA_Name>
-```
+1. Add the MSA with the following two commands:
 
-Please note that it should be just MSA name and not domain\account name.
+   ```bash
+   addent -password -p <MSA> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
+   addent -password -p <MSA> -k <kvno from command above> -e rc4-hmac
+   ```
+
+1. For each SPN, run the following two commands:
+
+   ```bash
+   addent -password -p <SPN> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
+   addent -password -p <SPN> -k <kvno from command above> -e rc4-hmac
+   ```
+
+1. Write the keytab to a file and then quit ktutil:
+
+   ```bash
+   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+   ktutil: quit
+   ```
+
+1. When using the MSA approach, a configuration option needs to be set with the **mssql-conf** tool to specify the MSA to be used while accessing the keytab file. Ensure the values below are in **/var/opt/mssql/mssql.conf**.
+
+   ```bash
+   sudo mssql-conf set network.privilegedadaccount <MSA_Name>
+   ```
+
+   > [!NOTE]
+   > Only include the MSA name and not the domain\account name.
 
 ## <a id="securekeytab"></a> Secure the keytab file
 
@@ -224,14 +238,14 @@ sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keyt
 sudo systemctl restart mssql-server
 ```
 
-**Optional**: Disable UDP connections to the domain controller to improve performance. In many cases, UDP connections will always fail when connecting to a domain controller, so you can set config options in **/etc/krb5.conf** to skip UDP calls. Edit **/etc/krb5.conf** and set the following options:
+Optionally disable UDP connections to the domain controller to improve performance. In many cases, UDP connections consistently fail when connecting to a domain controller, so you can set config options in **/etc/krb5.conf** to skip UDP calls. Edit **/etc/krb5.conf** and set the following options:
 
 ```/etc/krb5.conf
 [libdefaults]
 udp_preference_limit=0
 ```
 
-At this point you are ready to use AD based logins in SQL Server as follows.
+At this point, you are ready to use AD-based logins in SQL Server as follows.
 
 ## <a id="createsqllogins"></a> Create AD-based logins in Transact-SQL
 
@@ -249,9 +263,9 @@ At this point you are ready to use AD based logins in SQL Server as follows.
 
 ## <a id="connect"></a> Connect to SQL Server using AD Authentication
 
-Log in to a client machine using your domain credentials. Now you can connect to SQL Server without reentering your password, by using AD Authentication. If you create a login for an AD group, any AD user who is a member of that group can connect in the same way.
+Log in to a client machine using your domain credentials. Now you can connect to SQL Server without reentering your password by using AD Authentication. If you create a login for an AD group, any AD user who is a member of that group can connect in the same way.
 
-The specific connection string parameter for clients to use AD Authentication depends on which driver you are using. Consider the following examples:
+The specific connection string parameter for clients to use AD Authentication depends on which driver you are using. Consider the examples in the following sections.
 
 ### sqlcmd on a domain-joined Linux client
 
@@ -283,14 +297,14 @@ The following table describes recommendations for other client drivers:
 
 ## <a id="additionalconfig"></a> Additional configuration options
 
-If you are using third party utilities such as such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/) to join the Linux host to AD domain and you would like to force SQL server in using the openldap library directly, you can configure the **disablesssd** option with **mssql-conf** as follows:
+If you are using third-party utilities such as [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), or [Centrify](https://www.centrify.com/) to join the Linux host to AD domain and you would like to force SQL server in using the openldap library directly, you can configure the **disablesssd** option with **mssql-conf** as follows:
 
 ```bash
 sudo mssql-conf set network.disablesssd true
 systemctl restart mssql-server
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > There are utilities such as **realmd** which set up SSSD, while other tools such as PBIS, VAS and Centrify do not setup SSSD. If the utility used to join AD domain does not setup SSSD, it is recommended to configure **disablesssd** option to `true`. While it is not required as SQL Server will attempt to use SSSD for AD before falling back to openldap mechanism, it would be more performant to configure it so SQL Server makes openldap calls directly bypassing the SSSD mechanism.
 
 If your domain controller supports LDAPS, you can force all connections from SQL Server to the domain controllers to be over LDAPS. To check your client can contact the domain controller over ldaps, run the following bash command, `ldapsearch -H ldaps://contoso.com:3269`. To set SQL Server to only use LDAPS, run the following:
@@ -300,21 +314,23 @@ sudo mssql-conf set network.forceldaps true
 systemctl restart mssql-server
 ```
 
-This will use LDAPS over SSSD if AD domain join on host was done via SSSD package and d**isablesssd** is not set to true. If **disablesssd** is set to true along with **forceldaps** being set to true, then it will use LDAPS protocol over openldap library calls made by SQL Server.
+This will use LDAPS over SSSD if AD domain join on host was done via SSSD package and **disablesssd** is not set to true. If **disablesssd** is set to true along with **forceldaps** being set to true, then it will use LDAPS protocol over openldap library calls made by SQL Server.
 
-## Post SQL Server 2017 CU14:
+## Post SQL Server 2017 CU14
 
-If SQL Server was joined with AD domain controller using SSSD package and is configured to use openldap calls for general AD lookup by setting **disablesssd** to true, additionally you can use **enablekdcfromkrb5** option to force SQL Server to use krb5 library for KDC lookup instead of reverse DNS lookup for KDC server.
+Starting with SQL Server 2017 CU14, if SQL Server was joined to an AD domain controller using an SSSD package and is configured to use openldap calls for general AD lookup by setting **disablesssd** to true, you can also use **enablekdcfromkrb5** option to force SQL Server to use krb5 library for KDC lookup instead of reverse DNS lookup for KDC server.
 
-This may be useful for scenario where you want to manually configure the domain controllers that SQL Server attempts to communicate with while using openldap library mechanism by using KDC list in **krb5.conf**.
+This may be useful for the scenario where you want to manually configure the domain controllers that SQL Server attempts to communicate with. And you use the openldap library mechanism by using the KDC list in **krb5.conf**.
 
-   ```bash
-   sudo mssql-conf set network.disablesssd true
-   sudo mssql-conf set network.enablekdcfromkrb5conf true
-   systemctl restart mssql-server
-   ```
+First, set **disablessd** and **enablekdcfromkrb5conf** to true and then restart SQL Server:
 
-Then configure the KDC list in **/etc/krb5.conf** as following.
+```bash
+sudo mssql-conf set network.disablesssd true
+sudo mssql-conf set network.enablekdcfromkrb5conf true
+systemctl restart mssql-server
+```
+
+Then configure the KDC list in **/etc/krb5.conf** as follows:
 
 ```/etc/krb5.conf
 [realms]
@@ -324,8 +340,8 @@ CONTOSO.COM = {
 }
 ```
 
-> [!NOTE] 
-> While it is not recommended, it is possible to use utilities such as **realmd** which set up SSSD while joining the Linux host to the domain, and configure **disablesssd** to true so that SQL Server uses openldap calls instead of SSSD for Active Directory related calls.
+> [!NOTE]
+> While it is not recommended, it is possible to use utilities, such as **realmd**, that set up SSSD while joining the Linux host to the domain, while configuring **disablesssd** to true so that SQL Server uses openldap calls instead of SSSD for Active Directory related calls.
 
 ## Next steps
 

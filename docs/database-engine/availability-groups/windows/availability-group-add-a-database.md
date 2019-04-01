@@ -22,7 +22,7 @@ manager: craigg
   
 -   **Before you begin:**  
   
-     [Prerequisites and Restrictions](#Prerequisites)    
+     [Prerequisites and Restrictions](#prerequisites-and-restrictions)    
      [Permissions](#Permissions)    
 -   **To add a database to an availability group, using:**  
   
@@ -138,5 +138,3 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
  [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Use the Always On Dashboard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Monitor Availability Groups &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
-  

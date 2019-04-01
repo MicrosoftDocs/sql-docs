@@ -248,7 +248,7 @@
       href: ../analysis-services/instances/analysis-services-component-version.md
     - name: Post-install configuration
       items:
-      - name: Post install and confiuration overview
+      - name: Post install and configuration overview
         href: ../analysis-services/instances/post-install-configuration-analysis-services.md
       - name: Configure the Windows Firewall
         href: ../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md
@@ -446,7 +446,7 @@
       href: ../analysis-services/tabular-models/restore-from-power-pivot.md
   - name: Multidimensional modeling
     items:
-    - name: Multidimensionl modeling overview
+    - name: Multidimensional modeling overview
       href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
     - name: Multidimensional Solutions
       href: ../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md
@@ -1747,7 +1747,7 @@
       href: /bi-reference/adomd/developing-with-adomd-net
     - name: XML for Analysis (XMLA) +
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: OLE DB for Data Minining
+    - name: OLE DB for Data Mining
       href: ../analysis-services/data-mining-programming-ole-db.md
 - name: Samples
   items:

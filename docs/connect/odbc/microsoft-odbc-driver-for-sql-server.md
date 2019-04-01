@@ -63,7 +63,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Connection Resiliency in the Windows ODBC Driver](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [Driver-Aware Connection Pooling](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 - [Features and Behavior Changes](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
-- [Release Notes](../../connect/odbc/windows/release-notes.md)
+- [Release Notes for ODBC to SQL Server on Windows](windows/release-notes-odbc-sql-server-windows.md)
 - [System Requirements, Installation, and Driver Files](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
 

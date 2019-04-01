@@ -1,7 +1,7 @@
 ---
 title: "Feature dependencies of the Microsoft JDBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/06/2019"
+ms.date: "02/07/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -12,7 +12,6 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
-
 # Feature dependencies of the Microsoft JDBC Driver for SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -94,8 +93,8 @@ Specific projects that require either of the preceding features need to explicit
 
 ### Working with the Azure Key Vault Provider:
 
-- JDBC Driver version 7.2.1 - Dependency versions: Azure-Keyvault (version 1.2.0), Azure-Keyvault-Webkey (version 1.2.0), Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample.md))
-- JDBC Driver version 7.0.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.6.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample.md))
+- JDBC Driver version 7.2.1 - Dependency versions: Azure-Keyvault (version 1.2.0), Azure-Keyvault-Webkey (version 1.2.0), Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC Driver version 7.0.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.6.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC Driver version 6.4.0 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
 - JDBC Driver version 6.2.2 - Dependency versions: Azure-Keyvault (version 1.0.0), Adal4j (version 1.4.0), and their dependencies ([sample application](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
 - JDBC Driver version 6.0.0 - Dependency versions: Azure-Keyvault (version 0.9.7), Adal4j (version 1.3.0), and their dependencies ( [sample application](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
@@ -122,4 +121,4 @@ You can get a [sample application](../../connect/jdbc/connecting-using-azure-act
 ## See also
 
 [JDBC Driver GitHub repository](https://github.com/microsoft/mssql-jdbc)  
- [JDBC Driver API reference](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[JDBC Driver API reference](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

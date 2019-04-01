@@ -36,10 +36,10 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## Arguments  
- [ **@logged_before** = ] **'**_logged_before_**'**  
+`[ @logged_before = ] 'logged_before'`
  Deletes entries up to the date and time specified by the *logged_before* argument. *logged_before* is **datetime** with NULL as default. NULL indicates all dates.  
   
- [ **@event_type** = ] **'**_event_type_**'**  
+`[ @event_type = ] 'event_type'`
  Deletes log entries of the type specified as the *event_type*. *event_type* is **varchar(15)** with no default. Valid entries are **success**, **warning**, **error**, and **informational**. NULL indicates all event types.  
   
 ## Return Code Values  

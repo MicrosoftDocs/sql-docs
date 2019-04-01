@@ -47,10 +47,10 @@ sp_droprolemember 'role' ,
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of the role from which the member is being removed. *role* is **sysname**, with no default. *role* must exist in the current database.  
   
- [ **@membername =** ] **'***security_account***'**  
+`[ @membername = ] 'security_account'`
  Is the name of the security account being removed from the role. *security_account* is **sysname**, with no default. *security_account* can be a database user, another database role, a Windows login, or a Windows group. *security_account* must exist in the current database.  
   
 ## Return Code Values  

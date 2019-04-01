@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "precedence constraints [Integration Services], values"
 ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Set the Value of a Precedence Constraint by Using the Shortcut Menu

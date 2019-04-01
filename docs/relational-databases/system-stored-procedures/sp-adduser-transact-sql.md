@@ -39,13 +39,13 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows login. *login* is a **sysname**, with no default. *login* must be an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows login.  
   
- [ **@name_in_db =** ] **'***user***'**  
+`[ @name_in_db = ] 'user'`
  Is the name for the new database user. *user* is a **sysname**, with a default of NULL. If *user* is not specified, the name of the new database user defaults to the *login* name. Specifying *user* gives the new user a name in the database different from the server-level login name.  
   
- [ **@grpname =** ] **'***role***'**  
+`[ @grpname = ] 'role'`
  Is the database role of which the new user becomes a member. *role* is **sysname**, with a default of NULL. *role* must be a valid database role in the current database.  
   
 ## Return Code Values  

@@ -4,10 +4,10 @@ description: Install local R libraries and tools on a development workstation fo
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/17/2018  
+ms.date: 03/29/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Set up a data science client for R development on SQL Server
@@ -22,9 +22,6 @@ In this article, learn how to configure an R client development workstation so t
 ![Client-server components](media/sqlmls-r-client-revo.png "Local and remote R sessions and libraries")
 
 To validate the installation, you can use built-in **RGUI** tool as described in this article, or [link the libraries](#install-ide) to RStudio or any another IDE that you normally use.
-
-> [!Tip]
-> For a video demonstration of these exercises, see [Run R and Python remotely in SQL Server from Jupyter Notebooks](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
 > An alternative to client library installation is using a [standalone server](../install/sql-machine-learning-standalone-windows-install.md) as a rich client, which some customers prefer for deeper scenario work. A standalone server is fully decoupled from SQL Server, but because it has the same R libraries, you can use it as a client for SQL Server in-database analytics. You can also use it for non-SQL-related work, including the ability to import and model data from other data platforms. If you install a standalone server, you can find the R executable at this location: `C:\Program Files\Microsoft SQL Server\140\R_SERVER`. To validate your installation, [open an R console app](#R-tools) to run commands using the R.exe at that location.

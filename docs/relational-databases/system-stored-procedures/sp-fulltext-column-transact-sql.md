@@ -42,16 +42,16 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## Arguments  
- [ **@tabname=** ] **'***qualified_table_name***'**  
+`[ @tabname = ] 'qualified_table_name'`
  Is a one- or two-part table name. The table must exist in the current database. The table must have a full-text index. *qualified_table_name* is **nvarchar(517)**, with no default value.  
   
- [ **@colname=** ] **'***column_name***'**  
+`[ @colname = ] 'column_name'`
  Is the name of a column in *qualified_table_name*. The column must be either a character, **varbinary(max)** or **image** column and cannot be a computed column. *column_name* is **sysname**, with no default.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create full-text indexes of text data stored in columns that are of **varbinary(max)** or **image** data type. Images and pictures are not indexed.  
   
- [ **@action=** ] **'***action***'**  
+`[ @action = ] 'action'`
  Is the action to be performed. *action* is **varchar(20)**, with no default value, and can be one of the following values.  
   
 |Value|Description|  
@@ -59,13 +59,13 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |**add**|Adds *column_name* of *qualified_table_name* to the table's inactive full-text index. This action enables the column for full-text indexing.|  
 |**drop**|Removes *column_name* of *qualified_table_name* from the table's inactive full-text index.|  
   
- [ **@language=** ] **'***language_term***'**  
+`[ @language = ] 'language_term'`
  Is the language of the data stored in the column. For a list of languages included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Use 'Neutral' when a column contains data in multiple languages or in an unsupported language. The default is specified by the configuration option 'default full-text language'.  
   
- [ **@type_colname =** ] **'***type_column_name***'**  
+`[ @type_colname = ] 'type_column_name'`
  Is the name of a column in *qualified_table_name* that holds the document type of *column_name*. This column must be **char**, **nchar**, **varchar**, or **nvarchar**. It is only used when the data type of *column_name* is of type **varbinary(max)** or **image**. *type_column_name* is **sysname**, with no default.  
   
 ## Return Code Values  

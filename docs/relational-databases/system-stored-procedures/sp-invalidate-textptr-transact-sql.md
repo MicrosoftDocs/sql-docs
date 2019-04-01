@@ -34,7 +34,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## Arguments  
- [ **@TextPtrValue=** ] *textptr_value*  
+`[ @TextPtrValue = ] textptr_value`
  Is the in-row text pointer that to be invalidated. *textptr_value* is **varbinary(**16**)**, with a default of NULL. If NULL, **sp_invalidate_textptr** invalidates all in-row text pointers in the transaction.  
   
 ## Return Code Values  

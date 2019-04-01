@@ -38,10 +38,10 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## Arguments  
- [ **@msx_server_name =**] **'***msx_server***'**  
+`[ @msx_server_name = ] 'msx_server'`
  The name of the multiserver administration (master) server. *msx_server* is **sysname**, with no default.  
   
- [ **@location =**] **'***location***'**  
+`[ @location = ] 'location'`
  The location of the target server to add. *location* is **nvarchar(100)**, with a default of NULL.  
   
 ## Return Code Values  

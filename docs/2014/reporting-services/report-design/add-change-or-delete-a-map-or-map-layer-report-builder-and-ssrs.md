@@ -61,17 +61,13 @@ manager: kfile
 -   From the Ribbon, on the **Insert** menu, click **Map**, and then click **Map Wizard.** The wizard enables you to add a layer to the existing map. Most wizard pages are identical between the map wizard and the map layer wizard.  
   
      For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="ChangeLayer"></a> To change options for a layer by using the map layer wizard  
   
 -   Run the map layer wizard. This wizard enables you to change options for a layer that you created by using the map layer wizard. In the Map pane, right-click the layer, and on the toolbar, click the layer wizard button (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      For more information, see [Map Wizard and Map Layer Wizard &#40;Report Builder and SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="AddVectorLayer"></a> To add a point, line, or polygon layer from the Map pane toolbar  
   
 1.  Click the map until the Map pane appears.  
@@ -100,9 +96,7 @@ manager: kfile
      For more information about linking spatial and analytical data, see [Customize the Data and Display of a Map or Map Layer &#40;Report Builder and SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="FilterAnalyticalData"></a> To filter analytical data for the layer  
   
 1.  Click the map until the Map pane appears.  
@@ -112,9 +106,7 @@ manager: kfile
 3.  Click **Filters**.  
   
 4.  Define a filter equation to limit the analytical data that is used in the map display. For more information, see [Filter Equation Examples &#40;Report Builder and SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="PointProperties"></a> To control point properties for a point layer or for polygon center points  
   
 1.  Select **General** on the **Map Point Properties** dialog box to change label, tooltip, and marker type options for the following map elements:  
@@ -122,9 +114,7 @@ manager: kfile
     -   All dynamic or embedded points on a point layer. Color rules, size rules, and marker type rules for points override these options. To override options for a specific embedded point, use the [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) page.  
   
     -   The center point for all dynamic or embedded polygons on a polygon layer. Color rules, size rules, and marker type rules for center points override these options. To override options for a specific center point, use the [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) page.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="Embedded"></a> To specify embedded data as a source of spatial data  
   
 1.  Click the map until the Map pane appears.  
@@ -141,9 +131,7 @@ manager: kfile
     >  If you do not know the name of the field and you browsed to an ESRI Shapefile, use the **Link to ESRI shape file option** instead of this option.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="ESRI"></a> To specify an ESRI Shapefile as a source of spatial data  
   
 1.  Click the map until the Map pane appears.  
@@ -158,9 +146,7 @@ manager: kfile
     >  If the Shapefile is on your local computer, the spatial data is embedded in the report definition. To retrieve the data dynamically when the report is processed, you must upload the ESRI .shp file and its .dbf support file to the report server. For more information, see " How to: Upload a File or Report (Report Manager)" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="DatasetField"></a> To specify a report dataset field as a source of spatial data  
   
 1.  Click the map until the Map pane appears.  
@@ -174,9 +160,7 @@ manager: kfile
 5.  In **Spatial field name**, click the name of the field in the dataset that contains spatial data.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="TileLayer"></a> To add a tile layer  
   
 1.  Click the map until the Map pane appears.  
@@ -192,9 +176,7 @@ manager: kfile
   
     > [!NOTE]  
     >  A tile layer can also be added when you add a polygon, line, or point layer in the Map or Map Layer wizard. On the **Choose spatial data and map view options** page, select the option **Add a Bing Maps background for this map view**.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="DrawingOrder"></a> To change the drawing order of a layer  
   
 1.  Click the map until the Map pane appears.  
@@ -202,9 +184,7 @@ manager: kfile
 2.  Click the layer in the Map pane to select it.  
   
 3.  On the Map pane toolbar, click the up or down arrow to change the drawing order of each layer.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="Transparency"></a> To change the transparency of a polygon, line, or point layer  
   
 1.  Click the map until the Map pane appears.  
@@ -216,9 +196,7 @@ manager: kfile
 4.  In **Transparency options**, type a value that represents the percentage transparency, for example, **40**. Zero (0) % transparency means that the layer is opaque. 100% transparency means that you will not see the layer in the report.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="TileTransparency"></a> To change the transparency of a tile layer  
   
 1.  Click the map until the Map pane appears.  
@@ -230,9 +208,7 @@ manager: kfile
 4.  In **Transparency options**, type a value that represents the percentage transparency, for example, **40**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="Secure"></a> To specify a secure connection for a tile layer  
   
 1.  Click the map until the Map pane appears.  
@@ -242,9 +218,7 @@ manager: kfile
 3.  In the Properties pane, set UseSecureConnection to **True**.  
   
  The connection for the Bing Maps Web service will use the HTTP SSL (Secure Sockets Layer) service to retrieve Bing map tiles for this layer.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="Language"></a> To specify the language for tile labels  
   
 1.  By default, for tile styles that display labels, the language is determined from the default locale for Report Builder. You can customize the language setting for tile labels in the following ways.  
@@ -254,9 +228,7 @@ manager: kfile
     -   Click the report background to select the report. In the Properties pane, from for the Language property, select a culture value from the drop-down list.  
   
      The order of precedence for setting the tile label language is: report property Language, default locale for Report Builder, and map property TileLanguage.  
-  
-2.  ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="ConditionalHide"></a> To conditionally hide a layer based on viewport zoom level  
   
 1.  Set `Visibility` options to control the display for a map layer.  
@@ -272,11 +244,7 @@ manager: kfile
     -   Optional. Enter a value for transparency.  
   
      You can also conditionally hide the layer. For more information, see [Hide an Item &#40;Report Builder and SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md).  
-  
-2.  ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ## See Also  
  [Maps &#40;Report Builder and SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Troubleshoot Reports: Map Reports &#40;Report Builder and SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
-  

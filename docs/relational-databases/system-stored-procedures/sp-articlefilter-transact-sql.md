@@ -38,33 +38,33 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@filter_name=**] **'**_filter_name_**'**  
+`[ @filter_name = ] 'filter_name'`
  Is the name of the filter stored procedure to be created from the *filter_name*. *filter_name* is **nvarchar(386)**, with a default of NULL. You must specify a unique name for the article filter.  
   
- [ **@filter_clause=**] **'**_filter_clause_**'**  
+`[ @filter_clause = ] 'filter_clause'`
  Is a restriction (WHERE) clause that defines a horizontal filter. When entering the restriction clause, omit the keyword WHERE. *filter_clause* is **ntext**, with a default of NULL.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
   
  **1** specifies that changes to the article may cause the snapshot to be invalid, and if there are existing subscriptions that would require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.  
   
- [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
+`[ @force_reinit_subscription = ] force_reinit_subscription`
  Acknowledges that the action taken by this stored procedure may require existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit**, with a default of **0**.  
   
  **0** specifies that changes to the article do not cause a need for subscriptions to be reinitialized. If the stored procedure detects that the change would require subscriptions to be reinitialized, an error occurs and no changes are made.  
   
  **1** specifies that changes to the article causes existing subscriptions to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- [ **@publisher=** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  

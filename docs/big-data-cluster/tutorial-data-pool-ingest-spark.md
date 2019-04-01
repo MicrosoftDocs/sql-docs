@@ -5,7 +5,7 @@ description: This tutorial demonstrates how to ingest data into the data pool of
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -44,7 +44,15 @@ The following steps create an external table in the data pool named **web_clicks
 
    ![SQL Server master instance query](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. Create an external table named **web_clickstreams_spark_results** in the data pool. The `SqlDataPool` data source is a special data source type that can be used from the master instance of any big data cluster.
+1. Create an external data source to the data pool if it does not already exist.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. Create an external table named **web_clickstreams_spark_results** in the data pool.
 
    ```sql
    USE Sales
@@ -59,7 +67,7 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 2.3, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 2.4, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Start a Spark streaming job
 

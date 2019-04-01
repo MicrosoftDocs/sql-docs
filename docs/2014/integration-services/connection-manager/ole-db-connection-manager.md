@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "connection managers [Integration Services], OLE DB"
   - "connections [Integration Services], OLE DB"
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # OLE DB Connection Manager

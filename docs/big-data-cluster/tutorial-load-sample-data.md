@@ -110,4 +110,18 @@ The following steps describe how to use a Linux client to load the sample data i
 
 ## Next steps
 
-After the bootstrap script runs, your big data cluster has the sample databases and HDFS data. To start exploring this data and big data clusters, see the [Tutorials](tutorial-query-hdfs-storage-pool.md) in this section.
+After the bootstrap script runs, your big data cluster has the sample databases and HDFS data. The following tutorials use the sample data to demonstrate big data cluster capabilities:
+
+Data Virtualization:
+
+- [Tutorial: Query HDFS in a SQL Server big data cluster](tutorial-query-hdfs-storage-pool.md)
+- [Tutorial: Query Oracle from a SQL Server big data cluster](tutorial-query-oracle.md)
+
+Data ingestion:
+
+- [Tutorial: Ingest data into a SQL Server data pool with Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Tutorial: Ingest data into a SQL Server data pool with Spark jobs](tutorial-data-pool-ingest-spark.md)
+
+Notebooks:
+
+- [Tutorial: Run a sample notebook on a SQL Server 2019 big data cluster](tutorial-notebook-spark.md)

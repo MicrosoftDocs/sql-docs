@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Excel Destination Editor"
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Excel Destination Editor (Error Output Page)

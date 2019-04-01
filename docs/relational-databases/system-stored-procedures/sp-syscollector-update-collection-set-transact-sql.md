@@ -50,19 +50,19 @@ sp_syscollector_update_collection_set
 ```  
   
 ## Arguments  
- [ **@collection_set_id =** ] *collection_set_id*  
+`[ @collection_set_id = ] collection_set_id`
  Is the unique local identifier for the collection set. *collection_set_id* is **int** and must have a value if *name* is NULL.  
   
- [ **@name =** ] '*name*'  
+`[ @name = ] 'name'`
  Is the name of the collection set. *name* is **sysname** and must have a value if *collection_set_id* is NULL.  
   
- [ **@new_name =** ] '*new_name*'  
+`[ @new_name = ] 'new_name'`
  Is the new name for the collection set. *new_name* is **sysname**, and if used, cannot be an empty string. *new_name* must be unique. For a list of current collection set names, query the syscollector_collection_sets system view.  
   
- [ **@target =** ] '*target*'  
+`[ @target = ] 'target'`
  Reserved for future use.  
   
- [ **@collection_mode =** ] *collection_mode*  
+`[ @collection_mode = ] collection_mode`
  Is the type of data collection to use. *collection_mode* is **smallint** and can have one of the following values:  
   
  0 - Cached mode. Data collection and upload are on separate schedules. Specify cached mode for continuous collection.  
@@ -71,26 +71,26 @@ sp_syscollector_update_collection_set
   
  If changing from non-cached mode to cached mode (0), you must also specify either *schedule_uid* or *schedule_name*.  
   
- [ **@days_until_expiration=** ] *days_until_expiration*  
+`[ @days_until_expiration = ] days_until_expiration`
  Is the number of days that the collected data is saved in the management data warehouse. *days_until_expiration* is **smallint**. *days_until_expiration* must be 0 or a positive integer.  
   
- [ **@proxy_id =** ] *proxy_id*  
+`[ @proxy_id = ] proxy_id`
  Is the unique identifier for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy account. *proxy_id* is **int**.  
   
- [ **@proxy_name =** ] '*proxy_name*'  
+`[ @proxy_name = ] 'proxy_name'`
  Is the name of the proxy. *proxy_name* is **sysname** and is nullable.  
   
- [ **@schedule_uid** = ] '*schedule_uid*'  
+`[ @schedule_uid = ] 'schedule_uid'`
  Is the GUID that points to a schedule. *schedule_uid* is **uniqueidentifier**.  
   
  To obtain *schedule_uid*, query the sysschedules system table.  
   
  When *collection_mode* is set to 0, *schedule_uid* or *schedule_name* must be specified. When *collection_mode* is set to 1, *schedule_uid* or *schedule_name* is ignored if specified.  
   
- [ **@schedule_name =** ] '*schedule_name*'  
+`[ @schedule_name = ] 'schedule_name'`
  Is the name of the schedule. *schedule_name* is **sysname** and is nullable. If specified, *schedule_uid* must be NULL. To obtain *schedule_name*, query the sysschedules system table.  
   
- [ **@logging_level =** ] *logging_level*  
+`[ @logging_level = ] logging_level`
  Is the logging level. *logging_level* is **smallint** with one of the following values:  
   
  0 - Log execution information and [!INCLUDE[ssIS](../../includes/ssis-md.md)] events that track:  
@@ -113,7 +113,7 @@ sp_syscollector_update_collection_set
   
  The default value for *logging_level* is 1.  
   
- [ **@description =** ] '*description*'  
+`[ @description = ] 'description'`
  Is the description of the collection set. *description* is **nvarchar(4000)**.  
   
 ## Return Code Values  

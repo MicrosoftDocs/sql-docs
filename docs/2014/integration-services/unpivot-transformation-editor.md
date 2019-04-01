@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Unpivot Transformation Editor"
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Unpivot Transformation Editor

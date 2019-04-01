@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "child packages"
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Implementation of Child Packages

@@ -16,19 +16,6 @@ manager: craigg
   
  This topic covers monitoring your [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] memory usage.  
   
-## Sections in this topic  
-  
--   [Create a sample database with memory-optimized tables](monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
-  
--   [Monitoring Memory Usage](monitor-and-troubleshoot-memory-usage.md#bkmk_Monitoring)  
-  
-    -   [Using SQL Server Management Studio](monitor-and-troubleshoot-memory-usage.md#bkmk_UsingSSMS)  
-  
-    -   [Using DMVs](monitor-and-troubleshoot-memory-usage.md#bkmk_UsingDMVs)  
-  
--   [Managing memory consumed by memory-optimized objects](monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
-  
--   [Troubleshooting Memory Issues](monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
 ##  <a name="bkmk_CreateDB"></a> Create a sample database with memory-optimized tables  
  You can skip this section if you already have a database with memory-optimized tables.  
@@ -117,9 +104,9 @@ manager: craigg
     GO  
     ```  
   
-##  <a name="bkmk_Monitoring"></a> Monitoring Memory Usage  
+##  Monitoring Memory Usage  
   
-###  <a name="bkmk_UsingSSMS"></a> Using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
+###  Using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ships with built-in standard reports to monitor the memory consumed by in-memory tables. You can access these reports using Object Explorer as described [here](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). You can also use the object explorer to monitor memory consumed by individual memory-optimized tables.  
   
 #### Consumption at the database level  
@@ -137,13 +124,13 @@ manager: craigg
   
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
-###  <a name="bkmk_UsingDMVs"></a> Using DMVs  
+###  Using DMVs  
  There are a number of DMVs available to monitor memory consumed by memory-optimized tables, indexes, system objects, and by run-time structures.  
   
 #### Memory consumption by memory-optimized tables and indexes  
  You can find memory consumption for all user tables, indexes, and system objects by querying `sys.dm_db_xtp_table_memory_stats` as shown here.  
   
-```tsql  
+```sql  
 SELECT object_name(object_id) AS Name  
      , *  
    FROM sys.dm_db_xtp_table_memory_stats  
@@ -169,7 +156,7 @@ NULL       -2          192                           25                      16 
 #### Memory consumption by internal system structures  
  Memory is also consumed by system objects, such as, transactional structures, buffers for data and delta files, garbage collection structures, and more. You can find the memory used for these system objects by querying `sys.dm_xtp_system_memory_consumers` as shown here.  
   
-```tsql  
+```sql  
 SELECT memory_consumer_desc  
      , allocated_bytes/1024 AS allocated_bytes_kb  
      , used_bytes/1024 AS used_bytes_kb  
@@ -208,7 +195,7 @@ PGPOOL:  4K               0                    0                    0
 #### Memory consumption at run-time when accessing memory-optimized tables  
  You can determine the memory consumed by run time structures, such as the procedure cache with the following query: run this query to get the memory used by run-time structures such as for the procedure cache. All run-time structures are tagged with XTP.  
   
-```tsql  
+```sql  
 SELECT memory_object_address  
      , pages_in_bytes  
      , bytes_used  
@@ -241,7 +228,7 @@ memory_object_address pages_ in_bytes bytes_used type
 #### Memory consumed by [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine across the instance  
  Memory allocated to the [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine and the memory-optimized objects is managed the same way as any other memory consumer within a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The clerks of type MEMORYCLERK_XTP accounts for all the memory allocated to [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine. Use the following query to find all the memory used by the [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] engine.  
   
-```tsql  
+```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
 SELECT type  
      , name  
@@ -264,10 +251,10 @@ MEMORYCLERK_XTP      Default    64             0
   
  For more information see [sys.dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql).  
   
-##  <a name="bkmk_MemOptObjects"></a> Managing memory consumed by memory-optimized objects  
+##   Managing memory consumed by memory-optimized objects  
  You can control the total memory consumed by memory-optimized tables by binding it to a named resource pool as described in the topic [Bind a Database with Memory-Optimized Tables to a Resource Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
   
-##  <a name="bkmk_Troubleshooting"></a> Troubleshooting Memory Issues  
+##  Troubleshooting Memory Issues  
  Troubleshooting memory issues is a three step process:  
   
 1.  Identify how much memory is being consumed by the objects in your database or instance. You can use a rich set of monitoring tools available for memory-optimized tables as described earlier.  For example the DMVs `sys.dm_db_xtp_table_memory_stats` or `sys.dm_os_memory_clerks`.  
@@ -278,6 +265,6 @@ MEMORYCLERK_XTP      Default    64             0
   
 ## See Also  
  [Bind a Database with Memory-Optimized Tables to a Resource Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
+ [Change MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT on an existing pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)
   
   

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], components"
   - "input columns [Integration Services]"
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Creating a Destination with the Script Component

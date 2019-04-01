@@ -23,7 +23,7 @@ manager: craigg
   
  The first phase of indexing includes the population of the full-text keyword index and the semantic key phrase index, as well as the extraction of document similarity data.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -50,7 +50,7 @@ GO
   
  The logical size is displayed in number of index pages.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -61,7 +61,7 @@ GO
  **What is the total size of the full-text and semantic indexes for a full-text catalog?**  
  Query the **IndexSize** property of the [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) metadata function.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -69,7 +69,7 @@ GO
  **How many items are indexed in the full-text and semantic indexes for a full-text catalog?**  
  Query the **ItemCount** property of the [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) metadata function.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -97,7 +97,7 @@ GO
   
  When semantic indexing is disabled and suspended, queries over semantic data continue to work successfully and to return previously indexed data. This behavior is not consistent with the behavior of Full-Text Search.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  

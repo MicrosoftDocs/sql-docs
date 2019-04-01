@@ -43,7 +43,7 @@ ERROR_PROCEDURE ( )
 **nvarchar(128)**  
   
 ## Return Value  
-When called in a stored procedure CATCH block where an error occurs, `ERROR_PROCEDURE` returns the name of that stored procedure.  
+When called within a CATCH block in a stored procedure or trigger, `ERROR_PROCEDURE` returns the name of the stored procedure or trigger in which the error originated. 
   
 `ERROR_PROCEDURE` returns NULL if the error did not occur within a stored procedure or trigger.  
   

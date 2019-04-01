@@ -11,8 +11,8 @@ f1_keywords:
   - "SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
   - "sql12.dts.designer.configure.f1"
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure Dialog Box

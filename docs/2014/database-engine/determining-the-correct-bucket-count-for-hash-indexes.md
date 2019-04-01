@@ -32,7 +32,7 @@ manager: craigg
 ### Primary Key and Unique Indexes  
  Because the primary key index is unique, the number of distinct values in the key corresponds to the number of rows in the table. For an example primary key on (SalesOrderID, SalesOrderDetailID) in the table Sales.SalesOrderDetail in the AdventureWorks database, issue the following query to calculate the number of distinct primary key values, which corresponds to the number of rows in the table:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -42,7 +42,7 @@ FROM Sales.SalesOrderDetail
 ### Non-Unique Indexes  
  For other indexes, for example a multi-column index on (SpecialOfferID, ProductID), issue the following query to determine the number of unique index key values:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -59,7 +59,7 @@ FROM
 ## Troubleshooting the Bucket Count  
  To troubleshoot bucket count issues in memory-optimized tables, use [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) to obtain statistics about the empty buckets and the length of row chains. The following query can be used to obtain statistics about all the hash indexes in the current database. The query can take several minutes to run if there are large tables in the database.  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -93,7 +93,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  As an example, consider the following table and script to insert sample rows in the table:  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  

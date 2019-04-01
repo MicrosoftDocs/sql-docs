@@ -112,7 +112,7 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
   
 > [!NOTE]  
 > If you need to roll back all or part of the bulk copy when an error occurs, you can either use a SQLServerBulkCopy-managed transaction, or perform the bulk copy operation within an existing transaction.  
-> For more information, see [Transaction and bulk copy operations](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TransactionBulk)  
+> For more information, see [Transaction and bulk copy operations](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#transaction-and-bulk-copy-operations)  
   
  The general steps to perform a bulk copy operation are:  
   
@@ -138,7 +138,7 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
 The following application demonstrates how to load data using the SQLServerBulkCopy class. In this example, a ResultSet is used to copy data from the Production.Product table in the SQL Server AdventureWorks database to a similar table in the same database.  
   
 > [!IMPORTANT]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -232,7 +232,7 @@ You can perform multiple bulk copy operations using a single instance of a SQLSe
 If you perform several bulk copy operations using the same SQLServerBulkCopy object, there are no restrictions on whether source or target information is equal or different in each operation. However, you must ensure that column association information is properly set each time you write to the server.  
   
 > [!IMPORTANT]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -361,7 +361,7 @@ In the example, the source table and destination table each include an Identity 
 The bulk copy operation is executed with the **BatchSize** property set to 10. When the operation encounters the invalid row, an exception is thrown. In this first example, the bulk copy operation is non-transacted. All batches copied up to the point of the error are committed; the batch containing the duplicate key is rolled back, and the bulk copy operation is halted before processing any other batches.  
   
 > [!NOTE]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -470,7 +470,7 @@ You can pass a Connection object that has transactions enabled as a parameter in
 The following application is similar to **BulkCopyNonTransacted**, with one exception: in this example, the bulk copy operation is included in a larger, external transaction. When the primary key violation error occurs, the entire transaction is rolled back and no rows are added to the destination table.
 
 > [!NOTE]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -792,4 +792,3 @@ Implementation Notes and Limitations:
 ## See Also  
 
 [Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  

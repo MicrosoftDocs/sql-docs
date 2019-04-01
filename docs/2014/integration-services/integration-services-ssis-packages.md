@@ -107,10 +107,5 @@ manager: craigg
   
 -   See **Building Packages Programmatically** section in the Developer Guide.  
   
-## Related Content  
-  
--   [Implementing SQL Server Integration Services with Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
-  
--   [How to: Configure SQL Server Integration Services Package for Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
   
   

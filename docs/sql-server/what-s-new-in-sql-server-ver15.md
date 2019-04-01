@@ -26,24 +26,9 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## CTP 2.4
+## CTP 2.5
 
-Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
-
-- [Big data cluster](#bigdatacluster)
-  - Guidance on GPU support for running deep learning with TensorFlow in Spark.
-  - Spark runtime upgrade to Spark 2.4.
-  - `INSERT INTO SELECT` support for the data pool.
-  - `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.
-
-- [Database engine](#databaseengine)
-  - Truncation error message defaults to include table and column names, and truncated value. See [Truncation](#truncation).
-  - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries.
-  - Transparent Data Encryption (TDE) scan - suspend and resume.
-
-- [SQL Server Analysis Services](#ssas)
-  - Many-to-many relationships in tabular models.
-  - Property settings for resource governance.
+Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
 The following sections describe the new features that have been introduced in previous releases of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md) .
 
@@ -53,8 +38,8 @@ The following sections describe the new features that have been introduced in pr
 
 - [GPU support for running deep learning with TensorFlow in Spark](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
 - Spark runtime upgrade to Spark 2.4. (CTP 2.4)
-- `INSERT INTO SELECT` support for the data pool.
-- `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.
+- `INSERT INTO SELECT` support for the data pool.)(CTP 2.4)
+- `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries. (CTP 2.4)
 - [Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. (CTP 2.3)
 - [Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)

@@ -86,7 +86,7 @@ manager: craigg
   
  Fax: (609) 987-8116 Web: 
 
-[Microsoft accessibility website](https://www.microsoft.com/en-us/accessibility/)  
+[Microsoft accessibility website](https://www.microsoft.com/accessibility/)  
   
 ## Customer Service for People Who Are Deaf or Hard-of-Hearing  
  If you are deaf or hard-of-hearing, complete access to [!INCLUDE[msCoName](../includes/msconame-md.md)] product and customer services is available through a text telephone (TTY/TDD) service.  

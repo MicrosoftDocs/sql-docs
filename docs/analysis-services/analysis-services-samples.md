@@ -22,7 +22,7 @@ manager: kfile
 
 ## Sample solutions and databases  
 
-While no longer officially supported, Adventure Works remains one of the most inclusive and robust sample datasets for learning about and testing Analysis Services. Analysis Services sample projects and databases, as well as examples in documenation, blog posts, and presentations use the Adventure Works sample data.
+While no longer officially supported, Adventure Works remains one of the most inclusive and robust sample datasets for learning about and testing Analysis Services. Analysis Services sample projects and databases, as well as examples in documentation, blog posts, and presentations use the Adventure Works sample data.
 
 [Download Adventure Works sample projects and databases on GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).
 

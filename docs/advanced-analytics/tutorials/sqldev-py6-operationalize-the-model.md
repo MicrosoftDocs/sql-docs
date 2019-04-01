@@ -167,7 +167,7 @@ Sometimes, instead of batch scoring, you might want to pass in a single case, ge
 
 In this section, you'll learn how to create single predictions by calling two stored procedures:
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) is designed for single-row scoring using the scikit-learn model.
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) is designed for single-row scoring using the scikit-learn model.
 + [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) is designed for single-row scoring using the revoscalepy model.
 + If you haven't trained a model yet, return to [Step 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 

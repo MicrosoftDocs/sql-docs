@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "FTP task [Integration Services]"
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # FTP Task

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "counting extracted items"
   - "Term Lookup transformation"
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Term Lookup Transformation

@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "interoperability and coexistence [Integration Services]"
   - "Integration Services, interoperability and coexistence"
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Interoperability and Coexistence (Integration Services)

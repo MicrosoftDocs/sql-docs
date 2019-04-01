@@ -59,7 +59,7 @@ sp_OAMethod objecttoken , methodname
   
 -   The method returns an array as an output parameter.  
   
- [ _@parametername_**=** ] *parameter*[ **OUTPUT** ]  
+`[ _@parametername = ] parameter[ OUTPUT ]`
  Is a method parameter. If specified, *parameter* must be a value of the appropriate data type.  
   
  To obtain the return value of an output parameter, *parameter* must be a local variable of the appropriate data type, and **OUTPUT** must be specified. If a constant parameter is specified, or if **OUTPUT** is not specified, any return value from an output parameter is ignored.  

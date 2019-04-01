@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "OLE DB Source Editor"
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # OLE DB Source Editor (Connection Manager Page)

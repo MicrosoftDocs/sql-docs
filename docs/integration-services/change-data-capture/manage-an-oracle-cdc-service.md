@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Manage an Oracle CDC Service

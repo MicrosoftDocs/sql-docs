@@ -24,7 +24,7 @@ manager: craigg
 ## Enable Change Tracking for a Database  
  Before you can use change tracking, you must enable change tracking at the database level. The following example shows how to enable change tracking by using [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = ON  
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
@@ -49,7 +49,7 @@ SET CHANGE_TRACKING = ON
   
  The following example shows how to enable change tracking for a table by using [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 ENABLE CHANGE_TRACKING  
 WITH (TRACK_COLUMNS_UPDATED = ON)  
@@ -64,14 +64,14 @@ WITH (TRACK_COLUMNS_UPDATED = ON)
   
  When no tables in a database track changes, you can disable change tracking for the database. The following example shows how to disable change tracking for a database by using [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET CHANGE_TRACKING = OFF  
 ```  
   
  The following example shows how to disable change tracking for a table by using [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql).  
   
-```tsql  
+```sql  
 ALTER TABLE Person.Contact  
 DISABLE CHANGE_TRACKING;  
 ```  

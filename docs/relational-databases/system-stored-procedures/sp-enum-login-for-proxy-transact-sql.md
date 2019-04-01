@@ -37,13 +37,13 @@ sp_enum_login_for_proxy
 ```  
   
 ## Arguments  
- [ **@name**= ] '*name*'  
+`[ @name = ] 'name'`
  The name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principal, login, server role, or **msdb** database role to list proxies for. The name is **nvarchar(256)**, with a default of NULL.  
   
- [ **@proxy_id**= ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to list information for. The *proxy_id* is **int**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to list information for. The *proxy_name* is **sysname**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
 ## Return Code Values  

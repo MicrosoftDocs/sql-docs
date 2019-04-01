@@ -32,7 +32,7 @@ Drops an existing user-defined Workload Management Classifier.
   
 ## Syntax  
 
-```sql
+```
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 

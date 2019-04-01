@@ -47,7 +47,7 @@ ms.author: maghan
   
 ##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys -Reporting Services Configuration Manager (Native Mode)  
   
-1.  Start the Reporting Services Configuration Manager, and then connect to the report server instance you want to configure.  
+1.  Start the Report Server Configuration Manager, and then connect to the report server instance you want to configure.  
   
 2.  Click **Encryption Keys**, and then select **Back Up**.  
   

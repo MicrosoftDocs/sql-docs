@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data profiling"
   - "profiling data"
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Profiling Task

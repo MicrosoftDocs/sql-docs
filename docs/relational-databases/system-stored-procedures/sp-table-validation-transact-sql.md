@@ -40,16 +40,16 @@ sp_table_validation [ @table = ] 'table'
 ```  
   
 ## Arguments  
- [ **@table=**] **'***table***'**  
+`[ @table = ] 'table'`
  Is the name of the table. *table* is **sysname**, with no default.  
   
- [ **@expected_rowcount=**] *expected_rowcount*OUTPUT  
+`[ @expected_rowcount = ] expected_rowcountOUTPUT`
  Specifies whether to return the expected number of rows in the table. *expected_rowcount* is **int**, with a default of NULL. If NULL, the actual rowcount is returned as an output parameter. If a value is provided, that value is checked against the actual rowcount to identify any differences.  
   
- [ **@expected_checksum=**] *expected_checksum*OUTPUT  
+`[ @expected_checksum = ] expected_checksumOUTPUT`
  Specifies whether to return the expected checksum for the table. *expected_checksum* is **numeric**, with a default of NULL. If NULL, the actual checksum is returned as an output parameter. If a value is provided, that value is checked against the actual checksum to identify any differences.  
   
- [ **@rowcount_only=**] *type_of_check_requested*  
+`[ @rowcount_only = ] type_of_check_requested`
  Specifies what type of checksum or rowcount to perform. *type_of_check_requested* is **smallint**, with a default of **1**.  
   
  If **0**, perform a rowcount and a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0-compatible checksum.  
@@ -58,10 +58,10 @@ sp_table_validation [ @table = ] 'table'
   
  If **2**, perform a rowcount and binary checksum.  
   
- [ **@owner=**] **'***owner***'**  
+`[ @owner = ] 'owner'`
  Is the name of the owner of the table. *owner* is **sysname**, with a default of NULL.  
   
- [ **@full_or_fast=**] *full_or_fast*  
+`[ @full_or_fast = ] full_or_fast`
  Is the method used to calculate the rowcount. *full_or_fast* is **tinyint**, with a default of **2**, and can be one of these values.  
   
 |Value|Description|  
@@ -70,13 +70,13 @@ sp_table_validation [ @table = ] 'table'
 |**1**|Does fast count from **sysindexes.rows**. Counting rows in **sysindexes** is much faster than counting rows in the actual table. However, because **sysindexes** is lazily updated, the rowcount may not be accurate.|  
 |**2** (default)|Does conditional fast counting by first trying the fast method. If fast method shows differences, reverts to full method. If *expected_rowcount* is NULL and the stored procedure is being used to get the value, a full COUNT(*) is always used.|  
   
- [ **@shutdown_agent=**] *shutdown_agent*  
+`[ @shutdown_agent = ] shutdown_agent`
  If the Distribution Agent is executing **sp_table_validation**, specifies whether the Distribution Agent should shut down immediately upon completion of the validation. *shutdown_agent* is **bit**, with a default of **0**. If **0**, the replication agent does not shut down. If **1**, error 20578 is raised and the replication agent is signaled to shut down. This parameter is ignored when **sp_table_validation** is executed directly by a user.  
   
- [ **@table_name =**] *table_name*  
+`[ @table_name = ] table_name`
  Is the table name of the view used for output messages. *table_name* is **sysname**, with a default of **@table**.  
   
- [ **@column_list**= ] **'***column_list***'**  
+`[ @column_list = ] 'column_list'`
  Is the list of columns that should be used in the checksum function. *column_list* is **nvarchar(4000)**, with a default of NULL. Enables validation of merge articles to specify a column list that excludes computed and timestamp columns.  
   
 ## Return Code Values  

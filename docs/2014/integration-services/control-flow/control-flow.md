@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SSIS control flow elements"
   - "SQL Server Integration Services control flow elements"
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Control Flow

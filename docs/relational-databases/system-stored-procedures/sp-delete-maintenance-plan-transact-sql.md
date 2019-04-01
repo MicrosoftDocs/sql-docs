@@ -39,7 +39,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'**_plan\_id_**'**  
+`[ @plan_id = ] 'plan\_id'`
  Specifies the ID of the maintenance plan to be deleted. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
 ## Return Code Values  

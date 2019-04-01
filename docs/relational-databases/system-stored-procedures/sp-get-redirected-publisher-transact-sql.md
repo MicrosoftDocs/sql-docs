@@ -33,13 +33,13 @@ sp_get_redirected_publisher
 ```  
   
 ## Arguments  
- [ **@original_publisher** = ] **'***original_publisher***'**  
+`[ @original_publisher = ] 'original_publisher'`
  The name of the database being published. *publisher_db* is **sysname**, with no default.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  The name of the database being published. *publisher_db* is **sysname**, with no default.  
   
- [ **@bypass_publisher_validation** = ] [0 | 1 ]  
+`[ @bypass_publisher_validation = ] [0 | 1 ]`
  Used to bypass validation of the redirected publisher. If 0, validation is performed . If 1, validation is not performed. *bypass_publisher_validation* is **bit**, with a default of 0.  
   
 ## Return Code Values  

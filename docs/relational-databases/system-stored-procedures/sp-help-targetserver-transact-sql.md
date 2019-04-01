@@ -35,7 +35,7 @@ sp_help_targetserver
 ```  
   
 ## Arguments  
- [ **@server_name=** ] **'***server_name***'**  
+`[ @server_name = ] 'server_name'`
  The name of the server for which to return information. *server_name* is **nvarchar(30)**, with a default of NULL.  
   
 ## Return Code Values  

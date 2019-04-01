@@ -37,7 +37,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## Arguments  
- [ **@forced_defection =**] *forced_defection*  
+`[ @forced_defection = ] forced_defection`
  Specifies whether or not to force the defection to occur if the Master SQLServerAgent has been permanently lost due to an irreversibly corrupt **msdb** database, or no **msdb** database backup. *forced_defection*is **bit**, with a default of **0**, which indicates that no forced defection should occur. A value of **1** forces defection.  
   
  After forcing a defection by executing **sp_msx_defect**, a member of the **sysadmin** fixed server role at the Master SQLServerAgent must run the following command to complete the defection:  

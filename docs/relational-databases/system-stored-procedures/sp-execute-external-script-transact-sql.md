@@ -75,34 +75,34 @@ sp_execute_external_script
  **@script** = N'*script*' 
  External language  script specified as a literal or variable input. *script* is **nvarchar(max)**.  
 
-  [ **@input_data_1** =  N'*input_data_1*' ]  
+`[ @input_data_1 =  N'input_data_1' ]`
  Specifies the input data used by the external script in the form of a [!INCLUDE[tsql](../../includes/tsql-md.md)] query. The data type of *input_data_1* is **nvarchar(max)**.
 
- [ **@input_data_1_name** = N'*input_data_1_name*' ]  
+`[ @input_data_1_name = N'input_data_1_name' ]`
  Specifies the name of the variable used to represent the query defined by @input_data_1. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. *input_data_1_name* is **sysname**.  Default value is *InputDataSet*.  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-  [ **@input_data_1_order_by_columns** = N'*input_data_1_order_by_columns*' ]  
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`
  Applies to SQL Server 2019 only and is used to build per-partition models. Specifies the name of the column used to order the result set, for example by product name. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular.
 
-  [ **@input_data_1_partition_by_columns** = N'*input_data_1_partition_by_columns*' ]  
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]`
  Applies to SQL Server 2019 only and is used to build per-partition models. Specifies the name of the column used to segment data, such as geographic region or date. The data type of the variable in the external script depends on the language. In case of R, the input variable is a data frame. In the case of Python, input must be tabular. 
 ::: moniker-end
 
- [ **@output_data_1_name** =  N'*output_data_1_name*' ]  
+`[ @output_data_1_name =  N'output_data_1_name' ]`
  Specifies the name of the variable in the external script that contains the data to be returned to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upon completion of the stored procedure call. The data type of the variable in the external script depends on the language. For R, the output must be a data frame. For Python, the output must be a pandas data frame. *output_data_1_name* is **sysname**.  Default value is *OutputDataSet*.  
 
- [ **@parallel** = 0 | 1 ]  
+`[ @parallel = 0 | 1 ]`
  Enable parallel execution of R scripts by setting the `@parallel` parameter to 1. The default for this parameter is 0 (no parallelism). If `@parallel = 1` and the output is being streamed directly to the client machine, then the `WITH RESULT SETS` clause is required and an output schema must be specified.  
 
  + For R scripts that do not use RevoScaleR functions, using the  `@parallel` parameter can be beneficial for processing large datasets, assuming the script can be trivially parallelized. For example, when using the R `predict` function with a model to generate new predictions, set `@parallel = 1` as a hint to the query engine. If the query can be parallelized, rows are distributed according to the **MAXDOP** setting.  
   
  + For R scripts that use RevoScaleR functions, parallel processing is handled automatically and you should not specify `@parallel = 1` to the **sp_execute_external_script** call.  
   
-[ **@params** = N'*@parameter_name data_type* [ OUT | OUTPUT ] [ ,...n ]' ]  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]`
  A list of input parameter declarations that are used in the external script.  
   
-[ **@parameter1** = '*value1*'  [ OUT | OUTPUT ] [ ,...n ] ]  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`
  A list of values for the input parameters used by the external script.  
 
 ## Remarks

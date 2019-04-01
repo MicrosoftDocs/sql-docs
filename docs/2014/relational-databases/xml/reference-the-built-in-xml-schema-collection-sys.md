@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server], predefined"
   - "built-in XML schema collections [SQL Server]"
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Reference the Built-in XML Schema Collection (sys)

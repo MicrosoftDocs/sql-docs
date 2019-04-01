@@ -20,7 +20,7 @@ manager: craigg
 # sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Add subscriptions to new articles in a pull subscription for all the existing Subscribers to the publication. This stored procedure is executed at the Publisher on the publication database.  
+  Add subscriptions to new articles for all the existing Subscribers to an immediate-updating publication. This stored procedure is executed at the Publisher on the publication database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -32,7 +32,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the publication for which to refresh subscriptions. *publication* is **sysname**, with no default.  
   
 ## Return Code Values  

@@ -128,6 +128,6 @@ In this way, the query optimizer can process the join faster, because the partit
 -   [Bulk Loading into a Partitioned Table](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Project REAL: Data Lifecycle -- Partitioning](https://technet.microsoft.com/library/cc966424.aspx)    
 -   [Query Processing Enhancements on Partitioned Tables and Indexes](https://msdn.microsoft.com/library/ms345599.aspx)    
--   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) in _SQLCAT's Guide to: Relational Engineering_
   
   

@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [XML]"
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Change Existing Columns to XML Columns

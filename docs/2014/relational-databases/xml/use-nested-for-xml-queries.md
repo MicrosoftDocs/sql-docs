@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "queries [XML in SQL Server], nested FOR XML"
   - "nested FOR XML queries"
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use Nested FOR XML Queries

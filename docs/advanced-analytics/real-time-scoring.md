@@ -4,10 +4,10 @@ description: Generate predictions using sp_rxPredict, scoring data inputs agains
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/15/2018  
+ms.date: 03/29/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Real-time scoring with sp_rxPredict in SQL Server machine learning
@@ -27,9 +27,6 @@ Real-time scoring is a multi-step process:
 2. You load the pre-trained model in binary format.
 3. You provide new input data to be scored, either tabular or single rows, as input to the model.
 4. To generate scores, call the [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) stored procedure.
-
-> [!TIP]
-> For an example of real-time scoring in action, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## Prerequisites
 
@@ -196,7 +193,5 @@ EXEC sp_rxPredict
 To disable real-time scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## Next steps
-
-For an example of how rxPredict can be used for scoring, see [End to End Loan ChargeOff Prediction Built Using Azure HDInsight Spark Clusters and SQL Server 2016 R Service](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/).
 
 For more background on scoring in SQL Server, see [How to generate predictions in SQL Server machine learning](r/how-to-do-realtime-scoring.md).

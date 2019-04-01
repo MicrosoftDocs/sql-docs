@@ -34,7 +34,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## Arguments  
- [ **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`
  Represents the node in Object Explorer where you want to clear the health state. *target_tree_root_with_id* is **nvarchar(400)**, with a default of NULL.  
   
  You can specify values from the target_query_expression_with_id column of the msdb.dbo.syspolicy_system_health_state system view.  

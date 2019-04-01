@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2019 Release Notes | Microsoft Docs"
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: release-landing
@@ -28,10 +28,10 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 - Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
-## CTP 2.3
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+## CTP 2.4
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is available only as Evaluation Edition. No other editions are available. Support for CTP 2.3 is described in `license_Eval.rtf` with your installation media.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 is available only as Evaluation Edition. No other editions are available. Support for CTP releases is described in `license_Eval.rtf` with your installation media.
 
 Limited support may be found at one of the following locations:
 
@@ -43,15 +43,15 @@ Limited support may be found at one of the following locations:
 
 - Or tweet [@SQLServer](https://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
 
-### Documentation (CTP 2.3)
+### Documentation (CTP 2.4)
 
 - **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
 
-- **Issue and customer impact**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements. 
+- **Issue and customer impact**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements.
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
-### Hardware and software requirements (CTP 2.3)
+### Hardware and software requirements (CTP 2.4)
 
 - **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.
 
@@ -69,7 +69,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: N/A
 
-- **Applies to**: SQL Server 2019 CTP 2.3, CTP 2.2, CTP 2.1
+- **Applies to**: SQL Server 2019 CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
 ### UTF-8 collations
 
@@ -78,13 +78,14 @@ Limited support may be found at one of the following locations:
   - Linked Server
   - In-memory OLTP
   - External Table for PolyBase
+  - Always Encrypted
 
   > [!Note]
   > There is currently no UI support to choose UTF-8 enabled collations in Azure Data Studio or SQL Server Data Tools (SSDT). The latest [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) version supports choice of UTF-8 enabled collations in the UI.
  
 - **Workaround**: No workaround for [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ### SQL Graph
 
@@ -92,7 +93,7 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: Writing [!INCLUDE[tsql](../includes/tsql-md.md)] scripts and running them against the server using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or SQLCMD will work. Exporting or Importing database objects that create Edge constraints, have the new merge DML syntax, or create derived tables/views on graph objects will not work. Users will have to manually create such objects in their database using [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. 
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
 
 ### Always Encrypted with secure enclaves
 
@@ -100,23 +101,13 @@ Limited support may be found at one of the following locations:
 
 - **Workaround**: To enable rich computations, run `DBCC traceon(127,-1)`. For details, see  [Enable rich computations](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3, 2.2, CTP 2.1, 2.0.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
 
 ### System Dynamic Management Views
 
 - **Issue and customer impact**: The system table-valued function [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) returns random values in the `dependency` column.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
-
-### SQL Server Analysis Services (SSAS)
-
-- **Issue and customer impact**: For tabular models with dynamic security, under some circumstances a user can see data from another user belonging to the same role.
-
-  **Scenario**: There are at least 2 roles in the model. One of the roles doesn't have any dynamic security expression that contains `USERNAME` or `USERPRINCIPALNAME`. The second role with dynamic row-level security is defined for user A and user B by using expressions that contain `USERNAME` or `USERPRINCIPLENAME`. User A and user B can connect and query data, however, user B may see data secured only for user A under certain circumstances.
-
-- **Workaround**: Add a dummy measure in the model. For example `[DummyMeasure] := UserName()`. This ensures that dynamic expressions are evaluated for the row level security expressions.
-
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.3.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.4, CTP 2.3.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

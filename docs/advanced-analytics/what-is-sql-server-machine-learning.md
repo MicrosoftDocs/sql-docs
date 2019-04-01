@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/06/2018  
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Machine Learning Services (R, Python) in SQL Server 2017

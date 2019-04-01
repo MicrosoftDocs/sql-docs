@@ -36,13 +36,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the publication. *publication* is **sysname**, with no default. The publication must already exist.  
   
- [ **@publisher_db =**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication*is **sysname**, with no default.  
   
  [**@failover_mode=**] **'***failover_mode***'**  
@@ -56,7 +56,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing has been deprecated and is no longer supported.  
   
- [ **@override**= ] *override*  
+`[ @override = ] override`
  Internal use only.  
   
 ## Return Code Values  

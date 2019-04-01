@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "VSTA"
   - "SSIS Script task, coding"
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Coding and Debugging the Script Task

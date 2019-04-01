@@ -2412,8 +2412,6 @@
       href: ../connect/jdbc/application-security.md
     - name: Using SSL Encryption
       href: ../connect/jdbc/using-ssl-encryption.md
-    - name: FIPS Mode
-      href: ../connect/jdbc/fips-mode.md
       items:
       - name: Understanding SSL Support
         href: ../connect/jdbc/understanding-ssl-support.md
@@ -2421,6 +2419,8 @@
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
       - name: Configuring the Client for SSL Encryption
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
+    - name: FIPS Mode
+      href: ../connect/jdbc/fips-mode.md
   - name: Improving Performance and Reliability with the JDBC Driver
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
     items:
@@ -2530,6 +2530,8 @@
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: Using Basic Data Types
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: Using SQL_variant Data Type
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: Using Spatial Datatypes
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: Understanding Transactions
@@ -2624,10 +2626,13 @@
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Using Statements with Stored Procedures
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Azure Key Vault sample version 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Azure Key Vault sample version 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: Azure Key Vault samples, for 7.0 and others
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Azure Key Vault sample version 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Azure Key Vault sample version 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 
 
 
@@ -2688,7 +2693,7 @@
     - name: Features of the Microsoft ODBC Driver for SQL Server on Windows
       href: ../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
     - name: Release Notes
-      href: ../connect/odbc/windows/release-notes.md
+      href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
     - name: System Requirements, Installation, and Driver Files
       href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
     - name: Feature Guides
@@ -5362,7 +5367,7 @@
     - name: PHP Linux and Mac drivers installation tutorial
       href: ../connect/php/installation-tutorial-linux-mac.md
     - name: Release Notes
-      href: ../connect/php/release-notes-for-the-php-sql-driver.md
+      href: ../connect/php/release-notes-php-sql-driver.md
     - name: Support Resources
       href: ../connect/php/support-resources-for-the-php-sql-driver.md
     - name: About Code Samples

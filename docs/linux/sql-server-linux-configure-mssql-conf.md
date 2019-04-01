@@ -505,8 +505,8 @@ There are several other settings for mssql-conf that you can use to monitor and 
 
 | mssql-conf setting | Description |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | Configure secure only rpc calls for distributed transactions |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only rpc calls for distributed |transactions
+| distributedtransaction.allowonlysecurerpccalls | Configure secure only RPC calls for distributed transactions |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | Configure security only RPC calls for distributed |transactions
 | distributedtransaction.maxlogsize | DTC transaction log file size in MB. Default is 64MB |
 | distributedtransaction.memorybuffersize | Circular buffer size in which traces are stored. This size is in MB and default is 10MB |
 | distributedtransaction.servertcpport | MSDTC rpc server port |

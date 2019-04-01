@@ -6,8 +6,8 @@ ms.technology: machine-learning
   
 ms.date: 03/13/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Install SQL Server machine learning R and Python on computers with no internet access

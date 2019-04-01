@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Save Copy of Package dialog box"
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Save Copy of Package

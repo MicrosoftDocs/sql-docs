@@ -34,7 +34,7 @@ sp_delete_alert [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the alert. *name* is **sysname**, with no default.  
   
 ## Return Code Values  

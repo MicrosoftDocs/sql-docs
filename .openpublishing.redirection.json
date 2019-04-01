@@ -2203,6 +2203,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/connect/odbc/windows/release-notes.md",
+            "redirect_url": "/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
             "redirect_url": "/sql/connect/odbc/using-transparent-network-ip-resolution",
             "redirect_document_id": false

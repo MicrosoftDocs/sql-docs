@@ -48,8 +48,6 @@ manager: kfile
   
 -   `Images, lines, and custom report items` are ignored.  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
 ##  <a name="DataTypes"></a> Data Types  
  The text box element or attribute is assigned an XSD data type based on the values that the text box displays.  
   
@@ -64,8 +62,6 @@ manager: kfile
 |`Boolean`|**xsd:boolean**|  
 |`String`, `Char`|**xsd:string**|  
 |Other|**xsd:string**|  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> XML-Specific Rendering Rules  
  The following sections describe how the XML rendering extensions interprets the items within the report.  
@@ -110,8 +106,6 @@ manager: kfile
 ### Lines  
  Lines are not rendered.  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
 ### Tables, Matrices, and Lists  
  Tables, matrices, and lists, are rendered as an element. The name of the element comes from the Tablix DataElementName RDL property.  
   
@@ -149,17 +143,11 @@ manager: kfile
   
  If the DataElementOutput property value equals Output, a repeating item's header is rendered as a child of the detail element.  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
 ##  <a name="CustomFormatsXSLTransformations"></a> Custom Formats and XSL Transformations  
  XML files produced by the XML rendering extension can be transformed into almost any format using XSL Transformations (XSLT). This functionality can be used to produce data in formats not already supported by existing rendering extensions. Consider using the XML rendering extension and XSLT before attempting to create your own rendering extension.  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
 ##  <a name="DuplicateName"></a> Duplicate Names  
  If there are duplicate data element names within the same scope, the renderer displays an error message.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> XSLT Transformations  
  The XML renderer can apply a server-side XSLT transformation to the original XML data. When an XSLT is applied, the renderer outputs the transformed content instead of the original XML data. The transformation occurs on the server, not on the client.  
@@ -167,8 +155,6 @@ manager: kfile
  The XSLT to apply to the output is defined either in the report definition file with the DataTransform property of the report or with the XSLT *DeviceInfo* parameter. If either of these values are set, the transform occurs each time the XML renderer is used. When using subscriptions, the XSLT must be defined in the RDL DataTransform property.  
   
  If an XSLT file is specified, by both the DataTransform definition property and the device information setting, the XSLT specified in DataTransform occurs first, followed by the XSLT set by the device information settings.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> Device Information Settings  
  You can change some default settings for this renderer by changing the device information settings, including the following:  
@@ -189,13 +175,9 @@ manager: kfile
   
  For more information, see [XML Device Information Settings](../xml-device-information-settings.md).  
   
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
 ## See Also  
  [Pagination in Reporting Services &#40;Report Builder  and SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Rendering Behaviors &#40;Report Builder  and SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interactive Functionality for Different Report Rendering Extensions &#40;Report Builder and SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering Report Items &#40;Report Builder and SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

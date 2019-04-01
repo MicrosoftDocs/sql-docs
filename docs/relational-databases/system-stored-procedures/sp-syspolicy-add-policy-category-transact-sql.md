@@ -36,13 +36,13 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the policy category. *name* is **sysname**, and is required. *name* cannot be NULL or an empty string.  
   
- [ **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`
  Determines whether database subscription is mandated for the policy category. *mandate_database_subscriptions* is a **bit** value, with a default of 1 (enabled).  
   
- [ **@policy_category_id=** ] *policy_category_id*  
+`[ @policy_category_id = ] policy_category_id`
  Is the identifier for the policy category. *policy_category_id* is **int**, and is returned as OUTPUT.  
   
 ## Return Code Values  

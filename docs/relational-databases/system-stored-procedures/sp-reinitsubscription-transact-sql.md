@@ -39,31 +39,31 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of all.  
   
- [ **@article=**]  **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default of all. For an immediate-updating publication, *article* must be **all**; otherwise, the stored procedure skips the publication and reports an error.  
   
- [ **@subscriber=**]  **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with no default.  
   
- [ **@destination_db=**]  **'***destination_db***'**  
+`[ @destination_db = ] 'destination_db'`
  Is the name of the destination database. *destination_db* is **sysname**, with a default of all.  
   
- [ **@for_schema_change=**]  **'***for_schema_change***'**  
+`[ @for_schema_change = ] 'for_schema_change'`
  Indicates whether reinitialization occurs as a result of a schema change at the publication database. *for_schema_change* is **bit**, with a default of 0. If **0**, active subscriptions for publications that allow immediate updating are reactivated as long as the whole publication, and not just some of its articles, are reinitialized. This means that the reinitialization is being initiated as a result of schema changes. If **1**, active subscriptions are not reactivated until the Snapshot Agent runs.  
   
- [ **@publisher=** ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
- [ **@ignore_distributor_failure=** ] *ignore_distributor_failure*  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure`
  Allows reinitialization even if the Distributor does not exist or is offline. *ignore_distributor_failure* is **bit**, with a default of 0. If **0**, reinitialization fails if the Distributor does not exist or is offline.  
   
- [ **@invalidate_snapshot=** ] *invalidate_snapshot*  
+`[ @invalidate_snapshot = ] invalidate_snapshot`
  Invalidates the existing publication snapshot. *invalidate_snapshot* is **bit**, with a default of 0. If **1**, a new snapshot is generated for the publication.  
   
 ## Return Code Values  

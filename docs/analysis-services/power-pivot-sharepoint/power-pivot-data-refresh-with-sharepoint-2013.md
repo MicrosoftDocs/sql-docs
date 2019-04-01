@@ -229,7 +229,7 @@ manager: kfile
 ##  <a name="bkmk_moreinformation"></a> More Information  
  [Troubleshooting Power Pivot Data Refresh](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel Services in SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>).  
+ [Excel Services in SharePoint](/sharepoint/dev/general-development/excel-services-in-sharepoint).  
   
 ## See Also  
  [Install Analysis Services in Power Pivot Mode](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

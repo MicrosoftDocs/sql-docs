@@ -33,10 +33,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**, which cleans up metadata for all publications. The publication must already exist if explicitly specified.  
   
- [ **@reinitialize_subscriber =** ] **'***subscriber***'**  
+`[ @reinitialize_subscriber = ] 'subscriber'`
  Specifies whether to reinitialize the Subscriber. *subscriber* is **nvarchar(5)**, can be **TRUE** or **FALSE**, with a default of **TRUE**. If **TRUE**, subscriptions are marked for reinitialization. If **FALSE**, the subscriptions are not marked for reinitialization.  
   
 ## Return Code Values  

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "schema collections [SQL Server], guidelines"
   - "lexical representation"
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Requirements and Limitations for XML Schema Collections on the Server

@@ -36,7 +36,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@objname=**] **'***name***'**  
+`[ @objname = ] 'name'`
  Is the name of any object, in **sysobjects** or any user-defined data type in the **systypes** table. *name* is **nvarchar(**776**)**, with a default of NULL. Database names are not acceptable.  Two or three part names must be delimited, such as 'Person.AddressType' or [Person.AddressType].   
    
   

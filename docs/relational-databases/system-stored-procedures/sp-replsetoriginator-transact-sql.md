@@ -33,10 +33,10 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## Arguments  
- [ **@server_name=**] **'***server_name***'**  
+`[ @server_name = ] 'server_name'`
  Is the name of the server where the transaction is being applied. *originating_server* is **sysname**, with no default.  
   
- [ **@database_name=**] **'***database_name***'**  
+`[ @database_name = ] 'database_name'`
  Is the name of the database where the transaction is being applied. *originating_db* is **sysname**, with no default.  
   
 ## Return Code Values  

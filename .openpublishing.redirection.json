@@ -2148,6 +2148,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/tools/sqlpackage-release-notes.md",
+            "redirect_url": "/sql/tools/release-notes-sqlpackage",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md",
             "redirect_url": "/sql/tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor",
             "redirect_document_id": false
@@ -2178,6 +2183,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/connect/php/release-notes-for-the-php-sql-driver.md",
+            "redirect_url": "/sql/connect/php/release-notes-php-sql-driver",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/connect/php/download-microsoft-php-driver-for-sql-server.md",
             "redirect_url": "/sql/connect/php/microsoft-php-driver-for-sql-server",
             "redirect_document_id": false
@@ -2191,6 +2201,11 @@
             "source_path": "docs/connect/odbc/connecting-with-bcp.md",
             "redirect_url": "/sql/connect/odbc/linux-mac/connecting-with-bcp",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/connect/odbc/windows/release-notes.md",
+            "redirect_url": "/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows",
+            "redirect_document_id": true
         },
         {
             "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
@@ -5309,6 +5324,11 @@
         "source_path": "docs/linux/tutorial-sql-server-ag-kubernetes.md",
         "redirect_url": "/sql/linux/sql-server-ag-kubernetes",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "docs/linux/sql-server-linux-kubernetes-operator.md",
+        "redirect_url": "/sql/linux/sql-server-ag-kubernetes",
+        "redirect_document_id": false
       },
       {
         "source_path": "docs/connect/odbc/windows/welcome-to-the-microsoft-odbc-driver-13-for-sql-server-on-windows.md",
@@ -13868,6 +13888,11 @@
         {
             "source_path": "docs/ssdt/removing-sql-server-data-tools-components.md",
             "redirect_url": "/sql/ssdt/download-sql-server-data-tools-ssdt",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md",
+            "redirect_url": "/sql/relational-databases/security/authentication-access/create-a-login",
             "redirect_document_id": false
         }
     ]

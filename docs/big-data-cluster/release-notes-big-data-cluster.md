@@ -5,7 +5,7 @@ description: This article describes the latest updates and known issues for SQL 
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -23,10 +23,13 @@ The following sections describe the new features and known issues for big data c
 
 ### What's New
 
-| New feature/update | Details |
+| New feature or update | Details |
 |:---|:---|
-| Guidance on GPU support for running deep learning with TensorFlow in Spark. | [Deploy a big data cluster with GPU support and run TensorFlow](spark-gpu-tensorflow.md) |
+| Guidance on GPU support for running deep learning with TensorFlow in Spark. | [Deploy a big data cluster with GPU support and run TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** and **SqlStoragePool** data sources are no longer created by default. | Create these manually as needed. See the [known issues](#externaltablesctp24). |
+| `INSERT INTO SELECT` support for the data pool. | For an example, see [Tutorial: Ingest data into a SQL Server data pool with Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option. | Forces or disables the use of the compute pool for queries on external tables. For example, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Updated AKS deployment recommendations. | When evaluating big data clusters on AKS, we now recommend using a single node of size **Standard_L8s**. |
 | Spark runtime upgrade to Spark 2.4. | |
 
 ### Known issues
@@ -74,19 +77,44 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
+#### Delete cluster fails
+
+When you attempt to delete a cluster with **mssqlctl**, it fails with the following error:
+
+```
+2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
+Error processing command: "TypeError"
+delete_namespaced_service() takes 3 positional arguments but 4 were given
+Makefile:61: recipe for target 'delete-cluster' failed
+make[2]: *** [delete-cluster] Error 1
+Makefile:223: recipe for target 'deploy-clean' failed
+make[1]: *** [deploy-clean] Error 2
+Makefile:203: recipe for target 'deploy-clean' failed
+make: *** [deploy-clean] Error 2
+```
+
+A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API, which currently breaks **mssqlctl**. This only happens if you have a newer Kubernetes python client installed. You can work around this problem by directly deleting the cluster using **kubectl** (`kubectl delete ns <ClusterName>`), or you can install the older version using `sudo pip install kubernetes==8.0.1`.
+
 #### <a id="externaltablesctp24"></a> External tables
 
 - Big data cluster deployment no longer creates the **SqlDataPool** and **SqlStoragePool** external data sources. You can create these data sources manually to support data virtualization to the data pool and storage pool.
 
    ```sql
-   -- Create data sources for SQL Big Data Cluster
+   -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
+   -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
    ```
 
 - It is possible to create a data pool external table for a table that has unsupported column types. If you query the external table, you get a message similar to the following:
@@ -131,9 +159,9 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.3.
 
-### New features
+### What's New
 
-| New feature | Details |
+| New feature or update | Details |
 | :---------- | :------ |
 | Submit Spark jobs on big data clusters in IntelliJ. | [Submit Spark jobs on SQL Server big data clusters in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
 | Common CLI for application deployment and cluster management. | [How to deploy an app on SQL Server 2019 big data cluster (preview)](big-data-cluster-create-apps.md) |

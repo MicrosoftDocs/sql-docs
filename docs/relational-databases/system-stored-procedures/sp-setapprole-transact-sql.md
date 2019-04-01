@@ -40,10 +40,10 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## Arguments
 
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of the application role defined in the current database. *role* is **sysname**, with no default. *role* must exist in the current database.  
   
- [ **@password =** ] **{ encrypt N'***password***' }**  
+`[ @password = ] { encrypt N'password' }`
  Is the password required to activate the application role. *password* is **sysname**, with no default. *password* can be obfuscated by using the ODBC **encrypt** function. When you use the **encrypt** function, the password must be converted to a Unicode string by placing **N** before the first quotation mark.  
   
  The encrypt option is not supported on connections that are using **SqlClient**.  
@@ -57,10 +57,10 @@ sp_setapprole [ @rolename = ] 'role',
  **@encrypt= 'odbc'**  
  Specifies that ODBC will obfuscate the password by using the ODBC **encrypt** function before sending the password to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. This can be specified only when you are using either an ODBC client or the OLE DB Provider for SQL Server.  
   
- [ **@fCreateCookie =** ] **true** | **false**  
+`[ @fCreateCookie = ] true | false`
  Specifies whether a cookie is to be created. **true** is implicitly converted to 1. **false** is implicitly converted to 0.  
   
- [ **@cookie =** ] **@cookie OUTPUT**  
+`[ @cookie = ] @cookie OUTPUT`
  Specifies an output parameter to contain the cookie. The cookie is generated only if the value of **@fCreateCookie** is **true**. **varbinary(8000)**  
   
 > [!NOTE]  

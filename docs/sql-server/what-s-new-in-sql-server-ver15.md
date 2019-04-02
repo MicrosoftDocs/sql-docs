@@ -70,7 +70,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |**Service improvements**|**Details**|
 |:-----|:-----|
 |Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ. |[Details](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md)|
-|Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. |[Details] (../big-data-cluster/big-data-cluster-create-apps.md)|
+|Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. |[Details](../big-data-cluster/big-data-cluster-create-apps.md)|
 |Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. |[Details](../big-data-cluster/sparklyr-from-RStudio.md) |
 |Mount external HDFS-compatible storage into big data cluster with HDFS tiering.|[Details](../big-data-cluster/hdfs-tiering.md) |
 
@@ -564,7 +564,7 @@ FROM sys.dm_exec_requests AS d
 <!-->
 ## <a id="security"></a>Security
 
-- **Certificate management in SQL Server Configuration Manager|[Details](..database-engine/configure-windows/manage-certificates.md) (CTP 2.0)**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
+- **Certificate management in SQL Server Configuration Manager|[Details](../database-engine/configure-windows/manage-certificates.md) (CTP 2.0)**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
   - Viewing and validating certificates installed in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. 
   - Viewing certificates close to expiration.

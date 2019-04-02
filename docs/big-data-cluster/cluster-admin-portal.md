@@ -1,9 +1,10 @@
 ---
 title: Cluster administration portal
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Learn how to use the cluster administration portal to monitor SQL Server 2019 big data clusters (preview).
 author: yualan
 ms.author: alayu
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
@@ -13,6 +14,8 @@ ms.custom: seodec18
 ---
 
 # How to use the cluster administration portal to monitor a SQL Server big data cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 If you want to monitor or troubleshoot your SQL Server 2019 big data cluster (preview), use the cluster administration portal.
 

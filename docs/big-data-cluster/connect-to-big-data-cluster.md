@@ -1,6 +1,6 @@
 ---
 title: Connect to master and HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Learn how to connect to the SQL Server master instance and the HDFS/Spark gateway for a SQL Server 2019 big data cluster (preview).
 author: rothja
 ms.author: jroth
@@ -12,6 +12,8 @@ ms.technology: big-data-cluster
 ---
 
 # Connect to a SQL Server big data cluster with Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes how to connect to a SQL Server 2019 big data cluster (preview) from Azure Data Studio. There are two main endpoints that are used to interact with a big data cluster:
 
@@ -62,7 +64,7 @@ With the February 2019 release of Azure Data Studio, connecting to the SQL Serve
 
 - The Object Explorer now contains a new **Data Services** node with right-click support for big data cluster tasks, such as creating new notebooks or submitting spark jobs. 
 - The **Data Services** node also contains an **HDFS** folder for HDFS exploration and performing actions such as Create External Table or Analyze in Notebook.
-- The **Server Dashboard** for the connection also contains tabs for **SQL Server Big Data Cluster** and **SQL Server 2019 (Preview)** when the extension is installed.
+- The **Server Dashboard** for the connection also contains tabs for **SQL Server big data cluster** and **SQL Server 2019 (Preview)** when the extension is installed.
 
    ![Azure Data Studio Data Services Node](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 

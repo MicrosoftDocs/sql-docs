@@ -75,6 +75,11 @@ GeneMi (and CraigG).  2019/03/30.
 | Support for Azure SQL Managed Instance. | Extended Private Preview.<br/><br/>See the following list of [Differences when using Managed Instance (ODBC version 17)](#diffs-managed-instance-17). |
 | &nbsp; | &nbsp; |
 
+| Dependency changed | Details |
+| :------------ | :------ |
+| Removed Microsoft online service sign-in assistant | The dependency has been removed. |
+| &nbsp; | &nbsp; |
+
 ### <a name="diffs-managed-instance-17"></a> Differences when using Managed Instance (ODBC version 17)
 
 This version of ODBC contains support for Azure SQL Managed Instance (Extended Private Preview). See the following noted list of differences when using Managed Instance.

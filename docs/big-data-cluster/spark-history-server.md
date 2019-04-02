@@ -1,6 +1,6 @@
 ---
 title: Debug/Diagnose Spark Applications 
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Use Spark History Server to debug and diagnose Spark applications running on SQL Server 2019 big data clusters.
 author: jejiang
 ms.author: jejiang
@@ -12,7 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
+
 # Debug and Diagnose Spark Applications on SQL Server big data clusters in Spark History Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article provides guidance on how to use extended Spark History Server to debug and diagnose Spark applications in a SQL Server 2019 (preview) big data cluster. These debug and diagnosis capabilities are built into Spark History Server and powered by Microsoft. The extension includes data tab and graph tab and diagnosis tab. In data tab, users can check the input and output data of the Spark job. In graph tab, users can check the data flow and replay the job graph. In diagnosis tab, user can refer to Data skew, Time skew, and Executor Usage analysis.
 

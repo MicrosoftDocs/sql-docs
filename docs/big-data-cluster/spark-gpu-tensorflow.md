@@ -1,6 +1,6 @@
 ---
 title: GPU support and TensorFlow 
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Deploy a big data cluster with GPU support and use TensorFlow in Azure Data Studio Notebooks.
 author: lgongmsft
 ms.author: shivprashant
@@ -13,6 +13,8 @@ ms.technology: big-data-cluster
 ---
 
 # Deploy a big data cluster with GPU support and run TensorFlow
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article demonstrates how to deploy a big data cluster on Azure Kubernetes Service (AKS) that supports GPU-enabled node pools for compute-intensive workloads. You then run example notebooks in Azure Data Studio that perform image classification with TensorFlow for GPU.
 
@@ -137,7 +139,7 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
       SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
       SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp23-8-0-61-gpu
+      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
       SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
       SET DOCKER_EMAIL=<your email address>
@@ -165,7 +167,7 @@ To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you m
       export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
       export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp23-8-0-61-gpu"
+      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
       export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
       export DOCKER_EMAIL="<your email address>"

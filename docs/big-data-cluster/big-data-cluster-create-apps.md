@@ -1,9 +1,10 @@
 ---
 title: Deploy applications using mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt 
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
@@ -12,7 +13,9 @@ ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
-# How to deploy an app on SQL Server 2019 big data cluster (preview)
+# How to deploy an app on SQL Server big data cluster (preview)
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster (preview).
 

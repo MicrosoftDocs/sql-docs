@@ -1,6 +1,6 @@
 ---
 title: Export Spark ML models with MLeap
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Learn how to export Spark machine learning models with MLeap.
 author: lgongmsft
 ms.author: shivprashant
@@ -14,6 +14,8 @@ ms.custom: seodec18
 ---
 
 # Export Spark machine learning models with MLeap
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 A typical machine learning scenario involves model training on Spark and scoring outside of Spark. Export models in a portable format such that it can be used outside Spark. [MLeap](https://github.com/combust/mleap) is one such model exchange format. It allows Spark machine learning pipelines and models to be exported as portable formats and used in any JVM-based system with the `Mleap` runtime.
 

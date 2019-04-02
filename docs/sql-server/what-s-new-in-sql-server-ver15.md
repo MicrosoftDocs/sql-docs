@@ -69,7 +69,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Reduced recompilations for workloads using temporary tables across multiple scopes. |[Details](#reduced-recompilations) |
 |Improved indirect checkpoint scalability. |[Details](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |UTF-8 support: Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Details](../relational-databases/collations/collation-and-unicode-support.md) |
-| | |
+|Define cascaded delete actions on an edge constraint in a graph database. |[Details](../relational-databases/tables/graph-edge-constraint.md) |
 | | |
 | | |
 | | |
@@ -109,7 +109,11 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Details](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 |Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query. |[Details](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
 |Truncation error message improved to include table and column names, and truncated value. | |
-| | |
+|The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. | |
+|The new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations. | |
+|Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.  | |
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.  |[Details](../relational-databases/security/static-data-masking.md) |
+|Use derived table or view aliases in graph match query |[Details](../relational-databases/tables/graph-edge-constraint.md) |
 | | |
 | | |
 
@@ -125,13 +129,18 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Run Advanced analytics and machine learning with Spark. | |
 |Use Spark streaming to data to SQL data pools. | |
 |Run Query books that provide a notebook experience in **Azure Data Studio**|[Details](../sql-operations-studio/what-is.md)  |
-|**Database engine**| |
+|**Database engine**|[Details](../database-engine/configure-windows/hybrid-buffer-pool.md)|
+|Database **COMPATIBILITY_LEVEL 150** is added. |[Details](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
+|Resumable Online Index Create|[Details](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
+|Row mode memory grant feedback |[Details](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
+|Approximate `COUNT DISTINCT`|[Details](relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
+|Batch mode on rowstore |[Details](relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
+|Table variable deferred compilation |[Details](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
+|Java language extension |[Details](../advanced-analytics/java/extension-java.md) |
+|Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. | |
+|Edge constraints |[Details](../relational-databases/tables/graph-edge-constraint.md) |
+|Database scoped default setting for online and resumable DDL operations | |
 | | |
-| | |
-| | |
-| | |
-| | |
-
  
 
 
@@ -198,16 +207,21 @@ The new error message 2628 provides more context for the data truncation problem
 **CTP 2.4** Error message 2628 becomes the default truncation message and replaces error message 8152 under database compatibility level 150. A new database scoped configuration `VERBOSE_TRUNCATION_WARNINGS` is introduced to switch between error message 2628 and 8152 when the database compatibility level is 150. For more information, see [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation).
 For database compatibility level 140 or lower, error message 2628 remains an opt-in error message that requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
 -->
+
+<!--
 ### Improved diagnostic data for stats blocking (CTP 2.1)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.
+-->
 
+<!--
 ### Hybrid buffer pool (CTP 2.1)
 
 Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required. Since PMEM devices provide very low latency for data access, the engine can forgo making a copy of the data in a "clean pages" area of the buffer pool and simply access the page directly on PMEM. Access is performed using memory mapped I/O, as is the case with enlightenment. This brings performance benefits from avoiding a copy of the page to DRAM, and from the avoidance of the I/O stack of the operating system to access the page on persistent storage. This feature is available on both SQL Server on Windows and SQL Server on Linux.
 
 For more information, see [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md)
-
+-->
+<!--
 ### Static data masking (CTP 2.1)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases. Static data masking helps create a sanitized copy of databases where all sensitive information has been altered in a way that makes the copy sharable with non-production users. Static data masking can be used for development, testing, analytics and business reporting, compliance, troubleshooting, and any other scenario where specific data cannot be copied to different environments.
@@ -221,15 +235,8 @@ Data masking is the process of applying a mask on a database to hide sensitive i
 |Static data masking |Dynamic data masking|
 |:----|:----|
 |Happens on a copy of the database <br/><br/>Original data not retrievable<br/><br/>Mask occurs at the storage level<br/><br/>All users have access to the same masked data<br/><br/>Geared toward continuous team-wide access|Happens on the original database<br/><br/>Original data intact<br/><br/>Mask occurs on-the-fly at query time<br/><br/>Mask varies based on user permission <br/><br/>Geared toward punctual user-specific access|
-
-### Database compatibility level (CTP 2.0)
-
-Database **COMPATIBILITY_LEVEL 150** is added. To enable for a specific user database, execute:
-
-   ```sql
-   ALTER DATABASE database_name SET COMPATIBILITY_LEVEL =  150;
-   ```
-
+-->
+<!--
 ### Resumable online index create (CTP 2.0)
 
 **Resumable online index create** allows an index create operation to pause and resume later from where the operation was paused or failed, instead of restarting from the beginning.
@@ -246,7 +253,7 @@ With this release, we extend the resumable functionality adding this feature to 
 In addition, this feature can be set as the default for a specific database using [database scoped default setting for online and resumable DDL operations](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 For more information, see [Resumable Online Index Create](../t-sql/statements/create-index-transact-sql.md#resumable-indexes).
-
+-->
 ### Build and rebuild clustered columnstore indexes online (CTP 2.0)
 
 Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - requiring all changes stop while the CCI is created. With [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and 
@@ -277,7 +284,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
 
 > [!NOTE]
 > Always Encrypted with secure enclaves is only available on Windows OS.
-
+<!--
 ### Intelligent query processing (CTP 2.0)
 
 - **Row mode memory grant feedback** expands on the memory grant feedback feature introduced in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] by adjusting memory grant sizes for both batch and row mode operators. For an excessive memory grant condition, if the granted memory is more than two times the size of the actual used memory, memory grant feedback will recalculate the memory grant. Consecutive executions will then request less memory. For an insufficiently sized memory grant that results in a spill to disk, memory grant feedback will trigger a recalculation of the memory grant. Consecutive executions will then request more memory. This feature is enabled by default under database compatibility level 150.
@@ -300,11 +307,13 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
 - **Table variable deferred compilation** improves plan quality and overall performance for queries referencing table variables. During optimization and initial compilation, this feature will propagate cardinality estimates that are based on actual table variable row counts. This accurate row count information will be used for optimizing downstream plan operations. This feature is enabled by default under database compatibility level 150.
 
 To use intelligent query processing features, set database `COMPATIBILITY_LEVEL = 150`.
-
+-->
+<!--
 ### <a id="programmability"></a> Java language programmability extensions (CTP 2.0)
 
 - **Java language extension (preview)**: Use the Java language extension to execute Java code in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], this extension is installed when you add the feature 'Machine Learning Services (in-database)' to your [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.
-
+-->
+<!--
 ### <a id="sqlgraph"></a> SQL Graph features (CTP 2.3)
 
 - **Use derived table or view aliases in graph match query (CTP 2.1)** Graph queries on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] preview support using view and derived table aliases in the `MATCH` syntax. To use these aliases in `MATCH`, the views and derived tables must be created on either a set of node or a set of edge tables, using the `UNION ALL` operator. The node or edge tables may or may not have filters on it. The ability to use derived table and view aliases in `MATCH` queries can be very useful in scenarios where you are looking to query heterogeneous entities or heterogeneous connections between two or more entities in your graph.
@@ -314,7 +323,8 @@ To use intelligent query processing features, set database `COMPATIBILITY_LEVEL 
 - **Edge constraints (CTP 2.0)** are introduced for edge tables in SQL Graph. Edge tables can connect any node to any other node in the database. With introduction of edge constraints, you can now apply some restrictions on this behavior. The new `CONNECTION` constraint can be used to specify the type of nodes a given edge table will be allowed to connect to in the schema. 
 
   **(CTP 2.3)** Extending this feature further, you can define cascaded delete actions on an edge constraint. You can define the actions that the database engine takes when a user deletes the node(s), that a given edge connects.
-
+-->
+<!--
 ### Database scoped default setting for online and resumable DDL operations (CTP 2.0)
 
 - **Database scoped default setting for online and resumable DDL operations** allows a default behavior setting for `ONLINE` and `RESUMABLE` index operations at the database level, rather than defining these options for each individual index DDL statement such as index create or rebuild.
@@ -330,7 +340,7 @@ To override the default setting, include the `ONLINE` or `RESUMABLE` option in t
 Without this feature, you have to specify the online and resumable options directly in the index DDL statement such as index create and rebuild.
 
 For more information on index resumable operations, see [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
-
+-->
 ### <a id="ha"></a>Always On Availability Groups - more synchronous replicas (CTP 2.0)
 
 - **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.

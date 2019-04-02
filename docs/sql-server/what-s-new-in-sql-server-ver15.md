@@ -111,6 +111,16 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 | | |
 | | |
 
+### SQL Server on Linux
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|Always On Availability Group on Docker containers with Kubernetes |[Details](../linux/sql-server-ag-kubernetes.md) |
+| | |
+| | |
+| | |
+| | |
+
 ## CTP 2.1 November 2018
 
 ### Database engine
@@ -125,6 +135,17 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.  | |
 |[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.  |[Details](../relational-databases/security/static-data-masking.md) |
 |Use derived table or view aliases in graph match query |[Details](../relational-databases/tables/graph-edge-constraints.md) |
+| | |
+| | |
+
+### SQL Server on Linux
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|New container registry |[Details](../linux/quickstart-install-connect-docker.md) |
+| | |
+| | |
+| | |
 | | |
 | | |
 
@@ -165,19 +186,31 @@ hybrid-buffer-pool.md)|
 |Machine Learning support for partition-based modeling  |[Details](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
 |Lightweight query profiling infrastructure enabled by default |[Details](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
 |New PolyBase connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB. |[Details](../relational-databases/polybase/polybase-guide.md) |
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. |[Details](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
 | | |
 | | |
 | | |
 | | |
-| | |
 
+### SQL Server on Linux
 
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|Replication support |[Details](../linux/sql-server-linux-replication.md)
+|Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[Details](../linux/sql-server-linux-configure-msdtc.md) |
+|OpenLDAP support for third-party AD providers | |
+|Machine Learning on Linux |[Details](../linux/sql-server-linux-setup-machine-learning.md) |
 
+### Master Data Services
 
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|The Master Data Services (MDS) portal no longer depends on Silverlight.| All the former Silverlight components have been replaced with HTML controls.|
 
+### Security
 
-
-
+|**Service improvements**|**Details**|
+|Certificate management in SQL Server Configuration Manager|[Details](../database-engine/configure-windows/manage-certificates.md)
 
 
 
@@ -439,11 +472,12 @@ For more information on lightweight profiling, see [Query Profiling Infrastructu
 
 **CTP 2.3** A new database scoped configuration `LIGHTWEIGHT_QUERY_PROFILING` is introduced to enable or disable the lightweight query profiling infrastructure.
 -->
-
+<!-->
 ### <a id="polybase"></a>New PolyBase connectors
 
 - **New connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces new connectors to external data for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB.
-
+-->
+<!--
 ### New sys.dm_db_page_info system function returns page information (CTP 2.0)
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. The function returns a row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`. This function replaces the need to use `DBCC PAGE` in most cases. 
@@ -457,7 +491,8 @@ FROM sys.dm_exec_requests AS d
   CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id,'DETAILED')
     AS page_info;
 ```
-
+-->
+<!--
 ## <a id="sqllinux"></a> SQL Server on Linux
 
 - **Always On Availability Group on Docker containers with Kubernetes (CTP 2.2)**: Kubernetes can orchestrate containers running [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instances to provide a highly available set of databases with SQL Server Always On Availability Groups. A Kubernetes operator deploys a StatefulSet including a container with **mssql-server container**, and a health monitor.
@@ -481,14 +516,16 @@ FROM sys.dm_exec_requests AS d
 - **OpenLDAP support for third-party AD providers (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Linux supports OpenLDAP, which allows third-party providers to join Active Directory.
 
 - **Machine Learning on Linux (CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services (In-Database) is now supported on Linux. Support includes `sp_execute_external_script` stored procedure. For instructions on how to install Machine Learning Services on Linux, see [Install [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services R and Python support on Linux](../linux/sql-server-linux-setup-machine-learning.md).
-
+-->
+<!--
 ## <a id="mds"></a> Master Data Services 
 
 - **Silverlight controls replaced with HTML (CTP 2.0)**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
-
+-->
+<!-->
 ## <a id="security"></a>Security
 
-- **Certificate management in SQL Server Configuration Manager (CTP 2.0)**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
+- **Certificate management in SQL Server Configuration Manager|[Details](..database-engine/configure-windows/manage-certificates.md) (CTP 2.0)**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:
 
   - Viewing and validating certificates installed in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. 
   - Viewing certificates close to expiration.
@@ -497,7 +534,7 @@ FROM sys.dm_exec_requests AS d
 
   > [!NOTE]
   > User must have administrator permissions on all the cluster nodes.
-
+-->
 ## <a id="tools"></a>Tools
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Preview extension](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:

@@ -438,7 +438,7 @@ Download the latest [SQL Server Management Studio (SSMS)](../ssms/download-sql-s
 ### Upgrade Advisor
 SQL Server 2016 Upgrade Advisor Preview is a standalone tool that enables users of prior versions to run a set of upgrade rules against their SQL Server database to pinpoint breaking and behavior changes and deprecated features as well as providing help with the adoption of new features such as Stretch Database.
 
- You can install Upgrade Advisor Preview using the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx).
+ You can download Upgrade Advisor Preview [here](https://www.microsoft.com/download/details.aspx?id=48119) or you can install it by using the Web Platform Installer.
 
 ## See Also
 [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)

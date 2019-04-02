@@ -49,8 +49,6 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
   
 -   [Related Tasks](#RelatedTasks)  
   
--   [Related Content](#RelatedContent)  
-  
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
 ###  <a name="Prerequisites"></a> Prerequisites  
@@ -290,5 +288,3 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 - [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  
 - [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  

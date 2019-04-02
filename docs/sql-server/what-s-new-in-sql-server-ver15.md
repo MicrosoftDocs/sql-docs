@@ -158,7 +158,7 @@ hybrid-buffer-pool.md)|
 |Availability groups support up to 5 synchronous secondary replicas |[Details](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) |
 |Secondary to primary replica read/write connection redirection|[Details](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) |
 |SQL Data Discovery and Classification | [Details](../relational-databases/security/sql-data-discovery-and-classification.md) |
-| | |
+|Expanded support for persistent memory devices |[Details](../database-engine/configure-windows/hybrid-buffer-pool.md) |
 | | |
 | | |
 | | |
@@ -392,6 +392,7 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 >[!NOTE]
 >There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](/azure/sql-database/sql-database-data-discovery-and-classification/#subheading-3).
 -->
+<!--
 ### Expanded support for persistent memory devices (CTP 2.0)
 
 Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed on a persistent memory device can now operate in *enlightened* mode. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] directly accesses the device, bypassing the storage stack of the operating system using efficient memcpy operations. This mode improves performance because it allows low latency input/output against such devices.
@@ -404,7 +405,7 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 
 > [!NOTE]
 > For this preview release, enlightenment of files on persistent memory devices is only available on Linux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Windows supports persistent memory devices starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].
-
+-->
 ### Support for columnstore statistics in DBCC CLONEDATABASE (CTP 2.0)
 
 `DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data. In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.

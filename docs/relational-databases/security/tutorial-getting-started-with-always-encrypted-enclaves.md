@@ -252,8 +252,8 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
     3. Select Connection \> Change Connection.
     4. Select **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
     5. Select **Connect**.
-    6. Change the database context to the ContosoHR database.
-1. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
+    6. If prompted to enable parameterization for Always Encrypted queries, click **Enable**.
+2. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
     1. In SSMS, open a new query window.
     2. Right-click anywhere in the new query window.
     3. Select Connection \> Change Connection.
@@ -290,12 +290,12 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
 
 Now, you can run rich queries against the encrypted columns. Some query processing will be performed inside your server-side enclave. 
 
-1. Enable Parameterization for Always Encrypted.
+1. Make sure that Parameterization for Always Encrypted is enabled.
     1. Select **Query** from the main menu of SSMS.
     2. Select **Query Options...**.
     3. Navigate to **Execution** > **Advanced**.
-    4. Select **Enable Parameterization for Always Encrypted**.
-    5. Select **OK**.
+    4. Ensure that Enable Parameterization for Always Encrypted is checked.
+    5. Select OK.
 2. In the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
 
     ```sql

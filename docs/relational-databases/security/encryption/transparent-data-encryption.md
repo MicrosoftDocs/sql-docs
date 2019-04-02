@@ -145,7 +145,7 @@ GO
 
 ## Transparent Data Encryption (TDE) scan - suspend and resume
 
-In order to enable [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) on a database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] must perform an encryption scan which reads each page from the data file(s) into the buffer pool, and then writes the encrypted pages back out to disk. To provide the user with more control over the encryption scan, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces TDE scan - suspend and resume syntax so that you can pause the scan while the workload on the system is heavy, or during business-critical hours, and then resume the scan later.
+In order to enable Transparent Data Encryption (TDE) on a database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must perform an encryption scan which reads each page from the data file(s) into the buffer pool, and then writes the encrypted pages back out to disk. To provide the user with more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduces TDE scan - suspend and resume syntax so that you can pause the scan while the workload on the system is heavy, or during business-critical hours, and then resume the scan later.
 
 Use the following syntax to pause the TDE encryption scan:
 
@@ -159,7 +159,7 @@ Similarly, the following syntax resumes the TDE encryption scan:
 ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
-To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view. There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
+To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view. There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
 
 ### Restrictions  
  The following operations are not allowed during initial database encryption, key change, or database decryption:  

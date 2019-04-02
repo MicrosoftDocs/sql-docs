@@ -65,6 +65,21 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Mount external HDFS-compatible storage into big data cluster with HDFS tiering.|[Details](../big-data-cluster/hdfs-tiering.md) |
 |**Database engine** | |
 |Enable accelerated database recovery can be enabled per-database| [Details](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)|
+|Query Store plan forcing support for fast forward and static cursors.|[Details](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
+|Reduced recompilations for workloads using temporary tables across multiple scopes. | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
 
 ## CTP 2.2 December 2018
 
@@ -121,9 +136,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 
 
-### Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
 
-Query Store now supports the ability to force query execution plans for fast forward and static T-SQL and API cursors. Forcing is now supported via `sp_query_store_force_plan` or through SQL Server Management Studio Query Store reports.
 
 ### Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
 

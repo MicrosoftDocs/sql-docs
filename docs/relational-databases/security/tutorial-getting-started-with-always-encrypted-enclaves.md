@@ -30,8 +30,10 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 
 ### SQL Server computer requirements
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later
-- Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later.
+- Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter.
+- Your SQL Server computer must meet [Windows 10 Hyper-V System Requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
+- If your SQL Server computer is a VMWare virtual machine,  Virtualization Based Security must be enabled in the virtual machine and the host must be running vSphere 6.7 or later. See VMWare documentation.
 - [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 As an alternative, you can install SSMS on another machine.
@@ -99,6 +101,21 @@ In this step, you will configure the SQL Server computer as a guarded host regis
    ```
 
 3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
+
+4. If your SQL Server computer is a virtual machine or if it is a legacy physical machine that does not support UEFI Secure Boot or is not equipped with IOMMU, you need to remove the VBS requirement for platform security features.
+    1. Remove the requirement in Windows registry.
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. Restart the computer again to get VBS to come online with the lowered requirements.
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. Sign in to the SQL Server computer as an administrator again, open an elevated Windows PowerShell console, generate a unique host key, and export the resulting public key to a file.
 

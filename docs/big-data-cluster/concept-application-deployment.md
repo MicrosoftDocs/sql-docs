@@ -19,7 +19,7 @@ The following sections describe the architecture and functionality of Applicatio
 
 ## Application Deployment architecture
 
-Application deployment consists of a controller and app runtime handlers. When creating an application, a specification file (`spec.yaml`) is provided. This `spec.yaml` file contains everything the controller needs to know to succesfully deploy the application. The following is a sample of the contents for `spec.yaml`:
+Application deployment consists of a controller and app runtime handlers. When creating an application, a specification file (`spec.yaml`) is provided. This `spec.yaml` file contains everything the controller needs to know to successfully deploy the application. The following is a sample of the contents for `spec.yaml`:
 
 ```yaml
 #spec.yaml
@@ -43,7 +43,7 @@ These settings have an impact on the amount of requests the deployment can handl
 
 ![Poolsize and replicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-After the ReplicaSet has been created and the pods have started a Cronjob is created if a `schedule` was set in the `spec.yaml` file. Finally, a Kubernetes Service is created that can be used to manage and run the application (see below).
+After the ReplicaSet has been created and the pods have started, a cron job is created if a `schedule` was set in the `spec.yaml` file. Finally, a Kubernetes Service is created that can be used to manage and run the application (see below).
 
 When an application is executed, the Kubernetes service for the application proxies the requests to a replica and returns the results.
 

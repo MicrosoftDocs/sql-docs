@@ -52,7 +52,7 @@ The two main interfaces for Application Deployment are:
 - [Command line interface `mssqlctl`](big-data-cluster-create-apps.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 
-Next to that an application can be executed using a RESTful web service. See [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
+It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on big data clusters](big-data-cluster-consume-apps.md).
 
 ## Next steps
 

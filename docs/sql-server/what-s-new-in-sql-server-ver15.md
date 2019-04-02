@@ -229,6 +229,7 @@ hybrid-buffer-pool.md)|
 ### Security
 
 |**Service improvements**|**Details**|
+|:-----|:-----|
 |Certificate management in SQL Server Configuration Manager|[Details](../database-engine/configure-windows/manage-certificates.md)
 | | |
 

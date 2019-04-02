@@ -218,6 +218,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## Row mode memory grant feedback
+
 **Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a public preview feature
 
 > [!NOTE]

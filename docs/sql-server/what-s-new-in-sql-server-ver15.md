@@ -182,27 +182,27 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |**Service improvements**|**Details**|
 |:-----|:-----|
 hybrid-buffer-pool.md)|
-|Database **COMPATIBILITY_LEVEL 150** is added. |[Details](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
-|Resumable Online Index Create|[Details](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
-|Row mode memory grant feedback |[Details](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
-|Approximate `COUNT DISTINCT`|[Details](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
-|Batch mode on rowstore |[Details](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
-|Table variable deferred compilation |[Details](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
-|Java language extension |[Details](../advanced-analytics/java/extension-java.md) |
+|Database **COMPATIBILITY_LEVEL 150** is added. |[ALTER DATABASE Compatibility Level (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
+|Resumable Online Index Create|[CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
+|Row mode memory grant feedback |[Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
+|Approximate `COUNT DISTINCT`|[Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
+|Batch mode on rowstore |[Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
+|Table variable deferred compilation |[Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
+|Java language extension |[Java language extension](../advanced-analytics/java/extension-java.md) |
 |Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. | |
-|Edge constraints |[Details](../relational-databases/tables/graph-edge-constraints.md) |
+|Edge constraints |[Graph edge constraints](../relational-databases/tables/graph-edge-constraints.md) |
 |Database scoped default setting for online and resumable DDL operations | |
-|Availability groups support up to 5 synchronous secondary replicas |[Details](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) |
-|Secondary to primary replica read/write connection redirection|[Details](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) |
-|SQL Data Discovery and Classification | [Details](../relational-databases/security/sql-data-discovery-and-classification.md) |
-|Expanded support for persistent memory devices |[Details](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|Support for columnstore statistics in `DBCC CLONEDATABASE`|[Details](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
-|`sp_estimate_data_compression_savings` introduces `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`|[Details](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
-|Machine Learning services supported on Windows Server Failover Cluster |[Details](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) d|
-|Machine Learning support for partition-based modeling  |[Details](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
-|Lightweight query profiling infrastructure enabled by default |[Details](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
-|New PolyBase connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB. |[Details](../relational-databases/polybase/polybase-guide.md) |
-|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. |[Details](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
+|Availability groups support up to 5 synchronous secondary replicas |[Availability groups](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) |
+|Secondary to primary replica read/write connection redirection|[Secondary to primary replica read/write connection redirection-Always On Availability Groups](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) |
+|SQL Data Discovery and Classification | [SQL Data Discovery & Classification](../relational-databases/security/sql-data-discovery-and-classification.md) |
+|Expanded support for persistent memory devices |[Hybrid Buffer Pool](../database-engine/configure-windows/hybrid-buffer-pool.md) |
+|Support for columnstore statistics in `DBCC CLONEDATABASE`|[Stats blob for columnstore indexes](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
+|`sp_estimate_data_compression_savings` introduces `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`|[Considerations for Columnstore Indexes](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
+|Machine Learning services supported on Windows Server Failover Cluster |[ What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) d|
+|Machine Learning support for partition-based modeling  |[What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
+|Lightweight query profiling infrastructure enabled by default |[Lightweight query execution statistics profiling infrastructure v3](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
+|New PolyBase connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB. |[What is PolyBase?](../relational-databases/polybase/polybase-guide.md) |
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. |[sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
 |Always Encrypted with secure enclaves. |[Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) |
 |Build and rebuild online clustered columnstore index. |[Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md) |
 | | |
@@ -211,11 +211,12 @@ hybrid-buffer-pool.md)|
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|Replication support |[Details](../linux/sql-server-linux-replication.md)
-|Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[Details](../linux/sql-server-linux-configure-msdtc.md) |
+|Replication support |[SQL Server Replication on Linux](../linux/sql-server-linux-replication.md)
+|Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md) |
 |OpenLDAP support for third-party AD providers | |
-|Machine Learning on Linux |[Details](../linux/sql-server-linux-setup-machine-learning.md) |
+|Machine Learning on Linux |[Configure Machine Learning on Linux](../linux/sql-server-linux-setup-machine-learning.md) |
 | | |
+
 ### Master Data Services
 
 |**Service improvements**|**Details**|

@@ -26,129 +26,102 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## CTP 2.4
+[!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
+
+## CTP 2.4 - March 2019
 
 Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
-- [Big data cluster](#bigdatacluster)
-  - Guidance on GPU support for running deep learning with TensorFlow in Spark.
-  - Spark runtime upgrade to Spark 2.4.
-  - `INSERT INTO SELECT` support for the data pool.
-  - `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.
+### Service improvements
 
-- [Database engine](#databaseengine)
-  - Truncation error message defaults to include table and column names, and truncated value. See [Truncation](#truncation).
-  - New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries.
-  - Transparent Data Encryption (TDE) scan - suspend and resume.
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|**Big data clusters**| |
+|Guidance on GPU support for running deep learning with TensorFlow in Spark.||
+|Spark runtime upgrade to Spark.||
+|`INSERT INTO SELECT` support for the data pool.||
+|`FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.||
+|**Database engine**||
+|Truncation error message defaults to include table and column names, and truncated value.|[Truncation](#truncation)|
+|New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+|The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. |[Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md)|
+|Transparent Data Encryption (TDE) scan - suspend and resume.|[Details](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
+|**SQL Server Analysis Services (SSAS)**||
+|Many-to-many relationships in tabular models.||
+|Property settings for resource governance.||
+|||
 
-- [SQL Server Analysis Services](#ssas)
-  - Many-to-many relationships in tabular models.
-  - Property settings for resource governance.
+><sup>1</sup>
+>This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
 
-The following sections describe the new features that have been introduced in previous releases of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md) .
+## CTP 2.3 February 2019
 
-## <a id="bigdatacluster"></a>Big data clusters
+### Service improvements
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [Big data clusters](../big-data-cluster/big-data-cluster-overview.md) enables new scenarios including the following:
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|**Big data clusters**| |
+|Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ. |[Details](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md)|
+|Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. |[Details] (../big-data-cluster/big-data-cluster-create-apps.md)|
+|Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. |[Details](../big-data-cluster/sparklyr-from-RStudio.md) |
+|Mount external HDFS-compatible storage into big data cluster with HDFS tiering.|[Details](../big-data-cluster/hdfs-tiering.md) |
+|**Database engine** | |
+|Enable accelerated database recovery can be enabled per-database| [Details](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)|
 
-- [GPU support for running deep learning with TensorFlow in Spark](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
-- Spark runtime upgrade to Spark 2.4. (CTP 2.4)
-- `INSERT INTO SELECT` support for the data pool.
-- `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.
-- [Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
-- [Application deployment and management experience](../big-data-cluster/big-data-cluster-create-apps.md) for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. (CTP 2.3)
-- [Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
-- Mount external HDFS-compatible storage into big data cluster with [HDFS tiering](../big-data-cluster/hdfs-tiering.md). (CTP 2.3)
-- Use SparkR from Azure Data Studio on a big data cluster. (CTP 2.2)
-- [Deploy Python and R apps](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.2)
-- Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes. (CTP 2.0)
-- Access your big data from HDFS. (CTP 2.0)
-- Run Advanced analytics and machine learning with Spark. (CTP 2.0)
-- Use Spark streaming to data to SQL data pools. (CTP 2.0)
-- Run Query books that provide a notebook experience in [**Azure Data Studio**](../sql-operations-studio/what-is.md). (CTP 2.0)
+## CTP 2.2 December 2018
+
+### Service improvements
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|**Big data clusters**| |
+|Use SparkR from Azure Data Studio on a big data cluster. | |
+|Deploy Python and R apps.|[Details](../big-data-cluster/big-data-cluster-create-apps.md) |
+| | |
+
+## CTP 2.1 November 2018
+
+### Service improvements
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|**Database engine**| |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+
+## CTP 2.0 October 2018
+
+### Service improvements
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|**Big data clusters**| |
+|Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes. | |
+|Access your big data from HDFS. | |
+|Run Advanced analytics and machine learning with Spark. | |
+|Use Spark streaming to data to SQL data pools. | |
+|Run Query books that provide a notebook experience in **Azure Data Studio**|[Details](../sql-operations-studio/what-is.md)  |
+|**Database engine**| |
+| | |
+| | |
+| | |
+| | |
+| | |
+
  
-[!INCLUDE [Big data clusters preview](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="databaseengine"></a> Database Engine
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces or enhances the following new features for the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].
 
-### New query_post_execution_plan_profile Extended Event (CTP 2.4)
 
-The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. For more information, see [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).
 
-#### Example 1 - Extended Event session using standard profiling
 
-```sql
-CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
-ADD EVENT sqlserver.query_post_execution_showplan(
-    ACTION(sqlos.task_time, sqlserver.database_id, 
-    sqlserver.database_name, sqlserver.query_hash_signed, 
-    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
-ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
-WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
-    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
-    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
-```
 
-#### Example 2 - Extended Event session using lightweight profiling
 
-```sql
-CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
-ADD EVENT sqlserver.query_post_execution_plan_profile(
-    ACTION(sqlos.task_time, sqlserver.database_id, 
-    sqlserver.database_name, sqlserver.query_hash_signed, 
-    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
-ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
-WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
-    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
-    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
-```
 
-### New DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
-
-The new DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries, based on lightweight profiling. For more information, see [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) and [Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md). See the following script as an example:
-
-```sql
-SELECT *
-FROM sys.dm_exec_cached_plans
-CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)
-WHERE objtype ='Trigger';
-GO
-```
-
-This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
-
-### Transparent Data Encryption (TDE) scan - suspend and resume (CTP 2.4)
-
-In order to enable [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md) on a database, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] must perform an encryption scan which reads each page from the data file(s) into the buffer pool, and then writes the encrypted pages back out to disk. To provide the user with more control over the encryption scan, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces TDE scan - suspend and resume syntax so that you can pause the scan while the workload on the system is heavy, or during business-critical hours, and then resume the scan later.
-
-Use the following syntax to pause the TDE encryption scan:
-
-```sql
-ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
-```
-
-Similarly, the following syntax resumes the TDE encryption scan:
-
-```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
-```
-
-To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view. There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
-
-### Accelerated database recovery (CTP 2.3)
-
-[Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process. [Database recovery](../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) is the process SQL Server uses for each database to start at a transactionally consistent - or clean - state. A database, with accelerated database recovery enabled, completes recovery significantly faster after a fail over or other non-clean shutdown. As of CTP 2.3, accelerated database recovery can be enabled per-database using the following syntax:
-
-```sql
-ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
-```
-
-> [!NOTE]
-> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
-
-If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
 
 ### Query Store plan forcing support for fast forward and static cursors (CTP 2.3)
 

@@ -80,7 +80,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Improved indirect checkpoint scalability. |[Details](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |UTF-8 support: Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Details](../relational-databases/collations/collation-and-unicode-support.md) |
 |Define cascaded delete actions on an edge constraint in a graph database. |[Details](../relational-databases/tables/graph-edge-constraints.md) |
-| | |
+|Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[Details](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) |
 | | |
 | | |
 | | |
@@ -159,12 +159,17 @@ hybrid-buffer-pool.md)|
 |Secondary to primary replica read/write connection redirection|[Details](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) |
 |SQL Data Discovery and Classification | [Details](../relational-databases/security/sql-data-discovery-and-classification.md) |
 |Expanded support for persistent memory devices |[Details](../database-engine/configure-windows/hybrid-buffer-pool.md) |
+|Support for columnstore statistics in `DBCC CLONEDATABASE`|[Details](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
+|`sp_estimate_data_compression_savings` introduces `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`|[Details](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
+|Machine Learning services supported on Windows Server Failover Cluster |[Details](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) d|
+|Machine Learning support for partition-based modeling  |[Details](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
+|Lightweight query profiling infrastructure enabled by default |[Details](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
+|New PolyBase connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB. |[Details](../relational-databases/polybase/polybase-guide.md) |
 | | |
 | | |
 | | |
 | | |
 | | |
- 
 
 
 
@@ -406,14 +411,17 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 > [!NOTE]
 > For this preview release, enlightenment of files on persistent memory devices is only available on Linux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Windows supports persistent memory devices starting with [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].
 -->
-### Support for columnstore statistics in DBCC CLONEDATABASE (CTP 2.0)
+<!--
+### Support for columnstore statistics in DBCC CLONEDATABASE|[Details](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md)| (CTP 2.0)
 
 `DBCC CLONEDATABASE` creates a schema-only copy of a database that includes all the elements necessary to troubleshoot query performance issues without copying the data. In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the command did not copy the statistics necessary to accurately troubleshoot columnstore index queries and manual steps were required to capture this information. Now in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` automatically captures the stats blobs for columnstore indexes, so no manual steps will be required.
-
-### New options added to sp_estimate_data_compression_savings (CTP 2.0)
+-->
+<!--
+### New options added to sp_estimate_data_compression_savings introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE` (CTP 2.0)
 
 `sp_estimate_data_compression_savings` returns the current size of the requested object and estimates the object size for the requested compression state. Currently this procedure supports three options: `NONE`, `ROW`, and `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces two new options: `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`. These new options will allow you to estimate the space savings if a columnstore index is created on the table using either standard or archive columnstore compression.
-
+-->
+<!--
 ### <a id="ml"></a> SQL Server Machine Learning Services failover clusters and partition based modeling (CTP 2.0)
 
 - **Partition-based modeling**: Process external scripts per partition of your data using the new parameters added to `sp_execute_external_script`. This functionality supports training many small models (one model per partition of data) instead of one large model.
@@ -421,7 +429,8 @@ Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed o
 - **Windows Server Failover Cluster**: Configure high availability for Machine Learning Services on a Windows Server Failover Cluster.
 
 For detailed information, see [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
-
+-->
+<!--
 ### Lightweight query profiling infrastructure enabled by default (CTP 2.0)
 
 The lightweight query profiling infrastructure (LWP) provides query performance data more efficiently than standard profiling mechanisms. Lightweight profiling is now enabled by default. It was introduced in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Lightweight profiling offers a query execution statistics collection mechanism with an expected overhead of 2% CPU, compared with an overhead of up to 75% CPU for the standard query profiling mechanism. On previous versions, it was OFF by default. Database administrators could enable it with [trace flag 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
@@ -429,6 +438,7 @@ The lightweight query profiling infrastructure (LWP) provides query performance 
 For more information on lightweight profiling, see [Query Profiling Infrastructure](../relational-databases/performance/query-profiling-infrastructure.md).
 
 **CTP 2.3** A new database scoped configuration `LIGHTWEIGHT_QUERY_PROFILING` is introduced to enable or disable the lightweight query profiling infrastructure.
+-->
 
 ### <a id="polybase"></a>New PolyBase connectors
 

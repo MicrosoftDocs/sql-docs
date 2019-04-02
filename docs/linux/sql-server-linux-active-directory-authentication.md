@@ -316,7 +316,7 @@ systemctl restart mssql-server
 
 This will use LDAPS over SSSD if AD domain join on host was done via SSSD package and **disablesssd** is not set to true. If **disablesssd** is set to true along with **forceldaps** being set to true, then it will use LDAPS protocol over openldap library calls made by SQL Server.
 
-## Post SQL Server 2017 CU14
+### Post SQL Server 2017 CU14
 
 Starting with SQL Server 2017 CU14, if SQL Server was joined to an AD domain controller using an SSSD package and is configured to use openldap calls for general AD lookup by setting **disablesssd** to true, you can also use **enablekdcfromkrb5** option to force SQL Server to use krb5 library for KDC lookup instead of reverse DNS lookup for KDC server.
 

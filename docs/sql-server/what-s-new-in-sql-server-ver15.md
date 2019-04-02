@@ -40,7 +40,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |`INSERT INTO SELECT` support for the data pool.||
 |`FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.||
 |**Database engine**||
-|Truncation error message defaults to include table and column names, and truncated value.|[Truncation](#truncation)|
+|Truncation error message defaults to include table and column names, and truncated value.|[VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)|
 |New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 |The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. |[Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md)|
 |Transparent Data Encryption (TDE) scan - suspend and resume.|[Details](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
@@ -68,7 +68,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Query Store plan forcing support for fast forward and static cursors.|[Details](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
 |Reduced recompilations for workloads using temporary tables across multiple scopes. |[Details](#reduced-recompilations) |
 |Improved indirect checkpoint scalability. |[Details](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
-|UTF-8 support |[Details](../relational-databases/collations/collation-and-unicode-support.md) |
+|UTF-8 support: Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Details](../relational-databases/collations/collation-and-unicode-support.md) |
 | | |
 | | |
 | | |
@@ -107,8 +107,8 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |:-----|:-----|
 |**Database engine**| |
 |Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Details](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
-| | |
-| | |
+|Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query. |[Details](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
+|Truncation error message improved to include table and column names, and truncated value. | |
 | | |
 | | |
 | | |
@@ -177,12 +177,14 @@ For more information, see [Collation and Unicode Support](../relational-database
 
 **CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation (UTF8_BIN2).
 
-### Scalar UDF inlining (CTP 2.1)
+<!--### Scalar UDF inlining (CTP 2.1)
 
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
 
-For more information, see [Scalar UDF inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md).
+For more information, see [Scalar UDF inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md).-->
 
+
+<!--
 ### <a name="truncation" />Truncation error message improved to include table and column names, and truncated value (CTP 2.1)
 
 The error message ID 8152 `String or binary data would be truncated` is familiar to many [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] developers and administrators who develop or maintain data movement workloads; the error is raised during data transfers between a source and a destination with different schemas when the source data is too large to fit into the destination data type. This error message can be time-consuming to troubleshoot. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new, more specific error message (2628) for this scenario:  
@@ -193,9 +195,9 @@ The new error message 2628 provides more context for the data truncation problem
 
 **CTP 2.1 and CTP 2.2** This is an opt-in error message and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
 
-**CTP 2.4** Error message 2628 becomes the default truncation message and replaces error message 8152 under database compatibility level 150. A new database scoped configuration `VERBOSE_TRUNCATION_WARNINGS` is introduced to switch between error message 2628 and 8152 when the database compatibility level is 150. For more information, see [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**CTP 2.4** Error message 2628 becomes the default truncation message and replaces error message 8152 under database compatibility level 150. A new database scoped configuration `VERBOSE_TRUNCATION_WARNINGS` is introduced to switch between error message 2628 and 8152 when the database compatibility level is 150. For more information, see [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation).
 For database compatibility level 140 or lower, error message 2628 remains an opt-in error message that requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 to be enabled.
-
+-->
 ### Improved diagnostic data for stats blocking (CTP 2.1)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] provides improved diagnostic data for long-running queries that wait on synchronous statistics update operations. The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. Additionally, the new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.

@@ -82,7 +82,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |Query Store plan forcing support for fast forward and static cursors.|[Details](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
 |Reduced recompilations for workloads using temporary tables across multiple scopes. |[Details](#reduced-recompilations) |
 |Improved indirect checkpoint scalability. |[Details](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
-|UTF-8 support: Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Details](../relational-databases/collations/collation-and-unicode-support.md) |
+|UTF-8 support: Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 |Define cascaded delete actions on an edge constraint in a graph database. |[Details](../relational-databases/tables/graph-edge-constraints.md) |
 |Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[Details](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) |
 | | |
@@ -99,6 +99,12 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |Added "Reinstall Notebook dependencies" command to assist with Python package updates. | |
 |Launch Azure Data Studio from SSMS.| |
 
+### Analysis services
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|Calculation groups in tabular model| |
+| | |
 
 ## CTP 2.2 December 2018
 
@@ -114,7 +120,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|Adds support to use UTF-8 character encoding with SQL Server Replication. |[Details](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
+|Adds support to use UTF-8 character encoding with SQL Server Replication. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 | | |
 
 
@@ -134,7 +140,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Details](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
+|Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 |Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query. |[Details](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
 |Truncation error message improved to include table and column names, and truncated value. | |
 |The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. | |
@@ -143,7 +149,6 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.  |[Details](../relational-databases/security/static-data-masking.md) |
 |Use derived table or view aliases in graph match query |[Details](../relational-databases/tables/graph-edge-constraints.md) |
 | | |
-| | |
 
 ### SQL Server on Linux
 
@@ -151,21 +156,12 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |:-----|:-----|
 |New container registry |[Details](../linux/quickstart-install-connect-docker.md) |
 | | |
-| | |
-| | |
-| | |
-| | |
 
 ### Tools
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
 |[Azure Data Studio](../azure-data-studio/what-is.md) supports Connect and manage [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. | |
-| | |
-| | |
-| | |
-| | |
-| | |
 | | |
 
 ## CTP 2.0 October 2018
@@ -206,9 +202,8 @@ hybrid-buffer-pool.md)|
 |Lightweight query profiling infrastructure enabled by default |[Details](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
 |New PolyBase connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB. |[Details](../relational-databases/polybase/polybase-guide.md) |
 |`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. |[Details](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
-| | |
-| | |
-| | |
+|Always Encrypted with secure enclaves. |[Always Encrypted with secure enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md) |
+|Build and rebuild online clustered columnstore index. |[Perform Index Operations Online](../relational-databases/indexes/perform-index-operations-online.md) |
 | | |
 
 ### SQL Server on Linux
@@ -254,13 +249,7 @@ hybrid-buffer-pool.md)|
 | | |
 | | |
 
-## Content to relocate
-
-These articles need a place. 
-
-<a name="reduced-recompilations"></a>
-
-### Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
+## Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
 
 Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
 
@@ -355,6 +344,7 @@ In addition, this feature can be set as the default for a specific database usin
 
 For more information, see [Resumable Online Index Create](../t-sql/statements/create-index-transact-sql.md#resumable-indexes).
 -->
+<!--
 ### Build and rebuild clustered columnstore indexes online (CTP 2.0)
 
 Convert row-store tables into columnstore format. Creating clustered columnstore indexes (CCI) was an offline process in the previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] - requiring all changes stop while the CCI is created. With [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] and 
@@ -371,7 +361,8 @@ Convert row-store tables into columnstore format. Creating clustered columnstore
     ON <tableName>
     REBUILD WITH (ONLINE = ON);
   ```
-
+-->
+<!--
 ### Always Encrypted with secure enclaves (CTP 2.0)
 
 Expands upon Always Encrypted with in-place encryption and rich computations. The expansions come from the enabling of computations on plaintext data, inside a secure enclave on the server side.
@@ -385,6 +376,7 @@ For details, see [Always Encrypted with secure enclaves](../relational-databases
 
 > [!NOTE]
 > Always Encrypted with secure enclaves is only available on Windows OS.
+-->
 <!--
 ### Intelligent query processing (CTP 2.0)
 
@@ -607,6 +599,9 @@ FROM sys.dm_exec_requests AS d
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
 -->
+
+## SQL Server PowerShell module
+
 - [**SQL Server PowerShell module**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
 
   - Upgrade from 21.0 to 21.1 to support SMO v150.
@@ -614,7 +609,7 @@ FROM sys.dm_exec_requests AS d
   - Fixed issue in `New-SqlAvailabilityGroup` cmdlet when targeting SQL Server 2014.
   - Added `–LoadBalancedReadOnlyRoutingList` parameter to `Set-SqlAvailabilityReplica` and `New-SqlAvailabilityReplica`.
   - Updated `AnalysisService` cmdlet to use cached login token from `Login-AzureAsAccount` for Azure Analysis Services.
-
+<!--
 ## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
 
 ### Many-to-many relationships in tabular models (CTP 2.4)
@@ -665,7 +660,7 @@ In addition to new DAX functions, two new Dynamic Management Views are introduce
 #### Compatibility level
 
 Calculation groups require models be at the 1470 compatibility level, which is currently supported only in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 and later. At this time, calculation groups can be created by using the Tabular Object Model (TOM) API, Tabular Model Scripting Language (TMSL), and the open-source Tabular Editor tool. Support in SQL Server Data Tools (SSDT) will be included in a future release, as will documentation. Additional information for this and other CTP feature releases will be provided in the Analysis Services blog.
-
+-->
 ## Other services
 
 As of CTP 2.4, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] does not introduce new features for the following services:

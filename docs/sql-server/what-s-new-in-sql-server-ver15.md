@@ -32,19 +32,28 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 ### Service improvements
 
+#### Big data clusters
+
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|**Big data clusters**| |
 |Guidance on GPU support for running deep learning with TensorFlow in Spark.||
 |Spark runtime upgrade to Spark.||
 |`INSERT INTO SELECT` support for the data pool.||
 |`FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.||
-|**Database engine**||
+
+#### Database engine
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
 |Truncation error message defaults to include table and column names, and truncated value.|[VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)|
 |New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 |The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. |[Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md)|
 |Transparent Data Encryption (TDE) scan - suspend and resume.|[Details](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
-|**SQL Server Analysis Services (SSAS)**||
+
+#### SQL Server Analysis Services (SSAS)
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
 |Many-to-many relationships in tabular models.||
 |Property settings for resource governance.||
 |||
@@ -56,20 +65,25 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 ### Service improvements
 
+#### Big data clusters
+
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|**Big data clusters**| |
 |Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ. |[Details](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md)|
 |Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. |[Details] (../big-data-cluster/big-data-cluster-create-apps.md)|
 |Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. |[Details](../big-data-cluster/sparklyr-from-RStudio.md) |
 |Mount external HDFS-compatible storage into big data cluster with HDFS tiering.|[Details](../big-data-cluster/hdfs-tiering.md) |
-|**Database engine** | |
+
+#### Database engine
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
 |Enable accelerated database recovery can be enabled per-database| [Details](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)|
 |Query Store plan forcing support for fast forward and static cursors.|[Details](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
 |Reduced recompilations for workloads using temporary tables across multiple scopes. |[Details](#reduced-recompilations) |
 |Improved indirect checkpoint scalability. |[Details](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |UTF-8 support: Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Details](../relational-databases/collations/collation-and-unicode-support.md) |
-|Define cascaded delete actions on an edge constraint in a graph database. |[Details](../relational-databases/tables/graph-edge-constraint.md) |
+|Define cascaded delete actions on an edge constraint in a graph database. |[Details](../relational-databases/tables/graph-edge-constraints.md) |
 | | |
 | | |
 | | |
@@ -85,12 +99,16 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 ### Service improvements
 
+#### Big data clusters
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|**Big data clusters**| |
 |Use SparkR from Azure Data Studio on a big data cluster. | |
 |Deploy Python and R apps.|[Details](../big-data-cluster/big-data-cluster-create-apps.md) |
-|**Database engine** | |
+
+#### Database engine** | |
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
 |Adds support to use UTF-8 character encoding with SQL Server Replication. |[Details](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 | | |
 | | |
@@ -103,9 +121,10 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 ### Service improvements
 
+#### Database engine
+
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|**Database engine**| |
 |Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Details](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 |Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query. |[Details](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
 |Truncation error message improved to include table and column names, and truncated value. | |
@@ -113,7 +132,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |The new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations. | |
 |Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.  | |
 |[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.  |[Details](../relational-databases/security/static-data-masking.md) |
-|Use derived table or view aliases in graph match query |[Details](../relational-databases/tables/graph-edge-constraint.md) |
+|Use derived table or view aliases in graph match query |[Details](../relational-databases/tables/graph-edge-constraints.md) |
 | | |
 | | |
 
@@ -121,25 +140,39 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 ### Service improvements
 
+#### Big data clusters
+
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|**Big data clusters**| |
 |Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes. | |
 |Access your big data from HDFS. | |
 |Run Advanced analytics and machine learning with Spark. | |
 |Use Spark streaming to data to SQL data pools. | |
 |Run Query books that provide a notebook experience in **Azure Data Studio**|[Details](../sql-operations-studio/what-is.md)  |
-|**Database engine**|[Details](../database-engine/configure-windows/hybrid-buffer-pool.md)|
+
+#### Database engine
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+hybrid-buffer-pool.md)|
 |Database **COMPATIBILITY_LEVEL 150** is added. |[Details](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
 |Resumable Online Index Create|[Details](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
 |Row mode memory grant feedback |[Details](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
-|Approximate `COUNT DISTINCT`|[Details](relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
-|Batch mode on rowstore |[Details](relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
+|Approximate `COUNT DISTINCT`|[Details](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
+|Batch mode on rowstore |[Details](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
 |Table variable deferred compilation |[Details](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
 |Java language extension |[Details](../advanced-analytics/java/extension-java.md) |
 |Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. | |
-|Edge constraints |[Details](../relational-databases/tables/graph-edge-constraint.md) |
+|Edge constraints |[Details](../relational-databases/tables/graph-edge-constraints.md) |
 |Database scoped default setting for online and resumable DDL operations | |
+|Availability groups support up to 5 synchronous secondary replicas |[Details](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) |
+|Secondary to primary replica read/write connection redirection|[Details](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) |
+|SQL Data Discovery and Classification | [Details](../relational-databases/security/sql-data-discovery-and-classification.md) |
+| | |
+| | |
+| | |
+| | |
+| | |
 | | |
  
 
@@ -341,6 +374,7 @@ Without this feature, you have to specify the online and resumable options direc
 
 For more information on index resumable operations, see [Resumable Online Index Create](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/).
 -->
+<!--
 ### <a id="ha"></a>Always On Availability Groups - more synchronous replicas (CTP 2.0)
 
 - **Up to five synchronous replicas**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] increases the maximum number of synchronous replicas to 5, up from 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. You can configure this group of five replicas to have automatic failover within the group. There is one primary replica, plus four synchronous secondary replicas.
@@ -352,7 +386,8 @@ For more information on index resumable operations, see [Resumable Online Index 
   - Read scale-out or disaster recovery scenarios where cluster type is `NONE`.
 
 For details, see [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
-
+-->
+<!--
 ### Data discovery and classification (CTP 2.0)
 
 Data discovery and classification provides advanced capabilities that are natively built into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Classifying and labeling your most sensitive data provides the following benefits:
@@ -366,7 +401,7 @@ For more information, see [SQL Data Discovery and Classification](../relational-
 
 >[!NOTE]
 >There are no changes in terms of how audit is enabled. There is a new field added to the audit records, `data_sensitivity_information`, which logs the sensitivity classifications (labels) of the actual data that was returned by the query. See [Auditing access to sensitive data](/azure/sql-database/sql-database-data-discovery-and-classification/#subheading-3).
-
+-->
 ### Expanded support for persistent memory devices (CTP 2.0)
 
 Any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] file that is placed on a persistent memory device can now operate in *enlightened* mode. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] directly accesses the device, bypassing the storage stack of the operating system using efficient memcpy operations. This mode improves performance because it allows low latency input/output against such devices.

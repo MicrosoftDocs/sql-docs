@@ -30,9 +30,7 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
-### Service improvements
-
-#### Big data clusters
+### Big data clusters
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
@@ -41,7 +39,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |`INSERT INTO SELECT` support for the data pool.||
 |`FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.||
 
-#### Database engine
+### Database engine
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
@@ -50,7 +48,10 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. |[Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md)|
 |Transparent Data Encryption (TDE) scan - suspend and resume.|[Details](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 
-#### SQL Server Analysis Services (SSAS)
+><sup>1</sup>
+>This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
+
+### SQL Server Analysis Services (SSAS)
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
@@ -58,14 +59,9 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Property settings for resource governance.||
 |||
 
-><sup>1</sup>
->This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
-
 ## CTP 2.3 February 2019
 
-### Service improvements
-
-#### Big data clusters
+### Big data clusters
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
@@ -74,7 +70,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. |[Details](../big-data-cluster/sparklyr-from-RStudio.md) |
 |Mount external HDFS-compatible storage into big data cluster with HDFS tiering.|[Details](../big-data-cluster/hdfs-tiering.md) |
 
-#### Database engine
+### Database engine
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
@@ -97,15 +93,14 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 ## CTP 2.2 December 2018
 
-### Service improvements
+### Big data clusters
 
-#### Big data clusters
 |**Service improvements**|**Details**|
 |:-----|:-----|
 |Use SparkR from Azure Data Studio on a big data cluster. | |
 |Deploy Python and R apps.|[Details](../big-data-cluster/big-data-cluster-create-apps.md) |
 
-#### Database engine** | |
+### Database engine
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
@@ -116,12 +111,9 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 | | |
 | | |
 
-
 ## CTP 2.1 November 2018
 
-### Service improvements
-
-#### Database engine
+### Database engine
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
@@ -138,9 +130,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 ## CTP 2.0 October 2018
 
-### Service improvements
-
-#### Big data clusters
+### Big data clusters
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
@@ -150,7 +140,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Use Spark streaming to data to SQL data pools. | |
 |Run Query books that provide a notebook experience in **Azure Data Studio**|[Details](../sql-operations-studio/what-is.md)  |
 
-#### Database engine
+### Database engine
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
@@ -186,7 +176,7 @@ hybrid-buffer-pool.md)|
 
 
 
-## Not sure where to link these to
+## Content to relocate
 
 These articles need a place. 
 

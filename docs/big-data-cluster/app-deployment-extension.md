@@ -1,16 +1,20 @@
 ---
 title: App deployment extension
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview). 
-author: TheBharath 
-ms.author: bharaths  
+author: jeroenterheerdt 
+ms.author: jterh
+ms.reviewer: jroth 
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
+
 # How to use VS Code to deploy applications to SQL Server big data clusters
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes how to deploy applications to a SQL Server big data cluster using Visual Studio Code with the App Deployment extension. This capability was introduced in CTP 2.3. 
 
@@ -23,11 +27,11 @@ This article describes how to deploy applications to a SQL Server big data clust
 
 This extension supports the following tasks in Visual Studio Code:
 
-- Authenticate with SQL Server Big Data Cluster.
+- Authenticate with SQL Server big data cluster.
 - Retrieve an application template from GitHub repository for deployment of supported runtimes.
 - Manage currently open application templates in the user's workspace.
 - Deploy an application through a specification in YAML format.
-- Manage deployed apps within SQL Server Big Data Cluster.
+- Manage deployed apps within SQL Server big data cluster.
 - View all apps that you have deployed in the side bar with additional information.
 - Generate a run spec to consume the app or delete the app from the cluster.
 - Consume deployed apps through a run specification YAML.

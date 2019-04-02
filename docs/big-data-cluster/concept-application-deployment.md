@@ -19,7 +19,7 @@ The following sections describe the architecture and functionality of Applicatio
 
 ## Application Deployment architecture
 
-Application deployment consists of a controller and App Runtime Handlers. When creating an application, a specification file (`spec.yaml`) is provided. This `spec.yaml` file contains everything the controller needs to know to succesfully deploy the application. The following is a sample of the contents for `spec.yaml`:
+Application deployment consists of a controller and app runtime handlers. When creating an application, a specification file (`spec.yaml`) is provided. This `spec.yaml` file contains everything the controller needs to know to succesfully deploy the application. The following is a sample of the contents for `spec.yaml`:
 
 ```yaml
 #spec.yaml
@@ -38,7 +38,8 @@ output: #output parameter the app expects and the type
 ```
 
 The controller inspects the `runtime` specified in the `spec.yaml` file and calls the corresponding runtime handler. The runtime handler creates the application. First, a Kubernetes ReplicaSet is created containing one or more pods, each of which contains the application to be deployed. The number of pods is defined by the `replicas` parameter set in the `spec.yaml` file for the application. Each pod can have one of more pools. The number of pools is defined by the `poolsize` parameter set in the `spec.yaml` file.
-These settings have an impact on the amount of requests the deployment can handle in parallel. The maximum number of requests at one given time is equals to `replicas` times `poolsize`, i.e if you have 5 replicas and 2 pools per replica the deployment can handle 10 requests in parallel. See the image below for a graphical representation of `replicas` and `poolsize`:
+
+These settings have an impact on the amount of requests the deployment can handle in parallel. The maximum number of requests at one given time is equals to `replicas` times `poolsize`. If you have 5 replicas and 2 pools per replica the deployment can handle 10 requests in parallel. See the image below for a graphical representation of `replicas` and `poolsize`:
 
 ![Poolsize and replicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 

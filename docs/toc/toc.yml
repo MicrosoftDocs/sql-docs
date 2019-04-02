@@ -87,7 +87,7 @@
       href: ../big-data-cluster/tutorial-notebook-spark.md
   - name: Concepts
     items:
-    - name: Application Deployment
+    - name: Application deployment
       href: ../big-data-cluster/concept-application-deployment.md
     - name: Controller
       href: ../big-data-cluster/concept-controller.md

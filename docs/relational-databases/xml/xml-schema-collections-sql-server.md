@@ -1,7 +1,7 @@
 ---
 title: "XML Schema Collections (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server]"
   - "schema collections [SQL Server], about XML schema collections"
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # XML Schema Collections (SQL Server)
@@ -63,7 +63,7 @@ manager: craigg
   
  For example, consider the following schema:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -124,6 +124,7 @@ manager: craigg
 |**blockDefault**|The **block** attribute applied to all element declarations and type definitions where it is not already present and the value is set to the value of the **blockDefault** attribute.|  
 |**finalDefault**|The **final** attribute applied to all element declarations and type definitions where it is not already present and the value is set to the value of the **finalDefault** attribute.|  
 |**targetNamespace**|Information about the components that belong to the target namespace is stored in the metadata.|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> Permissions on an XML Schema Collection  
  You must have the necessary permissions to do the following:  
@@ -157,7 +158,7 @@ manager: craigg
 ##  <a name="info"></a> Getting Information about XML Schemas and Schema Collections  
  XML schema collections are enumerated in the catalog view, sys.xml_schema_collections. The XML schema collection "sys" is defined by the system. It contains the predefined namespaces that can be used in all user-defined XML schema collections without having to load them explicitly. This list contains the namespaces for xml, xs, xsi, fn, and xdt. Two other catalog views are sys.xml_schema_namespaces, which enumerates all namespaces within each XML schema collection, and sys.xml_components, which enumerates all XML schema components within each XML schema.  
   
- The built-in function **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, yields an **xml** data type instance.. This instance contains XML schema fragments for schemas that are contained in an XML schema collection, except the predefined XML schemas.  
+ The built-in function **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, yields an **xml** data type instance. This instance contains XML schema fragments for schemas that are contained in an XML schema collection, except the predefined XML schemas.  
   
  You can enumerate the contents of an XML schema collection in the following ways:  
   
@@ -170,7 +171,7 @@ manager: craigg
 ### Example: Enumerate the XML Namespaces in an XML Schema Collection  
  Use the following query for the XML schema collection "myCollection":  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -180,18 +181,18 @@ WHERE    XSC.name = 'myCollection'
 ### Example: Enumerate the Contents of an XML Schema Collection  
  The following statement enumerates the contents of the XML schema collection "myCollection" within the relational schema, dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  Individual XML schemas within the collection can be obtained as **xml** data type instances by specifying the target namespace as the third argument to **XML_SCHEMA_NAMESPACE()**. This is shown in the following example.  
   
 ### Example: Output a Specified Schema from an XML Schema Collection  
- The following statement outputs the XML schema with the target namespace "<https://www.microsoft.com/books>" from the XML schema collection "myCollection" within the relational schema, dbo.  
+ The following statement outputs the XML schema with the _pretend_ target namespace https/\/www.microsoft.com/was-books from the XML schema collection "myCollection" within the relational schema, dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### Querying XML Schemas  

@@ -36,10 +36,10 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## Arguments  
- [ **@database =** ] '*database*'  
+`[ @database = ] 'database'`
  Is the name of the log shipping primary database. *database* is **sysname**, with no default, and cannot be NULL.  
   
- [ **@primary_id =** ] '*primary_id*'  
+`[ @primary_id = ] 'primary_id'`
  The ID of the primary database for the log shipping configuration. *primary_id* is **uniqueidentifier** and cannot be NULL.  
   
 ## Return Code Values  

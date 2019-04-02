@@ -5,7 +5,7 @@ description: Learn about availability group clusters when running Red Hat Enterp
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux, seodec18"
@@ -83,7 +83,7 @@ Each node in the cluster must have an appropriate subscription for RHEL and the 
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-For more information, see [Pacemaker - The Open Source, High Availability Cluster](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+For more information, see [Pacemaker - The Open Source, High Availability Cluster](https://clusterlabs.org/pacemaker/). 
 
 After you have configured the subscription, complete the following steps to configure Pacemaker:
 
@@ -105,7 +105,7 @@ Node level fencing ensures that a node does not run any resources. This is done 
 
 For information about STONITH, and fencing, see the following articles:
 
-* [Pacemaker Clusters from Scratch](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 * [Fencing and STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Red Hat High Availability Add-On with Pacemaker: Fencing](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
@@ -138,10 +138,10 @@ To update the property value to `true` run:
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-To update the `ag1` resource property `failure-timeout` to `60s` run:
+To update the `ag_cluster` resource property `failure-timeout` to `60s` run:
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 

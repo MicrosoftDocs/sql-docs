@@ -34,10 +34,10 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## Arguments  
- [ **@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the name of the database. *dbname* is **sysname**, with a default of **%**. If **%**, then the result set contains all databases at the Publisher, otherwise only information on the specified database is returned. Information is not returned for any databases on which the user does not have the appropriate permissions, as described below.  
   
- [ **@type=**]  **'***type***'**  
+`[ @type = ] 'type'`
  Restricts the result set to contain only databases on which the specified replication option *type* value has been enabled. *type* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  
@@ -46,7 +46,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |**merge publish**|Merge replication allowed.|  
 |**replication allowed** (default)|Either transactional or merge replication allowed.|  
   
- [ **@reserved=** ] *reserved*  
+`[ @reserved = ] reserved`
  Specifies whether information on existing publications and subscriptions is returned. *reserved* is **bit**, with a default value of 0. If **1**, the result set includes information on whether the database specified has any existing publications or subscriptions.  
   
 ## Result Sets  

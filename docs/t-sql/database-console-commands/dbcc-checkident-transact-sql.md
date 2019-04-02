@@ -26,7 +26,7 @@ helpviewer_keywords:
   - "identity values [SQL Server], reseeding"
   - "reporting current identity values"
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---
@@ -130,8 +130,8 @@ GO
 ```  
   
 ### C. Forcing the current identity value to a new value  
- The following example forces the current identity value in the `AddressTypeID` column in the `AddressType` table to a value of 10. Because the table has existing rows, the next row inserted will use 11 as the value, that is, the new current identity value defined for the column value plus 1 (which is the column's increment value).  
-  
+ The following example forces the current identity value in the `AddressTypeID` column in the `AddressType` table to a value of 10. Because the table has existing rows, the next row inserted will use 11 as the value – the new current identity value defined for the column plus 1 (which is the column's increment value).  
+
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -161,4 +161,5 @@ GO
 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
 [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
+
   

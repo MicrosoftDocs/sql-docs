@@ -39,10 +39,10 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## Arguments  
- [ **@typename=** ] *type*  
+`[ @typename = ] type`
  Is the name of the alias data type. Alias data type names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique in each database. *type* is **sysname**, with no default.  
   
- [ **@phystype=**] *system_data_type*  
+`[ @phystype = ] system_data_type`
  Is the physical, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied, data type on which the alias data type is based.*system_data_type* is **sysname**, with no default, and can be one of these values:  
   
 ||||  
@@ -67,7 +67,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  Is a nonnegative integer that indicates the maximum number of decimal digits that can be stored to the right of the decimal point, and it must be less than or equal to the precision. For more information, see [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- [ **@nulltype =** ] **'***null_type***'**  
+`[ @nulltype = ] 'null_type'`
  Indicates the way the alias data type handles null values. *null_type* is **varchar(**8**)**, with a default of NULL, and must be enclosed in single quotation marks ('NULL', 'NOT NULL', or 'NONULL'). If *null_type* is not explicitly defined by **sp_addtype**, it is set to the current default nullability. Use the GETANSINULL system function to determine the current default nullability. This can be adjusted by using the SET statement or ALTER DATABASE. Nullability should be explicitly defined. If **@phystype** is **bit**, and **@nulltype** is not specified, the default is NOT NULL.  
   
 > [!NOTE]  

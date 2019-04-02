@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Add SSIS Connection Manager"
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add SSIS Connection Manager

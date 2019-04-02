@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Analysis Services Processing Task Editor"
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Analysis Services Processing Task Editor (Analysis Services Page)

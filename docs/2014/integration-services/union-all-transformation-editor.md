@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Union All Transformation Editor"
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Union All Transformation Editor

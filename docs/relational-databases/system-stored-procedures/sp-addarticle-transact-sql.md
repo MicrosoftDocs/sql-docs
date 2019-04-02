@@ -63,28 +63,28 @@ sp_addarticle [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains the article. The name must be unique in the database. *publication* is **sysname**, with no default.  
   
- [ **@article =** ] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article. The name must be unique within the publication. *article* is **sysname**, with no default.  
   
- [ **@source_table =** ] **'**_source_table_**'**  
+`[ @source_table = ] 'source_table'`
  This parameter has been deprecated; use *source_object* instead.  
   
  *This parameter is not supported for Oracle Publishers.*  
   
- [ **@destination_table =** ] **'**_destination_table_**'**  
+`[ @destination_table = ] 'destination_table'`
  Is the name of the destination (subscription) table, if different from *source_table*or the stored procedure. *destination_table* is **sysname**, with a default of NULL, which means that *source_table* equals *destination_table**.*  
   
- [ **@vertical_partition =** ] **'**_vertical_partition_**'**  
+`[ @vertical_partition = ] 'vertical_partition'`
  Enables and disables column filtering on a table article. *vertical_partition* is **nchar(5)**, with a default of FALSE.  
   
  **false** indicates there is no vertical filtering and publishes all columns.  
   
  **true** clears all columns except the declared primary key, nullable columns with no default, and unique key columns. Columns are added using [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md).  
   
- [ **@type =** ] **'**_type_**'**  
+`[ @type = ] 'type'`
  Is the type of article. *type* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  
@@ -105,13 +105,13 @@ sp_addarticle [ @publication = ] 'publication'
 |**serializable proc exec**|Replicates the execution of the stored procedure only if it is executed within the context of a serializable transaction. Not supported for Oracle Publishers.<br /><br /> The procedure also must be executed inside an explicit transaction for the procedure execution to be replicated.|  
 |**view schema only**|View with schema only. Not supported for Oracle Publishers. When using this option, you must also publish the base table.|  
   
- [ **@filter =** ] **'**_filter_**'**  
+`[ @filter = ] 'filter'`
  Is the stored procedure (created with FOR REPLICATION) used to filter the table horizontally. *filter* is **nvarchar(386)**, with a default of NULL. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) and [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) must be executed manually to create the view and filter stored procedure. If not NULL, the filter procedure is not created (assumes the stored procedure is created manually).  
   
- [ **@sync_object =** ] **'**_sync_object_**'**  
+`[ @sync_object = ] 'sync_object'`
  Is the name of the table or view used for producing the data file used to represent the snapshot for this article. *sync_object* is **nvarchar(386)**, with a default of NULL. If NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) is called to automatically create the view used to generate the output file. This occurs after adding any columns with [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). If not NULL, a view is not created (assumes the view is manually created).  
   
- [ **@ins_cmd =** ] **'**_ins_cmd_**'**  
+`[ @ins_cmd = ] 'ins_cmd'`
  Is the replication command type used when replicating inserts for this article. *ins_cmd* is **nvarchar(255)**, and can be one of the following values.  
   
 |Value|Description|  
@@ -122,7 +122,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [ **@del_cmd =**] **'**_del_cmd_**'**  
+`[ @del_cmd = ] 'del_cmd'`
  Is the replication command type used when replicating deletes for this article. *del_cmd* is **nvarchar(255)**, and can be one of the following values.  
   
 |Value|Description|  
@@ -134,7 +134,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [ **@upd_cmd =**] **'**_upd_cmd_**'**  
+`[ @upd_cmd = ] 'upd_cmd'`
  Is the replication command type used when replicating updates for this article. *upd_cmd* is **nvarchar(255)**, and can be one of the following values.  
   
 |Value|Description|  
@@ -149,13 +149,13 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  The CALL, MCALL, SCALL, and XCALL syntax vary the amount of data propagated to the subscriber. The CALL syntax passes all values for all inserted and deleted columns. The SCALL syntax passes values only for affected columns. The XCALL syntax passes values for all columns, whether changed or not, including the previous value of the column. For more information, see [Specify How Changes Are Propagated for Transactional Articles](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [ **@creation_script =**] **'**_creation_script_**'**  
+`[ @creation_script = ] 'creation_script'`
  Is the path and name of an optional article schema script used to create the article in the subscription database. *creation_script* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@description =**] **'**_description_**'**  
+`[ @description = ] 'description'`
  Is a descriptive entry for the article. *description* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@pre_creation_cmd =**] **'**_pre_creation_cmd_**'**  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'`
  Specifies what the system should do if it detects an existing object of the same name at the subscriber when applying the snapshot for this article. *pre_creation_cmd* is **nvarchar(10)**, and can be one of the following values.  
   
 |Value|Description|  
@@ -165,10 +165,10 @@ sp_addarticle [ @publication = ] 'publication'
 |**drop** (default)|Drops the destination table.|  
 |**truncate**|Truncates the destination table. Is not valid for ODBC or OLE DB Subscribers.|  
   
- [ **@filter_clause=**] **'**_filter_clause_**'**  
+`[ @filter_clause = ] 'filter_clause'`
  Is a restriction (WHERE) clause that defines a horizontal filter. When entering the restriction clause, omit the keyword WHERE. *filter_clause* is **ntext**, with a default of NULL. For more information, see [Filter Published Data](../../relational-databases/replication/publish/filter-published-data.md).  
   
- [ **@schema_option =**] *schema_option*  
+`[ @schema_option = ] schema_option`
  Is a bitmask of the schema generation option for the given article. *schema_option* is **binary(8)**, and can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values:  
   
 > [!NOTE]  
@@ -227,7 +227,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Not all *schema_option* values are valid for every type of replication and article type. The **Valid Schema Options** table in the Remarks section shows the valid schema options that can be chosen based upon the combination of the article type and the replication type.  
   
- [ **@destination_owner =**] **'**_destination_owner_**'**  
+`[ @destination_owner = ] 'destination_owner'`
  Is the name of the owner of the destination object. *destination_owner* is **sysname**, with a default of NULL. When *destination_owner* is not specified, the owner is specified automatically based on the following rules:  
   
 |Condition|Destination object owner|  
@@ -238,7 +238,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  To support non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, *destination_owner* must be NULL.  
   
- [ **@status=**] *status*  
+`[ @status = ] status`
  Specifies if the article is active and additional options for how changes are propagated. *status* is **tinyint**, and can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values.  
   
 |Value|Description|  
@@ -251,22 +251,22 @@ sp_addarticle [ @publication = ] 'publication'
   
  For example, an active article using parameterized statements would have a value of 17 in this column. A value of **0** means that the article is inactive and no additional properties are defined.  
   
- [ **@source_owner =**] **'**_source_owner_**'**  
+`[ @source_owner = ] 'source_owner'`
  Is the owner of the source object. *source_owner* is **sysname**, with a default of NULL. *source_owner* must be specified for Oracle Publishers.  
   
- [ **@sync_object_owner =**] **'**_sync_object_owner_**'**  
+`[ @sync_object_owner = ] 'sync_object_owner'`
  Is the owner of the view that defines the published article. *sync_object_owner* is **sysname**, with a default of NULL.  
   
- [ **@filter_owner =**] **'**_filter_owner_**'**  
+`[ @filter_owner = ] 'filter_owner'`
  Is the owner of the filter. *filter_owner* is **sysname**, with a default of NULL.  
   
- [ **@source_object =**] **'**_source_object_**'**  
+`[ @source_object = ] 'source_object'`
  Is the database object to be published. *source_object* is **sysname**, with a default of NULL. If *source_table* is NULL, *source_object* cannot be NULL.*source_object* should be used instead of *source_table*. For more information about the types of objects that can be published using snapshot or transactional replication, see [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [ **@artid =** ] _article_ID_ **OUTPUT**  
+`[ @artid = ] _article_ID_ OUTPUT`
  Is the article ID of the new article. *article_ID* is **int** with a default of NULL, and it is an OUTPUT parameter.  
   
- [ **@auto_identity_range =** ] **'**_auto_identity_range_**'**  
+`[ @auto_identity_range = ] 'auto_identity_range'`
  Enables and disables automatic identity range handling on a publication at the time it is created. *auto_identity_range* is **nvarchar(5)**, and can be one of the following values:  
   
 |Value|Description|  
@@ -278,23 +278,23 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *auto_identity_range* has been deprecated and is provided for backward compatibility only. You should use *identityrangemanagementoption* for specifying identity range management options. For more information, see [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [ **@pub_identity_range =** ] *pub_identity_range*  
+`[ @pub_identity_range = ] pub_identity_range`
  Controls the range size at the Publisher if the article has *identityrangemanagementoption* set to **auto** or *auto_identity_range* set to **true**. *pub_identity_range* is **bigint**, with a default of NULL. *Not supported for Oracle Publishers*.  
   
- [ **@identity_range =** ] *identity_range*  
+`[ @identity_range = ] identity_range`
  Controls the range size at the Subscriber if the article has *identityrangemanagementoption* set to **auto** or *auto_identity_range* set to **true**. *identity_range* is **bigint**, with a default of NULL. Used when *auto_identity_range* is set to **true**. *Not supported for Oracle Publishers*.  
   
- [ **@threshold =** ] *threshold*  
+`[ @threshold = ] threshold`
  Is the percentage value that controls when the Distribution Agent assigns a new identity range. When the percentage of values specified in *threshold* is used, the Distribution Agent creates a new identity range. *threshold* is **bigint**, with a default of NULL. Used when *identityrangemanagementoption* is set to **auto** or *auto_identity_range* is set to **true**. *Not supported for Oracle Publishers*.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of 0.  
   
  **0** specifies that adding an article does not cause the snapshot to be invalid. If the stored procedure detects that the change requires a new snapshot, an error occurs and no changes are made.  
   
  **1** specifies that adding an article may cause the snapshot to be invalid, and if subscriptions exist that would require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot to be generated.  
   
- [ **@use_default_datatypes =** ] *use_default_datatypes*  
+`[ @use_default_datatypes = ] use_default_datatypes`
  Is whether the default column data type mappings are used when publishing an article from an Oracle Publisher. *use_default_datatypes* is bit, with a default of 1.  
   
  **1** = the default article column mappings are used. The default data type mappings can be displayed by executing [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
@@ -306,7 +306,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  This parameter should only be used for Oracle Publishers. Setting *use_default_datatypes* to **0** for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher generates an error.  
   
- [ **@identityrangemanagementoption =** ] *identityrangemanagementoption*  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption`
  Specifies how identity range management is handled for the article. *identityrangemanagementoption* is **nvarchar(10)**, and can be one of the following values.  
   
 |Value|Description|  
@@ -320,13 +320,13 @@ sp_addarticle [ @publication = ] 'publication'
   
  For more information, see [Replicate Identity Columns](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [ **@publisher =** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when adding an article to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [ **@fire_triggers_on_snapshot =** ] **'**_fire_triggers_on_snapshot_**'**  
+`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'`
  Is if replicated user triggers are executed when the initial snapshot is applied. *fire_triggers_on_snapshot* is **nvarchar(5)**, with a default of FALSE. **true** means that user triggers on a replicated table are executed when the snapshot is applied. In order for triggers to be replicated, the bitmask value of *schema_option* must include the value **0x100**.  
   
 ## Return Code Values  

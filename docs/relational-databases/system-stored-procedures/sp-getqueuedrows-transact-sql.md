@@ -34,13 +34,13 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## Arguments  
- [ **@tablename =**] **'***tablename***'**  
+`[ @tablename = ] 'tablename'`
  Is the name of the table. *tablename* is **sysname**, with no default. The table must be a part of a queued subscription.  
   
- [ **@owner =**] **'***owner***'**  
+`[ @owner = ] 'owner'`
  Is the subscription owner. *owner* is **sysname**, with a default of NULL.  
   
- [ **@tranid =** ] **'***transaction_id***'**  
+`[ @tranid = ] 'transaction_id'`
  Allows the output to be filtered by the transaction ID. *transaction_id* is **nvarchar(70)**, with a default of NULL. If specified, the transaction ID associated with the queued command is displayed. If NULL, all the commands in the queue are displayed.  
   
 ## Return Code Values  

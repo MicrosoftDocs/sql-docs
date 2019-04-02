@@ -4,7 +4,7 @@ description: Learn how to call Java classes from SQL Server stored procedures us
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -22,7 +22,7 @@ There are two methods for calling Java classes in SQL Server:
 
 1. Place .class or .jar files in your [Java classpath](#classpath). This is available for both Windows and Linux.
 
-2. Upload compiled classes in a .jar file and other dependencies into the database using the [external library](#external-library) DDL. This option is available for Windows only in CTP 2.3. Linux support will be added in a later CTP.
+2. Upload compiled classes in a .jar file and other dependencies into the database using the [external library](#external-library) DDL. This option is available for Windows and Linux in CTP 2.4.
 
 > [!NOTE]
 > As a general recommendation, use .jar files and not individual .class files. This is common practice in Java and will make the overall experience easier. See also: [How to create a jar file from class files](extension-java.md#create-jar).
@@ -89,7 +89,7 @@ Just as you created a system variable for the JDK executables, you can create a 
 
 ## External library
 
-In SQL Server 2019 CTP 2.3, you can use external libraries for the Java language on Windows. The same functionality will be available on Linux in an upcoming CTP. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+In SQL Server 2019 CTP 2.4, you can use external libraries for the Java language on Windows and Linux. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 Example of how to upload a .jar file with external library:
 

@@ -36,15 +36,15 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job from which the step will be removed. *job_id*is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job from which the step will be removed. *job_name*is **sysname**, with a default of NULL.  
   
 > **NOTE:** Either *job_id* or *job_name* must be specified; both cannot be specified.  
   
- [ **@step_id=** ] *step_id*  
+`[ @step_id = ] step_id`
  The identification number of the step being removed. *step_id*is **int**, with no default.  
   
 ## Return Code Values  

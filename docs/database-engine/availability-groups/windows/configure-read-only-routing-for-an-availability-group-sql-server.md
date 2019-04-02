@@ -60,6 +60,8 @@ Read-only routing is available in [!INCLUDE[sssql15](../../../includes/sssql15-m
 -   One or more availability replicas must be configured to accept read-only in the secondary role (that is, to be [readable secondary replicas](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)). For more information, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 -   You must be connected to the server instance that hosts the current primary replica.  
+
+-   If using a SQL Login, make sure the account is configured correctly. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group (SQL Server)](logins-and-jobs-for-availability-group-databases.md).
   
 ###  <a name="RORReplicaProperties"></a> What Replica Properties Do you Need to Configure to Support Read-Only Routing?  
   
@@ -277,7 +279,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
 -    [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
--    [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)  
+-    [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
 
 **Additional content**
 

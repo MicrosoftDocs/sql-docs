@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "packages [Integration Services], configurations"
   - "deploying packages [Integration Services], configurations"
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create Package Configurations

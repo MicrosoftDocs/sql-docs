@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Audit Transformation Editor"
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Audit Transformation Editor

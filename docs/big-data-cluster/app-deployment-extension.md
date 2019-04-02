@@ -99,7 +99,7 @@ You may instantly deploy this App through the code lens `Deploy App` in the `spe
 
 ![Deploy App Button](media/vs-extension/deploy_app_lightning.png)
 
-![Deploy App Codelens](media/vs-extension/deploy_app_codelens.png)
+![Deploy App CodeLens](media/vs-extension/deploy_app_codelens.png)
 
 You will be notified when the app is ready for consumption based on the state of the app in the sidebar:
 
@@ -121,9 +121,11 @@ You may view all apps you have deployed in the side bar with the following infor
   - swagger
   - details
 
-If you click `Links`, you will see that you can access the `swagger.json` of your deployed app, so that write your own clients which call your app:
+If you click `Links`, you will see that you can access the `swagger.json` of your deployed app, so that you can write your own clients which call your app:
 
 ![Swagger](media/vs-extension/swagger.png)
+
+See [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
 
 ### App Run
 
@@ -167,7 +169,7 @@ To delete an app, just click the Trash can button next to the app in the `Deploy
 
 ## Next steps
 
-You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
+Explore how to integrate apps deployed on SQL Server big data clusters in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
 
 For more information about SQL Server big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
 

@@ -87,14 +87,22 @@ Now, for the SQL Server master instance to access data pools and HDFS, run the d
 
 ```sql
 USE AdventureWorks2016CTP3
-GO 
+GO
+-- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-    CREATE EXTERNAL DATA SOURCE SqlDataPool
-    WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+  CREATE EXTERNAL DATA SOURCE SqlDataPool
+  WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
+-- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+BEGIN
+  IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
     CREATE EXTERNAL DATA SOURCE SqlStoragePool
     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+  ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+    CREATE EXTERNAL DATA SOURCE SqlStoragePool
+    WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+END
 GO
 ```
 

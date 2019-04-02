@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "packages view [Integration Services]"
   - "catalog.packages view [Integration Services]"
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.packages (SSISDB Database)

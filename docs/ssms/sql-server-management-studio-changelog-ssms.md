@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/02/2019"
+ms.date: "03/29/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -18,90 +18,74 @@ manager: craigg
 This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions](#previous-ssms-releases).
 
 
+## [SSMS 18.0 (RC1)](download-sql-server-management-studio-ssms.md)
 
-## [SSMS 18.0 (Preview 7)](download-sql-server-management-studio-ssms.md)
+Build number: 15.0.18098.0<br>
+Release date: March 28, 2019
 
-Build number: 15.0.18092.0<br>
-Release date: March 1, 2019
+Release Candidate 1 (RC1) is our latest public preview of SSMS 18.0. For the latest General Availability (GA) version of SSMS, [download and install SSMS 17.9.1](#ssms-1791-latest-ga-release).
 
-Preview 7 is our latest public preview of SSMS 18.0. For the latest General Availability (GA) version of SSMS, [download and install SSMS 17.9.1](#ssms-1791-latest-ga-release).
+### What's new in RC1
 
-### What's new in Preview 7
+This section lists what's new in SSMS 18.0 RC1. For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 Preview - cumulative changelog through RC1](#ssms-180-preview---cumulative-changelog-through-rc1).
 
-This section lists what's new in SSMS 18.0 preview 7. For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 Preview - cumulative changelog through Preview 7](#ssms-180-preview---cumulative-changelog-through-preview-7).
+**SSMS Improvements**
 
-- **SSMS**
-  - Added functionality to migrate SSMS user settings from a previous version of SSMS (17.x or older 18.0 Preview) when SSMS is started for the first time.
-  - Added support for `UTF8_BIN2` collation.
-  - Added support for [edge constraints](../relational-databases/tables/graph-edge-constraints.md) in both SMO and SSMS.
-  - Added **Cloud witness** as a new quorum type and as a new resource type in both SMO and SSMS.
-  - Added logic to notify the user that a flat file import may have resulted in a renaming of the columns.
-  - Added Showplan support to LocalCube RelOp for `DW ROLLUP` and `CUBE`.
-  - Added support to import/export data tier application with graph tables.
-  - Changed the set of vulnerability assessment rules that are run on Azure SQL Database Managed Instances, so that vulnerability assessment scan results will be consistent SQL Azure DB.
-  - [SQL vulnerability assessment](../relational-databases/security/sql-vulnerability-assessment.md) now supports Azure SQL DW.
-  - Added **Data classification** feature to SMO. Column object exposes new properties: `SensitivityLabelName`, `SensitivityLabelId`, `SensitivityInformationTypeName`, `SensitivityInformationTypeId`, and `IsClassified` (read-only).
-    For more information see: https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql.
-  - Added **Classification Report** menu item to the **Data Classification** menu.
-  - Added **AAD logins** as a new login type in SMO and SSMS when connected to an Azure SQL Managed Instance.
-  - In Azure Data Studio, enabled run a query or create a new notebook when you right-click a database in Object Explorer.
-  - In XEvent Viewer, enabled showplan window for more XEvents.
-  - Data Masking:
-    - JSON config files now supported
-    - XML config file format has been changed to be more flexible moving forward.  Existing config files will need to be recreated.
-    - Databases containing memory-optimized and temporal tables are now able to be masked.  Some restrictions still apply to the memory-optimized and temporal tables themselves.
-    - Database copy operation for on-premises databases now uses the `COPY_ONLY` option for the `BACKUP DATABASE` step.
-    - Masked database is now set to `SIMPLE` recovery model while the masking operation is in progress to reduce log use, then returns to its original value after completion.
-    - Masked database is now named `<output database name>-MaskInProgress` while the operation is in progress, and renamed to `<output database name>` once the masking operation has succeeded.
-    - Changes display order of columns in configuration UI to be ordinal rather than alphabetical.
-    - Removed option to bulk-select columns in configuration UI to prevent unexpected behavior.
-    - Improved internal retry logic for connection and command failures.
+- Enabling XMLA endpoint connectivity to PowerBI datasets. XMLA endpoints provide access to the Analysis Services engine in the Power BI Service. This allows tools such as SSMS and SQL Profiler to connect to Power BI datasets for monitoring, management, debugging, etc. For details, see [XMLA endpoint connectivity](https://go.microsoft.com/fwlink/?linkid=2085204).
 
-- **SSIS**
-    - When connecting to Azure SQL DB or Azure SQL DB Managed Instance, you can connect to it with `<default>` as initial database.
-    - Added a new entry item **Try SSIS in Azure Data Factory** under **Integration Services Catalogs** node, which can be used to launch the **Integration Runtime Creation Wizard** and create **Azure-SSIS Integration Runtime** quickly.
-    - Added **Create SSIS IR** button in **Catalog Creation Wizard**", which can be used to launch the **Integration Runtime Creation Wizard** and create **Azure-SSIS Integration Runtime** quickly.
-    - `ISDeploymentWizard` now supports SQL Server authentication, Azure Active Directory Integrated authentication, and Azure Active Directory Password authentication in command-line mode.
+- **SMO**
+  - Added cascade delete support to "Edge Constraints" in both SMO and SSMS.
+  - Added support for data classification "read-write" permissions.
+
+- **Audit Files**
+  - Updated list of known audit actions to include FEATURE RESTRICTION ADD/CHANGE GROUP/DROP.
 
 ### Bug fixes
 
-- **SMO**
-    - Fixed performance regression in transfer from external tables.
-    - Fixed issue in `ServerConnection` thread-safety which was causing SMO to leak `SqlConnection` instances when targeting Azure SQL DB.
-    - Fixed an issue which was causing a `StringBuilder.FormatError` when trying to restore a database which had curly braces `{}` in its name.
-
 - **General SSMS**
-    - Fixed issue causing SSMS to hang/crash while editing T-SQL.
-    - Fixed issue where `ApplicationIntent` was not passed along in connections in `Registered Servers`.
-    - Fixed issue where **New XEvent Session Wizard UI** form was not rendered properly on high DPI monitors.
-    - Fixed issue trying to import a `.bacpac` file.
-    - Fixed issue trying to display the properties of a database with `FILEGROWTH > 2048GB` was throwing an arithmetic overflow error.
-    - Fixed issue preventing SSMS from opening a .sql file when double-clicking on it.
+  - Fixed an issue which was preventing MFA authentication when user ids belonged to multiple tenants.
+  - Fixed an issue where the Perf Dashboard Report was reporting PAGELATCH and PAGEIOLATCH waits that could not found in subreports.
 
-- **Object Scripting**
-    - Fixed issue causing the database scripting of a SQL Azure Database to always target an on-premises SQL Server instance, even if the **Object Explorer** scripting settings were set to match the source.
-    - Fixed issue trying to script a table in an Azure SQL Datawarehouse database involving clustered and non-clustered indexes that was generating incorrect T-SQL statements.
-    - Fixed an issue trying to script a table in an Azure SQL Datawarehouse database with both clustered columnstore indexes and clustered indexes that was generating incorrect T-SQL (duplicate statements).
-    - Fixed partitioned table scripting with no range values (Azure SQL Datawarehouse databases).
-    - Fixed an issue preventing scripting an audit or audit specification `SERVER_PERMISSION_CHANGE_GROUP`.
-    - Fixed an issue preventing scripting statistics from Azure SQL Datawarehouse. See [Microsoft Azure Feedback Forums](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296).
+- **SSMS Editor**
+  - Fixed an issue where several system views and table values functions were not properly colorized.
 
-- **Azure SQL Database Managed Instance**
-    - Fixed an issue causing right-clicking on a database and choosing **Import data-tier application** to fail.
-    - Fixed an issue causing right-clicking on a `TempDB` to show errors.
-    - Fixed an issue scripting `ALTER DB ADD FILE` statement in SMO was causing the generated T-SQL script to be empty.
+- **Object Explorer**
+  - Added proper escaping in Object Explorer filtering. For details, see [Azure feedback 36678803](https://feedback.azure.com/forums/908035/suggestions/36678803).
 
-- **Flat File Wizard**
-    - Fixed an issue where the wizard was not able to import from single column CSV files.
-    - Fixed an issue where the import wizard was not able to process negative decimal values.
-	
+- **SMO**
+  - Fixed an issue where GetDbComparer was incorrectly defaulting the collation to CI for ALL Azure DBs.
+
+- **Managed Instance support**
+  - Improved display of Managed Instances server specific properties (hardware generation, service tier, storage used and reserved).
+
+- **Azure SQL Database**
+  - Fixed issue where Service Level Objectives (SLO) were hardcoded, making it harder for SSMS to support newer SQL Azure SLOs. Now users can sign in to Azure and allow SSMS to retrieve all the applicable SLO data (Edition and Max Size).
+
+- **Result Grid**
+  - Fixed an issue which resulted in an "Index out of range" exception when clicking on the grid.
+  - Fixed an issue where the grid result background color was being ignored. For details, see [Azure feedback 32895916](https://feedback.azure.com/forums/908035/suggestions/32895916).
+
+- **Profiler**
+  - Fixed issue that was preventing the SQL Profiler from starting on Windows 7 SP1.
+
+- **ShowPlan**
+  - Add the following 4 attributes in RunTimeCountersPerThread of actual execution xml plan: HpcRowCount (Number of rows processed by hpc device), HpcKernelElapsedUs (elapsed time wait for kernel execution in use), HpcHostToDeviceBytes (bytes transferred from host to device), and HpcDeviceToHostBytes (bytes transferred from device to host).
+
+- **Data-tier Application Wizard**
+  - Fixed an issue where the user was not able to import a Data-tier Application (.dacpac) due to limited access to the server (e.g. no access to all the databases on the same server).
+  - Fixed an issue which was causing the import to be extremely slow when many databases happened to be hosted on the same Azure SQL server.
+
+### Deprecated Features
+
+- Removed Static Data Masking (preview) feature.
+
 ### Known issues
 
 - N/A
 
-## SSMS 18.0 preview - cumulative changelog through preview 7
+## SSMS 18.0 preview - cumulative changelog through RC1
 
-If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the change appeared in our first public preview of SSMS 18.0, which was SSMS 18.0 *preview 4*.
+If there is no *preview 5*, *preview 6*, *preview 7*, or *RC1* label it indicates the change appeared in our first public preview of SSMS 18.0, which was SSMS 18.0 *preview 4*.
 
 ### What's new
 
@@ -140,7 +124,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of SQL Azure databases
   - Added support for recently added vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.
   - Exposing AUTOGROW_ALL_FILES config option  for Filegroups in SSMS
-  - Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (For details, see https://blogs.msdn.microsoft.  com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
+  - Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (For details, see https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
   - SQL Editor honors the CTRL+D shortcut to duplicate lines (For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
   - New menu and key bindings to creates files: CTRL+ALT+N. CTRL+N will continue to create a new query. Note: if you are migrating from "SSMS 18.0 Preview 1", you must reset the user settings from "**Tools | Import Export Settings | Reset all settings**".
   - "New Firewall Rule" dialog now allow the user to specify a rule name, instead of automatically generating one on behalf of the user (For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32902039)=
@@ -165,6 +149,8 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - [New in Preview 5] Moved location for RegSrvr.xml file (Registered Server configuration file) to "%AppData%\Microsoft\SQL Server Management Studio" (unversioned, so it can be shared across versions of SSMS)
   - [New in Preview 7] Added **Cloud witness** as a new quorum type and as a new resource type in both SMO and SSMS.
   - [New in Preview 7] Added support for [edge constraints](../relational-databases/tables/graph-edge-constraints.md) in both SMO and SSMS.
+  - [New in RC1] Added cascade delete support to "Edge Constraints" in both SMO and SSMS.
+  - [New in RC1] Added support for data classification "read-write" permissions.
 
 
 - **Azure Data Studio integration**
@@ -209,6 +195,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
 
 - **Audit Files**
   - Changed authentication method from Storage Account Key based to Azure AD based authentication
+  - [New in RC1] Updated list of known audit actions to include FEATURE RESTRICTION ADD/CHANGE GROUP/DROP.
 
 - **SSIS**
   - [New in Preview 5] Added support to allow customers to schedule SSIS packages on Azure-SSIS IRs which are in Azure Government cloud
@@ -287,6 +274,8 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - [New in Preview 7]  Fixed issue trying to import a `.bacpac` file.
   - [New in Preview 7]  Fixed issue trying to display the properties of a database with `FILEGROWTH > 2048GB` was throwing an arithmetic overflow error.
   - [New in Preview 7]  Fixed issue preventing SSMS from opening a .sql file when double-clicking on it.
+  - [New in RC1] Fixed an issue which was preventing MFA authentication when user ids belonged to multiple tenants.
+  - [New in RC1] Fixed an issue where the Perf Dashboard Report was reporting PAGELATCH and PAGEIOLATCH waits that could not found in subreports.
 
 - **SSMS Editor**
   - Fixed an issue where "SQL System Table" where restoring the default colors was chancing the color to lime green, rather than the default green, making it very hard to read on a white background (For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906)
@@ -297,6 +286,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - [New in Preview 6] Improved intellisense on FORMAT built-in function. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676
   - [New in Preview 6] LAG and LEAD are now recognized as built-in functions. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757
   - [New in Preview 6] Fixed an issue where intellisense was giving a warning when using "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)"
+  - [New in RC1] Fixed an issue where several system views and table values functions were not properly colorized.
 
 - **Object Explorer**
   - Fixed an issue where SSMS was throwing an "Object cannot be cast from DBNull to other types" exception when trying to expand "Management" node in OE (misconfigured DataCollector)
@@ -314,6 +304,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - [New in Preview 5] Fixed an issue that was causing the creation of a "Spatial Index" to fail with an error like "To accomplish this action, set property PartitionScheme".
   - [New in Preview 5] Minor performance improvements in Object Explorer to avoid issuing extra queries, when possible.
   - [New in Preview 5] Extended logic to request confirmation when renaming a database to all the schema objects (the setting can be configured and this disabled)
+  - [New in RC1] Added proper escaping in Object Explorer filtering. For details, see [Azure feedback 36678803](https://feedback.azure.com/forums/908035/suggestions/36678803).
 
 - **Help Viewer**
   - Improved logic around honoring the online/offline modes (there may still be a few issues that need to be addressed)
@@ -343,6 +334,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - [New in Preview 7] Fixed performance regression in transfer from external tables.
   - [New in Preview 7] Fixed issue in `ServerConnection` thread-safety which was causing SMO to leak `SqlConnection` instances when targeting Azure SQL DB.
   - [New in Preview 7] Fixed an issue which was causing a `StringBuilder.FormatError` when trying to restore a database which had curly braces `{}` in its name.
+  - [New in RC1] Fixed an issue where Azure databases in SMO were defaulting to Case-Insensitive collation for all string comparisons instead of using the specified collation for the database.
  
 - **AS**
   - Fixed an issue where the "Advanced Settings" to the AS Xevent UI was clipped
@@ -398,6 +390,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - [New in Preview 7] Fixed an issue causing right-clicking on a database and choosing **Import data-tier application** to fail.
   - [New in Preview 7] Fixed an issue causing right-clicking on a `TempDB` to show errors.
   - [New in Preview 7] Fixed an issue scripting `ALTER DB ADD FILE` statement in SMO was causing the generated T-SQL script to be empty.
+  - [New in RC1] Improved display of Managed Instances server specific properties (hardware generation, service tier, storage used and reserved).
 
 - **Azure SQL Database**
   - Fixed an issue where the database list was not populated correctly for Azure SQL Db query window when connected to a user database in Azure SQL DB instead of to master.
@@ -405,6 +398,7 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
   - [New in Preview 6] Enabled the Statistics properties sub menu option under menu Statistics in Azure, since it has been fully supported for quite some time now.
   - Fixed issues in common Azure UI control that was preventing the user from displaying Azure subscriptions (if there were more than 50). Also, the sorting has been changed to be by name rather by Subscription ID. The user could run into this one when trying to restore a backup from URL, for example.
   - Fixed an issue in common Azure UI control when enumerating subscriptions which could yield a "Index was out of range. Must be non-negative and less than the size of the collection." error when the user had no subscriptions in some tenants. The user could run into this one when trying to restore a backup from URL, for example.
+  - [New in RC1] Fixed issue where Service Level Objectives (SLO) were hardcoded, making it harder for SSMS to support newer SQL Azure SLOs. Now users can sign in to Azure and allow SSMS to retrieve all the applicable SLO data (Edition and Max Size).
 
 - **Query Data Store**
   - [New in Preview 6] Fixed an issue where a "DocumentFrame (SQLEditors)" exception could be thrown.
@@ -412,6 +406,8 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
 
 - **Result Grid**
   - Fixed an issue that was causing the in High Contrast mode (selected line numbers not visible).
+  - [New in RC1] Fixed an issue which resulted in an "Index out of range" exception when clicking on the grid.
+  - [New in RC1] Fixed an issue where the grid result background color was being ignored. For details, see [Azure feedback 32895916](https://feedback.azure.com/forums/908035/suggestions/32895916).
 
 - **XEvent Profiler**
   - Fixed an issue where XEvent Profiler failed to launch when connected to a 96-core SQL Server.
@@ -432,12 +428,18 @@ If there is no *preview 5*, *preview 6*, or *preview 7* label it indicates the c
 
 - **Profiler**
   - [New in Preview 6] Added "Aggregate Table Rewrite Query" event to Profiler events.
+  - [New in RC1] Fixed issue that was preventing the SQL Profiler from starting on Windows 7 SP1.
 
 - **ShowPlan**
   - [New in Preview 6] New mem grant operator properties display incorrectly when there is more than one thread.
+  - [New in RC1] Add the following 4 attributes in RunTimeCountersPerThread of actual execution xml plan: HpcRowCount (Number of rows processed by hpc device), HpcKernelElapsedUs (elapsed time wait for kernel execution in use), HpcHostToDeviceBytes (bytes transferred from host to device), and HpcDeviceToHostBytes (bytes transferred from device to host).
 
 - **Data Masking**
   - [New in Preview 7] Fixed a bug where on-premises databases with multiple log and filestream memory-optimized table files would fail to be copied automatically.
+
+- **Data-tier Application Wizard**
+  - [New in RC1] Fixed an issue where the user was not able to import a Data-tier Application (.dacpac) due to limited access to the server (e.g. no access to all the databases on the same server).
+  - [New in RC1] Fixed an issue which was causing the import to be extremely slow when many databases happened to be hosted on the same Azure SQL server.
 
 ### Deprecated Features
 
@@ -457,8 +459,8 @@ The following features are no longer available in SSMS:
   - Due to security concerns, the option to specify clear-text passwords on the command line was removed.
 
 - Generate Scripts | Publish to Web Service removed. This (deprecated) feature was removed from the SSMS UI.
-
 - Removed node "Maintenance | Legacy" in Object Explorer. In Generate and Publish Scripts | Publish to Web Service option is removed. The *old* "Database Maintenance Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes continue to work as usual.
+- [New in RC1] Removed Static Data Masking (preview) feature.
 
 ### Known issues
 

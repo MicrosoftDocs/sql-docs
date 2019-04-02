@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords:
   - "sql13.ssis.designer.hdfsfiledest.f1"
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # HDFS File Destination

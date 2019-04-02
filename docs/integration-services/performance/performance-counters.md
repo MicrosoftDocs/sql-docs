@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "counters [Integration Services]"
   - "data flow engine [Integration Services]"
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Performance Counters

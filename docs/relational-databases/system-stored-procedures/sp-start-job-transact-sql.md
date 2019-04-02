@@ -40,22 +40,22 @@ sp_start_job
 ```  
   
 ## Arguments  
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job to start. Either *job_id* or *job_name* must be specified, but both cannot be specified. *job_name* is **sysname**, with a default of NULL.  
   
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job to start. Either *job_id* or *job_name* must be specified, but both cannot be specified. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@error_flag=** ] *error_flag*  
+`[ @error_flag = ] error_flag`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
+`[ @server_name = ] 'server_name'`
  The target server on which to start the job. *server_name* is **nvarchar(128)**, with a default of NULL. *server_name* must be one of the target servers to which the job is currently targeted.  
   
- [ **@step_name=** ] **'***step_name***'**  
+`[ @step_name = ] 'step_name'`
  The name of the step at which to begin execution of the job. Applies only to local jobs. *step_name* is **sysname**, with a default of NULL  
   
- [ **@output_flag=** ] *output_flag*  
+`[ @output_flag = ] output_flag`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

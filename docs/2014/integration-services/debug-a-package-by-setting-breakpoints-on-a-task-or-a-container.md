@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "breakpoints [Integration Services]"
   - "tasks [Integration Services], breakpoints"
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Debug a Package by Setting Breakpoints on a Task or a Container

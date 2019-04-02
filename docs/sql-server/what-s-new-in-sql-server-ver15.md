@@ -30,6 +30,10 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.4.
 
+[**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Preview extension](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux.
+
+For the latest improvements to Azure Data Studio, see the [Azure Data Studio release notes](../azure-data-studio/release-notes-azure-data-studio.md).
+
 ### Big data clusters
 
 |**Service improvements**|**Details**|
@@ -82,14 +86,19 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Define cascaded delete actions on an edge constraint in a graph database. |[Details](../relational-databases/tables/graph-edge-constraints.md) |
 |Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[Details](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) |
 | | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
+
+### Tools
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|[Azure Data Studio](../azure-data-studio/what-is.md) supports Azure Active Directory | |
+|Notebook view UI has moved into Azure Data Studio core. | |
+|Added new wizard to create external data sources from Hadoop Distributed File System (HDFS) to SQL Server Big Data Cluster. | |
+|Improved Notebook viewer UI. | |
+|Added new Notebook APIs.  | |
+|Added "Reinstall Notebook dependencies" command to assist with Python package updates. | |
+|Launch Azure Data Studio from SSMS.| |
+
 
 ## CTP 2.2 December 2018
 
@@ -99,6 +108,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |:-----|:-----|
 |Use SparkR from Azure Data Studio on a big data cluster. | |
 |Deploy Python and R apps.|[Details](../big-data-cluster/big-data-cluster-create-apps.md) |
+| | |
 
 ### Database engine
 
@@ -106,10 +116,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |:-----|:-----|
 |Adds support to use UTF-8 character encoding with SQL Server Replication. |[Details](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 | | |
-| | |
-| | |
-| | |
-| | |
+
 
 ### SQL Server on Linux
 
@@ -143,6 +150,18 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |**Service improvements**|**Details**|
 |:-----|:-----|
 |New container registry |[Details](../linux/quickstart-install-connect-docker.md) |
+| | |
+| | |
+| | |
+| | |
+| | |
+
+### Tools
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|[Azure Data Studio](../azure-data-studio/what-is.md) supports Connect and manage [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. | |
+| | |
 | | |
 | | |
 | | |
@@ -211,8 +230,28 @@ hybrid-buffer-pool.md)|
 
 |**Service improvements**|**Details**|
 |Certificate management in SQL Server Configuration Manager|[Details](../database-engine/configure-windows/manage-certificates.md)
+| | |
 
+### Tools
 
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|[Azure Data Studio](../azure-data-studio/what-is.md) supports Connect and manage [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. | |
+|Edit and run queries in a modern development environment with lightning fast Intellisense, code snippets, and source control integration. | | 
+|Quickly visualize data with built-in charting of your result sets. | |
+|Create custom dashboards for your servers and databases using customizable widgets. | | 
+|Easily manage your broader environment with the built-in terminal. | |
+|Analyze data in an integrated notebook experience built on Jupyter. | |
+|Enhance your experience with custom theming and extensions.| |
+|And explore your Azure resources with a built-in subscription and resource browser. | |
+|Supports scenarios using SQL Server big data cluster. | |
+|[**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md): Supports [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
+|Support for Always Encrypted with secure enclaves. | |
+|Smaller download size. | |
+|Now based on the Visual Studio 2017 Isolated Shell. | |
+|For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). | |
+| | |
+| | |
 
 ## Content to relocate
 
@@ -535,6 +574,7 @@ FROM sys.dm_exec_requests AS d
   > [!NOTE]
   > User must have administrator permissions on all the cluster nodes.
 -->
+<!--
 ## <a id="tools"></a>Tools
 
 - [**Azure Data Studio**](../azure-data-studio/what-is.md): Previously released under the preview name SQL Operations Studio, Azure Data Studio is a lightweight, modern, open source, cross-platform desktop tool for the most common tasks in data development and administration. With Azure Data Studio and the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Preview extension](../azure-data-studio/sql-server-2019-extension.md) you can connect to SQL Server on premises and in the cloud on Windows, macOS, and Linux. Azure Data Studio allows you to:
@@ -565,7 +605,7 @@ FROM sys.dm_exec_requests AS d
   - Smaller download size. (CTP 2.0)
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
-
+-->
 - [**SQL Server PowerShell module**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
 
   - Upgrade from 21.0 to 21.1 to support SMO v150.

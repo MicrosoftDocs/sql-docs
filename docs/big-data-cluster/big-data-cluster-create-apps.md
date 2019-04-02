@@ -41,7 +41,7 @@ In SQL Server 2019 (preview) CTP 2.3 you can create, delete, describe, initializ
 
 |Command |Description |
 |:---|:---|
-|`mssqlctl login` | Log into a SQL Server big data cluster |
+|`mssqlctl login` | Sign into a SQL Server big data cluster |
 |`mssqlctl app create` | Create application. |
 |`mssqlctl app delete` | Delete application. |
 |`mssqlctl app describe` | Describe application. |
@@ -58,9 +58,9 @@ mssqlctl app create --help
 
 The following sections describe these commands in more detail.
 
-## Log in
+## Sign in
 
-Before you deploy or interact with applications, first log in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `endpoint-service-proxy` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before you deploy or interact with applications, first sign in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `endpoint-service-proxy` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
 ```bash
 mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>

@@ -71,7 +71,7 @@ After you install PolyBase either standalone or in a scale-out group, you can't 
    
    > [!IMPORTANT] 
    >
-   >In a PolyBase scale-out group, the PolyBase Engine and PolyBase Data Movement service on all nodes must run under the same domain account. See [PolyBase scale-out groups](#Enable).
+   >In a PolyBase scale-out group, the PolyBase Engine and PolyBase Data Movement service on all nodes must run under the same domain account. See [PolyBase scale-out groups](#enable).
    
 5. On the PolyBase Configuration page, select one of the two options. For more information, see [PolyBase scale-out groups](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    

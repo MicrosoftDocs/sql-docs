@@ -42,6 +42,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |Spark runtime upgrade to Spark.||
 |`INSERT INTO SELECT` support for the data pool.||
 |`FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option clause for external table queries.||
+| | |
 
 ### Database engine
 
@@ -50,7 +51,8 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |Truncation error message defaults to include table and column names, and truncated value.|[VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)|
 |New DMF `sys.dm_exec_query_plan_stats` returns the equivalent of the last known actual execution plan for most queries. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 |The new `query_post_execution_plan_profile` Extended Event collects the equivalent of an actual execution plan based on lightweight profiling, unlike `query_post_execution_showplan` which uses standard profiling. |[Query profiling infrastructure](../relational-databases/performance/query-profiling-infrastructure.md)|
-|Transparent Data Encryption (TDE) scan - suspend and resume.|[Details](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
+|Transparent Data Encryption (TDE) scan - suspend and resume.|[Transparent Data Encryption (TDE) scan - suspend and resume](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
+| | |
 
 ><sup>1</sup>
 >This is an opt-in feature and requires [trace flag](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.
@@ -61,7 +63,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |:-----|:-----|
 |Many-to-many relationships in tabular models.||
 |Property settings for resource governance.||
-|||
+| | |
 
 ## CTP 2.3 February 2019
 
@@ -69,22 +71,23 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ. |[Details](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md)|
-|Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. |[Details](../big-data-cluster/big-data-cluster-create-apps.md)|
-|Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. |[Details](../big-data-cluster/sparklyr-from-RStudio.md) |
-|Mount external HDFS-compatible storage into big data cluster with HDFS tiering.|[Details](../big-data-cluster/hdfs-tiering.md) |
+|Submit Spark jobs on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters in IntelliJ. |[Run Spark jobs in Azure Toolkit for IntelliJ on SQL Server Big Data Cluster](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md)|
+|Application deployment and management experience for a variety of data-related apps, including operationalizing machine learning models using R and Python, running SQL Server Integration Services (SSIS) jobs, and more. |[Deploy applications using mssqlctl](../big-data-cluster/big-data-cluster-create-apps.md)|
+|Use Sparklyr in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. |[Use sparklyr from RStudio](../big-data-cluster/sparklyr-from-RStudio.md) |
+|Mount external HDFS-compatible storage into big data cluster with HDFS tiering.|[Configure HDFS tiering](../big-data-cluster/hdfs-tiering.md) |
+| | |
 
 ### Database engine
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|Enable accelerated database recovery can be enabled per-database| [Details](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)|
-|Query Store plan forcing support for fast forward and static cursors.|[Details](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
-|Reduced recompilations for workloads using temporary tables across multiple scopes. |[Details](#reduced-recompilations) |
-|Improved indirect checkpoint scalability. |[Details](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
+|Enable accelerated database recovery can be enabled per-database| [Accelerated database recovery](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)|
+|Query Store plan forcing support for fast forward and static cursors.|[Plan forcing support for fast forward and static cursors](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
+|Reduced recompilations for workloads using temporary tables across multiple scopes. |[Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
+|Improved indirect checkpoint scalability. |[Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |UTF-8 support: Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 |Define cascaded delete actions on an edge constraint in a graph database. |[Details](../relational-databases/tables/graph-edge-constraints.md) |
-|Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[Details](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) |
+|Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
 | | |
 
 ### Tools
@@ -98,6 +101,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |Added new Notebook APIs.  | |
 |Added "Reinstall Notebook dependencies" command to assist with Python package updates. | |
 |Launch Azure Data Studio from SSMS.| |
+| | |
 
 ### Analysis services
 
@@ -113,7 +117,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |**Service improvements**|**Details**|
 |:-----|:-----|
 |Use SparkR from Azure Data Studio on a big data cluster. | |
-|Deploy Python and R apps.|[Details](../big-data-cluster/big-data-cluster-create-apps.md) |
+|Deploy Python and R apps.|[Deploy applications using mssqlctl](../big-data-cluster/big-data-cluster-create-apps.md) |
 | | |
 
 ### Database engine
@@ -128,10 +132,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|Always On Availability Group on Docker containers with Kubernetes |[Details](../linux/sql-server-ag-kubernetes.md) |
-| | |
-| | |
-| | |
+|Always On Availability Group on Docker containers with Kubernetes |[Always On Availability Groups for containers running Linux](../linux/sql-server-ag-kubernetes.md) |
 | | |
 
 ## CTP 2.1 November 2018
@@ -141,20 +142,19 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |**Service improvements**|**Details**|
 |:-----|:-----|
 |Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
-|Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query. |[Details](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
-|Truncation error message improved to include table and column names, and truncated value. | |
+|Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query. |[Scalar UDF Inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
 |The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. | |
 |The new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations. | |
 |Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.  | |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.  |[Details](../relational-databases/security/static-data-masking.md) |
-|Use derived table or view aliases in graph match query |[Details](../relational-databases/tables/graph-edge-constraints.md) |
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.  |[Static data masking](../relational-databases/security/static-data-masking.md) |
+|Use derived table or view aliases in graph match query |[Graph Edge Constraints](../relational-databases/tables/graph-edge-constraints.md) |
 | | |
 
 ### SQL Server on Linux
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
-|New container registry |[Details](../linux/quickstart-install-connect-docker.md) |
+|New container registry |[Get started with SQL Server containers on Docker](../linux/quickstart-install-connect-docker.md) |
 | | |
 
 ### Tools
@@ -174,7 +174,8 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 |Access your big data from HDFS. | |
 |Run Advanced analytics and machine learning with Spark. | |
 |Use Spark streaming to data to SQL data pools. | |
-|Run Query books that provide a notebook experience in **Azure Data Studio**|[Details](../sql-operations-studio/what-is.md)  |
+|Run Query books that provide a notebook experience in **Azure Data Studio**|[Data engineering](../azure-data-studio/what-is.md#data-engineering)  |
+| | | 
 
 ### Database engine
 
@@ -214,12 +215,13 @@ hybrid-buffer-pool.md)|
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[Details](../linux/sql-server-linux-configure-msdtc.md) |
 |OpenLDAP support for third-party AD providers | |
 |Machine Learning on Linux |[Details](../linux/sql-server-linux-setup-machine-learning.md) |
-
+| | |
 ### Master Data Services
 
 |**Service improvements**|**Details**|
 |:-----|:-----|
 |The Master Data Services (MDS) portal no longer depends on Silverlight.| All the former Silverlight components have been replaced with HTML controls.|
+| | |
 
 ### Security
 
@@ -247,19 +249,23 @@ hybrid-buffer-pool.md)|
 |Now based on the Visual Studio 2017 Isolated Shell. | |
 |For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). | |
 | | |
+
+## SQL Server PowerShell module
+
+[**SQL Server PowerShell module**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): The `SqlServer` PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
+
+The `SqlServer` PowerShell module is delivered on a separate schedule from SQL Server. This section highlights recent updates to the module.
+
+|**Service improvements**|**Details**|
+|:-----|:-----|
+|Upgrade from 21.0 to 21.1 to support SMO v150.| |
+|Updated SQL Server provider (SQLRegistration) to display AS/IS/RS groups.| |
+|Fixed issue in `New-SqlAvailabilityGroup` cmdlet when targeting SQL Server 2014.| |
+|Added `–LoadBalancedReadOnlyRoutingList` parameter to `Set-SqlAvailabilityReplica` and `New-SqlAvailabilityReplica`.| |
+|Updated `AnalysisService` cmdlet to use cached login token from `Login-AzureAsAccount` for Azure Analysis Services.| |
 | | |
 
-## Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
-
-Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
-
-- Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions. 
-- Keep track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions. 
-
-The end result is a reduction in extraneous recompilations and CPU-overhead.
-
-
-
+<!--
 ### UTF-8 support (CTP 2.3)
 
 Full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix. 
@@ -275,7 +281,7 @@ For more information, see [Collation and Unicode Support](../relational-database
 **CTP 2.2** Adds support to use UTF-8 character encoding with SQL Server Replication.
 
 **CTP 2.3** Adds support to use UTF-8 character encoding with a BIN2 collation (UTF8_BIN2).
-
+-->
 <!--### Scalar UDF inlining (CTP 2.1)
 
 Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query, thereby improving the performance of workloads that leverage scalar UDFs. Scalar UDF inlining facilitates cost-based optimization of operations inside UDFs, and results in efficient plans that are set-oriented and parallel as opposed to inefficient, iterative, serial execution plans. This feature is enabled by default under database compatibility level 150.
@@ -599,16 +605,6 @@ FROM sys.dm_exec_requests AS d
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
   - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
 -->
-
-## SQL Server PowerShell module
-
-- [**SQL Server PowerShell module**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
-
-  - Upgrade from 21.0 to 21.1 to support SMO v150.
-  - Updated SQL Server provider (SQLRegistration) to display AS/IS/RS groups.
-  - Fixed issue in `New-SqlAvailabilityGroup` cmdlet when targeting SQL Server 2014.
-  - Added `–LoadBalancedReadOnlyRoutingList` parameter to `Set-SqlAvailabilityReplica` and `New-SqlAvailabilityReplica`.
-  - Updated `AnalysisService` cmdlet to use cached login token from `Login-AzureAsAccount` for Azure Analysis Services.
 <!--
 ## <a id="ssas"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Analysis Services (SSAS) 
 

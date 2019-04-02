@@ -31,9 +31,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Database Checkpoints (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
- A *checkpoint* creates a known good point from which the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can start applying changes contained in the log during recovery after an unexpected shutdown or crash.  
- 
-  
+ A *checkpoint* creates a known good point from which the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] can start applying changes contained in the log during recovery after an unexpected shutdown or crash.
+
 ##  <a name="Overview"></a> Overview   
 For performance reasons, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] performs modifications to database pages in memory-in the buffer cache-and does not write these pages to disk after every change. Rather, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] periodically issues a checkpoint on each database. A *checkpoint* writes the current in-memory modified pages (known as *dirty pages*) and transaction log information from memory to disk and, also, records information about the transaction log.  
   

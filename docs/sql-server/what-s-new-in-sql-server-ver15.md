@@ -66,9 +66,9 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |**Database engine** | |
 |Enable accelerated database recovery can be enabled per-database| [Details](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)|
 |Query Store plan forcing support for fast forward and static cursors.|[Details](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
-|Reduced recompilations for workloads using temporary tables across multiple scopes. | |
-| | |
-| | |
+|Reduced recompilations for workloads using temporary tables across multiple scopes. |[Details](#reduced-recompilations) |
+|Improved indirect checkpoint scalability. |[Details](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
+|UTF-8 support |[Details](../relational-databases/collations/collation-and-unicode-support.md) |
 | | |
 | | |
 | | |
@@ -90,7 +90,14 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |**Big data clusters**| |
 |Use SparkR from Azure Data Studio on a big data cluster. | |
 |Deploy Python and R apps.|[Details](../big-data-cluster/big-data-cluster-create-apps.md) |
+|**Database engine** | |
+|Adds support to use UTF-8 character encoding with SQL Server Replication. |[Details](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 | | |
+| | |
+| | |
+| | |
+| | |
+
 
 ## CTP 2.1 November 2018
 
@@ -99,7 +106,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |**Service improvements**|**Details**|
 |:-----|:-----|
 |**Database engine**| |
-| | |
+|Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Details](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 | | |
 | | |
 | | |
@@ -137,6 +144,11 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 
 
+## Not sure where to link these to
+
+These articles need a place. 
+
+<a name="reduced-recompilations"></a>
 
 ### Reduced recompilations for workloads using temporary tables across multiple scopes (CTP 2.3)
 
@@ -147,9 +159,7 @@ Prior to this feature, when referencing a temporary table with a data manipulati
 
 The end result is a reduction in extraneous recompilations and CPU-overhead.
 
-### Improved indirect checkpoint scalability (CTP 2.3)
 
-In previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], users may experience non-yielding scheduler errors when there is a database that generates a large number of dirty pages, such as tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces improved scalability for Indirect Checkpoint, which should help avoid these errors on databases that have a heavy UPDATE/INSERT workload.
 
 ### UTF-8 support (CTP 2.3)
 

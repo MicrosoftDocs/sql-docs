@@ -578,7 +578,7 @@ When using **sp_query_store_force_plan** you can only force plans that were reco
 
 #### <a name="ctp23"><a/> Plan forcing support for fast forward and static cursors
   
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3 Query Store  supports the ability to force query execution plans for fast forward and static T-SQL and API cursors. Forcing is now supported via `sp_query_store_force_plan` or through SQL Server Management Studio Query Store reports.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 Query Store  supports the ability to force query execution plans for fast forward and static T-SQL and API cursors. Forcing is now supported via `sp_query_store_force_plan` or through SQL Server Management Studio Query Store reports.
 
 ### Remove plan forcing for a query
 

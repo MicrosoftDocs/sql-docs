@@ -245,7 +245,17 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 All of the new collations have built-in support for supplementary characters, so none of the new collations have (or need) the SC flag.
 
 These collations are supported in Database Engine indexes, memory-optimized tables, columnstore indexes, and natively compiled modules.
-    
+
+<a name="ctp23"></a>
+
+## UTF-8 support
+
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces full support for the widely used UTF-8 character encoding as an import or export encoding, or as database-level or column-level collation for text data. UTF-8 is allowed in the `CHAR` and `VARCHAR` datatypes, and is enabled when creating or changing an object's collation to a collation with the `UTF8` suffix. 
+
+For example,`LATIN1_GENERAL_100_CI_AS_SC` to `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 is only available to Windows collations that support supplementary characters, as introduced in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. `NCHAR` and `NVARCHAR` allow UTF-16 encoding only, and remain unchanged.
+
+This feature may provide significant storage savings, depending on the character set in use. For example, changing an existing column data type with ASCII (Latin) strings from `NCHAR(10)` to `CHAR(10)` using an UTF-8 enabled collation, translates into 50% reduction in storage requirements. This reduction is because `NCHAR(10)` requires 20 bytes for storage, whereas `CHAR(10)` requires 10 bytes for the same Unicode string.
+
 ##  <a name="Related_Tasks"></a> Related Tasks    
     
 |Task|Topic|    

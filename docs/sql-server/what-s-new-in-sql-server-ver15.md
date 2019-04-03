@@ -561,7 +561,7 @@ FROM sys.dm_exec_requests AS d
 
 - **Silverlight controls replaced with HTML (CTP 2.0)**: The Master Data Services (MDS) portal no longer depends on Silverlight. All the former Silverlight components have been replaced with HTML controls.
 -->
-<!-->
+<!--
 ## <a id="security"></a>Security
 
 - **Certificate management in SQL Server Configuration Manager|[Details](../database-engine/configure-windows/manage-certificates.md) (CTP 2.0)**: SSL/TLS certificates are widely used to secure access to SQL Server instances. Certificate management is now integrated into the SQL Server Configuration Manager, simplifying common tasks such as:

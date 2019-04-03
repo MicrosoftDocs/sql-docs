@@ -3981,16 +3981,6 @@
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Compute capacity limits by edition
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Usage and diagnostic data collection
-      items:
-      - name: Privacy supplement
-        href: ../sql-server/sql-server-privacy.md
-      - name: Configure SQL Server to send usage and diagnostic data
-        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
-      - name: Configure SQL Server data tools to send usage and diagnostic data
-        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
-      - name: Local audit for SQL Server
-        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Release notes
     items:
     - name: Backward compatibility
@@ -4020,6 +4010,16 @@
       href: ../sql-server/install/local-language-versions-in-sql-server.md
     - name: File Locations
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: Usage and diagnostic data collection
+      items:
+      - name: Privacy supplement
+        href: ../sql-server/sql-server-privacy.md
+      - name: Configure to send usage and diagnostic data
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
+      - name: Configure tools to send usage and diagnostic data
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
+      - name: Local audit for SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Install SQL Server
     href: ../database-engine/install-windows/installation-for-sql-server.md
     items:

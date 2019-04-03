@@ -32,8 +32,13 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later.
 - Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter.
-- Your SQL Server computer must meet [Windows 10 Hyper-V System Requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements).
-- If your SQL Server computer is a VMWare virtual machine,  Virtualization Based Security must be enabled in the virtual machine and the host must be running vSphere 6.7 or later. See VMWare documentation.
+- If your SQL Server computer is a physical machine, it must meet the [Hyper-V Hardware Requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements:
+   - 64-bit Processor with Second Level Address Translation (SLAT)
+   - CPU support for VM Monitor Mode Extension (Intel VT-x or AMD-V)
+- If your SQL Server computer is a virtual machine, the VM must be configured to allow nested virtualization.
+   - On Hyper-V 2016 or later, [enable nested virtualization extensions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor.
+   - In Azure, make sure you're running a [VM size that supports nested virtualization](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization) such as the Dv3 and Ev3 series VMs.
+   - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the VMware documentation.
 - [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 As an alternative, you can install SSMS on another machine.

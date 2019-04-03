@@ -35,7 +35,12 @@ manager: craigg
     -   All nodes in a failover cluster must be of the same platform, either 32-bit or 64-bit, and must run the same operating system edition and version. Also, 64-bit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] editions must be installed on 64-bit hardware running the 64-bit versions of Windows operating systems. There is no WOW64 support for failover clustering in this release.  
   
 3.  Specify multiple IP addresses for each failover cluster instance. You can specify mutiple IP addresses for each subnet. If the mutiple IP addresses are on the same subnet, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup sets the dependency to AND. If you are clustering nodes across multiple subnets, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup sets the dependency to OR.  
-  
+
+4.   SQL Server failover cluster instance requires the cluster nodes to be domain joined.
+    1.	SQL FCI on workgroup clusters is not supported. 
+    2.	SQL FCI on Multi-Domain cluster is also not supported.  
+    3.	SQL FCI on Domain + Workgroup Clusters is not supported.
+
 ## [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Installation options  
   
 ##### Option 1: Integrated installation with Add Node  

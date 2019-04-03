@@ -3981,12 +3981,16 @@
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Compute capacity limits by edition
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Customer Experience Improvement Program (CEIP)
-      href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: Privacy supplement
-      href: ../sql-server/sql-server-privacy.md
-    - name: Configure SQL Server to send feedback to Microsoft
-      href: ../sql-server/sql-server-customer-feedback.md
+    - name: Usage and diagnostic data collection
+      items:
+      - name: Privacy supplement
+        href: ../sql-server/sql-server-privacy.md
+      - name: Configure SQL Server to send usage and diagnostic data
+        href: ../sql-server/sql-server-customer-feedback.md
+      - name: Configure SQL Server data tools to send usage and diagnostic data
+        href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
+      - name: Local audit for SQL Server
+      - href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Release notes
     items:
     - name: Backward compatibility

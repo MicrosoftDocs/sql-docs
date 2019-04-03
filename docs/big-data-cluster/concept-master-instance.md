@@ -1,6 +1,6 @@
 ---
 title: What is the master instance?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This article describes the SQL Server master instance in a SQL Server 2019 big data cluster (preview).
 author: rothja 
 ms.author: jroth 
@@ -12,7 +12,9 @@ ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
-# What is the master instance in a SQL Server 2019 big data cluster?
+# What is the master instance in a SQL Server big data cluster?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes the role of the *SQL Server master instance* in a SQL Server 2019 big data cluster. The master instance is a SQL Server instance running in a SQL Server big data cluster [control plane](big-data-cluster-overview.md#controlplane).
 

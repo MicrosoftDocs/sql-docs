@@ -77,7 +77,7 @@ For information on some of the events covered by alwayson_health, see the [exten
   
  [error_reported (1480): Database replica role change](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Occurs when the state of an availability replica has changed. The creation of an availability group or joining an availability replica can trigger this event. It is useful for the diagnostics of failed automatic failover. It can also be used to trace the failover steps.  
   
 #### Event information  
@@ -378,5 +378,3 @@ GO
   
 ## Next steps  
  [View event session data](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  

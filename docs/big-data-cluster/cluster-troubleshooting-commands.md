@@ -1,6 +1,6 @@
 ---
 title: Use kubectl to monitor/troubleshoot
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This article provide useful kubectl commands for monitoring and troubleshooting a SQL Server 2019 big data cluster (preview).
 author: rothja 
 ms.author: jroth 
@@ -13,6 +13,8 @@ ms.custom: seodec18
 ---
 
 # Kubectl commands for monitoring and troubleshooting SQL Server big data clusters
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes several useful Kubernetes commands that you can use to monitor and troubleshoot a SQL Server 2019 big data cluster (preview). This article covers common tasks, such as copying files to or from a container running one of the SQL Server big data cluster services. It also shows how to view in-depth details of a pod or other Kubernetes artifacts that are located in the big data cluster.
 

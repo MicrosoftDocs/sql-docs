@@ -37,9 +37,9 @@ manager: craigg
 3.  Specify multiple IP addresses for each failover cluster instance. You can specify mutiple IP addresses for each subnet. If the mutiple IP addresses are on the same subnet, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup sets the dependency to AND. If you are clustering nodes across multiple subnets, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup sets the dependency to OR.  
 
 4.   SQL Server failover cluster instance (FCI) requires the cluster nodes to be domain joined. The following configurations are **not supported**: 
-    *	SQL FCI on workgroup clusters. 
-    *	SQL FCI on Multi-Domain cluster.   
-    *	SQL FCI on Domain + Workgroup Clusters. 
+    - SQL FCI on workgroup clusters. 
+    -	SQL FCI on Multi-Domain cluster.   
+    -	SQL FCI on Domain + Workgroup Clusters. 
 
 ## [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Installation options  
   

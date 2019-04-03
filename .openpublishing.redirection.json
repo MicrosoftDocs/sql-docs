@@ -3709,7 +3709,12 @@
         },
         {
             "source_path": "docs/ssms/previous-sql-server-management-studio-releases.md",
-            "redirect_url": "/sql/ssms/sql-server-management-studio-changelog-ssms",
+            "redirect_url": "/sql/ssms/release-notes-ssms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/sql-server-management-studio-changelog-ssms.md",
+            "redirect_url": "/sql/ssms/release-notes-ssms",
             "redirect_document_id": false
         },
         {

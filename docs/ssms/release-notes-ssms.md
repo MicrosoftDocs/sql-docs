@@ -47,7 +47,7 @@ This section lists what's new in SSMS 18.0 RC1.
 Release Candidate 1 (RC1) is a public preview of SSMS 18.0. Until version 18 is released for General Availability (GA), version 17.\* is the latest version that has been released for GA.
 
 > [!NOTE]
-> For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 Preview - cumulative changelog through RC1](#ssms-180-preview---cumulative-changelog-through-rc1).
+> For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 Preview - cumulative changelog through RC1](#180-preview---cumulative-changelog-through-rc1).
 
 ### What's new in RC1
 

@@ -8662,9 +8662,9 @@
     - name: Download SSMS
       href: ../ssms/download-sql-server-management-studio-ssms.md
       items:
-      - name: SSMS Changelog & Previous Releases
-        href: ../ssms/sql-server-management-studio-changelog-ssms.md
-      - name: Release Notes
+      - name: SSMS Release Notes and Previous Releases
+        href: ../ssms/release-notes-ssms.md
+      - name: Download related Release Notes
         href: ../ssms/download-sql-server-management-studio-ssms.md#release-notes
       - name: Install non-English SSMS
         href: ../ssms/install-other-languages.md

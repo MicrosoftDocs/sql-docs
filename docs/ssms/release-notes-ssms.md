@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs"
+title: "Release notes for SSMS | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/29/2019"
+ms.date: "03/30/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -12,78 +12,84 @@ author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
-# SQL Server Management Studio - Changelog (SSMS)
+# Release notes for SQL Server Management Studio (SSMS)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. Download [previous SSMS versions](#previous-ssms-releases).
+This article provides details about updates, improvements, and bug fixes for the current and previous versions of SSMS. You can [click here to download previous SSMS versions](#previous-ssms-releases).
 
+<!--
+The latest ## H2 section of this Release Notes article has been reformatted to match the new standard.
+The new standard replaces the use of bullet lists with the 2-column markdown table format.
+Please use the new 2-column table format going forward.
+And please do include the final blank row of "| &nbsp; | &nbsp; |".
 
-## [SSMS 18.0 (RC1)](download-sql-server-management-studio-ssms.md)
+The ## H2 titles are also being shortened, by the removal of unnecessary repetitive strings.
+In this case, "## SSMS 17.9" is being shortened to "## 17.9" (as one standard actual example).
+And we are appending the 'Month yyyy'.
 
-Build number: 15.0.18098.0<br>
-Release date: March 28, 2019
+Also, this file has been renamed to the new standard, which calls for the file name to be with "release-notes-[techAreaName].md".
+The old name for this file was 'sql-server-management-studio-changelog-ssms.md'.
+But today the new file name is 'release-notes-ssms.md' (still in 'docs/ssms/').
 
-Release Candidate 1 (RC1) is our latest public preview of SSMS 18.0. For the latest General Availability (GA) version of SSMS, [download and install SSMS 17.9.1](#ssms-1791-latest-ga-release).
+Thank you.
+GeneMi. 2019/04/02.
+-->
+
+## 18.0 (RC1), March 2019
+
+Download: &nbsp; &nbsp; [Download SSMS 18.0 (RC1)](download-sql-server-management-studio-ssms.md)<br/>
+Build number: &nbsp; &nbsp; 15.0.18098.0<br/>
+Release date: &nbsp; &nbsp; March 28, 2019
+
+This section lists what's new in SSMS 18.0 RC1.
+
+Release Candidate 1 (RC1) is a public preview of SSMS 18.0. Until version 18 is released for General Availability (GA), version 17.\* is the latest version that has been released for GA.
+
+> [!NOTE]
+> For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 Preview - cumulative changelog through RC1](#ssms-180-preview---cumulative-changelog-through-rc1).
 
 ### What's new in RC1
 
-This section lists what's new in SSMS 18.0 RC1. For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 Preview - cumulative changelog through RC1](#ssms-180-preview---cumulative-changelog-through-rc1).
-
-**SSMS Improvements**
-
-- Enabling XMLA endpoint connectivity to PowerBI datasets. XMLA endpoints provide access to the Analysis Services engine in the Power BI Service. This allows tools such as SSMS and SQL Profiler to connect to Power BI datasets for monitoring, management, debugging, etc. For details, see [XMLA endpoint connectivity](https://go.microsoft.com/fwlink/?linkid=2085204).
-
-- **SMO**
-  - Added cascade delete support to "Edge Constraints" in both SMO and SSMS.
-  - Added support for data classification "read-write" permissions.
-
-- **Audit Files**
-  - Updated list of known audit actions to include FEATURE RESTRICTION ADD/CHANGE GROUP/DROP.
+| New item | Details |
+| :------- | :------ |
+| **SSMS:** &nbsp; &nbsp; Enabling XMLA endpoint connectivity to PowerBI datasets. | XML for Analysis (XMLA) endpoints provide access to the Analysis Services engine in the Power BI Service. This allows tools such as SSMS and SQL Profiler to connect to Power BI datasets for monitoring, management, debugging, etc.<br/><br/> For extended information, see the blog post [XMLA endpoint connectivity](https://go.microsoft.com/fwlink/?linkid=2085204), dated March 28, 2019. |
+| **SMO:** &nbsp; &nbsp; Added cascade delete support to _Edge Constraints_. | Addition was made in both SSMS and SQL Server Management Objects (SMO). |
+| **SMO:** &nbsp; &nbsp; Added support for data classification _read-write_ permissions. | &nbsp; |
+| **Audit files:** &nbsp; &nbsp; Updated list of known audit actions. | The list now includes FEATURE RESTRICTION ADD/CHANGE GROUP/DROP. |
+| &nbsp; | &nbsp; |
 
 ### Bug fixes
 
-- **General SSMS**
-  - Fixed an issue which was preventing MFA authentication when user ids belonged to multiple tenants.
-  - Fixed an issue where the Perf Dashboard Report was reporting PAGELATCH and PAGEIOLATCH waits that could not found in subreports.
-
-- **SSMS Editor**
-  - Fixed an issue where several system views and table values functions were not properly colorized.
-
-- **Object Explorer**
-  - Added proper escaping in Object Explorer filtering. For details, see [Azure feedback 36678803](https://feedback.azure.com/forums/908035/suggestions/36678803).
-
-- **SMO**
-  - Fixed an issue where GetDbComparer was incorrectly defaulting the collation to CI for ALL Azure DBs.
-
-- **Managed Instance support**
-  - Improved display of Managed Instances server specific properties (hardware generation, service tier, storage used and reserved).
-
-- **Azure SQL Database**
-  - Fixed issue where Service Level Objectives (SLO) were hardcoded, making it harder for SSMS to support newer SQL Azure SLOs. Now users can sign in to Azure and allow SSMS to retrieve all the applicable SLO data (Edition and Max Size).
-
-- **Result Grid**
-  - Fixed an issue which resulted in an "Index out of range" exception when clicking on the grid.
-  - Fixed an issue where the grid result background color was being ignored. For details, see [Azure feedback 32895916](https://feedback.azure.com/forums/908035/suggestions/32895916).
-
-- **Profiler**
-  - Fixed issue that was preventing the SQL Profiler from starting on Windows 7 SP1.
-
-- **ShowPlan**
-  - Add the following 4 attributes in RunTimeCountersPerThread of actual execution xml plan: HpcRowCount (Number of rows processed by hpc device), HpcKernelElapsedUs (elapsed time wait for kernel execution in use), HpcHostToDeviceBytes (bytes transferred from host to device), and HpcDeviceToHostBytes (bytes transferred from device to host).
-
-- **Data-tier Application Wizard**
-  - Fixed an issue where the user was not able to import a Data-tier Application (.dacpac) due to limited access to the server (e.g. no access to all the databases on the same server).
-  - Fixed an issue which was causing the import to be extremely slow when many databases happened to be hosted on the same Azure SQL server.
+| Bug fix | Details |
+| :------ | :------ |
+| **General SSMS:** &nbsp; &nbsp; Fixed an issue that was preventing multi-factor authenticaion (MFA) when user identifiers belonged to multiple tenants. | &nbsp; |
+| **General SSMS:** &nbsp; &nbsp; Fixed an issue where the Perf Dashboard Report was reporting PAGELATCH and PAGEIOLATCH waits that could not found in subreports. | &nbsp; |
+| **SSMS editor:** &nbsp; &nbsp; Fixed an issue where several system views and table values functions were not properly colorized. | &nbsp; |
+| **Object Explorer:** Added proper escaping in Object Explorer filtering. | See [Azure feedback 36678803](https://feedback.azure.com/forums/908035/suggestions/36678803). |
+| **SMO:** &nbsp; &nbsp; Fixed an issue where `GetDbComparer` was incorrectly defaulting the collation to CI for all Azure databases. | &nbsp; |
+| **Managed Instance support:** &nbsp; &nbsp; Improved display of Managed Instances server specific properties. | These properties include hardware generation, service tier, and storage both used and reserved. |
+| **Azure SQL Database:** &nbsp; &nbsp; Fixed issue where Service Level Objectives (SLO) were hardcoded, making it harder for SSMS to support newer SQL Azure SLOs. | Now users can sign in to Azure and allow SSMS to retrieve all the applicable SLO data.<br/>The applicable SLO data items are Edition and Max Size). |
+| **Result grid:** &nbsp; &nbsp; Fixed an issue that resulted in an _Index out of range_ exception when clicking on the grid. | &nbsp; |
+| **Result grid:** &nbsp; &nbsp; Fixed an issue where the grid result background color was being ignored. | See [Azure feedback 32895916](https://feedback.azure.com/forums/908035/suggestions/32895916). |
+| **Profiler:** &nbsp; &nbsp; Fixed issue that prevented the SQL Profiler from starting on Windows 7 SP1. | &nbsp; |
+| **ShowPlan:** &nbsp; &nbsp; Add four attributes in `RunTimeCountersPerThread` about the actual execution xml plan. | &bull; &nbsp; &nbsp; `HpcRowCount` - the number of rows processed by hpc device.<br/><br/>&bull; &nbsp; &nbsp; `HpcKernelElapsedUs` - the elapsed time wait for kernel execution in use.<br/><br/>&bull; &nbsp; &nbsp; `HpcHostToDeviceBytes` - the bytes transferred from host to device.<br/><br/>&bull; &nbsp; &nbsp; `HpcDeviceToHostBytes` - the bytes transferred from device to host. |
+| **Data-tier Application Wizard:** &nbsp; &nbsp; Fixed an issue where the user was not able to import a Data-tier Application (.dacpac) due to limited access to the server. | For example, the users could not import a .dacpac file if they had no access to all the databases on the same server. |
+| **Data-tier Application Wizard:** &nbsp; &nbsp; Fixed an issue that caused the import to be extremely slow when many databases happened to be hosted on the same Azure SQL server. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ### Deprecated Features
 
-- Removed Static Data Masking (preview) feature.
+| Deprecated feature | Details |
+| :----------------- | :------ |
+| Removed the Static Data Masking (preview) feature. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ### Known issues
 
-- N/A
+- None.
 
-## SSMS 18.0 preview - cumulative changelog through RC1
+## 18.0 preview - cumulative changelog through RC1
 
 If there is no *preview 5*, *preview 6*, *preview 7*, or *RC1* label it indicates the change appeared in our first public preview of SSMS 18.0, which was SSMS 18.0 *preview 4*.
 
@@ -467,7 +473,7 @@ The following features are no longer available in SSMS:
 - N/A
 
 
-## SSMS 17.9.1 (latest GA release)
+## 17.9.1 (latest GA release)
 
 ![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -488,7 +494,7 @@ The following features are no longer available in SSMS:
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-## SSMS 17.9
+## 17.9
 
 ![download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 

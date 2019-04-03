@@ -4116,8 +4116,6 @@
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: Multi-Homed Computer
       href: ../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: Local Audit for Usage Feedback Collection
-      href: ../database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md
     - name: Configure Database Engine Instances
       href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
     - name: Default Locations for Data Files

@@ -34,7 +34,8 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 - Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter.
 - If your SQL Server computer is a physical machine, it must meet the [Hyper-V Hardware Requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements:
    - 64-bit Processor with Second Level Address Translation (SLAT)
-   - CPU support for VM Monitor Mode Extension (Intel VT-x or AMD-V)
+   - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs)
+   - Virtualization support enabled (Intel VT-x or AMD-V)
 - If your SQL Server computer is a virtual machine, the VM must be configured to allow nested virtualization.
    - On Hyper-V 2016 or later, [enable nested virtualization extensions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor.
    - In Azure, make sure you're running a [VM size that supports nested virtualization](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization) such as the Dv3 and Ev3 series VMs.

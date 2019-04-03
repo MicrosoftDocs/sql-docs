@@ -1,6 +1,6 @@
 ---
 title: mssqlctl cluster reference
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Reference article for mssqlctl cluster commands.
 author: rothja
 ms.author: jroth
@@ -12,6 +12,8 @@ ms.technology: big-data-cluster
 ---
 
 # mssqlctl cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 The following article provides reference for the **cluster** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 

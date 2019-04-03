@@ -22,7 +22,7 @@ Learn about the central piece of a [!INCLUDE[ssNoVersion](../../includes/ssnover
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
 
-A Reporting Services report server runs in one of two deployment modes; Native mode or SharePoint mode. See the [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport) section for a comparison of features.  
+A Reporting Services report server runs in one of two deployment modes; Native mode or SharePoint mode. See the [Feature Comparison of SharePoint and Native Mode](#feature-comparison-of-sharepoint-and-native-mode) section for a comparison of features.  
   
  **Installation:** For information on Reporting Services installation, see [Install Reporting Services](../install-windows/install-reporting-services.md).
 

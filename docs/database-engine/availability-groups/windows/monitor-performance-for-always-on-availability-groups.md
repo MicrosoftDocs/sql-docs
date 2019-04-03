@@ -18,15 +18,15 @@ manager: craigg
   
  The following topics are covered:  
   
--   [Data synchronization process](#BKMK_DATA_SYNC_PROCESS)  
+-   [Data synchronization process](#data-synchronization-process)  
   
--   [Flow control gates](#BKMK_FLOW_CONTROL_GATES)  
+-   [Flow control gates](#flow-control-gates)  
   
--   [Estimating failover time (RTO)](#BKMK_RTO)  
+-   [Estimating failover time (RTO)](#estimating-failover-time-rto)  
   
--   [Estimating potential data loss (RPO)](#BKMK_RPO)  
+-   [Estimating potential data loss (RPO)](#estimating-potential-data-loss-rpo)  
   
--   [Monitoring for RTO and RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
+-   [Monitoring for RTO and RPO](#monitoring-for-rto-and-rpo)  
   
 -   [Performance troubleshooting scenarios](#BKMK_SCENARIOS)  
   
@@ -325,7 +325,7 @@ It is possible to query the DMVs [sys.dm_hadr_database_replica_states](../../../
 ##  Monitoring for RTO and RPO  
  This section demonstrates how to monitor your availability groups for RTO and RPO metrics. This demonstration is similar to the GUI tutorial given in [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
- Elements of the failover time and potential data loss calculations in [Estimating failover time (RTO)](#BKMK_RTO) and [Estimating potential data loss (RPO)](#BKMK_RPO) are conveniently provided as performance metrics in the policy management facet **Database Replica State** (see [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). You can monitor these two metrics on a schedule and be alerted when the metrics exceed your RTO and RPO, respectively.  
+ Elements of the failover time and potential data loss calculations in [Estimating failover time (RTO)](#estimating-failover-time-rto) and [Estimating potential data loss (RPO)](#estimating-potential-data-loss-rpo) are conveniently provided as performance metrics in the policy management facet **Database Replica State** (see [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). You can monitor these two metrics on a schedule and be alerted when the metrics exceed your RTO and RPO, respectively.  
   
  The demonstrated scripts create two system policies that are run on their respective schedules, with the following characteristics:  
   
@@ -468,5 +468,3 @@ To create the policies, follow the instructions below on all server instances th
 |hadr_dump_primary_progress|`alwayson`|Debug|Primary|  
 |hadr_dump_log_progress|`alwayson`|Debug|Primary|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analytic|Secondary|  
-  
-  

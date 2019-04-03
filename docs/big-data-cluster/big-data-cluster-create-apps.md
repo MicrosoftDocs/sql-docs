@@ -1,9 +1,10 @@
 ---
 title: Deploy applications using mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster (preview).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt 
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
@@ -12,7 +13,9 @@ ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
-# How to deploy an app on SQL Server 2019 big data cluster (preview)
+# How to deploy an app on SQL Server big data cluster (preview)
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster (preview).
 
@@ -41,7 +44,7 @@ In SQL Server 2019 (preview) CTP 2.4 you can create, delete, describe, initializ
 
 |Command |Description |
 |:---|:---|
-|`mssqlctl login` | Log into a SQL Server big data cluster |
+|`mssqlctl login` | Sign into a SQL Server big data cluster |
 |`mssqlctl app create` | Create application. |
 |`mssqlctl app delete` | Delete application. |
 |`mssqlctl app describe` | Describe application. |
@@ -58,9 +61,9 @@ mssqlctl app create --help
 
 The following sections describe these commands in more detail.
 
-## Log in
+## Sign in
 
-Before you deploy or interact with applications, first log in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `endpoint-service-proxy` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before you deploy or interact with applications, first sign in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `endpoint-service-proxy` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
 ```bash
 mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
@@ -90,53 +93,49 @@ To create an application, you use `mssqlctl` with the `app create` command. Thes
 Use the following syntax to create a new app in big data cluster:
 
 ```bash
-mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
+mssqlctl app create --spec <directory containing spec file>
 ```
 
 The following command shows an example of what this command might look like:
-
-This assumes that you have file called `spec.yaml` within the `addpy` folder.
-The `addpy` folder contains the `add.py` and  `spec.yaml`
-The `spec.yaml` is a specification file for the `add.py` app.
-
-
-`add.py` creates the following python app:
-
-```py
-#add.py
-def add(x,y):
-        result = x+y
-        return result
-result=add(x,y)
-```
-
-The following script is a sample of the contents for `spec.yaml`:
-
-```yaml
-#spec.yaml
-name: add-app #name of your python script
-version: v1  #version of the app
-runtime: Python #the language this app uses (R or Python)
-src: ./add.py #full path to the location of the app
-entrypoint: add #the function that will be called upon execution
-replicas: 1  #number of replicas needed
-poolsize: 1  #the pool size that you need your app to scale
-inputs:  #input parameters that the app expects and the type
-  x: int
-  y: int
-output: #output parameter the app expects and the type
-  result: int
-```
-
-To try this, copy the above lines of code into two files in the directory `addpy` as `add.py`  and `spec.yaml` and run the command below:
 
 ```bash
 mssqlctl app create --spec ./addpy
 ```
 
-> [!NOTE]
-> The `spec.yaml` file specifies both a `poolsize` and a number of `replicas`. The number of `replicas` specifies the number of copies of the service need to be deployed. The `poolsize` specifies the number of pools you want to create per replica. These settings have an impact on the amount of requests the deployment can handle in parallel. The maximum number of requests at one given time is equal to `replicas` times `poolsize`, i.e if you have 5 replicas and 2 pools per replica the deployment can handle 10 requests in parallel. See the image below for a graphical representation of `replicas` and `poolsize`:
-![Poolsize and replicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+This assumes that you have your application stored in the `addpy` folder. This folder should also contain a specification file for the application, called called `spec.yaml`. Please see [the Application Deployment page](concept-application-deployment.md) for more information on the `spec.yaml` file.
+
+To deploy this app sample app, create the following files in a directory called `addpy`:
+
+- `add.py`. Copy the following Python code into this file:
+   ```py
+   #add.py
+   def add(x,y):
+        result = x+y
+        return result
+    result=add(x,y)
+   ```
+- `spec.yaml`. Copy the following code into this file:
+   ```yaml
+   #spec.yaml
+   name: add-app #name of your python script
+   version: v1  #version of the app
+   runtime: Python #the language this app uses (R or Python)
+   src: ./add.py #full path to the location of the app
+   entrypoint: add #the function that will be called upon execution
+   replicas: 1  #number of replicas needed
+   poolsize: 1  #the pool size that you need your app to scale
+   inputs:  #input parameters that the app expects and the type
+     x: int
+     y: int
+   output: #output parameter the app expects and the type
+     result: int
+   ```
+
+Then, run the command below:
+
+```bash
+mssqlctl app create --spec ./addpy
+```
 
 You can check if the app is deployed using the list command:
 

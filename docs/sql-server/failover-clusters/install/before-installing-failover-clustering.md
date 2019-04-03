@@ -140,6 +140,12 @@ manager: craigg
 -   Review content in [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 -   To enable Kerberos authentication with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723) in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
+
+-   SQL Server failover cluster instance requires the cluster nodes to be domain joined.
+    1.	SQL FCI on workgroup clusters is not supported. 
+    2.	SQL FCI on Multi-Domain cluster is also not supported.  
+    3.	SQL FCI on Domain + Workgroup Clusters is not supported.
+
   
 ##  <a name="Network"></a> Review Network, Port, and Firewall Considerations  
   

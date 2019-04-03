@@ -1,6 +1,6 @@
 ---
 title: Restore a database
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This article shows how to restore a database into the master instance of a SQL Server 2019 big data cluster (preview).
 author: rothja
 ms.author: jroth
@@ -11,7 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
-# Restore a database into the SQL Server 2019 big data cluster master instance
+
+# Restore a database into the SQL Server big data cluster master instance
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes how to restore an existing database into the master instance of a SQL Server 2019 big data cluster (preview). The recommended method is to use a backup, copy, and restore approach.
 

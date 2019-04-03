@@ -1,6 +1,6 @@
 ---
 title: How to deploy
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Learn how to deploy SQL Server 2019 big data clusters (preview) on Kubernetes.
 author: rothja 
 ms.author: jroth 
@@ -13,6 +13,8 @@ ms.custom: seodec18
 ---
 
 # How to deploy SQL Server big data clusters on Kubernetes
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 SQL Server big data cluster can be deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 

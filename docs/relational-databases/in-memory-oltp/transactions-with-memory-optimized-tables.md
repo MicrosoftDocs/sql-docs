@@ -20,7 +20,7 @@ This article describes all the aspects of transactions that are specific to memo
   
 The transaction isolation levels in SQL Server apply differently to memory-optimized tables versus disk-based tables, and the underlying mechanisms are different. An understanding of the differences helps the programmer design a high throughput system. The goal of transaction integrity is shared in all cases.  
 
-For error conditions specific to transactions on memory-optimized tables, jump to the section [Conflict Detection and Retry Logic](#confdetretry34ni).
+For error conditions specific to transactions on memory-optimized tables, jump to the section [Conflict Detection and Retry Logic](#conflict-detection-and-retry-logic).
   
 For general information, see [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -91,7 +91,7 @@ Disk-based tables indirectly have a row versioning system when READ_COMMITTED_SN
   
 ## Isolation Levels 
   
-The following table lists the possible levels of transaction isolation, in sequence from least isolation to most. For details about conflicts that can occur and retry logic to deal with these conflicts, see [Conflict Detection and Retry Logic](#confdetretry34ni). 
+The following table lists the possible levels of transaction isolation, in sequence from least isolation to most. For details about conflicts that can occur and retry logic to deal with these conflicts, see [Conflict Detection and Retry Logic](#conflict-detection-and-retry-logic). 
   
 | Isolation Level | Description |   
 | :-- | :-- |   
@@ -117,7 +117,7 @@ Descriptions of the phases follow.
 #### Validation: Phase 2 (of 3)  
   
 - The validation phase begins by assigning the end time, thereby marking the transaction as logically complete. This completion makes all changes of the transaction visible to other transactions which take a dependency on this transaction. The dependent transactions are not allowed to commit until this transaction has successfully committed. In addition, transactions which hold such dependencies are not allowed to return result sets to the client, to ensure the client only sees data that has been successfully committed to the database.  
-- This phase comprises the repeatable read and serializable validation. For repeatable read validation, it checks whether any of the rows read by the transaction has since been updated. For serializable validation it checks whether any row has been inserted into any data range scanned by this transaction. Per the table in [Isolation Levels and Conflicts](#confdegreeiso30ni), both repeatable read and serializable validation can happen when using snapshot isolation, to validate consistency of unique and foreign key constraints.  
+- This phase comprises the repeatable read and serializable validation. For repeatable read validation, it checks whether any of the rows read by the transaction has since been updated. For serializable validation it checks whether any row has been inserted into any data range scanned by this transaction. Per the table in [Isolation Levels and Conflicts](#isolation-levels), both repeatable read and serializable validation can happen when using snapshot isolation, to validate consistency of unique and foreign key constraints.  
   
 #### Commit Processing: Phase 3 (of 3)  
   

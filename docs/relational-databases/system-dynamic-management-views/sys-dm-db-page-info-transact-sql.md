@@ -26,27 +26,22 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Returns information about a page in a database.  The function returns one row that contains the header information from the page, including the `object_id`, `index_id`, and `partition_id`.  This function replaces the need to use `DBCC PAGE` in most cases.
 
-## Syntax  
-  
+## Syntax   
 ```  
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
 ## Arguments  
- *DatabaseId* | NULL | DEFAULT  
-
- Is the ID of the database. *DatabaseId* is **smallint**. Valid input is the ID number of a database. The default is NULL, however sending a NULL value for this parameter will result in an error.
+*DatabaseId* | NULL | DEFAULT     
+Is the ID of the database. *DatabaseId* is **smallint**. Valid input is the ID number of a database. The default is NULL, however sending a NULL value for this parameter will result in an error.
  
-*FileId* | NULL | DEFAULT
-
+*FileId* | NULL | DEFAULT   
 Is the ID of the file. *FileId* is **int**.  Valid input is the ID number of a file in the database specified by *DatabaseId*. The default is NULL, however sending a NULL value for this parameter will result in an error.
 
-*PageId* | NULL | DEFAULT
-
+*PageId* | NULL | DEFAULT   
 Is the ID of the page.  *PageId* is **int**.  Valid input is the ID number of a page in the file specified by *FileId*. The default is NULL, however sending a NULL value for this parameter will result in an error.
 
-*Mode* | NULL | DEFAULT
-
+*Mode* | NULL | DEFAULT   
 Determines the level of detail in the output of the function. 'LIMITED' will return NULL values for all description columns, 'DETAILED' will populate description columns.  DEFAULT is 'LIMITED.'
 
 ## Table Returned  
@@ -143,6 +138,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ## See Also  
 [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Database Related Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 

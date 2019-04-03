@@ -38,8 +38,8 @@ manager: craigg
 
 4.   SQL Server failover cluster instance (FCI) requires the cluster nodes to be domain joined. The following configurations are **not supported**: 
     - SQL FCI on workgroup clusters. 
-    -	SQL FCI on Multi-Domain cluster.   
-    -	SQL FCI on Domain + Workgroup Clusters. 
+    - SQL FCI on Multi-Domain cluster.   
+    - SQL FCI on Domain + Workgroup Clusters. 
 
 ## [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Installation options  
   

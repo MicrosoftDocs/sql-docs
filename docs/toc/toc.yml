@@ -4016,7 +4016,7 @@
         href: ../sql-server/sql-server-privacy.md
       - name: Configure to send services data to Microsoft
         href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
-      - name: Configure to send tools data data to Microsoft
+      - name: Configure to send tools data to Microsoft
         href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
       - name: Local audit for SQL Server
         href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md

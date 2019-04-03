@@ -10091,7 +10091,7 @@
       - name: Configure persistent memory PMEM
         href: ../linux/sql-server-linux-configure-pmem.md
       - name: Customer feedback
-        href: ../linux/sql-server-linux-customer-feedback.md
+        href: ../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Develop
       href: ../linux/sql-server-linux-develop-overview.md
       items:

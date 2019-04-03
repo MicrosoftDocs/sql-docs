@@ -3986,9 +3986,9 @@
       - name: Privacy supplement
         href: ../sql-server/sql-server-privacy.md
       - name: Configure SQL Server to send usage and diagnostic data
-        href: ../sql-server/sql-server-customer-feedback.md
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
       - name: Configure SQL Server data tools to send usage and diagnostic data
-        href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
       - name: Local audit for SQL Server
         href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Release notes

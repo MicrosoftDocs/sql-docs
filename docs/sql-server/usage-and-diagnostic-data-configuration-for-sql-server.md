@@ -1,5 +1,5 @@
 ---
-title: Configure SQL Server to send feedback to Microsoft | Microsoft Docs
+title: Configure SQL Server to send usage and diagnostic data to Microsoft | Microsoft Docs
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
@@ -11,9 +11,11 @@ ms.custom: ""
 ms.technology: configuration
 ---
 # Configure SQL Server to send usage and diagnostic data to Microsoft
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## Summary
+
 By default, Microsoft SQL Server collects information about how its customers are using the application. Specifically, SQL Server collects information about the installation experience, usage, and performance. This information helps Microsoft improve the product to better meet customer needs. For example, Microsoft collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use SQL Server, and determine whether features should be added to the product to better serve customers.
 
 Specifically, Microsoft does not send any of the following types of information through this mechanism:

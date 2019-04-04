@@ -4,7 +4,7 @@ description: Quickstart for R script in SQL Server. Learn the basics of calling 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 01/04/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
@@ -38,7 +38,8 @@ The following exercise is focused on the first interaction model: how to pass R 
     b <- 2
     c <- a/b
     d <- a*b
-    print(c, d)'
+    print(c(c, d))'
+    '
     ```
 
 2. Assuming that you have everything set up correctly the correct result is calculated, and the R `print` function returns the result to the **Messages** window.

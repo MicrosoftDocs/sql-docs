@@ -22,7 +22,7 @@ The intelligent query processing (QP) feature family includes features with broa
 
 ![Intelligent Query Processing](./media/3_iqpfeaturefamily.png)
 
-You can make workloads automatically eligible for intelligent query processing by enabling the applicable database compatibility level for the database.  You can set this using Transact-SQL. For example:  
+You can make workloads automatically eligible for intelligent query processing by enabling the applicable database compatibility level for the database. You can set this using Transact-SQL. For example:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -45,7 +45,7 @@ The following table details all intelligent query processing features, along wit
 
 With this feature, your plan can dynamically switch to a better join strategy during execution by using a single cached plan.
 
-The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.
+The batch mode Adaptive Joins feature enables the choice of a [Hash Join or Nested Loops Join](../../relational-databases/performance/joins.md) method to be deferred until **after** the first input has been scanned. The Adaptive Join operator defines a threshold that is used to decide when to switch to a Nested Loops plan. Your plan can therefore dynamically switch to a better join strategy during execution.
 Here's how it works:
 -  If the row count of the build join input is small enough that a nested loop join would be more optimal than a Hash Join, your plan switches to a Nested Loops algorithm.
 -  If the build join input exceeds a specific row count threshold, no switch occurs and your plan continues with a Hash Join.
@@ -60,13 +60,13 @@ INNER JOIN [Dimension].[Stock Item] AS [si]
 WHERE [fo].[Quantity] = 360;
 ```
 
-The query returns 336 rows. Enabling [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md), we see the following plan:
+The query returns 336 rows. Enabling [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md), we see the following plan:
 
 ![Query result 336 rows](./media/4_AQPStats336Rows.png)
 
 In the plan, we see the following:
 1. We have a columnstore index scan used to provide rows for the hash join build phase.
-1. We have the new Adaptive Join operator. This operator defines a threshold that is used to decide when to switch to a Nested Loops plan. For our example, the threshold is 78 rows. Anything with &gt;= 78 rows will use a Hash Join. If less than the threshold, a Nested Loops Join will be used.
+1. We have the new Adaptive Join operator. This operator defines a threshold that is used to decide when to switch to a Nested Loops plan. For our example, the threshold is 78 rows. Anything with &gt;= 78 rows will use a Hash Join. If less than the threshold, a Nested Loops Join will be used.
 1. Since we return 336 rows, we are exceeding the threshold and so the second branch represents the probe phase of a standard Hash Join operation. Notice that Live Query Statistics shows rows flowing through the operators - in this case "672 of 672".
 1. And the last branch is our Clustered Index Seek for use by the nested loop join had the threshold not been exceeded. Notice that we see "0 of 336" rows displayed (the branch is unused).
  Now contrast the plan with the same query, but this time for a *Quantity* value that only has one row in the table:
@@ -78,7 +78,7 @@ INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-The query returns one row. Enabling Live Query Statistics we see the following plan:
+The query returns one row. Enabling Live Query Statistics we see the following plan:
 
 ![Query result one row](./media/5_AQPStatsOneRow.png)
 
@@ -90,7 +90,7 @@ In the plan, we see the following:
 Workloads with frequent oscillations between small and large join input scans will benefit most from this feature.
 
 ### Adaptive Join overhead
-Adaptive joins introduce a higher memory requirement than an indexed Nested Loops Join equivalent plan. The additional memory is requested as if the Nested Loops was a Hash Join. There is also overhead for the build phase as a stop-and-go operation versus a Nested Loops streaming equivalent join. With that additional cost comes flexibility for scenarios where row counts may fluctuate in the build input.
+Adaptive joins introduce a higher memory requirement than an indexed Nested Loops Join equivalent plan. The additional memory is requested as if the Nested Loops was a Hash Join. There is also overhead for the build phase as a stop-and-go operation versus a Nested Loops streaming equivalent join. With that additional cost comes flexibility for scenarios where row counts may fluctuate in the build input.
 
 ### Adaptive Join caching and re-use
 Batch mode Adaptive Joins work for the initial execution of a statement, and once compiled, consecutive executions will remain adaptive based on the compiled Adaptive Join threshold and the runtime rows flowing through the build phase of the outer input.
@@ -156,8 +156,8 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## Batch mode memory grant feedback
-A query's post-execution plan in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan.  When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
-The following graph shows one example of using batch mode adaptive memory grant feedback. For the first execution of the query, duration was **88 seconds** due to high spills:   
+A query's post-execution plan in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the minimum required memory needed for execution and the ideal memory grant size to have all rows fit in memory. Performance suffers when memory grant sizes are incorrectly sized. Excessive grants result in wasted memory and reduced concurrency. Insufficient memory grants cause expensive spills to disk. By addressing repeating workloads, batch mode memory grant feedback recalculates the actual memory required for a query and then updates the grant value for the cached plan. When an identical query statement is executed, the query uses the revised memory grant size, reducing excessive memory grants that impact concurrency and fixing underestimated memory grants that cause expensive spills to disk.
+The following graph shows one example of using batch mode adaptive memory grant feedback. For the first execution of the query, duration was **88 seconds** due to high spills:   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -171,7 +171,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![High spills](./media/2_AQPGraphHighSpills.png)
 
-With memory grant feedback enabled, for the second execution, duration is **1 second** (down from 88 seconds), spills are removed entirely, and the grant is higher: 
+With memory grant feedback enabled, for the second execution, duration is **1 second** (down from 88 seconds), spills are removed entirely, and the grant is higher: 
 
 ![No spills](./media/3_AQPGraphNoSpills.png)
 
@@ -180,14 +180,14 @@ For an excessive memory grant condition, if the granted memory is more than two 
 For an insufficiently sized memory grant condition, that result in a spill to disk for batch mode operators, memory grant feedback will trigger a recalculation of the memory grant. Spill events are reported to memory grant feedback and can be surfaced via the *spilling_report_to_memory_grant_feedback* xEvent. This event returns the node id from the plan and spilled data size of that node.
 
 ### Memory grant feedback and parameter sensitive scenarios
-Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as "parameter-sensitive." For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* xEvent. For more information about parameter sniffing and parameter sensitivity, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
+Different parameter values may also require different query plans in order to remain optimal. This type of query is defined as "parameter-sensitive." For parameter-sensitive plans, memory grant feedback will disable itself on a query if it has unstable memory requirements. The plan is disabled after several repeated runs of the query and this can be observed by monitoring the *memory_grant_feedback_loop_disabled* xEvent. For more information about parameter sniffing and parameter sensitivity, refer to the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
 
 ### Memory grant feedback caching
-Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the Query Store.
-Feedback is not persisted if the plan is evicted from cache. Feedback will also be lost if there is a failover. A statement using `OPTION (RECOMPILE)` creates a new plan and does not cache it. Since it is not cached, no memory grant feedback is produced and it is not stored for that compilation and execution.  However, if an equivalent statement (that is, with the same query hash) that did **not** use `OPTION (RECOMPILE)` was cached and then re-executed, the consecutive statement can benefit from memory grant feedback.
+Feedback can be stored in the cached plan for a single execution. It is the consecutive executions of that statement, however, that benefit from the memory grant feedback adjustments. This feature applies to repeated execution of statements. Memory grant feedback will change only the cached plan. Changes are currently not captured in the Query Store.
+Feedback is not persisted if the plan is evicted from cache. Feedback will also be lost if there is a failover. A statement using `OPTION (RECOMPILE)` creates a new plan and does not cache it. Since it is not cached, no memory grant feedback is produced and it is not stored for that compilation and execution. However, if an equivalent statement (that is, with the same query hash) that did **not** use `OPTION (RECOMPILE)` was cached and then re-executed, the consecutive statement can benefit from memory grant feedback.
 
 ### Tracking memory grant feedback activity
-You can track memory grant feedback events using the *memory_grant_updated_by_feedback* xEvent. This event tracks the current execution count history, the number of times the plan has been updated by memory grant feedback, the ideal additional memory grant before modification and the ideal additional memory grant after memory grant feedback has modified the cached plan.
+You can track memory grant feedback events using the *memory_grant_updated_by_feedback* xEvent. This event tracks the current execution count history, the number of times the plan has been updated by memory grant feedback, the ideal additional memory grant before modification and the ideal additional memory grant after memory grant feedback has modified the cached plan.
 
 ### Memory grant feedback, resource governor and query hints
 The actual memory granted honors the query memory limit determined by the resource governor or query hint.

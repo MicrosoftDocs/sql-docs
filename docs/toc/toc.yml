@@ -4014,9 +4014,9 @@
       items:
       - name: Privacy supplement
         href: ../sql-server/sql-server-privacy.md
-      - name: Configure to send services data to Microsoft
+      - name: Configure SQL Server usage and diagnostic data
         href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
-      - name: Configure to send tools data to Microsoft
+      - name: Configure tools usage and diagnostic data
         href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
       - name: Local audit for SQL Server
         href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md

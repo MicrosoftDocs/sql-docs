@@ -26,7 +26,7 @@ manager: craigg
  The following topics describe MDX queries and the cellsets they produce, and provide more detailed information about basic MDX syntax.  
   
 > [!NOTE]  
->  For more information about performance issues related to MDX queries and calculations, see the section "Writing Efficient MDX" in the [SQL Server 2005 Analysis Services Performance Guide](https://blogs.msdn.microsoft.com/sqlperf/2007/02/12/analysis-services-2005-performance-guide/).  
+>  For more information about performance issues related to MDX queries and calculations, see the section "Writing Efficient MDX" in the [SQL Server 2005 Analysis Services Performance Guide](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
   
 ## In This Section  
   

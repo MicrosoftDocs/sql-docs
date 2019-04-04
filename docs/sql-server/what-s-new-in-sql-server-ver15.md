@@ -41,7 +41,7 @@ For the latest improvements to Azure Data Studio, see the [Azure Data Studio rel
 | Guidance on GPU support for running deep learning with TensorFlow in Spark. | [Deploy a big data cluster with GPU support and run TensorFlow](../big-data-cluster/spark-gpu-tensorflow.md). |
 | **SqlDataPool** and **SqlStoragePool** data sources are no longer created by default. | Create these manually as needed. See the [known issues](../big-data-cluster/release-notes-big-data-cluster.md#externaltablesctp24). |
 | `INSERT INTO SELECT` support for the data pool. | For an example, see [Tutorial: Ingest data into a SQL Server data pool with Transact-SQL](../big-data-cluster/tutorial-data-pool-ingest-sql.md). |
-| `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option. | See [Big data clusters release notes](../big-data-cluster/release-notes-big-data-cluster.md#whats=new).|
+| `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option. | See [Big data clusters release notes](../big-data-cluster/release-notes-big-data-cluster.md#whats-new).|
 | Updated AKS deployment recommendations. | When evaluating big data clusters on AKS, we now recommend using a single node of size **Standard_L8s**. |
 | Spark runtime upgrade to Spark 2.4. | |
 | &nbsp; | &nbsp; |

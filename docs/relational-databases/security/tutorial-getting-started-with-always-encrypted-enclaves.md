@@ -30,8 +30,16 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 
 ### SQL Server computer requirements
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later
-- Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later.
+- Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter.
+- If your SQL Server computer is a physical machine, it must meet the [Hyper-V Hardware Requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
+   - 64-bit Processor with Second Level Address Translation (SLAT)
+   - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs)
+   - Virtualization support enabled (Intel VT-x or AMD-V)
+- If your SQL Server computer is a virtual machine, the VM must be configured to allow nested virtualization.
+   - On Hyper-V 2016 or later, [enable nested virtualization extensions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor.
+   - In Azure, make sure you're running a VM size that supports nested virtualization, such as the Dv3 and Ev3 series VMs. See [Create a nesting capable Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+   - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
 - [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 As an alternative, you can install SSMS on another machine.
@@ -99,6 +107,21 @@ In this step, you will configure the SQL Server computer as a guarded host regis
    ```
 
 3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
+
+4. If your SQL Server computer is a virtual machine or if it is a legacy physical machine that does not support UEFI Secure Boot or is not equipped with IOMMU, you need to remove the VBS requirement for platform security features.
+    1. Remove the requirement in Windows registry.
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. Restart the computer again to get VBS to come online with the lowered requirements.
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. Sign in to the SQL Server computer as an administrator again, open an elevated Windows PowerShell console, generate a unique host key, and export the resulting public key to a file.
 

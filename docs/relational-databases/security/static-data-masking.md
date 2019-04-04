@@ -15,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 # Static Data Masking
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Static Data Masking is a component of [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 preview 5 and higher. The latest preview of SQL Server Management Studio can be downloaded [here](../../ssms/download-sql-server-management-studio-ssms.md). 
+Static Data Masking is a component of [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 preview 4 and deprecated in 18.0 RC1. The latest preview of SQL Server Management Studio can be downloaded [here](../../ssms/download-sql-server-management-studio-ssms.md). 
 
 ![Static data masking](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

@@ -1,5 +1,5 @@
 ---
-title: "Configure usage and diagnostic data collection for SQL Server Tools | Microsoft Docs"
+title: "Configure usage and diagnostic data collection for SQL Server tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
 ms.prod: sql

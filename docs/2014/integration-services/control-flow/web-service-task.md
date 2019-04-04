@@ -78,6 +78,6 @@ manager: craigg
 ## Related Content  
  Video, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642), on technet.microsoft.com.  
   
- Curated Answer, [Using SSIS To Get Data From a Web Service](http://www.sqlsafety.com/?p=1032).  
+ [How To Consume Web Service Through SSIS Package](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

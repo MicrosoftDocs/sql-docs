@@ -117,7 +117,7 @@ To enable the lock pages in memory option:
  You can change these settings without restarting the instances, so you can easily experiment to find the best settings for your usage pattern.  
   
 ## Providing the maximum amount of memory to SQL Server  
-Memory can be configured up to the process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions. For more information, see [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
+Memory can be configured up to the process virtual address space limit in all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editions. For more information, see [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical-memory-limits-windows-server-2016).
 
 ## Examples
 
@@ -175,4 +175,3 @@ FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
  [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Editions and supported features of SQL Server 2017 on Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
  [Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases)
- 

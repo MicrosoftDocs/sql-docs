@@ -470,7 +470,7 @@ FROM sys.dm_exec_requests AS d
   - Support for Always Encrypted with secure enclaves. (CTP 2.0)
   - Smaller download size. (CTP 2.0)
   - Now based on the Visual Studio 2017 Isolated Shell. (CTP 2.0)
-  - For a complete list, see the [SSMS changelog](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
+  - For a complete list, see the [SSMS changelog](../ssms/release-notes-ssms.md). (CTP 2.0)
 
 - [**SQL Server PowerShell module**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): The SqlServer PowerShell module allows SQL Server developers, admins, and BI professionals to automate database deployment and server administration.
 

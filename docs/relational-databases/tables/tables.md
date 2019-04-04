@@ -41,13 +41,13 @@ Temporary tables are stored in **tempdb**. There are two types of temporary tabl
 
 #### <a name="ctp23"></a> Reduced recompilations for workloads using temporary tables across multiple scopes
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md) reduces recompilations for workloads using temporary tables across multiple scopes. Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)  reduces recompilations for workloads using temporary tables across multiple scopes. Prior to this feature, when referencing a temporary table with a data manipulation language (DML) statement (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), if the temporary table was created by an outer scope batch, this would result in a recompile of the DML statement each time it is executed. With this improvement, SQL Server performs additional lightweight checks to avoid unnecessary recompilations:
 
 - Check if the outer-scope module used for creating the temporary table at compile time is the same one used for consecutive executions. 
 - Keep track of any data definition language (DDL) changes made at initial compilation and  compare them with DDL operations for consecutive executions. 
 
 The end result is a reduction in extraneous recompilations and CPU-overhead.  
-System Tables  
+#### System Tables  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the data that defines the configuration of the server and all its tables in a special set of tables known as system tables. Users cannot directly query or update the system tables. The information in the system tables is made available through the system views. For more information, see [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   

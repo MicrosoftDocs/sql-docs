@@ -1,5 +1,5 @@
 ---
-title: Configure SQL Server to send usage and diagnostic data to Microsoft | Microsoft Docs
+title: Configure usage and diagnostic data collection for SQL Server | Microsoft Docs
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,7 +10,7 @@ ms.prod: sql
 ms.custom: ""
 ms.technology: configuration
 ---
-# Configure SQL Server to send usage and diagnostic data to Microsoft
+# Configure usage and diagnostic data collection for SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

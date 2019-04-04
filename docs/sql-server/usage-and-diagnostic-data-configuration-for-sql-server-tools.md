@@ -1,5 +1,5 @@
 ---
-title: "Configure SQL Server tools to send usage and diagnostic data to Microsoft | Microsoft Docs"
+title: "Configure usage and diagnostic data collection for SQL Server Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
 ms.prod: sql
@@ -12,7 +12,7 @@ ms.author: "sstein"
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Configure SQL Server tools to send usage and diagnostic data to Microsoft
+# Configure usage and diagnostic data collection for SQL Server Tools
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 

@@ -60,7 +60,7 @@ manager: kfile
   
 -   [BI capabilities in Excel and Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   
--   For information on requirements to use synonyms, see [Optimizing Power BI Q&A with Synonyms & Phrasing](http://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) at pragmaticworks.com.  
+-   For information on requirements to use synonyms, see [Optimizing Power BI Q&A with Synonyms & Phrasing](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) at pragmaticworks.com.  
   
 -   [Office Online, Pick your enterprise social network: Yammer or Newsfeed?](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   

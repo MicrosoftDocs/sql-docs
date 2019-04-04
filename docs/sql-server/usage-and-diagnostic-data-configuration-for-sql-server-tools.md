@@ -12,7 +12,7 @@ ms.author: "sstein"
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Configure usage and diagnostic data collection for SQL Server Tools
+# Configure usage and diagnostic data collection for SQL Server tools
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 

@@ -56,7 +56,7 @@ SSMS is free!
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-For additional details about SSMS 17.9.1, please see the [SSMS 17.9.1 changelog](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release).
+For additional details about SSMS 17.9.1, please see the [SSMS 17.9.1 changelog](release-notes-ssms.md#1791-latest-ga-release).
 
 ## SSMS installation tips and issues (SSMS 17.9.1)
 
@@ -106,7 +106,7 @@ No upgrade option is available at this time. If you have a previous SSMS 18.0 pr
 
 SSMS 18.0 (RC1) is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019 preview.
 
-For details about what's new in this release, see [the SSMS changelog](sql-server-management-studio-changelog-ssms.md).
+For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
 
 ## Supported SQL offerings (SSMS 18.0 RC1)
 
@@ -135,7 +135,7 @@ N/A
 
 ## Previous releases
 
-[Previous SQL Server Management Studio Releases](../ssms/sql-server-management-studio-changelog-ssms.md#previous-ssms-releases)
+[Previous SQL Server Management Studio Releases](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 ## Feedback
 

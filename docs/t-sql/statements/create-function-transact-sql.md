@@ -328,7 +328,7 @@ Is a default value for the parameter. If a *default* value is defined, the funct
   
  In inline TVFs, the TABLE return value is defined through a single SELECT statement. Inline functions do not have associated return variables.  
   
- <a name="mstvf"></a> In MSTVFs, @*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. @*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
+ <a name="mstvf"></a> In MSTVFs, \@*return_variable* is a TABLE variable, used to store and accumulate the rows that should be returned as the value of the function. \@*return_variable* can be specified only for [!INCLUDE[tsql](../../includes/tsql-md.md)] functions and not for CLR functions.  
   
  *select_stmt*  
  Is the single SELECT statement that defines the return value of an inline table-valued function (TVF).  

@@ -2203,6 +2203,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/connect/odbc/linux-mac/release-notes.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/connect/odbc/windows/release-notes.md",
             "redirect_url": "/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows",
             "redirect_document_id": true
@@ -3709,7 +3714,12 @@
         },
         {
             "source_path": "docs/ssms/previous-sql-server-management-studio-releases.md",
-            "redirect_url": "/sql/ssms/sql-server-management-studio-changelog-ssms",
+            "redirect_url": "/sql/ssms/release-notes-ssms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/sql-server-management-studio-changelog-ssms.md",
+            "redirect_url": "/sql/ssms/release-notes-ssms",
             "redirect_document_id": false
         },
         {

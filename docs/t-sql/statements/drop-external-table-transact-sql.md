@@ -31,7 +31,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## Arguments  
- [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
+ `[ database_name . [schema_name] . | schema_name . ] table_name`  
  The one- to three-part name of the external table to remove. The table name can optionally include the schema, or the database and schema.  
   
 ## Permissions  

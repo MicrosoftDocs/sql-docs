@@ -20,6 +20,7 @@ This article lists and describes what's new in the versioned releases of the [!I
 <!--
 Going forward, please use the new 2-column markdown table for each new H2 version section.
 And we are keeping the H2 titles much shorter, partly by removing redundant or obvious info.
+We want to track the Month YYYY each new version H2 section is added, at the end of the H2 title.
 This is the new standard format for Release Notes article content.
 
 OLD     FILE NAME:    linux-mac/release-notes.md
@@ -29,7 +30,7 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
-## 17.3
+## 17.3, February 2019
 
 | New item | Details |
 | :------- | :------ |
@@ -39,7 +40,7 @@ GeneMi.  2019/04/03.
 | XA distributed transactions. | See [Using XA Transactions](../use-xa-with-dtc.md).<br/><br/>XA is an initialism for _eXtended Architecture_, which is a standard for the execution of a global transaction that accesses more than one server-side data storage system. |
 | &nbsp; | &nbsp; |
 
-## 17.2
+## 17.2, July 2018
 
 | New item | Details |
 | :------- | :------ |
@@ -52,7 +53,7 @@ GeneMi.  2019/04/03.
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## 17.1
+## 17.1, March 2018
 
 | New item | Details |
 | :------- | :------ |
@@ -89,7 +90,7 @@ Support for Azure SQL Managed Instance (Extended Private Preview).
 > -   ALTER DATABASE [dbname1] MODIFY NAME = [dbname2] is not supported
 > -   The error messages are always shown in English, regardless of language settings (same as Azure) 
 
-## 13.1, for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS
+## 13.1, for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS, May 2017
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adds support for Always Encrypted and Azure Active Directory when used in conjunction with Microsoft SQL Server 2016.
 

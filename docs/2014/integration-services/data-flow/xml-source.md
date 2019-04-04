@@ -89,6 +89,6 @@ manager: craigg
  [Extract Data by Using the XML Source](xml-source.md)  
   
 ## Related Content  
- Technical article, [Create an XML Destination for an SSIS Package](http://www.sqlservercentral.com/articles/Integration+Services+(SSIS)/155343/).  
+ Technical article, [Using an XML file to configure an SSIS package](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
   
   

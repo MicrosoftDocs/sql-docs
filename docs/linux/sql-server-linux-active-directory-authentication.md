@@ -109,11 +109,13 @@ To configure the SQL Server service keytab file:
    sudo ktutil
    ```
 
-1. For each SPN, run the following two commands:
+1. Add keytab entries for each SPN using the following commands:
 
    ```bash
-   addent -password -p <SPN> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
-   addent -password -p <SPN> -k <kvno from command above> -e rc4-hmac
+   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac -sha1-96
+   addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
    ```
 
 1. Write the keytab to a file and then quit ktutil:

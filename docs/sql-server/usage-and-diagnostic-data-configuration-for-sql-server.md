@@ -93,31 +93,8 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 > [!NOTE]
 > {Major Version} refers to the version of SQL Server-for example, 140 for SQL Server 2017
 
-- For SQL Server Management Studio 17:
-  
-    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0
+- For SQL Server Management Studio 17 and SQL Server Management Studio 18, refer to [User Assistance in SQL Server Management Studio](../ssms/user-assistance-in-sql-server-management-studio.md)
 
-    RegEntry name = UserFeedbackOptIn
-
-    Entry type DWORD: 0 is opt out; 1 is opt in
-
-    Additionally, SSMS 17.x is based on the Visual Studio 2015 shell, and the Visual Studio installation enables customer feedback by default.  
-
-    To configure Visual Studio to disable customer feedback on individual computers, change the value of the following registry subkey to string "0":  
-    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
-
-    For example, change the subkey to the following:  
-    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
-
-    Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage and diagnostic data collection.
-
-- For SQL Server Management Studio 18:
-    
-    Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell
-
-    RegEntry name = UserFeedbackOptIn
-
-    Entry type DWORD: 0 is opt out; 1 is opt in
 ## Set registry subkeys for crash dump collection
 
 Similar to the behavior in an earlier version of SQL Server, SQL Server 2017 Enterprise customers can configure Group Policy settings on the server to opt in or out of crash dump collection. This is done by configuring a registry-based policy. The relevant registry subkeys and settings are as follows: 

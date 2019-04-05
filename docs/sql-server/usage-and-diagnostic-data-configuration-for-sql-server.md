@@ -93,7 +93,7 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
 > [!NOTE]
 > {Major Version} refers to the version of SQL Server-for example, 140 for SQL Server 2017
 
-- For SQL Server Management Studio 17 and SQL Server Management Studio 18, refer to [User Assistance in SQL Server Management Studio](../ssms/user-assistance-in-sql-server-management-studio.md)
+- For SQL Server Management Studio 17 and SQL Server Management Studio 18, refer to [User Assistance in SQL Server Management Studio](../ssms/sql-server-management-studio-telemetry-ssms.md)
 
 ## Set registry subkeys for crash dump collection
 

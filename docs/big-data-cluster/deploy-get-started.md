@@ -1,6 +1,6 @@
 ---
 title: Get started
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Learn the steps and resources for deploying SQL Server 2019 big data clusters (preview).
 author: rothja
 ms.author: jroth
@@ -11,7 +11,9 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Get started with SQL Server 2019 big data clusters
+# Get started with SQL Server big data clusters
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article provides an overview of how to deploy a [SQL Server 2019 big data cluster (preview)](big-data-cluster-overview.md). It is meant to orient you to the concepts and provide a framework for understanding the other deployment articles in this section. Your specific deployment steps vary based on your platform choices for the client and server.
 

@@ -187,7 +187,7 @@ manager: craigg
 ### Build a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Workbook  
  After you have the server components installed in a farm, you can create your first Excel 2013 workbook that uses embedded [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data, and then publish it to a SharePoint library. Alternatively, you can upload or publish a sample [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook to verify [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access in SharePoint. For more information, see the following:  
   
--   [What's new in PowerPivot in Excel 2013](http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1) (http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1).  
+-   [What's new in PowerPivot in Excel 2013](https://www.microsoft.com/microsoft-365/blog/2012/12/13/introduction-to-powerpivot-in-excel-2013/).  
   
 -   [Start PowerPivot in Excel 2013 add-in](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110) (http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110).  
   

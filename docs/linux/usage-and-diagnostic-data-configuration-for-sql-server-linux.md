@@ -1,16 +1,16 @@
 ---
-title: Customer Feedback for SQL Server on Linux | Microsoft Docs
-description: Describes how SQL Server customer feedback is collected and configured on Linux.
+title: Configure Usage and Diagnostic Data Collection for SQL Server on Linux | Microsoft Docs
+description: Describes how SQL Server customer usage and diagnostic data is collected and configured on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
 ms.technology: linux
 ---
-# Customer Feedback for SQL Server on Linux
+# Configure Usage and Diagnostic Data Collection for SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -29,16 +29,16 @@ SQL Server 2017 always collects and sends information about the installation exp
 > [!NOTE]
 > You can disable the sending of information to Microsoft only in paid versions of SQL Server.
 
-## Disable Customer Feedback
+## Disable Usage and Diagnostic Data Collection
 
-This option lets you change if SQL Server sends feedback to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
+This option lets you change if SQL Server sends usage and diagnostic data collection to Microsoft or not. By default, this value is set to true. To change the value, run the following commands:
 
 > [!IMPORTANT]
-> You can not turn off customer feedback for free editions of SQL Server, Express and Developer.
+> You can not turn off usage and diagnostic data collection for free editions of SQL Server, Express and Developer.
 
 ### On Red Hat, SUSE, and Ubuntu
 
-1. Run the mssql-conf script as root with the **set** command for **telemetry.customerfeedback**. The following example turns off customer feedback by specifying **false**.
+1. Run the mssql-conf script as root with the **set** command for **telemetry.customerfeedback**. The following example turns off usage and diagnostic data collection by specifying **false**.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -51,7 +51,7 @@ This option lets you change if SQL Server sends feedback to Microsoft or not. By
    ```
    
 ### On Docker
-To disable Customer Feedback on docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
+To disable usage and diagnostic data collection on docker, you must have Docker [persist your data](sql-server-linux-configure-docker.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -102,11 +102,11 @@ To disable Customer Feedback on docker, you must have Docker [persist your data]
 
 ::: moniker-end
 
-## Local Audit for SQL Server on Linux Usage Feedback Collection
+## Local Audit for SQL Server on Linux Usage and Diagnostic Data Collection
 
-Microsoft SQL Server 2017 contains Internet-enabled features that can collect and send information about your computer or device ("standard computer information") to Microsoft. The Local Audit component of SQL Server Usage Feedback collection can write data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.
+Microsoft SQL Server 2017 contains Internet-enabled features that can collect and send information about your computer or device ("standard computer information") to Microsoft. The Local Audit component of SQL Server Usage and Diagnostic Data collection can write data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.
 
-In SQL Server on Linux, Local Audit is configurable at instance level for SQL Server Database Engine. Other SQL Server components and SQL Server Tools do not have Local Audit capability for usage feedback collection.
+In SQL Server on Linux, Local Audit is configurable at instance level for SQL Server Database Engine. Other SQL Server components and SQL Server Tools do not have Local Audit capability for usage and diagnostic data collection.
 
 ### Enable Local Audit
 

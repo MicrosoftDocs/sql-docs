@@ -15,15 +15,15 @@ ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
-# local audit for SQL Server usage and diagnostic data collection
+# Local audit for SQL Server usage and diagnostic data collection
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## Introduction
 
-Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The local auditcomponent of [SQL Server Usage and Diagnostic Data collection](https://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the local auditis to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
+Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The local audit component of [SQL Server Usage and Diagnostic Data collection](https://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the local audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
 
-As of SQL Server 2016 CU2, local auditis configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, local audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have local audit capability for usage and diagnostic data collection. 
+As of SQL Server 2016 CU2, is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, local audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have local audit capability for usage and diagnostic data collection.
 
 ## Prerequisites 
 
@@ -119,7 +119,7 @@ Create a new folder (local audit directory) where the local audit will write the
  
 ## Turning local audit on or off
 
-After you have completed the preconfiguration steps, you can turn on Local Audit. To do this, use a System Administrator account or a similar role with access to modifying Registry Keys to turn local audit on or off by following the steps below. 
+After you have completed the preconfiguration steps, you can turn on local audit. To do this, use a System Administrator account or a similar role with access to modifying Registry Keys to turn local audit on or off by following the steps below. 
 
 1. Launch **regedit**.  
 
@@ -127,9 +127,9 @@ After you have completed the preconfiguration steps, you can turn on Local Audit
 
 1. Right-click **UserRequestedLocalAuditDirectory** and select *Modify*. 
 
-1. To turn on Local Audit, type the local audit path, for example *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
+1. To turn on local audit, type the local audit path, for example *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
  
-    To turn off Local Audit, empty the value in **UserRequestedLocalAuditDirectory**.
+    To turn off local audit, empty the value in **UserRequestedLocalAuditDirectory**.
 
 1. Close **regedit**. 
 
@@ -156,7 +156,7 @@ Local audit will produce one log file per day. The log files will be in a form o
 
 ## Maintenance 
 
-1. To limit disk space usage by the files written by Local Audit, set up a policy or a regular job to clean up the local audit Directory to remove older, unneeded files.  
+1. To limit disk space usage by the files written by local audit, set up a policy or a regular job to clean up the local audit Directory to remove older, unneeded files.  
 
 2. Secure the local audit Directory path so that it is only accessible by the appropriate people. Note that the log files contain information as outlined in [How to configure SQL Server 2016 to send feedback to Microsoft](https://support.microsoft.com/kb/3153756). Access to this file should prevent most members of your organization from reading it.  
 
@@ -214,7 +214,7 @@ Currently we collect the following trace categories:
 
 
 
-Below is an excerpt of a JSON file output of Local Audit.
+Below is an excerpt of a JSON file output of local audit.
 
 ```JSON
 [
@@ -305,7 +305,7 @@ No local audit file will be written.
 **What happens if there is not internet connectivity/machine is behind the firewall?**
 SQL Server 2016 usage and diagnostic data will not be sent to Microsoft. It will still try to write the local audit logs if configured correctly.
 
-**How do DBAs disable Local Audit?**
+**How do DBAs disable local audit?**
 Remove the UserRequestedLocalAuditDirectory registry key entry.
 
 **Who can read the local audit log files?**

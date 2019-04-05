@@ -1,6 +1,6 @@
 ---
 title: mssqlctl reference
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Reference article for mssqlctl commands.
 author: rothja
 ms.author: jroth
@@ -12,6 +12,8 @@ ms.technology: big-data-cluster
 ---
 
 # mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 The following article provides reference for the **mssqlctl** tool for [SQL Server 2019 big data clusters (preview)](big-data-cluster-overview.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
 

@@ -98,8 +98,14 @@
       "feedback_system": {
         "advanced-analytics/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
+        "database-engine/**/*.md": "GitHub",
         "linux/**/*.md": "GitHub",
-        "sql-server/**/*.md": "GitHub"
+        "powershell/**/*.md": "GitHub",
+        "relational-databases/**/*.md": "GitHub",
+        "sql-server/**/*.md": "GitHub",
+        "ssms/**/*.md": "GitHub",
+        "tools/**/*.md": "GitHub",
+        "t-sql/**/*.md": "GitHub"
       },
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"

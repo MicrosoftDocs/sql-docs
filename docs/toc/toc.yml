@@ -79,6 +79,8 @@
         href: ../big-data-cluster/deploy-on-minikube.md
   - name: Concepts
     items:
+    - name: Application deployment
+      href: ../big-data-cluster/concept-application-deployment.md
     - name: Controller
       href: ../big-data-cluster/concept-controller.md
     - name: Master instance
@@ -3979,12 +3981,6 @@
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Compute capacity limits by edition
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Customer Experience Improvement Program (CEIP)
-      href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: Privacy supplement
-      href: ../sql-server/sql-server-privacy.md
-    - name: Configure SQL Server to send feedback to Microsoft
-      href: ../sql-server/sql-server-customer-feedback.md
   - name: Release notes
     items:
     - name: Backward compatibility
@@ -4014,6 +4010,16 @@
       href: ../sql-server/install/local-language-versions-in-sql-server.md
     - name: File Locations
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: Usage and diagnostic data collection
+      items:
+      - name: Privacy supplement
+        href: ../sql-server/sql-server-privacy.md
+      - name: Configure SQL Server usage and diagnostic data
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
+      - name: Configure tools usage and diagnostic data
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
+      - name: Local audit for SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Install SQL Server
     href: ../database-engine/install-windows/installation-for-sql-server.md
     items:
@@ -4110,8 +4116,6 @@
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: Multi-Homed Computer
       href: ../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: Local Audit for Usage Feedback Collection
-      href: ../database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md
     - name: Configure Database Engine Instances
       href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
     - name: Default Locations for Data Files
@@ -8660,9 +8664,9 @@
     - name: Download SSMS
       href: ../ssms/download-sql-server-management-studio-ssms.md
       items:
-      - name: SSMS Changelog & Previous Releases
-        href: ../ssms/sql-server-management-studio-changelog-ssms.md
-      - name: Release Notes
+      - name: SSMS Release Notes and Previous Releases
+        href: ../ssms/release-notes-ssms.md
+      - name: Download related Release Notes
         href: ../ssms/download-sql-server-management-studio-ssms.md#release-notes
       - name: Install non-English SSMS
         href: ../ssms/install-other-languages.md
@@ -10086,8 +10090,8 @@
           href: ../linux/sql-server-linux-configure-msdtc-docker.md
       - name: Configure persistent memory PMEM
         href: ../linux/sql-server-linux-configure-pmem.md
-      - name: Customer feedback
-        href: ../linux/sql-server-linux-customer-feedback.md
+      - name: Configure to send usage and diagnostic data to Microsoft
+        href: ../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Develop
       href: ../linux/sql-server-linux-develop-overview.md
       items:

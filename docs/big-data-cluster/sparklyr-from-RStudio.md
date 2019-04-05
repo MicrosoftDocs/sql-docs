@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr provides an R interface for Apache Spark. Sparklyr is the preffered way for R developers to use Spark. This article describes how to use sparklyr in a SQL Server 2019 big data cluster (preview) using RStudio.
+Sparklyr provides an R interface for Apache Spark. Sparklyr is the preferred way for R developers to use Spark. This article describes how to use sparklyr in a SQL Server 2019 big data cluster (preview) using RStudio.
 
 ## Prerequisites
 
@@ -60,12 +60,24 @@ sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
 
 After connecting to Spark, you can run sparklyr. The following example performs a query on iris dataset using sparklyr:
 
-``` r
+```r
 copy_to(sc, iris)
 
 iris_count <- dbGetQuery(sc, "SELECT COUNT(*) FROM iris")
 
 iris_count
+```
+
+## Distributed R computations
+
+One feature of sparklyr is the ability to [distribute R computations](https://spark.rstudio.com/guides/distributed-r/) with [spark_apply](https://spark.rstudio.com/reference/spark_apply/).
+
+Because big data clusters use Livy connections, you must set `packages = FALSE` in the call to **spark_apply**. For more information, see the [Livy section](https://spark.rstudio.com/guides/distributed-r/#livy) of the sparklyr documentation on distributed R computations. With this setting, you can only use the R packages that are already installed on your Spark cluster in the R code passed to **spark_apply**. The following example demonstrates this functionality:
+
+```r
+iris_tbl <- copy_to(sc, iris)
+
+iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)
 ```
 
 ## Next steps

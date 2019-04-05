@@ -87,7 +87,7 @@ These database roles exist only in the virtual master database. Their permission
 
 |Role name|Description|  
 |--------------------|-----------------|
-|**dbmanager** | Can create and delete databases. A member of the dbmanager role that creates a database, becomes the owner of that databasee which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the dbmanager role do not necessarily have permission to access databases that they do not own.|
+|**dbmanager** | Can create and delete databases. A member of the dbmanager role that creates a database, becomes the owner of that database which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the dbmanager role do not necessarily have permission to access databases that they do not own.|
 |**loginmanager** | Can create and delete logins in the virtual master database.|
 
 > [!NOTE]

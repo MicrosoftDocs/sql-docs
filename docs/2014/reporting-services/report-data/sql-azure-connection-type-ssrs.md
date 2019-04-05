@@ -22,7 +22,7 @@ manager: kfile
 > [!NOTE]  
 >  When opening a connection to a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], set the connection timeout to 30 seconds.  
   
- For more information, see [Windows Azure SQL Database on MSDN](https://go.microsoft.com/fwlink/?LinkId=206770).  
+ For more information, see [Azure SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/).  
   
  Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   

@@ -62,7 +62,7 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [SSIS: Accessing variables in a parent package](https://go.microsoft.com/fwlink/?LinkId=257729), on consultingblogs.emc.com.  
+-   Blog entry, [SSIS: Accessing variables in a parent package](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), on andyleonard.blog.  
   
 -   Article, [Execute Package Task](../integration-services/control-flow/execute-package-task.md).  
   

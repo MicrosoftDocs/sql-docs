@@ -40,14 +40,12 @@ This topic describes how to create and define a [!INCLUDE[ssNoVersion](../../inc
   
     [SQL Server Management Objects](#SMO)  
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Security"></a>Security  
 For detailed information, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="SSMS"></a>Using SQL Server Management Studio  
   

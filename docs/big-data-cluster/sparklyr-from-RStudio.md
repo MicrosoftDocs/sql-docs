@@ -5,7 +5,7 @@ description: Connect to big data cluster using sparklyr from RStudio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.date: 02/28/2019
+ms.date: 04/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -20,7 +20,22 @@ Sparklyr provides an R interface for Apache Spark. Sparklyr is the preffered way
 ## Prerequisites
 
 - [Deploy a SQL Server 2019 big data cluster](quickstart-big-data-cluster-deploy.md).
-- [Install RStudio](https://www.rstudio.com/)
+
+### Install RStudio Desktop
+
+Install and configure **RStudio Desktop** with the following steps:
+
+1. If you are running on a Windows client, [download and install R 3.4.4](https://cran.rstudio.com/bin/windows/base/old/3.4.4).
+
+1. [Download and install RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
+
+1. After installation completes, run the following commands inside of RStudio Desktop to install the required packages:
+
+   ```RStudio Desktop
+   install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   ```
 
 ## Connect to spark in SS19 Big Data cluster
 

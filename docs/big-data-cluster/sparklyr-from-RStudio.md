@@ -54,7 +54,7 @@ library(DBI)
 #Specify the Knox username and password
 config <- livy_config(user = "<username>", password = "<password>")
 
-httr::set_config(httr::config(ssl_verifypeer = 0L))
+httr::set_config(httr::config(ssl_verifypeer = 0L, ssl_verifyhost = 0L))
 
 sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
                     method = "livy",
@@ -66,7 +66,7 @@ sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
 After connecting to Spark, you can run sparklyr. The following example performs a query on iris dataset using sparklyr:
 
 ```r
-copy_to(sc, iris)
+iris_tbl <- copy_to(sc, iris)
 
 iris_count <- dbGetQuery(sc, "SELECT COUNT(*) FROM iris")
 
@@ -80,8 +80,6 @@ One feature of sparklyr is the ability to [distribute R computations](https://sp
 Because big data clusters use Livy connections, you must set `packages = FALSE` in the call to **spark_apply**. For more information, see the [Livy section](https://spark.rstudio.com/guides/distributed-r/#livy) of the sparklyr documentation on distributed R computations. With this setting, you can only use the R packages that are already installed on your Spark cluster in the R code passed to **spark_apply**. The following example demonstrates this functionality:
 
 ```r
-iris_tbl <- copy_to(sc, iris)
-
 iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)
 ```
 

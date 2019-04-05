@@ -38,6 +38,6 @@ manager: kfile
   
 ## See Also  
  [Integrating Reporting Services into Applications](../application-integration/integrating-reporting-services-into-applications.md)   
- [Create SSRS Reports Using Visual Studio (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321991)  
+ [Create SSRS Reports Using Visual Studio (Blog)](https://jwcooney.com/2015/01/07/ssrs-basics-set-up-visual-studio-to-write-a-new-ssrs-report/)  
   
   

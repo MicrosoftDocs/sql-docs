@@ -1,5 +1,5 @@
 ---
-title: Configure SQL Server to send feedback to Microsoft | Microsoft Docs
+title: Configure usage and diagnostic data collection for SQL Server | Microsoft Docs
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,10 +10,12 @@ ms.prod: sql
 ms.custom: ""
 ms.technology: configuration
 ---
-# Configure SQL Server to send feedback to Microsoft
+# Configure usage and diagnostic data collection for SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## Summary
+
 By default, Microsoft SQL Server collects information about how its customers are using the application. Specifically, SQL Server collects information about the installation experience, usage, and performance. This information helps Microsoft improve the product to better meet customer needs. For example, Microsoft collects information about what kinds of error codes customers encounter so that we can fix related bugs, improve our documentation about how to use SQL Server, and determine whether features should be added to the product to better serve customers.
 
 Specifically, Microsoft does not send any of the following types of information through this mechanism:
@@ -51,20 +53,20 @@ For SQL Server on Linux refer to [Customer Feedback for SQL Server on Linux](htt
 
 ## Error and Usage Reporting application 
 
-After setup, the usage data collection setting for SQL Server components and instances can be changed through the Error and Usage Reporting application. This application is available as part of SQL Server installation. This tool lets each SQL Server instance configure its own Usage Data setting.
+After setup, the usage and diagnostic data collection setting for SQL Server components and instances can be changed through the Error and Usage Reporting application. This application is available as part of SQL Server installation. This tool lets each SQL Server instance configure its own Usage Reports setting.
 
 > [!NOTE]
-> The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage Feedback collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage Feedback collection, therefore can be turned on or off independently from Usage Feedback collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the [Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=868444).
+> The Error and Usage Reporting application is listed under the Configuration Tools of SQL Server. You can use this tool to manage your preference for Error Reporting and Usage and Diagnostic Data collection in the same manner as in SQL Server 2017. Error Reporting is separate from Usage and Diagnostic Data collection, therefore can be turned on or off independently from Usage and Diagnostic Data collection. Error Reporting collects crash dumps that are sent to Microsoft and that may contain sensitive information as outlined in the [Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-To start SQL Server Error and Usage Reporting, click or tap **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage feedback and serious errors that are collected for instances and components that are installed on that computer.
+To start SQL Server Error and Usage Reporting, click or tap **Start**, and then search on "Error" in the search box. The SQL Server Error and Usage Reporting item will be displayed. After you start the tool, you can manage usage and diagnostic data as well as serious errors that are collected for instances and components that are installed on that computer.
 
-For paid versions, use the "Usage Reports" check boxes to manage sending usage feedback to Microsoft.
+For paid versions, use the "Usage Reports" check boxes to manage sending usage and diagnostic data to Microsoft.
 
 For paid or free versions, use the "Error Reports" check boxes to manage sending feedback on serious errors and crash dumps to Microsoft.
 
 ## Set registry subkeys on the server
 
-Enterprise customers can configure Group Policy settings to opt in or out of usage data collection. This is done by configuring a registry-based policy. The relevant registry subkey and settings are as follows:
+Enterprise customers can configure Group Policy settings to opt in or out of usage and diagnostic data collection. This is done by configuring a registry-based policy. The relevant registry subkey and settings are as follows:
 
 - For SQL Server instance features:
     
@@ -107,7 +109,7 @@ Enterprise customers can configure Group Policy settings to opt in or out of usa
     For example, change the subkey to the following:  
     HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
-    Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage data collection.
+    Registry-based Group Policy on these registry subkeys is honored by SQL Server 2017 usage and diagnostic data collection.
 
 - For SQL Server Management Studio 18:
     
@@ -155,7 +157,7 @@ The procedure to turn this feature on or off is dependent on the OS version. To 
  
 - Windows Server 2016 and Windows 10
 
-    [Configure Windows telemetry in your organization](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
+    [Configure Windows diagnostic data in your organization](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 and Windows 7
 
     [WER Settings](/windows/desktop/wer/wer-settings)
@@ -164,6 +166,6 @@ The procedure to turn this feature on or off is dependent on the OS version. To 
 
 During installation, SQL Server 2016 Analysis Services adds a special account to your Analysis Services instance. This account is a member of the Analysis Services Server Admin role. The account is used to collect information for feedback from the Analysis Services instance.  
 
-You can configure your service not to send usage data, as described in the "Set registry subkeys on the server" section. However, doing this does not remove the service account. 
+You can configure your service not to send usage and diagnostic data, as described in the "Set registry subkeys on the server" section. However, doing this does not remove the service account. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

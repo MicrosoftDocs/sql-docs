@@ -73,7 +73,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 | Common CLI for application deployment and cluster management. | [How to deploy an app on SQL Server 2019 big data cluster (preview)](../big-data-cluster/big-data-cluster-create-apps.md) |
 | VS Code extension to deploy applications to a big data cluster. | [How to use VS Code to deploy applications to SQL Server big data clusters](../big-data-cluster/app-deployment-extension.md) |
 | Changes to the **mssqlctl** tool command usage. | For more details see the [known issues for mssqlctl](../big-data-cluster/release-notes-big-data-cluster.md#mssqlctlctp23). |
-| Use Sparklyr in big data cluster | [Use Sparklyr in SQL Server 2019 big data cluster](../big-data-cluster/sparklyr-from-RStudio.md) |
+| Use Sparklyr in big data cluster. | [Use Sparklyr in SQL Server 2019 big data cluster](../big-data-cluster/sparklyr-from-RStudio.md) |
 | Mount external HDFS-compatible storage into big data cluster with **HDFS tiering**. | See [HDFS tiering](../big-data-cluster/hdfs-tiering.md). |
 | New unified connection experience for the SQL Server master instance and the HDFS/Spark Gateway. | See [SQL Server master instance and the HDFS/Spark Gateway](../big-data-cluster/connect-to-big-data-cluster.md). |
 | Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster. | The namespace is not deleted. However, in earlier releases this command did delete the entire namespace. |
@@ -91,7 +91,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Reduced recompilations for workloads using temporary tables across multiple scopes. |[Reduced recompilations for workloads](../relational-databases/tables/tables.md#ctp23) |
 |Improved indirect checkpoint scalability. |[Improved indirect checkpoint scalability](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |UTF-8 support: Adds support to use UTF-8 character encoding with a BIN2 collation (`UTF8_BIN2`). |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
-|Define cascaded delete actions on an edge constraint in a graph database. |[Details](../relational-databases/tables/graph-edge-constraints.md) |
+|Define cascaded delete actions on an edge constraint in a graph database. |[Edge constraints](../relational-databases/tables/graph-edge-constraints.md) |
 |Enable or disable `LIGHTWEIGHT_QUERY_PROFILING` with the new database scoped configuration. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
 | &nbsp; | &nbsp; |
 
@@ -99,7 +99,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|[Azure Data Studio](../azure-data-studio/what-is.md) supports Azure Active Directory | |
+|Azure Data Studio supports Azure Active Directory. |[Azure Data Studio](../azure-data-studio/what-is.md) |
 |Notebook view UI has moved into Azure Data Studio core. | |
 |Added new wizard to create external data sources from Hadoop Distributed File System (HDFS) to SQL Server Big Data Cluster. | |
 |Improved Notebook viewer UI. | |
@@ -112,7 +112,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|Calculation groups in tabular model| |
+|Calculation groups in tabular model.| |
 | &nbsp; | &nbsp; |
 
 ## CTP 2.2 December 2018
@@ -137,7 +137,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|Always On Availability Group on Docker containers with Kubernetes |[Always On Availability Groups for containers running Linux](../linux/sql-server-ag-kubernetes.md) |
+|Always On Availability Group on Docker containers with Kubernetes. |[Always On Availability Groups for containers running Linux](../linux/sql-server-ag-kubernetes.md) |
 | &nbsp; | &nbsp; |
 
 ## CTP 2.1 November 2018
@@ -146,7 +146,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|Adds support to select UTF-8 collation as default during [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
+|Adds support to select UTF-8 collation as default during. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] setup. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md#ctp23) |
 |Scalar UDF inlining automatically transforms scalar user-defined functions (UDF) into relational expressions and embeds them in the calling SQL query. |[Scalar UDF Inlining](../relational-databases/user-defined-functions/scalar-udf-inlining.md) |
 |The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. | |
 |The new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations. | |
@@ -159,7 +159,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|New container registry |[Get started with SQL Server containers on Docker](../linux/quickstart-install-connect-docker.md) |
+|New container registry. |[Get started with SQL Server containers on Docker](../linux/quickstart-install-connect-docker.md) |
 | &nbsp; | &nbsp; |
 
 ### Tools
@@ -179,7 +179,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Access your big data from HDFS. | |
 |Run Advanced analytics and machine learning with Spark. | |
 |Use Spark streaming to data to SQL data pools. | |
-|Run Query books that provide a notebook experience in **Azure Data Studio**|[Data engineering](../azure-data-studio/what-is.md#data-engineering)  |
+|Run Query books that provide a notebook experience in **Azure Data Studio**.|[Data engineering](../azure-data-studio/what-is.md#data-engineering)  |
 | &nbsp; | &nbsp; | 
 
 ### Database engine
@@ -187,23 +187,23 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 | New feature or update | Details |
 |:-----|:-----|
 |Database **COMPATIBILITY_LEVEL 150** is added. |[ALTER DATABASE Compatibility Level (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) |
-|Resumable Online Index Create|[CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
-|Row mode memory grant feedback |[Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
-|Approximate `COUNT DISTINCT`|[Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
-|Batch mode on rowstore |[Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
-|Table variable deferred compilation |[Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
-|Java language extension |[Java language extension](../advanced-analytics/java/extension-java.md) |
+|Resumable Online Index Create.|[CREATE INDEX (Transact-SQL)](../t-sql/statements/create-index-transact-sql.md#resumable-indexes) |
+|Row mode memory grant feedback. |[Row mode memory grant feedback](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
+|Approximate `COUNT DISTINCT`.|[Approximate query processing](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
+|Batch mode on rowstore.|[Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
+|Table variable deferred compilation.|[Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
+|Java language extension.|[Java language extension](../advanced-analytics/java/extension-java.md) |
 |Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. | |
-|Edge constraints |[Graph edge constraints](../relational-databases/tables/graph-edge-constraints.md) |
-|Database scoped default setting for online and resumable DDL operations | |
-|Availability groups support up to 5 synchronous secondary replicas |[Availability groups](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) |
+|Edge constraints.|[Graph edge constraints](../relational-databases/tables/graph-edge-constraints.md) |
+|Database scoped default setting for online and resumable DDL operations.| |
+|Availability groups support up to 5 synchronous secondary replicas.|[Availability groups](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) |
 |Secondary to primary replica read/write connection redirection|[Secondary to primary replica read/write connection redirection-Always On Availability Groups](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) |
-|SQL Data Discovery and Classification | [SQL Data Discovery & Classification](../relational-databases/security/sql-data-discovery-and-classification.md) |
-|Expanded support for persistent memory devices |[Hybrid Buffer Pool](../database-engine/configure-windows/hybrid-buffer-pool.md) |
+|SQL Data Discovery and Classification.| [SQL Data Discovery & Classification](../relational-databases/security/sql-data-discovery-and-classification.md) |
+|Expanded support for persistent memory devices.|[Hybrid Buffer Pool](../database-engine/configure-windows/hybrid-buffer-pool.md) |
 |Support for columnstore statistics in `DBCC CLONEDATABASE`|[Stats blob for columnstore indexes](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
-|`sp_estimate_data_compression_savings` introduces `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`|[Considerations for Columnstore Indexes](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
-|Machine Learning services supported on Windows Server Failover Cluster |[ What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) d|
-|Machine Learning support for partition-based modeling  |[What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
+|`sp_estimate_data_compression_savings` introduces `COLUMNSTORE` and `COLUMNSTORE_ARCHIVE`.|[Considerations for Columnstore Indexes](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
+|Machine Learning services supported on Windows Server Failover Cluster. |[ What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
+|Machine Learning support for partition-based modeling.|[What's new - SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
 |Lightweight query profiling infrastructure enabled by default |[Lightweight query execution statistics profiling infrastructure v3](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
 |New PolyBase connectors for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata, and MongoDB. |[What is PolyBase?](../relational-databases/polybase/polybase-guide.md) |
 |`sys.dm_db_page_info(database_id, file_id, page_id, mode)` returns information about a page in a database. |[sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
@@ -232,7 +232,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|Certificate management in SQL Server Configuration Manager|[Details](../database-engine/configure-windows/manage-certificates.md)
+|Certificate management in SQL Server Configuration Manager|[Certificate Management (SQL Server Configuration Manager)](../database-engine/configure-windows/manage-certificates.md)
 | &nbsp; | &nbsp; |
 
 ### Tools

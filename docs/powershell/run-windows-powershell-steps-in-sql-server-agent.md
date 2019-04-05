@@ -31,10 +31,9 @@ There are several types of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 - Use a command prompt job step to run PowerShell.exe, and specify a script that imports the **sqlps** module.
 
-###  <a name="LimitationsRestrictions"></a> Limitations and Restrictions  
-  
-> [!CAUTION]  
->  Each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step that runs PowerShell with the **sqlps** module launches a process, which consumes approximately 20 MB of memory. Running large numbers of concurrent Windows PowerShell job steps can adversely impact performance.  
+### <a name="LimitationsRestrictions"></a> Caution about memory consumption
+
+Each [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent job step that runs PowerShell with the **sqlps** module launches a process, which consumes approximately **20 MB** of memory. Running large numbers of concurrent Windows PowerShell job steps can adversely impact performance.  
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

@@ -24,6 +24,6 @@ manager: craigg
 -   [Microsoft Knowledge Base article 154690](https://go.microsoft.com/fwlink/?LinkId=117747)  
   
 ## For More Information  
- [SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

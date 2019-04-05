@@ -225,7 +225,7 @@ This data source has been deprecated. Use the SQL Server data source type to con
  
 To install the Oracle Client tools you can do the following.
  
-1.	Go to [Oracle's download site](https://www.oracle.com/us/products/tools/index-090165.html)
+1.	Go to [Oracle's download site](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html)
 2.	Download ODAC 12c Release 4 (12.1.0.2.4) for Windows (64bit for server, 32bit for tools)
 3.	Install the Data Provider for .NET 4
   

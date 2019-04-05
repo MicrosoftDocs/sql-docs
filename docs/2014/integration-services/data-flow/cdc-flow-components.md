@@ -198,7 +198,7 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [CDC in SSIS for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543), on mattmasson.com.  
+-   Blog entry, [CDC in SSIS for SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/), on mattmasson.com.  
   
 -   Blog entry on setting up the CDC service, [CDC for Oracle in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), on blogs.msdn.com.  
   

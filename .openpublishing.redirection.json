@@ -13904,6 +13904,26 @@
             "source_path": "docs/relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md",
             "redirect_url": "/sql/relational-databases/security/authentication-access/create-a-login",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-server/sql-server-customer-feedback.md",
+            "redirect_url": "/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md",
+            "redirect_url": "/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md",
+            "redirect_url": "/sql/sql-server/usage-and-diagnostic-data-in-local-audit",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-customer-feedback.md",
+            "redirect_url": "/sql/linux/usage-and-diagnostic-data-configuration-for-sql-server-linux",
+            "redirect_document_id": false
         }
     ]
 }

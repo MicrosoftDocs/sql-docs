@@ -363,4 +363,4 @@ WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
 ## See also
-[Local audit for SSMSusage and diagnostic data collection](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
+[Local audit for SSMS usage and diagnostic data collection](../ssms/sql-server-management-studio-telemetry-ssms.md)

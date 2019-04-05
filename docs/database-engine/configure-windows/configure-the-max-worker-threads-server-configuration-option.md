@@ -71,14 +71,14 @@ manager: craigg
     |\> 64 processors|256 + ((logical CPU's - 4) * 32)|512 + ((logical CPU's - 4) * 32)|
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier.   We recommend 1024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can no longer be installed on a 32-bit operating system. 32-bit computer values are listed for the assistance of customers running [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and earlier. We recommend 1,024 as the maximum number of worker threads for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is running on a 32-bit computer.  
   
     > [!NOTE]  
-    >  For recommendations on using more than 64 CPUs, refer to [Best Practices for Running SQL Server on Computers That Have More Than 64 CPUs](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
+    > For recommendations on using more than 64 CPUs, refer to [Best Practices for Running SQL Server on Computers That Have More Than 64 CPUs](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   When all worker threads are active with long running queries, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might appear unresponsive until a worker thread completes and becomes available. Although this is not a defect, it can sometimes be undesirable. If a process appears to be unresponsive and no new queries can be processed, then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the dedicated administrator connection (DAC), and kill the process. To prevent this, increase the number of max worker threads.  
   
- The **max worker threads** server configuration option does not take into account threads that are required for all the system tasks such as Availibility Groups, Service Broker, Lock Manager, and others. If the number of threads configured are being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
+ The **max worker threads** server configuration option does limit all threads that may be spanwed in the system. Threads required for tasks such as Availibility Groups, Service Broker, Lock Manager, or others are spawned outside this limit. If the number of threads configured is being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -98,7 +98,7 @@ manager: craigg
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  
- Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the RECONFIGURE statement, a user must be granted the ALTER SETTINGS server-level permission. The ALTER SETTINGS permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
+ Execute permissions on **sp_configure** with no parameters or with only the first parameter are granted to all users by default. To execute **sp_configure** with both parameters to change a configuration option or to run the `RECONFIGURE` statement, a user must be granted the `ALTER SETTINGS` server-level permission. The `ALTER SETTINGS` permission is implicitly held by the **sysadmin** and **serveradmin** fixed server roles.  
   
 ##  <a name="SSMSProcedure"></a> Using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   

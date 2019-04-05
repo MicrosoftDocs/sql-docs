@@ -118,16 +118,6 @@ If either of these name checks fail, update your domain search list. The followi
    nameserver **<AD domain controller IP address>**
    ```
 
-## Check that the reverse DNS is properly configured
-
-The following command should return the fully qualified domain name (FQDN) of the host that runs SQL Server. An example is **SqlHost.contoso.com**.
-
-```bash
-host **<IP address of SQL Server host>**
-```
-
-The output of this command should be similar to `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`. If this command does not return your host's FQDN, or if the FQDN is incorrect, add a reverse DNS entry for your SQL Server on Linux host to your DNS server.
-
 ## Join to the AD domain
 
 After the basic configuration and connectivity with domain controller is verified, there are two options for joining a SQL Server Linux host machine with Active Directory domain controller:
@@ -166,7 +156,7 @@ Use the following steps to join a SQL Server host to an Active Directory domain:
 
 1. If the Kerberos client package installation prompts you for a realm name, enter your domain name in uppercase.
 
-1. After you confirm that your DNS is configured properly, join the domain by running the following command. You must authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain. Specifically, this command creates a new computer account in AD, creates the **/etc/krb5.keytab** host keytab file, and configures the domain in **/etc/sssd/sssd.conf**:
+1. After you confirm that your DNS is configured properly, join the domain by running the following command. You must authenticate using an AD account that has sufficient privileges in AD to join a new machine to the domain. This command creates a new computer account in AD, creates the **/etc/krb5.keytab** host keytab file, configures the domain in **/etc/sssd/sssd.conf**, and updates **/etc/krb5.conf**.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -232,6 +222,16 @@ CONTOSO.COM = {
 contoso.com = CONTOSO.COM
 .contoso.com = CONTOSO.COM
 ```
+
+## Check that the reverse DNS is properly configured
+
+The following command should return the fully qualified domain name (FQDN) of the host that runs SQL Server. An example is **SqlHost.contoso.com**.
+
+```bash
+host **<IP address of SQL Server host>**
+```
+
+The output of this command should be similar to `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`. If this command does not return your host's FQDN, or if the FQDN is incorrect, add a reverse DNS entry for your SQL Server on Linux host to your DNS server.
 
 ## Next steps
 

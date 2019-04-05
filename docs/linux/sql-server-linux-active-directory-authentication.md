@@ -101,24 +101,30 @@ To configure the SQL Server service keytab file:
    ```
 
    > [!NOTE]
-   > SPNs can take several minutes to propagate through your domain, especially if the domain is large. If you receive the error, `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, please wait a few minutes and try again.
+   > SPNs can take several minutes to propagate through your domain, especially if the domain is large. If you receive the error, `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, please wait a few minutes and try again.  
 
-1. Create a keytab file with **ktutil** for the AD user you created in the previous step. When prompted, enter the password for that AD account.
+1. Start **ktutil**:
 
    ```bash
    sudo ktutil
+   ```
 
-   ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name  of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from  above>** -e aes256-cts-hmac-sha1-96
+1. For each SPN, run the following two commands:
 
-   ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name  of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from  above>** -e rc4-hmac
+   ```bash
+   addent -password -p <SPN> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
+   addent -password -p <SPN> -k <kvno from command above> -e rc4-hmac
+   ```
 
-   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+1. Write the keytab to a file and then quit ktutil:
 
+   ```bash
+   wkt /var/opt/mssql/secrets/mssql.keytab
    quit
    ```
 
    > [!NOTE]
-   > The **ktutil** tool does not validate the password, so make sure you enter it correctly.
+   > The **ktutil** tool does not validate the password, so make sure you enter it correctly when prompted.
 
 ### <a id="upn"></a> Option 1: Using UPN to configure the keytab
 
@@ -139,7 +145,7 @@ Add the machine account to your keytab with **ktutil**. The machine account (als
 1. Next, list out the entries.
 
    ```bash
-   ktutil: list
+   list
    ```
 
 1. Delete all the entries by their slot number that are not the UPN. Do this one at a time by repeating the following command:
@@ -161,7 +167,6 @@ Add the machine account to your keytab with **ktutil**. The machine account (als
 
    ```bash
    wkt /var/opt/mssql/secrets/mssql.keytab
-   wkt /var/opt/mssql/secrets/mssql.keytabe
    ```
 
 1. Quit **ktutil**.
@@ -197,18 +202,11 @@ For the MSA option, you must create SQL Server's Kerberos keytab. It should cont
    addent -password -p <MSA> -k <kvno from command above> -e rc4-hmac
    ```
 
-1. For each SPN, run the following two commands:
-
-   ```bash
-   addent -password -p <SPN> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
-   addent -password -p <SPN> -k <kvno from command above> -e rc4-hmac
-   ```
-
 1. Write the keytab to a file and then quit ktutil:
 
    ```bash
-   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
-   ktutil: quit
+   wkt /var/opt/mssql/secrets/mssql.keytab
+   quit
    ```
 
 1. When using the MSA approach, a configuration option needs to be set with the **mssql-conf** tool to specify the MSA to be used while accessing the keytab file. Ensure the values below are in **/var/opt/mssql/mssql.conf**.
@@ -255,7 +253,7 @@ At this point, you are ready to use AD-based logins in SQL Server as follows.
    CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
    ```
 
-1.	Verify that the login is now listed in the [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) system catalog view:
+1. Verify that the login is now listed in the [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) system catalog view:
 
    ```sql
    SELECT name FROM sys.server_principals;
@@ -318,7 +316,7 @@ This will use LDAPS over SSSD if AD domain join on host was done via SSSD packag
 
 ### Post SQL Server 2017 CU14
 
-Starting with SQL Server 2017 CU14, if SQL Server was joined to an AD domain controller using an SSSD package and is configured to use openldap calls for general AD lookup by setting **disablesssd** to true, you can also use **enablekdcfromkrb5** option to force SQL Server to use krb5 library for KDC lookup instead of reverse DNS lookup for KDC server.
+Starting with SQL Server 2017 CU14, if SQL Server was joined to an AD domain controller using third-party providers and is configured to use openldap calls for general AD lookup by setting **disablesssd** to true, you can also use **enablekdcfromkrb5** option to force SQL Server to use krb5 library for KDC lookup instead of reverse DNS lookup for KDC server.
 
 This may be useful for the scenario where you want to manually configure the domain controllers that SQL Server attempts to communicate with. And you use the openldap library mechanism by using the KDC list in **krb5.conf**.
 

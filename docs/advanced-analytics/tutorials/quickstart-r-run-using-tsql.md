@@ -38,7 +38,7 @@ The following exercise is focused on the first interaction model: how to pass R 
     b <- 2
     c <- a/b
     d <- a*b
-    print(c(c, d))'
+    print(c(c, d))
     '
     ```
 

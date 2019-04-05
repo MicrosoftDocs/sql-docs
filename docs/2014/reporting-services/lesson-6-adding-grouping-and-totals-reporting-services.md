@@ -15,7 +15,7 @@ manager: kfile
 # Lesson 6: Adding Grouping and Totals (Reporting Services)
   Add grouping and totals to your report to organize and summarize your data.  
   
- For information about adding running totals to reports, see this curation on curah.microsoft.com: [Adding totals to Reporting Services (SSRS) reports](https://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ For information about adding running totals to reports, see: [Adding totals to Reporting Services (SSRS) reports](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
  **In this topic:**  
   

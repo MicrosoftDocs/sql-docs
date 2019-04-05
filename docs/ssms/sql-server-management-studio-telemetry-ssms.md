@@ -58,4 +58,5 @@ To opt in or out of usage data collection for SSMS:
 
 ## See also
 
-[Local Audit for SQL Server Usage Feedback Collection](https://msdn.microsoft.com/library/mt743085.aspx)
+- [Configure usage and diagnostic data collection for SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
+- [Local audit for SQL Server usage and diagnostic data collection](http://msdn.microsoft.com/library/mt743085.aspx)

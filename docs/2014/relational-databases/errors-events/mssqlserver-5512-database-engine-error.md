@@ -30,6 +30,6 @@ manager: craigg
  The truncate operation failed.  
   
 ## User Action  
- For the cause of the error, see the specific Windows status code. For more information about this status code, see the [Events and Errors Message Center](https://go.microsoft.com/fwlink/?linkid=47660).  
+ For the cause of the error, see the specific Windows status code. For more information about this status code, see [Event and Error Messages at Microsoft Support](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
   
   

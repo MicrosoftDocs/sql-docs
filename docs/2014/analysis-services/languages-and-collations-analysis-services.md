@@ -88,7 +88,7 @@ manager: craigg
   
 -   0x0416 or 1046 for **Portuguese (Brazil)**.  
   
- To view a longer list, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Encoding and Code Pages](https://msdn.microsoft.com/goglobal/bb688114.aspx).  
+ To view a longer list, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Code Pages](/windows/desktop/Intl/code-pages).  
   
 > [!NOTE]  
 >  The `Language` property does not determine the language for returning system messages, or which strings appear in the user interface. Errors, warnings, and messages are localized into all languages supported in Office and Office 365 and are used automatically when the client connection specifies one of the supported locales.  

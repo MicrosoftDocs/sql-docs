@@ -58,9 +58,9 @@ manager: kfile
   
 ## More information  
   
--   [Business intelligence capabilities in Excel, SharePoint Online, and Power BI for Office 365](https://technet.microsoft.com/en-us/library/dn198235.aspx).  
+-   [BI capabilities in Excel and Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   
--   For information on requirements to use synonyms, see [Add synonyms to a Power Pivot Excel data model](https://support.office.com/Article/Add-synonyms-to-a-Power-Pivot-Excel-data-model-345f4f5b-5ec2-4998-bc46-a26bdc0810b6?ui=en-US&rs=en-US&ad=US).  
+-   For information on requirements to use synonyms, see [Optimizing Power BI Q&A with Synonyms & Phrasing](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) at pragmaticworks.com.  
   
 -   [Office Online, Pick your enterprise social network: Yammer or Newsfeed?](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
@@ -70,7 +70,7 @@ manager: kfile
   
 -   [Compare a BI Center site to Power BI for Office 365 sites](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
   
--   [Introducing Microsoft BI Reporting and Analysis Tools](https://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Analysis and reporting with Microsoft business intelligence (BI) tools](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
 ## Community Content  
  [Microsoft self-service BI on premise vs cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  

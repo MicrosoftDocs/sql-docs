@@ -59,7 +59,7 @@ manager: craigg
   
  To restore the database to its state at 9:45 P.M. (the point of failure), either of the following alternative procedures can be used:  
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **Alternative 1: Restore the database by using the most recent full database backup**  
   

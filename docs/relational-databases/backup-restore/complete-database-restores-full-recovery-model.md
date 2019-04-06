@@ -38,7 +38,7 @@ For information about support for backups from earlier versions of [!INCLUDE[ssN
   
 ##  <a name="PointOfFailure"></a> Restoring a Database to the Point of Failure  
 
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Typically, recovering a database to the point of failure involves the following basic steps:  
   

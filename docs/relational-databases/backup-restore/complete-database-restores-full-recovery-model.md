@@ -1,7 +1,7 @@
 ---
 title: "Complete Database Restores (Full Recovery Model) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -28,21 +28,18 @@ manager: craigg
   
  When restoring a database, particularly under the full recovery model or bulk-logged recovery model, you should use a single restore sequence. A *restore sequence* consists of one or more restore operations that move data through one or more of the phases of restore.  
   
-> [!IMPORTANT]  
->  We recommend that you do not attach or restore databases from unknown or untrusted sources. These databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a nonproduction server and also examine the code, such as stored procedures or other user-defined code, in the database.  
-  
- **In this Topic:**  
-  
--   [Restoring a Database to the Point of Failure](#PointOfFailure)  
-  
--   [Restoring a Database to a Point Within a Log Backup](#PointWithinBackup)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
-> [!NOTE]  
->  For information about support for backups from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the "Compatibility Support" section of [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+### Untrusted sources
+
+We recommend that you do _not_ attach or restore databases from unknown or untrusted sources. These databases could contain malicious code that might execute unintended [!INCLUDE[tsql](../../includes/tsql-md.md)] code or cause errors by modifying the schema or the physical database structure. Before you use a database from an unknown or untrusted source, run [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) on the database on a non-production server. Also, examine the user-written code in the database, such as stored procedures or other user-defined code.
+
+### Backups from earlier versions
+
+For information about support for backups from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the "Compatibility Support" section of [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).
   
 ##  <a name="PointOfFailure"></a> Restoring a Database to the Point of Failure  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Typically, recovering a database to the point of failure involves the following basic steps:  
   
 1.  Back up the active transaction log (known as the tail of the log). This creates a tail-log backup. If the active transaction log is unavailable, all transactions in that part of the log are lost.  

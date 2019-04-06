@@ -1,7 +1,7 @@
 ---
 title: "Back up Multiple Databases to Azure Blob Storage - PowerShell | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/20/2016"
+ms.date: "05/21/2016"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -43,7 +43,9 @@ manager: craigg
   
 ### PowerShell for Multi-Database, Multi-Instance Backup Operations  
  The following sections include scripts for various operations like creating a SQL Credential on multiple instance of SQL Server, backing up all user databases in an instance of SQL Server, and such. You can use these scripts to automate or schedule backup operations according to the requirements of your environment. The scripts provided here are examples, and may be modified or extended for your environment.  
-  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  The following are considerations for the sample scripts:  
   
 1.  **Navigating SQL Server PowerShell paths:** Windows PowerShell implements cmdlets to navigate the path structure that represents the hierarchy of objects supported by a PowerShell provider. When you have navigated to a node in the path, you can use other cmdlets to perform basic operations on the current object.  

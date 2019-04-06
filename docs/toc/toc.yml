@@ -10200,10 +10200,10 @@
         href: ../linux/sql-server-linux-security-get-started.md
       - name: Active Directory authentication
         href: ../linux/sql-server-linux-active-directory-auth-overview.md
+      - name: Join an AD domain
+        href: ../linux/sql-server-linux-active-directory-join-domain.md
       - name: Encrypting connections
         href: ../linux/sql-server-linux-encrypted-connections.md
-      - name: Third-Party AD Auth
-        href: ../linux/sql-server-linux-active-directory-third-party-providers.md
     - name: Performance
       items:
       - name: Best practices

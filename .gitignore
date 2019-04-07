@@ -8,3 +8,4 @@ _themes.VS.Modern/
 
 .openpublishing.buildcore.ps1
 /docs/ssms/.vs
+.DS_Store

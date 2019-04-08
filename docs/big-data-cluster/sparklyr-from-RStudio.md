@@ -5,7 +5,7 @@ description: Connect to big data cluster using sparklyr from RStudio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
-ms.date: 04/05/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -85,4 +85,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## Next steps
 
-For more information about big data clusters, see [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are SQL Server 2019 big data clusters](big-data-cluster-overview.md).

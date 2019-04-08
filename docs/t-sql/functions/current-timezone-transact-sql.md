@@ -25,7 +25,7 @@ helpviewer_keywords:
 author: MladjoA
 ms.author: mlandzic
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2019||=sqlallproducts-allversions||>=sql-server-linux-2019||=azuresqldb-mi-current"
+
 ---
 # CURRENT_TIMEZONE (Transact-SQL)
 
@@ -67,4 +67,4 @@ SELECT CURRENT_TIMEZONE();
   
 ## See also
 
-[SQL Database Managed Instance Time Zone](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Database Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)

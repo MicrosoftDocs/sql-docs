@@ -1,7 +1,7 @@
 ---
 title: "Create a PowerShell Script Job Step | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/20/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -39,12 +39,14 @@ This topic describes how to create and define a [!INCLUDE[ssNoVersion](../../inc
     [Transact-SQL](#TSQL)  
   
     [SQL Server Management Objects](#SMO)  
-  
+
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
 ### <a name="Security"></a>Security  
 For detailed information, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="SSMS"></a>Using SQL Server Management Studio  
   
 #### To create a PowerShell Script job step  

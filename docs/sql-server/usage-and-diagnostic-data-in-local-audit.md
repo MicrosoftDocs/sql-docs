@@ -1,5 +1,5 @@
 ---
-title: "Local Audit for SQL Server Usage Feedback Collection | Microsoft Docs"
+title: "Local audit for SQL Server usage and diagnostic data collection | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/27/2018
 ms.prod: sql
@@ -15,40 +15,40 @@ ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
-# Local Audit for SQL Server Usage Feedback Collection
+# Local audit for SQL Server usage and diagnostic data collection
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## Introduction
 
-Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The Local Audit component of [SQL Server Usage Feedback collection](https://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the Local Audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
+Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The local audit component of [SQL Server Usage and Diagnostic Data collection](https://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the local audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
 
-As of SQL Server 2016 CU2, Local Audit is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, Local Audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have Local Audit capability for usage feedback collection. 
+As of SQL Server 2016 CU2, is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, local audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have local audit capability for usage and diagnostic data collection.
 
 ## Prerequisites 
 
-The following are prerequisites to enable Local Audit on each SQL Server instance: 
+The following are prerequisites to enable local audit on each SQL Server instance: 
 
 1. The instance is patched to SQL Server 2016 RTM CU2 or later. For Integration Services, the instance is patched to either SQL 2016 RTM CU4 or SQL 2016 SP1
 
 1. User must be a System Administrator or a role with access to add and modify Registry Key, create folders, manage folder security and stop/start a Windows Service.  
 
-## Pre-configuration Steps Prior To Turning On Local Audit 
+## Pre-configuration steps prior to turning on local audit
 
-Before turning on Local Audit, a system administrator needs to:
+Before turning on local audit, a system administrator needs to:
 
-1. Know the SQL Server instance name and the SQL Server CEIP Telemetry service logon account. 
+1. Know the SQL Server instance name and the SQL Server CEIP service logon account. 
 
-1. Configure a new folder for the Local Audit files.
+1. Configure a new folder for the local audit files.
 
-1. Grant permissions to the SQL Server CEIP Telemetry service logon account.
+1. Grant permissions to the SQL Server CEIP service logon account.
 
-1. Create a registry key setting to configure Local Audit target directory. 
+1. Create a registry key setting to configure local audit target directory. 
 
 
-### Get the SQL Server CEIP Service Logon Account 
+### Get the SQL Server CEIP service logon account 
 
-Do the following steps to get the SQL Server CEIP Telemetry service logon account
+Do the following steps to get the SQL Server CEIP service logon account
  
 1. Launch the **Services** console. To do this, select the **Windows Key + R** on your keyboard to open the **Run** dialog box. Next, type in *services.msc* in the text field and select **OK** to launch the **Services** console.  
 
@@ -58,22 +58,22 @@ Do the following steps to get the SQL Server CEIP Telemetry service logon accoun
 
 4. Select on the **Log On** tab. The Logon account is in listed in **This Account**. 
 
-### Configure a new folder for the Local Audit files.    
+### Configure a new folder for the local audit files.    
 
-Create a new folder (Local Audit Directory) where the Local Audit will write the logs. For example, the complete path to the Local Audit Directory for a default instance of the database engine would be: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Create a new folder (local audit directory) where the local audit will write the logs. For example, the complete path to the local audit Directory for a default instance of the database engine would be: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
  
   >[!NOTE] 
-  >Configure the directory path for Local Audit outside the SQL Server installation path to avoid allowing auditing functionality and patching to cause potential problems with SQL Server.
+  >Configure the directory path for local audit outside the SQL Server installation path to avoid allowing auditing functionality and patching to cause potential problems with SQL Server.
 
   ||Design Decision|Recommendation|  
   |------|-----------------|----------|  
-  |![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per database per instance.|  
-|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
-|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of Analysis Services uses the same instance name, create a separate folder for Analysis Services. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the Local Audit to write to the same log file from both instances.| 
-|![Checkbox](../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CEIP Telemetry service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP Telemetry service logon account|
+  |![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per database per instance.|  
+|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
+|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of Analysis Services uses the same instance name, create a separate folder for Analysis Services. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the local audit to write to the same log file from both instances.| 
+|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CEIP service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP service logon account|
 
 
-### Grant permissions to the SQL Server CEIP Telemetry service logon account
+### Grant permissions to the SQL Server CEIP service logon account
   
 1. In **File Explorer**, navigate to the location where the new folder is located.
 
@@ -81,15 +81,15 @@ Create a new folder (Local Audit Directory) where the Local Audit will write the
 
 1. On the **Security tab**, select **Edit** manage Permission.
 
-1. Select **Add** and type the credentials of the SQL Server CEIP Telemetry Service. For example `NT Service\SQLTELEMETRY`.
+1. Select **Add** and type the credentials of the SQL Server CEIP Service. For example `NT Service\SQLTELEMETRY`.
 
 1. Select **Check Names** to validate the name you provided, then select **OK**.
 
-1. On the **Permission** dialog box, choose the Log On account to SQL Server CEIP Telemetry service and select **List folder contents**, **Read** and **Write**.
+1. On the **Permission** dialog box, choose the Log On account to SQL Server CEIP service and select **List folder contents**, **Read** and **Write**.
 
 1. Select **OK** to apply the permission changes immediately. 
   
-### Create a registry key setting to configure Local Audit target directory
+### Create a registry key setting to configure local audit target directory
 
 1. Launch regedit.
 
@@ -117,9 +117,9 @@ Create a new folder (Local Audit Directory) where the Local Audit will write the
 
 1. Name the new registry key `UserRequestedLocalAuditDirectory`. 
  
-## Turning Local Audit on or off
+## Turning local audit on or off
 
-After you have completed the preconfiguration steps, you can turn on Local Audit. To do this, use a System Administrator account or a similar role with access to modifying Registry Keys to turn Local Audit on or off by following the steps below. 
+After you have completed the preconfiguration steps, you can turn on local audit. To do this, use a System Administrator account or a similar role with access to modifying Registry Keys to turn local audit on or off by following the steps below. 
 
 1. Launch **regedit**.  
 
@@ -127,13 +127,13 @@ After you have completed the preconfiguration steps, you can turn on Local Audit
 
 1. Right-click **UserRequestedLocalAuditDirectory** and select *Modify*. 
 
-1. To turn on Local Audit, type the Local Audit path, for example *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
+1. To turn on local audit, type the local audit path, for example *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
  
-    To turn off Local Audit, empty the value in **UserRequestedLocalAuditDirectory**.
+    To turn off local audit, empty the value in **UserRequestedLocalAuditDirectory**.
 
 1. Close **regedit**. 
 
-SQL Server CEIP should recognize the Local Audit setting immediately if the service is already running. To start the SQL Server CEIP Service, a System Administrator or someone who has access to start or stop Windows Services can follow the steps below: 
+SQL Server CEIP should recognize the local audit setting immediately if the service is already running. To start the SQL Server CEIP Service, a System Administrator or someone who has access to start or stop Windows Services can follow the steps below: 
 
 1. Launch the **Services** console. To do this, select the **Windows Key + R** on your keyboard to open the **Run** dialog box. Next, type in *services.msc* in the text field and select **OK** to launch the **Services** console.  
 
@@ -149,20 +149,20 @@ SQL Server CEIP should recognize the Local Audit setting immediately if the serv
 
 1. Verify that the status of the service is **Running**. 
 
-Local Audit will produce one log file per day. The log files will be in a form of `<YYYY-MM-DD>.json`. For example, *2016-07-12.json*. If there is an existing file for the day in the designated directory, Local Audit will append to it. Otherwise, it will create a new file for the day. 
+Local audit will produce one log file per day. The log files will be in a form of `<YYYY-MM-DD>.json`. For example, *2016-07-12.json*. If there is an existing file for the day in the designated directory, local audit will append to it. Otherwise, it will create a new file for the day. 
 
   >[!NOTE]
-  > After enabling Local Audit it may take up to 5 minutes for the log file to be written for the first time. 
+  > After enabling local audit it may take up to 5 minutes for the log file to be written for the first time. 
 
 ## Maintenance 
 
-1. To limit disk space usage by the files written by Local Audit, set up a policy or a regular job to clean up the Local Audit Directory to remove older, unneeded files.  
+1. To limit disk space usage by the files written by local audit, set up a policy or a regular job to clean up the local audit Directory to remove older, unneeded files.  
 
-2. Secure the Local Audit Directory path so that it is only accessible by the appropriate people. Note that the log files contain information as outlined in [How to configure SQL Server 2016 to send feedback to Microsoft](https://support.microsoft.com/kb/3153756). Access to this file should prevent most members of your organization from reading it.  
+2. Secure the local audit Directory path so that it is only accessible by the appropriate people. Note that the log files contain information as outlined in [How to configure SQL Server 2016 to send feedback to Microsoft](https://support.microsoft.com/kb/3153756). Access to this file should prevent most members of your organization from reading it.  
 
-## Data Dictionary of Local Audit Output Data Structure 
+## Data dictionary of local audit output data structure 
 
-- Local Audit log files are in JSON, containing a set of objects (rows) representing data points that are sent back to Microsoft at **emitTime**.
+- Local audit log files are in JSON, containing a set of objects (rows) representing data points that are sent back to Microsoft at **emitTime**.
 - Each row follows a specific schema identified by **schemaVersion**.
 - Each row is an output of a SQLCEIP service session identified as **sessionID**.
 - Rows are emitted in sequence, identified by **sequence**.
@@ -171,7 +171,7 @@ Local Audit will produce one log file per day. The log files will be in a form o
 - **data** contains the output of the corresponding query execution, which took **queryTimeInTicks**.
 - **queryIdentifiers** for T-SQL queries have the T-SQL query definition stored in query.
 
-| Logical Local Audit information hierarchy | Related columns |
+| Logical local audit information hierarchy | Related columns |
 | ------ | -------|
 | Header | emitTime, schemaVersion 
 | Machine | operatingSystem 
@@ -180,9 +180,9 @@ Local Audit will produce one log file per day. The log files will be in a form o
 | Query | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
 | Data |  data 
 
-### Name/Value Pairs Definition and Examples 
+### Name/value pairs definition and examples 
 
-The columns listed below represent the order of the Local Audit file output. One-way hash with SHA 256 is used to anonymize values for a number of the columns below.  
+The columns listed below represent the order of the local audit file output. One-way hash with SHA 256 is used to anonymize values for a number of the columns below.  
 
 | Name | Description | Example values
 |-------|--------| ----------|
@@ -198,10 +198,10 @@ The columns listed below represent the order of the Local Audit file output. One
 |traceName | Categories of traces: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | An identifier of the query | SQLServerProperties.002 
 |data	| The output of the information collected on queryIdentifier as an output of T-SQL query, XE session, or the application |	[{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
-|query|	If applicable, the T-SQL query definition related to the queryIdentifier that produces data.		This component does not get uploaded by SQL Server CEIP service. It is included in Local Audit as a reference to customers only.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
+|query|	If applicable, the T-SQL query definition related to the queryIdentifier that produces data.		This component does not get uploaded by SQL Server CEIP service. It is included in local audit as a reference to customers only.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
 |queryTimeInTicks | The duration it takes for the query with the following trace category to execute: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
-### Trace Categories 
+### Trace categories 
 Currently we collect the following trace categories: 
 
 - **SQLServerXeQueries**: contains data points collected through Extended Event session.
@@ -210,11 +210,11 @@ Currently we collect the following trace categories:
 - **SQLServerOneSettingsException**: contains exception messages related to updating schema and/or query set.
 - **DigitalProductID**: contains data points for aggregating anonymized (SHA-256) hashed digital product ID of SQL Server instances. 
 
-### Local Audit File Examples
+### Local audit file examples
 
 
 
-Below is an excerpt of a JSON file output of Local Audit.
+Below is an excerpt of a JSON file output of local audit.
 
 ```JSON
 [
@@ -294,22 +294,22 @@ Below is an excerpt of a JSON file output of Local Audit.
   }
 ]
 ```
-## Frequently Asked Questions
+## Frequently asked questions
 
-**How do DBAs read the Local Audit log files?**
-These log files are written in JSON format. Each line will be a JSON object representing a piece of telemetry uploaded to Microsoft. The fields names should be self-explanatory.
+**How do DBAs read the local audit log files?**
+These log files are written in JSON format. Each line will be a JSON object representing a piece of usage / diagnostic data uploaded to Microsoft. The fields names should be self-explanatory.
 
-**What happens if the DBA disables Usage Feedback Collection?**
-No Local Audit file will be written.
+**What happens if the DBA disables usage and diagnostic data collection?**
+No local audit file will be written.
 
 **What happens if there is not internet connectivity/machine is behind the firewall?**
-SQL Server 2016 usage feedback will not be sent to Microsoft. It will still try to write the local audit logs if configured correctly.
+SQL Server 2016 usage and diagnostic data will not be sent to Microsoft. It will still try to write the local audit logs if configured correctly.
 
-**How do DBAs disable Local Audit?**
+**How do DBAs disable local audit?**
 Remove the UserRequestedLocalAuditDirectory registry key entry.
 
-**Who can read the Local Audit log files?**
-Anyone in your organization that has access to the Local Audit Directory.
+**Who can read the local audit log files?**
+Anyone in your organization that has access to the local audit Directory.
 
 **How do DBAs manage the log files written to the designated directory?**
 DBAs will need to self-manage the clean-up of the files in the directory to avoid consuming too much disk space.
@@ -362,5 +362,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## See Also
-[Local Audit for SSMS Usage Feedback Collection](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)
+## See also
+[Local audit for SSMS usage and diagnostic data collection](../ssms/sql-server-management-studio-telemetry-ssms.md)

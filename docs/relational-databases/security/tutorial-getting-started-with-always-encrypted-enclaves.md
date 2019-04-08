@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/04/2018"
+ms.date: "04/05/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -30,8 +30,17 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 
 ### SQL Server computer requirements
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later
-- Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later.
+- Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter.
+- If your SQL Server computer is a physical machine, it must meet the [Hyper-V Hardware Requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
+   - 64-bit Processor with Second Level Address Translation (SLAT)
+   - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs)
+   - Virtualization support enabled (Intel VT-x or AMD-V)
+- If your SQL Server computer is a virtual machine, the VM must be configured to allow nested virtualization.
+   - On Hyper-V 2016 or later, [enable nested virtualization extensions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor.
+   - In Azure, make sure you're running a VM size that supports nested virtualization, such as the Dv3 and Ev3 series VMs. See [Create a nesting capable Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+   - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+   - Other hypervisors and public clouds may support using Always Encrypted with secure enclaves in a VM as long as virtualization extensions (sometimes called nested virtualization) are exposed to the VM. Check your virtualization solution’s documentation for compatibility and configuration instructions.
 - [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
 As an alternative, you can install SSMS on another machine.
@@ -99,6 +108,21 @@ In this step, you will configure the SQL Server computer as a guarded host regis
    ```
 
 3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
+
+4. If your SQL Server computer is a virtual machine or if it is a legacy physical machine that does not support UEFI Secure Boot or is not equipped with IOMMU, you need to remove the VBS requirement for platform security features.
+    1. Remove the requirement in Windows registry.
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. Restart the computer again to get VBS to come online with the lowered requirements.
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. Sign in to the SQL Server computer as an administrator again, open an elevated Windows PowerShell console, generate a unique host key, and export the resulting public key to a file.
 
@@ -230,7 +254,7 @@ In this step, you will create a column master key and a column encryption key th
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
     4. Select **Allow enclave computations**.
     5. If you selected Azure Key Vault, sign in to Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
-    6. Select your key if it already exists, or follow the directions on the form to create a new key.
+    6. Select your certificate or Azure Key Value key if it already exists, or click the **Generate Certificate** button to create a new one.
     7. Select **OK**.
 
         ![Allow enclave computations](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -252,8 +276,8 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
     3. Select Connection \> Change Connection.
     4. Select **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
     5. Select **Connect**.
-    6. Change the database context to the ContosoHR database.
-1. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
+    6. If prompted to enable parameterization for Always Encrypted queries, click **Enable**.
+2. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
     1. In SSMS, open a new query window.
     2. Right-click anywhere in the new query window.
     3. Select Connection \> Change Connection.
@@ -290,12 +314,12 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
 
 Now, you can run rich queries against the encrypted columns. Some query processing will be performed inside your server-side enclave. 
 
-1. Enable Parameterization for Always Encrypted.
+1. Make sure that Parameterization for Always Encrypted is enabled.
     1. Select **Query** from the main menu of SSMS.
     2. Select **Query Options...**.
     3. Navigate to **Execution** > **Advanced**.
-    4. Select **Enable Parameterization for Always Encrypted**.
-    5. Select **OK**.
+    4. Ensure that Enable Parameterization for Always Encrypted is checked.
+    5. Select OK.
 2. In the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
 
     ```sql

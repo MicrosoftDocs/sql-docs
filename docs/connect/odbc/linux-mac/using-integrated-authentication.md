@@ -1,7 +1,7 @@
 ---
 title: "Using Integrated Authentication | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "01/20/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -125,6 +125,6 @@ For more information about authenticating Linux or macOS computers with Active D
 ## See Also  
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [Using Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)

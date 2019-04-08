@@ -186,15 +186,16 @@ CREATE USER user_name
   
  Specifies the Azure Active Directory principal for which the database user is being created. The *Azure_Active_Directory_principal* can be an Azure Active Directory user, an Azure Active Directory group, or an Azure Active Directory application. (Azure Active Directory users cannot have Windows Authentication logins in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; only database users.) The connection string must specify the contained database as the initial catalog.
 
- For users, you use the full alias of their domain principal.   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ For Azure AD principals, the CREATE USER syntax requires:
 
- For security groups, you use the *Display Name* of the security group. For the *Nurses* security group, you would use:  
+- UserPrincipalName of the Azure AD object for Azure AD Users.
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- DisplayName of Azure AD object for Azure AD Groups and Azure AD Applications. If you had the *Nurses* security group, you would use:  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  For more information, see [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
@@ -462,7 +463,7 @@ WITH
 
  To create an Azure AD user from an Azure AD login, use the following syntax.
 
- Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) example.
+ Sign into your managed instance with an Azure AD login granted with the `sysadmin` role. The following creates an Azure AD user bob@contoso.com, from the login bob@contoso.com. This login was created in the [CREATE LOGIN](create-login-transact-sql.md#examples) example.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -509,7 +510,3 @@ You might also want to [GRANT Object Permissions](../../t-sql/statements/grant-o
  [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-

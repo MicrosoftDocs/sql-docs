@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+           "source_path": "docs/linux/sql-server-linux-active-directory-third-party-providers.md",
+           "redirect_url": "/sql/linux/sql-server-linux-active-directory-authentication",
+           "redirect_document_id": false
+        },       
+        {
             "source_path": "docs/toc/redirectfrom-reference-10.md",
             "redirect_url": "/sql/sql-server/applies-to-includes",
             "redirect_document_id": false
@@ -2203,6 +2208,16 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/connect/odbc/linux-mac/release-notes.md",
+            "redirect_url": "/sql/connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/connect/odbc/windows/release-notes.md",
+            "redirect_url": "/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/connect/odbc/windows/using-transparent-network-ip-resolution.md",
             "redirect_url": "/sql/connect/odbc/using-transparent-network-ip-resolution",
             "redirect_document_id": false
@@ -3704,7 +3719,12 @@
         },
         {
             "source_path": "docs/ssms/previous-sql-server-management-studio-releases.md",
-            "redirect_url": "/sql/ssms/sql-server-management-studio-changelog-ssms",
+            "redirect_url": "/sql/ssms/release-notes-ssms",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/ssms/sql-server-management-studio-changelog-ssms.md",
+            "redirect_url": "/sql/ssms/release-notes-ssms",
             "redirect_document_id": false
         },
         {
@@ -13888,6 +13908,26 @@
         {
             "source_path": "docs/relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md",
             "redirect_url": "/sql/relational-databases/security/authentication-access/create-a-login",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-server/sql-server-customer-feedback.md",
+            "redirect_url": "/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md",
+            "redirect_url": "/sql/sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md",
+            "redirect_url": "/sql/sql-server/usage-and-diagnostic-data-in-local-audit",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/linux/sql-server-linux-customer-feedback.md",
+            "redirect_url": "/sql/linux/usage-and-diagnostic-data-configuration-for-sql-server-linux",
             "redirect_document_id": false
         }
     ]

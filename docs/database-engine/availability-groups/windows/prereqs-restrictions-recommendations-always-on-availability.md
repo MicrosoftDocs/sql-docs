@@ -2,7 +2,7 @@
 title: "Prerequisites, Restrictions, and Recommendations for availability groups"
 description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group."
 ms.custom: "seodec18"
-ms.date: "01/31/2019"
+ms.date: "03/22/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -261,7 +261,7 @@ manager: craigg
   
 -   **Availability replicas:**  Each availability group supports one primary replica and up to eight secondary replicas. All of the replicas can run under asynchronous-commit mode, or up to three of them can run under synchronous-commit mode (one primary replica with two synchronous secondary replicas).  
   
--   **Maximum number of availability groups and availability databases per computer:** The actual number of databases and availability groups you can put on a computer (VM or physical) depends on the hardware and workload, but there is no enforced limit. Microsoft has extensively tested with 10 AGs and 100 DBs per physical machine. Signs of overloaded systems can include, but are not limited to, worker thread exhaustion, slow response times for availability group system views and DMVs, and/or stalled dispatcher system dumps. Please make sure to thoroughly test your environment with a production-like workload to ensure it can handle peak workload capacity within your application SLAs. When considering SLAs be sure to consider load under failure conditions as well as expected response times.  
+-   **Maximum number of availability groups and availability databases per computer:** The actual number of databases and availability groups you can put on a computer (VM or physical) depends on the hardware and workload, but there is no enforced limit. Microsoft has tested up to 10 AGs and 100 DBs per physical machine, however this is not a binding limit. Depending on the hardware specification on the server and the workload, you can put a higher number of databases and availability groups on an instance of SQL Server. Signs of overloaded systems can include, but are not limited to, worker thread exhaustion, slow response times for availability group system views and DMVs, and/or stalled dispatcher system dumps. Please make sure to thoroughly test your environment with a production-like workload to ensure it can handle peak workload capacity within your application SLAs. When considering SLAs be sure to consider load under failure conditions as well as expected response times.  
   
 -   **Do not use the Failover Cluster Manager to manipulate availability groups:**  
   

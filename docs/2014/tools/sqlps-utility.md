@@ -89,7 +89,7 @@ manager: craigg
   
 -   Use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider paths to navigate through the hierarchy of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  
   
- By default, the `sqlps` utility runs with the scripting execution policy set to **Restricted**. This prevents running any PowerShell scripts. You can use the **Set-ExecutionPolicy** cmdlet to enable running signed scripts, or any scripts. Only run scripts from trusted sources, and secure all input and output files by using the appropriate NTFS permissions. For more information about enabling PowerShell scripts, see [Running Windows PowerShell Scripts](https://go.microsoft.com/fwlink/?LinkId=103166).  
+ By default, the `sqlps` utility runs with the scripting execution policy set to **Restricted**. This prevents running any PowerShell scripts. You can use the **Set-ExecutionPolicy** cmdlet to enable running signed scripts, or any scripts. Only run scripts from trusted sources, and secure all input and output files by using the appropriate NTFS permissions. For more information about enabling PowerShell scripts, see [Running Windows PowerShell Scripts](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/).  
   
  The version of the `sqlps` utility in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] was implemented as a Windows PowerShell 1.0 mini-shell. Mini-shells have certain restrictions, such as not allowing users to load snap-ins other than those loaded by the mini-shell. These restrictions do not apply to the [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and higher versions of the utility, which have been changed to use the `sqlps` module.  
   

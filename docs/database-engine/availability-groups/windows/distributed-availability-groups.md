@@ -27,7 +27,7 @@ To configure a distributed availability group, see [Configure distributed availa
 
 A distributed availability group is a special type of availability group that spans two separate availability groups. The availability groups that participate in a distributed availability group do not need to be in the same location. They can be physical, virtual, on-premises, in the public cloud, or anywhere that supports an availability group deployment. This includes cross-domain and even cross-platform - such as between an availability group hosted on Linux and one hosted on Windows. As long as two availability groups can communicate, you can configure a distributed availability group with them.
 
-A traditional availability group has resources configured in a WSFC cluster. A distributed availability group does not configure anything in the WSFC cluster. Everything about it is maintained within SQL Server. To learn how to view information for a distributed availability group, see [Viewing distributed availability group information](#viewing-distributed-availability-group-information). 
+A traditional availability group has resources configured in a WSFC cluster. A distributed availability group does not configure anything in the WSFC cluster. Everything about it is maintained within SQL Server. To learn how to view information for a distributed availability group, see [Viewing distributed availability group information](#monitor-distributed-availability-group-health). 
 
 A distributed availability group requires that the underlying availability groups have a listener. Rather than provide the underlying server name for a standalone instance (or in the case of a SQL Server failover cluster instance [FCI], the value associated with the network name resource) as you would with a traditional availability group, you specify the configured listener for the distributed availability group with the parameter ENDPOINT_URL when you create it. Although each underlying availability group of the distributed availability group has a listener, a distributed availability group has no listener.
 
@@ -70,7 +70,7 @@ Because there are two separate availability groups, the process of installing a 
 
 ### Windows Server versions and distributed availability groups
 
-A distributed availability group spans multiple availability groups, each on its own underlying WSFC cluster, and a distributed availability group is a SQL Server-only construct.  This means the WSFC clusters that house the individual availability groups can have different major versions of Windows Server. The major versions of SQL Server must be the same, as discussed in the previous section. Much like [the initial figure](#fig1), the following figure shows AG 1 and AG 2 participating in a distributed availability group, but each of the WSFC clusters is a different version of Windows Server.
+A distributed availability group spans multiple availability groups, each on its own underlying WSFC cluster, and a distributed availability group is a SQL Server-only construct.  This means the WSFC clusters that house the individual availability groups can have different major versions of Windows Server. The major versions of SQL Server must be the same, as discussed in the previous section. Much like the initial figure, the following figure shows AG 1 and AG 2 participating in a distributed availability group, but each of the WSFC clusters is a different version of Windows Server.
 
 
 ![Distributed availability groups with WSFC clusters having different versions of Windows Server](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
@@ -91,8 +91,8 @@ With a distributed availability group, the primary replicas in each underlying a
 Here are the three main usage scenarios for a distributed availability group: 
 
 * [Disaster recovery and easier multi-site configurations](#disaster-recovery-and-multi-site-scenarios)
-* [Migration to new hardware or configurations, which might include using new hardware or changing the underlying operating systems](#migration-using-a-distributed-availability-group)
-* [Increasing the number of readable replicas beyond eight in a single availability group by spanning multiple availability groups](#scaling-out-readable-replicas-with-distributed-accessibility-groups)
+* [Migration to new hardware or configurations, which might include using new hardware or changing the underlying operating systems](#migrate-by-using-a-distributed-availability-group)
+* [Increasing the number of readable replicas beyond eight in a single availability group by spanning multiple availability groups](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### Disaster recovery and multi-site scenarios
 
@@ -206,7 +206,7 @@ However, if you right-click the distributed availability group, no options are a
 
 ![No options available for action](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
-As shown in the following figure, secondary replicas show nothing in SQL Server Management Studio related to the distributed availability group. These availability group names map to the roles shown in the previous [CLUSTER_A WSFC cluster](#fig7) image.
+As shown in the following figure, secondary replicas show nothing in SQL Server Management Studio related to the distributed availability group. These availability group names map to the roles shown in the previous CLUSTER_A WSFC cluster image.
 
 ![View in SQL Server Management Studio of a secondary replica](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
 
@@ -406,5 +406,3 @@ The below query displays information about the current state of seeding. This is
 * [Use the new availability group dialog box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
-
- 

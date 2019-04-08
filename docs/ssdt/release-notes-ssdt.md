@@ -55,7 +55,7 @@ _SSDT for Visual Studio 2017._
 | :------- | :------ |
 | Add Power Query Source (Preview) for SSIS in ADF 2017. | &nbsp; |
 | Add back the support for SQL Server 2012. | &nbsp; |
-| Add Oracle source and destination for SQL Server 2019. | &nbsp; |
+| Add Oracle source and destination for SQL Server 2019. | Oracle source and destination targeting SQL Server 2019 have already been installed by SSDT.<br/><br/>To design package targeting server version 2017 or below, please download the corresponding Oracle connector version from Microsoft download site and install it on the SSDT machine. <br/>[Microsoft Connector Version 5.0 for Oracle by Attunity targeting SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Microsoft Connector Version 4.0 for Oracle by Attunity targeting SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Microsoft Connector Version 3.0 for Oracle by Attunity targeting SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Microsoft Connector Version 2.0 for Oracle by Attunity targeting SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
 | Fix an issue that Script Task/Component cannot be loaded when migrating from earlier SSIS versions. | &nbsp; |
 | Fix an issue that data viewer doesn't work on Windows 7 SP1 and Windows 8.1. | &nbsp; |
 | Fix an issue that, in some cases, saving the package causes Visual Studio to crash. | &nbsp; |

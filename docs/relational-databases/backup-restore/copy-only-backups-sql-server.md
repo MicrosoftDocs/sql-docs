@@ -1,7 +1,7 @@
 ---
 title: "Copy-Only Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: "09/08/2018"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -43,6 +43,8 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ### Examples  
 ###  <a name="SSMSProcedure"></a> A.  Using SQL Server Management Studio  
 In this example, a copy-only backup of the `Sales` database will be backed up to disk at the default backup location.
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 

@@ -39,7 +39,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 | `INSERT INTO SELECT` support for the data pool. | For an example, see [Tutorial: Ingest data into a SQL Server data pool with Transact-SQL](../big-data-cluster/tutorial-data-pool-ingest-sql.md). |
 | `FORCE SCALEOUTEXECUTION` and `DISABLE SCALEOUTEXECUTION` option. | See [Big data clusters release notes](../big-data-cluster/release-notes-big-data-cluster.md#whats-new).|
 | Updated AKS deployment recommendations. | When evaluating big data clusters on AKS, we now recommend using a single node of size **Standard_L8s**. |
-| Spark runtime upgrade to Spark 2.4. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+| Spark runtime upgrade to Spark 2.4. | |
 | &nbsp; | &nbsp; |
 
 ### Database engine
@@ -101,18 +101,18 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |:-----|:-----|
 |Azure Data Studio supports Azure Active Directory. |[Azure Data Studio](../azure-data-studio/what-is.md) |
 |Notebook view UI has moved into Azure Data Studio core. |[How to manage notebooks in Azure Data Studio](../big-data-cluster/notebooks-how-to-manage.md) |
-|Added new wizard to create external data sources from Hadoop Distributed File System (HDFS) to SQL Server Big Data Cluster. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-|Improved Notebook viewer UI. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-|Added new Notebook APIs.| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-|Added "Reinstall Notebook dependencies" command to assist with Python package updates. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-|Launch Azure Data Studio from SSMS.| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+|Added new wizard to create external data sources from Hadoop Distributed File System (HDFS) to SQL Server Big Data Cluster. | |
+|Improved Notebook viewer UI. | |
+|Added new Notebook APIs.| |
+|Added "Reinstall Notebook dependencies" command to assist with Python package updates. | |
+|Launch Azure Data Studio from SSMS.| |
 | &nbsp; | &nbsp; |
 
 ### Analysis services
 
 | New feature or update | Details |
 |:-----|:-----|
-|Calculation groups in tabular model.| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+|Calculation groups in tabular model.| |
 | &nbsp; | &nbsp; |
 
 ## CTP 2.2 December 2018
@@ -121,7 +121,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|Use SparkR from Azure Data Studio on a big data cluster. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+|Use SparkR from Azure Data Studio on a big data cluster. | |
 |Deploy Python and R apps.|[Deploy applications using mssqlctl](../big-data-cluster/big-data-cluster-create-apps.md) |
 | &nbsp; | &nbsp; |
 
@@ -151,7 +151,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |The dynamic management view `sys.dm_exec_requests` column `command` shows `SELECT (STATMAN)` if a `SELECT` is waiting for a synchronous statistics update operation to complete prior to continuing query execution. | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |The new wait type `WAIT_ON_SYNC_STATISTICS_REFRESH` is surfaced in the `sys.dm_os_wait_stats` dynamic management view. It shows the accumulated instance-level time spent on synchronous statistics refresh operations.|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |Hybrid buffer pool is a new feature of the SQL Server database engine where database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|[Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.  |[Static data masking](../relational-databases/security/static-data-masking.md) |
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces static data masking. You can use static data masking to sanitize sensitive data in copies of SQL Server databases.|[Static data masking](../relational-databases/security/static-data-masking.md) |
 |Use derived table or view aliases in graph match query |[Graph Edge Constraints](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 
@@ -159,14 +159,14 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|New container registry. |[Get started with SQL Server containers on Docker](../linux/quickstart-install-connect-docker.md) |
+|New container registry for SQL Server. |[Get started with SQL Server containers on Docker](../linux/quickstart-install-connect-docker.md) |
 | &nbsp; | &nbsp; |
 
 ### Tools
 
 | New feature or update | Details |
 |:-----|:-----|
-|[Azure Data Studio](../azure-data-studio/what-is.md) supports Connect and manage [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+|[Azure Data Studio](../azure-data-studio/what-is.md) supports Connect and manage [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. | |
 | &nbsp; | &nbsp; |
 
 ## CTP 2.0 October 2018
@@ -175,12 +175,12 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-|Access your big data from HDFS. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-|Run Advanced analytics and machine learning with Spark. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-|Use Spark streaming to data to SQL data pools. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
-|Run Query books that provide a notebook experience in **Azure Data Studio**.|[Data engineering](../azure-data-studio/what-is.md#data-engineering)  |
-| &nbsp; | &nbsp; | 
+|Deploy a Big Data cluster with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Spark Linux containers on Kubernetes. | |
+|Access your big data from HDFS. | |
+|Run Advanced analytics and machine learning with Spark. | |
+|Use Spark streaming to data to SQL data pools. | |
+|Run Query books that provide a notebook experience in **Azure Data Studio**.|[Data engineering](../azure-data-studio/what-is.md#data-engineering)|
+| &nbsp; | &nbsp; |
 
 ### Database engine
 
@@ -193,9 +193,9 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |Batch mode on rowstore.|[Batch mode on rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
 |Table variable deferred compilation.|[Table variable deferred compilation](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
 |Java language extension.|[Java language extension](../advanced-analytics/java/extension-java.md) |
-|Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+|Merge your current graph data from node or edge tables with new data using the `MATCH` predicates in the `MERGE` statement. | |
 |Edge constraints.|[Graph edge constraints](../relational-databases/tables/graph-edge-constraints.md) |
-|Database scoped default setting for online and resumable DDL operations.| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+|Database scoped default setting for online and resumable DDL operations.| |
 |Availability groups support up to 5 synchronous secondary replicas.|[Availability groups](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) |
 |Secondary to primary replica read/write connection redirection|[Secondary to primary replica read/write connection redirection-Always On Availability Groups](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) |
 |SQL Data Discovery and Classification.| [SQL Data Discovery & Classification](../relational-databases/security/sql-data-discovery-and-classification.md) |
@@ -217,7 +217,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |:-----|:-----|
 |Replication support |[SQL Server Replication on Linux](../linux/sql-server-linux-replication.md)
 |Support for the Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux](../linux/sql-server-linux-configure-msdtc.md) |
-|OpenLDAP support for third-party AD providers | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+|OpenLDAP support for third-party AD providers |[Tutorial: Use Active Directory authentication with SQL Server on Linux](../linux/sql-server-linux-active-directory-authentication.md) |
 |Machine Learning on Linux |[Configure Machine Learning on Linux](../linux/sql-server-linux-setup-machine-learning.md) |
 | &nbsp; | &nbsp; |
 
@@ -241,7 +241,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 |:-----|:-----|
 |[Azure Data Studio](../azure-data-studio/what-is.md) supports Connect and manage [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] big data clusters. |[What is Azure Data Studio](../azure-data-studio/what-is.md)|
 |Supports scenarios using SQL Server big data clusters. |[SQL Server 2019 extension (preview)](../azure-data-studio/sql-server-2019-extension.md)|
-|[**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md): Supports [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|
+|[**SQL Server Management Studio (SSMS) 18.0 (preview)**](../ssms/sql-server-management-studio-ssms.md): Supports [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
 |Support for Always Encrypted with secure enclaves. |[Always Encrypted with Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md)|
 | &nbsp; | &nbsp; |
 

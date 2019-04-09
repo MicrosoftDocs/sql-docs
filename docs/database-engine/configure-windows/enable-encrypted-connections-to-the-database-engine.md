@@ -98,7 +98,7 @@ For SQL Server to load an SSL certificate, the certificate must meet the followi
 4. Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
 
 > [!NOTE]
-> To ensure secure connectivity between client and server, configure the client to request encrypted connections. More details are explained [later in this article](#client-request-encrypt-connect-23h).
+> To ensure secure connectivity between client and server, configure the client to request encrypted connections. More details are explained [later in this article](#to-configure-the-client-to-request-encrypted-connections).
 
 ### Wildcard Certificates
 

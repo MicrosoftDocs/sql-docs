@@ -40,7 +40,7 @@ Use the following instructions to load the sample notebook file **spark-sql.ipyn
 1. Run the following **curl** command to download the notebook file from GitHub:
 
    ```bash
-   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark-sql.ipynb' -o spark-sql.ipynb
+   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/dataloading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
    ```
 
 ## Open the notebook

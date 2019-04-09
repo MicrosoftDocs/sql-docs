@@ -78,7 +78,7 @@ manager: craigg
   
 -   When all worker threads are active with long running queries, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might appear unresponsive until a worker thread completes and becomes available. Although this is not a defect, it can sometimes be undesirable. If a process appears to be unresponsive and no new queries can be processed, then connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using the dedicated administrator connection (DAC), and kill the process. To prevent this, increase the number of max worker threads.  
   
- The **max worker threads** server configuration option does limit all threads that may be spanwed in the system. Threads required for tasks such as Availibility Groups, Service Broker, Lock Manager, or others are spawned outside this limit. If the number of threads configured is being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
+ The **max worker threads** server configuration option does not limit all threads that may be spanwed in the system. Threads required for tasks such as Availibility Groups, Service Broker, Lock Manager, or others are spawned outside this limit. If the number of threads configured is being exceeded, the following query will provide information about the system tasks that have spawned the additional threads.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  

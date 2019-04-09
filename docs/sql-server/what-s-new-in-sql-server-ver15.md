@@ -112,7 +112,7 @@ Community technology preview (CTP) 2.4 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:-----|:-----|
-|Calculation groups in tabular model.| |
+|Calculation groups in tabular model.| [Calculation groups in tabular model](#calc-ctp24) |
 | &nbsp; | &nbsp; |
 
 ## CTP 2.2 December 2018
@@ -723,7 +723,7 @@ The memory settings described here are already available in Azure Analysis Servi
 
 These properties can be set by using the latest version of SQL Server Management Studio (SSMS). Additional information for this feature will be provided in the Analysis Services blog.
 
-#### Calculation groups in tabular models (CTP 2.3) 
+#### <a name="calc-ctp24"></a>Calculation groups in tabular models (CTP 2.3) 
 
 Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures.  
 

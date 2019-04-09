@@ -78,17 +78,23 @@ SELECT TOP 1 LastName
   FOR XML AUTO;
 ```
 
+&nbsp;
+
 **Local server**: &nbsp; When `ServerName` is a local server, the query returns the following text:
 
 ```console
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```
 
+&nbsp;
+
 **Network server**: &nbsp; When `ServerName` is a network server, the query returns the following text:
 
 ```console
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />
 ```
+
+&nbsp;
 
 **Avoid ambiguity**: &nbsp; This potential ambiguity can be avoided by specifying this alias:
 

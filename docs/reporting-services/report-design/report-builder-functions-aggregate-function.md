@@ -1,6 +1,6 @@
 ---
 title: "Aggregate Function (Report Builder and SSRS) | Microsoft Docs"
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design

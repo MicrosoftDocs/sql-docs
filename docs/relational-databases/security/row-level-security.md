@@ -62,7 +62,7 @@ RLS supports two types of security predicates.
   
 - You may issue a query against a table that has a security predicate defined but disabled. Any rows that are filtered or blocked are not affected.  
   
-- If the dbo user, a member of the **db_owner** role, or the table owner queries against a table that has a security policy defined and enabled, the rows are filtered or blocked as defined by the security policy.  
+- If a dbo user, a member of the **db_owner** role, or the table owner queries against a table that has a security policy defined and enabled, the rows are filtered or blocked as defined by the security policy.  
   
 - Attempts to alter the schema of a table bound by a schema bound security policy will result in an error. However, columns not referenced by the predicate can be altered.  
   
@@ -273,7 +273,20 @@ ALTER SECURITY POLICY SalesFilter
 WITH (STATE = OFF);  
 ```
 
-Now the Sales1 and Sales2 users can see all six rows.
+Now Sales1 and Sales2 users can see all six rows.
+
+Connect to the SQL database to clean up resources
+
+```sql
+DROP USER Sales1;
+DROP USER Sales2;
+DROP USER Manager;
+
+DROP SECURITY POLICY SalesFilter;
+DROP TABLE Sales;
+DROP FUNCTION Security.fn_securitypredicate;
+DROP SCHEMA Security;
+```
 
 ### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure SQL Data Warehouse external table
 
@@ -351,7 +364,7 @@ ON dbo.Sales_ext
 WITH (STATE = ON);
 ```
 
-Now test the filtering predicate, by selecting from the Sales_ext external table. Login as each user, Sales1, Sales2, and manager. Run the following command as each user.
+Now test the filtering predicate, by selecting from the Sales_ext external table. Sign in as each user, Sales1, Sales2, and manager. Run the following command as each user.
 
 ```sql
 SELECT * FROM Sales_ext;
@@ -367,6 +380,30 @@ WITH (STATE = OFF);
 ```
 
 Now the Sales1 and Sales2 users can see all six rows.
+
+Connect to the SQL Data Warehouse database to clean up resources
+
+```sql
+DROP USER Sales1;
+DROP USER Sales2;
+DROP USER Manager;
+
+DROP SECURITY POLICY SalesFilter_ext;
+DROP TABLE Sales;
+DROP EXTERNAL TABLE Sales_ext;
+DROP EXTERNAL DATA SOURCE ext_datasource_with_abfss ;
+DROP EXTERNAL FILE FORMAT MSIFormat;
+DROP DATABASE SCOPED CREDENTIAL msi_cred; 
+DROP MASTER KEY;
+```
+
+Connect to logical master to clean up resources.
+
+```sql
+DROP LOGIN Sales1;
+DROP LOGIN Sales2;
+DROP LOGIN Manager;
+```
 
 ### <a name="MidTier"></a> C. Scenario for users who connect to the database through a middle-tier application
 
@@ -456,6 +493,17 @@ GO
   
 REVERT;  
 GO  
+```
+
+Clean up database resources.
+
+```sql
+DROP USER AppUser;
+
+DROP SECURITY POLICY Security.SalesFilter;
+DROP TABLE Sales;
+DROP FUNCTION Security.fn_securitypredicate;
+DROP SCHEMA Security;
 ```
 
 ## See Also

@@ -220,6 +220,26 @@ GO
   
 ### Transparent Data Encryption and FILESTREAM DATA  
  FILESTREAM data is not encrypted even when TDE is enabled.  
+
+<a name="scan-suspend-resume"></a>
+
+## Transparent Data Encryption (TDE) scan
+
+In order to enable Transparent Data Encryption (TDE) on a database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must perform an encryption scan which reads each page from the data file(s) into the buffer pool, and then writes the encrypted pages back out to disk. To provide the user with more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduces TDE scan - suspend and resume syntax so that you can pause the scan while the workload on the system is heavy, or during business-critical hours, and then resume the scan later.
+
+Use the following syntax to pause the TDE encryption scan:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+Similarly, the following syntax resumes the TDE encryption scan:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view. There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
   
 ## Transparent Data Encryption and Buffer Pool Extension  
  Files related to buffer pool extension (BPE) are not encrypted when database is encrypted using TDE. You must use file system level encryption tools like Bitlocker or EFS for BPE related files.  

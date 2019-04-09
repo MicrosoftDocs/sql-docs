@@ -1,5 +1,5 @@
 ---
-title: "Graph Edge Constraints | Microsoft Docs"
+title: "Graph edge constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2018"
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.author: "shkale"
 manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Edge Constraints
+# Edge constraints
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
   Edge constraints can be used to enforce data integrity and  specific semantics on the edge tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graph database. 

@@ -18,7 +18,7 @@ monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallprod
 The following release notes apply to SQL Server 2019 preview running on Linux. This article is broken into sections for each release. Each release has a link to a support article describing the CU changes as well as links to the Linux package downloads.
 
 > [!TIP]
-> To learn about new Linux features in SQL Server 2019, see [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> To learn about new Linux features in SQL Server 2019, see [What's new in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 
 ## Supported platforms
 

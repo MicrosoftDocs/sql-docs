@@ -1,6 +1,6 @@
 ---
 title: "Branding the web portal | Microsoft Docs"
-ms.date: 12/06/2018 
+ms.date: 04/10/2019 
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -16,7 +16,7 @@ ms.author: maghan
 
 You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.  
   
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>  
    
 ## Creating the brand package
   

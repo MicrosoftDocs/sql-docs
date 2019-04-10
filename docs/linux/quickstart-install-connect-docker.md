@@ -5,7 +5,7 @@ description: This quickstart shows how to use Docker to run the SQL Server 2017 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/10/2019
+ms.date: 04/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -282,11 +282,9 @@ The following steps use the SQL Server command-line tool, **sqlcmd**, inside the
 
 2. Once inside the container, connect locally with sqlcmd. Sqlcmd is not in the path by default, so you have to specify the full path.
 
-   ::: zone pivot="cs1-bash"
    ```bash
    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
    ```
-   ::: zone-end
 
    > [!TIP]
    > You can omit the password on the command-line to be prompted to enter it.

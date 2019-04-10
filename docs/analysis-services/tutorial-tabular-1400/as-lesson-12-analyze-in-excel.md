@@ -27,7 +27,7 @@ This article is part of a tabular modeling tutorial, which should be completed i
   
 ## Browse using the Default and Internet Sales perspectives  
 
-In these first tasks, you browse your model by using both the default perspective, which includes all model objects, and also by using the Internet Sales perspective you earlier. The Internet Sales perspective excludes the Customer table object.  
+In these first tasks, you browse your model by using both the default perspective, which includes all model objects, and also by using the Internet Sales perspective you created earlier. The Internet Sales perspective excludes the Customer table object.  
   
 #### To browse by using the Default perspective  
   

@@ -177,6 +177,6 @@ manager: kfile
  [Implementing a Security Extension](extensions/security-extension/implementing-a-security-extension.md)   
  [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [How to Administer SSRS using PowerShell (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321992)  
+ [How to Administer SSRS using PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

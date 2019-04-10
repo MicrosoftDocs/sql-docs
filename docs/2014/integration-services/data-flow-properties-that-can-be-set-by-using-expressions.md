@@ -73,7 +73,7 @@ manager: craigg
 -   [Add or Change a Property Expression](expressions/add-or-change-a-property-expression.md)  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](http://pragmaticworks.com/cheatsheet/), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), on pragmaticworks.com  
   
 ## See Also  
  [Use Property Expressions in Packages](expressions/use-property-expressions-in-packages.md)   

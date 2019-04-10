@@ -2,7 +2,7 @@
 title: Download and install sqlpackage | Microsoft Docs
 description: 'Download and Install sqlpackage for Windows, macOS, or Linux'
 ms.custom: "tools|sos"
-ms.date: "06/19/2018"
+ms.date: "06/20/2018"
 ms.prod: sql
 ms.reviewer: "alayu; sstein"
 ms.prod_service: sql-tools
@@ -24,6 +24,8 @@ Download and install the latest .NET Framework release and macOS and Linux previ
 |Linux .NET Core (preview)|[.zip file](https://go.microsoft.com/fwlink/?linkid=2069122)|February 1, 2019 | 18.1 |15.0.4316.1|
 
 For details about the latest release, see the [release notes](release-notes-sqlpackage.md).
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## Get sqlpackage for Windows
 

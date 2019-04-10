@@ -48,7 +48,7 @@ manager: kfile
 |---|**Permission level group:** For example "View Only" for the "Viewers" group.|  
 |**Tasks:** for example "Manage Reports".|**Permissions:** For example, within the "View Only" group there are list related permissions of view items, view versions, and view application pages.|  
   
- For more information on SharePoint permissions, see [Permission levels and permissions](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) and [Determine permission levels and groups in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
+ For more information on SharePoint permissions, see [User permissions and permission levels in SharePoint Server](/sharepoint/sites/user-permissions-and-permission-levels) and [Determine permission levels and groups in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Compare Native mode Roles and SharePoint Groups  
  The following table compares the predefined role definitions in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in native mode to standard SharePoint groups. If the SharePoint groups do not match the specific role that you want, you can create a custom group and assign permission levels in SharePoint.  

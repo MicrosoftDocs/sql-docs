@@ -1,7 +1,7 @@
 ---
 title: "Installing the Driver Manager (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/14/2018"
+ms.date: "02/15/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -83,4 +83,4 @@ You are now ready to install the driver. For more information, see [Installing t
 
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

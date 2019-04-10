@@ -26,7 +26,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
 2.  [Configure the Always On availability group.](#step2)  
   
-3.  [Insure that all secondary replica hosts are configured for replication.](#step3)  
+3.  [Ensure that all secondary replica hosts are configured for replication.](#step3)  
   
 4.  [Configure the secondary replica hosts as replication publishers.](#step4)  
   
@@ -41,7 +41,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ##  <a name="step1"></a> 1. Configure the Database Publications and Subscriptions  
  **Configure the distributor**  
   
- The distribution database cannot be placed in an availability group.  
+ The distribution database cannot be placed in an availability group with SQL Server 2012 and SQL Server 2014. Placing the distribution database into an availability group is supported with SQL 2016 and greater. For more information, see [Configure distribution database in an availability group](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Configure distribution at the distributor. If stored procedures are being used for configuration, run **sp_adddistributor**. Use the *@password* parameter to identify the password that will be used when a remote publisher connects to the distributor. The password will also be needed at each remote publisher when the remote distributor is set up.  
   
@@ -122,7 +122,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  For more information, see [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
 
   
-##  <a name="step3"></a> 3. Insure that all of the Secondary Replica Hosts are Configured for Replication  
+##  <a name="step3"></a> 3. Ensure that all of the Secondary Replica Hosts are Configured for Replication  
  At each secondary replica host, verify that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has been configured to support replication. The following query can be run at each secondary replica host to determine whether replication is installed:  
   
 ```  

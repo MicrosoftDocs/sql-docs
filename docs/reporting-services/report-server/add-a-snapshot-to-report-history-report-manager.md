@@ -22,6 +22,18 @@ ms.author: maghan
   
  Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. Deferred rendering makes a snapshot portable. The report can be rendered in the correct format for the requesting device or Web browser.  
   
+### To manually add snapshots to report history  (SSRS 2017)
+1.  In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the elipses (...).
+
+2.  In the drop-down menu, click **View Report History**.  
+
+3.  Click **New history snapshot**. A new snapshot is created and listed.  
+  
+    > [!NOTE]  
+    >  In order to do this, the report history must be configured by the administrator to **Allow history to be created manually**. For more information, see [Limit Report History &#40;Report Manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md).  
+  
+4.  Click **Apply**.  
+
 ### To manually add snapshots to report history  
   
 1.  In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the drop-down arrow.  

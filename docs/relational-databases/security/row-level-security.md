@@ -61,7 +61,7 @@ RLS supports two types of security predicates.
   
 - You may define a predicate function that joins with another table and/or invokes a function. If the security policy is created with `SCHEMABINDING = ON`, then the join or function is accessible from the query and works as expected without any additional permission checks. If the security policy is created with `SCHEMABINDING = OFF`, then users will need **SELECT** or **EXECUTE** permissions on these additional tables and functions to query the target table.
   
-- You may issue a query against a table that has a security predicate defined but disabled. Any rows that are filtered or blocked are't affected.  
+- You may issue a query against a table that has a security predicate defined but disabled. Any rows that are filtered or blocked aren't affected.  
   
 - If a dbo user, a member of the **db_owner** role, or the table owner queries a table that has a security policy defined and enabled, the rows are filtered or blocked as defined by the security policy.  
   

@@ -38,7 +38,7 @@ manager: craigg
 
 **Microsoft JDBC Driver 7.2 for SQL Server:**  
 
-  The JDBC Driver 7.2 includes two JAR class libraries in each installation package: **mssql-jdbc-7.2.1.jre8.jar**, and **mssql-jdbc-7.2.1.jre11.jar**.
+  The JDBC Driver 7.2 includes two JAR class libraries in each installation package: **mssql-jdbc-7.2.2.jre8.jar**, and **mssql-jdbc-7.2.2.jre11.jar**.
 
   The JDBC Driver 7.2 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 8.0, OpenJDK 11.0, Azul Zulu JRE 8.0 and Azul Zulu JRE 11.0.
   
@@ -46,8 +46,8 @@ manager: craigg
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.2.1.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 7.2 include: JDK 11 support, Active Directory Managed Service Identity (MSI) authentication, OSGi support, SQLServerError APIs. |    
-|mssql-jdbc-7.2.1.jre11.jar|4.3|10|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 7.2 include: JDK 11 support, Active Directory Managed Service Identity (MSI) authentication, OSGi support, SQLServerError APIs. |    
+|mssql-jdbc-7.2.2.jre8.jar|4.2|8|Requires a Java Runtime Environment (JRE) 8.0. Using JRE 7.0 or lower throws an exception.<br /><br /> New Features in 7.2 include: JDK 11 support, Active Directory Managed Service Identity (MSI) authentication, OSGi support, SQLServerError APIs. |    
+|mssql-jdbc-7.2.2.jre11.jar|4.3|10|Requires a Java Runtime Environment (JRE) 11.0. Using JRE 10.0 or lower throws an exception.<br /><br /> New Features in 7.2 include: JDK 11 support, Active Directory Managed Service Identity (MSI) authentication, OSGi support, SQLServerError APIs. |    
 
 
   The JDBC Driver 7.2 is also available on the Maven Central Repository and can be added to a Maven project by adding the following code in the POM.XML:  
@@ -56,7 +56,7 @@ manager: craigg
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.1.jre11</version>
+    <version>7.2.2.jre11</version>
 </dependency>
 ```
  

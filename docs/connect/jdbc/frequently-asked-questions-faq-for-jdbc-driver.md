@@ -35,8 +35,8 @@ The JDBC driver files available on the GitHub repository for the Microsoft JDBC 
 
 | JAR                        | JDBC Specification            | JDK Version |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-7.2.1.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
-| mssql-jdbc-7.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.2.2.jre11.jar | JDBC 4.3 (partially), and 4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
  The Microsoft JDBC Driver 7.0 supports the JDBC 4.2, and 4.3 (partially) specifications and includes two JAR class libraries in the installation package as follows:
 

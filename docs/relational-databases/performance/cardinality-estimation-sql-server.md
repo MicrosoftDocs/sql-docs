@@ -17,7 +17,9 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Cardinality Estimation (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer is a cost-based Query Optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
@@ -47,9 +49,10 @@ Your application system could possibly have an important query whose plan is cha
 - An OLTP (online transaction processing) query that runs so frequently that multiple instance of it often run concurrently.  
 - A SELECT with substantial aggregation that runs during your OLTP business hours.  
   
-You have techniques for identifying a query that performs slower with the new CE. And you have options for how to address the performance issue.     
+You have techniques for identifying a query that performs slower with the new CE. And you have options for how to address the performance issue.
   
-## Versions of the CE  
+## Versions of the CE
+
 In 1998, a major update of the CE was part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, for which the compatibility level was 70. This version of the CE model is set on four basic assumptions:
 
 -  **Independence:** Data distributions on different columns are assumed to be independent of each other, unless correlation information is available and usable.
@@ -100,7 +103,7 @@ Or starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, the [Que
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  

@@ -27,7 +27,7 @@ To query the data from an Oracle data source, you must create external tables to
  
 The following Transact-SQL commands are used in this section:
 
-- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md]
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
 - [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md) 
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
@@ -69,11 +69,12 @@ The following Transact-SQL commands are used in this section:
      CREDENTIAL = credential_name)
    ```
 
-1.  Use [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to create external tables that represents data stored in external Oracle system.
- 
+1. Use [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to create external tables that represents data stored in external Oracle system.
+
    ```sql
-   /*  LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
-   *  DATA_SOURCE: the external data source, created above.
+   /*
+   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
    [O_ORDERKEY] DECIMAL(38) NOT NULL,

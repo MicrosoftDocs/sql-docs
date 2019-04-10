@@ -37,7 +37,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 | New feature or update | Details |
 |:---|:---|
 | Compute pools |
-| Spark pools |
+| New `mssql` Spark-SQLServer connector |
 | PolyBase on Linux (non-Hadoop connectors only)|
 | Deployment profiles and related changes|
 | Offline install |

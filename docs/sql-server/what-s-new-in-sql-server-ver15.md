@@ -36,14 +36,14 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:---|:---|
-| Compute pools |
-| New `mssql` Spark-SQL Server connector |
-| PolyBase on Linux (non-Hadoop connectors only)|
-| Deployment profiles and related changes|
-| Offline install |
-| Java/extensibility |
-| `mssqlctl` improvements|
-| App deploy improvements|
+| Compute pools | |
+| New `mssql` Spark-SQL Server connector | |
+| PolyBase on Linux | Install PolyBase on Linux for non-Hadoop connectors. |
+| Deployment profiles | Use default and customized deployment profiles (.JSON files) for big data cluster deployments instead of environment variables. |
+| Offline install | Guidance for offline big data cluster deployments. |
+| Java/extensibility | |
+| `mssqlctl` improvements | |
+| App deploy improvements | |
 | &nbsp; | &nbsp; |
 
 ### Database engine

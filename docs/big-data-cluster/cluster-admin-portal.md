@@ -33,7 +33,7 @@ Follow the [quickstart to deploy your big data cluster](quickstart-big-data-clus
 Once the controller pod is running, you can use the cluster administration portal to monitor the deployment. You can access the portal using the external IP address and port number for the `endpoint-service-proxy` (for example: **https://\<ip-address\>:30777/portal**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above.
 
 > [!NOTE]
-> For CTP 2.4, There is a security warning when accessing the web page since it is using auto-generated SSL certificates.
+> For CTP 2.5, There is a security warning when accessing the web page since it is using auto-generated SSL certificates.
 
 ## Overview
 

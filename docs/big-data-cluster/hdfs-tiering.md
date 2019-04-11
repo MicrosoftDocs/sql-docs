@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview). At this time, CTP 2.4 only supports connecting to Azure Data Lake Storage Gen2, which is the focus of this article.
+HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview). At this time, CTP 2.5 only supports connecting to Azure Data Lake Storage Gen2, which is the focus of this article.
 
 ## HDFS tiering overview
 

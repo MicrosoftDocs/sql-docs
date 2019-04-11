@@ -194,7 +194,7 @@ CREATE SPATIAL INDEX index_name
   
  Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #.  
   
-### USING Options
+### USING ptions
 
  GEOMETRY_GRID  
  Specifies the **geometry** grid tessellation scheme that you are using. GEOMETRY_GRID can be specified only on a column of the **geometry** data type.  GEOMETRY_GRID allows for manual adjusting of the tessellation scheme.  
@@ -212,7 +212,7 @@ CREATE SPATIAL INDEX index_name
   
  Can be specified only on a column of the geography data type.  This is the default for this data type and does not need to be specified.  
   
-### WITH Options
+### WITH options
 
 BOUNDING_BOX  
 Specifies a numeric four-tuple that defines the four coordinates of the bounding box: the x-min and y-min coordinates of the lower-left corner, and the x-max and y-max coordinates of the upper-right corner.  
@@ -456,17 +456,17 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
   
  An index build cannot make use of available process parallelism.  
   
-## Methods Supported on Spatial Indexes
+## Methods supported on spatial indexes
 
  Under certain conditions, spatial indexes support a number of set-oriented geometry methods. For more information, see [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## Spatial Indexes and Partitioning
+## Spatial indexes and partitioning
 
  By default, if a spatial index is created on a partitioned table, the index is partitioned according to the partition scheme of the table. This assures that index data and the related row are stored in the same partition.  
   
  In this case, to alter the partition scheme of the base table, you would have to drop the spatial index before you can repartition the base table. To avoid this restriction, when you are creating a spatial index, you can specify the "ON filegroup" option. For more information, see "Spatial Indexes and Filegroups," later in this topic.  
   
-## Spatial Indexes and Filegroups
+## Spatial indexes and filegroups
 
  By default, spatial indexes are partitioned to the same filegroups as the table on which the index is specified. This can be overridden by using the filegroup specification:  
   
@@ -474,7 +474,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
   
  If you specify a filegroup for a spatial index, the index is placed on that filegroup, regardless of the partitioning scheme of the table.  
   
-## Catalog Views for Spatial Indexes
+## Catalog views for spatial indexes
 
  The following catalog views are specific to spatial indexes:  
   
@@ -484,7 +484,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  Represents the information about the tessellation scheme and parameters of each of the spatial indexes.  
   
-## Additional Remarks about creating indexes
+## Additional remarks about creating indexes
 
  For more information about creating indexes, see the "Remarks" section in [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
@@ -581,20 +581,20 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
 ```  
   
-## See Also
+## See also
 
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)
- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md
- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
- [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)
- [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)
- [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)  
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)
+- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)
+- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)
+- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+- [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
+- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)
+- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
+- [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)
+- [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)
+- [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)  

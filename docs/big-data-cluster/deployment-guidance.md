@@ -40,7 +40,7 @@ You can choose to deploy Kubernetes in any of three ways:
 | Deploy Kubernetes on: | Description | Link |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
-| **Multiple machines** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
+| **Multiple machines (kubeadm)** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
 | **Minikube** | A single-node Kubernetes cluster in a VM. | [Instructions](deploy-on-minikube.md) |
   
 ## Deploy SQL Server 2019 big data tools
@@ -72,7 +72,18 @@ kubectl config view
 
 ## <a id="profiles"></a> Configure a deployment profile
 
+Starting with CTP 2.5, most deployment settings are now configured in a deployment profile (.JSON file). There are default deployment profiles for AKS, kubeadm, and minikube. First, find the name of one of these standard deployment profiles using the `mssqlctl cluster config list` command:
 
+```bash
+mssqlctl cluster config list
+```
+
+This command returns configuration files such as the following:
+- **aks-dev-test.json**
+- **kubeadm-dev-test.json**
+- **minikube-dev-test.json**
+
+To customize your deployment, start with one of these default configurations that match your Kubernetes environment. Create a copy of the deployment profile with the `mssqlctl cluster config init` command. 
 
 ## <a id="env"></a> Define environment variables
 
@@ -234,7 +245,7 @@ For more information on how to connect, see [Connect to a SQL Server big data cl
 
 ### Minikube
 
-If you are using Minikube, you need to run the following command to get the IP address you need to connect to. In addition to the IP, specify the port for the endpoint you need to connect to. To get all the service endpoints for 
+If you are using minikube, you need to run the following command to get the IP address you need to connect to. In addition to the IP, specify the port for the endpoint you need to connect to. To get all the service endpoints for 
 
 ```bash
 minikube ip

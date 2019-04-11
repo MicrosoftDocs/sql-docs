@@ -53,7 +53,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 {
      {  [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE
+| CLEAR PROCEDURE_CACHE  [plan_handle]
 | SET < set_options >
 [;]
 
@@ -88,9 +88,14 @@ FOR SECONDARY
 
 Specifies the settings for secondary databases (all secondary databases must have the identical values).
 
-CLEAR PROCEDURE_CACHE    
+CLEAR PROCEDURE_CACHE [plan_handle]
 
 Clears the procedure (plan) cache for the database, and can be executed both on the primary and the secondaries.  
+
+Specify a query plan handle to clear a single query plan from the plan cache.
+
+> [!NOTE]
+> Specifying a query plan handle is available in Azure SQL Database and SQL Server 2019 or higher.
 
 MAXDOP **=** {\<value> | PRIMARY }
 **\<value>**
@@ -401,7 +406,7 @@ This example sets PARAMETER_SNIFFING to OFF for a primary database in a geo-repl
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
-This example sets PARAMETER_SNIFFING to OFF for a primary database in a geo-replication scenario.
+This example sets PARAMETER_SNIFFING to OFF for a secondary database in a geo-replication scenario.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
@@ -461,6 +466,13 @@ This example sets ELEVATE_RESUMABLE to WHEN_SUPPORTED.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
+```
+
+### K. Clear a query plan from the plan cache
+This example clears a specific plan from the procedure cache 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
 ```
 
 ## Additional Resources

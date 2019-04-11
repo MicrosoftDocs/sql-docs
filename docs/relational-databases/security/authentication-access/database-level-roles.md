@@ -52,7 +52,7 @@ To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBE
   
  Fixed-database roles are defined at the database level and exist in each database. Members of the **db_owner** database role can manage fixed-database role membership. There are also some special-purpose database roles in the msdb database.  
   
- You can add any database account and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] roles into database-level roles. Each member of a fixed-database role can add other users to that same role.  
+ You can add any database account and other [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] roles into database-level roles.
   
 > [!TIP]  
 >  Do not add user-defined database roles as members of fixed roles. This could enable unintended privilege escalation.  
@@ -68,7 +68,7 @@ For a list of all the permissions, see the [Database Engine Permissions](https:/
 |Fixed-Database role name|Description|  
 |-------------------------------|-----------------|  
 |**db_owner**|Members of the **db_owner** fixed database role can perform all configuration and maintenance activities on the database, and can also drop the database in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], some maintenance activities require server-level permissions and cannot be performed by **db_owners**.)|  
-|**db_securityadmin**|Members of the **db_securityadmin** fixed database role can modify role membership and manage permissions. Adding principals to this role could enable unintended privilege escalation.|  
+|**db_securityadmin**|Members of the **db_securityadmin** fixed database role can modify role membership for custom roles only, create users without logins, and manage permissions. Adding principals to this role could enable unintended privilege escalation.|  
 |**db_accessadmin**|Members of the **db_accessadmin** fixed database role can add or remove access to the database for Windows logins, Windows groups, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins.|  
 |**db_backupoperator**|Members of the **db_backupoperator** fixed database role can back up the database.|  
 |**db_ddladmin**|Members of the **db_ddladmin** fixed database role can run any Data Definition Language (DDL) command in a database.|  
@@ -87,7 +87,7 @@ These database roles exist only in the virtual master database. Their permission
 
 |Role name|Description|  
 |--------------------|-----------------|
-|**dbmanager** | Can create and delete databases. A member of the dbmanager role that creates a database, becomes the owner of that databasee which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the dbmanager role do not necessarily have permission to access databases that they do not own.|
+|**dbmanager** | Can create and delete databases. A member of the dbmanager role that creates a database, becomes the owner of that database which allows that user to connect to that database as the dbo user. The dbo user has all database permissions in the database. Members of the dbmanager role do not necessarily have permission to access databases that they do not own.|
 |**loginmanager** | Can create and delete logins in the virtual master database.|
 
 > [!NOTE]

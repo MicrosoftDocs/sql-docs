@@ -1,7 +1,6 @@
 - name: Welcome
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: Overview
-  href: ../toc/redirectfrom-overview-10.md ## /sql/database-engine/sql-server-database-engine-overview
   items:
   - name: New with SQL Server
     items:
@@ -41,7 +40,6 @@
     - name: SQL Server 2008 R2 SP2
       href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: Big data cluster
-  href: ../toc/redirectfrom-big-data-cluster.md ## /sql/big-data-cluster/big-data-cluster-overview
   items:
   - name: Overview
     items:
@@ -194,12 +192,10 @@
         - name: mssqlctl storage mount
           href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Business continuity
-  href: redirectfrom-business-continuity-10.md ## /sql/database-engine/sql-server-business-continuity-dr
   items:
   - name: Overview
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: Backup & restore
-    href: ../toc/redirectfrom-backup-restore-10.md ## /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
     items:
     - name: Overview
       items:
@@ -1007,7 +1003,6 @@
         - name: Set Warning Thresholds
           href: ../database-engine/database-mirroring/set-warning-thresholds.md
   - name: Log shipping
-    href: ../toc/redirectfrom-log-shipping.md ## /sql/database-engine/log-shipping/about-log-shipping-sql-server
     items:
     - name: Overview
       href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
@@ -1046,7 +1041,6 @@
       - name: Log Shipping Monitor Settings
         href: ../relational-databases/databases/log-shipping-monitor-settings.md
 - name: Database design
-  href: ../toc/redirectfrom-database-design.md ## /sql/relational-databases/hierarchical-data-sql-server
   items:
   - name: Hierarchical Data
     href: ../relational-databases/hierarchical-data-sql-server.md
@@ -1066,7 +1060,6 @@
     - name: Set a session language
       href: ../relational-databases/collations/set-a-session-language.md
   - name: Databases
-    href: ../toc/redirectfrom-databases.md ## /sql/relational-databases/databases/databases
     items:
     - name: Overview
       href: ../relational-databases/databases/databases.md
@@ -1928,7 +1921,6 @@
       - name: Use the value() & nodes() Methods with OPENXML
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Development
-  href: redirectfrom-development-10.md ## /sql/relational-databases/data-tier-applications/data-tier-applications
   items:
   - name: Programming interaction ++
     href: ../connect/index.md
@@ -3971,7 +3963,6 @@
   - name: Memory Management Architecture
     href: ../relational-databases/memory-management-architecture-guide.md
 - name: Installation
-  href: redirectfrom-installation-10.md ## /sql/sql-server/install/what-s-new-in-sql-server-installation
   items:
   - name: Overview
     items:
@@ -3981,12 +3972,6 @@
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Compute capacity limits by edition
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Customer Experience Improvement Program (CEIP)
-      href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: Privacy supplement
-      href: ../sql-server/sql-server-privacy.md
-    - name: Configure SQL Server to send feedback to Microsoft
-      href: ../sql-server/sql-server-customer-feedback.md
   - name: Release notes
     items:
     - name: Backward compatibility
@@ -4016,6 +4001,16 @@
       href: ../sql-server/install/local-language-versions-in-sql-server.md
     - name: File Locations
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: Usage and diagnostic data collection
+      items:
+      - name: Privacy supplement
+        href: ../sql-server/sql-server-privacy.md
+      - name: Configure SQL Server usage and diagnostic data
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
+      - name: Configure tools usage and diagnostic data
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
+      - name: Local audit for SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Install SQL Server
     href: ../database-engine/install-windows/installation-for-sql-server.md
     items:
@@ -4112,8 +4107,6 @@
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: Multi-Homed Computer
       href: ../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: Local Audit for Usage Feedback Collection
-      href: ../database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md
     - name: Configure Database Engine Instances
       href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
     - name: Default Locations for Data Files
@@ -4414,7 +4407,6 @@
       - name: Advanced Page
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrate & load data
-  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -4582,7 +4574,6 @@
     - name: DQS Security
       href: ../data-quality-services/dqs-security.md
   - name: Replication
-    href: ../toc/redirectfrom-replication.md ## /sql/relational-databases/replication/sql-server-replication
     items:
     - name: Overview
       href: ../relational-databases/replication/sql-server-replication.md
@@ -7233,7 +7224,6 @@
   - name: Subqueries
     href: ../relational-databases/performance/subqueries.md
   - name: Data virtualization (Polybase)
-    href: ../toc/redirectfrom-polybase.md ## /sql/relational-databases/polybase/polybase-guide
     items:
     - name: Overview
       items:
@@ -10088,8 +10078,8 @@
           href: ../linux/sql-server-linux-configure-msdtc-docker.md
       - name: Configure persistent memory PMEM
         href: ../linux/sql-server-linux-configure-pmem.md
-      - name: Customer feedback
-        href: ../linux/sql-server-linux-customer-feedback.md
+      - name: Configure to send usage and diagnostic data to Microsoft
+        href: ../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Develop
       href: ../linux/sql-server-linux-develop-overview.md
       items:
@@ -10198,10 +10188,10 @@
         href: ../linux/sql-server-linux-security-get-started.md
       - name: Active Directory authentication
         href: ../linux/sql-server-linux-active-directory-auth-overview.md
+      - name: Join an AD domain
+        href: ../linux/sql-server-linux-active-directory-join-domain.md
       - name: Encrypting connections
         href: ../linux/sql-server-linux-encrypted-connections.md
-      - name: Third-Party AD Auth
-        href: ../linux/sql-server-linux-active-directory-third-party-providers.md
     - name: Performance
       items:
       - name: Best practices
@@ -10302,7 +10292,6 @@
   - name: Local content with Help Viewer
     href: ../sql-server/sql-server-help-installation.md
 - name: Reference
-  href: ../toc/redirectfrom-reference-10.md ## /sql/sql-server/applies-to-includes
   items:
   - name: SQL Docs include files
     href: ../sql-server/applies-to-includes.md
@@ -10310,7 +10299,6 @@
     displayName: 2005, 2008, 2008 r2, 2012
     href: https://docs.microsoft.com/previous-versions/sql/
   - name: Database samples
-    href: ../toc/redirectfrom-database-samples.md ## /sql/samples/sql-samples-where-are
     items:
     - name: Samples Overview
       href: ../samples/sql-samples-where-are.md
@@ -10321,12 +10309,10 @@
       - name: Install & configure
         href: ../samples/adventureworks-install-configure.md
     - name: Wide World Importers
-      href: ../toc/redirectfrom-wide-world-importers.md ## /sql/samples/wide-world-importers-what-is
       items:
       - name: Overview
         href: ../samples/wide-world-importers-what-is.md
       - name: OLTP
-        href: ../toc/redirectfrom-oltp-10.md ## /sql/samples/wide-world-importers-oltp-database-catalog
         items:
         - name: Database catalog
           href: ../samples/wide-world-importers-oltp-database-catalog.md
@@ -10335,7 +10321,6 @@
         - name: SQL Server features
           href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
       - name: Data Warehouse
-        href: ../toc/redirectfrom-data-warehouse-10.md ## /sql/samples/wide-world-importers-dw-database-catalog
         items:
         - name: Database catalog
           href: ../samples/wide-world-importers-dw-database-catalog.md
@@ -15627,6 +15612,8 @@
           href: ../t-sql/functions/datefirst-transact-sql.md
         - name: CURRENT_TIMESTAMP
           href: ../t-sql/functions/current-timestamp-transact-sql.md
+        - name: CURRENT_TIMEZONE
+          href: ../t-sql/functions/current-timezone-transact-sql.md
         - name: DATEADD
           href: ../t-sql/functions/dateadd-transact-sql.md
         - name: DATEDIFF

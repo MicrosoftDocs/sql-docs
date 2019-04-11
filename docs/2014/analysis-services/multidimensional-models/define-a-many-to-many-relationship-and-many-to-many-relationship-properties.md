@@ -174,7 +174,7 @@ manager: craigg
 ##  <a name="bkmk_Learn"></a> Learn more  
  Use the following links to get additional information that helps you master the concepts.  
   
- [How do I define a many-to-many dimension in Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [How do I define a many-to-many dimension in Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [The many-to-many Revolution 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

@@ -60,8 +60,10 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\*** constant that specifies PHP data type of the returned value.|  
     |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\*** constant that specifies the SQL Server data type of the input value.|  
   
-*$options* [OPTIONAL]: An associative array that sets query properties. The following table lists the supported keys and corresponding values:  
-  
+*$options* [OPTIONAL]: An associative array that sets query properties. The following table lists the supported keys and corresponding values.
+
+#### Query Properties
+
 |Key|Supported values|Description|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|A positive integer|Configures the size of the buffer that holds the result set for a client-side cursor.<br /><br />The default is 10240 KB. For more information, read [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|

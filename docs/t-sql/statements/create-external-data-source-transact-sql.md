@@ -63,7 +63,7 @@ CREATE EXTERNAL DATA SOURCE data_source_name
 
  > [!NOTE] 
  > When you create an external data source with type hadoop and you are using an SAS Credential then it might fail with the error:
- > Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'
+ > `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
  > Currently SAS Token with type hadoop is unsupported,  and it is only supported with Storage account access key.
 
 -- PolyBase only: Azure Data Lake Store

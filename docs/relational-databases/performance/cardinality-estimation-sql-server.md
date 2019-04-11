@@ -290,5 +290,6 @@ WHERE s.ticket = r.ticket AND
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Query Hints](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT Query Hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [Upgrading Databases by using the Query Tuning Assistant](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)   

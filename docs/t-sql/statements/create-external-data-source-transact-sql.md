@@ -321,7 +321,7 @@ To ensure successful PolyBase queries in the event of Hadoop NameNode failover, 
   
  If the Hadoop cluster is set up with a name and the external data source uses the IP address for the cluster location, PolyBase must still be able to resolve the cluster name when the data source is used. To resolve the name, you must enable a DNS forwarder.  
  
-Currently an SAS token with type `hadoop` is unsupported, and it is only supported with a Storage account access key. Attempting to create an external data source with type `hadoop` and using a SAS crential might fail with the error:
+Currently an SAS token with type `hadoop` is unsupported, and it is only supported with a Storage account access key. Attempting to create an external data source with type `hadoop` and using a SAS credential might fail with the error:
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   

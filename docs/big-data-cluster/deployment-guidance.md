@@ -70,9 +70,13 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
-## <a id="profiles"></a> Configure a deployment profile
+## <a id="env"></a> Configure a deployment profile
 
-Starting with CTP 2.5, most deployment settings are now configured in a deployment profile (.JSON file). There are default deployment profiles for AKS, kubeadm, and minikube. First, find the name of one of these standard deployment profiles using the `mssqlctl cluster config list` command:
+Starting with CTP 2.5, most deployment settings are now configured in a deployment profile (.JSON file). There are default deployment profiles for AKS, kubeadm, and minikube. 
+
+### List default deployment profiles
+
+First, find the name of one of these standard deployment profiles using the `mssqlctl cluster config list` command:
 
 ```bash
 mssqlctl cluster config list
@@ -83,11 +87,56 @@ This command returns configuration files such as the following:
 - **kubeadm-dev-test.json**
 - **minikube-dev-test.json**
 
-To customize your deployment, start with one of these default configurations that match your Kubernetes environment. Create a copy of the deployment profile with the `mssqlctl cluster config init` command. 
+### Create a copy of a deployment profile
 
-## <a id="env"></a> Define environment variables
+To customize your deployment, start with one of these default configurations that match your Kubernetes environment. Create a copy of the deployment profile with the `mssqlctl cluster config init` command. For example, the following command creates a copy of the **aks-dev-test.json** deployment profile in the current directory:
 
-The cluster configuration can be customized using a set of environment variables that are passed to the `mssqlctl create cluster` command. Most of the environment variables are optional with default values as per below. Note that there are environment variables like credentials that require user input.
+```bash
+mssqlctl cluster config init --type aks-dev-test.json --name aks-customized.json
+```
+
+### Customize settings
+
+To customize settings in your deployment profile, it is best to use **mssqlctl** commands rather than manually editing the file. For example, 
+
+
+## Deploy SQL Server big data cluster
+
+To deploy a big data cluster, pass the deployment profile to the `mssqlctl cluster create` command. This initializes the Kubernetes namespace and deploys all the application pods into the namespace.
+
+```bash
+mssqlctl cluster create -f <deployment-profile.json> -e yes
+```
+
+During the deployment, you are prompted for any settings that were not in the deployment profile for security reasons.
+
+> [!TIP]
+> It is possible to pass the additional settings as environment variables. For more information, see the section in this article on [unattended installation](#unattended).
+
+During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
+
+```output
+2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
+```
+
+After 10 to 20 minutes, you should be notified that the controller pod is running:
+
+```output
+2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
+```
+
+> [!IMPORTANT]
+> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see the [troubleshooting](#troubleshoot) section of this article to learn how to monitor and inspect the deployment.
+
+When the deployment finishes, the output notifies you of success:
+
+```output
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
+2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
+```
+
+## <a id="unattended"></a> Unattended deployments
 
 | Environment variable | Required | Default value | Description |
 |---|---|---|---|
@@ -170,59 +219,6 @@ export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
 export DOCKER_EMAIL="<your email address>"
 export DOCKER_PRIVATE_REGISTRY="1"
-```
-
-### Minikube settings
-
-If you are deploying on minikube and `USE_PERSISTENT_VOLUME=true` (default), you must also override the default value for `STORAGE_CLASS_NAME` environment variable.
-
-Use the following command on Windows for minikube deployments:
-
-```cmd
-SET STORAGE_CLASS_NAME=standard
-```
-
-Use the following command on Linux for minikube deployments:
-
-```bash
-export STORAGE_CLASS_NAME=standard
-```
-
-Alternatively, you can suppress using persistent volumes on minikube by setting `USE_PERSISTENT_VOLUME=false`.
-
-### Kubadm settings
-
-If you are deploying with kubeadm on your own physical or virtual machines, you must pre-provision a Kubernetes storage class and pass it through using the `STORAGE_CLASS_NAME`. Alternatively, you can suppress using persistent volumes by setting `USE_PERSISTENT_VOLUME=false`. For more information about persistent storage, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
-
-## Deploy SQL Server big data cluster
-
-The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server big data cluster on your Kubernetes cluster, run the following command:
-
-```bash
-mssqlctl cluster create --name <your-cluster-name>
-```
-
-During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
-
-```output
-2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
-```
-
-After 10 to 20 minutes, you should be notified that the controller pod is running:
-
-```output
-2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
-```
-
-> [!IMPORTANT]
-> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see the [troubleshooting](#troubleshoot) section of this article to learn how to monitor and inspect the deployment.
-
-When the deployment finishes, the output notifies you of success:
-
-```output
-2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
-2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
 ## <a id="masterip"></a> Get big data cluster endpoints

@@ -39,13 +39,10 @@ You can choose to deploy Kubernetes in any of three ways:
 
 | Deploy Kubernetes on: | Description | Link |
 |---|---|---|
-| **Minikube** | A single-node Kubernetes cluster in a VM. | [Instructions](deploy-on-minikube.md) |
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
 | **Multiple machines** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
+| **Minikube** | A single-node Kubernetes cluster in a VM. | [Instructions](deploy-on-minikube.md) |
   
-> [!TIP]
-> For a sample python script that deploys both AKS and SQL Server big data cluster, see [Deploy a SQL Server big data cluster on Azure Kubernetes Service (AKS)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
-
 ## Deploy SQL Server 2019 big data tools
 
 Before deploying SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):
@@ -56,14 +53,12 @@ Before deploying SQL Server 2019 big data cluster, first [install the big data t
 
 ## <a id="deploy"></a> Deploy SQL Server big data cluster
 
-After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server big data cluster. 
+After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server big data cluster.
 
 > [!NOTE]
 > If you are upgrading from a previous release, please see the [Upgrade section of this article](#upgrade).
 
-To deploy a big data cluster in Azure with all default configurations for a dev/test environment, follow the instructions in this article:
-
-[Quickstart: Deploy SQL Server big data cluster on Kubernetes](quickstart-big-data-cluster-deploy.md)
+For a sample python script that deploys both AKS and a SQL Server big data cluster, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md).
 
 If you want to customize your deployment of big data cluster according to your workload needs, follow the instructions in the remainder of this article.
 
@@ -75,6 +70,10 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
+## <a id="profiles"></a> Configure a deployment profile
+
+
+
 ## <a id="env"></a> Define environment variables
 
 The cluster configuration can be customized using a set of environment variables that are passed to the `mssqlctl create cluster` command. Most of the environment variables are optional with default values as per below. Note that there are environment variables like credentials that require user input.
@@ -84,7 +83,7 @@ The cluster configuration can be customized using a set of environment variables
 | **ACCEPT_EULA** | Yes | N/A | Accept the SQL Server license agreement (for example, 'Yes').  |
 | **CLUSTER_NAME** | Yes | N/A | The name of the Kubernetes namespace to deploy SQLServer big data cluster into. |
 | **CLUSTER_PLATFORM** | Yes | N/A | The platform the Kubernetes cluster is deployed. Can be `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP 2.4 only valued allowed is 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP 2.5 only valued allowed is 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | The number of data pool replicas to build out. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | The number of storage pool replicas to build out. |
 | **DOCKER_REGISTRY** | Yes | TBD | The private registry where the images used to deploy the cluster are stored. |
@@ -275,13 +274,13 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

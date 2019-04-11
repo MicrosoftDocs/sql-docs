@@ -99,10 +99,6 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool'
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
 BEGIN
-  IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-    WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-  ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
     CREATE EXTERNAL DATA SOURCE SqlStoragePool
     WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
 END

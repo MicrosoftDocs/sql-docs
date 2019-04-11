@@ -1,7 +1,7 @@
 ---
 title: "sqlsrv_query | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/01/2018"
+ms.date: "04/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -57,7 +57,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\*** constant that specifies PHP data type of the returned value.<br /><br />For more information about PHP constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\*** constant that specifies the SQL Server data type of the input value.<br /><br />For more information about PHP constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
-*$options* [OPTIONAL]: An associative array that sets query properties. It is the same list of keys also supported by [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md####query-properties).
+*$options* [OPTIONAL]: An associative array that sets query properties. It is the same list of keys also supported by [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
   
 ## Return Value  
 A statement resource. If the statement cannot be created and/or executed, **false** is returned.  

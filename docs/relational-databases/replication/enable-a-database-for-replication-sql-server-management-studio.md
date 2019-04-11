@@ -25,3 +25,15 @@ manager: craigg
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
   
+## Using Transact-SQL (T-SQL)
+You can enable a database for replication with the following Transact-SQL code: 
+
+```sql
+USE master
+EXEC sp_replicationdboption @dbname = 'AdventureWorks2017',
+@optname = 'publish',
+@value = 'true'
+GO
+```
+
+To disable publishing, set the @value = 'false'. 

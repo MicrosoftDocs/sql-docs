@@ -68,7 +68,7 @@ For a list of all the permissions, see the [Database Engine Permissions](https:/
 |Fixed-Database role name|Description|  
 |-------------------------------|-----------------|  
 |**db_owner**|Members of the **db_owner** fixed database role can perform all configuration and maintenance activities on the database, and can also drop the database in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], some maintenance activities require server-level permissions and cannot be performed by **db_owners**.)|  
-|**db_securityadmin**|Members of the **db_securityadmin** fixed database role can modify role membership for custom roles only, create users without logins and manage permissions. Adding principals to this role could enable unintended privilege escalation.|  
+|**db_securityadmin**|Members of the **db_securityadmin** fixed database role can modify role membership for custom roles only, create users without logins, and manage permissions. Adding principals to this role could enable unintended privilege escalation.|  
 |**db_accessadmin**|Members of the **db_accessadmin** fixed database role can add or remove access to the database for Windows logins, Windows groups, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins.|  
 |**db_backupoperator**|Members of the **db_backupoperator** fixed database role can back up the database.|  
 |**db_ddladmin**|Members of the **db_ddladmin** fixed database role can run any Data Definition Language (DDL) command in a database.|  

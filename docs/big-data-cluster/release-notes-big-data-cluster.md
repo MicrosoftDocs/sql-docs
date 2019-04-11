@@ -20,7 +20,7 @@ This article lists the updates and know issues for the most recent releases of S
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="ctp25"></a> CTP 2.5 (March)
+## <a id="ctp25"></a> CTP 2.5 (April)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 2.5.
 

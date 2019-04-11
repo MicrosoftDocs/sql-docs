@@ -61,11 +61,6 @@ CREATE EXTERNAL DATA SOURCE data_source_name
     )  
 [;]
 
- > [!NOTE] 
- > When you create an external data source with type hadoop and you are using an SAS Credential then it might fail with the error:
- > `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
- > Currently SAS Token with type hadoop is unsupported,  and it is only supported with Storage account access key.
-
 -- PolyBase only: Azure Data Lake Store
 -- (on Azure SQL Data Warehouse)
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
@@ -325,6 +320,10 @@ To ensure successful PolyBase queries in the event of Hadoop NameNode failover, 
  All data sources defined on the same Hadoop cluster location must use the same setting for RESOURCE_MANAGER_LOCATION or JOB_TRACKER_LOCATION. If there is inconsistency, a runtime error will occur.  
   
  If the Hadoop cluster is set up with a name and the external data source uses the IP address for the cluster location, PolyBase must still be able to resolve the cluster name when the data source is used. To resolve the name, you must enable a DNS forwarder.  
+ 
+Currently an SAS token with type `hadoop` is unsupported, and it is only supported with a Storage account access key. Attempting to create an external data source with type `hadoop` and using a SAS crential might fail with the error:
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## Locking  
  Takes a shared lock on the EXTERNAL DATA SOURCE object.  

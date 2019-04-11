@@ -46,21 +46,21 @@ manager: craigg
 |-|-|  
 |[MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)|[MSpublicationthresholds](../../relational-databases/system-tables/mspublicationthresholds-transact-sql.md)|  
 |[MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)|[MSpublisher_databases](../../relational-databases/system-tables/mspublisher-databases-transact-sql.md)|  
-|[MSarticles](../../relational-databases/system-tables/msarticles-transact-sql.md)|[MSreplication_objects](../../relational-databases/system-tables/msreplication-objects-transact-sql.md)|  
-|[MScached_peer_lsns](../../relational-databases/system-tables/mscached-peer-lsns-transact-sql.md)|[MSreplication_subscriptions](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)|  
-|[MSdistpublishers](../../relational-databases/system-tables/msdistpublishers-transact-sql.md)|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)|  
-|[MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)|  
-|[MSdistribution_history](../../relational-databases/system-tables/msdistribution-history-transact-sql.md)|[MSrepl_originators](../../relational-databases/system-tables/msrepl-originators-transact-sql.md)|  
-|[MSdistributiondbs](../../relational-databases/system-tables/msdistributiondbs-transact-sql.md)|[MSrepl_transactions](../../relational-databases/system-tables/msrepl-transactions-transact-sql.md)|  
-|[MSdistributor](../../relational-databases/system-tables/msdistributor-transact-sql.md)|[MSrepl_version](../../relational-databases/system-tables/msrepl-version-transact-sql.md)|  
-|[MSlogreader_agents](../../relational-databases/system-tables/mslogreader-agents-transact-sql.md)|[MSsnapshot_agents](../../relational-databases/system-tables/mssnapshot-agents-transact-sql.md)|  
-|[MSlogreader_history](../../relational-databases/system-tables/mslogreader-history-transact-sql.md)|[MSsnapshot_history](../../relational-databases/system-tables/mssnapshot-history-transact-sql.md)|  
-|[MSmerge_agents](../../relational-databases/system-tables/msmerge-agents-transact-sql.md)|[MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md)|  
-|[MSmerge_history](../../relational-databases/system-tables/msmerge-history-transact-sql.md)|[MSsubscriber_schedule](../../relational-databases/system-tables/mssubscriber-schedule-transact-sql.md)|  
-|[MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md)|[MSsubscriptions](../../relational-databases/system-tables/mssubscriptions-transact-sql.md)|  
-|[MSmerge_subscriptions](../../relational-databases/system-tables/msmerge-subscriptions-transact-sql.md)|[MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)|  
-|[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|  
-|[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)|  
+|[MSarticles](../../relational-databases/system-tables/msarticles-transact-sql.md)|[MScached_peer_lsns](../../relational-databases/system-tables/mscached-peer-lsns-transact-sql.md)|  
+|[MSreplication_subscriptions](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)|[MSdistpublishers](../../relational-databases/system-tables/msdistpublishers-transact-sql.md)|  
+|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)|[MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)|  
+|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)|[MSdistribution_history](../../relational-databases/system-tables/msdistribution-history-transact-sql.md)|  
+|[MSrepl_originators](../../relational-databases/system-tables/msrepl-originators-transact-sql.md)|[MSdistributiondbs](../../relational-databases/system-tables/msdistributiondbs-transact-sql.md)|  
+|[MSrepl_transactions](../../relational-databases/system-tables/msrepl-transactions-transact-sql.md)|[MSdistributor](../../relational-databases/system-tables/msdistributor-transact-sql.md)|  
+|[MSrepl_version](../../relational-databases/system-tables/msrepl-version-transact-sql.md)|[MSlogreader_agents](../../relational-databases/system-tables/mslogreader-agents-transact-sql.md)|  
+|[MSsnapshot_agents](../../relational-databases/system-tables/mssnapshot-agents-transact-sql.md)|[MSlogreader_history](../../relational-databases/system-tables/mslogreader-history-transact-sql.md)|  
+|[MSsnapshot_history](../../relational-databases/system-tables/mssnapshot-history-transact-sql.md)|[MSmerge_agents](../../relational-databases/system-tables/msmerge-agents-transact-sql.md)|  
+|[MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md)|[MSmerge_history](../../relational-databases/system-tables/msmerge-history-transact-sql.md)|  
+|[MSsubscriber_schedule](../../relational-databases/system-tables/mssubscriber-schedule-transact-sql.md)|[MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md)|  
+|[MSsubscriptions](../../relational-databases/system-tables/mssubscriptions-transact-sql.md)|[MSmerge_subscriptions](../../relational-databases/system-tables/msmerge-subscriptions-transact-sql.md)|  
+|[MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)|[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|  
+[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|  
+|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)||  
   
  These tables in the distribution database are used for replicating data from non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. For more information, see [Non-SQL Server Publishers](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
@@ -118,7 +118,8 @@ manager: craigg
 |[MSmerge_metadataaction_request](../../relational-databases/system-tables/msmerge-metadataaction-request-transact-sql.md)|[sysmergeschemachange](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)|  
 |[MSmerge_partition_groups](../../relational-databases/system-tables/msmerge-partition-groups-transact-sql.md)|[sysmergesubscriptions](../../relational-databases/system-tables/sysmergesubscriptions-transact-sql.md)|  
 |[MSmerge_past_partition_mappings](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)|[sysmergesubsetfilters](../../relational-databases/system-tables/sysmergesubsetfilters-transact-sql.md)|  
-|[MSmerge_replinfo](../../relational-databases/system-tables/msmerge-replinfo-transact-sql.md)|[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
+|[MSmerge_replinfo](../../relational-databases/system-tables/msmerge-replinfo-transact-sql.md)|[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)|
+|[MSreplication_objects](../../relational-databases/system-tables/msreplication-objects-transact-sql.md)||  
   
 ## See Also  
  [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   

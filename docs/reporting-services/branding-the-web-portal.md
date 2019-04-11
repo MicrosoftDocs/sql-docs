@@ -14,10 +14,10 @@ ms.author: maghan
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>  
-   
+You can alter the appearance of the web portal by branding it to your business. This is done through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
+
 ## Creating the brand package
   
 A brand package for Reporting Services consists of three items and is packaged as a zip file.   

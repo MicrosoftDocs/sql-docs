@@ -87,6 +87,7 @@
         }
       },
       "extendBreadcrumb": true,
+      "toc_preview": true,
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",
       "feedback_product_url": "https://feedback.azure.com/forums/908035-sql-server/",

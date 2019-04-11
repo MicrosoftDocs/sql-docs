@@ -1,6 +1,6 @@
 ---
 title: "Static Data Masking | Microsoft Docs"
-ms.date: "10/04/2019"
+ms.date: "04/10/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

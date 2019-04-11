@@ -406,7 +406,7 @@ This example sets PARAMETER_SNIFFING to OFF for a primary database in a geo-repl
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
-This example sets PARAMETER_SNIFFING to OFF for a primary database in a geo-replication scenario.
+This example sets PARAMETER_SNIFFING to OFF for a secondary database in a geo-replication scenario.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;

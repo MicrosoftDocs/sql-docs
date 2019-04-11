@@ -666,6 +666,8 @@
           href: ../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md
     - name: Reference
       items:
+      - name: System Objects
+        href: ../database-engine/availability-groups/windows/availability-group-system-object-reference.md
       - name: PowerShell Cmdlets
         href: ../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
       - name: T-SQL
@@ -972,6 +974,8 @@
           href: ../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md
     - name: Reference
       items:
+      - name: System objects
+        href: ../database-engine/database-mirroring/database-mirroring-system-object-reference.md
       - name: Security Wizard
         href: ../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md
         items:

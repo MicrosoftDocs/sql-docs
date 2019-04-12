@@ -66,7 +66,7 @@ The following steps describe how to use a Windows client to load the sample data
    | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**endpoint-security**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**).
 
 1. Run the bootstrap script.
 
@@ -102,7 +102,7 @@ The following steps describe how to use a Linux client to load the sample data i
    | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
 
    > [!TIP]
-   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**endpoint-master-pool**) and Knox (**endpoint-security**).
+   > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**).
 
 1. Run the bootstrap script.
 

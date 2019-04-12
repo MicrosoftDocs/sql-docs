@@ -60,16 +60,16 @@ The following steps mount the remote HDFS storage in Azure Data Lake into the lo
    > [!TIP]
    > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View and copy access keys](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
 
-1. Use **kubectl** to find the IP Address for the **endpoint-service-proxy** service in your big data cluster. Look for the **External-IP**.
+1. Use **kubectl** to find the IP Address for the **mgmtproxy-svc-external** service in your big data cluster. Look for the **External-IP**.
 
    ```bash
-   kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
    ```
 
 1. Log in with **mssqlctl** using the service proxy endpoint with your cluster username and password:
 
    ```bash
-   mssqlctl login -e https://<IP-of-endpoint-service-proxy>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
    ```
 
 1. Mount the remote HDFS storage in Azure using **mssqlctl storage mount create**. Replace the placeholder values before running the following command:

@@ -63,19 +63,19 @@ The following sections describe these commands in more detail.
 
 ## Sign in
 
-Before you deploy or interact with applications, first sign in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `endpoint-service-proxy` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
+Before you deploy or interact with applications, first sign in to your SQL Server big data cluster with the `mssqlctl login` command. Specify the external IP address of the `mgmtproxy-svc-external` service (for example: `https://ip-address:30777`) along with the user name and password to the cluster.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
+mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
 ```
 
 ## AKS
 
-If you are using AKS, you need to run the following command to get the IP address of the `endpoint-service-proxy` service by running this command in a bash or cmd window:
+If you are using AKS, you need to run the following command to get the IP address of the `mgmtproxy-svc-external` service by running this command in a bash or cmd window:
 
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
 ```
 
 ## Kubeadm or Minikube

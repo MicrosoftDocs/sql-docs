@@ -64,7 +64,7 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
 - If you are connecting from within the cluster, query Kubernetes for the service IP for the endpoint that you want to connect to. For example, the following **kubectl** command displays the IP address of the SQL Server master instance:
 
    ```bash
-   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   kubectl get service master-svc-external -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
    ```
 
 - If you are connecting from outside the cluster, use the following steps to connect:

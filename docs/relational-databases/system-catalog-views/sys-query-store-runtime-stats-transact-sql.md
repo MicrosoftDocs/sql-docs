@@ -21,7 +21,7 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

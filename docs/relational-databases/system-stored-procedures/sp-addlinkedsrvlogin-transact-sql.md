@@ -38,21 +38,21 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ```  
   
 ## Arguments  
- [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  Is the name of a linked server that the login mapping applies to. *rmtsrvname* is **sysname**, with no default.  
   
- [ @useself **=** ] **'**TRUE**'** | 'FALSE' | 'NULL'  
+ `[ @useself = ] 'TRUE' | 'FALSE' | NULL ]`  
  Determines whether to connect to *rmtsrvname* by impersonating local logins or explicitly submitting a login and password. The data type is **varchar(**8**)**, with a default of TRUE.  
   
  A value of TRUE specifies that logins use their own credentials to connect to *rmtsrvname*, with the *rmtuser* and *rmtpassword* arguments being ignored. FALSE specifies that the *rmtuser* and *rmtpassword* arguments are used to connect to *rmtsrvname* for the specified *locallogin*. If *rmtuser* and *rmtpassword* are also set to NULL, no login or password is used to connect to the linked server.  
   
- [ @locallogin **=** ] **'***locallogin***'**  
+ `[ @locallogin = ] 'locallogin' ]`  
  Is a login on the local server. *locallogin* is **sysname**, with a default of NULL. NULL specifies that this entry applies to all local logins that connect to *rmtsrvname*. If not NULL, *locallogin* can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows login. The Windows login must have been granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] either directly, or through its membership in a Windows group granted access.  
   
- [ @rmtuser **=** ] **'***rmtuser***'**  
+ `[ @rmtuser = ] 'rmtuser' ]`  
  Is the remote login used to connect to *rmtsrvname* when @useself is FALSE. When the remote server is an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that does not use Windows Authentication, *rmtuser* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. *rmtuser* is **sysname**, with a default of NULL.  
   
- [ @rmtpassword **=** ] **'***rmtpassword***'**  
+ `[ @rmtpassword = ] 'rmtpassword' ]`  
  Is the password associated with *rmtuser*. *rmtpassword* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

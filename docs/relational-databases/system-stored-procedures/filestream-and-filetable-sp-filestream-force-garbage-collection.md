@@ -37,14 +37,14 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## Arguments  
- **@dbname** = *database_name*
+ `[ @dbname = ]  'database_name'`
  Signifies the name of the database to run the garbage collector on.  
   
 > [!NOTE]  
->  *dbname* is **sysname**. If not specified, current database is assumed.  
+>  `dbname` is **sysname**. If not specified, current database is assumed.  
   
- **@filename** = *logical_file_name*  
- Specifies the logical name of the FILESTREAM container to run the garbage collector on. **@filename** is optional. If no logical filename is specified, the garbage collector cleans all FILESTREAM containers in the specified database.  
+ `[ @filename = ] 'logical_file_name' ]`  
+ Specifies the logical name of the FILESTREAM container to run the garbage collector on. `@filename` is optional. If no logical filename is specified, the garbage collector cleans all FILESTREAM containers in the specified database.  
   
 ## Return Code Values  
   

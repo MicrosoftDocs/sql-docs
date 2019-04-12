@@ -29,22 +29,21 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
-sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,   
-        [ @succeeded =  succeeded   
-    [ , [ @user_defined_information =  ] 'user_defined_information' ]   
-    [ ; ]  
+sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
+    [ , [ @succeeded = ] succeeded ]
+    [ , [ @user_defined_information = ] 'user_defined_information' ]
+    [ ; ]
 ```  
   
 ## Arguments  
- **@user_defined_event_id**  
+ `[ @user_defined_event_id = ] user_defined_event_id`  
  A parameter defined by the user and recorded in the **user_defined_event_id** column of the audit log. *@user_defined_event_id* is type **smallint**.  
   
- **@succeeded**  
- A parameter passed by user to indicate whether the event was successful or not. This appears in the succeeded column of the audit log. *@succeeded* is **bit**.  
+ `[ @succeeded = ] succeeded`  
+ A parameter passed by user to indicate whether the event was successful or not. This appears in the succeeded column of the audit log. `@succeeded` is **bit**.  
   
- **@user_defined_information**  
- Is the text defined by the user and recorded in the new user_defined_event_id column of the audit log. *@user_defined_information* is **nvarchar(4000)**.  
+ `[ @user_defined_information = ] 'user_defined_information'`  
+ Is the text defined by the user and recorded in the new user_defined_event_id column of the audit log. `@user_defined_information` is **nvarchar(4000)**.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

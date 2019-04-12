@@ -194,7 +194,7 @@ CREATE SPATIAL INDEX index_name
   
  Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #.  
   
-### USING ptions
+### USING options
 
  GEOMETRY_GRID  
  Specifies the **geometry** grid tessellation scheme that you are using. GEOMETRY_GRID can be specified only on a column of the **geometry** data type.  GEOMETRY_GRID allows for manual adjusting of the tessellation scheme.  

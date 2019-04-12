@@ -28,8 +28,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
  
 ## Syntax  
   
-```  
-  
+```    
 sp_delete_database_firewall_rule [@name =] [N]'name'
 [ ; ]  
 ```  

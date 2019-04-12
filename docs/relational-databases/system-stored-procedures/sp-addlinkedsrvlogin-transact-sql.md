@@ -40,7 +40,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  `[ @rmtsrvname = ] 'rmtsrvname'`  
  Is the name of a linked server that the login mapping applies to. *rmtsrvname* is **sysname**, with no default.  
   
- `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Determines whether to connect to *rmtsrvname* by impersonating local logins or explicitly submitting a login and password. The data type is **varchar(**8**)**, with a default of TRUE.  
   
  A value of TRUE specifies that logins use their own credentials to connect to *rmtsrvname*, with the *rmtuser* and *rmtpassword* arguments being ignored. FALSE specifies that the *rmtuser* and *rmtpassword* arguments are used to connect to *rmtsrvname* for the specified *locallogin*. If *rmtuser* and *rmtpassword* are also set to NULL, no login or password is used to connect to the linked server.  

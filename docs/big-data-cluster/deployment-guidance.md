@@ -97,8 +97,13 @@ mssqlctl cluster config init --type aks-dev-test.json --name aks-customized.json
 
 ### Customize settings
 
-To customize settings in your deployment profile, it is best to use **mssqlctl** commands rather than manually editing the file. For example, 
+To customize settings in your deployment profile, it is best to use the `mssqlctl cluster config section set` command rather than manually editing the file. For example, the following command changes the name of the new cluster to `test-cluster`:
 
+```bash
+mssqlctl cluster config section set --config-file .\aks-customized.json --json-values "metadata.name=test-cluster"
+```
+
+In addition to passing key-value pairs, you can also provide inline JSON values or a path to a JSON file with the values. You can also use the `--patch-file` parameter to provide path to a JSON patch file. For more information, see [JSON Patches in Python](https://github.com/stefankoegl/python-json-patch).
 
 ## Deploy SQL Server big data cluster
 

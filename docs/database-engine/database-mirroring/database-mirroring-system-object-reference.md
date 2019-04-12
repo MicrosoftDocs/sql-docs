@@ -36,7 +36,7 @@ manager: craigg
 | [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)   | Returns information about database mirroring maintenance plans. |
 | [sysdbmaintplan_history](../../relational-databases/system-tables/sysdbmaintplan-history-transact-sql.md)    | Returns information about the history of database mirroring maintenance plans. |
 | [sysdbmaintplan_jobs](../../relational-databases/system-tables/sysdbmaintplan-jobs-transact-sql.md)    |Returns information about database mirroring maintenance plans jobs.  |
-| [sysdbmaintplans](../../relational-databases/system-tables/sysdbmaintplans-transact-sql.md)    | Returns information about databse mirroring plans.  |
+| [sysdbmaintplans](../../relational-databases/system-tables/sysdbmaintplans-transact-sql.md)    | Returns information about database mirroring plans.  |
 | &nbsp; | &nbsp; |
 
 

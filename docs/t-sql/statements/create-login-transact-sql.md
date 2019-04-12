@@ -33,6 +33,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-
 
 Creates a login for SQL Server, SQL Database, SQL Data Warehouse, or Analytics Platform System databases. Click one of the following tabs for the syntax, arguments, remarks, permissions, and examples for a particular version.
 
+CREATE LOGIN participates in transactions. If CREATE LOGIN is executed within a transaction and the transaction is rolled back, then login creation is rolled back. If executed within a transaction, the created login cannot be used until the transaction is committed.
+
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Click a product!

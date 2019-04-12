@@ -536,7 +536,7 @@ A Pacemaker high availability cluster underlying [!INCLUDE[ssnoversion-md](../in
 1.  In a query window connected to the first replica, execute the following:
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

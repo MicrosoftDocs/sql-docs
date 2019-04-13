@@ -40,7 +40,7 @@ To connect to a big data cluster with Azure Data Studio, make a new connection t
 1. From the command line, find the IP of your master instance with the following command:
 
    ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-cluster-name>
    ```
 
 1. In Azure Data Studio, press **F1** > **New Connection**.
@@ -78,7 +78,7 @@ In most cases, connecting to the SQL Server master instance gives you access to 
 1. From the command line, find the IP address of your HDFS/Spark gateway with one of the following commands.
 
    ```
-   kubectl get svc endpoint-security -n <your-cluster-name>
+   kubectl get svc gateway-svc-external -n <your-cluster-name>
    ```
  
 1. In Azure Data Studio, press **F1** > **New Connection**.

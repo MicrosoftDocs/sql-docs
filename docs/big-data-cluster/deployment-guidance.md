@@ -40,7 +40,7 @@ You can choose to deploy Kubernetes in any of three ways:
 | Deploy Kubernetes on: | Description | Link |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
-| **Multiple machines** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
+| **Multiple machines (kubeadm)** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
 | **Minikube** | A single-node Kubernetes cluster in a VM. | [Instructions](deploy-on-minikube.md) |
   
 ## Deploy SQL Server 2019 big data tools
@@ -70,138 +70,120 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
-## <a id="profiles"></a> Configure a deployment profile
+## <a id="env"></a> Default deployments
 
+Use the following steps to deploy a big data cluster with default configuration settings. If you would rather customize your deployment, see the sections on [customized deployments](#configfile) and [unattended deployments](#unattended) in this article.
 
+1. From the command line, start the deployment with `mssqlctl cluster create`.
 
-## <a id="env"></a> Define environment variables
+   ```bash
+   mssqlctl cluster create
+   ```
 
-The cluster configuration can be customized using a set of environment variables that are passed to the `mssqlctl create cluster` command. Most of the environment variables are optional with default values as per below. Note that there are environment variables like credentials that require user input.
+1. After accepting the licensing terms, enter the configuration that corresponds to your Kubernetes environment:
 
-| Environment variable | Required | Default value | Description |
+   | Configuration | Description |
+   |---|---|
+   | **1. aks-dev-test.json** | Azure Kubernetes Service (AKS) |
+   | **2. kubeadm-dev-test.json** | Multiple machines (kubeadm) |
+   | **3. minikube-dev-test.json** | minikube |
+
+   These configuration files contain default values that are appropriate for most dev-test scenarios. If you want more control over the deployment, see the [customized deployments](#configfile) section.
+
+1. Follow the prompts to enter credentials for the cluster.
+
+   > [!NOTE]
+   > The Docker information is provided to you by Microsoft as part of the SQL Server 2019 Early Adoption Program. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try SQL Server big data clusters. Microsoft will triage all requests and respond as soon as possible.
+
+After the deployment starts successfully, proceed to [monitoring your deployment](#monitor).
+
+## <a id="configfile"></a> Customized deployments
+
+Starting with CTP 2.5, most deployment settings are now configured in a JSON deployment configuration file. There are default deployment profiles for AKS, kubeadm, and minikube.
+
+### List default deployment profiles
+
+First, find the name of one of these standard deployment profiles using the `mssqlctl cluster config list` command:
+
+```bash
+mssqlctl cluster config list
+```
+
+This command returns configuration files such as the following:
+- **aks-dev-test.json**
+- **kubeadm-dev-test.json**
+- **minikube-dev-test.json**
+
+### Create a copy of a deployment profile
+
+To customize your deployment, start with one of these default configurations that match your Kubernetes environment. Create a copy of the deployment profile with the `mssqlctl cluster config init` command. For example, the following command creates a copy of the **aks-dev-test.json** deployment configuration file in the current directory:
+
+```bash
+mssqlctl cluster config init --type aks-dev-test.json --name aks-customized.json
+```
+
+### Customize settings
+
+To customize settings in your deployment configuration file, it is best to use the `mssqlctl cluster config section set` command rather than manually editing the file. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:
+
+```bash
+mssqlctl cluster config section set --config-file aks-customized.json --json-values "metadata.name=test-cluster"
+```
+
+In addition to passing key-value pairs, you can also provide inline JSON values or a path to a JSON file with the values. You can also use the `--patch-file` parameter to provide path to a JSON patch file. For more information, see [JSON Patches in Python](https://github.com/stefankoegl/python-json-patch) and the [JSONPath Online Evaluator](https://jsonpath.com/).
+
+### Deploy big data cluster
+
+To deploy the big data cluster, pass the deployment configuration file to the `mssqlctl cluster create` command. This initializes the Kubernetes namespace and deploys all the application pods into the namespace.
+
+```bash
+mssqlctl cluster create --configfile <deployment-profile.json> --accept-eula yes
+```
+
+During the deployment, you are prompted for any settings that were not in the deployment profile for security reasons. After the deployment starts successfully, proceed to [monitoring your deployment](#monitor).
+
+## <a id="unattended"></a> Unattended deployments
+
+A big data cluster typically involves several prompts for more information. For an unattended installation, you can pass a configuration file and use the following environment variables:
+
+| Environment variable | Description |
 |---|---|---|---|
-| **ACCEPT_EULA** | Yes | N/A | Accept the SQL Server license agreement (for example, 'Yes').  |
-| **CLUSTER_NAME** | Yes | N/A | The name of the Kubernetes namespace to deploy SQLServer big data cluster into. |
-| **CLUSTER_PLATFORM** | Yes | N/A | The platform the Kubernetes cluster is deployed. Can be `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | The number of compute pool replicas to build out. In CTP 2.5 only valued allowed is 1. |
-| **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | The number of data pool replicas to build out. |
-| **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | The number of storage pool replicas to build out. |
-| **DOCKER_REGISTRY** | Yes | TBD | The private registry where the images used to deploy the cluster are stored. |
-| **DOCKER_REPOSITORY** | Yes | TBD | The private repository within the above registry where images are stored.  It is required for the duration of the gated public preview. |
-| **DOCKER_USERNAME** | Yes | N/A | The username to access the container images in case they are stored in a private repository. It is required for the duration of the gated public preview. |
-| **DOCKER_PASSWORD** | Yes | N/A | The password to access the above private repository. It is required for the duration of the gated public preview.|
-| **DOCKER_EMAIL** | Yes | N/A | Your email address. |
-| **DOCKER_IMAGE_TAG** | No | latest | The label used to tag the images. |
-| **DOCKER_IMAGE_POLICY** | No | Always | Always force a pull of the images.  |
-| **DOCKER_PRIVATE_REGISTRY** | Yes | N/A | For the timeframe of the gated public preview, you must set this value to "1". |
-| **CONTROLLER_USERNAME** | Yes | N/A | The username for the cluster administrator. |
-| **CONTROLLER_PASSWORD** | Yes | N/A | The password for the cluster administrator. |
-| **KNOX_PASSWORD** | Yes | N/A | The password for Knox user. |
-| **MSSQL_SA_PASSWORD** | Yes | N/A | The password of SA user for SQL master instance. |
-| **USE_PERSISTENT_VOLUME** | No | true | `true` to use Kubernetes Persistent Volume Claims for pod storage.  `false` to use ephemeral host storage for pod storage. See the [data persistence](concept-data-persistence.md) article for more details. If you deploy SQL Server big data cluster on minikube and USE_PERSISTENT_VOLUME=true, you must set the value for `STORAGE_CLASS_NAME=standard`. |
-| **STORAGE_CLASS_NAME** | No | default | If `USE_PERSISTENT_VOLUME` is `true` this indicates the name of the Kubernetes Storage Class to use. See the [data persistence](concept-data-persistence.md) article for more details. If you deploy SQL Server big data cluster on minikube, the default storage class name is different and you must override it by setting `STORAGE_CLASS_NAME=standard`. |
-| **CONTROLLER_PORT** | No | 30080 | The TCP/IP port that the controller service listens on the public network. |
-| **MASTER_SQL_PORT** | No | 31433 | The TCP/IP port that the master SQL instance listens on the public network. |
-| **KNOX_PORT** | No | 30443 | The TCP/IP port that Apache Knox listens on the public network. |
-| **PROXY_PORT** | No | 30777 | The TCP/IP port that proxy service listens on the public network. This is the port used for computing the portal URL. |
-| **GRAFANA_PORT** | No | 30888 | The TCP/IP port that the Grafana monitoring application listens on the public network. |
-| **KIBANA_PORT** | No | 30999 | The TCP/IP port that the Kibana log search application listens on the public network. |
-
+| **DOCKER_REGISTRY** | The private registry where the images used to deploy the cluster are stored. |
+| **DOCKER_REPOSITORY** | The private repository within the above registry where images are stored. |
+| **DOCKER_USERNAME** | The username to access the container images in case they are stored in a private repository. |
+| **DOCKER_PASSWORD** | The password to access the above private repository. |
+| **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to `latest`. |
+| **CONTROLLER_USERNAME** | The username for the cluster administrator. |
+| **CONTROLLER_PASSWORD** | The password for the cluster administrator. |
+| **KNOX_PASSWORD** | The password for Knox user. |
+| **MSSQL_SA_PASSWORD** | The password of SA user for SQL master instance. |
 
 > [!IMPORTANT]
->1. For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
->1. For an on-premises cluster built with **kubeadm**, the value for environment variable `CLUSTER_PLATFORM` is `kubernetes`. Also, when `USE_PERSISTENT_VOLUME=true`, you must pre-provision a Kubernetes storage class and pass it through using the `STORAGE_CLASS_NAME`.
->1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
->1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
->1. The **SA** account is a system administrator on the SQL Server Master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+>- For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
+>- Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
+>- The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
+>- The **SA** account is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
 
-Setting the environment variables required for deploying a big data cluster differs depending on whether you are using Windows or Linux client.  Choose the steps below depending on which operating system you are using.
-
-Initialize the following environment variables, they are required for deploying the cluster:
-
-### Windows
-
-Using a CMD window (not PowerShell), configure the following environment variables. Do not use quotes around the values.
-
-```cmd
-SET ACCEPT_EULA=yes
-SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
-
-SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
-
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
-SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your email address>
-SET DOCKER_PRIVATE_REGISTRY=1
-```
-
-### Linux
-
-Initialize the following environment variables. In bash, you can use quotes around each value.
+To perform an unattended installation, provide a deployment configuration file (default or custom) and specify the environment variable with the `--env-var` parameter. The following `mssqlctl cluster create` command uses the default **aks-dev-test.json** configuration and shows the format for specifying the environment variables:
 
 ```bash
-export ACCEPT_EULA="yes"
-export CLUSTER_PLATFORM="<minikube or aks or kubernetes>"
-
-export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-export DOCKER_REGISTRY="private-repo.microsoft.com"
-export DOCKER_REPOSITORY="mssql-private-preview"
-export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
-export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your email address>"
-export DOCKER_PRIVATE_REGISTRY="1"
+mssqlctl cluster create --config-file aks-dev-test.json --accept-eula yes --env-var CONTROLLER_USERNAME=admin,CONTROLLER_PASSWORD=<password>,DOCKER_REGISTRY=<docker-registry>,DOCKER_REPOSITORY=<docker-repository>,MSSQL_SA_PASSWORD=<password>,KNOX_PASSWORD=<password>,DOCKER_USERNAME=<docker-username>,DOCKER_PASSWORD=<docker-password>,DOCKER_IMAGE_TAG=latest
 ```
 
-### Minikube settings
-
-If you are deploying on minikube and `USE_PERSISTENT_VOLUME=true` (default), you must also override the default value for `STORAGE_CLASS_NAME` environment variable.
-
-Use the following command on Windows for minikube deployments:
-
-```cmd
-SET STORAGE_CLASS_NAME=standard
-```
-
-Use the following command on Linux for minikube deployments:
-
-```bash
-export STORAGE_CLASS_NAME=standard
-```
-
-Alternatively, you can suppress using persistent volumes on minikube by setting `USE_PERSISTENT_VOLUME=false`.
-
-### Kubadm settings
-
-If you are deploying with kubeadm on your own physical or virtual machines, you must pre-provision a Kubernetes storage class and pass it through using the `STORAGE_CLASS_NAME`. Alternatively, you can suppress using persistent volumes by setting `USE_PERSISTENT_VOLUME=false`. For more information about persistent storage, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
-
-## Deploy SQL Server big data cluster
-
-The create cluster API is used to initialize the Kubernetes namespace and deploy all the application pods into the namespace. To deploy SQL Server big data cluster on your Kubernetes cluster, run the following command:
-
-```bash
-mssqlctl cluster create --name <your-cluster-name>
-```
+## <a id="monitor"></a> Monitor the deployment
 
 During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
 
 ```output
-2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
+2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-After 10 to 20 minutes, you should be notified that the controller pod is running:
+After 15 to 30 minutes, you should be notified that the controller pod is running:
 
 ```output
-2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
+2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
 
 > [!IMPORTANT]
@@ -210,46 +192,74 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 When the deployment finishes, the output notifies you of success:
 
 ```output
-2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
-2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
+2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
+2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> Get big data cluster endpoints
+Note the URL of the **Portal Endpoint** in the previous output for use in the next section.
 
-After the deployment script has completed successfully, you can obtain the IP address of the SQL Server master instance using the steps outlined below. You will use this IP address and port number 31433 to connect to the SQL Server master instance (for example: **\<ip-address-of-endpoint-master-pool\>,31433**). Similarly, you can connect to the SQL Server big data cluster (HDFS/Spark Gateway) IP associated with the **endpoint-security** service.
+> [!TIP]
+> The default name for the deployed big data cluster is `mssql-cluster` unless modified by a custom configuration.
 
-The following kubectl commands retrieve common endpoints for the big data cluster:
+## <a id="endpoints"></a> Get big data cluster endpoints
 
-```bash
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc endpoint-security -n <your-cluster-name>
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
-```
+After the deployment script has completed successfully, you can obtain the IP addresses of the external endpoints for the big data cluster using the following steps.
 
-Look for the **External-IP** value that is assigned to each service.
+1. From the deployment output, copy the **Portal Endpoint** and remove the `/portal/` at the end. This is the URL of the Management Proxy (for example, `https://<ip-address>:30777`).
 
-All cluster endpoints are also outlined in the **Service Endpoints** tab in the Cluster Administration Portal. You can access the portal using the external IP address and port number for the `endpoint-service-proxy` (for example: **https://\<ip-address-of-endpoint-service-proxy\>:30777/portal**). Credentials for accessing the admin portal are the values of `CONTROLLER_USERNAME` and `CONTROLLER_PASSWORD` environment variables provided above. You can also use the Cluster Administration Portal to monitor the deployment.
+   > [!TIP]
+   > If you do not have your deployment output, you can get the IP address for the Management Proxy by looking at the EXTERNAL-IP output of the following **kubectl** command:
+   >
+   > ```bash
+   > kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   > ```
 
-For more information on how to connect, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
+1. Log in to the big data cluster with `mssqlctl login`. Set the `--endpoint` parameter to the Management Proxy.
+
+   ```bash
+   mssqlctl login --endpoint https://<ip-address>:30777
+   ```
+
+   Specify the username and password that you configured for the controller during deployment.
+
+1. Run `mssqlctl cluster endpoints list` to get a list with a description of each endpoint and their corresponding IP address and port values. For example, the following displays the output for the Management Portal endpoint:
+
+   ```output
+   {
+     "description": "Management Portal",
+     "endpoint": "https://<ip-address>:30777/portal",
+     "ip": "<ip-address>",
+     "name": "portal",
+     "port": 30777,
+     "protocol": "https"
+   },
+   ```
+
+1. All cluster endpoints are also outlined in the **Service Endpoints** tab in the Cluster Administration Portal. You can access the portal using the Management Portal endpoint in the previous step (for example, `https://\<ip-address>:30777/portal`). The credentials for accessing the administration portal are the values for the controller username and password that you specified during deployment. You can also use the Cluster Administration Portal to monitor the deployment.
 
 ### Minikube
 
-If you are using Minikube, you need to run the following command to get the IP address you need to connect to. In addition to the IP, specify the port for the endpoint you need to connect to. To get all the service endpoints for 
+If you are using minikube, you need to run the following command to get the IP address you need to connect to. In addition to the IP, specify the port for the endpoint you need to connect to.
 
 ```bash
 minikube ip
 ```
 
 Irrespective of the platform you are running your Kubernetes cluster on, to get all the service endpoints deployed for the cluster, run following command:
+
 ```bash
 kubectl get svc -n <your-cluster-name>
 ```
+
+## <a id="connect"></a> Connect to the cluster
+
+For more information on how to connect to the big data cluster, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a id="upgrade"></a> Upgrade to a new release
 
 Currently, the only way to upgrade a big data cluster to a new release is to manually remove and recreate the cluster. Each release has a unique version of **mssqlctl** that is not compatible with the previous version. Also, if an older cluster had to download an image on a new node, the latest image might not be compatible with the older images on the cluster. To upgrade to the latest release, use the following steps:
 
-1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy the data out with **curl**](data-ingestion-curl.md).
+1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy out the data with **curl**](data-ingestion-curl.md).
 
 1. Delete the old cluster with the `mssqlctl delete cluster` command.
 
@@ -260,14 +270,19 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    > [!Important]
    > Use the version of **mssqlctl** that matches your cluster. Do not delete an older cluster with the newer version of **mssqlctl**.
 
-1. Uninstall any old versions of **mssqlctl**.
+1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
 
-   ```bash
+   If you are uninstalling **mssqlctl** corresponding to CTP version 2.2 or lower run:
+
+   ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   > [!IMPORTANT]
-   > You should not install the new version of **mssqlctl** without uninstalling any older versions first.
+   For CTP 2.3 or higher, run the following command. Replace `ctp-2.4` in the command with the version of **mssqlctl** that you are uninstalling:
+
+   ```powershell
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   ```
 
 1. Install the latest version of **mssqlctl**. 
 
@@ -298,48 +313,65 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
    kubectl get pods -n <your-cluster-name>
    ```
 
-   During deployment, pods with a **STATUS** of **ContainerCreating** are still coming up. If the deployment hangs for any reason, this can give you an idea where the problem might be. Also look at the **READY** column. This tells you how many containers have started in the pod. Note that deployments can take thirty minutes or more depending on your configuration and network. Much of this time is spent downloading the container images for different components. The following table shows example edited output of two containers during a deployment:
-
-   ```output
-   PS C:\> kubectl get pods -n sbdc8
-   NAME                                     READY   STATUS              RESTARTS   AGE
-   mssql-controller-h79ft                   4/4     Running             0          13m
-   mssql-storage-pool-default-0             0/7     ContainerCreating   0          6m
-   ```
-
-1. Describe an individual pod for more details. The following command inspects the `mssql-storage-pool-default-0` pod.
+   During deployment, pods with a **STATUS** of **ContainerCreating** are still coming up. If the deployment hangs for any reason, this can give you an idea where the problem might be. Also look at the **READY** column. This tells you how many containers have started in the pod. Note that deployments can take 30 minutes or more depending on your configuration and network. Much of this time is spent downloading the container images for different components. The following table shows example edited output of two containers during a deployment:
 
    ```cmd
-   kubectl describe pod mssql-storage-pool-default-0 -n <your-cluster-name>
+   PS C:\> kubectl get pods -n mssql-cluster
+   NAME              READY   STATUS    RESTARTS   AGE
+   appproxy-f2qqt    2/2     Running   0          110m
+   compute-0-0       3/3     Running   0          110m
+   control-zlncl     4/4     Running   0          118m
+   data-0-0          3/3     Running   0          110m
+   data-0-1          3/3     Running   0          110m
+   gateway-0         2/2     Running   0          109m
+   logsdb-0          1/1     Running   0          112m
+   logsui-jtdnv      1/1     Running   0          112m
+   master-0          7/7     Running   0          110m
+   metricsdb-0       1/1     Running   0          112m
+   metricsdc-shv2f   1/1     Running   0          112m
+   metricsui-9bcj7   1/1     Running   0          112m
+   mgmtproxy-x6gcs   2/2     Running   0          112m
+   nmnode-0-0        1/1     Running   0          110m
+   storage-0-0       7/7     Running   0          110m
+   storage-0-1       7/7     Running   0          110m
+   ```
+
+1. Describe an individual pod for more details. The following command inspects the `master-0` pod.
+
+   ```cmd
+   kubectl describe pod master-0 -n mssql-cluster
    ```
 
    This outputs detailed information about the pod, including recent events. If an error has occurred, you can sometimes find the error here.
 
-1. Retrieve the logs for containers running in a pod. The following command retrieves the logs for all containers running in the pod named `mssql-storage-pool-default-0` and outputs them to a file name `pod-logs.txt`:
+1. Retrieve the logs for containers running in a pod. The following command retrieves the logs for all containers running in the pod named `master-0` and outputs them to a file name `pod-logs.txt`:
 
    ```cmd
-   kubectl logs mssql-storage-pool-default-0 --all-containers=true -n <your-cluster-name> > pod-logs.txt
+   kubectl logs master-0 --all-containers=true -n mssql-cluser > pod-logs.txt
    ```
 
 1. Review the cluster services during and after a deployment with the following command:
 
    ```cmd
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n mssql-cluster
    ```
 
    These services support internal and external connections to the big data cluster. For external connections, the following services are used:
 
    | Service | Description |
    |---|---|
-   | **endpoint-master-pool** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
-   | **endpoint-controller** | Supports tools and clients that manage the cluster. |
-   | **endpoint-service-proxy** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
-   | **endpoint-security** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
+   | **master-svc-external** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
+   | **controller-svc-external** | Supports tools and clients that manage the cluster. |
+   | **mgmtproxy-svc-external** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal) |
+   | **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
+   | **appproxy-svc-external** | Support application deployment scenarios. |
 
-1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **endpoint-service-proxy** service to start before accessing this portal, so it won't be available at the beginning of a deployment.
+   > [!TIP]
+   > This is a way of viewing the services with **kubectl**; it is also possible to use `mssqlctl cluster endpoints list` command to view these endpoints. For more information, see [Get big data cluster endpoints](#endpoints).
 
-> [!TIP]
-> For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
+1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **mgmtproxy-svc-external** service to start before accessing this portal, so it won't be available at the beginning of a deployment. 
+
+For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
 ## Next steps
 

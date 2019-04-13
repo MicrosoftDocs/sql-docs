@@ -122,12 +122,9 @@ To customize your deployment, start with one of these default configurations tha
 mssqlctl cluster config init --type aks-dev-test.json --name aks-customized.json
 ```
 
-> [!TIP]
-> The default name for the deployed big data cluster is `mssql-cluster`.
-
 ### Customize settings
 
-To customize settings in your deployment configuration file, it is best to use the `mssqlctl cluster config section set` command rather than manually editing the file. For example, the following command changes the name of the new cluster to **test-cluster** in a configuration file named **aks-customized.json**:
+To customize settings in your deployment configuration file, it is best to use the `mssqlctl cluster config section set` command rather than manually editing the file. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:
 
 ```bash
 mssqlctl cluster config section set --config-file aks-customized.json --json-values "metadata.name=test-cluster"
@@ -156,16 +153,16 @@ A big data cluster typically involves several prompts for more information. For 
 | **DOCKER_USERNAME** | The username to access the container images in case they are stored in a private repository. |
 | **DOCKER_PASSWORD** | The password to access the above private repository. |
 | **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to `latest`. |
-| **CONTROLLER_USERNAME** | Yes | N/A | The username for the cluster administrator. |
-| **CONTROLLER_PASSWORD** | Yes | N/A | The password for the cluster administrator. |
-| **KNOX_PASSWORD** | Yes | N/A | The password for Knox user. |
-| **MSSQL_SA_PASSWORD** | Yes | N/A | The password of SA user for SQL master instance. |
+| **CONTROLLER_USERNAME** | The username for the cluster administrator. |
+| **CONTROLLER_PASSWORD** | The password for the cluster administrator. |
+| **KNOX_PASSWORD** | The password for Knox user. |
+| **MSSQL_SA_PASSWORD** | The password of SA user for SQL master instance. |
 
 > [!IMPORTANT]
->1. For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
->1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
->1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
->1. The **SA** account is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
+>- For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
+>- Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
+>- The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
+>- The **SA** account is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
 
 To perform an unattended installation, provide a deployment configuration file (default or custom) and specify the environment variable with the `--env-var` parameter. The following `mssqlctl cluster create` command uses the default **aks-dev-test.json** configuration and shows the format for specifying the environment variables:
 
@@ -173,15 +170,12 @@ To perform an unattended installation, provide a deployment configuration file (
 mssqlctl cluster create --config-file aks-dev-test.json --accept-eula yes --env-var CONTROLLER_USERNAME=admin,CONTROLLER_PASSWORD=<password>,DOCKER_REGISTRY=<docker-registry>,DOCKER_REPOSITORY=<docker-repository>,MSSQL_SA_PASSWORD=<password>,KNOX_PASSWORD=<password>,DOCKER_USERNAME=<docker-username>,DOCKER_PASSWORD=<docker-password>,DOCKER_IMAGE_TAG=latest
 ```
 
-> [!TIP]
-> Unless customized, the default name for the deployed big data cluster is `mssql-cluster`.
-
 ## <a id="monitor"></a> Monitor the deployment
 
 During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
 
 ```output
-2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
+2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
 ```
 
 After 15 to 30 minutes, you should be notified that the controller pod is running:
@@ -204,16 +198,23 @@ When the deployment finishes, the output notifies you of success:
 
 Note the URL of the **Portal Endpoint** in the previous output for use in the next section.
 
+> [!TIP]
+> The default name for the deployed big data cluster is `mssql-cluster` unless modified by a custom configuration.
+
 ## <a id="endpoints"></a> Get big data cluster endpoints
 
 After the deployment script has completed successfully, you can obtain the IP addresses of the external endpoints for the big data cluster using the following steps.
 
-1. From the deployment output, copy the **Portal Endppoint** and remove the `/portal/` at the end. This is the URL of the Management Proxy (for example, `https://<ip-address>:30777`).
+1. From the deployment output, copy the **Portal Endpoint** and remove the `/portal/` at the end. This is the URL of the Management Proxy (for example, `https://<ip-address>:30777`).
 
    > [!TIP]
-   > If you do not have your deployment output, you can get the IP address for the Management Proxy with the following kubectl command: `kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>`. Look at the EXTERNAL-IP value.
+   > If you do not have your deployment output, you can get the IP address for the Management Proxy by looking at the EXTERNAL-IP output of the following **kubectl** command:
+   >
+   > ```bash
+   > kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   > ```
 
-1. Log in to the big data cluster with `mssqlctl login`.
+1. Log in to the big data cluster with `mssqlctl login`. Set the `--endpoint` parameter to the Management Proxy.
 
    ```bash
    mssqlctl login --endpoint https://<ip-address>:30777

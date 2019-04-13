@@ -30,7 +30,7 @@ The following sections describe the new features and known issues for big data c
 |:---|:---|
 | Deployment profiles | Use default and customized [deployment configuration JSON files](deployment-guidance.md#configfile) for big data cluster deployments instead of environment variables. |
 | Prompted deployments | `mssqlctl cluster create` now prompts for any necessary settings for default deployments. |
-| Service endpoint and pod name changes | The following external endpoints have changed names:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** is now **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** is now **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** is now **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** is now **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** is now **appproxy-svc-external**|
+| Service endpoint and pod name changes | The following external endpoints have changed names:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
 | **mssqlctl** improvements | Use **mssqlctl** to [list external endpoints](deployment-guidance.md#endpoints) and check the version of **mssqlctl** with the `--version` parameter. |
 | Offline install | Guidance for offline big data cluster deployments. |
 | HDFS tiering improvements | S3 tiering, mount caching, and OAuth support for ADLS Gen2. |

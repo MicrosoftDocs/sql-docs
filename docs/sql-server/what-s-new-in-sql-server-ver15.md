@@ -50,7 +50,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 | New feature or update | Details |
 |:---|:---|
 | PolyBase on Linux | Install PolyBase on Linux for non-Hadoop connectors. |
-| New Java language SDK for SQL Server simplify development of Java programs that can be run from SQL Server.|
+| New Java language SDK for SQL Server | Simplifies development of Java programs that can be run from SQL Server. |
 | &nbsp; | &nbsp; |
 
 ## CTP 2.4 March 2019

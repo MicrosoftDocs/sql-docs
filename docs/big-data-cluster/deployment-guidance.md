@@ -143,7 +143,7 @@ To deploy the big data cluster, pass the deployment configuration file to the `m
 mssqlctl cluster create --configfile <deployment-profile.json> --accept-eula yes
 ```
 
-During the deployment, you are prompted for any settings that were not in the deployment profile for security reasons.
+During the deployment, you are prompted for any settings that were not in the deployment profile for security reasons. After the deployment starts successfully, proceed to [monitoring your deployment](#monitor).
 
 ## <a id="unattended"></a> Unattended deployments
 
@@ -165,7 +165,7 @@ A big data cluster typically involves several prompts for more information. For 
 >1. For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
 >1. Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
 >1. The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
->1. The **SA** account is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#change-the-sa-password).
+>1. The **SA** account is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
 
 To perform an unattended installation, provide a deployment configuration file (default or custom) and specify the environment variable with the `--env-var` parameter. The following `mssqlctl cluster create` command uses the default **aks-dev-test.json** configuration and shows the format for specifying the environment variables:
 
@@ -176,7 +176,7 @@ mssqlctl cluster create --config-file aks-dev-test.json --accept-eula yes --env-
 > [!TIP]
 > Unless customized, the default name for the deployed big data cluster is `mssql-cluster`.
 
-## Monitor the deployment
+## <a id="monitor"></a> Monitor the deployment
 
 During cluster bootstrap, the client command window will output the deployment status. During the deployment process, you should see a series of messages where it is waiting for the controller pod:
 
@@ -361,13 +361,16 @@ To monitor or troubleshoot a deployment, use **kubectl** to inspect the status o
    |---|---|
    | **master-svc-external** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
    | **controller-svc-external** | Supports tools and clients that manage the cluster. |
-   | **mgmtproxy-svc-external** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal)|
+   | **mgmtproxy-svc-external** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal) |
    | **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
+   | **appproxy-svc-external** | Support application deployment scenarios. |
 
-1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **mgmtproxy-svc-external** service to start before accessing this portal, so it won't be available at the beginning of a deployment.
+   > [!TIP]
+   > This is a way of viewing the services with **kubectl**; it is also possible to use `mssqlctl cluster endpoints list` command to view these endpoints. For more information, see [Get big data cluster endpoints](#endpoints).
 
-> [!TIP]
-> For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
+1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **mgmtproxy-svc-external** service to start before accessing this portal, so it won't be available at the beginning of a deployment. 
+
+For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
 ## Next steps
 

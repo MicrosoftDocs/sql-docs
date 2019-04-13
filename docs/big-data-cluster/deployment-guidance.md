@@ -72,7 +72,7 @@ kubectl config view
 
 ## <a id="env"></a> Default deployments
 
-Use the following steps to deploy a big data cluster with default configuration settings. If you would rather customize your deployment, see the sections on [customized deployments](#env) and [unattended deployments](#unattended) in this article.
+Use the following steps to deploy a big data cluster with default configuration settings. If you would rather customize your deployment, see the sections on [customized deployments](#configfile) and [unattended deployments](#unattended) in this article.
 
 1. From the command line, start the deployment with `mssqlctl cluster create`.
 
@@ -88,7 +88,7 @@ Use the following steps to deploy a big data cluster with default configuration 
    | **2. kubeadm-dev-test.json** | Multiple machines (kubeadm) |
    | **3. minikube-dev-test.json** | minikube |
 
-   These configuration files contain default values that are appropriate for most dev-test scenarios. If you want more control over the deployment, see the [customized deployments](#env) section.
+   These configuration files contain default values that are appropriate for most dev-test scenarios. If you want more control over the deployment, see the [customized deployments](#configfile) section.
 
 1. Follow the prompts to enter credentials for the cluster.
 
@@ -97,7 +97,7 @@ Use the following steps to deploy a big data cluster with default configuration 
 
 After the deployment starts successfully, proceed to [monitoring your deployment](#monitor).
 
-## <a id="env"></a> Customized deployments
+## <a id="configfile"></a> Customized deployments
 
 Starting with CTP 2.5, most deployment settings are now configured in a JSON deployment configuration file. There are default deployment profiles for AKS, kubeadm, and minikube.
 

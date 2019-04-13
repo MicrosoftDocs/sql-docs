@@ -28,15 +28,13 @@ The following sections describe the new features and known issues for big data c
 
 | New feature or update | Details |
 |:---|:---|
-| Compute pools | |
-| New `mssql` Spark-SQL Server connector | |
-| PolyBase on Linux | Install PolyBase on Linux for non-Hadoop connectors. |
-| Deployment profiles | Use default and customized deployment profiles (.JSON files) for big data cluster deployments instead of environment variables. |
+| Deployment profiles | Use default and customized [deployment configuration JSON files](deployment-guidance.md#configfile) for big data cluster deployments instead of environment variables. |
+| Prompted deployments | `mssqlctl cluster create` now prompts for any necessary settings for default deployments. |
+| Service endpoint and pod name changes | The following external endpoints have changed names:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** is now **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** is now **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** is now **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** is now **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** is now **appproxy-svc-external**|
+| **mssqlctl** improvements | Use **mssqlctl** to [list external endpoints](deployment-guidance.md#endpoints) and check the version of **mssqlctl** with the `--version` parameter. |
 | Offline install | Guidance for offline big data cluster deployments. |
-| Java/extensibility | |
-| `mssqlctl` improvements | |
-| App deploy improvements | |
-| &nbsp; | &nbsp; |
+| HDFS tiering improvements | S3 tiering, mount caching, and OAuth support for ADLS Gen2. |
+| New `mssql` Spark-SQL Server connector | |
 
 ### Known issues
 

@@ -48,7 +48,7 @@ After configuring Kubernetes, you deploy a big data cluster with the `mssqlctl c
 
 - To customize your deployment, you can create and use your own [deployment configuration files](deployment-guidance.md#configfile). 
 
-- For a completely unattended installation, you can pass all other settings in  environment variables. For more information, see [unattended deployments](#deployment-guidance.md#unattended).
+- For a completely unattended installation, you can pass all other settings in  environment variables. For more information, see [unattended deployments](deployment-guidance.md#unattended).
 
 ## Deployment scripts
 

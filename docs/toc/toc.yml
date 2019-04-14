@@ -2544,7 +2544,7 @@
         href: ../relational-databases/native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md
       - name: "Using IRow::GetColumns"
         href: ../relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md
-    - name: BLOBs & OLE OBjects
+    - name: BLOBs & OLE Objects
       href: ../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
       items:
       - name: Getting Large Data

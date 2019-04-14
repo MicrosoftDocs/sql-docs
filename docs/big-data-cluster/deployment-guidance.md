@@ -24,6 +24,15 @@ SQL Server big data cluster can be deployed as docker containers on a Kubernetes
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
+## Deploy SQL Server 2019 big data tools
+
+Before deploying SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):
+
+- **mssqlctl**
+- **kubectl**
+- **Azure Data Studio**
+- **SQL Server 2019 extension**
+
 ## <a id="prereqs"></a> Kubernetes cluster prerequisites
 
 SQL Server big data clusters require a minimum Kubernetes version of at least v1.10 for both server and client (kubectl).
@@ -42,27 +51,11 @@ You can choose to deploy Kubernetes in any of three ways:
 | **Azure Kubernetes Services (AKS)** | A managed Kubernetes container service in Azure. | [Instructions](deploy-on-aks.md) |
 | **Multiple machines (kubeadm)** | A Kubernetes cluster deployed on physical or virtual machines using **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
 | **Minikube** | A single-node Kubernetes cluster in a VM. | [Instructions](deploy-on-minikube.md) |
-  
-## Deploy SQL Server 2019 big data tools
 
-Before deploying SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):
-- **mssqlctl**
-- **kubectl**
-- **Azure Data Studio**
-- **SQL Server 2019 extension**
+> [!TIP]
+> For a sample python script that deploys both AKS and a SQL Server big data cluster in one step, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md).
 
-## <a id="deploy"></a> Deploy SQL Server big data cluster
-
-After you have configured your Kubernetes cluster, you can proceed with the deployment for SQL Server big data cluster.
-
-> [!NOTE]
-> If you are upgrading from a previous release, please see the [Upgrade section of this article](#upgrade).
-
-For a sample python script that deploys both AKS and a SQL Server big data cluster, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md).
-
-If you want to customize your deployment of big data cluster according to your workload needs, follow the instructions in the remainder of this article.
-
-## Verify kubernetes configuration
+## Verify Kubernetes configuration
 
 Run the **kubectl** command to view the cluster configuration. Ensure that kubectl is pointed to the correct cluster context.
 
@@ -70,7 +63,9 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
-## <a id="env"></a> Default deployments
+After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see the [upgrade section](#upgrade) of this article.
+
+## <a id="deploy"></a> Default deployments
 
 Use the following steps to deploy a big data cluster with default configuration settings. If you would rather customize your deployment, see the sections on [customized deployments](#configfile) and [unattended deployments](#unattended) in this article.
 
@@ -201,7 +196,7 @@ Note the URL of the **Portal Endpoint** in the previous output for use in the ne
 > [!TIP]
 > The default name for the deployed big data cluster is `mssql-cluster` unless modified by a custom configuration.
 
-## <a id="endpoints"></a> Get big data cluster endpoints
+## <a id="endpoints"></a> Retrieve endpoints
 
 After the deployment script has completed successfully, you can obtain the IP addresses of the external endpoints for the big data cluster using the following steps.
 
@@ -255,7 +250,7 @@ kubectl get svc -n <your-cluster-name>
 
 For more information on how to connect to the big data cluster, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
-## <a id="upgrade"></a> Upgrade to a new release
+## <a id="upgrade"></a> Upgrade guidance
 
 Currently, the only way to upgrade a big data cluster to a new release is to manually remove and recreate the cluster. Each release has a unique version of **mssqlctl** that is not compatible with the previous version. Also, if an older cluster had to download an image on a new node, the latest image might not be compatible with the older images on the cluster. To upgrade to the latest release, use the following steps:
 
@@ -303,7 +298,7 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
 
 1. Install the latest release using the instructions in the [Deploy section](#deploy) of this article. 
 
-## <a id="troubleshoot"></a> Monitoring and troubleshooting
+## <a id="troubleshoot"></a> Monitor and troubleshoot
 
 To monitor or troubleshoot a deployment, use **kubectl** to inspect the status of the cluster and to detect potential problems. At any time during a deployment, you can open a different command window to run the following tests.
 

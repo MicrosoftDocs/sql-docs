@@ -40,21 +40,23 @@ Big data clusters are deployed as a series of interrelated containers that are m
 
 - **Minikube**: Minikube allows you to run Kubernetes locally on a single server. It is a good option if you are trying out big data clusters or need to use it in a testing or development scenario. For more information about using Minikube, see the [Minikube documentation](https://kubernetes.io/docs/setup/minikube/). For specific requirements for using Minikube with big data clusters, see [Configure minikube for SQL Server 2019 big data cluster deployments](deploy-on-minikube.md).
 
-## Deployment scripts
-
-Deployment scripts can help deploy both Kubernetes and big data clusters in a single step. They also often provide default values for the required environment variables. For an example of a deployment script for big data cluster on Azure Kubernetes Service (AKS), see [Deploy a SQL Server 2019 big data cluster with a deployment script (AKS)](quickstart-big-data-cluster-deploy.md).
-
-You can customize any deployment script by creating your own version that configures the big data cluster environment variables differently.
-
 ## Deploy a big data cluster
 
-To deploy Kubernetes and a big data cluster to AKS with a single script, see the following example:
+After configuring Kubernetes, you deploy a big data cluster with the `mssqlctl cluster create` command. When deploying, you can take several different approaches.
 
-- [Deploy a SQL Server 2019 big data cluster with a deployment script (AKS)](quickstart-big-data-cluster-deploy.md)
+- If you are deploying to a dev-test environment, you can choose to use one of the [default configurations](deployment-guidance.md#deploy) provided by **mssqlctl**.
 
-For detailed deployment guidance for deploying big data clusters using AKS, kubeadm, and MiniKube, see the following article:
+- To customize your deployment, you can create and use your own [deployment configuration files](deployment-guidance.md#configfile). 
 
-- [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md)
+- For a completely unattended installation, you can pass all other settings in  environment variables. For more information, see [unattended deployments](deployment-guidance.md#unattended).
+
+## Deployment scripts
+
+Deployment scripts can help deploy both Kubernetes and big data clusters in a single step. They also often provide default values for big data cluster settings. For an example of a deployment script for big data cluster on Azure Kubernetes Service (AKS), see the following article:
+
+[Deploy a SQL Server 2019 big data cluster with a deployment script (AKS)](quickstart-big-data-cluster-deploy.md).
+
+You can customize any deployment script by creating your own version that configures the big data cluster environment variables differently.
 
 ## Next steps
 

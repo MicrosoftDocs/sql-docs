@@ -65,7 +65,7 @@ kubectl config view
 
 After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see the [upgrade section](#upgrade) of this article.
 
-## <a id="env"></a> Default deployments
+## <a id="deploy"></a> Default deployments
 
 Use the following steps to deploy a big data cluster with default configuration settings. If you would rather customize your deployment, see the sections on [customized deployments](#configfile) and [unattended deployments](#unattended) in this article.
 

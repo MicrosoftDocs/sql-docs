@@ -4,7 +4,7 @@ description: Quickstart for Python script in SQL Server. Learn the basics of cal
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/04/2019
+ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
@@ -39,7 +39,7 @@ The following exercise is focused on the first interaction model: how to pass Py
     b = 2
     c = a/b
     d = a*b
-    print(c(c, d))
+    print(c, d)
     '
     ```
 

@@ -29,6 +29,29 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## 18.2 sqlpackage
+
+Release date: &nbsp; April 15, 2019  
+Build: &nbsp; 15.0.4384.2 
+
+### Features
+
+| Feature | Details |
+| :------ | :------ |
+| Add graph table support for edge constraints and edge constraint clauses. | &nbsp; |
+| Enabled model validation rule to support 32 columns for index keys for SQL Server 2016 and up. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+### Fixes
+
+| Fix | Details |
+| :-- | :------ |
+| Fix reverse engineering a SQL Server 2016 RTM database due to an unsupported query hint being used. | &nbsp; |
+| Fix deployment ordering of auto close alter statements to occur before create filegroup statements. | &nbsp; |
+| Fix ScriptDom parsing regression where the 'URL' string was interpreted as a top level token. | &nbsp; |
+| Fix a null reference exception when parsing an alter table add index statement. | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## 18.1 sqlpackage
 
 Release date: &nbsp; February 1, 2019  
@@ -54,6 +77,7 @@ Preview release.
 | Fixed the schema drift detection logic to ignore certain extended event (xevent) sessions. | &nbsp; |
 | Fixed import ordering for graph tables. | &nbsp; |
 | Fixed exporting external tables with object permissions. | &nbsp; |
+| Fixed schema compare for nullable persisted computed columns always showing as different.| &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### Known issues

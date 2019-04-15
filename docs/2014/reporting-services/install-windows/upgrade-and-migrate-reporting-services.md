@@ -1,9 +1,6 @@
 ---
 title: "Upgrade and Migrate Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
-ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
@@ -12,13 +9,17 @@ helpviewer_keywords:
   - "Reporting Services, upgrades"
   - "SQL Server Reporting Services, upgrading"
   - "upgrading Reporting Services"
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "06/13/2017"
 ---
+
 # Upgrade and Migrate Reporting Services
-  This topic is an overview of the upgrade and migration options for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. There are two general approaches to upgrading a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment:  
+
+This topic is an overview of the upgrade and migration options for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. There are two general approaches to upgrading a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment:  
   
 -   **Upgrade:** You upgrade the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] components on the servers and instances where they are currently installed. This is commonly called an "in place" upgrade. In-place upgrade is not supported from one mode of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server to another. For example, you cannot upgrade a Native Mode report server to a SharePoint mode report server. You can migrate your report items from one mode to another. For more information, see the 'Native to SharePoint Migration' section later in this document and the related topic [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
@@ -149,7 +150,7 @@ manager: kfile
   
     3.  Other client tools such as [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and Books Online are not upgraded. To obtain new versions of the tools, you can add them when you run Setup. Earlier versions will co-exist alongside [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versions. If you installed samples, the earlier version will remain. Setup does not support upgrade for the SQL Server samples.  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a separate download. For more information, see [Microsoft SQL Server 2014 Data Tools - Business Intelligence for Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
 6.  Setup reuses the service entry in Service Control Manager for the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Report Server service. This service entry includes the Report Server Windows service account.  
   

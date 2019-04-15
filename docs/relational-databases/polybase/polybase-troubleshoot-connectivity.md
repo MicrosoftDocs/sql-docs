@@ -2,6 +2,7 @@
 title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
+ms.reviewer: jroth
 manager: craigg
 ms.technology: polybase
 ms.custom: ""

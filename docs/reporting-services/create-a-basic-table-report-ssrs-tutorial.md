@@ -1,6 +1,6 @@
 ---
 title: "Create a Basic Table Report (SSRS Tutorial) | Microsoft Docs"
-ms.date: 11/07/2017
+ms.date: 04/15/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services

@@ -1,6 +1,6 @@
 ---
 title: "Lesson 4: Adding a Table to the Report (Reporting Services) | Microsoft Docs"
-ms.date: 05/23/2016
+ms.date: 04/15/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services

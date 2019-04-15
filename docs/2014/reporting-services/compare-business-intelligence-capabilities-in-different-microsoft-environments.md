@@ -1,21 +1,22 @@
 ---
 title: "Compare Business Intelligence Capabilities In Different Microsoft Environments | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
-ms.reviewer: ""
 ms.technology: 
   - "reporting-services-native"
 ms.topic: conceptual
-ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
 manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "03/06/2017"
 ---
+
 # Compare Business Intelligence Capabilities In Different Microsoft Environments
-  Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence can be deployed in a number of different environments including [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with SharePoint Server, SharePoint Online, and Power BI for Office 365. This topic compares the components and features supported in each environment.  
+
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence can be deployed in a number of different environments including [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with SharePoint Server, SharePoint Online, and Power BI for Office 365. This topic compares the components and features supported in each environment.  
   
- For more information comparing SharePoint Server and SharePoint Online, see [Compare SharePoint plans and options](http://products.office.com/SharePoint/compare-sharepoint-plans).  
+For more information comparing SharePoint Server and SharePoint Online, see [Compare SharePoint plans and options](http://products.office.com/SharePoint/compare-sharepoint-plans).  
   
 ## Author and manage BI reports and dashboards  
   
@@ -36,7 +37,7 @@ manager: kfile
   
  **<sup>1</sup>**  [Understanding the Role of Data Stewards in Data Management](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) and [Video: Power BI Info Management and Data Stewardship](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
- **<sup>2</sup>**  [Power BI Q&A: Optimize a Power BI workbook (cloud modeling)](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US).  
+ **<sup>2</sup>**  [Power BI Q&A: Optimize a Power BI workbook (cloud modeling)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
  **<sup>3</sup>**  [Introducing new forecasting capabilities in Power View for Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
   
@@ -58,21 +59,18 @@ manager: kfile
   
 ## More information  
   
--   [BI capabilities in Excel and Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
+- [BI capabilities in Excel and Office 365](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   
--   For information on requirements to use synonyms, see [Optimizing Power BI Q&A with Synonyms & Phrasing](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) at pragmaticworks.com.  
+- For information on requirements to use synonyms, see [Optimizing Power BI Q&A with Synonyms & Phrasing](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) at pragmaticworks.com.  
   
--   [Office Online, Pick your enterprise social network: Yammer or Newsfeed?](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
+- [Office Online, Pick your enterprise social network: Yammer or Newsfeed?](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
--   [Power BI for Office 365](https://www.microsoft.com/powerbi/default.aspx).  
+- [Power BI for Office 365](https://www.microsoft.com/powerbi/default.aspx).  
   
--   [Power BI pricing](https://www.microsoft.com/powerBI/pricing.aspx).  
+- [Power BI pricing](https://www.microsoft.com/powerBI/pricing.aspx).  
   
--   [Compare a BI Center site to Power BI for Office 365 sites](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx).  
+- [Analysis and reporting with Microsoft business intelligence (BI) tools](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
--   [Analysis and reporting with Microsoft business intelligence (BI) tools](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
-  
-## Community Content  
- [Microsoft self-service BI on premise vs cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).  
-  
-  
+## Community Content
+
+[Microsoft self-service BI on premise vs cloud](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/).

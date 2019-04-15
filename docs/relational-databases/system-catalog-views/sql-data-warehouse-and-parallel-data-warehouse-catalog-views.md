@@ -58,6 +58,9 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 [sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (Preview)
 
 [sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview)
+
+> [!Note]
+> Workload classification is available for preview on SQL Data Warehouse Gen2. Workload Management Classification and Importance preview is for builds with a release date of April 9th, 2019 or later.  Users should avoid using builds earlier than this date for workload management testing.  To determine if your build is workload management capable, run select @@version when connected to your SQL Data Warehouse instance.
  
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views  
  The following catalog views apply to [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] only:

@@ -93,7 +93,7 @@ The following [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] feature
 |Extended stored procedure programming|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|Use CLR Integration instead.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |Extended stored procedures|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use DROP LOGIN IsIntegratedSecurityOnly argument of SERVERPROPERTY|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig|44<br /><br /> 45<br /><br /> 59|  
 |Functions|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|Hash algorithms|The  MD2, MD4, MD5, SHA, and SHA1 algorithms. These are not available under compatibility level 130.|Use SHA2_256 or SHA2_512.|Deprecated hash algorithm||  
+|Hash algorithms|The  MD2, MD4, MD5, SHA, and SHA1 algorithms. These should not be used.|Use SHA2_256 or SHA2_512.|Deprecated hash algorithm||  
 |High availability|database mirroring|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> If your edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support [!INCLUDE[ssHADR](../includes/sshadr-md.md)], use log shipping.|DATABASE_MIRRORING|267|  
 |Index options|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |Index options|CREATE TABLE, ALTER TABLE, or CREATE INDEX syntax without parentheses around the options.|Rewrite the statement to use the current syntax.|INDEX_OPTION|33|  

@@ -1,7 +1,7 @@
 ---
 title: "Local audit for SQL Server usage and diagnostic data collection | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ""

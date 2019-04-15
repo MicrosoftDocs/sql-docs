@@ -1,7 +1,6 @@
 - name: Welcome
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: Overview
-  href: ../toc/redirectfrom-overview-10.md ## /sql/database-engine/sql-server-database-engine-overview
   items:
   - name: New with SQL Server
     items:
@@ -41,7 +40,6 @@
     - name: SQL Server 2008 R2 SP2
       href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: Big data cluster
-  href: ../toc/redirectfrom-big-data-cluster.md ## /sql/big-data-cluster/big-data-cluster-overview
   items:
   - name: Overview
     items:
@@ -194,12 +192,10 @@
         - name: mssqlctl storage mount
           href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Business continuity
-  href: redirectfrom-business-continuity-10.md ## /sql/database-engine/sql-server-business-continuity-dr
   items:
   - name: Overview
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: Backup & restore
-    href: ../toc/redirectfrom-backup-restore-10.md ## /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
     items:
     - name: Overview
       items:
@@ -670,6 +666,8 @@
           href: ../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md
     - name: Reference
       items:
+      - name: System Objects
+        href: ../database-engine/availability-groups/windows/availability-group-system-object-reference.md
       - name: PowerShell Cmdlets
         href: ../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
       - name: T-SQL
@@ -976,6 +974,8 @@
           href: ../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md
     - name: Reference
       items:
+      - name: System objects
+        href: ../database-engine/database-mirroring/database-mirroring-system-object-reference.md
       - name: Security Wizard
         href: ../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md
         items:
@@ -1007,7 +1007,6 @@
         - name: Set Warning Thresholds
           href: ../database-engine/database-mirroring/set-warning-thresholds.md
   - name: Log shipping
-    href: ../toc/redirectfrom-log-shipping.md ## /sql/database-engine/log-shipping/about-log-shipping-sql-server
     items:
     - name: Overview
       href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
@@ -1046,7 +1045,6 @@
       - name: Log Shipping Monitor Settings
         href: ../relational-databases/databases/log-shipping-monitor-settings.md
 - name: Database design
-  href: ../toc/redirectfrom-database-design.md ## /sql/relational-databases/hierarchical-data-sql-server
   items:
   - name: Hierarchical Data
     href: ../relational-databases/hierarchical-data-sql-server.md
@@ -1066,7 +1064,6 @@
     - name: Set a session language
       href: ../relational-databases/collations/set-a-session-language.md
   - name: Databases
-    href: ../toc/redirectfrom-databases.md ## /sql/relational-databases/databases/databases
     items:
     - name: Overview
       href: ../relational-databases/databases/databases.md
@@ -1928,7 +1925,6 @@
       - name: Use the value() & nodes() Methods with OPENXML
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Development
-  href: redirectfrom-development-10.md ## /sql/relational-databases/data-tier-applications/data-tier-applications
   items:
   - name: Programming interaction ++
     href: ../connect/index.md
@@ -2548,7 +2544,7 @@
         href: ../relational-databases/native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md
       - name: "Using IRow::GetColumns"
         href: ../relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md
-    - name: BLOBs & OLE OBjects
+    - name: BLOBs & OLE Objects
       href: ../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
       items:
       - name: Getting Large Data
@@ -3971,7 +3967,6 @@
   - name: Memory Management Architecture
     href: ../relational-databases/memory-management-architecture-guide.md
 - name: Installation
-  href: redirectfrom-installation-10.md ## /sql/sql-server/install/what-s-new-in-sql-server-installation
   items:
   - name: Overview
     items:
@@ -4416,7 +4411,6 @@
       - name: Advanced Page
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrate & load data
-  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SQL Server Integration Services (SSIS) ++
     href: ../integration-services/index.md
@@ -4584,7 +4578,6 @@
     - name: DQS Security
       href: ../data-quality-services/dqs-security.md
   - name: Replication
-    href: ../toc/redirectfrom-replication.md ## /sql/relational-databases/replication/sql-server-replication
     items:
     - name: Overview
       href: ../relational-databases/replication/sql-server-replication.md
@@ -7235,7 +7228,6 @@
   - name: Subqueries
     href: ../relational-databases/performance/subqueries.md
   - name: Data virtualization (Polybase)
-    href: ../toc/redirectfrom-polybase.md ## /sql/relational-databases/polybase/polybase-guide
     items:
     - name: Overview
       items:
@@ -10304,7 +10296,6 @@
   - name: Local content with Help Viewer
     href: ../sql-server/sql-server-help-installation.md
 - name: Reference
-  href: ../toc/redirectfrom-reference-10.md ## /sql/sql-server/applies-to-includes
   items:
   - name: SQL Docs include files
     href: ../sql-server/applies-to-includes.md
@@ -10312,7 +10303,6 @@
     displayName: 2005, 2008, 2008 r2, 2012
     href: https://docs.microsoft.com/previous-versions/sql/
   - name: Database samples
-    href: ../toc/redirectfrom-database-samples.md ## /sql/samples/sql-samples-where-are
     items:
     - name: Samples Overview
       href: ../samples/sql-samples-where-are.md
@@ -10323,12 +10313,10 @@
       - name: Install & configure
         href: ../samples/adventureworks-install-configure.md
     - name: Wide World Importers
-      href: ../toc/redirectfrom-wide-world-importers.md ## /sql/samples/wide-world-importers-what-is
       items:
       - name: Overview
         href: ../samples/wide-world-importers-what-is.md
       - name: OLTP
-        href: ../toc/redirectfrom-oltp-10.md ## /sql/samples/wide-world-importers-oltp-database-catalog
         items:
         - name: Database catalog
           href: ../samples/wide-world-importers-oltp-database-catalog.md
@@ -10337,7 +10325,6 @@
         - name: SQL Server features
           href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
       - name: Data Warehouse
-        href: ../toc/redirectfrom-data-warehouse-10.md ## /sql/samples/wide-world-importers-dw-database-catalog
         items:
         - name: Database catalog
           href: ../samples/wide-world-importers-dw-database-catalog.md
@@ -11417,20 +11404,6 @@
       href: ../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md
     - name: Extended Properties - sys.extended_properties
       href: ../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md
-    - name: Change tracking
-      items:
-      - name: sys.change_tracking_databases
-        href: ../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md
-      - name: sys.change_tracking_tables
-        href: ../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md
-    - name: Database Mirroring
-      items:
-      - name: Database Mirroring Witness - sys.database_mirroring_witnesses
-        href: ../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md
-    - name: Data-tier Applications
-      items:
-      - name: Data-tier Application Views - dbo.sysdac_instance
-        href: ../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md
     - name: Availability groups
       href: ../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md
       items:
@@ -11475,6 +11448,12 @@
         href: ../relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md
       - name: sys.server_resource_stats
         href: ../relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md
+    - name: Change tracking
+      items:
+      - name: sys.change_tracking_databases
+        href: ../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md
+      - name: sys.change_tracking_tables
+        href: ../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md
     - name: CLR Assembly
       href: ../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md
       items:
@@ -11486,6 +11465,10 @@
         href: ../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md
       - name: sys.trusted_assemblies (T-SQL)
         href: ../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md
+    - name: Data-tier Applications
+      items:
+      - name: Data-tier Application Views - dbo.sysdac_instance
+        href: ../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md
     - name: Data Collector
       href: ../relational-databases/system-catalog-views/data-collector-views-transact-sql.md
       items:
@@ -11529,6 +11512,10 @@
         href: ../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md
       - name: sysmail_unsentitems
         href: ../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md
+    - name: Database Mirroring
+      items:
+      - name: Database Mirroring Witness - sys.database_mirroring_witnesses
+        href: ../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md
     - name: Databases & Files
       href: ../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md
       items:
@@ -12825,18 +12812,20 @@
         href: ../relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql.md
       - name: managed_backup.fn_backup_instance_config
         href: ../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md
-    - name: sys.fn_get_sql
-      href: ../relational-databases/system-functions/sys-fn-get-sql-transact-sql.md
-    - name: sys.fn_MSxe_read_event_stream
-      href: ../relational-databases/system-functions/sys-fn-msxe-read-event-stream-transact-sql.md
-    - name: sys.fn_stmt_sql_handle_from_sql_stmt
-      href: ../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md
-    - name: sys.fn_validate_plan_guide
-      href: ../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md
-    - name: sys.fn_xe_file_target_read_file
-      href: ../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md
-    - name: sys.fn_db_backup_file_snapshots
-      href: ../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md
+    - name: Queries & Extended events
+      items:      
+      - name: sys.fn_get_sql
+        href: ../relational-databases/system-functions/sys-fn-get-sql-transact-sql.md
+      - name: sys.fn_MSxe_read_event_stream
+        href: ../relational-databases/system-functions/sys-fn-msxe-read-event-stream-transact-sql.md
+      - name: sys.fn_stmt_sql_handle_from_sql_stmt
+        href: ../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md
+      - name: sys.fn_validate_plan_guide
+        href: ../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md
+      - name: sys.fn_xe_file_target_read_file
+        href: ../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md
+      - name: sys.fn_db_backup_file_snapshots
+        href: ../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md
     - name: Full-Text Search & Semantic Search
       href: ../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md
       items:

@@ -51,6 +51,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 |:---|:---|
 | PolyBase on Linux | Install PolyBase on Linux for non-Hadoop connectors. |
 | New Java language SDK for SQL Server | Simplifies development of Java programs that can be run from SQL Server. |
+|New spatial reference identifiers (SRIDs). |[`sys.spatial_reference_systems`](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) supports Australian GDA2020 datum according to their ESPG definitions:<br/> 7843 - geographic 2D<br/> 7844 - geographic 3D |
 | &nbsp; | &nbsp; |
 
 ## CTP 2.4 March 2019

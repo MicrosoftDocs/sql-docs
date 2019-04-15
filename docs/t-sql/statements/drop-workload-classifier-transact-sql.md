@@ -24,6 +24,9 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # DROP WORKLOAD CLASSIFIER (Transact-SQL) (Preview)
 
+> [!Note]
+> Workload classification is available for preview on SQL Data Warehouse Gen2. Workload Management Classification and Importance preview is for builds with a release date of April 9th, 2019 or later.  Users should avoid using builds earlier than this date for workload management testing.  To determine if your build is workload management capable, run select @@version when connected to your SQL Data Warehouse instance.
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Drops an existing user-defined Workload Management Classifier.  

@@ -50,6 +50,7 @@ Build: &nbsp; 15.0.4384.2
 | Fix deployment ordering of auto close alter statements to occur before create filegroup statements. | &nbsp; |
 | Fix ScriptDom parsing regression where the 'URL' string was interpreted as a top level token. | &nbsp; |
 | Fix a null reference exception when parsing an alter table add index statement. | &nbsp; |
+| Fixed schema compare for nullable persisted computed columns always showing as different.| &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## 18.1 sqlpackage
@@ -77,7 +78,6 @@ Preview release.
 | Fixed the schema drift detection logic to ignore certain extended event (xevent) sessions. | &nbsp; |
 | Fixed import ordering for graph tables. | &nbsp; |
 | Fixed exporting external tables with object permissions. | &nbsp; |
-| Fixed schema compare for nullable persisted computed columns always showing as different.| &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### Known issues

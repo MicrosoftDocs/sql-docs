@@ -29,6 +29,7 @@ This article describes limitations and known issues for the [!INCLUDE[SQL Server
 - [Run on SQL Server 2019 on Docker](../linux/quickstart-install-connect-docker.md).
 
 ## CTP 2.5
+
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.5 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.5 is available only as Evaluation Edition. No other editions are available. Support for CTP releases is described in `license_Eval.rtf` with your installation media.
@@ -108,6 +109,16 @@ Limited support may be found at one of the following locations:
 - **Issue and customer impact**: The system table-valued function [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) returns random values in the `dependency` column.
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.4, CTP 2.3.
+
+### SQL Server Integration Services (SSIS)
+
+- **Issue / customer impact**: The `SQL Server Destination` in an SSIS Package reports the following error when connecting to a database on [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.5.
+
+  `SSIS Error Code DTS_E_OLEDBERROR.  An OLE DB error has occurred. Error code: 0x80040E14. An OLE DB record is available.  Source: "Microsoft OLE DB Driver for SQL Server"  Hresult: 0x80040E14  Description: "Cannot fetch a row from OLE DB provider "BULK" for linked server "(null)"."`
+
+  `An OLE DB record is available.  Source: "Microsoft OLE DB Driver for SQL Server"  Hresult: 0x80040E14  Description: "The OLE DB provider "BULK" for linked server "(null)" reported an error. The provider did not give any information about the error."`
+
+- **Applies To**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.5.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

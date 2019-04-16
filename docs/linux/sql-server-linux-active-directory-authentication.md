@@ -310,11 +310,11 @@ systemctl restart mssql-server
 If your domain controller supports LDAPS, you can force all connections from SQL Server to the domain controllers to be over LDAPS. To check your client can contact the domain controller over ldaps, run the following bash command, `ldapsearch -H ldaps://contoso.com:3269`. To set SQL Server to only use LDAPS, run the following:
 
 ```bash
-sudo mssql-conf set network.forceldaps true
+sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-This will use LDAPS over SSSD if AD domain join on host was done via SSSD package and **disablesssd** is not set to true. If **disablesssd** is set to true along with **forceldaps** being set to true, then it will use LDAPS protocol over openldap library calls made by SQL Server.
+This will use LDAPS over SSSD if AD domain join on host was done via SSSD package and **disablesssd** is not set to true. If **disablesssd** is set to true along with **forcesecureldap** being set to true, then it will use LDAPS protocol over openldap library calls made by SQL Server.
 
 ### Post SQL Server 2017 CU14
 

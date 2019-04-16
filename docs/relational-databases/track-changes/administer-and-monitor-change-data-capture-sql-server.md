@@ -170,6 +170,11 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
   
 4. In the data warehouse you configured in step 1, locate the table custom_snapshots.cdc_log_scan_data. This table provides a historical snapshot of data from log scan sessions. This data can be used to analyze latency, throughput, and other performance measures over time.  
   
+## <a name="ScriptUpgrade"></a> Script upgrade mode
+
+When your apply cumulatives updates or service packs to a instance, at restart, the instance can enter in Script Upgrade mode. In this mode, the process wil run a step to analyze and upgrade CDC internals tables. This upgrade can cause recreating of objects like indexes on capture tables. If you have data on these tables, depending on amount of data, it can spend lot of minutes in script ugprade mode. Note that, due to modifications, you can note high transaction log usage for enabled CDC databases!
+
+
 ## See Also
 
 - [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)

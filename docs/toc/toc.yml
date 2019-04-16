@@ -69,6 +69,8 @@
       items:
       - name: Deployment guidance
         href: ../big-data-cluster/deployment-guidance.md
+      - name: Upgrade
+        href: ../big-data-cluster/deployment-upgrade.md
       - name: Azure Kubernetes Service
         href: ../big-data-cluster/deploy-on-aks.md
       - name: Kubeadm

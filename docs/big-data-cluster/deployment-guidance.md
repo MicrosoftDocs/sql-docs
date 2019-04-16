@@ -1,11 +1,11 @@
 ---
-title: How to deploy
+title: Deployment guidance
 titleSuffix: SQL Server big data clusters
 description: Learn how to deploy SQL Server 2019 big data clusters (preview) on Kubernetes.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -63,7 +63,7 @@ Run the **kubectl** command to view the cluster configuration. Ensure that kubec
 kubectl config view
 ```
 
-After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see the [upgrade section](#upgrade) of this article.
+After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see [How to upgrade SQL Server big data clusters](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Default deployments
 
@@ -182,7 +182,7 @@ After 15 to 30 minutes, you should be notified that the controller pod is runnin
 ```
 
 > [!IMPORTANT]
-> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see the [troubleshooting](#troubleshoot) section of this article to learn how to monitor and inspect the deployment.
+> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
 When the deployment finishes, the output notifies you of success:
 
@@ -249,124 +249,6 @@ kubectl get svc -n <your-cluster-name>
 ## <a id="connect"></a> Connect to the cluster
 
 For more information on how to connect to the big data cluster, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
-
-## <a id="upgrade"></a> Upgrade guidance
-
-Currently, the only way to upgrade a big data cluster to a new release is to manually remove and recreate the cluster. Each release has a unique version of **mssqlctl** that is not compatible with the previous version. Also, if an older cluster had to download an image on a new node, the latest image might not be compatible with the older images on the cluster. To upgrade to the latest release, use the following steps:
-
-1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy out the data with **curl**](data-ingestion-curl.md).
-
-1. Delete the old cluster with the `mssqlctl delete cluster` command.
-
-   ```bash
-    mssqlctl cluster delete --name <old-cluster-name>
-   ```
-
-   > [!Important]
-   > Use the version of **mssqlctl** that matches your cluster. Do not delete an older cluster with the newer version of **mssqlctl**.
-
-1. If you have any previous releases of **mssqlctl** installed, it is important to uninstall **mssqlctl** first before installing the latest version.
-
-   If you are uninstalling **mssqlctl** corresponding to CTP version 2.2 or lower run:
-
-   ```powershell
-   pip3 uninstall mssqlctl
-   ```
-
-   For CTP 2.3 or higher, run the following command. Replace `ctp-2.4` in the command with the version of **mssqlctl** that you are uninstalling:
-
-   ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
-   ```
-
-1. Install the latest version of **mssqlctl**. 
-
-   **Windows:**
-
-   ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
-   ```
-
-   **Linux:**
-
-   ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
-   ```
-
-   > [!IMPORTANT]
-   > For each release, the path to **mssqlctl** changes. Even if you previously installed **mssqlctl**, you must reinstall from the latest path before creating the new cluster.
-
-1. Install the latest release using the instructions in the [Deploy section](#deploy) of this article. 
-
-## <a id="troubleshoot"></a> Monitor and troubleshoot
-
-To monitor or troubleshoot a deployment, use **kubectl** to inspect the status of the cluster and to detect potential problems. At any time during a deployment, you can open a different command window to run the following tests.
-
-1. Inspect the status of the pods in your cluster.
-
-   ```cmd
-   kubectl get pods -n <your-cluster-name>
-   ```
-
-   During deployment, pods with a **STATUS** of **ContainerCreating** are still coming up. If the deployment hangs for any reason, this can give you an idea where the problem might be. Also look at the **READY** column. This tells you how many containers have started in the pod. Note that deployments can take 30 minutes or more depending on your configuration and network. Much of this time is spent downloading the container images for different components. The following table shows example edited output of two containers during a deployment:
-
-   ```cmd
-   PS C:\> kubectl get pods -n mssql-cluster
-   NAME              READY   STATUS    RESTARTS   AGE
-   appproxy-f2qqt    2/2     Running   0          110m
-   compute-0-0       3/3     Running   0          110m
-   control-zlncl     4/4     Running   0          118m
-   data-0-0          3/3     Running   0          110m
-   data-0-1          3/3     Running   0          110m
-   gateway-0         2/2     Running   0          109m
-   logsdb-0          1/1     Running   0          112m
-   logsui-jtdnv      1/1     Running   0          112m
-   master-0          7/7     Running   0          110m
-   metricsdb-0       1/1     Running   0          112m
-   metricsdc-shv2f   1/1     Running   0          112m
-   metricsui-9bcj7   1/1     Running   0          112m
-   mgmtproxy-x6gcs   2/2     Running   0          112m
-   nmnode-0-0        1/1     Running   0          110m
-   storage-0-0       7/7     Running   0          110m
-   storage-0-1       7/7     Running   0          110m
-   ```
-
-1. Describe an individual pod for more details. The following command inspects the `master-0` pod.
-
-   ```cmd
-   kubectl describe pod master-0 -n mssql-cluster
-   ```
-
-   This outputs detailed information about the pod, including recent events. If an error has occurred, you can sometimes find the error here.
-
-1. Retrieve the logs for containers running in a pod. The following command retrieves the logs for all containers running in the pod named `master-0` and outputs them to a file name `pod-logs.txt`:
-
-   ```cmd
-   kubectl logs master-0 --all-containers=true -n mssql-cluser > pod-logs.txt
-   ```
-
-1. Review the cluster services during and after a deployment with the following command:
-
-   ```cmd
-   kubectl get svc -n mssql-cluster
-   ```
-
-   These services support internal and external connections to the big data cluster. For external connections, the following services are used:
-
-   | Service | Description |
-   |---|---|
-   | **master-svc-external** | Provides access to the master instance.<br/>(**EXTERNAL-IP,31433** and the **SA** user) |
-   | **controller-svc-external** | Supports tools and clients that manage the cluster. |
-   | **mgmtproxy-svc-external** | Provides access to the [Cluster Administration Portal](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal) |
-   | **gateway-svc-external** | Provides access to the HDFS/Spark gateway.<br/>(**EXTERNAL-IP** and the **root** user) |
-   | **appproxy-svc-external** | Support application deployment scenarios. |
-
-   > [!TIP]
-   > This is a way of viewing the services with **kubectl**; it is also possible to use `mssqlctl cluster endpoints list` command to view these endpoints. For more information, see [Get big data cluster endpoints](#endpoints).
-
-1. Use the [Cluster Administration Portal](cluster-admin-portal.md) to monitor the deployment on the **Deployment** tab. You have to wait for the **mgmtproxy-svc-external** service to start before accessing this portal, so it won't be available at the beginning of a deployment. 
-
-For more information about troubleshooting the cluster, see [Kubectl commands for monitoring and troubleshooting SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
 ## Next steps
 

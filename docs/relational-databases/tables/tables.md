@@ -36,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### Temporary Tables  
  Temporary tables are stored in **tempdb**. There are two types of temporary tables: local and global. They differ from each other in their names, their visibility, and their availability. Local temporary tables have a single number sign (#) as the first character of their names; they are visible only to the current connection for the user, and they are deleted when the user disconnects from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Global temporary tables have two number signs (##) as the first characters of their names; they are visible to any user after they are created, and they are deleted when all users referencing the table disconnect from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## System Tables  
+### System Tables  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the data that defines the configuration of the server and all its tables in a special set of tables known as system tables. Users cannot directly query or update the system tables. The information in the system tables is made available through the system views. For more information, see [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
 ### Wide Tables  

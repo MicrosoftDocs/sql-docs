@@ -22,7 +22,7 @@ This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. F
 
 ### Compliance
 
-April 15, 2019
+April 16, 2019
 
 | Compliance change | Details |
 | :---------------- | :------ |
@@ -34,7 +34,7 @@ April 15, 2019
 > [!NOTE]
 > An issue with SQL statement parsing was found in the JDBC 7.2 Release To Web (RTW) driver released on January 31, 2019. The change was rolled back, and new jars (version 7.2.1) were released on February 11, 2019.
 >
-> Another update was made on the driver to fix issues with ActivityIDs not getting cleaned up properly. The new jars (version 7.2.2) were released on April 15, 2019.
+> Another update was made on the driver to fix issues with ActivityIDs not getting cleaned up properly. The new jars (version 7.2.2) were released on April 16, 2019.
 > 
 > We recommend updating your projects to use the 7.2.2 release jars. For more information, view release notes for [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) and [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 

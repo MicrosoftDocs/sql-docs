@@ -1,7 +1,7 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server Support Matrix | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/06/2019"
+ms.date: "04/16/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

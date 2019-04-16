@@ -1,7 +1,7 @@
 ---
 title: "Using the JDBC Driver | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/06/2019"
+ms.date: "04/16/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

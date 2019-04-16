@@ -46,7 +46,7 @@ Limited support may be found at one of the following locations:
 
 ### Documentation (CTP 2.5)
 
-- **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies To**.
+- **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies to**.
 
 - **Issue and customer impact**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] documentation can be filtered by version. Use the control at the top left of each documentation page to filter for your requirements.
 
@@ -118,7 +118,13 @@ Limited support may be found at one of the following locations:
 
   `An OLE DB record is available.  Source: "Microsoft OLE DB Driver for SQL Server"  Hresult: 0x80040E14  Description: "The OLE DB provider "BULK" for linked server "(null)" reported an error. The provider did not give any information about the error."`
 
-- **Applies To**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.5.
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.5.
+
+### Hive MetaStore Thrift API over HTTP allows clients to call all get methods
+
+- **Issue / customer impact**: Hive MetaStore Thrift API over HTTP allows clients to call all get methods, but many methods do not apply to Hive MetaStore.
+
+- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.5.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

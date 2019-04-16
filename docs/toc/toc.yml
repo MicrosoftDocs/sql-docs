@@ -71,6 +71,8 @@
         href: ../big-data-cluster/deployment-guidance.md
       - name: Upgrade
         href: ../big-data-cluster/deployment-upgrade.md
+      - name: Customize with patch files
+        href: ../big-data-cluster/deployment-json-patch-files.md
       - name: Azure Kubernetes Service
         href: ../big-data-cluster/deploy-on-aks.md
       - name: Kubeadm

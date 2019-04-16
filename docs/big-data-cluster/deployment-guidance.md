@@ -65,81 +65,64 @@ kubectl config view
 
 After you have configured your Kubernetes cluster, you can proceed with the deployment of a new SQL Server big data cluster. If you are upgrading from a previous release, please see [How to upgrade SQL Server big data clusters](deployment-upgrade.md).
 
-## <a id="deploy"></a> Default deployments
+## <a id="deploy"></a> Deployment overview
 
-Use the following steps to deploy a big data cluster with default configuration settings. If you would rather customize your deployment, see the sections on [customized deployments](#configfile) and [unattended deployments](#unattended) in this article.
+Starting in CTP 2.5, most big data cluster settings are defined in a JSON deployment configuration file. You can use a default deployment profile for AKS, kubeadm, or minikube. Or you can customize your own deployment configuration file to use during setup. For security reasons, authentication settings are passed with environment variables.
 
-1. From the command line, start the deployment with `mssqlctl cluster create`.
+The following sections provide more details on how to configure your big data cluster deployments as well as examples of common customizations.
+
+## <a id="configfile"></a> Configuration files
+
+Big data cluster deployment options are defined in JSON configuration files. There are three standard deployment profiles with default settings for dev/test environments:
+
+| Deployment profile | Kubernetes environment |
+|---|---|
+| **aks-dev-test.json** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-test.json** | Multiple machines (kubeadm) |
+| **minikube-dev-test.json** | minikube |
+
+You can deploy a big data cluster using the default values in one of these deployment profiles. For example, the following command deploys a big data cluster to AKS:
+
+```bash
+mssqlctl cluster create --configfile aks-dev-test.json
+```
+
+> [!TIP]
+> In this example, you are prompted for any settings that are not defined in the configuration file. Note that the Docker information is provided to you by Microsoft as part of the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup).
+
+### Custom deployment configuration files
+
+It is also possible to customize your own deployment configuration file. You can do this with the following steps:
+
+1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  `mssqlctl cluster config list` command to list them:
 
    ```bash
-   mssqlctl cluster create
+   mssqlctl cluster config list
    ```
 
-1. After accepting the licensing terms, enter the configuration that corresponds to your Kubernetes environment:
+1. To customize your deployment, create a copy of the deployment profile with the `mssqlctl cluster config init` command. For example, the following command creates a copy of the **aks-dev-test.json** deployment configuration file in the current directory:
 
-   | Configuration | Description |
-   |---|---|
-   | **1. aks-dev-test.json** | Azure Kubernetes Service (AKS) |
-   | **2. kubeadm-dev-test.json** | Multiple machines (kubeadm) |
-   | **3. minikube-dev-test.json** | minikube |
+   ```bash
+   mssqlctl cluster config init --src aks-dev-test.json --target aks-customized.json
+   ```
 
-   These configuration files contain default values that are appropriate for most dev-test scenarios. If you want more control over the deployment, see the [customized deployments](#configfile) section.
+1. To customize settings in your deployment configuration file, it is best to use the `mssqlctl cluster config section set` command rather than manually editing the file. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:
 
-1. Follow the prompts to enter credentials for the cluster.
+   ```bash
+   mssqlctl cluster config section set --config-file aks-customized.json --json-values "metadata.name=test-cluster"
+   ```
 
-   > [!NOTE]
-   > The Docker information is provided to you by Microsoft as part of the SQL Server 2019 Early Adoption Program. To request access, register [here](https://aka.ms/eapsignup), and specify your interest to try SQL Server big data clusters. Microsoft will triage all requests and respond as soon as possible.
+   In addition to passing key-value pairs, you can also provide inline JSON values. See the [examples section](#examples). You can also use the `--patch-file` parameter to provide path to a JSON patch file. For more inforamtion, see [Customize a big data cluster deployment with a JSON patch file](deployment-json-patch-files.md).
 
-After the deployment starts successfully, proceed to [monitoring your deployment](#monitor).
+1. Then pass the custom configuration file to `mssqlctl cluster create`:
 
-## <a id="configfile"></a> Customized deployments
+   ```bash
+   mssqlctl cluster create --configfile aks-customized.json
+   ```
 
-Starting with CTP 2.5, most deployment settings are now configured in a JSON deployment configuration file. There are default deployment profiles for AKS, kubeadm, and minikube.
+## <a id="env"></a> Environment variables
 
-### List default deployment profiles
-
-First, find the name of one of these standard deployment profiles using the `mssqlctl cluster config list` command:
-
-```bash
-mssqlctl cluster config list
-```
-
-This command returns configuration files such as the following:
-- **aks-dev-test.json**
-- **kubeadm-dev-test.json**
-- **minikube-dev-test.json**
-
-### Create a copy of a deployment profile
-
-To customize your deployment, start with one of these default configurations that match your Kubernetes environment. Create a copy of the deployment profile with the `mssqlctl cluster config init` command. For example, the following command creates a copy of the **aks-dev-test.json** deployment configuration file in the current directory:
-
-```bash
-mssqlctl cluster config init --type aks-dev-test.json --name aks-customized.json
-```
-
-### Customize settings
-
-To customize settings in your deployment configuration file, it is best to use the `mssqlctl cluster config section set` command rather than manually editing the file. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:
-
-```bash
-mssqlctl cluster config section set --config-file aks-customized.json --json-values "metadata.name=test-cluster"
-```
-
-In addition to passing key-value pairs, you can also provide inline JSON values or a path to a JSON file with the values. You can also use the `--patch-file` parameter to provide path to a JSON patch file. For more information, see [JSON Patches in Python](https://github.com/stefankoegl/python-json-patch) and the [JSONPath Online Evaluator](https://jsonpath.com/).
-
-### Deploy big data cluster
-
-To deploy the big data cluster, pass the deployment configuration file to the `mssqlctl cluster create` command. This initializes the Kubernetes namespace and deploys all the application pods into the namespace.
-
-```bash
-mssqlctl cluster create --configfile <deployment-profile.json> --accept-eula yes
-```
-
-During the deployment, you are prompted for any settings that were not in the deployment profile for security reasons. After the deployment starts successfully, proceed to [monitoring your deployment](#monitor).
-
-## <a id="unattended"></a> Unattended deployments
-
-A big data cluster typically involves several prompts for more information. For an unattended installation, you can pass a configuration file and use the following environment variables:
+The following environment variables are used for security settings that are not stored in a deployment configuration file.
 
 | Environment variable | Description |
 |---|---|---|---|
@@ -153,17 +136,46 @@ A big data cluster typically involves several prompts for more information. For 
 | **KNOX_PASSWORD** | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | The password of SA user for SQL master instance. |
 
+These environment variables can be set prior to calling `mssqlctl cluster create` or by using the `--envvar` parameter. If any variable is not set, you are prompted for it.
+
+The following example shows how to pass the environment variables on the command-line for Linux (bash) and Windows (PowerShell):
+
+```bash
+mssqlctl cluster create --config-file aks-dev-test.json \
+   --accept-eula yes --env-var \
+   CONTROLLER_USERNAME=admin,\
+   CONTROLLER_PASSWORD=<password>,\
+   DOCKER_REGISTRY=<docker-registry>,\
+   DOCKER_REPOSITORY=<docker-repository>,\
+   MSSQL_SA_PASSWORD=<password>,\
+   KNOX_PASSWORD=<password>,\
+   DOCKER_USERNAME=<docker-username>,\
+   DOCKER_PASSWORD=<docker-password>,\
+   DOCKER_IMAGE_TAG=latest
+```
+
+```PowerShell
+mssqlctl cluster create --config-file aks-dev-test.json `
+   --accept-eula yes --env-var `
+   CONTROLLER_USERNAME=admin,`
+   CONTROLLER_PASSWORD=<password>,`
+   DOCKER_REGISTRY=<docker-registry>,`
+   DOCKER_REPOSITORY=<docker-repository>,`
+   MSSQL_SA_PASSWORD=<password>,`
+   KNOX_PASSWORD=<password>,`
+   DOCKER_USERNAME=<docker-username>,`
+   DOCKER_PASSWORD=<docker-password>,`
+   DOCKER_IMAGE_TAG=latest
+```
+
 > [!IMPORTANT]
 >- For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
 >- Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
->- The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
 >- The **SA** account is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
 
-To perform an unattended installation, provide a deployment configuration file (default or custom) and specify the environment variable with the `--env-var` parameter. The following `mssqlctl cluster create` command uses the default **aks-dev-test.json** configuration and shows the format for specifying the environment variables:
+## <a id="unattended"></a> Unattended install
 
-```bash
-mssqlctl cluster create --config-file aks-dev-test.json --accept-eula yes --env-var CONTROLLER_USERNAME=admin,CONTROLLER_PASSWORD=<password>,DOCKER_REGISTRY=<docker-registry>,DOCKER_REPOSITORY=<docker-repository>,MSSQL_SA_PASSWORD=<password>,KNOX_PASSWORD=<password>,DOCKER_USERNAME=<docker-username>,DOCKER_PASSWORD=<docker-password>,DOCKER_IMAGE_TAG=latest
-```
+For an unattended deployment, you must set all required environment variables, use a configuration file, and call `mssqlctl cluster create`  with the `--accept-eula yes`. The examples in the previous section demonstrate how to do this.
 
 ## <a id="monitor"></a> Monitor the deployment
 
@@ -249,6 +261,21 @@ kubectl get svc -n <your-cluster-name>
 ## <a id="connect"></a> Connect to the cluster
 
 For more information on how to connect to the big data cluster, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
+
+## <a id="examples"></a> Deployment examples
+
+The following sections provide examples for how to customize a big data cluster deployment.
+
+### Deploy with default settings
+
+### Change cluster name
+
+> [!IMPORTANT]
+> The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
+
+### Configure pool replicas
+
+### Configure storage
 
 ## Next steps
 

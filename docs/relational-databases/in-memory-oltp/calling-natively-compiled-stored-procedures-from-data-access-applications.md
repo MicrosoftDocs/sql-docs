@@ -179,9 +179,9 @@ GO
 The following is the C code listing.
 
 ```cpp
-// compile with: user32.lib odbc32.lib  
+// compile with: user32.lib odbc32.lib
 #pragma once  
-#define WIN32_LEAN_AND_MEAN   // Exclude rarely-used stuff from Windows headers  
+#define WIN32_LEAN_AND_MEAN  // Exclude rarely-used stuff from Windows headers.
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <tchar.h>  
@@ -190,7 +190,7 @@ The following is the C code listing.
 #include "sqlext.h"  
 #include "sqlncli.h"  
   
-// cardinality of order item related array variables  
+// cardinality of order item related array variables
 #define ITEM_ARRAY_SIZE 20  
   
 // struct to pass order entry data  
@@ -214,24 +214,24 @@ void ODBCError(
    SQLTCHAR szSqlState[6] = {0};  
    SQLINTEGER fNativeError = 0;  
    SQLTCHAR szErrorMsg[256] = {0};  
-   SQLSMALLINT cbErrorMsgMax = sizeof(szErrorMsg) - 1;  
+   SQLSMALLINT cbErrorMsgMax = sizeof(szErrorMsg) - 1;
    SQLSMALLINT cbErrorMsg = 0;  
    TCHAR text[1024] = {0}, title[256] = {0};  
   
    if (hdesc != NULL)  
       r = SQLGetDiagRec(SQL_HANDLE_DESC, hdesc, 1, szSqlState,
-              &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);  
+              &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);
    else {  
       if (hstmt != NULL)  
          r = SQLGetDiagRec(SQL_HANDLE_STMT, hstmt, 1, szSqlState,
-                 &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);  
+                 &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);
       else {  
          if (hdbc != NULL)  
             r = SQLGetDiagRec(SQL_HANDLE_DBC, hdbc, 1, szSqlState,
-                    &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);  
+                    &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);
          else  
             r = SQLGetDiagRec(SQL_HANDLE_ENV, henv, 1, szSqlState,
-                    &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);  
+                    &fNativeError, szErrorMsg, cbErrorMsgMax, &cbErrorMsg);
       }  
    }  
   
@@ -241,7 +241,7 @@ void ODBCError(
       _sntprintf_s(text, _countof(text), _TRUNCATE, _T("[%s] - %s"),
                       szSqlState, szErrorMsg);  
   
-      MessageBox(NULL, (LPCTSTR) text, (LPCTSTR) _T("ODBC Error"), MB_OK);  
+      MessageBox(NULL, (LPCTSTR) text, (LPCTSTR) _T("ODBC Error"), MB_OK);
    }  
 }  
   
@@ -251,7 +251,7 @@ void connect() {
    r = SQLAllocHandle(SQL_HANDLE_ENV, NULL, &henv);  
   
    // This is an ODBC v3 application  
-   r = SQLSetEnvAttr(henv, SQL_ATTR_ODBC_VERSION, (SQLPOINTER) SQL_OV_ODBC3, 0);  
+   r = SQLSetEnvAttr(henv, SQL_ATTR_ODBC_VERSION, (SQLPOINTER) SQL_OV_ODBC3, 0);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, NULL, NULL, NULL, true);  
       exit(-1);  
@@ -260,7 +260,8 @@ void connect() {
    r = SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc);  
   
    // Run in ANSI/implicit transaction mode  
-   r = SQLSetConnectAttr(hdbc, SQL_ATTR_AUTOCOMMIT, (SQLPOINTER) SQL_AUTOCOMMIT_OFF, SQL_IS_INTEGER);  
+   r = SQLSetConnectAttr(hdbc, SQL_ATTR_AUTOCOMMIT,
+                          (SQLPOINTER) SQL_AUTOCOMMIT_OFF, SQL_IS_INTEGER);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, NULL, NULL, NULL, true);  
       exit(-1);  
@@ -268,7 +269,8 @@ void connect() {
   
    TCHAR szConnStrIn[256] = _T("DSN=PrepExecSample");  
   
-   r = SQLDriverConnect(hdbc, NULL, (SQLTCHAR *) szConnStrIn, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);  
+   r = SQLDriverConnect(hdbc, NULL, (SQLTCHAR *) szConnStrIn, SQL_NTS,
+                          NULL, 0, NULL, SQL_DRIVER_NOPROMPT);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, NULL, NULL, true);  
       exit(-1);  
@@ -293,21 +295,23 @@ void OrdEntry(OrdEntryData& order) {
   
    // Bind parameters for the Order  
    // 1 - OrdNo input  
-   r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 0, 0, &order.OrdNo, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER,
+                          0, 0, &order.OrdNo, sizeof(SQLINTEGER), NULL);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // 2 - Custcode input  
-   r = SQLBindParameter(hstmt, 2, SQL_PARAM_INPUT,SQL_C_TCHAR, SQL_VARCHAR, 5, 0, &order.CustCode, sizeof(order.CustCode), NULL);  
+   r = SQLBindParameter(hstmt, 2, SQL_PARAM_INPUT,SQL_C_TCHAR, SQL_VARCHAR, 5, 0,
+                          &order.CustCode, sizeof(order.CustCode), NULL);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // Insert the order  
-   r = SQLExecDirect(hstmt, (SQLTCHAR *) _T("{call OrderInsert(?, ?)}"),SQL_NTS);  
+   r = SQLExecDirect(hstmt, (SQLTCHAR *) _T("{call OrderInsert(?, ?)}"),SQL_NTS);
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
@@ -328,35 +332,39 @@ void OrdEntry(OrdEntryData& order) {
   
    // Bind parameters for the Items  
    // 1 - OrdNo   
-   r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0, &order.OrdNo, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,
+                          &order.OrdNo, sizeof(SQLINTEGER), NULL);  
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // 2 - ItemNo   
-   r = SQLBindParameter(hstmt, 2, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0, &ItemNo, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 2, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,
+                          &ItemNo, sizeof(SQLINTEGER), NULL);  
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // 3 - ProdCode  
-   r = SQLBindParameter(hstmt, 3, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0, &ProdCode, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 3, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,
+                          &ProdCode, sizeof(SQLINTEGER), NULL);  
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // 4 - Qty  
-   r = SQLBindParameter(hstmt, 4, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0, &Qty, sizeof(SQLINTEGER), NULL);  
+   r = SQLBindParameter(hstmt, 4, SQL_PARAM_INPUT, SQL_C_LONG, SQL_INTEGER, 10, 0,
+                          &Qty, sizeof(SQLINTEGER), NULL);  
    if (r != SQL_SUCCESS && r != SQL_SUCCESS_WITH_INFO) {  
       ODBCError(henv, hdbc, hstmt, NULL, true);   
       exit(-1);  
    }  
   
    // Prepare to insert items one at a time  
-   r = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);  
+   r = SQLPrepare(hstmt, (SQLTCHAR *) _T("{call ItemInsert(?, ?, ?, ?)}"),SQL_NTS);
   
    for (unsigned int i = 0; i < order.ItemCount; i++) {  
   ItemNo = order.ItemNo[i];  
@@ -395,7 +403,7 @@ void testOrderEntry() {
    OrdEntryData order;  
   
    order.OrdNo = 1;  
-   _tcscpy_s((TCHAR *) order.CustCode, _countof(order.CustCode), _T("CUST1"));  
+   _tcscpy_s((TCHAR *) order.CustCode, _countof(order.CustCode), _T("CUST1"));
    order.ItemNo[0] = 1;  
    order.ProdCode[0] = 10;  
    order.Qty[0] = 1;  

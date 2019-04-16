@@ -16,41 +16,40 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">=sql-server-2017||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Returns the string provided as a first argument after some characters specified in the second argument are translated into a destination set of characters specified in the third argument.
 
 ## Syntax
 
-```
-TRANSLATE ( inputString, characters, translations) 
+```sql
+TRANSLATE ( inputString, characters, translations)
 ```
 
-## Arguments   
+## Arguments
 
- *inputString*   
+ *inputString*
  Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be searched. *inputString* can be any character data type (nvarchar, varchar, nchar, char).
 
- *characters*   
+ *characters*
  Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing characters that should be replaced. *characters* can be any character data type.
 
-*translations*   
+*translations*
  Is a string [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the replacement characters. *translations* must be the same data type and length as *characters*.
 
 ## Return Types
 
 Returns a character expression of the same data type as `inputString` where characters from the second argument are replaced with the matching characters from third argument.
 
-## Remarks   
+## Remarks
 
 `TRANSLATE` will return an error if *characters* and *translations* expressions have different lengths. `TRANSLATE` will return NULL if any of the arguments are NULL.  
 
 The behavior of the `TRANSLATE` function is similar to using multiple [REPLACE](../../t-sql/functions/replace-transact-sql.md) functions. `TRANSLATE` does not, however, replace a character more than once. This is dissimilar to multiple `REPLACE` functions, as each use would replace all relevant characters. 
-
 
 `TRANSLATE` is always SC collation aware.
 
@@ -99,7 +98,7 @@ REPLACE
 );
 ```
 
-###  B. Convert GeoJSON points into WKT
+### B. Convert GeoJSON points into WKT
 
 GeoJSON is a format for encoding a variety of geographic data structures. With the `TRANSLATE` function, developers can easily convert GeoJSON points to WKT format and vice versa. The following query replaces square and curly braces in input  with regular braces:
 
@@ -108,7 +107,7 @@ SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```
 
-[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
 |Point  |Coordinates |  
 |---------|--------- |

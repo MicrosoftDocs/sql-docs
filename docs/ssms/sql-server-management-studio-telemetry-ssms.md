@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Management Studio - Telemetry (SSMS) | Microsoft Docs"
+title: "SQL Server Management Studio - Usage and Diagnostic Data (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/20/2017"
+ms.date: "04/16/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -16,18 +16,19 @@ manager: craigg
 # Local audit for SSMS usage and diagnostic data collection
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SSMS may collect standard computer information and information about use and performance that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. We do not collect your name, address or other contact information. For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](https://go.microsoft.com/fwlink/?LinkID=868444).
+SQL Server Management Studio (SSMS) contains Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SSMS may collect standard computer information and information about use and performance that may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of SSMS. We do not collect your name, address, or other contact information. For details, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement), and [SQL Server Privacy supplement](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-## Audit feature usage data
+## Audit feature usage and diagnostic data
 
-To see feature usage data that is collected by SSMS, do the following:
+To see feature usage data that is collected by SSMS, perform the following steps:
+
 1.	Launch SSMS.
 2.	Click **View**, then click **Output** in the main menu to show the **Output** window. 
 3.	When the **Output** window is visible, choose **Telemetry** in the **Show output from:** menu.
 
 While you use SSMS to interact with your databases, the **Output** window shows the data that is collected.
 
-## Enable or disable usage feedback collection in SSMS
+## Enable or disable usage and diagnostic data collection in SSMS
 
 To opt in or out of usage data collection for SSMS:
 

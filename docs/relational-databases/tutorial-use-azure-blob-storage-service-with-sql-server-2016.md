@@ -99,20 +99,20 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
-    $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
+    $storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
 
     # Creates a new container in blob storage  
-    $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+    $container = New-AzStorageContainer -Context $storageContext -Name $containerName  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+    $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
 
     # Gets the Shared Access Signature for the policy  
-    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
+    $sas = New-AzStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
     # Sets the variables for the new container you just created
-    $container = Get-AzureStorageContainer -Context $storageContext -Name $containerName
+    $container = Get-AzStorageContainer -Context $storageContext -Name $containerName
     $cbc = $container.CloudBlobContainer 
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  

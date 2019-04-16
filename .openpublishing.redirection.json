@@ -2934,7 +2934,7 @@
         },
         {
             "source_path": "docs/analysis-services/tabular-models/tabular-model-data-access.md",
-            "redirect_url": "sql/analysis-services/tabular-models/tabular-models-ssas",
+            "redirect_url": "/sql/analysis-services/tabular-models/tabular-models-ssas",
             "redirect_document_id": true
         },
         {

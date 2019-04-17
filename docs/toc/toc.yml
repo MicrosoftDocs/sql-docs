@@ -10098,6 +10098,8 @@
       items:
       - name: Use SSMS to manage
         href: ../linux/sql-server-linux-manage-ssms.md
+      - name: Use Azure Data Studio to manage
+        href: ../azure-data-studio/quickstart-sql-server.md
       - name: Use PowerShell to manage
         href: ../linux/sql-server-linux-manage-powershell.md
       - name: Use log shipping

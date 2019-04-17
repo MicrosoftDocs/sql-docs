@@ -21,14 +21,16 @@ Modern processors have multiple to many cores per socket. Each socket is represe
 > Hot-add processors are not supported by soft-NUMA.
   
 ## Automatic Soft-NUMA
-
-Starting with SQL Server 2014 Service Pack 2, whenever the database engine server detects more than 8 physical processors at startup, soft-NUMA nodes are created automatically if trace flag 8079 is enabled as a startup parameter. Hyper-threaded processor cores are not accounted for when counting physical processors. When the number of physical processors detected is more than 8 per socket, the database engine service will create soft-NUMA nodes that ideally contain 8 cores, but can go down to 5 or up to 9 logical processors per node. The size of the hardware node can be limited by a CPU affinity mask. The number of NUMA nodes will never exceed the maximum number of supported NUMA nodes.
+Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2, whenever the database engine server detects more than 8 physical processors at startup, soft-NUMA nodes are created automatically if trace flag 8079 is enabled as a startup parameter. Hyper-threaded processor cores are not accounted for when counting physical processors. When the number of physical processors detected is more than 8 per socket, the database engine service will create soft-NUMA nodes that ideally contain 8 cores, but can go down to 5 or up to 9 logical processors per node. The size of the hardware node can be limited by a CPU affinity mask. The number of NUMA nodes will never exceed the maximum number of supported NUMA nodes.
 
 Without the trace flag, soft-NUMA is disabled by default. You can enable soft-NUMA using trace flag 8079. Changing the value of this setting requires a restart of the database engine to take effect.
 
 The figure below shows the type of information regarding soft-NUMA that you will see in the SQL Server error log when SQL Server detects hardware NUMA nodes with greater than 8 logical processors and if trace flag 8079 is enabled.
 
 ![Soft-NUMA](./media/soft-numa-sql-server/soft-numa.PNG)
+
+> [!NOTE]
+> Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] this behavior is controlled by the engine and trace flag 8079 has no effect. For more information, see [DBCC TRACEON - Trace Flags](../../sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ## Manual Soft-NUMA
   

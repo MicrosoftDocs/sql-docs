@@ -175,6 +175,10 @@
         href: ../big-data-cluster/spark-history-server.md
   - name: Reference
     items:
+    - name: Deployment reference
+      items:
+      - name: Deployment configuration file
+        href: ../big-data-cluster/reference-deployment-config.md
     - name: mssqlctl reference
       items:
       - name: mssqlctl

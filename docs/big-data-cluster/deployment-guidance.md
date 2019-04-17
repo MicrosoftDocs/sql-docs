@@ -121,7 +121,7 @@ It is also possible to customize your own deployment configuration file. You can
    ```
 
 > [!TIP]
-> For more examples on how to customize your deployment settings, see the [deployment examples](#examples) section in this article.
+> For more information, see the [Deployment configuration file reference](reference-deployment-config.md). See the [deployment examples](#examples) section in this article for more examples.
 
 ## <a id="env"></a> Environment variables
 

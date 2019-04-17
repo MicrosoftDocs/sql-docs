@@ -1,7 +1,7 @@
 ---
-title: "SQL Server 2016 Express LocalDB | Microsoft Docs"
+title: "SQL Server Express LocalDB | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2016"
+ms.date: "04/17/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -18,22 +18,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ---
-# SQL Server 2016 Express LocalDB
+# SQL Server Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Microsoft SQL Server 2016 Express **LocalDB** is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) targeted to developers. It is available on SQL Server 2016 Express with Advanced Services.  
+Microsoft SQL Server Express LocalDB is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) targeted to developers. It is available on SQL Server Express with Advanced Services.  
 
  **LocalDB** installation copies a minimal set of files necessary to start the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Once LocalDB is installed, you can initiate a connection using a special connection string. When connecting, the necessary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure is automatically created and started, enabling the application to use the database without complex configuration tasks. Developer Tools can provide developers with a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that lets them write and test [!INCLUDE[tsql](../../includes/tsql-md.md)] code without having to manage a full server instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
  
  ## Try it out! 
   
--   To download and install SQL Server 2016 Express, go to **[SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package.through the **Visual Studio Installer**. In the **Visual Studio Installer**, you can install SQL Server Express LocalDB as part of the **.NET desktop development** workload or as an individual component.
+- To download and install SQL Server Express LocalDB, go to **[SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the **LocalDB** package.through the **Visual Studio Installer**. In the **Visual Studio Installer**, you can install SQL Server Express LocalDB as part of the **.NET desktop development** workload or as an individual component.
 
    > [!TIP]
-   > You can also install LocalDB as part of Visual Studio 2017. During Visual Studio installation, select the **.NET desktop development** workload, which includes SQL Server Express LocalDB.
+   > You can also install LocalDB as part of Visual Studio. During Visual Studio installation, select the **.NET desktop development** workload, which includes SQL Server Express LocalDB.
   
--   Have an Azure account?  Then go **[here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.  
+- Have an Azure account?  Then go **[here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.  
   
 ## Install LocalDB  
  Install **LocalDB** through the installation wizard or by using the SqlLocalDB.msi program. **LocalDB** is an option when installing [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
@@ -65,9 +65,9 @@ Select **LocalDB** on the **Feature Selection/Shared Features** page during inst
 ### Automatic and Named Instances  
  **LocalDB** supports two kinds of instances: Automatic instances and named instances.  
   
--   Automatic instances of **LocalDB** are public. They are created and managed automatically for the user and can be used by any application. One automatic instance of **LocalDB** exists for every version of **LocalDB** installed on the user's computer. Automatic instances of **LocalDB** provide seamless instance management. There is no need to create the instance; it just works. This allows for easy application installation and migration to a different computer. If the target machine has the specified version of **LocalDB** installed, the automatic instance of **LocalDB** for that version is available on the target machine as well. Automatic instances of **LocalDB** have a special pattern for the instance name that belongs to a reserved namespace. This prevents name conflicts with named instances of **LocalDB**. The name for the automatic instance is **MSSQLLocalDB**.  
+- Automatic instances of **LocalDB** are public. They are created and managed automatically for the user and can be used by any application. One automatic instance of **LocalDB** exists for every version of **LocalDB** installed on the user's computer. Automatic instances of **LocalDB** provide seamless instance management. There is no need to create the instance; it just works. This allows for easy application installation and migration to a different computer. If the target machine has the specified version of **LocalDB** installed, the automatic instance of **LocalDB** for that version is available on the target machine as well. Automatic instances of **LocalDB** have a special pattern for the instance name that belongs to a reserved namespace. This prevents name conflicts with named instances of **LocalDB**. The name for the automatic instance is **MSSQLLocalDB**.  
   
--   Named instances of **LocalDB** are private. They are owned by a single application that is responsible for creating and managing the instance. Named instances provide isolation from other instances and can improve performance by reducing resource contention with other database users. Named instances must be created explicitly by the user through the **LocalDB** management API or implicitly via the app.config file for a managed application (although managed application may also use the API, if desired). Each named instance of **LocalDB** has an associated **LocalDB** version that points to the respective set of **LocalDB** binaries. The instance name of a **LocalDB** is **sysname** data type and can have up to 128 characters. (This differs from regular named instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which limits names to regular NetBIOS names of 16 ASCII chars.) The name of an instance of **LocalDB** can contain any Unicode characters that are legal within a filename.  A named instance that uses an automatic instance name becomes an automatic instance.  
+- Named instances of **LocalDB** are private. They are owned by a single application that is responsible for creating and managing the instance. Named instances provide isolation from other instances and can improve performance by reducing resource contention with other database users. Named instances must be created explicitly by the user through the **LocalDB** management API or implicitly via the app.config file for a managed application (although managed application may also use the API, if desired). Each named instance of **LocalDB** has an associated **LocalDB** version that points to the respective set of **LocalDB** binaries. The instance name of a **LocalDB** is **sysname** data type and can have up to 128 characters. (This differs from regular named instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], which limits names to regular NetBIOS names of 16 ASCII chars.) The name of an instance of **LocalDB** can contain any Unicode characters that are legal within a filename.  A named instance that uses an automatic instance name becomes an automatic instance.  
   
  Different users of a computer can have instances with the same name. Each instance is a different processes running as a different user.  
   

@@ -3,7 +3,7 @@ title: Release notes
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
 ms.custom: "seodec18"
-ms.date: "03/22/2019"
+ms.date: "04/19/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"

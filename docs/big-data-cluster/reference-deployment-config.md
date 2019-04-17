@@ -26,14 +26,10 @@ Use the following JSON file as a reference for the structure and settings in a b
 
 ```json
 {
-  "apiVersion": {
-    "name": "API Version",
-    "description": "The API version"
-  },
   "metadata": {
     "kind": {
-      "name": "Deployment Type",
-      "description": "The type of deployment - in this case a 'Cluster'"
+      "name": "Deployment type",
+      "description": "The type of deployment - in this case a 'Cluster'. Do not change this value."
     },
     "name": {
       "name": "Cluster Name",
@@ -138,45 +134,6 @@ Use the following JSON file as a reference for the structure and settings in a b
           }
         ]
       },
-      "zookeeper": {
-        "replicas": {
-          "name": "Zookeeper Replicas",
-          "description": "The number of replicas for zookeeper."
-        },
-        "storage": {
-          "usePersistentVolume": {
-            "name": "Kubernetes Persistent Volume Use",
-            "description": "Set this value to `true` to use Kubernetes Persistent Volume Claims for storage. Also specify the className in this case. Set this value to `false` to use ephemeral host storage for non production deployments."
-          },
-          "className": {
-            "name": "Kubernetes Storage Class",
-            "description": "If usePersistentVolume is `true` this indicates the name of the Kubernetes Storage Class to use. You must pre-provision the storage class and the persistent volumes or you can use a built in storage class if the platform you are deploying provides this capability."
-          },
-          "accessMode": {
-            "name": "Kubernetes Persistent Volume Access Mode",
-            "description": "Access mode for the Persistent Volume. Default value is ReadWriteOnce."
-          },
-          "size": {
-            "name": "Kubernetes Persistent Volume Claim Size",
-            "description": "The size of each Persisted Volume Claim created. Default value is 10Gi."
-          }
-        }
-      },
-      "domainController": {
-        "realm": {
-          "name": "Domain Controller Realm",
-          "description": "Standard is AZDATA.LOCAL"
-        },
-        "domain": {
-          "name": "Domain Controller Domain",
-          "description": "Standard is azdata.local"
-        },
-        "workgroup": {
-          "name": "Domain Controller Workgroup",
-          "description": "Standard is AZDATA"
-        }
-      }
-    },
     "pools": [
       {
         "metadata": {
@@ -234,10 +191,6 @@ Use the following JSON file as a reference for the structure and settings in a b
           ]
         },
         "hadoop": {
-          "imageName": {
-            "name": "Hadoop Image Name",
-            "description": "The name of the hadoop image - mssql-hadoop"
-          },
           "yarn": {
             "nodeManager": {
               "memory": {
@@ -410,10 +363,6 @@ Use the following JSON file as a reference for the structure and settings in a b
           }
         },
         "namenode": {
-          "imageName": {
-            "name": "Hadoop Image Name",
-            "description": "The name of the hadoop image - mssql-hadoop"
-          },
           "replicas": {
             "name": "Hadoop Replicas",
             "description": "The number of replicas for hadoop"
@@ -440,10 +389,6 @@ Use the following JSON file as a reference for the structure and settings in a b
           }
         },
         "hadoop": {
-          "imageName": {
-            "name": "Hadoop Image Name",
-            "description": "The name of the hadoop image - mssql-hadoop"
-          },
           "yarn": {
             "nodeManager": {
               "memory": {

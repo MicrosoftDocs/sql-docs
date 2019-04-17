@@ -391,6 +391,31 @@ mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.typ
 
 For more information about storage configuration, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
 
+### Configure pod placement using Kubernetes labels
+You can control pod placement on Kubernetes nodes that have specific resources to accommodate various types of workloads requirements. For example, you might want to ensure the storage pool pods are placed on nodes with more storage, or SQL Server master instances lands on nodes that have higher CPU and memory resources. In this case, you will first build a heterogeneous Kubernetes cluster with different types of hardware and then [assign node labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) accordingly. At the time of deploying big data cluster, you can specify same labels at pool level in the cluster deployment configuration file. Kubernetes will then take care of  affinitizing the pods on nodes that match the specified labels.
+
+The following example shows how to edit a custom configuration file to include a node label setting for SQL Server Master instance. Note that there is no *nodeLabel* key in the built in configurations so you will need to either edit a custom configuration file manually or create a patch file and apply it to the custom configuration file.
+
+Create a file named **patch.json** in your current directory with the following contents:
+
+```json
+{
+  "patch": [
+     {
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
+      "value": {
+        "nodeLabel": "<yourNodeLabel>"
+       }
+    }
+  ]
+}
+```
+
+```bash
+mssqlctl cluster config section set -f custom.json -p ./patch.json
+```
+
 ## Next steps
 
 To learn more about the SQL Server big data clusters, see the following resources:

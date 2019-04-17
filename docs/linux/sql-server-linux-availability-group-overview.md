@@ -4,7 +4,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -52,7 +52,7 @@ The combination of `required_synchronized_secondaries_to_commit` and the new seq
 
 There are three values that can be set for `required_synchronized_secondaries_to_commit`: 0, 1, or 2. They control the behavior of what happens when a replica becomes unavailable. The numbers correspond to the number of secondary replicas that must be synchronized with the primary. The behavior is as follows under Linux:
 
--   0 - No automatic failover is possible since no secondary replica is required to be synchronized. The primary database is available at all times.
+-   0 - Secondary replicas do not need to be in synchronized state with the primary. However if the secondaries are not synchronized, there will be no automatic failover. 
 -   1 - One secondary replica must be in a synchronized state with the primary; automatic failover is possible. The primary database is unavailable until a secondary synchronous replica is available.
 -   2 - Both secondary replicas in a three or more node AG configuration must be synchronized with the primary; automatic failover is possible.
 

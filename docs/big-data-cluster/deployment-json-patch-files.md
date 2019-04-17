@@ -106,23 +106,19 @@ Create a file named **patch.json** in your current directory with the following 
 This example JSON patch file makes the following changes:
 
 - Updates the port of single endpoint.
-- Updates all endpoints (**port** and **serviceType**). You must update the entire array to update all the endpoints.
-- Update the control plane storage.
-- Update the storage class name in control plane storage.
-- Update pool storage, including replicas (storage pool).
-- Update Spark settings for a specific pool (storage pool).
 
-For example, the following section changes only the controller port to 30001:
+- Updates all endpoints (**port** and **serviceType**).
 
-```json
-{
-  "op": "replace",
-  "path": "$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port",
-  "value": 30000
-},
-```
+   > [!NOTE]
+   > You must update the entire array to update all the endpoints. Note that this overrides the first port change, but this example is meant to understand your options.
 
-But the section that immediately follows replaces the entire **endpoints** section. This includes the controller port, so you typically would not do both of these actions. But it is provided here to demonstrate different techniques in the patch file.
+- Updates the control plane storage.
+
+- Updates the storage class name in control plane storage.
+
+- Updates pool storage, including replicas (storage pool).
+
+- Updates Spark settings for a specific pool (storage pool).
 
 For more information about the structure and options for changing a deployment configuration file, see [Deployment configuration file reference for big data clusters](reference-deployment-config.md).
 

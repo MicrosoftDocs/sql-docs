@@ -63,6 +63,8 @@
         href: ../big-data-cluster/deploy-install-mssqlctl.md
     - name: Deploy
       items:
+      - name: Deployment guidance
+        href: ../big-data-cluster/deployment-guidance.md
       - name: Upgrade to a new release
         href: ../big-data-cluster/deployment-upgrade.md
       - name: Customize with patch files

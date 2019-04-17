@@ -13929,6 +13929,11 @@
             "source_path": "docs/linux/sql-server-linux-customer-feedback.md",
             "redirect_url": "/sql/linux/usage-and-diagnostic-data-configuration-for-sql-server-linux",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/database-engine/configure-windows/sql-server-2016-express-localdb.md",
+            "redirect_url": "/sql/database-engine/configure-windows/sql-server-express-localdb",
+            "redirect_document_id": false
         }
     ]
 }

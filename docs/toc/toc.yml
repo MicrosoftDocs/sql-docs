@@ -4139,8 +4139,8 @@
       href: ../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md
     - name: Diagnostic Connection for Database Administrators
       href: ../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md
-    - name: SQL Server 2016 Express LocalDB
-      href: ../database-engine/configure-windows/sql-server-2016-express-localdb.md
+    - name: SQL Server Express LocalDB
+      href: ../database-engine/configure-windows/sql-server-express-localdb.md
     - name: Remote Servers
       href: ../database-engine/configure-windows/remote-servers.md
     - name: SQL Server Monitor Overview

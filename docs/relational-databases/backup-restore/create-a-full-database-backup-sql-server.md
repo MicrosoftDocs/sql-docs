@@ -226,7 +226,7 @@ A stored access policy has been created with read, write, and list rights.  The 
   
   8.	Click **OK**.
 
-    **D3.  A shared access signature does not exist**
+   **D3.  A shared access signature does not exist**
   5.	Click the **New container** button and the **Connect to a Microsoft Subscription** dialog box will open.  
   
   6.	Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select Backup Destination** dialog box.  See [See Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.

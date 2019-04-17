@@ -38,7 +38,7 @@ In the following lessons, you define a data source for your report, define a dat
   
 5.  In **Name**, type **Tutorial**.  
 
-    By default, it's created in your Visual Studio 2015\Projects folder in a new directory.
+    By default, it's created in your Visual Studio 2019\Projects folder in a new directory.
     
     ![ssrs-ssdt-01-solution-location](../reporting-services/media/ssrs-ssdt-01-solution-location.png)
   

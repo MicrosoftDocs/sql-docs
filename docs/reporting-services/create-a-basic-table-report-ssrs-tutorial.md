@@ -1,6 +1,6 @@
 ---
 title: "Create a Basic Table Report (SSRS Tutorial) | Microsoft Docs"
-ms.date: 04/15/2019
+ms.date: 04/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -16,22 +16,22 @@ ms.author: maghan
 ---
 # Create a Basic Table Report (SSRS Tutorial)
 
-In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a table, based on the **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]** database. You can also create [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
+In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a table, based on the **[!INCLUDE[ssSampleDBAdventureworks2017_md](../includes/sssampledbadventureworks2017-md.md)]** database. You can also create [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
 
 As you go through this tutorial, you will create a report project, set up connection information, define a query, add a Table data region, group and total some fields, and preview the report.  
   
 ## Requirements  
 Your system must have the following installed to use this tutorial:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server database engine.  
+<!-- The tutorial is now MSSQL2017 & VS2019 specific [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server database engine. -->
+//]: # (Please verify @mblythe as Blame Annotations say the reference to SQL version was removed 2yrs. ago)
+-   [!INCLUDE[ssSql17](../includes/sssql17-md.md)] database engine.  
+-   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].
+-   The [!INCLUDE[ssSampleDBAdventureworks2017_md](../includes/sssampledbadventureworks2017-md.md)] database.  For more information, see [Adventure Works Sample Databases)](https://github.com/Microsoft/sql-server-samples/releases).  
   
--   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] in native mode.  
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) with the "SQL Server Reporting Services" Visual Studio Extension installed, which now installs automatically by selecting the "Data Storage and Processing Workload" during installation, then installing the Report Services Extension, so you have the Report Designer.
   
--   The [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] database.  For more information, see [Adventure Works 2014 Sample Databases)](https://github.com/Microsoft/sql-server-samples/releases).  
-  
- -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) with the "SQL Server Reporting Services" components installed so you have the Report Designer.    
-  
-You must also have read-only permissions to retrieve data from the [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] database.
+You must also have read-only permissions to retrieve data from the [!INCLUDE[ssSampleDBAdventureworks2017](../includes/sssampledbadventureworks2017-md.md)] database.
 
 **Estimated time to complete the tutorial:** 30 minutes.
   

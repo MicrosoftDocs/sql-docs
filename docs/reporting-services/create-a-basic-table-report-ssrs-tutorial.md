@@ -23,7 +23,7 @@ As you go through this tutorial, you will create a report project, set up connec
 ## Requirements  
 Your system must have the following installed to use this tutorial:  
   
-<!-- The tutorial is now MSSQL2017 & VS2019 specific [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server database engine. -->
+<!-- Tutorial is now MSSQL2017 & VS2019 specific [!INCLUDE[msCoName](../includes/msconame-md.md)] SQL Server database engine. -->
 //]: # (Please verify @mblythe as Blame Annotations say the reference to SQL version was removed 2yrs. ago)
 -   [!INCLUDE[ssSql17](../includes/sssql17-md.md)] database engine.  
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].

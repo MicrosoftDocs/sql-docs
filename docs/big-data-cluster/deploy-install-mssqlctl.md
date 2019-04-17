@@ -20,7 +20,7 @@ This article describes how to install the **mssqlctl** tool on Windows or Linux.
 **mssqlctl** is a command-line utility written in Python that enables cluster administrators to bootstrap and manage the big data cluster via REST APIs. The minimum Python version required is v3.5. You must also have `pip` that is used to download and install **mssqlctl** tool. The instructions below provide examples for Windows and Ubuntu. For installing Python on other platforms, see the [Python documentation](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 > [!IMPORTANT]
-> If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-guidance.md#upgrade).
+> If you are installing a newer version of big data clusters, you must backup your data and delete the old cluster *before* upgrading **mssqlctl** and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
 
 ## <a id="windows"></a> Windows mssqlctl installation
 

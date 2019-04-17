@@ -2,28 +2,25 @@
 title: "catalog.get_project (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # catalog.get_project (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retrieves the binary stream of a project that has been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
   
 ## Syntax  
   
-```tsql  
-get_project [ @folder_name = ] folder_name , [ @project_name = ] project_name   
+```sql  
+catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project_name   
 ```  
   
 ## Arguments  

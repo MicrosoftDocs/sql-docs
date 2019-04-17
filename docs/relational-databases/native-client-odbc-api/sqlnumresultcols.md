@@ -2,23 +2,22 @@
 title: "SQLNumResultCols | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLNumResultCols function"
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLNumResultCols
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   For executed statements, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not visit the server to report the number of columns in a result set. In this case, **SQLNumResultCols** does not cause a server roundtrip. Like [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) and [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md), calling **SQLNumResultCols** on prepared but not executed statements generates a server roundtrip.  
@@ -28,7 +27,7 @@ manager: "jhubbard"
  Improvements in the database engine starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] allow SQLNumResultCols to obtain more accurate descriptions of the expected results. These more accurate results may differ from the values returned by SQLNumResultCols in previous versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## See Also  
- [SQLNumResultCols Function](http://go.microsoft.com/fwlink/?LinkId=59359)   
+ [SQLNumResultCols Function](https://go.microsoft.com/fwlink/?LinkId=59359)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

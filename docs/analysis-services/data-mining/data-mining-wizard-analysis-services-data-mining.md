@@ -1,27 +1,17 @@
 ---
 title: "Data Mining Wizard (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dimensions [Analysis Services], data mining"
-  - "OLAP [Analysis Services], mining models"
-  - "Data Mining Wizard"
-  - "relational mining models [Analysis Services]"
-ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 57
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Wizard (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The Data Mining Wizard in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] starts every time that you add a new mining structure to a data mining project. The wizard helps you choose a data source and set up a data source view that defines the data to be used for analysis, and then helps you create an initial model.  
   
  In the final phase of the wizard, you can optionally divide your data into training and testing sets, and enable features such as drillthrough.  
@@ -53,7 +43,7 @@ manager: "jhubbard"
 ###  <a name="BKMK_Relational"></a> Relational vs. OLAP Mining Models  
  The next important option that you have is whether to use a relational data source, or to base your model on multidimensional (OLAP) data.  
   
- The Data Mining Wizard branches into two paths at this point, depending on whether your data source is relational or in a cube. Everything else except the data selection process is the same—the choice of algorithm, the ability to add a holdout data set, etc.—but selecting cube data is a bit more complex than using relational data. (You also get some additional options at the end if you create a model based on a cube.)  
+ The Data Mining Wizard branches into two paths at this point, depending on whether your data source is relational or in a cube. Everything else except the data selection process is the same-the choice of algorithm, the ability to add a holdout data set, etc.-but selecting cube data is a bit more complex than using relational data. (You also get some additional options at the end if you create a model based on a cube.)  
   
  See the following topics for a walkthrough of each option in more detail:  
   

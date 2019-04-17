@@ -2,13 +2,11 @@
 title: "SQLFreeHandle Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLFreeHandle"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFreeHandle function [ODBC]"
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
-caps.latest.revision: 35
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLFreeHandle Function
 **Conformance**  
@@ -31,7 +28,7 @@ manager: "jhubbard"
  **Summary**  
  **SQLFreeHandle** frees resources associated with a specific environment, connection, statement, or descriptor handle.  
   
-> [!NOTE]  
+> [!NOTE]
 >  This function is a generic function for freeing handles. It replaces the ODBC 2.0 functions **SQLFreeConnect** (for freeing a connection handle) and **SQLFreeEnv** (for freeing an environment handle). **SQLFreeConnect** and **SQLFreeEnv** are both deprecated in ODBC 3*.x*. **SQLFreeHandle** also replaces the ODBC 2.0 function **SQLFreeStmt** (with the SQL_DROP *Option*) for freeing a statement handle. For more information, see "Comments." For more information about what the Driver Manager maps this function to when an ODBC 3*.x* application is working with an ODBC 2*.x* driver, see [Mapping Replacement Functions for Backward Compatibility of Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## Syntax  
@@ -39,8 +36,8 @@ manager: "jhubbard"
 ```  
   
 SQLRETURN SQLFreeHandle(  
-     SQLSMALLINT   HandleType,  
-     SQLHANDLE     Handle);  
+     SQLSMALLINT   HandleType,  
+     SQLHANDLE     Handle);  
 ```  
   
 ## Arguments  
@@ -106,7 +103,7 @@ SQLRETURN SQLFreeHandle(
 ## Freeing a Descriptor Handle  
  A call to **SQLFreeHandle** with a *HandleType* of SQL_HANDLE_DESC frees the descriptor handle in *Handle*. The call to **SQLFreeHandle** does not release any memory allocated by the application that may be referenced by a pointer field (including SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, and SQL_DESC_OCTET_LENGTH_PTR) of any descriptor record of *Handle*. The memory allocated by the driver for fields that are not pointer fields is freed when the handle is freed. When a user-allocated descriptor handle is freed, all statements that the freed handle had been associated with revert to their respective automatically allocated descriptor handles.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2*.x* drivers do not support freeing descriptor handles, just as they do not support allocating descriptor handles.  
   
  Notice that **SQLDisconnect** automatically drops any statements and descriptors open on the connection. When an application frees a statement handle, the driver frees all the automatically generated descriptors associated with that handle.  

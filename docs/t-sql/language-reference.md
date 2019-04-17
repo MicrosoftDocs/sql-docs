@@ -2,12 +2,9 @@
 title: "Transact-SQL Reference (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "sql13.tsqlref.f1"
@@ -15,13 +12,13 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transact-SQL"
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Transact-SQL Reference (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 This topic gives the basics about how to find and use the Microsoft Transact-SQL (T-SQL) reference topics. T-SQL is central to using Microsoft SQL products and services. All tools and applications that communicate with a SQL database do so by sending T-SQL commands.  
 
@@ -29,9 +26,10 @@ This topic gives the basics about how to find and use the Microsoft Transact-SQL
 
 Some of the Microsoft tools that issue T-SQL commands are:
 
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
-- [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
-- [sqlcmd](../tools/sqlcmd-utility.md).  
+- [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [sqlcmd](../tools/sqlcmd-utility.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
   
  
 ## Locate the Transact-SQL reference topics  
@@ -68,7 +66,7 @@ In some cases, the topic is used by a product or service, but all of the argumen
  
 ## Get help from the MSDN forum  
   
-For online help, see the [MSDN Transact-SQL Forum](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql).  
+For online help, see the [MSDN Transact-SQL Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql).  
  
 ## See other language references
 

@@ -2,26 +2,23 @@
 title: "Uninstall Power Pivot for SharePoint | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
+author: "markingmyname"
+ms.author: "maghan"
+manager: "kfile"
 ---
 # Uninstall Power Pivot for SharePoint
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Uninstalling a [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installation is a multi-step operation that includes preparing for uninstall, removing features and solutions from the farm, and removing program files and registry settings.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   
- **In this topic:**  
+ **In this article:**  
   
 -   [Prerequisites](#prereq)  
   
@@ -46,7 +43,7 @@ manager: "erikre"
 -   You must be an Analysis Services System Administrator and a member of the local Administrators group to uninstall Analysis Services and [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
 ##  <a name="bkmk_before"></a> Step 1: Pre-Uninstall Checklist  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access will be disabled once the software that supports query and data processing is removed from the farm. As a first step, you should preemptively delete files and libraries that will no longer be operational. This lets you address any questions or concerns about ‘missing data’ before you uninstall the software.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data access will be disabled once the software that supports query and data processing is removed from the farm. As a first step, you should preemptively delete files and libraries that will no longer be operational. This lets you address any questions or concerns about 'missing data' before you uninstall the software.  
   
 1.  Delete all [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbooks, documents, and libraries that are associated with a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint installation. Neither the libraries nor the documents will function once the software is uninstalled.  
   
@@ -65,7 +62,7 @@ manager: "erikre"
 ##  <a name="bkmk_remove"></a> Step 2: Remove Features and Solutions from SharePoint  
  Use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool to remove [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] services and applications from SharePoint.  
   
--   You must be a farm administrator, a server administrator on the Analysis Services instance, and **db_owner** on the farm’s configuration database.  
+-   You must be a farm administrator, a server administrator on the Analysis Services instance, and **db_owner** on the farm's configuration database.  
   
 -   Use the appropriate version of the configuration tool for the version of SharePoint. Do not use either tool with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] installations.  
   
@@ -97,7 +94,7 @@ manager: "erikre"
   
 6.  Click **Validate** to check whether each action is valid. If **Validate** is not available, it means that all of the actions are valid for your system.  
   
-7.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: “All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?”  
+7.  Click **Run** to perform all of the actions that are valid for this task. **Run** is available only after the validation check is passed. When you click **Run**, the following warning appears, reminding you that actions are processed in batch mode: "All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?"  
   
 8.  Click **Yes** to continue.  
   
@@ -116,15 +113,15 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
 2.  Start the SharePoint Management Shell as an administrator and then run the following command to view jobs in the queue:  
   
     ```  
-    Stsadm –o enumdeployments  
+    Stsadm -o enumdeployments  
     ```  
   
 3.  Review existing deployments for the following information: **Type** is Retraction or Deployment, **File** is powerpivotwebapp.wsp or powerpivotfarm.wsp.  
   
-4.  For deployments or retractions related to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell’s Edit menu to copy the GUID):  
+4.  For deployments or retractions related to [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] solutions, copy the GUID value for **JobId** and then paste it into the following command (use the Mark, Copy, and Paste commands on the Shell's Edit menu to copy the GUID):  
   
     ```  
-    Stsadm –o canceldeployment –id “<GUID>”  
+    Stsadm -o canceldeployment -id "<GUID>"  
     ```  
   
 5.  Retry the task in the configuration tool by clicking **Validate** followed by **Run**.  

@@ -2,12 +2,10 @@
 title: "sp_lock (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_lock_TSQL"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_lock"
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
-caps.latest.revision: 56
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_lock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Reports information about locks.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] To obtain information about locks in the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], use the [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) dynamic management view.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,10 +38,10 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 ```  
   
 ## Arguments  
- [ **@spid1 =** ] **'***session ID1***'**  
+`[ @spid1 = ] 'session ID1'`
  Is a [!INCLUDE[ssDE](../../includes/ssde-md.md)] session ID  number from **sys.dm_exec_sessions** for which the user wants locking information. *session ID1* is **int** with a default value of NULL. Execute **sp_who** to obtain process information about the session. If *session ID1* is not specified, information about all locks is displayed.  
   
- [ **@spid2 =** ] **'***session ID2***'**  
+`[ @spid2 = ] 'session ID2'`
  Is another [!INCLUDE[ssDE](../../includes/ssde-md.md)] session ID number from **sys.dm_exec_sessions** that might have a lock at the same time as *session ID1* and about which the user also wants information. *session ID2* is **int** with a default value of NULL.  
   
 ## Return Code Values  

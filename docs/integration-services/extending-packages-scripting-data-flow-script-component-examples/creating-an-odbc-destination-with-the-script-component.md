@@ -1,26 +1,21 @@
 ---
 title: "Creating an ODBC Destination with the Script Component | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "10/10/2018"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "Script component [Integration Services], destination components"
   - "ODBC destination [Integration Services]"
   - "destinations [Integration Services], components"
   - "Script component [Integration Services], examples"
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Creating an ODBC Destination with the Script Component
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you typically save data to an ODBC destination by using an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] destination and the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC. However, you can also create an ad hoc ODBC destination for use in a single package. To create this ad hoc ODBC destination, you use the Script component as shown in the following example.  
@@ -37,7 +32,7 @@ manager: "jhubbard"
   
 -   The **OdbcCommand** expects positional parameters. The positions of the parameters are indicated by the question marks (?) in the text of the command. (In contrast, a **SqlCommand** expects named parameters.)  
   
- This example uses the **Person.Address** table in the **AdventureWorks** sample database. The example passes the first and fourth columns, the **int*AddressID*** and **nvarchar(30)City** columns, of this table through the data flow. This same data is used in the source, transformation, and destination samples in the topic, [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ This example uses the **Person.Address** table in the **AdventureWorks** sample database. The example passes the first and fourth columns, the **int _AddressID_** and **nvarchar(30) _City_** columns, of this table through the data flow. This same data is used in the source, transformation, and destination samples in the topic, [Developing Specific Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### To configure this Script Component example  
   
@@ -45,7 +40,7 @@ manager: "jhubbard"
   
 2.  Create a destination table by running the following Transact-SQL command in the **AdventureWorks** database:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -166,6 +161,6 @@ manager: "jhubbard"
     ```  
   
 ## See Also  
- [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

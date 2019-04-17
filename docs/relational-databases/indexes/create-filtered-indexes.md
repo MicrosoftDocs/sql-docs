@@ -2,13 +2,11 @@
 title: "Create Filtered Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filtered indexes [SQL Server], about filtered indexes"
   - "designing indexes [SQL Server], filtered"
@@ -16,13 +14,13 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], filtered"
   - "indexes [SQL Server], filtered"
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Filtered Indexes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic describes how to create a filtered index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A filtered index is an optimized nonclustered index especially suited to cover queries that select from a well-defined subset of data. It uses a filter predicate to index a portion of rows in the table. A well-designed filtered index can improve query performance as well as reduce index maintenance and storage costs compared with full-table indexes.  
   
@@ -66,7 +64,9 @@ manager: "jhubbard"
   
 ###  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   You cannot create a filtered index on a view. However, the query optimizer can benefit from a filtered index defined on a table that is referenced in a view. The query optimizer considers a filtered index for a query that selects from a view if the query results will be correct.  
+-   You cannot create a filtered index on a view. However, the query optimizer can benefit from a filtered index defined on a table that is referenced in a view. The query optimizer considers a filtered index for a query that selects from a view if the query results will be correct.
+
+-   You cannot create a filtered index on a table when the column accessed in the filter expression is of a CLR data type.
   
 -   Filtered indexes have the following advantages over indexed views:  
   
@@ -107,17 +107,17 @@ manager: "jhubbard"
   
 3.  Click the plus sign to expand the table on which you want to create a filtered index.  
   
-4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index…**.  
+4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index...**.  
   
 5.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
-6.  Under **Index key columns**, click **Add…**.  
+6.  Under **Index key columns**, click **Add...**.  
   
-7.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
+7.  In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
   
 8.  Click **OK**.  
   
-9. On the **Filter** page, under **Filter Expression**, enter SQL expression that you’ll use to create the filtered index.  
+9. On the **Filter** page, under **Filter Expression**, enter SQL expression that you'll use to create the filtered index.  
   
 10. Click **OK**.  
   

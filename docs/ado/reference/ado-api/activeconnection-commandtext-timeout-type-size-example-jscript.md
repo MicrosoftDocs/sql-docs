@@ -1,14 +1,12 @@
 ---
 title: "Stored Procedure Properties Example (JScript) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "JScript"
 helpviewer_keywords: 
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "Direction property [ADO], JScript example"
   - "CommandTimeout property [ADO], JScript example"
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (JScript)
 This example uses the [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md), and [Direction](../../../ado/reference/ado-api/direction-property.md) properties to execute a stored procedure. Cut and paste the following code to Notepad or another text editor, and save it as **ActiveConnectionJS.asp**.  

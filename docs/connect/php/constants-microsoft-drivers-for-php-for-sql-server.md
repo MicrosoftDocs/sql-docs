@@ -1,21 +1,18 @@
 ---
 title: "Constants (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "02/11/2019"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "constants"
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-caps.latest.revision: 72
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Constants (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -23,9 +20,9 @@ manager: "jhubbard"
 This topic discusses the constants that are defined by the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## PDO_SQLSRV Driver Constants  
-The constants listed on the [PDO website](http://go.microsoft.com/fwlink/?LinkID=187441) are valid in the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+The constants listed on the [PDO website](https://php.net/manual/book.pdo.php) are valid in the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-The following describe the Microsoft specific constants in the PDO_SQLSRV driver.  
+The following describe the Microsoft-specific constants in the PDO_SQLSRV driver.  
   
 ### Transaction Isolation Level Constants  
 The **TransactionIsolation** key, which is used with [PDO::__construct](../../connect/php/pdo-construct.md), accepts one of the following constants:  
@@ -50,9 +47,9 @@ The available values to pass to PDO::SQLSRV_ATTR_ENCODING are
 |PDO_SQLSRV driver constant|Description|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|Data is a raw byte stream from the server without performing encoding or translation.<br /><br />Not valid for PDO::setAttribute.|  
-|PDO::SQLSRV_ENCODING_SYSTEM|Data is 8-bit characters as specified in the code page of the Windows locale that is set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single byte question mark (?) character.|  
+|PDO::SQLSRV_ENCODING_SYSTEM|Data is 8-bit characters as specified in the code page of the Windows locale that is set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single-byte question mark (?) character.|  
 |PDO::SQLSRV_ENCODING_UTF8|Data is in the UTF-8 encoding. This is the default encoding.|  
-|PDO::SQLSRV_ENCODING_DEFAULT|Uses PDO::SQLSRV_ENCODING_SYSTEM if specified during connection.<br /><br />Use the connection’s encoding if specified in a prepare statement.|  
+|PDO::SQLSRV_ENCODING_DEFAULT|Uses PDO::SQLSRV_ENCODING_SYSTEM if specified during connection.<br /><br />Use the connection's encoding if specified in a prepare statement.|  
   
 ### Query Timeout  
 The PDO::SQLSRV_ATTR_QUERY_TIMEOUT attribute is any non-negative integer representing the timeout period, in seconds. Zero (0) is the default and means no timeout.  
@@ -63,8 +60,13 @@ You can specify the PDO::SQLSRV_ATTR_QUERY_TIMEOUT attribute with [PDOStatement:
 You can select direct query execution or prepared statement execution with the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute. PDO::SQLSRV_ATTR_DIRECT_QUERY can be set with [PDO::prepare](../../connect/php/pdo-prepare.md) or [PDO::setAttribute](../../connect/php/pdo-setattribute.md). For more information about PDO::SQLSRV_ATTR_DIRECT_QUERY, see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
 
 ### Handling Numeric Fetches
-The PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE attribute can be used to handle numeric fetches from columns with numeric SQL types (bit, integer, smallint, tinyint, float, and real). When PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE is set to true, the results from an integer column will be represented as ints, while SQL floats and reals will be represented as floats. This attribute can be set with  [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
+The PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE attribute can be used to handle numeric fetches from columns with numeric SQL types (bit, integer, smallint, tinyint, float, and real). When PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE is set to true, the results from an integer column are represented as ints, while SQL floats and reals are represented as floats. This attribute can be set with  [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
+You can modify the default decimal formatting behaviour with the PDO::SQLSRV_ATTR_FORMAT_DECIMALS and PDO::SQLSRV_ATTR_DECIMAL_PLACES attributes. The behaviour of these attributes is identical to the corresponding options on the SQLSRV side (**FormatDecimals** and **DecimalPlaces**), except that output params are not supported for formatting. These attributes may be set at either the connection or statement level with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) or [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), but any statement attribute will override the corresponding connection attribute. For more details, see [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+
+### Handling Date and Time Fetches
+
+The PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE specifies whether to retrieve date and time types as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects. If left false, the default behaviour is to return them as strings. This attribute may be set at either the connection or statement level with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) or [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), but the statement attribute will override the corresponding connection attribute. For more information, see [How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## SQLSRV Driver Constants  
 The following sections list the constants used by the SQLSRV driver.  
@@ -129,7 +131,7 @@ The following list contains the constants for specifying parameter direction whe
 |SQLSRV_PARAM_OUT|Indicates an output parameter.|  
   
 ### PHPTYPE Constants  
-The following table lists the constants that are used to describe PHP data types. For information about PHP data types, see [PHP Types](http://go.microsoft.com/fwlink/?LinkId=104881).  
+The following table lists the constants that are used to describe PHP data types. For information about PHP data types, see [PHP Types](https://php.net/manual/en/language.types.php).  
   
 |SQLSRV constant|PHP data type|  
 |-------------------|-----------------|  
@@ -144,7 +146,7 @@ The following table lists the constants that are used to describe PHP data types
 |SQLSRV constant|Description|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|Data is returned as a raw byte stream from the server without performing encoding or translation.|  
-|SQLSRV_ENC_CHAR|Data is returned in 8-bit characters as specified in the code page of the Windows locale that is set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single byte question mark (?) character.<br /><br />This is the default encoding.|  
+|SQLSRV_ENC_CHAR|Data is returned in 8-bit characters as specified in the code page of the Windows locale that is set on the system. Any multi-byte characters or characters that do not map into this code page are substituted with a single-byte question mark (?) character.<br /><br />This is the default encoding.|  
 |"UTF-8"|Data is returned in the UTF-8 encoding. This constant was added in version 1.1 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. For more information about UTF-8 support, see [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|  
   
 > [!NOTE]  
@@ -153,7 +155,7 @@ The following table lists the constants that are used to describe PHP data types
 For more information about these constants, see [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md), [How to: Retrieve Character Data as a Stream Using the SQLSRV Driver](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ### SQLTYPE Constants  
-The following table lists the constants that are used to describe SQL Server data types. Some constants are function-like and may take parameters that correspond to precision, scale, and/or length.  When binding parameters, the function-like constants should be used. For type comparisons, the standard (non function-like) constants are required. For information about SQL Server data types, see [Data Types (Transact-SQL).](http://go.microsoft.com/fwlink/?LinkId=104883) For information about precision, scale, and length, see [Precision, Scale, and Length (Transact-SQL).](http://go.microsoft.com/fwlink/?LinkId=104885)  
+The following table lists the constants that are used to describe SQL Server data types. Some constants are function-like and may take parameters that correspond to precision, scale, and/or length.  When binding parameters, the function-like constants should be used. For type comparisons, the standard (non function-like) constants are required. For information about SQL Server data types, see [Data Types (Transact-SQL).](../../t-sql/data-types/data-types-transact-sql.md) For information about precision, scale, and length, see [Precision, Scale, and Length (Transact-SQL).](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
   
 |SQLSRV constant|SQL Server data type|  
 |-------------------|------------------------|  

@@ -1,23 +1,17 @@
 ---
 title: "Remote Processing (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Remote Processing (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can run scheduled or unattended processing on a remote [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, where the processing request originates from one computer but executes on another computer on the same network.  
   
 ## Prerequisites  
@@ -48,9 +42,9 @@ manager: "erikre"
   
  Use the following links to set permissions:  
   
--   [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+-   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) suggests alternative fixed server roles if granting **sysadmin** permissions is not possible.  
+-   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md) suggests alternative fixed server roles if granting **sysadmin** permissions is not possible.  
   
  After account permissions are configured, continue with these steps.  
   
@@ -91,7 +85,7 @@ manager: "erikre"
 2.  As a final step, modify the job to run on a schedule that you define, adding any alerts or notifications necessary to administer the job. You might also want to refine the processing script, or create multiple steps in the job to process objects independently.  
   
 ## See Also  
- [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md)   
  [Schedule SSAS Administrative Tasks with SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Batch Processing &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

@@ -2,12 +2,11 @@
 title: "Working with Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DataType object"
@@ -15,12 +14,14 @@ helpviewer_keywords:
   - "data types [SMO]"
   - "SMO [SQL Server], data types"
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Working with Data Types
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   Data comes in many types and sizes, such as a string that has a defined length, a number that has specific accuracy, or a user-defined data type that is another object that has its own set of rules. The <xref:Microsoft.SqlServer.Management.Smo.DataType> object classifies the type of data so that it can be handled correctly by [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The <xref:Microsoft.SqlServer.Management.Smo.DataType> object is associated with objects that accept data. The following [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) objects accept data that must be defined by a <xref:Microsoft.SqlServer.Management.Smo.DataType> object property:  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Column>  
@@ -68,7 +69,7 @@ To use any code example that is provided, you will have to choose the programmin
 ```VBNET
 'Declare a DataType object variable and define the data type in the constructor.
 Dim dt As DataType
-'For the decimal data type the following two arguements specify precision, and scale.
+'For the decimal data type the following two arguments specify precision, and scale.
 dt = New DataType(SqlDataType.Decimal, 10, 2)
 ``` 
   
@@ -82,7 +83,7 @@ dt = New DataType(SqlDataType.Decimal, 10, 2)
 {   
 //Declare a DataType object variable and define the data type in the constructor.   
 DataType dt;   
-//For the decimal data type the following two arguements specify precision, and scale.   
+//For the decimal data type the following two arguments specify precision, and scale.   
 dt = new DataType(SqlDataType.Decimal, 10, 2);   
 }  
 ```  

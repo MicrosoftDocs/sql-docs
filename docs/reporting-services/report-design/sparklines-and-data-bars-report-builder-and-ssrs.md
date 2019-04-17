@@ -1,23 +1,18 @@
 ---
 title: "Sparklines and Data Bars (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/07/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rtp.rptdesigner.sparklines.f1"
   - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Sparklines and Data Bars (Report Builder and SSRS)
   Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often inline with text.   
@@ -26,7 +21,7 @@ manager: "erikre"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- To quickly get started with sparklines, see [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) and the videos [How to: Create a Sparkline in a Table](http://go.microsoft.com/fwlink/?LinkId=197092) and [Sparklines, Bar Charts, and Indicators in Report Builder](http://technet.microsoft.com/bi/video/ff877165) .  
+ To quickly get started with sparklines, see [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) and the videos [How to: Create a Sparkline in a Table](https://go.microsoft.com/fwlink/?LinkId=197092) and [Sparklines, Bar Charts, and Indicators in Report Builder](https://technet.microsoft.com/bi/video/ff877165) .  
   
 > [!NOTE]  
 >  You can publish sparklines and data bars with their parent table, matrix, or list, separately from a report as a report part. Read more about [Report Parts](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

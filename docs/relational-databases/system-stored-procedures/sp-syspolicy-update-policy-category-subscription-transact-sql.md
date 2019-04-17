@@ -2,12 +2,10 @@
 title: "sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syspolicy_update_policy_category_subscription_TSQL"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_update_policy_category_subscription"
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # sp_syspolicy_update_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Updates a policy category subscription for a specified database.  
   
@@ -40,18 +37,18 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## Arguments  
- [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`
  Is the identifier for the policy category subscription that you want to update. *policy_category_subscription_id* is **int**, and is required.  
   
- [ **@target_type=** ] **'**target_type**'**  
+`[ @target_type = ] 'target_type'`
  Is the target type of the category subscription. *target_type* is **sysname**, with a default of NULL.  
   
  If you specify *target_type*, the value must be set to 'DATABASE'.  
   
- [ **@target_object=** ] **'**target_object**'**  
+`[ @target_object = ] 'target_object'`
  Is the name of the database that will subscribe to the policy category. *target_object* is **sysname**, with a default of NULL.  
   
- [ **@policy_category=** ] **'**policy_category**'**  
+`[ @policy_category = ] 'policy_category'`
  Is the name of the policy category that you want the database to subscribe to. *policy_category* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

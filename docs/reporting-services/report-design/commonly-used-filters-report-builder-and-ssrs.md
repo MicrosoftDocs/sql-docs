@@ -1,25 +1,20 @@
 ---
 title: "Commonly Used Filters (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/07/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "multivalued parameters [Reporting Services]"
   - "single-valued parameters [Reporting Services]"
   - "parameters [Reporting Services], multivalued"
   - "valid values [Reporting Services]"
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
-caps.latest.revision: 36
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Commonly Used Filters (Report Builder and SSRS)
   To create a filter, you must specify one or more filter equations. A filter equation includes an expression, a data type, an operator, and a value. This topic provides examples of commonly used filters.  

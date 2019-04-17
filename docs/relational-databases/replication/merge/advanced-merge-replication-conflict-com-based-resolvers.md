@@ -2,23 +2,21 @@
 title: "Microsoft COM-Based Resolvers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "COM-based resolvers [SQL Server replication]"
   - "custom resolvers [SQL Server replication]"
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
-caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Advanced Merge Replication Conflict - COM-Based Resolvers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   All of the COM-based resolvers supplied with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] handle update conflicts, and where indicated, they also handle insert and delete conflicts. They all handle column tracking; most also handle row tracking. These and all other COM-based resolvers declare the types of conflict they can handle, and the Merge Agent uses the default resolver for all other conflict types.  
   
  The resolvers are installed during the installation process for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Execute the **sp_enumcustomresolvers** stored procedure to view all the conflict resolvers registered on a computer. Executing the procedure displays the description and globally unique identifier (GUID) for each resolver in a separate result set.  

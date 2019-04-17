@@ -1,0 +1,88 @@
+- name: Reporting Services Extensions
+  href: reporting-services-extensions.md
+  items:
+  - name: Security Considerations for Extensions
+    href: security-considerations-for-extensions.md
+  - name: Implementing a Data Processing Extension
+    href: data-processing/implementing-a-data-processing-extension.md
+  - name: Data Processing Extensions Overview
+    href: data-processing/data-processing-extensions-overview.md
+  - name: Preparing to Implement a Data Processing Extension
+    href: data-processing/preparing-to-implement-a-data-processing-extension.md
+  - name: Creating a Data Processing Extension Library
+    href: data-processing/creating-a-data-processing-extension-library.md
+  - name: Implementing a Connection Class for a Data Processing Extension
+    href: data-processing/implementing-a-connection-class-for-a-data-processing-extension.md
+  - name: Implementing a Command Class for a Data Processing Extension
+    href: data-processing/implementing-a-command-class-for-a-data-processing-extension.md
+  - name: Implementing a DataReader Class for a Data Processing Extension
+    href: data-processing/implementing-a-datareader-class-for-a-data-processing-extension.md
+  - name: Using an External Dataset with Reporting Services
+    href: data-processing/using-an-external-dataset-with-reporting-services.md
+  - name: Deploying a Data Processing Extension
+    href: data-processing/deploying-a-data-processing-extension.md
+    items:
+    - name: "How to: Deploy a Data Processing Extension to a Report Server"
+      href: data-processing/deploying-a-data-processing-extension-to-a-report-server.md
+    - name: "How to: Deploy a Data Processing Extension to Report Designer"
+      href: data-processing/deploying-a-data-processing-extension-to-report-designer.md
+  - name: Debugging Data Processing Extension Code
+    href: data-processing/debugging-data-processing-extension-code.md
+  - name: Removing a Data Processing Extension
+    href: data-processing/removing-a-data-processing-extension.md
+  - name: Implementing a Delivery Extension
+    href: delivery-extension/implementing-a-delivery-extension.md
+  - name: Delivery Extensions Overview
+    href: delivery-extension/delivery-extensions-overview.md
+  - name: Preparing to Implement a Delivery Extension
+    href: delivery-extension/preparing-to-implement-a-delivery-extension.md
+  - name: Creating a Delivery Extension Library
+    href: delivery-extension/creating-a-delivery-extension-library.md
+  - name: Implementing the IDeliveryExtension Interface for a Delivery Extension
+    href: delivery-extension/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
+  - name: Using a Notification Class for a Delivery Extension
+    href: delivery-extension/using-a-notification-class-for-a-delivery-extension.md
+  - name: Using the Setting Class for a Delivery Extension
+    href: delivery-extension/using-the-setting-class-for-a-delivery-extension.md
+  - name: Using the IDeliveryReportServerInformation Interface for a Delivery Extension
+    href: delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md
+  - name: Using the Report Class for a Delivery Extension
+    href: delivery-extension/using-the-report-class-for-a-delivery-extension.md
+  - name: Using the RenderedOutputFile Class for a Delivery Extension
+    href: delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md
+  - name: Implementing the ISubscriptionBaseUIUserControl Interface for a Delivery Extension
+    href: delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md
+  - name: Deploying a Delivery Extension
+    href: delivery-extension/deploying-a-delivery-extension.md
+  - name: Debugging Delivery Extension Code
+    href: delivery-extension/debugging-delivery-extension-code.md
+  - name: Removing a Delivery Extension
+    href: delivery-extension/removing-a-delivery-extension.md
+  - name: Implementing a Rendering Extension
+    href: rendering-extension/implementing-a-rendering-extension.md
+  - name: Rendering Extensions Overview
+    href: rendering-extension/rendering-extensions-overview.md
+  - name: Implementing the IRenderingExtension Interface
+    href: rendering-extension/implementing-the-irenderingextension-interface.md
+  - name: Deploying a Rendering Extension
+    href: rendering-extension/deploying-a-rendering-extension.md
+  - name: Removing a Rendering Extension
+    href: rendering-extension/removing-a-rendering-extension.md
+  - name: Implementing a Security Extension
+    href: security-extension/implementing-a-security-extension.md
+  - name: Security Extensions Overview
+    href: security-extension/security-extensions-overview.md
+  - name: Authentication in Reporting Services
+    href: security-extension/authentication-in-reporting-services.md
+  - name: Authorization in Reporting Services
+    href: security-extension/authorization-in-reporting-services.md
+  - name: Reporting Services Extension Library
+    href: reporting-services-extension-library.md
+  - name: Secure Development
+    href: secure-development/secure-development-reporting-services.md
+  - name: Code Access Security in Reporting Services
+    href: secure-development/code-access-security-in-reporting-services.md
+  - name: Understanding Security Policies
+    href: secure-development/understanding-security-policies.md
+  - name: Using Reporting Services Security Policy Files
+    href: secure-development/using-reporting-services-security-policy-files.md

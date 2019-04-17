@@ -2,12 +2,10 @@
 title: "sp_delete_log_shipping_primary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_log_shipping_primary_database"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_log_shipping_primary_database"
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # sp_delete_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This stored procedure removes log shipping of primary database including backup job as well as local and remote history. Only use this stored procedure after you have removed the secondary databases using **sp_delete_log_shipping_primary_secondary**.  
   
@@ -38,7 +35,7 @@ sp_delete_log_shipping_primary_database
 ```  
   
 ## Arguments  
- [ **@database =** ] '*database*'  
+`[ @database = ] 'database'`
  Is the name of the log shipping primary database. *database* is **sysname**, with no default, and cannot be NULL.  
   
 ## Return Code Values  

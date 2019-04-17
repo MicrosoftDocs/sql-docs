@@ -1,28 +1,21 @@
 ---
 title: "Create a Data-Driven Subscription (SSRS Tutorial) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.date: 05/26/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: reporting-services
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], tutorials"
   - "walkthroughs [Reporting Services]"
   - "data-driven subscriptions"
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Create a Data-Driven Subscription (SSRS Tutorial)
-This [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorial teaches you the concepts of data-driven subscriptions by walking you through a simple example that creates a data data-driven subscription to generate and save filtered report output to a file share. 
+This [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorial teaches you the concepts of data-driven subscriptions by walking you through a simple example that creates a data-driven subscription to generate and save filtered report output to a file share. 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data-driven subscriptions allow you to customize and automate the distribution of a report based on dynamic subscriber data. Data-driven subscriptions are intended for the following kinds of scenarios:  
   
 -   Distributing reports to a large recipient pool whose membership may change from one distribution to the next. For example, email a monthly report to all current customers.  
@@ -31,24 +24,25 @@ This [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tutorial teaches
 + Automate the generation of reports in a wide variety of formats, for example .xlsx and .pdf.  
   
 ## What You Will Learn  
- This tutorial is divided into three lessons:  
- Lesson | Comments
- ------- | --------------
- [Lesson 1: Create a Sample Subscriber Database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | In this lesson you will create a table local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains subscriber information. the information Order Numbers to use for filtering and output file foramts.
-[Lesson 2: Configure Report Data Source Properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |In this lesson, you will configure a report data source so that the report can run unattended on a schedule. Unattended processing requires stored credentials. You will also modify the report dataset to include a parameter that is supplied by the subscriber data. This parameter is used to filter the report data based on order number.
- [Lesson 3: Define a Data-Driven Subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | In this lesson you will create a data-driven subscription. This lesson guides you through each page in the Data-Driven Subscription Wizard.
+This tutorial is divided into three lessons:  
 
- The Following diagram illustrates the basic workflow of the tutorial
+| Lesson | Comments |
+| ------ | -------- |
+| [Lesson 1: Create a Sample Subscriber Database](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | In this lesson you will create a table local [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database that contains subscriber information. the information Order Numbers to use for filtering and output file formats. |
+| [Lesson 2: Configure Report Data Source Properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | In this lesson, you will configure a report data source so that the report can run unattended on a schedule. Unattended processing requires stored credentials. You will also modify the report dataset to include a parameter that is supplied by the subscriber data. This parameter is used to filter the report data based on order number. |
+| [Lesson 3: Define a Data-Driven Subscription](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | In this lesson you will create a data-driven subscription. This lesson guides you through each page in the Data-Driven Subscription Wizard. |
 
-Step  |Description 
----------|---------
-(1)     |  The subscription configuration notes the source report, schedule, and the field mapping to the subscribers Database.        
-(2)     | The OrderInfo table contains 4 order numbers to use for filtering, 1 per file. The table also contains the file formats for the generated reports.
-(3)     | Information from the Adventureworks database is filtered and return in the report. 
-(4)     | The reports are created in the file formats specified in the Orderinfo table.
+The following diagram illustrates the basic workflow of the tutorial:
 
- 
- 
+| Step    | Description |
+| --------|------------ |
+| (1)     | The subscription configuration notes the source report, schedule, and the field mapping to the subscribers Database. |
+| (2)     | The OrderInfo table contains 4 order numbers to use for filtering, 1 per file. The table also contains the file formats for the generated reports. |
+| (3)     | Information from the Adventureworks database is filtered and return in the report. |
+| (4)     | The reports are created in the file formats specified in the Orderinfo table. |
+
+
+
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
 ## Requirements  
@@ -58,7 +52,7 @@ The tutorial uses the *Sales order* report created in the tutorial [Create a Bas
   
 Your computer must have the following installed to use this tutorial:  
   
--   An edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and Components of SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   An edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that supports data-driven subscriptions. For more information, see [Editions and Features of SQL Server 2017](../sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   The report server must be running in native mode. The user interface described in this tutorial is based on a native mode report server. Subscriptions are supported on SharePoint mode report servers but the user interface will be different than what is described in this tutorial.  
   

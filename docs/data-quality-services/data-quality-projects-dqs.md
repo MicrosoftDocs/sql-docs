@@ -2,20 +2,20 @@
 title: "Data Quality Projects (DQS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Data Quality Projects (DQS)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   A data quality project in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) is a means of using a knowledge base to improve the quality of your source data by performing *data cleansing* and *data matching* activities, and then exporting the resultant data to a SQL Server database or a .csv file. You can create a data quality project as a cleansing project or a matching project to perform respective activities. Cleansing and matching projects can be run using the same knowledge base, because knowledge for data cleansing and matching can be built into the same knowledge base.  
   
  A data quality project has the following benefits:  
@@ -54,7 +54,7 @@ manager: "jhubbard"
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Describes how to create a data quality project.|[Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)|  
-|Describes how to open, unlock, rename, and delete a data quality project.|[Open, Unlock, Rename, and Delete a Data Quality Project](https://msdn.microsoft.com/library/hh510417.aspx)|  
+|Describes how to open, unlock, rename, and delete a data quality project.|[Open, Unlock, Rename, and Delete a Data Quality Project](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Describes how to open an Integration Services project in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Open Integration Services Projects in Data Quality Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## See Also  

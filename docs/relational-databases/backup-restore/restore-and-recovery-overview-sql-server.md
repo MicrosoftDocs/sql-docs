@@ -2,13 +2,11 @@
 title: "Restore and Recovery Overview (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "restoring tables [SQL Server]"
   - "backups [SQL Server], restore scenarios"
@@ -20,13 +18,12 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], about restoring databases"
   - "database restores [SQL Server], scenarios"
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Restore and Recovery Overview (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   To recover a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database from a failure, a database administrator has to restore a set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups in a logically correct and meaningful restore sequence. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restore and recovery supports restoring data from backups of a whole database, a data file, or a data page, as follows:  
   
@@ -149,9 +146,9 @@ manager: "jhubbard"
   
  For more information, see about the Database Recovery Advisor, see the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability blogs:  
   
--   [Recovery Advisor: An Introduction](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Recovery Advisor: Using SSMS to create/restore split backups](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Recovery Advisor: Using SSMS to create/restore split backups](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
 ##  <a name="RelatedContent"></a> Related Content  
  None.  

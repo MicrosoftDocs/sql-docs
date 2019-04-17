@@ -2,15 +2,11 @@
 title: "sp_posttracertoken (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "posttracerttoken"
   - "posttracerttoken_TSQL"
@@ -19,13 +15,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_posttracertoken"
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
-caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_posttracertoken (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   This procedure posts a tracer token into the transaction log at the Publisher and begins the process of tracking latency statistics. Information is recorded when the tracer token is written to the transaction log, when it is picked up by the Log Reader Agent, and when it is applied by the Distribution Agent. This stored procedure is executed at the Publisher on the publication database. For more information, see [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
@@ -41,14 +36,14 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication for which latency is being measured. *publication* is **sysname**, with no default.  
   
- [ **@tracer_token_id=** ] *tracer_token_id***OUTPUT**  
+`[ @tracer_token_id = ] _tracer_token_idOUTPUT`
  Is the ID of the tracer token inserted. *tracer_token_id* is **int** with a default of NULL, and it is an OUTPUT parameter. This value can be used to execute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) or [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) without first executing [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
- [ **@publisher=** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL and should not be specified for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL and should not be specified for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

@@ -2,23 +2,23 @@
 title: "Reserved Words (Master Data Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reserved words [Master Data Services]"
   - "Master Data Services, reserved words"
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
-caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Reserved Words (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], when you create model objects or members, some words cannot be used. Using these words may cause errors.  
   
 > [!NOTE]  

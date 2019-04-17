@@ -2,23 +2,21 @@
 title: "Promote Frequently Used XML Values with Computed Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "promoting properties [XML in SQL Server]"
   - "property promotion [XML in SQL Server]"
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Promote Frequently Used XML Values with Computed Columns
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   If queries are made principally on a small number of element and attribute values, you may want to promote those quantities into relational columns. This is helpful when queries are issued on a small part of the XML data while the whole XML instance is retrieved. Creating an XML index on the XML column is not required. Instead, the promoted column can be indexed. Queries must be written to use the promoted column. That is, the query optimizer does not target again the queries on the XML column to the promoted column.  
   
  The promoted column can be a computed column in the same table or it can be a separate, user-maintained column in a table. This is sufficient when singleton values are promoted from each XML instance. However, for multi-valued properties, you have to create a separate table for the property, as described in the following section.  
@@ -173,7 +171,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  To do this, you first create the streaming CLR function. The **xml** data type is exposed as a managed class SqlXml in ADO.NET and supports the **CreateReader()** method that returns an XmlReader.  
   
 > [!NOTE]  
->  The example code in this section uses XPathDocument and XPathNavigator. These force you to load all the XML documents into memory. If you are using similar code in your application to process several large XML documents, this code is not scalable. Instead, keep memory allocations small and use streaming interfaces whenever possible. For more information about performance, see [Architecture of CLR Integration](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  The example code in this section uses XPathDocument and XPathNavigator. These force you to load all the XML documents into memory. If you are using similar code in your application to process several large XML documents, this code is not scalable. Instead, keep memory allocations small and use streaming interfaces whenever possible. For more information about performance, see [Architecture of CLR Integration](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
   
 ```  
 public class c_streaming_xml_tvf {  

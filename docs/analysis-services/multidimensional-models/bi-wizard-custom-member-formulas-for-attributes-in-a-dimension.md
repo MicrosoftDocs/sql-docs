@@ -1,29 +1,17 @@
 ---
 title: "Set Custom Member Formulas for Attributes in a Dimension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Business Intelligence enhancements [Analysis Services], custom member formulas"
-  - "member formulas [Analysis Services]"
-  - "dimensions [Analysis Services], Business Intelligence enhancements"
-  - "custom member formulas [Analysis Services]"
-  - "CustomRollupColumn property"
-ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # BI Wizard - Custom Member Formulas for Attributes in a Dimension
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Add a custom member formula enhancement to a cube or dimension to replace the default aggregation that is associated with a dimension member with the results of a Multidimensional Expressions (MDX) expression. (This enhancement sets the **CustomRollupColumn** property on a specified attribute in a dimension.)  
   
 > [!NOTE]  

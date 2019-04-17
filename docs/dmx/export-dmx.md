@@ -1,32 +1,17 @@
 ---
 title: "EXPORT (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "EXPORT"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "exporting mining models"
-  - "exporting mining structures"
-  - "mining structures [DMX], exporting"
-  - "EXPORT statement"
-ms.assetid: 97617071-e560-4080-81af-a80276fc0823
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # EXPORT (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Extracts a mining model or mining structure object from the server to an Analysis Services Backup File (.abf).  
   

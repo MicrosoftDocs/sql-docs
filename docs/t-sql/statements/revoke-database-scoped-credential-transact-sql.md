@@ -2,13 +2,11 @@
 title: "REVOKE Database Scoped Credential (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: t-sql
+ms.topic: conceptual
 f1_keywords: 
   - "REVOKE DATABASE SCOPED CREDENTIAL"
   - "REVOKE_DATABASE_SCOPED_CREDENTIAL_TSQL"
@@ -18,13 +16,13 @@ helpviewer_keywords:
   - "REVOKE statements, database scoped credentials"
   - "revoking permissions [SQL Server], database scoped credentials"
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
-caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE Database Scoped Credential (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Revokes permissions on a database scoped credential.  
   
@@ -51,7 +49,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be revoked on a database scoped credential. Listed below.  
   
- ON CERTIFICATE **::***credential_name*  
+ ON CERTIFICATE **::**_credential_name_  
  Specifies the database scoped credential on which the permission is being revoked. The scope qualifier "::" is required.  
   
  *database_principal*  

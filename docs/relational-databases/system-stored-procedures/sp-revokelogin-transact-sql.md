@@ -2,12 +2,10 @@
 title: "sp_revokelogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_revokelogin_TSQL"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_revokelogin"
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
-caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # sp_revokelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes the login entries from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for a Windows user or group created by using CREATE LOGIN, **sp_grantlogin**, or **sp_denylogin**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) instead.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +37,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame=**] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the Windows user or group. *login* is **sysname**, with no default. *login* can be any existing Windows user name or group in the form *Computer name*\\*User or Domain*\\*User*.  
   
 ## Return Code Values  

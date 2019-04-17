@@ -2,22 +2,20 @@
 title: "FileTable Compatibility with Other SQL Server Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: filestream
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], using with other features"
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # FileTable Compatibility with Other SQL Server Features
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes how FileTables work with other features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="alwayson"></a> AlwaysOn Availability Groups and FileTables  
@@ -70,7 +68,7 @@ manager: "jhubbard"
   
 -   In addition to these impacts, triggers on FileTables need to deal with couple of additional behaviors  
   
-    -   In case of non-transactional update operations on FileTable through the File system, it is possible that the FILESTREAM contents may be exclusively locked by other Win32 operations and may not be accessible for read/write through the trigger body. In such cases, any attempt to access the FILESTREAM contents within the trigger body may give a “Sharing Violation” error. Triggers should be designed to handle such errors appropriately.  
+    -   In case of non-transactional update operations on FileTable through the File system, it is possible that the FILESTREAM contents may be exclusively locked by other Win32 operations and may not be accessible for read/write through the trigger body. In such cases, any attempt to access the FILESTREAM contents within the trigger body may give a "Sharing Violation" error. Triggers should be designed to handle such errors appropriately.  
   
     -   AFTER image of the FILESTREAM may not be stable since in some cases it may be actively being written by other non-transactional updates at the same time (due to the sharing modes permitted in the File system access).  
   
@@ -82,11 +80,11 @@ manager: "jhubbard"
   
 -   View will not have any FileTable semantics. i.e. the columns in the view (including File Attribute columns) behave just like normal view columns without any special semantics and same is true for rows representing Files/directories.  
   
--   View may be updateable based on the “updateable view” semantics, but the underlying table constraints can reject the updates just like in the table.  
+-   View may be updateable based on the "updateable view" semantics, but the underlying table constraints can reject the updates just like in the table.  
   
 -   File path for a file can be visualized in the view by adding it as an explicit column in the view. For example:  
   
-     `CREATE VIEW MP3FILES AS SELECT column1, column2, …, GetFileNamespacePath() AS PATH, column3,…  FROM Documents`  
+     `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
  **Indexed Views**  
  Currently Indexed views cannot include FILESTREAM columns or computed/persisted computed columns that depend on the FILESTREAM columns. This behavior remains unchanged with views defined on the FileTable also.  

@@ -2,12 +2,10 @@
 title: "SCHEMA_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SCHEMA_ID"
@@ -21,13 +19,13 @@ helpviewer_keywords:
   - "IDs [SQL Server], schemas"
   - "default schema IDs"
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SCHEMA_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the schema ID associated with a schema name.  
   
@@ -36,8 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SCHEMA_ID ( [ schema_name ] )   
 ```  
   
@@ -61,27 +57,9 @@ SCHEMA_ID ( [ schema_name ] )
   
 ```  
 SELECT SCHEMA_ID();  
-GO  
 ```  
   
 ### B. Returning the schema ID of a named schema  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT SCHEMA_ID('HumanResources');  
-GO   
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### C. Returning the default schema ID of a caller  
-  
-```  
-SELECT SCHEMA_ID();  
-```  
-  
-### D. Returning the schema ID of a named schema  
   
 ```  
 SELECT SCHEMA_ID('dbo');  

@@ -2,13 +2,11 @@
 title: "Create or Edit a Server Group (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.editgroup.f1"
   - "sql13.swb.newgroup.f1"
@@ -17,12 +15,12 @@ helpviewer_keywords:
   - "server groups [SQL Server]"
   - "groups [SQL Server], server"
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Create or Edit a Server Group (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   This topic describes how to organize the servers in Registered Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by creating server groups, and placing the servers in the server groups. You can create server groups in Registered Servers at any time, or you can create server groups when you register servers.  
   
 ##  <a name="SSMSProcedure"></a>  

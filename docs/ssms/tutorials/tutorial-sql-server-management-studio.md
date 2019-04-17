@@ -1,14 +1,12 @@
 ---
-title: "Tutorial: SQL Server Management Studio | Microsoft Docs"
+title: "Tutorial: SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
+ms.date: "08/30/2017"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.tutorialstart.ssms.f1"
 helpviewer_keywords: 
@@ -22,45 +20,65 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], tutorials"
   - "scripts [SQL Server], SQL Server Management Studio"
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
+ms.reviewer: "sstein"
 ---
-# Tutorial: SQL Server Management Studio
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# Tutorials for SQL Server Management Studio (SSMS)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-The [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tutorial introduces you to the integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presents a graphical interface for configuring, monitoring, and administering instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also allows you to deploy, monitor, and upgrade the data-tier components used by your applications, such as databases. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] also provides [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, and XML language editors for editing and debugging scripts.  
+The SQL Server Management Studio (SSMS) tutorial introduces you to the integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presents a graphical interface for configuring, monitoring, and administering instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also allows you to deploy, monitor, and upgrade the data-tier components used by your applications, such as databases. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] also provides [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, and XML language editors for editing and debugging scripts.  
   
 ## What You Will Learn  
-This tutorial will help you understand the presentation of information in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and how to take advantage of the features. Note that this tutorial uses the free [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] downloaded from the download center.  
+
+These tutorials will help you understand the presentation of information in SSMS and how to take advantage of its features.
   
-The best way to get acquainted with [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] is through hands-on practice. This tutorial will teach you how to manage the components of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] and how to find the features that you use regularly.  
+The best way to get acquainted with SSMS is through hands-on practice. These tutorials will familiarize you with the various features available within SSMS.  These tutorials will teach you how to manage the components of SSMS and how to find the features that you use regularly.  
+
+Here is what the tutorials cover: 
+
   
-This tutorial is divided into three lessons:  
+- [Tutorial: Connect & Query SQL Server using SSMS](connect-query-sql-server.md)
+
+    In this Tutorial, you learn how to connect to your SQL Server instance. You will also learn some basic Transact-SQL (T-SQL) commands to create and then query a new database. 
+
+- [Tutorial: Scripting Objects in SSMS](scripting-ssms.md)
+
+    In this Tutorial, you learn how to script out various objects in SSMS, including databases and queries. 
+
+- [Tutorial: Using Templates in SSMS](templates-ssms.md)
+   
+    In this Tutorial, you learn how to work with the pre-built Templates within SSMS. The templates are a little-known feature that store a number of Transact-SQL code snippets for various database administration tasks. 
+
+- [Tutorial: SSMS Configuration](ssms-configuration.md)
+
+    In this Tutorial, you learn the basics of configuring your SSMS environment, such as the changing the environmental layout. This Tutorial also explains what the different SSMS components are. 
   
-[Lesson 1: Basic Navigation in SQL Server Management Studio](../../tools/sql-server-management-studio/lesson-1-basic-navigation-in-sql-server-management-studio.md)  
-In this lesson you will learn how to use the components of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], how to reconfigure the environment layout, and how to restore the default layout.  
-  
-[Lesson 2: Writing Transact-SQL](../../tools/sql-server-management-studio/lesson-2-writing-transact-sql.md)  
-In this lesson, you will learn how to open Query Editor, how to manage code, and how to use the other new features of Query Editor.  
-  
-[Lesson 3: Working with Templates, Solutions, and Script Projects](../../tools/sql-server-management-studio/lesson-3-working-with-templates-solutions-and-script-projects.md)  
-In this lesson you will learn how to use templates, and organize scripts into solutions and projects.  
+
+- [Tutorial: Additional Tips and Tricks for using SSMS](ssms-tricks.md)
+
+    In this Tutorial, you will learn additional tips and tricks for using SSMS. The Tutorial includes the following:
+    - Commenting and uncommenting text
+    - Indenting text
+    - Filtering Objects in Object Explorer
+    - Accessing your SQL Server error log
+    - Finding the name of your instance 
+ 
   
 ## Requirements  
-This tutorial is intended for experienced database administrators and database developers who are not familiar with [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], but who are who are familiar with database concepts and the [!INCLUDE[tsql](../../includes/tsql-md.md)] language.  
+This tutorial is intended for experienced database administrators and database developers who are not familiar with [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], but who are familiar with database concepts and [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-Your system must have the following installed to use this tutorial:  
-  
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or a later version with the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sample databases. To enhance security, the sample databases are not installed by default. To install the sample databases, see [Installing SQL Server Samples and Sample Databases](http://sqlserversamples.codeplex.com).  
-  
--   Install the latest version of [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) from the download center.  
-  
--   Internet Explorer 9.0 or later.  
+You must have the following installed to use this tutorial:  
+
+  -   Install the latest version of [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
+
+The first section walks you through creating a database but other sample databases can be found here: [AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases). Instructions for restoring databases in SSMS can be found here: [Restoring a Database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+
+
   
 ## See Also  
-[Database Engine Tutorials](../../relational-databases/database-engine-tutorials.md)  
+[Database Engine Tutorials](../../relational-databases/database-engine-tutorials.md)          
   
   
   

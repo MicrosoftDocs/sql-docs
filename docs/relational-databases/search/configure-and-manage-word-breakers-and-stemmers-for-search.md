@@ -1,14 +1,10 @@
 ---
 title: "Configure and Manage Word Breakers and Stemmers for Search | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "languages [full-text search]"
   - "full-text search [SQL Server], stemmers"
@@ -20,13 +16,14 @@ helpviewer_keywords:
   - "conjugating verbs [full-text search]"
   - "word breakers [full-text search]"
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: 89
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure and Manage Word Breakers and Stemmers for Search
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Word breakers and stemmers perform linguistic analysis on all full-text indexed data. Linguistic analysis does the following two things:
 
 -   **Find word boundaries (word-breaking)**. The *word breaker* identifies individual words by determining where word boundaries exist based on the lexical rules of the language. Each word (also known as a *token*) is inserted into the full-text index using a compressed representation to reduce its size.
@@ -46,7 +43,7 @@ To use the word breakers and stemmers provided for all the languages supported b
 
 To see the list of languages supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The presence of a language in this list indicates that word breakers are registered for the language. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -56,7 +53,7 @@ For Full-Text Search to use the word breakers for a language, they must be regis
 
 To see the list of registered word breaker components, use the following statement.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -81,14 +78,14 @@ If you add, remove, or alter a word breaker, you need to refresh the list of Mic
   
 To view the word breaker language of specific columns, run the following statement.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 
 For additional options and more info, see [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
 
 ##  <a name="tshoot"></a> Troubleshoot word-breaking time-out errors  
- A word-breaking time-out error may occur in a variety of situations. or information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](https://msdn.microsoft.com/en-us/library/cc879279.aspx).
+ A word-breaking time-out error may occur in a variety of situations. or information about these situations and how to respond in each situation, see [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
 ### Info about the MSSQLSERVER_30053 error
   

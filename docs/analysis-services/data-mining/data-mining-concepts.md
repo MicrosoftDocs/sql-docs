@@ -1,36 +1,21 @@
 ---
 title: "Data Mining Concepts | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Analysis Services, data mining"
-  - "cleaning data"
-  - "predictive analytics"
-  - "learning algorithms"
-  - "data mining [Analysis Services], concepts"
-  - "inductive learning"
-  - "data mining [Analysis Services], about data mining"
-  - "mining models [Analysis Services]"
-  - "data access [Analysis Services]"
-  - "machine learning algorithms [Analysis Services]"
-  - "mining models [Analysis Services], about data mining"
-  - "SSAS, data mining"
-  - "Analysis Services, data mining"
-ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 01/09/2019
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Concepts
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
+> [!IMPORTANT]
+> Data mining is deprecated in SQL Server Analysis Services 2017. Documentation is not updated for deprecated features. To learn more, see [Analysis Services backward compatibility (SQL 2017)](../analysis-services-backward-compatibility-sql2017.md).
+
   Data mining is the process of discovering actionable information from large sets of data. Data mining uses mathematical analysis to derive patterns and trends that exist in data. Typically, these patterns cannot be discovered by traditional data exploration because the relationships are too complex or because there is too much data.  
   
  These patterns and trends can be collected and defined as a *data mining model*. Mining models can be applied to specific scenarios, such as:  
@@ -167,7 +152,7 @@ manager: "jhubbard"
   
 -   Embed data mining functionality directly into an application. You can include Analysis Management Objects (AMO), which contains a set of objects that your application can use to create, alter, process, and delete mining structures and mining models. Alternatively, you can send XML for Analysis (XMLA) messages directly to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Development (Analysis Services - Data Mining)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx).  
   
--   Use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to create a package in which a mining model is used to intelligently separate incoming data into multiple tables. For example, if a database is continually updated with potential customers, you could use a mining model together with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to split the incoming data into customers who are likely to purchase a product and customers who are likely to not purchase a product. For more information, see [Typical Uses of Integration Services](http://msdn.microsoft.com/en-us/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca).  
+-   Use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to create a package in which a mining model is used to intelligently separate incoming data into multiple tables. For example, if a database is continually updated with potential customers, you could use a mining model together with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] to split the incoming data into customers who are likely to purchase a product and customers who are likely to not purchase a product. For more information, see [Typical Uses of Integration Services](http://msdn.microsoft.com/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca).  
   
 -   Create a report that lets users directly query against an existing mining model. For more information, see [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   

@@ -2,12 +2,11 @@
 title: "Programming Specific Tasks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Visual Basic [SMO]"
@@ -18,12 +17,14 @@ helpviewer_keywords:
   - "SMO [SQL Server], programming"
   - "SMO [SQL Server], tasks"
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Programming Specific Tasks
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   Programming-specific tasks using SMO objects include complex subjects that would only be required by programs with a specific function, such as backing up, monitoring statistics, replication, managing instance objects, and setting configuration options.  
   
 |Topic|Description|  

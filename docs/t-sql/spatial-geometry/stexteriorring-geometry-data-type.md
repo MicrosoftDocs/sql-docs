@@ -2,12 +2,10 @@
 title: "STExteriorRing (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "STExteriorRing_TSQL"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "STExteriorRing (geometry Data Type)"
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # STExteriorRing (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Returns the exterior ring of a **geometry** instance that is a polygon.
   

@@ -2,12 +2,10 @@
 title: "DROP SIGNATURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP SIGNATURE"
@@ -22,13 +20,12 @@ helpviewer_keywords:
   - "signatures [SQL Server]"
   - "digital signatures [SQL Server]"
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # DROP SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Drops a digital signature from a stored procedure, function, trigger, or assembly.  
   

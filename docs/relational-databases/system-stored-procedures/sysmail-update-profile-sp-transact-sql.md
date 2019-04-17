@@ -2,12 +2,10 @@
 title: "sysmail_update_profile_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_update_profile_sp"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_update_profile_sp"
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # sysmail_update_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the description or name of a Database Mail profile.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,13 +35,13 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## Arguments  
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  The profile id to update. *profile_id* is **int**, with a default of NULL. At least one of *profile_id* or *profile_name* must be specified. If both are specified, the procedure changes the name of the profile.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  The name of the profile to update or the new name for the profile. *profile_name* is **sysname**, with a default of NULL. At least one of *profile_id* or *profile_name* must be specified. If both are specified, the procedure changes the name of the profile.  
   
- [ **@description** = ] **'***description***'**  
+`[ @description = ] 'description'`
  The new description for the profile. *description* is **nvarchar(256)**, with a default of NULL.  
   
 ## Return Code Values  

@@ -2,12 +2,10 @@
 title: "Executing Template Files by Using the CommandText Property | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Managed Classes [SQLXML], executing template files"
@@ -16,12 +14,13 @@ helpviewer_keywords:
   - "executing template files [SQLXML]"
   - "CommandText property"
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandText Property
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This example illustrates how template files that consist of SQL or XPath queries can be specified by using the CommandTextproperty. Instead of specifying the SQL or XPath query as the value of CommandText, you can specify a file name as the value. In the following example, the CommandType property is specified as SqlXmlCommandType.TemplateFile.  
   
  The sample application executes this template:  
@@ -89,7 +88,7 @@ class Test
   
 5.  At the command prompt, execute DocSample.exe.  
   
- If you pass a parameter to a template, the parameter name must begin with at sign (@); for example, p.Name="@ContactID", where p is a SqlXmlParameter object.  
+ If you pass a parameter to a template, the parameter name must begin with at sign (@); for example, p.Name="\@ContactID", where p is a SqlXmlParameter object.  
   
  This is the updated template which takes one parameter.  
   

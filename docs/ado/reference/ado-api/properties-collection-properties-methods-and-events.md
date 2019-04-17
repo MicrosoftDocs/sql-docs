@@ -1,21 +1,18 @@
 ---
 title: "Properties Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Properties collection [ADO], members"
 ms.assetid: 03dc1e08-5f03-49e5-8596-76b306b931bd
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Properties Collection Properties, Methods, and Events
 ## Properties  

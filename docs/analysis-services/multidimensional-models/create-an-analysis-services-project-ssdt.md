@@ -1,30 +1,17 @@
 ---
 title: "Create an Analysis Services Project (SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "templates [Analysis Services]"
-  - "templates [Analysis Services], projects"
-  - "projects [Analysis Services], creating"
-  - "projects [Analysis Services], Business Intelligence Development Studio"
-  - "Business Intelligence Development Studio, defining projects [Analysis Services]"
-  - "items [Analysis Services]"
-ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create an Analysis Services Project (SSDT)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You can define an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] either by using the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Project template or by using the Import [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Database Wizard to read the contents of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. If no solution is currently loaded in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], creating a new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project automatically creates a new solution. Otherwise, the new [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project will be added to the existing solution. Best practices for solution development call for creating separate projects for different types of application data, using a single solution if the projects are related. For example, you might have a single solution that contains separate projects for Integration Services packages, Analysis Services databases, and Reporting Services reports that are all used by the same business application.  
   
  An Analysis Services project contains objects used in a single Analysis Services database. The deployment properties of the project specify the server and database name by which the project metadata will be deployed as instantiated objects.  
@@ -58,7 +45,7 @@ manager: "erikre"
   
 5.  To add the new project to the existing solution, in the **Solution** drop-down list, select **Add to Solution**.  
   
-     —or—  
+     -or-  
   
      To create a new solution, in the **Solution** drop-down list, select **Create new Solution**. To create a new folder for the new solution, select **Create directory for solution**. In **Solution Name**, type the name of the new solution.  
   

@@ -1,25 +1,18 @@
 ---
 title: "Analysis Services Developer Documentation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "multidimensional data [Analysis Services], developer's guide"
-  - "developer's guide [Analysis Services - multidimensional data]"
-ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Analysis Services Developer Documentation
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
 In Analysis Services, almost every object and workload is programmable, and often there is more than one approach to choose from.  Options include writing managed code, script, or using open standards like XMLA and MSOLAP if your solution requirements preclude using the .NET framework.
 
 ## What you can accomplish in code
@@ -67,21 +60,21 @@ Developer reference documentation for the managed provider, Analysis Services Ma
 [ADOMD.NET](http://msdn.microsoft.com/library/mt465769.aspx)
 Developer reference documentation for the managed provider, ADOMD.NET, used for programmatic data access and query workloads.
 
-[Analysis Services Schema Rowsets](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
+[Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)
 Describes the schema rowsets that provide information about server state, server operations, and database objects.
 
-[XML for Analysis  &#40;XMLA&#41; Reference](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)
+[XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)
 Describes XMLA concepts that can help you understand how XMLA contributes to your custom solution. It also describes the level of compliance with the XMLA 1.1 specification.
 
-[Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)
+[Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)
 Describes the ASSL extensions to XMLA. ASSL provides a data definition and manipulation language for Analysis Services multidimensional models that supplements the XMLA specification.
 
-[Tabular Model Scripting Language &#40;TMSL&#41; Reference](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)
+[Tabular Model Scripting Language &#40;TMSL&#41; Reference](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)
 TMSL is a JSON representation of Tabular models at compatibility level 1200 and higher. Object definitions are based on tabular metadata constructs like table, column, and relationship rather than multidimensional metadata that might be unfamiliar if you are new to Analysis Services data modeling in Tabular mode.
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)
 Documents the cmdlets used for administrative functions, plus the general-purpose **Invoke-ASCmd** cmdlet that accepts any script or query as input.
 
 ## See Also
-[Technical Reference &#40;SSAS&#41;](../analysis-services/powershell/technical-reference-ssas.md)
+[Technical Reference](../analysis-services/powershell/technical-reference-ssas.md)
 [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

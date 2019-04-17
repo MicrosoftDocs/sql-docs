@@ -2,26 +2,22 @@
 title: "Summary Page (Always On Availability Group Wizards) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.newagwizard.summary.f1"
   - "sql13.swb.adddatabasewizard.summary.f1"
   - "sql13.swb.addreplicawizard.summary.f1"
   - "sql13.swb.failoverwizard.summary.f1"
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
-caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Summary Page (Always On Availability Group Wizards)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 <a name="Top"></a>  
   

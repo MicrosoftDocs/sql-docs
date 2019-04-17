@@ -1,23 +1,17 @@
 ---
 title: "Configure Power Pivot Health Rules | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Power Pivot Health Rules
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint includes SharePoint health rules that help you monitor and remedy server availability and configuration problems. Health rules that apply to [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint appear in the Review rule definitions page.  
   
  Health rules provide early detection of server problems that could eventually result in service disruptions. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint provides a number of rules to help you identify and fix problems before they impact your users. You can customize many of these rules to fit the unique characteristics of your deployment. For example, if you want more time to address warnings about disk space, you could raise the available disk space percentage from 5% to 10% so that you get the warning earlier.  
@@ -28,10 +22,10 @@ manager: "erikre"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Note:** Health rule settings are configured separately for the SQL Server Analysis Services instance and the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] service application. Use the instructions in this topic to configure health rules for each service. For a SharePoint 2013 deployment, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] only uses the service application. Therefore [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installs different sets of health rules for different versions of SharePoint. See the “version” column in the topic [Health Rules Reference &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md), or you can run the following Windows PowerShell command to see the installed rules.  
+ **Note:** Health rule settings are configured separately for the SQL Server Analysis Services instance and the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] service application. Use the instructions in this topic to configure health rules for each service. For a SharePoint 2013 deployment, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] only uses the service application. Therefore [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installs different sets of health rules for different versions of SharePoint. See the "version" column in the topic [Health Rules Reference &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md), or you can run the following Windows PowerShell command to see the installed rules.  
   
 ```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
+Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
 ```  
   
  **In this topic:**  

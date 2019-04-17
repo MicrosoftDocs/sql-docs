@@ -2,26 +2,23 @@
 title: "Backup and Restore for Oracle Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "recovery [SQL Server replication], Oracle publishing"
   - "backups [SQL Server replication], Oracle publishing"
   - "Oracle publishing [SQL Server replication], backup and restore"
   - "restoring [SQL Server replication], Oracle publishing"
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Backup and Restore for Oracle Publishers
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Follow these guidelines when backing up and restoring:  
   

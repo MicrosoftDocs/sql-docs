@@ -2,23 +2,21 @@
 title: "Options (Environment - Help - Online Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Environment.Help.Online"
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (Environment - Help - Online Page)
-The **Options** dialog box lets you specify the Help sources to use for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] searches, including F1 Help. On the **Tools** menu, click **Options**, expand the **Environment** folder, select **Help**, and then click **Online**. If the **Online** page does not appear in the list, select the **Show all settings** check box in the **Options** dialog box.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+The **Options** dialog box lets you specify the Help sources to use for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] searches, including F1 Help. On the **Tools** menu, click **Options**, expand the **Environment** folder, select **Help**, and then click **Online**. If the **Online** page does not appear in the list, select the **Show all settings** check box in the **Options** dialog box.  
   
 **When loading Help content**  
 Sets the order in which Help sources are used for F1 Help, and specifies which Help sources are used.  

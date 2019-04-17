@@ -2,23 +2,21 @@
 title: "Back Up Database (Media Options Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 f1_keywords: 
   - "swb.backupdatabase.mediaoptions.f1"
   - "sql13.swb.backupdatabase.mediaoptions.f1"
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Back Up Database (Media Options Page)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the  **Media Options** page of the **Back Up Database** dialog box to view or modify database media options.  
   
  **To create a backup by using SQL Server Management Studio**  
@@ -95,7 +93,7 @@ manager: "jhubbard"
  **Back up the tail of the log, and leave the database in the restoring state**  
  Back up the tail of the log and leave the database in a restoring state. This option creates a *tail-log backup*, which backs up logs that have not yet been backed up (the active log), typically, in preparation for restoring a database. The database will be unavailable to users until it is completely restored.  
   
- Selecting this option is equivalent to specifying WITH NO_TRUNCATE, NORECOVERY in a [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement ([!INCLUDE[tsql](../../includes/tsql-md.md)]). For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+ Selecting this option is equivalent to specifying WITH NO_TRUNCATE, NORECOVERY in a [BACKUP](../../t-sql/statements/backup-transact-sql.md) statement ( [!INCLUDE[tsql](../../includes/tsql-md.md)]). For more information, see [Tail-Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 ### Tape drive  
  The options of the **Tape drive** panel control tape management during the backup operation. These options are activated only if **Tape** has been selected in the **Destination** panel on the [General](../../relational-databases/backup-restore/back-up-database-general-page.md) page of the **Back Up Database** dialog box.  

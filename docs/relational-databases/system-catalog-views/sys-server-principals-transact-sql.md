@@ -2,12 +2,10 @@
 title: "sys.server_principals (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "server_principals"
@@ -19,13 +17,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_principals catalog view"
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Contains a row for every server-level principal.  
   
@@ -43,7 +41,7 @@ manager: "jhubbard"
 |**default_language_name**|**sysname**|Default language for this principal.|  
 |**credential_id**|**int**|ID of a credential associated with this principal. If no credential is associated with this principal, credential_id will be NULL.|  
 |**owning_principal_id**|**int**|The **principal_id** of the owner of a server role. NULL if the principal is not a server role.|  
-|**is_fixed_role**|**bit**|Returns 1 if the principal is one of the fixed server roles. For more information, see [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).|  
+|**is_fixed_role**|**bit**|Returns 1 if the principal is one of the built-in server roles with fixed permissions. For more information, see [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## Permissions  
  Any login can see their own login name, the system logins, and the fixed server roles. To see other logins, requires ALTER ANY LOGIN, or a permission on the login. To see user-defined server roles, requires ALTER ANY SERVER ROLE, or membership in the role.  
@@ -54,7 +52,7 @@ manager: "jhubbard"
  The following query lists the permissions explicitly granted or denied to server principals.  
   
 > [!IMPORTANT]  
->  The permissions of fixed server roles do not appear in sys.server_permissions. Therefore, server principals may have additional permissions not listed here.  
+>  The permissions of fixed server roles (other than public) do not appear in sys.server_permissions. Therefore, server principals may have additional permissions not listed here.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

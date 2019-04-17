@@ -2,21 +2,18 @@
 title: "SQLStatistics (Excel Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Excel driver [ODBC], SQLStatistics"
   - "SQLStatistics function [ODBC], Excel Driver"
 ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLStatistics (Excel Driver)
 > [!NOTE]  

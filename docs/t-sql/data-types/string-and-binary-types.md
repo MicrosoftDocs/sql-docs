@@ -2,12 +2,10 @@
 title: "String and Binary Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -15,13 +13,12 @@ helpviewer_keywords:
   - "data types [SQL Server]"
   - "LOB data [SQL Server]"
 ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
-caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # String and Binary Types
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following string and binary types.
   

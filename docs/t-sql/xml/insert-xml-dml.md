@@ -2,12 +2,9 @@
 title: "insert (XML DML) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,13 +14,12 @@ helpviewer_keywords:
   - "insert keyword [XML DML]"
   - "insert XML DML statement"
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # insert (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Inserts one or more nodes identified by *Expression1* as child nodes or siblings of the node identified by *Expression2*.  
   
@@ -127,7 +123,7 @@ GO
 ```  
   
 ### C. Inserting attributes into a document  
- The following example illustrates how attributes are inserted in a document.First, a document is assigned to an **xml** type variable. Then, a series of **insert** XML DML statements is used to insert attributes into the document. After each attribute insertion, the SELECT statement displays the result.  
+ The following example illustrates how attributes are inserted in a document. First, a document is assigned to an **xml** type variable. Then, a series of **insert** XML DML statements is used to insert attributes into the document. After each attribute insertion, the SELECT statement displays the result.  
   
 ```  
 USE AdventureWorks;  
@@ -381,7 +377,7 @@ FROM T;
 -- expression 2 in the insert() must be singleton.      
 UPDATE T   
 set Instructions.modify('   
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 insert <MI:Location LocationID="1000" >   
            <MI:step>New instructions go here</MI:step>   
          </MI:Location>   
@@ -394,7 +390,7 @@ FROM T ;
 -- 2) insert attributes in the new <Location>             
 UPDATE T             
 SET Instructions.modify('             
-declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";             
+declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";             
 insert attribute LaborHours { "1000" }             
 into (/MI:root/MI:Location[@LocationID=1000])[1] ');   
 GO             

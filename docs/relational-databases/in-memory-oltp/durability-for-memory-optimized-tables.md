@@ -2,21 +2,18 @@
 title: "Durability for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # Durability for Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] provides full durability for memory-optimized tables. When a transaction that changed a memory-optimized table commits, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (as it does for disk-based tables), guarantees that the changes are permanent (will survive a database restart), provided the underlying storage is available. There are two key components of durability: transaction logging and persisting data changes to on-disk storage.  
   
@@ -99,10 +96,10 @@ manager: "jhubbard"
 |CFP0 (30%), CFP1 (20%), CFP2 (50%), CFP3 (10%)|(CFP0, CFP1, CFP2). Files are chosen starting from left.<br /><br /> CTP3 is not chosen as it will make resultant data file greater than 100% of the ideal size.|  
 |CFP0 (80%), CFP1 (30%), CFP2 (10%), CFP3 (40%)|(CFP1, CFP2, CFP3). Files are chosen starting from left.<br /><br /> CFP0 is skipped because if combined with CFP1, the resultant data file will be greater than 100% of the ideal size.|  
   
- Not all CFPs with available space qualify for merge. For example, if two adjacent CFPs are 60% full, they will not qualify for merge and each of these CFPs will have 40% storage unused. In the worst case, all CFPs will be 50% full, a storage utilization of only 50%. While the deleted rows may exist in storage because the CFPs don’t qualify for merge, the deleted rows may have already been removed from memory by in-memory garbage collection. The management of storage and the memory is independent from garbage collection. Storage taken by active CFPs (not all CFPs are being updated) can be up to 2 times larger than the size of durable tables in memory.  
+ Not all CFPs with available space qualify for merge. For example, if two adjacent CFPs are 60% full, they will not qualify for merge and each of these CFPs will have 40% storage unused. In the worst case, all CFPs will be 50% full, a storage utilization of only 50%. While the deleted rows may exist in storage because the CFPs don't qualify for merge, the deleted rows may have already been removed from memory by in-memory garbage collection. The management of storage and the memory is independent from garbage collection. Storage taken by active CFPs (not all CFPs are being updated) can be up to 2 times larger than the size of durable tables in memory.  
   
 ### Life Cycle of a CFP  
- CPFs transition through several states before they can be deallocated. Database checkpoints and log backups need to happen to transition the files through the phases, and ultimately clean up files that are no longer needed. For a description of these phases, see [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
+ CFPs transition through several states before they can be deallocated. Database checkpoints and log backups need to happen to transition the files through the phases, and ultimately clean up files that are no longer needed. For a description of these phases, see [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md).  
   
  You can manually force the checkpoint followed by log backup to expedite the garbage collection. In production scenarios, the automatic checkpoints and log backups taken as part of backup strategy will seamlessly transition CFPs through these phases without requiring any manual intervention. The impact of the garbage collection process is that databases with memory-optimized tables may have a larger storage size compared to its size in memory. If checkpoint and log backups do not happen, the on-disk footprint of checkpoint files continues to grow.  
   

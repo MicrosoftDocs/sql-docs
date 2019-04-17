@@ -2,23 +2,22 @@
 title: "SQLSetStmtAttr | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLSetStmtAttr function"
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSetStmtAttr
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not support the mixed (keyset/dynamic) cursor model. Attempts to set the keyset size using SQL_ATTR_KEYSET_SIZE will fail if the value set is not equal to 0.  
@@ -63,7 +62,7 @@ manager: "jhubbard"
   
 |*ValuePtr* value|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Default. After calling [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), the statement preparation is deferred until **SQLExecute** is called or metaproperty operation (**SQLDescribeCol** or **SQLDescribeParam**) is executed.|  
+|SQL_DP_ON|Default. After calling [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360), the statement preparation is deferred until **SQLExecute** is called or metaproperty operation (**SQLDescribeCol** or **SQLDescribeParam**) is executed.|  
 |SQL_DP_OFF|The statement is prepared as soon as **SQLPrepare** is executed.|  
   
 ### SQL_SOPT_SS_REGIONALIZE  
@@ -145,7 +144,7 @@ manager: "jhubbard"
  If a catalog function other then SQLTables, SQLColumns, or SQLPrimaryKeys is called when SQL_SOPT_SS_NAME_SCOPE has a value other than SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR is returned. A diagnostic record is generated with SQLSTATE HY010 and the message "Function sequence error (SQL_SOPT_SS_NAME_SCOPE is not set to SQL_SS_NAME_SCOPE_TABLE)".  
   
 ## See Also  
- [SQLGetStmtAttr Function](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr Function](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -2,13 +2,11 @@
 title: "Properties Window F1 Help (Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - ".SPID"
   - ".ExecutionTime"
@@ -23,12 +21,12 @@ helpviewer_keywords:
   - "Properties window [SQL Server Management Studio]"
   - "SQL Server Management Studio Help [SQL Server], properties window"
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Properties Window F1 Help (Management Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use the **Properties** window to view properties of selected elements. You can also use the **Properties** window to view file, project, and solution properties. The **Properties** window is available by clicking **Properties Window** on the **View** menu.  
   
 The **Properties** window displays different types of editing fields, depending on the needs of a particular property. Properties shown in gray are read-only.  
@@ -50,5 +48,5 @@ Displays the properties for an object.
 The description pane appears at the bottom of the **Properties** window and shows the property type and a short description of the property. You can turn the description of the property off and on using the **Description** command on the shortcut menu.  
   
 ## See Also  
-[Properties Window in SQL Server Management Studio](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
+[Properties Window in SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   

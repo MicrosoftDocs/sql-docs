@@ -1,21 +1,14 @@
 ---
 title: "Tutorial: Add a Parameter to Your Report (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: reporting-services
+
+ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Add a Parameter to Your Report (Report Builder)
 In this tutorial, you add a parameter to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report so report readers can filter report data for one or more values. 
@@ -503,5 +496,5 @@ This concludes the walkthrough for how to add a parameter to your report. To lea
   
 ## See Also  
 * [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)
-* [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Lookup Function](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

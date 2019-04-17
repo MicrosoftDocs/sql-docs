@@ -1,15 +1,12 @@
 ---
 title: "Report and Snapshot Size Limits | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-server
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "large reports"
   - "maximum report size"
@@ -18,10 +15,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], size"
   - "denial of service attacks [Reporting Services]"
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Report and Snapshot Size Limits
   Administrators who manage a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] deployment can use the information in this topic to understand report size limits when the report is published to a report server, rendered at run time, and saved to the file system. This topic also provides practical guidance on how to measure the size of a report server database, and describes the effect of snapshot size on server performance.  
@@ -51,14 +46,14 @@ manager: "erikre"
  The only hard limit on report size is when rendering to Excel format. Worksheets cannot exceed 65536 rows or 256 columns. Other rendering formats do not have these limits so size is limited only by the amount of resources on your server.  
   
 > [!NOTE]  
->  Report processing and rendering occur in memory. If you have large reports or large number of users, be sure to do some kind of capacity planning to make sure your report server deployment performs at a level that is satisfactory for your users. For more information about tools and guidelines, see the following publications on MSDN: [Planning for Scalability and Performance with Reporting Services](http://go.microsoft.com/fwlink/?LinkID=70650) and [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](http://go.microsoft.com/fwlink/?LinkID=77519).  
+>  Report processing and rendering occur in memory. If you have large reports or large number of users, be sure to do some kind of capacity planning to make sure your report server deployment performs at a level that is satisfactory for your users. For more information about tools and guidelines, see the following publications on MSDN: [Planning for Scalability and Performance with Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) and [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## Measuring Snapshot Storage  
  The size of any given snapshot is directly proportional to the amount of data in the report. Snapshots are typically much larger than other items that are stored on a report server. Snapshot size can typically range from a few megabytes to tens of megabytes. If you have very large reports, you can expect to see snapshots that are even larger. Depending on how frequently you use snapshots and how you configure report history, the amount of disk space that the report server database requires can increase rapidly over a short period of time.  
   
  By default, both the **reportserver** and **reportservertempdb** databases are set to autogrow. Although the database size can increase automatically, it is never decreased automatically. If the **reportserver** database has excess capacity because you deleted snapshots, you must manually reduce it to recover disk space. Similarly, if the **reportservertempdb** grew to accommodate an unusually high volume of interactive reporting, the disk space allocation will remain at that setting until you reduce it.  
   
- To measure the size of the report server databases, you can run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. Calculating total database size at regular intervals can help you develop reasonable estimates of how to allocate space for the report server database over time. The following statements measure the amount of space that that is currently used (the statements assume you are using default database names):  
+ To measure the size of the report server databases, you can run the following [!INCLUDE[tsql](../../includes/tsql-md.md)] commands. Calculating total database size at regular intervals can help you develop reasonable estimates of how to allocate space for the report server database over time. The following statements measure the amount of space that is currently used (the statements assume you are using default database names):  
   
 ```  
 USE ReportServer  

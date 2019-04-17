@@ -2,25 +2,25 @@
 title: "Managing a Composite Domain | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2012"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Managing a Composite Domain
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes the use of composite domains in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Sometimes a single domain does not represent the data in a field satisfactorily, and you can represent the data only by grouping single domains. To do so, you create a composite domain. A composite domain consists of two or more single domains, and maps to a data field that consists of multiple related terms that are not parsed, but are included in a single composite value. Each term in the value will be represented by a different single domain. Once you have included single domains into composite domains, and then mapped the composite domain to the data field, you can build knowledge in the knowledge base about the data in that field by building knowledge in the single domains. A composite domain, like a single domain, is a semantic representation of the data in a single data field.  
   
  The single domains in a composite domain must have a common area of knowledge. An example is an address field that has street, city, state, country, and postal code data. The different terms in this field could have different data types. To handle that, you map those terms to different single domains. Another example is a full name field that has first name, middle name, and last name data. To use a composite domain, you have to be able to parse the data in the field into different single domains, creating a composite domain for the field and a single domain for part of the field.  
   
- Composite domains have different capabilities than single domains. You cannot change the values in the composite domain—you must do so in a single domain. With composite domains, you can use cross-domain rules to test the values in the single domains of the composite domain. You can also view the value combinations that are found in the composite domains.  
+ Composite domains have different capabilities than single domains. You cannot change the values in the composite domain-you must do so in a single domain. With composite domains, you can use cross-domain rules to test the values in the single domains of the composite domain. You can also view the value combinations that are found in the composite domains.  
   
 ## In This Section  
  Using a composite domain enables you to do the following:  

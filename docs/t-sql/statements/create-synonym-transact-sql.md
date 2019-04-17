@@ -2,12 +2,10 @@
 title: "CREATE SYNONYM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_SYNONYM_TSQL"
@@ -22,13 +20,12 @@ helpviewer_keywords:
   - "CREATE SYNONYM statement"
   - "synonyms [SQL Server], creating"
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE SYNONYM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates a new synonym.  
   
@@ -49,7 +46,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR <object>
 ```  
   
 ```  
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
   
 CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >  
   
@@ -130,21 +127,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------`  
-  
- `ProductID   Name`  
-  
- `----------- --------------------------`  
-  
- `1           Adjustable Race`  
-  
- `2           Bearing Ball`  
-  
- `3           BB Ball Bearing`  
-  
- `4           Headset Ball Bearings`  
-  
- `(4 row(s) affected)`  
+ ```
+ ----------------------- 
+ ProductID   Name 
+ ----------- -------------------------- 
+ 1           Adjustable Race 
+ 2           Bearing Ball 
+ 3           BB Ball Bearing 
+ 4           Headset Ball Bearings 
+
+ (4 row(s) affected)
+``` 
   
 ### B. Creating a synonym to remote object  
  In the following example, the base object, `Contact`, resides on a remote server named `Server_Remote`.  

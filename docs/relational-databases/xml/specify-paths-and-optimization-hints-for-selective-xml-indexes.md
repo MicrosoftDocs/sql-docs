@@ -2,20 +2,18 @@
 title: "Specify Paths and Optimization Hints for Selective XML Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Specify Paths and Optimization Hints for Selective XML Indexes
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   This topic describes how to specify node paths to index and optimization hints for indexing when you create or alter selective XML indexes.  
   
  You specify node paths and optimization hints at the same time in one of the following statements:  
@@ -59,7 +57,7 @@ manager: "jhubbard"
   
  Here is an example of a selective XML index created with default mappings. For all three paths, the default node type (**xs:untypedAtomic**) and cardinality are used.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -70,7 +68,7 @@ mypath03 = '/a/b/d'
 )  
 ```  
   
- The user-specified mapping mode lets you specify a type and cardinality for the node to obtain better performance. However, this improved performance is achieved by giving up safety – because a cast can fail - and generality – because only the specified type is matched with the selective XML index.  
+ The user-specified mapping mode lets you specify a type and cardinality for the node to obtain better performance. However, this improved performance is achieved by giving up safety - because a cast can fail - and generality - because only the specified type is matched with the selective XML index.  
   
  The XQuery types supported for untyped XML case are:  
   
@@ -90,7 +88,7 @@ mypath03 = '/a/b/d'
   
  You can optimize the selective XML index shown in the following manner:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -99,8 +97,8 @@ mypath= '/a/b' as XQUERY 'node()',
 pathX = '/a/b/c' as XQUERY 'xs:double' SINGLETON,  
 pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON  
 )  
--- mypath – Only the node value is needed; storage is saved.  
--- pathX – Performance is improved; secondary indexes are possible.  
+-- mypath - Only the node value is needed; storage is saved.  
+-- pathX - Performance is improved; secondary indexes are possible.  
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
@@ -114,7 +112,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Consider the following query:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -122,7 +120,7 @@ FROM myXMLTable T
   
  The specified query returns a value from the path `/a/b/d` packed into an NVARCHAR(200) data type, so the data type to specify for the node is obvious. However there is no schema to specify the cardinality of the node in untyped XML. To specify that node `d` appears at most once under its parent node `b`, create a selective XML index that uses the SINGLETON optimization hint as follows:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -220,7 +218,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      Consider the following simple query over the [sample XML document](#sample) in this topic:  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -235,7 +233,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  To improve the performance of the SELECT statement shown above, you can create the following selective XML index:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -248,7 +246,7 @@ FOR
 ### Indexing identical paths  
  You cannot promote identical paths as the same data type under different path names. For example, the following query raises an error, because `pathOne` and `pathTwo` are identical:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -259,7 +257,7 @@ FOR
   
  However, you can promote identical paths as different data types with different names. For example, the following query is now acceptable, because the data types are different:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -275,7 +273,7 @@ FOR
   
  Here is a simple XQuery that uses the exist() method:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -290,7 +288,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  Here is a more complex variation of the previous XQuery, with a predicate applied:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -306,7 +304,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  Here is a more complex query with a value() clause:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -324,7 +322,7 @@ FROM myXMLTable T
   
  Here is a query that uses a FLWOR clause inside an exist() clause. (The name FLWOR comes from the five clauses that can make up an XQuery FLWOR expression: for, let, where, order by, and return.)  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -347,7 +345,7 @@ WHERE T.xmldata.exist('
   
  The use of optimization hints is optional. You can always accept the default mappings, which are reliable but may not provide optimal performance and storage.  
   
- Some optimization hints – for example, the SINGLETON hint - introduce constraints over your data. In some cases, errors may be raised when those constraints are not met.  
+ Some optimization hints - for example, the SINGLETON hint - introduce constraints over your data. In some cases, errors may be raised when those constraints are not met.  
   
 ### Benefits of Optimization Hints  
  The following table identifies the optimization hints that support more efficient storage or improved performance.  
@@ -376,7 +374,7 @@ WHERE T.xmldata.exist('
   
  Consider the following example:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  

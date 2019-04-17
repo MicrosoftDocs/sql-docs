@@ -2,18 +2,15 @@
 title: "Define a State Variable | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Define a State Variable
   This procedure describes how to define a package variable where the CDC state is stored.  
@@ -30,7 +27,7 @@ manager: "jhubbard"
 |**CS**|This marks the current processing range start point (Current Start).|  
 |**\<cs-lsn>**|This is the last (Log Sequence Number) LSN processed in the previous CDC run.|  
 |**CE**|This marks the current processing range end point (Current End). The presence of the CE component in the CDC state is an indication that either a CDC package is currently processing or that a CDC package failed before fully processing its CDC processing range.|  
-|**\<ce-lsn>**|This is the last LSN to be processed in the current CDC Run. It is always assumed that the last sequence number to be processed is the maximum (0xFFF…).|  
+|**\<ce-lsn>**|This is the last LSN to be processed in the current CDC Run. It is always assumed that the last sequence number to be processed is the maximum (0xFFF...).|  
 |**IR**|This marks the initial processing range.|  
 |**\<ir-start>**|This is an LSN of a change just before the initial load began.|  
 |**\<ir-end>**|This is an LSN of a change just after the initial load ended.|  

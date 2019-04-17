@@ -2,12 +2,10 @@
 title: "ALTER QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_QUEUE_TSQL"
@@ -23,13 +21,12 @@ helpviewer_keywords:
   - "unavailable queues [SQL Server]"
   - "activation stored procedures [Service Broker]"
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # ALTER QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the properties of a queue.  
   

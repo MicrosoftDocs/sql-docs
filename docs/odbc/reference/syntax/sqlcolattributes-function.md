@@ -2,13 +2,11 @@
 title: "SQLColAttributes Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLColAttributes"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLColAttributes function [ODBC]"
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLColAttributes Function
 **Conformance**  

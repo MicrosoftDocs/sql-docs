@@ -2,28 +2,23 @@
 title: "sp_MSchange_logreader_agent_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_MSchange_logreader_agent_properties_TSQL"
   - "sp_MSchange_logreader_agent_properties"
 helpviewer_keywords: 
   - "sp_MSchange_logreader_agent_properties"
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_MSchange_logreader_agent_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the properties of a Log Reader Agent job that runs at a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or later version Distributor. This stored procedure is used to change properties when the Publisher runs on an instance of [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. This stored procedure is executed at the Distributor on the distribution database.  
   
@@ -44,32 +39,32 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=** ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publisher_security_mode**= ] *publisher_security_mode*  
+`[ @publisher_security_mode = ] publisher_security_mode`
  Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with no default.  
   
  **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
  **1** specifies Windows Authentication.  
   
- [ **@publisher_login**= ] **'***publisher_login***'**  
+`[ @publisher_login = ] 'publisher_login'`
  Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with no default. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the Windows account specified in *job_login* will be used when connecting to the Publisher.  
   
- [ **@publisher_password**= ] **'***publisher_password***'**  
+`[ @publisher_password = ] 'publisher_password'`
  Is the password used when connecting to the Publisher. *publisher_password* is **sysname**, with no default.  
   
- [ **@job_login**= ] **'***job_login***'**  
+`[ @job_login = ] 'job_login'`
  Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with no default. *This cannot be changed for a non-*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
   
- [ **@job_password**= ] **'***job_password***'**  
+`[ @job_password = ] 'job_password'`
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with no default.  
   
- [ **@publisher_type**= ] **'***publisher_type***'**  
+`[ @publisher_type = ] 'publisher_type'`
  Specifies the Publisher type when the Publisher is not running in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  

@@ -2,27 +2,25 @@
 title: "catalog.update_logdb_info (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
-caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
+manager: craigg
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # catalog.update_logdb_info (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Update the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Logging information.
 
 ## Syntax
 
-```tsql
-update_logdb_info [@server_name = ] server_name, [@connection_string = ] connection_string
+```sql
+catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ] connection_string
 ```
 
 ## Arguments

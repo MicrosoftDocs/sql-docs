@@ -2,28 +2,23 @@
 title: "sp_dropmergepullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_dropmergepullsubscription"
   - "sp_dropmergepullsubscription_TSQL"
 helpviewer_keywords: 
   - "sp_dropmergepullsubscription"
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_dropmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Drops a merge pull subscription. This stored procedure is executed at the Subscriber on the subscription database.  
   
@@ -40,16 +35,16 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of NULL. This parameter is required. Specify a value of **all** to remove subscriptions to all publications  
   
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher*is **sysname**, with a default of NULL. This parameter is required.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db*is **sysname**, with a default of NULL. This parameter is required.  
   
- [ **@reserved=**] **'***reserved***'**  
+`[ @reserved = ] 'reserved'`
  Is reserved for future use. *reserved* is **bit**, with a default of **0**.  
   
 ## Return Code Values  

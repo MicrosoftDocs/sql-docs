@@ -1,22 +1,18 @@
 ---
 title: "HTML Device Information Settings | Microsoft Docs"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/16/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: reporting-services
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "HTML [Reporting Services], rendering"
   - "device information settings [Reporting Services], HTML rendering"
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # HTML Device Information Settings
 The following table lists the device information settings for rendering in HTML format.  
@@ -26,7 +22,7 @@ The following table lists the device information settings for rendering in HTML 
   
 |Setting|Value|  
 |-------------|-----------|  
-|**AccessibleTablix**|Indicates whether to render with additional accessibility metadata for use with screen readers. The additional accessibility metadata causes the rendered report to be compliant with the following technical standards in the "Web-based Intranet and Internet Information and Applications" section (1194.22) of the Electronic and Information Technology Accessibility Standards (Section 508) document:<br /><br /> (g) Row and column headers shall be identified for data tables.<br /><br /> (h) Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.<br /><br /> (i) Frames shall be titled with text that facilitates frame identification and navigation.<br /><br /> <br /><br /> This parameter is only applicable to reports that contain simple table or matrix structures with simple grouping. The default value is **false**.<br /><br /> This parameter is supported in [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)], but not in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2007](../includes/sps2007-md.md)].|  
+|**AccessibleTablix**|Indicates whether to render with additional accessibility metadata for use with screen readers. The additional accessibility metadata causes the rendered report to be compliant with the following technical standards in the "Web-based Intranet and Internet Information and Applications" section (1194.22) of the Electronic and Information Technology Accessibility Standards (Section 508) document:<br /><br /> (g) Row and column headers shall be identified for data tables.<br /><br /> (h) Markup shall be used to associate data cells and header cells for data tables that have two or more logical levels of row or column headers.|  
 |**ActionScript(\*)**|Specifies the name of the JavaScript function to use when an action event occurs, such as a drillthrough or bookmark click. If this parameter is specified, an action event will trigger the named JavaScript function instead of a postback to the server.|  
 |**BookmarkID**|The bookmark ID to jump to in the report.|  
 |**DocMap**|Indicates whether to show or hide the report document map. The default value of this parameter is **true**.|  
@@ -41,10 +37,10 @@ The following table lists the device information settings for rendering in HTML 
 |**OutlookCompat**|Indicates whether to render with extra metadata that makes the report look better in Outlook. For others, the default value is **false**.|  
 |**Parameters**|Indicates whether to show or hide the parameters area of the toolbar. If you set this parameter to a value of **true**, the parameters area of the toolbar is displayed. The default value of this parameter is **true**.|  
 |**PrefixId**|When used with **HTMLFragment**, adds the specified prefix to all **ID** attributes in the HTML fragment that is created.|  
-|**ReplacementRoot(\*)**|The string to prepend to all drillthrough, toggle, and bookmark links in the report when rendered outside of the ReportViewer control. For example, this is used for redirecting a user’s click to a custom page.|  
+|**ReplacementRoot(\*)**|The string to prepend to all drillthrough, toggle, and bookmark links in the report when rendered outside of the ReportViewer control. For example, this is used for redirecting a user's click to a custom page.|  
 |**ResourceStreamRoot(\*)**|The string to prepend to the URL for all image resources, such as images for toggle or sort.|  
 |**Section**|The page number of the report to render. A value of **0** indicates that all sections of the report are rendered. The default value is **1**.|  
-|**StreamRoot (\*)**|The path used for prefixing the value of the **src** attribute of the IMG element in the HTML report returned by the report server. By default, the report server provides the path. You can use this setting to specify a root path for the images in a report (for example, **http://\<servername>/resources/companyimages**).|  
+|**StreamRoot (\*)**|The path used for prefixing the value of the **src** attribute of the IMG element in the HTML report returned by the report server. By default, the report server provides the path. You can use this setting to specify a root path for the images in a report (for example, **https://\<servername>/resources/companyimages**).|  
 |**StyleStream**|Indicates whether styles and scripts are created as a separate stream instead of in the document. The default value is **false**.|  
 |**Toolbar**|Indicates whether to show or hide the toolbar. The default of this parameter is **true**. If the value of this parameter is **false**, all remaining options (except the document map) are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it.<br /><br /> The Report Viewer toolbar is rendered when you use URL access to render a report. The toolbar is not rendered through the SOAP API. However, the **Toolbar** device information setting affects the way that the report is displayed when using the SOAP **Render** method. If the value of this parameter is **true** when using SOAP to render to HTML, only the first section of the report is rendered. If the value is **false**, the entire HTML report is rendered as a single HTML page.|  
 |**UserAgent**|The **user-agent** string of the browser that is making the request, which is found in the HTTP request.|  

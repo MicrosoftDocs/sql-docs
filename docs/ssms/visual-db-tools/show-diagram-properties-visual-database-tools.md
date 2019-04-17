@@ -2,23 +2,22 @@
 title: "Show Diagram Properties (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "database diagrams [SQL Server], properties"
   - "diagrams [SQL Server], properties"
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Show Diagram Properties (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can display properties for a database diagram in the Properties window.  
   
 ### To show database diagram properties in the Properties window  

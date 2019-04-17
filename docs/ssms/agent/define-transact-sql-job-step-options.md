@@ -2,25 +2,28 @@
 title: "Define Transact-SQL Job Step Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL job step"
   - "job steps [Transact-SQL]"
   - "SQL Server Agent jobs, Transact-SQL step"
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Define Transact-SQL Job Step Options
-This topic describes how to define options for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent [!INCLUDE[tsql](../../includes/tsql_md.md)] job steps in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] or SQL Server Management Objects.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
+This topic describes how to define options for [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] job steps in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or SQL Server Management Objects.  
   
 **In This Topic**  
   
@@ -57,9 +60,9 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 7.  Specify an action to take if the job fails by choosing from the **On failure action** list.  
   
-8.  If the job is a [!INCLUDE[tsql](../../includes/tsql_md.md)] script, you can choose from the following options:  
+8.  If the job is a [!INCLUDE[tsql](../../includes/tsql-md.md)] script, you can choose from the following options:  
   
-    -   Enter the name of an **Output file**. By default the file is overwritten each time the job step executes. If you do not want the output file overwritten, check **Append output to existing file**. This option is only available to members of the **sysadmin** fixed server role. Note that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] does not allow users to view arbitrary files on the file system, so you cannot use [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] to view job step logs that are written to the file system.  
+    -   Enter the name of an **Output file**. By default the file is overwritten each time the job step executes. If you do not want the output file overwritten, check **Append output to existing file**. This option is only available to members of the **sysadmin** fixed server role. Note that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not allow users to view arbitrary files on the file system, so you cannot use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to view job step logs that are written to the file system.  
   
     -   Check **Log to table** if you want to log the job step to a database table. By default the table contents are overwritten each time the job step executes. If you do not want the table contents overwritten, check **Append output to existing entry in table**. After the job step executes, you can view the contents of this table by clicking **View**.  
   

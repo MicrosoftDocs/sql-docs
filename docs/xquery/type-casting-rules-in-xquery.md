@@ -2,15 +2,11 @@
 title: "Type Casting Rules in XQuery | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -21,13 +17,12 @@ helpviewer_keywords:
   - "cast as operator"
   - "implicit casting"
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Type Casting Rules in XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The following W3C XQuery 1.0 and XPath 2.0 Functions and Operators specifications diagram shows the built-in data types. This includes the built-in primitive and built-in derived types.  
   

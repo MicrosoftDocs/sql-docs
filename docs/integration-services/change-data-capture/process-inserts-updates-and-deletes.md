@@ -2,20 +2,17 @@
 title: "Process Inserts, Updates, and Deletes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],processing data"
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Process Inserts, Updates, and Deletes
   In the data flow of an Integration Services package that performs an incremental load of change data, the second task is to separate inserts, updates, and deletes. Then, you can use appropriate commands to apply them to the destination.  
@@ -31,7 +28,7 @@ manager: "jhubbard"
   
  Matching an ordinal value to its corresponding operation is not as easy as using a mnemonic of the operation. For example, 'D' can easily represent a delete operation and 'I' represent an insert operation. The example query that was created in the topic, [Creating the Function to Retrieve the Change Data](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md), makes this conversion from an ordinal value to a friendly string value that is returned in a new column. The following segment of code shows this conversion:  
   
-```  
+```sql
 select   
     ...  
     case __$operation  

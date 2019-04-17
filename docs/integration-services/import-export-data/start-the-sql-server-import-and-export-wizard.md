@@ -2,27 +2,22 @@
 title: "Start the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Import and Export Wizard"
   - "starting SQL Server Import and Export Wizard"
   - "Import and Export Wizard"
   - "starting Import and Export Wizard"
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: 130
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Start the SQL Server Import and Export Wizard
 
- > For content related to previous versions of SQL Server, see [Run the SQL Server Import and Export Wizard](https://msdn.microsoft.com/en-US/library/ms140052(SQL.120).aspx).
 
 Start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard in one of the ways described in this topic to import data from and export data to any supported data source.
 
@@ -37,6 +32,9 @@ You can start the wizard:
 
 ## Prerequisite - Is the wizard installed on your computer?
 If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+
+> [!NOTE]
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
 
 ## <a name="startStart"></a> Start menu  
 ### Start the SQL Server Import and Export Wizard from the Start menu
@@ -78,7 +76,7 @@ Run the 64-bit version of the wizard unless you know that your data source requi
 
     ![Start wizard SSMS](../../integration-services/import-export-data/media/start-wizard-ssms.jpg) 
 
-If you don't have SQL Server installed, or you have SQL Server but don't have SQL Server Management Studio installed, see [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+If you don't have SQL Server installed, or you have SQL Server but don't have SQL Server Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
   
 ## <a name="startVS"></a> Visual Studio
 ### Start the SQL Server Import and Export Wizard from Visual Studio with SQL Server Data Tools (SSDT) 
@@ -94,7 +92,7 @@ If you don't have SQL Server installed, or you have SQL Server but don't have SQ
 
     ![Start wizard Packages](../../integration-services/import-export-data/media/start-wizard-packages.jpg)
 
-If you don't have Visual Studio installed, or you have Visual Studio but don't have SQL Server Data Tools installed, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+If you don't have Visual Studio installed, or you have Visual Studio but don't have SQL Server Data Tools installed, see [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## Get the wizard
 If you want to run the wizard, but you don't have [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installed on your computer, you can install the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard  by installing SQL Server Data Tools (SSDT). For more info, see [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).

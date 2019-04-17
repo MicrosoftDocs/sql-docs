@@ -2,20 +2,19 @@
 title: "Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   This sample uses the IRowsetFastUpload interface to send between 4MB and 4GB of data to a filestream column.  
@@ -39,7 +38,7 @@ manager: "jhubbard"
   
  When you run this sample, you must pass the name of a server, or a server\instance_name, as well as a value between 4 MB (0x400001) and 4 GB (0xFFFFFFFF) indicating the amount of data to write.  
   
- The fourth ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing deletes the database created by this sample.  
+ The fourth ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing deletes the database created by this sample.  
   
 ```  
 // ISSHelper.h: interface for the CISSHelper class.  

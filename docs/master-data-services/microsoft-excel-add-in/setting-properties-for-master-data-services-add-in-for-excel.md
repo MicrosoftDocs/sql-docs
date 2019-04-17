@@ -1,22 +1,21 @@
 ---
 title: "Setting Properties for Master Data Services Add-in for Excel | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Setting Properties for Master Data Services Add-in for Excel
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Master Data Services Add-in for Excel settings determine how data is loaded from MDS into the Excel Add-in and how data is published from the Excel Add-in into MDS.  
   
  To make settings for the Excel Add-in, open **Excel**, click the **Master Data** menu, and then click **Settings**. Anyone with access to Excel can change these settings. The settings apply to the computer that Excel is open on.  
@@ -37,7 +36,7 @@ manager: "jhubbard"
 |Data: Filters|Maximum rows|Select the threshold for the number of rows being loaded, beyond which a filter warning will be posted.|  
 |Data: Filters|Maximum columns|Select the threshold for the number of columns being loaded, beyond which a filter warning will be posted.|  
 |Data: Cell Format|Change the color when: Attribute values change|Click to specify that the color of a cell will be changed if the attribute value in that cell changes when you refresh the Excel Add-in table with new data from the MDS repository.|  
-|Data: Cell Format|Change the color when: Members are added|Click to specify that the color of a row’s cells will be changed if a new member is added to the row when you refresh the Excel Add-in table with new data from the MDS repository.|  
+|Data: Cell Format|Change the color when: Members are added|Click to specify that the color of a row's cells will be changed if a new member is added to the row when you refresh the Excel Add-in table with new data from the MDS repository.|  
 |Data: Cell Format|Display format|Select the preferred format for displaying values of domain-based attributes. The options are Code {Name}, Code, and Name {Code}.|  
   
   

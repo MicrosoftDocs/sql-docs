@@ -2,22 +2,22 @@
 title: "Creating, Altering, and Removing User-Defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+
 ms.topic: "reference"
 helpviewer_keywords: 
   - "user-defined functions [SMO]"
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing User-Defined Functions
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   The <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> object provides functionality that lets users programmatically manage user-defined functions in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. User-defined functions support input and output parameters, and also support direct references to table columns.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requires assemblies to be registered within a database before these can be used inside stored procedures, user defined functions, triggers, and user defined data types. SMO supports this feature with the <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> object.  

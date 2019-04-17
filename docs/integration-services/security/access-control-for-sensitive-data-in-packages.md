@@ -1,14 +1,12 @@
 ---
 title: "Access Control for Sensitive Data in Packages | Microsoft Docs"
-ms.custom: ""
+ms.custom: security
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.packageprotectionlevel.f1"
   - "sql13.ssis.bids.projectprotectionlevel.f1"
@@ -23,10 +21,9 @@ helpviewer_keywords:
   - "cryptography [Integration Services]"
   - "security [Integration Services], protection levels"
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Access Control for Sensitive Data in Packages
   To protect the data in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, you can set a protection level that helps protect just sensitive data or all the data in the package. Furthermore, you can encrypt this data with a password or a user key, or rely on the database to encrypt the data. Also, the protection level that you use for a package is not necessarily static, but changes throughout the life cycle of the package. You often set one protection level during development and another as soon as you deploy the package.  
@@ -59,9 +56,9 @@ manager: "jhubbard"
 |----------------------|-----------------|  
 |Do not save sensitive (**DontSaveSensitive**)|Suppresses the values of sensitive properties in the package when the package is saved. This protection level does not encrypt, but instead it prevents properties that are marked sensitive from being saved with the package and therefore makes the sensitive data unavailable to other users. If a different user opens the package, the sensitive information is replaced with blanks and the user must provide the sensitive information.<br /><br /> When used with the **dtutil** utility (dtutil.exe), this protection level corresponds to the value of 0.|  
 |Encrypt all with password (**EncryptAllWithPassword**)|Uses a password to encrypt the whole package. The package is encrypted by using a password that the user supplies when the package is created or exported. To open the package in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or run the package by using the **dtexec** command prompt utility, the user must provide the package password. Without the password the user cannot access or run the package.<br /><br /> When used with the **dtutil** utility, this protection level corresponds to the value of 3.|  
-|Encrypt all with user key (**EncryptAllWithUserKey**)|Uses a key that is based on the current user profile to encrypt the whole package. Only the user who created or exported the package can open the package in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or run the package by using the **dtexec** command prompt utility.<br /><br /> When used with the **dtutil** utility, this protection level corresponds to the value of 4.<br /><br /> Note: For protection levels that use a user key, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses DPAPI standards. For more information about DPAPI, see the MSDN Library at [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
+|Encrypt all with user key (**EncryptAllWithUserKey**)|Uses a key that is based on the current user profile to encrypt the whole package. Only the user who created or exported the package can open the package in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or run the package by using the **dtexec** command prompt utility.<br /><br /> When used with the **dtutil** utility, this protection level corresponds to the value of 4.<br /><br /> Note: For protection levels that use a user key, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses DPAPI standards. For more information about DPAPI, see the MSDN Library at [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Encrypt sensitive with password (**EncryptSensitiveWithPassword**)|Uses a password to encrypt only the values of sensitive properties in the package. DPAPI is used for this encryption. Sensitive data is saved as a part of the package, but that data is encrypted by using a password that the current user supplies when the package is created or exported. To open the package in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the user must provide the package password. If the password is not provided, the package opens without the sensitive data and the current user must provide new values for sensitive data. If the user tries to execute the package without providing the password, package execution fails. For more information about passwords and command line execution, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md).<br /><br /> When used with the **dtutil** utility, this protection level corresponds to the value of 2.|  
-|Encrypt sensitive with user key (**EncryptSensitiveWithUserKey**)|Uses a key that is based on the current user profile to encrypt only the values of sensitive properties in the package. Only the same user who uses the same profile can load the package. If a different user opens the package, the sensitive information is replaced with blanks and the current user must provide new values for the sensitive data. If the user attempts to execute the package, package execution fails. DPAPI is used for this encryption.<br /><br /> When used with the **dtutil** utility, this protection level corresponds to the value of 1.<br /><br /> Note: For protection levels that use a user key, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses DPAPI standards. For more information about DPAPI, see the MSDN Library at [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
+|Encrypt sensitive with user key (**EncryptSensitiveWithUserKey**)|Uses a key that is based on the current user profile to encrypt only the values of sensitive properties in the package. Only the same user who uses the same profile can load the package. If a different user opens the package, the sensitive information is replaced with blanks and the current user must provide new values for the sensitive data. If the user attempts to execute the package, package execution fails. DPAPI is used for this encryption.<br /><br /> When used with the **dtutil** utility, this protection level corresponds to the value of 1.<br /><br /> Note: For protection levels that use a user key, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses DPAPI standards. For more information about DPAPI, see the MSDN Library at [https://msdn.microsoft.com/library](https://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Rely on server storage for encryption (**ServerStorage**)|Protects the whole package using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database roles. This option is supported when a package is saved to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb database. In addition, the SSISDB catalog uses the **ServerStorage** protection level<br /><br /> This option is not supported when a package is saved to the file system from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
   
 ## Protection Level Setting and the SSISDB Catalog  
@@ -92,7 +89,7 @@ manager: "jhubbard"
   
 ### To set or change the protection level of a package in SQL Server Data Tools  
   
-1.  Review the available values for the **ProtectionLevel** property in the topic, [Setting the Protection Level of Packages](#set_protection), and determine the appropriate value for your package.  
+1.  Review the available values for the **ProtectionLevel** property in the section, [Protection Levels](#protection-levels), and determine the appropriate value for your package.  
   
 2.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], open the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project that contains the package.  
   
@@ -108,7 +105,7 @@ manager: "jhubbard"
   
 ### To set or change the protection level of packages at the command prompt  
   
-1.  Review the available values for the **ProtectionLevel** property in the section, [Setting the Protection Level of Packages](#set_protection), and determine the appropriate value for your package.  
+1.  Review the available values for the **ProtectionLevel** property in the section, [Protection Levels](#protection-levels), and determine the appropriate value for your package.  
   
 2.  Review the mappings for the **Encrypt** option in the topic, [dtutil Utility](../../integration-services/dtutil-utility.md), and determine the appropriate integer to use as the value of the selected **ProtectionLevel** property.  
   

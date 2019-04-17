@@ -2,13 +2,11 @@
 title: "SQL Server Audit Action Groups and Actions | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "audit"
 helpviewer_keywords: 
@@ -21,12 +19,12 @@ helpviewer_keywords:
   - "audit action groups [SQL Server]"
   - "audits [SQL Server], actions"
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # SQL Server Audit Action Groups and Actions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and individual events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audits consist of zero or more audit action items. These audit action items can be either a group of actions, such as Server_Object_Change_Group, or individual actions such as SELECT operations on a table.  
@@ -118,6 +116,9 @@ manager: "jhubbard"
  Server-level action groups cover actions across a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. For example, any schema object access check in any database is recorded if the appropriate action group is added to a server audit specification. In a database audit specification, only schema object accesses in that database are recorded.  
   
  Server-level actions do not allow for detailed filtering on database-level actions. A database-level audit, such as audit of SELECT actions on the Customers table for logins in the Employee group is required to implement detailed action filtering. Do not include server-scoped objects, such as the system views, in a user database audit specification.  
+
+ > [!NOTE]
+ > Because of the overhead involved in enabling transaction-level auditing, starting with [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4, transaction-level auditing is disabled by default unless you have Common Criteria Compliance enabled.  If Common Criteria Compliance is disabled, you will still be able to add an action from TRANSACTION_GROUP to an audit specification, but it will not actually collect any transaction actions.  If you intend to configure any auditing actions from TRANSACTION_GROUP, be sure that the transaction-level auditing infrastructure is enabled by enabling Common Criteria Compliance starting with [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 and [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 and later.  Note that in [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] transaction-level auditing may also be disabled with trace flag 3427 starting with SP1 CU2.
   
 ## Database-Level Audit Action Groups  
  Database-Level Audit Action Groups are actions similar to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Security Audit Event classes. For more information about event classes, see [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  

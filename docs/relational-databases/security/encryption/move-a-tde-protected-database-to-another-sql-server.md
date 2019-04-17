@@ -2,58 +2,31 @@
 title: "Move a TDE Protected Database to Another SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Transparent Data Encryption, moving"
   - "TDE, moving a database"
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: aliceku
+ms.author: aliceku
+manager: craigg
 ---
 # Move a TDE Protected Database to Another SQL Server
-  This topic describes how to to protect a database by using transparent data encryption (TDE), and then move the database to another instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the **master** database of the server or an asymmetric key protected by an EKM module.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  This topic describes how to protect a database by using transparent data encryption (TDE), and then move the database to another instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE performs real-time I/O encryption and decryption of the data and log files. The encryption uses a database encryption key (DEK), which is stored in the database boot record for availability during recovery. The DEK is a symmetric key secured by using a certificate stored in the **master** database of the server or an asymmetric key protected by an EKM module.  
+   
+##  <a name="Restrictions"></a> Limitations and Restrictions  
   
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To create a database protected by transparent data encryption, using:**  
-  
-     [SQL Server Management Studio](#SSMSCreate)  
-  
-     [Transact-SQL](#TsqlCreate)  
-  
--   **To move a database, using:**  
-  
-     [SQL Server Management Studio](#SSMSMove)  
-  
-     [Transact-SQL](#TsqlMove)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
-  
--   When moving a TDE protected database, you must also move the certificate or asymmetric key that is used to open the DEK. The certificate or asymmetric key must be installed in the **master** database of the destination server, so that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can access the database files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
+-   When moving a TDE protected database, you must also move the certificate or asymmetric key that is used to open the DEK. The certificate or asymmetric key must be installed in the **master** database of the destination server, so that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can access the database files. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 -   You must retain copies of both the certificate file and the private key file in order to recover the certificate. The password for the private key does not have to be the same as the database master key password.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stores the files created here in **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** by default. Your file names and locations might be different.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 -   Requires **CONTROL DATABASE** permission on the **master** database to create the database master key.  
   
@@ -62,6 +35,8 @@ manager: "jhubbard"
 -   Requires **CONTROL DATABASE** permission on the encrypted database and **VIEW DEFINITION** permission on the certificate or asymmetric key that is used to encrypt the database encryption key.  
   
 ##  <a name="SSMSProcedure"></a> To create a database protected by transparent data encryption  
+
+The following procedures show you have to create a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSCreate"></a> Using SQL Server Management Studio  
   
@@ -73,7 +48,7 @@ manager: "jhubbard"
   
 4.  In the **New Database** dialog box, in the **Database name** box, enter the name of the new database.  
   
-5.  In the **Owner** box, enter the name of the new database's owner. Alternately, click the ellipsis **(…)** to open the **Select Database Owner** dialog box. For more information on creating a new database, see [Create a Database](../../../relational-databases/databases/create-a-database.md).  
+5.  In the **Owner** box, enter the name of the new database's owner. Alternately, click the ellipsis **(...)** to open the **Select Database Owner** dialog box. For more information on creating a new database, see [Create a Database](../../../relational-databases/databases/create-a-database.md).  
   
 6.  In Object Explorer, click the plus sign to expand the **Databases** folder.  
   
@@ -103,7 +78,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     -- Create a database master key and a certificate in the master database.  
     USE master ;  
     GO  
@@ -155,11 +130,13 @@ manager: "jhubbard"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> To move a database  
+##  <a name="TsqlProcedure"></a> To move a database protected by transparent data encryption 
+
+The following procedures show you have to move a database protected by TDE using SQL Server Management Studio and by using Transact-SQL.
   
 ###  <a name="SSMSMove"></a> Using SQL Server Management Studio  
   
-1.  In Object Explorer, right-click the database you encrypted above, point to **Tasks** and select **Detach…**.  
+1.  In Object Explorer, right-click the database you encrypted above, point to **Tasks** and select **Detach...**.  
   
      The following options are available in the **Detach Database** dialog box.  
   
@@ -189,7 +166,7 @@ manager: "jhubbard"
   
     -   When a database is involved with replication, the **Status** is **Not ready** and the **Message** column displays **Database replicated**.  
   
-    -   When a database has one or more active connections, the **Status** is **Not ready** and the **Message** column displays *<number_of_active_connections>***Active connection(s)** — for example: **1 Active connection(s)**. Before you can detach the database, you need to disconnect any active connections by selecting **Drop Connections**.  
+    -   When a database has one or more active connections, the **Status** is **Not ready** and the **Message** column displays _\<number\_of\_active\_connections\>_**Active connection(s)** - for example: **1 Active connection(s)**. Before you can detach the database, you need to disconnect any active connections by selecting **Drop Connections**.  
   
      To obtain more information about a message, click the hyperlinked text to open Activity Monitor.  
   
@@ -203,11 +180,11 @@ manager: "jhubbard"
   
 6.  Recreate the server certificate by using the original server certificate backup file. For more information, see **Using Transact-SQL** below.  
   
-7.  In Object Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], right-click the **Databases** folder and select **Attach…**.  
+7.  In Object Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], right-click the **Databases** folder and select **Attach...**.  
   
 8.  In the **Attach Databases** dialog box, under **Databases to attach**, click **Add**.  
   
-9. In the **Locate Database Files –***server_name* dialog box, select the database file to attach to the new server and click **OK**.  
+9. In the **Locate Database Files -**_server\_name_ dialog box, select the database file to attach to the new server and click **OK**.  
   
      The following options are available in the **Attach Databases** dialog box.  
   
@@ -250,8 +227,8 @@ manager: "jhubbard"
      **Remove**  
      Removes the selected file from the **Databases to attach** grid.  
   
-     **"** *<database_name>* **" database details**  
-     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**…**).  
+     **"** _<database_name>_ **" database details**  
+     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
   
     > [!NOTE]  
     >  If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
@@ -276,7 +253,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     -- Detach the TDE protected database from the source server.   
     USE master ;  
     GO  
@@ -321,6 +298,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Database Detach and Attach &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
+ [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   

@@ -1,24 +1,21 @@
 ---
 title: "Seek Method and Index Property Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Seek method [ADO], Visual Basic example"
   - "index property [ADO]"
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Seek Method and Index Property Example (VB)
 This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Seek](../../../ado/reference/ado-api/seek-method.md) method and [Index](../../../ado/reference/ado-api/index-property.md) property in conjunction with a given ***Employee ID***, to locate the employee's name in the ***Employees*** table of the Nwind.mdb database.  

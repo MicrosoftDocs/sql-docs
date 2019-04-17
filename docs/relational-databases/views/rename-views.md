@@ -2,23 +2,22 @@
 title: "Rename Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], renaming"
   - "renaming views"
 ms.assetid: 5eed0488-81d2-40e8-8fdf-b0a640a591d0
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+ms.manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rename Views
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   You can rename a view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!WARNING]  
@@ -58,7 +57,7 @@ manager: "jhubbard"
   
 2.  Right-click the view you wish to rename and select **Rename**.  
   
-3.  Enter the view’s new name.  
+3.  Enter the view's new name.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To rename a view**  
@@ -68,6 +67,6 @@ manager: "jhubbard"
  For more information, see [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md) and [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Renaming a View  
- Ensure that all objects, scripts, and applications that reference the view’s old name now use the new name.  
+ Ensure that all objects, scripts, and applications that reference the view's old name now use the new name.  
   
   

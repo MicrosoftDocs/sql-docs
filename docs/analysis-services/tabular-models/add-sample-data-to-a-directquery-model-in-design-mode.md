@@ -1,24 +1,17 @@
 ---
-title: "Add sample data to a DirectQuery model in Design Mode | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 1af1e823-85aa-4319-a93f-98b35f7c7322
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Add sample data to an Analysis Services DirectQuery model in design mode | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Add sample data to a DirectQuery model in Design Mode
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
  In DirectQuery mode, table partitions are used to either create sample data subsets used during model design, or create alternatives of a full data view.
  
  When you deploy a DirectQuery tabular model, only one partition is allowed per table, and that partition by necessity must be full data view. Any additional partition is either a substitute for a full data view or sample data. In this topic, we're going to describe creating a sample partition, with a subset of data.

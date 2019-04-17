@@ -2,13 +2,11 @@
 title: "SQLConfigDriver Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLConfigDriver"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLConfigDriver function [ODBC]"
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLConfigDriver Function
 **Conformance**  
@@ -38,13 +35,13 @@ manager: "jhubbard"
 ```  
   
 BOOL SQLConfigDriver(  
-     HWND     hwndParent,  
-     WORD     fRequest,  
-     LPCSTR   lpszDriver,  
-     LPCSTR   lpszArgs,  
-     LPSTR    lpszMsg,  
-     WORD     cbMsgMax,  
-     WORD *   pcbMsgOut);  
+     HWND     hwndParent,  
+     WORD     fRequest,  
+     LPCSTR   lpszDriver,  
+     LPCSTR   lpszArgs,  
+     LPSTR    lpszMsg,  
+     WORD     cbMsgMax,  
+     WORD *   pcbMsgOut);  
 ```  
   
 ## Arguments  

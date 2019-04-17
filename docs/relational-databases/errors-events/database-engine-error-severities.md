@@ -2,13 +2,10 @@
 title: "Database Engine Error Severities | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined error messages [SQL Server]"
   - "severity levels [SQL Server]"
@@ -16,12 +13,12 @@ helpviewer_keywords:
   - "errors [SQL Server], severity"
   - "TRY...CATCH [SQL Server]"
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Database Engine Error Severities
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When an error is raised by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], the severity of the error indicates the type of problem encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Levels of Severity  
@@ -54,17 +51,17 @@ manager: "jhubbard"
   
  RAISERROR can be used to generate user-defined error messages with severities from 1 through 25. RAISERROR can reference a user-defined error message stored in the **sys.messages** catalog view or build a message dynamically. When using the user-defined error message in **sys.messages** while generating an error, the severity specified by RAISERROR overrides the severity specified in **sys.messages**. For more information, see [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
-## Error Severity and TRY…CATCH  
- A TRY…CATCH construct catches all execution errors with severity greater than 10 that do not terminate the database connection.  
+## Error Severity and TRY...CATCH  
+ A TRY...CATCH construct catches all execution errors with severity greater than 10 that do not terminate the database connection.  
   
- Errors with severity from 0 through 10 are informational messages and do not cause execution to jump from the CATCH block of a TRY…CATCH construct.  
+ Errors with severity from 0 through 10 are informational messages and do not cause execution to jump from the CATCH block of a TRY...CATCH construct.  
   
  Errors that terminate the database connection, usually with severity from 20 through 25, are not handled by the CATCH block because execution is aborted when the connection terminates.  
   
  For more information, see [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   
 ## Retrieving Error Severity  
- The ERROR_SEVERITY system function can be used to retrieve the severity of the error that caused the CATCH block of a TRY…CATCH construct to be run. ERROR_SEVERITY returns NULL if called outside the scope of a CATCH block. For more information, see [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  
+ The ERROR_SEVERITY system function can be used to retrieve the severity of the error that caused the CATCH block of a TRY...CATCH construct to be run. ERROR_SEVERITY returns NULL if called outside the scope of a CATCH block. For more information, see [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  
   
 ## See Also  
  [Understanding Database Engine Errors](../../relational-databases/errors-events/understanding-database-engine-errors.md)   

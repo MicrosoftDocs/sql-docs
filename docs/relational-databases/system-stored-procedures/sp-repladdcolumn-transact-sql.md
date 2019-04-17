@@ -2,32 +2,27 @@
 title: "sp_repladdcolumn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_repladdcolumn_TSQL"
   - "sp_repladdcolumn"
 helpviewer_keywords: 
   - "sp_repladdcolumn"
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_repladdcolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a column to an existing table article that has been published. Allows the new column to be added to all publishers that publish this table, or just add the column to a specific publication that publishes the table. This stored procedure is executed at the Publisher on the publication database.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  This stored procedure has been deprecated and is being supported for backward-compatibility. It should only be used with [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Publishers and [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] republishing Subscribers. This procedure should not be used on columns with data types that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or higher.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

@@ -2,20 +2,20 @@
 title: "Installation Tasks for Master Data Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/24/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: 32
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Installation Tasks for Master Data Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This article provides an overview of the installation tasks, with links to instructions. For a walkthrough of installing and configuring Master Data Services, see [Master Data Services Installation and Configuration](../../master-data-services/master-data-services-installation-and-configuration.md) 
   
 -   [Pre-Installation Tasks](#preinstall): Verify system requirements before you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
@@ -46,12 +46,12 @@ manager: "jhubbard"
 |Create a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to create a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database for your master data.|[Create a Master Data Services Database](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |Create a [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to create and configure a web application to host [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|[Create a Master Data Manager Web Application &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |Associate a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database with a web application|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] to associate your [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application with your [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database.|[Associate a Master Data Services Database and Web Application](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
-|Configure Internet Explorer Enhanced Security|When you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a Windows Server 2012 computer, you might have to configure Internet Explorer Enhanced Security to allow scripting for the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site. Otherwise, browsing to the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site on the server computer will fail.|[Internet Explorer: Enhanced Security Configuration](http://go.microsoft.com/fwlink/p/?LinkId=223869)|  
-|Install the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Users who will work with master data can install the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].|[http://go.microsoft.com/fwlink/?LinkID=398159](http://go.microsoft.com/fwlink/?LinkID=398159)|  
+|Configure Internet Explorer Enhanced Security|When you install [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a Windows Server 2012 computer, you might have to configure Internet Explorer Enhanced Security to allow scripting for the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site. Otherwise, browsing to the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application site on the server computer will fail.|[Internet Explorer: Enhanced Security Configuration](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|Install the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Users who will work with master data can install the [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].|[https://go.microsoft.com/fwlink/?LinkID=398159](https://go.microsoft.com/fwlink/?LinkID=398159)|  
 |Enable Data Quality Services (DQS) integration|For users of the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], enable integration with the DQS feature, which can be used to match similar data.|[Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |Deploy a sample model|Sample model packages are installed with Master Data Services, and can be deployed using MDSModelDeploy.exe.|[Deploying MDS Samples in SQL Server](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
   
- If you encounter issues during the installation process or initial configuration, see [Troubleshooting Installation and Configuration Issues](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) on TechNet Wiki.  
+ If you encounter issues during the installation process or initial configuration, see [Troubleshooting Installation and Configuration Issues](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) on TechNet Wiki.  
   
  If you no longer need [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] on a computer, you can uninstall [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] and determine whether to remove items that are not affected by the uninstall process. For more information, see [Uninstall and Remove Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md).  
   

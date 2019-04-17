@@ -1,24 +1,21 @@
 ---
 title: "PositionEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "PositionEnum"
 helpviewer_keywords: 
   - "PositionEnum enumeration"
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # PositionEnum
 Specifies the current position of the record pointer within a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

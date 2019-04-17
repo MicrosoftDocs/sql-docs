@@ -1,24 +1,18 @@
 ---
-title: "KPIs (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "KPIs in Analysis Services tabular models | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # KPIs
-  A *KPI* (Key Performance Indicator), in a tabular model, is used to gauge performance of a value, defined by a *Base* measure, against a *Target* value, also defined by a measure or by an absolute value. This topic provides tabular model authors a basic understanding of KPIs in a tabular model.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  A *KPI* (Key Performance Indicator), in a tabular model, is used to gauge performance of a value, defined by a *Base* measure, against a *Target* value, also defined by a measure or by an absolute value. This article provides tabular model authors a basic understanding of KPIs in a tabular model.  
   
 ##  <a name="bkmk_benefits"></a> Benefits  
  In business terminology, a Key Performance Indicator (KPI) is a quantifiable measurement for gauging business objectives. A KPI is frequently evaluated over time. For example, the sales department of an organization may use a KPI to measure monthly gross profit against projected gross profit. The accounting department may measure monthly expenditures against revenue to evaluate costs, and a human resources department may measure quarterly employee turnover. Each is an example of a KPI. Business professionals frequently consume KPIs that are grouped together in a business scorecard to obtain a quick and accurate historical summary of business success or to identify trends.  
@@ -35,9 +29,9 @@ manager: "erikre"
  A Status threshold is defined by the range between a low and high threshold or by a fixed value. The Status threshold displays with a graphic to help users easily determine the status of the Base value compared to the Target value.  
   
 ##  <a name="bkmk_example"></a> Example  
- The sales manager at Adventure Works wants to create a PivotTable that she can use to quickly display whether or not sales employees are meeting their sales quota for a given period (year). For each sales employee, she wants the PivotTable to display the the actual sales amount in dollars, the sales quota amount in dollars, and a simple graphic display showing the status of whether or not each sales employee is below, at, or above their sales quota. She wants to be able to slice the data by year.  
+ The sales manager at Adventure Works wants to create a PivotTable that she can use to quickly display whether or not sales employees are meeting their sales quota for a given period (year). For each sales employee, she wants the PivotTable to display the actual sales amount in dollars, the sales quota amount in dollars, and a simple graphic display showing the status of whether or not each sales employee is below, at, or above their sales quota. She wants to be able to slice the data by year.  
   
- To do this, the sales manager enlists the help of her organization’s BI solution developer to add a Sales KPI to the AdventureWorks Tabular Model. The sales manager will then use Excel to connect to the Adventure Works Tabular Model as a data source and create a PivotTable with the fields (measures and KPI) and slicers to analyze whether or not the sales force is meeting their quotas.  
+ To do this, the sales manager enlists the help of her organization's BI solution developer to add a Sales KPI to the AdventureWorks Tabular Model. The sales manager will then use Excel to connect to the Adventure Works Tabular Model as a data source and create a PivotTable with the fields (measures and KPI) and slicers to analyze whether or not the sales force is meeting their quotas.  
   
  In the model, a measure on the SalesAmount column in the FactResellerSales table, which gives the actual sales amount in dollars for each sales employee is created. This measure will define the Base value of the KPI.  
   
@@ -60,7 +54,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Now that measures have been created to serve as the Base value and Target value of the KPI, the Sales measure is extended to a new Sales KPI. In the Sales KPI, the Target SalesAmountQuota measure is defined as the Target value. The Status threshold is defined as a range by percentage, the target of which is 100% meaning actual sales defined by the Sales measure met the quota amount defined in the Target SalesAmoutnQuota measure. Low and High percentages are defined on the status bar, and a graphic type is selected.  
   
- The sales manager can now create a PivotTable adding the KPI’s Base value, Target value, and Status to the Values field. The Employees column is added to the RowLabel field, and the CalendarYear column is added as a Slicer.  
+ The sales manager can now create a PivotTable adding the KPI's Base value, Target value, and Status to the Values field. The Employees column is added to the RowLabel field, and the CalendarYear column is added as a Slicer.  
   
  The sales manager can now slice by year the actual sales amount, sales quota amount, and status for each sales employee. She can analyze sales trends over years to determine whether or not she needs to adjust the sales quota for a sales employee.  
   

@@ -1,12 +1,11 @@
 ---
 title: "sp_addsubscription (Transact-SQL) | Microsoft Docs"
 ms.date: "10/28/2015"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.custom: ""
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addsubscription"
@@ -14,13 +13,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addsubscription"
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_addsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a subscription to a publication and sets the Subscriber status. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -226,7 +224,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher= ] '*publisher*'  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be specified for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -264,7 +262,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Specifies the log sequence number (LSN) at which a subscription should start delivering changes to a node in a peer-to-peer transactional replication topology. Used with a @sync_type value of initialize from lsn to make sure that all relevant transactions are replicated to a new node. For more information, see [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  [ @subscriptionstreams= ] *subscriptionstreams*  
- Is the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber, while maintaining many of the transactional characteristics present when using a single thread. *subscriptionstreams* is **tinyint**, with a default value of NULL. A range of values from 1 to 64 is supported. This parameter is not supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, Oracle Publishers or peer-to-peer subscriptions. Whenever subscription streams is used additional rows are added in the msreplication_subscriptions table (1 per stream) with an agent_id set to NULL.  
+ Is the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber, while maintaining many of the transactional characteristics present when using a single thread. *subscriptionstreams* is **tinyint**, with a default value of NULL. A range of values from 1 to 64 is supported. This parameter is not supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers, Oracle Publishers or peer-to-peer subscriptions. Whenever subscription streams is used additional rows are added in the msreplication_subscriptions table (1 per stream) with an agent_id set to NULL.  
   
 > [!NOTE]  
 >  Subscriptionstreams do not work for articles configured to deliver [!INCLUDE[tsql](../../includes/tsql-md.md)]. To use subscriptionstreams, configure articles to deliver stored procedure calls instead.  

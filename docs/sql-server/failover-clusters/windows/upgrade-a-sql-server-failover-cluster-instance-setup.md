@@ -2,13 +2,10 @@
 title: "Upgrade a SQL Server Failover Cluster Instance (Setup) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading clusters"
   - "clusters [SQL Server], upgrading"
@@ -16,12 +13,12 @@ helpviewer_keywords:
   - "clusters [SQL Server], creating"
   - "failover clustering [SQL Server], upgrading"
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: 63
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Upgrade a SQL Server Failover Cluster Instance (Setup)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] failover cluster by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup UI or from a command prompt.  
   
  For local installations, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read permissions on the remote share.  
@@ -58,7 +55,7 @@ manager: "jhubbard"
   
 10. The Disk Space Requirements page calculates the required disk space for the features that you specify, and compares requirements to the available disk space on the computer where Setup is running.  
   
-11. On the Full-Text Search Upgrade page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+11. On the Full-Text Search Upgrade page, specify the upgrade options for the databases being upgraded. For more information, see [Full-Text Search Upgrade Options](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
   
 12. On the **Error Reporting** page, specify the information that you want to send to [!INCLUDE[msCoName](../../../includes/msconame-md.md)] that will help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. By default, options for error reporting is enabled.  
   
@@ -101,7 +98,7 @@ manager: "jhubbard"
   
 -   [Change the Database Compatibility Mode and Use the Query Store](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [Take Advantage of New SQL Server 2016 Features](http://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [Take Advantage of New SQL Server 2016 Features](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
   
 ## See Also  
  [Upgrade a SQL Server Failover Cluster Instance](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)   

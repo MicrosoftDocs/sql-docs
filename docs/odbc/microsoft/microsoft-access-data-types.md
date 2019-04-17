@@ -1,14 +1,12 @@
 ---
 title: "Microsoft Access Data Types | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: 01/19/2019
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC], Access driver"
   - "Jet-based ODBC drivers [ODBC], Access driver"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "access data types [ODBC]"
   - "data types [ODBC], Access driver"
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft Access Data Types
 The following table shows the Microsoft Access data types, data types used to create tables, and ODBC SQL data types.  
@@ -45,7 +42,7 @@ The following table shows the Microsoft Access data types, data types used to cr
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
 |TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
-ARBINARY|VARBINARY|SQL_VARBINARY|  
+|VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1]   Access 4.0 applications only. Maximum length of 4000 bytes. Behavior similar to LONGBINARY.  
   

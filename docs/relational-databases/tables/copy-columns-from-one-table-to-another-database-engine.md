@@ -2,24 +2,22 @@
 title: "Copy Columns from One Table to Another (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "copying columns"
   - "columns [SQL Server], copying"
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Copy Columns from One Table to Another (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   This topic describes how to copy columns from one table to another, copying either just the column definition, or the definition and data in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -31,7 +29,7 @@ manager: "jhubbard"
   
      [Security](#Security)  
   
--   **To coy columns, using:**  
+-   **To copy columns, using:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -74,7 +72,7 @@ manager: "jhubbard"
 
 4.  In the **Add Table** dialog box, select the source and destination table, click **Add**, and then close the **Add Table** dialog box. 
 
-5.  Right-click an open area of the the Query Editor, point to **Change Type**, and then click **Insert Results**.  
+5.  Right-click an open area of the Query Editor, point to **Change Type**, and then click **Insert Results**.  
 
 6.  In the **Choose Target Table for Insert Results** dialog box, select the destination table. 
 

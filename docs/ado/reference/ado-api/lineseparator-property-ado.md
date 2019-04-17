@@ -1,24 +1,21 @@
 ---
 title: "LineSeparator Property (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "_Stream::LineSeparator"
 helpviewer_keywords: 
   - "LineSeparator property [ADO]"
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # LineSeparator Property (ADO)
 Indicates the binary character to be used as the line separator in text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects.  

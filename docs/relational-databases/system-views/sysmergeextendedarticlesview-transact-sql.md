@@ -2,15 +2,11 @@
 title: "sysmergeextendedarticlesview (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sysmergeextendedarticlesview"
   - "sysmergeextendedarticlesview_TSQL"
@@ -19,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergeextendedarticlesview view"
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
-caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sysmergeextendedarticlesview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   The **sysmergeextendedarticlesview** view exposes article information. This view is stored in the publication database at the Publisher and subscription database at the Subscriber.  
   
@@ -73,7 +68,7 @@ manager: "jhubbard"
 |**fast_multicol_updateproc**|**bit**|Specifies whether the Merge Agent has been enabled to apply changes to multiple columns in the same row in one UPDATE statement.<br /><br /> **0** = Issues a separate UPDATE for each column changed.<br /><br /> **1** = Issued on UPDATE statement which causes updates to occur to multiple columns in one statement.|  
 |**check_permissions**|**int**|The bitmap of the table-level permissions that will be verified when the Merge Agent applies changes to the Publisher. *check_permissions* can have one of these values:<br /><br /> **0x00** = Permissions are not checked.<br /><br /> **0x10** = Checks permissions at the Publisher before INSERTs made at a Subscriber can be uploaded.<br /><br /> **0x20** = Checks permissions at the Publisher before UPDATEs made at a Subscriber can be uploaded.<br /><br /> **0x40** = Checks permissions at the Publisher before DELETEs made at a Subscriber can be uploaded.|  
 |**maxversion_at_cleanup**|**int**|The highest generation for which the metadata is cleaned up.|  
-|**processing_order**|**int**|Indicates the processing order of articles in a merge publication; where a value of **0** indicated that the article is unordered, and articles are processed in order from lowest to highest value. If two articles have the same value, they are processed concurrently. For more information, see [Specify the Processing Order of Merge Articles](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
+|**processing_order**|**int**|Indicates the processing order of articles in a merge publication; where a value of **0** indicated that the article is unordered, and articles are processed in order from lowest to highest value. If two articles have the same value, they are processed concurrently. For more information, see [Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
 |**published_in_tran_pub**|**bit**|Indicates that an article in a merge publication is also published in a transactional publication.<br /><br /> **0** = Article is not published in a transactional article.<br /><br /> **1** = Article is also published in a transactional article.|  
 |**upload_options**|**tinyiny**|Defines whether changes can be made at or uploaded from the Subscriber, which can be one of the following values.<br /><br /> **0** = There are no restrictions on updates made at the Subscriber; all changes are uploaded to the Publisher.<br /><br /> **1** = Changes are allowed at the Subscriber, but they are not uploaded to the Publisher.<br /><br /> **2** = Changes are not allowed at the Subscriber.|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

@@ -2,23 +2,22 @@
 title: "Create Queries using Something Besides a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "user-defined functions [SQL Server], queries"
   - "queries [SQL Server], creating"
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Create Queries using Something Besides a Table (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Whenever you write a retrieval query, you articulate what columns you want, what rows you want, and where the query processor should find the original data. Typically, this original data consists of a table or several tables joined together. But the original data can come from sources other than tables. In fact, it can come from views, queries, synonyms, or user-defined functions that return a table.  
   
 ## Using a View in Place of a Table  
@@ -52,7 +51,7 @@ FROM sales
 For more information about adding a view to a query, see [Add Tables to Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md).  
   
 ## Using a Query in Place of a Table  
-You can select rows from a query. For example, suppose you have already written a query retrieving titles and identifiers of the coauthored books — the books with more than one author. The SQL might look like this:  
+You can select rows from a query. For example, suppose you have already written a query retrieving titles and identifiers of the coauthored books - the books with more than one author. The SQL might look like this:  
   
 ```  
 SELECT   
@@ -129,7 +128,7 @@ For more information about adding a query to a query, see [Add Tables to Queries
 ## Using a User-Defined Function in Place of a Table  
 In SQL Server 2000 or higher, you can create a user-defined function that returns a table. Such functions are useful for performing complex or procedural logic.  
   
-For example, suppose the employee table contains an additional column, employee.manager_emp_id, and that a foreign key exists from manager_emp_id to employee.emp_id. Within each row of the employee table, the manager_emp_id column indicates the employee's boss. More precisely, it indicates the employee's boss's emp_id. You can create a user-defined function that returns a table containing one row for each employee working within a particular high-level manager's organizational hierarchy. You might call the function fn_GetWholeTeam, and design it to take an input variable — the emp_id of the manager whose team you want to retrieve.  
+For example, suppose the employee table contains an additional column, employee.manager_emp_id, and that a foreign key exists from manager_emp_id to employee.emp_id. Within each row of the employee table, the manager_emp_id column indicates the employee's boss. More precisely, it indicates the employee's boss's emp_id. You can create a user-defined function that returns a table containing one row for each employee working within a particular high-level manager's organizational hierarchy. You might call the function fn_GetWholeTeam, and design it to take an input variable - the emp_id of the manager whose team you want to retrieve.  
   
 You can write a query that uses the fn_GetWholeTeam function as a source of data. The resulting SQL might look like this:  
   
@@ -139,5 +138,5 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-"VPA30890F" is the emp_id of the manager whose organization you want to retrieve. For more information about adding a user-defined function to a query, see [Add Tables to Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). For a complete description of user-defined functions, see [User-Defined Functions](http://msdn.microsoft.com/en-us/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
+"VPA30890F" is the emp_id of the manager whose organization you want to retrieve. For more information about adding a user-defined function to a query, see [Add Tables to Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). For a complete description of user-defined functions, see [User-Defined Functions](https://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   

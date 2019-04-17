@@ -2,13 +2,11 @@
 title: "Multiple Flat Files Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.multifile.advanced.f1"
   - "sql13.dts.designer.multifile.columns.f1"
@@ -22,10 +20,9 @@ helpviewer_keywords:
   - "connection managers [Integration Services], Multiple Flat Files"
   - "multiple flat file connections"
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Multiple Flat Files Connection Manager
   A Multiple Flat Files connection manager enables a package to access data in multiple flat files. For example, a Flat File source can use a Multiple Flat Files connection manager when the Data Flow task is inside a loop container, such as the For Loop container. On each loop of the container, the Flat File source loads data from the next file name that the Multiple Flat Files connection manager provides.  
@@ -236,7 +233,7 @@ manager: "jhubbard"
 |**TextQualified**|Indicate whether text data is qualified using a text qualifier character:<br /><br /> **True**: Text data in the flat file is qualified.<br /><br /> **False**: Text data in the flat file is not qualified.|  
 |**Name**|Provide a column name. The default is a numbered list of columns; however, you can choose any unique, descriptive name.|  
 |**DataScale**|Specify the scale of numeric data. Scale refers to the number of decimal places. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Select from the list of available column delimiters. Choose delimiters that are not likely to occur in the text. This value is ignored for fixed-width columns.<br /><br /> **{CR}{LF}** – columns are delimited by a carriage return-line feed combination<br /><br /> **{CR}** – columns are delimited by a carriage return<br /><br /> **{LF}** – columns are delimited by a line feed<br /><br /> **Semicolon {;}** – columns are delimited by a semicolon<br /><br /> **Colon {:}** – columns are delimited by a colon<br /><br /> **Comma {,}** – columns are delimited by a comma<br /><br /> **Tab {t}** – columns are delimited by a tab<br /><br /> **Vertical bar {&#124;}** – columns are delimited by a vertical bar|  
+|**ColumnDelimiter**|Select from the list of available column delimiters. Choose delimiters that are not likely to occur in the text. This value is ignored for fixed-width columns.<br /><br /> **{CR}{LF}** - columns are delimited by a carriage return-line feed combination<br /><br /> **{CR}** - columns are delimited by a carriage return<br /><br /> **{LF}** - columns are delimited by a line feed<br /><br /> **Semicolon {;}** - columns are delimited by a semicolon<br /><br /> **Colon {:}** - columns are delimited by a colon<br /><br /> **Comma {,}** - columns are delimited by a comma<br /><br /> **Tab {t}** - columns are delimited by a tab<br /><br /> **Vertical bar {&#124;}** - columns are delimited by a vertical bar|  
 |**DataPrecision**|Specify the precision of numeric data. Precision refers to the number of digits. For more information, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Specify a value to be stored as a count of bytes; for Unicode files, this will display as a count of characters. This value is ignored for delimited columns.<br /><br /> **Note** In the object model, the name of this property is ColumnWidth.|  
   

@@ -2,22 +2,20 @@
 title: "Security Architecture for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Web synchronization, security architecture"
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Security Architecture for Web Synchronization
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enables fine-grained control over the configuration of Web synchronization security. This topic provides a comprehensive list of all the components that can be included in a Web synchronization configuration and information about the connections that are made between components. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  The following illustration shows all the possible connections, but some connections might not be required in a particular topology. For example, a connection to an FTP server is required only if the snapshot is delivered by using FTP.  
@@ -101,7 +99,7 @@ manager: "jhubbard"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication is used if one of the following is specified:<br /><br /> -   [!INCLUDE[tsql](../../../includes/tsql-md.md)]: a value of **0** for the **@distributor_security_mode** parameter of [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br />-   RMO: a value of <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> for <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>.<br />-   Merge Agent command line: a value of **0** for **-DistributorSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: the **@distributor_login** and **@distributor_password** parameters of [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> and <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> Merge Agent command line: **-DistributorLogin** and **-DistributorPassword**.|  
   
 ## G. Connection to an FTP Server  
- Specify a Windows user for this connection only if you will download snapshot files from an FTP server, instead of from a UNC location, to the computer that is running IIS before you apply the snapshot to the Subscriber. For more information, see [Transfer Snapshots Through FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md).  
+ Specify a Windows user for this connection only if you will download snapshot files from an FTP server, instead of from a UNC location, to the computer that is running IIS before you apply the snapshot to the Subscriber. For more information, see [Transfer Snapshots Through FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
 |Type of authentication|Where the authentication is specified|  
 |----------------------------|-------------------------------------------|  

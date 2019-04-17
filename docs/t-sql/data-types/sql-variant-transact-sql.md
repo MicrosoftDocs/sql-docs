@@ -1,13 +1,11 @@
 ---
 title: "sql_variant (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/23/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/12/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "sql_variant"
@@ -20,17 +18,14 @@ helpviewer_keywords:
   - "sql_variant data type"
   - "storage [SQL Server], sql_variant"
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # sql_variant (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 A data type that stores values of various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-supported data types.
-  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -64,7 +59,7 @@ The **sql_variant** data type belongs to the top of the data type hierarchy list
   
 |Data type hierarchy|Data type family|  
 |---|---|
-|**sql_variant**|**sql_variant**|  
+|**sql_variant**|sql_variant |  
 |**datetime2**|Date and time|  
 |**datetimeoffset**|Date and time|  
 |**datetime**|Date and time|  
@@ -87,7 +82,7 @@ The **sql_variant** data type belongs to the top of the data type hierarchy list
 |**char**|Unicode|  
 |**varbinary**|Binary|  
 |**binary**|Binary|  
-|**uniqueidentifier**|**Uniqueidentifier**|  
+|**uniqueidentifier**|Uniqueidentifier |  
   
 The following rules apply to **sql_variant** comparisons:
 -   When **sql_variant** values of different base data types are compared and the base data types are in different data type families, the value whose data type family is higher in the hierarchy chart is considered the greater of the two values.  
@@ -109,7 +104,44 @@ The following table lists the types of values that cannot be stored by using **s
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
 |User-defined types|**datetimeoffset**|  
+
+## Examples  
+
+### A. Using a sql_variant in a table  
+ The following example, creates a table with a sql_variant data type. Then the example retrieves `SQL_VARIANT_PROPERTY` information about the `colA` value `46279.1` where `colB` =`1689`, given that `tableA` has `colA` that is of type `sql_variant` and `colB`.  
   
+```sql    
+CREATE   TABLE tableA(colA sql_variant, colB int)  
+INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
+SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
+         SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',  
+         SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'  
+FROM      tableA  
+WHERE      colB = 1689  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Note that each of these three values is a **sql_variant**.  
+  
+```  
+Base Type    Precision    Scale  
+---------    ---------    -----  
+decimal      8           2  
+  
+(1 row(s) affected)  
+```  
+  
+### B. Using a sql_variant as a variable   
+ The following example, creates a variable using the sql_variant data type, and then retrieves `SQL_VARIANT_PROPERTY` information about a variable named @v1.  
+  
+```sql    
+DECLARE @v1 sql_variant;  
+SET @v1 = 'ABC';  
+SELECT @v1;  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');  
+```    
+
+
 ## See also
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [SQL_VARIANT_PROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)

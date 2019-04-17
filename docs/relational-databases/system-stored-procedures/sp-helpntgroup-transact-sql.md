@@ -2,12 +2,10 @@
 title: "sp_helpntgroup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpntgroup"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpntgroup"
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helpntgroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Reports information about Windows groups with accounts in the current database.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +34,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@ntname =** ] **'***name***'**  
+`[ @ntname = ] 'name'`
  Is the name of the Windows group. *name* is **sysname**, with a default of NULL. *name* must be a valid Windows group with access to the current database. If *name* is not specified, all Windows groups with access to the current database are included in the output.  
   
 ## Return Code Values  

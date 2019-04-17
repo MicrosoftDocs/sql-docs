@@ -2,13 +2,11 @@
 title: "XML Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.xmltask.f1"
   - "sql13.dts.designer.xmltask.general.f1"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "XML [Integration Services]"
   - "XML task [Integration Services]"
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # XML Task
   The XML task is used to work with XML data. Using this task, a package can retrieve XML documents, apply operations to the documents by using Extensible Stylesheet Language Transformations (XSLT) style sheets and XPath expressions, merge multiple documents, or validate, compare, and save the updated documents to files and variables.  
@@ -124,7 +121,7 @@ manager: "jhubbard"
   
  For more information about how to set properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Programmatic Configuration of the XML Task  
  For more information about programmatically setting these properties, click the following topic:  
@@ -132,12 +129,12 @@ manager: "jhubbard"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
 ## Related Tasks  
- [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## XML Task Editor (General Page)
   Use the **General Node** of the **XML Task Editor** dialog box to specify the operation type and configure the operation.  
   
- To learn about this task, see [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
+ To learn about this task, see [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md). For information about working with XML documents and data, see "[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
   
 ### Static Options  
  **OperationType**  
@@ -162,7 +159,7 @@ manager: "jhubbard"
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **Source**  
- If **Source** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **Source** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **Source** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -170,7 +167,7 @@ manager: "jhubbard"
   
  If **Source** is set to **Variable**, select an existing variable, or click **\<New variable...>** to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 ### OperationType Dynamic Options  
   
@@ -223,7 +220,7 @@ manager: "jhubbard"
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -231,7 +228,7 @@ manager: "jhubbard"
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### OperationType = XSLT  
  Specify options for the XSLT operation.  
@@ -249,7 +246,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -269,7 +266,7 @@ manager: "jhubbard"
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -277,7 +274,7 @@ manager: "jhubbard"
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### OperationType = XPATH  
  Specify options for the XPath operation.  
@@ -295,7 +292,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -315,7 +312,7 @@ manager: "jhubbard"
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -323,7 +320,7 @@ manager: "jhubbard"
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **PutResultInOneNode**  
  Specify whether the result is written to a single node.  
@@ -350,7 +347,7 @@ manager: "jhubbard"
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **XPathStringSource**  
- If **XPathStringSourceType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **XPathStringSourceType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **XPathStringSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -358,7 +355,7 @@ manager: "jhubbard"
   
  If **XPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  When you use an XPath statement to identify the merge location in the source document, this statement is expected to return a single node. If the statement returns multiple nodes, only the first node is used. The contents of the second document are merged under the first node that the XPath query returns.  
   
@@ -375,7 +372,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -395,7 +392,7 @@ manager: "jhubbard"
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -403,7 +400,7 @@ manager: "jhubbard"
   
  If **SecondOperandType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### OperationType = Diff  
  Specify options for the Diff operation.  
@@ -450,7 +447,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -470,7 +467,7 @@ manager: "jhubbard"
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -478,7 +475,7 @@ manager: "jhubbard"
   
  If **SecondOperandType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### OperationType = Patch  
  Specify options for the Patch operation.  
@@ -496,7 +493,7 @@ manager: "jhubbard"
   
  If **DestinationType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **DestinationType**  
  Select the destination type of the XML document. This property has the options listed in the following table.  
@@ -516,7 +513,7 @@ manager: "jhubbard"
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **SecondOperand**  
- If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(…)** and then provide the XML by using the **Document Source Editor** dialog box.  
+ If **SecondOperandType** is set to **Direct input**, provide the XML code or click the ellipsis button **(...)** and then provide the XML by using the **Document Source Editor** dialog box.  
   
  If **SecondOperandType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -524,12 +521,10 @@ manager: "jhubbard"
   
  If **SecondOperandType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## Related Content  
-  
--   Blog entry, [XML Destination Script Component](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/), on agilebi.com  
-  
--   CodePlex sample, [Process XML Data Package Sample](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), on www.codeplex.com  
+
+-   CodePlex sample, [Process XML Data Package Sample](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), on www.codeplex.com  
   
   

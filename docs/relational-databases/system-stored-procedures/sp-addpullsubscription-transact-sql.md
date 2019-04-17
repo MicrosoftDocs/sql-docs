@@ -2,28 +2,23 @@
 title: "sp_addpullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addpullsubscription"
   - "sp_addpullsubscription_TSQL"
 helpviewer_keywords: 
   - "sp_addpullsubscription"
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
-caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_addpullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a pull subscription to a snapshot or transactional publication. This stored procedure is executed at the Subscriber on the database where the pull subscription is to be created.  
   
@@ -44,25 +39,25 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with a default of NULL. *publisher_db* is ignored by Oracle Publishers.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@independent_agent=**] **'***independent_agent***'**  
+`[ @independent_agent = ] 'independent_agent'`
  Specifies if there is a stand-alone Distribution Agent for this publication. *independent_agent* is **nvarchar(5)**, with a default of TRUE. If **true**, there is a stand-alone Distribution Agent for this publication. If **false**, there is one Distribution Agent for each Publisher database/Subscriber database pair. *independent_agent* is a property of the publication and must have the same value here as it has at the Publisher.  
   
- [ **@subscription_type=**] **'***subscription_type***'**  
+`[ @subscription_type = ] 'subscription_type'`
  Is the type of subscription. *subscription_type* is **nvarchar(9)**, with a default of **anonymous**. You must specify a value of **pull** for *subscription_type*, unless you want to create a subscription without registering the subscription at the Publisher. In this case, you must specify a value of **anonymous**. This is necessary for cases in which you cannot establish a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection to the Publisher during subscription configuration.  
   
- [ **@description=**] **'***description***'**  
+`[ @description = ] 'description'`
  Is the description of the publication. *description* is **nvarchar(100)**, with a default of NULL.  
   
- [ **@update_mode=**] **'***update_mode***'**  
+`[ @update_mode = ] 'update_mode'`
  Is the type of update. *update_mode* is **nvarchar(30)**, and can be one of the following values.  
   
 |Value|Description|  
@@ -73,7 +68,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 |**failover**|Enables the subscription for immediate updating with queued updating as a failover. Data modifications can be made at the Subscriber and propagated to the Publisher immediately. If the Publisher and Subscriber are not connected, data modifications made at the Subscriber can be stored in a queue until the Subscriber and Publisher are reconnected.|  
 |**queued failover**|Enables the subscription as a queued updating subscription with the ability to change to immediate updating mode. Data modifications can be made at the Subscriber and stored in a queue until a connection is established between the Subscriber and Publisher. When a continuous connection is established the updating mode can be changed to immediate updating. *Not supported for Oracle Publishers*.|  
   
- [ **@immediate_sync =**] *immediate_sync*  
+`[ @immediate_sync = ] immediate_sync`
  Is whether the synchronization files are created or re-created each time the Snapshot Agent runs. *immediate_sync* is **bit** with a default of 1, and must be set to the same value as *immediate_sync* in **sp_addpublication**.*immediate_sync* is a property of the publication and must have the same value here as it has at the Publisher.  
   
 ## Return Code Values  
@@ -95,7 +90,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 ## See Also  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-updatable-subscription-to-transactional-publication.md)
+ [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

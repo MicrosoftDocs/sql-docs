@@ -2,13 +2,11 @@
 title: "Set Package Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, properties"
   - "properties [Integration Services]"
@@ -25,10 +23,9 @@ helpviewer_keywords:
   - "version properties [Integration Services]"
   - "SQL Server Integration Services packages, properties"
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Set Package Properties
   When you create a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by using the graphical interface that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, you set the properties of the package object in the Properties window.  
@@ -57,7 +54,7 @@ manager: "jhubbard"
   
 ### To set package properties in the Properties window  
   
--   [Set the Properties of a Package](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
+-   [Set the Properties of a Package](https://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
 ## Properties by Category  
  The following tables list the package properties by category.  
@@ -115,8 +112,8 @@ manager: "jhubbard"
   
 |Property|Description|  
 |--------------|-----------------|  
-|**Configurations**|The collection of configurations that the package uses. Click the browse button **(…)** to view and configure package configurations.|  
-|**Expressions**|Click the browse button **(…)** to create expressions for package properties.<br /><br /> Note that you can create property expressions for all the package properties that object model includes, not just the properties listed in the Properties window.<br /><br /> For more information, see [Use Property Expressions in Packages](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> To view existing property expressions, expand **Expressions**. Click the browse button **(…)** in an expression text box to modify and evaluate an expression.|  
+|**Configurations**|The collection of configurations that the package uses. Click the browse button **(...)** to view and configure package configurations.|  
+|**Expressions**|Click the browse button **(...)** to create expressions for package properties.<br /><br /> Note that you can create property expressions for all the package properties that object model includes, not just the properties listed in the Properties window.<br /><br /> For more information, see [Use Property Expressions in Packages](../integration-services/expressions/use-property-expressions-in-packages.md).<br /><br /> To view existing property expressions, expand **Expressions**. Click the browse button **(...)** in an expression text box to modify and evaluate an expression.|  
 |**ForceExecutionResult**|The execution result of the package. The values are **None**, **Success**, **Failure**, and **Completion**. The default value of this property is **None**. For more information, see T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult.|  
 |**LocaleId**|A Microsoft Win32 locale. The default value of this property is the locale of the operating system on the local computer.|  
 |**LoggingMode**|A value that specifies the logging behavior of the package. The values are **Disabled**, **Enabled**, and **UseParentSetting**. The default value of this property is **UseParentSetting**. For more information, see <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  

@@ -2,26 +2,23 @@
 title: "Open Activity Monitor (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Activity Monitor [SQL Server], setting the refresh interval"
   - "refresh interval for Activity Monitor"
   - "Activity Monitor [SQL Server], opening"
   - "opening Activity Monitor"
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
-caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Open Activity Monitor (SQL Server Management Studio)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  Activity Monitor runs queries on the monitored instance to obtain information for the Activity Monitor display panes. When the refresh interval is set to less than 10 seconds, the time that is used to run these queries can affect server performance  
   

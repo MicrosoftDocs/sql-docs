@@ -2,12 +2,10 @@
 title: "sp_cursorfetch (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cursorfetch"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorfetch"
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fetches a buffer of one or more rows from the database. The group of rows in this buffer is called the cursor's *fetch buffer*. sp_cursorfetch is invoked by specifying ID = 7 in a tabular data stream (TDS) packet.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -95,7 +88,7 @@ sp_cursorfetch cursor
 |*\<nrows>*|Set to|  
 |-----------------|------------|  
 |If not open|0|  
-|For KEYSET and STATIC cursors|Typically, the current keyset size.<br /><br /> **–m** if the cursor is in asynchronous creation with *m* rows found to this point.|  
+|For KEYSET and STATIC cursors|Typically, the current keyset size.<br /><br /> **-m** if the cursor is in asynchronous creation with *m* rows found to this point.|  
 |For DYNAMIC cursors|-1|  
   
 ## Remarks  

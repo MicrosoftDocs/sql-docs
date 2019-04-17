@@ -1,23 +1,19 @@
 ---
 title: "Azure Blob Upload Task | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/25/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpblobuptask.f1"
   - "sql14.dts.designer.afpblobuptask.f1"
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Azure Blob Upload Task
 The **Azure Blob Upload Task** enables an SSIS package to upload files to an Azure blob storage.

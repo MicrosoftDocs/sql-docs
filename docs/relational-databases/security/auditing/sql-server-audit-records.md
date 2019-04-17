@@ -2,22 +2,20 @@
 title: "SQL Server Audit Records | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "audit records [SQL Server]"
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # SQL Server Audit Records
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit feature enables you to audit server-level and database-level groups of events and events. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Audits consist of zero or more audit action items, which are recorded to an audit *target*. The audit target can be a binary file, the Windows Application event log, or the Windows Security event log. The records sent to the target can contain the elements described in the following table:  
@@ -26,10 +24,10 @@ manager: "jhubbard"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Date/time when the auditable action is fired.|**datetime2**|Yes|  
 |**sequence_no**|Tracks the sequence of records within a single audit record that was too large to fit in the write buffer for audits.|**int**|Yes|  
-|**action_id**|ID of the action<br /><br /> Tip: To use **action_id** as a predicate it must be converted from a character string to a numeric value. For more information, see [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Yes|  
-|**succeeded**|Indicates whether or not the permission check of the action triggering the audit event succeeded or failed. |**bit**<br /> – 1 = Success, <br />0 = Fail|Yes|  
+|**action_id**|ID of the action<br /><br /> Tip: To use **action_id** as a predicate it must be converted from a character string to a numeric value. For more information, see [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Yes|  
+|**succeeded**|Indicates whether or not the permission check of the action triggering the audit event succeeded or failed. |**bit**<br /> - 1 = Success, <br />0 = Fail|Yes|  
 |**permission_bitmask**|When applicable, shows the permissions that were granted, denied, or revoked|**bigint**|No|  
-|**is_column_permission**|Flag indicating a column level permission|**bit** <br />– 1 = True, <br />0 = False|No|  
+|**is_column_permission**|Flag indicating a column level permission|**bit** <br />- 1 = True, <br />0 = False|No|  
 |**session_id**|ID of the session on which the event occurred.|**int**|Yes|  
 |**server_principal_id**|ID of the login context that the action is performed in.|**int**|Yes|  
 |**database_principal_id**|ID of the database user context that the action is performed in.|**int**|No|  

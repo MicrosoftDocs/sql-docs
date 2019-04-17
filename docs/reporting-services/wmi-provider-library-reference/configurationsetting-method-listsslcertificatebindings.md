@@ -1,22 +1,17 @@
 ---
 title: "ListSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: wmi-provider-library-reference
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ListSSLCertificateBindings method"
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
-caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # ConfigurationSetting Method - ListSSLCertificateBindings
   Returns a list of installed SSL certificates on the computer.  

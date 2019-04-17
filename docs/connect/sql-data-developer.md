@@ -2,18 +2,15 @@
 title: "SQL Data Developer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQL Data Developer
 Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud.  
@@ -21,11 +18,11 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 ## SQL Data storage
 * [SQL Server Database Engine](../database-engine/configure-windows/sql-server-database-engine.md): Use the  SQL Server Database Engine to create relational databases for online transaction processing or online analytical processing data. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): Use  SQL Azure to move your database to the cloud 
-* [SQL Compact](https://www.microsoft.com/en-us/download/details.aspx?id=17876): SQL Server Compact to build standalone and occasionally connected applications for mobile devices, desktops, and Web clients.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact to build standalone and occasionally connected applications for mobile devices, desktops, and Web clients.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): Use LocalDB during development to write and test Transact-SQL code without having to manage a full server instance of SQL Server.
 
 ## SQL Data tools
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : Use  SSDT to build relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : Use  SSDT to build relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.
 * [SQL Server Management Tools](../ssms/download-sql-server-management-studio-ssms.md):  Use SSMS configure, monitor, and administer instances of SQL Server.
 
 ## SQL Data access
@@ -38,12 +35,12 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 * [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): Use SQLXML 4.0 to export relational data to XML.
 
 ## Data collection, processing, and visualization
-* [Analysis Services](https://msdn.microsoft.com/library/bb500153.aspx)
-* [Integration Services](https://msdn.microsoft.com/library/ms136025.aspx)  
-* [Master Data Services](https://msdn.microsoft.com/library/hh230994.aspx)
-* [Replication Services](https://msdn.microsoft.com/library/ms147384.aspx)
-* [Reporting Services](https://msdn.microsoft.com/library/bb522713.aspx)
-* [Service Broker](https://msdn.microsoft.com/library/bb522893.aspx)
+* [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Integration Services](../integration-services/integration-services-developer-documentation.md)  
+* [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
+* [Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)
+* [Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
+* [Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
 
 
  

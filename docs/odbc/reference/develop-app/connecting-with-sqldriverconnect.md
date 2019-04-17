@@ -2,13 +2,11 @@
 title: "Connecting with SQLDriverConnect | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], connection functions"
   - "functions [ODBC], data source or driver connections"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "connection functions [ODBC]"
   - "ODBC drivers [ODBC], connection functions"
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Connecting with SQLDriverConnect
 **SQLDriverConnect** is used to connect to a data source using a connection string. **SQLDriverConnect** is used instead of **SQLConnect** for the following reasons:  

@@ -1,25 +1,22 @@
 ---
-title: "Contained Databases with Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Use contained databases with availability groups"
+description: "How to use contained databases with an Always On availability group"
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], interoperability"
   - "contained database, AlwaysOnAvailabilityGroups"
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
-caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Contained Databases with Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# Use contained databases with Always On availability groups 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic contains information about the using a contained database with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

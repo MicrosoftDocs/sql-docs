@@ -2,12 +2,10 @@
 title: "PARSENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "PARSENAME_TSQL"
@@ -21,13 +19,13 @@ helpviewer_keywords:
   - "objects [SQL Server], names"
   - "part of object names [SQL Server]"
 ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
-caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PARSENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Returns the specified part of an object name. The parts of an object that can be retrieved are the object name, owner name, database name, and server name.  
   
@@ -39,8 +37,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 PARSENAME ( 'object_name' , object_piece )   
 ```  
   
@@ -60,7 +56,7 @@ PARSENAME ( 'object_name' , object_piece )
  4 = Server name  
   
 ## Return Types  
- **nchar**  
+ **sysname**  
   
 ## Remarks  
  PARSENAME returns NULL if one of the following conditions is true:  
@@ -75,52 +71,6 @@ PARSENAME ( 'object_name' , object_piece )
  The following example uses `PARSENAME` to return information about the `Person` table in the `AdventureWorks2012` database.  
   
 ```  
-USE AdventureWorks2012;  
-SELECT PARSENAME('AdventureWorks2012..Person', 1) AS 'Object Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 2) AS 'Schema Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 3) AS 'Database Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 4) AS 'Server Name';  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `Object Name`  
-  
- `------------------------------`  
-  
- `Person`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorks2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example uses `PARSENAME` to return information about the `Person` table in the `AdventureWorks2012` database.  
-  
-```  
 -- Uses AdventureWorks  
   
 SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 1) AS 'Object Name';  
@@ -131,40 +81,34 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `Object Name`  
-  
- `------------------------------`  
-  
- `DimCustomer`  
-  
- `(1 row(s) affected)`  
-  
- `Schema Name`  
-  
- `------------------------------`  
-  
- `dbo`  
-  
- `(1 row(s) affected)`  
-  
- `Database Name`  
-  
- `------------------------------`  
-  
- `AdventureWorksPDW2012`  
-  
- `(1 row(s) affected)`  
-  
- `Server Name`  
-  
- `------------------------------`  
-  
- `(null)`  
-  
- `(1 row(s) affected)`  
+```
+Object Name
+------------------------------
+DimCustomer
+
+(1 row(s) affected)
+
+Schema Name
+------------------------------
+dbo
+
+(1 row(s) affected)
+
+Database Name
+------------------------------
+AdventureWorksPDW2012
+
+(1 row(s) affected)
+
+Server Name
+------------------------------
+(null)
+
+(1 row(s) affected)
+```
   
 ## See Also  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  

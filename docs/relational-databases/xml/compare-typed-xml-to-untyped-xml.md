@@ -2,13 +2,11 @@
 title: "Compare Typed XML to Untyped XML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xml data type [SQL Server], variables"
   - "parameters [XML in SQL Server]"
@@ -25,12 +23,12 @@ helpviewer_keywords:
   - "XML [SQL Server], untyped"
   - "xml data type [SQL Server], parameters"
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Compare Typed XML to Untyped XML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   You can create variables, parameters, and columns of the **xml** type. You can optionally associate a collection of XML schemas with a variable, parameter, or column of **xml** type. In this case, the **xml** data type instance is called *typed*. Otherwise, the XML instance is called *untyped*.  
   
 ## Well-formed XML and the xml Data Type  
@@ -66,7 +64,7 @@ manager: "jhubbard"
  In the following examples, a two-part naming convention is used for specifying the XML schema collection name. The first part is the schema name, and the second part is the XML schema collection name.  
   
 ### Example: Associating a Schema Collection with an xml Type Variable  
- The following example creates an**xml** type variable and associates a schema collection with it. The schema collection specified in the example is already imported in the **AdventureWorks** database.  
+ The following example creates an **xml** type variable and associates a schema collection with it. The schema collection specified in the example is already imported in the **AdventureWorks** database.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

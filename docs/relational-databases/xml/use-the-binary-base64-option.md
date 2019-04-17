@@ -2,22 +2,20 @@
 title: "Use the BINARY BASE64 Option | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "AUTO FOR XML mode, BINARY BASE64 option"
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Use the BINARY BASE64 Option
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   If the BINARY BASE64 option is specified in the query, the binary data is returned in base64 encoding format. By default, if the BINARY BASE64 option is not specified, AUTO mode supports URL encoding of binary data. That is, instead of binary data, a reference to a relative URL to the virtual root of the database where the query was executed is returned. This reference can be used to access the actual binary data in subsequent operations by using the SQLXML ISAPI dbobject query. The query must provide enough information, such as primary key columns, to identify the image.  
   
  In specifying a query, if an alias is used for the binary column of the view, the alias is returned in the URL encoding of the binary data. In subsequent operations, the alias is meaningless, and the URL encoding cannot be used to retrieve the image. Therefore, do not use aliases when querying a view using FOR XML AUTO mode.  

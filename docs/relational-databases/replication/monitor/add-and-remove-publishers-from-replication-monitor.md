@@ -2,22 +2,20 @@
 title: "Add and Remove Publishers from Replication Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Replication Monitor, adding and removing Publishers"
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
-caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Add and Remove Publishers from Replication Monitor
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The server from which you launch Replication Monitor is automatically added to the monitor if it is a Publisher. Additional Publishers can be added through the **Add Publisher** dialog box. After adding a Publisher, it is displayed in a group in the left pane of the monitor. The **My Publishers** group is included by default, but you can create new groups to manage one or more replication topologies. For information about starting Replication Monitor, see [Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 ### To add a SQL Server Publisher  
@@ -104,6 +102,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Configure Distribution](../../../relational-databases/replication/configure-distribution.md)   
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

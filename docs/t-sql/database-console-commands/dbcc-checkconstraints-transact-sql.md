@@ -1,13 +1,11 @@
 ---
 title: "DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/16/2017"
-ms.prod: "sql-non-specified"
+ms.date: "11/14/2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC CHECKCONSTRAINTS"
@@ -23,13 +21,12 @@ helpviewer_keywords:
   - "constraints [SQL Server], consistency checks"
   - "integrity [SQL Server], constraints"
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: umajay
+manager: craigg
 ---
 # DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Checks the integrity of a specified constraint or all constraints on a specified table in the current database.
   
@@ -88,7 +85,7 @@ DBCC CHECKCONSTRAINTS checks the integrity of FOREIGN KEY and CHECK constraints 
   
 **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-If *table_name* or *table_id* is specified and it is enabled for system versioning, DBCC CHECKCONSTRAINTS also performs temporal data consistency checks on the specified table. When *NO_INFOMSGS* is not specified, this command will return each consistency violation in the output on a separate line. The format of the output will be ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<what is wrong with temporal table record>.
+If *table_name* or *table_id* is specified and it is enabled for system versioning, DBCC CHECKCONSTRAINTS also performs temporal data consistency checks on the specified table. When *NO_INFOMSGS* is not specified, this command will return each consistency violation in the output on a separate line. The format of the output will be ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record>.
   
 |Check|Additional info in output if check failed|  
 |-----------|-----------------------------------------------|  

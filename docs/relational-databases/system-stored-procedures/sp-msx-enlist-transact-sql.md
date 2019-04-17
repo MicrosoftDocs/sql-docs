@@ -2,12 +2,10 @@
 title: "sp_msx_enlist (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_msx_enlist_TSQL"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_msx_enlist"
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_msx_enlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds the current server to the list of available servers on the master server.  
   
 > [!CAUTION]  
 >  The **sp_msx_enlist** stored procedure edits the registry. Manual editing of the registry is not recommended because inappropriate or incorrect changes can cause serious configuration problems for your system. Therefore, only experienced users should use the Registry Editor program to edit the registry. For more information, see the Microsoft Windows documentation.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,10 +38,10 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## Arguments  
- [ **@msx_server_name =**] **'***msx_server***'**  
+`[ @msx_server_name = ] 'msx_server'`
  The name of the multiserver administration (master) server. *msx_server* is **sysname**, with no default.  
   
- [ **@location =**] **'***location***'**  
+`[ @location = ] 'location'`
  The location of the target server to add. *location* is **nvarchar(100)**, with a default of NULL.  
   
 ## Return Code Values  

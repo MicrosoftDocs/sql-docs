@@ -2,21 +2,18 @@
 title: "Validate XML with the XML Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XML validation"
   - "XML, validating"
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Validate XML with the XML Task
   Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task.  
@@ -29,15 +26,15 @@ manager: "jhubbard"
   
  The XML validation functionality scales easily for large XML documents and large numbers of errors. Since the output file itself is in XML format, you can query and analyze the output. For example, if the output contains a large number of errors, you can group the errors by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] query, as described in this topic.  
   
-> [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. The property is also available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+> [!NOTE]
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ( [!INCLUDE[ssIS](../../includes/ssis-md.md)]) introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. The property is also available in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ## Sample output for XML that's valid  
  Here is a sample output file with validation results for a valid XML file.  
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>true</result>  
         <errors>0</errors>  
@@ -56,7 +53,7 @@ manager: "jhubbard"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>false</result>  
         <errors>2</errors>  
@@ -78,7 +75,7 @@ manager: "jhubbard"
 ## Analyze XML validation output with a Transact-SQL query  
  If the output of XML validation contains a large number of errors, you can use a [!INCLUDE[tsql](../../includes/tsql-md.md)] query to load the output in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Then you can analyze the error list with all the capabilities of the T-SQL language including WHERE, GROUP BY, ORDER BY, JOIN, and so forth.  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     
@@ -86,7 +83,7 @@ FROM OPENROWSET (BULK N'C:\Temp\XMLValidation_2016-02-212T10-41-00.xml', SINGLE_
   
 -- Query # 1, flat list of errors  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  
@@ -94,11 +91,11 @@ SELECT col.value('@line','INT') AS line
 FROM @XML.nodes('/root/messages/error') AS tab(col)  
 )  
 SELECT * FROM rs;  
--- WHERE error LIKE ‘%whatever_string%’  
+-- WHERE error LIKE '%whatever_string%'  
   
 -- Query # 2, count of errors grouped by the error message  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  

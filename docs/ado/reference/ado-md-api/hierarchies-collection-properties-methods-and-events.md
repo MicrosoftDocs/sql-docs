@@ -1,21 +1,18 @@
 ---
 title: "Hierarchies Collection Properties, Methods, and Events | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Hierarchies collection [ADO MD], members"
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Hierarchies Collection Properties, Methods, and Events
 ## Properties  

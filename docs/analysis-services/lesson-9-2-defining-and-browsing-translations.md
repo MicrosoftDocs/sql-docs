@@ -1,23 +1,18 @@
 ---
 title: "Defining and Browsing Translations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 9-2 - Defining and Browsing Translations
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 A translation is a representation of the names of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects in a specific language. Objects include measure groups, measures, dimensions, attributes, hierarchies, KPIs, actions, and calculated members. Translations provide server support for client applications that can support multiple languages. By using such a client, the client passes the locale identifier (LCID) to the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], which uses the LCID to determine which set of translations to use when it provides metadata for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects. If an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object does not contain a translation for that language, or does not contain a translation for a specified object, the default language is used in returning the object metadata back to the client. For example, if a business user in France accesses a cube from a workstation that has a French locale setting, the business user will see the member captions and member property values in French if a French translation exists. However, if a business user in Germany accesses the same cube from a workstation that has a German locale setting, the business user will see the captions names and member property values in German. For more information, see [Dimension Translations](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Cube Translations](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md), [Translation support in Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
   
 In the tasks in this topic, you define metadata translations for a limited set of dimension objects in the Date dimension and cube objects in the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube. You will then browse these dimension and cube objects to examine the metadata translations.  
@@ -44,9 +39,9 @@ In the tasks in this topic, you define metadata translations for a limited set o
   
 6.  In the row for the **Caption** object for the **Month Name** attribute, type **Mes del Año** in the **Spanish (Spain)** translation column and **Mois d'Année** in the **French (France)** translation column.  
   
-    Notice that when you enter these translations, an ellipsis (**…**) appears. Clicking this ellipsis will enable you to specify a column in the underlying table that provides translations for each member of the attribute hierarchy.  
+    Notice that when you enter these translations, an ellipsis (**...**) appears. Clicking this ellipsis will enable you to specify a column in the underlying table that provides translations for each member of the attribute hierarchy.  
   
-7.  Click the ellipsis (**…**) for the **Spanish (Spain)** translation for the **Month Name** attribute.  
+7.  Click the ellipsis (**...**) for the **Spanish (Spain)** translation for the **Month Name** attribute.  
   
     The **Attribute Data Translation** dialog box appears.  
   
@@ -54,7 +49,7 @@ In the tasks in this topic, you define metadata translations for a limited set o
   
     ![Attribute Data Translation dialog box](../analysis-services/media/l9-translations-4.gif "Attribute Data Translation dialog box")  
   
-9. Click **OK**, and then click the ellipsis (**…**) for the **French (France)** translation for the **Month Name** attribute.  
+9. Click **OK**, and then click the ellipsis (**...**) for the **French (France)** translation for the **Month Name** attribute.  
   
 10. In the **Translation columns** list, select **FrenchMonthName**, and then click **OK**.  
   

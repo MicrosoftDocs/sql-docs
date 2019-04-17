@@ -1,23 +1,21 @@
 ---
-title: "Enable and Configure FILESTREAM | Microsoft Docs"
+title: "Enable and configure FILESTREAM | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "08/23/2017"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: filestream
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], enabling"
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
-# Enable and Configure FILESTREAM
+# Enable and configure FILESTREAM
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Before you can start to use FILESTREAM, you must enable FILESTREAM on the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. This topic describes how to enable FILESTREAM by using SQL Server Configuration Manager.  
   
 ##  <a name="enabling"></a> Enabling FILESTREAM  
@@ -46,7 +44,7 @@ manager: "jhubbard"
   
 11. In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code:  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  
@@ -56,9 +54,9 @@ manager: "jhubbard"
 13. Restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.  
   
   
-##  <a name="best"></a> Best Practices  
+##  <a name="best"></a> Best practices  
   
-###  <a name="config"></a> Physical Configuration and Maintenance  
+###  <a name="config"></a> Physical configuration and maintenance  
  When you set up FILESTREAM storage volumes, consider the following guidelines:  
   
 -   Turn off short file names on FILESTREAM computer systems. Short file names take significantly longer to create. To disable short file names, use the Windows **fsutil** utility.  
@@ -67,9 +65,9 @@ manager: "jhubbard"
   
 -   Use 64-KB NTFS clusters. Compressed volumes must be set to 4-KB NTFS clusters.  
   
--   Disable indexing on FILESTREAM volumes and set **disablelastaccess** To set **disablelastaccess**, use the Windows **fsutil** utility.  
+-   Disable indexing on FILESTREAM volumes and set **disablelastaccess**. To set **disablelastaccess**, use the Windows **fsutil** utility.  
   
--   Disable antivirus scanning of FILESTREAM volumes when it is not unnecessary. If antivirus scanning is necessary, avoid setting policies that will automatically delete offending files.  
+-   Disable antivirus scanning of FILESTREAM volumes when it is not necessary. If antivirus scanning is necessary, avoid setting policies that will automatically delete offending files.  
   
 -   Set up and tune the RAID level for fault tolerance and the performance that is required by an application.  
   
@@ -78,10 +76,10 @@ manager: "jhubbard"
 |RAID level|Write performance|Read performance|Fault tolerance|Remarks|  
 |RAID 5|Normal|Normal|Excellent|Performance is better than one disk or JBOD; and less than RAID 0 or RAID 5 with striping.|  
 |RAID 0|Excellent|Excellent|None||  
-|RAID 5 + stripping|Excellent|Excellent|Excellent|Most expensive option.|  
+|RAID 5 + striping|Excellent|Excellent|Excellent|Most expensive option.|  
   
   
-###  <a name="database"></a> Physical Database Design  
+###  <a name="database"></a> Physical database design  
  When you design a FILESTREAM database, consider the following guidelines:  
   
 -   FILESTREAM columns must be accompanied by a corresponding **uniqueidentifier**ROWGUID column. These kinds of tables must also be accompanied by a unique index. Typically this index is not a clustered index. If the databases business logic requires a clustered index, you have to make sure that the values stored in the index are not random. Random values will cause the index to be reordered every time that a row is added or removed from the table.  

@@ -2,24 +2,24 @@
 title: "XML Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.xmlsource.f1"
+  - "sql13.dts.designer.xmlsourceadapter.connectionmanager.f1"
+  - "sql13.dts.designer.xmlsourceadapter.columns.f1"
+  - "sql13.dts.designer.xmlsourceadapter.erroroutput.f1"
 helpviewer_keywords: 
   - "sources [Integration Services], XML"
   - "XML source [Integration Services]"
   - "XML Source Editor"
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # XML Source
   The XML source reads an XML data file and populates the columns in the source output with the data.  
@@ -71,23 +71,97 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **XML Source Editor** dialog box, click one of the following topics:  
-  
--   [XML Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)  
-  
--   [XML Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)  
-  
--   [XML Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [XML Source Custom Properties](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
  For more information about how to set the properties, click one of the following topics:  
   
 -   [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## XML Source Editor (Connection Manager Page)
+  Use the **Connection Manager** page of the **XML Source Editor** to specify an XML file and the XSD that transforms the XML data.  
+  
+### Static Options  
+ **Data access mode**  
+ Specify the method for selecting data from the source.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|XML file location|Retrieve data from an XML file.|  
+|XML file from variable|Specify the XML file name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|XML data from variable|Retrieve XML data from a variable.|  
+  
+ **Use inline schema**  
+ Specify whether the XML source data itself contains the XSD schema that defines and validates its structure and data.  
+  
+ **XSD location**  
+ Type the path and file name of the XSD schema file, or locate the file by clicking **Browse**.  
+  
+ **Browse**  
+ Use the **Open** dialog box to locate the XSD schema file.  
+  
+ **Generate XSD**  
+ Use the **Save As** dialog box to select a location for the auto-generated XSD schema file. The editor infers the schema from the structure of the XML data.  
+  
+### Data Access Mode Dynamic Options  
+  
+#### Data access mode = XML file location  
+ **XML location**  
+ Type the path and file name of the XML data file, or locate the file by clicking **Browse**.  
+  
+ **Browse**  
+ Use the **Open** dialog box to locate the XML data file.  
+  
+#### Data access mode = XML file from variable  
+ **Variable name**  
+ Select the variable that contains the path and file name of the XML file.  
+  
+#### Data access mode = XML data from variable  
+ **Variable name**  
+ Select the variable that contains the XML data.  
+  
+## XML Source Editor (Columns Page)
+  Use the **Columns** node of the **XML Source Editor** dialog box to map an output column to an external (source) column.  
+  
+### Options  
+ **Available External Columns**  
+ View the list of available external columns in the data source. You cannot use this table to add or delete columns.  
+  
+ **External Column**  
+ View external (source) columns in the order in which the task will read them. You can change this order by first clearing the selected columns in the table displayed in the editor, and then selecting external columns from the list in a different order.  
+  
+ **Output Column**  
+ Provide a unique name for each output column. The default is the name of the selected external (source) column; however, you can choose any unique, descriptive name. The name provided will be displayed within [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
+  
+## XML Source Editor (Error Output Page)
+  Use the **Error Output** page of the **XML Source Editor** dialog box to select error handling options and to set properties on error output columns.  
+  
+### Options  
+ **Input/Output**  
+ View the name of the data source.  
+  
+ **Column**  
+ View the external (source) columns that you selected on the **Connection Manager** page of the **XML Source Editor**dialog box.  
+  
+ **Error**  
+ Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Related Topics:** [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Truncation**  
+ Specify what should happen when a truncation occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Description**  
+ View the description of the error.  
+  
+ **Set this value to selected cells**  
+ Specify what should happen to all the selected cells when an error or truncation occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Apply**  
+ Apply the error handling option to the selected cells.  
   
 ## Related Tasks  
  [Extract Data by Using the XML Source](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  

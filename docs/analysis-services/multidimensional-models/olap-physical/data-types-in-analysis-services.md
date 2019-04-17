@@ -1,25 +1,18 @@
 ---
 title: "Data Types in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Types in Analysis Services
-  For all <xref:Microsoft.AnalysisServices.DataItem> objects, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the following subset of **System.Data.OleDb.OleDbType**. To set or read the data type, use [DataItem Data Type &#40;ASSL&#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  For all <xref:Microsoft.AnalysisServices.DataItem> objects, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports the following subset of **System.Data.OleDb.OleDbType**. To set or read the data type, use [DataItem Data Type &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
   
 ## Supported Data Types  
   

@@ -2,20 +2,17 @@
 title: "Work with CDC Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "cdcServ"
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Work with CDC Services
   You can use the CDC Service Configuration Console to create a new CDC service and to prepare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database for CDC.  

@@ -2,20 +2,17 @@
 title: "Configuring Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], configuring"
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Configuring Data Sources
 Information about data sources is stored in the system registry. Users modify data source information through an administration program. This can be the ODBC Administrator, the ODBC Control Panel device, or an administration program written by an application or driver developer.  

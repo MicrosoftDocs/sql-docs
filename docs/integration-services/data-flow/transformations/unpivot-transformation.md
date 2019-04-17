@@ -2,25 +2,23 @@
 title: "Unpivot Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.unpivottrans.f1"
+  - "sql13.dts.designer.unpivottransformation.f1"
 helpviewer_keywords: 
   - "Unpivot transformation"
   - "more normalized data set [Integration Services]"
   - "normalized data [Integration Services]"
   - "datasets [Integration Services], normalized data"
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Unpivot Transformation
   The Unpivot transformation makes an unnormalized dataset into a more normalized version by expanding values from multiple columns in a single record into multiple records with the same values in a single column. For example, a dataset that lists customer names has one row for each customer, with the products and the quantity purchased shown in columns in the row. After the Unpivot transformation normalizes the data set, the data set contains a different row for each product that the customer purchased.  
@@ -42,16 +40,54 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Unpivot Transformation Editor** dialog box, click one of the following topics:  
-  
--   [Unpivot Transformation Editor](../../../integration-services/data-flow/transformations/unpivot-transformation-editor.md)  
-  
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  For more information about how to set the properties, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## Unpivot Transformation Editor
+  Use the **Unpivot Transformation Editor** dialog box to select the columns to pivot into rows, and to specify the data column and the new pivot value output column.  
+  
+> [!NOTE]  
+>  This topic relies on the Unpivot scenario described in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) to illustrate the use of the options.  
+  
+### Options  
+ **Available Input Columns**  
+ Using the check boxes, specify the columns to pivot into rows.  
+  
+ **Name**  
+ View the name of the available input column.  
+  
+ **Pass Through**  
+ Indicate whether to include the column in the unpivoted output.  
+  
+ **Input Column**  
+ Select from the list of available input columns for each row. Your selections are reflected in the check box selections in the **Available Input Columns** table.  
+  
+ In the Unpivot scenario described in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), the Input Columns are the **Ham**, **Soda**, **Milk**, **Beer**, and **Chips** columns.  
+  
+ **Destination Column**  
+ Provide a name for the data column.  
+  
+ In the Unpivot scenario described in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), the Destination Column is the quantity (**Qty**) column.  
+  
+ **Pivot Key Value**  
+ Provide a name for the pivot value. The default is the name of the input column; however, you can choose any unique, descriptive name.  
+  
+ The value of this property can be specified by using a property expression.  
+  
+ In the Unpivot scenario described in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), the Pivot Values will appear in the new Product column designated by the **Pivot Key Value Column Name** option, as the text values **Ham**, **Soda**, **Milk**, **Beer**, and **Chips**.  
+  
+ **Pivot Key Value Column Name**  
+ Provide a name for the pivot value column. The default is "Pivot Key Value"; however, you can choose any unique, descriptive name.  
+  
+ In the Unpivot scenario described in [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), the Pivot Key Value Column Name is **Product** and designates the new **Product** column into which the **Ham**, **Soda**, **Milk**, **Beer**, and **Chips** columns are unpivoted.  
+  
+## See Also  
+ [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [Pivot Transformation](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   

@@ -2,12 +2,10 @@
 title: "sp_addtype (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addtype"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addtype"
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_addtype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates an alias data type.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) instead.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,10 +39,10 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## Arguments  
- [ **@typename=** ] *type*  
+`[ @typename = ] type`
  Is the name of the alias data type. Alias data type names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique in each database. *type* is **sysname**, with no default.  
   
- [ **@phystype=**] *system_data_type*  
+`[ @phystype = ] system_data_type`
  Is the physical, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supplied, data type on which the alias data type is based.*system_data_type* is **sysname**, with no default, and can be one of these values:  
   
 ||||  
@@ -74,7 +67,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  Is a nonnegative integer that indicates the maximum number of decimal digits that can be stored to the right of the decimal point, and it must be less than or equal to the precision. For more information, see [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- [ **@nulltype =** ] **'***null_type***'**  
+`[ @nulltype = ] 'null_type'`
  Indicates the way the alias data type handles null values. *null_type* is **varchar(**8**)**, with a default of NULL, and must be enclosed in single quotation marks ('NULL', 'NOT NULL', or 'NONULL'). If *null_type* is not explicitly defined by **sp_addtype**, it is set to the current default nullability. Use the GETANSINULL system function to determine the current default nullability. This can be adjusted by using the SET statement or ALTER DATABASE. Nullability should be explicitly defined. If **@phystype** is **bit**, and **@nulltype** is not specified, the default is NOT NULL.  
   
 > [!NOTE]  

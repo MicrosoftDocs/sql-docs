@@ -2,12 +2,9 @@
 title: "DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.prod: sql
+ms.prod_service: "sql-database"
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC_SHOWCONTIG_TSQL"
@@ -24,20 +21,19 @@ helpviewer_keywords:
   - "fragmentation [SQL Server]"
   - "index defragmenting [SQL Server]"
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: 78
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: umajay
+manager: craigg
 ---
 # DBCC SHOWCONTIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Displays fragmentation information for the data and indexes of the specified table or view.
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) instead.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -161,7 +157,7 @@ When an index is heavily fragmented, the following choices are available for red
 -   Drop and re-create a clustered index.  
      Re-creating a clustered index reorganizes the data, and causes full data pages. The level of fullness can be configured by using the FILLFACTOR option in CREATE INDEX. The drawbacks of this method are that the index is offline during the drop or re-create cycle, and that the operation is atomic. If the index creation is interrupted, the index is not re-created.  
 -   Reorder the leaf-level pages of the index in a logical order.  
-     Use ALTER INDEX…REORGANIZE to reorder the leaf-level pages of the index in a logical order. Because this operation is an online operation, the index is available when the statement is running. The operation is also interruptible without loss of completed work. The drawback of this method is that the method does not do as good a job of reorganizing the data as a clustered index drop or re-create operation.  
+     Use ALTER INDEX...REORGANIZE to reorder the leaf-level pages of the index in a logical order. Because this operation is an online operation, the index is available when the statement is running. The operation is also interruptible without loss of completed work. The drawback of this method is that the method does not do as good a job of reorganizing the data as a clustered index drop or re-create operation.  
 -   Rebuild the index.  
      Use ALTER INDEX with REBUILD to rebuild the index. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
@@ -198,7 +194,7 @@ GO
 ```  
   
 ### B. Using OBJECT_ID to obtain the table ID and sys.indexes to obtain the index ID  
-The following example uses `OBJECT`_`ID` and the `sys.indexes` catalog view to obtain the table ID and index ID for the `AK_Product_Name` index of the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
+The following example uses `OBJECT_ID` and the `sys.indexes` catalog view to obtain the table ID and index ID for the `AK_Product_Name` index of the `Production.Product` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
   
 ```sql  
 USE AdventureWorks2012;  

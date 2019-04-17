@@ -2,12 +2,10 @@
 title: "Size Property (ClientNetLibInfo Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "Size Property (ClientNetLibInfo Class)"
@@ -17,12 +15,12 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "Size property"
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # Size Property (ClientNetLibInfo Class)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Gets the size of the client network library in kilobytes.  
   
 ## Syntax  
@@ -42,6 +40,6 @@ object.Size [= value]
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -1,20 +1,15 @@
 ---
 title: "Aggregate Function (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/15/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Report Builder Functions - Aggregate Function
   Returns a custom aggregate of the specified expression, as defined by the data provider.  
@@ -40,7 +35,7 @@ Aggregate(expression, scope)
  Return type is determined by the data provider. Returns **Nothing** if the data provider does not support this function or data is not available.  
   
 ## Remarks  
- The **Aggregate** function provides a way to use aggregates that are calculated on the external data source. Support for this feature is determined by the data extension. For example, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension retrieves flattened rowsets from an MDX query. Some rows in the result set can contain aggregate values calculated on the data source server. These are known as *server aggregates*. To view server aggregates in the graphical query designer for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use the **Show Aggregate** button on the toolbar. For more information, see [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
+ The **Aggregate** function provides a way to use aggregates that are calculated on the external data source. Support for this feature is determined by the data extension. For example, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension retrieves flattened rowsets from an MDX query. Some rows in the result set can contain aggregate values calculated on the data source server. These are known as *server aggregates*. To view server aggregates in the graphical query designer for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can use the **Show Aggregate** button on the toolbar. For more information, see [Analysis Services MDX Query Designer User Interface &#40;Report Builder&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
   
  When you display the combination of aggregate and detail dataset values on detail rows of a Tablix data region, server aggregates would not typically be included because they are not detail data. However, you may want to display all values retrieved for the dataset and customize the way aggregate data is calculated and displayed.  
   
@@ -48,7 +43,7 @@ Aggregate(expression, scope)
   
  You can change this default behavior by changing the value of the **Interpret subtotals as details** option on the **Dataset Properties** dialog box. When this option is set to **True**, all data, including server aggregates, appears as detail data. When set to **False**, server aggregates appear as totals. The setting for this property affects all data regions that are linked to this dataset.  
   
-> [!NOTE]  
+> [!NOTE]
 >  All containing groups for the report item that references **Aggregate** must have simple field references for their group expressions, for example, `[FieldName]`. You cannot use **Aggregate** in a data region that uses complex group expressions. For the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension, your query must include MDX fields of type **LevelProperty** (not **MemberProperty**) to support aggregation using the **Aggregate**function.  
   
  *Expression* can contain calls to nested aggregate functions with the following exceptions and conditions:  

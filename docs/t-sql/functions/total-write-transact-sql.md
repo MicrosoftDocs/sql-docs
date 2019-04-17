@@ -1,13 +1,11 @@
 ---
 title: "@@TOTAL_WRITE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/18/2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@TOTAL_WRITE"
@@ -18,16 +16,15 @@ helpviewer_keywords:
   - "write activity since last started [SQL Server]"
   - "number of disk writes"
   - "@@TOTAL_WRITE function"
-  - "disks [SQL Server], numbr of disk writes"
+  - "disks [SQL Server], number of disk writes"
   - "total write [SQL Server]"
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# @@TOTAL_WRITE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# &#x40;&#x40;TOTAL_WRITE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the number of disk writes by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.  
   

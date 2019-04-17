@@ -1,13 +1,11 @@
 ---
-title: "|= (Bitwise OR EQUALS) (Transact-SQL) | Microsoft Docs"
+title: "|= (Bitwise OR Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "|="
@@ -16,14 +14,17 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "compound operators, |="
-  - "|= (bitwize OR equals)"
+  - "assignment operators, |="
+  - "augmented operators, |="
+  - "|= (bitwise OR equals)"
 ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# |= (Bitwise OR EQUALS) (Transact-SQL)
+
+# |= (Bitwise OR Assignment) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Performs a bitwise logical OR operation between two specified integer values as translated to binary expressions within [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, and sets a value to the result of the operation.  

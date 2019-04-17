@@ -1,25 +1,20 @@
 ---
 title: "Display Headers and Footers with a Group (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Display Headers and Footers with a Group (Report Builder and SSRS)
   You can help control whether a static row, such as a group header or footer, renders with dynamic rows that are associated with a group in a tablix data region.  
   
- To repeat all the column headings or row headings on multiple pages, you can set properties for the tablix data region. For more information, see [Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)](https://msdn.microsoft.com/library/dd207045.aspx).  
+ To repeat all the column headings or row headings on multiple pages, you can set properties for the tablix data region. For more information, see [Display Row and Column Headers on Multiple Pages (Report Builder and SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
  To control the rendering behavior for dynamic rows and columns that are associated with nested groups, or for static rows and columns that are associated with labels or subtotals, you must set properties for the tablix member. A tablix member represents a static or dynamic row or column. A static member repeats once. For example, a grand total row is a static row. A dynamic member repeats once for each group instance. For example, a row that is associated with a group that has the group expression [Territory] repeats once for each unique value for territory. For more information about tablix members, see [Tablix Data Region Cells, Rows, and Columns &#40;Report Builder&#41; and SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
@@ -68,7 +63,7 @@ manager: "erikre"
 5.  (Optional) Preview the report. Where possible, the report renderer keeps this member with the specified column group members.  
   
 ## See Also  
- [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](https://msdn.microsoft.com/library/dd220587.aspx)   
+ [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   

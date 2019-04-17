@@ -1,26 +1,19 @@
 ---
 title: "Data Sources and Connection Methods | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.date: 03/06/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: report-server-web-service
+
+
+ms.topic: reference
 helpviewer_keywords: 
   - "connections [Reporting Services], data sources"
   - "reports [Reporting Services], data"
   - "data sources [Reporting Services], methods"
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-caps.latest.revision: 38
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Data Sources and Connection Methods
   You can use these methods to set and manage data source connections and credentials.  

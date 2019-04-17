@@ -2,12 +2,10 @@
 title: "sp_trace_generateevent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_trace_generateevent_TSQL"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_generateevent"
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_trace_generateevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a user-defined event in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,13 +39,13 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## Arguments  
- [ **@eventid=**] *event_id*  
+`[ @eventid = ] event_id`
  Is the ID of the event to turn on. *event_id* is **int**, with no default. The ID must be one of the event numbers from 82 through 91, which represent user-defined events as set with [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- [ **@userinfo**= ] **'***user_info***'**  
+`[ @userinfo = ] 'user_info'`
  Is the optional user-defined string identifying the reason for the event. *user_info* is **nvarchar(128)**, with a default of NULL.  
   
- [ **@userdata**= ] *user_data*  
+`[ @userdata = ] user_data`
  Is the optional user-specified data for the event. *user_data* is **varbinary(8000)**, with a default of NULL.  
   
 ## Return Code Values  

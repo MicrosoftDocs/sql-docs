@@ -2,13 +2,11 @@
 title: "SQLMoreResults Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLMoreResults"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLMoreResults function [ODBC]"
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
-caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLMoreResults Function
 **Conformance**  
@@ -36,7 +33,7 @@ manager: "jhubbard"
 ```  
   
 SQLRETURN SQLMoreResults(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## Arguments  
@@ -70,7 +67,7 @@ SQLRETURN SQLMoreResults(
 ## Comments  
  **SELECT** statements return result sets. **UPDATE**, **INSERT**, and **DELETE** statements return a count of affected rows. If any of these statements are batched, submitted with arrays of parameters (numbered in increasing parameter order, in the order that they appear in the batch), or in procedures, they can return multiple result sets or row counts. For information about batches of statements and arrays of parameters, see [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md) and [Arrays of Parameter Values](../../../odbc/reference/develop-app/arrays-of-parameter-values.md).  
   
- After executing the batch, the application is positioned on the first result set. The application can call **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, **SQLSetPos**, and all the metadata functions, on the first or any subsequent result sets, just as it would if there were just a single result set. Once it is done with the first result set, the application calls **SQLMoreResults** to move to the next result set. If another result set or count is available, **SQLMoreResults** returns SQL_SUCCESS and initializes the result set or count for additional processing. If any row count–generating statements appear in between result set–generating statements, they can be stepped over by calling **SQLMoreResults**.After calling **SQLMoreResults** for **UPDATE**, **INSERT**, or **DELETE** statements, an application can call **SQLRowCount**.  
+ After executing the batch, the application is positioned on the first result set. The application can call **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, **SQLSetPos**, and all the metadata functions, on the first or any subsequent result sets, just as it would if there were just a single result set. Once it is done with the first result set, the application calls **SQLMoreResults** to move to the next result set. If another result set or count is available, **SQLMoreResults** returns SQL_SUCCESS and initializes the result set or count for additional processing. If any row count-generating statements appear in between result set-generating statements, they can be stepped over by calling **SQLMoreResults**.After calling **SQLMoreResults** for **UPDATE**, **INSERT**, or **DELETE** statements, an application can call **SQLRowCount**.  
   
  If there was a current result set with unfetched rows, **SQLMoreResults** discards that result set and makes the next result set or count available. If all results have been processed, **SQLMoreResults** returns SQL_NO_DATA. For some drivers, output parameters and return values are not available until all result sets and row counts have been processed. For such drivers, output parameters and return values become available when **SQLMoreResults** returns SQL_NO_DATA.  
   
@@ -91,9 +88,9 @@ SQLRETURN SQLMoreResults(
  For more information about SQL_PARAM_DATA_AVAILABLE and streamed output parameters, see [Retrieving Output Parameters Using SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 ## Availability of Row Counts  
- When a batch contains multiple consecutive row count–generating statements, it is possible that these row counts are rolled up into just one row count. For example, if a batch has five insert statements, then certain data sources are capable of returning five individual row counts. Certain other data sources return only one row count that represents the sum of the five individual row counts.  
+ When a batch contains multiple consecutive row count-generating statements, it is possible that these row counts are rolled up into just one row count. For example, if a batch has five insert statements, then certain data sources are capable of returning five individual row counts. Certain other data sources return only one row count that represents the sum of the five individual row counts.  
   
- When a batch contains a combination of result set–generating and row count–generating statements, row counts may or may not be available at all. The behavior of the driver with respect to the availability of row counts is enumerated in the SQL_BATCH_ROW_COUNT information type available through a call to **SQLGetInfo**. For example, suppose that the batch contains a **SELECT**, followed by two **INSERT**s and another **SELECT**. Then the following cases are possible:  
+ When a batch contains a combination of result set-generating and row count-generating statements, row counts may or may not be available at all. The behavior of the driver with respect to the availability of row counts is enumerated in the SQL_BATCH_ROW_COUNT information type available through a call to **SQLGetInfo**. For example, suppose that the batch contains a **SELECT**, followed by two **INSERT**s and another **SELECT**. Then the following cases are possible:  
   
 -   The row counts corresponding to the two **INSERT** statements are not available at all. The first call to **SQLMoreResults** will position you on the result set of the second **SELECT** statement.  
   

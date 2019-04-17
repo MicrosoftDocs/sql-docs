@@ -2,23 +2,20 @@
 title: "Force a WSFC Cluster to Start Without a Quorum | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], WSFC clusters"
   - "quorum [SQL Server], AlwaysOn and WSFC quorum"
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
-caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Force a WSFC Cluster to Start Without a Quorum
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to force a Windows Server Failover Clustering (WSFC) cluster node to start without a quorum.  This may be required in disaster recovery and multi-subnet scenarios to recover data and fully re-establish high-availability for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
 -   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  
@@ -41,7 +38,7 @@ manager: "jhubbard"
   
 1.  Open a Failover Cluster Manager and connect to the desired cluster node to force online.  
   
-2.  In the **Actions** pane, click **Force Cluster Start**, and then click **Yes – Force my cluster to start**.  
+2.  In the **Actions** pane, click **Force Cluster Start**, and then click **Yes - Force my cluster to start**.  
   
 3.  In the left pane, in the **Failover Cluster Manager** tree, click the cluster name.  
   
@@ -57,9 +54,9 @@ manager: "jhubbard"
   
 3.  Use `Stop-ClusterNode` to make sure that the cluster service is stopped.  
   
-4.  Use `Start-ClusterNode` with `–FixQuorum` to force the cluster service to start.  
+4.  Use `Start-ClusterNode` with `-FixQuorum` to force the cluster service to start.  
   
-5.  Use `Get-ClusterNode` with `–Propery NodeWieght = 1` to set the value the guarantees that the node is a voting member of the quorum.  
+5.  Use `Get-ClusterNode` with `-Propery NodeWieght = 1` to set the value the guarantees that the node is a voting member of the quorum.  
   
 6.  Output the cluster node properties in a readable format.  
   
@@ -70,8 +67,8 @@ manager: "jhubbard"
 Import-Module FailoverClusters  
   
 $node = "Always OnSrv02"  
-Stop-ClusterNode –Name $node  
-Start-ClusterNode –Name $node -FixQuorum  
+Stop-ClusterNode -Name $node  
+Start-ClusterNode -Name $node -FixQuorum  
   
 (Get-ClusterNode $node).NodeWeight = 1  
   
@@ -120,13 +117,13 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [View Events and Logs for a Failover Cluster](http://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
--   [Get-ClusterLog Failover Cluster Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
 ## See Also  
  [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Configure Cluster Quorum NodeWeight Settings](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
- [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](http://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+ [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
   
   

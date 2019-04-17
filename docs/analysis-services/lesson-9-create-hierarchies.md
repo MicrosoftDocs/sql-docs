@@ -1,21 +1,14 @@
 ---
-title: "Lesson 10: Create Hierarchies | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
-caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Lesson 9: Create Hierarchies | Microsoft Docs"
+ms.date: 08/22/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 9: Create Hierarchies
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

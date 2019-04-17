@@ -2,22 +2,18 @@
 title: "Choose Search Folders Dialog Box (Visual Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.lookin"
+ms.technology: ssms
+ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Choose Search Folders Dialog Box (Visual Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Allows you to assemble, save, and revise your own named sets of search folders, and to specify the order in which they are searched. To display this dialog box, select the **Browse (...)** button beside the **Look in** dropdown list on the Find in Files or Replace in Files, Find and Replace Window.  
   
 Add folders to the **Selected folders** list, type a name for this folder set in the **Folder set** field, and click **Apply** to save it. This custom search scope can thereafter be chosen by name from the **Look in** dropdown lists in **Find in Files** and **Replace in Files**. To remove a custom folder set from the **Look in** lists, select its name in the **Folder set** field and click **Delete**.  
@@ -54,4 +50,3 @@ Lists folders added from the **Folders list**. These folders will be included in
   
 **Apply**  
 Save the set of search folders listed in **Selected folders** list as a named folder set. This folder set then can be chosen in the **Look in** field on all tabs of the **Find and Replace** window. Closes the Choose Search Folders dialog box.  
-  

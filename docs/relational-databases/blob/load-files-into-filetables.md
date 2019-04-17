@@ -2,24 +2,22 @@
 title: "Load Files into FileTables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: filestream
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], migrating files"
   - "FileTables [SQL Server], bulk loading"
   - "FileTables [SQL Server], loading files"
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # Load Files into FileTables
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes how to load or migrate files into FileTables.  
   
 ##  <a name="BasicsLoadNew"></a> Loading or Migrating Files into a FileTable  
@@ -27,32 +25,32 @@ manager: "jhubbard"
   
 |Current location of files|Options for migration|  
 |-------------------------------|---------------------------|  
-|Files are currently stored in the file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has no knowledge of the files.|Since a FileTable appears as a folder in the Windows file system, you can easily load files into a new FileTable by using any of the available methods for moving or copying files. These methods include Windows Explorer, command line options including xcopy and robocopy, and custom scripts or applications.<br /><br /> You cannot convert an existing folder to a FileTable.|  
-|Files are currently stored in the file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contains a table of metadata that contains pointers to the files.|The first step is to move or copy the files by using one of the methods mentioned above.<br /><br /> The second step is to update the existing table of metadata to point to the new location of the files.<br /><br /> For more information, see [Example: Migrating Files from the File System into a FileTable](#HowToMigrateFiles) in this topic.|  
+|Files are currently stored in the file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has no knowledge of the files.|Since a FileTable appears as a folder in the Windows file system, you can easily load files into a new FileTable by using any of the available methods for moving or copying files. These methods include Windows Explorer, command-line options including xcopy and robocopy, and custom scripts or applications.<br /><br /> You cannot convert an existing folder to a FileTable.|  
+|Files are currently stored in the file system.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contains a table of metadata that contains pointers to the files.|The first step is to move or copy the files by using one of the preceding methods mentioned.<br /><br /> The second step is to update the existing table of metadata to point to the new location of the files.<br /><br /> For more information, see [Example: Migrating Files from the File System into a FileTable](#HowToMigrateFiles) in this article.|  
   
 ###  <a name="HowToLoadNew"></a> How To: Load Files into a FileTable  
- The methods that you can use to load files into a FileTable include the following:  
+You can use the following methods to load files into a FileTable:  
   
 -   Drag and drop files from the source folders to the new FileTable folder in Windows Explorer.  
   
--   Use command line options such as MOVE, COPY, XCOPY, or ROBOCOPY from the command prompt or in a batch file or script.  
+-   Use command-line options such as MOVE, COPY, XCOPY, or ROBOCOPY from the command prompt or in a batch file or script.  
   
--   Write a custom application in C# or Visual Basic.NET that uses methods from the **System.IO** namespace to move or copy the files.  
+-   Write a custom application to move or copy the files in C# or Visual Basic.NET. Call methods from the **System.IO** namespace.  
   
 ###  <a name="HowToMigrateFiles"></a> Example: Migrating Files from the File System into a FileTable  
  In this scenario, your files are stored in the file system, and you have a table of metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that contains pointers to the files. You want to move the files into a FileTable, and then replace the original UNC path for each file in the metadata with the FileTable UNC path. The [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) function helps you to achieve this goal.  
   
  For this example, assume that there is an existing database table, **PhotoMetadata**, which contains data about photographs. This table has a column **UNCPath** of type **varchar**(512) which contains the actual UNC path to a .jpg file.  
   
- To migrate the image files from the file system into a FileTable, you have to do the following:  
+ To migrate the image files from the file system into a FileTable, you have to do the following things:  
   
 1.  Create a new FileTable to hold the files. This example uses the table name, **dbo.PhotoTable**, but does not show the code to create the table.  
   
 2.  Use xcopy or a similar tool to copy the .jpg files, with their directory structure, into the root directory of the FileTable.  
   
-3.  Fix the metadata in the **PhotoMetadata** table, by using code similar to the following:  
+3.  Fix the metadata in the **PhotoMetadata** table, by using code similar to the following example:  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   
@@ -75,9 +73,9 @@ UPDATE PhotoMetadata
 ```  
   
 ##  <a name="BasicsBulkLoad"></a> Bulk Loading Files into a FileTable  
- A FileTable behaves like a normal table for bulk operations, with the following qualifications.  
+ A FileTable behaves like a normal table for bulk operations, with the following qualifications:  
   
- A FileTable has system-defined constraints which ensure that the integrity of the file and directory namespace is maintained. These constraints have to be verified on the data bulk loaded into the FileTable. Since some bulk insert operations allow table constraints to be ignored, the following requirements are enforced.  
+ A FileTable has system-defined constraints that ensure that the integrity of the file and directory namespace is maintained. These constraints have to be verified on the data bulk loaded into the FileTable. Since some bulk insert operations allow table constraints to be ignored, the following requirements are enforced.  
   
 -   Bulk loading operations that enforce constraints can be run against a FileTable as against any other table. This category includes the following operations:  
   
@@ -85,7 +83,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT with CHECK_CONSTRAINTS clause.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) without IGNORE_CONSTRAINTS clause.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) without IGNORE_CONSTRAINTS clause.  
   
 -   Bulk loading operations that do not enforce constraints fail unless the FileTable system-defined constraints have been disabled. This category includes the following operations:  
   
@@ -93,7 +91,7 @@ UPDATE PhotoMetadata
   
     -   BULK INSERT without CHECK_CONSTRAINTS clause.  
   
-    -   INSERT INTO … SELECT * FROM OPENROWSET(BULK …) with IGNORE_CONSTRAINTS clause.  
+    -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) with IGNORE_CONSTRAINTS clause.  
   
 ###  <a name="HowToBulkLoad"></a> How To: Bulk Load Files into a FileTable  
  You can use various methods to bulk load files into a FileTable:  
@@ -110,7 +108,7 @@ UPDATE PhotoMetadata
   
     -   Disable the FileTable namespace and call without the **CHECK_CONSTRAINTS** clause. Then re-enable the FileTable namespace.  
   
--   **INSERT INTO … SELECT \* FROM OPENROWSET(BULK …)**  
+-   **INSERT INTO ... SELECT \* FROM OPENROWSET(BULK ...)**  
   
     -   Call with the **IGNORE_CONSTRAINTS** clause.  
   

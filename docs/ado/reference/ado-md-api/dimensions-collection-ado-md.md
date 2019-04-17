@@ -1,14 +1,12 @@
 ---
 title: "Dimensions Collection (ADO MD) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Dimensions"
@@ -16,10 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Dimensions collection [ADO MD]"
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Dimensions Collection (ADO MD)
 Contains the [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) objects that make up a cube.  

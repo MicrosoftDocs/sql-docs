@@ -2,31 +2,30 @@
 title: "Prepare and Execute a Statement (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "statement execution"
   - "statement preparation"
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Prepare and Execute a Statement (ODBC)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### To prepare a statement once, and then execute it multiple times  
   
-1.  Call [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360) to prepare the statement.  
+1.  Call [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) to prepare the statement.  
   
-2.  Optionally, call [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
+2.  Optionally, call [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
   
 3.  Optionally, for each parameter in the prepared statement:  
   
@@ -38,9 +37,9 @@ manager: "jhubbard"
   
     -   If the statement has parameter markers, put the data values into the bound parameter buffer.  
   
-    -   Call [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) to execute the prepared statement.  
+    -   Call [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) to execute the prepared statement.  
   
-    -   If data-at-execution input parameters are used, [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   If data-at-execution input parameters are used, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) returns SQL_NEED_DATA. Send the data in chunks by using [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) and [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### To prepare a statement with column-wise parameter binding  
   
@@ -56,7 +55,7 @@ manager: "jhubbard"
   
 2.  Call SQLPrepare to prepare the statement.  
   
-3.  Optionally, call [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
+3.  Optionally, call [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) to determine the number of parameters in the prepared statement.  
   
 4.  Optionally, for each parameter in the prepared statement, call SQLDescribeParam to get parameter information.  
   

@@ -2,12 +2,10 @@
 title: "Connecting to a Data Source (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "checking connection states"
@@ -23,12 +21,13 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, data sources"
   - "SQL Server Native Client ODBC driver, connections"
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Connecting to a Data Source (ODBC)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   After allocating environment and connection handles and setting any connection attributes, the application connects to the data source or driver. There are three functions you can use to connect:  

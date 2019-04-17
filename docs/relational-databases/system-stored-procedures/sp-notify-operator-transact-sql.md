@@ -2,12 +2,10 @@
 title: "sp_notify_operator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_notify_operator_TSQL"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_notify_operator"
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
-caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_notify_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Sends an e-mail message to an operator using Database Mail.  
   
@@ -45,27 +42,27 @@ sp_notify_operator
 ```  
   
 ## Arguments  
- [ **@profile_name=** ] **'***profilename***'**  
+`[ @profile_name = ] 'profilename'`
  The name of the Database Mail profile to use to send the message. *profilename* is **nvarchar(128)**. If *profilename* is not specified, the default Database Mail profile is used.  
   
- [ **@id=** ] *id*  
+`[ @id = ] id`
  The identifier for the operator to send the message to. *id* is **int**, with a default of NULL. One of *id* or *name* must be specified.  
   
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the operator to send the message to. *name* is **nvarchar(128)**, with a default of NULL. One of *id* or *name* must be specified.  
   
 > **NOTE:** An e-mail address must be defined for the operator before they can receive messages.  
   
- [ **@subject=** ] **'***subject***'**  
+`[ @subject = ] 'subject'`
  The subject for the e-mail message. *subject* is **nvarchar(256)** with no default.  
   
- [ **@body=** ] **'***message***'**  
+`[ @body = ] 'message'`
  The body of the e-mail message. *message* is **nvarchar(max)** with no default.  
   
- [ **@file_attachments=** ] **'***attachment***'**  
+`[ @file_attachments = ] 'attachment'`
  The name of a file to attach to the e-mail message. *attachment* is **nvarchar(512)**, with no default.  
   
- [ **@mail_database=** ] **'***mail_host_database***'**  
+`[ @mail_database = ] 'mail_host_database'`
  Specifies the name of the mail host database. *mail_host_database* is **nvarchar(128)**. If no *mail_host_database* is specified, the **msdb** database is used by default.  
   
 ## Return Code Values  
@@ -85,7 +82,7 @@ sp_notify_operator
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## Examples  
  The following example sends a notification e-mail to the operator `François Ajenstat` using the `AdventureWorks Administrator` Database Mail profile. The subject of the e-mail is `Test Notification`. The e-mail message contains the sentence, "This is a test of notification via e-mail."  

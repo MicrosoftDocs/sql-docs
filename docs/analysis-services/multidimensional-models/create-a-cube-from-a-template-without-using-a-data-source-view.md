@@ -1,23 +1,17 @@
 ---
 title: "Create a Cube from a template without using a Data Source View | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create a Cube from a template without using a Data Source View
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Select **Build the cube without using a data source** on the first page of the Cube Wizard to create a cube without using a data source view. You can later use the Schema Generation Wizard to generate the relational schema for the data source view based on the structure of the cube and possibly other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects. For more information about generating a schema, see [Schema Generation Wizard &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## Selecting the Build Method  
@@ -82,7 +76,7 @@ manager: "erikre"
 |Calendar|Description|  
 |--------------|-----------------|  
 |Fiscal calendar|A twelve-month fiscal calendar. If you select this calendar, specify the starting day and month for the fiscal year used by your organization.|  
-|Reporting (or marketing) calendar|A twelve-month reporting calendar that includes two months of four weeks and one month of five weeks in a recurring three-month (quarterly) pattern. If you select this calendar, specify the starting day and month and the three-month pattern of 4–4–5, 4–5–4, or 5–4–4 weeks, where each digit represents the number of weeks in a month.|  
+|Reporting (or marketing) calendar|A twelve-month reporting calendar that includes two months of four weeks and one month of five weeks in a recurring three-month (quarterly) pattern. If you select this calendar, specify the starting day and month and the three-month pattern of 4-4-5, 4-5-4, or 5-4-4 weeks, where each digit represents the number of weeks in a month.|  
 |Manufacturing calendar|A calendar that uses 13 periods of four weeks, divided into three quarters of four periods and one quarter of five periods. If you select this calendar, specify the starting week (between 1 and 4) and month for the manufacturing year, and the quarter with extra periods.|  
 |ISO 8601 Calendar|The International Organization for Standardization (ISO) Representation of Dates and Time standard calendar (8601). This calendar has an integral number of 7-day weeks. To avoid splitting a week, this calendar starts a new year up to several days before or after January 1.|  
   

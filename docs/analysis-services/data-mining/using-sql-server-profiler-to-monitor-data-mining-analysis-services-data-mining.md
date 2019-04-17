@@ -1,24 +1,17 @@
 ---
 title: "Using SQL Server Profiler to Monitor Data Mining  | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Profiler [SQL Server Profiler], Analysis Services"
-ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
-caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Using SQL Server Profiler to Monitor Data Mining (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   If you have the necessary permissions, you can use SQL Server Profiler to monitor data mining activities that are issued as requests sent to an instance of SQL Server Analysis Services. Data mining activity can include the processing of models or structures, prediction queries or content queries, or the creation of new models or structures.  
   
  SQL Server Profiler uses a **trace** to monitor requests sent from multiple clients, including [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], SQL Server Management Studio, Web services, or the Data Mining Add-ins for Excel, so long as the activities all use the same instance of SQL Server Analysis Services. You must create a separate trace for each instance of SQL Server Analysis Services that you want to monitor. For general information about traces, and how to use SQL Server Profiler, see [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
@@ -41,7 +34,7 @@ manager: "jhubbard"
  By viewing the command statements in the trace log, you can also see the syntax of complex statements sent by the client to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server, including calls to system stored procedures. This information can be useful for debugging, or you can use valid statements as a template for creating new prediction queries or models. For some examples of stored procedure calls that you can capture via a trace, see [Clustering Model Query Examples](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
 ## See Also  
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+
  [Monitor Analysis Services with SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

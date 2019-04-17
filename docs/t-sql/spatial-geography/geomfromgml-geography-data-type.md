@@ -2,12 +2,10 @@
 title: "GeomFromGML (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "GeomFromGML_TSQL"
@@ -18,17 +16,16 @@ helpviewer_keywords:
   - "GeomFromGML (geography Data Type)"
   - "GeomFromGML method"
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # GeomFromGML (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Constructs a **geography** instance given a representation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset of the Geography Markup Language (GML).
   
-For more information on GML, see the following Open Geospatial Consortium Specifications: [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
+For more information on GML, see the following Open Geospatial Consortium Specifications: [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 This **geography** data type method supports **FullGlobe** instances or spatial instances that are larger than a hemisphere.
   
@@ -62,7 +59,7 @@ GeomFromGml ( GML_input, SRID )
 ```  
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<LineString xmlns="http://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
+SET @x = '<LineString xmlns="https://www.opengis.net/gml"><posList>47.656 -122.36 47.656 -122.343</posList></LineString>';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  
@@ -72,7 +69,7 @@ SELECT @g.ToString();
 ```  
 DECLARE @g geography;  
 DECLARE @x xml;  
-SET @x = '<FullGlobe xmlns="http://schemas.microsoft.com/sqlserver/2011/geography" />';  
+SET @x = '<FullGlobe xmlns="https://schemas.microsoft.com/sqlserver/2011/geography" />';  
 SET @g = geography::GeomFromGml(@x, 4326);  
 SELECT @g.ToString();  
 ```  

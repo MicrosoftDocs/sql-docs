@@ -1,38 +1,29 @@
 ---
-title: "Tabular Model Designer (SSAS) | Microsoft Docs"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1"
-ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Analysis Services tabular model designer in SQL Server Data Tools| Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Tabular Model Designer (SSAS)
-  The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrated with Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], with additional project type templates specifically for developing professional tabular model solutions.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is installed as a free web download. See [Download SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx) for details.   
+# Tabular model designer
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+The tabular model designer is part of [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], integrated with Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], with additional project type templates specifically for developing professional tabular model solutions.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is installed as a free web download. See [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md) for details.    
   
 ##  <a name="bkmk_benefits"></a> Benefits  
  When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], new project templates for creating tabular models are added to the available project types. After creating a new tabular model project by using one of the templates, you can begin model authoring by using the tabular model designer tools and wizards.  
   
  In addition to new templates and tools for authoring professional multidimensional and tabular model solutions, the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment provides debugging and project lifecycle capabilities that ensure you create the most powerful BI solutions for your organization. For more information about [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], see [Getting Started with Visual Studio](http://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a> Project Templates  
+##  <a name="bkmk_proj_temp"></a> Project templates  
  When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], the following tabular model project templates are added to the Business Intelligence project types:  
   
  **Analysis Services Tabular Project**  
- This template can be used to create a new, blank tabular model project. Compatibility levels are specified when you create the project. Choose the default, **SQL Server 2016 RTM (1200)**, to use all of features built into [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+ This template can be used to create a new, blank tabular model project. Compatibility levels are specified when you create the project.
   
  **Import from Server (Tabular)**  
  This template can be used to create a new tabular model project by extracting the metadata from an existing tabular model in Analysis Services.  
@@ -45,18 +36,18 @@ manager: "erikre"
 ##  <a name="bkmk_wind_men"></a> Windows and Menus  
  The [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tabular model authoring environment includes the following:  
   
-### Designer Window  
+### Designer window  
  The designer window is used to author tabular models by providing a visual representation of the model. When you open the Model.bim file, the model opens in the designer window. You can author a model in the designer window by using two different view modes:  
   
- **Data View**  
+ **Data view**  
  The data view displays tables in a tabular, grid format. You can also define measures by using the measure grid, which can be shown for each table in Data View only.  
   
- **Diagram View**  
+ **Diagram view**  
  The diagram view displays tables, with relationships between them, in a graphical format. Columns, measures, hierarchies, and KPIs can be filtered, and you can choose to view the model by using a defined perspective.  
   
  Most model authoring tasks can be performed in either view.  
   
-### View Code Window  
+### View Code window  
  You can view the code behind a Model.bim file when you right-click select **View Code** on the file in Solution Explorer. For Tabular models at compatibility level 1200 and later, the model definition is expressed in JSON.  
   
  Note that you will need a full version of Visual Studio that provides the JSON editor. You can download and install the [free Visual Studio Community edition](https://www.visualstudio.com/downloads/download-visual-studio-vs.aspx) if you do not require the additional features in commercial editions.  
@@ -75,13 +66,13 @@ manager: "erikre"
    
   ![Tabular Model Explorer](../../analysis-services/tabular-models/media/tabular-model-explorer.png) 
   
- Tabular Model Explorer organizes metadata objects into a tree structure that closely resembles the schema of a tabular model. Data Sources, Perspectives, Relationships, Roles, Tables, and Translations correspond to top-level schema objects. There are some exceptions, specifically KPIs and Measures, which technically aren’t top-level objects, but child objects of the various tables in the model. However, having consolidated top-level containers for all KPIs and Measures makes it easier to work with these objects, especially if your model includes a very large number of tables. Measures are also listed under their corresponding parent tables, so you have a clear view of the actual parent-child relationships. If you select a measure in the top-level Measures container, the same measure is also selected in the child collection under its table, and vice-versa.  
+ Tabular Model Explorer organizes metadata objects into a tree structure that closely resembles the schema of a tabular model. Data Sources, Perspectives, Relationships, Roles, Tables, and Translations correspond to top-level schema objects. There are some exceptions, specifically KPIs and Measures, which technically aren't top-level objects, but child objects of the various tables in the model. However, having consolidated top-level containers for all KPIs and Measures makes it easier to work with these objects, especially if your model includes a very large number of tables. Measures are also listed under their corresponding parent tables, so you have a clear view of the actual parent-child relationships. If you select a measure in the top-level Measures container, the same measure is also selected in the child collection under its table, and vice-versa.  
  
  Object nodes in Tabular Model Explorer are linked to appropriate menu options that until now were hiding under the Model, Table, and Column menus in Visual Studio. You can right-click an object to explore options for the object type. Not all object node types have a context menu yet, but additional options and improvements are coming in subsequent releases. 
 
  Tabular Model Explorer also offers a convenient search feature. Just type in a portion of the name in the Search box and Tabular Model Explorer narrows down the tree view to the matches. 
   
-### Properties Window  
+### Properties window  
  The Properties window lists the properties of the selected object. The following objects have properties that can be viewed and edited in the Properties window:  
   
 -   Model.bim  
@@ -92,7 +83,7 @@ manager: "erikre"
   
 -   Measure  
   
- Project Properties display only the project name and project folder in the Properties window. Projects also have additional deployment Options and deployment server settings that you can set using a modal properties dialog box. To view these properties, in **Solution Explorer**, right click the project, and then click **Properties**.  
+ Project properties display only the project name and project folder in the Properties window. Projects also have additional deployment Options and deployment server settings that you can set using a modal properties dialog box. To view these properties, in **Solution Explorer**, right click the project, and then click **Properties**.  
   
  Fields in the Properties window have embedded controls that open when you click them. The type of edit control depends on the particular property. Controls include edit boxes, dropdown lists, and links to custom dialog boxes. Properties that are shown as dimmed are read-only.  
   
@@ -114,7 +105,7 @@ manager: "erikre"
 ### Output  
  Build and deployment information is displayed in the **Output** Window (in addition to the modal progress dialog). To view the **Output** window, click the **View** menu, and then click Output.  
   
-### Menu Items  
+### Menu items  
  When you install [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], additional menu items specifically for authoring tabular models are added to the Visual Studio menu bar. The **Model** menu can be used to launch the Data Import Wizard, view existing connections, process workspace data, and browse the model workspace in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. The **Table** menu is used to create and manage relationships between tables, create and manage measures, specify data table settings, specify calculation options, and specify other table properties. With the **Column** menu, you can add and delete columns in a table, hide and unhide columns, and specify other column properties such as data types and filters. You can build and deploy tabular model solutions on the **Build** menu. Copy/Paste functions are included on the **Edit** menu.  
   
  In addition to these menu items, additional settings are added to the Analysis Services options on the Tools menu items.  
@@ -122,18 +113,17 @@ manager: "erikre"
 ### Toolbar  
  The Analysis Services toolbar provides quick and easy access to the most frequently used model authoring commands.  
   
-##  <a name="bkmk_vsint"></a> Visual Studio Integration  
- **Source Control**  
+##  <a name="bkmk_vsint"></a> Visual Studio integration  
+ **Source control**  
  Analysis Services projects integrate with the selected source control plug-in. If you have configured Visual Studio to use source control, you can use check in/check out from Solution Explorer. To configure to use Team Foundation Server, see [Configure Visual Studio with Team Foundation Version Control](http://msdn.microsoft.com/library/ms253064.aspx). Many third-party source control plug-ins are supported as well.  
   
  **Fonts**  
  Tabular models use the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment font to control the fonts in the display. It can be necessary to change this font if the default [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] font does not have all of the Unicode characters you need for your language. To change fonts, click the **Tools** menu, then click **Options**, and then click **Fonts and Colors**.  
   
- **Keyboard Shortcuts**  
+ **Keyboard shortcuts**  
  The Analysis Services keyboard shortcuts can be configured/remapped through the Tools->Options->Keyboard dialog. Some global [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] shortcuts, such as build, save, debug, new project, etc. are supported in the tabular model designer context. Other tabular model designer specific shortcuts are in the Analysis Services context.  
   
-## See Also  
- [Tabular Model Projects &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
+## See also  
+ [Tabular Model Projects](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
   
   

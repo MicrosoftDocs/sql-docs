@@ -1,14 +1,11 @@
 ---
 title: "JSON_QUERY (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "JSON_QUERY"
@@ -18,13 +15,13 @@ helpviewer_keywords:
   - "JSON, querying"
   - "JSON_QUERY function"
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: genemi
+manager: craigg
 ---
 # JSON_QUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  Extracts an object or an array from a JSON string.  
   

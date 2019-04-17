@@ -2,12 +2,10 @@
 title: "DROP FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_FULLTEXT_INDEX_TSQL"
@@ -21,13 +19,12 @@ helpviewer_keywords:
   - "DROP FULLTEXT INDEX statement"
   - "dropping full-text indexes"
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # DROP FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Removes a full-text index from a specified table or indexed view.  
   

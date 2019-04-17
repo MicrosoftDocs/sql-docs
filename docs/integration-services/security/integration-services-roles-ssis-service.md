@@ -1,14 +1,12 @@
 ---
 title: "Integration Services Roles (SSIS Service) | Microsoft Docs"
-ms.custom: ""
+ms.custom: security
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.dtsserver.packageroles.f1"
 helpviewer_keywords: 
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "roles [Integration Services]"
   - "db_ssisltduser role"
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: 50
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Integration Services Roles (SSIS Service)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides certain fixed database-level roles to help secure access to packages that are stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The available roles are different depending on whether you're saving packages in the SSIS Catalog database (SSISDB) or in the msdb database.  

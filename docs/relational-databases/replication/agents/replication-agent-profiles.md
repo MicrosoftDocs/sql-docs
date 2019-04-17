@@ -2,13 +2,11 @@
 title: "Replication Agent Profiles | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Distribution Agent, profiles"
   - "replication [SQL Server], agents and profiles"
@@ -20,12 +18,12 @@ helpviewer_keywords:
   - "Snapshot Agent, profiles"
   - "Log Reader Agent, profiles"
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
-caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replication Agent Profiles
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When replication is configured, a set of agent profiles is installed on the Distributor. An agent profile contains a set of parameters that are used each time an agent runs: each agent logs in to the Distributor during its startup process and queries for the parameters in its profile. For merge subscriptions that use Web synchronization, profiles are downloaded and stored at the Subscriber. If the profile is changed, the profile at the Subscriber is updated the next time the Merge Agent runs. For more information about Web synchronization, see [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
  Replication provides a default profile for each agent and additional predefined profiles for the Log Reader Agent, Distribution Agent, and Merge Agent. In addition to the profiles provided, you can create profiles suited to your application requirements. An agent profile allows you to change key parameters easily for all agents associated with that profile. For example, if you have 20 Snapshot Agents and need to change the query timeout value (the **-QueryTimeout** parameter), you can update the profile used by the Snapshot Agents and all agents of that type will begin using the new value automatically the next time they run.  

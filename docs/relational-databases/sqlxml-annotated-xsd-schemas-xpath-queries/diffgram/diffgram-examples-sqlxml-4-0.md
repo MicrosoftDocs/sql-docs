@@ -2,12 +2,10 @@
 title: "DiffGram Examples (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DiffGrams [SQLXML], examples"
@@ -15,12 +13,13 @@ helpviewer_keywords:
   - "diffgr:parentID"
   - "parentID annotation"
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DiffGram Examples (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The examples in this topic consist of DiffGrams that perform insert, update, and delete operations to the database. Before using the examples, note the following:  
   
 -   The examples use two tables (Cust and Ord) that must be created if you want to test the DiffGram examples:  

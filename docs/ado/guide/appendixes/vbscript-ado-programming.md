@@ -1,24 +1,21 @@
 ---
 title: "VBScript ADO Programming | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "ADO, VBScript"
   - "VBScript [ADO]"
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # VBScript ADO Programming
 ## Creating an ADO Project  
@@ -32,14 +29,14 @@ manager: "jhubbard"
   
  You can either copy and paste constant definitions from these files into your ASP pages, or, if you are doing server-side scripting, copy Adovbs.inc file to a folder on your Web site and referencing it from your ASP page like this:  
   
-```  
+```vb
 <!--#include File="adovbs.inc"-->  
 ```  
   
 ## Creating ADO Objects in VBScript  
  You cannot use the **Dim** statement to assign objects to a specific type in VBScript. Also, VBScript does not support the **New** syntax used with the **Dim** statement in Visual Basic for Applications. You must instead use the **CreateObject** function call:  
   
-```  
+```vb
 Dim Rs1  
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 ```  
@@ -47,14 +44,14 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ## VBScript Examples  
  The following code is a generic example of VBScript server-side programming in an Active Server Page (ASP) file:  
   
-```  
+```vb
 <%  @LANGUAGE="VBSCRIPT" %>  
 <%  Option Explicit %>  
 <!--#include File="adovbs.inc"-->  
 <HTML>  
-    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
+    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
   
-    <!-- Your ASP Code goes here -->  
+    <!-- Your ASP Code goes here -->  
 <%  
 Dim Source  
 Dim Connect  
@@ -62,13 +59,13 @@ Dim Rs1
   
 Source = "SELECT * FROM Authors"  
 Connect = "Provider=sqloledb;Data Source=srv;" & _  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
   
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 Rs1.Open Source, Connect, adOpenForwardOnly  
 Response.Write("Success!")  
 %>  
-    </BODY>  
+    </BODY>  
 </HTML>  
 ```  
   

@@ -2,15 +2,15 @@
 title: "Row Sampling Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.rowsamplingtrans.f1"
+  - "sql13.DTS.DESIGNER.ROWSAMPLINGTRANSFORMATION.COLUMNS.F1"
+  - "sql13.dts.designer.rowsamplingtransformation.f1"
 helpviewer_keywords: 
   - "sampling seeds [Integration Services]"
   - "random seeds"
@@ -20,10 +20,9 @@ helpviewer_keywords:
   - "packages [Integration Services], samples"
   - "datasets [Integration Services], sample"
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Row Sampling Transformation
   The Row Sampling transformation is used to obtain a randomly selected subset of an input dataset. You can specify the exact size of the output sample, and specify a seed for the random number generator.  
@@ -45,15 +44,31 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Row Sampling Transformation Editor** dialog box, see [Row Sampling Transformation Editor &#40;Sampling Page&#41;](../../../integration-services/data-flow/transformations/row-sampling-transformation-editor-sampling-page.md).  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  For more information about how to set properties, see.  
+  
+## Row Sampling Transformation Editor (Sampling Page)
+  Use the **Row Sampling Transformation Editor** dialog box to split a portion of an input into a sample using a specified number of rows. This transformation divides the input into two separate outputs.  
+  
+### Options  
+ **Number of rows**  
+ Specify the number of rows from the input to use as a sample.  
+  
+ The value of this property can be specified by using a property expression.  
+  
+ **Sample output name**  
+ Provide a unique name for the output that will include the sampled rows. The name provided will be displayed within SSIS Designer.  
+  
+ **Unselected output name**  
+ Provide a unique name for the output that will contain the rows excluded from the sampling. The name provided will be displayed within SSIS Designer.  
+  
+ **Use the following random seed**  
+ Specify the sampling seed for the random number generator that the transformation uses to create a sample. This is only recommended for development and testing. The transformation uses the Microsoft Windows tick count as a seed if a random seed is not specified.  
   
 ## Related Tasks  
  [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  

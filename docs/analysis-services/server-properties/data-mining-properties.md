@@ -1,68 +1,18 @@
 ---
-title: "Data Mining Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "ClusterCount property"
-  - "AllowedProvidersInOpenRowset property"
-  - "MinimumSeriesValue property"
-  - "ScoreMethod property"
-  - "MinimumImportance property"
-  - "ModellingCardinality property"
-  - "BrentTolerance property"
-  - "ComplexityPenalty property"
-  - "MaximumItemsetCount property"
-  - "MinimumSupport property"
-  - "AllowSessionMiningModels property"
-  - "HoldoutPercentage property"
-  - "ClusterCountPrior property"
-  - "MaximumSequenceStates property"
-  - "OptimizedPredictionCount property"
-  - "data mining [Analysis Services], properties"
-  - "MaximumStates property"
-  - "MaximumContinuousInputAttributes property"
-  - "MaximumOutputAttributes property"
-  - "AllowAdHocOpenRowsetQueries property"
-  - "Enabled property"
-  - "HistoricModelGap property"
-  - "SampleSize property"
-  - "MaximumInputAttributes property"
-  - "PeriodicityHint property"
-  - "MissingValueSubstitution property"
-  - "SplitMethod property"
-  - "ForceRegressor property"
-  - "MaximumBucketsForContinuousSplit property"
-  - "MaxConcurrentPredictionQueries property"
-  - "MinimumItemsetSize property"
-  - "AcyclicGraph property"
-  - "HoldoutMethod property"
-  - "StoppingTolerance property"
-  - "properties [data mining]"
-  - "AutoDetectPeriodicity property"
-  - "HoldoutTolerance property"
-  - "MinimumLeafCases property"
-  - "HoldoutSeed property"
-  - "MinimumClusterCases property"
-  - "ClusterCountDeviation property"
-  - "MinimumDependencyProbability property"
-  - "ClusteringMethod property"
-  - "MaximumItemsetSize property"
-  - "HiddenNodeRatio property"
-  - "MaximumSeriesValue property"
-ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Analysis Services Data Mining Properties | Microsoft Docs"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: 
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Properties
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the data mining server properties listed in the following tables. For more information about additional server properties and how to set them, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Applies to:** Multidimensional server mode only  

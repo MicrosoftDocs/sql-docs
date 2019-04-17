@@ -2,25 +2,23 @@
 title: "Estimate Memory Requirements for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Memory-optimized tables require that sufficient memory exist to keep all of the rows and indexes in memory. Because memory is a finite resource, it is important that you understand and manage memory usage on your system. The topics in this section cover common memory use and management scenarios.
 
-Whether you are creating a new memory-optimized table or migrating an existing disk-based table to an [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized table, it is important to have a reasonable estimate of each table’s memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
+Whether you are creating a new memory-optimized table or migrating an existing disk-based table to an [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized table, it is important to have a reasonable estimate of each table's memory needs so you can provision the server with sufficient memory. This section describes how to estimate the amount of memory that you need to hold data for a memory-optimized table.  
   
 If you are contemplating migrating from disk-based tables to memory-optimized tables, before you proceed in this topic, see the topic [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) for guidance on which tables are best to migrate. All the topics under [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) provide guidance on migrating from disk-based to memory-optimized tables. 
   
@@ -53,7 +51,7 @@ When there is an active workload, additional memory is needed to account for row
 
 Consider the following memory-optimized table schema:
   
-```tsql  
+```sql  
 CREATE TABLE t_hk
 (  
   col1 int NOT NULL  PRIMARY KEY NONCLUSTERED,  
@@ -74,8 +72,7 @@ CREATE TABLE t_hk
   col8 char (30) NOT NULL,   
   col9 char (50) NOT NULL  
 
-  WITH (memory_optimized = on)  
-);
+)   WITH (memory_optimized = on)  ;
 GO  
 ```  
 
@@ -96,40 +93,40 @@ A memory-optimized table row is comprised of three parts:
   
 The following is a size computation for 5,000,000 (5 million) rows in a memory-optimized table. The total memory used by data rows is estimated as follows:  
   
-#### Memory for the table’s rows  
+#### Memory for the table's rows  
   
-From the above calculations, the size of each row in the memory-optimized table is 24 + 32 + 200, or 256 bytes.  Since we have 5 million rows, the table will consume 5,000,000 * 256 bytes, or 1,280,000,000 bytes – approximately 1.28 GB.  
+From the above calculations, the size of each row in the memory-optimized table is 24 + 32 + 200, or 256 bytes.  Since we have 5 million rows, the table will consume 5,000,000 * 256 bytes, or 1,280,000,000 bytes - approximately 1.28 GB.  
   
 ###  <a name="bkmk_IndexMeemory"></a> Memory for indexes  
 
 #### Memory for each hash index  
   
-Each hash index is a hash array of 8-byte address pointers.  The size of the array is best determined by the number of unique index values for that index – e.g., the number of unique Col2 values is a good starting point for the array size for the t1c2_index. A hash array that is too big wastes memory.  A hash array that is too small slows performance since there will be too many collisions by index values that hash to the same index.  
+Each hash index is a hash array of 8-byte address pointers.  The size of the array is best determined by the number of unique index values for that index - e.g., the number of unique Col2 values is a good starting point for the array size for the t1c2_index. A hash array that is too big wastes memory.  A hash array that is too small slows performance since there will be too many collisions by index values that hash to the same index.  
   
 Hash indexes achieve very fast equality lookups such as:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 = 3;
 ```  
   
 Nonclustered indexes are faster for range lookups such as:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 >= 3;
 ```  
   
 If you are migrating a disk-based table you can use the following to determine the number of unique values for the index t1c2_index.  
   
-```tsql
+```sql
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk;
 ```  
   
-If you are creating a new table, you’ll need to estimate the array size or gather data from your testing prior to deployment.  
+If you are creating a new table, you'll need to estimate the array size or gather data from your testing prior to deployment.  
   
-For information on how hash indexes work in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+For information on how hash indexes work in [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory-optimized tables, see [Hash Indexes](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
   
 #### Setting the hash index array size  
   
@@ -158,7 +155,7 @@ Memory needed by non-clustered indexes can be computed as follows:
   
  Non-clustered indexes are best when used for range lookups, as exemplified by the following query:  
   
-```tsql  
+```sql  
 SELECT * FRON t_hk  
    WHERE c2 > 5;  
 ```  

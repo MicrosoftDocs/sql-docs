@@ -2,22 +2,19 @@
 title: "Property Expressions Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.propertyexpressionseditor.f1"
 helpviewer_keywords: 
   - "Property Expressions Editor dialog box"
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Property Expressions Editor
   Use the **Property Expressions Editor** dialog box to create, edit, or delete the property expressions that update property values.  
@@ -32,7 +29,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  The names of user-defined and system variables are case-sensitive.  
   
- **Expression (…)**  
+ **Expression (...)**  
  Click the ellipsis to open the **Expression Builder** dialog box. For more information, see [Expression Builder](../../integration-services/expressions/expression-builder.md).  
   
  **Delete**  

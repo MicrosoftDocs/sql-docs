@@ -1,14 +1,12 @@
 ---
 title: "WillChangeRecord and RecordChangeComplete Events (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "RecordChangeComplete"
   - "Recordset::WillChangeRecord"
@@ -18,10 +16,9 @@ helpviewer_keywords:
   - "WillChangeRecord event [ADO]"
   - "recordchangecomplete event [ADO]"
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # WillChangeRecord and RecordChangeComplete Events (ADO)
 The **WillChangeRecord** event is called before one or more records (rows) in the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) change. The **RecordChangeComplete** event is called after one or more records change.  

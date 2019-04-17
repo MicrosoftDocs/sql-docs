@@ -2,13 +2,11 @@
 title: "Manage the Database Engine Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Configuration Manager, accessing"
   - "Database Engine [SQL Server], services"
@@ -24,12 +22,12 @@ helpviewer_keywords:
   - "administering SQL Server, services"
   - "SQL Server services"
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Manage the Database Engine Services
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on the operating systems as a service. A service is a type of application that runs in the system background. Services usually provide core operating system features, such as Web serving, event logging, or file serving. Services can run without showing a user interface on the computer desktop. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, and several other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components run as services. These services typically are started when the operating system starts. This depends on what is specified during setup; some services are not started by default. This section describes the management of the various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Before you log in to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you need to know how to start, stop, pause, resume, and restart an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you are logged in, you can perform tasks such as administering the server or querying a database.  
   
 ## Using the SQL Server Service  
@@ -67,7 +65,7 @@ manager: "jhubbard"
 |[Set an Instance of SQL Server to Start Automatically &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[Configure File System Permissions for Database Engine Access](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
   
 ## Related Content  
- [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+ [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
  [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   

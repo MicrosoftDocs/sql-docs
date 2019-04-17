@@ -2,12 +2,10 @@
 title: "DBCC DROPCLEANBUFFERS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROPCLEANBUFFERS"
@@ -24,13 +22,13 @@ helpviewer_keywords:
   - "removing buffers"
   - "DBCC DROPCLEANBUFFERS statement"
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: umajay
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DBCC DROPCLEANBUFFERS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
 Removes all clean buffers from the buffer pool, and columnstore objects from the columnstore object pool.
   
@@ -53,10 +51,10 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
  COMPUTE  
- Purge the query plan cache from each Compute node.  
+ Purge the data cache in memory from each Compute node.  
   
  ALL  
- Purge the query plan cache from each Compute node and from the Control node. This is the default if you do not specify a value.  
+ Purge the data cache in memory from each Compute node and from the Control node. This is the default if you do not specify a value.  
   
 ## Remarks  
 Use DBCC DROPCLEANBUFFERS to test queries with a cold buffer cache without shutting down and restarting the server.

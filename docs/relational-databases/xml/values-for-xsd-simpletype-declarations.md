@@ -2,22 +2,20 @@
 title: "Values for &lt;xsd:simpleType&gt; Declarations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "xsd:simpleType declarations"
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Values for &lt;xsd:simpleType&gt; Declarations
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The following table outlines the restrictions that are applied, based on all recognized XSD simple type enumerations.  
   
  Also, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support the NaN value in **\<xsd:simpleType>** declarations. Schemas that include NaN values are rejected by the server.  

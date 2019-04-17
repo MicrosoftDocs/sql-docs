@@ -2,12 +2,10 @@
 title: "OPTION Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "OPTION clause"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "clauses [SQL Server], OPTION"
   - "OPTION clause"
 ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
-caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OPTION Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifies that the indicated query hint should be used throughout the entire query. Each query hint can be specified only one time, although multiple query hints are permitted. Only one OPTION clause can be specified with the statement.  
   
@@ -172,7 +170,7 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### H. Using EXERNALPUSHDOWN  
+### H. Using EXTERNALPUSHDOWN  
  The following example forces the pushdown of the WHERE clause to the MapReduce job on the external Hadoop table.  
   
 ```  

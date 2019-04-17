@@ -2,21 +2,18 @@
 title: "Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "desktop database drivers [ODBC], limitations"
   - "ODBC desktop database drivers [ODBC], limitations"
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Limitations
 This section describes limitations of the ODBC Desktop Database Drivers with regard to the following topics:  

@@ -2,12 +2,9 @@
 title: "Registering User-Defined Types in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -33,12 +30,12 @@ helpviewer_keywords:
   - "UDTs [CLR integration], registering"
   - "ADD FILE clause"
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Registering User-Defined Types in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In order to use a user-defined type (UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you must register it. Registering a UDT involves registering the assembly and creating the type in the database in which you wish to use it. UDTs are scoped to a single database, and cannot be used in multiple databases unless the identical assembly and UDT are registered with each database. Once the UDT assembly is registered and the type created, you can use the UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] and in client code. For more information, see [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## Using Visual Studio to Deploy UDTs  
@@ -81,7 +78,7 @@ WITH PERMISSION_SET = SAFE;
 ```  
 USE AdventureWorks;  
 CREATE ASSEMBLY Point  
-FROM 0xfeac4 … 21ac78  
+FROM 0xfeac4 ... 21ac78  
 ```  
   
 ### Using CREATE TYPE  

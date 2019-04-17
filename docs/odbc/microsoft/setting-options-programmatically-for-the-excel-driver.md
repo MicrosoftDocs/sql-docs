@@ -2,25 +2,23 @@
 title: "Setting Options Programmatically for the Excel Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Jet-based ODBC drivers [ODBC], Excel driver"
   - "desktop database drivers [ODBC], Excel driver"
   - "ODBC desktop database drivers [ODBC], Excel driver"
   - "Excel driver [ODBC], setting options programmatically"
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Setting Options Programmatically for the Excel Driver
+
 |Option|Description|Method|  
 |------------|-----------------|------------|  
 |Data Source Name|A name that identifies the data source, such as Payroll or Personnel.|To set this option dynamically, use the **DSN** keyword in a call to [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  

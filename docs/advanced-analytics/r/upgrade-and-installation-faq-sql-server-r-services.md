@@ -1,126 +1,68 @@
 ---
-title: "Upgrade and Installation FAQ (SQL Server R Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 001e66b9-6c3f-41b3-81b7-46541e15f9ea
-caps.latest.revision: 59
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Upgrade and installation frequently asked questions (FAQ) - SQL Server Machine Learning Services
+ms.custom: sqlseattle
+ms.prod: sql
+ms.technology: machine-learning
+  
+ms.date: 05/15/2018
+ms.topic: conceptual
+ms.author: davidph
+author: dphansen
+manager: cgronlun
 ---
-# Upgrade and Installation FAQ (SQL Server R Services)
+# Upgrade and installation FAQ for SQL Server Machine Learning or R Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic provides answers to some common questions about installation of machine learning services in SQL Server. It also covers common questions about upgrades. Some problems occur only with upgrades from pre-release versions. Therefore, we recommend that you identify your version and edition first, and upgrade to the most current release or service release as soon as possible.
+This topic provides answers to some common questions about installation of machine learning features in SQL Server. It also covers common questions about upgrades.
+
++ Some problems occur only with upgrades from pre-release versions. Therefore, we recommend that you identify your version and edition first before reading these notes. To get version information, run `@@VERSION` in a query from SQL Server Management Studio.
++ Upgrade to the most current release or service release as soon as possible to resolve any issues that were fixed in recent releases.
 
 **Applies to:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (In-Database)
 
-## Performing Setup for the First Time
+## Requirements and restrictions on older versions of SQL Server 2016 
 
-Follow the procedures for setting up [!INCLUDEssCurrent] and the R components as described here: 
+Depending on the build of SQL Server that you are installing, some of the following limitations might apply:
 
-+ [Set up SQL Server R Services or Machine Learning Services In-Database](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)
-+ [Set up SQL Server 2017 with Python](../python/setup-python-machine-learning-services.md)
-+ [Create a Standalone R Server](create-a-standalone-r-server.md)
+- In early versions of SQL Server 2016 R Services, 8dot3 notation was required on the drive that contains the working directory. If you installed a pre-release version, upgrading to SQL Server 2016 Service Pack 1 should fix this issue. This requirement does not apply to releases after SP1.
 
-After you have installed SQL Server, to use external R or Python scripts, you must perform some additional configuration steps. That is because the external script execution feature is not enabled by default, to reduce surface area.
-
-> [!NOTE]
-> Do not use setup instructions that were published prior to the public release of SQL Server 2016. The setup process changed completely between early releases and the official release version. 
-
-### Requirements and Restrictions
-
-Depending on the build of R Services you are installing, some of the following
-limitations might apply.
-
-- In early versions of SQL Server 2016 R Services, 8dot3 notation was required on the drive that contains the working directory. If you installed a pre-release version, upgrading to SQL Server 2016 Service Pack 1 should remove this requirement.
-
-- You cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster. 
+- Currently, you cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster. However, SQL Server 2019 preview does provide failover support if you would like to evaluate this capablity in a test environment. For more information, see [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - On an Azure VM, some additional configuration might be necessary. For example, you might need to create a firewall exception to support remote access.
 
 - Side-by-side installation with another version of R, or with other releases from Revolution Analytics, is not supported.
 
-- New installation of any pre-release version of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is no longer supported. If you are using a pre-release version, upgrade as soon as possible.
+- Disable virus scanning before beginning setup. After setup is completed, we recommend suspending virus scanning on the folders used by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Preferably, suspend scanning on the entire [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tree.
 
-- Disable virus scanning before beginning setup. After setup is completed, we recommend suspending virus scanning on the folders used by SQL Server, preferably the entire tree.
+ - Installing Microsoft R Server on an instance of SQL Server installed on Windows Core. In the RTM version of SQL Server 2016, there was a known issue when adding Microsoft R Server to an instance on Windows Server Core edition. This has been fixed. If you encounter this issue, you can apply the fix described in [KB3164398](https://support.microsoft.com/kb/3164398) to add the R feature to the existing instance on Windows Server Core. For more information, see [Can't install Microsoft R Server Standalone on a Windows Server Core operating system](https://support.microsoft.com/kb/3168691).
 
-### Licensing agreements for unattended installs
 
-If you use the command line to upgrade an instance of SQL Server, make sure that the command line includes the new license agreement parameter, */IACCEPTROPENLICENSEAGREEMENT*. Failure to use the correct argument can cause setup to fail.
+## Offline installation of machine learning components for a localized version of SQL Server 2016
 
-### Offline installation of R components for localized version of SQL Server
+Early-release versions of SQL Server 2016 failed to install locale-specific .cab files during offline setup without an internet connection. This issue was fixed in later releases, but if the installer returns a message stating it cannot install the correct language, you can edit the filename to allow setup to continue.
 
-When you install R Services on a computer that does not have Internet access, you must take two additional steps: you must download the R component installer to a local folder before you run SQL Server setup, and you must edit the installer file to ensure that the correct language is installed.
++ Manually edit the installer file to ensure that the correct language is installed. For example, to install the Japanese version of SQL Server, you would change the name of the file from SRS_8.0.3.0_**1033**.cab to SRS_8.0.3.0_**1041**.cab.
++ The language identifier used for the machine learning components must be the same as the SQL Server setup language, or you cannot complete setup.
 
-The language identifier used for the R components must be the same as the SQL Server setup language, or the **Next** button will be disabled and you cannot complete setup.
+## Pre-release versions: support policies, upgrade, and known issues
 
-For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
-
-## Post-Installation Configuration
-
-To use machine learning with R or Python, some additional configuration is required after running SQL Server setup. Additional steps might be required depending on the security level of the server and of your SQL Server instance and databases. Review these steps from the setup instructions to determine if any additional configuration might be needed.
-
-[Set up Sql Server R Services In-Database](set-up-sql-server-r-services-in-database.md)
-
-- The feature that supports running external scripts, such as R or Python, is disabled by default for database security, and must be enabled.
-
-- Ensure that the worker accounts that are used by Launchpad to run R or Python have access to the instance. See [Enable implied authentication for Launchpad account group]
-
-- You might need to enable remote access on the server or create a firewall rule allowing inbound communication with SQL Server.
-
-- Depending on the planned workload, you might need to optimize the server for machine learning tasks. 
-
-## Upgrades or Uninstallation
+New installations of any pre-release version of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is no longer supported. If you are using a pre-release version, upgrade as soon as possible.
 
 This section contains detailed instructions for specific upgrade scenarios.
 
-Upgrades from prerelease version of SQL Server 2016 R Services are no longer supported. We recommend that you uninstall and then install a release version as soon as possible.
+### How to upgrade SQL Server
 
-### Support for slipstream upgrades
+You can upgrade your version of SQL Server by re-running the setup wizard.
 
-Slipstream setup refers to the ability to apply a patch or update to a failed instance installation, to repair existing problems. The advantage of this method is that the SQL Server is updated at the same time that you perform setup, avoiding a separate restart later.
++ [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
++ [Upgrade SQL Server Using the Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
-If the server does not have Internet access, be sure to download the SQL Server installer. You must also separately download matching versions of the R component installers **before** beginning the update process. 
+You can upgrade just the machine learning components by using a process called binding: 
++ [Use SqlBindR to upgrade machine learning components](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 
-For download locations, see [Installing R Components without Internet Access](installing-ml-components-without-internet-access.md).
+### End of support for in-place upgrades from prerelease versions
 
-When all setup files have been copied to a local directory, start the setup utility by typing SETUP.EXE from the command line.
-
-- Use the */UPDATESOURCE* argument to specify the location of a local file containing the SQL Server update, such as a Cumulative Update or Service Pack release.
-
-- Use the */MRCACHEDIRECTORY* argument to specify the folder containing the R component CAB files.
-
-For more information, see this blog by the support team: [Deploying R Services on Computers without Internet Access](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)
-
-### Upgrading R components offline
-
-If you install or upgrade servers that are not connected to the Internet, you must download an updated version of the R components manually before beginning the refresh. For more information, see [Installing R Components without Internet Access](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
-
-### Schedule for update of R components
-
-As hotfixes or improvements to SQL Server 2016 are released, R components are upgraded or refreshed as well, if your instance already includes the R Services feature.
-
-If you are using SQL Server 2017, upgrades to R components are automatically installed.
-
-As of December 2016, it is also possible to upgrade R components on a faster cadence than the SQL Server release cycle, by *binding* an instance of R Services to the Modern Software Lifecycle policy. Currently support is provided only for upgrade of 2016 instances. However, when a new version of R Server is released, you will be able to upgraded 2017 instances as well.
-
-For more information, see [Use SqlBindR to Upgrade an Instance of SQL Server R Services](../../advanced-analytics/r-services/use-sqlbindr-exe-to-upgrade-an-instance-of-r-services.md)
-
-### Upgrading from a pre-release version of SQL Server 2016
-
-In general, in-place upgrades are not supported for any pre-release versions.
-
-To install R Services successfully, you must uninstall any previous versions of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] and its related R components, including SQL Server 2016 CTP3, CTP3.1, CTP3.2, RC0, or RC1.
-
-Uninstalling of a pre-release version can be complex and require running a special script; we recommend that you contact technical support for assistance.
+Upgrades from pre-release versions of SQL Server 2016 are no longer supported. This includes SQL Server 2016 CTP3, CTP3.1, CTP3.2, RC0, or RC1.
 
 The following versions were installed with pre-release versions of SQL Server 2016.
 
@@ -134,34 +76,33 @@ The following versions were installed with pre-release versions of SQL Server 20
 | RC2     | 13.0.1300.275 |
 | RC3     | 13.0.1400.361 |
 
-If you have any doubt about which version you are using, run `@@VERSION` from SQL Server Management Studio.
+If you have any doubt about which version you are using, run `@@VERSION` in a query from SQL Server Management Studio.
 
-### Problems with Setup of R Server (Standalone)
+In general, the process for upgrade is as follows:
 
-This section describes issues specific to installation of Microsoft R Server (Standalone) using SQL Server 2016 setup. For more general issues related to R Server upgrades, see the MSDN site for [Microsoft R Server](https://msdn.microsoft.com/microsoft-r/).
+1. Back up scripts and data.
+2. Uninstall the pre-release version.
+3. Install a release version.
 
-#### Failure to install localized versions
+Uninstalling a pre-release version of the SQL Server machine learning components can be complex and could require running a special script. Contact technical support for assistance.
 
-When performing an offline install of R Server, pre-release versions do not allow you to use localized languages.
+###  <a name="bkmk_Uninstall"></a> Uninstall prior to upgrading from an older version of Microsoft R Server
 
-Generally, when the server does not have Internet access, before running setup you must download all the installation packages for R Server, and then specify the location of the files during the installation.
+If you installed a pre-release version of Microsoft R Server, you must uninstall it before you can upgrade to a newer version.
 
-However, if the language identifier associated with the installer package is not the same as the SQL Server setup language, when you reach the page for the R component install, the **Next** button is disabled and you cannot proceed with the installation. As a workaround, you can rename the package to use a matching identifier.
+1.  In **Control Panel**, click **Add/Remove Programs**, and select `Microsoft SQL Server 2016 <version number>`.
 
-For example, the name of the installation packages might be `SRO_3.2.2.0_1031.cab`.
-To install the 104 language on SQL Server, rename the file to `SRO_3.2.2.0_1041.cab`.
+2.  In the dialog box with options to **Add**, **Repair**, or **Remove** components, select **Remove**.
+  
+3.  On the **Select Features** page, under **Shared Features**, select **R Server (Standalone)**. Click **Next**, and then click **Finish** to uninstall just the selected components.
 
-#### Installing R Services and R Server Standalone on the same computer
+## R Services and R Server (Standalone) side-by-side errors 
 
-Generally, it is not recommended to install both R Services (In-Database) and R Server (Standalone) on the same computer. However, if the server has sufficient capacity, R Server Standalone might be useful as a development tool. You might also need to use the operationalization features of R Server and access SQL Server data from R Server without data movement.
+In earlier versions of SQL Server 2016, installing both R Server (Standalone) and R Services (In-Database) at the same time sometimes caused setup to fail with an "access denied" message. This issue was fixed in Service Pack 1 for SQL Server 2016.
 
-Note that if you install both R Server and R Services on the same computer, two separate sets of the same R libraries are installed: one for use by the SQL server instance, and one for development use or use by R Server.
+If you encountered this error, and need to upgrade these features, perform a slipstream installation of SQL Server 2016 with SP1. There are two ways to resolve the issue, both of which require uninstalling and reinstalling.
 
-In earlier versions of SQL Server 2016, installing both R Server (Standalone) and R Services (In-Database) at the same time could cause setup to fail with an “access denied” message. This issue was fixed in Service Pack 1 for SQL Server 2016.
-
-If you encountered this error, and need to upgrade these features, we recommend that you perform a slipstream install of SQL Server 2016 with SP1. There are two ways to resolve the issue, both of which require uninstall and reinstall.
-
-1. Uninstall R Services (In-Database) and make sure the user accounts for SQLRUserGroup are removed.
+1. Uninstall R Services (In-Database), and make sure the user accounts for SQLRUserGroup are removed.
 
 2. Restart the server, and then reinstall R Server (Standalone).
 
@@ -169,7 +110,7 @@ If you encountered this error, and need to upgrade these features, we recommend 
 
 4. Choose the instance, and then select the **R Services (In-Database)** option to add.
 
-In some cases, this procedure will fail to clear up the earlier failed installation. In that case, you should uninstall and reinstall as follows:
+If this procedure fails to resolve the problem, try the following workaround:
 
 1. Uninstall R Services (In-Database) and R Server (Standalone) at the same time.
 
@@ -177,10 +118,47 @@ In some cases, this procedure will fail to clear up the earlier failed installat
 
 3. Restart the server.
 
-4. Run SQL Server setup and add the R Services (In-Database) feature only. Do not select **R Server (Standalone)**.
+4. Run SQL Server setup, and add the R Services (In-Database) feature only. Do not select **R Server (Standalone)**.
 
-## See Also
+Generally, we recommend that you do not install both R Services (In-Database) and R Server (Standalone) on the same computer. However, assuming the server has sufficient capacity, you might find R Server Standalone might be useful as a development tool. Another possible scenario is that you need to use the operationalization features of R Server, but also want to access SQL Server data without data movement.
 
- [Getting Started with SQL Server R Services](../r/getting-started-with-sql-server-r-services.md)
+## Incompatible version of R Client and R Server
 
- [Getting Started with Microsoft R Server Standalone](../r/getting-started-with-microsoft-r-server-standalone.md)
+If you install Microsoft R Client and use it to run R in a remote SQL Server compute context, you might get an  error like this:
+
+*You are running version 9.0.0 of Microsoft R client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
+
+In SQL Server 2016, it was required that the version of R that was running in SQL Server R Services be exactly the same as the libraries in Microsoft R Client. That requirement has been removed in later versions. However, we recommend that you always get the latest versions of the machine learning components, and install all service packs. 
+
+If you have an earlier version of Microsoft R Server and need to ensure compatibility with Microsoft R Client 9.0.0, install the updates that are described in this [support article](https://support.microsoft.com/kb/3210262).
+
+
+## Installation fails with error "Only one Revolution Enterprise product can be installed at a time."
+
+You might encounter this error if you have an older installation of the Revolution Analytics products, or a pre-release version of SQL Server R Services. You must uninstall any previous versions before you can install a newer version of Microsoft R Server. Side-by-side installation with other versions of the Revolution Enterprise tools is not supported.
+
+However, side-by-side installs are supported when using R Server Standalone with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] or SQL Server 2016.
+
+## Registry cleanup to uninstall older components
+
+If you have problems removing an older version, you might need to edit the registry to remove related keys.
+
+> [!IMPORTANT]
+> This issue applies only if you installed a pre-release version of Microsoft R Server or a CTP version of SQL Server 2016 R Services.
+  
+1. Open the Windows Registry, and locate this key: `HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall`.
+2. Delete any of the following entries if present, and if the key contains only the value `sEstimatedSize2`:
+  
+    -   E0B2C29E-B8FC-490B-A043-2CAE75634972        (for 8.0.2)
+  
+    -   46695879-954E-4072-9D32-1CC84D4158F4        (for 8.0.1)
+  
+    -   2DF16DF8-A2DB-4EC6-808B-CB5A302DA91B        (for 8.0.0)
+  
+    -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (for 7.5.0)
+
+## See also
+
+ [SQL Server Machine Learning Services (In-Database)](../r/sql-server-r-services.md)
+
+ [SQL Server Machine Learning Server (Standalone)](../r/r-server-standalone.md)

@@ -1,19 +1,14 @@
 ---
 title: "Add data grids to mobile reports | Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: mobile-reports
+
+ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: 4
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Add data grids to mobile reports | Reporting Services
 Sometimes the best visualization is the data itself. Learn about the three *data grids*, or tables, for displaying data in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:

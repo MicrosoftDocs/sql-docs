@@ -2,12 +2,10 @@
 title: "managed_backup.fn_available_backups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "smart_admin.fn_available_backups"
@@ -20,25 +18,20 @@ helpviewer_keywords:
   - "fn_available_backups"
   - "smart_admin.fn_available_backups"
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
-caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # managed_backup.fn_available_backups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Returns a table of 0, one or more rows of the available backup files for the specified database. The backup files returned are backups created by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```tsql  
+```sql  
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
@@ -54,7 +47,7 @@ If there are gaps in LSN meaning that there is a break in the log chain, the tab
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|The URL of the backup file.|  
-|backup_type|NVARCHAR(6)|‘DB’ for database backup ‘LOG’ for log backup|  
+|backup_type|NVARCHAR(6)|'DB' for database backup 'LOG' for log backup|  
 |expiration_date|DATETIME|The date on which this file is expected to be deleted. This is set based on the ability to recover the database to a point in time within the specified retention period.|  
 |database_guid|UNIQUEIDENTIFIER|The GUID value for the specified database.  The GUID uniquely identifies a database.|  
 |first_lsn|NUMERIC(25, 0)|Log sequence number of the first or oldest log record in the backup set. Can be NULL.|  
@@ -76,7 +69,7 @@ If there are gaps in LSN meaning that there is a break in the log chain, the tab
  Requires **SELECT** permissions on this function.  
   
 ## Examples  
- The following example lists all the available backups backed up through [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database ‘MyDB’  
+ The following example lists all the available backups backed up through [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for the database 'MyDB'  
   
 ```  
 SELECT *   

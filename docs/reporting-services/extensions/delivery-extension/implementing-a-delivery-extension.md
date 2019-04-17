@@ -1,32 +1,25 @@
 ---
 title: "Implementing a Delivery Extension | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.date: 03/16/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: extensions
+
+
+ms.topic: reference
 helpviewer_keywords: 
   - "delivery [Reporting Services]"
   - "custom delivery extensions [Reporting Services]"
   - "extensions [Reporting Services], delivery"
   - "delivery extensions [Reporting Services]"
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
-caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Implementing a Delivery Extension
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enables users to create and publish reports that, once created and published, can be delivered to various locations. In addition, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes several delivery extensions and a delivery API that enable developers to create additional delivery extensions to further extend the functionality of delivery in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- For a sample implementation of a delivery extension, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ For a sample implementation of a delivery extension, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## In This Section  
  [Delivery Extensions Overview](../../../reporting-services/extensions/delivery-extension/delivery-extensions-overview.md)  
@@ -47,17 +40,11 @@ manager: "erikre"
  [Using the Setting Class for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
  Describes the attributes of a **Setting** class and how to use it in your delivery extension implementation.  
   
- [Using the IDeliveryReportServerInformation Interface for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- Describes the attributes of a **IDeliveryReportServerInformation** interface and how to use it in your delivery extension implementation.  
-  
  [Using the Report Class for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
  Describes the attributes of a **Report** class and how to use it in your delivery extension implementation.  
   
  [Using the RenderedOutputFile Class for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
  Describes the attributes of a **RenderedOutputFile** class and how to use it in your delivery extension implementation.  
-  
- [Implementing the ISubscriptionBaseUIUserControl Interface for a Delivery Extension](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
- Describes the attributes of a delivery extension user control and how to implement your own user interface for a subscription.  
   
  [Deploying a Delivery Extension](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
  Describes how to deploy your delivery extension.  

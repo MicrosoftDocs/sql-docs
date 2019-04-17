@@ -2,28 +2,23 @@
 title: "sp_getagentparameterlist (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_getagentparameterlist"
   - "sp_getagentparameterlist_TSQL"
 helpviewer_keywords: 
   - "sp_getagentparameterlist"
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_getagentparameterlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a list of all replication agent parameters that can be set in an agent profile for the specified agent type. This stored procedure is executed at the Distributor where the agent is running, on any database.  
   
@@ -37,7 +32,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ```  
   
 ## Arguments  
- [ **@agent_type =** ] **'***agent_type***'**  
+`[ @agent_type = ] 'agent_type'`
  Is the replication agent for which the parameter is being added. *agent_type* is **int**, and can be one of these values:  
   
 |Value|Agent|  

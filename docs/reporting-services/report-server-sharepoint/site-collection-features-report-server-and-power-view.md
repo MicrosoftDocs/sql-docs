@@ -1,41 +1,38 @@
 ---
-title: "Activate the Report Server and Power View Integration Features in SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
-caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+title: "Activate the report server and Power View integration features in SharePoint | Microsoft Docs"
+ms.date: 09/25/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-server-sharepoint
+
+
+ms.topic: conceptual
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Site Collection Features - Report Server and Power View
-  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] site collection features are usually activated by default after you install the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Add-in for SharePoint products. In some situations you will need to manually activate the features.  
+# Activate the report server and Power View integration features in SharePoint
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+  The Reporting Services site collection features are activated by default after you install the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] Add-in for SharePoint products. In some situations, you need to manually activate the features.  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+ If you install the Reporting Services add-in for SharePoint 2010 Products after the installation of the SharePoint product, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, you need to manually activate the features. For example, if you have a site collection of **https://[my server name]/sites/[site collection name]** you need to manually activate the Reporting Services site collection features.  
   
- If you install the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint 2010 Products after the installation of the SharePoint product, then the Report Server integration feature and the Power View integration feature will only be activated for root site collections. For other site collections, you will need to manually activate the features. For example if you have a site collection of **http://[my server name]/sites/[site collection name]** you will need to manually activate the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] site collection features.  
-  
- When there is no root site collection, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in will log a message similar to the following.  
+ When there is no root site collection, the Reporting Services add-in will log a message similar to the following.  
   
  "SharePoint web app 80 does not have root site collection"  
   
- The message will be found in the add-in installation log, named “RS_SP_#.log” where # is an incrementing number. The log file will be found in the current users Temp folder, for example C:\Users\\[user name]\AppData\Local\Temp. For more information on logging options with the add-in, see [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ The message is found in the add-in installation log, named "RS_SP_#.log" where # is an incrementing number. The log file is found in the current users Temp folder, for example C:\Users\\[user name]\AppData\Local\Temp. For more information on logging options with the add-in, see [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+
+## Activate the Report Server and Power View integration site collection features
   
- In this topic:  
-  
--   [To Activate the Report Server and Power View Integration Site Collection Features:](#bkmk_features)  
-  
--   [To Activate or Deactivate Reporting Services Central Administration Site Collection Feature:](#bkmk_centraladmin)  
-  
-##  <a name="bkmk_features"></a> To Activate the Report Server and Power View Integration Site Collection Features:  
-  
-1.  Open your browser to the site where you want the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] features active.  
+1.  Open your browser to the site where you want the Reporting Services features active.  
   
 2.  Click **Site Actions**.  
   
@@ -49,7 +46,7 @@ manager: "erikre"
   
  To deactivate the features, you can use the same procedure, but click **Deactivate** rather than **Activate.**  
   
-##  <a name="bkmk_centraladmin"></a> To Activate or Deactivate Reporting Services Central Administration Site Collection Feature:  
+## Activate or Deactivate Reporting Services central administration site collection feature
   
 1.  Open your browser to SharePoint Central Administration.  
   
@@ -65,10 +62,8 @@ manager: "erikre"
   
  To deactivate the feature, you can use the same procedure, but click **Deactivate** rather than **Activate.**  
   
-## Next Steps  
- After the feature is activated, you can continue with server integration.  
-  
-## See Also  
- [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
-  
-  
+## Next steps
+
+After the feature is activated, you can continue with server integration.
+
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

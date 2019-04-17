@@ -2,21 +2,18 @@
 title: "Installer DLL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installing ODBC components [ODBC], installer DLL functions"
   - "installer DLL [ODBC]"
 ms.assetid: e2b92afb-64ce-4ce0-84ad-6a4276646e68
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Installer DLL
 > [!NOTE]  

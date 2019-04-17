@@ -2,13 +2,11 @@
 title: "Secure the Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logins [SQL Server replication], publication access list"
   - "publications [SQL Server replication], publication access lists"
@@ -17,12 +15,12 @@ helpviewer_keywords:
   - "Publishers [SQL Server replication], security"
   - "publications [SQL Server replication], security"
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
-caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Secure the Publisher
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The following replication agents connect to the Publisher:  
   
 -   Log Reader Agent  
@@ -41,7 +39,7 @@ manager: "jhubbard"
  The PAL is the primary mechanism for securing publications at the Publisher. The PAL functions similarly to a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows access control list. When you create a publication, replication creates a PAL for the publication. The PAL can be configured to contain a list of logins and groups that are granted access to the publication. When an agent connects to the Publisher or Distributor and requests access to a publication, the authentication information in the PAL is compared to the Publisher login that the agent provides. This process provides additional security for the Publisher by preventing the Publisher and Distributor login from being used by a client tool to perform modifications on the Publisher directly.  
   
 > [!NOTE]  
->  Replication creates a role on the Publisher for each publication to enforce PAL membership. The role has a name in the form **Msmerge_***\<PublicationID>* for merge replication and **MSReplPAL_***\<PublicationDatabaseID>***_***\<PublicationID>* for transactional and snapshot replication.  
+>  Replication creates a role on the Publisher for each publication to enforce PAL membership. The role has a name in the form **Msmerge_**_\<PublicationID>_ for merge replication and **MSReplPAL_**_\<PublicationDatabaseID>_**_**_\<PublicationID>_ for transactional and snapshot replication.  
   
  By default, the following logins are included in the PAL: the members of the **sysadmin** fixed server role at the time the publication is created and the login that is used to create the publication. By default, all logins that are members of the **sysadmin** fixed server role or the **db_owner** fixed database role on the publication database can subscribe to a publication without being explicitly added to the PAL.  
   
@@ -72,6 +70,6 @@ manager: "jhubbard"
 ## See Also  
  [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)  
+ [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
   

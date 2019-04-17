@@ -1,43 +1,39 @@
 ---
 title: "Always Encrypted Cryptography | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "02/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.reviewer: vanto
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Always Encrypted, cryptography system"
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: aliceku
+ms.author: aliceku
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Always Encrypted Cryptography
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This document describes encryption algorithms and mechanisms to derive cryptographic material used in the [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
 ## Keys, Key Stores and Key Encryption Algorithms  
  Always Encrypted uses two types of keys: Column master keys and column encryption keys.  
   
- A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client’s control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../includes/msconame-md.md)] key store providers for [Windows Certificate Store](https://msdn.microsoft.com/library/windows/desktop/aa388160) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
+ A column master key (CMK) is a key encrypting key (i.e. a key used to encrypt other keys) that is always in client's control and is stored in an external key store. An Always Encrypted-enabled client driver interacts with the key store via a CMK store provider, which can be either part of the driver library (a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system provider) or part of the client application (a custom provider). Client driver libraries currently include [!INCLUDE[msCoName](../../../includes/msconame-md.md)] key store providers for [Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) and hardware security modules (HSMs).  (For the current list of providers, see [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) An application developer can supply a custom provider for an arbitrary store.  
   
  A column encryption key (CEK), is a content encryption key (i.e. a key used to protect data) that is protected by a CMK.  
   
- All [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK store providers encrypt CEKs by using RSA with Optimal Asymmetric Encryption Padding (RSA-OAEP) with the default parameters specified by RFC 3447 in Section A.2.1. Those default parameters are using a hash function of SHA-1 and a mask generation function of MGF1 with SHA-1.  
+ All [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK store providers encrypt CEKs by using RSA with Optimal Asymmetric Encryption Padding (RSA-OAEP) with the default parameters specified by RFC 8017 in Section A.2.1. Those default parameters are using a hash function of SHA-1 and a mask generation function of MGF1 with SHA-1.  
   
 ## Data Encryption Algorithm  
  Always Encrypted uses the **AEAD_AES_256_CBC_HMAC_SHA_256** algorithm to encrypt data in the database.  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** is derived from the specification draft at [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). It uses an Authenticated Encryption scheme with Associated Data, following an Encrypt-then-MAC approach. That is, the plaintext is first encrypted, and the MAC is produced based on the resulting ciphertext.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** is derived from the specification draft at [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05). It uses an Authenticated Encryption scheme with Associated Data, following an Encrypt-then-MAC approach. That is, the plaintext is first encrypted, and the MAC is produced based on the resulting ciphertext.  
   
- In order to conceal patterns, **AEAD_AES_256_CBC_HMAC_SHA_256** uses the Cipher Block Chaining (CBC) mode of operation, where an initial value is fed into the system named the initialization vector (IV). The full description of the CBC mode can be found at [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
+ In order to conceal patterns, **AEAD_AES_256_CBC_HMAC_SHA_256** uses the Cipher Block Chaining (CBC) mode of operation, where an initial value is fed into the system named the initialization vector (IV). The full description of the CBC mode can be found at [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf).  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** computes a ciphertext value for a given plaintext value using the following steps.  
   
@@ -67,7 +63,7 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
 ```  
   
  The HMAC value truncation is performed in order to fit 1 block of data as needed for the IV.    
-As a result, deterministic encryption always produces the same ciphertext for a given plaintext values, which enables inferring whether two plaintext values are equal by comparing their corresponding ciphertext values. This limited information disclosure allows the database system to support equality comparison on encrypted column values.  
+As a result, deterministic encryption always produces the same ciphertext for a given plaintext value, which enables inferring whether two plaintext values are equal by comparing their corresponding ciphertext values. This limited information disclosure allows the database system to support equality comparison on encrypted column values.  
   
  Deterministic encryption is more effective in concealing patterns, compared to alternatives, such as using a pre-defined IV value.  
   
@@ -174,7 +170,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/A (not supported)|  
   
 ## .NET Reference  
- For details about the algorithms, discussed in this document, see the **SqlAeadAes256CbcHmac256Algorithm.cs** and **SqlColumnEncryptionCertificateStoreProvider.cs** files in the [.NET Reference](http://referencesource.microsoft.com/).  
+ For details about the algorithms, discussed in this document, see the **SqlAeadAes256CbcHmac256Algorithm.cs** and **SqlColumnEncryptionCertificateStoreProvider.cs** files in the [.NET Reference](https://referencesource.microsoft.com/).  
   
 ## See Also  
  [Always Encrypted &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

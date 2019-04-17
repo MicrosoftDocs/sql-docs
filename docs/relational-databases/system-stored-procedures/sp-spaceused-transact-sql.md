@@ -1,14 +1,11 @@
 ---
 title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "08/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_spaceused_TSQL"
@@ -18,13 +15,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_spaceused"
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 62
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Displays the number of rows, disk space reserved, and disk space used by a table, indexed view, or [!INCLUDE[ssSB](../../includes/sssb-md.md)] queue in the current database, or displays the disk space reserved and used by the whole database.  
   
@@ -42,9 +39,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## Arguments  
 
-For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)], `sp_spacedused` must specify named parameters (for example `sp_spacedused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
+For [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` must specify named parameters (for example `sp_spaceused (@objname= N'Table1');` rather than relying upon the ordinal position of parameters. 
 
- [ **@objname=**] **'***objname***'** 
+`[ @objname = ] 'objname'`
    
  Is the qualified or nonqualified name of the table, indexed view, or queue for which space usage information is requested. Quotation marks are required only if a qualified object name is specified. If a fully qualified object name (including a database name) is provided, the database name must be the name of the current database.  
 If *objname* is not specified, results are returned for the whole database.  
@@ -52,10 +49,10 @@ If *objname* is not specified, results are returned for the whole database.
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] and [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] only support database and table objects.
   
- [ **@updateusage=**] **'***updateusage***'**  
+`[ @updateusage = ] 'updateusage'`
  Indicates DBCC UPDATEUSAGE should be run to update space usage information. When *objname* is not specified, the statement is run on the whole database; otherwise, the statement is run on *objname*. Values can be **true** or **false**. *updateusage* is **varchar(5)**, with a default of **false**.  
   
- [ **@mode=**] **'***mode***'**  
+`[ @mode = ] 'mode'`
  Indicates the scope of the results. For a stretched table or database, the *mode* parameter lets you include or exclude the remote portion of the object. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  The *mode* argument can have the following values:  
@@ -68,7 +65,7 @@ If *objname* is not specified, results are returned for the whole database.
   
  *mode* is **varchar(11)**, with a default of **N'ALL'**.  
   
- [ **@oneresultset=**] *oneresultset*  
+`[ @oneresultset = ] oneresultset`
  Indicates whether to return a single result set. The *oneresultset* argument can have the following values:  
   
 |Value|Description|  
@@ -78,8 +75,8 @@ If *objname* is not specified, results are returned for the whole database.
   
  *oneresultset* is **bit**, with a default of **0**.  
 
-[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
-**Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+`[ @include_total_xtp_storage] 'include_total_xtp_storage'`
+**Applies to:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  When @oneresultset=1, the parameter @include_total_xtp_storage determines whether the single resultset includes columns for MEMORY_OPTIMIZED_DATA storage. The default value is 0, that is, by default (if the parameter is omitted) the XTP columns are not included in the resultset.  
 

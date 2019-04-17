@@ -2,24 +2,22 @@
 title: "Connect to SQL Server When System Administrators Are Locked Out | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sa account"
   - "connecting when locked out [SQL Server]"
   - "locked out [SQL Server]"
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Connect to SQL Server When System Administrators Are Locked Out
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how you can regain access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] as a system administrator. A system administrator can lose access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] because of one of the following reasons:  
   
 -   All logins that are members of the sysadmin fixed server role have been removed by mistake.  
@@ -63,7 +61,7 @@ manager: "jhubbard"
   
 6.  Click **OK**, and after the message to restart, right-click your server name, and then click **Restart**.  
   
-7.  After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has restarted your server will be in single-user mode. Make sure that that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running. If started, it will take your only connection.  
+7.  After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has restarted your server will be in single-user mode. Make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running. If started, it will take your only connection.  
   
 8.  On the Windows 8 start screen, right-click the icon for [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. At the bottom of the screen, select **Run as administrator**. (This will pass your administrator credentials to SSMS.)  
   

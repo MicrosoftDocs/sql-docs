@@ -1,21 +1,18 @@
 ---
 title: "Getting Data | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, getting data"
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Getting Data
 [ADO Fundamentals](../../../ado/guide/data/ado-fundamentals.md), and the [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) example in particular, introduced the four primary operations involved in creating an ADO application: getting data, examining data, editing data, and updating data. This section discusses getting data in more detail.  

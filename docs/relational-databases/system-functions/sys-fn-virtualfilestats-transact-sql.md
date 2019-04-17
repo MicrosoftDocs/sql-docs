@@ -2,12 +2,10 @@
 title: "sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/16/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_virtualfilestats_TSQL"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "sys.fn_virtualfilestats function"
   - "statistical information [SQL Server], I/O"
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_virtualfilestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns I/O statistics for database files, including log files. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this information is also available from the [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) dynamic management view.  
 
@@ -74,16 +72,16 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ### A. Displaying statistical information for a database  
  The following example displays statistical information for file ID 1 in the database with an ID of `1`.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(1, 1);  
 GO  
 ```  
   
 ### B. Displaying statistical information for a named database and file  
- The following example displays statistical information for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The system function `DB`_`ID` is used to specify the *database_id* parameter.  
+ The following example displays statistical information for the log file in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database. The system function `DB_ID` is used to specify the *database_id* parameter.  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);  
 GO  
@@ -92,7 +90,7 @@ GO
 ### C. Displaying statistical information for all databases and files  
  The following example displays statistical information for all files in all databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 SELECT *  
 FROM fn_virtualfilestats(NULL,NULL);  
 GO  

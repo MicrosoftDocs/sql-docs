@@ -2,18 +2,15 @@
 title: "SQL Server Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # SQL Server Destination Custom Properties
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination has both custom properties and the properties common to all data flow components.  
@@ -29,7 +26,7 @@ manager: "jhubbard"
 |BulkInsertKeepIdentity|Boolean|A value that specifies whether values can be inserted into identity columns. The default value of this property is **False**.|  
 |BulkInsertKeepNulls|Boolean|A value that specifies whether the bulk insert keeps Null values. The default value of this property is **False**.|  
 |BulkInsertLastRow|Integer|A value that specifies the last row to insert. The default value of this property is **-1**, which indicates that no value has been assigned.|  
-|BulkInsertMaxErrors|Integer|A value that specifies the number of errors that can occur before the bulk insert stops. The default value of this property is **–1**, which indicates that no value has been assigned.|  
+|BulkInsertMaxErrors|Integer|A value that specifies the number of errors that can occur before the bulk insert stops. The default value of this property is **-1**, which indicates that no value has been assigned.|  
 |BulkInsertOrder|String|The names of the sort columns. Each column can be sorted in ascending or descending order. If multiple sort columns are used, the column names are separated by commas.|  
 |BulkInsertTableName|String|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or view in the database to which the data is copied.|  
 |BulkInsertTablock|Boolean|A value that specifies whether the table is locked during the bulk insert. The default value of this property is **True**.|  
@@ -42,6 +39,6 @@ manager: "jhubbard"
  For more information, see [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md).  
   
 ## See Also  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

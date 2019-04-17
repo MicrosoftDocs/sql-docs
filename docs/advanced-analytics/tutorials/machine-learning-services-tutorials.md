@@ -1,122 +1,83 @@
 ---
-title: "SQL Server Machine Learning Tutorials | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "Python"
-ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: 32
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: SQL Server R and Python tutorials - SQL Server Machine Learning
+description: Examples and tutorials for R and Python scripting in SQL Server Machine Learning Services.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 03/29/2019
+ms.topic: tutorial
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 ---
-# SQL Server Machine Learning tutorials
+# SQL Server Machine Learning tutorials in R and Python
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This article provides a comprehensive list of the tutorials, demos, and sample applications that use R or Python with SQL Server 2016 or SQL Server 2017. Start here to learn how to run R or Python from T-SQL, use remote and local compute contexts, and optimize your R and Python code for a SQL production environment.
+This article provides a comprehensive list of tutorials and code samples demonstrating the machine learning features of [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) or [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 
-## Start here
++ Quickstarts use built-in data or no data for fast exploration with least effort.
++ Tutorials go deeper with more tasks, larger datasets, and longer explanations.
++ Samples and solutions are for developers who prefer to start with code, working backwards to concepts and lessons to fill in knowledge gaps.
 
-+ [**Python tutorials**](#bkmk_pythontutorials)
+You'll learn how to use R and Python libraries with resident relational data in the same operational context, how to use SQL Server stored procedures for running and deploying custom code, and how to call the Microsoft R and Python libraries for high-performance data science and machine learning tasks.
 
-+ [**R tutorials**](#bkmk_rtutorials)
+As a first step, review foundational concepts backing Microsoft's R and Python integration with SQL Server.
 
-### Related resources
+## Concepts
 
-+ [Samples](#bkmk_samples) are real-world scenarios for embedding machine learning in applications. All samples include code that you can download, modify, and use in production.
+In-database analytics refers to native support for R and Python on SQL Server when you install SQL Server Machine Learning Services or SQL Server 2016 R Services (R only) as an add-on to the database engine. R and Python integration includes base open-source distributions, plus Microsoft-specific libraries for high performance analytics.
 
-+ [Solutions](#bkmk_solutions) from the Microsoft Data Science team demonstrate end-to-end scenarios. Most are designed to run either in SQL Server or in a cloud environment such as Azure machine Learning.
+From an architecture stand point, your code runs as an external process on the box to preserve the integrity of the database engine. However, all data access and security is through SQL Server database roles and permissions, which means any application with access to SQL Server can access your R and Python script when you deploy it as a stored procedure, or serialize and save a trained model to a SQL Server database.
 
-For more information about requirements and how to get set up, see [Prerequisites](#bkmk_prerequisites).
+Key differences between R and Python support on SQL Server versus equivalent language support in other Microsoft products and services include:
 
-## <a name="bkmk_prerequisites"></a>Prerequisites
++ Ability to "package" code in stored procedures or as binary models.
++ Write code that calls the Microsoft R and Python libraries installed locally with the SQL Server program files.
++ Apply SQL Server's database security architecture to your R and Python solutions.
++ Leverage SQL Server infrastructure and administrative support for your custom solutions.
 
-To use these tutorials and samples, you must have installed one of the following server products:
+## Quickstarts
 
-+ SQL Server 2016 R Services (In-Database)
-  
-  Supports R. Be sure to install the machine learning features, and then enable external scripting.
+Start here to learn how to run R or Python from T-SQL and how to operationalize your R and Python code for a SQL production environment.
 
-+ SQL Server 2017 Machine Learning Services (In-Database)
-  
-  Supports either R or Python. You must select the machine learning feature and the language to install, and then enable external scripting.
++ [Python: Run Python using T-SQL](run-python-using-t-sql.md)
++ [R: Hello World in R and SQL](rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [R: Handle inputs and outputs](rtsql-working-with-inputs-and-outputs.md)
++ [R: Handle data types and objects](rtsql-r-and-sql-data-types-and-data-objects.md)
++ [R: Using R functions](rtsql-using-r-functions-with-sql-server-data.md)
++ [R: Create a predictive model](rtsql-create-a-predictive-model-r.md)
++ [R: Predict and plot from model](rtsql-predict-and-plot-from-model.md)
 
-For more information about setup, see [Prerequisites](#bkmk_Prerequisites).
+## Tutorials
 
-> [!NOTE]
->
-> Support for Python is a new feature in SQL Server 2017, beginning with CTP 2.0. Although the feature is in pre-release and not supported for production environments, we invite you to try it out and send feedback.
+Build on your first experience with R and Python and T-SQL by taking a closer look at the Microsoft packages and more specialized operations such as shifting from local to remote compute contexts.
 
-## <a name ="bkmk_samples"></a>SQL Server product samples
++ [Python tutorials](sql-server-python-tutorials.md)
++ [R tutorials](sql-server-r-tutorials.md)
+
+<a name ="bkmk_samples"></a>
+
+## Samples
 
 These samples and demos provided by the SQL Server and R Server development team highlight ways that you can use embedded analytics in real-world applications.
 
-+ [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction)
+| Link | Description | 
+|------|-------------|
+| [Perform customer clustering using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Use unsupervised learning to segment customers based on sales data. This example uses the scalable rxKmeans algorithm from Microsoft R to build the clustering model. |
+| [Perform customer clustering using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Learn how to use the Kmeans algorithm to perform unsupervised clustering of customers. This example uses the Python language in-database.| SQL Server 2017 |
+| [Build a predictive model using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand. This example uses the Microsoft algorithms to build logistic regression and decision trees models. | 
+| [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Build the ski rental analysis application using Python, to help plan for future demand. This example uses the new Python library, **revoscalepy**, to create a linear regression model. | 
 
-  Learn how a ski rental business might use machine learning to predict future rentals, which helps the business plan and staff to meet future demand.
+<a name="bkmk_solutions"></a>
 
-+ [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
+## Solution templates
 
-   Build the ski rental analysis application using Python, to help plan for future demand.
+The Microsoft Data Science Team has provided customizable solution templates that can be used to jump-start solutions for common scenarios. Each solution is tailored to a specific task or industry problem. Most of the solutions are designed to run either in SQL Server, or in a cloud environment such as Azure Machine Learning. Other solutions can run on Linux or in Spark or Hadoop clusters, by using Microsoft R Server or Machine Learning Server.
 
-+ [Clustering in SQL Server R Services](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/)
-
-  Use unsupervised learning to segment customers based on sales data.
-
-## Learn about Microsoft R
-
-Wondering what the RevoScaleR package offers? See these tutorials:
-
-+ [Tutorials and sample data for Microsoft R](https://docs.microsoft.com/r-server/r/tutorial-introduction)
-
-  These R Server tutorials demonstrate how you can write R code once and deploy anywhere, using RevoScaleR data sources and remote compute contexts.
-
-+ [Get started with MicrosoftML](https://docs.microsoft.com/en-us/r-server/r/concept-what-is-the-microsoftml-package)
-
-  Learn how to use the new algorithms in the MicrosoftML package for advanced modeling and scalable data transformations, optimized for multiple compute contexts.
-
-## <a name="bkmk_solutions"></a>Customizable solutions
-
-The Microsoft Data Science Team has provided solution templates that can be used to jump-start solutions for common scenarios. All T-SQL and R code is provided, along with instructions on how to train and deploy a model for scoring using SQL Server stored procedures.
+All code is provided, along with instructions on how to train and deploy a model for scoring using SQL Server stored procedures.
 
 + [Fraud detection](https://gallery.cortanaanalytics.com/Tutorial/Online-Fraud-Detection-Template-with-SQL-Server-R-Services-1)
 + [Custom churn prediction](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
 + [Predictive maintenance](https://gallery.cortanaanalytics.com/Tutorial/Predictive-Maintenance-Template-with-SQL-Server-R-Services-1)
 + [Predict hospital length of stay](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
 
-For more information, see [Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/).
-
-## Resources and reading
-
-+ Want to know the real story behind R Services? Read this article from the development and PM team: [Why did we build it?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)
-
-
-## <a name="bkmk_Prerequisites"></a>Prerequisites
-
-To run these tutorials, you must download and install the SQL Server machine learning components, as described here:
-
-+ [Set up SQL Server R Services](../r/set-up-sql-server-r-services-in-database.md)
-+ [Set up SQL Server Python Services](../python/setup-python-machine-learning-services.md)
-
-With SQL Server 2017 CTP 2.0, you can install either R or Python, or both. Otherwise the overall setup process, architecture, and requirements are the same.
-
-After running SQL Server setup, don't forget these important steps:
-
-+ Enable the external script execution feature by running `sp_configure 'enable external script', 1`
-+ Restart the server
-+ Ensure that the service that calls the external runtime has necessary permissions
-+ Ensure that your SQL login or Windows user account has necessary permissions to connect to the server, to read data, and to create any database objects required by the sample
-
-If you run into trouble, see this article for some common issues: [Upgrade and Installation of SQL Server R Services](../../advanced-analytics/r-services/upgrade-and-installation-faq-sql-server-r-services.md)
-
-> [!NOTE]
-> You cannot run these tutorials using just the standard R or Python tools. Both your development environment and the SQL Server computer with machine learning must have the R or Python libraries provided by Microsoft.

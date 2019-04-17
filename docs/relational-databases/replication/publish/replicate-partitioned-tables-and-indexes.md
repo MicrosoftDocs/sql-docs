@@ -2,13 +2,11 @@
 title: "Replicate Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/10/2015"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "partitioned indexes [SQL Server], replicating"
   - "partitioned tables [SQL Server], replicating"
@@ -16,12 +14,12 @@ helpviewer_keywords:
   - "publishing [SQL Server replication], partitioned tables"
   - "transactional replication, partitioned tables"
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replicate Partitioned Tables and Indexes
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Partitioning makes large tables or indexes more manageable because partitioning enables you to manage and access subsets of data quickly and efficiently, and maintain the integrity of a data collection at the same time. For more information, see [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Replication supports partitioning by providing a set of properties that specify how partitioned tables and indexes should be treated.  
   
 ## Article Properties for Transactional and Merge Replication  

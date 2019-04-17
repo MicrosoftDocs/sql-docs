@@ -2,12 +2,10 @@
 title: "SYSTEM_USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SYSTEM_USER_TSQL"
@@ -25,13 +23,13 @@ helpviewer_keywords:
   - "system usernames [SQL Server]"
   - "users [SQL Server], names"
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SYSTEM_USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Allows a system-supplied value for the current login to be inserted into a table when no default value is specified.  
   
@@ -40,8 +38,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SYSTEM_USER  
 ```  
   
@@ -71,11 +67,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------------------------------------------------------`  
-  
- `The current system user is: WillisJo`  
-  
- `(1 row(s) affected)`  
+ ```
+----------------------------------------------------------
+The current system user is: WillisJo
+
+(1 row(s) affected)
+ ```  
   
 ### B. Using SYSTEM_USER with DEFAULT constraints  
  The following example creates a table with `SYSTEM_USER` as a `DEFAULT` constraint for the `SRep_tracking_user` column.  
@@ -113,21 +110,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Territory_id Rep_id Last_sale            SRep_tracking_user`  
+ ```
+Territory_id Rep_id Last_sale            SRep_tracking_user
+-----------  ------ -------------------- ------------------
+2000         151    Mar 4 1998 10:36AM   ArvinDak
+2001         293    May 15 1998 12:00AM  ArvinDak
+2003         21392  Mar 4 1998 10:36AM   ArvinDak
+2004         24283  Nov 3 1998 12:00AM   ArvinDak
+2002         27882  Jun 20 1998 12:00AM  ArvinDak
   
- `-----------  ------ -------------------- ------------------`  
-  
- `2000         151    Mar 4 1998 10:36AM   ArvinDak`  
-  
- `2001         293    May 15 1998 12:00AM  ArvinDak`  
-  
- `2003         21392  Mar 4 1998 10:36AM   ArvinDak`  
-  
- `2004         24283  Nov 3 1998 12:00AM   ArvinDak`  
-  
- `2002         27882  Jun 20 1998 12:00AM  ArvinDak`  
-  
- `(5 row(s) affected)`  
+(5 row(s) affected)
+ ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

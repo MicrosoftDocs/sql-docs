@@ -2,12 +2,9 @@
 title: "CLR Hosted Environment | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "type-safe code [CLR integration]"
@@ -27,12 +24,12 @@ helpviewer_keywords:
   - "hosted environments [CLR integration]"
   - "HPAs [CLR integration]"
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR Integration Architecture - CLR Hosted Environment
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR) enables database programmers to use languages such as Visual C#, Visual Basic .NET, and Visual C++. Functions, stored procedures, triggers, data types, and aggregates are among the kinds of business logic that programmers can write with these languages.  
   
   The CLR features garbage-collected memory, pre-emptive threading, metadata services (type reflection), code verifiability, and code access security. The CLR uses metadata to locate and load classes, lay out instances in memory, resolve method invocations, generate native code, enforce security, and set run-time context boundaries.  
@@ -75,7 +72,7 @@ manager: "jhubbard"
  Type-safe code is code that accesses memory structures only in well-defined ways. For example, given a valid object reference, type-safe code can access memory at fixed offsets corresponding to actual field members. However, if the code accesses memory at arbitrary offsets inside or outside the range of memory that belongs to the object, then it is not type-safe. When assemblies are loaded in the CLR, prior to the MSIL being compiled using just-in-time (JIT) compilation, the runtime performs a verification phase that examines code to determine its type-safety. Code that successfully passes this verification is called verifiably type-safe code.  
   
 ###### Application domains  
- The CLR supports the notion of application domains as execution zones within a host process where managed code assemblies can be loaded and executed. The application domain boundary provides isolation between assemblies. The assemblies are isolated in terms of visibility of static variables and data members and the ability to call code dynamically. Application domains are also the mechanism for loading and unloading code. Code can be unloaded from memory only by unloading the application domain. For more information, see [Application Domains and CLR Integration Security](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ The CLR supports the notion of application domains as execution zones within a host process where managed code assemblies can be loaded and executed. The application domain boundary provides isolation between assemblies. The assemblies are isolated in terms of visibility of static variables and data members and the ability to call code dynamically. Application domains are also the mechanism for loading and unloading code. Code can be unloaded from memory only by unloading the application domain. For more information, see [Application Domains and CLR Integration Security](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
   
 ###### Code Access Security (CAS)  
  The CLR security system provides a way to control what kinds of operations managed code can perform by assigning permissions to code. Code access permissions are assigned based on code identity (for example, the signature of the assembly or the origin of the code).  

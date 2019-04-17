@@ -1,59 +1,65 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "07/09/2018"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SSIS.AZURE.F1"
   - "SQL14.SSIS.AZURE.F1"
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Azure Feature Pack for Integration Services (SSIS)
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
 
-[![Download SSIS Feature Pack for Azure](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=626967) **Download**
+[![Download SSIS Feature Pack for Azure](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Download**
 
-- [SSIS Feature Pack for Azure](http://go.microsoft.com/fwlink/?LinkID=626967) for SQL Server 2016
-- [SSIS Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798) for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+- For SQL Server 2017 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
+- For SQL Server 2016 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
+- For SQL Server 2014 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)
+- For SQL Server 2012 - [Microsoft SQL Server 2012 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47367)
+
+The download pages also include information about prerequisites. Make sure you install SQL Server before you install the Azure Feature Pack on a server, or the components in the Feature Pack may not be available when you deploy packages to the SSIS Catalog database, SSISDB, on the server.
 
 ## Components in the Feature Pack
 -   Connection Managers
 
+    -   [Azure Data Lake Analytics Connection Manager](connection-manager/azure-data-lake-analytics-connection-manager.md)
+
+    -   [Azure Data Lake Store Connection Manager](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+    
+    -   [Azure HDInsight Connection Manager](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
+
+    -   [Azure Resource Manager Connection Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    
     -   [Azure Storage Connection Manager](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
     -   [Azure Subscription Connection Manager](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
-    -   [Azure Data Lake Store Connection Manager](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-    
-    -   [Azure Resource Manager Connection Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
-    
-    -   [Azure HDInsight Connection Manager](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
-
 -   Tasks
-
-    -   [Azure Blob Upload Task](../integration-services/control-flow/azure-blob-upload-task.md)
 
     -   [Azure Blob Download Task](../integration-services/control-flow/azure-blob-download-task.md)
 
-    -   [Azure HDInsight Hive Task](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Azure Blob Upload Task](../integration-services/control-flow/azure-blob-upload-task.md)
 
-    -   [Azure HDInsight Pig Task](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+    -   [Azure Data Lake Analytics Task](control-flow/azure-data-lake-analytics-task.md)
+
+    -   [Azure Data Lake Store File System Task](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
     -   [Azure HDInsight Create Cluster Task](../integration-services/control-flow/azure-hdinsight-create-cluster-task.md)
 
     -   [Azure HDInsight Delete Cluster Task](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
+    -   [Azure HDInsight Hive Task](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+
+    -   [Azure HDInsight Pig Task](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+
     -   [Azure SQL DW Upload Task](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
 -   Data Flow Components
@@ -66,19 +72,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension th
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob Enumerator. See [Enumerator = Foreach Azure Blob Enumerator](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
-
-## Download the Feature Pack
- Download the SQL Server Integration Services (SSIS) Feature Pack for Azure.
- 
-- [SSIS Feature Pack for Azure](http://go.microsoft.com/fwlink/?LinkID=626967) for SQL Server 2016
-- [SSIS Feature Pack for Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798) for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
-
-## Prerequisites
- You must install the following prerequisites before installing this feature pack.
-
--   SQL Server Integration Services
--   .Net Framework 4.5
+-   Azure Blob & Azure Data Lake Store File Enumerator. See [Foreach Loop Container](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
 ## Scenario: Processing big data
  Use Azure Connector to complete following big data processing work:

@@ -1,29 +1,26 @@
 ---
 title: "Events Logged by an Integration Services Package | Microsoft Docs"
-ms.custom: ""
+ms.custom: supportability
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "package [Integration Services], events"
   - "events [Integration Services], package"
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Events Logged by an Integration Services Package
   An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package logs various event messages to the Windows Application event log. A package logs these messages when the package starts, when the package stops, and when certain problems occur.  
   
  This topic provides information about the common event messages that a package logs to the Application event log. By default, a package logs some of these messages even if you have not enabled logging on the package. However, there are other messages that the package will log only if you have enabled logging on the package. Regardless of whether the package logs these messages by default or because logging has been enabled, the Event Source for the messages is SQLISPackage.  
   
- For general information about how to run SSIS packages, see [Execution of Projects and Packages](https://msdn.microsoft.com/library/ms141708.aspx).  
+ For general information about how to run SSIS packages, see [Execution of Projects and Packages](../packages/run-integration-services-ssis-packages.md).  
   
  For information about how to troubleshoot running packages, see [Troubleshooting Tools for Package Execution](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   

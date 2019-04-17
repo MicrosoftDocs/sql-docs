@@ -2,22 +2,20 @@
 title: "Change Existing Columns to XML Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [XML]"
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Change Existing Columns to XML Columns
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The ALTER TABLE statement supports the **xml** data type. For example, you can alter any string type column to the **xml** data type. Note that in these cases, the documents contained in the column must be well formed. Also, if you are changing the type of the column from string to typed xml, the documents in the column are validated against the specified XSD schemas.  
   
 ```  
@@ -38,7 +36,7 @@ CREATE TABLE T (Col1 int primary key, Col2 xml)
 GO  
 INSERT INTO T   
 values (1, '<p1:ProductDescription ProductModelID="1"   
-xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
             </p1:ProductDescription>')  
 GO   
 -- Make it a typed xml column by specifying a schema collection.  

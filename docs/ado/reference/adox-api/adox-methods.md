@@ -1,24 +1,22 @@
 ---
 title: "ADOX Methods | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "methods [ADOX]"
   - "ADOX, methods"
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADOX Methods
+
 |||  
 |-|-|  
 |[Append (Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Adds a new **Column** object to the **Columns** collection.|  

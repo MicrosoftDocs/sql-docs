@@ -2,12 +2,10 @@
 title: "XQuery Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -16,13 +14,12 @@ helpviewer_keywords:
   - "expressions [XQuery]"
   - "expressions [XQuery], listed"
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
-caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # XQuery Expressions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Topics that describe the XQuery expressions.  
   

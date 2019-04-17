@@ -1,25 +1,18 @@
 ---
 title: "Integrating Reporting Services Using URL Access | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: application-integration
+
+
+ms.topic: reference
 helpviewer_keywords: 
   - "URL access [Reporting Services], about URL access"
   - "integrating reports [Reporting Services]"
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-caps.latest.revision: 32
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Integrating Reporting Services Using URL Access
   With URL access, you access reports through a report server URL. A URL request enables you to access a specific report server as well as the reports, resources, and other items in the report server database. You can also customize the report viewing and navigation experience for your users. The query string of the URL contains device information settings, as well as report parameters targeted at your report and the chosen rendering output. The way the report server handles URL requests depends on the parameters, parameter prefixes, and type of item that you are accessing through the URL.  

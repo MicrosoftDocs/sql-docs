@@ -1,22 +1,19 @@
 ---
 title: "How to: Perform Parameterized Queries | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "updating data"
   - "parameterized queries"
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
-caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # How to: Perform Parameterized Queries
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +26,7 @@ The steps for performing a parameterized query can be summarized into four steps
   
 2.  Initialize or update PHP variables that correspond to the placeholders in the Transact-SQL query.  
   
-3.  Use PHP variables from step 2 to create or update an array of parameter values that correspond in order to parameter placeholders in the Transact-SQL string.  
+3.  Use PHP variables from step 2 to create or update an array of parameter values which correspond to parameter placeholders in the Transact-SQL string. The parameter values in the array must be in the same order as the placeholders meant to represent them.
   
 4.  Execute the query:  
   
@@ -47,7 +44,7 @@ The following example updates the quantity for a specified product ID in the *Pr
   
 The example then queries the database to verify that the quantity has been correctly updated. The product ID is a parameter in the SELECT query.  
   
-The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -113,7 +110,7 @@ The previous example uses the **sqlsrv_query** function to execute queries. This
 ## Example  
 The following example demonstrates the implicit binding of variables when you use the **sqlsrv_prepare** function. The example inserts several sales orders into the *Sales.SalesOrderDetail* table. The *$params* array is bound to the statement (*$stmt*) when **sqlsrv_prepare** is called. Before each execution of a query that inserts a new sales order into the table, the *$params* array is updated with new values corresponding to sales order details. The subsequent query execution uses the new parameter values.  
   
-The example assumes that SQL Server and the [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
+The example assumes that SQL Server and the [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database are installed on the local computer. All output is written to the console when the example is run from the command line.  
   
 ```  
 <?php  
@@ -186,8 +183,11 @@ sqlsrv_close( $conn);
 ```  
   
 ## See Also  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[Security Considerations for PHP SQL Driver](../../connect/php/security-considerations-for-php-sql-driver.md)
-[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
+[Converting Data Types](../../connect/php/converting-data-types.md)
+
+[Security Considerations for the Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+
+[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)
+
 [sqlsrv_rows_affected](../../connect/php/sqlsrv-rows-affected.md)  
   

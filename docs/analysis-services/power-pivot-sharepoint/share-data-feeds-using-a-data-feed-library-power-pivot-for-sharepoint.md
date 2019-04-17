@@ -1,25 +1,17 @@
 ---
 title: "Share Data Feeds Using a Data Feed Library (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data feeds [Analysis Services with SharePoint]"
-ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Share Data Feeds Using a Data Feed Library (Power Pivot for SharePoint)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A data feed is an XML data stream that is generated from a service or application that exposes data in the Atom wire format. Increasingly, it is used to transport data between applications and to client-side viewers. In a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint deployment, data feeds are used to populate a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source with data from an Atom-aware application or service.  
   
  If you already use a combination of Atom-aware applications, you might never need to know how feeds are generated and consumed because the data transfer is seamless between the applications. However, organizations that use custom solutions to publish Atom feeds often need a way to make feeds available to information workers. One way to do that is to create and share data service document (.atomsvc) files that provide connections to the online sources that produce the feeds. A special-purpose library, called a data feed library, supports creating and sharing data service documents in a SharePoint web application.  

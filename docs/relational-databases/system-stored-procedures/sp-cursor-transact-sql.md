@@ -2,12 +2,10 @@
 title: "sp_cursor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cursor_TSQL"
@@ -17,19 +15,18 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursor"
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Requests positioned updates. This procedure performs operations on one or more rows within a cursor's fetch buffer. sp_cursor is invoked by specifying ID = 1 in a tabular data stream (TDS) packet.  
   
 ||  
 |-|  
-|**Applies to**: SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Applies to**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -123,7 +120,7 @@ sp_cursor  cursor, optype, rownum, table
 ## value Parameter  
  There are two alternatives to the rules for using *value* as stated earlier in the Arguments section:  
   
-1.  You can use a name that is '@' pre-pended to the name of the column in the select-list for any named *value* parameters. One advantage of this alternative is that data conversion may not be necessary.  
+1.  You can use a name that is '\@' pre-pended to the name of the column in the select-list for any named *value* parameters. One advantage of this alternative is that data conversion may not be necessary.  
   
 2.  Use a parameter to either submit a complete UPDATE or INSERT statement or use multiple parameters to submit portions of an UPDATE or INSERT statement which SQL Server will then build into a complete statement. Examples of this can be found in the Examples section later in this topic.  
   
@@ -134,7 +131,7 @@ sp_cursor  cursor, optype, rownum, table
   
  When a single parameter is used, an UPDATE statement may be submitted using the following syntax:  
   
- `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,…n]`  
+ `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
 >  If UPDATE \<table name> is specified, any value specified for the *table* parameter will be ignored.  
@@ -166,7 +163,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- except where VALUES was specified, in which case there must be a trailing ")" after the last expression. In this case, the *\<table name>* in the constructed UDPATE statement is the one either specified or defaulted to by the *table* parameter.  
+ except where VALUES was specified, in which case there must be a trailing ")" after the last expression. In this case, the *\<table name>* in the constructed UPDATE statement is the one either specified or defaulted to by the *table* parameter.  
   
 > [!NOTE]  
 >  It is possible to submit one parameter as a named parameter, i.e. "`@VALUES`". In this case no other named parameters may be used.  

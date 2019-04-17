@@ -2,12 +2,10 @@
 title: "ABS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ABS_TSQL"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "ABS function"
   - "absolute positive value"
 ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
-caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ABS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 A mathematical function that returns the absolute (positive) value of the specified numeric expression. (`ABS` changes negative values to positive values. `ABS` has no effect on zero or positive values.)
   
@@ -40,13 +38,13 @@ ABS ( numeric_expression )
   
 ## Arguments  
 *numeric_expression*  
-Is an expression of the exact numeric or approximate numeric data type category.
+An expression of the exact numeric or approximate numeric data type category.
   
 ## Return Types  
 Returns the same type as *numeric_expression*.
   
 ## Examples  
-The following example shows the results of using the `ABS` function on three different numbers.
+This example shows the results of using the `ABS` function on three different numbers.
   
 ```sql
 SELECT ABS(-1.0), ABS(0.0), ABS(1.0);  
@@ -59,7 +57,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 1.0  .0   1.0  
 ```  
   
-The `ABS` function can produce an overflow error when the absolute value of a number is greater than the largest number that can be represented by the specified data type. For example, the `int` data type can hold only values that range from `-2,147,483,648` to `2,147,483,647`. Computing the absolute value for the signed integer `-2,147,483,648` causes an overflow error because its absolute value is greater than the positive range for the `int` data type.
+The `ABS` function can produce an overflow error when the absolute value of a number exceeds the largest number that the specified data type can represent. For example, the `int` data type has a value range from `-2,147,483,648` to `2,147,483,647`. Computing the absolute value for the signed integer `-2,147,483,648` will cause an overflow error because its absolute value exceeds the positive range limit for the `int` data type.
   
 ```sql
 DECLARE @i int;  
@@ -68,7 +66,7 @@ SELECT ABS(@i);
 GO  
 ```  
   
-Here is the error message:
+Returns this error message:
   
 "Msg 8115, Level 16, State 2, Line 3"
   

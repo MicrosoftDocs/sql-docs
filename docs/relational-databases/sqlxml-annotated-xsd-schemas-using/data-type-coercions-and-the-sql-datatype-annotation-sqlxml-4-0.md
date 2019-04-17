@@ -2,12 +2,10 @@
 title: "Data Type Coercions and the sql:datatype Annotation (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "mapping data types [SQLXML]"
@@ -21,12 +19,13 @@ helpviewer_keywords:
   - "data types [SQLXML], mapping data types"
   - "XSD schemas [SQLXML], mapping data types"
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data Type Coercions and the sql:datatype Annotation (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In an XSD schema, the **xsd:type** attribute specifies the XSD data type of an element or attribute. When an XSD schema is used to extract data from the database, the data type specified is used to format the data.  
   
  In addition to specifying an XSD type in a schema, you can also specify a Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type by using the **sql:datatype** annotation. The **xsd:type** and **sql:datatype** attributes control the mapping between XSD data types and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.  

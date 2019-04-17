@@ -1,23 +1,20 @@
 ---
 title: "DeleteRule Property Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "DeleteRule property [ADOX], VC++ example"
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DeleteRule Property Example (VC++)
 This example demonstrates the [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) property of a [Key](../../../ado/reference/adox-api/key-object-adox.md) object. The code appends a new [Table](../../../ado/reference/adox-api/table-object-adox.md) and then defines a new primary key, setting **DeleteRule** to **adRICascade**.  

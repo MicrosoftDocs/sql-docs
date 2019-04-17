@@ -2,12 +2,10 @@
 title: "sp_certify_removable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_certify_removable_TSQL"
@@ -17,17 +15,16 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_certify_removable"
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_certify_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Verifies that a database is correctly configured for distribution on removable media and reports any problems to the user.  
   
-> **IMPORTANT!!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that use [CREATE DATABASE](https://msdn.microsoft.com/library/ms176061.aspx) instead.  
+> **IMPORTANT!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -41,10 +38,10 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## Arguments  
- [ **@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Specifies the database to be verified. *dbname* is **sysname**.  
   
- [ **@autofix=**] **'auto'**  
+`[ @autofix = ] 'auto'`
  Gives ownership of the database and all database objects to the system administrator, and drops any user-created database users and nondefault permissions. *auto* is **nvarchar(4)**, with a default of NULL.  
   
 ## Return Code Values  

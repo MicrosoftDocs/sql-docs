@@ -2,18 +2,15 @@
 title: "Generating Dump Files for Package Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Generating Dump Files for Package Execution
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. The information in these files can help you with troubleshooting package execution issues.  
@@ -30,7 +27,7 @@ manager: "jhubbard"
   
      Call this stored procedure to cause a running package to pause and create a dump file.  
   
- If you are using the package deployment model, you create the debug dump files by using either the **dtexec** utility or the **dtutil** utility to specify a debug dump option in the command line. For more information, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md) and [dtutil Utility](../../integration-services/dtutil-utility.md). For more information about the package deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx) and [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ If you are using the package deployment model, you create the debug dump files by using either the **dtexec** utility or the **dtutil** utility to specify a debug dump option in the command line. For more information, see [dtexec Utility](../../integration-services/packages/dtexec-utility.md) and [dtutil Utility](../../integration-services/dtutil-utility.md). For more information about the package deployment model, see [Deploy Integration Services (SSIS) Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx) and [Legacy Package Deployment &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## Debug dump file format  
  When you specify a debug dump option, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates the following debug dump files:  
@@ -47,7 +44,7 @@ manager: "jhubbard"
 |-------------------------|-----------------|-------------|  
 |Environment|Operating system version, memory usage data, process ID, and process image name. The environment information is at the beginning of the .tmp file.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
 |Dynamic-link library (DLL) path and version|Path and version number of each DLL that the system loads during the processing of a package.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Recent messages|Recent messages issued by the system. Includes the time, type, description, and thread ID of each message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( @ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description: The component is missing, not registered, not upgradeable, or missing required interfaces. The contact information for this component is "".|  
+|Recent messages|Recent messages issued by the system. Includes the time, type, description, and thread ID of each message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description: The component is missing, not registered, not upgradeable, or missing required interfaces. The contact information for this component is "".|  
   
 ## Related information  
  [Execute Package Dialog Box](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  

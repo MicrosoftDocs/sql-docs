@@ -1,24 +1,21 @@
 ---
 title: "Stream (Visual C++ Syntax Index with #import) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Stream collection [ADO]"
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Stream (Visual C++ Syntax Index with #import)
 ## Methods  

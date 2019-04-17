@@ -2,12 +2,10 @@
 title: "FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "FULLTEXTSERVICEPROPERTY_TSQL"
@@ -20,13 +18,12 @@ helpviewer_keywords:
   - "services [SQL Server], full-text search properties"
   - "test"
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # FULLTEXTSERVICEPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns information related to the properties of the Full-Text Engine. These properties can be set and retrieved by using **sp_fulltext_service**.  
   
@@ -43,7 +40,7 @@ FULLTEXTSERVICEPROPERTY ('property')
  *property*  
  Is an expression containing the name of the full-text service-level property. The table lists the properties and provides descriptions of the information returned.  
   
-> [!NOTE]  
+> [!NOTE]
 >  The following properties will be removed in a future release of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, and **ResourceUsage**. Avoid using these properties in new development work, and plan to modify applications that currently use any of them.  
   
 |Property|Value|  

@@ -2,23 +2,20 @@
 title: "Writing ODBC 3.x Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading drivers [ODBC]"
   - "ODBC drivers [ODBC], upgrading"
   - "backward compatibility [ODBC], drivers"
   - "compatibility [ODBC], drivers"
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Writing ODBC 3.x Drivers
 The following table shows function support in an ODBC 3.*x* driver and an ODBC application, and the mapping performed by the Driver Manager when the functions are called against an ODBC 3.*x* driver.  
@@ -103,9 +100,9 @@ The following table shows function support in an ODBC 3.*x* driver and an ODBC a
 |**SQLTables**|Yes|Yes|No|  
 |**SQLTransact**|No|No[1]|Yes|  
   
- [1]   This function is deprecated in ODBC 3.*x*. ODBC 3.*x* applications should not use this function. However, an Open Group or ISO CLI–compliant application can call this function.  
+ [1]   This function is deprecated in ODBC 3.*x*. ODBC 3.*x* applications should not use this function. However, an Open Group or ISO CLI-compliant application can call this function.  
   
- [2]   ODBC 3.*x* applications should use **SQLBindParameter** instead of **SQLBindParam**. However, an Open Group or ISO CLI–compliant application can call this function.  
+ [2]   ODBC 3.*x* applications should use **SQLBindParameter** instead of **SQLBindParam**. However, an Open Group or ISO CLI-compliant application can call this function.  
   
  [3]   Driver writers should note that the ODBC 2.*x* column attributes SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE, and SQL_COLUMN_LENGTH must be supported with **SQLColAttribute**.  
   

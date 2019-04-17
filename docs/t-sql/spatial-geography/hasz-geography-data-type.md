@@ -2,12 +2,10 @@
 title: "HasZ (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "HasZ"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "HasZ geography"
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
-caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # HasZ (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Returns 1 (true) if a spatial object contains at least one Z value; otherwise, it returns 0 (false).  
   
@@ -43,7 +40,7 @@ manager: "jhubbard"
   
 ## Examples  
   
-```tsql  
+```sql  
 DECLARE @p GEOGRAPHY = 'Point(1 1 1 1)'  
 SELECT @p.HasZ   
 --Returns: 1 (true)  

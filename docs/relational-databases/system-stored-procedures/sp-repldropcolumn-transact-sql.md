@@ -2,32 +2,27 @@
 title: "sp_repldropcolumn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_repldropcolumn_TSQL"
   - "sp_repldropcolumn"
 helpviewer_keywords: 
   - "sp_repldropcolumn"
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_repldropcolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Drops a column from an existing table article that has been published. This stored procedure is executed at the Publisher on the publication database.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  This stored procedure has been deprecated and is being supported mainly for backward-compatibility. It should only be used with [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Publishers and [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] republishing Subscribers. This procedure should not be used on columns with data types that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] or higher.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

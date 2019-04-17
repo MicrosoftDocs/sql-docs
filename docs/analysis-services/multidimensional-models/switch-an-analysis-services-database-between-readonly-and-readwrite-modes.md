@@ -1,27 +1,17 @@
 ---
 title: "Switch an Analysis Services database between ReadOnly and ReadWrite modes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ReadOnly property"
-  - "ReadWriteMode command"
-  - "operations [Analysis Services - multidimensional data]"
-ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Switch an Analysis Services database between ReadOnly and ReadWrite modes
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrators can change the read/write mode of a Tabular or Multidimensional database as part of larger effort that distributes a query workload among multiple query-only servers.  
   
  A database mode can be switched in several ways. This document explains the following common scenarios:  
@@ -38,13 +28,13 @@ manager: "erikre"
   
      Note the location. An empty database storage location indicates that the database folder is located in the server data folder.  
   
-2.  Right-click the database and select **Detach…**  
+2.  Right-click the database and select **Detach...**  
   
 3.  Assign a password to the database to be detached, and then click **OK** to execute the detach command.  
   
-4.  In Object Explorer, right-click the **Databases** folder and select **Attach…**  
+4.  In Object Explorer, right-click the **Databases** folder and select **Attach...**  
   
-5.  In the **folder** text box, type the original location of the database folder. Alternatively, you can use the browse button (**…**) to locate the database folder.  
+5.  In the **folder** text box, type the original location of the database folder. Alternatively, you can use the browse button (**...**) to locate the database folder.  
   
 6.  Select the read/write mode for the database.  
   
@@ -97,7 +87,7 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
      Note the location. An empty database storage location indicates that the database folder is located in the server data folder.  
   
-2.  Right-click the database and select **Detach…**  
+2.  Right-click the database and select **Detach...**  
   
 3.  Open a new XMLA tab in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
@@ -135,9 +125,9 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
  [Attach and Detach Analysis Services Databases](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Database Storage Location](../../analysis-services/multidimensional-models/database-storage-location.md)   
  [Database ReadWriteModes](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Attach Element](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Detach Element](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode Element](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation Element](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

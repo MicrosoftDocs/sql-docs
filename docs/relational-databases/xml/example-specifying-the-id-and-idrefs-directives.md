@@ -2,23 +2,21 @@
 title: "Example: Specifying the ID and IDREFS Directives | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "IDREFS directive"
   - "ID directive"
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Example: Specifying the ID and IDREFS Directives
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   An element attribute can be specified as an **ID** type attribute, and the **IDREFS** attribute can then be used to refer to it. This enables intra-document links and is similar to the primary key and foreign key relationships in relational databases.  
   
  This example illustrates how the **ID** and **IDREFS** directives can be used to create attributes of **ID** and **IDREFS** types. Because IDs cannot be integer values, the ID values in this example are converted. In other words, they are type casted. Prefixes are used for the ID values.  

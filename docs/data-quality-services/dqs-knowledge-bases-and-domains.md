@@ -2,20 +2,20 @@
 title: "DQS Knowledge Bases and Domains | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # DQS Knowledge Bases and Domains
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes what a knowledge base is in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). To cleanse data, you have to have knowledge about the data. To prepare knowledge for a data quality project, you build and maintain a knowledge base (KB) that DQS can use to identify incorrect or invalid data. DQS enables you to use both computer-assisted and interactive processes to create, build, and update your knowledge base. Knowledge in a knowledge base is maintained in domains, each of which is specific to a data field. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
   
  DQS knowledge bases have the following benefits:  
@@ -54,7 +54,7 @@ manager: "jhubbard"
 ##  <a name="Discovery"></a> Knowledge Discovery  
  Knowledge base creation is initially a computer-guided process. The knowledge discovery activity builds the knowledge base by analyzing a sample of data for data quality criteria, looking for data inconsistencies and syntax errors, and proposing changes to the data. This analysis is based on algorithms built into DQS.  
   
- The data steward prepares the process by linking a knowledge base to a SQL Server database table or view that contains sample data similar to the data that the knowledge base will be used to analyze. The data steward then maps a knowledge base domain to each column of sample data to be analyzed. A domain can either be a single domain that is mapped to a single field, or it can be a composite domain that consists of multiple single domains each of which is mapped to part of the data in a single field (see “Composite Domains” below). When you run knowledge discovery, DQS extracts data quality information from the sample data into domains in the knowledge base. When you have run the knowledge discovery analysis, you will have a knowledge base that you can perform data correction with.  
+ The data steward prepares the process by linking a knowledge base to a SQL Server database table or view that contains sample data similar to the data that the knowledge base will be used to analyze. The data steward then maps a knowledge base domain to each column of sample data to be analyzed. A domain can either be a single domain that is mapped to a single field, or it can be a composite domain that consists of multiple single domains each of which is mapped to part of the data in a single field (see "Composite Domains" below). When you run knowledge discovery, DQS extracts data quality information from the sample data into domains in the knowledge base. When you have run the knowledge discovery analysis, you will have a knowledge base that you can perform data correction with.  
   
  The DQS knowledge base is extensible. From within the Knowledge Discovery activity, you can interactively add knowledge to the knowledge base after the computer-assisted knowledge discovery analysis. You can manually add value changes and you can import domain values from an Excel file. In addition, you can run the knowledge discovery process again at a later point if the data in the sample has changed. You can apply more knowledge from within the Domain Management activity and from within the Data Matching activity (see below).  
   
@@ -124,7 +124,7 @@ manager: "jhubbard"
   
 -   Analyzing the different single domains that make up a composite domain can be a more effective way of assessing data quality.  
   
--   When you use a composite domain, you can also create cross-domain rules that enable you to verify that the relationship between the data in multiple domains is appropriate. For example, you can verify that the string “London” in a city domain corresponds to the string “England” in a country domain. Note that cross-domain rules are taken into consideration after domain rules.  
+-   When you use a composite domain, you can also create cross-domain rules that enable you to verify that the relationship between the data in multiple domains is appropriate. For example, you can verify that the string "London" in a city domain corresponds to the string "England" in a country domain. Note that cross-domain rules are taken into consideration after domain rules.  
   
 -   Data in composite domains can be attached to a reference data source, in which case the composite domain will be sent to the reference data provider. This is often done with address data.  
   

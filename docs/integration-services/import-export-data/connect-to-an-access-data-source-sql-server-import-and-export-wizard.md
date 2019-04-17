@@ -2,18 +2,14 @@
 title: "Connect to an Access Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Connect to an Access Data Source (SQL Server Import and Export Wizard)
 This topic shows you how to connect to a **Microsoft Access** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
@@ -43,8 +39,8 @@ The list of data providers may contain several entries for Microsoft Access. Sel
  **File name**  
 Specify the path and file name for the Access file. For example, **C:\\MyData.mdb** for a file on the local computer, or **\\\\Sales\\Database\\Northwind.mdb** for a file on a network share. Or, click **Browse**. 
 
- >   [!NOTE] 
- > If you click **Browse** to locate the Access file, the **Open** dialog box filters for files with the older .MDB format and file extension by default. However the data provider can also open files with the newer .ACCDB format and file extension.
+> [!NOTE]
+> If you click **Browse** to locate the Access file, the **Open** dialog box filters for files with the older .MDB format and file extension by default. However the data provider can also open files with the newer .ACCDB format and file extension.
   
  **Browse**  
  Locate the database file by using the **Open** dialog box.  
@@ -62,7 +58,10 @@ Specify advanced options, such as the database password or a non-default workgro
 
 ## I don't see Access in the list of data sources
 If you don't see Access in the list of data sources, are you running the 64-bit wizard? The providers for Excel and Access are typically 32-bit and aren't visible in the 64-bit wizard. Run the 32-bit wizard instead.
-  
+
+> [!NOTE]
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
+
 ## <a name="officeDownloads"></a>Get the files you need to connect to Access  
 You may have to download the connectivity components for Microsoft Office data sources, including Access and Excel, if they're not already installed. Download the latest version of the connectivity components for both Access and Excel files here:
 [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).

@@ -2,12 +2,10 @@
 title: "sp_droplinkedsrvlogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_droplinkedsrvlogin_TSQL"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droplinkedsrvlogin"
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_droplinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Removes an existing mapping between a login on the local server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a login on the linked server.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +35,10 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## Arguments  
- [ **@rmtsrvname =** ] **'***rmtsrvname***'**  
+`[ @rmtsrvname = ] 'rmtsrvname'`
  Is the name of a linked server that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login mapping applies to. *rmtsrvname* is **sysname**, with no default. *rmtsrvname* must already exist.  
   
- [ **@locallogin =** ] **'***locallogin***'**  
+`[ @locallogin = ] 'locallogin'`
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login on the local server that has a mapping to the linked server *rmtsrvname*. *locallogin* is **sysname**, with no default. A mapping for *locallogin* to *rmtsrvname* must already exist. If NULL, the default mapping created by **sp_addlinkedserver**, which maps all logins on the local server to logins on the linked server, is deleted.  
   
 ## Return Code Values  

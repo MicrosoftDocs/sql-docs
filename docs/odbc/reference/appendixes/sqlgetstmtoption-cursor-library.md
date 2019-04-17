@@ -2,20 +2,17 @@
 title: "SQLGetStmtOption (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetStmtOption function [ODBC], Cursor Library"
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetStmtOption (Cursor Library)
 > [!IMPORTANT]  

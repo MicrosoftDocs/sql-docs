@@ -1,14 +1,12 @@
 ---
 title: "Fields Collection (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Fields"
@@ -17,10 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Fields collection [ADO]"
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Fields Collection (ADO)
 Contains all the [Field](../../../ado/reference/ado-api/field-object.md) objects of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) or [Record](../../../ado/reference/ado-api/record-object-ado.md) object.  

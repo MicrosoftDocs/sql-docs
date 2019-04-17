@@ -2,13 +2,11 @@
 title: "Use FOR XML Results in Application Code | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, application code usage"
   - "XML [SQL Server], FOR XML clause"
@@ -18,12 +16,12 @@ helpviewer_keywords:
   - "XML data islands [SQL Server]"
   - "data islands [SQL Server]"
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Use FOR XML Results in Application Code
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   By using FOR XML clauses with SQL queries, you can retrieve and even cast query results as XML data. This functionality allows you to do the following when FOR XML query results can be used in XML application code:  
   
 -   Query SQL tables for instances of [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md) values  
@@ -131,13 +129,13 @@ manager: "jhubbard"
 3.  Open the ASP page in a browser window by using the following URL. First, replace 'MyServer' with either "localhost" or the actual name of the server where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and IIS are installed.  
   
     ```  
-    http://MyServer/RetrieveResults.asp  
+    https://MyServer/RetrieveResults.asp  
     ```  
   
  The generated HTML page results that appear will be similar to the following sample output:  
   
 ##### Server-side processing  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ Page Generated \@ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
   
@@ -177,7 +175,7 @@ manager: "jhubbard"
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
   <Sales.Store>  
     <Demographics>  
-      <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
+      <StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
         <AnnualSales>1500000</AnnualSales>  
         <AnnualRevenue>150000</AnnualRevenue>  
         <BankName>Primary International</BankName>  
@@ -270,7 +268,7 @@ manager: "jhubbard"
 3.  Open the ASP.NET page in a browser window using the following URL. First, replace 'MyServer' with either "localhost" or the actual name of the server where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and IIS are installed.  
   
     ```  
-    http://MyServer/RetrieveResults.aspx  
+    https://MyServer/RetrieveResults.aspx  
     ```  
   
  The generated HTML page results that appear will be similar to the following sample output:  
@@ -282,7 +280,7 @@ Page Generated @ 3/11/2006 3:36:02 PM
   
 SqlConnection opened.  
   
-<Sales.Store><Demographics><StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
+<Sales.Store><Demographics><StoreSurvey xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey"><AnnualSales>1500000</AnnualSales><AnnualRevenue>150000</AnnualRevenue><BankName>Primary International</BankName><BusinessType>OS</BusinessType><YearOpened>1974</YearOpened><Specialty>Road</Specialty><SquareFeet>38000</SquareFeet><Brands>3</Brands><Internet>DSL</Internet><NumberEmployees>40</NumberEmployees></StoreSurvey></Demographics></Sales.Store>  
   
 SqlConnection closed.  
 ```  

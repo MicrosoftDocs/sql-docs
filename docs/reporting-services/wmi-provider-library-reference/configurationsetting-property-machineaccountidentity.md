@@ -1,22 +1,17 @@
 ---
 title: "MachineAccountIdentity Property (WMI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: wmi-provider-library-reference
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MachineAccountIdentity property"
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
-caps.latest.revision: 11
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # ConfigurationSetting Property - MachineAccountIdentity
   Gets the machine account identity of the computer that the report server is installed on.  

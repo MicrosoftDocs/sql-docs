@@ -2,12 +2,10 @@
 title: "sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_update_profileaccount_sp_TSQL"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_update_profileaccount_sp"
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
-caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # sysmail_update_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Updates the sequence number of an account within a Database Mail profile.  
   
@@ -40,19 +37,19 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## Arguments  
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  The profile ID of the profile to update. *profile_id* is **int**, with a default of NULL. Either the *profile_id* or the *profile_name* must be specified.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  The profile name of the profile to update. *profile_name* is **sysname**, with a default of NULL. Either the *profile_id* or the *profile_name* must be specified.  
   
- [ **@account_id** = ] *account_id*  
+`[ @account_id = ] account_id`
  The account ID to update. *account_id* is **int**, with a default of NULL. Either the *account_id* or the *account_name* must be specified.  
   
- [ **@account_name** = ] **'***account_name***'**  
+`[ @account_name = ] 'account_name'`
  The name of the account to update. *account_name* is **sysname**, with a default of NULL. Either the *account_id* or the *account_name* must be specified.  
   
- [ **@sequence_number** = ] *sequence_number*  
+`[ @sequence_number = ] sequence_number`
  The new sequence number for the account. *sequence_number* is **int**, with no default. The sequence number determines the order in which accounts are used in the profile.  
   
 ## Return Code Values  

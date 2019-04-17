@@ -1,25 +1,24 @@
 ---
 title: "Business Rules (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/18/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "business rules [Master Data Services], about business rules"
   - "business rules [Master Data Services]"
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Business Rules (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a business rule is a rule that you use to ensure the quality and accuracy of your master data. You can use a business rule to automatically update data, to send email, or to start a business process or workflow.  
   
  To view examples of business rules, see [Business Rule Examples &#40;Master Data Services&#41;](../master-data-services/business-rule-examples-master-data-services.md).  
@@ -31,7 +30,7 @@ manager: "jhubbard"
   
  To use business rules you must first create and publish your rules, then apply the published rules to data. You can apply rules to subsets of data or to all data for a version by validating the version. A version cannot be committed until all attributes pass business rule validation.  
   
- If a user attempts to add an attribute value that doesn’t pass business rule validation, the value can still be saved. You can review and correct validation issues, which are displayed in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+ If a user attempts to add an attribute value that doesn't pass business rule validation, the value can still be saved. You can review and correct validation issues, which are displayed in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
  When you create a model deployment package, if you want to include business rules you must include data from the version in the package.  
   

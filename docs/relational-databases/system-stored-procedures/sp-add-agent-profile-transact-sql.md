@@ -2,28 +2,23 @@
 title: "sp_add_agent_profile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_add_agent_profile"
   - "sp_add_agent_profile_TSQL"
 helpviewer_keywords: 
   - "sp_add_agent_profile"
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new profile for a replication agent. This stored procedure is executed at the Distributor on any database.  
   
@@ -42,13 +37,13 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ```  
   
 ## Arguments  
- [ **@profile_id=** ] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID associated with the newly inserted profile. *profile_id* is **int** and is an optional OUTPUT parameter. If specified, the value is set to the new profile ID.  
   
- [ **@profile_name=** ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  Is the name of the profile. *profile_name* is **sysname**, with no default.  
   
- [ **@agent_type=** ] **'***agent_type***'**  
+`[ @agent_type = ] 'agent_type'`
  Is the type of replication agent. *agent_type* is **int**, with no default, and can be one of these values.  
   
 |Value|Description|  
@@ -59,15 +54,15 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|Merge Agent|  
 |**9**|Queue Reader Agent|  
   
- [ **@profile_type=** ] *profile_type*  
+`[ @profile_type = ] profile_type`
  Is the type of profile.*profile_type* is **int**, with a default of **1**.  
   
  **0** indicates a system profile. **1** indicates a custom profile. Only custom profiles can be created using this stored procedure; therefore the only valid value is **1**. Only [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates system profiles.  
   
- [ **@description=** ] **'***description***'**  
+`[ @description = ] 'description'`
  Is a description of the profile. *description* is **nvarchar(3000)**, with no default.  
   
- [ **@default=** ] *default*  
+`[ @default = ] default`
  Indicates whether the profile is the default for *agent_type**.* *default* is **bit**, with a default of **0**. **1** indicates that the profile being added will become the new default profile for the agent specified by *agent_type*.  
   
 ## Return Code Values  

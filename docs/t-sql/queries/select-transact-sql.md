@@ -1,13 +1,11 @@
 ---
 title: "SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
-ms.prod: "sql-non-specified"
+ms.date: "10/24/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SELECT_TSQL"
@@ -24,13 +22,13 @@ helpviewer_keywords:
   - "row retrieval [SQL Server]"
   - "queries [SQL Server], results"
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retrieves rows from the database and enables the selection of one or many rows or columns from one or many tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The full syntax of the SELECT statement is complex, but the main clauses can be summarized as:  
   
@@ -131,7 +129,12 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. TOP  
-  
+
+> [!WARNING]
+> The preceding sequence is usually true. However, there are uncommon cases where the sequence may differ.
+>
+> For example, suppose you have a clustered index on a view, and the view excludes some table rows, and the view's SELECT column list uses a CONVERT that changes a data type from *varchar* to *integer*. In this situation, the CONVERT may execute before the WHERE clause executes. Uncommon indeed. Often there is a way to modify your view to avoid the different sequence, if it matters in your case. 
+
 ## Permissions  
  Selecting data requires **SELECT** permission on the table or view, which could be inherited from a higher scope such as **SELECT** permission on the schema or **CONTROL** permission on the table. Or requires membership in the **db_datareader** or **db_owner** fixed database roles, or the **sysadmin** fixed server role. Creating a new table using **SELECTINTO** also requires both the **CREATETABLE** permission, and the **ALTERSCHEMA** permission on the schema that owns the new table.  
   
@@ -163,7 +166,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- This example returns only the rows for `DimEmployee` that have an `EndDate` that is not NULL and a `MaritalStatus` of ‘M’ (married).  
+ This example returns only the rows for `DimEmployee` that have an `EndDate` that is not NULL and a `MaritalStatus` of 'M' (married).  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

@@ -2,15 +2,15 @@
 title: "Export Column Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.exportcolumntrans.f1"
+  - "sql13.dts.designer.fileextractortransformation.columns.f1"
+  - "sql13.dts.designer.fileextractortransformation.errorhandling.f1"
 helpviewer_keywords: 
   - "exporting data"
   - "append options [Integration Services]"
@@ -19,10 +19,9 @@ helpviewer_keywords:
   - "inserting data"
   - "truncate options [Integration Services]"
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Export Column Transformation
   The Export Column transformation reads data in a data flow and inserts the data into a file. For example, if the data flow contains product information, such as a picture of each product, you could use the Export Column transformation to save the images to files.  
@@ -59,14 +58,56 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Export Column Transformation Editor** dialog box, see [Export Column Transformation Editor &#40;Columns Page&#41;](../../../integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md).  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  For more information about how to set properties, see [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+  
+## Export Column Transformation Editor (Columns Page)
+  Use the **Columns** page of the **Export Column Transformation Editor** dialog box to specify columns in the data flow to extract to files. You can specify whether the Export Column transformation appends data to a file or overwrites an existing file.  
+  
+### Options  
+ **Extract Column**  
+ Select from the list of input columns that contain text or image data. All rows should have definitions for **Extract Column** and **File Path Column**.  
+  
+ **File Path Column**  
+ Select from the list of input columns that contain file paths and file names. All rows should have definitions for **Extract Column** and **File Path Column**.  
+  
+ **Allow Append**  
+ Specify whether the transformation appends data to existing files. The default is **false**.  
+  
+ **Force Truncate**  
+ Specify whether the transformation deletes the contents of existing files before writing data. The default is **false**.  
+  
+ **Write BOM**  
+ Specify whether to write a byte-order mark (BOM) to the file. A BOM is only written if the data has the **DT_NTEXT** or DT_WSTR data type and is not appended to an existing data file.  
+  
+## Export Column Transformation Editor (Error Output Page)
+  Use the **Error Output** page of the **Export Column Transformation Editor** dialog box to specify how to handle errors.  
+  
+### Options  
+ **Input/Output**  
+ View the name of the output. Click the name to expand the view to include columns.  
+  
+ **Column**  
+ View the output columns that you selected on the **Columns** page of the **Export Column Transformation Editor** dialog box.  
+  
+ **Error**  
+ Specify what you want to happen if an error occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Truncation**  
+ Specify what you want to happen if a truncation occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Description**  
+ View the description of the operation.  
+  
+ **Set this value to selected cells**  
+ Specify what should happen to all the selected cells when an error or truncation occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Apply**  
+ Apply the error handling option to the selected cells.  
   
   

@@ -2,28 +2,23 @@
 title: "sp_replicationdboption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replicationdboption_TSQL"
   - "sp_replicationdboption"
 helpviewer_keywords: 
   - "sp_replicationdboption"
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # sp_replicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Sets a replication database option for the specified database. This stored procedure is executed at the Publisher or Subscriber on any database.  
   
@@ -54,13 +49,13 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**subscribe**|Database is a subscription database.|  
 |**sync with backup**|Database is enabled for coordinated backup. For more information, see [Enable Coordinated Backups for Transactional Replication &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
- [ **@value=**] **'***value***'**  
+`[ @value = ] 'value'`
  Is whether to enable or disable the given replication database option. *value* is **sysname**, and can be **true** or **false**. When this value is **false** and *optname* is **merge publish**, subscriptions to the merge published database are also dropped.  
   
- [ **@ignore_distributor=**]  *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  Indicates whether this stored procedure is executed without connecting to the Distributor. *ignore_distributor* is **bit**, with a default of **0**, meaning the Distributor should be connected to and updated with the new status of the publishing database. The value **1** should be specified only if the Distributor is inaccessible and **sp_replicationdboption** is being used to disable publishing.  
   
- [ **@from_scripting=**]  *from_scripting*  
+`[ @from_scripting = ] from_scripting`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

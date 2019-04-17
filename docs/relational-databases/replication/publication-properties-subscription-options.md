@@ -2,22 +2,20 @@
 title: "Publication Properties, Subscription Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1"
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Publication Properties, Subscription Options
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **Subscription Options** page of the **Publication Properties** dialog box allows you to view and set publication level properties associated with subscriptions. The properties are grouped into the following categories:  
   
 -   Properties that apply to all publications.  
@@ -55,13 +53,13 @@ manager: "jhubbard"
  Determines whether to use an agent that is independent of other publications from this database. This option is read-only; it is set to **True** by default for publications created with the New Publication Wizard and cannot be changed after the publication is created. For more information, see [Replication Agent Administration](../../relational-databases/replication/agents/replication-agent-administration.md).  
   
  **Snapshot always available**  
- Determines whether snapshot files are created every time the Snapshot Agent runs (requires **Independent Distribution Agent**). This option is read-only; it is set to **True** if you select **Create a snapshot immediately and keep the snapshot available to initialize subscriptions** on the **Snapshot Agent** page of the New Publication Wizard (the default). For more information, see [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-snapshot.md).  
+ Determines whether snapshot files are created every time the Snapshot Agent runs (requires **Independent Distribution Agent**). This option is read-only; it is set to **True** if you select **Create a snapshot immediately and keep the snapshot available to initialize subscriptions** on the **Snapshot Agent** page of the New Publication Wizard (the default). For more information, see [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
  **Allow initialization from backup files**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Determines whether to allow backup files to be used to initialize subscriptions. For more information, see [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  **Allow non-SQL Server Subscribers**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Determines whether the publication supports non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. Setting this option to **True** sets other publication properties to support non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. This option is read-only if subscriptions exist; it cannot be set to **True** if **Allow immediate updating subscriptions**, **Allow queued updating subscriptions**, or **Allow peer-to-peer subscriptions** is set to **True**. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. Determines whether the publication supports non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. Setting this option to **True** sets other publication properties to support non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. This option is read-only if subscriptions exist; it cannot be set to **True** if **Allow immediate updating subscriptions**, **Allow queued updating subscriptions**, or **Allow peer-to-peer subscriptions** is set to **True**. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 ### Data Transformation  
  **Allow data transformations**  

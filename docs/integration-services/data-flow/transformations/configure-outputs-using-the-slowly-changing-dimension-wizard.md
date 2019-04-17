@@ -2,22 +2,19 @@
 title: "Configure Outputs Using the Slowly Changing Dimension Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Slowly Changing Dimension transformation"
   - "slowly changing dimensions"
   - "Slowly Changing Dimension Wizard"
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Configure Outputs Using the Slowly Changing Dimension Wizard
   The Slowly Changing Dimension Wizard functions as the editor for the Slowly Changing Dimension transformation. Building and configuring the data flow for slowly changing dimension data can be a complex task. The Slowly Changing Dimension Wizard offers the simplest method of building the data flow for the Slowly Changing Dimension transformation outputs by guiding you through the steps of mapping columns, selecting business key columns, setting column change attributes, and configuring support for inferred dimension members.  

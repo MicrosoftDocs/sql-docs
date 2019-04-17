@@ -2,24 +2,22 @@
 title: "Database Mirroring Witness | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "witness [SQL Server], about witness"
   - "witness [SQL Server]"
   - "database mirroring [SQL Server], witness"
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
-caps.latest.revision: 72
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Database Mirroring Witness
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   To support automatic failover, a database mirroring session must be configured in high-safety mode and also possess a third server instance, known as the *witness*. The witness is an optional instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that enables the mirror server in a high-safety mode session to recognize whether to initiate an automatic failover. Unlike the two partners, the witness does not serve the database. Supporting automatic failover is the only role of the witness.  
   
 > [!NOTE]  

@@ -2,24 +2,23 @@
 title: "Subscription Validation Options (Merge Subscriptions) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.validate.mergeoptions.f1"
 helpviewer_keywords: 
   - "Subscription Validation Options dialog box"
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Subscription Validation Options (Merge Subscriptions)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use the **Subscription Validation Options** dialog box to specify whether validation should use a row count only or a row count and a binary checksum.  
   
 ## Options  
@@ -31,6 +30,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Validate Data at the Subscriber](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)  
+ [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

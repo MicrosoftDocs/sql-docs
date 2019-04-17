@@ -2,22 +2,21 @@
 title: "Color Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptions.FontsAndColors.ColorPicker"
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Color Dialog Box (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The **Color Dialog Box** returns the RGB value of a color selected by the user. The user can select from a set of basic colors determined by the display driver or from a set of custom colors. Select from the Basic colors, or create custom colors. Define colors by clicking in the color matrix or by typing in the **Hue**, **Sat**, **Lum**, **Red**, **Green**, and **Blue** boxes.  
   
 ## Options  

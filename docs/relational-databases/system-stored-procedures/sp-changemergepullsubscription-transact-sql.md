@@ -2,28 +2,23 @@
 title: "sp_changemergepullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changemergepullsubscription"
   - "sp_changemergepullsubscription_TSQL"
 helpviewer_keywords: 
   - "sp_changemergepullsubscription"
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_changemergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the properties of the merge pull subscription. This stored procedure is executed at the Subscriber on the subscription database.  
   
@@ -41,19 +36,19 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of %.  
   
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher*is **sysname**, with a default of %.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db*is **sysname**, with a default of %.  
   
- [ **@property=**]  **'***property***'**  
+`[ @property = ] 'property'`
  Is the name of the property to change. *property* is **sysname**, and can be one of the values in the table.  
   
- [ **@value=**]  **'***value***'**  
+`[ @value = ] 'value'`
  Is the new value for the specified property. *value*is **nvarchar(255)**, and can be one of the values in the table.  
   
 |Property|Value|Description|  

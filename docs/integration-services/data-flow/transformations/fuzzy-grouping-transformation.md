@@ -2,15 +2,16 @@
 title: "Fuzzy Grouping Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.fuzzygroupingtrans.f1"
+  - "sql13.dts.designer.fuzzygroupingtransformation.connection.f1"
+  - "sql13.dts.designer.fuzzygroupingtransformation.columns.f1"
+  - "sql13.dts.designer.fuzzygroupingtransformation.advanced.f1"
 helpviewer_keywords: 
   - "cleaning data"
   - "comparing data"
@@ -25,20 +26,19 @@ helpviewer_keywords:
   - "data cleaning [Integration Services]"
   - "duplicate data [Integration Services]"
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Fuzzy Grouping Transformation
   The Fuzzy Grouping transformation performs data cleaning tasks by identifying rows of data that are likely to be duplicates and selecting a canonical row of data to use in standardizing the data.  
   
 > [!NOTE]  
->  For more detailed information about the Fuzzy Grouping transformation, including performance and memory limitations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  For more detailed information about the Fuzzy Grouping transformation, including performance and memory limitations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  The Fuzzy Grouping transformation requires a connection to an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to create the temporary [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables that the transformation algorithm requires to do its work. The connection must resolve to a user who has permission to create tables in the database.  
   
- To configure the transformation, you must select the input columns to use when identifying duplicates, and you must select the type of match—fuzzy or exact—for each column. An exact match guarantees that only rows that have identical values in that column will be grouped. Exact matching can be applied to columns of any [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data type except DT_TEXT, DT_NTEXT, and DT_IMAGE. A fuzzy match groups rows that have approximately the same values. The method for approximate matching of data is based on a user-specified similarity score. Only columns with the DT_WSTR and DT_STR data types can be used in fuzzy matching. For more information, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ To configure the transformation, you must select the input columns to use when identifying duplicates, and you must select the type of match-fuzzy or exact-for each column. An exact match guarantees that only rows that have identical values in that column will be grouped. Exact matching can be applied to columns of any [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data type except DT_TEXT, DT_NTEXT, and DT_IMAGE. A fuzzy match groups rows that have approximately the same values. The method for approximate matching of data is based on a user-specified similarity score. Only columns with the DT_WSTR and DT_STR data types can be used in fuzzy matching. For more information, see [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  The transformation output includes all input columns, one or more columns with standardized data, and a column that contains the similarity score. The score is a decimal value between 0 and 1. The canonical row has a score of 1. Other rows in the fuzzy group have scores that indicate how well the row matches the canonical row. The closer the score is to 1, the more closely the row matches the canonical row. If the fuzzy group includes rows that are exact duplicates of the canonical row, these rows also have a score of 1. The transformation does not remove duplicate rows; it groups them by creating a key that relates the canonical row to similar rows.  
   
@@ -79,17 +79,9 @@ manager: "jhubbard"
 ## Configuration of the Fuzzy Grouping Transformation  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Fuzzy Grouping Transformation Editor** dialog box, click one of the following topics:  
-  
--   [Fuzzy Grouping Transformation Editor &#40;Connection Manager Tab&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
-  
--   [Fuzzy Grouping Transformation Editor &#40;Columns Tab&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md)  
-  
--   [Fuzzy Grouping Transformation Editor &#40;Advanced Tab&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md)  
-  
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -99,6 +91,85 @@ manager: "jhubbard"
 -   [Identify Similar Data Rows by Using the Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## Fuzzy Grouping Transformation Editor (Connection Manager Tab)
+  Use the **Connection Manager** tab of the **Fuzzy Grouping Transformation Editor** dialog box to select an existing connection or create a new one.  
+  
+> [!NOTE]  
+>  The server specified by the connection must be running [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The Fuzzy Grouping transformation creates temporary data objects in tempdb that may be as large as the full input to the transformation. While the transformation executes, it issues server queries against these temporary objects. This can affect overall server performance.  
+  
+### Options  
+ **OLE DB connection manager**  
+ Select an existing OLE DB connection manager by using the list box, or create a new connection by using the **New** button.  
+  
+ **New**  
+ Create a new connection by using the **Configure OLE DB Connection Manager** dialog box.  
+  
+## Fuzzy Grouping Transformation Editor (Columns Tab)
+  Use the **Columns** tab of the **Fuzzy Grouping Transformation Editor** dialog box to specify the columns used to group rows with duplicate values.  
+  
+### Options  
+ **Available Input Columns**  
+ Select from this list the input columns used to group rows with duplicate values.  
+  
+ **Name**  
+ View the names of available input columns.  
+  
+ **Pass Through**  
+ Select whether to include the input column in the output of the transformation. All columns used for grouping are automatically copied to the output. You can include additional columns by checking this column.  
+  
+ **Input Column**  
+ Select one of the input columns selected earlier in the **Available Input Columns** list.  
+  
+ **Output Alias**  
+ Enter a descriptive name for the corresponding output column. By default, the output column name is the same as the input column name.  
+  
+ **Group Output Alias**  
+ Enter a descriptive name for the column that will contain the canonical value for the grouped duplicates. The default name of this output column is the input column name with _clean appended.  
+  
+ **Match Type**  
+ Select fuzzy or exact matching. Rows are considered duplicates if they are sufficiently similar across all columns with a fuzzy match type. If you also specify exact matching on certain columns, only rows that contain identical values in the exact matching columns are considered as possible duplicates. Therefore, if you know that a certain column contains no errors or inconsistencies, you can specify exact matching on that column to increase the accuracy of the fuzzy matching on other columns.  
+  
+ **Minimum Similarity**  
+ Set the similarity threshold at the join level by using the slider. The closer the value is to 1, the closer the resemblance of the lookup value to the source value must be to qualify as a match. Increasing the threshold can improve the speed of matching since fewer candidate records need to be considered.  
+  
+ **Similarity Output Alias**  
+ Specify the name for a new output column that contains the similarity scores for the selected join. If you leave this value empty, the output column is not created.  
+  
+ **Numerals**  
+ Specify the significance of leading and trailing numerals in comparing the column data. For example, if leading numerals are significant, "123 Main Street" will not be grouped with "456 Main Street."  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Neither**|Leading and trailing numerals are not significant.|  
+|**Leading**|Only leading numerals are significant.|  
+|**Trailing**|Only trailing numerals are significant.|  
+|**LeadingAndTrailing**|Both leading and trailing numerals are significant.|  
+  
+ **Comparison Flags**  
+ For information about the string comparison options, see [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+## Fuzzy Grouping Transformation Editor (Advanced Tab)
+  Use the **Advanced** tab of the **Fuzzy Grouping Transformation Editor** dialog box to specify input and output columns, set similarity thresholds, and define delimiters.  
+  
+> [!NOTE]  
+>  The **Exhaustive** and the **MaxMemoryUsage** properties of the Fuzzy Grouping transformation are not available in the **Fuzzy Grouping Transformation Editor**, but can be set by using the **Advanced Editor**. For more information on these properties, see the Fuzzy Grouping Transformation section of [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+  
+### Options  
+ **Input key column name**  
+ Specify the name of an output column that contains the unique identifier for each input row. The **_key_in** column has a value that uniquely identifies each row.  
+  
+ **Output key column name**  
+ Specify the name of an output column that contains the unique identifier for the canonical row of a group of duplicate rows. The **_key_out** column corresponds to the **_key_in** value of the canonical data row.  
+  
+ **Similarity score column name**  
+ Specify a name for the column that contains the similarity score. The similarity score is a value between 0 and 1 that indicates the similarity of the input row to the canonical row. The closer the score is to 1, the more closely the row matches the canonical row.  
+  
+ **Similarity threshold**  
+ Set the similarity threshold by using the slider. The closer the threshold is to 1, the more the rows must resemble each other to qualify as duplicates. Increasing the threshold can improve the speed of matching because fewer candidate records have to be considered.  
+  
+ **Token delimiters**  
+ The transformation provides a default set of delimiters for tokenizing data, but you can add or remove delimiters as needed by editing the list.  
   
 ## See Also  
  [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

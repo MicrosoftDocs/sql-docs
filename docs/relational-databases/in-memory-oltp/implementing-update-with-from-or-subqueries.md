@@ -1,23 +1,20 @@
 ---
 title: "Implementing UPDATE with FROM or Subqueries | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
-caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing UPDATE with FROM or Subqueries
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Natively compiled T-SQL modules do not support the FROM clause and do not support subqueries in UPDATE statements (they are supported in SELECT). UPDATE statements with FROM clause are typically used to update information in a table based on a table-valued parameter (TVP), or to update columns in a table in an AFTER trigger. 
 
@@ -29,13 +26,13 @@ Here is the original T-SQL UPDATE statement :
   
   
   
-  
+   ```
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
-  
+   ```
   
   
 
@@ -47,7 +44,7 @@ The sample T-SQL code in this section demonstrates a workaround that provides go
   
   
   
-
+ ```
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
@@ -156,4 +153,4 @@ The sample T-SQL code in this section demonstrates a workaround that provides go
     ****/  
   
   
-  
+ ```

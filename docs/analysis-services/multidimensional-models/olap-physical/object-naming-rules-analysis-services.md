@@ -1,26 +1,17 @@
 ---
 title: "Object Naming Rules (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "objects [Analysis Services], naming"
-ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Object Naming Rules (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topic describes object naming conventions, as well as the reserved words and characters that cannot be used in any object name, in code or script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a> Naming Conventions  
@@ -32,7 +23,7 @@ manager: "erikre"
   
  The following rules apply to **Name** and **ID** properties.  
   
--   Names are case insensitive. You cannot have a cube named “sales” and another named “Sales” in the same database.  
+-   Names are case insensitive. You cannot have a cube named "sales" and another named "Sales" in the same database.  
   
 -   No leading or trailing spaces allowed in an object name, although you can embed spaces within a name. Leading and trailing spaces are implicitly trimmed. This applies to both the **Name** and **ID** of an object.  
   
@@ -69,7 +60,7 @@ manager: "erikre"
   
 |Object|Invalid characters|  
 |------------|------------------------|  
-|**Server**|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) for details.|  
+|**Server**|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](/windows/desktop/DNS/naming-conventions) for details.|  
 |**DataSource**|: / \ * &#124; ? " () [] {} <>|  
 |**Level** or **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
 |**Dimension** or **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
@@ -84,13 +75,13 @@ manager: "erikre"
 |MOLAP (all versions)|No|  
 |Tabular - 1050|No|  
 |Tabular - 1100|No|  
-|Tabular – 1130 and higher|Yes|  
+|Tabular - 1130 and higher|Yes|  
   
  Databases can have a ModelType of default. Default is equivalent to multidimensional, and thus does not support the use of reserved characters in column names.  
   
 ## See Also  
  [MDX Reserved Words](../../../mdx/mdx-reserved-words.md)   
  [Translation support in Analysis Services](../../../analysis-services/translation-support-in-analysis-services.md)   
- [XML for Analysis Compliance &#40;XMLA&#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis Compliance &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

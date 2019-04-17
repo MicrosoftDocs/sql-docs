@@ -2,13 +2,11 @@
 title: "Connecting with SQLConnect | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], connection functions"
   - "connecting to driver [ODBC], SQLConnect"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "connection functions [ODBC]"
   - "ODBC drivers [ODBC], connection functions"
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Connecting with SQLConnect
 **SQLConnect** is the simplest connection function. It requires a data source name and accepts an optional user ID and password. It works well for applications that hard-code a data source name and do not require a user ID or password. It also works well for applications that want to control their own "look and feel" or that have no user interface. Such applications can build a list of data sources using **SQLDataSources**, prompt the user for data source, user ID, and password, and then call **SQLConnect**.  

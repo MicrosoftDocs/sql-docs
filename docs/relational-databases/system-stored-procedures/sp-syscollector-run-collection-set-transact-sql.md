@@ -2,12 +2,10 @@
 title: "sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_run_collection_set_TSQL"
@@ -18,13 +16,12 @@ helpviewer_keywords:
   - "sp_syscollector_run_collection_set"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_syscollector_run_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Starts a collection set if the collector is already enabled and the collection set is configured for non-cached collection mode.  
   
@@ -32,10 +29,6 @@ manager: "jhubbard"
 >  This procedure will fail if it is run against a collection set that is configured for cached collection mode.  
   
  sp_syscollector_run_collection_set enables a user to take on-demand data snapshots.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +41,10 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ```  
   
 ## Arguments  
- [ **@collection_set_id =** ] *collection_set_id*  
+`[ @collection_set_id = ] collection_set_id`
  Is the unique local identifier for the collection set. *collection_set_id* is **int** and must have a value if *name* is NULL.  
   
- [ **@name =** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the collection set. *name* is **sysname** and must have a value if *collection_set_id* is NULL.  
   
 ## Return Code Values  

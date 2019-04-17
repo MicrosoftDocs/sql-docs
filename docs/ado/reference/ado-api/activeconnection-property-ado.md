@@ -1,14 +1,12 @@
 ---
 title: "ActiveConnection Property (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Command15::ActiveConnection"
@@ -17,10 +15,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "ActiveConnection property [ADO]"
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ActiveConnection Property (ADO)
 Indicates to which [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object the specified [Command](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), or [Record](../../../ado/reference/ado-api/record-object-ado.md) object currently belongs.  

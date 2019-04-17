@@ -2,13 +2,11 @@
 title: "SQLColAttribute Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLColAttribute"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLColAttribute function [ODBC]"
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
-caps.latest.revision: 42
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLColAttribute Function
 **Conformance**  
@@ -145,7 +142,7 @@ SQLRETURN SQLColAttribute (
   
 |*FieldIdentifier*|Information<br /><br /> returned in|Description|  
 |-----------------------|---------------------------------|-----------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE if the column is an autoincrementing column.<br /><br /> SQL_FALSE if the column is not an autoincrementing column or is not numeric.<br /><br /> This field is valid for numeric data type columns only. An application can insert values into a row containing an autoincrement column, but typically cannot update values in the column.<br /><br /> When an insert is made into an autoincrement column, a unique value is inserted into the column at insert time. The increment is not defined, but is data source–specific. An application should not assume that an autoincrement column starts at any particular point or increments by any particular value.|  
+|SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE if the column is an autoincrementing column.<br /><br /> SQL_FALSE if the column is not an autoincrementing column or is not numeric.<br /><br /> This field is valid for numeric data type columns only. An application can insert values into a row containing an autoincrement column, but typically cannot update values in the column.<br /><br /> When an insert is made into an autoincrement column, a unique value is inserted into the column at insert time. The increment is not defined, but is data source-specific. An application should not assume that an autoincrement column starts at any particular point or increments by any particular value.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|The base column name for the result set column. If a base column name does not exist (as in the case of columns that are expressions), then this variable contains an empty string.<br /><br /> This information is returned from the SQL_DESC_BASE_COLUMN_NAME record field of the IRD, which is a read-only field.|  
 |SQL_DESC_BASE_TABLE_NAME (ODBC 3.0)|*CharacterAttributePtr*|The name of the base table that contains the column. If the base table name cannot be defined or is not applicable, then this variable contains an empty string.<br /><br /> This information is returned from the SQL_DESC_BASE_TABLE_NAME record field of the IRD, which is a read-only field.|  
 |SQL_DESC_CASE_SENSITIVE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE if the column is treated as case-sensitive for collations and comparisons.<br /><br /> SQL_FALSE if the column is not treated as case-sensitive for collations and comparisons or is noncharacter.|  
@@ -153,7 +150,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|The concise data type.<br /><br /> For the datetime and interval data types, this field returns the concise data type; for example, SQL_TYPE_TIME or SQL_INTERVAL_YEAR. (For more information, see [Data Type Identifiers and Descriptors](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) in Appendix D: Data Types.)<br /><br /> This information is returned from the SQL_DESC_CONCISE_TYPE record field of the IRD.|  
 |SQL_DESC_COUNT  (ODBC 1.0)|*NumericAttributePtr*|The number of columns available in the result set. This returns 0 if there are no columns in the result set. The value in the *ColumnNumber* argument is ignored.<br /><br /> This information is returned from the SQL_DESC_COUNT header field of the IRD.|  
 |SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|Maximum number of characters required to display data from the column. For more information about display size, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendix D: Data Types.|  
-|SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE if the column has a fixed precision and nonzero scale that are data source–specific.<br /><br /> SQL_FALSE if the column does not have a fixed precision and nonzero scale that are data source–specific.|  
+|SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE if the column has a fixed precision and nonzero scale that are data source-specific.<br /><br /> SQL_FALSE if the column does not have a fixed precision and nonzero scale that are data source-specific.|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|The column label or title. For example, a column named EmpName might be labeled Employee Name or might be labeled with an alias.<br /><br /> If a column does not have a label, the column name is returned. If the column is unlabeled and unnamed, an empty string is returned.|  
 |SQL_DESC_LENGTH  (ODBC 3.0)|*NumericAttributePtr*|A numeric value that is either the maximum or actual character length of a character string or binary data type. It is the maximum character length for a fixed-length data type, or the actual character length for a variable-length data type. Its value always excludes the null-termination byte that ends the character string.<br /><br /> This information is returned from the SQL_DESC_LENGTH record field of the IRD.<br /><br /> For more information about length, see [Column Size, Decimal Digits, Transfer Octet Length, and Display Size](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) in Appendix D: Data Types.|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|This VARCHAR(128) record field contains the character or characters that the driver recognizes as a prefix for a literal of this data type. This field contains an empty string for a data type for which a literal prefix is not applicable. For more information, see [Literal Prefixes and Suffixes](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md).|  
@@ -169,7 +166,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE if the column cannot be used in a WHERE clause. (This is the same as the SQL_UNSEARCHABLE value in ODBC 2.*x*.)<br /><br /> SQL_PRED_CHAR if the column can be used in a WHERE clause but only with the LIKE predicate. (This is the same as the SQL_LIKE_ONLY value in ODBC 2.*x*.)<br /><br /> SQL_PRED_BASIC if the column can be used in a WHERE clause with all the comparison operators except LIKE. (This is the same as the SQL_EXCEPT_LIKE value in ODBC 2.*x*.)<br /><br /> SQL_PRED_SEARCHABLE if the column can be used in a WHERE clause with any comparison operator.<br /><br /> Columns of type SQL_LONGVARCHAR and SQL_LONGVARBINARY usually return SQL_PRED_CHAR.|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|The name of the table that contains the column. The returned value is implementation-defined if the column is an expression or if the column is part of a view.<br /><br /> If the table name cannot be determined, an empty string is returned.|  
 |SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|A numeric value that specifies the SQL data type.<br /><br /> When *ColumnNumber* is equal to 0, SQL_BINARY is returned for variable-length bookmarks and SQL_INTEGER is returned for fixed-length bookmarks.<br /><br /> For the datetime and interval data types, this field returns the verbose data type: SQL_DATETIME or SQL_INTERVAL. (For more information, see [Data Type Identifiers and Descriptors](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) in Appendix D: Data Types.<br /><br /> This information is returned from the SQL_DESC_TYPE record field of the IRD. **Note:**  To work against ODBC 2.*x* drivers, use SQL_DESC_CONCISE_TYPE instead.|  
-|SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|Data source–dependent data type name; for example, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY", or "CHAR ( ) FOR BIT DATA".<br /><br /> If the type is unknown, an empty string is returned.|  
+|SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|Data source-dependent data type name; for example, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY", or "CHAR ( ) FOR BIT DATA".<br /><br /> If the type is unknown, an empty string is returned.|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED or SQL_UNNAMED. If the SQL_DESC_NAME field of the IRD contains a column alias or a column name, SQL_NAMED is returned. If there is no column name or column alias, SQL_UNNAMED is returned.<br /><br /> This information is returned from the SQL_DESC_UNNAMED record field of the IRD.|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE if the column is unsigned (or not numeric).<br /><br /> SQL_FALSE if the column is signed.|  
 |SQL_DESC_UPDATABLE (ODBC 1.0)|*NumericAttributePtr*|Column is described by the values for the defined constants:<br /><br /> SQL_ATTR_READONLY SQL_ATTR_WRITE SQL_ATTR_READWRITE_UNKNOWN<br /><br /> SQL_DESC_UPDATABLE describes the updatability of the column in the result set, not the column in the base table. The updatability of the base column on which the result set column is based may be different from the value in this field. Whether a column is updatable can be based on the data type, user privileges, and the definition of the result set itself. If it is unclear whether a column is updatable, SQL_ATTR_READWRITE_UNKNOWN should be returned.|  

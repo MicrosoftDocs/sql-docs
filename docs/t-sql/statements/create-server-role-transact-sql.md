@@ -2,12 +2,10 @@
 title: "CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "pdw, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SERVER_ROLE_TSQL"
@@ -24,13 +22,12 @@ helpviewer_keywords:
   - "user-defined server roles [SQL Server]"
   - "roles, server"
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Creates a new user-defined server role.  
   
@@ -39,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Parallel Data Warehouse  
-  
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   

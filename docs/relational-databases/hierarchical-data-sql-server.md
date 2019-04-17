@@ -1,14 +1,12 @@
 ---
 title: "Hierarchical Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/01/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchies [SQL Server], tables to support"
   - "hierarchyid [Database Engine], concepts"
@@ -17,12 +15,13 @@ helpviewer_keywords:
   - "hierarchyid [Database Engine]"
   - "hierarchical queries [SQL Server], using hierarchyid data type"
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Hierarchical Data (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The built-in **hierarchyid** data type makes it easier to store and query hierarchical data. **hierarchyid** is optimized for representing trees, which are the most common type of hierarchical data.  
   
  Hierarchical data is defined as a set of data items that are related to each other by hierarchical relationships. Hierarchical relationships exist where one item of data is the parent of another item. Examples of the hierarchical data that is commonly stored in databases include the following:  
@@ -37,7 +36,7 @@ manager: "jhubbard"
   
 -   A graph of links between Web pages  
   
- Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) in [!INCLUDE[tsql](../includes/tsql-md.md)] to query and manage hierarchical data.  
+ Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) as a data type to create tables with a hierarchical structure, or to describe the hierarchical structure of data that is stored in another location. Use the [hierarchyid functions](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) in [!INCLUDE[tsql](../includes/tsql-md.md)] to query and manage hierarchical data.  
   
 ##  <a name="keyprops"></a> Key Properties of hierarchyid  
  A value of the **hierarchyid** data type represents a position in a tree hierarchy. Values for **hierarchyid** have the following properties:  
@@ -241,7 +240,7 @@ Converted Level  Level     Location         LocationType
 /3/1/            0x7AC0    McMurdo Station  City  
 ```  
   
- Notice that the hierarchy is has a valid structure, even though it is not internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country. Users must decide if this type of hierarchy is appropriate for their use.  
+ Notice that the hierarchy has a valid structure, even though it is not internally consistent. Bahia is the only state. It appears in the hierarchy as a peer of the city Brasilia. Similarly, McMurdo Station does not have a parent country. Users must decide if this type of hierarchy is appropriate for their use.  
   
  Add another row and select the results.  
   
@@ -522,7 +521,7 @@ GO
   
   
 ## See Also  
- [hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
  [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   

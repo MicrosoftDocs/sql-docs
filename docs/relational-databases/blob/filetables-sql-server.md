@@ -2,25 +2,23 @@
 title: "FileTables (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: filestream
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], overview"
   - "FileTables [SQL Server]"
   - "FileTable [SQL Server], see FileTables [SQL Server]"
   - "FileTable [SQL Server]"
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # FileTables (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The FileTable feature brings support for the Windows file namespace and compatibility with Windows applications to the file data stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable lets an application integrate its storage and data management components, and provides integrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services - including full-text search and semantic search - over unstructured data and metadata.  
   
  In other words, you can store files and documents in special tables in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] called FileTables, but access them from Windows applications as if they were stored in the file system, without making any changes to your client applications.  
@@ -56,9 +54,9 @@ manager: "jhubbard"
   
 -   Every row contains the following items. For more information about the schema of a FileTable, see [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  
   
-    -   A**file_stream** column for stream data and a **stream_id** (GUID) identifier. (The **file_stream** column is NULL for a directory.)  
+    -   A **file_stream** column for stream data and a **stream_id** (GUID) identifier. (The **file_stream** column is NULL for a directory.)  
   
-    -   Both **path_locator** and **parent_path_locator** columns for representing and maintaining the file and directory hierarchy.  
+    -   Both **path_locator** and **parent_path_locator** columns for representing and maintaining the current item (file or directory) and directory hierarchy.  
   
     -   10 file attributes such as created date and modified date that are useful with file I/O APIs.  
   
@@ -79,6 +77,8 @@ manager: "jhubbard"
 -   Windows API operations are non-transactional in nature, and are not associated with user transactions. However, transactional access to FILESTREAM data stored in a FileTable is fully supported, as is the case for any FILESTREAM column in a regular table.  
   
 -   FileTables can also be queried and updated through normal [!INCLUDE[tsql](../../includes/tsql-md.md)] access. They are also integrated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] management tools, and features such as backup.  
+
+-   You are unable to send an email request through dbmail and attach a file located in a filestream directory (and therefore filetable). The filesystem filter driver RsFx0420 inspects incoming I/O requests going in and out of the filestream folder. If the request is not both from the SQLServer executable and Filestream code, they are explicitly disallowed.
   
 ##  <a name="additional"></a> Additional Considerations for Using FileTables  
   
@@ -129,5 +129,12 @@ manager: "jhubbard"
   
  [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
  Lists the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that have been added or changed to support the FileTable feature.  
+
+## See Also
+[Filestream and FileTable Dynamic Management Views (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Filestream and FileTable Catalog Views (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Filestream and FileTable System Stored Procedures (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
+
+
   
   

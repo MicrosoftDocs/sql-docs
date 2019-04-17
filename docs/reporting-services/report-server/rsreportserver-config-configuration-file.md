@@ -1,20 +1,15 @@
-﻿---
+---
 title: "RsReportServer.config Configuration File | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/12/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 06/12/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-server
+
+
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # RsReportServer.config Configuration File
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** file stores settings that are used by the Report Server Web service and background processing. All [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] applications run within a single process that reads configuration settings stored in the RSReportServer.config file. Both Native mode and SharePoint mode report servers use the RSReportServer.config, however the two modes do not use all of the same settings in the configuration file. The SharePoint mode version of the file is smaller as many of the settings for SharePoint mode are stored in SharePoint configuration databases rather than the file. This topic describes the default configuration file that is installed for Native mode and SharePoint mode and some of the important settings and behaviors that are controlled by the configuration file.  
@@ -30,20 +25,22 @@ The RSReportServer.config is located in the following folders, depending on the 
 
 
   
-### Native mode report server  
+### Native mode report server 
 
  
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  SQL Server 2016
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[applies](../../includes/applies-md.md)]**  January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
   
-### SharePoint mode report server
+### SharePoint mode report server 
 
 > [!NOTE]
 > SharePoint integrated mode is not available with the January 2017 Technical Preview of Power BI reports in SQL Server Reporting Services.
@@ -58,16 +55,16 @@ For more information on editing the file, see [Modify a Reporting Services Confi
  The following table provides information about general configuration settings that appear in the first part of the file. Settings are presented in the order in which they appear in the configuration file. The last column of the table indicates if the setting applies to a Native mode report server **(N)** or a SharePoint mode report server **(S)** or both.  
   
 > [!NOTE]  
->  In this topic, “maximum integer” refers to INT_MAX value of 2147483647.  For more information, see [Integer Limits](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  In this topic, "maximum integer" refers to INT_MAX value of 2147483647.  For more information, see [Integer Limits](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  
 |**Dsn**|Specifies the connection string to the database server that hosts the report server database. This value is encrypted and is added to the configuration file when you create the report server database. For SharePoint, the database connection information is taken from the SharePoint configuration database.|N,S|  
 |**ConnectionType**|Specifies the type of credentials that the report server uses to connect to the report server database. Valid values are **Default** and **Impersonate**. **Default** is specified if the report server is configured to use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or the service account to connect to the report server database. **Impersonate** is specified if the report server uses a Windows account to connect to the report server database.|N|  
 |**LogonUser, LogonDomain, LogonCred**|Stores the domain, user name, and password of a domain account that is used by a report server to connect to a report server database. Values for **LogonUser**, **LogonDomain**, and **LogonCred** are created when the report server connection is configured to use a domain account. For more information about a report server database connection, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).|N|  
-|**InstanceID**|An identifier for the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. This value specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name. By default, this value is **MSRS12***\<instancename>*. Do not modify this setting. The following is an example of the complete value: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> The following is an example of SharePoint mode:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
+|**InstanceID**|An identifier for the report server instance. Report server instance names are based on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance names. This value specifies a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name. By default, this value is **MSRS12**_\<instancename>_. Do not modify this setting. The following is an example of the complete value: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> The following is an example of SharePoint mode:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
 |**InstallationID**|An identifier for the report server installation that Setup creates. This value is set to a GUID. Do not modify this setting.|N|  
-|**SecureConnectionLevel**|Specifies the degree to which Web service calls must us Secure Sockets Layer (SSL). This setting is used for both the Report Server Web service and the web portal. This value is set when you configure a URL to use HTTP or HTTPS in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. Valid values range from 0 through 3, where 0 is least secure. For more information, see [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) and [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|  
+|**SecureConnectionLevel**|Specifies the degree to which Web service calls must us Secure Sockets Layer (SSL). This setting is used for both the Report Server Web service and the web portal. This value is set when you configure a URL to use HTTP or HTTPS in the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool. In SQL Server 2008 R2, SecureConnectionLevel is made an on/off switch. For earlier versions than SQL Server 2008 R2 the valid values range are from 0 through 3, where 0 is least secure. For more information, see [ConfigurationSetting Method - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md), [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md) and [Configure SSL Connections on a Native Mode Report Server](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|N,S|
 |**DisableSecureFormsAuthenticationCookie**|Default value is False.<br /><br /> Specifies whether to disable the forcing of the cookie used for form and custom authentication to be marked secure. Starting with SQL Server 2012, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will automatically mark forms authentication cookies used with custom authentication extensions, as a secure cookie when sent to the client. By changing this property, report server administrators and custom security extension authors can revert to the previous behavior which allowed the custom security extension author to determine whether to mark the cookie as a secure cookie. It is recommended that secure cookies are used for forms authentication to help prevent network sniffing and replay attacks.|N|  
 |**CleanupCycleMinutes**|Specifies the number of minutes after which old sessions and expired snapshots are removed from the report server databases. Valid values range from 0 to maximum integer. The default is 10. Setting the value to 0 disables the database clean up the process.|N,S|  
 |**MaxActiveReqForOneUser**|Specifies the maximum number of reports that one user can process at the same time. Once the limit is reached, further report processing requests are denied. Valid values are 1 to a maximum integer. The default is 20.<br /><br /> Note that most requests process very quickly so it is unlikely that a single user will have more than 20 open connections at any given time. If users are opening more than 15 process-intensive reports at the same time, you might need to increase this value.<br /><br /> This setting is ignored for report servers that run in SharePoint integrated mode.|N,S|  
@@ -91,7 +88,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
  **URLReservations** defines HTTP access to the Report Server Web service and the web portal for the current instance. URLs are reserved and stored in HTTP.SYS when you configure the report server.  
   
 > [!WARNING]  
->  For SharePoint mode, URL reservations are configured in SharePoint Central Administration. For more information, see [Configure alternate access mapping (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
+>  For SharePoint mode, URL reservations are configured in SharePoint Central Administration. For more information, see [Configure alternate access mapping (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx).  
   
  Do not modify URL reservations in the configuration file directly. Always use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager or the Report Server WMI provider to create or modify URL reservations for a Native mode report server. If you modify the values in the configuration file, you might corrupt the reservation, which will cause server errors at run time or leave orphan reservations in HTTP.SYS that are not removed if you uninstall the software. For more information, see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) and [URLs in Configuration Files  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md).  
   
@@ -177,7 +174,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |Setting|Description|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Specifies the URL of the report server that the web portal connects to. Only modify this value if you are configuring the web portal to connect to a report server in another instance or on a remote computer.|N,S|  
-|**ReportBuilderTrustLevel**|Do not modify this value; it is not configurable. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions, Report Builder runs only in **FullTrust**. For more information, see [Configure Report Builder Access](../../reporting-services/report-server/configure-report-builder-access.md) . For more information about discontinuing partial trust mode, see [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
+|**ReportBuilderTrustLevel**|Do not modify this value; it is not configurable. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions, Report Builder runs only in **FullTrust**. For more information about discontinuing partial trust mode, see [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N,S|  
 |**PageCountMode**|For the web portal only, this setting specifies whether the report server calculates a page count value before the report is rendered, or as the report is viewed. Valid values are **Estimate** (default) and **Actual**. Use **Estimate** to calculate page count information as the user views the report. Initially, the page count is set to 2 (for the current page plus one additional page), but adjusts upwards as the user pages through the report. Use **Actual** if you want to calculate page count in advance before the report is displayed. **Actual** is provided for backward compatibility. Note that if you set **PageCountMode** to **Actual**, the entire report must be processed to get a valid page count, increasing wait time before the report is displayed.|N,S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (RSReportServer.config file) Native Mode  
@@ -237,7 +234,7 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |**ExcludedRenderFormats**, **RenderingExtension**|These settings are used to intentionally exclude export formats that do not work well with file share delivery. These formats are typically used for interactive reporting, preview, or to preload the report cache. They do not produce application files that can be easily viewed from a desktop application.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> Report Server E-mail Extension Configuration Settings  
- Report Server Email uses an SMTP network device to send reports to e-mail addresses. This delivery extension must be configured before it can be used. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) and [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ Report Server Email uses an SMTP network device to send reports to e-mail addresses. This delivery extension must be configured before it can be used. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) and [E-Mail Delivery in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Setting|Description|  
 |-------------|-----------------|  
@@ -382,8 +379,8 @@ For more information on editing the file, see [Modify a Reporting Services Confi
 |-------------|-----------------|  
 |**MaxConnections**|Specifies the maximum number of connections to Bing Maps Web Services.|  
 |**Timeout**|Specifies the timeout in seconds to wait for a response from Bing Maps Web Services.|  
-|**AppID**|Specifies the application identifier (AppID) to use for Bing Maps Web Services. **(Default)** specifies the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default AppID.<br /><br /> For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](http://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Do not change this value unless you must specify a custom AppID for your own Bing Maps license agreement. When you change the AppID, you do not have to restart [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for the change to take effect.|  
-|**CacheLevel**|Specifies a value from the HttpRequestCacheLevel Enumeration of System.Net.Cache. The default value is **Default**. For more information, see [HttpRequestCacheLevel Enumeration](http://go.microsoft.com/fwlink/?LinkId=153353).|  
+|**AppID**|Specifies the application identifier (AppID) to use for Bing Maps Web Services. **(Default)** specifies the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] default AppID.<br /><br /> For more information about the use of Bing map tiles in your report, see [Additional Terms of Use](https://go.microsoft.com/fwlink/?LinkId=151371).<br /><br /> Do not change this value unless you must specify a custom AppID for your own Bing Maps license agreement. When you change the AppID, you do not have to restart [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] for the change to take effect.|  
+|**CacheLevel**|Specifies a value from the HttpRequestCacheLevel Enumeration of System.Net.Cache. The default value is **Default**. For more information, see [HttpRequestCacheLevel Enumeration](https://go.microsoft.com/fwlink/?LinkId=153353).|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> Default Configuration File for a Native Mode Report Server  
  The rsreportserver.config file is installed to the following location by default:  
@@ -430,7 +427,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			<VirtualDirectory>ReportServer</VirtualDirectory>
 			<URLs>
 				<URL>
-					<UrlString>http://+:80</UrlString>
+					<UrlString>https://+:80</UrlString>
 					<AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
 					<AccountName>NT SERVICE\ReportServer</AccountName>
 				</URL>
@@ -441,7 +438,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
 			<VirtualDirectory>Reports</VirtualDirectory>
 			<URLs>
 				<URL>
-					<UrlString>http://+:80</UrlString>
+					<UrlString>https://+:80</UrlString>
 					<AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>
 					<AccountName>NT SERVICE\ReportServer</AccountName>
 				</URL>
@@ -771,7 +768,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>ReportServer</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  
@@ -784,7 +781,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
       <VirtualDirectory>Reports</VirtualDirectory>  
       <URLs>  
         <URL>  
-          <UrlString>http://+:80</UrlString>  
+          <UrlString>https://+:80</UrlString>  
           <AccountSid>  
           </AccountSid>  
           <AccountName>  
@@ -841,6 +838,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+ More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

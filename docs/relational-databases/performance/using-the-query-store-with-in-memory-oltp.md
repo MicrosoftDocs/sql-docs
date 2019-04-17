@@ -1,25 +1,22 @@
 ---
 title: "Using the Query Store with In-Memory OLTP | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Store, in-memory"
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the Query Store with In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store allows you to monitor the performance of natively compiled code for workloads running in-memory OLTP.  
 Compile and runtime statistics are collected and exposed the same way as for disk-based workloads.   
@@ -47,9 +44,9 @@ However, there are some specific aspects that users should be aware of when usin
   
 -   Query Store capture mode (*QUERY_CAPTURE_MODE* parameter in **ALTER TABLE** statement) does not affect queries from natively compiled modules as they are always captured regardless of the configured value. This includes setting `QUERY_CAPTURE_MODE = NONE`.  
   
--   The duration of query compilation captured by the Query Store includes only time spent in query optimization, before the native code was generated. More precisely, it doesn’t include time for C code compilation and generation of internal structures necessary for C code generation.  
+-   The duration of query compilation captured by the Query Store includes only time spent in query optimization, before the native code was generated. More precisely, it doesn't include time for C code compilation and generation of internal structures necessary for C code generation.  
   
--   Memory grants metrics within [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) are not populated for natively compiled queries – their values are always 0. The memory grants columns are: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, and stdev_query_max_used_memory.  
+-   Memory grants metrics within [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) are not populated for natively compiled queries - their values are always 0. The memory grants columns are: avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, and stdev_query_max_used_memory.  
   
 ## Enabling and using Query Store with In-Memory OLTP  
  The following simple example  demonstrates using Query Store with in-memory OLTP in an end-to-end user scenario. In this example we assume that a  database (`MemoryOLTP`) is enabled for in-memory OLTP.  

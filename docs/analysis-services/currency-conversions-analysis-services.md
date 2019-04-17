@@ -1,29 +1,18 @@
 ---
 title: "Currency Conversions (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "multiple currency conversions"
-  - "monetary data [SQL Server]"
-  - "currency [Analysis Services]"
-  - "converting currency"
-  - "one-to-many currency conversions"
-  - "many-to-many currency conversions [Analysis Services]"
-  - "many-to-one currency conversions [Analysis Services]"
-ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Currency Conversions (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[applies](../includes/applies-md.md)] Multidimensional only  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] uses a combination of features, guided by Multidimensional Expressions (MDX) scripts, to provide currency conversion support in cubes supporting multiple currencies.  

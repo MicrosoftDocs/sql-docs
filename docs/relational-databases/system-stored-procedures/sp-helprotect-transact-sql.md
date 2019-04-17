@@ -2,12 +2,10 @@
 title: "sp_helprotect (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helprotect"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helprotect"
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helprotect (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a report that has information about user permissions for an object, or statement permissions, in the current database.  
   
@@ -31,10 +28,6 @@ manager: "jhubbard"
 >  **sp_helprotect** does not return information about securables that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Use [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) and [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) instead.  
   
  Does not list permissions that are always assigned to the fixed server roles or fixed database roles. Does not include logins or users that receive permissions based on their membership in a role.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,18 +42,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## Arguments  
- [ **@name =** ] **'***object_statement***'**  
- Is the name of the object in the current database, or a statement, that has the permissions to report. *object_statement* is **nvarchar(776)**, with a default of NULL, which returns all object and statement permissions. If the value is an object (table, view, stored procedure, or extended stored procedure), it must be a valid object in the current database. The object name can include an owner qualifier in the form *owner***.***object*.  
+`[ @name = ] 'object_statement'`
+ Is the name of the object in the current database, or a statement, that has the permissions to report. *object_statement* is **nvarchar(776)**, with a default of NULL, which returns all object and statement permissions. If the value is an object (table, view, stored procedure, or extended stored procedure), it must be a valid object in the current database. The object name can include an owner qualifier in the form _owner_**.**_object_.  
   
  If *object_statement* is a statement, it can be a CREATE statement.  
   
- [ **@username =** ] **'***security_account***'**  
+`[ @username = ] 'security_account'`
  Is the name of the principal for which permissions are returned. *security_account* is **sysname**, with a default of NULL, which returns all principals in the current database. *security_account* must exist in the current database.  
   
- [ **@grantorname =** ] **'***grantor***'**  
+`[ @grantorname = ] 'grantor'`
  Is the name of the principal that granted permissions. *grantor* is **sysname**, with a default of NULL, which returns all information for permissions granted by any principal in the database.  
   
- [ **@permissionarea =** ] **'***type***'**  
+`[ @permissionarea = ] 'type'`
  Is a character string that indicates whether to display object permissions (character string **o**), statement permissions (character string **s**), or both (**os**). *type* is **varchar(10)**,with a default of **os**. *type* can be any combination of **o** and **s**, with or without commas or spaces between **o** and **s**.  
   
 ## Return Code Values  

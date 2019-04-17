@@ -2,13 +2,11 @@
 title: "SQLRemoveTranslator Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLRemoveTranslator"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveTranslator function [ODBC]"
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLRemoveTranslator Function
 **Conformance**  
@@ -36,8 +33,8 @@ manager: "jhubbard"
 ```  
   
 BOOL SQLRemoveTranslator(  
-     LPCSTR    lpszTranslator,  
-     LPDWORD   lpdwUsageCount);  
+     LPCSTR    lpszTranslator,  
+     LPDWORD   lpdwUsageCount);  
 ```  
   
 ## Arguments  

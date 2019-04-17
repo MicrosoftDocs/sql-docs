@@ -1,14 +1,12 @@
 ---
 title: "Type Property (ADO MD) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Member::Type"
@@ -16,10 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type property [ADO MD]"
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Type Property (ADO MD)
 Indicates the type of the current [member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  

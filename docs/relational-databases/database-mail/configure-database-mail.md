@@ -2,13 +2,11 @@
 title: "Configure Database Mail | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
   - "sql13.swb.sqlimail.newaccount.f1"
@@ -39,12 +37,12 @@ f1_keywords:
   - "sql13.swb.dbmail.manageexistingprofile.f1"
   - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # Configure Database Mail
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to enable and configure Database Mail using the Database Mail Configuration Wizard, and create a Database Mail Configuration script using templates.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
@@ -100,11 +98,11 @@ manager: "jhubbard"
 ###  <a name="Welcome"></a> Welcome Page  
  This page describes the steps to configuring Database Mail.  
   
- **Do not show this page again** – Check this to skip this welcome page from displaying in the future.  
+ **Do not show this page again** - Check this to skip this welcome page from displaying in the future.  
   
  **Next** - Proceeds to the **Select a configuration task** page.  
   
- **Cancel** – Terminates the wizard without configuring Database Mail  
+ **Cancel** - Terminates the wizard without configuring Database Mail  
   
  [Database Mail Configuration Wizard](#DBWizard)  
   
@@ -151,7 +149,7 @@ manager: "jhubbard"
  Type the e-mail address that will be used for replies to e-mail messages sent from this account. The reply e-mail is optional. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, danw@Adventure-Works.com.  
   
  **Server name**  
- Type the name or IP address of the SMTP server the account uses to send e-mail. Typically this is in a format similar to **smtp.***<your_company>***.com**. For help with this, consult your mail administrator.  
+ Type the name or IP address of the SMTP server the account uses to send e-mail. Typically this is in a format similar to **smtp.**_<your_company>_**.com**. For help with this, consult your mail administrator.  
   
  **Port number**  
  Type the port number of the SMTP server for this account. Most SMTP servers use port 25.  
@@ -416,7 +414,7 @@ manager: "jhubbard"
  [Database Mail Configuration Wizard](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Use the **Send Test E-Mail from***<instance_name>* page to send an e-mail message using the specified Database Mail profile. Only members of the **sysadmin** fixed server role can send test e-mail using this page.  
+ Use the **Send Test E-Mail from**_<instance_name>_ page to send an e-mail message using the specified Database Mail profile. Only members of the **sysadmin** fixed server role can send test e-mail using this page.  
   
  **Database Mail Profile**  
  Select a Database Mail profile from the list. This is a required field. If no profiles are shown, there are no profiles or you do not have permission to a profile. Use the **Database Mail Configuration Wizard** to create and configure profiles. If no profiles are listed, use the Database Mail Configuration Wizard to create a profile for your use.  
@@ -436,7 +434,7 @@ manager: "jhubbard"
  The **mailitem_id** of the test e-mail message.  
   
  **Troubleshoot**  
- Click to open Books Online to the [Troubleshooting Database Mail](http://msdn.microsoft.com/library/ms188663.aspx)topic.  
+ Click to open Books Online to the [Troubleshooting Database Mail](https://msdn.microsoft.com/library/ms188663.aspx)topic.  
   
  [Database Mail Configuration Wizard](#DBWizard)  
   

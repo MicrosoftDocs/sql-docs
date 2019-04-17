@@ -1,24 +1,21 @@
 ---
 title: "DateCreated and DateModified Properties Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "DateCreated property [ADOX], VC++ example"
   - "DateModified property [ADOX], VC++ example"
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DateCreated and DateModified Properties Example (VC++)
 This example demonstrates the [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) and [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) properties by adding a new [Column](../../../ado/reference/adox-api/column-object-adox.md) to an existing [Table](../../../ado/reference/adox-api/table-object-adox.md) and by creating a new **Table**. The DateOutput procedure is required for this example to run.  

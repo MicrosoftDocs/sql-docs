@@ -2,12 +2,10 @@
 title: "sp_query_store_force_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "SYS.SP_QUERY_STORE_FORCE_PLAN"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "sys.sp_query_store_force_plan"
   - "sp_query_store_force_plan"
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_force_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Enables forcing a particular plan for a particular query.  
   
@@ -42,10 +40,10 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## Arguments  
- [ **@query_id =** ] *query_id*  
+`[ @query_id = ] query_id`
  Is the id of the query. *query_id* is a **bigint**, with no default.  
   
- [ **@plan_id =** ] *plan_id*  
+`[ @plan_id = ] plan_id`
  Is the id of the query plan to be forced. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  

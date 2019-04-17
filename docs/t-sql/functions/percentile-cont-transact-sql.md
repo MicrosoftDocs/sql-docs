@@ -2,12 +2,10 @@
 title: "PERCENTILE_CONT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "PERCENTILE_CONT_TSQL"
@@ -18,13 +16,13 @@ helpviewer_keywords:
   - "analytic functions, PERCENTILE_CONT"
   - "PERCENTILE_CONT function"
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Calculates a percentile based on a continuous distribution of the column value in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The result is interpolated and might not be equal to any of the specific values in the column.  
   
@@ -33,8 +31,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 PERCENTILE_CONT ( numeric_literal )   
     WITHIN GROUP ( ORDER BY order_by_expression [ ASC | DESC ] )  
     OVER ( [ <partition_by_clause> ] )  
@@ -45,10 +41,10 @@ PERCENTILE_CONT ( numeric_literal )
  The percentile to compute. The value must range between 0.0 and 1.0.  
   
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
- Specifies a list of numeric values to sort and compute the percentile over. Only one *order_by_expression* is allowed. The expression must evaluate to an exact numeric type (**int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, **money**) or an approximate numeric type (**float**, **real**). Other data types are not allowed. The default sort order is ascending.  
+ Specifies a list of numeric values to sort and compute the percentile over. Only one *order_by_expression* is allowed. The expression must evaluate to an exact or approximate numeric type, with no other data types allowed. Exact numeric types are **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, and **money**. Approximate numeric types are **float** and **real**. The default sort order is ascending.  
   
  OVER **(** \<partition_by_clause> **)**  
- Divides the result set produced by the FROM clause into partitions to which the percentile function is applied. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). The \<ORDER BY clause> and \<rows or range clause> of the OVER syntax cannot be specified in a PERCENTILE_CONT function.  
+ Divides the result set produced by the FROM clause into partitions to which the percentile function is applied. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). The \<ORDER BY clause> and \<rows or range clause> of the OVER syntax can't be specified in a PERCENTILE_CONT function.  
   
 ## Return Types  
  **float(53)**  
@@ -64,7 +60,7 @@ PERCENTILE_CONT ( numeric_literal )
 ## Examples  
   
 ### A. Basic syntax example  
- The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. Note that these functions may not return the same value. This is because PERCENTILE_CONT interpolates the appropriate value, whether or not it exists in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
+ The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. These functions may not return the same value. PERCENTILE_CONT interpolates the appropriate value, which may or may not exist in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
   
 ```  
 USE AdventureWorks2012;  
@@ -84,22 +80,19 @@ WHERE dh.EndDate IS NULL;
   
  Here is a partial result set.  
   
- `DepartmentName        MedianCont    MedianDisc`  
-  
- `--------------------   ----------   ----------`  
-  
- `Document Control       16.8269      16.8269`  
-  
- `Engineering            34.375       32.6923`  
-  
- `Executive              54.32695     48.5577`  
-  
- `Human Resources        17.427850    16.5865`  
+ ```
+DepartmentName        MedianCont    MedianDisc
+--------------------   ----------   ----------
+Document Control       16.8269      16.8269
+Engineering            34.375       32.6923
+Executive              54.32695     48.5577
+Human Resources        17.427850    16.5865
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### B. Basic syntax example  
- The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. Note that these functions may not return the same value. This is because PERCENTILE_CONT interpolates the appropriate value, whether or not it exists in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
+ The following example uses PERCENTILE_CONT and PERCENTILE_DISC to find the median employee salary in each department. These functions may not return the same value. PERCENTILE_CONT interpolates the appropriate value, which may or may not exist in the data set, while PERCENTILE_DISC always returns an actual value from the set.  
   
 ```  
 -- Uses AdventureWorks  
@@ -115,21 +108,16 @@ FROM dbo.DimEmployee;
   
  Here is a partial result set.  
   
- `DepartmentName        MedianCont    MedianDisc`  
-  
- `--------------------   ----------   ----------`  
-  
- `Document Control       16.826900    16.8269`  
-  
- `Engineering            34.375000    32.6923`  
-  
- `Human Resources        17.427850    16.5865`  
-  
- `Shipping and Receiving 9.250000      9.0000`  
+ ```
+DepartmentName        MedianCont    MedianDisc
+--------------------   ----------   ----------
+Document Control       16.826900    16.8269
+Engineering            34.375000    32.6923
+Human Resources        17.427850    16.5865
+Shipping and Receiving 9.250000      9.0000
+```  
   
 ## See Also  
  [PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
-  
-
-
+ 

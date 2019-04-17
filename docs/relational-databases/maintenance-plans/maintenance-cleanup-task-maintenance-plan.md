@@ -2,24 +2,22 @@
 title: "Maintenance Cleanup Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.maint.cleanup.f1"
 helpviewer_keywords: 
   - "Maintenance Cleanup Task dialog box"
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Maintenance Cleanup Task (Maintenance Plan)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **Maintenance Cleanup Task** to remove old files related to maintenance plans, including text reports created by maintenance plans and database backup files.  
   
 > [!NOTE]  
@@ -51,7 +49,7 @@ manager: "jhubbard"
  Path and name of the folder containing the files to be deleted.  
   
  **File extension**  
- Provide the file extension of the files to be deleted.  
+ Provide the file extension of the file to be deleted. Don't include any other characters before or after the extension (for example, use BAK or TRN). 
   
  **Include first-level subfolders**  
  Delete files with the extension specified for **File extension** from first-level subfolders under **Folder**.  
@@ -75,7 +73,7 @@ manager: "jhubbard"
  **Select or enter a server name**  
  Select a server to connect to when performing this task.  
   
- **…**  
+ **...**  
  Select to view the list of available servers.  
   
  **Enter information to log on to the server**  

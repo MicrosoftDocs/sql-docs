@@ -2,12 +2,10 @@
 title: "sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_xtp_bind_db_resource_pool_TSQL"
@@ -20,13 +18,12 @@ helpviewer_keywords:
   - "sp_xtp_bind_db_resource_pool"
   - "sys.sp_xtp_bind_db_resource_pool"
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Binds the specified [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database to the specified resource pool. Both the database and the resource pool must exist prior to executing `sys.sp_xtp_bind_db_resource_pool`.  
   
@@ -39,7 +36,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'  
 ```  
   
@@ -81,7 +78,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
 ```  
   
 **Pool_name refers to a reserved system pool**  
- The pool names “INTERNAL” and “DEFAULT” are reserved for system pools.  It is not valid to explicitly bind a database to either of these.  If a system pool name is entered, the following error is returned:  
+ The pool names "INTERNAL" and "DEFAULT" are reserved for system pools.  It is not valid to explicitly bind a database to either of these.  If a system pool name is entered, the following error is returned:  
 *Resource Pool %s is a system resource pool.  System resource pools may not be explicitly bound to a database using this procedure.*  
   
 ```  
@@ -107,7 +104,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
 ## Examples  
 A.  The following code example binds the database Hekaton_DB to the resource pool Pool_Hekaton.  
   
-```tsql  
+```sql  
 sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'  
 ```  
  
@@ -115,7 +112,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  B. Expanded example of above example which includes some basic checks.  Execute the following [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
-```tsql
+```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
 DECLARE @database sysname = N'Hekaton_DB';
 

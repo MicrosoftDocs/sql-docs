@@ -1,21 +1,16 @@
 ---
-title: "SQL Server R Services Performance Tuning | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/12/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: cf6f3b7d-f9f9-4e45-b0d1-07850b53e0c5
-caps.latest.revision: 20
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: SQL Server R Services Performance Tuning - SQL Server Machine Learning Services
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 ---
 # Performance tuning for R in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 This article is the first in a series of four articles that describe performance optimization for R Services, based on two case studies:
 
@@ -83,17 +78,18 @@ Configuration and tuning for performance requires creating a solid base, on whic
 
 ## Articles in this series
 
-+ [Performance tuning for R in SQL Server - hardware](..\r\sql-server-configuration-r-services.md)
++ [Performance tuning for R in SQL Server - hardware](../r/sql-server-configuration-r-services.md)
 
-    Provides guidance for configuring the hardware that [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] is installed on, and for configuring the SQL Server instance to better support external scripts. It is particularly useful for **database administrators**.
+    Provides guidance for configuring the hardware that [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is installed on, and for configuring the SQL Server instance to better support external scripts. It is particularly useful for **database administrators**.
 
-+ [Performance tuning for R in SQL Server - code and data optimization](..\r\r-and-data-optimization-r-services.md)
++ [Performance tuning for R in SQL Server - code and data optimization](../r/r-and-data-optimization-r-services.md)
 
     Provides specific tips on how to optimize the external script to avoid known problems. It is most useful to **data scientists**.
 
-    [!NOTE]
+    > [!NOTE]
     > While much of the information in this section applies to R in general, some information is specific to RevoScaleR analytic functions. Detailed performance guidance is not available for **revoscalepy** and other supported Python libraries.
+    >
 
-+ [Performance tuning for R in SQL Server - methods and results](..\r\performance-case-study-r-services.md)
++ [Performance tuning for R in SQL Server - methods and results](../r/performance-case-study-r-services.md)
 
     Summarizes what data was used the two case studies, how performance was tested, and how the optimizations affected results.

@@ -1,13 +1,11 @@
 ---
 title: "LEAD (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/20/2015"
-ms.prod: "sql-non-specified"
+ms.date: "11/09/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "LEAD_TSQL"
@@ -18,23 +16,21 @@ helpviewer_keywords:
   - "LEAD function"
   - "analytic functions, LEAD"
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LEAD (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Accesses data from a subsequent row in the same result set without the use of a self-join in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. LEAD provides access to a row at a given physical offset that follows the current row. Use this analytic function in a SELECT statement to compare values in the current row with values in a following row.  
+  Accesses data from a subsequent row in the same result set without the use of a self-join starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LEAD provides access to a row at a given physical offset that follows the current row. Use this analytic function in a SELECT statement to compare values in the current row with values in a following row.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 LEAD ( scalar_expression [ ,offset ] , [ default ] )   
     OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
@@ -47,9 +43,9 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  The number of rows forward from the current row from which to obtain a value. If not specified, the default is 1. *offset* can be a column, subquery, or other expression that evaluates to a positive integer or can be implicitly converted to **bigint**. *offset* cannot be a negative value or an analytic function.  
   
  *default*  
- The value to return when *scalar_expression* at *offset* is NULL. If a default value is not specified, NULL is returned. *default* can be a column, subquery, or other expression, but it cannot be an analytic function. *default* must be type-compatible with *scalar_expression*.  
+ The value to return when *offset* is beyond the scope of the partition. If a default value is not specified, NULL is returned. *default* can be a column, subquery, or other expression, but it cannot be an analytic function. *default* must be type-compatible with *scalar_expression*.
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. When *partition_by_clause* is specified, it determines the order of the data in each partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
@@ -62,7 +58,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 ### A. Compare values between years  
  The query uses the LEAD function to return the difference in sales quotas for a specific employee over subsequent years. Notice that because there is no lead value available for the last row, the default of zero (0) is returned.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -74,7 +70,6 @@ WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 BusinessEntityID SalesYear   CurrentQuota          NextQuota  
 ---------------- ----------- --------------------- ---------------------  
 275              2005        367000.00             556000.00  
@@ -88,7 +83,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 ### B. Compare values within partitions  
  The following example uses the LEAD function to compare year-to-date sales between employees. The PARTITION BY clause is specified to partition the rows in the result set by sales territory. The LEAD function is applied to each partition separately and computation restarts for each partition. The ORDER BY clause specified in the OVER clause orders the rows in each partition before the function is applied. The ORDER BY clause in the SELECT statement orders the rows in the whole result set. Notice that because there is no lead value available for the last row of each partition, the default of zero (0) is returned.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -100,8 +95,7 @@ ORDER BY TerritoryName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
-  
+```   
 TerritoryName            BusinessEntityID SalesYTD              NextRepSales  
 -----------------------  ---------------- --------------------- ---------------------  
 Canada                   282              2604540.7172          1453719.4653  
@@ -115,7 +109,7 @@ Northwest                280              1352577.1325          0.00
 ### C. Specifying arbitrary expressions  
  The following example demonstrates specifying a variety of arbitrary expressions in the LEAD function syntax.  
   
-```  
+```sql  
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -143,7 +137,7 @@ b           c           i
 ### D: Compare values between quarters  
  The following example demonstrates the LEAD function. The query obtains the difference in sales quota values for a specified employee over subsequent calendar quarters. Notice that because there is no lead value available after the last row, the default of zero (0) is used.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  
@@ -156,21 +150,16 @@ ORDER BY CalendarYear, CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year Quarter  SalesQuota  NextQuota  Diff`  
-  
- `---- -------  ----------  ---------  -------------`  
-  
- `2001 3        28000.0000   7000.0000   21000.0000`  
-  
- `2001 4         7000.0000  91000.0000  -84000.0000`  
-  
- `2001 1        91000.0000 140000.0000  -49000.0000`  
-  
- `2002 2       140000.0000   7000.0000    7000.0000`  
-  
- `2002 3         7000.0000 154000.0000   84000.0000`  
-  
- `2002 4       154000.0000      0.0000  154000.0000`  
+ ```
+Year Quarter  SalesQuota  NextQuota  Diff  
+---- -------  ----------  ---------  -------------  
+2001 3        28000.0000   7000.0000   21000.0000 
+2001 4         7000.0000  91000.0000  -84000.0000  
+2001 1        91000.0000 140000.0000  -49000.0000  
+2002 2       140000.0000   7000.0000    7000.0000  
+2002 3         7000.0000 154000.0000   84000.0000  
+2002 4       154000.0000      0.0000  154000.0000
+```  
   
 ## See Also  
  [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  

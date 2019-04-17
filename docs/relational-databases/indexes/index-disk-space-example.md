@@ -2,13 +2,11 @@
 title: "Index Disk Space Example | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "online index disk space"
   - "disk space [SQL Server], indexes"
@@ -17,12 +15,12 @@ helpviewer_keywords:
   - "indexes [SQL Server], disk space requirements"
   - "offline index disk space [SQL Server]"
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
-caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Index Disk Space Example
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Whenever an index is created, rebuilt, or dropped, disk space for both the old (source) and new (target) structures is required in their appropriate files and filegroups. The old structure is not deallocated until the index creation transaction commits. Additional temporary disk space for sorting operations may also be needed. For more information, see [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
  In this example, disk space requirements to create a clustered index are determined.  
@@ -59,9 +57,9 @@ manager: "jhubbard"
   
      Clustered index: 1 million * 200 bytes / 80% ~ 250 MB  
   
-     Nonclustered index A: 1 million * (50 – 8 + 24) bytes / 80% ~ 83 MB  
+     Nonclustered index A: 1 million * (50 - 8 + 24) bytes / 80% ~ 83 MB  
   
-     Nonclustered index B: 1 million * (80 – 8 + 24) bytes / 80% ~ 120 MB  
+     Nonclustered index B: 1 million * (80 - 8 + 24) bytes / 80% ~ 120 MB  
   
      Total size of new structures: 453 MB  
   

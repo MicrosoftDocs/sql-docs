@@ -2,20 +2,17 @@
 title: "General Page of Integration Services Designers Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General"
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # General Page of Integration Services Designers Options
   Use the **General** page of the **Integration Services Designers** page in the **Options** dialog box to specify the options for loading, displaying, and upgrading packages.  
@@ -34,7 +31,7 @@ manager: "jhubbard"
  Select to display a warning when loading a package that is not signed.  
   
  **Show precedence constraint labels**  
- Select which label—Success, Failure, or Completion—to display on precedence constraints when viewing packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+ Select which label-Success, Failure, or Completion-to display on precedence constraints when viewing packages in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
  **Scripting language**  
  Select the default scripting language for new Script tasks and Script components.  

@@ -2,24 +2,22 @@
 title: "Create a Credential | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "credentials [SQL Server], creating"
   - "authentication [SQL Server], credentials"
   - "logins [SQL Server], credentials"
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Create a Credential
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to create a credential in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  Credentials provide a way to allow [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication users to have an identity outside of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This is primarily used to execute code in Assemblies with EXTERNAL_ACCESS permission set. Credentials can also be used when a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication user needs access to a domain resource, such as a file location to store a backup.  
@@ -59,13 +57,13 @@ manager: "jhubbard"
   
 1.  In Object Explorer, expand  the **Security** folder.  
   
-2.  Right-click the **Credentials** folder and select **New Credential…**.  
+2.  Right-click the **Credentials** folder and select **New Credential...**.  
   
 3.  In the **New Credential** dialog box, in the **Credential Name** box, type a name for the credential.  
   
 4.  In the **Identity** box, type the name of the account used for outgoing connections (when leaving the context of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Typically, this will be a Windows user account, but the identity can be an account of another type.  
   
-     Alternately, click the ellipsis **(…)** to open the **Select User or Group** dialog box.  
+     Alternately, click the ellipsis **(...)** to open the **Select User or Group** dialog box.  
   
 5.  In the **Password** and **Confirm password** boxes, type the password of the account specified in the **Identity** box. If **Identity** is a Windows user account, this is the Windows password. The **Password** can be blank, if no password is required.  
   

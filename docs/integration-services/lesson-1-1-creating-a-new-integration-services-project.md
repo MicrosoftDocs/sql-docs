@@ -1,50 +1,46 @@
 ---
-title: "Step 1: Creating a New Integration Services Project | Microsoft Docs"
+title: "Step 1: Create a new Integration Services project | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.date: "01/03/2019"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
-# Lesson 1-1 - Creating a New Integration Services Project
-The first step in creating a package in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is to create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. This project includes the templates for the objects — data sources, data source views, and packages — that you use in a data transformation solution.  
+# Lesson 1-1: Create a new Integration Services project
+
+The first step in creating a package in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is to create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. This example project includes templates for the data sources, data source views, and packages that make up a data transformation solution.  
   
-The packages that you will create in this [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutorial interpret the values of locale-sensitive data. If your computer is not configured to use the regional option English (United States), you need to set additional properties in the package. The packages that you use in lessons 2 through 5 are copied from the package created in lesson 1, and you need not update locale-sensitive properties in the copied packages.  
+The packages that you create in this [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutorial interpret the values of locale-sensitive data. If your computer isn't configured to use the regional option **English (United States)**, you need to set additional properties in the package. 
+
+The packages that you use in lessons 2 through 6 are copied from the package you create in this lesson.  
   
 > [!NOTE]  
-> This tutorial requires Microsoft SQL Server Data Tools.  
->   
-> For more information on installing the SQL Server Data Tools see [SQL Server Data Tools Download](http://msdn.microsoft.com/en-us/data/hh297027).  
+> If you haven't already, see the [Lesson 1 prerequisites](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+
+## Create a new Integration Services project  
   
-### To create a new Integration Services project  
+1.  On the Windows **Start** menu, search for and select **Visual Studio (SSDT)**.  
   
-1.  On the **Start** menu, point to **All Programs**, point to **Microsoft SQL Server**, and click **SQL Server Data Tools**.  
+2.  In Visual Studio, select **File** > **New** > **Project** to create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
-2.  On the **File** menu, point to **New**, and click **Project** to create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
+3.  In the **New Project** dialog box, expand the **Business Intelligence** node under **Installed**, and select **Integration Services Project** in the **Templates** pane.  
   
-3.  In the **New Project** dialog box, expand the **Business Intelligence** node under **Installed Templates**, and select **Integration Services Project** in the **Templates** pane.  
+4.  In the **Name** box, change the default name to **SSIS Tutorial**. To use a folder that already exists, clear the **Create directory for solution** check box.  
   
-4.  In the **Name** box, change the default name to **SSIS Tutorial**. Optionally, clear the **Create directory for solution** check box.  
+5.  Accept the default location, or select **Browse** to browse to locate the folder you want to use. In the **Project Location** dialog box, select the folder and then **Select Folder**.  
   
-5.  Accept the default location, or click **Browse** to browse to locate the folder you want to use. In the **Project Location** dialog box, click the folder and click **Select Folder**.  
+6.  Select **OK**.  
   
-6.  Click **OK**.  
+    By default, an empty package titled **Package.dtsx** is created and added to your project under **SSIS Packages**.  
   
-    By default, an empty package, titled **Package.dtsx**, will be created and added to your project under SSIS Packages.  
+7.  In **Solution Explorer**, right-click **Package.dtsx**, select **Rename**, and rename the default package to **Lesson 1.dtsx**.  
   
-7.  In **Solution Explorer** toolbar, right-click **Package.dtsx**, click **Rename**, and rename the default package to **Lesson 1.dtsx**.  
-  
-## Next Task in Lesson  
-[Step 2: Adding and Configuring a Flat File Connection Manager](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+## Go to next task
+[Step 2: Add and configure a Flat File connection manager](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

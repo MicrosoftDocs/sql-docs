@@ -1,20 +1,15 @@
 ---
 title: "Save a Report to a SharePoint Library (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-builder
+
+
+ms.topic: conceptual
 ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
-caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Save a Report to a SharePoint Library (Report Builder)
   To save a report to a report server configured for SharePoint integration, you must browse to the SharePoint server and establish a connection to the report server. In the report definition, all references to items related to the report must use values that are specific to a SharePoint report server. Related items include subreports, drillthrough reports, and resources such as Web-based images. For more information, see [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  
@@ -23,7 +18,7 @@ manager: "erikre"
   
 ### To save a report to a SharePoint site  
   
-1.  From the Report Builder button, click **Save**. The **Save As***\<Report Item>* dialog box opens.  
+1.  From the Report Builder button, click **Save**. The **Save As**_\<Report Item>_ dialog box opens.  
   
     > [!NOTE]  
     >  If you are resaving a report, it is automatically resaved to its previous location. Use the **Save As** option to change location.  

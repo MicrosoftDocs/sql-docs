@@ -1,40 +1,21 @@
 ---
 title: "Attributes and Attribute Hierarchies | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "regular attributes [Analysis Services]"
-  - "parent attributes [Analysis Services]"
-  - "hierarchies [Analysis Services], attribute"
-  - "attributes [Analysis Services], about attributes"
-  - "account attributes [Analysis Services]"
-  - "dimensions [Analysis Services], attributes"
-  - "key attributes [Analysis Services]"
-  - "OLAP objects [Analysis Services], attributes"
-  - "attributes [Analysis Services], relationships"
-  - "attributes [Analysis Services]"
-  - "relationships [Analysis Services], attributes"
-ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
-caps.latest.revision: 49
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Attributes and Attribute Hierarchies
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Dimensions are collections of attributes, which are bound to one or more columns in a table or view in the data source view.  
   
 ## Key Attribute  
- Each dimension contains a key attribute. Each attribute bound to one or more columns in a dimension table. The key attribute is the attribute in a dimension that identifies the columns in the dimension main table that are used in foreign key relationships to the fact table. Typically, the key attribute represents the primary key column or columns in the dimension table. You can define a logical primary key on a table in a data source view which has no physical primary key in the underlying data source. **For more information**, see [Define Logical Primary Keys in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). When defining key attributes, the Cube Wizard and Dimension Wizard try to use the primary key columns of the dimension table in the data source view. If the dimension table does not have a logical primary key or physical primary key defined, the wizards may not be able to correctly define the key attributes for the dimension.  
+ Each dimension contains a key attribute. Each attribute is bound to one or more columns in a dimension table. The key attribute is the attribute in a dimension that identifies the columns in the dimension main table that are used in foreign key relationships to the fact table. Typically, the key attribute represents the primary key column or columns in the dimension table. You can define a logical primary key on a table in a data source view which has no physical primary key in the underlying data source. **For more information**, see [Define Logical Primary Keys in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). When defining key attributes, the Cube Wizard and Dimension Wizard try to use the primary key columns of the dimension table in the data source view. If the dimension table does not have a logical primary key or physical primary key defined, the wizards may not be able to correctly define the key attributes for the dimension.  
   
 ## Binding an Attribute to Columns in Data Source View Tables or Views  
  An attribute is bound to columns in one or more data source view tables or views. An attribute is always bound to one or more key columns, which determines the members that are contained by the attribute. By default, this is the only column to which an attribute is bound. An attribute can also be bound to one or more additional columns for specific purposes. For example, an attribute's **NameColumn** property determines the name that appears to the user for each attribute member - this property of the attribute can be bound to a particular dimension column through a data source view or can be bound to a calculated column in the data source view. For more information, see [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md).  

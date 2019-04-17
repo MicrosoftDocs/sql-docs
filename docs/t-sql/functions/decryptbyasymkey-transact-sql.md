@@ -2,12 +2,10 @@
 title: "DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DECRYPTBYASYMKEY"
@@ -19,15 +17,14 @@ helpviewer_keywords:
   - "DECRYPTBYASYMKEY function"
   - "decryption [SQL Server], asymmetric keys"
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # DECRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Decrypts data with an asymmetric key.  
+This function uses an asymmetric key to decrypt encrypted data.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,28 +38,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## Arguments  
  *Asym_Key_ID*  
- Is the ID of an asymmetric key in the database. *Asym_Key_ID* is **int**.  
+The ID of an asymmetric key in the database. *Asym_Key_ID* has an **int** data type.  
   
  *ciphertext*  
- Is a string of data that has been encrypted with the asymmetric key.  
+The string of data encrypted with the asymmetric key.  
   
  @ciphertext  
- Is a variable of type **varbinary** that contains data that has been encrypted with the asymmetric key.  
+A variable of type **varbinary**, containing data encrypted with the asymmetric key.  
   
  *Asym_Key_Password*  
- Is the password that was used to encrypt the asymmetric key in the database.  
+The password used to encrypt the asymmetric key in the database.  
   
 ## Return Types  
- **varbinary** with a maximum size of 8,000 bytes.  
+**varbinary**, with a maximum size of 8,000 bytes.  
   
 ## Remarks  
- Encryption/decryption with an asymmetric key is very costly compared to encryption/decryption with a symmetric key. We do not recommend using an asymmetric key when you work with large datasets, such as user data in tables.  
+Compared to symmetric encryption / decryption, asymmetric key encryption / decryption has a high cost. When working with large datasets - for example, user data stored in tables - we suggest that developers avoid asymmetric key encryption / decryption.  
   
 ## Permissions  
- Requires CONTROL permission on the asymmetric key.  
+`DECRYPTBYASYMKEY` requires CONTROL permission on the asymmetric key.  
   
 ## Examples  
- The following example decrypts ciphertext that was encrypted with asymmetric key `JanainaAsymKey02`, which was stored in `AdventureWorks2012.ProtectedData04`. The returned data is decrypted using asymmetric key `JanainaAsymKey02`, which has been decrypted with password `pGFD4bb925DGvbd2439587y`. The plaintext is converted to type **nvarchar**.  
+This example decrypts ciphertext originally encrypted with asymmetric key `JanainaAsymKey02`. `AdventureWorks2012.ProtectedData04` stored this asymmetric key. The example decrypted the returned data with asymmetric key `JanainaAsymKey02`. The example used password `pGFD4bb925DGvbd2439587y` to decrypt this asymmetric key. The example converted the returned plaintext to type **nvarchar**.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

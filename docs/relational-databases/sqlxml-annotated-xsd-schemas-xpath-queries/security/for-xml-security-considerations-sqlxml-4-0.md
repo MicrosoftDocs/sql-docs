@@ -2,12 +2,10 @@
 title: "FOR XML Security Considerations (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "NESTED mode"
@@ -17,12 +15,13 @@ helpviewer_keywords:
   - "AUTO mode"
   - "security [SQLXML], FOR XML"
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FOR XML Security Considerations (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The FOR XML AUTO mode generates an XML hierarchy in which element names map to table names and attribute names map to column names. This exposes the database table and column information. You can hide the database information when you use AUTO mode (server-side formatting) by specifying table and column aliases in the query. These aliases are returned in the resulting XML document as element and attribute names.  
   
  For example, the following query specifies AUTO mode; therefore, the XML formatting is done on the server:  

@@ -2,23 +2,18 @@
 title: "Developing Custom Objects for Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom user interface [Integration Services]"
   - "custom objects [Integration Services]"
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Developing Custom Objects for Integration Services
   When the control flow and data flow objects that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not completely meet your requirements, you can develop many types of custom objects on your own including:  
@@ -91,7 +86,7 @@ manager: "jhubbard"
 ## Providing a Custom User Interface  
  To allow users of your custom object to configure its properties, you may have to develop a custom user interface also. In those cases where a custom user interface is not strictly required, you may choose to create one to provide a more user-friendly interface than the default editor.  
   
- In a custom user interface project or assembly, you generally have two classes —a class that implements an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] interface for user interfaces for the specific type of custom object, and the Windows form that it displays to gather information from the user. The interfaces that you implement have only a few methods, and a custom user interface is not difficult to develop.  
+ In a custom user interface project or assembly, you generally have two classes -a class that implements an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] interface for user interfaces for the specific type of custom object, and the Windows form that it displays to gather information from the user. The interfaces that you implement have only a few methods, and a custom user interface is not difficult to develop.  
   
 > [!NOTE]  
 >  Many [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] log providers have a custom user interface that implements <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> and replaces the **Configuration** text box with a filtered drop-down list of available connection managers. However custom user interfaces for custom log providers are not implemented in this release of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Specifying a value for the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> property of the <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> has no effect.  
@@ -108,7 +103,7 @@ manager: "jhubbard"
   
 ## External Resources  
   
--   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](http://go.microsoft.com/fwlink/?LinkId=215662), on blogs.msdn.com.  
+-   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://go.microsoft.com/fwlink/?LinkId=215662), on blogs.msdn.com.  
   
 ## See Also  
  [Persisting Custom Objects](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   

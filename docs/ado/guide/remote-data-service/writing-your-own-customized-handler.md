@@ -1,22 +1,19 @@
 ---
 title: "Writing Your Own Customized Handler | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/09/2018
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DataFactory handler in RDS [ADO]"
   - "customized handler in RDS [ADO]"
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Writing Your Own Customized Handler
 You may want to write your own handler if you are an IIS server administrator who wants the default RDS support, but more control over user requests and access rights.  
@@ -24,7 +21,7 @@ You may want to write your own handler if you are an IIS server administrator wh
  The MSDFMAP.Handler implements the **IDataFactoryHandler** interface.  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## IDataFactoryHandler Interface  
  This interface has two methods, **GetRecordset** and **Reconnect**. Both methods require that the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property be set to **adUseClient**.  
@@ -56,31 +53,31 @@ You may want to write your own handler if you are an IIS server administrator wh
 ## msdfhdl.idl  
  This is the interface definition for **IDataFactoryHandler** that appears in the **msdfhdl.idl** file.  
   
-```  
+```cpp
 [  
-  uuid(D80DE8B3-0001-11d1-91E6-00C04FBBBFB3),  
-  version(1.0)  
+  uuid(D80DE8B3-0001-11d1-91E6-00C04FBBBFB3),  
+  version(1.0)  
 ]  
 library MSDFHDL  
 {  
-    importlib("stdole32.tlb");  
-    importlib("stdole2.tlb");  
+    importlib("stdole32.tlb");  
+    importlib("stdole2.tlb");  
   
-    // TLib : Microsoft ActiveX Data Objects 2.0 Library  
-    // {00000200-0000-0010-8000-00AA006D2EA4}  
-    #ifdef IMPLIB  
-    importlib("implib\\x86\\release\\ado\\msado15.dll");  
-    #else  
-    importlib("msado20.dll");  
-    #endif  
+    // TLib : Microsoft ActiveX Data Objects 2.0 Library  
+    // {00000200-0000-0010-8000-00AA006D2EA4}  
+    #ifdef IMPLIB  
+    importlib("implib\\x86\\release\\ado\\msado15.dll");  
+    #else  
+    importlib("msado20.dll");  
+    #endif  
   
-    [  
-      odl,  
-      uuid(D80DE8B5-0001-11d1-91E6-00C04FBBBFB3),  
-      version(1.0)  
-    ]  
-    interface IDataFactoryHandler : IUnknown  
-    {  
+    [  
+      odl,  
+      uuid(D80DE8B5-0001-11d1-91E6-00C04FBBBFB3),  
+      version(1.0)  
+    ]  
+    interface IDataFactoryHandler : IUnknown  
+    {  
 HRESULT _stdcall GetRecordset(  
       [in] BSTR conn,  
       [in] BSTR args,  
@@ -93,7 +90,7 @@ HRESULT _stdcall GetRecordset(
       [in] BSTR conn,  
       [in] BSTR args,  
       [in] _Recordset *pRS);  
-    };  
+    };  
 };  
 ```  
   

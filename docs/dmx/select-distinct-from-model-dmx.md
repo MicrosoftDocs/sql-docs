@@ -1,33 +1,17 @@
 ---
 title: "SELECT DISTINCT FROM &lt;model &gt; (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "DISTINCT"
-  - "SELECT"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "discrete columns [DMX]"
-  - "discretized columns [DMX]"
-  - "SELECT DISTINCT FROM <model> statement"
-  - "continuous columns"
-ms.assetid: 0ab44ef6-1c3b-4809-a687-4d5d13f343af
-caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # SELECT DISTINCT FROM &lt;model &gt; (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Returns all possible states for the selected column in the model. The values that are returned vary depending on whether the specified column contains discrete values, discretized numeric values, or continuous numeric values.  
   
@@ -73,7 +57,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|The midpoint for the values in the column.|  
   
 ## Discrete Column Example  
- The following code sample is based on the `[TM Decision Tree]` model that you create in the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns the unique values that exist in the discrete column, `Gender`.  
+ The following code sample is based on the `[TM Decision Tree]` model that you create in the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). The query returns the unique values that exist in the discrete column, `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  

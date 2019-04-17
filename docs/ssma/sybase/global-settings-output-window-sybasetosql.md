@@ -2,21 +2,14 @@
 title: "Global Settings (Output Window)  (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 7efe8070-bb30-45c7-8619-7efc9cdfbd06
-caps.latest.revision: 3
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Global Settings (Output Window)  (SybaseToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

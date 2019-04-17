@@ -2,15 +2,16 @@
 title: "OLE DB Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbdest.f1"
+  - "sql13.dts.designer.oledbdestadapter.connection.f1"
+  - "sql13.dts.designer.oledbdestadapter.mappings.f1"
+  - "sql13.dts.designer.oledbdestadapter.errorhandling.f1"
 helpviewer_keywords: 
   - "fast-load data access mode [Integration Services]"
   - "OLE DB destination [Integration Services]"
@@ -20,10 +21,9 @@ helpviewer_keywords:
   - "fast load data access mode [Integration Services]"
   - "inserting data"
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # OLE DB Destination
   The OLE DB destination loads data into a variety of OLE DB-compliant databases using a database table or view or an SQL command. For example, the OLE DB source can load data into tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
@@ -100,17 +100,9 @@ manager: "jhubbard"
 ## Configuring the OLE DB Destination  
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **OLE DB Destination Editor** dialog box, click one of the following topics:  
-  
--   [OLE DB Destination Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/ole-db-destination-editor-connection-manager-page.md)  
-  
--   [OLE DB Destination Editor &#40;Mappings Page&#41;](../../integration-services/data-flow/ole-db-destination-editor-mappings-page.md)  
-  
--   [OLE DB Destination Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/ole-db-destination-editor-error-output-page.md)  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -119,6 +111,185 @@ manager: "jhubbard"
 -   [Load Data by Using the OLE DB Destination](../../integration-services/data-flow/load-data-by-using-the-ole-db-destination.md)  
   
 -   [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## OLE DB Destination Editor (Connection Manager Page)
+  Use the **Connection Manager** page of the **OLE DB Destination Editor** dialog box to select the OLE DB connection for the destination. This page also lets you select a table or view from the database.  
+  
+> [!NOTE]  
+>  If the data source is [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, the data source requires a different connection manager than earlier versions of Excel. For more information, see [Connect to an Excel Workbook](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+  
+> [!NOTE]  
+>  The **CommandTimeout** property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+  
+### Static Options  
+ **OLE DB connection manager**  
+ Select an existing connection manager from the list, or create a new connection by clicking **New**.  
+  
+ **New**  
+ Create a new connection manager by using the **Configure OLE DB Connection Manager** dialog box.  
+  
+ **Data access mode**  
+ Specify the method for loading data into the destination. Loading double-byte character set (DBCS) data requires use of one of the fast load options. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
+  
+|Option|Description|  
+|------------|-----------------|  
+|Table or view|Load data into a table or view in the OLE DB destination.|  
+|Table or view - fast load|Load data into a table or view in the OLE DB destination and use the fast load option. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
+|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information**: [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Table name or view name variable - fast load|Specify the table or view name in a variable, and use the fast load option to load the data. For more information about the fast load data access modes, which are optimized for bulk inserts, see [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
+|SQL command|Load data into the OLE DB destination by using a SQL query.|  
+  
+ **Preview**  
+ Preview results by using the **Preview Query Results** dialog box. Preview can display up to 200 rows.  
+  
+### Data Access Mode Dynamic Options  
+ Each of the settings for **Data access mode** displays a dynamic set of options specific to that setting. The following sections describe each of the dynamic options available for each **Data access mode** setting.  
+  
+#### Data access mode = Table or view  
+ **Name of the table or the view**  
+ Select the name of the table or view from a list of those available in the data source.  
+  
+ **New**  
+ Create a new table by using the **Create Table** dialog box.  
+  
+> [!NOTE]  
+>  When you click **New**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+#### Data access mode = Table or view - fast load  
+ **Name of the table or view**  
+ Select a table or view from the database by using this list, or create a new table by clicking **New**.  
+  
+ **New**  
+ Create a new table by using the **Create Table** dialog box.  
+  
+> [!NOTE]  
+>  When you click **New**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Keep identity**  
+ Specify whether to copy identity values when data is loaded. This property is available only with the fast load option. The default value of this property is **false**.  
+  
+ **Keep nulls**  
+ Specify whether to copy null values when data is loaded. This property is available only with the fast load option. The default value of this property is **false**.  
+  
+ **Table lock**  
+ Specify whether the table is locked during the load. The default value of this property is **true**.  
+  
+ **Check constraints**  
+ Specify whether the destination checks constraints when it loads data. The default value of this property is **true**.  
+  
+ **Rows per batch**  
+ Specify the number of rows in a batch. The default value of this property is **-1**, which indicates that no value has been assigned.  
+  
+> [!NOTE]  
+>  Clear the text box in the **OLE DB Destination Editor** to indicate that you do not want to assign a custom value for this property.  
+  
+ **Maximum insert commit size**  
+ Specify the batch size that the OLE DB destination tries to commit during fast load operations. The value of **0** indicates that all data is committed in a single batch after all rows have been processed.  
+  
+> [!NOTE]  
+>  A value of **0** might cause the running package to stop responding if the OLE DB destination and another data flow component are updating the same source table. To prevent the package from stopping, set the **Maximum insert commit size** option to **2147483647**.  
+  
+ If you provide a value for this property, the destination commits rows in batches that are the smaller of (a) the **Maximum insert commit size**, or (b) the remaining rows in the buffer that is currently being processed.  
+  
+> [!NOTE]  
+>  Any constraint failure at the destination causes the entire batch of rows defined by **Maximum insert commit size** to fail.  
+  
+#### Data access mode = Table name or view name variable  
+ **Variable name**  
+ Select the variable that contains the name of the table or view.  
+  
+#### Data Access Mode = Table name or view name variable - fast load)  
+ **Variable name**  
+ Select the variable that contains the name of the table or view.  
+  
+ **New**  
+ Create a new table by using the **Create Table** dialog box.  
+  
+> [!NOTE]  
+>  When you click **New**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] generates a default CREATE TABLE statement based on the connected data source. This default CREATE TABLE statement will not include the FILESTREAM attribute even if the source table includes a column with the FILESTREAM attribute declared. To run an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component with the FILESTREAM attribute, first implement FILESTREAM storage on the destination database. Then, add the FILESTREAM attribute to the CREATE TABLE statement in the **Create Table** dialog box. For more information, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+  
+ **Keep identity**  
+ Specify whether to copy identity values when data is loaded. This property is available only with the fast load option. The default value of this property is **false**.  
+  
+ **Keep nulls**  
+ Specify whether to copy null values when data is loaded. This property is available only with the fast load option. The default value of this property is **false**.  
+  
+ **Table lock**  
+ Specify whether the table is locked during the load. The default value of this property is **false**.  
+  
+ **Check constraints**  
+ Specify whether the task checks constraints. The default value of this property is **false**.  
+  
+ **Rows per batch**  
+ Specify the number of rows in a batch. The default value of this property is **-1**, which indicates that no value has been assigned.  
+  
+> [!NOTE]  
+>  Clear the text box in the **OLE DB Destination Editor** to indicate that you do not want to assign a custom value for this property.  
+  
+ **Maximum insert commit size**  
+ Specify the batch size that the OLE DB destination tries to commit during fast load operations. The default value of **2147483647** indicates that all data is committed in a single batch after all rows have been processed.  
+  
+> [!NOTE]  
+>  A value of **0** might cause the running package to stop responding if the OLE DB destination and another data flow component are updating the same source table. To prevent the package from stopping, set the **Maximum insert commit size** option to **2147483647**.  
+  
+#### Data access mode = SQL command  
+ **SQL command text**  
+ Enter the text of a SQL query, build the query by clicking **Build Query**, or locate the file that contains the query text by clicking **Browse**.  
+  
+> [!NOTE]  
+>  The OLE DB destination does not support parameters. If you need to execute a parameterized INSERT statement, consider the OLE DB Command transformation. For more information, see [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
+  
+ **Build query**  
+ Use the **Query Builder** dialog box to construct the SQL query visually.  
+  
+ **Browse**  
+ Use the **Open** dialog box to locate the file that contains the text of the SQL query.  
+  
+ **Parse query**  
+ Verify the syntax of the query text.  
+  
+## OLE DB Destination Editor (Mappings Page)
+  Use the **Mappings** page of the **OLE DB Destination Editor** dialog box to map input columns to destination columns.  
+  
+### Options  
+ **Available Input Columns**  
+ View the list of available input columns. Use a drag-and-drop operation to map available input columns in the table to destination columns.  
+  
+ **Available Destination Columns**  
+ View the list of available destination columns. Use a drag-and-drop operation to map available destination columns in the table to input columns.  
+  
+ **Input Column**  
+ View the input columns that you selected. You can remove mappings by selecting **\<ignore>** to exclude columns from the output.  
+  
+ **Destination Column**  
+ View each available destination column, regardless of whether it is mapped or not.  
+  
+## OLE DB Destination Editor (Error Output Page)
+  Use the **Error Output** page of the **OLE DB Destination Editor** dialog box to specify error handling options.  
+  
+### Options  
+ **Input/Output**  
+ View the name of the input.  
+  
+ **Column**  
+ Not used.  
+  
+ **Error**  
+ Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Related Topics:** [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Truncation**  
+ Not used.  
+  
+ **Description**  
+ View the description of the operation.  
+  
+ **Set this value to selected cells**  
+ Specify what should happen to all the selected cells when an error or truncation occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Apply**  
+ Apply the error handling option to the selected cells.  
   
 ## Related Content  
  [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)  

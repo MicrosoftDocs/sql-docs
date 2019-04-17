@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<testSuite name="SMOTest" projectPath="/Microsoft/SqlServer/TestHarness" xmlns="https://schemas.microsoft.com/sqlserver/2004/07/UXTestSpec"
+    managementDatabaseConnectionString="data source=localhost;initial catalog=UXTest;integrated security=SSPI;persist security info=False"
+    testDatabaseConnectionString="data source=localhost;initial catalog=AdventureWorks2012;integrated security=SSPI;persist security info=False"
+    rootDirectory="C:\Program Files\UEDevelopmentTools\Samples\Tools\UXTest\"
+    testOwner="elspeths">
+   
+     <commandLineTestCase name="SMO_VB1" rootDirectory="vsbeta2\SMO_VB1\SMO_VB1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VB1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+ <commandLineTestCase name="SMO_VB2" rootDirectory="vsbeta2\SMO_VB2\SMO_VB2\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VB2</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+ <commandLineTestCase name="SMO_VB3" rootDirectory="vsbeta2\SMO_VB3\SMO_VB3\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VB3</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+ <commandLineTestCase name="SMO_VB3cleanup" rootDirectory="vsbeta2\SMO_VB3cleanup\SMO_VB3cleanup\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VB3cleanup</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VB4" rootDirectory="vsbeta2\SMO_VB4\SMO_VB4\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VB4</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+ <commandLineTestCase name="SMO_VBMethods1" rootDirectory="vsbeta2\SMO_VBMethods1\SMO_VBMethods1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBMethods1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+ <commandLineTestCase name="SMO_VBMethods2" rootDirectory="vsbeta2\SMO_VBMethods2\SMO_VBMethods2\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBMethods2</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBMethods3" rootDirectory="vsbeta2\SMO_VBMethods3\SMO_VBMethods3\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBMethods3</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBMethods4" rootDirectory="vsbeta2\SMO_VBMethods4\SMO_VBMethods4\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBMethods4</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBMethods5" rootDirectory="vsbeta2\SMO_VBMethods5\SMO_VBMethods5\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBMethods5</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBMethods6" rootDirectory="vsbeta2\SMO_VBMethods6\SMO_VBMethods6\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBMethods6</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBProperties1" rootDirectory="vsbeta2\SMO_VBProperties1\SMO_VBProperties1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBProperties1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBProperties2" rootDirectory="vsbeta2\SMO_VBProperties2\SMO_VBProperties2\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBProperties2</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBProperties3" rootDirectory="vsbeta2\SMO_VBProperties3\SMO_VBProperties3\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBProperties3</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBCollections1" rootDirectory="vsbeta2\SMO_VBCollections1\SMO_VBCollections1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBCollections1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBCollections2" rootDirectory="vsbeta2\SMO_VBCollections2\SMO_VBCollections2\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBCollections2</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBDataTypes1" rootDirectory="vsbeta2\SMO_VBDataTypes1\SMO_VBDataTypes1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBDataTypes1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBDataTypes2" rootDirectory="vsbeta2\SMO_VBDataTypes2\SMO_VBDataTypes2\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBDataTypes2</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBCapture1" rootDirectory="vsbeta2\SMO_VBCapture1\SMO_VBCapture1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBCapture1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBEvents1" rootDirectory="vsbeta2\SMO_VBEvents1\SMO_VBEvents1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBEvents1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBExceptions1" rootDirectory="vsbeta2\SMO_VBExceptions1\SMO_VBExceptions1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBExceptions1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBLinkedServers1" rootDirectory="vsbeta2\SMO_VBLinkedServers1\SMO_VBLinkedServers1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBLinkedServers1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBPartitions1" rootDirectory="vsbeta2\SMO_VBPartitions1\SMO_VBPartitions1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBPartitions1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBConfigure1" rootDirectory="vsbeta2\SMO_VBConfigure1\SMO_VBConfigure1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBConfigure1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBConfigure2" rootDirectory="vsbeta2\SMO_VBConfigure2\SMO_VBConfigure2\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBConfigure2</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBFileGroups1" rootDirectory="vsbeta2\SMO_VBFileGroups1\SMO_VBFileGroups1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBFileGroups1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBFileGroups3" rootDirectory="vsbeta2\SMO_VBFileGroups3\SMO_VBFileGroups3\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBFileGroups3</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBDatabase1" rootDirectory="vsbeta2\SMO_VBDatabase1\SMO_VBDatabase1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBDatabase1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBTable1" rootDirectory="vsbeta2\SMO_VBTable1\SMO_VBTable1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBTable1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBIndex1" rootDirectory="vsbeta2\SMO_VBIndex1\SMO_VBIndex1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBIndex1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBXMLSchema1" rootDirectory="vsbeta2\SMO_VBXMLSchema1\SMO_VBXMLSchema1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBXMLSChema1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBXMLIndex1" rootDirectory="vsbeta2\SMO_VBXMLIndex1\SMO_VBXMLIndex1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBXMLIndex1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBXMLSchema1Cleanup" rootDirectory="vsbeta2\SMO_VBXMLSchema1Cleanup\SMO_VBXMLSchema1Cleanup\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBXMLSchema1Cleanup</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBForeignKeys1" rootDirectory="vsbeta2\SMO_VBForeignKeys1\SMO_VBForeignKeys1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBForeignKeys1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBDefaults1" rootDirectory="vsbeta2\SMO_VBDefaults1\SMO_VBDefaults1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBDefaults1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBRules1" rootDirectory="vsbeta2\SMO_VBRules1\SMO_VBRules1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBRules1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBViews1" rootDirectory="vsbeta2\SMO_VBViews1\SMO_VBViews1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBViews1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBTrigger1" rootDirectory="vsbeta2\SMO_VBTrigger1\SMO_VBTrigger1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBTrigger1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBStoredProcs1" rootDirectory="vsbeta2\SMO_VBStoredProcs1\SMO_VBStoredProcs1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBStoredProcs1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBUserDefFuncs1" rootDirectory="vsbeta2\SMO_VBUserDefFuncs1\SMO_VBUserDefFuncs1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBUserDefFuncs1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBSchemas1" rootDirectory="vsbeta2\SMO_VBSchemas1\SMO_VBSchemas1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBSchemas1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBLogins1" rootDirectory="vsbeta2\SMO_VBLogins1\SMO_VBLogins1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBLogins1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBPermissions1" rootDirectory="vsbeta2\SMO_VBPermissions1\SMO_VBPermissions1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBPermissions1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBCertificate1" rootDirectory="vsbeta2\SMO_VBCertificate1\SMO_VBCertificate1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBCertificate1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBAgent1" rootDirectory="vsbeta2\SMO_VBAgent1\SMO_VBAgent1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBAgent1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBAgent2" rootDirectory="vsbeta2\SMO_VBAgent2\SMO_VBAgent2\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBAgent2</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBAgent3" rootDirectory="vsbeta2\SMO_VBAgent3\SMO_VBAgent3\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBAgent3</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBBackup1" rootDirectory="vsbeta2\SMO_VBBackup1\SMO_VBBackup1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBBackup1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBBackup2" rootDirectory="vsbeta2\SMO_VBBackup2\SMO_VBBackup2\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBBackup2</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBScripting1" rootDirectory="vsbeta2\SMO_VBScripting1\SMO_VBScripting1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBScripting1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBTransfer1" rootDirectory="vsbeta2\SMO_VBTransfer1\SMO_VBTransfer1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBTransfer1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBMail1" rootDirectory="vsbeta2\SMO_VBMail1\SMO_VBMail1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBMail1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBSynonyms1" rootDirectory="vsbeta2\SMO_VBSynonyms1\SMO_VBSynonyms1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBSynonyms1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBFTS1" rootDirectory="vsbeta2\SMO_VBFTS1\SMO_VBFTS1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBFTS1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBMessages1" rootDirectory="vsbeta2\SMO_VBMessages1\SMO_VBMessages1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBMessages1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBEndpoints1" rootDirectory="vsbeta2\SMO_VBEndpoints1\SMO_VBEndpoints1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBEndpoints1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+<commandLineTestCase name="SMO_VBStatistics1" rootDirectory="vsbeta2\SMO_VBStatistics1\SMO_VBStatistics1\bin\debug\" component="Command line sample">
+        <applicationName>SMO_VBStatistics1</applicationName>
+	  <commandLineArguments>/</commandLineArguments>
+    </commandLineTestCase>
+
+</testSuite>
+
+

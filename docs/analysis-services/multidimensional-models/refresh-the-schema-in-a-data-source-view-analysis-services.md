@@ -1,27 +1,17 @@
 ---
 title: "Refresh the Schema in a Data Source View (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data source views [Analysis Services], schema updates"
-  - "refreshing data source views"
-  - "data source views [Analysis Services], refreshing"
-ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Refresh the Schema in a Data Source View (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   After defining a data source view (DSV) in an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or database, the schema in an underlying data source may change. These changes are not automatically detected or updated in a development project. Moreover, if you deployed the project to a server, you will now encounter processing errors if Analysis Services can no longer connect to the external data source.  
   
  To update the DSV so that it matches the external data source, you can refresh the DSV in Business Intelligence Development Studio (BIDS). Refreshing the DSV detects changes to the external data sources upon which the DSV is based, and builds a change list that enumerates the additions or deletions in the external data source. You can then apply the set of changes to the DSV that will realign it to the underlying data source. Note that additional work is often required to further update the cubes and dimensions in the project that use the DSV.  
@@ -52,7 +42,7 @@ manager: "erikre"
   
  The dialog box lists tables, columns, constraints, and relationships that will be deleted or added in the DSV. The report also lists any named query or calculation that cannot be successfully prepared. The affected objects are listed in a tree view with columns and relationships nested under tables and the type of change (deletion or addition) indicated for each object. The standard data source view object icons indicate the type of object affected.  
   
- Refresh is based completely on the names of the underlying objects. Therefore, if an underlying object is renamed in the data source, Data Source View Designer treats the renamed object as two separate operations—a deletion and an addition. In this case, you may have to manually add the renamed object back to the data source view. You may also have to re-create relationships or logical primary keys.  
+ Refresh is based completely on the names of the underlying objects. Therefore, if an underlying object is renamed in the data source, Data Source View Designer treats the renamed object as two separate operations-a deletion and an addition. In this case, you may have to manually add the renamed object back to the data source view. You may also have to re-create relationships or logical primary keys.  
   
 > [!IMPORTANT]  
 >  If you are aware that a table has been renamed in a data source, you may want to use the **Replace Table** command to replace the table with the renamed table before you refresh the data source view. For more information, see [Replace a Table or a Named Query in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  

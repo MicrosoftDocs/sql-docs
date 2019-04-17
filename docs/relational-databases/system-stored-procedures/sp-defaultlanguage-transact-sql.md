@@ -2,12 +2,10 @@
 title: "sp_defaultlanguage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_defaultlanguage"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_defaultlanguage"
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_defaultlanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the default language of for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) instead.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,10 +38,10 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the login name. *login* is **sysname**, with no default. *login* can be an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows user or group.  
   
- [ **@language =** ] **'***language***'**  
+`[ @language = ] 'language'`
  Is the default language of the login. *language* is **sysname**, with a default of NULL. *language* must be a valid language on the server. If *language* is not specified, *language* is set to the server default language; default language is defined by the **sp_configure** configuration variable **default language**. Changing the server default language does not change the default language for existing logins.  
   
 ## Return Code Values  

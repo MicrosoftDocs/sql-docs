@@ -2,12 +2,10 @@
 title: "RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "RANK"
@@ -20,40 +18,38 @@ helpviewer_keywords:
   - "ranking rows"
   - "RANK function [Transact-SQL]"
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
-caps.latest.revision: 62
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns the rank of each row within the partition of a result set. The rank of a row is one plus the number of ranks that come before the row in question.  
+Returns the rank of each row within the partition of a result set. The rank of a row is one plus the number of ranks that come before the row in question.  
 
-  ROW_NUMBER and RANK are similar. ROW_NUMBER numbers all rows sequentially (for example 1, 2, 3, 4, 5). RANK provides the same numeric value for ties (for example 1, 2, 2, 4, 5).   
+ROW_NUMBER and RANK are similar. ROW_NUMBER numbers all rows sequentially (for example 1, 2, 3, 4, 5). RANK provides the same numeric value for ties (for example 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> RANK is a temporary value calulated when the query is run. To persist numbers in a table, see [IDENTITY Property](../../t-sql/statements/create-table-transact-sql-identity-property.md) and [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
+> RANK is a temporary value calculated when the query is run. To persist numbers in a table, see [IDENTITY Property](../../t-sql/statements/create-table-transact-sql-identity-property.md) and [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
+```sql  
 RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
 ## Arguments  
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. The *order_by_clause* is required. The \<rows or range clause> of the OVER clause cannot be specified for the RANK function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. _order\_by\_clause_ determines the order of the data before the function is applied. The *order_by_clause* is required. The \<rows or range clause/> of the OVER clause cannot be specified for the RANK function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## Return Types  
  **bigint**  
   
 ## Remarks  
- If two or more rows tie for a rank, each tied rows receives the same rank. For example, if the two top salespeople have the same SalesYTD value, they are both ranked one. The salesperson with the next highest SalesYTD is ranked number three, because there are two rows that are ranked higher. Therefore, the RANK function does not always return consecutive integers.  
+ If two or more rows tie for a rank, each tied row receives the same rank. For example, if the two top salespeople have the same SalesYTD value, they are both ranked one. The salesperson with the next highest SalesYTD is ranked number three, because there are two rows that are ranked higher. Therefore, the RANK function does not always return consecutive integers.  
   
  The sort order that is used for the whole query determines the order in which the rows appear in a result set.  
   
@@ -64,7 +60,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ### A. Ranking rows within a partition  
  The following example ranks the products in inventory the specified inventory locations according to their quantities. The result set is partitioned by `LocationID` and logically ordered by `Quantity`. Notice that products 494 and 495 have the same quantity. Because they are tied, they are both ranked one.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -80,7 +76,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
   
 ProductID   Name                   LocationID   Quantity Rank  
 ----------- ---------------------- ------------ -------- ----  
@@ -100,7 +96,7 @@ ProductID   Name                   LocationID   Quantity Rank
 ### B. Ranking all rows in a result set  
  The following example returns the top ten employees ranked by their salary. Because a PARTITION BY clause was not specified, the RANK function was applied to all rows in the result set.  
   
-```  
+```sql  
 USE AdventureWorks2012  
 SELECT TOP(10) BusinessEntityID, Rate,   
        RANK() OVER (ORDER BY Rate DESC) AS RankBySalary  
@@ -113,7 +109,7 @@ ORDER BY BusinessEntityID;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
 BusinessEntityID Rate                  RankBySalary  
 ---------------- --------------------- --------------------  
 1                125.50                1  
@@ -133,7 +129,7 @@ BusinessEntityID Rate                  RankBySalary
 ### C: Ranking rows within a partition  
  The following example ranks the sales representatives in each sales territory according to their total sales. The rowset is partitioned by `SalesTerritoryGroup` and sorted by `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion,  
@@ -147,37 +143,24 @@ GROUP BY LastName, SalesTerritoryRegion;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          TotalSales     SalesTerritoryGroup  RankResult`  
-  
- `----------------  -------------  -------------------  --------`  
-  
- `Tsoflias          1687000.0000   Australia            1`  
-  
- `Saraiva           7098000.0000   Canada               1`  
-  
- `Vargas            4365000.0000   Canada               2`  
-  
- `Carson            12198000.0000  Central              1`  
-  
- `Varkey Chudukatil 5557000.0000   France               1`  
-  
- `Valdez            2287000.0000   Germany              1`  
-  
- `Blythe            11162000.0000  Northeast            1`  
-  
- `Campbell          4025000.0000   Northwest            1`  
-  
- `Ansman-Wolfe      3551000.0000   Northwest            2`  
-  
- `Mensa-Annan       2753000.0000   Northwest            3`  
-  
- `Reiter            8541000.0000   Southeast            1`  
-  
- `Mitchell          11786000.0000  Southwest            1`  
-  
- `Ito               7804000.0000   Southwest            2`  
-  
- `Pak               10514000.0000  United Kingdom       1`  
+```sql
+LastName          TotalSales     SalesTerritoryGroup  RankResult
+----------------  -------------  -------------------  --------
+Tsoflias          1687000.0000   Australia            1
+Saraiva           7098000.0000   Canada               1
+Vargas            4365000.0000   Canada               2
+Carson            12198000.0000  Central              1
+Varkey Chudukatil 5557000.0000   France               1
+Valdez            2287000.0000   Germany              1
+Blythe            11162000.0000  Northeast            1
+Campbell          4025000.0000   Northwest            1
+Ansman-Wolfe      3551000.0000   Northwest            2
+Mensa-Annan       2753000.0000   Northwest            3
+Reiter            8541000.0000   Southeast            1
+Mitchell          11786000.0000  Southwest            1
+Ito               7804000.0000   Southwest            2
+Pak               10514000.0000  United Kingdom       1
+```  
   
 ## See Also  
  [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   

@@ -2,12 +2,10 @@
 title: "sp_batch_params (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_batch_params"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_batch_params"
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a rowset that contains information about the parameters included in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. **sp_batch_params** only parses the batch specified and returns information about embedded parameter values. It does not execute the batch or modify the execution environment.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +34,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## Arguments  
- [ **@tsqlbatch =**] **'***tsqlbatch***'**  
+`[ @tsqlbatch = ] 'tsqlbatch'`
  Is a Unicode string that contains a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch for which parameter information is that you want. *tsqlbatch* is **nvarchar(max)** or implicitly convertible to **nvarchar(max)**.  
   
 ## Return Code Values  
@@ -82,7 +75,7 @@ EXECUTE sp_batch_params @SQLString;
   
 ## See Also  
  [Running Stored Procedures](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Running Stored Procedures How-to Topics &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
+ [Running Stored Procedures How-to Topics &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [Running Stored Procedures &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
   

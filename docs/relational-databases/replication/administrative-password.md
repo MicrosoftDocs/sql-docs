@@ -2,22 +2,20 @@
 title: "Administrative Password | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.replicationutilities.administrativepassword.f1"
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Administrative Password
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   If, on the **Distributors** page of this wizard, you selected a remote Distributor for this Publisher, you must enter a password for the connection replication makes between the Publisher and the Distributor using the **distributor_admin** login. The password must match the password specified on the **Distributor Password** page of the Configure Distribution Wizard or the **Publishers** page of the **Distributor Properties** dialog box.  
   
 ## Options  

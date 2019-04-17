@@ -2,12 +2,10 @@
 title: "Using Annotations in XSD Schemas (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "annotated XSD schemas, about annotated XSD schemas"
@@ -17,19 +15,20 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "mapping schema [SQLXML], scenarios for using"
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Annotations in XSD Schemas (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0, the XSD schema language supports annotations in a manner similar to the annotations introduced in the XML-Data Reduced (XDR) schema language. There are additional annotations introduced in XSD that are not supported in XDR.  
   
  These annotations can be used within the XSD schema to specify XML-to-relational mapping. This includes mapping between elements and attributes in the XSD schema to tables (views) and columns in the databases.  
   
  If you do not specify the annotations, default mapping takes place. By default, an XSD element with a complex type maps to a table (view) name in the specified database, and an element or attribute with a simple type maps to the column with the same name as the element or attribute.  
   
- These annotations can also be used to specify the hierarchical relationships in XML—thus representing the relationships in the database, because an XSD schema is simply an XML view of relational data.  
+ These annotations can also be used to specify the hierarchical relationships in XML-thus representing the relationships in the database, because an XSD schema is simply an XML view of relational data.  
   
  This section provides descriptions of the annotations you can use with XSD schemas and examples of their usage.  
   

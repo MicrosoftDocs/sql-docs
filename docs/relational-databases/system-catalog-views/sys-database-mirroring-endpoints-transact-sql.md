@@ -2,12 +2,10 @@
 title: "sys.database_mirroring_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.database_mirroring_endpoints_TSQL"
@@ -22,13 +20,12 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], catalog views"
   - "sys.database_mirroring_endpoints catalog view"
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contains one row for the database mirroring endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -37,14 +34,14 @@ manager: "jhubbard"
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**|—|Inherits columns from **sys.endpoints** (for more information, see [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
+|**\<inherited columns>**|-|Inherits columns from **sys.endpoints** (for more information, see [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
 |**role**|**tinyint**|Mirroring role, one of:<br /><br /> **0** = None<br /><br /> **1** = Partner<br /><br /> **2** = Witness<br /><br /> **3** = All<br /><br /> Note: This value is relevant only for database mirroring.|  
 |**role_desc**|**nvarchar(60)**|Description of mirroring role, one of:<br /><br /> **NONE**<br /><br /> **PARTNER**<br /><br /> **WITNESS**<br /><br /> **ALL**<br /><br /> Note: This value is relevant only for database mirroring.|  
 |**is_encryption_enabled**|**bit**|**1** means that encryption is enabled.<br /><br /> **0** means that encryption is disabled.|  
 |**connection_auth**|**tinyint**|The type of connection authentication required for connections to this endpoint, one of:<br /><br /> **1** - NTLM<br /><br /> **2** - KERBEROS<br /><br /> **3** - NEGOTIATE<br /><br /> **4** - CERTIFICATE<br /><br /> **5** - NTLM, CERTIFICATE<br /><br /> **6** - KERBEROS, CERTIFICATE<br /><br /> **7** - NEGOTIATE, CERTIFICATE<br /><br /> **8** - CERTIFICATE, NTLM<br /><br /> **9** - CERTIFICATE, KERBEROS<br /><br /> **10** - CERTIFICATE, NEGOTIATE|  
 |**connection_auth_desc**|**Nvarchar (60)**|Description of the type of authentication required for connections to this endpoint, one of:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**int**|ID of certificate used for authentication, if any.<br /><br /> 0 = Windows Authentication is being used.|  
-|**encryption_algorithm**|**tinyint**|Encryption algorithm, one of:<br /><br /> **0** – NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** – NONE, RC4<br /><br /> **4** – NONE, AES<br /><br /> **5** – RC4, AES<br /><br /> **6** – AES, RC4<br /><br /> **7** – NONE, RC4, AES<br /><br /> **8** – NONE, AES, RC4|  
+|**encryption_algorithm**|**tinyint**|Encryption algorithm, one of:<br /><br /> **0** - NONE<br /><br /> **1** - RC4<br /><br /> **2** - AES<br /><br /> **3** - NONE, RC4<br /><br /> **4** - NONE, AES<br /><br /> **5** - RC4, AES<br /><br /> **6** - AES, RC4<br /><br /> **7** - NONE, RC4, AES<br /><br /> **8** - NONE, AES, RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Description of the encryption algorithm, one of:<br /><br /> NONE<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## Remarks  

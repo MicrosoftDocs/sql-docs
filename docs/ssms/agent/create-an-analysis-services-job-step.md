@@ -2,23 +2,27 @@
 title: "Create an Analysis Services Job Step | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [Analysis Services]"
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create an Analysis Services Job Step
-This topic describes how to create and define [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job steps in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] that execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Analysis Services commands and queries by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)] or SQL Server Management Objects.  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
+This topic describes how to create and define [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services commands and queries by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
   
 -   **Before you begin:**  
   
@@ -38,17 +42,17 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
   
--   If the job step uses an Analysis Services command, the command statement must be an XML for Analysis Services **Execute** method. The statement may not contain a complete Simple Object Access Protocol (SOAP) envelope or an XML for Analysis **Discover** method. While [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job steps do not. For more information about XML for Analysis Services, see [XML for Analysis Overview (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx).  
+-   If the job step uses an Analysis Services command, the command statement must be an XML for Analysis Services **Execute** method. The statement may not contain a complete Simple Object Access Protocol (SOAP) envelope or an XML for Analysis **Discover** method. While [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not. For more information about XML for Analysis Services, see [XML for Analysis Overview (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
--   If the job step uses an Analysis Services query, the query statement must be a multidimensional expressions (MDX) query. For more information about MDX, see [MDX Statement Fundamentals (MDX)](http://msdn.microsoft.com/en-us/a560383b-bb58-472e-95f5-65d03d8ea08b).  
+-   If the job step uses an Analysis Services query, the query statement must be a multidimensional expressions (MDX) query. For more information about MDX, see [MDX Statement Fundamentals (MDX)](https://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Permissions  
   
--   To run a job step that uses the Analysis Services subsystem, a user must be a member of the **sysadmin** fixed server role or have access to a valid proxy account defined to use this subsystem. In addition, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account or the proxy must be an Analysis Services administrator and a valid Windows domain account.  
+-   To run a job step that uses the Analysis Services subsystem, a user must be a member of the **sysadmin** fixed server role or have access to a valid proxy account defined to use this subsystem. In addition, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account or the proxy must be an Analysis Services administrator and a valid Windows domain account.  
   
--   Only members of the **sysadmin** fixed server role can write job step output to a file. If the job step is run by users who are members of the **SQLAgentUserRole** database role in the **msdb** database, then the output can be written only to a table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent writes job step output to the **sysjobstepslog** table in the **msdb** database.  
+-   Only members of the **sysadmin** fixed server role can write job step output to a file. If the job step is run by users who are members of the **SQLAgentUserRole** database role in the **msdb** database, then the output can be written only to a table. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent writes job step output to the **sysjobstepslog** table in the **msdb** database.  
   
 -   For detailed information, see [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
   
@@ -72,7 +76,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
   
 8.  In the **Command** box, type the statement to execute, or click **Open** to select a statement.  
   
-9. Click the **Advanced** page to define options for this job step, such as what action [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent should take if the job step succeeds or fails, how many times the job step should be attempted, and where the job step output should be written.  
+9. Click the **Advanced** page to define options for this job step, such as what action [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent should take if the job step succeeds or fails, how many times the job step should be attempted, and where the job step output should be written.  
   
 #### To create an Analysis Services query job step  
   
@@ -92,7 +96,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
   
 8.  In the **Command** box, type the statement to execute, or click **Open** to select a statement.  
   
-9. Click the **Advanced** page to define options for this job step, such as what action [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent should take if the job step succeeds or fails, how many times the job step should be attempted, and where the job step output should be written.  
+9. Click the **Advanced** page to define options for this job step, such as what action [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent should take if the job step succeeds or fails, how many times the job step should be attempted, and where the job step output should be written.  
   
 ## <a name="TSQL"></a>Using Transact-SQL  
   
@@ -115,7 +119,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
             N'Create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database',  
         @subsystem = N'ANALYSISCOMMAND',  
         @command =
-            N' <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
+            N' <Create xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
         <ParentObject>  
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
@@ -137,7 +141,7 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
     GO  
     ```  
   
-For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755).  
+For more information, see [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 #### To create an Analysis Services query job step  
   
@@ -164,10 +168,10 @@ For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.
     GO  
     ```  
   
-For more information, see [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755).  
+For more information, see [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To create a PowerShell Script job step**  
   
-Use the **JobStep** class by using a programming language that you choose, such as XMLA or MDX. For more information, see [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+Use the **JobStep** class by using a programming language that you choose, such as XMLA or MDX. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

@@ -2,21 +2,19 @@
 title: "Application Pattern for Partitioning Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Application Pattern for Partitioning Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supports a pattern where a limited amount of active data is kept in a memory-optimized table, while less-frequently accessed data is processed on disk. Typically, this would be a scenario where data is stored based on a **datetime** key.  
   
@@ -46,7 +44,7 @@ Active Data Maintenance
   
  The first part of this sample creates the database and necessary objects. The second part of the sample shows how to move data from a memory-optimized table into a partitioned table.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

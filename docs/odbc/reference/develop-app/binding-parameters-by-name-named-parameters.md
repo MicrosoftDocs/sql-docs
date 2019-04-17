@@ -2,21 +2,18 @@
 title: "Binding Parameters by Name (Named Parameters) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "named parameters [ODBC]"
   - "binding parameters by name [ODBC]"
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Binding Parameters by Name (Named Parameters)
 Certain DBMSs allow an application to specify the parameters to a stored procedure by name instead of by position in the procedure call. Such parameters are called *named parameters*. ODBC supports the use of named parameters. In ODBC, named parameters are used only in calls to stored procedures and cannot be used in other SQL statements.  
@@ -36,7 +33,7 @@ Certain DBMSs allow an application to specify the parameters to a stored procedu
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- In this procedure, the first parameter, @title_id, has a default value of 1. An application can use the following code to invoke this procedure such that it specifies only one dynamic parameter. This parameter is a named parameter with the name "@quote".  
+ In this procedure, the first parameter, @title_id, has a default value of 1. An application can use the following code to invoke this procedure such that it specifies only one dynamic parameter. This parameter is a named parameter with the name "\@quote".  
   
 ```  
 // Prepare the procedure invocation statement.  

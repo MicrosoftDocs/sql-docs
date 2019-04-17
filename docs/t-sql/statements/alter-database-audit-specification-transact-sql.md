@@ -2,12 +2,10 @@
 title: "ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_DATABASE_AUDIT_SPECIFICATION_TSQL"
@@ -19,13 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER DATABASE AUDIT SPECIFICATION statement"
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Alters a database audit specification object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -90,11 +87,11 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  After a database audit specification is created, it can be viewed by principals with the CONTROL SERVER,or ALTER ANY DATABASE AUDIT permissions, the sysadmin account, or principals having explicit access to the audit.  
   
 ## Examples  
- The following example alters a database audit specification called `HIPPA_Audit_DB_Specification` that audits the `SELECT` statements by the `dbo` user, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit called `HIPPA_Audit`.  
+ The following example alters a database audit specification called `HIPAA_Audit_DB_Specification` that audits the `SELECT` statements by the `dbo` user, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] audit called `HIPAA_Audit`.  
   
 ```  
-ALTER DATABASE AUDIT SPECIFICATION HIPPA_Audit_DB_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (SELECT  
          ON OBJECT::dbo.Table1  
          BY dbo)  

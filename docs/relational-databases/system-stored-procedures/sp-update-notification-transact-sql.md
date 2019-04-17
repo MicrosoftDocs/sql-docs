@@ -2,12 +2,10 @@
 title: "sp_update_notification (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_update_notification_TSQL"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_updatenotification"
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_update_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Updates the notification method of an alert notification.  
 
@@ -41,13 +38,13 @@ sp_update_notification
 ```  
   
 ## Arguments  
- [ **@alert_name =**] **'***alert***'**  
+`[ @alert_name = ] 'alert'`
  The name of the alert associated with this notification. *alert* is **sysname**, with no default.  
   
- [ **@operator_name =**]  **'***operator***'**  
+`[ @operator_name = ] 'operator'`
  The operator who will be notified when the alert occurs. *operator* is **sysname**, with no default.  
   
- [ **@notification_method =**] *notification*  
+`[ @notification_method = ] notification`
  The method by which the operator is notified. *notification*is **tinyint**, with no default, and can be one or more of these values.  
   
 |Value|Description|  

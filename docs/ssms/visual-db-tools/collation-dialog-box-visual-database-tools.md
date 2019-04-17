@@ -2,34 +2,33 @@
 title: "Collation Dialog Box (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.definecolumncollation"
   - "vdtsql.chm:65561"
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Collation Dialog Box (Visual Database Tools)
-This dialog box lets you specify a collation sequence for the column. A column's collation sequence is used in any operation that compares values of the column to another column or to constant values. It also affects the behavior of some string functions, such as SUBSTRING and CHARINDEX. For a complete list of the effects of a column's collation setting, see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] documentation.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+This dialog box lets you specify a collation sequence for the column. A column's collation sequence is used in any operation that compares values of the column to another column or to constant values. It also affects the behavior of some string functions, such as SUBSTRING and CHARINDEX. For a complete list of the effects of a column's collation setting, see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentation.  
   
 This dialog box appears:  
   
 -   If you enter an invalid collation name in the **Collation** field on the **Column Properties** tab.  
   
--   If you click in the **Collation** field on the **Column Properties** tab, and then click the ellipsis button (**…**) to the right of the field.  
+-   If you click in the **Collation** field on the **Column Properties** tab, and then click the ellipsis button (**...**) to the right of the field.  
   
 ## Options  
 **SQL Collation**  
-Choose among the collation sequences defined by [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] from the drop-down list.  
+Choose among the collation sequences defined by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from the drop-down list.  
   
 **Windows Collation**  
 Choose among the collation sequences defined by Windows from the drop-down list.  

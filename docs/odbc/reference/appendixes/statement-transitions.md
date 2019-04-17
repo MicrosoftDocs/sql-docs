@@ -2,22 +2,19 @@
 title: "Statement Transitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "transitioning states [ODBC], statement"
   - "state transitions [ODBC], statement"
   - "statement transitions [ODBC]"
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Statement Transitions
 ODBC statements have the following states.  
@@ -44,7 +41,7 @@ ODBC statements have the following states.
   
 ## SQLAllocHandle  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1], [5], [6]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |--[2], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
@@ -63,25 +60,25 @@ ODBC statements have the following states.
   
 ## SQLBindCol  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## SQLBindParameter  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## SQLBrowseConnect, SQLConnect, and SQLDriverConnect  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |08002|08002|08002|08002|08002|08002|08002|  
   
 ## SQLBulkOperations  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|See next table|HY010|NS [c] HY010 o|  
   
@@ -93,7 +90,7 @@ ODBC statements have the following states.
   
 ## SQLCancel  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|S1[1] S2 [nr] and [2] S3 [r]and [2] S5[3] and [5] S6([3] or [4]) and [6] S7[4] and [7]|See next table|  
   
@@ -123,13 +120,13 @@ ODBC statements have the following states.
   
 ## SQLCloseCursor  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|24000|24000|24000|S1 [np] S3 [p]|HY010|HY010|  
   
 ## SQLColAttribute  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|See next table|24000|-- [s] S11 [x]|HY010|NS [c] HY010 o|  
   
@@ -145,7 +142,7 @@ ODBC statements have the following states.
   
 ## SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges, and SQLTables  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S5 [s]  S11 [x]|S1 [e] S5 [s]  S11 [x]|S1 [e] and [1] S5 [s] and [1] S11 [x] and [1] 24000[2]|See next table|HY010|NS [c] HY010 o|  
   
@@ -163,7 +160,7 @@ ODBC statements have the following states.
   
 ## SQLCopyDesc  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH[1]|--|--|--|--|HY010|NS [c] and [3] HY010 [o] or [4]|  
 |IH[2]|HY010|See next table|24000|-- [s]  S11 x|HY010|NS [c] and [3] HY010 [o] or [4]|  
@@ -186,13 +183,13 @@ ODBC statements have the following states.
   
 ## SQLDataSources and SQLDrivers  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## SQLDescribeCol  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|See next table|24000|-- [s]  S11 [x]|HY010|NS [c] HY010 o|  
   
@@ -204,13 +201,13 @@ ODBC statements have the following states.
   
 ## SQLDescribeParam  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|-- [s]  S11 [x]|HY010|HY010|HY010|NS [c] HY010 [o]|  
   
 ## SQLDisconnect  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|S0[1]|S0[1]|S0[1]|S0[1]|(HY010)|(HY010)|  
   
@@ -218,7 +215,7 @@ ODBC statements have the following states.
   
 ## SQLEndTran  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--[2] or [3] S1[1]|--[3]  S1 [np] and ([1] or [2]) S1 [p] and [1] S2 [p] and [2]|--[3]  S1 [np] and ([1] or [2]) S1 [p] and [1] S3 [p] and [2]|(HY010)|(HY010)|  
   
@@ -230,7 +227,7 @@ ODBC statements have the following states.
   
 ## SQLExecDirect  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S4 [s] and [nr] S5 [s] and [r] S8 [d]  S11 [x]|-- [e] and [1] S1 [e] and [2] S4 [s] and [nr] S5 [s] and [r] S8 [d]  S11 [x]|-- [e], [1], and [3] S1 [e], [2], and [3] S4 [s], [nr], and [3] S5 [s], [r], and [3] S8 [d] and [3] S11 [x] and [3] 24000 [4]|See next table|HY010|NS [c] HY010 [o]|  
   
@@ -252,7 +249,7 @@ ODBC statements have the following states.
   
 ## SQLExecute  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|(HY010)|See next table|S2 [e], p, and [1]  S4 [s], [p], [nr], and [1] S5 [s], [p], [r], and [1] S8 [d], [p], and [1]  S11 [x], [p], and [1] 24000 [p] and [2] HY010 [np]|See cursor states table|HY010|NS [c] HY010 [o]|  
   
@@ -276,7 +273,7 @@ ODBC statements have the following states.
   
 ## SQLExtendedFetch  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|S1010|S1010|24000|See next table|S1010|NS [c] S1010 [o]|  
   
@@ -288,7 +285,7 @@ ODBC statements have the following states.
   
 ## SQLFetch and SQLFetchScroll  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|See next table|HY010|NS [c] HY010 [o]|  
   
@@ -300,7 +297,7 @@ ODBC statements have the following states.
   
 ## SQLFreeHandle  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |-- [1]|HY010|HY010|HY010|HY010|HY010|HY010|  
 |IH [2]|S0|S0|S0|S0|HY010|HY010|  
@@ -314,7 +311,7 @@ ODBC statements have the following states.
   
 ## SQLFreeStmt  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH [1]|--|--|S1 [np]  S2 [p]|S1 [np]  S3 [p]|HY010|HY010|  
 |IH [2]|--|--|--|--|HY010|HY010|  
@@ -325,19 +322,19 @@ ODBC statements have the following states.
   
 ## SQLGetConnectAttr  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## SQLGetCursorName  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|HY010|HY010|  
   
 ## SQLGetData  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|See next table|HY010|NS [c] HY010 [o]|  
   
@@ -349,7 +346,7 @@ ODBC statements have the following states.
   
 ## SQLGetDescField and SQLGetDescRec  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|-- [1] or [2] HY010 [3]|See next table|-- [1] or [2] 24000 [3]|-- [1], [2], or [3] S11 [3] and [x]|HY010|NS [c] or [4] HY010 [o] and [5]|  
   
@@ -377,7 +374,7 @@ ODBC statements have the following states.
   
 ## SQLGetDiagField and SQLGetDiagRec  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--|--|--|  
 |IH[2]|--[3]|--[3]|--|--|--[3]|--[3]|  
@@ -390,25 +387,25 @@ ODBC statements have the following states.
   
 ## SQLGetEnvAttr  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## SQLGetFunctions  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## SQLGetInfo  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## SQLGetStmtAttr  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--[1] 24000[2]|--[1] 24000[2]|--[1] 24000[2]|See next table|HY010|HY010|  
   
@@ -428,7 +425,7 @@ ODBC statements have the following states.
   
 ## SQLMoreResults  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|--[1]|--[1]|-- [s] and [2] S1 [nf], [np], and [4] S2 [nf], [p], and [4] S5 [s] and [3] S11 [x]|S1 [nf], [np], and [4] S3 [nf], [p] and [4] S4 [s] and [2] S5 [s] and [3] S11 [x]|HY010|NS [c] HY010 [o]|  
   
@@ -442,25 +439,25 @@ ODBC statements have the following states.
   
 ## SQLNativeSql  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--|--|--|--|--|--|--|  
   
 ## SQLNumParams  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|-- [s]  S11 [x]|-- [s]  S11 [x]|-- [s]  S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## SQLNumResultCols  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|-- [s]  S11 [x]|-- [s]  S11 [x]|-- [s]  S11 [x]|HY010|NS [c] HY010 [o]|  
   
 ## SQLParamData  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|HY010|HY010|See next table|NS [c] HY010 [o]|  
   
@@ -482,7 +479,7 @@ ODBC statements have the following states.
   
 ## SQLPrepare  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|S2 [s] and [nr] S3 [s] and [r] S11 [x]|-- [s] or ([e] and [1]) S1 [e] and [2] S11 [x]|S1 [e] and [3] S2 [s], [nr], and [3] S3 [s], [r], and [3] S11 [x] and [3] 24000[4]|See next table|HY010|NS [c] HY010 [o]|  
   
@@ -502,7 +499,7 @@ ODBC statements have the following states.
   
 ## SQLPutData  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|HY010|HY010|See next table|NS [c] HY010 [o]|  
   
@@ -526,13 +523,13 @@ ODBC statements have the following states.
   
 ## SQLRowCount  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(IH)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
   
 ## SQLSetConnectAttr  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--[2] 24000[3]|HY010|HY010|  
   
@@ -544,13 +541,13 @@ ODBC statements have the following states.
   
 ## SQLSetCursorName  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|24000|24000|HY010|HY010|  
   
 ## SQLSetDescField and SQLSetDescRec  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH[1]|--|--|--|--|HY010|HY010|  
   
@@ -558,13 +555,13 @@ ODBC statements have the following states.
   
 ## SQLSetEnvAttr  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |HY011|HY011|HY011|HY011|Y011|HY01|HY011|  
   
 ## SQLSetPos  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|HY010|HY010|24000|See next table|HY010|NS [c] HY010 [o]|  
   
@@ -576,7 +573,7 @@ ODBC statements have the following states.
   
 ## SQLSetStmtAttr  
   
-|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2–S3<br /><br /> Prepared|S4<br /><br /> Executed|S5–S7<br /><br /> Cursor|S8–S10<br /><br /> Need Data|S11–S12<br /><br /> Async|  
+|S0<br /><br /> Unallocated|S1<br /><br /> Allocated|S2-S3<br /><br /> Prepared|S4<br /><br /> Executed|S5-S7<br /><br /> Cursor|S8-S10<br /><br /> Need Data|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--[1] HY011[2]|--[1] 24000[2]|--[1] 24000[2]|HY010 [np] or [1] HY011 [p] and [2]|HY010 [np] or [1] HY011 [p] and [2]|  
   

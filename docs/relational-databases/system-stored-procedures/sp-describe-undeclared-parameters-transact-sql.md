@@ -1,13 +1,11 @@
 ---
 title: "sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/24/2018"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_describe_undeclared_parameters"
@@ -17,25 +15,21 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_undeclared_parameters"
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Returns a result set that contains metadata about undeclared parameters in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considers each parameter that is used in the **@tsql** batch, but not declared in **@params**. A result set is returned that contains one row for each such parameter, with the deduced type information for that parameter. The procedure returns an empty result set if the **@tsql** input batch has no parameters except those declared in **@params**.  
+  Returns a result set that contains metadata about undeclared parameters in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considers each parameter that is used in the **\@tsql** batch, but not declared in **\@params**. A result set is returned that contains one row for each such parameter, with the deduced type information for that parameter. The procedure returns an empty result set if the **\@tsql** input batch has no parameters except those declared in **\@params**.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
 ## Syntax  
   
-```  
+```sql
   
 sp_describe_undeclared_parameters   
     [ @tsql = ] 'Transact-SQL_batch'   
@@ -43,13 +37,13 @@ sp_describe_undeclared_parameters
 ```  
   
 ## Arguments  
- [ **@tsql =** ] **'***Transact-SQL_batch***'**  
- One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(***n***)** or **nvarchar(max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'`
+ One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
   
- [ **@params =** ] **N'***parameters***'**  
- @params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similarly to the way sp_executesql works. *Parameters* may be **nvarchar(***n***)** or **nvarchar(max)**.  
+`[ \@params = ] N'parameters'`
+ \@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similarly to the way sp_executesql works. *Parameters* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  
   
- Is one string that contains the definitions of all parameters that have been embedded in *Transact-SQL_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. n is a placeholder that indicates additional parameter definitions. If the Transact-SQL statement or batch in the statement does not contain parameters, @params is not required. The default value for this parameter is NULL.  
+ Is one string that contains the definitions of all parameters that have been embedded in *Transact-SQL_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. n is a placeholder that indicates additional parameter definitions. If the Transact-SQL statement or batch in the statement does not contain parameters, \@params is not required. The default value for this parameter is NULL.  
   
  Datatype  
  The data type of the parameter.  
@@ -96,15 +90,15 @@ sp_describe_undeclared_parameters
   
  **sp_describe_undeclared_parameters** returns an error in any of the following cases.  
   
--   If the input @tsql is not a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Validity is determined by parsing and analyzing the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Any errors caused by the batch during query optimization or during execution are not considered when determining whether the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is valid.  
+-   If the input \@tsql is not a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Validity is determined by parsing and analyzing the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Any errors caused by the batch during query optimization or during execution are not considered when determining whether the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is valid.  
   
--   If @params is not NULL and contains a string that is not a syntactically valid declaration string for parameters, or if it contains a string that declares any parameter more than one time.  
+-   If \@params is not NULL and contains a string that is not a syntactically valid declaration string for parameters, or if it contains a string that declares any parameter more than one time.  
   
--   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in @params.  
+-   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
   
--   If the statement creates any temporary tables.  
+- If the statement references temporary tables.
   
- If @tsql has no parameters, other than those declared in @params, the procedure returns an empty result set.  
+ If \@tsql has no parameters, other than those declared in \@params, the procedure returns an empty result set.  
   
 ## Parameter Selection Algorithm  
  For a query with undeclared parameters, data type deduction for undeclared parameters proceeds in three steps.  
@@ -119,11 +113,11 @@ sp_describe_undeclared_parameters
   
 -   An expression with data types that do not depend on the undeclared parameters for all inputs.  
   
- For example, consider the query `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2`. The expressions dbo.tbl(@p1) + c1 and c2 have data types, and expression @p1 and @p2 + 2 do not.  
+ For example, consider the query `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2`. The expressions dbo.tbl(\@p1) + c1 and c2 have data types, and expression \@p1 and \@p2 + 2 do not.  
   
  After this step, if any expression (other than a call to a UDF) has two arguments without data types, type deduction fails with an error. For example, the following all produce errors:  
   
-```  
+```sql
 SELECT * FROM t1 WHERE @p1 = @p2  
 SELECT * FROM t1 WHERE c1 = @p1 + @p2  
 SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)  
@@ -131,13 +125,13 @@ SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)
   
  The following example does not produce an error:  
   
-```  
+```sql
 SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)  
-```  
+```
   
  **Step 2**  
   
- For a given undeclared parameter @p, the type deduction algorithm finds the innermost expression E(@p) that contains @p and is one of the following:  
+ For a given undeclared parameter \@p, the type deduction algorithm finds the innermost expression E(\@p) that contains \@p and is one of the following:  
   
 -   An argument to a comparison or assignment operator.  
   
@@ -147,7 +141,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   An argument to a **CAST** or **CONVERT**.  
   
- The type deduction algorithm finds a target data type TT(@p) for E(@p). Target data types for the previous examples are as follows:  
+ The type deduction algorithm finds a target data type TT(\@p) for E(\@p). Target data types for the previous examples are as follows:  
   
 -   The data type of the other side of the comparison or assignment.  
   
@@ -157,32 +151,32 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   The data type to which the statement is casting or converting.  
   
- For example, consider the query `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`. Then E(@p1) = @p1, E(@p2) = @p2 + c1, TT(@p1) is the declared return data type of dbo.tbl, and TT(@p2) is the declared parameter data type for dbo.tbl.  
+ For example, consider the query `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`. Then E(\@p1) = \@p1, E(\@p2) = \@p2 + c1, TT(\@p1) is the declared return data type of dbo.tbl, and TT(\@p2) is the declared parameter data type for dbo.tbl.  
   
- If @p is not contained in any expression listed at the beginning of step 2, the type deduction algorithm determines that E(@p) is the largest scalar expression that contains @p, and the type deduction algorithm does not compute a target data type TT(@p) for E(@p). For example, if the query is SELECT `@p + 2` then E(@p) = @p + 2, and there is no TT(@p).  
+ If \@p is not contained in any expression listed at the beginning of step 2, the type deduction algorithm determines that E(\@p) is the largest scalar expression that contains \@p, and the type deduction algorithm does not compute a target data type TT(\@p) for E(\@p). For example, if the query is SELECT `@p + 2` then E(\@p) = \@p + 2, and there is no TT(\@p).  
   
  **Step 3**  
   
- Now that E(@p) and TT(@p) are identified, the type deduction algorithm deduces a data type for @p in one of the following two ways:  
+ Now that E(\@p) and TT(\@p) are identified, the type deduction algorithm deduces a data type for \@p in one of the following two ways:  
   
 -   Simple deduction  
   
-     If E(@p) = @p and TT(@p) exists, i.e., if @p is directly an argument to one of the expressions listed at the beginning of step 2, the type deduction algorithm deduces the data type of @p to be TT(@p). For example:  
+     If E(\@p) = \@p and TT(\@p) exists, i.e., if \@p is directly an argument to one of the expressions listed at the beginning of step 2, the type deduction algorithm deduces the data type of \@p to be TT(\@p). For example:  
   
-    ```  
+    ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
     ```  
   
-     The data type for @p1, @p2, and @p3 will be the data type of c1, the return data type of dbo.tbl, and the parameter data type for dbo.tbl respectively.  
+     The data type for \@p1, \@p2, and \@p3 will be the data type of c1, the return data type of dbo.tbl, and the parameter data type for dbo.tbl respectively.  
   
-     As a special case, if @p is an argument to a \<, >, \<=, or >= operator, simple deduction rules do not apply. The type deduction algorithm will use the general deduction rules explained in the next section. For example, if c1 is a column of data type char(30), consider the following two queries:  
+     As a special case, if \@p is an argument to a \<, >, \<=, or >= operator, simple deduction rules do not apply. The type deduction algorithm will use the general deduction rules explained in the next section. For example, if c1 is a column of data type char(30), consider the following two queries:  
   
-    ```  
+    ```sql
     SELECT * FROM t WHERE c1 = @p  
     SELECT * FROM t WHERE c1 > @p  
     ```  
   
-     In the first case, the type deduction algorithm deduces **char(30)** as the data type for @p as per rules earlier in this topic. In the second case, the type deduction algorithm deduces **varchar(8000)** according to the general deduction rules in the next section.  
+     In the first case, the type deduction algorithm deduces **char(30)** as the data type for \@p as per rules earlier in this topic. In the second case, the type deduction algorithm deduces **varchar(8000)** according to the general deduction rules in the next section.  
   
 -   General deduction  
   
@@ -213,25 +207,25 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ### Selection Criteria  
  Of the candidate data types, any data type that would invalidate the query is rejected. Of the remaining candidate data types, the type deduction algorithm selects one according to the following rules.  
   
-1.  The data type that produces the smallest number of implicit conversions in E(@p) is selected. If a particular data type produces a data type for E(@p) that is different from TT(@p), the type deduction algorithm considers this to be an extra implicit conversion from the data type of E(@p) to TT(@p).  
+1.  The data type that produces the smallest number of implicit conversions in E(\@p) is selected. If a particular data type produces a data type for E(\@p) that is different from TT(\@p), the type deduction algorithm considers this to be an extra implicit conversion from the data type of E(\@p) to TT(\@p).  
   
      For example:  
   
-    ```  
+    ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     In this case, E(@p) is Col_Int + @p and TT(@p) is **int**. **int** is chosen for @p because it produces no implicit conversions. Any other choice of data type produces at least one implicit conversion.  
+     In this case, E(\@p) is Col_Int + \@p and TT(\@p) is **int**. **int** is chosen for \@p because it produces no implicit conversions. Any other choice of data type produces at least one implicit conversion.  
   
 2.  If multiple data types tie for the smallest number of conversions, the data type with greater precedence is used. For example  
   
-    ```  
+    ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     In this case, **int** and **smallint** produce one conversion. Every other data type produces more than one conversion. Because **int** takes precedence over **smallint**, **int** is used for @p. For more information about data type precedence, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     In this case, **int** and **smallint** produce one conversion. Every other data type produces more than one conversion. Because **int** takes precedence over **smallint**, **int** is used for \@p. For more information about data type precedence, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-     This rule only applies if there is an implicit conversion between every data type that ties according to rule 1 and the data type with the greatest precedence. If there is no implicit conversion, then data type deduction fails with an error. For example in the query `SELECT @p FROM t`, data type deduction fails because any data type for @p would be equally good. For example, there is no implicit conversion from **int** to **xml**.  
+     This rule only applies if there is an implicit conversion between every data type that ties according to rule 1 and the data type with the greatest precedence. If there is no implicit conversion, then data type deduction fails with an error. For example in the query `SELECT @p FROM t`, data type deduction fails because any data type for \@p would be equally good. For example, there is no implicit conversion from **int** to **xml**.  
   
 3.  If two similar data types tie under rule 1, for example **varchar(8000)** and **varchar(max)**, the smaller data type (**varchar(8000)**) is chosen. The same principle applies to **nvarchar** and **varbinary** data types.  
   
@@ -247,15 +241,15 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  For example, for the query `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar(8000)** is chosen because conversion (a) is best. For the query `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar(8000)** is still chosen because it causes a type (b) conversion, and because another choice (such as **varchar(4000)**) would cause a type (d) conversion.  
   
- As a final example, given a query `SELECT NULL + @p`, **int** is chosen for @p because it results in a type (c) conversion.  
+ As a final example, given a query `SELECT NULL + @p`, **int** is chosen for \@p because it results in a type (c) conversion.  
   
 ## Permissions  
- Requires permission to execute the @tsql argument.  
+ Requires permission to execute the \@tsql argument.  
   
 ## Examples  
  The following example returns information such as the expected data type for the undeclared `@id` and `@name` parameters.  
   
-```  
+```sql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  
@@ -265,7 +259,7 @@ WHERE object_id = @id OR name = @name'
   
  When the `@id` parameter is provided as a `@params` reference, the `@id` parameter is omitted from the result set and only the `@name` parameter is described.  
   
-```  
+```sql
 sp_describe_undeclared_parameters @tsql =   
 N'SELECT object_id, name, type_desc   
 FROM sys.indexes  
@@ -277,6 +271,4 @@ WHERE object_id = @id OR NAME = @name',
 ## See Also  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
-  
-  
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

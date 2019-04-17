@@ -2,13 +2,10 @@
 title: "Configure the Windows Firewall to Allow SQL Server Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows Firewall ports"
   - "WMI firewall ports"
@@ -23,24 +20,21 @@ helpviewer_keywords:
   - "ports [SQL Server], TCP"
   - "netsh to open firewall ports"
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 48
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-
- > For content related to previous versions of SQL Server, see [Configure the Windows Firewall to Allow SQL Server Access](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Firewall systems help prevent unauthorized access to computer resources. If a firewall is turned on but not correctly configured, attempts to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might be blocked.  
   
-To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a firewall, you must configure the firewall on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The firewall is a component of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. You can also install a firewall from another company. This topic discusses how to configure the Windows firewall, but the basic principles apply to other firewall programs.  
+To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through a firewall, you must configure the firewall on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The firewall is a component of [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. You can also install a firewall from another company. This article discusses how to configure the Windows firewall, but the basic principles apply to other firewall programs.  
   
 > [!NOTE]  
->  This topic provides an overview of firewall configuration and summarizes information of interest to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. For more information about the firewall and for authoritative firewall information, see the firewall documentation, such as [Windows Firewall with Advanced Security and IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
+>  This article provides an overview of firewall configuration and summarizes information of interest to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrator. For more information about the firewall and for authoritative firewall information, see the firewall documentation, such as [Windows Firewall with Advanced Security and IPsec](https://go.microsoft.com/fwlink/?LinkID=116904).  
   
- Users familiar with the **Windows Firewall** item in Control Panel and with the Windows Firewall with Advanced Security Microsoft Management Console (MMC) snap-in and who know which firewall settings they want to configure can move directly to the topics in the following list:  
+ Users familiar with the **Windows Firewall** item in Control Panel and with the Windows Firewall with Advanced Security Microsoft Management Console (MMC) snap-in and who know which firewall settings they want to configure can move directly to the articles in the following list:  
   
 -   [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -57,13 +51,13 @@ To access an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 -   An administrator configures exceptions to the firewall. This allows either access to specified programs running on your computer, or access to specified connection ports on your computer. In this case, the computer accepts unsolicited incoming traffic when acting as a server, a listener, or a peer. This is the type of configuration that must be completed to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Choosing a firewall strategy is more complex than just deciding if a given port should be open or closed. When designing a firewall strategy for your enterprise, make sure that you consider all the rules and configuration options available to you. This topic does not review all the possible firewall options. We recommend that you review the following documents:  
+ Choosing a firewall strategy is more complex than just deciding if a given port should be open or closed. When designing a firewall strategy for your enterprise, make sure that you consider all the rules and configuration options available to you. This article does not review all the possible firewall options. We recommend that you review the following documents:  
   
- [Windows Firewall with Advanced Security Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=116080)  
+ [Windows Firewall with Advanced Security Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=116080)  
   
- [Windows Firewall with Advanced Security Design Guide](http://go.microsoft.com/fwlink/?LinkId=116904)  
+ [Windows Firewall with Advanced Security Design Guide](https://go.microsoft.com/fwlink/?LinkId=116904)  
   
- [Introduction to Server and Domain Isolation](http://go.microsoft.com/fwlink/?LinkId=116081)  
+ [Introduction to Server and Domain Isolation](https://go.microsoft.com/fwlink/?LinkId=116081)  
   
 ##  <a name="BKMK_default"></a> Default Firewall Settings  
  The first step in planning your firewall configuration is to determine the current status of the firewall for your operating system. If the operating system was upgraded from a previous version, the earlier firewall settings may have been preserved. Also, the firewall settings could have been changed by another administrator or by a Group Policy in your domain.  
@@ -76,11 +70,11 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
 
 -  **Microsoft Management Console (MMC)**  
   
-     The Windows Firewall with Advanced Security MMC snap-in lets you configure more advanced firewall settings. This snap-in presents most of the firewall options in an easy-to-use manner, and presents all firewall profiles. For more information, see [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) later in this topic.  
+     The Windows Firewall with Advanced Security MMC snap-in lets you configure more advanced firewall settings. This snap-in presents most of the firewall options in an easy-to-use manner, and presents all firewall profiles. For more information, see [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) later in this article.  
   
 -   **netsh**  
   
-     The **netsh.exe** tool can be used by an administrator to configure and monitor Windows-based computers at a command prompt or using a batch file**.** By using the **netsh** tool, you can direct the context commands you enter to the appropriate helper, and the helper then performs the command. A helper is a Dynamic Link Library (.dll) file that extends the functionality of the **netsh** tool by providing configuration, monitoring, and support for one or more services, utilities, or protocols. All operating systems that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have a firewall helper. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] also has an advanced firewall helper called **advfirewall**. The details of using **netsh** are not discussed in this topic. However, many of the configuration options described can be configured by using **netsh**. For example, run the following script at a command prompt to open TCP port 1433:  
+     The **netsh.exe** tool can be used by an administrator to configure and monitor Windows-based computers at a command prompt or using a batch file**.** By using the **netsh** tool, you can direct the context commands you enter to the appropriate helper, and the helper then performs the command. A helper is a Dynamic Link Library (.dll) file that extends the functionality of the **netsh** tool by providing configuration, monitoring, and support for one or more services, utilities, or protocols. All operating systems that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] have a firewall helper. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] also has an advanced firewall helper called **advfirewall**. The details of using **netsh** are not discussed in this article. However, many of the configuration options described can be configured by using **netsh**. For example, run the following script at a command prompt to open TCP port 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  
@@ -94,11 +88,13 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
   
      For more information about **netsh**, see the following links:  
   
-    -   [How to Use the Netsh.exe Tool and Command-Line Switches](http://support.microsoft.com/kb/242468)  
+    -   [How to Use the Netsh.exe Tool and Command-Line Switches](https://support.microsoft.com/kb/242468)  
   
-    -   [How to use the “netsh advfirewall firewall” context instead of the “netsh firewall” context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](http://support.microsoft.com/kb/947709)  
+    -   [How to use the "netsh advfirewall firewall" context instead of the "netsh firewall" context to control Windows Firewall behavior in Windows Server 2008 and in Windows Vista](https://support.microsoft.com/kb/947709)  
   
-    -   [The "netsh firewall" command together with the "profile=all" parameter does not configure the public profile on a Windows Vista-based computer](http://support.microsoft.com/kb/947213)  
+    -   [The "netsh firewall" command together with the "profile=all" parameter does not configure the public profile on a Windows Vista-based computer](https://support.microsoft.com/kb/947213)  
+    
+- **For Linux**: On Linux, you also need to open the ports associated with the services you need access to. Different distributions of Linux and different firewalls have their own procedures. For two examples, see [SQL Server on Red Hat](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions), and [SQL Server on SUSE](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions). 
   
 ## Ports Used By [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The following tables can help you identify the ports being used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -108,7 +104,7 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
   
 |Scenario|Port|Comments|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance running over TCP|TCP port 1433|This is the most common port allowed through the firewall. It applies to routine connections to the default installation of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or a named instance that is the only instance running on the computer. (Named instances have special considerations. See [Dynamic Ports](#BKMK_dynamic_ports) later in this topic.)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance running over TCP|TCP port 1433|This is the most common port allowed through the firewall. It applies to routine connections to the default installation of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or a named instance that is the only instance running on the computer. (Named instances have special considerations. See [Dynamic Ports](#BKMK_dynamic_ports) later in this article.)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named instances in the default configuration|The TCP port is a dynamic port determined at the time the [!INCLUDE[ssDE](../../includes/ssde-md.md)] starts.|See the discussion below in the section [Dynamic Ports](#BKMK_dynamic_ports). UDP port 1434 might be required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service when you are using named instances.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named instances when they are configured to use a fixed port|The port number configured by the administrator.|See the discussion below in the section [Dynamic Ports](#BKMK_dynamic_ports).|  
 |Dedicated Admin Connection|TCP port 1434 for the default instance. Other ports are used for named instances. Check the error log for the port number.|By default, remote connections to the Dedicated Administrator Connection (DAC) are not enabled. To enable remote DAC, use the Surface Area Configuration facet. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).|  
@@ -116,7 +112,7 @@ Configure the Windows Firewall settings with either **Microsoft Management Conso
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance running over an HTTP endpoint.|Can be specified when an HTTP endpoint is created. The default is TCP port 80 for CLEAR_PORT traffic and 443 for SSL_PORT traffic.|Used for an HTTP connection through a URL.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default instance running over an HTTPS endpoint.|TCP port 443|Used for an HTTPS connection through a URL. HTTPS is an HTTP connection that uses secure sockets layer (SSL).|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP port 4022. To verify the port used, execute the following query:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|There is no default port for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], but this is the conventional configuration used in Books Online examples.|  
-|Database Mirroring|Administrator chosen port. To determine the port, execute the following query:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|There is no default port for database mirroring however Books Online examples use TCP port 7022. It is very important to avoid interrupting an in-use mirroring endpoint, especially in high-safety mode with automatic failover. Your firewall configuration must avoid breaking quorum. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
+|Database Mirroring|Administrator chosen port. To determine the port, execute the following query:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|There is no default port for database mirroring however Books Online examples use TCP port 5022 or 7022. It is very important to avoid interrupting an in-use mirroring endpoint, especially in high-safety mode with automatic failover. Your firewall configuration must avoid breaking quorum. For more information, see [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Replication|Replication connections to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use the typical regular [!INCLUDE[ssDE](../../includes/ssde-md.md)] ports (TCP port 1433 for the default instance, etc.)<br /><br /> Web synchronization and FTP/UNC access for replication snapshot require additional ports to be opened on the firewall. To transfer initial data and schema from one location to another, replication can use FTP (TCP port 21), or sync over HTTP (TCP port 80) or File Sharing. File sharing uses UDP port 137 and 138, and TCP port 139 if it using NetBIOS. File Sharing uses TCP port 445.|For sync over HTTP, replication uses the IIS endpoint (ports for which are configurable but is port 80 by default), but the IIS process connects to the backend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through the standard ports (1433 for the default instance.<br /><br /> During Web synchronization using FTP, the FTP transfer is between IIS and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher, not between subscriber and IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] debugger|TCP port 135<br /><br /> See [Special Considerations for Port 135](#BKMK_port_135)<br /><br /> The [IPsec](#BKMK_IPsec) exception might also be required.|If using [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], on the [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] host computer, you must also add **Devenv.exe** to the Exceptions list and open TCP port 135.<br /><br /> If using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], on the [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] host computer, you must also add **ssms.exe** to the Exceptions list and open TCP port 135. For more information, see [Configure firewall rules before running the TSQL Debugger](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
@@ -191,24 +187,24 @@ The following table lists ports and services that [!INCLUDE[ssNoVersion](../../i
 |--------------|----------|--------------|  
 |Windows Management Instrumentation<br /><br /> For more information about WMI, see [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)|WMI runs as part of a shared service host with ports assigned through DCOM. WMI might be using TCP port 135.<br /><br /> See [Special Considerations for Port 135](#BKMK_port_135)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager uses WMI to list and manage services. We recommend that you use the preconfigured rule group **Windows Management Instrumentation (WMI)**. For more information, see the [Interaction with Other Firewall Rules](#BKMK_other_rules) section below.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC)|TCP port 135<br /><br /> See [Special Considerations for Port 135](#BKMK_port_135)|If your application uses distributed transactions, you might have to configure the firewall to allow [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) traffic to flow between separate MS DTC instances, and between the MS DTC and resource managers such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. We recommend that you use the preconfigured **Distributed Transaction Coordinator** rule group.<br /><br /> When a single shared MS DTC is configured for the entire cluster in a separate resource group you should add sqlservr.exe as an exception to the firewall.|  
-|The browse button in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] uses UDP to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service. For more information, see [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP port 1434|UDP is a connectionless protocol.<br /><br /> The firewall has a setting, which is named [UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](http://go.microsoft.com/fwlink/?LinkId=118371) which controls the behavior of the firewall with respect to unicast responses to a broadcast (or multicast) UDP request.  It has two behaviors:<br /><br /> If the setting is TRUE, no unicast responses to a broadcast are permitted at all. Enumerating services will fail.<br /><br /> If the setting is FALSE (default), unicast responses are permitted for 3 seconds. The length of time is not configurable. in a congested or high-latency network, or for heavily loaded servers, tries to enumerate instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might return a partial list, which might mislead users.|  
+|The browse button in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] uses UDP to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Service. For more information, see [SQL Server Browser Service &#40;Database Engine and SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md).|UDP port 1434|UDP is a connectionless protocol.<br /><br /> The firewall has a setting, which is named [UnicastResponsesToMulticastBroadcastDisabled Property of the INetFwProfile Interface](https://go.microsoft.com/fwlink/?LinkId=118371) which controls the behavior of the firewall with respect to unicast responses to a broadcast (or multicast) UDP request.  It has two behaviors:<br /><br /> If the setting is TRUE, no unicast responses to a broadcast are permitted at all. Enumerating services will fail.<br /><br /> If the setting is FALSE (default), unicast responses are permitted for 3 seconds. The length of time is not configurable. in a congested or high-latency network, or for heavily loaded servers, tries to enumerate instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might return a partial list, which might mislead users.|  
 |<a name="BKMK_IPsec"></a> IPsec traffic|UDP port 500 and UDP port 4500|If the domain policy requires network communications to be done through IPsec, you must also add UDP port 4500 and UDP port 500 to the exception list. IPsec is an option using the **New Inbound Rule Wizard** in the Windows Firewall snap-in. For more information, see [Using the Windows Firewall with Advanced Security Snap-in](#BKMK_WF_msc) below.|  
-|Using Windows Authentication with Trusted Domains|Firewalls must be configured to allow authentication requests.|For more information, see [How to configure a firewall for domains and trusts](http://support.microsoft.com/kb/179442/).|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Clustering|Clustering requires additional ports that are not directly related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|For more information, see [Enable a network for cluster use](http://go.microsoft.com/fwlink/?LinkId=118372).|  
-|URL namespaces reserved in the HTTP Server API (HTTP.SYS)|Probably TCP port 80, but can be configured to other ports. For general information, see [Configuring HTTP and HTTPS](http://go.microsoft.com/fwlink/?LinkId=118373).|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific information about reserving an HTTP.SYS endpoint using HttpCfg.exe, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
+|Using Windows Authentication with Trusted Domains|Firewalls must be configured to allow authentication requests.|For more information, see [How to configure a firewall for domains and trusts](https://support.microsoft.com/kb/179442/).|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Clustering|Clustering requires additional ports that are not directly related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|For more information, see [Enable a network for cluster use](https://go.microsoft.com/fwlink/?LinkId=118372).|  
+|URL namespaces reserved in the HTTP Server API (HTTP.SYS)|Probably TCP port 80, but can be configured to other ports. For general information, see [Configuring HTTP and HTTPS](https://go.microsoft.com/fwlink/?LinkId=118373).|For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specific information about reserving an HTTP.SYS endpoint using HttpCfg.exe, see [About URL Reservations and Registration  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).|  
   
 ##  <a name="BKMK_port_135"></a> Special Considerations for Port 135  
  When you use RPC with TCP/IP or with UDP/IP as the transport, inbound ports are frequently dynamically assigned to system services as required; TCP/IP and UDP/IP ports that are larger than port 1024 are used. These are frequently informally referred to as "random RPC ports." In these cases, RPC clients rely on the RPC endpoint mapper to tell them which dynamic ports were assigned to the server. For some RPC-based services, you can configure a specific port instead of letting RPC assign one dynamically. You can also restrict the range of ports that RPC dynamically assigns to a small range, regardless of the service. Because port 135 is used for many services it is frequently attacked by malicious users. When opening port 135, consider restricting the scope of the firewall rule.  
   
  For more information about port 135, see the following references:  
   
--   [Service overview and network port requirements for the Windows Server system](http://support.microsoft.com/kb/832017)  
+-   [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)  
   
--   [Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](http://support.microsoft.com/kb/839880)  
+-   [Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](https://support.microsoft.com/kb/839880)  
   
--   [Remote procedure call (RPC)](http://go.microsoft.com/fwlink/?LinkId=118375)  
+-   [Remote procedure call (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)  
   
--   [How to configure RPC dynamic port allocation to work with firewalls](http://support.microsoft.com/kb/154596/)  
+-   [How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/kb/154596/)  
   
 ##  <a name="BKMK_other_rules"></a> Interaction with Other Firewall Rules  
  The Windows Firewall uses rules and rule groups to establish its configuration. Each rule or rule group is generally associated with a particular program or service, and that program or service might modify or delete that rule without your knowledge. For example, the rule groups **World Wide Web Services (HTTP)** and **World Wide Web Services (HTTPS)** are associated with IIS. Enabling those rules will open ports 80 and 443, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that depend on ports 80 and 443 will function if those rules are enabled. However, administrators configuring IIS might modify or disable those rules. Therefore, if you are using port 80 or port 443 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you should create your own rule or rule group that maintains your desired port configuration independently of the other IIS rules.  
@@ -216,7 +212,7 @@ The following table lists ports and services that [!INCLUDE[ssNoVersion](../../i
  The Windows Firewall with Advanced Security MMC snap-in allows any traffic that matches any applicable allow rule. So if there are two rules that both apply to port 80 (with different parameters), traffic that matches either rule will be permitted. So if one rule allows traffic over port 80 from local subnet and one rule allows traffic from any address, the net effect is that all traffic to port 80 is permitted regardless of the source. To effectively manage access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], administrators should periodically review all firewall rules enabled on the server.  
   
 ##  <a name="BKMK_profiles"></a> Overview of Firewall Profiles  
- Firewall profiles are discussed in [Windows Firewall with Advanced Security Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=116080) in the section **Network location-aware host firewall**. To summarize, the operating systems identify and remember each of the networks to which they connect with regard to connectivity, connections, and category.  
+ Firewall profiles are discussed in [Windows Firewall with Advanced Security Getting Started Guide](https://go.microsoft.com/fwlink/?LinkId=116080) in the section **Network location-aware host firewall**. To summarize, the operating systems identify and remember each of the networks to which they connect with regard to connectivity, connections, and category.  
   
  There are three network location types in Windows Firewall with Advanced Security:  
   
@@ -306,10 +302,10 @@ The following table lists ports and services that [!INCLUDE[ssNoVersion](../../i
   
          The **-n** switch instructs **netstat** to numerically display the address and port number of active TCP connections. The **-a** switch instructs **netstat** to display the TCP and UDP ports on which the computer is listening.  
   
--   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=28590).  
+-   The **PortQry** utility can be used to report the status of TCP/IP ports as listening, not listening, or filtered. (With a filtered status, the port might or might not be listening; this status indicates that the utility did not receive a response from the port.) The **PortQry** utility is available for download from the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=28590).  
   
 ## See Also  
- [Service overview and network port requirements for the Windows Server system](http://support.microsoft.com/kb/832017)   
+ [Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017)   
  [How to: Configure Firewall Settings (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   

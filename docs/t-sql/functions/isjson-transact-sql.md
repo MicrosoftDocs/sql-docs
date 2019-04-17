@@ -2,12 +2,10 @@
 title: "ISJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ISJSON"
@@ -16,13 +14,13 @@ helpviewer_keywords:
   - "ISJSON function"
   - "JSON, validating"
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: "jovanpop-msft"
+ms.author: "jovanpop"
+ms.reviewer: genemi
+manager: craigg
 ---
 # ISJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Tests whether a string contains valid JSON.  
   

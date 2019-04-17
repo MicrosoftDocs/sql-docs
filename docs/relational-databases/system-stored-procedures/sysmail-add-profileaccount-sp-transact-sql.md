@@ -2,12 +2,10 @@
 title: "sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_add_profileaccount_sp"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_add_profileaccount_sp"
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
-caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sysmail_add_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a Database Mail account to a Database Mail profile. Execute **sysmail_add_profileaccount_sp** after a Database Account is created with [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md), and a Database Profile is created with [sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,19 +36,19 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## Arguments  
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  The profile id to add the account to. *profile_id* is **int**, with a default of NULL. Either the *profile_id* or the *profile_name* must be specified.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  The profile name to add the account to. *profile_name* is **sysname**, with a default of NULL. Either the *profile_id* or the *profile_name* must be specified.  
   
- [ **@account_id** = ] *account_id*  
+`[ @account_id = ] account_id`
  The account id to add to the profile. *account_id* is **int**, with a default of NULL. Either the *account_id* or the *account_name* must be specified.  
   
- [ **@account_name** = ] **'***account_name***'**  
+`[ @account_name = ] 'account_name'`
  The name of the account to add to the profile. *account_name* is **sysname**, with a default of NULL. Either the *account_id* or the *account_name* must be specified.  
   
- [ **@sequence_number** = ] *sequence_number*  
+`[ @sequence_number = ] sequence_number`
  The sequence number of the account within the profile. *sequence_number* is **int**, with no default. The sequence number determines the order in which accounts are used in the profile.  
   
 ## Return Code Values  

@@ -1,17 +1,12 @@
 ---
 title: "sp_changesubscription (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "10/28/2015"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "changesubscription"
   - "sp_changesubscription"
@@ -20,13 +15,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changesubscription"
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
-caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_changesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the properties of a snapshot or transactional push subscription or a pull subscription involved in queued updating transactional replication. To change properties of all other types of pull subscriptions, use [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md). **sp_changesubscription** is executed at the Publisher on the publication database.  
   
@@ -49,22 +43,22 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to change. *publication*is **sysname**, with no default  
   
- [ **@article** = ] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article to change. *article* is **sysname**, with no default.  
   
- [ **@subscriber** = ] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with no default.  
   
- [ **@destination_db** = ] **'***destination_db***'**  
+`[ @destination_db = ] 'destination_db'`
  Is the name of the subscription database. *destination_db* is **sysname**, with no default.  
   
- [ **@property=**] **'***property***'**  
+`[ @property = ] 'property'`
  Is the property to change for the given subscription. *property* is **nvarchar(30)**, and can be one of the values in the table.  
   
- [ **@value=**] **'***value***'**  
+`[ @value = ] 'value'`
  Is the new value for the specified *property*. *value* is **nvarchar(4000)**, and can be one of the values in the table.  
   
 |Property|Value|Description|  
@@ -85,8 +79,8 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|OLE DB provider|  
 |**memory_optimized**|**bit**|Indicates that  the subscription supports memory optimized tables. *memory_optimized* is **bit**, where 1 equals true (the subscription supports memory optimized tables).|  
   
- [ **@publisher =** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be specified for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

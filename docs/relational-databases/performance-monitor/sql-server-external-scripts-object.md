@@ -2,12 +2,10 @@
 title: "SQL Server, External Scripts Object | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/21/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -15,13 +13,12 @@ helpviewer_keywords:
   - "External Scripts object"
   - "SQLServer:External Scripts"
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
-caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # SQL Server, External Scripts Object
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   The **SQLServer:External Scripts** object in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor the actions associated with executing external scripts. For information about executing external scripts, see [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   

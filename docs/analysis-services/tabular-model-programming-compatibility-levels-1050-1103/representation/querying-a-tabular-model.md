@@ -1,24 +1,17 @@
 ---
 title: "Querying a Tabular Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Querying a Tabular Model
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   As a developer querying a tabular model means to retrieve data from the tabular database; to accomplish this goal you have two options: use table queries in DAX, or use MDX and retrieve the data as it were coming from a cube. However, depending on the underlying mode of your tabular model you might be restricted to use only DAX table queries; DirectQuery mode requires the usage of DAX table queries.  
   
 ## Querying with ADOMD.Net  

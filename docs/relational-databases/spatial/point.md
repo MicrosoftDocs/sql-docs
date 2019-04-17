@@ -1,24 +1,22 @@
 ---
 title: "Point | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Point geometry subtype [SQL Server]"
   - "geometry data type [SQL Server], spatial data"
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Point
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data, a **Point** is a 0-dimensional object representing a single location and may contain Z (elevation) and M (measure) values.  
   
 ## Geography Data Type  
@@ -28,21 +26,24 @@ manager: "jhubbard"
  The Point type for the geometry data type represents a single location where *X* represents the X-coordinate of the Point being generated and *Y* represents the Y-coordinate of the Point being generated. *SRID* represents the spatial reference ID of the **geometry** instance that you wish to return.  
   
 ## Examples  
- The following example creates a `geometry Point`instance representing the point (3, 4) with an SRID of 0.  
+### Example A.
+The following example creates a `geometry Point`instance representing the point (3, 4) with an SRID of 0.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('POINT (3 4)', 0);  
 ```  
   
- The next example creates a `geometry``Point` instance representing the point (3, 4) with a Z (elevation) value of 7, an M (measure) value of 2.5, and the default SRID of 0.  
+### Example B.
+The following example creates a `geometry``Point` instance representing the point (3, 4) with a Z (elevation) value of 7, an M (measure) value of 2.5, and the default SRID of 0.  
   
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POINT(3 4 7 2.5)');  
 ```  
   
- The final example returns the X, Y, Z, and M values for the `geometry``Point` instance.  
+### Example C.
+The following example returns the X, Y, Z, and M values for the `geometry``Point` instance.  
   
 ```  
 SELECT @g.STX;  
@@ -51,7 +52,8 @@ SELECT @g.Z;
 SELECT @g.M;  
 ```  
   
- Z and M values may be explicitly specified as NULL, as shown in the following example.  
+### Example D.
+Z and M values may be explicitly specified as NULL, as shown in the following example.  
   
 ```  
 DECLARE @g geometry;  

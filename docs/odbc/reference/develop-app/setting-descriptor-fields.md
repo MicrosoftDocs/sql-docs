@@ -2,20 +2,17 @@
 title: "Setting Descriptor Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "descriptors [ODBC], retrieving or setting field values"
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Setting Descriptor Fields
 To modify the fields of a descriptor, an application can call **SQLSetDescField**. Some fields are read-only and cannot be set. (See the [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) function description.)  

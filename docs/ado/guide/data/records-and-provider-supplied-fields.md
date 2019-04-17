@@ -1,22 +1,19 @@
 ---
 title: "Records and Provider-Supplied Fields | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "records-provided fields [ADO]"
   - "provider-supplied fields [ADO]"
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Records and Provider-Supplied Fields
 When a [Record](../../../ado/reference/ado-api/record-object-ado.md) object is opened, its source can be the current row of an open [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), an absolute URL, or a relative URL in conjunction with an open [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  
@@ -60,7 +57,7 @@ When a [Record](../../../ado/reference/ado-api/record-object-ado.md) object is o
 |RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Read-only. Indicates the absolute URL of the resource, which is the concatenation of PARENTNAME and PARSENAME.|  
 |RESOURCE_ISHIDDEN|AdBoolean|True if the resource is hidden. No rows will be returned unless the command that creates the rowset explicitly selects rows where RESOURCE_ISHIDDEN is True.|  
 |RESOURCE_ISREADONLY|AdBoolean|True if the resource is read-only. Tries to open this resource with DBBINDFLAG_WRITE and will fail with DB_E_READONLY. This property can be edited even when the resource has only been opened for reading.|  
-|RESOURCE_CONTENTTYPE|AdVarWChar|Indicates the likely use of the document—for example, a lawyer's brief. This may correspond to the Office template that was used to create the document.|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|Indicates the likely use of the document-for example, a lawyer's brief. This may correspond to the Office template that was used to create the document.|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indicates the MIME type of the document, indicating the format such as "`text/html`".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indicates the language in which the content is stored.|  
 |RESOURCE_CREATIONTIME|adFileTime|Read-only. Indicates a FILETIME structure that contains the time the resource was created. The time is reported in Coordinated Universal Time (UTC) format.|  

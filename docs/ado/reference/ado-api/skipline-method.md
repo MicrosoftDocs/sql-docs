@@ -1,14 +1,12 @@
 ---
 title: "SkipLine Method | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "_Stream::raw_SkipLine"
@@ -16,10 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Skipline method [ADO]"
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
-caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SkipLine Method
 Skips one entire line when reading a text [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  

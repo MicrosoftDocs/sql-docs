@@ -2,12 +2,10 @@
 title: "sp_help (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help"
@@ -17,13 +15,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help"
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Reports information about a database object (any object listed in the **sys.sysobjects** compatibility view), a user-defined data type, or a data type.  
   
@@ -38,7 +36,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@objname=**] **'***name***'**  
+`[ @objname = ] 'name'`
  Is the name of any object, in **sysobjects** or any user-defined data type in the **systypes** table. *name* is **nvarchar(**776**)**, with a default of NULL. Database names are not acceptable.  Two or three part names must be delimited, such as 'Person.AddressType' or [Person.AddressType].   
    
   
@@ -46,7 +44,7 @@ sp_help [ [ @objname = ] 'name' ]
  0 (success) or 1 (failure)  
   
 ## Result Sets  
- The result sets that are returned depend on whether *name* is specified, when it is specified, and what database object it is.  
+ The result sets that are returned depend on whether *name* is specified, when it is specified, and which database object it is.  
   
 1.  If **sp_help** is executed with no arguments, summary information of objects of all types that exist in the current database is returned.  
   

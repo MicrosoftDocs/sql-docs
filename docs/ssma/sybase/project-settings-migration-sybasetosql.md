@@ -2,24 +2,17 @@
 title: "Project Settings (Migration) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Project Settings (Migration) (SybaseToSQL)
-The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from Sybase Adaptive Server Enterprise (ASE) to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+The Migration page of the **Project Settings** dialog box contains settings that customize how SSMA migrates data from Sybase Adaptive Server Enterprise (ASE) to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 The Migration pane is available in both the **Project Settings** and **Default Project Settings** dialog boxes.  
   
@@ -31,7 +24,7 @@ The Migration pane is available in both the **Project Settings** and **Default P
   
 |Term|Definition|  
 |--------|--------------|  
-|**Replace unsupported dates**|Specifies whether SSMA should correct dates that are earlier than the earliest [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** date (01 January 1753).<br /><br />To keep the current date values, select **Do nothing**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] will not accept dates before 01 January 1753 in a datetime column. If you use older dates, you must convert the datetime values to character values.<br /><br />To convert dates before 01 January 1753 to NULL, select **Replace with NULL**.<br /><br />To replace dates before 01 January 1753 with a supported date, select **Replace with nearest supported date**.<br /><br />**Default Mode**:  Do nothing<br /><br />**Optimistic Mode**:  Do nothing<br /><br />**Full Mode**:  Replace with nearest supported date|  
+|**Replace unsupported dates**|Specifies whether SSMA should correct dates that are earlier than the earliest [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** date (01 January 1753).<br /><br />To keep the current date values, select **Do nothing**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not accept dates before 01 January 1753 in a datetime column. If you use older dates, you must convert the datetime values to character values.<br /><br />To convert dates before 01 January 1753 to NULL, select **Replace with NULL**.<br /><br />To replace dates before 01 January 1753 with a supported date, select **Replace with nearest supported date**.<br /><br />**Default Mode**:  Do nothing<br /><br />**Optimistic Mode**:  Do nothing<br /><br />**Full Mode**:  Replace with nearest supported date|  
   
 ## Migration Engine  
   

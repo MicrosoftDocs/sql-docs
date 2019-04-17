@@ -1,13 +1,11 @@
 ---
 title: "sp_describe_first_result_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/17/2018"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_describe_first_result_set"
@@ -17,21 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_first_result_set"
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Returns the metadata for the first possible result set of the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Returns an empty result set if the batch returns no results. Raises an error if the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot determine the metadata for the first query that will be executed by performing a static analysis. The dynamic management view [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) returns the same information.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://msdn.microsoft.com/library/bb500435.aspx)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## Syntax  
   
@@ -43,15 +37,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## Arguments  
- [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+`[ \@tsql = ] 'Transact-SQL_batch'`
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(***n***)** or **nvarchar(max)**.  
   
- [ **@params =** ] **N'***parameters***'**  
- @params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, which is similar to sp_executesql. Parameters may be **nvarchar(n)** or **nvarchar(max)**.  
+`[ \@params = ] N'parameters'`
+ \@params provides a declaration string for parameters for the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, which is similar to sp_executesql. Parameters may be **nvarchar(n)** or **nvarchar(max)**.  
   
- Is one string that contains the definitions of all parameters that have been embedded in the [!INCLUDE[tsql](../../includes/tsql-md.md)]*_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in the statement must be defined in @params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in the statement does not contain parameters, @params is not required. NULL is the default value for this parameter.  
+ Is one string that contains the definitions of all parameters that have been embedded in the [!INCLUDE[tsql](../../includes/tsql-md.md)]*_batch*. The string must be either a Unicode constant or a Unicode variable. Each parameter definition consists of a parameter name and a data type. *n* is a placeholder that indicates additional parameter definitions. Every parameter specified in the statement must be defined in \@params. If the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or batch in the statement does not contain parameters, \@params is not required. NULL is the default value for this parameter.  
   
- [ **@browse_information_mode =** ] *tinyint*  
+`[ \@browse_information_mode = ] tinyint`
  Specifies if additional key columns and source table information are returned. If set to 1, each query is analyzed as if it includes a FOR BROWSE option on the query. Additional key columns and source table information are returned.  
   
 -   If set to 0, no information is returned.  
@@ -69,7 +63,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|Indicates that the column is an extra column added for browsing information purposes and that it does not actually appear in the result set.|  
-|**column_ordinal**|**int NOT NULL**|Contains the ordinal position of the column in the result set. The first column’s position will be specified as 1.|  
+|**column_ordinal**|**int NOT NULL**|Contains the ordinal position of the column in the result set. The first column's position will be specified as 1.|  
 |**name**|**sysname NULL**|Contains the name of the column if a name can be determined. Otherwise, it will contain NULL.|  
 |**is_nullable**|**bit NOT NULL**|Contains the value 1 if the column allows NULLs, 0 if the column does not allow NULLs, and 1 if it cannot be determined if the column allows NULLs.|  
 |**system_type_id**|**int NOT NULL**|Contains the system_type_id of the data type of the column as specified in sys.types. For CLR types, even though the system_type_name column will return NULL, this column will return the value 240.|  
@@ -113,15 +107,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  The name, nullability, and data type can differ. If **sp_describe_first_result_set** returns an empty result set, the guarantee is that the batch execution will return no-result sets.  
   
- This guarantee presumes there are are no relevant schema changes on the server. Relevant schema changes on the server do not include creating a temporary tables or table variables in the batch A between the time that **sp_describe_first_result_set** is called and the time that the result set is returned during execution, including schema changes made by batch B.  
+ This guarantee presumes there are no relevant schema changes on the server. Relevant schema changes on the server do not include creating a temporary tables or table variables in the batch A between the time that **sp_describe_first_result_set** is called and the time that the result set is returned during execution, including schema changes made by batch B.  
   
  **sp_describe_first_result_set** returns an error in any of the following cases.  
   
--   If the input @tsql is not a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Validity is determined by parsing and analyzing the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Any errors caused by the batch during query optimization or during execution are not considered when determining whether the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is valid.  
+-   If the input \@tsql is not a valid [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Validity is determined by parsing and analyzing the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Any errors caused by the batch during query optimization or during execution are not considered when determining whether the [!INCLUDE[tsql](../../includes/tsql-md.md)] batch is valid.  
   
--   If @params is not NULL and contains a string that is not a syntactically valid declaration string for parameters, or if it contains a string that declares any parameter more than one time.  
+-   If \@params is not NULL and contains a string that is not a syntactically valid declaration string for parameters, or if it contains a string that declares any parameter more than one time.  
   
--   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in @params.  
+-   If the input [!INCLUDE[tsql](../../includes/tsql-md.md)] batch declares a local variable of the same name as a parameter declared in \@params.  
   
 -   If the statement uses a temporary table.  
   
@@ -156,7 +150,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** does not support indirect recursion.  
   
 ## Permissions  
- Requires permission to execute the @tsql argument.  
+ Requires permission to execute the \@tsql argument.  
   
 ## Examples  
   
@@ -184,7 +178,7 @@ WHERE object_id = @id1'
   
  Example using 0 indicating no information is returned.  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.t (a int PRIMARY KEY, b1 int);  
 GO  
 CREATE VIEW dbo.v AS SELECT b1 AS b2 FROM dbo.t;  
@@ -200,7 +194,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  Example using 1 indicating it returns information as if it includes a FOR BROWSE option on the query.  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1  
   
 ```  
@@ -214,7 +208,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  Example using 2 indicating analyzed as if you are preparing a cursor.  
   
-```tsql  
+```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2  
 ```  
   
@@ -406,5 +400,4 @@ N'
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
-  
-  
+ 

@@ -2,23 +2,23 @@
 title: "Create a Knowledge Base | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.selectkb.f1"
   - "sql13.dqs.kb.newkb.f1"
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Create a Knowledge Base
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes how to create a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), and prepare it for domain management, knowledge discovery, or adding a matching policy.  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  

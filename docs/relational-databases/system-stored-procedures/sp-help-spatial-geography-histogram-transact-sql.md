@@ -2,12 +2,10 @@
 title: "sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_spatial_geography_histogram_TSQL"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geography_histogram"
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # sp_help_spatial_geography_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Facilitates the keying of grid parameters for a spatial index.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## Syntax  
   
@@ -42,18 +35,18 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## Arguments  
- [ **@tabname =**] **'***tabname***'**  
+`[ @tabname = ] 'tabname'`
  Is the qualified or nonqualified name of the table for which the spatial index has been specified.  
   
  Quotation marks are required only if a qualified table is specified. If a fully qualified name, including a database name, is provided, the database name must be the name of the current database. *tabname* is **sysname**, with no default.  
   
- [ **@colname =** ] **'***columnname***'**  
+`[ @colname = ] 'columnname'`
  Is the name of the spatial column specified. *columnname* is a **sysname**, with no default.  
   
- [ **@resolution =** ] **'***resolution***'**  
+`[ @resolution = ] 'resolution'`
  Is the resolution of the bounding box. Valid values are from 10 to 5000. *resolution* is a **tinyint**, with no default.  
   
- [ **@sample =** ] **'***sample***'**  
+`[ @sample = ] 'sample'`
  Is the percentage of the table that is used. Valid values are from 0 to 100. *tablesample* is a **float**. Default value is 100.  
   
 ## Property Value/Return Value  
@@ -84,6 +77,6 @@ EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = S
 ```  
   
 ## See Also  
- [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+ [Spatial Index Stored Procedures &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

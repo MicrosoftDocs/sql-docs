@@ -1,26 +1,18 @@
 ---
-title: "Create a Relationship Between Two Tables (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.createrelatdb.f1"
-  - "sql13.asvs.bidtoolset.managereldb.f1"
-ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Create a relationship in Analysis Services tabular models | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Create a Relationship Between Two Tables (SSAS Tabular)
-  If the tables in your data source do not have existing relationships, or if you add new tables, you can use the tools in the model designer to create new relationships. For information about how relationships are used in tabular models, see [Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
+# Create a relationship 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  If the tables in your data source do not have existing relationships, or if you add new tables, you can use the tools in the model designer to create new relationships. For information about how relationships are used in tabular models, see [Relationships](../../analysis-services/tabular-models/relationships-ssas-tabular.md).  
   
 ## Create a relationship between two tables  
   
@@ -68,8 +60,8 @@ manager: "erikre"
   
 6.  Click **Create**.  
   
-## See Also  
- [Delete Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
- [Relationships &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
+## See also  
+ [Delete relationships](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
+ [Relationships](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   
   

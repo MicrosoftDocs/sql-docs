@@ -2,18 +2,15 @@
 title: "The Oracle CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # The Oracle CDC Service
   The Oracle CDC Service is a Windows service running the program xdbcdcsvc.exe. The Oracle CDC Service can be configured to run multiple Windows services on the same computer, each one with a different Windows service name. Creating multiple Oracle CDC Windows services on a single computer is often done to achieve a better separation between them, or when each needs to work with a different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
@@ -30,7 +27,7 @@ manager: "jhubbard"
   
  When using the Oracle CDC Designer console, changes are automatically detected. When updating the Oracle CDC configuration directly using SQL, the following procedure should be called for the Oracle CDC Service to notice the configuration change:  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -59,7 +56,7 @@ GO
   
  The log mining password is stored encrypted by means of an asymmetric key with the fixed name `xdbcdc_asym_key` that is automatically created with the following command:  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  

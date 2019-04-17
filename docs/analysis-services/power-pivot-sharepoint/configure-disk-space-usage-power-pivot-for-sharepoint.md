@@ -1,23 +1,17 @@
 ---
 title: "Configure Disk Space Usage (Power Pivot for SharePoint) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Disk Space Usage (Power Pivot for SharePoint)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint deployment uses the disk space of the host computer to cache [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] databases for faster reloads. Every [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] database that is loaded in memory is first cached to disk so that it can be quickly reloaded later to service new requests. By default, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint uses all available disk space to cache its databases, but can modify this behavior by setting properties that limit how much disk space is used.  
   
  This topic explains how to set the limits on disk space usage.  
@@ -66,7 +60,7 @@ manager: "erikre"
   
 3.  In Disk Usage, set a value (in gigabytes) for **Total disk space** to set an upper limit on the amount of space used for caching purposes. The default is 0, which allows Analysis Services to use all available disk space.  
   
-4.  In Disk Usage, in the **Delete cached databases in last ‘n’ hours** setting, specify last-used criteria for emptying the cache when disk space is at the maximum limit.  
+4.  In Disk Usage, in the **Delete cached databases in last 'n' hours** setting, specify last-used criteria for emptying the cache when disk space is at the maximum limit.  
   
      The default is 4 hours, meaning that all databases that have been inactive for 4 hours or more are deleted from the file system. Databases that are inactive but still in memory are unloaded and then deleted from the file system.  
   

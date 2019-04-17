@@ -2,13 +2,11 @@
 title: "Use RAW Mode with FOR XML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML RAW mode"
   - "XMLSCHEMA option"
@@ -18,12 +16,12 @@ helpviewer_keywords:
   - "RAW mode"
   - "XMLDATA option"
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Use RAW Mode with FOR XML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   RAW mode transforms each row in the query result set into an XML element that has the generic identifier \<row>, or the optionally provided element name. By default, each column value in the rowset that is not NULL is mapped to an attribute of the \<row> element. If the ELEMENTS directive is added to the FOR XML clause, each column value is mapped to a subelement of the \<row> element. Together with the ELEMENTS directive, you can optionally specify the XSINIL option to map NULL column values in the result set to an element that has the attribute, xsi:nil=`"`true`"`.  
   
  You can request a schema for the resulting XML. Specifying the XMLDATA option returns an in-line XDR schema. Specifying the XMLSCHEMA option returns an in-line XSD schema. The schema appears at the start of the data. In the result, the schema namespace reference is repeated for every top-level element.  

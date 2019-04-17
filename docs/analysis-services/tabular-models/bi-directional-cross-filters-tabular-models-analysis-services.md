@@ -1,34 +1,28 @@
 ---
-title: "Bi-directional cross filters - tabular models - Analysis Services | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Bi-directional cross filters in Analysis Services tabular models| Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Bi-directional cross filters - tabular models - Analysis Services
+# Bi-directional cross filters in tabular models
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   New in SQL Server 2016 is a built-in approach for enabling *bi-directional cross filters* in tabular models, eliminating the need for hand-crafted DAX workarounds for propagating filter context across table relationships.  
   
  Breaking the concept down into its component parts: *cross filtering* is the ability to set a filter context on a table based on values in a related table, and *bi-directional* is the transference of a filter context to second related table on the other side of a table relationship. As the name implies, you can slice in both directions of the relationship rather than just one way.  Internally, two-way filtering expands filter context to query a superset of your data.  
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- There are two types of cross filters: one- and two-way filtering. One-way is the traditional many-to-one filter direction between fact and dimensional tables in that relationship. Two-way is a cross-filter that enables the filter context of one relationship to be used as the filter context for another table relationship, with  one table common to both relationships.  
+ There are two types of cross filters: One-way and two-way filtering. One-way is the traditional many-to-one filter direction between fact and dimensional tables in that relationship. Two-way is a cross-filter that enables the filter context of one relationship to be used as the filter context for another table relationship, with  one table common to both relationships.  
   
  Given **DimDate** and **DimProduct** with foreign key relationships to **FactOnlineSales**, a two-way cross filter is equivalent of **FactOnlineSales-to-DimDate** plus **FactOnlineSales-to-DimProduct** used simultaneously.  
   
- Bi-directional cross filters can be an easy  fix to the many-to-many query design problem that has challenged tabular and Power Pivot developers in the past. If you’ve used the DAX workaround for many-to-many relationships in tabular or Power Pivot models, you can try applying a two-way filter to see if it produces expected results.  
+ Bi-directional cross filters can be an easy  fix to the many-to-many query design problem that has challenged tabular and Power Pivot developers in the past. If you've used the DAX workaround for many-to-many relationships in tabular or Power Pivot models, you can try applying a two-way filter to see if it produces expected results.  
   
  When creating a bi-directional cross filter, keep the following points in mind:  
   
@@ -74,7 +68,7 @@ manager: "erikre"
   
  As long as measures are pulled from the fact table and the filter context terminates at the fact table, the aggregations will be filtered correctly for this model. But what happens if you want to create measures elsewhere, such as a distinct count in the products or customer table, or an average discount in the promotion table, and have an existing filter context extend to that measure.  
   
- Let’s try it out by adding a distinct count from **DimProducts** to the PivotTable. Notice the repeating values for **Count Products**. At first glance, this looks like a missing table relationship, but in our model, we can see that all the relationships are fully defined and active. In this case, the repeating values occur because there is no date filter on rows in the product table.  
+ Let's try it out by adding a distinct count from **DimProducts** to the PivotTable. Notice the repeating values for **Count Products**. At first glance, this looks like a missing table relationship, but in our model, we can see that all the relationships are fully defined and active. In this case, the repeating values occur because there is no date filter on rows in the product table.  
   
  ![ssas-bidi-5-prodcount-nofilter](../../analysis-services/tabular-models/media/ssas-bidi-5-prodcount-nofilter.png "ssas-bidi-5-prodcount-nofilter")  
   
@@ -82,8 +76,8 @@ manager: "erikre"
   
  ![ssas-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
-## Learn step by step  
- You can try out bi-directional cross filters by stepping through this walkthrough. To follow along, you’ll need:  
+## Learn step-by-step  
+ You can try out bi-directional cross filters by stepping through this walkthrough. To follow along, you'll need:  
   
 -   SQL Server 2016 Analysis Services instance, tabular mode, latest CTP release  
   
@@ -147,7 +141,7 @@ manager: "erikre"
  ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
   
 ### Create measures  
- You’ll need an aggregation to sum sale amounts by different facets of dimensional data. In **DimProduct,** you can create a measure that counts products, and then use it in an analysis of product merchandising that shows a count of how many products participated in sales for a given year, a given region, or customer type.  
+ You'll need an aggregation to sum sale amounts by different facets of dimensional data. In **DimProduct,** you can create a measure that counts products, and then use it in an analysis of product merchandising that shows a count of how many products participated in sales for a given year, a given region, or customer type.  
   
 1.  Click **Model** > **Model View** > **Diagram View**.  
   
@@ -173,7 +167,7 @@ manager: "erikre"
   
 4.  Select **Date** > **Calendar Year**.  
   
- Notice that sales are broken out by year and manufacturer as expected. This is because the default filter context between **FactOnlineSales**, **DimProduct**, and **DimDate** works correctly for measures on the ‘many’ side of the relationship.  
+ Notice that sales are broken out by year and manufacturer as expected. This is because the default filter context between **FactOnlineSales**, **DimProduct**, and **DimDate** works correctly for measures on the 'many' side of the relationship.  
   
  At the same time, you can see that product count is not picking up on the same filter context as sales. While product counts are correctly filtered by manufacturer (both manufacturer and product counts are in the same table), the date filter is not propagated to product count.  
   
@@ -191,14 +185,14 @@ manager: "erikre"
   
  You should now see that both product counts and sales are filtered by the same filter context, one that includes not only manufacturers from **DimProducts** but also calendar year from **DimDate**.  
   
-## Conclusion and next steps  
- Understanding when and how a bi-directional cross filter can be a matter of trial and error to see how it works in your scenario. At times, you’ll find that the built-in behaviors are not sufficient and will need to fall back on DAX computations to get the job done. In the **See Also** section, you’ll find several links to additional resources on this subject.  
+## Next steps  
+ Understanding when and how a bi-directional cross filter can be a matter of trial and error to see how it works in your scenario. At times, you'll find that the built-in behaviors are not sufficient and will need to fall back on DAX computations to get the job done. In the **See Also** section, you'll find several links to additional resources on this subject.  
   
- In practical terms, cross-filtering can enable forms of data exploration typically delivered only through a many-to-many construction. Having said that, it’s important to recognize that bi-directional cross-filtering is not a many-to-many construct.  An actual many-to-many table configuration remains unsupported in the designer for tabular models in this release.  
+ In practical terms, cross-filtering can enable forms of data exploration typically delivered only through a many-to-many construction. Having said that, it's important to recognize that bi-directional cross-filtering is not a many-to-many construct.  An actual many-to-many table configuration remains unsupported in the designer for tabular models in this release.  
   
-## See Also  
+## See also  
  [Create and manage relationships in Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [A practical example of how to handle simple many-to-manay relationships in Power Pivot and SSAS tabular models](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [A practical example of how to handle simple many-to-manay relationships in Power Pivot and tabular models](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [Resolving many-to-many relationships leveraging DAX cross-table filtering](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
  [Many to many revolution (SQLBI blog)](http://www.sqlbi.com/articles/many2many/)  
   

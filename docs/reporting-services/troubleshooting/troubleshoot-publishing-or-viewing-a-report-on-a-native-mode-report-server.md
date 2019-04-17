@@ -1,20 +1,15 @@
 ---
 title: "Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 02/28/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: troubleshooting
+
+
+ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server
   
@@ -30,7 +25,7 @@ Report Server Name is Not Specified Correctly
   
 When you deploy the report to a report server in native mode, a common error is to specify the name of the reports folder instead of the name of the report server.   
   
-Verify that the report server URL is the address of the report server (for example, `http://localhost/reportserver`), not the address of the Report Manager virtual directory (for example, `http://localhost/reports`). If you have specified a port number for the report server that is different than the default port number 80, you must specify it in the report server address (for example, `http://localhost:81/reportserver`).   
+Verify that the report server URL is the address of the report server (for example, `https://localhost/reportserver`), not the address of the Report Manager virtual directory (for example, `https://localhost/reports`). If you have specified a port number for the report server that is different than the default port number 80, you must specify it in the report server address (for example, `https://localhost:81/reportserver`).   
   
  ## Nothing happens when I toggle items in my published report.  
   When you view a report in local preview, you can toggle items in the report and show or hide them. When you view the same report after it is published to the report server, toggle items no longer work.   
@@ -58,5 +53,5 @@ Verify that you have permission to access the folders that contain the cached fi
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

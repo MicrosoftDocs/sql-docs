@@ -1,6 +1,0 @@
-# [ClientSettingsGeneralFlag Class](clientsettingsgeneralflag-class.md)
-# [FlagIndex Property (ClientSettingsGeneralFlag Class)](flagindex-property-clientsettingsgeneralflag-class.md)
-# [FlagName Property (ClientSettingsGeneralFlag Class)](flagname-property-clientsettingsgeneralflag-class.md)
-# [FlagValue Property (ClientSettingsGeneralFlag Class)](flagvalue-property-clientsettingsgeneralflag-class.md)
-# [InstanceName Property (ClientSettingsGeneralFlag Class)](instancename-property-clientsettingsgeneralflag-class.md)
-# [SetValue Method (ClientSettingsGeneralFlag Class)](setvalue-method-clientsettingsgeneralflag-class.md)

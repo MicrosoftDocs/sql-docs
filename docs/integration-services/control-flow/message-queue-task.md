@@ -2,13 +2,11 @@
 title: "Message Queue Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.messagequeuetask.f1"
   - "sql13.dts.designer.msgqueuetask.general.f1"
@@ -21,10 +19,9 @@ helpviewer_keywords:
   - "messages [Integration Services]"
   - "sending messages"
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Message Queue Task
   The Message Queue task allows you to use Message Queuing (also known as MSMQ) to send and receive messages between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, or to send messages to an application queue that is processed by a custom application. These messages can take the form of simple text, files, or variables and their values.  
@@ -39,7 +36,7 @@ manager: "jhubbard"
   
  When sending or receiving messages, the Message Queue task uses one of four message types: data file, string, string message to variable, or variable. The string message to variable message type can be used only when receiving messages.  
   
- The task uses an MSMQ connection manager to connect to a message queue. For more information, see [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md). For more information about Message Queuing, see the [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=7022).  
+ The task uses an MSMQ connection manager to connect to a message queue. For more information, see [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md). For more information about Message Queuing, see the [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
  The Message Queue task requires that the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service be installed. Some [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components that you may select for installation on the **Components to Install** page or the **Feature Selection** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard install a partial subset of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components. These components are useful for specific tasks, but the functionality of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] will be limited. For example, the [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] option installs the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] components required to design a package, but the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is not installed, and therefore the Message Queue task is not functional. To ensure a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you must select [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on the **Components to Install** page. For more information about installing and running the Message Queue task, see [Install Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
@@ -95,7 +92,7 @@ manager: "jhubbard"
  For information about programmatically setting these properties, see the documentation for the **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** class in the Developer Guide.  
   
 ## Related Tasks  
- For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## Message Queue Task Editor (General Page)
   Use the **General page** of the **Message Queue Task Editor** dialog box to name and describe the Message Queue task, to specify the message format, and to indicate whether the task sends or receives messages.  
@@ -150,17 +147,17 @@ manager: "jhubbard"
   
 #### MessageType = Data file message  
  **DataFileMessage**  
- Type the path of the data file, or click the ellipsis **(…)** and then locate the file.  
+ Type the path of the data file, or click the ellipsis **(...)** and then locate the file.  
   
 #### MessageType = Variable message  
  **VariableMessage**  
- Type the variable names, or click the ellipsis **(…)** and then select the variables. Variables are separated by commas.  
+ Type the variable names, or click the ellipsis **(...)** and then select the variables. Variables are separated by commas.  
   
  **Related Topics:** Select Variables  
   
 #### MessageType = String message  
  **StringMessage**  
- Type the string message, or click the ellipsis **(…)** and then type the message in the **Enter String Message** dialog box.  
+ Type the string message, or click the ellipsis **(...)** and then type the message in the **Enter String Message** dialog box.  
   
 ## Message Queue Task Editor (Receive Page)
   Use the **Receive** page of the **Message Queue Task Editor** dialog box to configure a Message Queue task to receive [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) messages.  
@@ -189,7 +186,7 @@ manager: "jhubbard"
   
 #### MessageType = Data file message  
  **SaveFileAs**  
- Type the path of the file to use, or click the ellipsis button **(…)** and then locate the file.  
+ Type the path of the file to use, or click the ellipsis button **(...)** and then locate the file.  
   
  **Overwrite**  
  Indicate whether to overwrite the data in an existing file when saving the contents of a data file message. The default is **False**.  
@@ -210,7 +207,7 @@ manager: "jhubbard"
   
 ##### Filter = From package  
  **Identifier**  
- If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
+ If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(...)** and then specify the package.  
   
  **Related Topics:** [Select a Package](../../integration-services/control-flow/select-a-package.md)  
   
@@ -224,9 +221,9 @@ manager: "jhubbard"
 |**From package**|The message receives only messages from the specified package. Selecting the value displays the dynamic option, **Identifier**.|  
   
  **Variable**  
- Type the variable name, or click \<**New variable…**> and then configure a new variable.  
+ Type the variable name, or click \<**New variable...**> and then configure a new variable.  
   
- **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### Filter Dynamic Options  
   
@@ -236,7 +233,7 @@ manager: "jhubbard"
   
 ##### Filter = From package  
  **Identifier**  
- If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(…)** and then specify the package.  
+ If you choose to apply a filter, type the unique identifier of the package from which messages can be received, or click the ellipsis button **(...)** and then specify the package.  
   
  **Related Topics:** [Select a Package](../../integration-services/control-flow/select-a-package.md)  
   
@@ -269,9 +266,9 @@ manager: "jhubbard"
  Unless the **Compare** option is set to **None**, provide the string to which the message is compared.  
   
  **Variable**  
- Type the name of the variable to hold the received message, or click \<**New variable…**> and then configure a new variable.  
+ Type the name of the variable to hold the received message, or click \<**New variable...**> and then configure a new variable.  
   
- **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## Select Variables
   Use the **Select Variables** dialog box to specify the variables to use in a send message operation in the Message Queue task. The **Available Variables** list includes system and user-defined variables that are in the scope of the Message Queue task or its parent container. The task uses the variables in the **Selected Variables** list.  
@@ -292,7 +289,7 @@ manager: "jhubbard"
  **New Variable**  
  Create a new variable.  
   
- **Related Topics:** [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   
  [Control Flow](../../integration-services/control-flow/control-flow.md)  

@@ -1,25 +1,24 @@
 ---
 title: "XML Format Files (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: 01/11/2019
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-movement
+ms.topic: conceptual
 helpviewer_keywords: 
   - "format files [SQL Server], XML format files"
   - "bulk importing [SQL Server], format files"
   - "XML format files [SQL Server]"
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Format Files (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides an XML schema that defines syntax for writing *XML format files* to use for bulk importing data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. XML format files must adhere to this schema, which is defined in the XML Schema Definition Language (XSDL). XML format files are only supported when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  You can use an XML format file with a **bcp** command, BULK INSERT statement, or INSERT ... SELECT \* FROM OPENROWSET(BULK...) statement. The **bcp** command allows you to automatically generate an XML format file for a table; for more information, see [bcp Utility](../../tools/bcp-utility.md).  
@@ -175,21 +174,21 @@ manager: "jhubbard"
 ####  <a name="AttrOfFieldElement"></a> Attributes of the \<FIELD> Element  
  This section describes the attributes of the \<FIELD> element, which are summarized in the following schema syntax:  
   
- \<FIELD  
+ <FIELD  
   
- ID **="***fieldID***"**  
+ ID **="**_fieldID_**"**  
   
- xsi**:**type **="***fieldType***"**  
+ xsi**:**type **="**_fieldType_**"**  
   
- [ LENGTH **="***n***"** ]  
+ [ LENGTH **="**_n_**"** ]  
   
- [ PREFIX_LENGTH **="***p***"** ]  
+ [ PREFIX_LENGTH **="**_p_**"** ]  
   
- [ MAX_LENGTH **="***m***"** ]  
+ [ MAX_LENGTH **="**_m_**"** ]  
   
- [ COLLATION **="***collationName***"** ]  
+ [ COLLATION **="**_collationName_**"** ]  
   
- [ TERMINATOR **="***terminator***"** ]  
+ [ TERMINATOR **="**_terminator_**"** ]  
   
  />  
   
@@ -197,13 +196,13 @@ manager: "jhubbard"
   
 |FIELD Attribute|Description|Optional /<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|Specifies the logical name of the field in the data file. The ID of a field is the key used to refer to the field.<br /><br /> \<FIELD ID**="***fieldID***"**/> maps to \<COLUMN SOURCE**="***fieldID***"**/>|Required|  
-|xsi:type **="***fieldType***"**|This is an XML construct (used like an attribute) that identifies the type of the instance of the element. The value of *fieldType* determines which of the optional attributes (below) you need in a given instance.|Required (depending on the data type)|  
-|LENGTH **="***n***"**|This attribute defines the length for an instance of a fixed-length data type.<br /><br /> The value of *n* must be a positive integer.|Optional unless required by the xsi:type value|  
-|PREFIX_LENGTH **="***p***"**|This attribute defines the prefix length for a binary data representation. The PREFIX_LENGTH value, *p*, must be one of the following: 1, 2, 4, or 8.|Optional unless required by the xsi:type value|  
-|MAX_LENGTH **="***m***"**|This attribute is the maximum number of bytes that can be stored in a given field. Without a target table, the column max-length is not known. The MAX_LENGTH attribute restricts the maximum length of an output character column, limiting the storage allocated for the column value. This is especially convenient when using the OPENROWSET function's BULK option in a SELECT FROM clause.<br /><br /> The value of *m* must be a positive integer. By default, the maximum length is 8000 characters for a **char** column and 4000 characters for an **nchar** column.|Optional|  
-|COLLATION **="***collationName***"**|COLLATION is only allowed for character fields. For a list of the SQL collation names, see [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
-|TERMINATOR **= "***terminator***"**|This attribute specifies the terminator of a data field. The terminator can be any character. The terminator must be a unique character that is not part of the data.<br /><br /> By default, the field terminator is the tab character (represented as \t). To represent a paragraph mark, use \r\n.|Used only with an xsi:type of character data, which requires this attribute|  
+|ID **="**_fieldID_**"**|Specifies the logical name of the field in the data file. The ID of a field is the key used to refer to the field.<br /><br /> \<FIELD ID**="**_fieldID_**"**/> maps to \<COLUMN SOURCE**="**_fieldID_**"**/>|Required|  
+|xsi:type **="**_fieldType_**"**|This is an XML construct (used like an attribute) that identifies the type of the instance of the element. The value of *fieldType* determines which of the optional attributes (below) you need in a given instance.|Required (depending on the data type)|  
+|LENGTH **="**_n_**"**|This attribute defines the length for an instance of a fixed-length data type.<br /><br /> The value of *n* must be a positive integer.|Optional unless required by the xsi:type value|  
+|PREFIX_LENGTH **="**_p_**"**|This attribute defines the prefix length for a binary data representation. The PREFIX_LENGTH value, *p*, must be one of the following: 1, 2, 4, or 8.|Optional unless required by the xsi:type value|  
+|MAX_LENGTH **="**_m_**"**|This attribute is the maximum number of bytes that can be stored in a given field. Without a target table, the column max-length is not known. The MAX_LENGTH attribute restricts the maximum length of an output character column, limiting the storage allocated for the column value. This is especially convenient when using the OPENROWSET function's BULK option in a SELECT FROM clause.<br /><br /> The value of *m* must be a positive integer. By default, the maximum length is 8000 characters for a **char** column and 4000 characters for an **nchar** column.|Optional|  
+|COLLATION **="**_collationName_**"**|COLLATION is only allowed for character fields. For a list of the SQL collation names, see [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
+|TERMINATOR **= "**_terminator_**"**|This attribute specifies the terminator of a data field. The terminator can be any character. The terminator must be a unique character that is not part of the data.<br /><br /> By default, the field terminator is the tab character (represented as \t). To represent a paragraph mark, use \r\n.|Used only with an xsi:type of character data, which requires this attribute|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Xsi:type values of the \<FIELD> Element  
  The xsi:type value is an XML construct (used like an attribute) that identifies the data type of an instance of an element. For information on using the "Putting the xsi:type Value into a Data Set," later in this section.  
@@ -226,7 +225,7 @@ manager: "jhubbard"
 ####  <a name="AttrOfColumnElement"></a> Attributes of the \<COLUMN> Element  
  This section describes the attributes of the \<COLUMN> element, which are summarized in the following schema syntax:  
   
- \<COLUMN  
+ <COLUMN  
   
  SOURCE = "*fieldID*"  
   
@@ -250,12 +249,12 @@ manager: "jhubbard"
   
 |COLUMN Attribute|Description|Optional /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|Specifies the ID of the field being mapped to the column.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> maps to \<FIELD ID**="***fieldID***"**/>|Required|  
+|SOURCE **="**_fieldID_**"**|Specifies the ID of the field being mapped to the column.<br /><br /> \<COLUMN SOURCE**="**_fieldID_**"**/> maps to \<FIELD ID**="**_fieldID_**"**/>|Required|  
 |NAME = "*columnName*"|Specifies the name of the column in the row set represented by the format file. This column name is used to identify the column in the result set, and it need not correspond to the column name used in the target table.|Required|  
-|xsi**:**type **="***ColumnType***"**|This is an XML construct (used like an attribute) that identifies the data type of the instance of the element. The value of *ColumnType* determines which of the optional attributes (below) you need in a given instance.<br /><br /> Note: The possible values of *ColumnType* and their associated attributes are listed in the \<COLUMN> element table in the [Xsi:type values of the &lt;COLUMN&gt; Element](#XsiTypeValuesOfCOLUMN) section.|Optional|  
-|LENGTH **="***n***"**|Defines the length for an instance of a fixed-length data type. LENGTH is used only when the xsi:type is a string data type.<br /><br /> The value of *n* must be a positive integer.|Optional (available only if the xsi:type is a string data type)|  
-|PRECISION **="***n***"**|Indicates the number of digits in a number. For example, the number 123.45 has a precision of 5.<br /><br /> The value must be a positive integer.|Optional (available only if the xsi:type is a variable-number data type)|  
-|SCALE **="***int***"**|Indicates the number of digits to the right of the decimal point in a number. For example, the number 123.45 has a scale of 2.<br /><br /> The value must be an integer.|Optional (available only if the xsi:type is a variable-number data type)|  
+|xsi**:**type **="**_ColumnType_**"**|This is an XML construct (used like an attribute) that identifies the data type of the instance of the element. The value of *ColumnType* determines which of the optional attributes (below) you need in a given instance.<br /><br /> Note: The possible values of *ColumnType* and their associated attributes are listed in the \<COLUMN> element table in the [Xsi:type values of the &lt;COLUMN&gt; Element](#XsiTypeValuesOfCOLUMN) section.|Optional|  
+|LENGTH **="**_n_**"**|Defines the length for an instance of a fixed-length data type. LENGTH is used only when the xsi:type is a string data type.<br /><br /> The value of *n* must be a positive integer.|Optional (available only if the xsi:type is a string data type)|  
+|PRECISION **="**_n_**"**|Indicates the number of digits in a number. For example, the number 123.45 has a precision of 5.<br /><br /> The value must be a positive integer.|Optional (available only if the xsi:type is a variable-number data type)|  
+|SCALE **="**_int_**"**|Indicates the number of digits to the right of the decimal point in a number. For example, the number 123.45 has a scale of 2.<br /><br /> The value must be an integer.|Optional (available only if the xsi:type is a variable-number data type)|  
 |NULLABLE **=** { **"**YES**"**<br /><br /> **"**NO**"** }|Indicates whether a column can assume NULL values. This attribute is completely independent of FIELDS. However, if a column is not NULLABLE and field specifies NULL (by not specifying any value), a run-time error results.<br /><br /> The NULLABLE attribute is used only if you do a plain SELECT FROM OPENROWSET(BULK...) statement.|Optional (available for any data type)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> Xsi:type values of the \<COLUMN> Element  
@@ -307,7 +306,7 @@ manager: "jhubbard"
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> Putting the xsi:type Value into a Data Set  
  When an XML document is validated through the XML Schema Definition (XSD) language, the xsi:type value is not put into the data set. However, you can put the xsi:type information into the data set by loading the XML format file into an XML document (for example, `myDoc`), as illustrated in the following code snippet:  
   
-```  
+```cs
 ...;  
 myDoc.LoadXml(xmlFormat);  
 XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");  
@@ -356,10 +355,10 @@ for(int i=0;i<ColumnList.Count;i++)
   
  The data fields correspond one-to-one with the columns of the table. In the `<ROW>` element, the format file maps the column `Age` to the first field, the column `FirstName` to the second field, and the column `LastName` to the third field.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -392,10 +391,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  In the `<ROW>` element, the format file maps the column `Age` to the first field, the column `FirstName` to the third field, and the column `LastName` to the second field.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -427,9 +426,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  In the `<ROW>` element, the format file maps the column `Age` to the first field, the column `FirstName` to the third field, and the column `LastName` to the fourth field.  
   
-```  
+```xml
+<?xml version = "1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -458,10 +458,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="MapXSItype"></a> D. Mapping \<FIELD> xsi:type to \<COLUMN> xsi:type  
  The following example shows different types of fields and their mappings to columns.  
   
-```  
+```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
@@ -495,15 +495,15 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ###  <a name="MapXMLDataToTbl"></a> E. Mapping XML data to a table  
  The following example creates an empty two-column table (`t_xml`), in which the first column maps to the `int` data type and the second column maps to the `xml` data type.  
   
-```  
+```sql
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
  The following XML format file would load a data file into table `t_xml`.  
   
-```  
+```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
@@ -519,15 +519,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="ImportFixedFields"></a> F. Importing fixed-length or fixed-width fields  
  The following example describes fixed fields of `10` or `6` characters each. The format file represents these field lengths/widths as `LENGTH="10"` and `LENGTH="6"`, respectively. Every row of the data files ends with a carriage return-line feed combination, {CR}{LF}, which the format file represents as `TERMINATOR="\r\n"`.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  
-    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"  
+    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"/>  
   </RECORD>  
   <ROW>  
     <COLUMN SOURCE="1" NAME="C1" xsi:type="SQLINT" />  

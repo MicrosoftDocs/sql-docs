@@ -2,23 +2,20 @@
 title: "Security Best Practices with Contained Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "contained database, threats"
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+ms.author: vanto
+manager: craigg
+manager: craigg
 ---
 # Security Best Practices with Contained Databases
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Contained databases have some unique threats that should be understood and mitigated by [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] administrators. Most of the threats are related to the **USER WITH PASSWORD** authentication process, which moves the authentication boundary from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] level to the database level.  
   
@@ -54,7 +51,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### Creating a User that Duplicates a Login  
  If a contained database user with password is created, using the same name as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login, and if the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login connects specifying the contained database as the initial catalog, then the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login will be unable to connect. The connection will be evaluated as the contained database user with password principal on the contained database instead of as a user based on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. This could cause an intentional or accidental denial of service for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
--   As a best practice, members of the **sysadmin** fixed server role should consider always connecting without using the initial catalog option. This connects the login to the master database and avoids any attempts by a database owner to misuse the login attempt. Then the administrator can change to the contained database by using the **USE***\<database>* statement. You can also set the default database of the login to the contained database, which completes the login to **master**, and then transfers the login to the contained database.  
+-   As a best practice, members of the **sysadmin** fixed server role should consider always connecting without using the initial catalog option. This connects the login to the master database and avoids any attempts by a database owner to misuse the login attempt. Then the administrator can change to the contained database by using the **USE**_\<database>_ statement. You can also set the default database of the login to the contained database, which completes the login to **master**, and then transfers the login to the contained database.  
   
 -   As a best practice, do not create contained database users with passwords who have the same name as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins.  
   

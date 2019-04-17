@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: System.Windows.Forms.DialogResult
+  commentId: F:System.Windows.Forms.DialogResult
+  href: https://msdn.microsoft.com/library/system.windows.forms.dialogresult.aspx
+  name: DialogResult
+  name.vb: DialogResult
+  fullName: System.Windows.Forms.DialogResult
+  fullName.vb: System.Windows.Forms.DialogResult

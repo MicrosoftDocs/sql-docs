@@ -1,20 +1,15 @@
 ---
 title: "View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 05/30/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: reports
+
+
+ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 
 # View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
@@ -92,7 +87,7 @@ manager: "erikre"
     Install-SPWebPartPack -LiteralPath "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -GlobalInstall  
     ```  
   
-4.  You should see a message similar to the following, indicating the Web Part was deployed.”  
+4.  You should see a message similar to the following, indicating the Web Part was deployed."  
   
     > Name               SolutionId                                             Deployed  
   
@@ -100,7 +95,7 @@ manager: "erikre"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     For more information on using PowerShell, see [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx).  
+     For more information on using PowerShell, see [Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx).  
   
 #### Install Web Parts Using STSADM.exe  
   
@@ -116,7 +111,7 @@ manager: "erikre"
     STSADM.EXE -o addwppack -filename "C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Reporting Services\SharePoint\RSWebParts.cab" -globalinstall  
     ```  
   
-4.  You should see a message of “Operation completed successfully.”  
+4.  You should see a message of "Operation completed successfully."  
   
      Specifying `-globalinstall` adds the Web Parts to the global assembly cache (GAC). This step is necessary if you want to connect the Web Parts.  
   
@@ -142,9 +137,9 @@ manager: "erikre"
   
 6.  While the page is in edit mode, click **Edit Web Part** in the Report Viewer Web Part.  
   
-7.  In **Report Manager URL**, type a URL to a Report Manager instance that is associated with the native mode report server you want to access. By default, a Report Manager URL has the following syntax: **http://\<servername>/reports**.  
+7.  In **Report Manager URL**, type a URL to a Report Manager instance that is associated with the native mode report server you want to access. By default, a Report Manager URL has the following syntax: **https://\<servername>/reports**.  
   
-8.  In **Report Path**, specify a forward slash, followed by the folder path, and the report name. Do **not** include the server name or Report Manager virtual directory. For example to open the ‘Company Sales’ report in the Adventure Works folder specify **/Adventure Works/Company Sales**. The following is another example where the report ‘Products’ is in the report server root folder **/Products**.  
+8.  In **Report Path**, specify a forward slash, followed by the folder path, and the report name. Do **not** include the server name or Report Manager virtual directory. For example to open the 'Company Sales' report in the Adventure Works folder specify **/Adventure Works/Company Sales**. The following is another example where the report 'Products' is in the report server root folder **/Products**.  
   
 9. Click **OK**.  
   
@@ -168,4 +163,4 @@ manager: "erikre"
   
     3.  Click **Report Viewer**.  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -2,36 +2,34 @@
 title: "Columns with a Name | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Columns with a Name
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:  
   
--   The column name starts with an at sign (@).  
+-   The column name starts with an at sign (\@).  
   
--   The column name does not start with an at sign (@).  
+-   The column name does not start with an at sign (\@).  
   
--   The column name does not start with an at sign@ and contains a slash mark (/).  
+-   The column name does not start with an at sign\@ and contains a slash mark (/).  
   
 -   Several columns share the same prefix.  
   
 -   One column has a different name.  
   
-## Column Name Starts with an At Sign (@)  
- If the column name starts with an at sign (@) and does not contain a slash mark (/), an attribute of the <`row`> element that has the corresponding column value is created. For example, the following query returns a two-column (@PmId, Name) rowset. In the resulting XML, a **PmId** attribute is added to the corresponding <`row`> element and a value of ProductModelID is assigned to it.  
+## Column Name Starts with an At Sign (\@)  
+ If the column name starts with an at sign (\@) and does not contain a slash mark (/), an attribute of the `row` element that has the corresponding column value is created. For example, the following query returns a two-column (\@PmId, Name) rowset. In the resulting XML, a **PmId** attribute is added to the corresponding `row` element and a value of ProductModelID is assigned to it.  
   
 ```  
   
@@ -63,10 +61,10 @@ FOR XML PATH
 go  
 ```  
   
-## Column Name Does Not Start with an At Sign (@)  
- If the column name does not start with an at sign (@), is not one of the XPath node tests, and does not contain a slash mark (/), an XML element that is a subelement of the row element, <`row`> by default, is created.  
+## Column Name Does Not Start with an At Sign (\@)  
+ If the column name does not start with an at sign (\@), is not one of the XPath node tests, and does not contain a slash mark (/), an XML element that is a subelement of the row element, `row` by default, is created.  
   
- The following query specifies the column name, the result. Therefore, a <`result`> element child is added to the <`row`> element.  
+ The following query specifies the column name, the result. Therefore, a `result` element child is added to the `row` element.  
   
 ```  
 SELECT 2+2 as result  
@@ -81,13 +79,13 @@ for xml PATH
 </row>  
 ```  
   
- The following query specifies the column name, ManuWorkCenterInformation, for the XML returned by the XQuery specified against Instructions column of **xml** type. Therefore, a <`ManuWorkCenterInformation`> element is added as a child of the <`row`> element.  
+ The following query specifies the column name, ManuWorkCenterInformation, for the XML returned by the XQuery specified against Instructions column of **xml** type. Therefore, a `ManuWorkCenterInformation` element is added as a child of the `row` element.  
   
 ```  
 SELECT   
        ProductModelID,  
        Name,  
-       Instructions.query('declare namespace MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
                 /MI:root/MI:Location   
               ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
@@ -110,8 +108,8 @@ go
 </row>  
 ```  
   
-## Column Name Does Not Start with an At Sign (@) and Contains a Slash Mark (/)  
- If the column name does not start with an at sign (@), but contains a slash mark (/), the column name indicates an XML hierarchy. For example, if the column name is "Name1/Name2/Name3.../Name***n*** ", each Name***i*** represents an element name that is nested in the current row element (for i=1) or that is under the element that has the name Name***i-1***. If Name***n*** starts with '@', it is mapped to an attribute of Name***n-1*** element.  
+## Column Name Does Not Start with an At Sign (\@) and Contains a Slash Mark (/)  
+ If the column name does not start with an at sign (\@), but contains a slash mark (/), the column name indicates an XML hierarchy. For example, if the column name is "Name1/Name2/Name3.../Name***n*** ", each Name***i*** represents an element name that is nested in the current row element (for i=1) or that is under the element that has the name Name***i-1***. If Name***n*** starts with '\@', it is mapped to an attribute of Name***n-1*** element.  
   
  For example, the following query returns an employee ID and name that are represented as a complex element EmpName that contains a First, Middle, and Last name.  
   
@@ -126,7 +124,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- The column names are used as a path in constructing XML in the PATH mode. The column name that contains employee ID values, starts with '@'.Therefore, an attribute, **EmpID**, is added to the <`row`> element. All other columns include a slash mark ('/') in the column name that indicates hierarchy. The resulting XML will have the <`EmpName`> child under the <`row`> element, and the <`EmpName`> child will have <`First`>, <`Middle`> and <`Last`> element children.  
+ The column names are used as a path in constructing XML in the PATH mode. The column name that contains employee ID values, starts with '\@'.Therefore, an attribute, **EmpID**, is added to the `row` element. All other columns include a slash mark ('/') in the column name that indicates hierarchy. The resulting XML will have the `EmpName` child under the `row` element, and the `EmpName` child will have `First`, `Middle` and `Last` element children.  
   
 ```  
 <row EmpID="1">  
@@ -165,7 +163,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  By default, the PATH mode generates element-centric XML. Therefore, specifying the ELEMENTS directive in a PATH mode query has no effect. However, as shown in the previous example, the ELEMENTS directive is useful with XSINIL to generate elements for null values.  
   
- Besides the ID and name, the following query retrieves an employee address. As per the path in the column names for address columns, an <`Address`> element child is added to the <`row`> element and the address details are added as element children of the <`Address`> element.  
+ Besides the ID and name, the following query retrieves an employee address. As per the path in the column names for address columns, an `Address` element child is added to the `row` element and the address details are added as element children of the `Address` element.  
   
 ```  
 SELECT EmployeeID   "@EmpID",   
@@ -198,7 +196,7 @@ FOR XML PATH
 ```  
   
 ## Several Columns Share the Same Path Prefix  
- If several subsequent columns share the same path prefix, they are grouped together under the same name. If different namespace prefixes are being used even if they are bound to the same namespace, a path is considered different. In the previous query, the FirstName, MiddleName, and LastName columns share the same EmpName prefix.Therefore, they are added as children of the <`EmpName`> element. This is also the case when you were creating the <`Address`> element in the previous example.  
+ If several subsequent columns share the same path prefix, they are grouped together under the same name. If different namespace prefixes are being used even if they are bound to the same namespace, a path is considered different. In the previous query, the FirstName, MiddleName, and LastName columns share the same EmpName prefix.Therefore, they are added as children of the `EmpName` element. This is also the case when you were creating the `Address` element in the previous example.  
   
 ## One Column Has a Different Name  
  If a column with a different name appears in between, it will break the grouping, as shown in the following modified query. The query breaks the grouping of FirstName, MiddleName, and LastName, as specified in the previous query, by adding address columns in between the FirstName and MiddleName columns.  
@@ -218,7 +216,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- As a result, the query creates two <`EmpName`> elements. The first <`EmpName`> element has the <`FirstName`> element child and the second <`EmpName`> element has the <`MiddleName`> and <`LastName`> element children.  
+ As a result, the query creates two `EmpName` elements. The first `EmpName` element has the `FirstName` element child and the second `EmpName` element has the `MiddleName` and `LastName` element children.  
   
  This is the result:  
   

@@ -2,22 +2,20 @@
 title: "Audit Login GDR Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Login GDR event class"
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Login GDR Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The **Audit Login GDR** event class occurs whenever a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login right is added or removed. This event class is for the **sp_grantlogin**, **sp_revokelogin**, and **sp_denylogin** stored procedures.  
   
  This event class may be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It is recommended that you use the **Audit Server Principal Management** event class instead.  

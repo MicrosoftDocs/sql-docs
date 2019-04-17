@@ -2,12 +2,10 @@
 title: "sp_foreignkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_foreignkeys_TSQL"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_foreignkeys"
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_foreignkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the foreign keys that reference primary keys on the table in the linked server.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,32 +40,32 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'***table_server***'**  
+`[ @table_server = ] 'table_server'`
  Is the name of the linked server for which to return table information. *table_server* is **sysname**, with no default.  
   
- [ **@pktab_name =** ] **'***pktab_name***'**  
+`[ @pktab_name = ] 'pktab_name'`
  Is the name of the table with a primary key. *pktab_name* is **sysname**, with a default of NULL.  
   
- [ **@pktab_schema =** ] **'***pktab_schema***'**  
+`[ @pktab_schema = ] 'pktab_schema'`
  Is the name of the schema with a primary key. *pktab_schema*is **sysname**, with a default of NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this contains the owner name.  
   
- [ **@pktab_catalog =** ] **'***pktab_catalog***'**  
+`[ @pktab_catalog = ] 'pktab_catalog'`
  Is the name of the catalog with a primary key. *pktab_catalog*is **sysname**, with a default of NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this contains the database name.  
   
- [ **@fktab_name =** ] **'***fktab_name***'**  
+`[ @fktab_name = ] 'fktab_name'`
  Is the name of the table with a foreign key. *fktab_name*is **sysname**, with a default of NULL.  
   
- [ **@fktab_schema =** ] **'***fktab_schema***'**  
+`[ @fktab_schema = ] 'fktab_schema'`
  Is the name of the schema with a foreign key. *fktab_schema*is **sysname**, with a default of NULL.  
   
- [ **@fktab_catalog =** ] **'***fktab_catalog***'**  
+`[ @fktab_catalog = ] 'fktab_catalog'`
  Is the name of the catalog with a foreign key. *fktab_catalog*is **sysname**, with a default of NULL.  
   
 ## Return Code Values  
  None  
   
 ## Result Sets  
- Various DBMS products support three-part naming for tables (*catalog***.***schema***.***table*), which is represented in the result set.  
+ Various DBMS products support three-part naming for tables (_catalog_**.**_schema_**.**_table_), which is represented in the result set.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  

@@ -1,15 +1,12 @@
 ---
 title: "Report Server Command Prompt Utilities (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: tools
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "rsconfig utility"
   - "components [Reporting Services], command line utilities"
@@ -17,10 +14,8 @@ helpviewer_keywords:
   - "command prompt utilities [Reporting Services]"
   - "rskeymgmt utility"
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
-caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Report Server Command Prompt Utilities (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] includes several command line utilities that you can use to administer a report server. These utilities are installed automatically when you install a report server.  

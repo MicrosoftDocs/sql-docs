@@ -2,18 +2,15 @@
 title: "SQL Server Compact Edition Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # SQL Server Compact Edition Destination Custom Properties
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact destination has both custom properties and the properties common to all data flow components.  
@@ -29,6 +26,6 @@ manager: "jhubbard"
  For more information, see [SQL Server Compact Edition Destination](../../integration-services/data-flow/sql-server-compact-edition-destination.md).  
   
 ## See Also  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

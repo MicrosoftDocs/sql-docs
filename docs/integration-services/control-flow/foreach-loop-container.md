@@ -1,15 +1,12 @@
 ---
 title: "Foreach Loop Container | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "08/22/2017"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.foreachloopcontainer.f1"
   - "sql13.dts.designer.foreachloopcontainer.general.f1"
@@ -18,16 +15,22 @@ f1_keywords:
   - "sql13.dts.designer.schemarestrictions.f1"
   - "sql13.dts.designer.foreachitemcolumns.f1"
   - "sql13.dts.designer.selectsmoenumeration.f1"
+  - "sql14.dts.designer.foreachloopcontainer.f1"
+  - "sql14.dts.designer.foreachloopcontainer.general.f1"
+  - "sql14.dts.designer.foreachloopcontainer.collection.f1"
+  - "sql14.dts.designer.foreachloopcontainer.mapping.f1"
+  - "sql14.dts.designer.schemarestrictions.f1"
+  - "sql14.dts.designer.foreachitemcolumns.f1"
+  - "sql14.dts.designer.selectsmoenumeration.f1"
 helpviewer_keywords: 
   - "repeating control flow"
   - "Foreach Loop containers"
   - "foreach enumerators [Integration Services]"
   - "containers [Integration Services], Foreach Loop"
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 73
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Foreach Loop Container
   The Foreach Loop container defines a repeating control flow in a package. The loop implementation is similar to **Foreach** looping structure in programming languages. In a package, looping is enabled by using a Foreach enumerator.  The Foreach Loop container repeats the control flow for each member of a specified enumerator.  
@@ -36,7 +39,7 @@ manager: "jhubbard"
   
 -   Foreach ADO enumerator to enumerate rows in tables. For example, you can get the rows in an ADO recordset.  
   
-     The Recordset destination saves data in memory in a recordset that is stored in a package variable of **Object** data type. You typically use a Foreach Loop container with the Foreach ADO enumerator to process one row of the recordset at a time. The variable specified for the Foreach ADO enumerator must be of Object data type. For more information about the Recordeset destination, see [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md).  
+     The Recordset destination saves data in memory in a recordset that is stored in a package variable of **Object** data type. You typically use a Foreach Loop container with the Foreach ADO enumerator to process one row of the recordset at a time. The variable specified for the Foreach ADO enumerator must be of Object data type. For more information about the Recordset destination, see [Use a Recordset Destination](../../integration-services/data-flow/use-a-recordset-destination.md).  
   
 -   Foreach ADO.NET Schema Rowset enumerator to enumerate the schema information about a data source. For example, you can enumerate and get a list of the tables in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
@@ -53,6 +56,8 @@ manager: "jhubbard"
 -   Foreach HDFS File Enumerator to enumerate HDFS files in the specified HDFS location.  
   
 -   Foreach Azure Blob enumerator to enumerate blobs in a blob container in Azure Storage.  
+
+-   Foreach ADLS File enumerator to enumerate files in a directory in Azure Data Lake Store.
   
  The following diagram shows a Foreach Loop container that has a File System task. The Foreach loop uses the Foreach File enumerator, and the File System task is configured to copy a file. If the folder that the enumerator specifies contains four files, the loop repeats four times and copies four files.  
   
@@ -82,6 +87,7 @@ manager: "jhubbard"
 |Foreach SMO|Specify the connection to a database and the SMO objects to enumerate.|  
 |Foreach HDFS File Enumerator|Specify a folder and the files to enumerate, the format of the file name of the retrieved files, and whether to traverse subfolders.|  
 |Foreach Azure Blob|Specify the Azure blob container that containers blobs to be enumerated.|  
+|Foreach ADLS File|Specify the Azure Data Lake Store directory that contains the files to be enumerated.|
 
 ## Add enumeration to a control flow with a Foreach Loop container
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the Foreach Loop container, a control flow element that makes it simple to include a looping construct that enumerates files and objects in the control flow of a package. For more information, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -96,9 +102,9 @@ manager: "jhubbard"
   
 2.  Add tasks and containers to the Foreach Loop container. For more information, see [Add or Delete a Task or a Container in a Control Flow](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-3.  Connect tasks and containers in the Foreach Loop container using precedence constraints. For more information, see [Connect Tasks and Containers by Using a Default Precedence Constraint](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
+3.  Connect tasks and containers in the Foreach Loop container using precedence constraints. For more information, see [Connect Tasks and Containers by Using a Default Precedence Constraint](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
   
-4.  Configure the Foreach Loop container. For more information, see [Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+4.  Configure the Foreach Loop container. For more information, see [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
 
 ## Configure a Foreach Loop Container
 This procedure describes how to configure a Foreach Loop container, including property expressions at the enumerator and container levels.  
@@ -113,7 +119,7 @@ This procedure describes how to configure a Foreach Loop container, including pr
   
 5.  Specify an enumerator and set enumerator options as follows:  
   
-    -   To usethe Foreach File enumerator, provide the folder that contains the files to enumerate, specify a filter for the file name and type, and specify whether the fully qualified file name should be returned. Also, indicate whether to recurse through subfolders for more files.  
+    -   To use the Foreach File enumerator, provide the folder that contains the files to enumerate, specify a filter for the file name and type, and specify whether the fully qualified file name should be returned. Also, indicate whether to recurse through subfolders for more files.  
   
     -   To use the Foreach Item enumerator, click **Columns**, and, in the **For Each Item Columns** dialog box, click **Add** to add columns. Select a data type in the **Data Type** list for each column, and click **OK**.  
   
@@ -139,16 +145,16 @@ This procedure describes how to configure a Foreach Loop container, including pr
   
          Next, click EnumerationType and select an enumeration type from the list. If EnumerationType is **Navigator, Node, or NodeText**, click OuterXPathStringSourceType and select the source type, and then click OuterXPathString. Depending on the value set for OuterXPathStringSourceType, select a variable or a file connection from the list, create a new variable or file connection, or type the string for the outer XML Path Language (XPath) expression.  
   
-         If EnumerationType is **ElementCollection**,set OuterXPathStringSourceType and OuterXPathString as described above. Then, click InnerElementType and select an enumeration type for the inner elements, and then click InnerXPathStringSourceType. Depending on the value set for InnerXPathStringSourceType, select a variable or a file connection, create a new variable or file connection, or type the string for the inner XPath expression.  
+         If EnumerationType is **ElementCollection**, set OuterXPathStringSourceType and OuterXPathString as described above. Then, click InnerElementType and select an enumeration type for the inner elements, and then click InnerXPathStringSourceType. Depending on the value set for InnerXPathStringSourceType, select a variable or a file connection, create a new variable or file connection, or type the string for the inner XPath expression.  
   
     -   To use the Foreach SMO enumerator, select an existing ADO.NET connection or click **New connection** in the **Connection** list, and then either type the string to use or click **Browse**. If you click **Browse**, in the **Select SMO Enumeration** dialog box, select the object type to enumerate and the enumeration type, and click **OK**.  
   
-6.  Optionally, click the browse button **(…)** in the **Expressions** text box on the **Collection** page to create expressions that update property values. For more information, see [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Optionally, click the browse button **(...)** in the **Expressions** text box on the **Collection** page to create expressions that update property values. For more information, see [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
-    >  The properties listed in the **Property** list varies by enumerator.  
+    >  The properties listed in the **Property** list vary by enumerator.  
   
-7.  Optionally, click **Variable Mappings** to map object properties to the collection value, and then do the following:  
+7.  Optionally, click **Variable Mappings** to map object properties to the collection value, and then do the following things:  
   
     1.  In the **Variables** list, select a variable or click **\<New Variable>** to create a new variable.  
   
@@ -166,7 +172,7 @@ This procedure describes how to configure a Foreach Loop container, including pr
 ## General Page - Foreach Loop Editor
 Use the **General** page of the **Foreach Loop Editor** dialog box to name and describe a Foreach Loop container that uses a specified enumerator to repeat a workflow for each member in a collection.  
   
- To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) and [Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) and [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### Options  
  **Name**  
@@ -179,13 +185,13 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  Type a description of the Foreach Loop container.  
 
 ## Collection Page - Foreach Loop Editor
- Use the **Collection** pageof the **Foreach Loop Editor** dialog box to specify the enumerator type and configure the enumerator.  
+ Use the **Collection** page of the **Foreach Loop Editor** dialog box to specify the enumerator type and configure the enumerator.  
   
- To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) and [Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ To learn about the Foreach Loop container and how to configure it, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) and [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
 ### Static Options  
  **Enumerator**  
- Select the enumerator type from the list. This property has the options listed in the following table.  
+ Select the enumerator type from the list. This property has the options listed in the following table:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -198,9 +204,10 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 |**Foreach SMO Enumerator**|Enumerate a SMO object. Selecting this value displays the dynamic options in the section, **Foreach SMO Enumerator**.|  
 |**Foreach HDFS File Enumerator**|Enumerate HDFS files in the specified HDFS location. Selecting this value displays the dynamic options in the section, **Foreach HDFS File Enumerator**.|  
 |**Foreach Azure Blob Enumerator**|Enumerate blob files in the specified blob location. Selecting this value displays the dynamic options in the section, **Foreach Azure Blob Enumerator**.|  
+|**Foreach ADLS File Enumerator**|Enumerate files in the specified Data Lake Store directory. Selecting this value displays the dynamic options in the section, **Foreach ADLS File Enumerator**.|
   
  **Expressions**  
- Click or expand **Expressions** to view the list of existing property expressions. Click the ellipsis button **(…)** to add a property expression for an enumerator property, or edit and evaluate an existing property expression.  
+ Click or expand **Expressions** to view the list of existing property expressions. Click the ellipsis button **(...)** to add a property expression for an enumerator property, or edit and evaluate an existing property expression.  
   
  **Related Topics:**  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md), [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md), [Expression Builder](../../integration-services/expressions/expression-builder.md)  
   
@@ -209,13 +216,13 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 #### Enumerator = Foreach File Enumerator  
  You use the Foreach File enumerator to enumerate files in a folder. For example, if the Foreach Loop includes an Execute SQL task, you can use the Foreach File enumerator to enumerate files that contain SQL statements that the Execute SQL task runs. The enumerator can be configured to include subfolders.  
   
- The content of the folders and subfolders that the Foreach File enumerator enumerates might change while the loop is executing because external processes or tasks in the loop add, rename, or delete files while the loop is executing. This means that a number of unexpected situations may occur:  
+ The content of the folders and subfolders that the Foreach File enumerator enumerates might change while the loop is executing because external processes or tasks in the loop add, rename, or delete files while the loop is executing. These changes may cause a number of unexpected situations:  
   
--   If files are deleted, one task in the Foreach Loop may perform work on a different set of files than the files used by subsequent tasks.  
+-   If files are deleted, the actions of one task in the Foreach Loop may affect a different set of files than the files used by subsequent tasks.  
   
--   If files are renamed and an external process automatically adds files to replace the renamed files, the Foreach Loop might perform work twice on the same file content.  
+-   If files are renamed and an external process automatically adds files to replace the renamed files, the actions of tasks in the Foreach Loop may affect the same files twice.  
   
--   If files are added, it may be difficult to determine for which files the Foreach Loop performed work.  
+-   If files are added, it may be difficult to determine for which files the Foreach Loop affected.  
   
  **Folder**  
  Provide the path of the root folder to enumerate.  
@@ -227,14 +234,14 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  Specify the files to enumerate.  
   
 > [!NOTE]  
->  Use wildcard characters (*) to specify the files to include in the collection. For example, to include files with names that contain “abc”, use the following filter: \*abc\*.  
+>  Use wildcard characters (*) to specify the files to include in the collection. For example, to include files with names that contain "abc", use the following filter: \*abc\*.  
 >   
->  When you specify a file name extension, the enumerator also returns files that have the same extension with additional characters appended. (This is the same behavior as that of the **dir** command in the operating system, which also compares 8.3 file names for backward compatibility.) This behavior of the enumerator could cause unexpected results. For example, you want to enumerate only Excel 2003 files, and you specify "*.xls". However, the enumerator will also return Excel 2007 files because those files have the extension, ".xlsx".  
+>  When you specify a file name extension, the enumerator also returns files that have the same extension with additional characters appended. (This is the same behavior as that of the **dir** command in the operating system, which also compares 8.3 file names for backward compatibility.) This behavior of the enumerator could cause unexpected results. For example, you want to enumerate only Excel 2003 files, and you specify "*.xls". However, the enumerator also returns Excel 2007 files because those files have the extension, ".xlsx".  
 >   
->  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (…) to add the property expression.  
+>  You can use an expression to specify the files to include in a collection, by expanding **Expressions** on the **Collection** page, selecting the **FileSpec** property, and then clicking the ellipsis button (...) to add the property expression.  
   
  **Fully qualified**  
- Select to retrieve the fully qualified path of file names. If wildcard characters are specified in the Files option, then the fully-qualified paths that are returned match the filter.  
+ Select to retrieve the fully qualified path of file names. If wildcard characters are specified in the Files option, then the fully qualified paths that are returned match the filter.  
   
  **Name only**  
  Select to retrieve only the file names. If wildcard characters are specified in the Files option, then the file names returned match the filter.  
@@ -268,7 +275,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  **Columns**  
  Click to configure the data type of the columns in the item.  
   
- **Related Topics:** [For Each Item Columns Dialog Box UI Reference](http://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
+ **Related Topics:** [For Each Item Columns Dialog Box UI Reference](https://msdn.microsoft.com/library/ea76aae0-8798-4677-8ab8-4a579de4957c)  
   
 #### Enumerator = Foreach ADO Enumerator  
  You use the Foreach ADO enumerator to enumerate rows or tables in an ADO or ADO.NET object that is stored in a variable. For example, if the Foreach Loop includes a Script task that writes a dataset to a variable, you can use the Foreach ADO enumerator to enumerate the rows in the dataset. If the variable contains an ADO.NET dataset, the enumerator can be configured to enumerate rows in multiple tables or to enumerate tables.  
@@ -279,7 +286,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 > [!NOTE]  
 >  The variable must have the Object data type, otherwise an error occurs.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Rows in first table**  
  Select to enumerate only rows in the first table.  
@@ -307,7 +314,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  **Set Restrictions**  
  Set the restrictions to apply to the specified schema.  
   
- **Related Topics:** [Schema Restrictions Dialog Box](http://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **Related Topics:** [Schema Restrictions Dialog Box](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
   
 #### Enumerator = Foreach From Variable Enumerator  
  You use the Foreach From Variable enumerator to enumerate the enumerable objects in the specified variable. For example, if the Foreach Loop includes an Execute SQL task that runs a query and stores the result in a variable, you can use the Foreach From Variable enumerator to enumerate the query results.  
@@ -315,17 +322,17 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  **Variable**  
  Select a variable in the list, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### Enumerator = Foreach NodeList Enumerator  
  You use the Foreach Nodelist enumerator to enumerate the set of XML nodes that results from applying an XPath expression to an XML file. For example, if the Foreach Loop includes a Script task, you can use the Foreach NodeList enumerator to pass a value that meets the XPath expression criteria from the XML file to the Script task.  
   
  The XPath expression that applies to the XML file is the outer XPath operation, stored in the OuterXPathString property. If the XPath enumeration type is set to **ElementCollection**, the Foreach NodeList enumerator can apply an inner XPath expression, stored in the InnerXPathString property, to a collection of element.  
   
- To learn more about working with XML documents and data, see "[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
+ To learn more about working with XML documents and data, see "[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)" in the MSDN Library.  
   
  **DocumentSourceType**  
- Select the source type of the XML document. This property has the options listed in the following table.  
+ Select the source type of the XML document. This property has the options listed in the following table:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -334,7 +341,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 |**Variable**|Set the source to a variable that contains the XML document.|  
   
  **DocumentSource**  
- If **DocumentSourceType** is set to **Direct input**, provide the XML code, or click the ellipsis (…) button to provide XML by using the **Document Source Edito**r dialog box.  
+ If **DocumentSourceType** is set to **Direct input**, provide the XML code, or click the ellipsis (...) button to provide XML by using the **Document Source Edito**r dialog box.  
   
  If **DocumentSourceType** is set to **File connection**, select a File connection manager, or click \<**New connection...**> to create a new connection manager.  
   
@@ -342,10 +349,10 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
   
  If **DocumentSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **EnumerationType**  
- Select an enumeration type from the list. This property has the options listed in the following table.  
+ Select an enumeration type from the list. This property has the options listed in the following table:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -355,7 +362,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
 |**ElementCollection**|Enumerates element nodes returned by an XPath operation.|  
   
  **OuterXPathStringSourceType**  
- Select the source type of the XPath string. This property has the options listed in the following table.  
+ Select the source type of the XPath string. This property has the options listed in the following table: 
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -372,13 +379,13 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
   
  If **OuterXPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
  **InnerElementType**  
  If **EnumerationType** is set to **ElementCollection**, select the type of inner element in the list.  
   
  **InnerXPathStringSourceType**  
- Select the source type of the inner XPath string. This property has the options listed in the following table.  
+ Select the source type of the inner XPath string. This property has the options listed in the following table:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -395,10 +402,10 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
   
  If **InnerXPathStringSourceType** is set to **Variable**, select an existing variable, or click \<**New variable...**> to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### Enumerator = Foreach SMO Enumerator  
- You use the Foreach SMO enumerator to enumerate SQL Server Management Object (SMO) objects. For example, if the Foreach Loop includes an Execute SQL task, you can use the Foreach SMO enumerator to enumerate the tables in the **AdventureWorks** database and run queries that counts the number of rows in each table.  
+ You use the Foreach SMO enumerator to enumerate SQL Server Management Object (SMO) objects. For example, if the Foreach Loop includes an Execute SQL task, you can use the Foreach SMO enumerator to enumerate the tables in the **AdventureWorks** database and run queries that count the number of rows in each table.  
   
  **Connection**  
  Select an existing ADO.NET connection manager, or click \<**New connection...**> to create a new connection manager.  
@@ -411,7 +418,7 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  **Browse**  
  Select the SMO enumeration.  
   
- **Related Topics:** [Select SMO Enumeration Dialog Box](http://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
+ **Related Topics:** [Select SMO Enumeration Dialog Box](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
 ####  <a name="ForeachHDFSFile"></a> Enumerator = Foreach HDFS File Enumerator  
  The **Foreach HDFS File Enumerator** enables an SSIS package to enumerate HDFS files in the specified HDFS location. The name of each  HDFS file can be stored in a variable and used in tasks inside the Foreach Loop Container.  
@@ -423,14 +430,14 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  Specify the name of the HDFS directory that contains the HDFS files to be enumerated.  
   
  **File name filter**  
- Specify a name filter to select files with a certain name pattern. For example, MySheet*.xls\* will include files such as MySheet001.xls and MySheetABC.xlsx.  
+ Specify a name filter to select files with a certain name pattern. For example, MySheet*.xls\* includes files such as MySheet001.xls and MySheetABC.xlsx.  
   
  **Retrieve file name**  
  Specify the file name type retrieved by SSIS.  
   
--   **Fully qualified name** means the full name which contains the directory path and file name.  
+-   **Fully qualified name** means the full name, which contains the directory path and file name.  
   
--   **Name only** means only the file name is retrieved.  
+-   **Name only** means the file name is retrieved without the path.  
   
  **Traverse subfolders**  
  Specify whether to loop through subfolders recursively.  
@@ -438,9 +445,9 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  On the **Variable Mappings** page of the editor, select or create a variable to store the name of the enumerated HDFS file.  
   
 ####  <a name="ForeachAzureBlob"></a> Enumerator = Foreach Azure Blob Enumerator  
- The  **Azure Blob Enumerator** enables an SSIS package to enumerate blob files in the specified blob location. The name of enumerated blob file can be stored in a variable and used in tasks inside the Foreach Loop Container.  
+ The  **Azure Blob Enumerator** enables an SSIS package to enumerate blob files in the specified blob location. You can store the name of the enumerated blob file in a variable and use it in tasks inside the Foreach Loop Container.  
   
- The **Azure Blob Enumerator** is a component of the SQL Server Integration Services (SSIS) Feature Pack for Azure for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Download the Feature Pack [here](http://go.microsoft.com/fwlink/?LinkID=626967).  
+ The **Azure Blob Enumerator** is a component of the SQL Server Integration Services (SSIS) Feature Pack for Azure for [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Download the Feature Pack [here](https://go.microsoft.com/fwlink/?LinkID=626967).  
   
  **Azure storage connection manager**  
  Select an existing Azure Storage Connection Manager or create a new one that refers to an Azure Storage Account.  
@@ -448,32 +455,47 @@ Use the **General** page of the **Foreach Loop Editor** dialog box to name and d
  Related Topics: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Blob container name**  
- Specify the name of the blob container that contains the blob files to be enumerated..  
+ Specify the name of the blob container that contains the blob files to be enumerated.
   
  **Blob directory**  
- Specify the specify the blob directory that contains the blob files to be enumerated. The blob directory is a virtual hierarchical structure.  
+ Specify the blob directory that contains the blob files to be enumerated. The blob directory is a virtual hierarchical structure.  
   
  **Blob name filter**  
- Specify a name filter to enumerate files with a certain name pattern. E.g. MySheet*.xls\* will include files such as MySheet001.xls and MySheetABC.xlsx.  
+ Specify a name filter to enumerate files with a certain name pattern. For example, `MySheet*.xls\*` includes files such as MySheet001.xls and MySheetABC.xlsx.  
   
  **Blob time range from/to filter**  
- Specify a time range filter. Files modified after **TimeRangeFrom** and before **TimeRangeTo** will be enumerated. 
+ Specify a time range filter. Files modified after **TimeRangeFrom** and before **TimeRangeTo** are enumerated. 
+
+####  <a name="ForeachAdlsFile"></a> Enumerator = Foreach ADLS File Enumerator 
+The **ADLS File Enumerator** enables an SSIS package to enumerate files in Azure Data Lake Store. You can store the full path of the enumerated file (prefixed with a slash - `/`) in a variable and use the file path in tasks inside the Foreach Loop Container.
+  
+**AzureDataLakeConnection**  
+Specifies an Azure Data Lake connection manager, or creates a new one that refers to an ADLS account.   
+  
+**AzureDataLakeDirectory**  
+Specifies the ADLS directory that contains the files to be enumerated.
+  
+**FileNamePattern**  
+Specifies a file name filter. Only files whose names match the specified pattern are enumerated. The wildcards `*` and `?` are supported. 
+  
+**SearchRecursively**  
+Specifies whether to search recursively within the specified directory.  
 
 ## Variable Mappings Page - Foreach Loop Editor
  Use the **Variables Mappings** page of the **Foreach Loop Editor** dialog box to map variables to the collection value. The value of the variable is updated with the collection values on each iteration of the loop.  
   
- To learn about how to use the Foreach Loop container in an Integration Services package,  see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md) . To learn about how to configure it, see [Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+ To learn about how to use the Foreach Loop container in an Integration Services package,  see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md). To learn about how to configure it, see [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tutorial, Creating a Simple ETL Package Tutorial, includes a lesson that teaches you to add and configure a Foreach Loop.  
   
 ### Options  
  **Variable**  
- Select an existing variable, or click \<**New variable...**> to create a new variable.  
+ Select an existing variable, or click **New variable...** to create a new variable.  
   
 > [!NOTE]  
 >  After you map a variable, a new row is automatically added to the **Variable** list.  
   
- **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics**: [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Index**  
  If using the Foreach Item enumerator, specify the index of the column in the collection value to map to the variable. For other enumerator types, the index is read-only.  
@@ -494,7 +516,7 @@ Use the **Schema Restrictions** dialog box to set the schema restrictions to app
  **Variable**  
  Use a variable to define restrictions. Select a variable in the list, or click **New variable...** to create a new variable.  
   
- **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) , [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:** [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) , [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Text**  
  Provide the text to define restrictions.  

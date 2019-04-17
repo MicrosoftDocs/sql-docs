@@ -2,22 +2,22 @@
 title: "Domain Management: Domain List | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.domainlist.f1"
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Domain Management: Domain List
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes the controls in the Domains list of the **Domain Management** page in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Use this pane to select a domain to perform management operations on. The same pane is used for all tabbed pages in the **Domain Management** page.  
   
 ## Options  
@@ -33,7 +33,7 @@ manager: "jhubbard"
  Create a new domain in the knowledge base. This command will display the **Create Domain** dialog box. This command is available either by right-clicking a domain or by clicking the icon above the domain list. For more information, see [Create a Domain](../data-quality-services/create-a-domain.md).  
   
  **Create a copy of the selected domain**  
- Create an exact copy of the selected domain, and add it to the knowledge base. Its name will be the name of the domain that it was created from, plus “ – Copy” appended to the name. This command is available either by right-clicking a domain and then clicking **Create a copy**, or by clicking the icon above the domain list. It is not available for a composite domain.  
+ Create an exact copy of the selected domain, and add it to the knowledge base. Its name will be the name of the domain that it was created from, plus " - Copy" appended to the name. This command is available either by right-clicking a domain and then clicking **Create a copy**, or by clicking the icon above the domain list. It is not available for a composite domain.  
   
  **Import Domain from Data File**  
  Import a domain from a .dqs file. This command displays the **Import from Data File** dialog box that enables you to browse the file system and select a .dqs file for a single domain or a composite domain. This command is available by clicking the icon above the domain list. For more information, see [Import a Domain from a .dqs File](../data-quality-services/import-a-domain-from-a-dqs-file.md).  

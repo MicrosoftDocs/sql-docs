@@ -2,22 +2,19 @@
 title: "Location of Cache | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC cursor library [ODBC], cache"
   - "cursor library [ODBC], cache"
   - "cache [ODBC]"
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Location of Cache
 > [!IMPORTANT]  

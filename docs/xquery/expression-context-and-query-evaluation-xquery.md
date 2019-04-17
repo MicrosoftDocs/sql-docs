@@ -2,15 +2,11 @@
 title: "Expression Context and Query Evaluation (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -20,19 +16,18 @@ helpviewer_keywords:
   - "static context"
   - "dynamic context [XQuery]"
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Expression Context and Query Evaluation (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The context of an expression is the information that is used to analyze and evaluate it. Following are the two phases in which XQuery is evaluated:  
   
--   **Static context** – This is the query compilation phase. Based on the information available, errors are sometimes raised during this static analysis of the query.  
+-   **Static context** - This is the query compilation phase. Based on the information available, errors are sometimes raised during this static analysis of the query.  
   
--   **Dynamic context** – This is the query execution phase. Even if a query has no static errors, such as errors during query compilation, the query may return errors during its execution.  
+-   **Dynamic context** - This is the query execution phase. Even if a query has no static errors, such as errors during query compilation, the query may return errors during its execution.  
   
 ## Static Context  
  Static context initialization refers to the process of putting together all the information for static analysis of the expression. As part of static context initialization, the following is completed:  
@@ -59,10 +54,10 @@ manager: "jhubbard"
   
     -   Any namespaces defined using WITH XMLNAMESPACES. For more information, see [Add Namespaces to Queries with WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)).  
   
-    -   Any namespaces defined in the query prolog. Note that the namespace declarations in the prolog may override the namespace declaration in the WITH XMLNAMESPACES. For example, in the following query, WITH XMLNAMESPACES declares a prefix (pd) that binds it to namespace (`http://someURI`). However, in the WHERE clause, the query prolog overrides the binding.  
+    -   Any namespaces defined in the query prolog. Note that the namespace declarations in the prolog may override the namespace declaration in the WITH XMLNAMESPACES. For example, in the following query, WITH XMLNAMESPACES declares a prefix (pd) that binds it to namespace (`https://someURI`). However, in the WHERE clause, the query prolog overrides the binding.  
   
         ```  
-        WITH XMLNAMESPACES ('http://someURI' AS pd)  
+        WITH XMLNAMESPACES ('https://someURI' AS pd)  
         SELECT ProductModelID, CatalogDescription.query('  
             <Product   
                 ProductModelID= "{ sql:column("ProductModelID") }"   
@@ -70,7 +65,7 @@ manager: "jhubbard"
         ') AS Result  
         FROM Production.ProductModel  
         WHERE CatalogDescription.exist('  
-            declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
              /pd:ProductDescription[(pd:Specifications)]'  
             ) = 1  
         ```  
@@ -86,8 +81,8 @@ manager: "jhubbard"
     -- go  
     CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <simpleType name="myType">  
                 <restriction base="int">  
                  <enumeration value="0" />  
@@ -134,8 +129,8 @@ manager: "jhubbard"
     go  
     CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <element name="Elem" type="string"/>  
     </schema>'  
     go  

@@ -1,46 +1,32 @@
 ---
-# required metadata
-
 title: Configure log shipping for SQL Server on Linux | Microsoft Docs
 description: This tutorial shows a basic example of how to replicate a SQL Server instance on Linux to a secondary instance using log shipping.
 author: meet-bhagdev 
 ms.author: meetb 
-manager: jhubbard
+manager: craigg
 ms.date: 04/19/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
-ms.assetid: 
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ---
-
-
 # Get started with Log Shipping on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 SQL Server Log shipping is a HA configuration where a database from a primary server is replicated onto one or more secondary servers. In a nutshell, a backup of the source database is restored onto the secondary server. Then the primary server creates transaction log backups periodically, and the secondary servers restore them, updating the secondary copy of the database. 
 
   ![Logshipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-As described in the picture above, a log shipping session involves the following steps:
+As described in the this picture, a log shipping session involves the following steps:
 
 - Backing up the transaction log file on the primary SQL Server instance
 - Copying the transaction log backup file across the network to one or more secondary SQL Server instances
 - Restoring the transaction log backup file on the secondary SQL Server instances
 
 ## Prerequisites
-- [Install SQL Server Agent on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
+- [Install SQL Server Agent on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## Setup a network share for Log Shipping using CIFS 
 
@@ -123,12 +109,12 @@ As described in the picture above, a log shipping session involves the following
 
 - Run this script from your primary server
 
-    ```tsql
+    ```sql
     BACKUP DATABASE SampleDB
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
-    ```tsql
+    ```sql
     DECLARE @LS_BackupJobId	AS uniqueidentifier 
     DECLARE @LS_PrimaryId	AS uniqueidentifier 
     DECLARE @SP_Add_RetCode	As int 
@@ -189,12 +175,12 @@ As described in the picture above, a log shipping session involves the following
 
 - Run this script from your secondary server
 
-    ```tsql
+    ```sql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     WITH NORECOVERY;
     ```
     
-    ```tsql
+    ```sql
     DECLARE @LS_Secondary__CopyJobId	AS uniqueidentifier 
     DECLARE @LS_Secondary__RestoreJobId	AS uniqueidentifier 
     DECLARE @LS_Secondary__SecondaryId	AS uniqueidentifier 
@@ -297,7 +283,7 @@ As described in the picture above, a log shipping session involves the following
 
 - Verify that Log Shipping works by starting the following job on the primary server
 
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 
@@ -307,7 +293,7 @@ As described in the picture above, a log shipping session involves the following
 
 - Verify that Log Shipping works by starting the following job on the secondary server
  
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 

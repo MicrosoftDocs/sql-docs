@@ -1,13 +1,11 @@
 ---
 title: "ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/12/2017"
-ms.prod: "sql-non-specified"
+ms.date: "06/18/2018"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_CERTIFICATE_TSQL"
@@ -22,13 +20,13 @@ helpviewer_keywords:
   - "ALTER CERTIFICATE statement"
   - "certificates [SQL Server], modifying"
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Changes the private key used to encrypt a certificate, or adds one if none is present. Changes the availability of a certificate to [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -51,7 +49,7 @@ ALTER CERTIFICATE certificate_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -66,13 +64,13 @@ ALTER CERTIFICATE certificate_name
  *certificate_name*  
  Is the unique name by which the certificate is known in database.  
   
- FILE **='***path_to_private_key***'**  
+ FILE **='**_path\_to\_private\_key_**'**  
  Specifies the complete path, including file name, to the private key. This parameter can be a local path or a UNC path to a network location. This file will be accessed within the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. When you use this option, you must make sure that the service account has access to the specified file.  
   
- DECRYPTION BY PASSWORD **='***key_password***'**  
+ DECRYPTION BY PASSWORD **='**_key\_password_**'**  
  Specifies the password that is required to decrypt the private key.  
   
- ENCRYPTION BY PASSWORD **='***password***'**  
+ ENCRYPTION BY PASSWORD **='**_password_**'**  
  Specifies the password used to encrypt the private key of the certificate in the database. *password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
  REMOVE PRIVATE KEY  
@@ -88,7 +86,7 @@ ALTER CERTIFICATE certificate_name
   
  When the private key of a certificate that already exists in the database is imported from a file, the private key will be automatically protected by the database master key. To protect the private key with a password, use the ENCRYPTION BY PASSWORD phrase.  
   
- The REMOVE PRIVATE KEY option will delete the private key of the certificate from the database. You can do this when the certificate will be used to verify signatures or in [!INCLUDE[ssSB](../../includes/sssb-md.md)] scenarios that do not require a private key. Do not remove the private key of a certificate that protects a symmetric key.  
+ The REMOVE PRIVATE KEY option will delete the private key of the certificate from the database. You can remove the private key when the certificate will be used to verify signatures or in [!INCLUDE[ssSB](../../includes/sssb-md.md)] scenarios that do not require a private key. Do not remove the private key of a certificate that protects a symmetric key.  
   
  You do not have to specify a decryption password when the private key is encrypted by using the database master key.  
   
@@ -134,17 +132,6 @@ GO
 ```  
 ALTER CERTIFICATE Shipping15   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hk000eEnvjkjy#F%');  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### E. Importing a private key for a certificate that is already present in the database  
-  
-```  
-ALTER CERTIFICATE Shipping13   
-    WITH PRIVATE KEY (FILE = '\\ServerA7\importedkeys\Shipping13',  
-    DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
 GO  
 ```  
   

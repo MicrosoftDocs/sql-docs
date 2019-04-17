@@ -2,18 +2,15 @@
 title: "Step 3: Proof of concept connecting to SQL using pymssql | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -22,7 +19,7 @@ This example should be considered a proof of concept only.  The sample code is s
   
 ## Step 1:  Connect  
   
-The [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) function is used to connect to SQL Database.  
+The [pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html) function is used to connect to SQL Database.  
   
 ```python
     import pymssql  
@@ -32,7 +29,7 @@ The [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) function is
   
 ## Step 2:  Execute query  
   
-The [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and returns a result set which can be iterated over with the use of [cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+The [cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and returns a result set which can be iterated over with the use of [cursor.fetchone()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python
@@ -48,7 +45,7 @@ The [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Curso
   
 ## Step 3:  Insert a row  
   
-In this example you will see how to execute an [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) statement safely, pass parameters which protect your application from [SQL injection](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnerability, and retrieve the auto-generated [Primary Key](https://msdn.microsoft.com/library/ms179610.aspx) value.    
+In this example you will see how to execute an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
   
   
 ```python
@@ -84,4 +81,4 @@ This code example demonstrates the use of transactions in which you:
     
   ## Next steps  
   
-For more information, see the [Python Developer Center](https://azure.microsoft.com/en-us/develop/python/).
+For more information, see the [Python Developer Center](https://azure.microsoft.com/develop/python/).

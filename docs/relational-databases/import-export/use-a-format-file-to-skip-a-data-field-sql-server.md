@@ -2,23 +2,22 @@
 title: "Use a Format File to Skip a Data Field (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/19/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-movement
+ms.topic: conceptual
 helpviewer_keywords: 
   - "format files [SQL Server], skipping data fields"
   - "skipping data fields when importing"
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
-caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use a Format File to Skip a Data Field (SQL Server)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 A data file can contain more fields than the number of columns in the table. This topic describes modifying both non-XML and XML format files to accommodate a data file with more fields by mapping the table columns to the corresponding data fields and ignoring the extra fields.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 
 |Outline|
@@ -34,7 +33,7 @@ The examples of modified format files in this topic are based on the table and d
 ### Sample Table<a name="sample_table"></a>
 The script below creates a test database and a table named `myTestSkipField`.  Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
  
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -100,7 +99,7 @@ Compare the changes made:
 
 The modified format file now reflects:
 * 4 data fields
-* The first data field in `myTestSkipField.bcp` is mapped to the first column, ` myTestSkipField.. PersonID`
+* The first data field in `myTestSkipField.bcp` is mapped to the first column, `myTestSkipField.. PersonID`
 * The second data field in `myTestSkipField.bcp` is not mapped to any column.
 * The third data field in `myTestSkipField.bcp` is mapped to the second column, `myTestSkipField.. FirstName`
 * The fourth data field in `myTestSkipField.bcp` is mapped to the third column, `myTestSkipField.. LastName`
@@ -122,7 +121,7 @@ Compare the changes made:
 **Before**
 ```
 \<?xml version="1.0"?>
-\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
   \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
   \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
@@ -139,7 +138,7 @@ Compare the changes made:
 **After**
 ```
 \<?xml version="1.0"?>
-\<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+\<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
   \<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
   \<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>
@@ -178,7 +177,7 @@ bcp TestDatabase.dbo.myTestSkipField IN D:\BCP\myTestSkipField.bcp -f D:\BCP\myT
 
 ### Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a>
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -194,7 +193,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a>
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -210,7 +209,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a>	
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -229,7 +228,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
 ### Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and [XML Format File](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a>
 Execute the following Transact-SQL in Microsoft SQL Server Management Studio (SSMS):
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

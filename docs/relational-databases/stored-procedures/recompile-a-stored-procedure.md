@@ -2,25 +2,23 @@
 title: "Recompile a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sp_recompile"
   - "WITH RECOMPILE clause"
   - "recompiling stored procedures"
   - "stored procedures [SQL Server], recompiling"
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Recompile a Stored Procedure
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   This topic describes how to recompile a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. There are three ways to do this: **WITH RECOMPILE** option in the procedure definition or when the procedure is called, the **RECOMPILE** query hint on individual statements, or by using the **sp_recompile** system stored procedure. This topic describes using the WITH RECOMPILE option when creating a procedure definition and executing an existing procedure. It also describes using the sp_recompile system stored procedure to recompile an existing procedure.  
   
  **In This Topic**  
@@ -39,7 +37,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   When a procedure is compiled for the first time or recompiled, the procedure’s query plan is optimized for the current state of the database and its objects. If a database undergoes significant changes to its data or structure, recompiling a procedure updates and optimizes the procedure’s query plan for those changes. This can improve the procedure’s processing performance.  
+-   When a procedure is compiled for the first time or recompiled, the procedure's query plan is optimized for the current state of the database and its objects. If a database undergoes significant changes to its data or structure, recompiling a procedure updates and optimizes the procedure's query plan for those changes. This can improve the procedure's processing performance.  
   
 -   There are times when procedure recompilation must be forced and other times when it occurs automatically. Automatic recompiling occurs whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is restarted. It also occurs if an underlying table referenced by the procedure has undergone physical design changes.  
   
@@ -101,9 +99,9 @@ AS
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates a simple procedure that returns all employees (first and last names supplied), their job titles, and their department names from a view.  
   
-     And then copy and paste the second code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure’s query plan.  
+     And then copy and paste the second code example into the query window and click **Execute**. This executes the procedure and recompiles the procedure's query plan.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -121,7 +119,7 @@ GO
   
      Then, copy and paste the following example into the query window and click **Execute**. This does not execute the procedure but it does mark the procedure to be recompiled so that its query plan is updated the next time that the procedure is executed.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  

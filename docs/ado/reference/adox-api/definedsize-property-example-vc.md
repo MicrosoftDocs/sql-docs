@@ -1,23 +1,20 @@
 ---
 title: "DefinedSize Property Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "DefinedSize property [ADOX], VC++ example"
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DefinedSize Property Example (VC++)
 This example demonstrates the [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md). The code will redefine the size of the FirstName column of the **Employees** table of the *Northwind* database. Then, the change in the values of the FirstName [Field](../../../ado/reference/ado-api/field-object.md) of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) based on the **Employees** table is displayed. Note that by default, the FirstName field becomes padded with spaces after you redefine the **DefinedSize** property.  

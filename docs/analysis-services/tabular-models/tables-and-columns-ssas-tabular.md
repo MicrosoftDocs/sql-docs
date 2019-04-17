@@ -1,23 +1,17 @@
 ---
-title: "Tables and Columns (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Analysis Services tabular model tables and columns | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Tables and Columns (SSAS Tabular)
+# Tables and Columns 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   After you have added tables and data into a model by using the Table Import Wizard, you can begin working with the tables by adding new columns of data, creating relationships between tables, defining calculations that extend the data, and filtering and sorting data in the tables for easier viewing.  
   
  Sections in this topic:  
@@ -49,7 +43,7 @@ manager: "erikre"
   
 -   A combination of both relational data and tabular (HTML) data copy and pasted into the table.  
   
- When you import data, each table or view, sheet, or file of data is added as a table in the model designer. You typically add data from various sources onto separate tabs, but you can combine data in a single table by using **Paste** and **Paste Append**. For more information, see [Copy and Paste Data &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
+ When you import data, each table or view, sheet, or file of data is added as a table in the model designer. You typically add data from various sources onto separate tabs, but you can combine data in a single table by using **Paste** and **Paste Append**. For more information, see [Copy and Paste Data](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md).  
   
  After you have added the data that you need, you can create additional relationships between the tables, look up or reference related values in other tables, or create derived values by adding new calculated columns.  
   
@@ -59,16 +53,16 @@ manager: "erikre"
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[Add Columns to a Table &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|Describes how to add a source column to a table definition.|  
-|[Delete a Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|Describes how to delete a model table column by using the model designer or by using the Table Properties dialog box.|  
-|[Change table, column, or row filter mappings &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|Describes how to change table, column, or row filter mappings by using the table preview or SQL query editor in the Edit Table Properties dialog box.|  
-|[Specify Mark as Date Table for use with Time Intelligence &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Describes how to use the Mark as Date Table dialog box to specify a date table and unique identifier column. Specifying a date table and unique identifier is necessary when using time intelligence functions in DAX formulas.|  
-|[Add a Table &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|Describes how to add a table from a data source by using an existing data source connection.|  
-|[Delete a Table &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|Describes how to delete tables in your model workspace database that you no longer need.|  
-|[Rename a Table or Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Describes how to rename a table or column to make it more identifiable in your model.|  
-|[Set the Data Type of a Column &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Describes how to change the data type of a column. The data type defines how data in the column is stored and presented.|  
-|[Hide or Freeze Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describes how to hide columns that you don’t want to display and how to keep an area of a model visible while you scroll to another area of the model by freezing (locking) specific columns in one area.|  
-|[Calculated Columns &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Topics in this section describe how you can use calculated columns to add aggregated data to your model.|  
-|[Filter and Sort Data &#40;SSAS Tabular&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Topics in this section describe how you can filter or sort data by using controls in the model designer.|  
+|[Add columns to a table](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|Describes how to add a source column to a table definition.|  
+|[Delete a Column](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|Describes how to delete a model table column by using the model designer or by using the Table Properties dialog box.|  
+|[Change table, column, or row filter mappings](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)|Describes how to change table, column, or row filter mappings by using the table preview or SQL query editor in the Edit Table Properties dialog box.|  
+|[Specify Mark as Date Table for use with Time Intelligence](../../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|Describes how to use the Mark as Date Table dialog box to specify a date table and unique identifier column. Specifying a date table and unique identifier is necessary when using time intelligence functions in DAX formulas.|  
+|[Add a table](../../analysis-services/tabular-models/add-a-table-ssas-tabular.md)|Describes how to add a table from a data source by using an existing data source connection.|  
+|[Delete a Table](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)|Describes how to delete tables in your model workspace database that you no longer need.|  
+|[Rename a Table or Column](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|Describes how to rename a table or column to make it more identifiable in your model.|  
+|[Set the Data Type of a Column](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|Describes how to change the data type of a column. The data type defines how data in the column is stored and presented.|  
+|[Hide or freeze columns](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|Describes how to hide columns that you don't want to display and how to keep an area of a model visible while you scroll to another area of the model by freezing (locking) specific columns in one area.|  
+|[Calculated Columns](../../analysis-services/tabular-models/ssas-calculated-columns.md)|Topics in this section describe how you can use calculated columns to add aggregated data to your model.|  
+|[Filter and Sort Data](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|Topics in this section describe how you can filter or sort data by using controls in the model designer.|  
   
   

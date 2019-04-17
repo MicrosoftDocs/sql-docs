@@ -1,27 +1,22 @@
 ---
 title: "RestoreEncryptionKey Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: wmi-provider-library-reference
+
+
+ms.topic: conceptual
 apiname: 
   - "RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)"
 apilocation: 
   - "reportingservices.mof"
-apitype: "MOFDef"
+apitype: MOFDef
 helpviewer_keywords: 
   - "RestoreEncryptionKey method"
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
-caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # ConfigurationSetting Method - RestoreEncryptionKey
   Reapplies the specified encryption key to the report server database.  
@@ -59,7 +54,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful. A non-zero value indicates that an error has occurred.  
   
 ## Remarks  
- If an entry already exists for the report server in the report server database, it is deleted. The new entry is then created using the specified encryption key and the report server’s public key.  
+ If an entry already exists for the report server in the report server database, it is deleted. The new entry is then created using the specified encryption key and the report server's public key.  
   
  The method is most effective when called after the [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) method, which clears the list of encryption keys.  
   

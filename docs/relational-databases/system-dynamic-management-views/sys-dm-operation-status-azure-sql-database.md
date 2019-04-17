@@ -1,16 +1,9 @@
 ---
 title: "sys.dm_operation_status (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "06/05/2017"
-ms.prod: 
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_operation_status_TSQL"
@@ -23,13 +16,13 @@ helpviewer_keywords:
   - "dm_operation_status dynamic management view"
   - "sys.dm_operation_status dynamic management view"
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_operation_status (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   Returns information about operations performed on databases in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.  
   
@@ -46,7 +39,7 @@ manager: "jhubbard"
 |percent_complete|**int**|Percentage of operation that has completed. Values are not continuous and the valid values are listed below. Not NULL.<br/><br/>0 = Operation not started<br/>50 = Operation in progress<br/>100 = Operation complete|  
 |error_code|**int**|Code indicating the error that occurred during a failed operation. If the value is 0, it indicates that the operation completed successfully.|  
 |error_desc|**nvarchar(2048)**|Description of the error that occurred during a failed operation.|  
-|error_severity|**int**|Severity level of the error that occurred during a failed operation. For more information about error severities, see [Database Engine Error Severities](http://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Severity level of the error that occurred during a failed operation. For more information about error severities, see [Database Engine Error Severities](https://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Reserved for future use. Future compatibility is not guaranteed.|  
 |start_time|**datetime**|Timestamp when the operation started.|  
 |last_modify_time|**datetime**|Timestamp when the record was last modified for a long running operation. In case of successfully completed operations, this field displays the timestamp when the operation completed.|  
@@ -76,11 +69,11 @@ manager: "jhubbard"
 -   Delete database  
   
 ## Example  
- Show most recent geo-replication operations associated with database ‘mydb’.  
+ Show most recent geo-replication operations associated with database 'mydb'.  
   
 ```  
 SELECT * FROM sys.dm_ operation_status   
-   WHERE major_resource_id = ‘myddb’   
+   WHERE major_resource_id = 'myddb'   
    ORDER BY start_time DESC;  
 ```  
   

@@ -1,28 +1,21 @@
 ---
 title: "Key Performance Indicator Representation (Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Tables - Key Performance Indicator Representation
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A KPI is used to gauge performance of a value, defined by a Base measure, against a Target value  
   
 ## Key Performance Indicator Representation  
- In tabular object models a key performance indicator –kpi- is a measure with additional information for the client application to display it graphically. A kpi usually has information about a goal to be obtained, the status of the measure compared to a the goal, and information for the client tool on how to display graphically the status.  
+ In tabular object models a key performance indicator -kpi- is a measure with additional information for the client application to display it graphically. A kpi usually has information about a goal to be obtained, the status of the measure compared to a the goal, and information for the client tool on how to display graphically the status.  
   
 ### Key Performance Indicator in AMO  
  When using AMO to manage a Tabular Model kpi there is no one-to-one object match for a kpi in AMO, the AMO <xref:Microsoft.AnalysisServices.Kpi>object is not used for this purpose; in AMO, for tabular models, a kpi is represented the by a series of objects created in one of the elements in the <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> collection and in the <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>.  

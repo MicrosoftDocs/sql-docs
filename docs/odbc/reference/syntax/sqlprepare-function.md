@@ -2,13 +2,11 @@
 title: "SQLPrepare Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLPrepare"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLPrepare function [ODBC]"
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
-caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLPrepare Function
 **Conformance**  
@@ -36,9 +33,9 @@ manager: "jhubbard"
 ```  
   
 SQLRETURN SQLPrepare(  
-     SQLHSTMT      StatementHandle,  
-     SQLCHAR *     StatementText,  
-     SQLINTEGER    TextLength);  
+     SQLHSTMT      StatementHandle,  
+     SQLCHAR *     StatementText,  
+     SQLINTEGER    TextLength);  
 ```  
   
 ## Arguments  
@@ -66,7 +63,7 @@ SQLRETURN SQLPrepare(
 |21S02|Degree of derived table does not match column list|\**StatementText* contained a **CREATE VIEW** statement, and the number of names specified is not the same degree as the derived table defined by the query specification.|  
 |22018|Invalid character value for cast specification|**StatementText* contained an SQL statement that contained a literal or parameter, and the value was incompatible with the data type of the associated table column.|  
 |22019|Invalid escape character|The argument *StatementText* contained a **LIKE** predicate with an **ESCAPE** in the **WHERE** clause, and the length of the escape character following **ESCAPE** was not equal to 1.|  
-|22025|Invalid escape sequence|The argument *StatementText* contained "**LIKE** *pattern value* **ESCAPE** *escape character*" in the **WHERE** clause, and the character following the escape character in the pattern value was neither "%" nor "_".|  
+|22025|Invalid escape sequence|The argument *StatementText* contained "**LIKE** _pattern value_ **ESCAPE** _escape character_" in the **WHERE** clause, and the character following the escape character in the pattern value was neither "%" nor "_".|  
 |24000|Invalid cursor state|(DM) A cursor was open on the *StatementHandle*, and **SQLFetch** or **SQLFetchScroll** had been called.<br /><br /> A cursor was open on the *StatementHandle*, but **SQLFetch** or **SQLFetchScroll** had not been called.|  
 |34000|Invalid cursor name|\**StatementText* contained a positioned **DELETE** or a positioned **UPDATE**, and the cursor referenced by the statement being prepared was not open.|  
 |3D000|Invalid catalog name|The catalog name specified in *StatementText* was invalid.|  

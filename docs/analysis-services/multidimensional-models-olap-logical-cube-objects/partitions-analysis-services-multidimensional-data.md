@@ -1,37 +1,17 @@
 ---
 title: "Partitions (Analysis Services - Multidimensional Data) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "storage [Analysis Services], partitions"
-  - "incremental updates [Analysis Services]"
-  - "data sources [Analysis Services], partitions"
-  - "data storage [Analysis Services]"
-  - "aggregations [Analysis Services], partitions"
-  - "OLAP objects [Analysis Services], partitions"
-  - "storing data [Analysis Services], partitions"
-  - "partitions [Analysis Services], about partitions"
-  - "cubes [Analysis Services], partitions"
-  - "partitions [Analysis Services]"
-  - "remote partitions [Analysis Services]"
-  - "measure groups [Analysis Services], partitions"
-ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Partitions (Analysis Services - Multidimensional Data)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A partition is a container for a portion of the measure group data. Partitions are not seen from MDX queries; all queries reflect the whole content of the measure group, regardless of how many partitions are defined for the measure group. The data content of a partition is defined by the query bindings of the partition, and by the slicing expression.  
   
  A simple <xref:Microsoft.AnalysisServices.Partition> object is composed of: basic information, slicing definition, aggregation design, and others. Basic information includes the name of the partition, the storage mode, the processing mode, and others. The slicing definition is an MDX expression specifying a tuple or a set. The slicing definition has the same restrictions as the StrToSet MDX function. Together with the CONSTRAINED parameter, the slicing definition can use dimension, hierarchy, level and member names, keys, unique names, or other named objects in the cube, but cannot use MDX functions. The aggregation design is a collection of aggregation definitions that can be shared across multiple partitions. The default is taken from the parent cube's aggregation design.  

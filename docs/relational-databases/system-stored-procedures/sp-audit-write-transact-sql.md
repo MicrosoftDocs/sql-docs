@@ -2,12 +2,10 @@
 title: "sp_audit_write (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_audit_write"
@@ -17,41 +15,35 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_audit_write"
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_audit_write (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Adds a user-defined audit event to the **USER_DEFINED_AUDIT_GROUP**. If **USER_DEFINED_AUDIT_GROUP** is not enabled, **sp_audit_write** is ignored.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
-sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,   
-        [ @succeeded =  succeeded   
-    [ , [ @user_defined_information =  ] 'user_defined_information' ]   
-    [ ; ]  
+sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
+    [ , [ @succeeded = ] succeeded ]
+    [ , [ @user_defined_information = ] 'user_defined_information' ]
+    [ ; ]
 ```  
   
 ## Arguments  
- **@user_defined_event_id**  
+ `[ @user_defined_event_id = ] user_defined_event_id`  
  A parameter defined by the user and recorded in the **user_defined_event_id** column of the audit log. *@user_defined_event_id* is type **smallint**.  
   
- **@succeeded**  
- A parameter passed by user to indicate whether the event was successful or not. This appears in the succeeded column of the audit log. *@succeeded* is **bit**.  
+ `[ @succeeded = ] succeeded`  
+ A parameter passed by user to indicate whether the event was successful or not. This appears in the succeeded column of the audit log. `@succeeded` is **bit**.  
   
- **@user_defined_information**  
- Is the text defined by the user and recorded in the new user_defined_event_id column of the audit log. *@user_defined_information* is **nvarchar(4000)**.  
+ `[ @user_defined_information = ] 'user_defined_information'`  
+ Is the text defined by the user and recorded in the new user_defined_event_id column of the audit log. `@user_defined_information` is **nvarchar(4000)**.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

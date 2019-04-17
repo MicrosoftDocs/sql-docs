@@ -2,24 +2,22 @@
 title: "Use the value() and nodes() Methods with OPENXML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "OpenXML method [XML in SQL Server]"
   - "value method [XML in SQL Server]"
   - "nodes method [XML in SQL Server]"
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Use the value() and nodes() Methods with OPENXML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   You can use multiple **value()** methods on **xml** data type in a **SELECT** clause to generate a rowset of extracted values. The **nodes()** method yields an internal reference for each selected node that can be used for additional query. The combination of the **nodes()** and **value()** methods can be more efficient in generating the rowset when it has several columns and, perhaps, when the path expressions used in its generation are complex.  
   
  The **nodes()** method yields instances of a special **xml** data type, each of which has its context set to a different selected node. This kind of XML instance supports **query()**, **value()**, **nodes()**, and **exist()** methods and can be used in **count(\*)** aggregations. All other uses cause an error.  

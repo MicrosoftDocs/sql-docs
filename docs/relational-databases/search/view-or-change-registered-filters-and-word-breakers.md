@@ -1,26 +1,24 @@
 ---
 title: "View or Change Registered Filters and Word Breakers | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], word breakers"
   - "full-text search [SQL Server], filters"
   - "filters [full-text search]"
   - "word breakers [full-text search]"
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View or Change Registered Filters and Word Breakers
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   After any word breakers or filters are installed or uninstalled on a system, the changes do not automatically take effect on server instances. This topic describes how to view the currently registered word breaker or filters and how to register newly installed word breakers and filters on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### To view a list of languages whose word breakers are currently registered  
@@ -76,7 +74,7 @@ manager: "jhubbard"
   
      **To install and load Microsoft Filter Pack IFilters**  
   
-    -   [How to register Microsoft Filter Pack IFilters with SQL Server](http://go.microsoft.com/fwlink/?LinkId=130439)  
+    -   [How to register Microsoft Filter Pack IFilters with SQL Server](https://go.microsoft.com/fwlink/?LinkId=130439)  
   
 4.  Use **sp_fulltext_service** to load newly installed word breakers and filters in the server instance, as follows:  
   

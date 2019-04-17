@@ -2,12 +2,10 @@
 title: "sp_unbindefault (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_unbindefault_TSQL"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_unbindefault"
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
-caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_unbindefault (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Unbinds, or removes, a default from a column or from an alias data type in the current database.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] We recommend that you create default definitions by using the DEFAULT keyword in the [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) statements instead.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +38,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## Arguments  
- [ **@objname=** ] **'***object_name***'**  
+`[ @objname = ] 'object_name'`
  Is the name of the table and column or the alias data type from which the default is to be unbound. *object_name* is **nvarchar(776)**, with no default. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to resolve two-part identifiers to column names first, then to alias data types.  
   
  When unbinding a default from an alias data type, any columns of that data type that have the same default are also unbound. Columns of that data type with defaults bound directly to them are unaffected.  
@@ -53,7 +46,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 > [!NOTE]  
 >  *object_name* can contain brackets **[]** as delimited identifier characters. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+`[ @futureonly = ] 'futureonly_flag'`
  Is used only when unbinding a default from an alias data type. *futureonly_flag* is **varchar(15)**, with a default of NULL. When *futureonly_flag* is **futureonly**, existing columns of the data type do not lose the specified default.  
   
 ## Return Code Values  

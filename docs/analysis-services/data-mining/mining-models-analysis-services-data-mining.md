@@ -1,29 +1,17 @@
 ---
 title: "Mining Models (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "algorithms [data mining]"
-  - "mining models [Analysis Services]"
-  - "logical architecture [Analysis Services Multidimensional Data]"
-  - "properties [Analysis Services]"
-  - "mining models [Analysis Services], about data mining models"
-  - "architecture [Analysis Services]"
-ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Mining Models (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A *mining model* is created by applying an algorithm to data, but it is more than an algorithm or a metadata container: it is a set of data, statistics, and patterns that can be applied to new data to generate predictions and make inferences about relationships.  
   
  This section explains what a data mining model is and what it can be used for: the basic architecture of models and structures, the properties of mining models, and ways to create and work with mining models.  
@@ -47,11 +35,11 @@ manager: "jhubbard"
   
  ![model contains metadata, patterns, and bindings](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "model contains metadata, patterns, and bindings")  
   
- The metadata specifies the name of the model and the server where it is stored, as well as a definition of the model, including the columns from the mining structure that were used in building the model, the definitions of any filters that were applied when processing the model, and the algorithm that was used to analyze the data. All these choices—the data columns and their data types, filters, and algorithm—have a powerful influence on the results of analysis.  
+ The metadata specifies the name of the model and the server where it is stored, as well as a definition of the model, including the columns from the mining structure that were used in building the model, the definitions of any filters that were applied when processing the model, and the algorithm that was used to analyze the data. All these choices-the data columns and their data types, filters, and algorithm-have a powerful influence on the results of analysis.  
   
  For example, you can use the same data to create multiple models, using perhaps a clustering algorithm, decision tree algorithm, and Naïve Bayes algorithm. Each model type creates different set of patterns, itemsets, rules, or formulas, which you can use for making predictions. Generally each algorithm analyses the data in a different way, so the *content* of the resulting model is also organized in different structures. In one type of model, the data and patterns might be grouped in *clusters*; in another type of model, data might be organized into trees, branches, and the rules that divide and define them.  
   
- The model is also affected by the data that you train it on: even models trained on the same mining structure can yield different results if you filter the data differently or use different seeds during analysis. However, the actual data is not stored in the model—only summary statistics are stored, with the actual data residing in the mining structure. If you have created filters on the data when you trained the model, the filter definitions are saved with the model object as well.  
+ The model is also affected by the data that you train it on: even models trained on the same mining structure can yield different results if you filter the data differently or use different seeds during analysis. However, the actual data is not stored in the model-only summary statistics are stored, with the actual data residing in the mining structure. If you have created filters on the data when you trained the model, the filter definitions are saved with the model object as well.  
   
  The model does contain a set of bindings, which point back to the data cached in the mining structure. If the data has been cached in the structure and has not been cleared after processing, these bindings enable you to drill through from the results to the cases that support the results. However, the actual data is stored in the structure cache, not in the model.  
   
@@ -64,7 +52,7 @@ manager: "jhubbard"
   
 -   Select the algorithm that is best suited to the analytical task.  
   
--   Choose the columns from the structure to use in the model, and specify how they should be used—which column contains the outcome you want to predict, which columns are for input only, and so forth.  
+-   Choose the columns from the structure to use in the model, and specify how they should be used-which column contains the outcome you want to predict, which columns are for input only, and so forth.  
   
 -   Optionally, set parameters to fine-tune the processing by the algorithm.  
   
@@ -127,7 +115,7 @@ manager: "jhubbard"
 |Learn how to build mining structures that can support multiple mining models. Learn about the usage of columns in models.|[Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [Content Types &#40;Data Mining&#41;](../../analysis-services/data-mining/content-types-data-mining.md)|  
 |Learn about different algorithms, and how the choice of algorithm affects the model content.|[Mining Model Content &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [Data Mining Algorithms &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Learn now you can set properties on the model that affects its composition and behavior.|[Mining Model Properties](../../analysis-services/data-mining/mining-model-properties.md)<br /><br /> [Modeling Flags &#40;Data Mining&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)|  
-|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](../../dmx/data-mining-extensions-dmx-reference.md)|  
+|Learn about the programmable interfaces for data mining.|[Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [Data Mining Extensions &#40;DMX&#41; Reference](../../dmx/data-mining-extensions-dmx-reference.md)|  
 |Learn how to use the custom data mining viewers in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Data Mining Model Viewers](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |View examples of the different types of queries that you can use against data mining models.|[Data Mining Queries](../../analysis-services/data-mining/data-mining-queries.md)|  
   

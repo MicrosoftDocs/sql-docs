@@ -1,14 +1,12 @@
 ---
-title: "Availability Modes (Always On Availability Groups) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+title: "Differences between availability modes for an availability group"
+description: "A description of the different availability modes for an Always On availability group."
+ms.custom: "seodec18"
+ms.date: "10/16/2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], asynchronous commit"
@@ -17,33 +15,21 @@ helpviewer_keywords:
   - "asynchronous-commit availability mode"
   - "Availability Groups [SQL Server], availability modes"
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Availability Modes (Always On Availability Groups)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# Differences between availability modes for an Always On availability group
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the *availability mode* is a replica property that determines whether a given availability replica can run in synchronous-commit mode. For each availability replica, the availability mode must be configured for either synchronous-commit mode or asynchronous-commit mode.  If the primary replica is configured for *asynchronous-commit mode*, it does not wait for any secondary replica to write incoming transaction log records to disk (to *harden the log*). If a given secondary replica is configured for asynchronous-commit mode, the primary replica does not wait for that secondary replica to harden the log. If both the primary replica and a given secondary replica are both configured for *synchronous-commit mode*, the primary replica waits for the secondary replica to confirm that it has hardened the log (unless the secondary replica fails to ping the primary replica within the primary's *session-timeout period*).  
+  In [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the *availability mode* is a replica property that determines whether a given availability replica can run in synchronous-commit mode. For each availability replica, the availability mode must be configured for either synchronous-commit mode, asynchronous-commit, or configuration only mode.  If the primary replica is configured for *asynchronous-commit mode*, it does not wait for any secondary replica to write incoming transaction log records to disk (to *harden the log*). If a given secondary replica is configured for asynchronous-commit mode, the primary replica does not wait for that secondary replica to harden the log. If both the primary replica and a given secondary replica are both configured for *synchronous-commit mode*, the primary replica waits for the secondary replica to confirm that it has hardened the log (unless the secondary replica fails to ping the primary replica within the primary's *session-timeout period*). 
   
+
 > [!NOTE]  
 >  If primary's session-timeout period is exceeded by a secondary replica, the primary replica temporarily shifts into asynchronous-commit mode for that secondary replica. When the secondary replica reconnects with the primary replica, they resume synchronous-commit mode.  
   
- **In this Topic:**  
-  
--   [Supported Availability Modes](#SupportedAvModes)  
-  
--   [Asynchronous-Commit Availability Mode](#AsyncCommitAvMode)  
-  
--   [Synchronous-Commit Availability Mode](#SyncCommitAvMode)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
 ##  <a name="SupportedAvModes"></a> Supported Availability Modes  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports two availability modes—asynchronous-commit mode and synchronous-commit mode, as follows:  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports three availability modes-asynchronous-commit mode, synchronous-commit mode, and configuration only mode as follows:  
   
 -   *Asynchronous-commit mode* is a disaster-recovery solution that works well when the availability replicas are distributed over considerable distances. If every secondary replica is running under asynchronous-commit mode, the primary replica does not wait for any of the secondary replicas to harden the log. Rather, immediately after writing the log record to the local log file, the primary replica sends the transaction confirmation to the client. The primary replica runs with minimum transaction latency in relation to a secondary replica that is configured for asynchronous-commit mode.  If the current primary is configured for asynchronous commit availability mode, it will commit transactions asynchronously for all secondary replicas regardless of their individual availability mode settings.  
   
@@ -52,6 +38,8 @@ manager: "jhubbard"
 -   *Synchronous-commit mode* emphasizes high availability over performance, at the cost of increased transaction latency. Under synchronous-commit mode, transactions wait to send the transaction confirmation to the client until the secondary replica has hardened the log to disk. When data synchronization begins on a secondary database, the secondary replica begins applying incoming log records from the corresponding primary database. As soon as every log record has been hardened, the secondary database enters the SYNCHRONIZED state. Thereafter, every new transaction is hardened by the secondary replica before the log record is written to the local log file. When all the secondary databases of a given secondary replica are synchronized, synchronous-commit mode supports manual failover and, optionally, automatic failover.  
   
      For more information, see [Synchronous-Commit Availability Mode](#SyncCommitAvMode), later in this topic.  
+
+-   *Configuration only mode* applies to availability groups that are not on a Windows Server Failover Cluster. A replica in configuration only mode does not contain user data. In configuration only mode, the replica master database stores availability group configuration metadata. For more information see [Availability group with configuration only replica](../../../linux/sql-server-linux-availability-group-ha.md).
   
  The following illustration shows an availability group with five availability replicas. The primary replica and one secondary replica are configured for synchronous-commit mode with automatic failover. Another secondary replica is configured for synchronous-commit mode with only planned manual failover, and two secondary replicas are configured for asynchronous-commit mode, which supports only forced manual failover (typically called *forced failover*).  
   
@@ -135,6 +123,15 @@ manager: "jhubbard"
   
 > [!NOTE]  
 >  For information about WSFC quorum and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see For more information, see [WSFC Quorum Modes and Voting Configuration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+
+### Data latency on secondary replica
+Implementing read-only access to secondary replicas is useful if your read-only workloads can tolerate some data latency. In situations where data latency is unacceptable, consider running read-only workloads against the primary replica.
+
+The primary replica sends log records of changes on primary database to the secondary replicas. On each secondary database, a dedicated redo thread applies the log records. On a read-access secondary database, a given data change does not appear in query results until the log record that contains the change has been applied to the secondary database and the transaction has been committed on primary database.+
+
+This means that there is some latency, usually only a matter of seconds, between the primary and secondary replicas. In unusual cases, however, for example if network issues reduce throughput, latency can become significant. Latency increases when I/O bottlenecks occur and when data movement is suspended. To monitor suspended data movement, you can use the [Always On Dashboard](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) or the [sys.dm_hadr_database_replica_states dynamic management view](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).
+
+For more information on investigating redo latency on the secondary replica, please see [Troubleshoot primary changes not reflected on secondary replica](../../../database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md).
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **To change the availability mode and failover mode**  
@@ -169,7 +166,7 @@ manager: "jhubbard"
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

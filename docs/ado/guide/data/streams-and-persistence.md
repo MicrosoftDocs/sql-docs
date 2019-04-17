@@ -1,22 +1,19 @@
 ---
 title: "Streams and Persistence | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "persisted streams [ADO]"
   - "streams [ADO], persistence"
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Streams and Persistence
 The [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object [Save](../../../ado/reference/ado-api/save-method.md) method stores, or *persists*, a **Recordset** in a file, and the [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) method restores the **Recordset** from that file.  
@@ -102,7 +99,7 @@ Set rs = nothing
   
  A new property on the RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), points to the .asp page that generates the **Recordset**. This means a **Recordset** object can be obtained without RDS using the server-side [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) object or the user writing a business object. This simplifies the RDS programming model significantly.  
   
- Server-side code, named http://server/directory/recordset.asp:  
+ Server-side code, named https://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -136,8 +133,8 @@ rs.Save response, adPersistADTG
 <BR>  
   
 <OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"  
-    ID=DC1 HEIGHT=1 WIDTH = 1>  
-    <PARAM NAME="URL" VALUE="http://server/directory/recordset.asp">  
+    ID=DC1 HEIGHT=1 WIDTH = 1>  
+    <PARAM NAME="URL" VALUE="https://server/directory/recordset.asp">  
 </OBJECT>  
   
 </SCRIPT>  
@@ -150,11 +147,11 @@ rs.Save response, adPersistADTG
 ```  
 ...  
 function GetRs()   
-    {  
-    rs = CreateObject("ADODB.Recordset");  
-    rs.Open "http://server/directory/recordset.asp"  
-    DC1.SourceRecordset = rs;  
-    }  
+    {  
+    rs = CreateObject("ADODB.Recordset");  
+    rs.Open "https://server/directory/recordset.asp"  
+    DC1.SourceRecordset = rs;  
+    }  
 ...  
 ```  
   

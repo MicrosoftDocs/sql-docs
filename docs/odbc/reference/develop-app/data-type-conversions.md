@@ -2,13 +2,11 @@
 title: "Data Type Conversions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], conversions"
   - "SQL data types [ODBC], conversions"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "converting data types [ODBC]"
   - "C data types [ODBC], conversions"
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Data Type Conversions
 Data can be converted from one type to another at one of four times: when data is transferred from one application variable to another (C to C), when data in an application variable is sent to a statement parameter (C to SQL), when data in a result set column is returned in an application variable (SQL to C), and when data is transferred from one data source column to another (SQL to SQL).  

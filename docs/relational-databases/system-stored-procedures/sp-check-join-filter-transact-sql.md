@@ -2,15 +2,11 @@
 title: "sp_check_join_filter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "filter_TSQL"
   - "sp_check_TSQL"
@@ -23,13 +19,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_check_join_filter"
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_check_join_filter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Is used to verify a join filter between two tables to determine if the join filter clause is valid. This stored procedure also returns information about the supplied join filter, including if it can be used with precomputed partitions for the given table. This stored procedure is executed at the Publisher on the publication. For more information, see [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
@@ -45,13 +40,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## Arguments  
- [ **@filtered_table**= ] **'***filtered_table***'**  
+`[ @filtered_table = ] 'filtered_table'`
  Is the name of a filtered table. *filtered_table* is **nvarchar(400)**, with no default.  
   
- [ **@join_table**= ] **'***join_table***'**  
+`[ @join_table = ] 'join_table'`
  Is the name of a table being joined to *filtered_table*. *join_table* is **nvarchar(400)**, with no default.  
   
- [ **@join_filterclause** = ] **'***join_filterclause***'**  
+`[ @join_filterclause = ] 'join_filterclause'`
  Is the join filter clause being tested. *join_filterclause* is **nvarchar(1000)**, with no default.  
   
 ## Result Sets  

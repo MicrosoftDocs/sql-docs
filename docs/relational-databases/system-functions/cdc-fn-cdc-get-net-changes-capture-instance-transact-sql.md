@@ -2,12 +2,10 @@
 title: "cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,17 +14,16 @@ helpviewer_keywords:
   - "change data capture [SQL Server], querying metadata"
   - "cdc.fn_cdc_get_net_changes_<capture_instance>"
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns one net change row for each source row changed within the specified Log Sequence Numbers (LSN) range.  
   
- **Wait, what is an LSN?** Every record in the [SQL Server transaction log](https://msdn.microsoft.com/en-us/library/ms190925.aspx) is uniquely identified by a log sequence number (LSN). LSNs are ordered such that if LSN2 is greater than LSN1, the change described by the log record referred to by LSN2 occurred **after** the change described by the log record LSN.  
+ **Wait, what is an LSN?** Every record in the [SQL Server transaction log](../logs/the-transaction-log-sql-server.md) is uniquely identified by a log sequence number (LSN). LSNs are ordered such that if LSN2 is greater than LSN1, the change described by the log record referred to by LSN2 occurred **after** the change described by the log record LSN.  
   
  The LSN of a log record where a significant event occurred can be useful for constructing correct restore sequences. Because LSNs are ordered, you can compare them for equality and inequality (that is, \<, >, =, \<=, >=). Such comparisons are useful when constructing restore sequences.  
   
@@ -87,10 +84,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  Requires membership in the sysadmin fixed server role or db_owner fixed database role. For all other users, requires SELECT permission on all captured columns in the source table and, if a gating role for the capture instance was defined, membership in that database role. When the caller does not have permission to view the source data, the function returns error 208 (Invalid object name).  
   
 ## Remarks  
- If the specified LSN range does not fall within the change tracking timeline for the capture instance, the function returns error 208 (Invalid object name).  
+ If the specified LSN range does not fall within the change tracking timeline for the capture instance, the function returns error 208 (Invalid object name).
+
+ Modifications on the unique identifier of a row will cause fn_cdc_get_net_changes to show the initial UPDATE command with a DELETE and then INSERT command instead.  This behavior is necessary to track the key both before and after the change.
   
 ## Examples  
- The following example uses the function `cdc.fn`_`cdc`\_`get`\_`net`\_`changes`\_`HR`\_`Department` to report the net changes made to the source table `HumanResources.Department` during a specific time interval.  
+ The following example uses the function `cdc.fn_cdc_get_net_changes_HR_Department` to report the net changes made to the source table `HumanResources.Department` during a specific time interval.  
   
  First, the `GETDATE` function is used to mark the beginning of the time interval. After several DML statements are applied to the source table, the `GETDATE` function is called again to identify the end of the time interval. The function [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) is then used to map the time interval to a change data capture query range bounded by LSN values. Finally, the function `cdc.fn_cdc_get_net_changes_HR_Department` is queried to obtain the net changes to the source table for the time interval. Notice that the row that is inserted and then deleted does not appear in the result set returned by the function. This is because a row that is first added and then deleted within a query window produces no net change on the source table for the interval. Before you run this example, you must first run example B in [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   

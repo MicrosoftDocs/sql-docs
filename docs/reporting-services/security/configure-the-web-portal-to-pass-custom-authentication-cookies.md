@@ -1,23 +1,18 @@
 ---
 title: "Configure the Web Portal to Pass Custom Authentication Cookies | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 04/18/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: security
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "authentication [Reporting Services]"
   - "extensions [Reporting Services], custom security"
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
-caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Configure the Web Portal to Pass Custom Authentication Cookies
 
@@ -48,4 +43,4 @@ To enable additional cookies to be transmitted through HTTP requests when using 
 [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Security Extensions Overview](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
-More questions? [Try the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

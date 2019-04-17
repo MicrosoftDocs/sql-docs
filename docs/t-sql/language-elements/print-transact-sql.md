@@ -2,12 +2,10 @@
 title: "PRINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "PRINT_TSQL"
@@ -22,12 +20,13 @@ helpviewer_keywords:
   - "viewing user-defined messages"
   - "conditionally returning messages [SQL Server]"
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# PRINT-Transact-SQL
+
+# PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns a user-defined message to the client.  
@@ -37,8 +36,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-
 PRINT msg_str | @local_variable | string_expr  
 ```  
   
@@ -47,7 +44,7 @@ PRINT msg_str | @local_variable | string_expr
  Is a character string or Unicode string constant. For more information, see [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@** *local_variable*  
- Is a variable of any valid character data type. **@***local_variable* must be **char**, **nchar**, **varchar**, or **nvarchar**, or it must be able to be implicitly converted to those data types.  
+ Is a variable of any valid character data type. **@**_local\_variable_ must be **char**, **nchar**, **varchar**, or **nvarchar**, or it must be able to be implicitly converted to those data types.  
   
  *string_expr*  
  Is an expression that returns a string. Can include concatenated literal values, functions, and variables. For more information, see [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
@@ -107,26 +104,6 @@ IF DB_ID() = 1
     PRINT N'The current database is master.';  
 ELSE  
     PRINT N'The current database is not master.';  
-GO  
-```  
-  
-### D. Building and displaying a string  
- The following example converts the results of the `GETDATE` function to a `nvarchar` data type and concatenates it with literal text to be returned by `PRINT`.  
-  
-```  
--- Build the message text by concatenating  
--- strings and expressions.  
-PRINT N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
-    + N'.';  
-GO  
--- This example shows building the message text  
--- in a variable and then passing it to PRINT.  
-DECLARE @PrintMessage nvarchar(50);  
-SET @PrintMessage = N'This message was printed on '  
-    + RTRIM(CAST(GETDATE() AS nvarchar(30)))  
-    + N'.';  
-PRINT @PrintMessage;  
 GO  
 ```  
   

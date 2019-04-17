@@ -2,20 +2,20 @@
 title: "Use the DQS Speller | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Use the DQS Speller
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   The [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) Speller checks the syntax, spelling, and sentence structure of string values in a domain. The Speller is a standalone, client-side feature that has no integration with server-side engines and no implications on current flows or statuses. The Speller identifies those string values that it considers to be potential errors, and then marks them with a red underscore in the same location in which you make other manual changes to domain values. These locations include:  
   
 -   The **Manage Domain Values** page of the **Knowledge Discovery** activity  
@@ -66,7 +66,7 @@ manager: "jhubbard"
  After you have run the Speller, complete the activity that the domain is in to use the corrections suggested by the Speller. If in the knowledge discovery, domain management, or matching policy activity, publish the knowledge base in order to make the results of the Speller analysis available for use in the knowledge base. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> How the Speller Works  
- The DQS Speller marks any potential string value error with a red underscore that is displayed for the entire value. For example, if “New York” is incorrectly spelled as “Neu York”, the speller will display a red underscore under “Neu York”, and not just “Neu”. If you right-click the value, you will see suggested corrections for the whole value. You can also click **More suggestions** if there are more than five suggestions. You can pick one of the suggestions or add a value to the dictionary (at a user account level) to be displayed for the original value. Values added to the dictionary apply to all domains. Only if you explicitly designate a suggestion will the correction be made in the domain. When you select a suggestion from the Speller context menu, the value type becomes (or stays as) an error. The selected suggestion will be added to the correction column. Note that a value can have a **Type** of **Correct** and yet be marked as a potential error by the Speller.  
+ The DQS Speller marks any potential string value error with a red underscore that is displayed for the entire value. For example, if "New York" is incorrectly spelled as "Neu York", the speller will display a red underscore under "Neu York", and not just "Neu". If you right-click the value, you will see suggested corrections for the whole value. You can also click **More suggestions** if there are more than five suggestions. You can pick one of the suggestions or add a value to the dictionary (at a user account level) to be displayed for the original value. Values added to the dictionary apply to all domains. Only if you explicitly designate a suggestion will the correction be made in the domain. When you select a suggestion from the Speller context menu, the value type becomes (or stays as) an error. The selected suggestion will be added to the correction column. Note that a value can have a **Type** of **Correct** and yet be marked as a potential error by the Speller.  
   
  DQS will provide suggestions for values in both the **Value** column and the **Correct To** column of the **Value** table. When you select a suggestion in the **Value** column, the value type is set to **Error**, and the suggestion is copied to the **Correct To** column, as if you inserted it manually. If there was an existing correction, it becomes a suggestion. In the **Manage and View results** page of the **Cleansing** activity, when you select a suggestion in the **Correct To** column, DQS will replace the currently selected value with the selection, and the currently selected value will become a suggestion. In the **Manage and View results** page of the **Cleansing** activity, no suggestions are made in the record-level (the lower grid).  
   

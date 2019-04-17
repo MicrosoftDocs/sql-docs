@@ -2,20 +2,17 @@
 title: "Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.scdsupport.f1"
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)
   Use the **Slowly Changing Dimensions Columns** dialog box to select a change type for each slowly changing dimension column.  

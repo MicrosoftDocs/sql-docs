@@ -2,29 +2,25 @@
 title: "catalog.configure_catalog (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # catalog.configure_catalog (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Configures the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog by setting a catalog property to a specified value.  
   
 ## Syntax  
   
-```  
-  
-configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
+```sql
+catalog.configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
 ```  
   
 ## Arguments  
@@ -45,7 +41,7 @@ configure_catalog [ @property_name = ] property_name , [ @property_value = ] pro
   
  This stored procedure can be performed only when there are no active executions, such as pending, queued, running, and paused executions.  
   
- While the catalog is being configured, all other catalog stored procedures fail with the error message “Server is currently being configured”.  
+ While the catalog is being configured, all other catalog stored procedures fail with the error message "Server is currently being configured."
   
  When the catalog is configured, an entry is written to the operation log.  
   

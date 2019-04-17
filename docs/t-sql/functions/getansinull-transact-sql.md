@@ -2,12 +2,10 @@
 title: "GETANSINULL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "GETANSINULL"
@@ -20,17 +18,16 @@ helpviewer_keywords:
   - "default nullability"
   - "database nullability [SQL Server]"
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # GETANSINULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the default nullability for the database for this session.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -41,13 +38,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## Arguments  
  '*database*'  
- Is the name of the database for which to return nullability information. *database*is either **char** or **nchar**. If **char**, *database* is implicitly converted to **nchar**.  
+ Is the name of the database for which to return nullability information. *database is either **char** or **nchar**. If **char**, *database* is implicitly converted to **nchar**.  
   
 ## Return Types  
  **int**  
   
 ## Remarks  
- When the nullability of the specified database allows for null values and the column or data type nullability is not explicitly defined, GETANSINULL returns 1. This is the ANSI NULL default.  
+GETANSINULL returns 1 if the database's nullability allows for null values. This return value also requires that the column or data type nullability isn't explicitly defined. The ANSI NULL default is 1. 
   
  To enable the ANSI NULL default behavior, one of these conditions must be set:  
   
@@ -69,11 +66,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
+ ```
+ ------  
+1  
+
+(1 row(s) affected)
+ ```  
   
 ## See Also  
  [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  

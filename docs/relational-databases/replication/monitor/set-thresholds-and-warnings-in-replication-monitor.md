@@ -2,13 +2,11 @@
 title: "Set Thresholds and Warnings in Replication Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "alerts [SQL Server replication]"
   - "Merge Agent, thresholds and warnings"
@@ -17,12 +15,12 @@ helpviewer_keywords:
   - "Replication Monitor, thresholds and warnings"
   - "monitoring performance [SQL Server replication], thresholds and warnings"
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Set Thresholds and Warnings in Replication Monitor
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions. By default, Replication Monitor displays warnings only for uninitialized subscriptions, but you can enable warnings for other conditions. It is recommended that you enable warnings for your topology, so that you are informed about status and performance in a timely manner.  
   
  When you enable a warning, you specify a threshold. When that threshold is met or exceeded, a warning is displayed (unless an issue with a higher priority needs to be displayed). In addition to displaying a warning in Replication Monitor, reaching a threshold can also trigger an alert. You can enable warnings for the following conditions:  
@@ -160,6 +158,6 @@ manager: "jhubbard"
 5.  Click **Close**.  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

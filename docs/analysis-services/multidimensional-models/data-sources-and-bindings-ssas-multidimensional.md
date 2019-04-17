@@ -1,46 +1,17 @@
 ---
 title: "Data Sources and Bindings (SSAS Multidimensional) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "data source views [Analysis Services], bindings"
-  - "DSO, bindings"
-  - "Analysis Services Scripting Language, data sources"
-  - "cubes [Analysis Services], bindings"
-  - "OLAP mining models [Analysis Services Scripting Language]"
-  - "bindings [Analysis Services Scripting Language]"
-  - "rebindings [Analysis Services Scripting Language]"
-  - "ASSL, bindings"
-  - "relational mining models [ASSL]"
-  - "data sources [Analysis Services Scripting Language]"
-  - "ASSL, data sources"
-  - "dimensions [Analysis Services], bindings"
-  - "measures [Analysis Services], bindings"
-  - "relational data sources [Analysis Services Scripting Language]"
-  - "Analysis Services Scripting Language, bindings"
-  - "chaptered rowsets"
-  - "granularity"
-  - "mining models [Analysis Services], data sources"
-  - "inline bindings [ASSL]"
-  - "out-of-line bindings"
-  - "measure groups [Analysis Services], bindings"
-  - "partitions [Analysis Services], bindings"
-ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Sources and Bindings (SSAS Multidimensional)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Cubes, dimensions, and other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects can be bound to a data source. A data source can be one of the following objects:  
   
 -   A relational data source.  
@@ -49,7 +20,7 @@ manager: "erikre"
   
  The means of expressing the data source varies by the type of data source. For example, a relational data source is distinguished by the connection string. For more information about data sources, see [Data Sources in Multidimensional Models](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md).  
   
- Regardless of the data source used, the data source view (DSV) contains the metadata for the data source. Thus, the bindings for a cube or other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects are expressed as bindings to the DSV. These bindings can include bindings to logical objects—objects such as views, calculated columns, and relationships that do not physically exist in the data source. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adds a calculated column that encapsulates the expression to the DSV, and then binds the corresponding OLAP measure to that column in the DSV. For more information about DSVs, see [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+ Regardless of the data source used, the data source view (DSV) contains the metadata for the data source. Thus, the bindings for a cube or other [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects are expressed as bindings to the DSV. These bindings can include bindings to logical objects-objects such as views, calculated columns, and relationships that do not physically exist in the data source. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adds a calculated column that encapsulates the expression to the DSV, and then binds the corresponding OLAP measure to that column in the DSV. For more information about DSVs, see [Data Source Views in Multidimensional Models](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Each [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object binds to the data source in its own way. In addition, the data bindings for these objects and the definition of the data source can be provided inline with the definition of the databound object (for example, the dimension), or out-of-line as a separate set of definitions.  
   
@@ -75,7 +46,7 @@ manager: "erikre"
  All data that is received from the data source is converted to the [!INCLUDE[ssAS](../../includes/ssas-md.md)] type specified in the binding (usually during processing). An error is raised if the conversion cannot be performed (for example, String to Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usually sets the data type in the binding to the one that best matches the source type in the data source. For example, the SQL types Date, DateTime, SmallDateTime, DateTime2, DateTimeOffset are mapped to [!INCLUDE[ssAS](../../includes/ssas-md.md)] Date, and the SQL type Time is mapped to String.  
   
 ## Bindings for Dimensions  
- Each attribute of a dimension is bound to a column in a DSV. All the attributes of a dimension must come from a single data source. However, the attributes can be bound to columns in different tables. The relationships between the tables are defined in the DSV. In the case where more than one set of relationships exists to the same table, it might be necessary to introduce a named query in the DSV to act as an ‘alias’ table. Expressions and filters are defined in the DSV by using named calculations and named queries.  
+ Each attribute of a dimension is bound to a column in a DSV. All the attributes of a dimension must come from a single data source. However, the attributes can be bound to columns in different tables. The relationships between the tables are defined in the DSV. In the case where more than one set of relationships exists to the same table, it might be necessary to introduce a named query in the DSV to act as an 'alias' table. Expressions and filters are defined in the DSV by using named calculations and named queries.  
   
 ## Bindings for MeasureGroups, Measures, and Partitions  
  Each measure group has the following default bindings:  

@@ -2,18 +2,15 @@
 title: "Step 3: Proof of concept connecting to SQL using pyodbc | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
-caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 3: Proof of concept connecting to SQL using pyodbc
 
@@ -30,11 +27,14 @@ This example should be considered a proof of concept only.  The sample code is s
 ```python
 
 import pyodbc 
+# Some other example server values are
+# server = 'localhost\sqlexpress' # for a named instance
+# server = 'myserver,port' # to specify an alternate port
 server = 'tcp:myserver.database.windows.net' 
 database = 'mydb' 
 username = 'myusername' 
 password = 'mypassword' 
-cnxn = pyodbc.connect('DRIVER={ODBC Driver 13 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+cnxn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
 
 ```  
@@ -57,7 +57,7 @@ while row:
   
 ## Step 3:  Insert a row  
   
-In this example you will see how to execute an [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) statement safely, pass parameters which protect your application from [SQL injection](https://technet.microsoft.com/library/ms161953(v=sql.105).aspx) vulnerability, and retrieve the auto-generated [Primary Key](https://msdn.microsoft.com/library/ms179610.aspx) value.    
+In this example you will see how to execute an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, pass parameters which protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) value.    
   
   
 ```python
@@ -73,4 +73,4 @@ while row:
   `      
   ## Next steps  
   
-For more information, see the [Python Developer Center](https://azure.microsoft.com/en-us/develop/python/).
+For more information, see the [Python Developer Center](https://azure.microsoft.com/develop/python/).

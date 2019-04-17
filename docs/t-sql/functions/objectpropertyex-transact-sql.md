@@ -2,12 +2,10 @@
 title: "OBJECTPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "OBJECTPROPERTYEX"
@@ -21,13 +19,13 @@ helpviewer_keywords:
   - "schema-scoped objects [SQL Server]"
   - "objects [SQL Server], schema-scoped"
 ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
-caps.latest.revision: 76
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECTPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns information about schema-scoped objects in the current database. For a list of these objects, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). OBJECTPROPERTYEX cannot be used for objects that are not schema-scoped, such as data definition language (DDL) triggers and event notifications.  
   
@@ -36,8 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 OBJECTPROPERTYEX ( id , property )  
 ```  
   
@@ -203,11 +199,11 @@ GO
   
  The result set shows that the base type of the underlying object, the `Employee` table, is a user table.  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### B. Returning a property value  
  The following example returns the number of UPDATE triggers on the specified table.  

@@ -2,12 +2,10 @@
 title: "sp_trace_setfilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_trace_setfilter"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_setfilter"
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Applies a filter to a trace. **sp_trace_setfilter** may be executed only on existing traces that are stopped (*status* is **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error if this stored procedure is executed on a trace that does not exist or whose *status* is not **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use Extended Events instead.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +41,16 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## Arguments  
- [ **@traceid=** ] *trace_id*  
+`[ @traceid = ] trace_id`
  Is the ID of the trace to which the filter is set. *trace_id* is **int**, with no default. The user employs this *trace_id* value to identify, modify, and control the trace.  
   
- [ **@columnid=** ] *column_id*  
+`[ @columnid = ] column_id`
  Is the ID of the column on which the filter is applied. *column_id* is **int**, with no default. If *column_id* is NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clears all filters for the specified trace.  
   
- [ **@logical_operator** = ] *logical_operator*  
+`[ @logical_operator = ] logical_operator`
  Specifies whether the AND (**0**) or OR (**1**) operator is applied. *logical_operator* is **int**, with no default.  
   
- [ **@comparison_operator=** ] *comparison_operator*  
+`[ @comparison_operator = ] comparison_operator`
  Specifies the type of comparison to be made. *comparison_operator* is **int**, with no default. The table contains the comparison operators and their representative values.  
   
 |Value|Comparison operator|  
@@ -71,7 +64,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|NOT LIKE|  
   
- [ **@value=** ] *value*  
+`[ @value = ] value`
  Specifies the value on which to filter. The data type of *value* must match the data type of the column to be filtered. For example, if the filter is set on an Object ID column that is an **int** data type, *value* must be **int**. If *value* is **nvarchar** or **varbinary**, it can have a maximum length of 8000.  
   
  When the comparison operator is LIKE or NOT LIKE, the logical operator can include "%" or other filter appropriate for the LIKE operation.  

@@ -1,22 +1,20 @@
-﻿---
+---
 title: "Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/12/2017"
-ms.prod: "sql-server-2016"
+ms.date: 09/05/2017
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: 31
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Survey of Initial Areas in In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 This article is for the developer who is in a hurry to learn the basics of the In-Memory OLTP performance features of Microsoft SQL Server and Azure SQL Database.  
@@ -78,7 +76,7 @@ The present article focuses on OLTP, and not on Analytics. For information on ho
   
   
 > [!NOTE]
-> A two minute video about the In-Memory features is available at [Azure SQL Database - In-Memory Technologies](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). The video is dated December 2015.  
+> A two minute video about the In-Memory features is available at [Azure SQL Database - In-Memory Technologies](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies). The video is dated December 2015.  
 
 
 ### Columnstore
@@ -88,7 +86,7 @@ A sequence of excellent blog posts elegantly explains columnstore indexes from s
 #### Real-time Operational Analytics
 
 1. [Real-Time Operational Analytics Using In-Memory Technology](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
-2. [Real-Time Operational Analytics – Overview nonclustered columnstore index (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
+2. [Real-Time Operational Analytics - Overview nonclustered columnstore index (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
 3. [Real-Time Operational Analytics: Simple example using nonclustered clustered columnstore index (NCCI) in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
 4. [Real-Time Operational Analytics: DML operations and nonclustered columnstore index (NCCI) in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
 5. [Real-Time Operational Analytics: Filtered nonclustered columnstore index (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
@@ -104,8 +102,8 @@ A sequence of excellent blog posts elegantly explains columnstore indexes from s
 #### Bulk importation of data
 
 1. [Clustered Column Store: Bulk Load](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [Clustered Columnstore Index: Data Load Optimizations – Minimal Logging](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
-3. [Clustered columnstore Index: Data Load Optimization – Parallel Bulk Import](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
+2. [Clustered Columnstore Index: Data Load Optimizations - Minimal Logging](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
+3. [Clustered columnstore Index: Data Load Optimization - Parallel Bulk Import](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
 
 
@@ -130,7 +128,7 @@ A [Memory-optimized tables](../../relational-databases/in-memory-oltp/memory-opt
   
 #### Natively compiled modules  
   
-The T-SQL keyword NATIVE_COMPILATION, on the CREATE PROCEDURE statement, is how a native proc is created. The T-SQL statements are compiled to machine code on first use of the native proc each time the database is cycled online. The T-SQL instructions no longer endure slow interpretation of every instruction.  
+The T-SQL keyword NATIVE_COMPILATION, on the CREATE PROCEDURE statement, is how a natively compiled stored procedure is created. The T-SQL statements are compiled to machine code on first use of the native proc each time the database is cycled online. The T-SQL instructions no longer endure slow interpretation of every instruction.  
   
 - We have seen native compilation result in durations that are 1/100th of the interpreted duration.  
   
@@ -212,14 +210,12 @@ On Microsoft SQL Server, before you can create a memory-optimized table you must
 On Azure SQL Database, you need not and cannot create such a FILEGROUP.  
 
 The following sample T-SQL script enables a database for In-Memory OLTP and configures all recommended settings. It works with both SQL Server and Azure SQL Database: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql).
-  
+
+Note that not all SQL Server features are supported for databases with a MEMORY_OPTIMIZED_DATA filegroup. For details on limitations see: [Unsupported SQL Server Features for In-Memory OLTP](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## 4. Create a memory-optimized table  
-  
-  
-  
   
 The crucial Transact-SQL keyword is the keyword MEMORY_OPTIMIZED.  
   
@@ -296,6 +292,7 @@ The crucial keyword is NATIVE_COMPILATION.
   
 The keyword SCHEMABINDING means the tables referenced in the native proc cannot be dropped unless the native proc is dropped first. For details see [Creating Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md).  
   
+Note that you do not need to create a natively compiled stored procedure to access a memory-optimized table. You can also reference memory-optimized tables from traditional stored procedures and ad hoc batches.
   
 <a name="execute-the-native-proc-31e"></a>  
   
@@ -407,30 +404,25 @@ The rest of this section lists some of the major planning and trade-off consider
 - [Application-Level Partitioning](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Application Pattern for Partitioning Memory-Optimized Tables](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
-  
 <a name="trade-offs-of-native-procs-38p"></a>  
   
 ### Trade-offs of native procs  
   
-  
 - A natively compiled stored procedure cannot access a disk-based table. A native proc can access only memory-optimized tables.  
 - When a native proc runs for its first time after the server or database was most recently brought back online, the native proc must be recompiled one time. This causes a delay before the native proc starts to run.  
-  
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
 ## Advanced considerations for memory-optimized tables  
   
-  
-[Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) are different in some ways from indexes on traditional on-disk tables.  
-  
-- [Hash Indexes](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) are available only on memory-optimized tables.  
-  
+[Indexes for Memory-Optimized Tables](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) are different in some ways from indexes on traditional on-disk tables. Hash Indexes are available only on memory-optimized tables.
+    
+- [Hash Indexes for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#hash_index)
+- [Nonclustered Index for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
 You must plan to ensure there will be sufficient active memory for your planned memory-optimized table and its indexes. See:  
   
 - [Creating and Managing Storage for Memory-Optimized Objects](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   
 A memory-optimized table can be declared with DURABILITY = SCHEMA_ONLY:  
   
@@ -438,17 +430,13 @@ A memory-optimized table can be declared with DURABILITY = SCHEMA_ONLY:
 - When the database is brought back online, the memory-optimized table is loaded back into active memory, empty of data.  
 - SCHEMA_ONLY tables can be a superior [alternative to #temporary tables](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) in tempdb, when many thousands of rows are involved.  
   
-  
 Table variables can also be declared as memory-optimized. See:  
   
 - [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
-  
-  
 <a name="advanced-considerations-for-natively-compiled-modules-40k"></a>  
   
 ## Advanced considerations for natively compiled modules  
-  
   
 The types of natively compiled modules available through Transact-SQL are:  
   
@@ -458,7 +446,6 @@ The types of natively compiled modules available through Transact-SQL are:
   - Only triggers that are natively compiled are allowed on memory-optimized tables.  
 - Natively compiled [table-valued functions](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   - [Improving temp table and table variable performance using memory optimization](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
-  
   
 A natively compiled user defined function (UDF) runs faster than an interpreted UDF. Here are some things to consider with UDFs:  
   
@@ -470,30 +457,26 @@ A natively compiled user defined function (UDF) runs faster than an interpreted 
 For test data and explanation about the performance of native UDFs, see:  
   
   - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - The [fine blog post written by Gail Shaw](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/), dated January 2016.  
-  
+  - [Natively Compiled User Defined Functions](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) blog post by Gail Shaw, dated January 2016.  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
 ## Documentation guide for memory-optimized tables  
   
-  
-Here are links to other articles that discuss special considerations for memory-optimized tables:  
+Refer to these other articles that discuss special considerations for memory-optimized tables:  
   
 - [Migrating to In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
-  - The Transaction Performance Analysis report in SQL Server Management Studio helps you evaluate if In-Memory OLTP will improve your database application’s performance.  
+  - The Transaction Performance Analysis report in SQL Server Management Studio helps you evaluate if In-Memory OLTP will improve your database application's performance.  
   - Use the [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) to help you migrate the disk-based database table to In-Memory OLTP.   
-- [Backup, Restore, and Recovery of Memory-Optimized Tables](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [Backup, Restore, and Recovery of Memory-Optimized Tables](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - The storage used by memory-optimized tables can be much larger than its size in memory, and it affects the size of the database backup.  
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - Includes information about retry logic in T-SQL, for transactions on memory-optimized tables.  
 - [Transact-SQL Support for In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - Supported and unsupported T-SQL and data types, for memory-optimized tabled and native procs.  
 - [Bind a Database with Memory-Optimized Tables to a Resource Pool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md), which discusses an optional advanced consideration.  
-  
-  
-  
+
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## Documentation guide for native procs  
@@ -506,9 +489,8 @@ The following article, and its children articles in the table of contents (TOC),
   
 ## Related links  
   
-- Initial article: [In-Memory OLTP (In-Memory Optimization)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+- Initial article: [In-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+    
 Here are articles that offer code to demonstrate the performance gains you can achieve by using In-Memory OLTP:  
   
 - [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) offers a small-scale demonstration of the larger potential performance gains.  

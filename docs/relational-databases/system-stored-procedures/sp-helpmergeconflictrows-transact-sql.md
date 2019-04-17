@@ -2,28 +2,23 @@
 title: "sp_helpmergeconflictrows (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpmergeconflictrows_TSQL"
   - "sp_helpmergeconflictrows"
 helpviewer_keywords: 
   - "sp_helpmergeconflictrows"
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helpmergeconflictrows (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the rows in the specified conflict table. This stored procedure is run on the computer where the conflict table is stored.  
   
@@ -41,19 +36,19 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**. If the publication is specified, all conflicts qualified by the publication are returned. For example, if the **MSmerge_conflict_Customers** table has conflict rows for the **WA** and the **CA** publications, passing in a publication name **CA** retrieves conflicts that pertain to the **CA** publication.  
   
- [ **@conflict_table=**] **'***conflict_table***'**  
- Is the name of the conflict table. *conflict_table* is **sysname**, with no default. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, conflict tables are named using the format names with **MSmerge_conflict_*publication*_*article***, with one table for each published article.  
+`[ @conflict_table = ] 'conflict_table'`
+ Is the name of the conflict table. *conflict_table* is **sysname**, with no default. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions, conflict tables are named using the format names with **MSmerge_conflict\__publication\_article_**, with one table for each published article.  
   
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publisher database.*publisher_db* is **sysname**, with a default of NULL.  
   
- [ **@logical_record_conflicts=** ] *logical_record_conflicts*  
+`[ @logical_record_conflicts = ] logical_record_conflicts`
  Indicates whether the result set contains information about logical record conflicts. *logical_record_conflicts* is **int**, with a default value of 0. **1** means that logical record conflict information is returned.  
   
 ## Result Sets  

@@ -1,14 +1,12 @@
 ---
 title: "Stream Property | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "ADOStreamConstruction::GetStream"
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Stream property"
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Stream Property
 Gets or sets an OLE DB **Stream** object from/on an **ADOStreamConstruction** object.  

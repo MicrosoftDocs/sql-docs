@@ -2,12 +2,10 @@
 title: "SUBSTRING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SUBSTRING"
@@ -23,29 +21,27 @@ helpviewer_keywords:
   - "expressions [SQL Server], part returned"
   - "characters [SQL Server], returning part of"
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SUBSTRING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns part of a character, binary, text, or image expression in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Returns part of a character, binary, text, or image expression in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 SUBSTRING ( expression ,start , length )  
 ```  
   
 ## Arguments  
  *expression*  
- Is a **character**, **binary**, **text**, **ntext**, or **image**[expression](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Is a **character**, **binary**, **text**, **ntext**, or **image** [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *start*  
  Is an integer or **bigint** expression that specifies where the returned characters start. (The numbering is 1 based, meaning that the first character in the expression is 1). If *start* is less than 1, the returned expression will begin at the first character that is specified in *expression*. In this case, the number of characters that are returned is the largest value of either the sum of *start* + *length*- 1 or 0. If *start* is greater than the number of characters in the value expression, a zero-length expression is returned.  
@@ -101,13 +97,13 @@ SELECT x = SUBSTRING('abcdef', 2, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
+ ```
+x  
+----------  
+bcd  
   
- `----------`  
-  
- `bcd`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### B. Using SUBSTRING with text, ntext, and image data  
   
@@ -126,13 +122,13 @@ WHERE pub_id = '1756';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `pub_id logo    pr_info`  
-  
- `------ ---------------------- ----------`  
-  
- `1756   0x474946383961E3002500 This is sa`  
-  
- `(1 row(s) affected)`  
+ ```
+ pub_id logo    pr_info
+------ ---------------------- ----------
+1756   0x474946383961E3002500 This is sa
+
+(1 row(s) affected)
+```  
   
  The following example shows the effect of SUBSTRING on both **text** and **ntext** data. First, this example creates a new table in the `pubs` database named `npub_info`. Second, the example creates the `pr_info` column in the `npub_info` table from the first 80 characters of the `pub_info.pr_info` column and adds an `ü` as the first character. Lastly, an `INNER JOIN` retrieves all publisher identification numbers and the `SUBSTRING` of both the **text** and **ntext** publisher information columns.  
   
@@ -192,15 +188,13 @@ ORDER BY LastName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName             Initial`  
-  
- `-------------------- -------`  
-  
- `Barbariol            A`  
-  
- `Barber               D`  
-  
- `Barreto de Mattos    P`  
+ ```
+LastName             Initial
+-------------------- -------
+Barbariol            A
+Barber               D
+Barreto de Mattos    P
+```  
   
  The following example shows how to return the second, third, and fourth characters of the string constant `abcdef`.  
   
@@ -212,13 +206,19 @@ SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
-  
- `-----`  
-  
- `bcd`  
+ ```
+x
+-----
+bcd
+```  
   
 ## See Also  
+ [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
+ [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

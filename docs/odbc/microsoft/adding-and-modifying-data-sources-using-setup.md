@@ -2,13 +2,11 @@
 title: "Adding and Modifying Data Sources Using Setup | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], adding"
   - "editing data sources [ODBC], ODBC driver for Oracle"
@@ -17,16 +15,15 @@ helpviewer_keywords:
   - "data sources [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], adding data sources"
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Adding and Modifying Data Sources Using Setup
 > [!IMPORTANT]  
 >  This feature will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Instead, use the ODBC driver provided by Oracle.  
   
- A data source identifies a path to data that can include a network library, server, database, and other attributes — in this case, the data source is the path to an Oracle database. To connect to a data source, the Driver Manager checks the Windows registry for specific connection information.  
+ A data source identifies a path to data that can include a network library, server, database, and other attributes - in this case, the data source is the path to an Oracle database. To connect to a data source, the Driver Manager checks the Windows registry for specific connection information.  
   
  The registry entry created by the ODBC Data Source Administrator is used by the ODBC Driver Manager and ODBC drivers. This entry contains information about each data source and its associated driver. Before you can connect to a data source, its connection information must be added to the registry.  
   
@@ -55,13 +52,13 @@ manager: "jhubbard"
   
 1.  Click Options make more specifications about the ODBC Driver for Oracle setup:  
   
-    -   **Translation** — Click Select to choose a loaded data translator. The default is \<No Translator>.  
+    -   **Translation** - Click Select to choose a loaded data translator. The default is \<No Translator>.  
   
-    -   **Performance** — The Include REMARKS in Catalog Functions check box specifies whether the driver returns Remarks columns for the [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) result set. The ODBC Driver for Oracle provides faster access when this value is not set.  
+    -   **Performance** - The Include REMARKS in Catalog Functions check box specifies whether the driver returns Remarks columns for the [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) result set. The ODBC Driver for Oracle provides faster access when this value is not set.  
   
          The Include SYNONYMS in SQL Columns check box specifies whether the driver returns column information. **Buffer Size** specifies the size, in bytes, allocated to receive fetched data. The driver optimizes fetching so that one fetch from the Oracle Server returns enough rows to fill a buffer of the specified size. Larger values tend to increase performance when fetching a lot of data.  
   
-    -   **Customization** — The Enforce ODBC DayOfWeek Standard check box specifies whether the result set will conform to the ODBC specified day-of-week format (Sunday = 1; Saturday = 7). If this check box is cleared, the locale-specific Oracle value is returned.  
+    -   **Customization** - The Enforce ODBC DayOfWeek Standard check box specifies whether the result set will conform to the ODBC specified day-of-week format (Sunday = 1; Saturday = 7). If this check box is cleared, the locale-specific Oracle value is returned.  
   
          The SQLDescribeCol **always returns a value for precision** check box specifies whether or not the driver should return a non-zero value for the *cbColDef* argument of **SQLDescribeCol**. This connection string attribute applies only to columns where there is no Oracle-defined scale, such as computed numeric columns and columns defined as NUMBER without a precision or scale. A **SQLDescribeCol** call returns 130 for the precision when Oracle does not provide that information. If this check box is cleared, the driver will return 0 for these types of columns instead.  
   

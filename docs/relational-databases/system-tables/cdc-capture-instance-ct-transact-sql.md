@@ -2,12 +2,10 @@
 title: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "cdc"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.<capture_instance>_CT"
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Is the change table created when change data capture is enabled on a source table. The table returns one row for each insert and delete operation performed against the source table, and two rows for each update operation performed against the source table. When the name of the change table is not specified at the time the source table is enabled, the name is derived. The format of the name is cdc.*capture_instance*_CT where *capture_instance* is the schema name of the source table and the source table name in the format *schema_table*. For example, if the table **Person.Address** in the **AdventureWorks** sample database is enabled for change data capture, the derived change table name would be **cdc.Person_Address_CT**.  
   
@@ -73,7 +70,7 @@ The `__$command_id` column was column was introduced in a cumulative update in v
 3.  Alter the source table by specifying the new data type. The data type change is propagated successfully to the change table.  
   
 ## Data Manipulation Language Modifications  
- When insert, update, and delete operations are performed on a change data capture enabled source table, a record of those DML operations appears in the database transaction log. The change data capture capture process retrieves information about those changes from the transaction log, and adds either one or two rows to the change table to record the change. Entries are added to the change table in the same order that they were committed to the source table, although the commit of change table entries must typically be performed on a group of changes instead of for a single entry.  
+ When insert, update, and delete operations are performed on a change data capture enabled source table, a record of those DML operations appears in the database transaction log. The change data capture process retrieves information about those changes from the transaction log, and adds either one or two rows to the change table to record the change. Entries are added to the change table in the same order that they were committed to the source table, although the commit of change table entries must typically be performed on a group of changes instead of for a single entry.  
   
  Within the change table entry, the **__$start_lsn** column is used to record the commit LSN that is associated with the change to the source table, and the **__$seqval column** is used to order the change within its transaction. Together, these metadata columns can be used to make sure that the commit order of the source changes is preserved. Because the capture process obtains its change information from the transaction log, it is important to note that change table entries do not appear synchronously with their corresponding source table changes. Instead, corresponding changes appear asynchronously, after the capture process has processed the relevant change entries from the transaction log.  
   

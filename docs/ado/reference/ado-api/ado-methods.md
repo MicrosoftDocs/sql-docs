@@ -1,30 +1,28 @@
 ---
 title: "ADO Methods | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, methods"
   - "methods [ADO]"
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ADO Methods
+
 |||  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Creates a new record for an updatable **Recordset** object.|  
 |[Append](../../../ado/reference/ado-api/append-method-ado.md)|Appends an object to a collection. If the collection is **Fields**, a new **Field** object may be created before it is appended to the collection.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Appends data to a large text or binary data **Field**, or to a **Parameter** object.|  
-|[BeginTrans, CommitTrans, and RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Manages transaction processing within a **Connection** object as follows:<br /><br /> **BeginTrans** — Begins a new transaction.<br /><br /> **CommitTrans** — Saves any changes and ends the current transaction. It may also start a new transaction.<br /><br /> **RollbackTrans** — Cancels any changes and ends the current transaction. It may also start a new transaction.|  
+|[BeginTrans, CommitTrans, and RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Manages transaction processing within a **Connection** object as follows:<br /><br /> **BeginTrans** - Begins a new transaction.<br /><br /> **CommitTrans** - Saves any changes and ends the current transaction. It may also start a new transaction.<br /><br /> **RollbackTrans** - Cancels any changes and ends the current transaction. It may also start a new transaction.|  
 |[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancels execution of a pending, asynchronous method call.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancels a pending batch update.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancels any changes that were made to the current or new row of a **Recordset** object, or the **Fields** collection of a **Record** object, before calling the **Update** method.|  

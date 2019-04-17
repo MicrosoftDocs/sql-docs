@@ -1,22 +1,17 @@
 ---
-title: "Deployment and Version Support in SQL Server Data Tools (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Deployment and Version Support in SQL Server Data Tools (SSDT) | Microsoft Docs"
+ms.date: 03/15/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: tools
+
+
+ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
-# Deployment and Version Support in SQL Server Data Tools (SSRS)
+# Deployment and Version Support in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] supports the following scenarios:  
   
 -   Open report definitions (*.rdl) and report server projects (\*.rptproj).  
@@ -40,7 +35,7 @@ manager: "erikre"
   
 -   OutputPath is a build property that identifies the path of folders to store the report definition used in build verification, deployment, and preview of reports.  
   
--   ErrorLevel is a build property that identifies the severity of the build issues that are reported as errors. Issues with severity levels less than or equal to the value of ErrorLevel are reported as errors; otherwise, the issues are reported as warnings. For more information, see The “Report Validation and Error Levels” section in [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel is a build property that identifies the severity of the build issues that are reported as errors. Issues with severity levels less than or equal to the value of ErrorLevel are reported as errors; otherwise, the issues are reported as warnings. For more information, see The "Report Validation and Error Levels" section in [Design Reports with Report Designer &#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion is a deployment property that identifies the expected version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] that is installed on the target report server specified in the TargetServerURL property.  
   
@@ -66,7 +61,7 @@ manager: "erikre"
 |Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL schema|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Report Server Project<br /><br /> or<br /><br /> Report Server Wizard Project|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL schema|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server only|Upgrades 2003 RDL and 2005 RDL to the 2008 RDL schema locally.|  
   
- For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](http://go.microsoft.com/fwlink/?linkid=116865).  
+ For more information about opening reports in a previous version of the report definition schema, see [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md). For more information about specific report definition schemas, see [Report Definition Language Specification](https://go.microsoft.com/fwlink/?linkid=116865).  
   
 ## See Also  
  [Publishing Data Sources and Reports](../../reporting-services/reports/publishing-data-sources-and-reports.md)  

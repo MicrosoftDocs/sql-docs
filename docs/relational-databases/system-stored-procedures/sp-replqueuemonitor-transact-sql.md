@@ -2,28 +2,23 @@
 title: "sp_replqueuemonitor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replqueuemonitor"
   - "sp_replqueuemonitor_TSQL"
 helpviewer_keywords: 
   - "sp_replqueuemonitor"
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_replqueuemonitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lists the queue messages from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queue or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing for queued updating subscriptions to a specified publication. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] queues are used, this stored procedure is executed at the Subscriber on the subscription database. If Message Queuing is used, this stored procedure is executed at the Distributor on the distribution database.  
   
@@ -41,16 +36,16 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL. The server must be configured for publishing. NULL for all Publishers.  
   
- [ **@publisherdb** = ] **'***publisher_db***'** ]  
+`[ @publisherdb = ] 'publisher_db' ]`
  Is the name of the publication database. *publisher_db* is **sysname**, with a default of NULL. NULL for all publication databases.  
   
- [ **@publication** = ] **'***publication***'** ]  
+`[ @publication = ] 'publication' ]`
  Is the name of the publication. *publication*is **sysname**, with a default of NULL. NULL for all publications.  
   
- [ **@tranid** = ] **'***tranid***'** ]  
+`[ @tranid = ] 'tranid' ]`
  Is the transaction ID. *tranid*is **sysname**, with a default of NULL. NULL for all transactions.  
   
  [**@queuetype=** ] **'***queuetype***'** ]  

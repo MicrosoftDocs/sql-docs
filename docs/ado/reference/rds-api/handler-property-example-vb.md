@@ -1,27 +1,24 @@
 ---
 title: "Handler Property Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Handler property [ADO], Visual Basic example"
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Handler Property Example (VB)
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  This example demonstrates the [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object [Handler](../../../ado/reference/rds-api/handler-property-rds.md) property. (See [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md) for more details.)  
   
@@ -48,7 +45,7 @@ Public Sub Main()
     dc.Handler = "MSDFMAP.Handler"  
     dc.ExecuteOptions = 1  
     dc.FetchOptions = 1  
-    dc.Server = "http://MyServer"  
+    dc.Server = "https://MyServer"  
     dc.Connect = "Data Source=AuthorDataBase"  
     dc.SQL = "AuthorById('267-41-2394')"  
     dc.Refresh                  'Retrieve the record  

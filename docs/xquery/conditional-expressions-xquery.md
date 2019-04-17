@@ -2,12 +2,10 @@
 title: "Conditional Expressions (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -19,13 +17,12 @@ helpviewer_keywords:
   - "conditional expressions [XQuery]"
   - "EBV"
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # Conditional Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery supports the following conditional **if-then-else** statement:  
   
@@ -82,7 +79,7 @@ if ( sql:variable("@v")="FirstName" ) then
   
 ```  
 SELECT CatalogDescription.query('  
-     declare namespace p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare namespace p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      <Product>   
           { /p1:ProductDescription/@ProductModelID }  
           { /p1:ProductDescription/@ProductModelName }   
@@ -108,11 +105,11 @@ WHERE ProductModelID = 19
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
-  \<p1:Warranty xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+  \<p1:Warranty xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     \<p1:WarrantyPeriod>3 years\</p1:WarrantyPeriod>  
     \<p1:Description>parts and labor\</p1:Description>  
   \</p1:Warranty>  
-  \<p2:Maintenance xmlns:p2="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
+  \<p2:Maintenance xmlns:p2="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
     \<p2:NoOfYears>10 years\</p2:NoOfYears>  
     \<p2:Description>maintenance contract available through your dealer or any AdventureWorks retail store.\</p2:Description>  
   \</p2:Maintenance>  
@@ -124,7 +121,7 @@ WHERE ProductModelID = 19
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         for $WC in //AWMI:root/AWMI:Location  
         return  
         if ( $WC[not(@SetupHours)] )  
@@ -151,7 +148,7 @@ where ProductModelID=7
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 for $WC in //AWMI:root/AWMI:Location[not(@SetupHours)]   
         return  
           <Location>  

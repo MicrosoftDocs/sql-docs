@@ -2,12 +2,10 @@
 title: "STRING_ESCAPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "STRING_ESCAPE"
@@ -17,13 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "STRING_ESCAPE function"
 ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
-caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # STRING_ESCAPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Escapes special characters in texts and returns text with escaped characters. **STRING_ESCAPE** is a deterministic function.  
   
@@ -31,18 +30,20 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
+```sql
 STRING_ESCAPE( text , type )  
 ```  
   
-## Arguments  
+## Arguments
+
  *text*  
  Is a **nvarchar**[expression](../../t-sql/language-elements/expressions-transact-sql.md) expression representing the object that should be escaped.  
   
  *type*  
  Escaping rules that will be applied. Currently the value supported is `'json'`.  
   
-## Return Types  
+## Return Types
+
  **nvarchar(max)** text with escaped special and control characters. Currently **STRING_ESCAPE** can only escape JSON special characters shown in the following tables.  
   
 |Special character|Encoded sequence|  
@@ -67,32 +68,41 @@ STRING_ESCAPE( text , type )
   
 ## Examples  
   
-### A.  Escape text according to the JSON formatting rules  
+### A.  Escape text according to the JSON formatting rules
+
  The following query escapes special characters using JSON rules and returns escaped text.  
   
-```  
+```sql
 SELECT STRING_ESCAPE('\   /  
 \\    "     ', 'json') AS escapedText;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `escapedText`  
+```
+escapedText  
+-------------------------------------------------------------  
+\\\t\/\n\\\\\t\"\t
+```  
   
- `-------------------------------------------------------------`  
-  
- `\\\t\/\n\\\\\t\"\t`  
-  
-### B. Format JSON object  
+### B. Format JSON object
+
  The following query creates JSON text from number and string variables, and escapes any special JSON character in variables.  
   
-```  
-SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',   
+```
+SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
     17, STRING_ESCAPE(@name,'json'), STRING_ESCAPE(@surname,'json') );  
 ```  
   
-## See Also  
- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
-  
-  
+## See Also
+
+ [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [REPLACE &#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [REVERSE &#40;Transact-SQL&#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

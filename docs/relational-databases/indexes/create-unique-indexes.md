@@ -2,13 +2,11 @@
 title: "Create Unique Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "unique indexes"
   - "designing indexes [SQL Server], unique"
@@ -17,13 +15,13 @@ helpviewer_keywords:
   - "nonclustered indexes [SQL Server], unique"
   - "unique indexes, design guidelines"
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Unique Indexes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic describes how to create a unique index on a table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A unique index guarantees that the index key contains no duplicate values and therefore every row in the table is in some way unique. There are no significant differences between creating a UNIQUE constraint and creating a unique index that is independent of a constraint. Data validation occurs in the same manner, and the query optimizer does not differentiate between a unique index created by a constraint or manually created. However, creating a UNIQUE constraint on the column makes the objective of the index clear. For more information on UNIQUE constraints, see [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
@@ -112,7 +110,7 @@ manager: "jhubbard"
   
 7.  In the main grid, under **(General)**, select **Type** and then choose **Index** from the list.  
   
-8.  Select **Columns**, and then click the ellipsis **(…)**.  
+8.  Select **Columns**, and then click the ellipsis **(...)**.  
   
 9. In the **Index Columns** dialog box, under **Column Name**, select the columns you want to index. You can select up to 16 columns. For optimal performance, select only one or two columns per index. For each column you select, indicate whether the index arranges values of this column in ascending or descending order.  
   
@@ -124,7 +122,7 @@ manager: "jhubbard"
   
 13. Click **Close**.  
   
-14. On the **File** menu, click **Save***table_name*.  
+14. On the **File** menu, click **Save**_table\_name_.  
   
 #### Create a unique index by using Object Explorer  
   
@@ -134,15 +132,15 @@ manager: "jhubbard"
   
 3.  Expand the table on which you want to create a unique index.  
   
-4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index…**.  
+4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index...**.  
   
 5.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
 6.  Select the **Unique** check box.  
   
-7.  Under **Index key columns**, click **Add…**.  
+7.  Under **Index key columns**, click **Add...**.  
   
-8.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
+8.  In the **Select Columns from**_table\_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the unique index.  
   
 9. Click **OK**.  
   

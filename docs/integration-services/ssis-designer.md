@@ -2,13 +2,11 @@
 title: "SSIS Designer | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.controlflowwindow.f1"
   - "sql13.dts.designer.dataflowwindow.f1"
@@ -24,10 +22,9 @@ helpviewer_keywords:
   - "SSIS Designer, about SSIS Designer"
   - "Integration Services, SSIS Designer"
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # SSIS Designer
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer is a graphical tool that you can use to create and maintain [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer is available in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] as part of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
@@ -55,7 +52,7 @@ manager: "jhubbard"
 ## Undo and Redo  
  You can undo and redo up to 20 actions in the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer. For a package, undo /redo is available in the **Control Flow**, **Data Flow**, **Event Handlers**, and **Parameters** tabs, and in the **Variables** window. For a project, undo/redo is available in the **Project Parameters** window.  
   
- You can’t undo/redo changes to the new **SSIS Toolbox**.  
+ You can't undo/redo changes to the new **SSIS Toolbox**.  
   
  When you make changes to a component using the component editor, you undo and redo the changes as a set rather than undoing and redoing individual changes. The set of changes appears as a single action in the undo and redo drop-down list.  
   
@@ -79,14 +76,14 @@ manager: "jhubbard"
 ### Parameters Tab  
  Integration Services (SSIS) parameters allow you to assign values to properties within packages at the time of package execution. You can create project parameters at the project level and package parameters at the package level. Project parameters are used to supply any external input the project receives to one or more packages in the project. Package parameters allow you to modify package execution without having to edit and redeploy the package. This tab allows you to manage package parameters.  
   
- For more information about parameters, see [Integration Services (SSIS) Parameters](https://msdn.microsoft.com/library/hh213214.aspx).  
+ For more information about parameters, see [Integration Services (SSIS) Parameters](integration-services-ssis-package-and-project-parameters.md).  
   
 > **IMPORTANT!!**  Parameters are available only to projects developed for the project deployment model. Therefore, you will see the Parameters tab only for packages that are part of a project configured to use the project deployment model.  
   
 ### Event Handlers Tab  
  You construct the events in a package on the design surface of the **Event Handlers** tab. On the **Event Handlers** tab, you select the package or package object that you want to create an event handler for, and then select the event to associate with the event handler. An event handler has a control flow and optional data flows.  
   
- For more information, see [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ For more information, see [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
 ### Package Explorer Tab  
  Packages can be complex, including many tasks, connection managers, variables, and other elements. The explorer view of the package lets you see a complete list of package elements.  
@@ -101,7 +98,7 @@ manager: "jhubbard"
 #### Connection Managers Area  
  You add and modify the connection managers that a package uses in the **Connection Managers** area. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes connection managers to connect to a variety of data sources, such as text files, OLE DB databases, and .NET providers.  
   
- For more information, see [Integration Services &#40;SSIS&#41; Connections](../integration-services/connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ For more information, see [Integration Services &#40;SSIS&#41; Connections](../integration-services/connection-manager/integration-services-ssis-connections.md) and [Create Connection Managers](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
  
 ## Control Flow tab
 Use the **Control Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to build the control flow in a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  

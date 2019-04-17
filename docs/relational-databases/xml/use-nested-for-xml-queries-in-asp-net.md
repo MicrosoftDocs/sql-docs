@@ -2,25 +2,23 @@
 title: "Use Nested FOR XML Queries in ASP.NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, nested FOR XML queries"
   - "queries [XML in SQL Server], ASP.NET and"
   - "nested FOR XML queries in ASP.NET"
   - "ASP.NET [SQL Server]"
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Use Nested FOR XML Queries in ASP.NET
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   In this example, an ASP.NET application returns XML to a browser by executing a stored procedure in SQL Server. The stored procedure generates XML using nested queries. A similar SELECT statement is shown in the topic [Generating Siblings by Using a Nested AUTO Mode Query](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md). This example demonstrates one way to use nested FOR XML queries to generate element-centric XML in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Example  
@@ -88,7 +86,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  Save the .aspx application in the c:\inetpub\wwwroot directory (GetSalesOrderInfo.aspx).  
   
-3.  Execute the application (`http://server/GetSalesOrderInfo.aspx`).  
+3.  Execute the application (`https://server/GetSalesOrderInfo.aspx`).  
   
 ## See Also  
  [Use Nested FOR XML Queries](../../relational-databases/xml/use-nested-for-xml-queries.md)  

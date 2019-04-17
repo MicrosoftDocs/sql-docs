@@ -2,20 +2,17 @@
 title: "Install Client Tools on a SQL Server Failover Cluster | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Install Client Tools on a SQL Server Failover Cluster
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Client tools such as [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] are shared features common across all instances on the same machine. They are backward compatible, with supported [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions that can be installed side by side. Only one version of the client tool exists on a node at a time.  
   
  If the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client tools are installed during setup on first node of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster, they are automatically added to any nodes that may be added later to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using Add Node.  

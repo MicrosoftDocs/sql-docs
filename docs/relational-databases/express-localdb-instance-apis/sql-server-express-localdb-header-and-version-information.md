@@ -2,22 +2,21 @@
 title: "SQL Server Express LocalDB Header and Version Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+
 ms.topic: "reference"
 apilocation: 
   - "sqluserinstance.dll"
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
-caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # SQL Server Express LocalDB Header and Version Information
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   There is no separate header file for the SQL Server Express LocalDB instance API; the LocalDB function signatures and error codes are defined in the SQL Server Native Client header file (sqlncli.h). To use the LocalDB instance API, you must include the sqlncli.h header file in your project.  
   
 ## LocalDB Versioning  
@@ -80,15 +79,15 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 // The #define has to take place BEFORE the API header file (sqlncli.h) is included  
 #define LOCALDB_DEFINE_PROXY_FUNCTIONS  
 #include <sqlncli.h>  
-…  
+...  
 HRESULT hr = S_OK;  
   
 // Create LocalDB instance by calling the create API proxy function included by macro  
 if (FAILED(hr = LocalDBCreateInstance( L"12.0", L"name", 0)))  
 {  
-…  
+...  
 }  
-…  
+...  
   
 ```  
   

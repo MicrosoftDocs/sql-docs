@@ -2,12 +2,10 @@
 title: "REVOKE Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,13 +14,12 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], permissions"
   - "REVOKE statement, asymmetric keys"
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
-caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # REVOKE Asymmetric Key Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Revokes permissions on an asymmetric key.  
   
@@ -49,7 +46,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  *permission*  
  Specifies a permission that can be revoked on an assembly. Listed below.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  Specifies the asymmetric key on which the permission is being revoked. The scope qualifier **::** is required.  
   
  *database_principal*  

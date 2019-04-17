@@ -1,37 +1,22 @@
 ---
 title: "Key Performance Indicators (KPIs) in Multidimensional Models | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "viewing Key Performance Indicators"
-  - "Key Performance Indicators [Analysis Services]"
-  - "KPIs [Analysis Services]"
-  - "OLAP objects [Analysis Services], performance indicators"
-  - "weights [Analysis Services]"
-  - "displaying Key Performance Indicators"
-  - "parent KPIs [Analysis Services]"
-  - "child KPIs"
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Key Performance Indicators (KPIs) in Multidimensional Models
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   In business terminology, a Key Performance Indicator (KPI) is a quantifiable measurement for gauging business success.  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a KPI is a collection of calculations that are associated with a measure group in a cube that are used to evaluate business success. Typically, these calculations are a combination of Multidimensional Expressions (MDX) expressions or calculated members. KPIs also have additional metadata that provides information about how client applications should display the results of the KPI's calculations.  
   
- A KPI handles information about a goal set, the actual formula of the performance recorded in the cube, and measurement to show the trend and the status of the performance. AMO is used to define the formulas and other definitions about the values of a KPI. A query interface, such as ADOMD.NET, is used by the client application to retrieve and expose the KPI values to the end user. For more information see [Developing with ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ A KPI handles information about a goal set, the actual formula of the performance recorded in the cube, and measurement to show the trend and the status of the performance. AMO is used to define the formulas and other definitions about the values of a KPI. A query interface, such as ADOMD.NET, is used by the client application to retrieve and expose the KPI values to the end user. For more information see [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  A simple <xref:Microsoft.AnalysisServices.Kpi> object is composed of: basic information, the goal, the actual value achieved, a status value, a trend value, and a folder where the KPI is viewed. Basic information includes the name and description of the KPI. The goal is an MDX expression that evaluates to a number. The actual value is an MDX expression that evaluates to a number. The status and trend value are MDX expressions that evaluate to a number. The folder is a suggested location for the KPI to be presented to the client.  
   

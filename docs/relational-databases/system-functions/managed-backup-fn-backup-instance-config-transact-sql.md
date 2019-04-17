@@ -2,12 +2,10 @@
 title: "managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_backup_instance_config"
@@ -20,13 +18,12 @@ helpviewer_keywords:
   - "smart_admin.fn_backup_instance_config"
   - "fn_backup_instance_config"
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
-caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # managed_backup.fn_backup_instance_config (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Returns 1 row with the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] default configuration settings for the instance of SQL Server.  
   
@@ -37,7 +34,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 managed_backup.fn_backup_db_config ()  
 ```  
   

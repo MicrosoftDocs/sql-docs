@@ -2,23 +2,20 @@
 title: "ODBC Flow Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # ODBC Flow Components
   This topic describes the concepts necessary for creating an ODBC data flow using [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- The Connector for Open Database Connectivity (ODBC) by Attunity for [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] helps SSIS developers easily create packages that load and unload data from ODBC-supported databases.  
+ The Connector for Open Database Connectivity (ODBC) for [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] helps SSIS developers easily create packages that load and unload data from ODBC-supported databases.  
   
  The ODBC Connector is designed to achieve optimal performance when loading data into or unloading data from an ODBC-supported database in the context of [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   

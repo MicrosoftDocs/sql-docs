@@ -2,12 +2,10 @@
 title: "sp_adduser (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_adduser"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_adduser"
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # sp_adduser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a new user to the current database.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) instead.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,13 +39,13 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows login. *login* is a **sysname**, with no default. *login* must be an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or Windows login.  
   
- [ **@name_in_db =** ] **'***user***'**  
+`[ @name_in_db = ] 'user'`
  Is the name for the new database user. *user* is a **sysname**, with a default of NULL. If *user* is not specified, the name of the new database user defaults to the *login* name. Specifying *user* gives the new user a name in the database different from the server-level login name.  
   
- [ **@grpname =** ] **'***role***'**  
+`[ @grpname = ] 'role'`
  Is the database role of which the new user becomes a member. *role* is **sysname**, with a default of NULL. *role* must be a valid database role in the current database.  
   
 ## Return Code Values  

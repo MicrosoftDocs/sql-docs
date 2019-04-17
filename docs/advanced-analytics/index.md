@@ -1,3 +1,3 @@
---- 
-redirect_url: /sql/advanced-analytics/getting-started-with-machine-learning-services 
---- 
+---
+redirect_url: /sql/advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server
+---

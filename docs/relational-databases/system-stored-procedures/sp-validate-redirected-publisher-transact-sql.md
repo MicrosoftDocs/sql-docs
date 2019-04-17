@@ -2,28 +2,23 @@
 title: "sp_validate_redirected_publisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_validate_redirected_publisher"
   - "sp_validate_redirected_publisher_TSQL"
 helpviewer_keywords: 
   - "sp_validate_redirected_publisher"
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_validate_redirected_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Verifies that the current host for the publishing database is capable of supporting replication. Must be run from a distribution database. This procedure is called by **sp_get_redirected_publisher**.  
   
@@ -40,13 +35,13 @@ manager: "jhubbard"
 ```  
   
 ## Arguments  
- [ **@original_publisher** = ] **'***original_publisher***'**  
+`[ @original_publisher = ] 'original_publisher'`
  The name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that originally published the database. *original_publisher* is **sysname**, with no default.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  The name of the database being published. *publisher_db* is **sysname**, with no default.  
   
- [ **@redirected_publisher** = ] **'***redirected_publisher***'**  
+`[ @redirected_publisher = ] 'redirected_publisher'`
  The target of redirection specified when **sp_redirect_publisher** was called for the publisher/database pair. *redirected_publisher* is **sysname**, with no default.  
   
 ## Return Code Values  

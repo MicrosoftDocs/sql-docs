@@ -2,28 +2,23 @@
 title: "sp_addlogreader_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addlogreader_agent"
   - "sp_addlogreader_agent_TSQL"
 helpviewer_keywords: 
   - "sp_addlogreader_agent"
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_addlogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a Log Reader agent for a given database. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -46,35 +41,35 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## Arguments  
- [ **@job_login**= ] **'***job_login***'**  
+`[ @job_login = ] 'job_login'`
  Is the login for the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor.  
   
-> [!NOTE]  
->  For non-[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+> [!NOTE]
+>  For non- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
- [ **@job_password**= ] **'***job_password***'**  
+`[ @job_password = ] 'job_password'`
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with a default value of NULL.  
   
 > [!IMPORTANT]  
 >  Do not store authentication information in script files. For best security, login names and passwords should be supplied at runtime.  
   
- [ **@job_name**= ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  Is the name of an existing agent job. *job_name* is **sysname**, with a default value of NULL. This parameter is only specified when the agent is started using an existing job instead of a newly created job (the default).  
   
- [ **@publisher_security_mode**= ] *publisher_security_mode*  
- Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of **1**. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+`[ @publisher_security_mode = ] publisher_security_mode`
+ Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of **1**. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
- [ **@publisher_login**= ] **'***publisher_login***'**  
+`[ @publisher_login = ] 'publisher_login'`
  Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with a default of NULL. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the Windows account specified in *job_login* will be used when connecting to the Publisher.  
   
- [ **@publisher_password**= ] **'***publisher_password***'**  
+`[ @publisher_password = ] 'publisher_password'`
  Is the password used when connecting to the Publisher. *publisher_password* is **sysname**, with a default of NULL.  
   
 > [!IMPORTANT]  
 >  Do not store authentication information in script files. For best security, login names and passwords should be supplied at runtime.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Is the name of the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Is the name of the non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  You should not specify this parameter for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

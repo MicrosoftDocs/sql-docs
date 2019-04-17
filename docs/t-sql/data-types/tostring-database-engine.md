@@ -2,12 +2,10 @@
 title: "ToString (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ToString"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "ToString [Database Engine]"
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
-caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # ToString (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Returns a string with the logical representation of *this*. ToString is called implicitly when a conversion from **hierarchyid** to a string type occurs. Acts as the opposite of [Parse &#40;Database Engine&#41;](../../t-sql/data-types/parse-database-engine.md).
   
@@ -48,7 +45,7 @@ string ToString  ( )
 **CLR return type:String**
   
 ## Remarks  
-Returns the logical location in the hierarchy. For example, `/2/1/` represents the fourth row ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) in the following hierarchical structure of a file system:
+Returns the logical location in the hierarchy. For example, `/2/1/` represents the fourth row ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) in the following hierarchical structure of a file system:
   
 ```sql
 /        C:\  
@@ -100,11 +97,11 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`hierarchyidRepresentation    StringRepresentation`
-  
-`-------------------------    -----------------------`
-  
-`0x5ADE                       /1/1/3/`
+```
+hierarchyidRepresentation    StringRepresentation
+-------------------------    -----------------------
+0x5ADE                       /1/1/3/
+```
   
 ### C. CLR example  
 The following code snippet calls the ToString() method:
@@ -114,7 +111,7 @@ this.ToString()
 ```  
   
 ## See also
-[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
   

@@ -1,28 +1,23 @@
 ---
 title: "Import a Data Mining Project using the Analysis Services Import Wizard | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Import a Data Mining Project using the Analysis Services Import Wizard
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This topic describes how to create a new data mining project by importing the metadata from an existing data mining project on another server, using the template, **Import from Server (Multidimensional and Data Mining) Project**, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## Import data sources, mining structures, and mining models from an existing data mining project  
  When you use the template, **Import from Server (Multidimensional and Data Mining) Project**, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] creates a new data mining project, and then copies the metadata from the specified data mining project. The new project contains the same data sources, data source views, mining structures, and mining models as the ssASnoversion database that you imported from. However, the project cannot be used until you have updated certain properties and processed the objects as described:  
   
--   The data itself is not copied from the source server to the new data mining project—only the definitions of the data sources and data source views are imported. Therefore, after the import process has completed, and the objects have been created, you must populate the objects with data by training the mining structures and dependent models. You can use the command **Process All** in Data Mining Designer to train the models and structures.  
+-   The data itself is not copied from the source server to the new data mining project-only the definitions of the data sources and data source views are imported. Therefore, after the import process has completed, and the objects have been created, you must populate the objects with data by training the mining structures and dependent models. You can use the command **Process All** in Data Mining Designer to train the models and structures.  
   
 -   If you are importing a project that was created in a previous version of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the data source might use providers that are not installed on the server to which you are importing the project. If you encounter errors when processing the imported mining structures, right-click each data source and select **Open Designer** to edit the connection string and review the provider properties.  
   
@@ -58,6 +53,6 @@ manager: "jhubbard"
      The new project is automatically opened using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## See Also  
- [Project Properties &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
+ [Project Properties](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   
   

@@ -1,24 +1,20 @@
 ---
 title: "Parameter Data Types | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 01/19/2017
+ms.prod: sql
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], parameters"
   - "parameter data type [ODBC]"
   - "minimum SQL syntax supported [ODBC]"
   - "ODBC drivers [ODBC], minimum SQL syntax supported"
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ""
+manager: craigg
 ---
 # Parameter Data Types
 Even though each parameter specified with **SQLBindParameter** is defined using an SQL data type, the parameters in an SQL statement have no intrinsic data type. Therefore, parameter markers can be included in an SQL statement only if their data types can be inferred from another operand in the statement. For example, in an arithmetic expression such as ? + COLUMN1, the data type of the parameter can be inferred from the data type of the named column represented by COLUMN1. An application cannot use a parameter marker if the data type cannot be determined.  

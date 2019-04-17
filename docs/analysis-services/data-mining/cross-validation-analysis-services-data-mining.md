@@ -1,27 +1,17 @@
 ---
 title: "Cross-Validation (Analysis Services - Data Mining) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "stored procedures [Analysis Services], data mining"
-  - "cross-validation [data mining]"
-  - "scoring [data mining]"
-  - "accuracy testing [data mining]"
-ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Cross-Validation (Analysis Services - Data Mining)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   *Cross-validation* is a standard tool in analytics and is an important feature for helping you develop and fine-tune data mining models. You use cross-validation after you have created a mining structure and related mining models to ascertain the validity of the model.  Cross-validation has the following applications:  
   
 -   Validating the robustness of a particular mining model.  
@@ -85,7 +75,7 @@ manager: "jhubbard"
   
  After you select the predictable attribute, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatically tests all models that use the same predictable attribute. If the target attribute contains discrete values, after you have selected the predictable column, you can optionally type a target state, if there is a specific value that you want to predict.  
   
- The selection of the target state affects the measures that are returned. If you specify a target attribute—that is, a column name—and do not pick a specific value that you want the model to predict, by default the model will be evaluated on its prediction of the most probable state.  
+ The selection of the target state affects the measures that are returned. If you specify a target attribute-that is, a column name-and do not pick a specific value that you want the model to predict, by default the model will be evaluated on its prediction of the most probable state.  
   
  When you use cross-validation with clustering models, there is no predictable column; instead, you select **#Cluster** from the list in the **Target Attribute** list box. After you have selected this option, other options that are not relevant to clustering models, such as **Target State**, are disabled. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will then test all clustering models that are associated with the mining structure.  
   

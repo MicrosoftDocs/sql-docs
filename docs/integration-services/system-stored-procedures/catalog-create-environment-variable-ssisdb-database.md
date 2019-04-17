@@ -2,56 +2,53 @@
 title: "catalog.create_environment_variable (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # catalog.create_environment_variable (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Create an environment variable in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
-```tsql  
-create_environment_variable [ @folder_name = ] folder_name  
-    , [ @environment_name = ] environment_name  
-    , [ @variable_name = ] variable_name  
-    , [ @data_type = ] data_type  
-    , [ @sensitive = ] sensitive  
-    , [ @value = ] value  
-    , [ @description = ] description  
+```sql  
+catalog.create_environment_variable [@folder_name =] folder_name  
+    , [@environment_name =] environment_name  
+    , [@variable_name =] variable_name  
+    , [@data_type =] data_type  
+    , [@sensitive =] sensitive  
+    , [@value =] value  
+    , [@description =] description  
 ```  
   
 ## Arguments  
- [ @folder_name = ] *folder_name*  
+ [@folder_name =] *folder_name*  
  The name of the folder that contains the environment. The *folder_name* is **nvarchar(128)**.  
   
- [ @environment_name = ] *environment_name*  
+ [@environment_name =] *environment_name*  
  The name of the environment. The *environment_name* is **nvarchar(128)**.  
   
- [ @variable_name = ] *variable_name*  
+ [@variable_name =] *variable_name*  
  The name of the environment variable. The *variable_name* is **nvarchar(128)**.  
   
- [ @data_type = ] *data_type*  
+ [@data_type =] *data_type*  
  The data type of the variable. Supported environment variable data types include **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32**, and **UInt64**. Unsupported environment variable data types include **Char**, **DBNull**, **Object**, and **Sbyte**. The data type of the *data_type* parameter is **nvarchar(128)**.  
   
- [ @sensitive = ] *sensitive*  
+ [@sensitive =] *sensitive*  
  Indicates whether the variable contains a sensitive value or not. Use a value of `1` to indicate that the value of the environment variable is sensitive or a value of `0` to indicate that it is not. A sensitive value is encrypted when it is stored. A value that is not sensitive is stored in plaintext.*Sensitive* is **bit**.  
   
- [ @value = ] *value*  
+ [@value =] *value*  
  The value of the environment variable. The *value* is **sql_variant**.  
   
- [ @description = ] *description*  
+ [@description =] *description*  
  The description of the environment variable. The *value* is **nvarchar(1024)**.  
   
 ## Return Code Value  
@@ -86,7 +83,7 @@ create_environment_variable [ @folder_name = ] folder_name
 > [!TIP]  
 >  Consider using the **Int16** data type in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instead of the unsupported **Sbyte** data type.  
   
- The value passed to this stored procedure with the *value* parameter will be converted from an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type according to the following table:  
+ The value passed to this stored procedure with the *value* parameter is converted from an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] data type to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type according to the following table:  
   
 |Integration Services Data Type|SQL Server Data Type|  
 |------------------------------------|--------------------------|  
@@ -99,7 +96,7 @@ create_environment_variable [ @folder_name = ] folder_name
 |**Int64**|**bigint**|  
 |**Single**|Exact numeric: **decimal**, **numeric**; Approximate numeric: **float**, **real**|  
 |**String**|**varchar**, **nvarchar**, **char**|  
-|**UInt32**|**int** (This is the closest available mapping to **Uint32**.)|  
-|**UInt64**|**bigint** (This is the closest available mapping to **Uint64**.)|  
+|**UInt32**|**int** (**int** is the closest available mapping to **Uint32**.)|  
+|**UInt64**|**bigint** (**int** is the closest available mapping to **Uint64**.)|  
   
   

@@ -2,22 +2,19 @@
 title: "Restart Packages by Using Checkpoints | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "checkpoints [Integration Services]"
   - "restarting packages"
   - "starting packages"
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Restart Packages by Using Checkpoints
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can restart failed packages from the point of failure, instead of rerunning the whole package. If a package is configured to use checkpoints, information about package execution is written to a checkpoint file. When the failed package is rerun, the checkpoint file is used to restart the package from the point of failure. If the package runs successfully, the checkpoint file is deleted, and then re-created the next time the package is run.  
@@ -40,7 +37,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  Using checkpoints and transactions in the same package could cause unexpected results. For example, when a package fails and restarts from a checkpoint, the package might repeat a transaction that has already been successfully committed.  
   
- Checkpoint data is not saved for For Loop and Foreach Loop containers. When a package is restarted, the For Loop and Foreach Loop containers and the child containers are run again. If a child container in the loop runs successfully, it is not recorded in the checkpoint file, instead it is rerun. For more information and a workaround, see [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](http://go.microsoft.com/fwlink/?LinkId=241633).  
+ Checkpoint data is not saved for For Loop and Foreach Loop containers. When a package is restarted, the For Loop and Foreach Loop containers and the child containers are run again. If a child container in the loop runs successfully, it is not recorded in the checkpoint file, instead it is rerun. For more information and a workaround, see [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](https://go.microsoft.com/fwlink/?LinkId=241633).  
   
  If the package is restarted the package configurations are not reloaded, instead the package uses the configuration information written to the checkpoint file. This ensures that the package uses the same configurations when it is rerun as the time it failed.  
   
@@ -110,6 +107,6 @@ manager: "jhubbard"
     
 ## External Resources  
   
--   Technical article, [Automatic Restart of SSIS packages after Failover or Failure](http://go.microsoft.com/fwlink/?LinkId=200407), on social.technet.microsoft.com  
+-   Technical article, [Automatic Restart of SSIS packages after Failover or Failure](https://go.microsoft.com/fwlink/?LinkId=200407), on social.technet.microsoft.com  
   
--   Support article, [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](http://go.microsoft.com/fwlink/?LinkId=241633), on support.microsoft.com.  
+-   Support article, [SSIS Checkpoints are not honored for For Loop or Foreach Loop container items](https://go.microsoft.com/fwlink/?LinkId=241633), on support.microsoft.com.  

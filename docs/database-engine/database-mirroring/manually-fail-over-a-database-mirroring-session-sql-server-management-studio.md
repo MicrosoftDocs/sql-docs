@@ -2,24 +2,22 @@
 title: "Manually Fail Over a Database Mirroring Session (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "failover [SQL Server], database mirroring"
   - "manual failover [SQL Server]"
   - "database mirroring [SQL Server], failover"
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
-caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Manually Fail Over a Database Mirroring Session (SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When the mirrored database is synchronized (that is, when the database is in the SYNCHRONIZED state), the database owner can initiate manual failover to the mirror server.  
   
  During a manual failover, the principal and mirror server roles are swapped for the database on which the failover occurs. The mirror database becomes the principal database and the principal database becomes the mirror. For example, the following table shows the how a manual failover swaps the roles of two mirroring partners: `SQLDBENGINE0_1` and `SQLDBENGINE0_2`.  

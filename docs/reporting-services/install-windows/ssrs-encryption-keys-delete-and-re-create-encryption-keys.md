@@ -1,14 +1,10 @@
 ---
 title: "Delete and Re-create Encryption Keys  (SSRS Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 05/31/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "re-creating encryption keys"
   - "encryption keys [Reporting Services]"
@@ -17,10 +13,8 @@ helpviewer_keywords:
   - "removing encryption keys"
   - "resetting encryption keys"
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # SSRS Encryption Keys - Delete and Re-create Encryption Keys
   Deleting and re-creating encryption keys are activities that fall outside of routine encryption key maintenance. You perform these tasks in response to a specific threat to your report server, or as a last resort when you can no longer access a report server database.  

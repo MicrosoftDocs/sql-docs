@@ -2,12 +2,10 @@
 title: "DENY Schema Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,22 +15,21 @@ helpviewer_keywords:
   - "permissions [SQL Server], schemas"
   - "DENY statement, schemas"
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
-caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # DENY Schema Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Denies permissions on a schema.  
+Denies permissions on a schema.  
   
 
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```sql
 DENY permission  [ ,...n ] } ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]   
     [ CASCADE ]  
@@ -40,14 +37,14 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 ```  
   
 ## Arguments  
- *permission*  
- Specifies a permission that can be denied on a schema. For a list of these permissions, see the Remarks section later in this topic.  
+*permission*  
+Specifies a permission that can be denied on a schema. For a list of these permissions, see the Remarks section later in this article.  
   
- ON SCHEMA **::** schema*_name*  
- Specifies the schema on which the permission is being denied. The scope qualifier **::** is required.  
+ON SCHEMA **::** schema*_name*  
+Specifies the schema on which the permission is denied. The scope qualifier **::** is required.  
   
- *database_principal*  
- Specifies the principal to which the permission is being denied. *database_principal* can be one of the following:  
+*database_principal*  
+Specifies the principal to which the permission is denied. *database_principal* can be one of these principals:  
   
 -   Database user  
 -   Database role  
@@ -59,10 +56,10 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 -   Database user not mapped to a server principal  
   
 CASCADE  
- Indicates that the permission being denied is also denied to other principals to which it has been granted by this principal.  
+Denies permission to any other principals that the specified *database_principal* granted permission to.
   
 *denying_principal*  
- Specifies a principal from which the principal executing this query derives its right to deny the permission. *denying_principal* can be one of the following:  
+Specifies a principal from which the principal executing this query derives its right to deny the permission. *denying_principal* can be one of these principals:  
   
 -   Database user  
 -   Database role  
@@ -74,7 +71,7 @@ CASCADE
 -   Database user not mapped to a server principal  
   
 ## Remarks  
- A schema is a database-level securable that is contained by the database that is its parent in the permissions hierarchy. The most specific and limited permissions that can be denied on a schema are listed in the following table, together with the more general permissions that include them by implication.  
+A schema is a database-level securable. It's contained by the database that is its parent in the permissions hierarchy. The most specific and limited permissions that can be denied on a schema are listed in the following table. The table shows the more general permissions that include them by implication.  
   
 |Schema permission|Implied by schema permission|Implied by database permission|  
 |-----------------------|----------------------------------|------------------------------------|  
@@ -92,15 +89,15 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## Permissions  
- Requires CONTROL permission on the schema. If you are using the AS option, the specified principal must own the schema.  
+Requires CONTROL permission on the schema. If you're using the AS option, the specified principal must own the schema.  
   
 ## See Also  
- [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
+[CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+[DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+[Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+[Principals &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+[sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+[sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+[HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

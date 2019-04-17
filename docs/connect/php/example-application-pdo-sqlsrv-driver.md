@@ -1,19 +1,16 @@
 ---
 title: "Example Application (PDO_SQLSRV Driver) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/26/2018"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: 19
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Example Application (PDO_SQLSRV Driver)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -22,17 +19,17 @@ The AdventureWorks Product Reviews example application is a Web application that
   
 ### Running the Example Application  
   
-1.  Install the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. For detailed information, see [Getting Started with the PHP SQL Driver](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  Install the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. For detailed information, see [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  Copy the code listed later in this document into two files: adventureworks_demo.php and photo.php.  
 3.  Put the adventureworks_demo.php and photo.php files in the root directory of your Web server.  
-4.  Run the application by starting http://localhost/adventureworks_demo.php from your browser.  
+4.  Run the application by starting https\://localhost/adventureworks_demo.php from your browser.  
   
 ## Requirements  
 To run the AdventureWorks Product Reviews example application, the following must be true for your computer:  
   
--   Your system meets the requirements for the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. For detailed information, see [System Requirements for the PHP SQL Driver](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   Your system meets the requirements for the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. For detailed information, see [System Requirements for the Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
  -   The adventureworks_demo.php and photo.php files are in the root directory of your Web server. The files must contain the code listed later in this document.  
--   SQL Server 2005 or SQL Server 2008, with the [AdventureWorks2008](http://go.microsoft.com/fwlink/?LinkID=67739) database attached, is installed on the local computer.  
+-   SQL Server 2005 or SQL Server 2008, with the [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database attached, is installed on the local computer.  
 -   A Web browser is installed.  
   
 ## Demonstrates  
@@ -502,9 +499,13 @@ die( print_r( $e->getMessage() ) );
 ```  
   
 ## See Also  
-[Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
-[Comparing Execution Functions](../../connect/php/comparing-execution-functions.md)  
-[Retrieving Data](../../connect/php/retrieving-data.md)  
-[Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[Connecting to the Server](../../connect/php/connecting-to-the-server.md)
+
+[Comparing Execution Functions](../../connect/php/comparing-execution-functions.md)
+
+[Retrieving Data](../../connect/php/retrieving-data.md)
+
+[Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
   

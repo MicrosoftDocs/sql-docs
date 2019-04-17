@@ -2,15 +2,11 @@
 title: "MSsubscription_articles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSsubscription_articles"
   - "MSsubscription_articles_TSQL"
@@ -19,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsubscription_articles system table"
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # MSsubscription_articles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   The **MSsubscription_articles** table contains information regarding the articles in a queued subscription. This table is populated only for the replication types of queued updating and immediate updating with queued updating as a failover.  
   

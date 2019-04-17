@@ -2,13 +2,11 @@
 title: "SQLGetDiagRec Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLGetDiagRec"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetDiagRec function [ODBC]"
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
-caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetDiagRec Function
 **Conformance**  
@@ -36,14 +33,14 @@ manager: "jhubbard"
 ```  
   
 SQLRETURN SQLGetDiagRec(  
-     SQLSMALLINT     HandleType,  
-     SQLHANDLE       Handle,  
-     SQLSMALLINT     RecNumber,  
-     SQLCHAR *       SQLState,  
-     SQLINTEGER *    NativeErrorPtr,  
-     SQLCHAR *       MessageText,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   TextLengthPtr);  
+     SQLSMALLINT     HandleType,  
+     SQLHANDLE       Handle,  
+     SQLSMALLINT     RecNumber,  
+     SQLCHAR *       SQLState,  
+     SQLINTEGER *    NativeErrorPtr,  
+     SQLCHAR *       MessageText,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   TextLengthPtr);  
 ```  
   
 ## Arguments  
@@ -118,7 +115,7 @@ SQLRETURN SQLGetDiagRec(
   
  For a description of the fields of the diagnostic data structure, see [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). For more information, see [Using SQLGetDiagRec and SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) and [Implementing SQLGetDiagRec and SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
   
- Calling an API other than the one that’s being executed asynchronously will generate HY010 "Function sequence error". However, the error record cannot be retrieved before the asynchronous operation completes.  
+ Calling an API other than the one that's being executed asynchronously will generate HY010 "Function sequence error". However, the error record cannot be retrieved before the asynchronous operation completes.  
   
 ## HandleType Argument  
  Each handle type can have diagnostic information associated with it. The *HandleType* argument denotes the handle type of the *Handle* argument.  

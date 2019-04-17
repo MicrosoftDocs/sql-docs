@@ -1,25 +1,24 @@
 ---
 title: "Create a Date Attribute (Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: master-data-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "creating date attributes [Master Data Services]"
   - "attributes [Master Data Services], creating date attributes"
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Create a Date Attribute (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], create a date attribute when you want users to enter a date as an attribute value.  
   
 > [!NOTE]  
@@ -81,9 +80,9 @@ manager: "jhubbard"
 |IsVisible|1|  
 |Group_ID|3|  
   
- After you enter a row with the above values in the mdm.tblList table, the “dd/MM/yyyy hh:mm:ss tt” mask will be available in the Input mask list box. You can then select that mask to display the date and time in a datetime attribute column of an entity in the MDS Explorer.  
+ After you enter a row with the above values in the mdm.tblList table, the "dd/MM/yyyy hh:mm:ss tt" mask will be available in the Input mask list box. You can then select that mask to display the date and time in a datetime attribute column of an entity in the MDS Explorer.  
   
- The Input Mask is a custom .NET DateTime format string. For more information, see [Custom Date and Time Format Strings](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
+ The Input Mask is a custom .NET DateTime format string. For more information, see [Custom Date and Time Format Strings](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
 ## See Also  
  [Attributes &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

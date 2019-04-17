@@ -1,13 +1,10 @@
 ---
 title: "MATCH (SQL Graph) | Microsoft Docs"
-ms.custom: 
+ms.custom: ""
 ms.date: "05/05/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "MATCH"
@@ -17,15 +14,13 @@ dev_langs:
 helpviewer_keywords: 
   - "MATCH statement [SQL Server], SQL graph"
   - "SQL graph, MATCH statement"
-ms.assetid: 
-caps.latest.revision: 1
-author: "shkale-msft"
-ms.author: "shkale"
-manager: "jhubbard"
+author: shkale-msft
+ms.author: shkale
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-
 # MATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
   Specifies a search condition for a graph. MATCH can be used only with graph node and edge tables, in the SELECT statement as part of  WHERE clause. 
   

@@ -1,15 +1,12 @@
 ---
 title: "Register a Standard .NET Framework Data Provider (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 05/24/2018
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-data
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], data"
   - ".NET Framework data providers for Reporting Services"
@@ -18,15 +15,13 @@ helpviewer_keywords:
   - "data retrieval [Reporting Services]"
   - "Reporting Services, data sources"
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Register a Standard .NET Framework Data Provider (SSRS)
   To use a third-party [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider to retrieve data for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report dataset, you need to deploy and register the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider assembly in two locations: on the report authoring client and on the report server. On the report authoring client, you must register the data provider as a data source type and associate it with a query designer. You can then select this data provider as a type of data source when you create a report dataset. The associated query designer opens to help you create queries for this data source type. On the report server, you must register the data provider as a data source type. You can then process published reports that retrieve data from a data source using this data provider.  
   
- Third-party data providers do not necessarily provide all the functionality available with the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extensions. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). To learn about extending the functionality of a .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider, see [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Third-party data providers do not necessarily provide all the functionality available with the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extensions. For more information, see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). To learn about extending the functionality of a . [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider, see [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  You need administrator credentials to install and register data providers.  
   
@@ -37,7 +32,7 @@ manager: "erikre"
   
 1.  Navigate to the default location of the bin directory on the report server on which you want to use the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider. The default location of the report server bin directory is *\<drive>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
-2.  Copy your assembly from your staging location to the bin directory of the report server. Alternatively, you can load your assembly in the global assembly cache (GAC). For more information, see [Working with Assemblies and the Global Assembly Cache](http://go.microsoft.com/fwlink/?linkid=63912) in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation on MSDN.  
+2.  Copy your assembly from your staging location to the bin directory of the report server. Alternatively, you can load your assembly in the global assembly cache (GAC). For more information, see [Working with Assemblies and the Global Assembly Cache](https://go.microsoft.com/fwlink/?linkid=63912) in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation on MSDN.  
   
 #### To register a .NET data provider on the report server  
   
@@ -101,7 +96,7 @@ manager: "erikre"
  URL membership is only one of many membership conditions you might select for the data provider.  
   
 ### Verifying the Deployment and Registration  
- You can verify whether the data provider was deployed successfully to the report server by opening Report Manager and verifying that the data provider is included in the list of available data sources. For more information about Report Manager and data sources, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ You can verify whether the data provider was deployed successfully to the report server by opening the web portal and verifying that the data provider is included in the list of available data sources. For more information about the web portal and data sources, see [Create, Modify, and Delete Shared Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## Registering a .NET Framework Data Provider on the Report Designer Client  
  In order to author reports that use this [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider for a data source, you must install the assembly on your client computer that runs Report Designer. You must modify two configuration files. Modify RSReportDesigner.config to register the data provider as a data source and to use the generic query designer. Modify RSPreviewPolicy.config to grant code access security permissions for the data provider assembly.  
@@ -110,7 +105,7 @@ manager: "erikre"
   
 1.  Navigate to the default location of the PrivateAssemblies directory on the Report Designer client on which you want to use the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider. The default location of the PrivateAssemblies directory is *\<drive>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-2.  Copy your assembly from your staging location to the PrivateAssemblies directory of the Report Designer client. Alternatively, you can load your assembly in the global assembly cache (GAC). For more information, see [Working with Assemblies and the Global Assembly Cache](http://go.microsoft.com/fwlink/?linkid=63912) in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation on MSDN.  
+2.  Copy your assembly from your staging location to the PrivateAssemblies directory of the Report Designer client. Alternatively, you can load your assembly in the global assembly cache (GAC). For more information, see [Working with Assemblies and the Global Assembly Cache](https://go.microsoft.com/fwlink/?linkid=63912) in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK documentation on MSDN.  
   
 #### To register a .NET data provider on the Report Designer client  
   
@@ -193,7 +188,7 @@ manager: "erikre"
  Before you can verify deployment, you must close all instances of [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] on your local computer. After you have ended all current sessions, you can verify whether your data provider was deployed successfully to Report Designer by creating a new report project in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. The data provider should be included in the list of available data source types when you create a new data set for your report.  
   
 ## Platform Considerations  
- On a 64-bit (x64) platform, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] runs in 32-bit WOW mode. When you author reports on an x64 platform, you need 32-bit data providers installed on the report authoring client in order to preview your reports. If you publish the report on the same system, you need x64 data providers to view the report with Report Manager.  
+ On a 64-bit (x64) platform, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] runs in 32-bit WOW mode. When you author reports on an x64 platform, you need 32-bit data providers installed on the report authoring client in order to preview your reports. If you publish the report on the same system, you need x64 data providers to view the report in the web portal.  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is not supported for [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-based platforms.  
   

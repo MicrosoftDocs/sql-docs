@@ -2,12 +2,10 @@
 title: "sp_add_proxy (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_proxy"
@@ -18,19 +16,14 @@ helpviewer_keywords:
   - "CREATE PROXY statement"
   - "sp_add_proxy"
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_add_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds the specified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +41,22 @@ sp_add_proxy
 ```  
   
 ## Arguments  
- [ **@proxy_name**= ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to create. The *proxy_name* is **sysname**, with a default of NULL. When the *proxy_name* is NULL or an empty string, the name of the proxy defaults to the *user_name* supplied.  
   
- [ **@enabled** = ] *is_enabled*  
+`[ @enabled = ] is_enabled`
  Specifies whether the proxy is enabled. The *is_enabled* flag is **tinyint**, with a default of 1. When *is_enabled* is **0**, the proxy is not enabled, and cannot be used by a job step.  
   
- [ **@description**= ] **'***description***'**  
+`[ @description = ] 'description'`
  A description of the proxy. The description is **nvarchar(512)**, with a default of NULL. The description allows you to document the proxy, but is not otherwise used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Therefore, this argument is optional.  
   
- [ **@credential_name** = ] **'***credential_name***'**  
+`[ @credential_name = ] 'credential_name'`
  The name of the credential for the proxy. The *credential_name* is **sysname**, with a default of NULL. Either *credential_name* or *credential_id* must be specified.  
   
- [ **@credential_id** = ] *credential_id*  
+`[ @credential_id = ] credential_id`
  The identification number of the credential for the proxy. The *credential_id* is **int**, with a default of NULL. Either *credential_name* or *credential_id* must be specified.  
   
- [ **@proxy_id**= ] *id* OUTPUT  
+`[ @proxy_id = ] id OUTPUT`
  The proxy identification number assigned to the proxy if created successfully.  
   
 ## Return Code Values  

@@ -2,12 +2,9 @@
 title: "CLR Integration Code Access Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "UNSAFE assemblies"
@@ -17,12 +14,12 @@ helpviewer_keywords:
   - "code access security [CLR integration]"
   - "EXTERNAL_ACCESS assemblies"
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR Integration Code Access Security
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The common language runtime (CLR) supports a security model called code access security for managed code. In this model, permissions are granted to assemblies based on the identity of the code. For more information, see the "Code Access Security" section in the .NET Framework software development kit.  
   
  The security policy that determines the permissions granted to assemblies is defined in three different places:  
@@ -33,16 +30,16 @@ manager: "jhubbard"
   
 -   Host policy: This is the policy set up by the host of the CLR (in this case, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) that is in effect for managed code running in that host.  
   
- The code access security mechanism supported by the CLR is based on the assumption that the runtime can host both fully trusted and partially trusted code. The resources that are protected by CLR code access security are typically wrapped by managed application programming interfaces that requirethe corresponding permission before allowing access to the resource. The demandfor the permission is satisfied only if all the callers (at the assembly level) in the call stack have the corresponding resource permission.  
+ The code access security mechanism supported by the CLR is based on the assumption that the runtime can host both fully trusted and partially trusted code. The resources that are protected by CLR code access security are typically wrapped by managed application programming interfaces that require the corresponding permission before allowing access to the resource. The demand for the permission is satisfied only if all the callers (at the assembly level) in the call stack have the corresponding resource permission.  
   
  The set of code access security permissions that are granted to managed code when running inside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is the intersection of the set of permissions granted by the above three policy levels. Even if [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grants a set of permissions to an assembly loaded in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the eventual set of permissions given to user code may be restricted further by the user and machine-level policies.  
   
 ## SQL Server Host Policy Level Permission Sets  
- The set of code access security permissions granted to assemblies by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] host policy level is determined by the permission set specified when creating the assembly. There are three permission sets: **SAFE**, **EXTERNAL_ACCESS** and **UNSAFE** (specified using the **PERMISSION_SET** option of[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
+ The set of code access security permissions granted to assemblies by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] host policy level is determined by the permission set specified when creating the assembly. There are three permission sets: **SAFE**, **EXTERNAL_ACCESS** and **UNSAFE** (specified using the **PERMISSION_SET** option of [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supplies a host-level security policy level to the CLR while hosting it; this policy is an additional policy level below the two policy levels that are always in effect. This policy is set for every application domain that is created by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This policy is not meant for the default application domain that would be in effect when [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] creates an instance of the CLR.  
   
- The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] host-level policy is a combination of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fixedpolicy for system assemblies and user-specified policy for user assemblies.  
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] host-level policy is a combination of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fixed policy for system assemblies and user-specified policy for user assemblies.  
   
  The fixed policy for CLR assemblies and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] system assemblies grants them full trust.  
   

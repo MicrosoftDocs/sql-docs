@@ -2,13 +2,11 @@
 title: "SQLTables Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLTables"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLTables function [ODBC]"
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
-caps.latest.revision: 24
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLTables Function
 **Conformance**  
@@ -36,15 +33,15 @@ manager: "jhubbard"
 ```  
   
 SQLRETURN SQLTables(  
-     SQLHSTMT       StatementHandle,  
-     SQLCHAR *      CatalogName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      SchemaName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      TableName,  
-     SQLSMALLINT    NameLength3,  
-     SQLCHAR *      TableType,  
-     SQLSMALLINT    NameLength4);  
+     SQLHSTMT       StatementHandle,  
+     SQLCHAR *      CatalogName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      SchemaName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      TableName,  
+     SQLSMALLINT    NameLength3,  
+     SQLCHAR *      TableType,  
+     SQLSMALLINT    NameLength4);  
 ```  
   
 ## Arguments  
@@ -153,7 +150,7 @@ SQLRETURN SQLTables(
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Catalog name; NULL if not applicable to the data source. If a driver supports catalogs for some tables but not for others, such as when the driver retrieves data from different DBMSs, it returns an empty string ("") for those tables that do not have catalogs.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Schema name; NULL if not applicable to the data source. If a driver supports schemas for some tables but not for others, such as when the driver retrieves data from different DBMSs, it returns an empty string ("") for those tables that do not have schemas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|Table name.|  
-|TABLE_TYPE (ODBC 1.0)|4|Varchar|Table type name; one of the following: "TABLE", "VIEW", "SYSTEM TABLE", "GLOBAL TEMPORARY", "LOCAL TEMPORARY", "ALIAS", "SYNONYM", or a data source–specific type name.<br /><br /> The meanings of "ALIAS" and "SYNONYM" are driver-specific.|  
+|TABLE_TYPE (ODBC 1.0)|4|Varchar|Table type name; one of the following: "TABLE", "VIEW", "SYSTEM TABLE", "GLOBAL TEMPORARY", "LOCAL TEMPORARY", "ALIAS", "SYNONYM", or a data source-specific type name.<br /><br /> The meanings of "ALIAS" and "SYNONYM" are driver-specific.|  
 |REMARKS (ODBC 1.0)|5|Varchar|A description of the table.|  
   
 ## Example  

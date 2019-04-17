@@ -1,34 +1,17 @@
 ---
 title: "Structure and Usage of DMX Prediction Queries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "prediction joins [DMX]"
-  - "empty prediction joins [DMX]"
-  - "natural prediction joins [DMX]"
-  - "DMX [Analysis Services], prediction queries"
-  - "prediction queries [DMX]"
-  - "queries [DMX], prediction queries"
-  - "singleton query predictions [DMX]"
-  - "Data Mining Extensions [Analysis Services], prediction queries"
-ms.assetid: 098bdaa6-9e7d-4e13-a9aa-eb17ce1750e6
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Structure and Usage of DMX Prediction Queries
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   In [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you can use the prediction query in Data Mining Extensions (DMX) to predict unknown column values in a new dataset, based on the results of a mining model.  
   

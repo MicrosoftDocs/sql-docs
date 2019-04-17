@@ -2,30 +2,25 @@
 title: "sp_refreshsubscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_refreshsubscriptions"
   - "sp_refreshsubscriptions_TSQL"
 helpviewer_keywords: 
   - "sp_refreshsubscriptions"
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_refreshsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Add subscriptions to new articles in a pull subscription for all the existing Subscribers to the publication. This stored procedure is executed at the Publisher on the publication database.  
+  Add subscriptions to new articles for all the existing Subscribers to an immediate-updating publication. This stored procedure is executed at the Publisher on the publication database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +32,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the publication for which to refresh subscriptions. *publication* is **sysname**, with no default.  
   
 ## Return Code Values  

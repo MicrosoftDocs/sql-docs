@@ -1,29 +1,17 @@
 ---
 title: "Establishing Cube Context in a Query (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "cubes [Analysis Services], MDX"
-  - "MDX [Analysis Services], cube context"
-  - "SELECT statement [MDX]"
-  - "Multidimensional Expressions [Analysis Services], cube context"
-  - "queries [MDX], cube context"
-ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Establishing Cube Context in a Query (MDX)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Every MDX query runs within a specified cube context. This context defines the members that are evaluated by the expressions within the query.  
   
  In the SELECT statement, the FROM clause determines the cube context. This context can be the whole cube or just a subcube from that cube. Having specified cube context through the FROM clause, you can use additional functions to expand or restrict that context.  

@@ -1,22 +1,17 @@
 ---
 title: "Data Mining Services and Data Sources | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Services and Data Sources
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Data mining requires a connection to an instance of SQL Server Analysis Services. Data from a cube is not required for data mining and the use of relational sources is recommended; however, data mining uses components provided by the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] engine.  
   
  This topic provides information that you need to know when connecting to an instance of SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to create, process, deploy, or query data mining models.  
@@ -116,7 +111,7 @@ manager: "jhubbard"
   
  If the procedure returns a dataset, the client will receive a dataset or datatable with a nested table containing the rows. For example, if you create a query against the model content, the query returns the entire model. To avoid bringing back too many rows, you can write stored procedures by using the ADOMD+ object model.  
   
- To write a server stored procedure, you must reference the Microsoft.AnalysisServices.AdomdServer namespace. For more information about how to create and use stored procedures, see [User Defined Functions and Stored Procedures](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md).  
+ To write a server stored procedure, you must reference the Microsoft.AnalysisServices.AdomdServer namespace. For more information about how to create and use stored procedures, see [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Stored procedures cannot be used to change security on data server objects. When you execute a stored procedure, the user's current context is used to determine access to all server objects. Therefore, users must have appropriate permissions on any database objects that they access.  

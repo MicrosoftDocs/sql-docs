@@ -1,14 +1,12 @@
 ---
-title: "Monitor Availability Groups (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "Monitor availability groups using Transact-SQL (T-SQL)"
+description: "A description of how to monitor Always On availability groups using Transact-SQL (T-SQL)."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
   - "dynamic management views [SQL Server], AlwaysOn Availability Groups"
@@ -17,12 +15,12 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], databases"
   - "catalog views [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
-caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Monitor Availability Groups (Transact-SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   For monitoring availability groups and replicas and the associated databases by using [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] provides a set of catalog and dynamic management views and server properties. Using [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT statements, you can use the views to monitor availability groups and their replicas and databases. The information returned for a given availability group depends on whether you are connected to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is hosting the primary replica or a secondary replica.  
   
 > [!TIP]  

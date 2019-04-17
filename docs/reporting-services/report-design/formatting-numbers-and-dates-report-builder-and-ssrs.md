@@ -1,15 +1,12 @@
 ---
 title: "Formatting Numbers and Dates (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
   - "10127"
@@ -20,10 +17,8 @@ f1_keywords:
   - "10285"
   - "sql13.rtp.rptdesigner.axisproperties.number.f1"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Formatting Numbers and Dates (Report Builder and SSRS)
   You can format numbers and dates in data regions by selecting a format from the **Number** page of the corresponding data region's **Properties** dialog box.  
@@ -45,7 +40,7 @@ manager: "erikre"
   
 -   By default, numbers are formatted to reflect the cultural settings on the client computer. Use formatting strings to specify how numbers are displayed so that formatting is consistent regardless of where the person who is viewing the report is located.  
   
--   The formats provided on the **Number** page are a subset of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard numeric format strings. To format a number or date using a custom format that is not shown in the dialog box, you can use any [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format strings for numbers or dates. For more information about custom format strings, see the [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) topic on MSDN.  
+-   The formats provided on the **Number** page are a subset of the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] standard numeric format strings. To format a number or date using a custom format that is not shown in the dialog box, you can use any [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] format strings for numbers or dates. For more information about custom format strings, see the [Formatting Types](https://go.microsoft.com/fwlink/?LinkId=112024) topic on MSDN.  
   
 -   If a custom format string has been specified, it has a higher priority over default settings that are culture-specific. For example, suppose you set a custom format string of "#,###" to show the number 1234 as 1,234. This may have different meaning to users in the United States than it does to users in Europe. Before you specify a custom format, consider how the format you choose will affect users of different cultures who may view the report.  
   

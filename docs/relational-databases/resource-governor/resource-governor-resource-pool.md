@@ -1,26 +1,22 @@
 ---
 title: "Resource Governor Resource Pool | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
+ms.date: "10/20/2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, resource pool"
   - "resource pool [SQL Server], overview"
   - "resource pool [SQL Server]"
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Resource Governor Resource Pool
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor, a resource pool represents a subset of the physical resources of an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Resource Governor enables you to specify limits on the amount of CPU, physical IO, and memory that incoming application requests can use within the resource pool. Each resource pool can contain one or more workload groups. When a session is started, the Resource Governor classifier assigns the session to a specific workload group, and the session must run using the resources assigned to the workload group.  
   
@@ -47,11 +43,20 @@ manager: "jhubbard"
   
      These settings are the minimum and maximum physical IO operations per second (IOPS) per disk volume for a resource pool. You can use these settings to control the physical IOs issued for user threads for a given resource pool. For example, the Sales department generates several end-of-month reports in large batches. The queries in these batches can generate IOs that can saturate the disk volume and impact the performance of other higher priority workloads in the database. To isolate this workload, the MIN_IOPS_PER_VOLUME is set to 20 and the MAX_IOPS_PER_VOLUME is set to 100 for the Sales department resource pool, which controls the level of IOs that can issued for the workload.  
   
- When configuring CPU or Memory, the sum of MIN values across all pools cannot exceed 100 percent of the server resources. In addition, when configuring CPU or Memory, MAX and CAP values can be set anywhere in the range between MIN and 100 percent inclusive.  
+When configuring CPU or Memory, the sum of MIN values across all pools cannot exceed 100 percent of the server resources. In addition, when configuring CPU or Memory, MAX and CAP values can be set anywhere in the range between MIN and 100 percent inclusive.  
   
- If a pool has a nonzero MIN defined, the effective MAX value of other pools is readjusted. The minimum of the configured MAX value of a pool and the sum of the MIN values of other pools is subtracted from 100 percent.  
+If a pool has a nonzero MIN defined, the effective MAX value of other pools is readjusted. The minimum of the configured MAX value of a pool and the sum of the MIN values of other pools is subtracted from 100 percent.  
   
- The following table illustrates a few of the preceding concepts. The table shows the settings for the internal pool, the default pool, and two user-defined pools. The following formulas are used for calculating the effective MAX% and the shared %.  
+The following table illustrates a few of the preceding concepts. The table shows the settings for the internal pool, the default pool, and two user-defined pools. 
+  
+|Pool name|MIN % setting|MAX % setting|Calculated effective MAX %|Calculated shared %|Comment|  
+|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
+|internal|0|100|100|0|Effective MAX% and shared% are not applicable to the internal pool.|  
+|default|0|100|30|30|The effective MAX value is calculated as: min(100,100-(20+50)) = 30. The calculated shared % is effective MAX - MIN = 30.|  
+|Pool 1|20|100|50|30|The effective MAX value is calculated as: min(100,100-50) = 50. The calculated Shared % is Effective MAX - MIN = 30.|  
+|Pool 2|50|70|70|20|The effective MAX value is calculated as: min(70,100-20) = 70. The calculated Shared % is Effective MAX - MIN = 20.|  
+
+The following formulas are used for calculating the effective MAX% and the shared % in the table above:  
   
 -   Min(X,Y) means the smaller value of X and Y.  
   
@@ -62,15 +67,8 @@ manager: "jhubbard"
 -   Effective MAX % = min(X,Y).  
   
 -   Shared % = Effective MAX % - MIN %.  
-  
-|Pool name|MIN % setting|MAX % setting|Calculated effective MAX %|Calculated shared %|Comment|  
-|---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|internal|0|100|100|0|Effective MAX% and shared% are not applicable to the internal pool.|  
-|default|0|100|30|30|The effective MAX value is calculated as: min(100,100-(20+50)) = 30. The calculated shared % is effective MAX - MIN = 30.|  
-|Pool 1|20|100|50|30|The effective MAX value is calculated as: min(100,100-50) = 50. The calculated Shared % is Effective MAX - MIN = 30.|  
-|Pool 2|50|70|70|20|The effective MAX value is calculated as: min(70,100-20) = 70. The calculated Shared % is Effective MAX - MIN = 20.|  
-  
- Using the preceding table as an example we can further illustrate the adjustments that take place when another pool is created. This pool is Pool 3 and has a MIN % setting of 5.  
+
+Using the preceding table as an example, we can further illustrate the adjustments that take place when another pool is created. This pool is Pool 3 and has a MIN % setting of 5.  
   
 |Pool name|MIN % setting|MAX % setting|Calculated effective MAX %|Calculated shared %|Comment|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
@@ -88,29 +86,29 @@ manager: "jhubbard"
   
 -   All pools have zero minimums. All the pools compete for available resources and their final sizes are based on resource consumption in each pool. Other factors such as policies play a role in shaping the final pool size.  
   
- Resource Governor predefines two resource pools, the internal pool and the default pool. You can add additional pools.  
+Resource Governor predefines two resource pools, the internal pool and the default pool. You can add additional pools.  
   
- **Internal Pool**  
+**Internal Pool**  
   
- The internal pool represents the resources consumed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] itself. This pool always contains only the internal group, and the pool is not alterable in any way. Resource consumption by the internal pool is not restricted. Any workloads in the pool are considered critical for server function, and Resource Governor allows the internal pool to pressure other pools even if it means the violation of limits set for the other pools.  
+The internal pool represents the resources consumed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] itself. This pool always contains only the internal group, and the pool is not alterable in any way. Resource consumption by the internal pool is not restricted. Any workloads in the pool are considered critical for server function, and Resource Governor allows the internal pool to pressure other pools even if it means the violation of limits set for the other pools.  
   
 > [!NOTE]  
 >  The internal pool and internal group resource usage is not subtracted from the overall resource usage. Percentages are calculated from the overall resources available.  
   
- **Default Pool**  
+**Default Pool**  
   
- The default pool is the first predefined user pool. Prior to any configuration the default pool only contains the default group. The default pool cannot be created or dropped but it can be altered. The default pool can contain user-defined groups in addition to the default group. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] there is a default resource pool for routine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operations, and a default external resource pool for external processes, such as executing R scripts.  
+The default pool is the first predefined user pool. Prior to any configuration the default pool only contains the default group. The default pool cannot be created or dropped but it can be altered. The default pool can contain user-defined groups in addition to the default group. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] there is a default resource pool for routine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operations, and a default external resource pool for external processes, such as executing R scripts.  
   
 > [!NOTE]  
 >  The default group is alterable but it cannot be moved out of the default pool.  
   
- **External Pool**  
+**External Pool**  
   
- Users can define an external pool to define resources for the external processes. For R Services, this specifically governs `rterm.exe`, `BxlServer.exe` and other processes spawned by them.  
+Users can define an external pool to define resources for the external processes. For R Services, this specifically governs `rterm.exe`, `BxlServer.exe` and other processes spawned by them.  
   
- **User-Defined Resource Pools**  
+**User-Defined Resource Pools**  
   
- User-defined resource pools are those that you create for specific workloads in your environment. Resource Governor provides DDL statements for creating, changing, and dropping resource pools.  
+User-defined resource pools are those that you create for specific workloads in your environment. Resource Governor provides DDL statements for creating, changing, and dropping resource pools.  
   
 ## Resource Pool Tasks  
   

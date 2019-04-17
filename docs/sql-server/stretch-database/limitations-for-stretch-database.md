@@ -1,28 +1,22 @@
 ---
 title: "Limitations for Stretch Database | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
 ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, limitations"
   - "Stretch Database, blocking issues"
   - "limitations (Stretch Database)"
   - "blocking issues (Stretch Database)"
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # Limitations for Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Learn about limitations for Stretch-enabled tables, and about limitations that currently prevent you from enabling Stretch for a table.  
   
@@ -56,8 +50,8 @@ Stretch-enabled tables have the following limitations.
   
 -   Memory-optimized tables  
   
- ### Data types  
- -   text, ntext and image  
+### Data types  
+-   text, ntext and image  
   
 -   timestamp  
   

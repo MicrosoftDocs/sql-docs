@@ -2,13 +2,11 @@
 title: "Administer Servers by Using Policy-Based Management | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "facet See facets"
   - "Declarative Management Framework See Policy-Based Management"
@@ -20,12 +18,12 @@ helpviewer_keywords:
   - "facets [Policy-Based Management], about facets"
   - "PolicyAdministratorRole role"
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Administer Servers by Using Policy-Based Management
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    Policy-Based Management is a policy based system for managing one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use is to create conditions that contain condition expressions. Then, create policies that apply the conditions to database target objects.  
 
 For example, as the database administrator, you may want to ensure that certain servers do not have Database Mail enabled, so you  create a condition and a policy that sets that server option. 
@@ -44,7 +42,7 @@ For example, as the database administrator, you may want to ensure that certain 
   
  For failed policies, Object Explorer indicates a critical health warning as a red icon next to the target and the nodes that are higher in the Object Explorer tree.  
   
-> **NOTE:** When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](http://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+> **NOTE:** When the system computes the object set for a policy, by default the system objects are excluded.  For example, if the object set of the policy refers to all tables, the policy will not apply to system tables. If users want to evaluate a policy against system objects, they can explicitly add system objects to the object set. However, though all policies are supported for **check on schedule** evaluation mode, for performance reason, not all policies with arbitrary object sets are supported for **check on change** evaluation mode. For more information, see [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## Three Policy-Based Management components  
  Policy-Based Management has three components:  
@@ -102,7 +100,7 @@ For example, as the database administrator, you may want to ensure that certain 
   
 ## Links to specific tasks 
 
- - [Store Policy-Based Management policies.](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [Store Policy-Based Management policies.](policy-based-management-storage.md)|  
  - [Configure Alerts to Notify Policy Administrators of Policy Failures](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [Create a New Policy-Based Management Condition](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [Delete a Policy-Based Management Condition](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -113,11 +111,14 @@ For example, as the database administrator, you may want to ensure that certain 
  - [Work with Policy-Based Management Facets](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
  - [Monitor and Enforce Best Practices Using Policy-Based Management](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
-  
- ## Examples
- - [Create the Off By Default Policy](https://msdn.microsoft.com/library/bb500172.aspx)
-  - [Configure a Server to Run the Off By Default Policy](https://msdn.microsoft.com/library/bb522470.aspx)
+
 ## See also  
- [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ 
+ - [Tutorial: Create and apply an off-by-default policy](lesson-1-create-and-apply-an-off-by-default-policy.md)
+ - [Tutorial: Create and apply naming standards policy](lesson-2-create-and-apply-a-naming-standards-policy.md)
+ - [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ 
+
+ 
   
   

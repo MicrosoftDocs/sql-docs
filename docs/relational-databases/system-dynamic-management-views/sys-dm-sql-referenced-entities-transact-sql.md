@@ -1,13 +1,11 @@
 ---
 title: "sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.date: "11/09/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_sql_referenced_entities_TSQL"
@@ -19,13 +17,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_sql_referenced_entities dynamic management function"
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_sql_referenced_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns one row for each user-defined entity referenced by name in the definition of the specified referencing entity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A dependency between two entities is created when one user-defined entity, called the *referenced entity*, appears by name in a persisted SQL expression of another user-defined entity, called the *referencing entity*. For example, if a stored procedure is the specified referencing entity, this function returns all user-defined entities that are referenced in the stored procedure such as tables, views, user-defined types (UDTs), or other stored procedures.  
   
@@ -45,14 +43,11 @@ manager: "jhubbard"
   
 -   Partition functions  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## Syntax  
   
 ```  
-  
 sys.dm_sql_referenced_entities (  
     ' [ schema_name. ] referencing_entity_name ' , ' <referencing_class> ' )  
   
@@ -94,7 +89,9 @@ sys.dm_sql_referenced_entities (
 |is_selected|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column is selected.|  
 |is_updated|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column is modified.|  
 |is_select_all|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object is used in a SELECT * clause (object-level only).|  
-|is_all_columns_found|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = All column dependencies for the object could be found.<br /><br /> 0 = Column dependencies for the object could not be found.|  
+|is_all_columns_found|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = All column dependencies for the object could be found.<br /><br /> 0 = Column dependencies for the object could not be found.|
+|is_insert_all|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object is used in an INSERT statement without a column list (object-level only).|  
+|is_incomplete|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column has a binding error and is incomplete.|
   
 ## Exceptions  
  Returns an empty result set under any of the following conditions:  
@@ -147,33 +144,31 @@ sys.dm_sql_referenced_entities (
 ### A. Returning entities that are referenced by a database-level DDL trigger  
  The following example returns the entities (tables and columns) that are referenced by the database-level DDL trigger `ddlDatabaseTriggerLog`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
     referenced_minor_id, referenced_class_desc  
 FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIGGER');  
 GO  
-  
 ```  
   
 ### B. Returning entities that are referenced by an object  
  The following example returns the entities that are referenced by the user-defined function `dbo.ufnGetContactInformation`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
     referenced_minor_id, referenced_class_desc, is_caller_dependent, is_ambiguous  
 FROM sys.dm_sql_referenced_entities ('dbo.ufnGetContactInformation', 'OBJECT');  
 GO  
-  
 ```  
   
 ### C. Returning column dependencies  
  The following example creates the table `Table1` with the computed column `c` defined as the sum of columns `a` and `b`. The `sys.dm_sql_referenced_entities` view is then called. The view returns two rows, one for each column defined in the computed column.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -183,27 +178,26 @@ SELECT referenced_schema_name AS schema_name,
     referenced_minor_name AS referenced_column,  
     COALESCE(COL_NAME(OBJECT_ID(N'dbo.Table1'),referencing_minor_id), 'N/A') AS referencing_column_name  
 FROM sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT');  
-GO  
+GO
+
 -- Remove the table.  
 DROP TABLE dbo.Table1;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `schema_name table_name referenced_column referencing_column`  
-  
- `----------- ---------- ----------------- ------------------`  
-  
- `dbo         Table1     a                 c`  
-  
- `dbo         Table1     b                 c`  
-  
+ ```
+ schema_name table_name referenced_column referencing_column  
+ ----------- ---------- ----------------- ------------------  
+ dbo         Table1     a                 c  
+ dbo         Table1     b                 c  
+```
+
 ### D. Returning non-schema-bound column dependencies  
  The following example drops `Table1` and creates `Table2` and stored procedure `Proc1`. The procedure references `Table2` and the nonexistent table `Table1`. The view `sys.dm_sql_referenced_entities` is run with the stored procedure specified as the referencing entity. The result set shows one row for `Table1` and 3 rows for `Table2`. Because `Table1` does not exist, the column dependencies cannot be resolved and error 2020 is returned. The `is_all_columns_found` column returns 0 for `Table1` indicating that there were columns that could not be discovered.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -223,24 +217,21 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `referenced_id table_name   referenced_column_name  is_all_columns_found`  
-  
- `------------- ------------ ----------------------- --------------------`  
-  
- `935674381     Table2       NULL                    1`  
-  
- `935674381     Table2       C1                      1`  
-  
- `935674381     Table2       C2                      1`  
-  
- `NULL          Table1       NULL                    0`  
-  
- `Msg 2020, Level 16, State 1, Line 1The dependencies reported for entity "dbo.Proc1" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.`  
+ ```
+ referenced_id table_name   referenced_column_name  is_all_columns_found  
+ ------------- ------------ ----------------------- --------------------  
+ 935674381     Table2       NULL                    1  
+ 935674381     Table2       C1                      1  
+ 935674381     Table2       C2                      1  
+ NULL          Table1       NULL                    0  
+
+ Msg 2020, Level 16, State 1, Line 1The dependencies reported for entity "dbo.Proc1" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.
+ ```
   
 ### E. Demonstrating dynamic dependency maintenance  
  The following example extends Example D to show that dependencies are maintained dynamically. The example first re-creates `Table1`, which was dropped in Example D. Then `sys.dm_sql_referenced_entities` is run again with the stored procedure specified as the referencing entity. The result set shows that both tables and their respective columns defined in the stored procedure are returned. In addition, the `is_all_columns_found` column returns a 1 for all objects and columns.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -256,32 +247,24 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `referenced_id table_name   referenced_column_name  is_all_columns_found`  
-  
- `------------- ------------ ----------------------- --------------------`  
-  
- `935674381     Table2       NULL                    1`  
-  
- `935674381     Table2       c1                      1`  
-  
- `935674381     Table2       c2                      1`  
-  
- `967674495     Table1       NULL                    1`  
-  
- `967674495     Table1       a                       1`  
-  
- `967674495     Table1       b                       1`  
-  
- `967674495     Table1       c                       1`  
-  
+ ```
+ referenced_id table_name   referenced_column_name  is_all_columns_found  
+ ------------- ------------ ----------------------- --------------------  
+ 935674381     Table2       NULL                    1 
+ 935674381     Table2       c1                      1 
+ 935674381     Table2       c2                      1 
+ 967674495     Table1       NULL                    1 
+ 967674495     Table1       a                       1  
+ 967674495     Table1       b                       1  
+ 967674495     Table1       c                       1  
+ ```
+ 
 ### F. Returning object or column usage  
- The following example returns the objects and column dependencies of the stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. This procedure updates the columns `NationalIDNumber`, `BirthDate,``MaritalStatus`, and `Gender` of the `Employee` table based on a specified `BusinessEntityID` value. Another stored procedure, `upsLogError` is defined in a TRY…CATCH block to capture any execution errors. The `is_selected`, `is_updated`, and `is_select_all` columns return information about how these objects and columns are used within the referencing object. The table and columns that are modified are indicated by a 1 in the is_updated column. The `BusinessEntityID` column is only selected and the stored procedure `uspLogError` is neither selected nor modified.  
+ The following example returns the objects and column dependencies of the stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. This procedure updates the columns `NationalIDNumber`, `BirthDate,``MaritalStatus`, and `Gender` of the `Employee` table based on a specified `BusinessEntityID` value. Another stored procedure, `upsLogError` is defined in a TRY...CATCH block to capture any execution errors. The `is_selected`, `is_updated`, and `is_select_all` columns return information about how these objects and columns are used within the referencing object. The table and columns that are modified are indicated by a 1 in the is_updated column. The `BusinessEntityID` column is only selected and the stored procedure `uspLogError` is neither selected nor modified.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   
@@ -289,23 +272,17 @@ FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalIn
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `table_name    column_name         is_selected is_updated is_select_all`  
-  
- `------------- ------------------- ----------- ---------- -------------`  
-  
- `uspLogError   NULL                0           0          0`  
-  
- `Employee      NULL                0           1          0`  
-  
- `Employee      BusinessEntityID    1           0          0`  
-  
- `Employee      NationalIDNumber    0           1          0`  
-  
- `Employee      BirthDate           0           1          0`  
-  
- `Employee      MaritalStatus       0           1          0`  
-  
- `Employee      Gender              0           1          0`  
+ ```
+ table_name    column_name         is_selected is_updated is_select_all  
+ ------------- ------------------- ----------- ---------- -------------  
+ uspLogError   NULL                0           0          0  
+ Employee      NULL                0           1          0  
+ Employee      BusinessEntityID    1           0          0  
+ Employee      NationalIDNumber    0           1          0  
+ Employee      BirthDate           0           1          0  
+ Employee      MaritalStatus       0           1          0  
+ Employee      Gender              0           1          0
+ ```
   
 ## See Also  
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   

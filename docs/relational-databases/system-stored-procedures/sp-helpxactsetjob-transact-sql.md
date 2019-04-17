@@ -2,28 +2,23 @@
 title: "sp_helpxactsetjob (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpxactsetjob"
   - "sp_helpxactsetjob_TSQL"
 helpviewer_keywords: 
   - "sp_helpxactsetjob"
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helpxactsetjob (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Displays information on the Xactset job for an Oracle Publisher. This stored procedure is executed at the Distributor on any database.  
   
@@ -38,7 +33,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## Arguments  
  [**@publisher** = ] **'***publisher***'**  
- Is the name of the non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher to which the job belongs. *publisher* is **sysname**, with no default.  
+ Is the name of the non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher to which the job belongs. *publisher* is **sysname**, with no default.  
   
 ## Result Sets  
   

@@ -2,18 +2,15 @@
 title: "Custom Keystore Providers | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: 1
 ms.author: "v-chojas"
-manager: "jhubbard"
-author: "MightyPen"
+manager: craigg
+author: MightyPen
 ---
 # Custom Keystore Providers
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -141,7 +138,7 @@ Placeholder name for a provider-defined ECEK decryption function. The driver cal
 |`alg`|[Input] The value of the [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) metadata attribute for the given ECEK. Null-terminated wide-character* string. This is intended to identify the encryption algorithm used to encrypt the given ECEK.|
 |`ecek`|[Input] Pointer to the ECEK to be decrypted.|
 |`ecekLen`|[Input] Length of the ECEK.|
-|`cekOut`|[Output] The provider shall allocate memory for the decrypted ECEK and write its address to the pointer pointed to by cekOut. It must be possible to free this block of memory using the [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *cekOut to a null pointer.|
+|`cekOut`|[Output] The provider shall allocate memory for the decrypted ECEK and write its address to the pointer pointed to by cekOut. It must be possible to free this block of memory using the [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *cekOut to a null pointer.|
 |`cekLen`|[Output] The provider shall write to the address pointed to by cekLen the length of the decrypted ECEK that it has written to **cekOut.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
@@ -158,7 +155,7 @@ Placeholder name for a provider-defined CEK encryption function. The driver does
 |`alg`|[Input] The value of the [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md) metadata attribute for the given ECEK. Null-terminated wide-character* string. This is intended to identify the encryption algorithm used to encrypt the given ECEK.|
 |`cek`|[Input] Pointer to the CEK to be encrypted.|
 |`cekLen`|[Input] Length of the CEK.|
-|`ecekOut`|[Output] The provider shall allocate memory for the encrypted CEK and write its address to the pointer pointed to by ecekOut. It must be possible to free this block of memory using the [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *ecekOut to a null pointer.|
+|`ecekOut`|[Output] The provider shall allocate memory for the encrypted CEK and write its address to the pointer pointed to by ecekOut. It must be possible to free this block of memory using the [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) or free (Linux/Mac) function. If no memory was allocated due to an error or otherwise, the provider shall set *ecekOut to a null pointer.|
 |`ecekLen`|[Output] The provider shall write to the address pointed to by ecekLen the length of the encrypted CEK that it has written to **ecekOut.|
 |`Return Value`|Return nonzero to indicate success, or zero to indicate failure.|
 
@@ -184,7 +181,7 @@ The **onError** parameter points to an error-reporting function, with the follow
 |Argument|Description|
 |:--|:--|
 |`ctx`|[Input] The context to report the error on.|
-|`msg`|[Input] The error message to report. Null-terminated wide-character string. To allow parameterized information to be present, this string may contain insert-formatting sequences of the form accepted by the [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) function. Extended functionality may be specified by this parameter as described below.|
+|`msg`|[Input] The error message to report. Null-terminated wide-character string. To allow parameterized information to be present, this string may contain insert-formatting sequences of the form accepted by the [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) function. Extended functionality may be specified by this parameter as described below.|
 |...|[Input] Additional variadic parameters to fit format specifiers in msg, as appropriate.|
 
 To report when an error has occurred, the provider calls onError, supplying the context parameter passed into the provider function by the driver and an error message with optional additional parameters to be formatted in it. The provider may call this function multiple times to post multiple error messages consecutively within one provider-function invocation. For example:
@@ -220,6 +217,7 @@ void *dbcCtx;
 void *stmtCtx;
 } CEKEYSTORECONTEXT;
 ```
+
 |Field|Description|
 |:--|:--|
 |`envCtx`|Environment context.|

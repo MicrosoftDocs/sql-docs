@@ -1,23 +1,17 @@
 ---
 title: "Configure and View SharePoint and Diagnostic Logging | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure and View SharePoint and Diagnostic Logging
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] server operations, events, and messages are recorded in SharePoint log files. Use the information in this topic to configure logging levels and view log file information. You can control which [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] server events are logged to the file. You can also control the severity of messages that are logged. For more information, see [Configure Usage Data Collection for &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  In this topic:  
@@ -76,7 +70,7 @@ manager: "erikre"
   
 -   For errors that provide a correlation ID, copy the ID and use it as a search term in the log file.  
   
--   Search for error status "High" or "Exception". Search for “[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service”.  
+-   Search for error status "High" or "Exception". Search for "[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service".  
   
 -   If you know when the error occurred, use the date and time information to narrow the scope of entries you must scroll through.  
   

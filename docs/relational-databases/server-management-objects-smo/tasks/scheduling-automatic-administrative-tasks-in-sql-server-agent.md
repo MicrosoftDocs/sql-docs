@@ -2,24 +2,25 @@
 title: "Scheduling Automatic Administrative Tasks in SQL Server Agent | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+
 ms.topic: "reference"
 helpviewer_keywords: 
   - "scheduling administrative tasks [SMO]"
   - "SQL Server Agent [SMO]"
   - "automatic administrative SMO tasks"
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Scheduling Automatic Administrative Tasks in SQL Server Agent
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   In SMO, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent is represented by the following objects:  
   
 -   The <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> object has three collections of jobs, alerts and operators.  
@@ -262,7 +263,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## See Also  
- [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
- [Implement Jobs](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+ [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)   
+ [Implement Jobs](../../../ssms/agent/implement-jobs.md)  
   
   

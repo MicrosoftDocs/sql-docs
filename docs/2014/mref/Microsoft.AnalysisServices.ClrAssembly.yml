@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.AnalysisServices.ClrAssembly.PermissionSet*
+  commentId: P:Microsoft.AnalysisServices.ClrAssembly.PermissionSet*
+  href: https://msdn.microsoft.com/library/microsoft.analysisservices.clrassembly.permissionset(v=sql.120).aspx
+  name: PermissionSet*
+  name.vb: PermissionSet*
+  fullName: Microsoft.AnalysisServices.ClrAssembly.PermissionSet*
+  fullName.vb: Microsoft.AnalysisServices.ClrAssembly.PermissionSet*

@@ -2,27 +2,25 @@
 title: "SQLBrowseConnect Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLBrowseConnect"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll" 
 apitype: "dllExport"
 f1_keywords: 
   - "SQLBrowseConnect"
 helpviewer_keywords: 
   - "SQLBrowseConnect function [ODBC]"
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: 36
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLBrowseConnect Function
 **Conformance**  
@@ -36,12 +34,12 @@ manager: "jhubbard"
 ```  
   
 SQLRETURN SQLBrowseConnect(  
-     SQLHDBC         ConnectionHandle,  
-     SQLCHAR *       InConnectionString,  
-     SQLSMALLINT     StringLength1,  
-     SQLCHAR *       OutConnectionString,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   StringLength2Ptr);  
+     SQLHDBC         ConnectionHandle,  
+     SQLCHAR *       InConnectionString,  
+     SQLSMALLINT     StringLength1,  
+     SQLCHAR *       OutConnectionString,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   StringLength2Ptr);  
 ```  
   
 ## Arguments  
@@ -109,7 +107,11 @@ SQLRETURN SQLBrowseConnect(
 ## InConnectionString Argument  
  A browse request connection string has the following syntax:  
   
- *connection-string* ::= *attribute*[;] &#124; *attribute*; *connection-stringattribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value[*}]*attribute-keyword* ::= DSN &#124; UID &#124; PWD           &#124; *driver-defined-attribute-keywordattribute-value* ::= *character-stringdriver-defined-attribute-keyword* ::= *identifier*  
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
+ *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
+ *attribute-value* ::= *character-string*<br>
+ *driver-defined-attribute-keyword* ::= *identifier*<br>
   
  where *character-string* has zero or more characters; *identifier* has one or more characters; *attribute-keyword* is not case-sensitive; *attribute-value* may be case-sensitive; and the value of the **DSN** keyword does not consist solely of blanks. Because of connection string and initialization file grammar, keywords and attribute values that contain the characters **[]{}(),;?\*=!@** should be avoided. Because of the grammar in the system information, keywords and data source names cannot contain the backslash (\\) character. For an ODBC 2.*x* driver, braces are required around the attribute value for the DRIVER keyword.  
   
@@ -120,7 +122,13 @@ SQLRETURN SQLBrowseConnect(
 ## OutConnectionString Argument  
  The browse result connection string is a list of connection attributes. A connection attribute consists of an attribute keyword and a corresponding attribute value. The browse result connection string has the following syntax:  
   
- *connection-string* ::= *attribute*[;] &#124; *attribute*; *connection-stringattribute* ::= [\*]*attribute-keyword=attribute-valueattribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keywordODBC-attribute-keyword* = {UID &#124; PWD}[:*localized-identifier*]*driver-defined-attribute-keyword* ::= *identifier*[:*localized-identifier*]*attribute-value* ::= {*attribute-value-list*} &#124; ? (The braces are literal; they are returned by the driver.)*attribute-value-list* ::= *character-string* [:*localized-character string*] &#124; *character-string* [:*localized-character string*], *attribute-value-list*  
+ *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
+ *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
+ *ODBC-attribute-keyword* = {`UID` &#124; `PWD`}[`:`*localized-identifier*]
+ *driver-defined-attribute-keyword* ::= *identifier*[`:`*localized-identifier*]
+ *attribute-value* ::= `{` *attribute-value-list* `}` &#124; `?` (The braces are literal; they are returned by the driver.)<br>
+ *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
   
  where *character-string* and *localized-character string* have zero or more characters; *identifier* and *localized-identifier* have one or more characters; *attribute-keyword* is not case-sensitive; and *attribute-value* may be case-sensitive. Because of connection string and initialization file grammar, keywords, localized identifiers, and attribute values that contain the characters **[]{}(),;?\*=!@** should be avoided. Because of the grammar in the system information, keywords and data source names cannot contain the backslash (\\) character.  
   

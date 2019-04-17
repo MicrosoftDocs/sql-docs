@@ -2,13 +2,11 @@
 title: "Transport Security - Database Mirroring - Always On Availability | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "sessions [SQL Server], database mirroring"
   - "cryptography [SQL Server], database mirroring"
@@ -19,13 +17,12 @@ helpviewer_keywords:
   - "transport security"
   - "database mirroring [SQL Server], security"
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Transport Security - Database Mirroring - Always On Availability
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Transport security involves authentication and, optionally, encryption of messages exchanged between the databases. For database mirroring and [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], authentication and encryption are configured on the database mirroring endpoint. For an introduction to database mirroring endpoints, see [The Database Mirroring Endpoint &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
@@ -49,7 +46,7 @@ manager: "jhubbard"
   
 -   If the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] run as services under different domain accounts (in the same or trusted domains), the login of each account must be created in **master** on each of the other server instances, and that login must be granted CONNECT permissions on the endpoint.  
   
--   If the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] run as the Network Service account, the login of the each host computer account (*DomainName***\\***ComputerName$*) must be created in **master** on each of the other servers, and that login must be granted CONNECT permissions on the endpoint. This is because a server instance running under the Network Service account authenticates using the domain account of the host computer.  
+-   If the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] run as the Network Service account, the login of the each host computer account (_DomainName_**\\**_ComputerName$_) must be created in **master** on each of the other servers, and that login must be granted CONNECT permissions on the endpoint. This is because a server instance running under the Network Service account authenticates using the domain account of the host computer.  
   
 > [!NOTE]  
 >  For an example of setting up a database mirroring session using Windows Authentication, see [Example: Setting Up Database Mirroring Using Windows Authentication &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
@@ -71,7 +68,7 @@ manager: "jhubbard"
   
 |ALGORITHM value|Description|  
 |---------------------|-----------------|  
-|RC4|Specifies that the endpoint must use the RC4 algorithm. This is the default.<br /><br /> **\*\* Warning \*\*** The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.|  
+|RC4|Specifies that the endpoint must use the RC4 algorithm. This is the default.<br /><br /> <strong>\*\* Warning \*\*</strong> The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.|  
 |AES|Specifies that the endpoint must use the AES algorithm.|  
 |AES RC4|Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the AES algorithm.|  
 |RC4 AES|Specifies that the two endpoints will negotiate for an encryption algorithm with this endpoint giving preference to the RC4 algorithm.|  

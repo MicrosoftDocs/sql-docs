@@ -2,13 +2,11 @@
 title: "File Restores (Full Recovery Model) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "file restores [SQL Server]"
   - "full recovery model [SQL Server], performing restores"
@@ -19,13 +17,12 @@ helpviewer_keywords:
   - "Transact-SQL restore sequence"
   - "file restores [SQL Server], Transact-SQL restore sequence"
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
-caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # File Restores (Full Recovery Model)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic is relevant only for databases that contain multiple files or filegroups under the full or bulk-load recovery model.  
   

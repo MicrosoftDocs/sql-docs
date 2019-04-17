@@ -1,22 +1,19 @@
 ---
 title: "Update Resync Property-Dynamic (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "Update Resync property [ADO]"
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Update Resync Property-Dynamic (ADO)
 Specifies whether the [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) method is followed by an implicit [Resync](../../../ado/reference/ado-api/resync-method.md) method operation, and if so, the scope of that operation.  

@@ -1,26 +1,17 @@
 ---
 title: "Use the Schema Generation Wizard (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Schema Generation Wizard, steps"
-  - "relational schema [Analysis Services], Schema Generation Wizard"
-ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Use the Schema Generation Wizard (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The Schema Generation Wizard requires a limited amount of information during the generation phase. Most of the information that the Schema Generation Wizard requires for generating relational schemas is extracted from the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cubes and dimensions that you already created in the project. Additionally, you can customize how the subject area database schema is generated and how objects in the schema are named.  
   
 ## Start the Wizard  

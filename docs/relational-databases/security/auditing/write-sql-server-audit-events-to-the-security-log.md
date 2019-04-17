@@ -1,57 +1,40 @@
 ---
 title: "Write SQL Server Audit Events to the Security Log | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/21/2017"
+ms.prod: sql
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], Security Log"
   - "server audit [SQL Server]"
   - "audits [SQL Server], writing to Security Log"
   - "security logs [SQL Server]"
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
----
-# Write SQL Server Audit Events to the Security Log
-  In a high security environment, the Windows Security log is the appropriate location to write events that record object access. Other audit locations are supported but are more subject to tampering.  
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+---  
+# Write SQL Server Audit Events to the Security Log  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+In a high security environment, the Windows Security log is the appropriate location to write events that record object access. Other audit locations are supported but are more subject to tampering.  
   
  There are two key requirements for writing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] server audits to the Windows Security log:  
   
 -   The audit object access setting must be configured to capture the events. The audit policy tool (`auditpol.exe`) exposes a variety of sub-policies settings in the **audit object access** category. To allow [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to audit object access, configure the **application generated** setting.  
-  
 -   The account that the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service is running under must have the **generate security audits** permission to write to the Windows Security log. By default, the LOCAL SERVICE and the NETWORK SERVICE accounts have this permission. This step is not required if [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is running under one of those accounts.  
+-   Provide full permission for the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account to the registry hive `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`.  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auditing if it is configured to write to the Windows Security log, with the potential of losing events if the audit policy is incorrectly configured. Typically, the Windows Security log is set to overwrite the older events. This preserves the most recent events. However, if the Windows Security log is not set to overwrite older events, then if the Security log is full, the system will issue Windows event 1104 (Log is full). At that point:  
-  
+The Windows audit policy can affect [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auditing if it is configured to write to the Windows Security log, with the potential of losing events if the audit policy is incorrectly configured. Typically, the Windows Security log is set to overwrite the older events. This preserves the most recent events. However, if the Windows Security log is not set to overwrite older events, then if the Security log is full, the system will issue Windows event 1104 (Log is full). At that point:  
 -   No further security events will be recorded  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will not be able to detect that the system is not able to record the events in the Security log, resulting in the potential loss of audit events  
-  
 -   After the box administrator fixes the Security log, the logging behavior will return to normal.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Security](#Security)  
-  
--   **To write SQL Server audit events to the Security Log:**  
-  
-     [Configure the audit object access setting in Windows using auditpol](#auditpolAccess)  
-  
-     [Configure the audit object access setting in Windows using secpol](#secpolAccess)  
-  
-     [Grant the generate security audits permission to an account using secpol](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   

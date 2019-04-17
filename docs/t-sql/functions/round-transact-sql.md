@@ -1,13 +1,11 @@
 ---
 title: "ROUND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-non-specified"
+ms.date: "12/14/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ROUND_TSQL"
@@ -18,30 +16,23 @@ helpviewer_keywords:
   - "rounding expressions"
   - "ROUND function [Transact-SQL]"
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns a numeric value, rounded to the specified length or precision.  
+Returns a numeric value, rounded to the specified length or precision.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
   
 ROUND ( numeric_expression , length [ ,function ] )  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-ROUND (numeric_expression , length )  
 ```  
   
 ## Arguments  
@@ -104,25 +95,15 @@ GO
  The following example shows rounding and approximations.  
   
 ```  
-SELECT ROUND(123.4545, 2);  
-GO  
-SELECT ROUND(123.45, -2);  
-GO  
+SELECT ROUND(123.4545, 2), ROUND(123.45, -2);  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `----------`  
-  
- `123.4500`  
-  
- `(1 row(s) affected)`  
-  
- `--------`  
-  
- `100.00`  
-  
- `(1 row(s) affected)`  
+
+ ```
+--------  ----------
+123.45    100.00
+```
   
 ### C. Using ROUND to truncate  
  The following example uses two `SELECT` statements to demonstrate the difference between rounding and truncation. The first statement rounds the result. The second statement truncates the result.  
@@ -146,42 +127,11 @@ GO
 150.00  
   
 (1 row(s) affected)  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Using ROUND and estimates  
- The following example shows two expressions that demonstrate by using `ROUND` the last digit is always an estimate.  
-  
-```  
-SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ---------`  
-  
- `123.995000    123.995444`  
-  
-### E. Using ROUND and rounding approximations  
- The following example shows rounding and approximations.  
-  
-```  
-SELECT ROUND(123.4545, 2), ROUND(123.45, -2);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ----------`  
-  
- `123.45    100.00`  
+```
   
 ## See Also  
  [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [FLOOR &#40;Transact-SQL&#41;](../../t-sql/functions/floor-transact-sql.md)   
- [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
-  
-  
-
+ [Mathematical Functions &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

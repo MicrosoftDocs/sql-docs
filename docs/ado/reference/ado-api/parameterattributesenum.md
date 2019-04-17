@@ -1,24 +1,21 @@
 ---
 title: "ParameterAttributesEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "ParameterAttributesEnum"
 helpviewer_keywords: 
   - "ParameterAttributesEnum enumeration [ADO]"
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ParameterAttributesEnum
 Specifies the attributes of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  

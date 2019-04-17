@@ -1,13 +1,11 @@
 ---
 title: "SELECT @local_variable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.date: "09/06/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "variable_TSQL"
@@ -24,13 +22,13 @@ helpviewer_keywords:
   - "@local_variable"
   - "local variables [SQL Server]"
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # SELECT @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Sets a local variable to the value of an expression.  
   
@@ -41,36 +39,29 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-    
-SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression } [ ,...n ] [ ; ]  
+SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expression } 
+    [ ,...n ] [ ; ]  
 ```  
   
 ## Arguments  
- @*local_variable*  
+@*local_variable*  
  Is a declared variable for which a value is to be assigned.  
   
- =  
- Assign the value on the right to the variable on the left.  
+{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+Assign the value on the right to the variable on the left.  
   
- {= | += | -= | *= | /= | %= | &= | ^= | |= }  
- Compound assignment operator:  
-  
- +=                    Add and assign  
-  
- -=                     Subtract and assign  
-  
- *=                     Multiply and assign  
-  
- /=                      Divide and assign  
-  
- %=                    Modulo and assign  
-  
- &=                     Bitwise AND and assign  
-  
- ^=                     Bitwise XOR and assign  
-  
- |=                      Bitwise OR and assign  
+Compound assignment operator:  
+  |operator |action |   
+  |-----|-----|  
+  | = | Assigns the expression that follows, to the variable. |  
+  | += | Add and assign |   
+  | -= | Subtract and assign |  
+  | \*= | Multiply and assign |  
+  | /= | Divide and assign |  
+  | %= | Modulo and assign |  
+  | &= | Bitwise AND and assign |  
+  | ^= | Bitwise XOR and assign |  
+  | \|= | Bitwise OR and assign |  
   
  *expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). This includes a scalar subquery.  
@@ -90,7 +81,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 ### A. Use SELECT @local_variable to return a single value  
  In the following example, the variable `@var1` is assigned `Generic Name` as its value. The query against the `Store` table returns no rows because the value specified for `CustomerID` does not exist in the table. The variable retains the `Generic Name` value.  
   
-```  
+```sql  
 -- Uses AdventureWorks    
   
 DECLARE @var1 varchar(30);         
@@ -103,16 +94,16 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Company Name`  
-  
- `------------------------------`  
-  
- `Generic Name`  
+ ```  
+ Company Name  
+ ------------------------------  
+ Generic Name  
+ ```  
   
 ### B. Use SELECT @local_variable to return null  
  In the following example, a subquery is used to assign a value to `@var1`. Because the value requested for `CustomerID` does not exist, the subquery returns no value and the variable is set to `NULL`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 DECLARE @var1 varchar(30)   
@@ -125,15 +116,16 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Company Name`  
-  
- `----------------------------`  
-  
- `NULL`  
+```  
+Company Name  
+----------------------------  
+NULL  
+```  
   
 ## See Also  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
   
   

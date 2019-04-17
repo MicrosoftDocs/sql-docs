@@ -2,15 +2,17 @@
 title: "Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.lookuptrans.f1"
+  - "sql13.dts.designer.lookuptransformation.general.f1"
+  - "sql13.dts.designer.lookuptransformation.referencetable.f1"
+  - "sql13.dts.designer.lookuptransformation.columns.f1"
+  - "sql13.dts.designer.lookuptransformation.advanced.f1"
 helpviewer_keywords: 
   - "Lookup transformation"
   - "joining columns [Integration Services]"
@@ -19,10 +21,9 @@ helpviewer_keywords:
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Lookup Transformation
   The Lookup transformation performs lookups by joining data in input columns with columns in a reference dataset. You use the lookup to access additional information in a related table that is based on values in common columns.  
@@ -53,7 +54,7 @@ manager: "jhubbard"
   
  The Lookup transformation tries to perform an equi-join between values in the transformation input and values in the reference dataset. (An equi-join means that each row in the transformation input must match at least one row from the reference dataset.) If an equi-join is not possible, the Lookup transformation takes one of the following actions:  
   
--   If there is no matching entry in the reference dataset, no join occurs. By default, the Lookup transformation treats rows without matching entries as errors. However, you can configure the Lookup transformation to redirect such rows to a no match output. For more information, see [Lookup Transformation Editor &#40;General Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md) and [Lookup Transformation Editor &#40;Error Output Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+-   If there is no matching entry in the reference dataset, no join occurs. By default, the Lookup transformation treats rows without matching entries as errors. However, you can configure the Lookup transformation to redirect such rows to a no match output.  
   
 -   If there are multiple matches in the reference table, the Lookup transformation returns only the first match returned by the lookup query. If multiple matches are found, the Lookup transformation generates an error or warning only when the transformation has been configured to load all the reference dataset into the cache. In this case, the Lookup transformation generates a warning when the transformation detects multiple matches as the transformation fills the cache.  
   
@@ -124,15 +125,148 @@ manager: "jhubbard"
   
 ## Related Content  
   
--   Video, [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031), on msdn.microsoft.com  
+-   Video, [How to: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031), on msdn.microsoft.com  
   
--   Blog entry, [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623), on blogs.msdn.com  
+-   Blog entry, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623), on blogs.msdn.com  
   
--   Blog entry, [Lookup Pattern: Case Insensitive](http://go.microsoft.com/fwlink/?LinkId=157782), on blogs.msdn.com  
+-   Blog entry, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782), on blogs.msdn.com  
   
--   Sample, [Lookup Transformation](http://go.microsoft.com/fwlink/?LinkId=267528), on msftisprodsamples.codeplex.com.  
+-   Sample, [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528), on msftisprodsamples.codeplex.com.  
   
-     For information on installing [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] product samples and sample databases, see [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527).  
+     For information on installing [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] product samples and sample databases, see [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527).  
+  
+## Lookup Transformation Editor (General Page)
+  Use the **General** page of the Lookup Transformation Editor dialog box to select the cache mode, select the connection type, and specify how to handle rows with no matching entries.  
+  
+### Options  
+ **Full cache**  
+ Generate and load the reference dataset into cache before the Lookup transformation is executed.  
+  
+ **Partial cache**  
+ Generate the reference dataset during the execution of the Lookup transformation. Load the rows with matching entries in the reference dataset and the rows with no matching entries in the dataset into cache.  
+  
+ **No cache**  
+ Generate the reference dataset during the execution of the Lookup transformation. No data is loaded into cache.  
+  
+ **Cache connection manager**  
+ Configure the Lookup transformation to use a Cache connection manager. This option is available only if the Full cache option is selected.  
+  
+ **OLE DB connection manager**  
+ Configure the Lookup transformation to use an OLE DB connection manager.  
+  
+ **Specify how to handle rows with no matching entries**  
+ Select an option for handling rows that do not match at least one entry in the reference dataset.  
+  
+ When you select **Redirect rows to no match output**, the rows are redirected to a no match output and are not handled as errors. The **Error** option on the **Error Output** page of the **Lookup Transformation Editor** dialog box is not available.  
+  
+ When you select any other option in the **Specify how to handle rows with no matching entries** list box, the rows are handled as errors. The **Error** option on the **Error Output** page is available.  
+  
+### External Resources  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+  
+## Lookup Transformation Editor (Connection Page)
+  Use the **Connection** page of the **Lookup Transformation Editor** dialog box to select a connection manager. If you select an OLE DB connection manager, you also select a query, table, or view to generate the reference dataset.  
+  
+### Options  
+ The following options are available when you select **Full cache** and **Cache connection manager** on the General page of the **Lookup Transformation Editor** dialog box.  
+  
+ **Cache connection manager**  
+ Select an existing Cache connection manager from the list, or create a new connection by clicking **New**.  
+  
+ **New**  
+ Create a new connection by using the **Cache Connection Manager Editor** dialog box.  
+  
+ The following options are available when you select **Full cache**, **Partial cache**, or **No cache**, and **OLE DB connection manager**, on the General page of the **Lookup Transformation Editor** dialog box.  
+  
+ **OLE DB connection manager**  
+ Select an existing OLE DB connection manager from the list, or create a new connection by clicking **New**.  
+  
+ **New**  
+ Create a new connection by using the **Configure OLE DB Connection Manager** dialog box.  
+  
+ **Use a table or view**  
+ Select an existing table or view from the list, or create a new table by clicking **New**.  
+  
+> [!NOTE]  
+>  If you specify a SQL statement on the **Advanced** page of the **Lookup Transformation Editor**, that SQL statement overrides and replaces the table name selected here. For more information, see [Lookup Transformation Editor &#40;Advanced Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+  
+ **New**  
+ Create a new table by using the **Create Table** dialog box.  
+  
+ **Use results of an SQL query**  
+ Choose this option to browse to a preexisting query, build a new query, check query syntax, and preview query results.  
+  
+ **Build query**  
+ Create the Transact-SQL statement to run by using **Query Builder**, a graphical tool that is used to create queries by browsing through data.  
+  
+ **Browse**  
+ Use this option to browse to a preexisting query saved as a file.  
+  
+ **Parse Query**  
+ Check the syntax of the query.  
+  
+ **Preview**  
+ Preview results by using the **Preview Query Results** dialog box. This option displays up to 200 rows.  
+  
+### External Resources  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
+  
+## Lookup Transformation Editor (Columns Page)
+  Use the **Columns** page of the **Lookup Transformation Editor** dialog box to specify the join between the source table and the reference table, and to select lookup columns from the reference table.  
+  
+### Options  
+ **Available Input Columns**  
+ View the list of available input columns. The input columns are the columns in the data flow from a connected source. The input columns and lookup column must have matching data types.  
+  
+ Use a drag-and-drop operation to map available input columns to lookup columns.  
+  
+ You can also map input columns to lookup columns using the keyboard, by highlighting a column in the **Available Input Columns** table, pressing the Application key, and then clicking **Edit Mappings**.  
+  
+ **Available Lookup Columns**  
+ View the list of lookup columns. The lookup columns are columns in the reference table in which you want to look up values that match the input columns.  
+  
+ Use a drag-and-drop operation to map available lookup columns to input columns.  
+  
+ Use the check boxes to select lookup columns in the reference table on which to perform lookup operations.  
+  
+ You can also map lookup columns to input columns using the keyboard, by highlighting a column in the **Available Lookup Columns** table, pressing the Application key, and then clicking **Edit Mappings**.  
+  
+ **Lookup Column**  
+ View the selected lookup columns. The selections are reflected in the check box selections in the **Available Lookup Columns** table.  
+  
+ **Lookup Operation**  
+ Select a lookup operation from the list to perform on the lookup column.  
+  
+ **Output Alias**  
+ Type an alias for the output for each lookup column. The default is the name of the lookup column; however, you can select any unique, descriptive name.  
+  
+## Lookup Transformation Editor (Advanced Page)
+  Use the **Advanced** page of the **Lookup Transformation Editor** dialog box to configure partial caching and to modify the SQL statement for the Lookup transformation.  
+  
+### Options  
+ **Cache size (32-bit)**  
+ Adjust the  cache size (in megabytes) for 32-bit computers. The default value is 5 megabytes.  
+  
+ **Cache size (64-bit)**  
+ Adjust the cache size (in megabytes) for 64-bit computers. The default value is 5 megabytes.  
+  
+ **Enable cache for rows with no matching entries**  
+ Cache rows with no matching entries in the reference dataset.  
+  
+ **Allocation from cache**  
+ Specify the percentage of the cache to allocate for rows with no matching entries in the reference dataset.  
+  
+ **Modify the SQL statement**  
+ Modify the SQL statement that is used to generate the reference dataset.  
+  
+> [!NOTE]  
+>  The optional SQL statement that you specify on this page overrides and replaces the table name that you specified on the **Connection** page of the **Lookup Transformation Editor**. For more information, see [Lookup Transformation Editor &#40;Connection Page&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+  
+ **Set Parameters**  
+ Map input columns to parameters by using the **Set Query Parameters** dialog box.  
+  
+### External Resources  
+ Blog entry, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) on blogs.msdn.com  
   
 ## See Also  
  [Fuzzy Lookup Transformation](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

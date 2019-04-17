@@ -2,18 +2,15 @@
 title: "Change Data Capture Service for Oracle by Attunity System Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Change Data Capture Service for Oracle by Attunity System Architecture
   The CDC Service for Oracle captures changes made to selected tables in one or more source Oracle databases into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC databases located on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The following diagram shows the components that make up the CDC Service for Oracle.  

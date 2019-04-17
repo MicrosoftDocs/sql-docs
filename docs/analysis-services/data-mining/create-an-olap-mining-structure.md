@@ -1,22 +1,17 @@
 ---
 title: "Create an OLAP Mining Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create an OLAP Mining Structure
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   There are many advantages to creating a data mining model based on an OLAP cube or other multidimensional data store. An OLAP solution already contains huge amounts of data that is well organized, cleaned and properly formatted; however, the complexity of the data is such that users are unlikely to find meaningful patterns by ad hoc exploration. Data mining offers the ability to discover new correlations and provide actionable insight.  
   
  This topic describes how to create an OLAP mining structure, based on a dimension and related measures in an existing multidimensional solution.  
@@ -62,7 +57,7 @@ manager: "jhubbard"
   
      The wizard automatically includes for your review and selection any measures that were created using attributes from the selected dimension.  
   
-     For example, if your cube contains a measure that calculates freight cost based on the customer’s geographical location, and you chose the Customer dimension as your main data source for modeling, the measure will be proposed as a candidate for adding to the model. Beware of adding too many measures that are already directly based on attributes, as there is already one implicit relationship between the columns, as defined in the measure formula, and the strength of this (expected) correlation can obscure other relationships that you might otherwise discover.  
+     For example, if your cube contains a measure that calculates freight cost based on the customer's geographical location, and you chose the Customer dimension as your main data source for modeling, the measure will be proposed as a candidate for adding to the model. Beware of adding too many measures that are already directly based on attributes, as there is already one implicit relationship between the columns, as defined in the measure formula, and the strength of this (expected) correlation can obscure other relationships that you might otherwise discover.  
   
 6.  **Specify Mining Model Column Usage**: For each attribute or measure that you added to the structure, you must specify whether the attribute should be used for prediction, or used as input. If you do not select either of these options, the data will be processed but will not be used for analysis; however, it will be available as background data in case you later enable drillthrough.  
   
@@ -119,9 +114,9 @@ manager: "jhubbard"
   
  In this scenario, you would create two filters:  
   
--   For the first filter, you would choose the Geography dimension, choose the hierarchy for Region, and then use the **Filter Expression** list to choose “United Kingdom” from the possible values.  
+-   For the first filter, you would choose the Geography dimension, choose the hierarchy for Region, and then use the **Filter Expression** list to choose "United Kingdom" from the possible values.  
   
--   For the second filter, you would choose the Customer dimension, select the Gender attribute, and select “Female” from the list of attribute values.  
+-   For the second filter, you would choose the Customer dimension, select the Gender attribute, and select "Female" from the list of attribute values.  
   
  After the mining structure has been created, you can modify both the definition of the cube data and the filter criteria. For more information, see [Filters for Mining Models](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
@@ -137,11 +132,11 @@ manager: "jhubbard"
   
  For example, if the main dimension used for case data is Customer, you might add as a related dimension the Products dimension, because you expect that a customer might have ordered multiple products over time, and the cube already links each customer to the many products via the order fact tables.  
   
- You add nested tables in the **Specify Mining Model Column Usage** page of the wizard, by clicking **Add Nested Tables**. A dialog box opens that guides you through process of choosing a related dimension, as well as any measures. The case and nested dimensions must be related by a foreign key, and measures must use one of the attributes that are already included in the case or nested tables. Unfortunately, these restrictions really don’t do much to narrow the scope, so you must be careful to select only those attributes that are useful for modeling.  
+ You add nested tables in the **Specify Mining Model Column Usage** page of the wizard, by clicking **Add Nested Tables**. A dialog box opens that guides you through process of choosing a related dimension, as well as any measures. The case and nested dimensions must be related by a foreign key, and measures must use one of the attributes that are already included in the case or nested tables. Unfortunately, these restrictions really don't do much to narrow the scope, so you must be careful to select only those attributes that are useful for modeling.  
   
  For each attribute or measure that you add to the nested table, you must specify whether the nested attribute will be used for prediction or not, by selecting **Predictable** or **Input** in the **Select Nested Table Columns** dialog box. If you do not select either of these options, the data will be added to the mining structure but not used for analysis.  
   
- For each attribute and measure, you must also specify whether the attribute is discrete, discretized, or continuous. The wizard will preselect a default based on the data type of the attribute, but you might need to change these, depending on the algorithm requirements. If you choose a content type that is not compatible with the algorithm you have chosen (for example, you use a continuous numeric type with a Naïve Bayes model), you won’t get an error message till you try to process the model.  
+ For each attribute and measure, you must also specify whether the attribute is discrete, discretized, or continuous. The wizard will preselect a default based on the data type of the attribute, but you might need to change these, depending on the algorithm requirements. If you choose a content type that is not compatible with the algorithm you have chosen (for example, you use a continuous numeric type with a Naïve Bayes model), you won't get an error message till you try to process the model.  
   
  When you are done setting these options, the wizard adds the nested table to the case table. The default name for the nested table is the nested dimension name, but you can rename the nested table and its columns. You can repeat this process to add multiple nested tables to the mining structure.  
   

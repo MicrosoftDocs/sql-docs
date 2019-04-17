@@ -2,13 +2,11 @@
 title: "Integration Services Service (SSIS Service) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssiseditserverregistration.connectionproperties.f1"
   - "sql13.swb.connecttodts.connectionproperties.f1"
@@ -22,15 +20,14 @@ helpviewer_keywords:
   - "service [Integration Services]"
   - "SQL Server Integration Services, service"
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Integration Services Service (SSIS Service)
   The topics in this section discuss the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, a Windows service for managing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. This service is not required to create, save, and run Integration Services packages. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supports the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service for backward compatibility with earlier releases of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Starting in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stores objects, settings, and operational data in the **SSISDB** database for projects that you’ve deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, which is an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine, hosts the database. For more information about the database, see [SSIS Catalog](../../integration-services/service/ssis-catalog.md). For more information about deploying projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Starting in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stores objects, settings, and operational data in the **SSISDB** database for projects that you've deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server using the project deployment model. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, which is an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine, hosts the database. For more information about the database, see [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md). For more information about deploying projects to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, see [Deploy Integration Services (SSIS) Projects and Packages](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ## Management capabilities  
  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is a Windows service for managing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is available only in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -65,7 +62,7 @@ manager: "jhubbard"
  When you install the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is also installed. By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is started and the startup type of the service is set to automatic. However, you must also install [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to use the service to manage stored and running [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages.  
   
 > [!NOTE]
-> To connect directly to an instance of the legacy Integration Services Service, you have to use the version of SQL Server Management Studio (SSMS) aligned with the version of SQL Server on which the Integration Services Service is running. For example, to connect to the legacy Integration Services Service running on an instance of SQL Server 2016, you have to use the version of SSMS released for SQL Server 2016. [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+> To connect directly to an instance of the legacy Integration Services Service, you have to use the version of SQL Server Management Studio (SSMS) aligned with the version of SQL Server on which the Integration Services Service is running. For example, to connect to the legacy Integration Services Service running on an instance of SQL Server 2016, you have to use the version of SSMS released for SQL Server 2016. [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 >
 >   In the SSMS **Connect to Server** dialog box, you cannot enter the name of a server on which an earlier version of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is running. However, to manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server.   
   
@@ -156,6 +153,28 @@ manager: "jhubbard"
 7.  Restart SQL Server Management Studio.  
   
 8.  Restart the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Service.  
+
+### Event logged when permissions are missing
+
+If the service account of the SQL Server Agent doesn't have the Integration Services DCOM **[Launch and Activation Permissions]**, the following event is added to the system event logs when the SQL Server Agent executes the SSIS package jobs:
+
+```
+Log Name: System
+Source: **Microsoft-Windows-DistributedCOM**
+Date: 1/9/2019 5:42:13 PM
+Event ID: **10016**
+Task Category: None
+Level: Error
+Keywords: Classic
+User: NT SERVICE\SQLSERVERAGENT
+Computer: testmachine
+Description:
+The application-specific permission settings do not grant Local Activation permission for the COM Server application with CLSID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+and APPID
+{xxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487193-2804545603-1466107430) from address LocalHost (Using LRPC) running in the application container Unavailable SID (Unavailable). This security permission can be modified using the Component Services administrative tool.
+```
 
 ## Configure the service
  
@@ -248,7 +267,7 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
  The Registry key **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** specifies the location and name for the configuration file that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service uses. The default value of the Registry key is **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. You can update the value of the Registry key to use a different name and location for the configuration file. Note that the version number in the path (120 for SQL Server  [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 for  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], etc.) will vary depending on the SQL Server version.
   
 > [!CAUTION]  
->  Incorrectly editing the Registry can cause serious problems that may require you to reinstall your operating system. [!INCLUDE[msCoName](../../includes/msconame-md.md)] cannot guarantee that problems resulting from editing the Registry incorrectly can be resolved. Before editing the Registry, back up any valuable data. For information about how to back up, restore, and edit the Registry, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base article, [Description of the Microsoft Windows registry](http://support.microsoft.com/kb/256986).  
+>  Incorrectly editing the Registry can cause serious problems that may require you to reinstall your operating system. [!INCLUDE[msCoName](../../includes/msconame-md.md)] cannot guarantee that problems resulting from editing the Registry incorrectly can be resolved. Before editing the Registry, back up any valuable data. For information about how to back up, restore, and edit the Registry, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base article, [Description of the Microsoft Windows registry](https://support.microsoft.com/kb/256986).  
   
  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service loads the configuration file when the service is started. Any changes to the Registry entry require that the service be restarted.  
 
@@ -272,7 +291,7 @@ When you install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 
  Connecting to an instance of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] on a remote server, from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or another management application, requires a specific set of rights on the server for the users of the application.  
   
 > [!IMPORTANT]
-> To connect directly to an instance of the legacy Integration Services Service, you have to use the version of SQL Server Management Studio (SSMS) aligned with the version of SQL Server on which the Integration Services Service is running. For example, to connect to the legacy Integration Services Service running on an instance of SQL Server 2016, you have to use the version of SSMS released for SQL Server 2016. [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+> To connect directly to an instance of the legacy Integration Services Service, you have to use the version of SQL Server Management Studio (SSMS) aligned with the version of SQL Server on which the Integration Services Service is running. For example, to connect to the legacy Integration Services Service running on an instance of SQL Server 2016, you have to use the version of SSMS released for SQL Server 2016. [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 >
 >  To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server.
   
@@ -356,7 +375,7 @@ For more info, see [Getting Cross Domain Kerberos and Delegation working with SS
 > [!IMPORTANT]  
 >  To manage packages that are stored on a remote server, you do not have to connect to the instance of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service on that remote server. Instead, edit the configuration file for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service so that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] displays the packages that are stored on the remote server.
   
- The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service uses the DCOM protocol. For more information about how the DCOM protocol works through firewalls, see the article, "[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)," in the MSDN Library.  
+ The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service uses the DCOM protocol.
   
  There are many firewall systems available. If you are running a firewall other than Windows firewall, see your firewall documentation for information that is specific to the system you are using.  
   

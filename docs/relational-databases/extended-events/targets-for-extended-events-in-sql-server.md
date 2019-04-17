@@ -1,23 +1,21 @@
 ---
 title: "Targets for Extended Events in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/12/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/07/2018"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xevents
+ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Targets for Extended Events in SQL Server
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 This article explains when and how to use the package0 targets for extended events in SQL Server. For each target, the present article explains:
@@ -39,7 +37,7 @@ The [ring_buffer section](#h2_target_ring_buffer) includes an example of using [
 
 
 - Have installed a recent version of the frequently updated utility SQL Server Management Studio (SSMS.exe). For details see:
-    - [Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+    - [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 - In SSMS.exe, know how to use the **Object Explorer** to right-click the target node under your event session, for [easy viewing of the output data](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
@@ -81,6 +79,10 @@ SQL Server extended events can inter-operate with Event Tracing for Windows (ETW
 
 This ETW target processes *synchronously* the data it receives, whereas most targets process *asynchronously*.
 
+> [!NOTE]
+> Azure SQL Database does not support the `etw_classic_sync_target target`.
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 <a name="h2_target_event_counter"></a>
 
@@ -113,7 +115,7 @@ sqlserver      checkpoint_begin   4
 Next is the CREATE EVENT SESSION that led to the previous results. For this test, on the EVENT...WHERE clause, the **package0.counter** field was used to cease the counting after the count climbed to 4.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_counter_1]
 	ON SERVER 
 	ADD EVENT sqlserver.checkpoint_begin   -- Test by issuing CHECKPOINT; statements.
@@ -144,6 +146,15 @@ The **event_file** target writes event session output from buffer to a disk file
 
 - The file name you choose is used by the system as a prefix to which a date-time based long integer is appended, followed by the .xel extension.
 
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
+> [!NOTE]
+> Azure SQL Database only supports storing `xel` files on Azure blob storage. 
+>
+> For an **event_file** code example particular to SQL Database (and to SQL Database Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+
+::: moniker-end
+
 
 #### CREATE EVENT SESSION with **event_file** target
 
@@ -151,7 +162,7 @@ The **event_file** target writes event session output from buffer to a disk file
 Next is the CREATE EVENT SESSION that we used to test with. One of the ADD TARGET clauses specifies an event_file.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 	ON SERVER 
 	ADD EVENT sqlserver.lock_acquired
@@ -283,7 +294,7 @@ In the present example, the EVENT...ACTION clause offer happens to offer only on
 - To track more than one source action, you can add a second histogram target to your CREATE EVENT SESSION statement.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_lockacquired]
 	ON SERVER 
 	ADD EVENT sqlserver.lock_acquired
@@ -349,7 +360,7 @@ The following example sets **source_type=0**. The value assigned to **source=** 
 
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
 	ON SERVER 
 	ADD EVENT  sqlserver.checkpoint_begin
@@ -442,7 +453,7 @@ The following CREATE EVENT SESSION statement specifies two events, and two targe
 To narrow the results, we first SELECTed from sys.objects to find the object_id of our test table. We added a filter for that one ID to the EVENT...WHERE clause.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 	ON SERVER 
 	ADD EVENT sqlserver.lock_acquired
@@ -546,7 +557,7 @@ In this ring_buffer section we also show how you can use the Transact-SQL implem
 There is nothing special about this CREATE EVENT SESSION statement, which uses the ring_buffer target.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 	ON SERVER 
 	ADD EVENT sqlserver.lock_acquired
@@ -659,7 +670,7 @@ When retrieved by a SELECT statement, the content is in the form of a string of 
 To see the preceding XML, you can issue the following SELECT while the event session is active. The active XML data is retrieved from the system view **sys.dm_xe_session_targets**.
 
 
-```tsql
+```sql
 SELECT
 		CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
 	INTO
@@ -691,7 +702,7 @@ SELECT * FROM #XmlAsTable;
 To see the preceding XML as a relational rowset, continue from the preceding SELECT statement by issuing the following T-SQL. The commented lines explain each use of XQuery.
 
 
-```tsql
+```sql
 SELECT
 		 -- (A)
 		 ObjectLocks.value('(@timestamp)[1]',

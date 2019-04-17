@@ -1,40 +1,21 @@
 ---
-# required metadata
-
 title: DB Mail and Email Alerts with SQL Agent on Linux | Microsoft Docs
-description: This topic describes how to use DB Mail and Email Alerts with SQL Server on Linux
+description: This article describes how to use DB Mail and Email Alerts with SQL Server on Linux
 author: meet-bhagdev
 ms.author: meetb
-manager: jhubbard
-ms.date: 07/17/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
+manager: craigg
+ms.date: 02/20/2018
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ms.assetid: tbd
-
-# optional metadata
-
-# keywords: "DB Main, SQL Agent, SQL Agent DB Mail, DB Mail with SQL Server on Linux, SQL Agent alerts on Linux"
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-# ms.custom: ""
-
 ---
 # DB Mail and Email Alerts with SQL Agent on Linux
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 The following steps show you how to set up DB Mail and use it with SQL Server Agent (**mssql-server-agent**) on Linux. 
-
-> [!NOTE]
-> To use DB Mail with SQL Server on Linux, you need to use SQL Server 2017 RC2 or later.
-
-## Prerequisites
--   SQL Server 2017 RC2 and above
--   SQL Server Agent v14.0.800.90-2 and above (if you plan to use email for alerts)
 
 ## 1. Enable DB Mail
 
@@ -110,7 +91,7 @@ You can use the mssql-conf utility or environment variables to register your DB 
 
 ```bash
 # via mssql-conf
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile default
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 # via environment variable
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
@@ -126,7 +107,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## 9. Send email when 'Agent Test Job’ succeeds 
+## 9. Send email when 'Agent Test Job' succeeds 
 
 ```
 EXEC msdb.dbo.sp_update_job 

@@ -2,28 +2,23 @@
 title: "sp_deletepeerrequesthistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_deletepeerrequesthistory"
   - "sp_deletepeerrequesthistory_TSQL"
 helpviewer_keywords: 
   - "sp_deletepeerrequesthistory"
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_deletepeerrequesthistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Deletes history related to a publication status request, which includes the request history ([MSpeer_request &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mspeer-request-transact-sql.md)) as well as the response history ([MSpeer_response &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)).This stored procedure is executed on the publication database at a Publisher participating in a Peer-to-Peer replication topology. For more information, see [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
@@ -39,13 +34,13 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Name of the publication for which the status request was made. *publication* is **sysname**, with no default.  
   
- [ **@request_id=** ] *request_id*  
+`[ @request_id = ] request_id`
  Specifies an individual status request so that all responses to this request will be deleted. *request_id* is **int**, with a default value of NULL.  
   
- [ **@cutoff_date=** ] *cutoff_date*  
+`[ @cutoff_date = ] cutoff_date`
  Specifies a cutoff date, before which all earlier response records are deleted. *cutoff_date* is **datetime**, with a default value of NULL.  
   
 ## Return Code Values  

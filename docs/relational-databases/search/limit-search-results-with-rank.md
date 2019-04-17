@@ -1,14 +1,10 @@
 ---
 title: "Limit Search Results with RANK | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "row ranking [full-text search]"
   - "relevance ranking values [full-text search]"
@@ -18,12 +14,14 @@ helpviewer_keywords:
   - "rankings [full-text search]"
   - "per-row rank values [full-text search]"
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Limit Search Results with RANK
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) and [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) functions return a column named RANK that contains ordinal values from 0 through 1000 (rank values). These values are used to rank the rows returned according to how well they match the selection criteria. The rank values indicate only a relative order of relevance of the rows in the result set, with a lower value indicating lower relevance. The actual values are unimportant and typically differ each time the query is run.  
   
 > [!NOTE]  
@@ -189,10 +187,10 @@ Rank = Σ[Terms in Query] w ( ( ( k1 + 1 ) tf ) / ( K + tf ) ) * ( ( k3 + 1 ) qt
 Where:   
 w is the Robertson-Sparck Jones weight.   
 In simplified form, w is defined as:   
-w = log10 ( ( ( r + 0.5 ) * ( N – R + r + 0.5 ) ) / ( ( R – r + 0.5 ) * ( n – r + 0.5 ) )  
+w = log10 ( ( ( r + 0.5 ) * ( N - R + r + 0.5 ) ) / ( ( R - r + 0.5 ) * ( n - r + 0.5 ) )  
 N is the number of indexed rows for the property being queried.   
 n is the number of rows containing the word.   
-K is ( k1 * ( ( 1 – b ) + ( b * dl / avdl ) ) ).   
+K is ( k1 * ( ( 1 - b ) + ( b * dl / avdl ) ) ).   
 dl is the property length, in word occurrences.   
 avdl is the average length of the property being queried, in word occurrences.   
 k1, b, and k3 are the constants 1.2, 0.75, and 8.0, respectively.   

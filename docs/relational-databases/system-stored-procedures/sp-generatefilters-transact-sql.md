@@ -2,28 +2,23 @@
 title: "sp_generatefilters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_generatefilters"
   - "sp_generatefilters_TSQL"
 helpviewer_keywords: 
   - "sp_generatefilters"
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_generatefilters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates filters on foreign key tables when a specified table is replicated. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -37,7 +32,7 @@ sp_generatefilters [ @publication =] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to be filtered. *publication* is **sysname**, with no default.  
   
 ## Return Code Values  

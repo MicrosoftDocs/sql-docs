@@ -2,22 +2,20 @@
 title: "Options (SQL Server Object Explorer - Commands) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands"
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Options (SQL Server Object Explorer - Commands)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 When you right-click a table or view in Object Explorer, the following two options for displaying rows in the table are presented:  
   
 -   **Select Top 1000 Rows**  
@@ -41,5 +39,5 @@ Specifies the number of rows to return when you are editing rows in a table. The
 Specifies the number of rows to be returned that is specified in the Query Editor script that is created. The default is 1000 rows.  
   
 ## See Also  
-[SQL Server Audit (Database Engine)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[SQL Server Audit (Database Engine)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

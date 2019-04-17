@@ -2,12 +2,10 @@
 title: "managed_backup.fn_is_master_switch_on (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "fn_is_master_switch_on"
@@ -20,13 +18,12 @@ helpviewer_keywords:
   - "smart_admin.fn_is_master_switch_on"
   - "fn_is_master_switch_on"
 ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
-caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # managed_backup.fn_is_master_switch_on (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Returns the state of the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] operations on the instance of SQL Server.  
   
@@ -37,7 +34,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 managed_backup.fn_is_master_switch_on ()  
 ```  
   

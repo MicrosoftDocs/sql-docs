@@ -2,23 +2,20 @@
 title: "rowInserted Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.rowInserted"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # rowInserted Method (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +41,7 @@ public boolean rowInserted()
  The value that is returned depends on whether this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object can detect visible inserts.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] does not detect inserted rows for any cursor type.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not detect inserted rows for any cursor type.  
   
 ## See Also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

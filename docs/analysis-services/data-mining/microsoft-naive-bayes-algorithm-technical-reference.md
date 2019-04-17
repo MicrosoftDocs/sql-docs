@@ -1,30 +1,17 @@
 ---
 title: "Microsoft Naive Bayes Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MINIMUM_DEPENDENCY_PROBABILITY parameter"
-  - "MAXIMUM_INPUT_ATTRIBUTES parameter"
-  - "naive bayes model [Analysis Services]"
-  - "Bayesian classifiers"
-  - "naive bayes algorithms [Analysis Services]"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES parameter"
-  - "MAXIMUM_STATES parameter"
-ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Naive Bayes Algorithm Technical Reference
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm is a classification algorithm provided by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for use in predictive modeling. The algorithm calculates the conditional probability between input and predictable columns, and assumes that the columns are independent. This assumption of independence leads to the name Naive Bayes.  
   
 ## Implementation of the Microsoft Naive Bayes Algorithm  
@@ -71,7 +58,7 @@ manager: "jhubbard"
  The default is 0.5.  
   
  *MAXIMUM_STATES*  
- Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is greater than the maximum number of states, the algorithm uses the attribute’s most popular states and treats the remaining states as missing.  
+ Specifies the maximum number of attribute states that the algorithm supports. If the number of states that an attribute has is greater than the maximum number of states, the algorithm uses the attribute's most popular states and treats the remaining states as missing.  
   
  The default is 100.  
   

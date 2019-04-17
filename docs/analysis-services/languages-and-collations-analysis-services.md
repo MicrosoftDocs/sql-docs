@@ -1,40 +1,26 @@
 ---
 title: "Languages and Collations (Analysis Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Test Analysis Services"
-helpviewer_keywords: 
-  - "Windows collations [Analysis Services]"
-  - "default collations"
-  - "languages [Analysis Services]"
-  - "sort orders [Analysis Services]"
-  - "language identifiers [Analysis Services]"
-  - "default languages"
-  - "collations [Analysis Services]"
-ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Languages and Collations (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the languages and collations provided by [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating systems. **Language** and **Collation** properties are initially set at the instance level during installation, but can be changed afterwards at different levels of the object hierarchy.  
   
- In a multidimensional model (only), you can set these properties on a database or cube – you can also set them on translations that you create for objects within a cube. In a tabular model, language and collation are inherited from the host operating system.  
+ In a multidimensional model (only), you can set these properties on a database or cube - you can also set them on translations that you create for objects within a cube. In a tabular model, language and collation are inherited from the host operating system.  
   
  When setting **Language** and **Collation** in a multidimensional model,  you are either specifying settings used by the data model during processing and query execution, or  you are equipping a model with multiple translations so that foreign language speakers can work with the model in their native language. Explicitly setting **Language** and **Collation** properties on an object (database, model, or cube) is for situations where the development environment and production server are configured for different locales, and you want to be sure that the language and collation matches those of the intended target environment.  
   
 ##  <a name="bkmk_object"></a> Objects that support Language and Collation properties  
- **Language** and **Collation** properties are often exposed together – where you can set **Language**, you can also set **Collation**.  
+ **Language** and **Collation** properties are often exposed together - where you can set **Language**, you can also set **Collation**.  
   
  You can set **Language** and **Collation** on these objects:  
   
@@ -76,7 +62,7 @@ manager: "erikre"
   
 -   0x0416 or 1046 for **Portuguese (Brazil)**.  
   
- To view a longer list, see [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Encoding and Code Pages](http://msdn.microsoft.com/goglobal/bb688114.aspx).  
+ To view a longer list, see [Locale IDs Assigned by Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Encoding and Code Pages](/globalization/encoding/encoding-overview).  
   
 > [!NOTE]  
 >  The **Language** property does not determine the language for returning system messages, or which strings appear in the user interface. Errors, warnings, and messages are localized into all languages supported in Office and Office 365 and are used automatically when the client connection specifies one of the supported locales.  

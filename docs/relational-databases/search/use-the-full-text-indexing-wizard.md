@@ -1,14 +1,10 @@
 ---
 title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
-ms.custom: ""
 ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.fulltextindexingwizard.welcome.f1"
   - "sql13.swb.fulltextindexingwizard.selectorcreatepopschedules.f1"
@@ -23,12 +19,14 @@ helpviewer_keywords:
   - "Full-Text Indexing Wizard"
   - "full-text search [SQL Server], Full-Text Indexing Wizard"
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use the Full-Text Indexing Wizard
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Full-Text Indexing Wizard in SSMS walks you through a series of steps designed to help you create a full-text index.  
   
 ## Create a  Full-Text index 

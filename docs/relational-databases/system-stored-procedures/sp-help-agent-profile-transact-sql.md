@@ -2,28 +2,23 @@
 title: "sp_help_agent_profile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_help_agent_profile"
   - "sp_help_agent_profile_TSQL"
 helpviewer_keywords: 
   - "sp_help_agent_profile"
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Displays the profile of a specified agent. This stored procedure is executed at the Distributor on any database.  
   
@@ -38,7 +33,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## Arguments  
- [ **@agent_type=**] *agent_type*  
+`[ @agent_type = ] agent_type`
  Is the type of agent. *agent_type* is **int**, with a default of **0**, and can be one of these values.  
   
 |Value|Description|  
@@ -49,7 +44,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Merge Agent|  
 |**9**|Queue Reader Agent|  
   
- [ **@profile_id=**] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile to be displayed. *profile_id* is **int**, with a default of **-1**, which returns all the profiles in the **MSagent_profiles** table.  
   
 ## Result Sets  

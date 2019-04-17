@@ -1,15 +1,12 @@
 ---
 title: "What&#39;s New in SQLXML 4.0 SP1 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "registry keys [SQLXML]"
   - "SQLNCLI, SQLXML"
@@ -20,12 +17,13 @@ helpviewer_keywords:
   - "SQL Server Native Client, SQLXML"
   - "side-by-side installations [SQLXML]"
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # What&#39;s New in SQLXML 4.0 SP1
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 includes various updates and enhancements. This topic summarizes the updates and provides links to more detailed information, where available. SQLXML 4.0 SP1 provides additional enhancements to support the new data types introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. This topic includes the following subjects:  
   
 -   Installing SQLXML 4.0 SP1  
@@ -47,7 +45,7 @@ manager: "jhubbard"
 -   Migration Issues  
   
 ## Installing SQLXML 4.0 SP1  
- Before [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 was released with SQL Server and was part of the default installation of all SQL Server versions except for SQL Server Express. Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the latest version of SQLXML (SQLXML 4.0 SP1) is no longer included in SQL Server. To install SQLXML 4.0 SP1, download it from [Install Location for SQLXML 4.0 SP1](http://www.microsoft.com/download/details.aspx?id=30403).  
+ Before [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], SQLXML 4.0 was released with SQL Server and was part of the default installation of all SQL Server versions except for SQL Server Express. Starting with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], the latest version of SQLXML (SQLXML 4.0 SP1) is no longer included in SQL Server. To install SQLXML 4.0 SP1, download it from [Install Location for SQLXML 4.0 SP1](https://www.microsoft.com/download/details.aspx?id=30403).  
   
  The SQLXML 4.0 SP1 files are installed in the following location:  
   

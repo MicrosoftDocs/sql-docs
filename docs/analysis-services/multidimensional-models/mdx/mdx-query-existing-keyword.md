@@ -1,27 +1,17 @@
 ---
 title: "EXISTING Keyword (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "EXISTING"
-helpviewer_keywords: 
-  - "Existing keyword"
-ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Query - EXISTING Keyword
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Forces a specified set to be evaluated within the current context.  
   
 ## Syntax  
@@ -39,7 +29,7 @@ Existing Set_Expression
  By default, sets are evaluated within the context of the cube that contains the members of the set. The **Existing** keyword forces a specified set to be evaluated within the current context instead.  
   
 ## Example  
- The following example returns the count of the resellers whose sales have declined over the previous time period, based on user-selected State-Province member values evaluated using the **Aggregate** function. The [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md) and [DrilldownLevel (MDX)](../../../mdx/drilldownlevel-mdx.md) functions are used to return values for declining sales for product categories in the Product dimension. The **Existing** keyword forces the the set in the **Filter** function to be evaluated in the current context - that is, for the Washington and Oregon members of the State-Province attribute hierarchy.  
+ The following example returns the count of the resellers whose sales have declined over the previous time period, based on user-selected State-Province member values evaluated using the **Aggregate** function. The [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md) and [DrilldownLevel (MDX)](../../../mdx/drilldownlevel-mdx.md) functions are used to return values for declining sales for product categories in the Product dimension. The **Existing** keyword forces the set in the **Filter** function to be evaluated in the current context - that is, for the Washington and Oregon members of the State-Province attribute hierarchy.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

@@ -2,12 +2,10 @@
 title: "USE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/28/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "pdw, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "USE_TSQL"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "context changes [SQL Server]"
   - "modifying database context"
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
-caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # USE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Changes the database context to the specified database or database snapshot in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -35,8 +33,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 USE { database_name }   
 [;]  
 ```  
@@ -61,13 +57,6 @@ USE { database_name }
 ```  
 USE AdventureWorks2012;  
 GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- The following example changes the database context to the `AccountingDB` database.  
-  
-```  
-USE AccountingDB;  
 ```  
   
 ## See Also  

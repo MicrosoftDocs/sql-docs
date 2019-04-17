@@ -1,25 +1,18 @@
 ---
 title: "Working with SSMA for Oracle Console (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Working with SSMA for Oracle Console (DB2ToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) release for DB2 is now accessible through a console application at command line. The script files form the input to the application for executing the commands. As a console application, SSMA enables script-level interfacing, reduces the migration cycle, and scales the migration effort.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) release for DB2 is now accessible through a console application at command line. The script files form the input to the application for executing the commands. As a console application, SSMA enables script-level interfacing, reduces the migration cycle, and scales the migration effort.  
   
 This section explains the procedure to migrate the DB2 database using the SSMA Console application.  
   
@@ -40,5 +33,5 @@ Topics covered in this section include:
 |[Troubleshooting &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Provides brief information about fixing migration issues.|  
   
 ## See Also  
-[Getting Started with SSMA for DB2 Console](http://msdn.microsoft.com/en-us/f245c017-023e-4880-8721-8908d339525e)  
+[Getting Started with SSMA for DB2 Console](https://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
   

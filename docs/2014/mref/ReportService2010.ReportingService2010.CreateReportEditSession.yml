@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: ReportService2010.ReportingService2010.CreateReportEditSession*
+  commentId: M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[]
+  href: https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.createreporteditsession(v=sql.120).aspx
+  name: CreateReportEditSession(System.String,System.String,System.Byte[]
+  name.vb: CreateReportEditSession(System.String,System.String,System.Byte[]
+  fullName: ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[]*
+  fullName.vb: ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[]*

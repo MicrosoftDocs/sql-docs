@@ -2,15 +2,11 @@
 title: "Handling Namespaces in XQuery | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -18,13 +14,12 @@ helpviewer_keywords:
   - "namespaces [XQuery]"
   - "XQuery, namespaces"
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Handling Namespaces in XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This topic provides samples for handling namespaces in queries.  
   
@@ -35,7 +30,7 @@ manager: "jhubbard"
   
 ```  
 SELECT Instructions.query('  
-     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         /AWMI:root/AWMI:Location[1]/AWMI:step  
     ') as x  
 FROM Production.ProductModel  
@@ -45,8 +40,8 @@ WHERE ProductModelID=7
  This is the partial result:  
   
 ```  
-<AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
-…  
+<AWMI:step xmlns:AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
+...  
 ```  
   
  Note that the **namespace** keyword is used to define a new namespace prefix, "AWMI:". This prefix then must be used in the query for all elements that fall within the scope of that namespace.  
@@ -56,7 +51,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT Instructions.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         /root/Location[1]/step  
     ') as x  
 FROM Production.ProductModel  
@@ -66,18 +61,18 @@ where ProductModelID=7
  This is the result  
   
 ```  
-<step xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
-…  
+<step xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <material>aluminum sheet MS-2341</material> into the <tool>T-85A framing tool</tool>. </step>  
+...  
 ```  
   
- Note in this example that the namespace defined, `"http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`, is made to override the default, or empty, namespace. Because of this, you no longer have a namespace prefix in the path expression that is used to query. You also no longer have a namespace prefix in the element names that appear in the results. Additionally, the default namespace is applied to all elements, but not to their attributes.  
+ Note in this example that the namespace defined, `"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"`, is made to override the default, or empty, namespace. Because of this, you no longer have a namespace prefix in the path expression that is used to query. You also no longer have a namespace prefix in the element names that appear in the results. Additionally, the default namespace is applied to all elements, but not to their attributes.  
   
 ### C. Using namespaces in XML construction  
  When you define new namespaces, they are brought into scope not only for the query, but for the construction. For example, in constructing XML, you can define a new namespace by using the "`declare namespace ...`" declaration and then use that namespace with any elements and attributes that you construct to appear within the query results.  
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
      declare namespace myNS="uri:SomeNamespace";<myNS:Result>  
           { /ProductDescription/Summary }  
        </myNS:Result>  
@@ -92,7 +87,7 @@ where ProductModelID=19
 ```  
   
       <myNS:Result xmlns:myNS="uri:SomeNamespace">  
-  <Summary xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  <Summary xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
    <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
      Our top-of-the-line competition mountain bike. Performance-enhancing   
      options include the innovative HL Frame, super-smooth front   
@@ -105,7 +100,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
        <myNS:Result xmlns:myNS="uri:SomeNamespace">  
           { /ProductDescription/Summary }  
        </myNS:Result>  
@@ -119,7 +114,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-      declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+      declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
       declare default element namespace "uri:SomeNamespace";<Result>  
           { /PD:ProductDescription/PD:Summary }  
        </Result>  
@@ -134,7 +129,7 @@ where ProductModelID=19
 ```  
   
       <Result xmlns="uri:SomeNamespace">  
-  <PD:Summary xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  <PD:Summary xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
    <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
          Our top-of-the-line competition mountain bike. Performance-  
          enhancing options include the innovative HL Frame, super-smooth   

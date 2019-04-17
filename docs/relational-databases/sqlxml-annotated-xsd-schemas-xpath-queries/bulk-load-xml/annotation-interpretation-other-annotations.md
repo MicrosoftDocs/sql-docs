@@ -2,12 +2,10 @@
 title: "Other Annotations (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "url-encode annotation"
@@ -21,12 +19,13 @@ helpviewer_keywords:
   - "id-prefix annotation [SQLXML]"
   - "is-mapping-schema annotation"
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation - Other Annotations
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In addition to the annotations discussed in the previous topics in this section, XML Bulk Load interprets these other annotations, as follows:  
   
  **sql:id-prefix**  

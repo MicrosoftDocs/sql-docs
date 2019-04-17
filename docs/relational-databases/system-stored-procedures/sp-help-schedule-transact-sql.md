@@ -2,12 +2,10 @@
 title: "sp_help_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_schedule"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_schedule"
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_help_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lists information about schedules.  
   
@@ -41,16 +38,16 @@ sp_help_schedule
 ```  
   
 ## Arguments  
- [ **@schedule_id =** ] *id*  
+`[ @schedule_id = ] id`
  The identifier of the schedule to list. *schedule_name* is **int**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to list. *schedule_name* is **sysname**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
- [ **@attached_schedules_only** = ] *attached_schedules_only* ]  
+`[ @attached_schedules_only = ] attached_schedules_only ]`
  Specifies whether to show only schedules that a job is attached to. *attached_schedules_only* is **bit**, with a default of **0**. When *attached_schedules_only* is **0**, all schedules are shown. When *attached_schedules_only* is **1**, the result set contains only schedules that are attached to a job.  
   
- [ **@include_description** = ] *include_description*  
+`[ @include_description = ] include_description`
  Specifies whether to include descriptions in the result set. *include_description* is **bit**, with a default of **0**. When *include_description* is **0**, the *schedule_description* column of the result set contains a placeholder. When *include_description* is **1**, the description of the schedule is included in the result set.  
   
 ## Return Code Values  
@@ -91,7 +88,7 @@ sp_help_schedule
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Members of **SQLAgentUserRole** can only view the schedules that they own.  
   

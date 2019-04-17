@@ -2,12 +2,10 @@
 title: "semantickeyphrasetable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "semantickeyphrasetable"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "semantickeyphrasetable function"
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # semantickeyphrasetable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns a table with zero, one, or more rows for key phrases associated with the specified columns in the specified table.  
   
@@ -33,7 +30,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```tsql  
+```sql  
 SEMANTICKEYPHRASETABLE  
     (  
     table,  
@@ -92,7 +89,7 @@ SEMANTICKEYPHRASETABLE
 ###  <a name="HowToTopPhrases"></a> Example 1: Find the Top Key Phrases in a Specific Document  
  The following example retrieves the top 10 key phrases from the document specified by the @DocumentId variable in the Document column of the Production.Document table of the AdventureWorks sample database. The @DocumentId variable represents a value from the key column of the full-text index. The **SEMANTICKEYPHRASETABLE** function retrieves these results efficiently by using an index seek instead of a table scan. This example assumes that the column is configured for full-text and semantic indexing.  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -105,9 +102,9 @@ ORDER BY KEYP_TBL.score DESC;
 ```  
   
 ###  <a name="HowToTopDocuments"></a> Example 2: Find the Top Documents that Contain a Specific Key Phrase  
- The following example retrieves the top 25 documents that contain the key phrase “Bracket” from the Document column of the Production.Document table of the AdventureWorks sample database. This example assumes that the column is configured for full-text and semantic indexing.  
+ The following example retrieves the top 25 documents that contain the key phrase "Bracket" from the Document column of the Production.Document table of the AdventureWorks sample database. This example assumes that the column is configured for full-text and semantic indexing.  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

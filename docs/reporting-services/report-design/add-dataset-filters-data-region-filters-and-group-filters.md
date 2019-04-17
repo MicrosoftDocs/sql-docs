@@ -1,20 +1,15 @@
 ---
 title: "Add Dataset Filters, Data Region Filters, and Group Filters | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Add Dataset Filters, Data Region Filters, and Group Filters
   In a report, a filter is a part of a dataset, a data region, or a data region group that you create to limit the data that is used in the report. Filters are a way to help you control report data if you cannot change the dataset query, for example, if you are using a shared dataset.  

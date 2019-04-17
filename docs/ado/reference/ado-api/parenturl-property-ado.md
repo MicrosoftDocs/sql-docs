@@ -1,24 +1,21 @@
 ---
 title: "ParentURL Property (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "_Record::ParentURL"
 helpviewer_keywords: 
   - "ParentURL property [ADO]"
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ParentURL Property (ADO)
 Indicates an absolute URL string that points to the parent [Record](../../../ado/reference/ado-api/record-object-ado.md) of the current **Record** object.  
@@ -32,13 +29,13 @@ Indicates an absolute URL string that points to the parent [Record](../../../ado
  Suppose "second" is a folder contained under "first". Open the **Record** object by using the following syntax:  
   
 ```  
-record.ActiveConnection = "http://first"  
+record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- Now, the value of `the` **ParentURL** property is `"http://first"`, the same as **ActiveConnection**.  
+ Now, the value of `the` **ParentURL** property is `"https://first"`, the same as **ActiveConnection**.  
   
- The source can also be an absolute URL such as, `"http://first/second"`. The **ParentURL** property is then `"http://first"`, the level above `"second"`.  
+ The source can also be an absolute URL such as, `"https://first/second"`. The **ParentURL** property is then `"https://first"`, the level above `"second"`.  
   
  This property may be a null value if:  
   

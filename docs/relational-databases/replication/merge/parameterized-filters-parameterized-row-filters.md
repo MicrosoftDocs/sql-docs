@@ -2,13 +2,11 @@
 title: "Parameterized Row Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "publications [SQL Server replication], dynamic filters"
   - "merge replication [SQL Server replication], dynamic filters"
@@ -20,12 +18,12 @@ helpviewer_keywords:
   - "filters [SQL Server replication], parameterized"
   - "dynamic filters [SQL Server replication]"
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 69
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Parameterized Filters - Parameterized Row Filters
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Parameterized row filters allow different partitions of data to be sent to different Subscribers without requiring multiple publications to be created (parameterized filters were referred to as dynamic filters in previous versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). A partition is a subset of the rows in a table; depending on the settings chosen when creating a parameterized row filter, each row in a published table can belong to one partition only (which produces nonoverlapping partitions) or to two or more partitions (which produces overlapping partitions).  
   
  Nonoverlapping partitions can be shared among subscriptions or they can be restricted so that only one subscription receives a given partition. The settings that control partition behavior are described in "Using the Appropriate Filtering Options" later in this topic. Using these settings you can tailor parameterized filtering according to application and performance requirements. In general, overlapping partitions allow for greater flexibility, and nonoverlapping partitions replicated to a single subscription provide better performance.  
@@ -91,7 +89,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
  For example, employee Pamela Ansman-Wolfe has been assigned an employee ID of 280. Specify the value of the employee ID (280 in our example) for the HOST_NAME() value when creating a subscription for this employee. When the Merge Agent connects to the Publisher, it compares the value returned by HOST_NAME() to the values in the table and downloads only the row that contains a value of 280 in the **EmployeeID** column.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  The HOST_NAME() function returns an **nchar** value, so you must use CONVERT if the column in the filter clause is of a numeric data type, as it is in the example above. For performance reasons, we recommended that you do not apply functions to column names in parameterized row filter clauses, such as `CONVERT(nchar,EmployeeID) = HOST_NAME()`. Instead, we recommend using the approach shown in the example: `EmployeeID = CONVERT(int,HOST_NAME())`. This clause can be used for the **@subset_filterclause** parameter of [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), but it typically cannot be used in the New Publication Wizard (the wizard executes the filter clause to validate it, which fails because the computer name cannot be converted to an **int**). If you use the New Publication Wizard, we recommend specifying `CONVERT(nchar,EmployeeID) = HOST_NAME()` in the wizard and then use [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) to change the clause to `EmployeeID = CONVERT(int,HOST_NAME())` before creating a snapshot for the publication.  
   
  **To override the HOST_NAME() value**  
@@ -105,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   Merge Agent: specify a value for the **-Hostname** parameter at the command line or through an agent profile. For more information about the Merge Agent, see [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). For more information about agent profiles, see [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## Initializing a Subscription to a Publication with Parameterized Filters  
- When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ When parameterized row filters are used in merge publications, replication initializes each subscription with a two-part snapshot. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## Using the Appropriate Filtering Options  
  There are two key areas over which you have control when using parameterized filters:  
@@ -170,7 +168,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Articles can exist in only one publication; articles cannot be republished.  
   
--   The publication must allow Subscribers to initiate the snapshot process. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   The publication must allow Subscribers to initiate the snapshot process. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ##### Additional Considerations for Join Filters  
   

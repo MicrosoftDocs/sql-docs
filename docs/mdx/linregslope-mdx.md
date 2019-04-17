@@ -1,28 +1,17 @@
 ---
 title: "LinRegSlope (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "LINREGSLOPE"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "LinRegSlope function"
-ms.assetid: dc61f941-b25d-4eef-9b25-75e03a1dd6de
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # LinRegSlope (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Calculates the linear regression of a set, and returns the value of the slope in the regression line, y = ax + b.  
   

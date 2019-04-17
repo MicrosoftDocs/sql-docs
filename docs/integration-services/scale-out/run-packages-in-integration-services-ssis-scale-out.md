@@ -1,75 +1,78 @@
 ---
 title: "Run Packages in SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2017"
-ms.prod: "sql-server-2017"
+description: "This article describes how to run SSIS packages in Scale Out"
+ms.custom: performance
+ms.date: "12/13/2017"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: integration-services
+ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
+ms.reviewer: "douglasl"
+manager: craigg
 f1_keywords: 
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
 ---
-
 # Run packages in Integration Services (SSIS) Scale Out
-After the packages are deployed to the Integration Services server, you can execute them in Scale Out.
+After you deploy packages to the Integration Services server, you can run them in Scale Out by using one of the following methods:
 
-## Run packages with Execute Package In Scale Out dialog 
+-   [Execute Package in Scale Out dialog box](#scale_out_dialog)
 
-1. Open the Execute Package In Scale Out dialog box
+-   [Stored procedures](#stored_proc)
+
+-   [SQL Server Agent jobs](#sql_agent)
+
+## <a name="scale_out_dialog"></a> Run packages with the Execute Package in Scale Out dialog box
+
+1. Open the Execute Package In Scale Out dialog box.
 
     In [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)], connect to the Integration Services server. In Object Explorer, expand the tree to display the nodes under **Integration Services Catalogs**. Right-click the **SSISDB** node or the project or the package you want to run, and then click **Execute in Scale Out**.
 
-2. Select packages and set the options
+2. Select packages and set the options.
 
-    On the **Package Selection** page, you select multiple packages to run and set the environment, parameters, connection managers, and advanced options for each package. Click a package to set these options.
+    On the **Package Selection** page, select one or more  packages to run. Set the environment, parameters, connection managers, and advanced options for each package. Click a package to set these options.
     
-    In the **Advanced** tab, you set a Scale Out option called **Retry count**. It sets the number of times a package execution will retry if it fails.
+    On the **Advanced** tab, set a Scale Out option called **Retry count** to specify the number of times a package execution will retry if it fails.
 
-    > [!Note]
-    > The **Dump on errors** option only takes effect when the account running Scale Out Worker service is an administrator of local computer.
+    > [!NOTE]
+    > The **Dump on errors** option only works when the account running Scale Out Worker service is an administrator on the local computer.
 
-3. Select machines
+3. Select worker computers.
 
-    On the **Machine Selection** page, you select the Scale Out Worker machines to run the packages. By default, any machine is allowed to run the packages. 
+    On the **Machine Selection** page, select the Scale Out Worker computers to run the packages. By default, any computer is allowed to run the packages. 
 
-   > [!Note] 
-   > The packages are executed with the credential of the user accounts of the Scale Out Worker services, which are shown on the **Machine Selection** page. 
-   >By default, the account is NT Service\SSISScaleOutWorker140. You may want to change to your own lab accounts.
+   > [!NOTE] 
+   > The packages are executed with the credentials of the user accounts of the Scale Out Worker services. Review these credentials on the **Machine Selection** page. By default, the account is `NT Service\SSISScaleOutWorker140`.
 
-   >[!WARNING]
-   >Package executions triggered by different users on the same worker are run with the same account. There is no security boundary among them. 
+   > [!WARNING]
+   > Package executions triggered by different users on the same worker run with the same credentials. There is no security boundary between or among them. 
 
-4. Run the packages and view reports 
+4. Run the packages and view reports.
 
     Click **OK** to start the package executions. To view the execution report for a package, right-click the package in Object Explorer, click **Reports**, click **All Executions**, and find the execution.
     
-## Run packages with stored procedures
+## <a name="stored_proc"></a> Run packages with stored procedures
 
-1. Create executions
+1.  Create executions.
 
-    Call [catalog].[create_execution] for each package. Set parameter **@runinscaleout** to True. If not all Scale Out Worker machines are allowed to run the package, set parameter **@useanyworker** to False.   
+    Call `[catalog].[create_execution]` for each package. Set the parameter **@runinscaleout** to `True`. If not all Scale Out Worker computers are allowed to run the package, set the parameter **@useanyworker** to `False`. For more info about this stored procedure and the **@useanyworker** parameter, see [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
-2. Set execution parameters
+2. Set execution parameters.
 
-    Call [catalog].[set_execution_parameter_value] for each execution.
+    Call `[catalog].[set_execution_parameter_value]` for each execution.
 
-3. Set Scale Out Workers
+3. Set the Scale Out Workers.
 
-    Call [catalog].[add_execution_worker]. If any machine is allowed to run the package, you do not need to call this stored procedure. 
+    Call `[catalog].[add_execution_worker]`. If all computers are allowed to run the package, you don't have to call this stored procedure. 
 
-4. Start executions
+4. Start the executions.
 
-    Call [catalog].[start_execution]. Set parameter **@retry_count** to set the number of times a package execution will retry if it fails.
+    Call `[catalog].[start_execution]`. Set the parameter **@retry_count** to set the number of times a package execution will retry if it fails.
     
-#### Example
-The following example runs two packages, package1.dtsx and package2.dtsx, in Scale Out with one Scale Out Worker.  
+### Example
+The following example runs two packages, `package1.dtsx` and `package2.dtsx`, in Scale Out with one Scale Out Worker.  
 
 ```sql
 Declare @execution_id bigint
@@ -92,7 +95,7 @@ GO
 ```
 
 ### Permissions
-Running packages in Scale Out requires one the following permissions:
+To run packages in Scale Out, you have to have one the following permissions:
 
 -   Membership in the **ssis_admin** database role  
 
@@ -101,14 +104,20 @@ Running packages in Scale Out requires one the following permissions:
 -   Membership in the **sysadmin** server role  
 
 ## Set default execution mode
-To set default execution mode to "Scale Out", right-click the **SSISDB** node in Object Explorer of SSMS and select **Properties**.
-In the **Catalog Properities** dialog, set **Server-wide Default execution mode** to **Scale Out**.
+To set the default execution mode for packages to **Scale Out**, do the following things:
 
-After this setting, there's no need to specify the **@runinscaleout** parameter for [catalog].[create_execution]. Executions are executed in Scale Out automatically. 
+1.  In SSMS, in Object Explorer, right-click the **SSISDB** node and select **Properties**.
 
-![Exe mode](media\exe-mode.PNG)
+2.  In the **Catalog Properties** dialog box, set **Server-wide Default execution mode** to **Scale Out**.
 
-To switch default execution mode back to non-Scale Out mode, just set  **Server-wide Default execution mode** to **Server**.
+After you set this default execution mode, you no longer have to specify the **@runinscaleout** parameter when you call the `[catalog].[create_execution]` stored procedure. Packages are run in Scale Out automatically. 
 
-## Run package in SQL agent job
-In Sql agent job, you can choose to run a SSIS package as one step of the job. To run the package in Scale Out, you can leverage the above default execution mode. After setting default execution mode to "Scale Out", packages in Sql agent jobs will be run in Scale Out.
+![Exe mode](media/exe-mode.PNG)
+
+To switch the default execution mode back so that packages no longer run by default in Scale Out mode, set  **Server-wide Default execution mode** to **Server**.
+
+## <a name="sql_agent"></a> Run package in SQL Server Agent job
+In a SQL Server Agent job, you can run an SSIS package as one step of the job. To run the package in Scale Out, set the default execution mode to **Scale Out**. After you set the default execution mode to **Scale Out**, packages in SQL Server Agent jobs run in Scale Out mode.
+
+## Next steps
+-   [Troubleshoot Scale Out](troubleshooting-scale-out.md)

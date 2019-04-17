@@ -2,23 +2,21 @@
 title: "Set a Trace Filter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server], traces"
   - "traces [SQL Server], filters"
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Set a Trace Filter (Transact-SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to use stored procedures to create a filter that retrieves only the information you need on an event being traced.  
   
 ### To set a trace filter  
@@ -28,7 +26,7 @@ manager: "jhubbard"
 2.  Execute **sp_trace_setfilter** to configure the type of information to retrieve for the event being traced.  
   
 > [!IMPORTANT]  
->  Unlike regular stored procedures, parameters of all [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stored procedures (**sp_trace_*xx***) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure will return an error.  
+>  Unlike regular stored procedures, parameters of all [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] stored procedures (**sp_trace\__xx_**) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure will return an error.  
   
 ## See Also  
  [Filter a Trace](../../relational-databases/sql-trace/filter-a-trace.md)   

@@ -1,26 +1,27 @@
 ---
-title: "Create Clustered DTC for an Always On Availability Group | Microsoft Docs"
-ms.custom: ""
+title: "Create Clustered DTC resource for an availability group"
+description: "This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group."
+ms.custom: "seodec18"
 ms.date: "08/30/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: 2
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Create Clustered DTC for an Always On Availability Group
+# Create Clustered DTC resource for an Always On availability group
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 This topic walks you through a complete configuration of a clustered DTC resource for a SQL Server Always On Availability Group. The complete configuration can take up to an hour to complete. 
 
 The walkthrough creates a clustered DTC resource and the SQL Server Availability Groups to align with the requirements at [Cluster DTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
-The walkthrough uses PowerShell and Transact-SQL (T-SQL) scripts.  Many of the T-SQL scripts require **SQLCMD Mode** to be enabled.  For more information on **SQLCMD Mode**, see [Enable SQLCMD Scripting in Query Editor](https://msdn.microsoft.com/library/ms174187.aspx#Anchor_1).  The PowerShell module **FailoverClusters** must be imported.  For more information of importing a PowerShell module, see [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).  This walkthrough is based on the following:
+The walkthrough uses PowerShell and Transact-SQL (T-SQL) scripts.  Many of the T-SQL scripts require **SQLCMD Mode** to be enabled.  For more information on **SQLCMD Mode**, see [Enable SQLCMD Scripting in Query Editor](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  The PowerShell module **FailoverClusters** must be imported.  For more information of importing a PowerShell module, see [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx).  This walkthrough is based on the following:
 - All requirements from [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md) have been met.  
 - The domain is `contoso.lab`.
 - The user has the Create Computer objects permission in the OU where the DTC Network Name resource will be created.
@@ -110,9 +111,9 @@ foreach ($node in $nodes) {
     };
 ```  
 ## 3.  Configure **in-doubt xact resolution** 
-This script will configure the **in-doubt xact resolution** server configuration option to “presume commit” for in-doubt transactions.  Run the following T-SQL script in SQL Server Management Studio (SSMS) against `SQLNODE1` in **SQLCMD mode**.
+This script will configure the **in-doubt xact resolution** server configuration option to "presume commit" for in-doubt transactions.  Run the following T-SQL script in SQL Server Management Studio (SSMS) against `SQLNODE1` in **SQLCMD mode**.
 
-```tsql  
+```sql  
 /*******************************************************************
 	Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -153,7 +154,7 @@ GO
 ## 4. Create test databases
 The script will create a database named `AG1` on `SQLNODE1` and a database named `dtcDemoAG1` on `SQLNODE2`.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
 
-```tsql  
+```sql  
 /*******************************************************************
 	Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -211,7 +212,7 @@ GO
 ## 5.	Create Endpoints
 This script will create an endpoint called `AG1_endpoint` that listens on TCP port `5022`.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
 
-```tsql  
+```sql  
 /**********************************************
 Execute on SQLNODE1 in SQLCMD mode
 **********************************************/
@@ -244,7 +245,7 @@ GO
 ## 6.	Prepare databases for Availability Group
 The script will back up `AG1` on `SQLNODE1` and restore it to `SQLNODE2`.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
 
-```tsql  
+```sql  
 /*******************************************************************
 	Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -277,7 +278,7 @@ GO
 ## 7.	Create Availability Group
 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] must be created with the **CREATE AVAILABILITY GROUP** command and the **WITH DTC_SUPPORT = PER_DB** clause.  You cannot currently alter an existing Availability Group.  The New Availability Group wizard does not allow you to enable DTC support for a new Availability Group.  The following script will create the new Availability Group and join the secondary.  Run the following T-SQL script in SSMS against `SQLNODE1` in **SQLCMD mode**.
 
-```tsql  
+```sql  
 /*******************************************************************
 	Execute script in its entirety on SQLNODE1 in SQLCMD mode
 *******************************************************************/
@@ -314,21 +315,21 @@ GO
 ```
 
 > [!IMPORTANT]
-You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
->
+> You cannot Enable DTC on an existing [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will accept the following syntax for an existing Availability Group:  
+> 
 > USE master;    
 > ALTER AVAILABILITY GROUP \<availability_group\>  
-SET (DTC_Support = Per_DB)  
->
->However, no configuration change will actually be made.  You can confirm the **dtc_support** configuration with the following T-SQL query:  
->
->SELECT name, dtc_support FROM sys.availability_groups  
->
->The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
+> SET (DTC_Support = Per_DB)  
+> 
+> However, no configuration change will actually be made.  You can confirm the **dtc_support** configuration with the following T-SQL query:  
+> 
+> SELECT name, dtc_support FROM sys.availability_groups  
+> 
+> The only way to enable DTC support on an Availability Group is by creating an Availability Group using Transact-SQL.
  
 ## <a name="ClusterDTC"></a>8.	Prepare cluster resources
 
-This script will prepare the DTC dependent resources: Disk and IP.  The shared storage will be added to the Windows Cluster.  Network resources will be created and then the DTC will be created and made as a resource to the Availability Group.  Run the following PowerShell Script on `SQLNODE1`.
+This script will prepare the DTC dependent resources: Disk and IP.  The shared storage will be added to the Windows Cluster.  Network resources will be created and then the DTC will be created and made as a resource to the Availability Group.  Run the following PowerShell Script on `SQLNODE1`. Thanks [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) for the script!
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server
@@ -446,7 +447,7 @@ IF ($restart -eq 1)
 
 In order to guarantee that distributed transactions use the clustered DTC resource, disable the local DTC on both nodes.  The following script will disable and stop the local DTC service on each node.  Run the following PowerShell Script on `SQLNODE1`.
 ```powershell  
-# Disble local DTC service
+# Disable local DTC service
 
 \<#
 Script: 
@@ -480,7 +481,7 @@ With the clustered DTC service completely configured, you need to stop and resta
 The first time [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service requires a distributed transaction, it enrolls with a DTC service. SQL Server service will continue to use that DTC service until it is restarted. If a clustered DTC service is available, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will enroll with the clustered DTC service. If a clustered DTC service is not available, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] will enroll with the local DTC service. In order to verify that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enrolls with the clustered DTC service, stop and restart each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
 
 Follow the steps contained in the T-SQL script below:
-```tsql  
+```sql  
 /*
 Gracefully cycle the SQL Server service and failover the Availability Group
 	a.	On SQLNODE2, cycle the SQL Server service from SQL Server Configuration Manger
@@ -541,7 +542,7 @@ This test uses a linked server from `SQLNODE1` to `SQLNODE2` to create a distrib
 ### Create linked servers  
 The following script will create two linked servers on `SQLNODE1`.  Run the following T-SQL script in SSMS against `SQLNODE1`.
 
-```tsql  
+```sql  
 -- SQLNODE1
 IF NOT EXISTS (SELECT * FROM sys.servers where name = N'SQLNODE1')
 BEGIN
@@ -557,7 +558,7 @@ END
 ### Execute a distributed transaction
 This script will first return the current DTC transaction statistics.  Then the script will execute a distributed transaction utilizing databases on `SQLNODE1` and `SQLNODE2`.  Then the script will again return the DTC transaction statics which will now should an increased count.  Physically connect to `SQLNODE1` and run the following T-SQL Script in SSSMS against `SQLNODE1` in **SQLCMD mode**.
 
-```tsql  
+```sql  
 /*******************************************************************
 	Execute script in its entirety on SQLNODE1 in SQLCMD mode
 	Must be physically connected to SQLNODE1
@@ -581,4 +582,4 @@ GO
 ```
 
 > [!IMPORTANT]
-> The `USE AG1` statement must be executed to ensure the database context is set to `AG1`.  Otherwise, you will receive the following error message: “Transaction context in use by another session.”
+> The `USE AG1` statement must be executed to ensure the database context is set to `AG1`.  Otherwise, you will receive the following error message: "Transaction context in use by another session."

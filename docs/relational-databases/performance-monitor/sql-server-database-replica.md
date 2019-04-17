@@ -2,28 +2,26 @@
 title: "SQL Server, Database Replica | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
   - "SQLServer:Database Replica"
   - "performance counters [SQL Server], AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], performance counters"
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # SQL Server, Database Replica
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The **SQLServer:Database Replica** performance object contains performance counters that report information about the secondary databases of an Always On availability group in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This object is valid only on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary replica.  
   
-|Counter Name|Description|View on…|  
+|Counter Name|Description|View on...|  
 |------------------|-----------------|--------------|  
 |**File Bytes Received/sec**|Amount of FILESTREAM data received by the secondary replica for the secondary database in the last second.|Secondary replica|  
 |**Log Apply Pending Queue**|Number of log blocks that is waiting to be applied to the database replica.|Secondary replica|

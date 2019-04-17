@@ -1,28 +1,17 @@
 ---
 title: "LinRegIntercept (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "LINREGINTERCEPT"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "LinRegIntercept function"
-ms.assetid: 6ef2527d-e519-4b66-b67e-131c5831234e
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # LinRegIntercept (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Calculates the linear regression of a set and returns the value of the x-intercept in the regression line, y = ax + b.  
   
@@ -48,7 +37,7 @@ LinRegIntercept(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
   
  y = ax+b  
   
- The **LinRegIntercept** function evaluates the specified set against the first numeric expression to obtain the values for the y-axis. The function then evaluates the specified set against the second numeric expression, if specified, to obtain the values for the x-axis. If the second numeric expression is not specified, the function uses the current context of the cells in the specified set as values for the x-axis. Not specifying the the x-axis argument is frequently used with the Time dimension.  
+ The **LinRegIntercept** function evaluates the specified set against the first numeric expression to obtain the values for the y-axis. The function then evaluates the specified set against the second numeric expression, if specified, to obtain the values for the x-axis. If the second numeric expression is not specified, the function uses the current context of the cells in the specified set as values for the x-axis. Not specifying the x-axis argument is frequently used with the Time dimension.  
   
  After obtaining the set of points, the **LinRegIntercept** function returns the intercept of the regression line (b in the previous equation).  
   

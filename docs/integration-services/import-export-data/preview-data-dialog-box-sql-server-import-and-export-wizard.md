@@ -2,20 +2,16 @@
 title: "Preview Data Dialog Box (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.previewdata.f1"
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Preview Data Dialog Box (SQL Server Import and Export Wizard)
   After you specify the data that you want to copy, you can optionally click **Preview** to open the **Preview Data** dialog box. On this page, you can preview up to 200 rows of sample data from your data source. This confirms that the wizard is going to copy the data that you want to copy.

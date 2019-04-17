@@ -2,22 +2,20 @@
 title: "Missing Join Predicate Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Missing Join Predicate event class"
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Missing Join Predicate Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Missing Join Predicate event class indicates that a query is being executed that has no join predicate. This could result in a long-running query. For more information on join predicates, see [Predicates &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md).  
   
 ## Missing Join Predicate Event Class Data Columns  

@@ -1,83 +1,63 @@
 ---
-title: "In-database R analytics for SQL developers (tutorial)| Microsoft Docs"
-ms.custom: ""
-ms.date: "07/26/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-  - "TSQL"
-ms.assetid: c18cb249-2146-41b7-8821-3a20c5d7a690
-caps.latest.revision: 15
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Tutorial for in-database analytics using R - SQL Server Machine Learning
+description: Learn how to embed R programming language code in SQL Server stored procedures and T-SQL functions.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 12/18/2018  
+ms.topic: tutorial
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 ---
-# In-database R analytics for SQL developers (tutorial)
+# Tutorial: R data analytics for SQL developers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-The goal of this tutorial is to provide SQL programmers with hands-on experience building a machine learning solution in SQL Server. In this tutorial, you'll learn how to incorporate R into an application or BI solution by wrapping R code in stored procedures.
+In this tutorial for SQL programmers, learn about R integration by building and deploying an R-based machine learning solution using a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. You'll use T-SQL, SQL Server Management Studio, and a database engine instance with [Machine Learning Services]([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) and the R language support
 
-> [!NOTE]
-> 
-> The same solution is available in Python. SQL Server 2017 is required. See [In-database analytics for Python developers](../tutorials/sqldev-in-database-python-for-sql-developers.md)
+This tutorial introduces you to R functions used in a data modeling workflow. Steps include data exploration, building and training a binary classification model, and model deployment. The model you will build predicts whether a trip is likely to result in a tip based on the time of day, distance travelled, and pick-up location. 
 
-## Overview
+All of the R code used in this tutorial is wrapped in stored procedures that you create and run in Management Studio.
 
-The process of building an end to end solution typically consists of obtaining and cleaning data, data exploration and feature engineering, model training and tuning, and finally deployment of the model in production. Development and testing of the actual code is best performed using a dedicated development environment. For R, that might mean RStudio or [!INCLUDE[rtvs-short](../../includes/rtvs-short-md.md)].
+## Background for SQL developers
 
-However, after the solution has been created, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+The process of building a machine learning solution is a complex one that can involve multiple tools, and the coordination of subject matter experts across several phases:
 
-In this tutorial, we assume that you have been given all the R code needed for the solution, and focus on building and deploying the solution using SQL Server.
++ obtaining and cleaning data
++ exploring the data and building features useful for modeling
++ training and tuning the model
++ deployment to production
 
-- [Lesson 1: Download the sample data](../tutorials/sqldev-download-the-sample-data.md)
+Development and testing of the actual code is best performed using a dedicated R development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-    Download the sample dataset and the sample SQL script files to a local computer.
+The purpose of this multi-part tutorial is an introduction to a typical workflow for migrating "finished R code" to  SQL Server. 
 
-- [Lesson 2: Import data to SQL Server using PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [Lesson 1: Explore and visualize data shape and distribution by calling R functions in stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-    Execute a PowerShell script that creates a database and a table on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instance and loads the sample data to the table.
-
-- [Lesson 3: Explore and visualize the data](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-    Perform basic data exploration and visualization, by calling R packages and functions from [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures.
-
-- [Lesson 4: Create data features using T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
-
-    Create new data features using custom SQL functions.
+- [Lesson 2: Create data features using R in T-SQL functions](sqldev-create-data-features-using-t-sql.md)
   
--   [Lesson 5: Train and save an R model using T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-
-    Build a machine learning model using R in stored procedures. Save the model to a SQL Server table.
+- [Lesson 3: Train and save an R model using functions and stored procedures](sqldev-train-and-save-a-model-using-t-sql.md)
   
--   [Lesson 6: Operationalize the model](../tutorials/sqldev-operationalize-the-model.md)
+- [Lesson 4: Predict potential outcomes using an R model in a stored procedure](../tutorials/sqldev-operationalize-the-model.md)
 
-    After the model has been saved to the database, call the model for prediction from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
+After the model has been saved to the database, call the model for predictions from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
 
-### Scenario
+## Prerequisites
 
-This tutorial uses a well-known public dataset, based on trips in New York city taxis. To make the sample code run quicker, we created a representative 1% sampling of the data. You'll use this data to build a binary classification model that predicts whether a particular trip is likely to get a tip or not, based on columns such as the time of day, distance, and pick-up location.
+All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-### Requirements
+This tutorial assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know R. As such, all R code is provided. 
 
-This tutorial is intended for users who are already familiar with fundamental database operations, such as creating databases and tables, importing data into tables, and creating SQL queries. All R code is provided, so no R development environment is required. An experienced SQL programmer should be able to complete this example by using [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and by running the provided PowerShell scripts.
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) or [SQL Server 2017 Machine Learning Services with R enabled](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-However, before starting the tutorial, you must complete these preparations:
++ [R libraries](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
 
-- Connect to an instance of SQL Server 2016 with R Services, or SQL Server 2017 with Machine Learning Services and R enabled.
-- The login that you use for this tutorial must have permissions to create databases and other objects, to upload data, select data, and run stored procedures.
++ [Permissions](../security/user-permission.md)
 
-> [!NOTE]
-> We recommend that you do **not** use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to write or test R code. If the code that you embed in a stored procedure has any problems, the information that is returned from the stored procedure is usually inadequate to understand the cause of the error.
-> 
-> For debugging, we recommend you use a tool such as [!INCLUDE[rtvs-short](../../includes/rtvs-short-md.md)], or RStudio. The R scripts provided in this tutorial have already been developed and debugged using traditional R tools.
++ [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
 
-## Next lesson
 
-[Lesson 1: Download the sample data](../tutorials/sqldev-download-the-sample-data.md)
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Explore and visualize data using R functions in stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)

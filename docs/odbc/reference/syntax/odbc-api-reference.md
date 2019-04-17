@@ -2,19 +2,16 @@
 title: "ODBC API Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apitype: "dllExport"
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ODBC API Reference
 The topics in this section describe each ODBC function in alphabetical order. Each function is defined as a C programming language function. Descriptions include the following:  
@@ -39,7 +36,7 @@ The topics in this section describe each ODBC function in alphabetical order. Ea
   
 -   References to related functions  
   
- The standard CLI conformance level can be one of the following: ISO 92, Open Group, ODBC, or Deprecated. A function tagged as ISO 92–conformant also appears in Open Group version 1, because Open Group is a pure superset of ISO 92. A function tagged as Open Group-compliant also appears in ODBC 3.*x*, because ODBC 3.*x* is a pure superset of Open Group version 1. A function tagged as ODBC-compliant appears in neither standard. A function tagged as deprecated has been deprecated in ODBC 3.*x*.  
+ The standard CLI conformance level can be one of the following: ISO 92, Open Group, ODBC, or Deprecated. A function tagged as ISO 92-conformant also appears in Open Group version 1, because Open Group is a pure superset of ISO 92. A function tagged as Open Group-compliant also appears in ODBC 3.*x*, because ODBC 3.*x* is a pure superset of Open Group version 1. A function tagged as ODBC-compliant appears in neither standard. A function tagged as deprecated has been deprecated in ODBC 3.*x*.  
   
  Handling of diagnostic information is described in the [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) function description. The text associated with SQLSTATE values is included to provide a description of the condition but is not intended to prescribe specific text.  
   

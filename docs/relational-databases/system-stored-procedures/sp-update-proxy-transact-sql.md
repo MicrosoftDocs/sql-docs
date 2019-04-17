@@ -2,12 +2,10 @@
 title: "sp_update_proxy (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_update_proxy"
@@ -18,19 +16,14 @@ helpviewer_keywords:
   - "ALTER PROXY statement"
   - "sp_update_proxy"
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
-caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # sp_update_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the properties of an existing proxy.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,25 +42,25 @@ sp_update_proxy
 ```  
   
 ## Arguments  
- [ **@proxy_id**= ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to change. The *proxy_id* is **int**, with a default of NULL.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to change. The *proxy_name* is **sysname**, with a default of NULL.  
   
- [ **@credential_name** = ] **'***credential_name***'**  
+`[ @credential_name = ] 'credential_name'`
  The name of the new credential for the proxy. The *credential_name* is **sysname**, with a default of NULL. Either *credential_name* or *credential_id* may be specified.  
   
- [ **@credential_id** = ] *credential_id*  
+`[ @credential_id = ] credential_id`
  The identification number of the new credential for the proxy. The *credential_id* is **int**, with a default of NULL. Either *credential_name* or *credential_id* may be specified.  
   
- [ **@new_name**= ] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  The new name of the proxy. The *new_name* is **sysname**, with a default of NULL. When provided, the procedure changes the name of the proxy to *new_name*. When this argument is NULL, the name of the proxy remains unchanged.  
   
- [ **@enabled** = ] *is_enabled*  
+`[ @enabled = ] is_enabled`
  Is whether the proxy is enabled. The *is_enabled* flag is **tinyint**, with a default of NULL. When *is_enabled* is **0**, the proxy is not enabled, and cannot be used by a job step. When this argument is NULL, the status of the proxy remains unchanged.  
   
- [ **@description**= ] **'***description***'**  
+`[ @description = ] 'description'`
  The new description of the proxy. The *description* is **nvarchar(512)**, with a default of NULL. When this argument is NULL, the description of the proxy remains unchanged.  
   
 ## Return Code Values  
@@ -98,7 +91,7 @@ GO
   
 ## See Also  
  [SQL Server Agent Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Implement SQL Server Agent Security](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   

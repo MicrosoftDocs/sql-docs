@@ -1,14 +1,11 @@
 ---
 title: "Rename a Computer that Hosts a Stand-Alone Instance of SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/08/2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "remote login errors [SQL Server]"
   - "standalone computer names [SQL Server]"
@@ -19,15 +16,18 @@ helpviewer_keywords:
   - "deleting remote logins"
   - "dropping remote logins"
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Rename a Computer that Hosts a Stand-Alone Instance of SQL Server
-  When you change the name of the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the new name is recognized during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup. You do not have to run Setup again to reset the computer name. Instead, use the following steps to update system metadata that is stored in sys.servers and reported by the system function @@SERVERNAME. Update system metadata to reflect computer name changes for remote connections and applications that use @@SERVERNAME, or that query the server name from sys.servers.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+When you change the name of the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the new name is recognized during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup. You do not have to run Setup again to reset the computer name. Instead, use the following steps to update system metadata that is stored in sys.servers and reported by the system function @@SERVERNAME. Update system metadata to reflect computer name changes for remote connections and applications that use @@SERVERNAME, or that query the server name from sys.servers.  
   
- The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used only to rename the part of the instance name that corresponds to the computer name. For example, you can change a computer named MB1 that hosts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named Instance1 to another name, such as MB2. However, the instance part of the name, Instance1, will remain unchanged. In this example, the \\\\*ComputerName*\\*InstanceName* would be changed from \\\MB1\Instance1 to \\\MB2\Instance1.  
+The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used only to rename the part of the instance name that corresponds to the computer name. For example, you can change a computer named MB1 that hosts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] named Instance1 to another name, such as MB2. However, the instance part of the name, Instance1, will remain unchanged. In this example, the \\\\*ComputerName*\\*InstanceName* would be changed from \\\MB1\Instance1 to \\\MB2\Instance1.  
   
  **Before you begin**  
   
@@ -45,11 +45,11 @@ manager: "jhubbard"
   
  You can connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using the new computer name after you have restarted [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To ensure that @@SERVERNAME returns the updated name of the local server instance, you should manually run the following procedure that applies to your scenario. The procedure you use depends on whether you are updating a computer that hosts a default or named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### To rename a computer that hosts a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## Rename a computer that hosts a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   For a renamed computer that hosts a default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run the following procedures:  
   
-    ```  
+    ```sql
     sp_dropserver <old_name>;  
     GO  
     sp_addserver <new_name>, local;  
@@ -60,7 +60,7 @@ manager: "jhubbard"
   
 -   For a renamed computer that hosts a named instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], run the following procedures:  
   
-    ```  
+    ```sql
     sp_dropserver <old_name\instancename>;  
     GO  
     sp_addserver <new_name\instancename>, local;  
@@ -72,7 +72,7 @@ manager: "jhubbard"
 ## After the Renaming Operation  
  After a computer has been renamed, any connections that used the old computer name must connect by using the new name.  
   
-#### To verify that the renaming operation has completed successfully  
+## Verify renaming operation  
   
 -   Select information from either @@SERVERNAME or sys.servers. The @@SERVERNAME function will return the new name, and the sys.servers table will show the new name. The following example shows the use of @@SERVERNAME.  
   
@@ -80,34 +80,34 @@ manager: "jhubbard"
     SELECT @@SERVERNAME AS 'Server Name';  
     ```  
   
-## Additional Considerations  
+## Additional considerations  
  **Remote Logins** - If the computer has any remote logins, running **sp_dropserver** might generate an error similar to the following:  
   
  `Server: Msg 15190, Level 16, State 1, Procedure sp_dropserver, Line 44 There are still remote logins for the server 'SERVER1'.`  
   
  To resolve the error, you must drop remote logins for this server.  
   
-#### To drop remote logins  
+### Drop remote logins  
   
 -   For a default instance, run the following procedure:  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   For a named instance, run the following procedure:  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
   
  **Linked Server Configurations** - Linked server configurations will be affected by the computer renaming operation. Use **sp_addlinkedserver** or **sp_setnetname** to update computer name references. For more information, see the [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md).  
   
- **Client Alias Names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid and. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](http://go.microsoft.com/fwlink/?LinkId=111063).  
+ **Client Alias Names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid and. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
-## See Also  
- [Install SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
+## See also  
+ [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  
   
   

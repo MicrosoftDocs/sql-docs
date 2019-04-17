@@ -2,24 +2,24 @@
 title: "Import Values from an Excel File into a Domain | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.importfailing.f1"
   - "sql13.dqs.kb.importselect.f1"
   - "sql13.dqs.kb.failingvalues.f1"
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Import Values from an Excel File into a Domain
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   This topic describes how to import values from an Excel file into a domain in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Using an Excel file to import domain values into the [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] application simplifies the knowledge generation process, saving time and effort. It enables people who have a list of valid data values in an Excel file or a text file to import those values into a domain. From an Excel file you can import domain values into a domain or domains into a knowledge base. (See [Import Domains from an Excel File in Knowledge Discovery](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) for more information about importing domains into a knowledge base.) Exporting to an Excel file is not supported.  
   
  You can import data values in two ways:  
@@ -60,9 +60,9 @@ manager: "jhubbard"
   
 10. Click **OK**. A progress bar is displayed, with an indication of how many values have been imported successfully, how many were not imported, and the total number of values. Click the **Cancel** button to cancel the process.  
   
-11. Verify that “Import complete” is displayed in the **Import Domain Values** dialog box. See which values were successfully imported, and which were not, in this dialog box. It indicates the name of the file and the file’s path, the completion status of the operation, how many values have been imported successfully, how many values were not imported, and the total number of values processed.  
+11. Verify that "Import complete" is displayed in the **Import Domain Values** dialog box. See which values were successfully imported, and which were not, in this dialog box. It indicates the name of the file and the file's path, the completion status of the operation, how many values have been imported successfully, how many values were not imported, and the total number of values processed.  
   
-12. For those values that were not successfully imported, click **Log** to display the **Import Domain Values – Failing Values** dialog box to see why the import operation failed. The **Failing Value** column shows the values that failed to be imported from an Excel file into a domain, and the **Reason** column explains why the import failed. Click **Copy to clipboard** to copy the **Failing Value** table onto the clipboard, from which you can copy it into another program, such as an Excel spreadsheet or a Notepad file. Click **OK** to close the **Failing Values** dialog box.  
+12. For those values that were not successfully imported, click **Log** to display the **Import Domain Values - Failing Values** dialog box to see why the import operation failed. The **Failing Value** column shows the values that failed to be imported from an Excel file into a domain, and the **Reason** column explains why the import failed. Click **Copy to clipboard** to copy the **Failing Value** table onto the clipboard, from which you can copy it into another program, such as an Excel spreadsheet or a Notepad file. Click **OK** to close the **Failing Values** dialog box.  
   
 13. Click **OK** to complete the import operation and close the dialog box. When the import has completed successfully, the domain values list on the **Domain Values** page is refreshed and will include the new imported values. The filter is changed to **All Values** and **Show Only New** is selected. When **Show Only New** is selected after the import operation, only the values imported from the Excel file will be displayed.  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
 -   A value that contradicts a domain rule will be imported as an invalid value.  
   
--   A value will not be imported from the file if the value is not of the domain’s data type or is null.  
+-   A value will not be imported from the file if the value is not of the domain's data type or is null.  
   
 -   Values are imported in the order in which they appear in the file.  
   
@@ -109,7 +109,7 @@ manager: "jhubbard"
   
     -   The expected format is that the first column will be leading values and the second column and above will be synonyms.  
   
-    -   You can import multiple synonyms in the same row or in different rows. For example, if you want to import “NYC” and “New York City” as synonyms for “New York”, you can import a single row with “New York” in column 1, “NYC” in column 2, and “New York City” in column 3; or you can import one row with “New York” in column 1 and “NYC” in column 2, and another row with “New York” in column 1 and “New York City” in column 2. Note that if the value “New York” already exists in the domain, only the synonyms will be added, and the user will not receive an error during the import process telling him that the value already exist. If the first value does not already exist, it will be added to the domain.  
+    -   You can import multiple synonyms in the same row or in different rows. For example, if you want to import "NYC" and "New York City" as synonyms for "New York", you can import a single row with "New York" in column 1, "NYC" in column 2, and "New York City" in column 3; or you can import one row with "New York" in column 1 and "NYC" in column 2, and another row with "New York" in column 1 and "New York City" in column 2. Note that if the value "New York" already exists in the domain, only the synonyms will be added, and the user will not receive an error during the import process telling him that the value already exist. If the first value does not already exist, it will be added to the domain.  
   
  The following rules apply to the Excel file being used for the import:  
   

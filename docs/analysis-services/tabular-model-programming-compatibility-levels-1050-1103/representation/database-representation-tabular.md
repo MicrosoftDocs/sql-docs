@@ -1,24 +1,17 @@
 ---
 title: "Database Representation(Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Database Representation(Tabular)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   In Tabular mode, the database is the container for all objects in the tabular model.  
   
 ## Database Representation  
@@ -37,10 +30,10 @@ manager: "erikre"
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
-…  
+...  
    ADOMD.AdomdConnection currrentCnx = new ADOMD.AdomdConnection("Data Source=<<server\instance>>;Catalog=<<database>>");  
    currrentCnx.Open();  
-…  
+...  
   
 ```  
   
@@ -54,7 +47,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## Database in AMO  
  When using AMO to manage a database object, start with a <xref:Microsoft.AnalysisServices.Server> object. Then search for your database in the databases collection or create a new database by adding one to the collection.  
   
- The following code snippet shows the steps to connect to a server and create an empty database, after checking the database doesn’t exist:  
+ The following code snippet shows the steps to connect to a server and create an empty database, after checking the database doesn't exist:  
   
 ```  
   

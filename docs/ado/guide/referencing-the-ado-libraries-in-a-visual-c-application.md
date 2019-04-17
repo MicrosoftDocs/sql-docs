@@ -1,13 +1,12 @@
 ---
 title: "Referencing the ADO Libraries In a Visual C++ Application | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: 11/08/2018
 ms.reviewer: ""
-ms.suite: ""
-ms.prod: "sql-non-specified"
-ms.technology: “drivers”
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
@@ -15,15 +14,14 @@ helpviewer_keywords:
   - "referencing libraries in a Visual C++ application[ADO]"
   - "ADO, libraries"
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
-caps.latest.revision: 12
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Referencing the ADO Libraries In a Visual C++ Application
 To use the latest version of ADO in a Visual C++ application, use the following `#import` directive:  
   
-```  
+```cpp
 #import "msado15.dll" \  
     no_namespace rename("EOF", "EndOfFile")  
 ```  

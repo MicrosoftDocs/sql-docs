@@ -2,28 +2,23 @@
 title: "sp_vupgrade_mergeobjects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_vupgrade_mergeobjects"
   - "sp_vupgrade_mergeobjects_TSQL"
 helpviewer_keywords: 
   - "sp_vupgrade_mergeobjects"
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
-caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_vupgrade_mergeobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Regenerates the article-specific triggers, stored procedures, and views that are used to track and apply data changes for merge replication. Execute this procedure in the following situations:  
   
@@ -45,13 +40,13 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## Arguments  
- [ **@login=**] **'***login***'**  
+`[ @login = ] 'login'`
  Is the system administrator login to use when creating new system objects in the distribution database. *login* is **sysname**, with a default of NULL. This parameter is not required if *security_mode* is set to **1**, which is Windows Authentication.  
   
- [ **@password=**] **'***password***'**  
+`[ @password = ] 'password'`
  Is the system administrator password to use when creating new system objects in the distribution database. *password* is **sysname**, with a default of **''** (empty string). This parameter is not required if *security_mode* is set to **1**, which is Windows Authentication.  
   
- [ **@security_mode=**] **'***security_mode***'**  
+`[ @security_mode = ] 'security_mode'`
  Is the login security mode to use when creating new system objects in the distribution database. *security_mode* is **bit** with a default value of **1**. If **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication will be used. If **1**, Windows Authentication will be used. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## Return Code Values  

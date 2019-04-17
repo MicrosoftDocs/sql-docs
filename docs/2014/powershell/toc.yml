@@ -1,0 +1,36 @@
+- name: SQL Server PowerShell
+  href: sql-server-powershell.md
+- name: Load the SMO Assemblies in Windows PowerShell
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: Run Windows PowerShell from SQL Server Management Studio
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: Run Windows PowerShell Steps in SQL Server Agent
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: SQL Server PowerShell Provider
+  href: sql-server-powershell-provider.md
+  items:
+  - name: Navigate SQL Server PowerShell Paths
+    href: navigate-sql-server-powershell-paths.md
+  - name: Work With SQL Server PowerShell Paths
+    href: work-with-sql-server-powershell-paths.md
+- name: SQL Server Identifiers in PowerShell
+  href: sql-server-identifiers-in-powershell.md
+  items:
+  - name: Specify Instances in the SQL Server PowerShell Provider
+    href: specify-instances-in-the-sql-server-powershell-provider.md
+  - name: Encode and Decode SQL Server Identifiers
+    href: encode-and-decode-sql-server-identifiers.md
+  - name: Escape SQL Server Identifiers
+    href: escape-sql-server-identifiers.md
+- name: Manage Authentication in Database Engine PowerShell
+  href: manage-authentication-in-database-engine-powershell.md
+- name: Manage Tab Completion (SQL Server PowerShell)
+  href: manage-tab-completion-sql-server-powershell.md
+- name: Import the SQLPS Module
+  href: ../database-engine/import-the-sqlps-module.md
+- name: Convert URNs to SQL Server Provider Paths
+  href: ../database-engine/convert-urns-to-sql-server-provider-paths.md
+- name: Use the Database Engine cmdlets
+  href: ../database-engine/use-the-database-engine-cmdlets.md
+- name: Get Help SQL Server PowerShell
+  href: ../database-engine/get-help-sql-server-powershell.md

@@ -2,33 +2,30 @@
 title: "catalog.add_data_tap_by_guid | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # catalog.add_data_tap_by_guid
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Adds a data tap to a specific data flow path in a package data flow, for an instance of the execution.  
   
 ## Syntax  
   
-```tsql  
-add_data_tap_by_guid [ @execution_id = ] execution_id  
-[ @dataflow_task_guid = ] dataflow_task_guid   
-[ @dataflow_path_id_string = ] dataflow_path_id_string  
-[ @data_filename = ] data_filename  
-[ @max_rows = ] max_rows  
-[ @data_tap_id = ] data_tap_id  
+```sql  
+catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+, [ @dataflow_task_guid = ] dataflow_task_guid   
+, [ @dataflow_path_id_string = ] dataflow_path_id_string  
+, [ @data_filename = ] data_filename  
+, [ @max_rows = ] max_rows  
+, [ @data_tap_id = ] data_tap_id  
 ```  
   
 ## Arguments  
@@ -57,12 +54,11 @@ add_data_tap_by_guid [ @execution_id = ] execution_id
 ## Example  
  In the following example, a data tap is created on the data flow path,  `Paths[SRC DimDCVentor.OLE DB Source Output]`, in the data flow task `{D978A2E4-E05D-4374-9B05-50178A8817E8}`. The tapped data is stored in the DCVendorOutput.csv file.  
   
-```  
+```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
 '{D978A2E4-E05D-4374-9B05-50178A8817E8}',   
 'Paths[SRC DimDCVentor.OLE DB Source Output]',   
 'D:\demos\datafiles\DCVendorOutput.csv'  
-  
 ```  
   
 ## Remarks  

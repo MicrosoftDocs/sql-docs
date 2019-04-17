@@ -1,26 +1,19 @@
 ---
 title: "Using the Detail Property to Handle Specific Errors | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.date: 03/16/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: report-server-web-service-net-framework-exception-handling
+
+
+ms.topic: reference
 helpviewer_keywords: 
   - "exceptions [Reporting Services], Detail property"
   - "Detail property"
   - "InnerText property"
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
-caps.latest.revision: 30
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Using the Detail Property to Handle Specific Errors
   To further classify exceptions, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] returns additional error information in the **InnerText** property of the child elements in the SOAP exception's **Detail** property. Because the **Detail** property is an **XmlNode** object, you can access the inner text of the **Message** child element using the following code.  

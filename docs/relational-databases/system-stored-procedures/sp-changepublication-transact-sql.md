@@ -1,29 +1,24 @@
 ---
 title: "sp_changepublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "08/29/2017"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changepublication"
   - "sp_changepublication_TSQL"
 helpviewer_keywords: 
   - "sp_changepublication"
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_changepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the properties of a publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -32,7 +27,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 sp_changepublication [ [ @publication = ] 'publication' ]  
     [ , [ @property = ] 'property' ]  
     [ , [ @value = ] 'value' ]  
@@ -42,13 +36,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of NULL.  
   
- [ **@property =** ] **'***property***'**  
+`[ @property = ] 'property'`
  Is the publication property to change. *property* is **nvarchar(255)**.  
   
- [ **@value =** ] **'***value***'**  
+`[ @value = ] 'value'`
  Is the new property value. *value* is **nvarchar(255)**, with a default of NULL.  
   
  This table describes the properties of the publication that can be changed and restrictions on the values for those properties.  
@@ -59,8 +53,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Anonymous subscriptions cannot be created for the given publication. Cannot be changed for peer-to-peer publications.|  
 |**allow_initialize_from_backup**|**true**|Subscribers can initialize a subscription to this publication from a backup rather than an initial snapshot. This property cannot be changed for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**false**|Subscribers must use the initial snapshot. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
-|**allow_partition_switch**|**true**|ALTER TABLE…SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|ALTER TABLE…SWITCH statements cannot be executed against the published database.|  
+|**allow_partition_switch**|**true**|ALTER TABLE...SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE...SWITCH statements cannot be executed against the published database.|  
 |**allow_pull**|**true**|Pull subscriptions are allowed for the given publication. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**false**|Pull subscriptions are not allowed for the given publication. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 |**allow_push**|**true**|Push subscriptions are allowed for the given publication.|  
@@ -77,11 +71,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub wins**|Conflict resolution policy for updating Subscribers where the Subscriber wins the conflict. This property can be changed only if there are no active subscriptions. Not supported for Oracle Publishers.|  
 |**conflict_retention**||**int** that specifies the conflict retention period, in days. The default retention is 14 days. **0** means that no conflict cleanup is needed. Not supported for Oracle Publishers.|  
 |**description**||Optional entry describing the publication.|  
-|**enabled_for_het_sub**|**true**|Enables the publication to support non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. **enabled_for_het_sub** cannot be changed when there are subscriptions to the publication. You may need to execute [Replication Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) to comply with the following requirements before setting **enabled_for_het_sub** to true:<br /><br /> **allow_queued_tran** must be **false**.<br /><br /> **allow_sync_tran** must be **false**.<br /><br /> <br /><br /> Changing **enabled_for_het_sub** to **true** may change existing publication settings. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
+|**enabled_for_het_sub**|**true**|Enables the publication to support non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. **enabled_for_het_sub** cannot be changed when there are subscriptions to the publication. You may need to execute [Replication Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) to comply with the following requirements before setting **enabled_for_het_sub** to true:<br /> - **allow_queued_tran** must be **false**.<br /> - **allow_sync_tran** must be **false**.<br /> Changing **enabled_for_het_sub** to **true** may change existing publication settings. For more information, see [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**false**|Publication does not support non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 |**enabled_for_internet**|**true**|Publication is enabled for the Internet, and File Transfer Protocol (FTP) can be used to transfer the snapshot files to a subscriber. The synchronization files for the publication are put into the following directory: C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* cannot be NULL. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**false**|Publication is not enabled for the Internet. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
-|**enabled_for_p2p**|**true**|The publication supports peer-to-peer replication. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.<br /><br /> To set **enabled_for_p2p** to **true**, the following restrictions apply:<br /><br /> **allow_anonymous** must be **false**<br /><br /> **allow_dts** must be **false**.<br /><br /> **allow_initialize_from_backup** must be **true**<br /><br /> **allow_queued_tran** must be **false**.<br /><br /> **allow_sync_tran** must be **false**.<br /><br /> **enabled_for_het_sub** must be **false**.<br /><br /> **independent_agent** must be **true**.<br /><br /> **repl_freq** must be **continuous**.<br /><br /> **replicate_ddl** must be **1**.|  
+|**enabled_for_p2p**|**true**|The publication supports peer-to-peer replication. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.<br /> To set **enabled_for_p2p** to **true**, the following restrictions apply:<br /> - **allow_anonymous** must be **false**<br /> - **allow_dts** must be **false**.<br /> - **allow_initialize_from_backup** must be **true**<br /> - **allow_queued_tran** must be **false**.<br /> - **allow_sync_tran** must be **false**.<br /> - **enabled_for_het_sub** must be **false**.<br /> - **independent_agent** must be **true**.<br /> - **repl_freq** must be **continuous**.<br /> - **replicate_ddl** must be **1**.|  
 ||**false**|The publication does not support peer-to-peer replication. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 |**ftp_address**||FTP accessible location of the publication snapshot files. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 |**ftp_login**||User name used to connect to the FTP service, and the value ANONYMOUS is allowed. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
@@ -92,7 +86,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Synchronization files are created only if there are new subscriptions. Subscribers cannot receive the synchronization files after the subscription until the Snapshot Agent is started and completes.|  
 |**independent_agent**|**true**|Publication has its own dedicated Distribution Agent.|  
 ||**false**|Publication uses a shared Distribution Agent, and each publication/subscription database pair has a shared agent.|  
-|**p2p_continue_onconflict**|**true**|The Distribution Agent continues to process changes when a conflict is detected.<br /><br /> **\*\* Caution \*\*** We recommend that you use the default value of FALSE. When this option is set to TRUE, the Distribution Agent tries to converge data in the topology by applying the conflicting row from the node that has the highest originator ID. This method does not guarantee convergence. You should make sure that the topology is consistent after a conflict is detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|The Distribution Agent continues to process changes when a conflict is detected.<br /> **Caution:** We recommend that you use the default value of `FALSE`. When this option is set to `TRUE`, the Distribution Agent tries to converge data in the topology by applying the conflicting row from the node that has the highest originator ID. This method does not guarantee convergence. You should make sure that the topology is consistent after a conflict is detected. For more information, see "Handling Conflicts" in [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**false**|The Distribution Agent stops processing changes when a conflict is detected.|  
 |**post_snapshot_script**||Specifies the location of a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file that the Distribution Agent runs after all the other replicated object scripts and data have been applied during an initial synchronization.|  
 |**pre_snapshot_script**||Specifies the location of a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file that the Distribution Agent runs before all the other replicated object scripts and data have been applied during an initial synchronization.|  
@@ -103,8 +97,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**snapshot**|Publishes only scheduled synchronization events.|  
 |**replicate_ddl**|**1**|Data definition language (DDL) statements executed at the publisher are replicated. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**0**|DDL statements are not replicated. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications. Replication of schema changes cannot be disabled when using peer-to-peer replication.|  
-|**replicate_partition_switch**|**true**|ALTER TABLE…SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to TRUE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|ALTER TABLE…SWITCH statements should not be replicated to Subscribers.|  
+|**replicate_partition_switch**|**true**|ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to TRUE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE...SWITCH statements should not be replicated to Subscribers.|  
 |**retention**||**int** representing the retention period, in hours, for subscription activity. If a subscription is not active within the retention period, it is removed.|  
 |**snapshot_in_defaultfolder**|**true**|Snapshot files are stored in the default snapshot folder. If *alt_snapshot_folder*is also specified, snapshot files are stored in both the default and alternate locations.|  
 ||**false**|Snapshot files are stored in the alternate location specified by *alt_snapshot_folder*.|  
@@ -115,31 +109,26 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**concurrent**|Uses native-mode bulk-copy program output of all tables, but does not lock tables during the snapshot generation process. Not valid for snapshot replication.|  
 ||**concurrent_c**|Uses character-mode bulk copy program output of all tables, but does not lock tables during the snapshot generation process. Not valid for snapshot replication.|  
 |**taskid**||This property has been deprecated and is no longer supported.|  
-|**allow_drop**|**true**|Enables DROP TABLE DLL support for articles which are part of Transactional Replication. Minimum supported version: [!INCLUDE[ssSQL14](../../includes/sssql15-md.md)] Service Pack 2 or above and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 or above. Additional reference: [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
-||**false**|Disables DROP TABLE DLL support for articles which are part of Transactional Replication. This is the **default** value for this property.|
-|NULL (default)||Returns the list of supported values for *property*.|  
+|**allow_drop**|**true**|Enables `DROP TABLE` DLL support for articles which are part of transactional replication. Minimum supported version: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 or above and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 or above. Additional reference: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+||**false**|Disables `DROP TABLE` DLL support for articles that are part of transactional replication. This is the **default** value for this property.|
+|**NULL** (default)||Returns the list of supported values for *property*.|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
+  - **0** specifies that changes to the article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
+  - **1** specifies that changes to the article may cause the snapshot to be invalid. If there are existing subscriptions that would require a new snapshot, this value gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.   
+See the Remarks section for the properties that, when changed, require the generation of a new snapshot.  
   
- **0** specifies that changes to the article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
-  
- **1** specifies that changes to the article may cause the snapshot to be invalid. If there are existing subscriptions that would require a new snapshot, this value gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.  
-  
- See the Remarks section for the properties that, when changed, require the generation of a new snapshot.  
-  
- [**@force_reinit_subscription =** ] *force_reinit_subscription*  
+[**@force_reinit_subscription =** ] *force_reinit_subscription*  
  Acknowledges that the action taken by this stored procedure may require existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit** with a default of **0**.  
+  - **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  
+  - **1** specifies that changes to the article cause the existing subscription to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
- **1** specifies that changes to the article cause the existing subscription to be reinitialized, and gives permission for the subscription reinitialization to occur.  
-  
- [ **@publisher** = ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
-  
-> [!NOTE]  
->  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+  > [!NOTE]  
+  >  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  
@@ -147,36 +136,24 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## Remarks  
  **sp_changepublication** is used in snapshot replication and transactional replication.  
   
- Changing any of the following properties requires that a new snapshot be generated, and you must specify a value of **1** for the *force_invalidate_snapshot* parameter.  
-  
+ After changing any of the following properties, you must generate a new snapshot, and you must specify a value of **1** for the *force_invalidate_snapshot* parameter.  
 -   **alt_snapshot_folder**  
-  
 -   **compress_snapshot**  
-  
 -   **enabled_for_het_sub**  
-  
 -   **ftp_address**  
-  
 -   **ftp_login**  
-  
 -   **ftp_password**  
-  
 -   **ftp_port**  
-  
 -   **ftp_subdirectory**  
-  
 -   **post_snapshot_script**  
-  
 -   **pre_snapshot_script**  
-  
 -   **snapshot_in_defaultfolder**  
-  
 -   **sync_mode**  
   
- To list publication objects in the Active Directory using the **publish_to_active_directory** parameter, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object must already be created in the Active Directory.  
+To list publication objects in the Active Directory using the **publish_to_active_directory** parameter, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object must already be created in the Active Directory.  
   
 ## Impact of immediate sync  
- When immediate sync is on, all changes in the log are tracked immediately after the initial snapshot is generated even if there are no subscriptions. Logged changes will be used when a customer is using backup to add a new peer node. After the backup is restored, the peer will be synched with any other changes occurring after the backup was taken. Since the commands are tracked in the distribution database, the synchronization logic can look at the last backed up LSN and use this as a starting point, knowing that the command will be available if the backup was taken within the max retention period. (The default values for the min retention period is 0 hrs and max retention period is 24 hrs.)  
+ When immediate sync is on, all changes in the log are tracked immediately after the initial snapshot is generated even if there are no subscriptions. Logged changes are used when a customer is using backup to add a new peer node. After the backup is restored, the peer is synched with any other changes occurring after the backup was taken. Since the commands are tracked in the distribution database, the synchronization logic can look at the last backed up LSN and use this as a starting point, knowing that the command is available if the backup was taken within the max retention period. (The default value for the min retention period is 0 hrs and max retention period is 24 hrs.)  
   
  When immediate sync is off, changes are kept at least the min retention period and cleaned up immediately for all the transactions that are already replicated. If immediate sync is off and configured with the default retention period, it is likely that the required changes after the backup was taken were cleaned up and the new peer node will not be initialized properly. The only option left is to quiesce the topology. Setting immediate sync to on provides greater flexibility and is the recommended setting for P2P replication.  
   

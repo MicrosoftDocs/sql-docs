@@ -2,28 +2,23 @@
 title: "sp_removedbreplication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_removedbreplication"
   - "sp_removedbreplication_TSQL"
 helpviewer_keywords: 
   - "sp_removedbreplication"
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_removedbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   This stored procedure removes all replication objects on the publication database on the Publisher instance of SQL Server or on the subscription database on the Subscriber instance of SQL Server. Execute in the appropriate database, or if the execution is in the context of another database on the same instance, specify the database where the replication objects should be removed. This procedure does not remove objects from other databases, such as the distribution database.  
   
@@ -41,10 +36,10 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## Arguments  
- [ **@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the name of the database. *dbname* is **sysname**, with a default value of NULL. When NULL, the current database will be used.  
   
- [ **@type** = ] *type*  
+`[ @type = ] type`
  Is the type of replication for which database objects are being removed. *type* is **nvarchar(5)** and can be one of the following values.  
   
 |||  

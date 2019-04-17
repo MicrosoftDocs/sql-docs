@@ -2,21 +2,18 @@
 title: "Step 4a: Fetch the Results | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "application process [ODBC], fetching results"
   - "fetches [ODBC], fetching results"
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Step 4a: Fetch the Results
 The next step is to fetch the results, as shown in the following illustration.  

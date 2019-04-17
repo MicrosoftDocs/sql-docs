@@ -1,30 +1,19 @@
 ---
 title: "Ancestors (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "ANCESTORS"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "Ancestors function"
-ms.assetid: abdf2e9c-72c8-4f2e-a823-d42efc4cc7d5
-caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Ancestors (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  A function that returns the set of all ancestors of a specified member at a specified level or at a specified distance from the member. With [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the set returned will always consist of a single member - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not support multiple parents for a single member.  
+
+  A function that returns the set of all ancestors of a specified member at a specified level or at a specified distance from the member. With [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the set returned will always consist of a single member - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] does not support multiple parents for a single member.  
   
 ## Syntax  
   

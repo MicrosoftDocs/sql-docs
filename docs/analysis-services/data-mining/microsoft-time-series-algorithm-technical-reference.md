@@ -1,39 +1,17 @@
 ---
 title: "Microsoft Time Series Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ARTXP"
-  - "HISTORICAL_MODEL_GAP parameter"
-  - "AUTO_DETECT_PERIODICITY parameter"
-  - "time series algorithms [Analysis Services]"
-  - "ARIMA"
-  - "INSTABILITY_SENSITIVITY parameter"
-  - "PERIODICITY_HINT parameter"
-  - "MAXIMUM_SERIES_VALUE parameter"
-  - "time series [Analysis Services]"
-  - "MINIMUM_SUPPORT parameter"
-  - "HISTORIC_MODEL_COUNT parameter"
-  - "FORECAST_METHOD parameter"
-  - "MISSING_VALUE_SUBSTITUTION parameter"
-  - "MINIMUM_SERIES_VALUE parameter"
-  - "COMPLEXITY_PENALTY parameter"
-  - "PREDICTION_SMOOTHING parameter"
-ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Time Series Algorithm Technical Reference
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm includes two separate algorithms for analyzing time series:  
   
 -   The ARTXP algorithm, which was introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], is optimized for predicting the next likely value in a series.  
@@ -66,7 +44,7 @@ manager: "jhubbard"
   
  The Microsoft Time Series algorithm works by taking values in a data series and attempting to fit the data to a pattern. If the data series is are not already stationary, the algorithm applies an order of difference. Each increase in the order of difference tends to make the time series more stationary.  
   
- For example, if you have the time series (z1, z2, …, zn) and perform calculations using one order of difference, you obtain a new series (y1, y2,…., yn-1), where `yi = zi+1-zi`. When the difference order is 2, the algorithm generates another series \`(x1, x2, …, xn-2)`, based on the y series that was derived from the first order equation. The correct amount of differencing depends on the data. A single order of differencing is most common in models that show a constant trend; a second order of differencing can indicate a trend that varies with time.  
+ For example, if you have the time series (z1, z2, ..., zn) and perform calculations using one order of difference, you obtain a new series (y1, y2,...., yn-1), where `yi = zi+1-zi`. When the difference order is 2, the algorithm generates another series \`(x1, x2, ..., xn-2)`, based on the y series that was derived from the first order equation. The correct amount of differencing depends on the data. A single order of differencing is most common in models that show a constant trend; a second order of differencing can indicate a trend that varies with time.  
   
  By default, the order of difference used in the Microsoft Time Series algorithm is -1, meaning that the algorithm will automatically detect the best value for the difference order. Typically, that best value is 1 (when differencing is required), but under certain circumstances the algorithm will increase that value to a maximum of 2.  
   
@@ -74,7 +52,7 @@ manager: "jhubbard"
   
  Whenever the value of ARIMA_AR_ORDER is greater than 1, the algorithm multiplies the time series by a polynomial term. If one term of the polynomial formula resolves to a root of 1 or close to 1, the algorithm attempts to preserve the stability of the model by removing the term and increasing the difference order by 1. If the difference order is already at the maximum, the term is removed and the difference order does not change.  
   
- For example, if the value of AR = 2,   the resulting AR polynomial term might look like this: `1 – 1.4B + .45B^2 = (1- .9B) (1- 0.5B)`. Note the term `(1- .9B)` which has a root of about 0.9. The algorithm eliminates this term from the polynomial formula but cannot increase the difference order by one because it is already at the maximum value of 2.  
+ For example, if the value of AR = 2,   the resulting AR polynomial term might look like this: `1 - 1.4B + .45B^2 = (1- .9B) (1- 0.5B)`. Note the term `(1- .9B)` which has a root of about 0.9. The algorithm eliminates this term from the polynomial formula but cannot increase the difference order by one because it is already at the maximum value of 2.  
   
  It is important to note that the only way that you can **force** a change in difference order is to use the unsupported parameter, ARIMA_DIFFERENCE_ORDER. This hidden parameter controls how many times the algorithm performs differencing on the time series, and can be set by typing a custom algorithm parameter. However, we do not recommend that you change this value unless you are prepared to experiment and are familiar with the calculations involved. Also note that there is currently no mechanism, including hidden parameters, to let you control the threshold at which the increase in difference order is triggered.  
   

@@ -2,12 +2,10 @@
 title: "Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "unconsumed data"
@@ -17,12 +15,13 @@ helpviewer_keywords:
   - "overflow data [SQLXML]"
   - "sql:overflow-field"
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Retrieving Unconsumed Data Using the sql:overflow-field (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   When records are inserted in a database from an XML document by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML function, all the unconsumed data from the source XML document can be stored in a column. When you retrieve data from a database by using annotated schemas, you can specify the **sql:overflow-field** attribute to identify the column in the table in which the overflow data is stored. The **sql:overflow-field** attribute can be specified on **\<element>**.  
   
  This data is then retrieved in these ways:  
@@ -58,7 +57,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- In addition, you must create a virtual directory for the tempdb database—and a template virtual name of **template** type named "template".  
+ In addition, you must create a virtual directory for the tempdb database-and a template virtual name of **template** type named "template".  
   
  In the following example, the mapping schema retrieves the unconsumed data that is stored in the AddressOverflow column of the Customers2 table:  
   

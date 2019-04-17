@@ -1,25 +1,24 @@
 ---
 title: "Get Started with Full-Text Search | Microsoft Docs"
 ms.date: "08/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text catalogs [SQL Server], creating"
   - "full-text indexes [SQL Server], creating"
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], setting up"
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 76
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Started with Full-Text Search
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 SQL Server databases are full-text enabled by default. Before you can run full-text queries, however, you must create a full text catalog and create a full-text index on the tables or indexed views you want to search.
 
 ## Set up full-text search in two steps
@@ -41,7 +40,7 @@ To set up full-text search by using a wizard, see [Use the Full-Text Indexing Wi
   
 1.  To create a full-text catalog named `AdvWksDocFTCat`, the example uses a [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) statement:  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -50,13 +49,13 @@ To set up full-text search by using a wizard, see [Use the Full-Text Indexing Wi
  
 2.  Before you can create a full-text index on the Document table, ensure that the table has a unique, single-column, non-nullable index. The following [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) statement creates a unique index, `ui_ukDoc`, on the DocumentID column of the Document table:  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  After you have a unique key, you can create a full-text index on the `Document` table by using the following [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) statement.  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -99,14 +98,14 @@ Always select the smallest unique index available for your full-text unique key.
   
  For example, the following [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] statement creates a new full-text stoplist named myStoplist by copying from the system stoplist:  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  The following [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] statement alters a stoplist named myStoplist, adding the word 'en', first for Spanish and then for French:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  

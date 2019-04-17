@@ -1,23 +1,18 @@
 ---
 title: "Create and Manage Subscriptions for Native Mode Report Servers | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: subscriptions
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "standard subscriptions [Reporting Services]"
   - "subscriptions [Reporting Services], standard"
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 52
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Create and Manage Subscriptions for Native Mode Report Servers
   A standard subscription is one that is created by individual users who want to have a report delivered through e-mail or to a shared folder. This topic provides information about standard subscriptions that are created and managed by individual users. Data-driven subscriptions have different requirements and steps, and are discussed in a separate topic. For more information, see [Create, Modify, and Delete Data-Driven Subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -41,7 +36,7 @@ manager: "erikre"
   
 -   To use e-mail delivery, the report server must be configured for an SMTP server or gateway connection before you create the subscription.  
   
--   To use file share delivery, you must have target folder already defined. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   To use file share delivery, you must have target folder already defined. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Before you can subscribe to a report, the report data source must be configured to use stored credentials or no credentials. For more information, see [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). If it does not, the **New Subscription** button is not available.  
   
@@ -49,7 +44,7 @@ manager: "erikre"
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> To Create a File Share Subscription  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigate to the report you want to subscribe to. Click the report menu and click **Subscribe**.  
   
@@ -96,7 +91,7 @@ manager: "erikre"
   
 ###  <a name="bkmk_create_email_subscription"></a> To Create an E-mail Subscription  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Navigate to the report you want to subscribe to. Click the report menu and click **Subscribe**.  
   
@@ -106,14 +101,14 @@ manager: "erikre"
   
 4.  **Owner**: The owner field defaults to the current user and cannot be edited when you create the subscription. However, after the subscription is saved, you can change the subscription properties including the owner and description.  
   
-5.  **Delivered by**: Select **E-Mail**. If **E-Mail** is not available, your report server has not been configured for e-mail subscriptions. See [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **Delivered by**: Select **E-Mail**. If **E-Mail** is not available, your report server has not been configured for e-mail subscriptions. See [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **To**: The recipient name in the To: field is self-addressed using your domain user account. Verify the format is [user name]@[domain.com]Report server configuration settings determine whether the **To** field is self-addressed with your user account. For more information about changing the configuration settings e-mail addresses, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **To**: The recipient name in the To: field is self-addressed using your domain user account. Verify the format is [user name]@[domain.com]Report server configuration settings determine whether the **To** field is self-addressed with your user account. For more information about changing the configuration settings e-mail addresses, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
     >  Depending on your permissions, you might be able to type the e-mail address you want the report delivered to. To specify multiple e-mail addresses, separate them with a semicolon (;). You can also type additional e-mail addresses in the **Cc**, **Bcc**, and **Reply-To** text boxes. This requires that you have permission to manage all subscriptions.  
   
-7.  **Subject**: Defaults to “@ReportName was executed at @ExecutionTime”. You can edit the subject but note that the @ReportName and @ExecutionTime are the only global variables supported in the **Subject** field.  
+7.  **Subject**: Defaults to "@ReportName was executed at @ExecutionTime". You can edit the subject but note that the @ReportName and @ExecutionTime are the only global variables supported in the **Subject** field.  
   
 8.  Select the delivery options as follows:  
   
@@ -162,9 +157,9 @@ manager: "erikre"
 >  A report server administrator cannot manage from one place all the individual subscriptions that are in use on a given report server. However, report server administrators can access each individual subscription to modify or delete it.  
   
 ##  <a name="bkmk_delete_subscription"></a> To Delete a Subscription  
- To delete a subscription”  
+ To delete a subscription"  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Report Manager, click **My Subscriptions** on the toolbar and navigate to the subscription you want to modify or delete.  
   
@@ -183,7 +178,7 @@ manager: "erikre"
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Use My Subscriptions &#40;Native Mode Report Server&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

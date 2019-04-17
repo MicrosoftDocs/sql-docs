@@ -2,25 +2,27 @@
 title: "Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.scriptcomponentdetails.f1"
+  - "sql13.dts.designer.scriptcomponent.f1"
+  - "sql13.dts.designer.scriptcomponent.connections.f1"
+  - "sql13.dts.designer.scriptcomponent.inputcolumn.f1"
+  - "sql13.dts.designer.scriptcomponent.columnproperties.f1"
+  - "sql13.dts.designer.scriptcomponent.script.f1"
 helpviewer_keywords: 
   - "Script transformation"
   - "scripts [Integration Services], transformations"
   - "Script component [Integration Services], about Script component"
   - "Script component [Integration Services]"
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Script Component
   The Script component hosts script and enables a package to include and run custom script code. You can use the Script component in packages for the following purposes:  
@@ -86,16 +88,6 @@ manager: "jhubbard"
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
 ### Configuring the Script Component in the Designer  
- For more information about the properties that you can set in the **Script Transformation Editor** dialog box, click one of the following topics:  
-  
--   [Script Transformation Editor &#40;Input Columns Page&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
-  
--   [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)  
-  
--   [Script Transformation Editor &#40;Script Page&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)  
-  
--   [Script Transformation Editor &#40;Connection Managers Page&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)  
-  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, click the following topic:  
   
 -   [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
@@ -103,13 +95,120 @@ manager: "jhubbard"
 ### Configuring the Script Component Programmatically  
  For more information about the properties that you can set in the **Properties** window or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  For more information about how to set properties, click one of the following topics:  
   
 -   [Set the Properties of a Data Flow Component](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## Select Script Component Type
+  Use the **Select Script Component Type** dialog box to specify whether to create a Script Transformation that is preconfigured for use as a source, a transformation, or a destination.  
+  
+ To learn more about the Script component, see [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### Options  
+ Your selection of **Source**, **Destination**, or **Transformation** affects the configuration of the Script Transformation and the pages of the Script Transformation Editor.  
+  
+## Script Transformation Editor (Connection Managers Page)
+  Use the **Connection Managers** page of the **Script Transformation Editor** to specify any connections that will be used by the script.  
+  
+ To learn more about the Script component, see [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### Options  
+ **Connection managers**  
+ View the list of connections available for use by the script.  
+  
+ **Name**  
+ Type a unique and descriptive name for the connection.  
+  
+ **Connection Manager**  
+ Select from the list of available connection managers, or select **\<New connection>** to open the **Add SSIS Connection Manager** dialog box.  
+  
+ **Description**  
+ Type a description for the connection.  
+  
+ **Add**  
+ Add another connection to the **Connection managers** list.  
+  
+ **Remove**  
+ Remove the selected connection from the **Connection managers** list.  
+  
+## Script Transformation Editor (Input Columns Page)
+  Use the **Input Columns** page of the **Script Transformation Editor** dialog box to set properties on input columns.  
+  
+> [!NOTE]  
+>  The **Input Columns** page is not displayed for Source components, which have outputs but no inputs.  
+  
+ To learn more about the Script component, see [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### Options  
+ **Input name**  
+ Select from the list of available inputs.  
+  
+ **Available Input Columns**  
+ Using the check boxes, specify the columns that the script transformation will use.  
+  
+ **Input Column**  
+ Select from the list of available input columns for each row. Your selections are reflected in the check box selections in the **Available Input Columns**table.  
+  
+ **Output Alias**  
+ Type an alias for each output column. The default is the name of the input column; however, you can choose any unique, descriptive name.  
+  
+ **Usage Type**  
+ Specify whether the Script Transformation will treat each column as **ReadOnly** or **ReadWrite**.  
+  
+## Script Transformation Editor (Inputs and Outputs Page)
+  Use the **Inputs and Outputs** page of the **Script Transformation Editor** dialog box to add, remove, and configure inputs and outputs for the Script Transformation.  
+  
+> [!NOTE]  
+>  Source components have outputs and no inputs, while destination components have inputs but no outputs. Transformations have both inputs and outputs.  
+  
+ To learn more about the Script component, see [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### Options  
+ **Inputs and outputs**  
+ Select an input or output on the left to view its properties in the table on the right. Properties available for editing vary according to the selection. Many of the properties displayed are read-only. For more information on the individual properties, see the following topics.  
+  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+  
+ [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+  
+ **Add Output**  
+ Add an additional output to the list.  
+  
+ **Add Column**  
+ Select a folder in which to place the new output column, and then add the column by clicking **Add Column**.  
+  
+ **Remove Output**  
+ Select an output, and then remove it by clicking **Remove Output**.  
+  
+ **Remove Column**  
+ Select a column, and then remove it by clicking **Remove Column**.  
+  
+## Script Transformation Editor (Script Page)
+  Use the **Script** tab of the **Script Transformation Editor** dialog box to specify a script and related properties.  
+  
+ To learn more about the Script component, see [Configuring the Script Component in the Script Component Editor](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). To learn about programming the Script component, see [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+### Options  
+ **Properties**  
+ View and modify the properties of the Script transformation. Many of the properties displayed are read-only. You can modify the following properties:  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Description**|Describe the script transformation in terms of its purpose.|  
+|**LocaleID**|Specify the locale to provide region-specific information for ordering, and for date and time conversion.|  
+|**Name**|Type a descriptive name for the component.|  
+|**ValidateExternalMetadata**|Indicate whether the Script transformation validates column metadata against external data sources at design time. A value of **false** delays validation until the time of execution.|  
+|**ReadOnlyVariables**|Type a comma-separated list of variables for read-only access by the Script transformation.<br /><br /> Note: Variable names are case-sensitive.|  
+|**ReadWriteVariables**|Type a comma-separated list of variables for read/write access by the Script transformation.<br /><br /> Note: Variable names are case-sensitive.|  
+|**ScriptLanguage**|Select the script language to be used by the Script component.<br /><br /> To set the default script language for Script components and Script tasks, use the **Scripting language** option on the **General** page of the **Options** dialog box.|  
+|**UserComponentTypeName**|Specifies the <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> class and the **Microsoft.SqlServer.TxScript** assembly that support the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] infrastructure.|  
+  
+ **Edit Script**  
+ Use [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) to create or modify a script.  
   
 ## Related Content  
  [Integration Services Transformations](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

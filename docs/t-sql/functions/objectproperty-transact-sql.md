@@ -2,12 +2,10 @@
 title: "OBJECTPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "OBJECTPROPERTY"
@@ -21,13 +19,13 @@ helpviewer_keywords:
   - "schema-scoped objects [SQL Server]"
   - "objects [SQL Server], schema-scoped"
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-caps.latest.revision: 81
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECTPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns information about schema-scoped objects in the current database. For a list of schema-scoped objects, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). This function cannot be used for objects that are not schema-scoped, such as data definition language (DDL) triggers and event notifications.  
   
@@ -36,8 +34,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 OBJECTPROPERTY ( id , property )   
 ```  
   
@@ -105,7 +101,8 @@ OBJECTPROPERTY ( id , property )
 |IsRule|Any schema-scoped object|Bound rule.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|Function|Scalar-valued function.<br /><br /> 1 = Scalar-valued function<br /><br /> 0 = Not scalar-valued function|  
 |IsSchemaBound|Function, view|A schema bound function or view created by using SCHEMABINDING.<br /><br /> 1 = Schema-bound<br /><br /> 0 = Not schema-bound.|  
-|IsSystemTable|Table|System table.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|Table|System table.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|SQL Server can verify the determinism and precision properties of the object.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|Table|Table.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|Function|Table-valued function.<br /><br /> 1 = Table-valued function<br /><br /> 0 = Not table-valued function|  
 |IsTrigger|Any schema-scoped object|Trigger.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -209,19 +206,20 @@ GO
   
  The result set shows that `ufnGetProductDealerPrice` is not a deterministic function.  
   
- `-----`  
+ ```
+-----  
+0
+```  
   
- `0`  
-  
-### C. Finding the objects that belong to a specific schema  
- The following example uses the `SchemaId` property to return all the objects that belong to the schema `Production`.  
+### C: Finding the tables that belong to a specific schema  
+ The following example returns all the tables in the dbo schema.  
   
 ```  
-USE AdventureWorks2012;  
-GO  
+-- Uses AdventureWorks  
+  
 SELECT name, object_id, type_desc  
 FROM sys.objects   
-WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'Production')  
+WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'dbo')  
 ORDER BY type_desc, name;  
 GO  
 ```  
@@ -238,19 +236,6 @@ IF OBJECTPROPERTY (OBJECT_ID(N'dbo.DimReseller'),'ISTABLE') = 1
    SELECT 'DimReseller is a table.'  
 ELSE   
    SELECT 'DimReseller is not a table.';  
-GO  
-```  
-  
-### E: Finding the tables that belong to a specific schema  
- The following example returns all the tables in the dbo schema.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT name, object_id, type_desc  
-FROM sys.objects   
-WHERE OBJECTPROPERTY(object_id, N'SchemaId') = SCHEMA_ID(N'dbo')  
-ORDER BY type_desc, name;  
 GO  
 ```  
   

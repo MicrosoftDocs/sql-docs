@@ -2,25 +2,24 @@
 title: "Aggregate Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.aggregatetrans.f1"
+  - "sql13.dts.designer.aggregationtransformation.aggregations.f1"
+  - "sql13.dts.designer.aggregationtransformation.advanced.f1"
 helpviewer_keywords: 
   - "IsBig property"
   - "aggregate functions [Integration Services]"
   - "Aggregate transformation [Integration Services]"
   - "large data, SSIS transformations"
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Aggregate Transformation
   The Aggregate transformation applies aggregate functions, such as Average, to column values and copies the results to the transformation output. Besides aggregate functions, the transformation provides the GROUP BY clause, which you can use to specify groups to aggregate across.  
@@ -108,15 +107,9 @@ manager: "jhubbard"
   
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
- For more information about the properties that you can set in the **Aggregate Transformation Editor** dialog box, click one of the following topics:  
-  
--   [Aggregate Transformation Editor &#40;Aggregations Tab&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md)  
-  
--   [Aggregate Transformation Editor &#40;Advanced Tab&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-advanced-tab.md)  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -130,6 +123,113 @@ manager: "jhubbard"
   
 ## Related Tasks  
  [Aggregate Values in a Dataset by Using the Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+  
+## Aggregate Transformation Editor (Aggregations Tab)
+  Use the **Aggregations** tab of the **Aggregate Transformation Editor** dialog box to specify columns for aggregation and aggregation properties. You can apply multiple aggregations. This transformation does not generate an error output.  
+  
+> [!NOTE]  
+>  The options for key count, key scale, distinct key count, and distinct key scale apply at the component level when specified on the **Advanced** tab, at the output level when specified in the advanced display of the **Aggregations** tab, and at the column level when specified in the column list at the bottom of the **Aggregations** tab.  
+>   
+>  In the Aggregate transformation, **Keys** and **Keys scale** refer to the number of groups that are expected to result from a **Group by** operation. **Count distinct keys** and **Count distinct scale** refer to the number of distinct values that are expected to result from a **Distinct count** operation.  
+  
+### Options  
+ **Advanced / Basic**  
+ Display or hide options to configure multiple aggregations for multiple outputs. By default, the Advanced options are hidden.  
+  
+ **Aggregation Name**  
+ In the Advanced display, type a friendly name for the aggregation.  
+  
+ **Group By Columns**  
+ In the Advanced display, select columns for grouping by using the **Available Input Columns** list as described below.  
+  
+ **Key Scale**  
+ In the Advanced display, optionally specify the approximate number of keys that the aggregation can write. By default, the value of this option is **Unspecified**. If both the **Key Scale** and **Keys** properties are set, the value of **Keys** takes precedence.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Unspecified|The Key Scale property is not used.|  
+|Low|Aggregation can write approximately 500,000 keys.|  
+|Medium|Aggregation can write approximately 5,000,000 keys.|  
+|High|Aggregation can write more than 25,000,000 keys.|  
+  
+ **Keys**  
+ In the Advanced display, optionally specify the exact number of keys that the aggregation can write. If both **Key Scale** and **Keys** are specified, **Keys** takes precedence.  
+  
+ **Available Input Columns**  
+ Select from the list of available input columns by using the check boxes in this table.  
+  
+ **Input Column**  
+ Select from the list of available input columns.  
+  
+ **Output Alias**  
+ Type an alias for each column. The default is the name of the input column; however, you can choose any unique, descriptive name.  
+  
+ **Operation**  
+ Choose from the list of available operations, using the following table as a guide.  
+  
+|Operation|Description|  
+|---------------|-----------------|  
+|**GroupBy**|Divides datasets into groups. Columns with any data type can be used for grouping. For more information, see GROUP BY.|  
+|**Sum**|Sums the values in a column. Only columns with numeric data types can be summed. For more information, see SUM.|  
+|**Average**|Returns the average of the column values in a column. Only columns with numeric data types can be averaged. For more information, see AVG.|  
+|**Count**|Returns the number of items in a group. For more information, see COUNT.|  
+|**CountDistinct**|Returns the number of unique nonnull values in a group. For more information, see COUNT and Distinct.|  
+|**Minimum**|Returns the minimum value in a group. Restricted to numeric data types.|  
+|**Maximum**|Returns the maximum value in a group. Restricted to numeric data types.|  
+  
+ **Comparison Flags**  
+ If you choose **Group By**, use the check boxes to control how the transformation performs the comparison. For information on the string comparison options, see [Comparing String Data](../../../integration-services/data-flow/comparing-string-data.md).  
+  
+ **Count Distinct Scale**  
+ Optionally specify the approximate number of distinct values that the aggregation can write. By default, the value of this option is **Unspecified**. If both **CountDistinctScale** and **CountDistinctKeys** are specified, **CountDistinctKeys** takes precedence.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Unspecified|The **CountDistinctScale** property is not used.|  
+|Low|Aggregation can write approximately 500,000 distinct values.|  
+|Medium|Aggregation can write approximately 5,000,000 distinct values.|  
+|High|Aggregation can write more than 25,000,000 distinct values.|  
+  
+ **Count Distinct Keys**  
+ Optionally specify the exact number of distinct values that the aggregation can write. If both **CountDistinctScale** and **CountDistinctKeys** are specified, **CountDistinctKeys** takes precedence.  
+  
+## Aggregate Transformation Editor (Advanced Tab)
+  Use the **Advanced** tab of the **Aggregate Transformation Editor** dialog box to set component properties, specify aggregations, and set properties of input and output columns.  
+  
+> [!NOTE]  
+>  The options for key count, key scale, distinct key count, and distinct key scale apply at the component level when specified on the **Advanced** tab, at the output level when specified in the advanced display of the **Aggregations** tab, and at the column level when specified in the column list at the bottom of the **Aggregations** tab.  
+>   
+>  In the Aggregate transformation, **Keys** and **Keys scale** refer to the number of groups that are expected to result from a **Group by** operation. **Count distinct keys** and **Count distinct scale** refer to the number of distinct values that are expected to result from a **Distinct count** operation.  
+  
+### Options  
+ **Keys scale**  
+ Optionally specify the approximate number of keys that the aggregation expects. The transformation uses this information to optimize its initial cache size. By default, the value of this option is **Unspecified**. If both **Keys scale** and **Number of keys** are specified, **Number of keys** takes precedence.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Unspecified|The **Keys scale** property is not used.|  
+|Low|Aggregation can write approximately 500,000 keys.|  
+|Medium|Aggregation can write approximately 5,000,000 keys.|  
+|High|Aggregation can write more than 25,000,000 keys.|  
+  
+ **Number of keys**  
+ Optionally specify the exact number of keys that the aggregation expects. The transformation uses this information to optimize its initial cache size. If both **Keys scale** and **Number of keys** are specified, **Number of keys** takes precedence.  
+  
+ **Count distinct scale**  
+ Optionally specify the approximate number of distinct values that the aggregation can write. By default, the value of this option is **Unspecified**. If both **Count distinct scale** and **Count distinct keys** are specified, **Count distinct keys** takes precedence.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|Unspecified|The CountDistinctScale property is not used.|  
+|Low|Aggregation can write approximately 500,000 distinct values.|  
+|Medium|Aggregation can write approximately 5,000,000 distinct values.|  
+|High|Aggregation can write more than 25,000,000 distinct values.|  
+  
+ **Count distinct keys**  
+ Optionally specify the exact number of distinct values that the aggregation can write. If both **Count distinct scale** and **Count distinct keys** are specified, **Count distinct keys** takes precedence.  
+  
+ **Auto extend factor**  
+ Use a value between 1 and 100 to specify the percentage by which memory can be extended during the aggregation. By default, the value of this option is **25%**.  
   
 ## See Also  
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   

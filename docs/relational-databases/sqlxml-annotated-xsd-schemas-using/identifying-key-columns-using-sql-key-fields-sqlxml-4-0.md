@@ -2,12 +2,10 @@
 title: "Identifying Key Columns Using sql:key-fields (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "nesting XML results"
@@ -21,12 +19,13 @@ helpviewer_keywords:
   - "hierarchical relationships [SQLXML]"
   - "key-fields annotation"
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Identifying Key Columns Using sql:key-fields (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   When an XPath query is specified against an XSD schema, key information is required in most cases to obtain proper nesting in the result. Specifying the **sql:key-fields** annotation is a way of ensuring that the appropriate hierarchy is generated.  
   
 > [!NOTE]  

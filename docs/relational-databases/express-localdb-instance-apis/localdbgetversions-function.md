@@ -2,12 +2,10 @@
 title: "LocalDBGetVersions Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "LocalDBGetVersions"
@@ -15,12 +13,12 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # LocalDBGetVersions Function
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Returns all SQL Server Express LocalDB versions available on the computer.  
   
  **Header file:** sqlncli.h  
@@ -33,7 +31,7 @@ manager: "jhubbard"
   
 ## Parameters  
  *pVersionNames*  
- [Output] Contains names of the LocalDB versions that are available on the user’s workstation.  
+ [Output] Contains names of the LocalDB versions that are available on the user's workstation.  
   
  *lpdwNumberOfVersions*  
  [Input/Output] On input holds the number of slots for versions in the *pVersionNames* buffer.   

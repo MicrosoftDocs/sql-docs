@@ -1,22 +1,17 @@
 ---
 title: "Add gauges to mobile reports | Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/30/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: mobile-reports
+
+ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Add gauges to mobile reports | Reporting Services
-Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset – just the value, or the value compared to a goal.
+Gauges are the most basic and widely used visuals in mobile reports. They display a single value in a dataset - just the value, or the value compared to a goal.
 
 ![PBI_SSMRP_Gauges](../../reporting-services/mobile-reports/media/pbi-ssmrp-gauges.png)  
   

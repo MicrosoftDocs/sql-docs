@@ -2,24 +2,22 @@
 title: "Replication Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.beta2.f1"
 helpviewer_keywords: 
   - "Replication Monitor, help"
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replication Monitor
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This section of the documentation includes information on the Replication Monitor. The pages and dialog boxes displayed in the monitor differ depending on the type of replication and the version of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is monitored.  
   
 -   [Replication Monitor, Main Page](../../relational-databases/replication/replication-monitor-main-page.md)  
@@ -29,14 +27,6 @@ manager: "jhubbard"
 -   [Distributor Settings](../../relational-databases/replication/distributor-settings.md)  
   
 -   [Distributor Information, Publications](../../relational-databases/replication/distributor-information-publications.md)  
-  
--   [Distributor Information, Subscription Watch List &#40;Transactional Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-transaction-pub-sql-2005.md)  
-  
--   [Distributor Information, Subscription Watch List &#40;Merge Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-merge-pub-sql-2005.md)  
-  
--   [Distributor Information, Subscription Watch List &#40;Snapshot Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md)  
-  
--   [Distributor Information, Agents](../../relational-databases/replication/distributor-information-agents.md)  
   
 -   [Publisher Settings](../../relational-databases/replication/publisher-settings.md)  
   
@@ -64,8 +54,7 @@ manager: "jhubbard"
   
 -   [Publication Information, Agents &#40;Transactional Publication&#41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
--   [Publication Information, Agents &#40;Merge Publication&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)  
-  
+-   [Publication Information, Agents &#40;Merge Publication&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
 -   [Publication Information, Agents &#40;Snapshot Publication&#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [Publication Information, Tracer Tokens &#40;Transactional Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
@@ -77,8 +66,6 @@ manager: "jhubbard"
 -   [Subscription, Distributor to Subscriber History &#40;Transactional Subscription&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md)  
   
 -   [Subscription, Synchronization History &#40;Merge Subscription, SQL Server 2005 and Later&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
-  
--   [Subscription, Synchronization History &#40;Merge Subscription, SQL Server 2000&#41;](../../relational-databases/replication/subscription-synchronization-history-merge-subscription-sql-server-2000.md)  
   
 -   [Subscription, Distributor to Subscriber History &#40;Snapshot Subscription&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
@@ -94,7 +81,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
- [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

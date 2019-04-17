@@ -2,28 +2,23 @@
 title: "sp_helppullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helppullsubscription_TSQL"
   - "sp_helppullsubscription"
 helpviewer_keywords: 
   - "sp_helppullsubscription"
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helppullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Displays information about one or more subscriptions at the Subscriber. This stored procedure is executed at the Subscriber on the subscription database.  
   
@@ -40,16 +35,16 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the remote server. *publisher* is **sysname**, with a default of **%**, which returns information for all Publishers.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with a default of **%**, which returns all the Publisher databases.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**, which returns all the publications. If this parameter equals to ALL, only pull subscriptions with independent_agent = **0** are returned.  
   
- [ **@show_push=**] **'***show_push***'**  
+`[ @show_push = ] 'show_push'`
  Is whether all push subscriptions are to be returned. *show_push*is **nvarchar(5)**, with a default of FALSE, which does not return push subscriptions.  
   
 ## Result Sets  

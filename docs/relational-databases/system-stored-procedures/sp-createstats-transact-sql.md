@@ -2,12 +2,10 @@
 title: "sp_createstats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_createstats_TSQL"
@@ -17,23 +15,19 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_createstats"
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_createstats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Calls the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement to create single-column statistics on columns that are not already the first column in a statistics object. Creating single-column statistics increases the number of histograms, which can improve cardinality estimates, query plans, and query performance. The first column of a statistics object has a histogram; other columns do not have a histogram.  
   
  sp_createstats is useful for applications such as benchmarking when query execution times are critical and cannot wait for the query optimizer to generate single-column statistics. In most cases, it is not necessary to use sp_createstats; the query optimizer generates single-column statistics as necessary to improve query plans when the **AUTO_CREATE_STATISTICS** option is on.  
   
  For more information about statistics, see [Statistics](../../relational-databases/statistics/statistics.md). For more information about generating single-column statistics, see the **AUTO_CREATE_STATISTICS** option in [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,21 +43,17 @@ sp_createstats
 ```  
   
 ## Arguments  
- [ **@indexonly=** ] **'indexonly'**  
+`[ @indexonly = ] 'indexonly'`
  Creates statistics only on columns that are in an existing index and are not the first column in any index definition. **indexonly** is **char(9)**. The default is NO.  
   
- [ **@fullscan=** ] **'fullscan'**  
+`[ @fullscan = ] 'fullscan'`
  Uses the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement with the **FULLSCAN** option. **fullscan** is **char(9)**.  The default is NO.  
   
- [ **@norecompute=** ] **'norecompute'**  
+`[ @norecompute = ] 'norecompute'`
  Uses the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement with the **NORECOMPUTE** option. **norecompute** is **char(12)**.  The default is NO.  
   
- [ **@incremental=** ] **'incremental'**  
+`[ @incremental = ] 'incremental'`
  Uses the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement with the **INCREMENTAL = ON** option. **Incremental** is **char(12)**.  The default is NO.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

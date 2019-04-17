@@ -2,23 +2,20 @@
 title: "Errors and Events Reference (Integration Services) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, events"
   - "events [Integration Services]"
   - "errors [Integration Services]"
   - "Integration Services, errors"
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Errors and Events Reference (Integration Services)
   This section of the documentation contains information about several errors and events related to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Cause and resolution information is included for error messages.  

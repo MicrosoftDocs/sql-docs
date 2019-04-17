@@ -2,12 +2,10 @@
 title: "sys.dm_clr_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_clr_properties"
@@ -19,21 +17,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_clr_properties dynamic management view"
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_clr_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Returns a row for each property related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language runtime (CLR) integration, including the version and state of the hosted CLR. The hosted CLR is initialized by running the [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md), or [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) statements, or by executing any CLR routine, type, or trigger. The **sys.dm_clr_properties** view does not specify whether execution of user CLR code has been enabled on the server. Execution of user CLR code is enabled by using the [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) stored procedure with the [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) option set to 1.  
   
  The **sys.dm_clr_properties** view contains the **name** and **value** columns. Each row in this view provides details about a property of the hosted CLR. Use this view to gather information about the hosted CLR, such as the CLR install directory, the CLR version, and the current state of the hosted CLR. This view can help you determine if the CLR integration code is not working because of problems with the CLR installation on the server computer.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)). [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -73,10 +67,10 @@ manager: "jhubbard"
  The properties and values of this view might change in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] due to enhancements of the CLR integration functionality.  
   
 ## Permissions  
- On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires VIEW SERVER STATE permission on the server.  
   
- On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Tiers requires the VIEW DATABASE STATE permission in the database. On [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard and Basic Tiers requires the [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admin account.  
-  
+On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
+On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
 ## Examples  
  The following example retrieves information about the hosted CLR:  
   

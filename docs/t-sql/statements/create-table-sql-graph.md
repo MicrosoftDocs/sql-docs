@@ -1,13 +1,11 @@
 ---
 title: "CREATE TABLE (SQL Graph) | Microsoft Docs"
-ms.custom: 
+ms.custom: ""
 ms.date: "05/04/2017"
-ms.prod: "sql-server-2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SQL_GRAPH_TSQL"
@@ -31,14 +29,13 @@ helpviewer_keywords:
   - "EDGE"
   - "SQL graph, CREATE TABLE statement"
 ms.assetid: 
-caps.latest.revision: 1
 author: "shkale-msft"
 ms.author: "shkale"
-manager: "jhubbard"
+manager: craigg
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-
 # CREATE TABLE (SQL Graph)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]   
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Creates a new SQL graph table as either a `NODE` or an `EDGE` table. 
   
@@ -83,7 +80,7 @@ Creating a node or edge table as a temporal table is not supported.
 
 Stretch database is not supported for node or edge table.
 
-Node or edge tables cannot be external tables (no polybase support for graph tables). 
+Node or edge tables cannot be external tables (no PolyBase support for graph tables). 
   
  
 ## Examples  

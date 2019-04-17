@@ -2,20 +2,17 @@
 title: "Column Pattern Profile Request Options (Data Profiling Task) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Column Pattern Profile Request Options (Data Profiling Task)
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Column Pattern Profile Request** selected in the requests pane. A Column Pattern profile reports a set of regular expressions that cover the specified percentage of values in a string column. This profile can help you identify problems in your data, such as invalid strings, and can suggest regular expressions that can be used in the future to validate new values. For example, a pattern profile of a column of United States Zip Codes might produce the regular expressions \d{5}-\d{4}, \d{5}, and \d{9}. If you see other regular expressions, your data likely contains values that are invalid or in an incorrect format.  
@@ -30,7 +27,7 @@ manager: "jhubbard"
   
 -   **Delimiters** By default, the list of delimiters contains the following characters: space, horizontal tab (\t), new line (\n), and carriage return (\r). You can specify additional delimiters, but you cannot remove the default delimiters.  
   
--   **Symbols** By default, the list of **Symbols** contains the following characters: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`", the value "(425) 123-4567" is tokenized as ["(", "425", ")", "123", "-", "4567", ")"].  
+-   **Symbols** By default, the list of **Symbols** contains the following characters: `,.;:-"'~=&/@!?()<>[]{}|#*^%` as well as the tick mark. For example, if the symbols are "`()-`", the value "(425) 123-4567" is tokenized as ["(", "425", ")", "123", "-", "4567", ")"].  
   
  A character cannot be both a delimiter and a symbol.  
   
@@ -126,7 +123,7 @@ manager: "jhubbard"
  For more information, see "Understanding the Use of Delimiters and Symbols" earlier in this topic.  
   
  **Symbols**  
- List the symbols that should be retained as part of patterns. Examples might include "/" for dates, ":" for times, and "@" for e-mail addresses. By default, the list of **Symbols** contains the following characters: `,.;:-"'`~=&/@!?()<>[]{}|#*^%`.  
+ List the symbols that should be retained as part of patterns. Examples might include "/" for dates, ":" for times, and "\@" for e-mail addresses. By default, the list of **Symbols** contains the following characters: `,.;:-"'~=&/@!?()<>[]{}|#*^%`.  
   
  For more information, see "Understanding the Use of Delimiters and Symbols" earlier in this topic.  
   

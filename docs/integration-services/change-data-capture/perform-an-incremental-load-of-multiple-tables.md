@@ -2,20 +2,17 @@
 title: "Perform an Incremental Load of Multiple Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],multiple tables"
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Perform an Incremental Load of Multiple Tables
   In the topic, [Improving Incremental Loads with Change Data Capture](../../integration-services/change-data-capture/change-data-capture-ssis.md), the diagram illustrates a basic package that performs an incremental load on just one table. However, loading one table is not as common as having to perform an incremental load of multiple tables.  

@@ -1,15 +1,12 @@
 ---
 title: "Create, Modify, and Delete Shared Data Sources (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 05/24/2018
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-data
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying data source properties"
   - "shared data sources [Reporting Services]"
@@ -19,18 +16,11 @@ helpviewer_keywords:
   - "data sources [Reporting Services], modifying properties"
   - "deleting shared data sources"
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Create, Modify, and Delete Shared Data Sources (SSRS)
   A shared data source is a set of data source connection properties that can be referenced by multiple reports, models, and data-driven subscriptions that run on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server.  Shared data sources provide an easy way to manage data source properties that often change over time. If a user account or password changes, or if you move the database to a different server, you can update the connection information in one place.  
-  
- The following icon indicates a shared data source in the Report Manager folder hierarchy:  
-  
- ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
-shared data source icon  
   
  Shared data sources are optional for reports and data-driven subscriptions, but required for report models. If you plan to use report models for ad hoc reporting, you must create and maintain a shared data source item to provide connection information to the model.  
   
@@ -39,7 +29,7 @@ shared data source icon
 |Part|Description|  
 |----------|-----------------|  
 |Name|A name that identifies the item within the report server folder hierarchy.|  
-|Description|A description that appears with the item in Report Manager when you view the contents of the folder.|  
+|Description|A description that appears with the item in the web portal when you view the contents of the folder.|  
 |Connection type|The data processing extension used with the data source. You can only use data processing extensions that are deployed on the report server. For more information about data processing extensions included with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], see [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Connection string|The connection string for the database. For more information and to view examples of connection strings to frequently used data sources, see [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Credential type|Specifies how credentials are obtained for the connection and whether they are to be used after the connection is made. For more information, see [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
@@ -47,7 +37,7 @@ shared data source icon
  A shared data source does not contain query information used to retrieve data. The query is always kept within a report definition.  
   
 ## Creating and Modifying Shared Data Sources  
- To create a shared data source or modify its properties, you must have **Manage data sources** permissions on the report server. If the report server runs in native mode, you can use Report Manager to create and configure the shared data source. If the report server runs in SharePoint integrated mode, you can use the application pages on a SharePoint site. For any report server regardless of its mode, you can create a shared data source in Report Designer and then publish it to a target server.  
+ To create a shared data source or modify its properties, you must have **Manage data sources** permissions on the report server. If the report server runs in native mode, you can create and configure the shared data source in the web portal. If the report server runs in SharePoint integrated mode, you can use the application pages on a SharePoint site. For any report server regardless of its mode, you can create a shared data source in Report Designer and then publish it to a target server.  
   
  After you create a shared data source on the report server, you can create role assignments to control access to it, move it to a different location, rename it, or take it offline to prevent report processing while maintenance operations are performed on the external data source. If you rename or move a shared data source item to another location in the report server folder hierarchy, the path information in all reports or subscriptions that reference the shared data source are updated accordingly. If you take the shared data source offline, all reports, models, and subscriptions will not run until you re-enable the data source.  
   
@@ -70,30 +60,26 @@ shared data source icon
   
          The new shared data source appears in the Shared Data Sources folder in Solution Explorer.  
   
-4.  Click Credentials.  
+4.  Click **Credentials**.  
   
      Specify the credentials to use for this data source. The owner of the data source chooses the type of credentials that are supported.  
   
- **To create a shared data source in Report Manager**  
+ **To create a shared data source in the web portal**  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  In the web portal, select **New** > **Data Source**. 
   
-2.  In Report Manager, navigate to the **Contents** page.  
+4.  Type a name for the item. A name must contain at least one character and it must start with a letter. It can also include certain symbols, but not spaces or the characters ; ? : \@ & = + , $ / * < > | " /.  
   
-3.  Click **New Data Source**. The **New Data Source** page opens.  
-  
-4.  Type a name for the item. A name must contain at least one character and it must start with a letter. It can also include certain symbols, but not spaces or the characters ; ? : @ & = + , $ / * < > | " /.  
-  
-5.  Optionally type a description to provide users with information about the connection. This description will appear on the **Contents** page in Report Manager.  
+5.  Optionally type a description to provide users with information about the connection..  
   
 6.  In the **Data source type** list, specify the data processing extension that is used to process data from the data source.  
   
-7.  For **Connection string**, specify the connection string that the report server uses to connect to the data source. It is recommended that you do not specify credentials in the connection string.  
+7.  For **Connection string**, specify the connection string that the report server uses to connect to the data source. We recommend not specifying credentials in the connection string.  
   
-     The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
+     The following example illustrates a connection string for connecting to the local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AdventureWorks2016 database:  
   
     ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
+    data source=<localservername>; initial catalog=AdventureWorks2016 
     ```  
   
 8.  For **Connect using**, specify how credentials are obtained when the report runs:  
@@ -115,11 +101,13 @@ shared data source icon
   
 10. Click **OK**  
   
- **To modify a shared data source in Report Manager**  
+ **To modify a shared data source in the web portal**  
   
-1.  In Report Manager, navigate to the Contents page.  
+1.  In the web portal, navigate to the shared data source.  
   
-2.  Navigate to the shared data source item, hover over the item, click the drop-down list, and from the context menu, click **Manage**. The **Properties** page opens.  
+2.  Select the ellipsis (...) in the upper-right corner of the shared data source > **Manage**.   
+
+    The **Properties** page opens.
   
 3.  Modify the data source, and then click **Apply**.  
   
@@ -128,21 +116,14 @@ shared data source icon
   
  **To delete a shared data source**  
   
-1.  In Report Manager, navigate to the **Contents** page and do one of the following:  
+1. In the web portal, navigate to the shared data source.  
   
-    -   Navigate to the shared data source item.  
+2.  Select the ellipsis (...) in the upper-right corner of the shared data source > **Manage**.    
+    The **Properties** page opens.
   
-         Click the item to open it. The General Properties page opens.  
+3. Click **Delete**, and then click **OK**.  
   
-         Click **Delete**, and then click **OK**.  
-  
-    -   In the **Contents** page, navigate to the folder that contains the data source you want to delete.  
-  
-         Hover over the item, click the drop-down list, and from the context menu, click **Delete**.  
-  
-         [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- Deleting a shared data source will deactivate any report, model, or data-driven subscription that uses it. Without the data source connection information, the items will no longer run. To activate these items, you must open each one and do the following:  
+Deleting a shared data source deactivates any report, model, or data-driven subscription that uses it. Without the data source connection information, the items will no longer run. To activate these items, you must open each one and do the following:  
   
 -   For reports and data-driven subscriptions that reference the shared data source, you can specify data source connection information in report properties or subscription, or you can select a new shared data source that has the values you want to use.  
   
@@ -151,7 +132,8 @@ shared data source icon
  There is no Undo operation for deleting a shared data source. However, if you accidentally delete a shared data source, you can create a new one using the same property values as the one you deleted. You will have to open each report, model, and data-driven subscription to rebind the shared data source to the item that uses it, but as long as the data source properties are the same as before, the reports, models, and subscriptions will continue to function as before.  
   
 ## Importing Shared Data Sources  
- **To import an existing data source in Report Designer**  
+
+**To import an existing data source in Report Designer**  
   
 1.  In Solution Explorer, right-click the **Shared Data Sources** folder in the report server project, and then click **Add Existing Item**. The **Add Existing Item** dialog box opens.  
   
@@ -215,7 +197,7 @@ shared data source icon
  Use caution when deleting a report model. If you delete a model, you can no longer open and modify any reports that are based on that model in Report Builder. If you inadvertently delete a model that is used by existing reports, you must regenerate the model, re-create and save any reports that use the model, and re-specify any model item security that you want to use. You cannot simply regenerate the model and then attach it to an existing report.  
   
 ## Dependent Items  
- To view a list of reports and models that use the data source, open the Dependent Items page for the shared data source. You can access this page when you open the data source in Report Manager or a SharePoint application page. Note that the Dependent Items page does not show data-driven subscriptions. If a shared data source is used by a subscription, the subscription will not appear in the dependent items list.  
+ To view a list of reports and models that use the data source, open the Dependent Items page for the shared data source. You can access this page when you open the data source in the web portal or a SharePoint application page. Note that the Dependent Items page does not show data-driven subscriptions. If a shared data source is used by a subscription, the subscription will not appear in the dependent items list.  
   
  **To view dependent items in SharePoint**  
   
@@ -228,13 +210,8 @@ shared data source icon
      For report models, the list of dependent items shows the reports that were created in Report Builder. For shared data sources, the dependent items list can include both reports and report models.  
   
 ## See Also  
- [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Data Sources Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Create, Delete, or Modify a Shared Data Source &#40;Report Manager&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configure Data Source Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configure Data Source Properties for a Paginated Report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

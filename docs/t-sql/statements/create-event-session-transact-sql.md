@@ -2,12 +2,10 @@
 title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EVENT SESSION"
@@ -22,13 +20,12 @@ helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "CREATE EVENT SESSION statement"
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 65
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE EVENT SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.  
   
@@ -36,8 +33,7 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```    
 CREATE EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -175,13 +171,13 @@ ON SERVER
  Sets a target parameter. Target parameters appear in the sys.dm_xe_object_columns view as column_type 'customizable' and object_name = *target_name*.  
   
 > [!IMPORTANT]  
->  If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+>  If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
  WITH ( \<event_session_options> [ ,...*n*] ) 
  Specifies options to use with the event session.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
- Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value.  
+ Specifies the maximum amount of memory to allocate to the session for event buffering. The default is 4 MB. *size* is a whole number and can be a kilobyte (KB) or a megabyte (MB) value. The maximum amount cannot exceed 2 GB (less than 2048 MB). However, using memory  values in GB range is not recommended.
   
  EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }  
  Specifies the event retention mode to use for handling event loss.  
@@ -229,7 +225,7 @@ ON SERVER
  Specifies whether or not to start this event session automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts.  
   
 > [!NOTE]  
->  If STARTUP_STATE = ON, the event session will only start if SQL Server is stopped and then restarted.  
+> If `STARTUP_STATE = ON`, the event session will only start if [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is stopped and then restarted.  
   
  ON  
  The event session is started at startup.  
@@ -238,15 +234,15 @@ ON SERVER
  The event session is not started at startup.  
   
 ## Remarks  
- The order of precedence for the logical operators is NOT (highest), followed by AND, followed by OR.  
+The order of precedence for the logical operators is `NOT` (highest), followed by `AND`, followed by `OR`.  
   
 ## Permissions  
- Requires the ALTER ANY EVENT SESSION permission.  
+Requires the `ALTER ANY EVENT SESSION` permission.  
   
 ## Examples  
  The following example shows how to create an event session named `test_session`. This example adds two events and uses the Event Tracing for Windows target.  
   
-```  
+```sql  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='test_session')  
     DROP EVENT session test_session ON SERVER;  
 GO  

@@ -2,12 +2,10 @@
 title: "ProtocolDLL Property (ClientNetworkProtocol Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "ProtocolDLL Property (ClientNetworkProtocol Class)"
@@ -17,13 +15,13 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProtocolDLL property"
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # ProtocolDLL Property (ClientNetworkProtocol Class)
-  Gets the name of the .dll file required by the network protocol specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  Gets the name of the .dll file required by the network protocol specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## Syntax  
   
@@ -42,6 +40,6 @@ object.ProtocolDLL [= value]
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

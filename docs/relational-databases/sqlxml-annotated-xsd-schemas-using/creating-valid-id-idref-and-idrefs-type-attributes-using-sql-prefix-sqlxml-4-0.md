@@ -2,12 +2,10 @@
 title: "Create Valid ID-IDREF-IDREFS Type Attributes - sql:prefix (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IDREFS relationships [SQLXML]"
@@ -22,12 +20,13 @@ helpviewer_keywords:
   - "annotated XSD schemas, IDREF type attribute"
   - "ID relationships [SQLXML]"
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating Valid ID, IDREF, and IDREFS Type Attributes Using sql:prefix (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   An attribute can be specified to be an ID type attribute. Attributes specified as IDREF or IDREFS can then be used to refer to the ID type attributes, enabling links between documents.  
   
  ID, IDREF, and IDREFS correspond to PK/FK (primary key/foreign key) relationships in the database, with few differences. In an XML document, the values of ID type attributes must be distinct. If **CustomerID** and **OrderID** attributes are specified as ID type in an XML document, these values must be distinct. However, in a database, CustomerID and OrderID columns can have the same values. (For example, CustomerID = 1 and OrderID = 1 are valid in the database).  

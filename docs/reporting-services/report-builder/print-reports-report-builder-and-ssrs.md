@@ -1,23 +1,18 @@
 ---
-title: "Print Reports (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Print Reports (SSRS) | Microsoft Docs"
+ms.date: 05/24/2018
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-builder
+
+
+ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
-# Print Reports (Report Builder and SSRS)
-  After you save a report to a report server, you can view and print the report from a browser, Report Manager, or any application that you use to view an exported report. Before saving a report, you can print it when you preview it.  
+# Print Reports - Reporting Services (SSRS)
+  After you save a report to a report server, you can view and print the report from the web portal or any application that you use to view an exported report. Before saving a report, you can print it when you preview it.  
   
  All print processing is performed on demand and on the client computer. There is no server-side print functionality that enables you to route a print job directly from a report server to a printer that is attached to the Web server. Printers and print options are selected by individual report users by using a standard **Print** dialog box.  
   
@@ -39,7 +34,7 @@ manager: "erikre"
   
 ## In This Section  
  [Print Reports from a Browser with the Print Control &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
- Describes how to use client-side printing to print reports from your Web browser or Report Manager.  
+ Describes how to use client-side printing to print reports from the web portal.  
   
  [Print Reports from Other Applications &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  Describes how to print reports exported to another application.  

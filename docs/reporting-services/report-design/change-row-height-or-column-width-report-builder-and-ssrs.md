@@ -1,20 +1,15 @@
 ---
 title: "Change Row Height or Column Width (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Change Row Height or Column Width (Report Builder and SSRS)
   When you set a row height, you are specifying the maximum height for the row in the rendered report. However, by default, text boxes in the row are set to grow vertically to accommodate their data at run-time, and this can cause a row to expand beyond the height that you specify. To set a fixed row height, you must change the text box properties so they do not automatically expand.  
@@ -64,11 +59,11 @@ manager: "erikre"
 3.  Click to grab the edge of the column and move it left or right to adjust the column width.  
   
 ## See Also  
- [Tablix Data Region (Report Builder and SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [Tablix Data Region (Report Builder and SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Tablix Data Region Cells, Rows, and Columns (Report Builder) and SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Tables (Report Builder and SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [Matrices (Report Builder and SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
- [Lists (Report Builder and SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [Matrices (Report Builder and SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
+ [Lists (Report Builder and SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists (Report Builder and SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

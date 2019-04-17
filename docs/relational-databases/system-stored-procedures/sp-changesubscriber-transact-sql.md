@@ -2,28 +2,23 @@
 title: "sp_changesubscriber (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changesubscriber"
   - "sp_changesubscriber_TSQL"
 helpviewer_keywords: 
   - "sp_changesubscriber"
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_changesubscriber (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the options for a Subscriber. Any distribution task for the Subscribers to this Publisher is updated. This stored procedure writes to the **MSsubscriber_info** table in the distribution database. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -56,28 +51,28 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## Arguments  
- [ **@subscriber=**] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber on which to change the options. *subscriber* is **sysname**, with no default.  
   
- [ **@type=**] *type*  
- Is the Subscriber type. *type* is **tinyint**, with a default of NULL. **0** indicates a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber. **1** specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or other ODBC data source server Subscriber.  
+`[ @type = ] type`
+ Is the Subscriber type. *type* is **tinyint**, with a default of NULL. **0** indicates a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscriber. **1** specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or other ODBC data source server Subscriber.  
   
- [ **@login=**] **'***login***'**  
+`[ @login = ] 'login'`
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login ID. *login* is **sysname**, with a default of NULL.  
   
- [ **@password=**] **'***password***'**  
+`[ @password = ] 'password'`
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication password. *password* is **sysname**, with a default of **%**. **%** indicates there is no change to the password property.  
   
- [ **@commit_batch_size=**] *commit_batch_size*  
+`[ @commit_batch_size = ] commit_batch_size`
  Supported for backward compatibility only.  
   
- [ **@status_batch_size=**] *status_batch_size*  
+`[ @status_batch_size = ] status_batch_size`
  Supported for backward compatibility only.  
   
- [ **@flush_frequency=**] *flush_frequency*  
+`[ @flush_frequency = ] flush_frequency`
  Supported for backward compatibility only.  
   
- [ **@frequency_type=**] *frequency_type*  
+`[ @frequency_type = ] frequency_type`
  Is the frequency with which to schedule the distribution task. *frequency_type* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -91,10 +86,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|Autostart|  
 |**128**|Recurring|  
   
- [ **@frequency_interval=**] *frequency_interval*  
+`[ @frequency_interval = ] frequency_interval`
  Is the interval for *frequency_type*. *frequency_interval* is **int**, with a default of NULL.  
   
- [ **@frequency_relative_interval=**] *frequency_relative_interval*  
+`[ @frequency_relative_interval = ] frequency_relative_interval`
  Is the date of the distribution task. This parameter is used when *frequency_type* is set to **32** (monthly relative). *frequency_relative_interval* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -105,10 +100,10 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Fourth|  
 |**16**|Last|  
   
- [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`
  Is how often the distribution task should recur during the defined *frequency_type*. *frequency_recurrence_factor* is **int**, with a default of NULL.  
   
- [ **@frequency_subday=**] *frequency_subday*  
+`[ @frequency_subday = ] frequency_subday`
  Is how often to reschedule during the defined period. *frequency_subday* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -118,25 +113,25 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [ **@frequency_subday_interval=**] *frequency_subday_interval*  
+`[ @frequency_subday_interval = ] frequency_subday_interval`
  Is the interval for *frequence_subday*. *frequency_subday_interval* is **int**, with a default of NULL.  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
+`[ @active_start_time_of_day = ] active_start_time_of_day`
  Is the time of day when the distribution task is first scheduled, formatted as HHMMSS. *active_start_time_of_day* is **int**, with a default of NULL.  
   
- [ **@active_end_time_of_day=**] *active_end_time_of_day*  
+`[ @active_end_time_of_day = ] active_end_time_of_day`
  Is the time of day when the distribution task stops being scheduled, formatted as HHMMSS. *active_end_time_of_day*is **int**, with a default of NULL.  
   
- [ **@active_start_date=**] *active_start_date*  
+`[ @active_start_date = ] active_start_date`
  Is the date when the distribution task is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with a default of NULL.  
   
- [ **@active_end_date=**] *active_end_date*  
+`[ @active_end_date = ] active_end_date`
  Is the date when the distribution task stops being scheduled, formatted as YYYYMMDD. *active_end_date*is **int**, with a default of NULL.  
   
- [ **@description=**] **'***description***'**  
+`[ @description = ] 'description'`
  Is an optional text description. *description* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@security_mode=**] *security_mode*  
+`[ @security_mode = ] security_mode`
  Is the implemented security mode. *security_mode* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -144,8 +139,8 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication|  
 |**1**|Windows Authentication|  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

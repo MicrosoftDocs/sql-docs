@@ -2,30 +2,28 @@
 title: "Configure a Multi-Homed Computer for SQL Server Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ports [SQL Server], multi-homed computer"
   - "multi-homed computer [SQL Server] configuring ports"
   - "firewall systems [Database Engine], multi-homed computer"
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Configure a Multi-Homed Computer for SQL Server Access
-  When a server must provide a connection to two or more networks or network subnets, a typical scenario uses a multi-homed computer. Frequently this computer is located in a perimeter network (also known as DMZ, demilitarized zone, or screened subnet). This topic describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a multi-homed environment.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  When a server must provide a connection to two or more networks or network subnets, a typical scenario uses a multi-homed computer. Frequently this computer is located in a perimeter network (also known as DMZ, demilitarized zone, or screened subnet). This article describes how to configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in a multi-homed environment.  
   
 > [!NOTE]  
 >  A multi-homed computer has multiple network adapters or has been configured to use multiple IP addresses for a single network adapter. A dual-homed computer has two network adapters or has been configured to use two IP addresses for a single network adapter.  
   
- Before you continue in this topic, you should be familiar with the information provided in the topic [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). This topic contains basic information about how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components work with the firewall.  
+ Before you continue in this article, you should be familiar with the information provided in the article [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). This article contains basic information about how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components work with the firewall.  
   
  **Assumptions for this example:**  
   
@@ -36,7 +34,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  IPv4 addresses are a series of four numbers known as octets. Each number is less than 255, separated by periods, such as 127.0.0.1. IPv6 addresses are a series of eight hexadecimal numbers separated by colons, such as fe80:4898:23:3:49a6:f5c1:2452:b994.  
   
--   Firewall rules could allow access through a specific port, such as port 1433. Or firewall rules could allow access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] program (sqlservr.exe). Neither method is better than the other. Because a server in a perimeter network is more vulnerable to attack than servers on an intranet, this topic assumes that you want to have more precise control, and individually select the ports that you open. For that reason, this topic assumes that you will configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to listen on a fixed port. For more information about the ports that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+-   Firewall rules could allow access through a specific port, such as port 1433. Or firewall rules could allow access to the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] program (sqlservr.exe). Neither method is better than the other. Because a server in a perimeter network is more vulnerable to attack than servers on an intranet, this article assumes that you want to have more precise control, and individually select the ports that you open. For that reason, this article assumes that you will configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to listen on a fixed port. For more information about the ports that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses, see [Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 -   This example configures access to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] by using TCP port 1433. The other ports that are the different [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components use can be configured by using the same general steps.  
   

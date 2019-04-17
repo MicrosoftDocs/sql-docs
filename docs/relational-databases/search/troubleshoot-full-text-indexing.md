@@ -1,25 +1,23 @@
 ---
 title: "Troubleshoot Full-Text Indexing | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [full-text search]"
   - "troubleshooting [SQL Server], full-text search"
   - "troubleshooting [full-text search]"
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Troubleshoot Full-Text Indexing
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
      
 ##  <a name="failure"></a> Troubleshoot Full-Text Indexing Failures  
  While populating or maintaining a full-text index, the full-text indexer, for reasons described below, might fail to index one or more rows. These row-level errors do not prevent the population from completing. The indexer skips these rows, which means that you are not able to query for content contained in these rows.  
@@ -28,7 +26,7 @@ manager: "jhubbard"
   
 -   The indexer cannot find or load a filter or word breaker component. This failure can occur if the table row contains a document format or content in a language that has not been registered with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This failure can also happen if the registered word breaker or filter component was not signed or failed signature verification when it was being loaded.  
   
--   A component, such as a word breaker or filter, fails and returns an error to the indexer. This can happen if the document being indexed is corrupt and the filter is unable to extract text from the document. This can also occur when a component is unable to handle the content of a single row above a certain size, due to memory limits on the full-text filter daemon host (fdhost.exe).  
+-   A component, such as a word breaker or filter, fails, and returns an error to the indexer. This failure can happen if the document being indexed is corrupt and the filter is unable to extract text from the document. This failure can also occur when a component is unable to handle the content of a single row above a certain size, due to memory limits on the full-text filter daemon host (fdhost.exe).  
   
  For each row-level failure, the crawl log contains details on the reason for the failure. The error counts are summarized at the end of a full or incremental population.  
   
@@ -42,7 +40,7 @@ manager: "jhubbard"
   
 -   A file group that contains the table being full-text indexed goes offline, or is made read-only.  
   
- You should view the crawl log at the end of any significant full-text index population operation, or when you find that a population did not complete.  
+ Examine the crawl log at the end of any significant full-text index population operation, or when you find that a population did not complete.  
   
 ### Unsigned Components  
  By default, the full-text indexer requires the filters and word breakers that it loads to be signed. If they are not signed, which is the case sometimes when custom components are installed, you must configure the full-text indexer to ignore signature verification.  

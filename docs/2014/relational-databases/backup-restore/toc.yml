@@ -1,0 +1,237 @@
+- name: Back Up and Restore of SQL Server Databases
+  href: back-up-and-restore-of-sql-server-databases.md
+  items:
+  - name: SQL Server Backup and Restore with Windows Azure Blob Storage Service
+    href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
+    items:
+    - name: Use PowerShell to Backup Multiple Databases to Windows Azure Blob Storage Service
+      href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
+  - name: SQL Server Backup to URL
+    href: sql-server-backup-to-url.md
+    items:
+    - name: SQL Server Backup to URL Best Practices and Troubleshooting
+      href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
+  - name: Deleting Backup Blob Files with Active Leases
+    href: deleting-backup-blob-files-with-active-leases.md
+- name: SQL Server Managed Backup to Windows Azure
+  href: sql-server-managed-backup-to-microsoft-azure.md
+  items:
+  - name: Setting up SQL Server Managed Backup to Windows Azure
+    href: enable-sql-server-managed-backup-to-microsoft-azure.md
+  - name: "SQL Server Managed Backup to Windows Azure: Interoperability and Coexistence"
+    href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
+  - name: SQL Server Managed Backup to Windows Azure - Retention and Storage Settings
+    href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
+  - name: Setting up SQL Server Managed Backup to Windows Azure for Availability Groups
+    href: ../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md
+  - name: Monitor SQL Server Managed Backup to Windows Azure
+    href: ../../database-engine/monitor-sql-server-managed-backup-to-windows-azure.md
+  - name: Troubleshooting SQL Server Managed  Backup to Windows Azure
+    href: ../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md
+  - name: Configure Managed Backup (SQL Server Management Studio)
+    href: ../../database-engine/configure-managed-backup-sql-server-management-studio.md
+  - name: Restoring From Backups Stored in Windows Azure
+    href: restoring-from-backups-stored-in-microsoft-azure.md
+- name: Recovery Models
+  href: recovery-models-sql-server.md
+  items:
+  - name: View or Change the Recovery Model of a Database
+    href: view-or-change-the-recovery-model-of-a-database-sql-server.md
+- name: Backup Overview
+  href: backup-overview-sql-server.md
+- name: Restore and Recovery Overview
+  href: restore-and-recovery-overview-sql-server.md
+  items:
+  - name: Plan and Perform Restore Sequences (Full Recovery Model)
+    href: plan-and-perform-restore-sequences-full-recovery-model.md
+  - name: Restart an Interrupted Restore Operation (Transact-SQL)
+    href: restart-an-interrupted-restore-operation-transact-sql.md
+- name: Backup Compression
+  href: backup-compression-sql-server.md
+  items:
+  - name: Configure Backup Compression
+    href: configure-backup-compression-sql-server.md
+  - name: Use Resource Governor to Limit CPU Usage by Backup Compression (Transact-SQL)
+    href: use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md
+- name: Backup Encryption
+  href: backup-encryption.md
+  items:
+  - name: Create an Encrypted Backup
+    href: create-an-encrypted-backup.md
+- name: Full Database Backups (SQL Server)
+  href: full-database-backups-sql-server.md
+  items:
+  - name: Create a Full Database Backup
+    href: create-a-full-database-backup-sql-server.md
+  - name: Back Up Database (General Page)
+    href: back-up-database-general-page.md
+  - name: Back Up Database (Media Options Page)
+    href: back-up-database-media-options-page.md
+  - name: Back Up Database (Backup Options Page)
+    href: back-up-database-backup-options-page.md
+  - name: Select Backup Destination
+    href: select-backup-destination.md
+  - name: Create Credential - Authenticate to Azure Storage
+    href: create-credential-authenticate-to-azure-storage.md
+- name: Partial Backups (SQL Server)
+  href: partial-backups-sql-server.md
+- name: Full File Backups (SQL Server)
+  href: full-file-backups-sql-server.md
+  items:
+  - name: Back Up Files and Filegroups
+    href: back-up-files-and-filegroups-sql-server.md
+- name: Differential Backups
+  href: differential-backups-sql-server.md
+  items:
+  - name: Create a Differential Database Backup
+    href: create-a-differential-database-backup-sql-server.md
+  - name: Restore a Differential Database Backup
+    href: restore-a-differential-database-backup-sql-server.md
+- name: Copy-Only Backups
+  href: copy-only-backups-sql-server.md
+- name: Transaction Log Backups
+  href: transaction-log-backups-sql-server.md
+  items:
+  - name: Back Up a Transaction Log (SQL Server)
+    href: back-up-a-transaction-log-sql-server.md
+  - name: Back Up the Transaction Log When the Database Is Damaged (SQL Server)
+    href: back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
+- name: Tail-Log Backups
+  href: tail-log-backups-sql-server.md
+- name: Backup Devices
+  href: backup-devices-sql-server.md
+  items:
+  - name: Define a Logical Backup Device for a Disk File
+    href: define-a-logical-backup-device-for-a-disk-file-sql-server.md
+  - name: Define a Logical Backup Device for a Tape Drive (SQL Server)
+    href: define-a-logical-backup-device-for-a-tape-drive-sql-server.md
+  - name: View the Contents of a Backup Tape or File
+    href: view-the-contents-of-a-backup-tape-or-file-sql-server.md
+  - name: Specify a Disk or Tape As a Backup Destination (SQL Server)
+    href: specify-a-disk-or-tape-as-a-backup-destination-sql-server.md
+  - name: Device Contents (SQL Server)
+    href: device-contents-sql-server.md
+  - name: Backup Device (Media Contents Page)
+    href: backup-device-media-contents-page.md
+  - name: Backup Device (General Page)
+    href: backup-device-general-page.md
+  - name: Restore a Backup from a Device (SQL Server)
+    href: restore-a-backup-from-a-device-sql-server.md
+  - name: Delete a Backup Device
+    href: delete-a-backup-device-sql-server.md
+- name: Media Sets, Media Families, and Backup Sets
+  href: media-sets-media-families-and-backup-sets-sql-server.md
+  items:
+  - name: Set the Expiration Date on a Backup (SQL Server)
+    href: set-the-expiration-date-on-a-backup-sql-server.md
+  - name: View the Data and Log Files in a Backup Set (SQL Server)
+    href: view-the-data-and-log-files-in-a-backup-set-sql-server.md
+  - name: Mirrored Backup Media Sets (SQL Server)
+    href: mirrored-backup-media-sets-sql-server.md
+  - name: Back Up to a Mirrored Media Set (Transact-SQL)
+    href: back-up-to-a-mirrored-media-set-transact-sql.md
+- name: Backup History and Header Information (SQL Server)
+  href: backup-history-and-header-information-sql-server.md
+  items:
+  - name: View the Properties and Contents of a Logical Backup Device (SQL Server)
+    href: view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md
+  - name: Possible Media Errors During Backup and Restore
+    href: possible-media-errors-during-backup-and-restore-sql-server.md
+  - name: Enable or Disable Backup Checksums During Backup or Restore (SQL Server)
+    href: enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md
+  - name: Specify Whether a Backup or Restore Operation Continues or Stops After Encountering an Error (SQL Server)
+    href: specify-if-backup-or-restore-continues-or-stops-after-error.md
+- name: Complete Database Restores (Simple Recovery Model)
+  href: complete-database-restores-simple-recovery-model.md
+  items:
+  - name: Restore a Database Backup Under the Simple Recovery Model (Transact-SQL)
+    href: restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md
+  - name: Restore a Database Backup (SQL Server Management Studio)
+    href: restore-a-database-backup-using-ssms.md
+  - name: Backup Timeline
+    href: backup-timeline.md
+  - name: Restore Database (General Page)
+    href: restore-database-general-page.md
+  - name: Restore Database (Options Page)
+    href: restore-database-options-page.md
+  - name: Restore Database (Files Page)
+    href: restore-database-files-page.md
+  - name: Continue with Restore
+    href: dbengine-continue-with-restore.md
+  - name: Select Backup Device
+    href: select-backup-device.md
+  - name: Connect to Windows Azure Storage (Restore)
+    href: connect-to-microsoft-azure-storage-restore.md
+  - name: Restore a Database to a New Location
+    href: restore-a-database-to-a-new-location-sql-server.md
+- name: Complete Database Restores (Full Recovery Model)
+  href: complete-database-restores-full-recovery-model.md
+  items:
+  - name: Restore a Database to the Point of Failure Under the Full Recovery Model (Transact-SQL)
+    href: restore-database-to-point-of-failure-full-recovery.md
+- name: File Restores (Simple Recovery Model)
+  href: file-restores-simple-recovery-model.md
+  items:
+  - name: Restore Files and Filegroups over Existing Files
+    href: restore-files-and-filegroups-over-existing-files-sql-server.md
+  - name: Restore Files to a New Location
+    href: restore-files-to-a-new-location-sql-server.md
+  - name: Restore Files and Filegroups (SQL Server)
+    href: restore-files-and-filegroups-sql-server.md
+- name: File Restores (Full Recovery Model)
+  href: file-restores-full-recovery-model.md
+- name: Apply Transaction Log Backups
+  href: apply-transaction-log-backups-sql-server.md
+  items:
+  - name: Restore a Transaction Log Backup (SQL Server)
+    href: restore-a-transaction-log-backup-sql-server.md
+  - name: Restore a SQL Server Database to a Point in Time (Full Recovery Model)
+    href: restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md
+  - name: Recovery of Related  Databases That Contain Marked Transaction
+    href: recovery-of-related-databases-that-contain-marked-transaction.md
+  - name: Use Marked Transactions to Recover Related Databases Consistently (Full Recovery Model)
+    href: use-marked-transactions-to-recover-related-databases-consistently.md
+  - name: Restore a Database to a Marked Transaction (SQL Server Management Studio)
+    href: restore-a-database-to-a-marked-transaction-sql-server-management-studio.md
+  - name: Recover to a Log Sequence Number (SQL Server)
+    href: recover-to-a-log-sequence-number-sql-server.md
+- name: Online Restore
+  href: online-restore-sql-server.md
+  items:
+  - name: Deferred Transactions (SQL Server)
+    href: deferred-transactions-sql-server.md
+  - name: Remove Defunct Filegroups (SQL Server)
+    href: remove-defunct-filegroups-sql-server.md
+  - name: "Example: Online Restore of a Read-Write File (Full Recovery Model)"
+    href: example-online-restore-of-a-read-write-file-full-recovery-model.md
+  - name: "Example: Online Restore of a Read-Only File (Full Recovery Model)"
+    href: example-online-restore-of-a-read-only-file-full-recovery-model.md
+  - name: "Example: Online Restore of a Read-Only File (Simple Recovery Model)"
+    href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
+  - name: "Example: Offline Restore of Primary and One Other Filegroup (Full Recovery Model)"
+    href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
+- name: Restore Pages
+  href: restore-pages-sql-server.md
+  items:
+  - name: Manage the suspect_pages Table (SQL Server)
+    href: manage-the-suspect-pages-table-sql-server.md
+- name: Piecemeal Restores
+  href: piecemeal-restores-sql-server.md
+  items:
+  - name: "Example: Piecemeal Restore of Database (Full Recovery Model)"
+    href: example-piecemeal-restore-of-database-full-recovery-model.md
+  - name: "Example: Piecemeal Restore of Database (Simple Recovery Model)"
+    href: example-piecemeal-restore-of-database-simple-recovery-model.md
+  - name: "Example: Piecemeal Restore of Only Some Filegroups (Full Recovery Model)"
+    href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
+  - name: "Example: Piecemeal Restore of Only Some Filegroups (Simple Recovery Model)"
+    href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
+- name: Recover a Database Without Restoring Data (Transact-SQL)
+  href: recover-a-database-without-restoring-data-transact-sql.md
+- name: Back Up and Restore of System Databases
+  href: back-up-and-restore-of-system-databases-sql-server.md
+  items:
+  - name: Restore the master Database (Transact-SQL)
+    href: restore-the-master-database-transact-sql.md
+- name: "Backup and Restore: Interoperability and Coexistence"
+  href: backup-and-restore-interoperability-and-coexistence-sql-server.md

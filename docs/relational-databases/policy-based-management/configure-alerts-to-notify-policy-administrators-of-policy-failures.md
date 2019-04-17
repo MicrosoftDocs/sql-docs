@@ -2,22 +2,20 @@
 title: "Configure Alerts to Notify Policy Administrators of Policy Failures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, configure alerts"
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
-caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Configure Alerts to Notify Policy Administrators of Policy Failures
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   When Policy-Based Management policies are executed in one of the three automated evaluation modes, if a policy violation occurs, a message is written to the event log. To be notified when this message is written to the event log, you can create an alert to detect the message and perform an action. The alert should detect the messages as shown in the following table.  
   
 |Execution mode|Message number|  
@@ -29,11 +27,11 @@ manager: "jhubbard"
   
  To set up an alert to respond to the Policy-Based Management error messages, see the following topics:  
   
--   [Create an Operator](http://msdn.microsoft.com/library/1359d790-5905-4927-a208-e7155e7768a2)  
+-   [Create an Operator](../../ssms/agent/create-an-operator.md)  
   
--   [Create an Alert Using an Error Number](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [Create an Alert Using an Error Number](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Assign Alerts to an Operator](http://msdn.microsoft.com/library/aa818155-6fa2-4565-a09f-5c7e31c89754)  
+-   [Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
 ## Permissions  
  When policies are evaluated on demand, they execute in the security context of the user. To write to the error log, the user must have ALTER TRACE permissions or be a member of the sysadmin fixed server role. Policies that are evaluated by a user that has less privileges will not write to the event log, and will not fire an alert.  

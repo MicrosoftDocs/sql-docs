@@ -1,159 +1,221 @@
 ---
-title: "Troubleshooting SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2017"
-ms.prod: "sql-server-2017"
+title: "Troubleshoot SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
+description: "This article describes how to troubleshoot common issues with SSIS Scale Out"
+ms.custom: performance
+ms.date: 01/09/2019
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-caps.latest.revision: 1
+ms.technology: integration-services
+ms.topic: conceptual
 author: "haoqian"
 ms.author: "haoqian"
-manager: "jhubbard"
+manager: craigg
 ---
-# Troubleshooting Scale Out
+# Troubleshoot Scale Out
 
-SSIS Scale Out involves communtication among SSISDB, Scale Out Master service and Scale Out Worker service. Sometimes, the communication is broken due to configuration mistakes, lack of access permissions and other reasons. This document helps you to troubleshoot your Scale Out configuration.
+SSIS Scale Out involves communication among the SSIS Catalog database `SSISDB`, the Scale Out Master service, and the Scale Out Worker service. Sometimes this communication breaks due to configuration mistakes, lack of access permissions, and other reasons. This article helps you to troubleshoot issues with your Scale Out configuration.
 
 To investigate the symptoms you encounter, follow the steps below one by one until your problem is resolved.
 
-### **Symptoms** 
-Scale Out Master cannot connect to SSISDB. 
+## Scale Out Master fails
 
-Master properties cannot show in Scale Out Manager.
+### Symptoms 
+-   Scale Out Master cannot connect to SSISDB. 
 
-Master properties are not filled in [SSISDB].[catalog].[master_properties]
+-   Master properties cannot show in Scale Out Manager.
 
-### **Solution**
-Step 1: Check if Scale Out is enabled.
+-   Master properties are not populated in the view `[catalog].[master_properties]`.
 
-Right-click **SSISDB** node in the object explorer of SSMS and check **Scale Out feature is enabled**.
+### Solution
+1.  Check whether Scale Out is enabled.
 
-![Is Scale Out enabled](media\isenabled.PNG)
+    In SSMS, in Object Explorer, right-click **SSISDB** and check **Scale Out feature is enabled**.
 
-If the property value is False, enable Scale Out by calling stored procedure [SSISDB].[catalog].[enable_scaleout].
+    ![Is Scale Out enabled](media/isenabled.PNG)
 
-Step 2: Check if Sql Server name specified in Scale Out Master configuration file is correct and restart Scale Out Master service.
+    If the property value is False, enable Scale Out by calling the stored procedure `[catalog].[enable_scaleout]`.
 
-### **Symptoms** 
-Scale Out Worker cannot connect to Scale Out Master
+2.  Check whether the SQL Server name specified in the Scale Out Master configuration file is correct, and restart the Scale Out Master service.
 
-Scale Out Worker does not show after adding it in Scale Out Manager
+## Scale Out Worker fails
 
-Scale Out Worker does not show in [SSISDB].[catalog].[worker_agents]
+### Symptoms 
+-   Scale Out Worker cannot connect to Scale Out Master.
 
-Scale Out Worker service is running, while Scale Out Worker is offline
+-   Scale Out Worker does not show after adding it in Scale Out Manager.
 
-### **Solutions** 
-Check the error messages in Scale Out Worker service log under \<driver\>:\Users\\*[account running worker service]*\AppData\Local\SSIS\Cluster\Agent.
+-   Scale Out Worker does not show in the view `[catalog].[worker_agents]`.
 
-**Case** 
+-   The Scale Out Worker service is running, but the Scale Out Worker is offline.
 
-System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://*[MachineName]:[Port]*/ClusterManagement/ that could accept the message.
+### Solution
+Check the error messages in the Scale Out Worker service log under `\<drive\>:\Users\\*[account running worker service]*\AppData\Local\SSIS\Cluster\Agent`.
 
-Step 1: Check if the port number specified in Scale Out Master service configuration file is correct and restart Scale Out Master service. 
+## No endpoint listening
 
-Step 2: Check if the master endpoint specified in Scale Out Worker service configuration is correct and restart Scale Out Worker service.
+### Symptoms
 
-Step 3: Check if firewall port is open on Scale Out Master node.
+*"System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://*[MachineName]:[Port]*/ClusterManagement/ that could accept the message."*
 
-Step 4: Resolve any other connection issues between Scale Out Master node and Scale Out Worker node.
+### Solution
 
-**Case**
+1.  Check whether the port number specified in the Scale Out Master service configuration file is correct, and restart the Scale Out Master service. 
 
-System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority '*[Machine Name]:[Port]*'. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure.
+2.  Check whether the master endpoint specified in the Scale Out Worker service configuration is correct, and restart the Scale Out Worker service.
 
-Step 1: Install Scale Out Master certificate to Root certificate store of local machine on Scale Out Worker node if not installed yet and restart Scale Out Worker service.
+3.  Check whether the firewall port is open on the Scale Out Master node.
 
-Step 2: Check if the host name in master endpoint is included in the CNs of Scale Out Master certificate. If not, reset the master endpoint in Scale Out Worker configuration file and restart Scale Out Worker service. 
+4.  Resolve any other connection issues between the Scale Out Master node and the Scale Out Worker node.
 
-> [!Note]
-> If it is not possible to change the host name of master endpoint due to DNS settings, you have to change the Scale Out Master certificate. See [Deal with certificates in SSIS Scale Out](deal-with-certificates-in-ssis-scale-out.md).
+## Could not establish trust relationship
 
-Step 3: Check if the master thumbprint specified in Scale Out Worker configuration matches the thumbprint of Scale Out Master certificate. 
+### Symptoms
+*""System.ServiceModel.Security.SecurityNegotiationException: Could not establish trust relationship for the SSL/TLS secure channel with authority '[Machine Name]:[Port]'."*
 
-**Case**
+*"System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel."*
 
-System.ServiceModel.Security.SecurityNegotiationException: Could not establish secure channel for SSL/TLS with authority '*[Machine Name]:[Port]*'. ---> System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel.
+*"System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure."*
 
-Step 1: Check if the account running Scale Out Worker service has access to Scale Out Worker certificate by the command below.
+### Solution
+1.  Install the Scale Out Master certificate to the Root certificate store of the local computer on the Scale Out Worker node, if the certificate is not yet installed, and restart the Scale Out Worker service.
+
+2.  Check whether the host name in the master endpoint is included in the CNs of the Scale Out Master certificate. If not, reset the master endpoint in the Scale Out Worker configuration file, and restart the Scale Out Worker service. 
+
+    > [!NOTE]
+    > If it's not possible to change the host name of the master endpoint due to DNS settings, you have to change the Scale Out Master certificate. See [Manage certificates for SSIS Scale Out](deal-with-certificates-in-ssis-scale-out.md).
+
+3.  Check whether the master thumbprint specified in the Scale Out Worker configuration matches the thumbprint of the Scale Out Master certificate. 
+
+## Could not establish secure channel
+
+### Symptoms
+
+*"System.ServiceModel.Security.SecurityNegotiationException: Could not establish secure channel for SSL/TLS with authority '[Machine Name]:[Port]'."*
+
+*"System.Net.WebException: The request was aborted: Could not create SSL/TLS secure channel."*
+
+### Solution
+Check whether the account running the Scale Out Worker service has access to the Scale Out Worker certificate by running the following command:
 
 ```dos
 winhttpcertcfg.exe -l -c LOCAL_MACHINE\MY -s {CN of the worker certificate}
 ```
 
-If the account does not have access, grant by the command below and restart Scale Out Worker service.
+If the account does not have access, grant access by running the following command, and restart Scale Out Worker service.
 
 ```dos
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {the account running Scale Out Worker service}
 ```
 
-**Case**
+## HTTP request forbidden
 
-System.ServiceModel.Security.MessageSecurityException: The HTTP request was forbidden with client authentication scheme 'Anonymous'. ---> System.Net.WebException: The remote server returned an error: (403) Forbidden.
+### Symptoms
 
-Step 1: Install Scale Out Worker certificate to Root certificate store of local machine on Scale Out Master node if not installed yet and restart Scale Out Worker service.
+*"System.ServiceModel.Security.MessageSecurityException: The HTTP request was forbidden with client authentication scheme 'Anonymous'."*
 
-Step 2: Clean up useless certificates in the Root certificate store of local machine on Scale Out Master node.
+*"System.Net.WebException: The remote server returned an error: (403) Forbidden."*
 
-Step 3: Configure Schannel to no longer send the list of trusted root certification authorities during the TLS/SSL handshake process, by adding the registry entry below on Scale Out Master node.
+### Solution
+1.  Install the Scale Out Worker certificate to the Root certificate store of the local computer on the Scale Out Master node, if the certificate is not yet installed, and restart the Scale Out Worker service.
 
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
+2.  Clean up useless certificates in the Root certificate store of the local computer on the Scale Out Master node.
 
-Value name: SendTrustedIssuerList 
+3.  Configure Schannel to no longer send the list of trusted root certification authorities during the TLS/SSL handshake process by adding the following registry entry on the Scale Out Master node.
 
-Value type: REG_DWORD 
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-Value data: 0 (False)
+    Value name: **SendTrustedIssuerList** 
 
-**Case**
+    Value type: **REG_DWORD** 
 
-System.ServiceModel.CommunicationException: An error occurred while making the HTTP request to https://*[Machine Name]:[Port]*/ClusterManagement/. This could be due to the fact that the server certificate is not configured properly with HTTP.SYS in the HTTPS case. This could also be caused by a mismatch of the security binding between the client and the server. 
+    Value data: **0 (False)**
 
-Step 1: Check if Scale Out Master certificate is bound to the port in master endpoint correctly on master node with the command below. Check if the certificate hash displayed is matched with Scale Out Master certificate thumbprint.
+4.  If it is not possible to clean up all non-self-signed certificates as described in step 2, set the value of the following registry key to 2.
 
-```dos
-netsh http show sslcert ipport=0.0.0.0:{Master port}
-```
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
-If the binding is not correct, reset it with following commands and restart Scale Out Worker service.
+    Value name: **ClientAuthTrustMode** 
 
-```dos
-netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate thumbprint} certstorename=Root appid={random guid}
-```
+    Value type: **REG_DWORD** 
 
-### **Symptoms**
+    Value data: **2**
+
+    > [!NOTE]
+    > If you have non-self-signed certificates in the Root certificate store, client certificate authentication fails. For more info, see [Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ).
+
+## HTTP request error
+
+### Symptoms
+
+*"System.ServiceModel.CommunicationException: An error occurred while making the HTTP request to https://[Machine Name]:[Port]/ClusterManagement/. This could be due to the fact that the server certificate is not configured properly with HTTP.SYS in the HTTPS case. This could also be caused by a mismatch of the security binding between the client and the server."*
+
+### Solution
+1.  Check whether the Scale Out Master certificate is bound to the port in the master endpoint correctly on the master node by running the following command:
+
+    ```dos
+    netsh http show sslcert ipport=0.0.0.0:{Master port}
+    ```
+
+    Check whether the certificate hash displayed matches the Scale Out Master certificate thumbprint. If the binding is not correct, reset the binding by running the following commands, and restart Scale Out Worker service.
+
+    ```dos
+    netsh http delete sslcert ipport=0.0.0.0:{Master port}
+    netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={Master certificate thumbprint} certstorename=Root  appid={random guid}
+    ```
+
+## Cannot open certificate store
+
+### Symptoms
+Validation fails when connecting a Scale Out Worker to the Scale Out Master in Scale Out Manager with the error message, *"Cannot open certificate store on the machine."*
+
+### Solution
+
+1.  Run Scale Out Manager as administrator. If you open Scale Out Manager with SSMS, you have to run SSMS as administrator.
+
+2.  Start the Remote Registry service on the computer if it is not running.
+
+## Execution doesn't start
+
+### Symptoms
 Execution in Scale Out does not start.
 
-### **Solution**
+### Solution
 
-Check the status of the machines you selected to run the package in [SSISDB].[catalog].[worker_agents]. At least one worker must be online and enabled.
+Check the status of the computers you selected to run the package in the view `[catalog].[worker_agents]`. At least one worker must be online and enabled.
 
-### **Symptoms** 
-Packages run successfully, but there is no message logged.
+## No log
 
-### **Solution**
+### Symptoms 
+Packages run successfully, but there no messages are logged.
 
-Check if SQL Server Authentication is allowed by the Sql Server hosting SSISDB.
+### Solution
 
-> [!Note]  
+Check whether SQL Server Authentication is allowed by the SQL Server instance that hosts SSISDB.
+
+> [!NOTE]  
 > If you have changed the account for Scale Out logging, see [Change the Account for Scale Out Logging](change-logdb-account.md) and verify the connection string used for logging.
 
-### **Symptoms**
-The error messages in package execution report are not enough for troubleshooting.
+## Error messages aren't helpful
 
-### **Solution**
-More execution logs can be found under TasksRootFolder configured in WorkerSettings.config. By default, it is \<driver\>:\Users\\*[account]*\AppData\Local\SSIS\ScaleOut\Tasks. The *[account]* is the account running Scale Out Worker service with default value SSISScaleOutWorker140.
+### Symptoms
+The error messages in the package execution report are not sufficient for troubleshooting.
 
-To locate the log for the package execution with *[execution id]*, execute the T-SQL command below to get the *[task id]*. Then, find the subfolder named with *[task id]* under TasksRootFolder.<sup>1<sup>
+### Solution
+More execution logs can be found under the `TasksRootFolder` configured in `WorkerSettings.config`. By default, this folder is `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. The *[account]* is the account running the Scale Out Worker service, with default value `SSISScaleOutWorker140`.
+
+To locate the log for the package execution with *[execution ID]*, execute the following Transact-SQL command to get the *[task ID]*. Then, find the subfolder name that contains *[task ID]* under `TasksRootFolder`.
 
 ```sql
 SELECT [TaskId]
 FROM [SSISDB].[internal].[tasks] tasks, [SSISDB].[internal].[executions] executions 
 WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions.job_id
 ```
-<sup>1</sup> This query is for troubleshooting purpose only and open to change when the logging/diagnostic scenario for Scale Out Worker is improved in the future. 
+
+> [!WARNING]
+> This query is for troubleshooting purpose only. The internal views referenced in the query are to change in the future. 
+
+## Next steps
+For more info, see the following articles about setting up and configuring SSIS Scale Out:
+-   [Get started with Integration Services (SSIS) Scale Out on a single computer](get-started-with-ssis-scale-out-onebox.md)
+-   [Walkthrough: Set up Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)

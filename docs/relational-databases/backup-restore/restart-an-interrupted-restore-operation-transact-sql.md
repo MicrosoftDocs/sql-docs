@@ -2,13 +2,11 @@
 title: "Restart an Interrupted Restore Operation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interrupted restore operation"
   - "restoring databases [SQL Server], restarting interrupted operation"
@@ -17,12 +15,12 @@ helpviewer_keywords:
   - "restarting interrupted restore operation"
   - "restoring interrupted operation [SQL Server]"
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Restart an Interrupted Restore Operation (Transact-SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic explains how to restart an interrupted restore operation.  
   
 ### To restart an interrupted restore operation  
@@ -36,7 +34,7 @@ manager: "jhubbard"
 ## Example  
  This example restarts an interrupted restore operation.  
   
-```tsql  
+```sql  
 -- Restore a full database backup of the AdventureWorks database.  
 RESTORE DATABASE AdventureWorks  
    FROM DISK = 'C:\AdventureWorks.bck'  

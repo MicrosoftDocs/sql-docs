@@ -2,12 +2,10 @@
 title: "sp_addumpdevice (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addumpdevice_TSQL"
@@ -18,17 +16,16 @@ helpviewer_keywords:
   - "backup devices [SQL Server], defining"
   - "sp_addumpdevice"
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_addumpdevice (Transact-SQL)
-  Adds a backup device to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+
+Adds a backup device to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +42,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## Arguments  
- [ **@devtype=** ] **'***device_type***'**  
+`[ @devtype = ] 'device_type'`
  Is the type of backup device. *device_type* is **varchar(20)**, with no default, and can be one of the following values.  
   
 |Value|Description|  
@@ -53,10 +50,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 |**disk**|Hard disk file as a backup device.|  
 |**tape**|Any tape devices supported by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Note: Support for tape backup devices will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.|  
   
- [ **@logicalname =** ] **'***logical_name***'**  
+`[ @logicalname = ] 'logical_name'`
  Is the logical name of the backup device used in the BACKUP and RESTORE statements. *logical_name* is **sysname**, with no default, and cannot be NULL.  
   
- [ **@physicalname =** ] **'***physical_name***'**  
+`[ @physicalname = ] 'physical_name'`
  Is the physical name of the backup device. Physical names must follow the rules for operating-system file names or universal naming conventions for network devices, and must include a full path. *physical_name* is **nvarchar(260)**, with no default value, and cannot be NULL.  
   
  When creating a backup device on a remote network location, be sure that the name under which the [!INCLUDE[ssDE](../../includes/ssde-md.md)] was started has appropriate write capabilities on the remote computer.  
@@ -66,10 +63,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  This procedure enters the specified physical name into the catalog. The procedure does not attempt to access or create  the device.  
   
- [ **@cntrltype =** ] **'***controller_type***'**  
+`[ @cntrltype = ] 'controller_type'`
  Obsolete. If specified, this parameter is ignored. It is supported purely for backward compatibility. New uses of **sp_addumpdevice** should omit this parameter.  
   
- [ **@devstatus =** ] **'***device_status***'**  
+`[ @devstatus = ] 'device_status'`
  Obsolete. If specified, this parameter is ignored. It is supported purely for backward compatibility. New uses of **sp_addumpdevice** should omit this parameter.  
   
 ## Return Code Values  

@@ -2,12 +2,10 @@
 title: "sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_help_queue_sp"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_queue_sp"
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sysmail_help_queue_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   There are two queues in Database Mail: the mail queue and status queue. The mail queue stores mail items that are waiting to be sent. The status queue stores the status of items that have already been sent. This stored procedure allows viewing the state of the mail or status queues. If the parameter **@queue_type** is not specified, the stored procedure returns one row for each of the queues.  
   
@@ -37,7 +34,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## Arguments  
- [ **@queue_type** = ] **'***queue_type***'**  
+`[ @queue_type = ] 'queue_type'`
  Optional argument deletes e-mails of the type specified as the *queue_type*. *queue_type* is **nvarchar(6)** with no default. Valid entries are **mail** and **status**.  
   
 ## Return Code Values  

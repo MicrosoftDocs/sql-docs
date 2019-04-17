@@ -2,21 +2,19 @@
 title: "A Guide to Query Processing for Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-caps.latest.revision: 26
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # A Guide to Query Processing for Memory-Optimized Tables
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In-Memory OLTP introduces memory-optimized tables and natively compiled stored procedures in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This article gives an overview of query processing for both memory-optimized tables and natively compiled stored procedures.  
   
@@ -41,7 +39,7 @@ manager: "jhubbard"
   
  We consider two tables, Customer and Order. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] script contains the definitions for these two tables and associated indexes, in their (traditional) disk-based form:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -60,11 +58,11 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- For constructing the query plans shown in this article, the two tables were populated with sample data from the Northwind sample database, which you can download from [Northwind and pubs Sample Databases for SQL Server 2000](http://www.microsoft.com/download/details.aspx?id=23654).  
+ For constructing the query plans shown in this article, the two tables were populated with sample data from the Northwind sample database, which you can download from [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
   
  Consider the following query, which joins the tables Customer and Order and returns the ID of the order and the associated customer information:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -83,7 +81,7 @@ Query plan for join of disk-based tables.
   
  Consider a slight variation on this query, which returns all rows from the Order table, not only OrderID:  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -136,7 +134,7 @@ Query processing pipeline for interpreted Transact-SQL access to memory-optimize
   
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] script contains memory-optimized versions of the Order and Customer tables, using hash indexes:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -153,7 +151,7 @@ GO
   
  Consider the same query executed on memory-optimized tables:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -175,7 +173,7 @@ Query plan for join of memory-optimized tables.
 ## Natively Compiled Stored Procedures  
  Natively compiled stored procedures are [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures compiled to machine code, rather than interpreted by the query execution engine. The following script creates a natively compiled stored procedure that runs the example query (from the Example Query section).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -222,7 +220,7 @@ Execution of natively compiled stored procedures.
   
  Invocation of a natively compiled stored procedure is described as follows:  
   
-1.  The user issues an **EXEC***usp_myproc* statement.  
+1.  The user issues an **EXEC**_usp_myproc_ statement.  
   
 2.  The parser extracts the name and stored procedure parameters.  
   
@@ -241,7 +239,7 @@ Execution of natively compiled stored procedures.
 ### Retrieving a Query Execution Plan for Natively Compiled Stored Procedures  
  The query execution plan for a natively compiled stored procedure can be retrieved using **Estimated Execution Plan** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], or using the SHOWPLAN_XML option in [!INCLUDE[tsql](../../includes/tsql-md.md)]. For example:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -269,7 +267,7 @@ GO
 |Stream Aggregate|`SELECT count(CustomerID) FROM dbo.Customer`|Note that the Hash Match operator is not supported for aggregation. Therefore, all aggregation in natively compiled stored procedures uses the Stream Aggregate operator, even if the plan for the same query in interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] uses the Hash Match operator.|  
   
 ## Column Statistics and Joins  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains statistics on values in index key columns to help estimate the cost of certain operations, such as index scan and index seeks. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also creates statistics on non-index key columns if you explicitly create them or if the query optimizer creates them in response to a query with a predicate.) The main metric in cost estimation is the number of rows processed by a single operator. Note that for disk-based tables, the number of pages accessed by a particular operator is significant in cost estimation. However, as page count is not important for memory-optimized tables (it is always zero), this discussion focuses on row count. The estimation starts with the index seek and scan operators in the plan, and is then extended to include the other operators, like the join operator. The estimated number of rows to be processed by a join operator is based on the estimation for the underlying index, seek, and scan operators. For interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access to memory-optimized tables, you can observe the actual execution plan to see the difference between the estimated and actual row counts for the operators in the plan.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains statistics on values in index key columns to help estimate the cost of certain operations, such as index scan and index seeks. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also creates statistics on non-index key columns if you explicitly create them or if the query optimizer creates them in response to a query with a predicate.) The main metric in cost estimation is the number of rows processed by a single operator. Note that for disk-based tables, the number of pages accessed by a particular operator is significant in cost estimation. However, as page count is not important for memory-optimized tables (it is always zero), this discussion focuses on row count. The estimation starts with the index seek and scan operators in the plan, and is then extended to include the other operators, like the join operator. The estimated number of rows to be processed by a join operator is based on the estimation for the underlying index, seek, and scan operators. For interpreted [!INCLUDE[tsql](../../includes/tsql-md.md)] access to memory-optimized tables, you can observe the actual execution plan to see the difference between the estimated and actual row counts for the operators in the plan.  
   
  For the example in figure 1,  
   

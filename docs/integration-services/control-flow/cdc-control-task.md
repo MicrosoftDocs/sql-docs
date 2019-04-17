@@ -2,21 +2,18 @@
 title: "CDC Control Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.cdccontroltask.f1"
   - "sql13.ssis.designer.cdccontroltask.config.f1"
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # CDC Control Task
   The CDC Control task is used to control the life cycle of change data capture (CDC) packages. It handles CDC package synchronization with the initial load package, the management of Log Sequence Number (LSN) ranges that are processed in a run of a CDC package. In addition, the CDC Control task deals with error scenarios and recovery.  
@@ -75,11 +72,11 @@ manager: "jhubbard"
   
 ## Related Content  
   
--   Technical article, [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252958), on social.technet.microsoft.com.  
+-   Technical article, [Installing Microsoft SQL Server 2012 Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252958), on social.technet.microsoft.com.  
   
--   Technical article, [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252960), on social.technet.microsoft.com.  
+-   Technical article, [Troubleshoot Configuration Issues in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252960), on social.technet.microsoft.com.  
   
--   Technical article, [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](http://go.microsoft.com/fwlink/?LinkId=252961), on social.technet.microsoft.com.  
+-   Technical article, [Troubleshoot CDC Instance Errors in Microsoft Change Data Capture for Oracle by Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), on social.technet.microsoft.com.  
   
 ## CDC Control Task Editor
   Use the **CDC Control Task Editor** dialog box to configure the CDC Control task. The CDC Control task configuration includes defining a connection to the CDC database, the CDC task operation and the state management information.  
@@ -107,7 +104,7 @@ manager: "jhubbard"
   
      If you select **Mark Initial Load End** when working on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC (that is, not Oracle) the user specified in the connection manager must be either  **db_owner** or **sysadmin**.  
   
--   **Mark CDC start**: This operation is used when then the initial load is made from a snapshot database database or from a quiescence database. It is invoked at any point within the initial load package. The operation accepts a parameter that can be a snapshot LSN, a name of a snapshot database (from which the snapshot LSN will be derived automatically) or it can be left empty, in which case the current database LSN is used as the start LSN for the change processing package.  
+-   **Mark CDC start**: This operation is used when then the initial load is made from a snapshot database or from a quiescence database. It is invoked at any point within the initial load package. The operation accepts a parameter that can be a snapshot LSN, a name of a snapshot database (from which the snapshot LSN will be derived automatically) or it can be left empty, in which case the current database LSN is used as the start LSN for the change processing package.  
   
      This operation is used instead of the Mark Initial Load Start/End operations.  
   

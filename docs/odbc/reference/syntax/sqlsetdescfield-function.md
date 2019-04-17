@@ -1,14 +1,12 @@
 ---
 title: "SQLSetDescField Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "01/19/2019"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLSetDescField"
 apilocation: 
@@ -19,12 +17,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetDescField function [ODBC]"
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
-caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLSetDescField Function
+
 **Conformance**  
  Version Introduced: ODBC 3.0 Standards Compliance: ISO 92  
   
@@ -33,14 +31,13 @@ manager: "jhubbard"
   
 ## Syntax  
   
-```  
-  
+```cpp  
 SQLRETURN SQLSetDescField(  
-     SQLHDESC      DescriptorHandle,  
-     SQLSMALLINT   RecNumber,  
-     SQLSMALLINT   FieldIdentifier,  
-     SQLPOINTER    ValuePtr,  
-     SQLINTEGER    BufferLength);  
+     SQLHDESC      DescriptorHandle,  
+     SQLSMALLINT   RecNumber,  
+     SQLSMALLINT   FieldIdentifier,  
+     SQLPOINTER    ValuePtr,  
+     SQLINTEGER    BufferLength);  
 ```  
   
 ## Arguments  
@@ -144,7 +141,7 @@ SQLRETURN SQLSetDescField(
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|ARD: R/W APD: R/W IRD: R/W IPD: R/W|ARD: Null ptr APD: Null ptr IRD: Null ptr IPD: Null ptr|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|ARD: R/W APD: R/W IRD: Unused IPD: Unused|ARD: Null ptr APD: Null ptr IRD: Unused IPD: Unused|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|ARD: R/W APD: R/W IRD: Unused IPD: Unused|ARD: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: Unused<br /><br /> IPD: Unused|  
-SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: 0 APD: 0 IRD: D IPD: 0|  
+|SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: 0 APD: 0 IRD: D IPD: 0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|ARD: Unused APD: Unused IRD: R/W IPD: R/W|ARD: Unused APD: Unused IRD: Null ptr IPD: Null ptr|  
   
  [1]   These fields are defined only when the IPD is automatically populated by the driver. If not, they are undefined. If an application attempts to set these fields, SQLSTATE HY091 (Invalid descriptor field identifier) will be returned.  
@@ -162,7 +159,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: 0 APD: 0 IRD: 
 |SQL_DESC_DATA_PTR|SQLPOINTER|ARD: R/W APD: R/W IRD: Unused IPD: Unused|ARD: Null ptr APD: Null ptr IRD: Unused IPD: Unused[2]|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_DISPLAY_SIZE|SQLLEN|ARD: Unused APD: Unused IRD: R IPD: Unused|ARD: Unused APD: Unused IRD: D IPD: Unused|  
+|SQL_DESC_DISPLAY_SIZE|SQLLEN|ARD: Unused APD: Unused IRD: R IPD: Unused|ARD: Unused APD: Unused IRD: D IPD: Unused|  
 |SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|ARD: Unused APD: Unused IRD: R IPD: R|ARD: Unused APD: Unused IRD: D IPD: D[1]|  
 |SQL_DESC_INDICATOR_PTR|SQLLEN *|ARD: R/W APD: R/W IRD: Unused IPD: Unused|ARD: Null ptr APD: Null ptr IRD: Unused IPD: Unused|  
 |SQL_DESC_LABEL|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: Unused|ARD: Unused APD: Unused IRD: D IPD: Unused|  
@@ -173,7 +170,7 @@ SQL_DESC_DISPLAY_SIZE|SQLLEN|ARD: Unused APD: Unused IRD: R IPD: Unused|ARD: Unu
 |SQL_DESC_NAME|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_NULLABLE|SQLSMALLINT|ARD: Unused APD: Unused IRD: R IPD: R|ARD: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
-SQL_DESC_OCTET_LENGTH|SQLLEN|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
+|SQL_DESC_OCTET_LENGTH|SQLLEN|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|ARD: R/W APD: R/W IRD: Unused IPD: Unused|ARD: Null ptr APD: Null ptr IRD: Unused IPD: Unused|  
 |SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|ARD: Unused APD: Unused IRD: Unused IPD: R/W|ARD: Unused APD: Unused IRD: Unused IPD: D=SQL_PARAM_INPUT|  
 |SQL_DESC_PRECISION|SQLSMALLINT|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
@@ -183,7 +180,7 @@ SQL_DESC_OCTET_LENGTH|SQLLEN|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: ND APD: ND I
 |SQL_DESC_SEARCHABLE|SQLSMALLINT|ARD: Unused APD: Unused IRD: R IPD: Unused|ARD: Unused APD: Unused IRD: D IPD: Unused|  
 |SQL_DESC_TABLE_NAME|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: Unused|ARD: Unused APD: Unused IRD: D IPD: Unused|  
 |SQL_DESC_TYPE|SQLSMALLINT|ARD: R/W APD: R/W IRD: R IPD: R/W|ARD: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
-SQL_DESC_TYPE_NAME|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: R|ARD: Unused APD: Unused IRD: D IPD: D[1]|  
+|SQL_DESC_TYPE_NAME|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: R|ARD: Unused APD: Unused IRD: D IPD: D[1]|  
 |SQL_DESC_UNNAMED|SQLSMALLINT|ARD: Unused APD: Unused IRD: R IPD: R/W|ARD: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_UNSIGNED|SQLSMALLINT|ARD: Unused APD: Unused IRD: R IPD: R|ARD: Unused APD: Unused IRD: D IPD: D[1]|  
 |SQL_DESC_UPDATABLE|SQLSMALLINT|ARD: Unused APD: Unused IRD: R IPD: Unused|ARD: Unused APD: Unused IRD: D IPD: Unused|  
@@ -213,7 +210,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: R|ARD: Unused A
  **SQL_DESC_ARRAY_STATUS_PTR [All]**  
  For each descriptor type, this SQLUSMALLINT * header field points to an array of SQLUSMALLINT values. These arrays are named as follows: row status array (IRD), parameter status array (IPD), row operation array (ARD), and parameter operation array (APD).  
   
- In the IRD, this header field points to a row status array containing status values after a call to **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, or **SQLSetPos**. The array has as many elements as there are rows in the rowset. The application must allocate an array of SQLUSMALLINTs and set this field to point to the array. The field is set to a null pointer by default. The driver will populate the array — unless the SQL_DESC_ARRAY_STATUS_PTR field is set to a null pointer, in which case no status values are generated and the array is not populated.  
+ In the IRD, this header field points to a row status array containing status values after a call to **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, or **SQLSetPos**. The array has as many elements as there are rows in the rowset. The application must allocate an array of SQLUSMALLINTs and set this field to point to the array. The field is set to a null pointer by default. The driver will populate the array - unless the SQL_DESC_ARRAY_STATUS_PTR field is set to a null pointer, in which case no status values are generated and the array is not populated.  
   
 > [!CAUTION]  
 >  Driver behavior is undefined if the application sets the elements of the row status array pointed to by the SQL_DESC_ARRAY_STATUS_PTR field of the IRD.  
@@ -238,7 +235,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: R|ARD: Unused A
   
  The SQL_DESC_ARRAY_STATUS_PTR field of the IRD is valid only after SQL_SUCCESS or SQL_SUCCESS_WITH_INFO has been returned. If the return code is not one of these, the location pointed to by SQL_DESC_ROWS_PROCESSED_PTR is undefined.  
   
- In the IPD, this header field points to a parameter status array containing status information for each set of parameter values after a call to **SQLExecute** or **SQLExecDirect**. If the call to **SQLExecute** or **SQLExecDirect** did not return SQL_SUCCESS or SQL_SUCCESS_WITH_INFO, the contents of the array pointed to by this field are undefined. The application must allocate an array of SQLUSMALLINTs and set this field to point to the array. The driver will populate the array — unless the SQL_DESC_ARRAY_STATUS_PTR field is set to a null pointer, in which case no status values are generated and the array is not populated. The elements in the array can contain the following values:  
+ In the IPD, this header field points to a parameter status array containing status information for each set of parameter values after a call to **SQLExecute** or **SQLExecDirect**. If the call to **SQLExecute** or **SQLExecDirect** did not return SQL_SUCCESS or SQL_SUCCESS_WITH_INFO, the contents of the array pointed to by this field are undefined. The application must allocate an array of SQLUSMALLINTs and set this field to point to the array. The driver will populate the array - unless the SQL_DESC_ARRAY_STATUS_PTR field is set to a null pointer, in which case no status values are generated and the array is not populated. The elements in the array can contain the following values:  
   
 -   SQL_PARAM_SUCCESS: The SQL statement was successfully executed for this set of parameters.  
   
@@ -376,12 +373,12 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD: Unused APD: Unused IRD: R IPD: R|ARD: Unused A
 |SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
 |SQL_INTERVAL_DAY_TO_SECOND/ SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR/ SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
-QL_INTERVAL_HOUR_TO_MINUTE/ SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
+|SQL_INTERVAL_HOUR_TO_MINUTE/ SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND/ SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
 |SQL_INTERVAL_MINUTE_TO_SECOND/ SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
 |SQL_INTERVAL_MONTH/ SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-QL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
 |SQL_INTERVAL_YEAR/ SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH/ SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
@@ -510,7 +507,7 @@ QL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  When an application calls **SQLSetDescField** to set fields of a descriptor rather than calling **SQLSetDescRec**, the application must first declare the data type. When it does, the other fields indicated in the previous table are implicitly set. If any of the values implicitly set are unacceptable, the application can then call **SQLSetDescField** or **SQLSetDescRec** to set the unacceptable value explicitly.  
   
  **SQL_DESC_TYPE_NAME [Implementation descriptors]**  
- This read-only SQLCHAR * record field contains the data source–dependent type name (for example, "CHAR", "VARCHAR", and so on). If the data type name is unknown, this variable contains an empty string.  
+ This read-only SQLCHAR * record field contains the data source-dependent type name (for example, "CHAR", "VARCHAR", and so on). If the data type name is unknown, this variable contains an empty string.  
   
  **SQL_DESC_UNNAMED [Implementation descriptors]**  
  This SQLSMALLINT record field in a row descriptor is set by the driver to either SQL_NAMED or SQL_UNNAMED when it sets the SQL_DESC_NAME field. If the SQL_DESC_NAME field contains a column alias or if the column alias does not apply, the driver sets the SQL_DESC_UNNAMED field to SQL_NAMED. If an application sets the SQL_DESC_NAME field of an IPD to a parameter name or alias, the driver sets the SQL_DESC_UNNAMED field of the IPD to SQL_NAMED. If there is no column name or a column alias, the driver sets the SQL_DESC_UNNAMED field to SQL_UNNAMED.  

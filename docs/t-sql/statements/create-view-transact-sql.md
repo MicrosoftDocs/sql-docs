@@ -1,13 +1,11 @@
 ---
 title: "CREATE VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.date: "10/10/2018"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE VIEW"
@@ -36,13 +34,13 @@ helpviewer_keywords:
   - "views [SQL Server], indexed views"
   - "maximum number of columns per view"
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 85
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Creates a virtual table whose contents (columns and rows) are defined by a query. Use this statement to create a view of the data in one or more tables in the database. For example, a view can be used for the following purposes:  
   
@@ -144,7 +142,7 @@ OR ALTER
  Encrypts the entries in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) that contain the text of the CREATE VIEW statement. Using WITH ENCRYPTION prevents the view from being published as part of SQL Server replication.  
   
  SCHEMABINDING  
- Binds the view to the schema of the underlying table or tables. When SCHEMABINDING is specified, the base table or tables cannot be modified in a way that would affect the view definition. The view definition itself must first be modified or dropped to remove dependencies on the table that is to be modified. When you use SCHEMABINDING, the *select_statement* must include the two-part names (*schema***.***object*) of tables, views, or user-defined functions that are referenced. All referenced objects must be in the same database.  
+ Binds the view to the schema of the underlying table or tables. When SCHEMABINDING is specified, the base table or tables cannot be modified in a way that would affect the view definition. The view definition itself must first be modified or dropped to remove dependencies on the table that is to be modified. When you use SCHEMABINDING, the *select_statement* must include the two-part names (_schema_**.**_object_) of tables, views, or user-defined functions that are referenced. All referenced objects must be in the same database.  
   
  Views or tables that participate in a view created with the SCHEMABINDING clause cannot be dropped unless that view is dropped or changed so that it no longer has schema binding. Otherwise, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error. Also, executing ALTER TABLE statements on tables that participate in views that have schema binding fail when these statements affect the view definition.  
   
@@ -219,7 +217,7 @@ UNION ALL
 SELECT *  
 FROM Server2.CompanyData.dbo.Customers_66  
 UNION ALL  
---Select from mmeber table on Server3.  
+--Select from member table on Server3.  
 SELECT *  
 FROM Server3.CompanyData.dbo.Customers_99;  
 ```  
@@ -438,11 +436,6 @@ supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 451 and 600),
 supplier CHAR(50)  
 );  
 GO  
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
-, ('231', 'FarEast'), ('280', 'NZ')  
-, ('321', 'EuroGroup'), ('442', 'UKArchip')  
-, ('475', 'India'), ('521', 'Afrique');  
-GO  
 --Create the view that combines all supplier tables.  
 CREATE VIEW dbo.all_supplier_view  
 WITH SCHEMABINDING  
@@ -458,6 +451,12 @@ SELECT supplyID, supplier
 UNION ALL  
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
+GO
+INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')    
+, ('231', 'FarEast'), ('280', 'NZ')  
+, ('321', 'EuroGroup'), ('442', 'UKArchip')  
+, ('475', 'India'), ('521', 'Afrique');  
+GO  
 ```  
   
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

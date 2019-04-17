@@ -2,12 +2,10 @@
 title: "Manage Partition Wizard F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.managepartition.createjob.f1"
@@ -23,12 +21,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "wizards [SQL Server Management Studio] See Manage Partition Wizard"
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
 ---
 # Manage Partition Wizard F1 Help
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **Manage Partition Wizard** to manage and modify existing partitioned tables through partition switching or the implementation of a sliding window scenario. This wizard can ease the management of your partitions and simplify the regular migration of data in and out of your tables.  
   
 ### To start the Manage Partition Wizard  

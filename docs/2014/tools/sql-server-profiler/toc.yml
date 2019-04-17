@@ -1,0 +1,164 @@
+- name: SQL Server Profiler
+  href: sql-server-profiler.md
+- name: SQL Server Profiler Templates and Permissions
+  href: sql-server-profiler-templates-and-permissions.md
+  items:
+  - name: SQL Server Profiler Templates
+    href: sql-server-profiler-templates.md
+  - name: Permissions Required to Run SQL Server Profiler
+    href: permissions-required-to-run-sql-server-profiler.md
+- name: Start SQL Server Profiler
+  href: start-sql-server-profiler.md
+- name: Run SQL Server Profiler
+  href: ../../database-engine/run-sql-server-profiler.md
+- name: Set Global Trace Options (SQL Server Profiler)
+  href: set-global-trace-options-sql-server-profiler.md
+- name: Set Trace Definition Defaults (SQL Server Profiler)
+  href: set-trace-definition-defaults-sql-server-profiler.md
+- name: Set Trace Display Defaults (SQL Server Profiler)
+  href: set-trace-display-defaults-sql-server-profiler.md
+- name: Create a Trace (SQL Server Profiler)
+  href: create-a-trace-sql-server-profiler.md
+- name: Create a Trace Template (SQL Server Profiler)
+  href: create-a-trace-template-sql-server-profiler.md
+  items:
+  - name: Derive a Template from a Running Trace (SQL Server Profiler)
+    href: derive-a-template-from-a-running-trace-sql-server-profiler.md
+  - name: Derive a Template from a Trace File or Trace Table (SQL Server Profiler)
+    href: derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md
+  - name: Export a Trace Template (SQL Server Profiler)
+    href: export-a-trace-template-sql-server-profiler.md
+  - name: Import a Trace Template (SQL Server Profiler)
+    href: import-a-trace-template-sql-server-profiler.md
+  - name: Modify Trace Templates
+    href: modify-trace-templates.md
+  - name: Modify a Trace Template (SQL Server Profiler)
+    href: ../../database-engine/modify-a-trace-template-sql-server-profiler.md
+- name: Save Traces and Trace Templates
+  href: save-traces-and-trace-templates.md
+  items:
+  - name: Save Trace Results to a File (SQL Server Profiler)
+    href: save-trace-results-to-a-file-sql-server-profiler.md
+  - name: Specify Events and Data Columns for a Trace File (SQL Server Profiler)
+    href: specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md
+  - name: Set a Maximum File Size for a Trace File (SQL Server Profiler)
+    href: set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md
+  - name: Open a Trace File (SQL Server Profiler)
+    href: open-a-trace-file-sql-server-profiler.md
+  - name: Save Trace Results to a Table (SQL Server Profiler)
+    href: save-trace-results-to-a-table-sql-server-profiler.md
+  - name: Set a Maximum Table Size for a Trace Table (SQL Server Profiler)
+    href: set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md
+  - name: Open a Trace Table (SQL Server Profiler)
+    href: open-a-trace-table-sql-server-profiler.md
+- name: Filter Traces with SQL Server Profiler
+  href: filter-traces-with-sql-server-profiler.md
+  items:
+  - name: View Filter Information (SQL Server Profiler)
+    href: view-filter-information-sql-server-profiler.md
+  - name: Modify a Filter (SQL Server Profiler)
+    href: modify-a-filter-sql-server-profiler.md
+  - name: Filter Events in a Trace (SQL Server Profiler)
+    href: filter-events-in-a-trace-sql-server-profiler.md
+    items:
+    - name: Filter Events Based on the Event Start Time (SQL Server Profiler)
+      href: filter-events-based-on-the-event-start-time-sql-server-profiler.md
+    - name: Filter Events Based on the Event End Time (SQL Server Profiler)
+      href: filter-events-based-on-the-event-end-time-sql-server-profiler.md
+  - name: Filter Server Process IDs (SPIDs) in a Trace (SQL Server Profiler)
+    href: filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md
+- name: Start a Trace
+  href: start-a-trace.md
+  items:
+  - name: Start a Trace Automatically after Connecting to a Server (SQL Server Profiler)
+    href: start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md
+- name: Pause a Trace (SQL Server Profiler)
+  href: pause-a-trace-sql-server-profiler.md
+- name: Stop a Trace (SQL Server Profiler)
+  href: stop-a-trace-sql-server-profiler.md
+- name: Run a Trace After It Has Been Paused or Stopped (SQL Server Profiler)
+  href: run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md
+- name: Clear a Trace Window (SQL Server Profiler)
+  href: clear-a-trace-window-sql-server-profiler.md
+- name: Close a Trace Window (SQL Server Profiler)
+  href: close-a-trace-window-sql-server-profiler.md
+- name: Replay Traces
+  href: replay-traces.md
+  items:
+  - name: Replay Requirements
+    href: replay-requirements.md
+  - name: Replay Options (SQL Server Profiler)
+    href: replay-options-sql-server-profiler.md
+  - name: Considerations for Replaying Traces (SQL Server Profiler)
+    href: considerations-for-replaying-traces-sql-server-profiler.md
+  - name: Replay a Trace Table (SQL Server Profiler)
+    href: replay-a-trace-table-sql-server-profiler.md
+  - name: Replay a Trace File (SQL Server Profiler)
+    href: replay-a-trace-file-sql-server-profiler.md
+  - name: Replay a Single Event at a Time (SQL Server Profiler)
+    href: replay-a-single-event-at-a-time-sql-server-profiler.md
+  - name: Replay to a Breakpoint (SQL Server Profiler)
+    href: replay-to-a-breakpoint-sql-server-profiler.md
+  - name: Replay to a Cursor (SQL Server Profiler)
+    href: replay-to-a-cursor-sql-server-profiler.md
+  - name: Replay a Transact-SQL Script (SQL Server Profiler)
+    href: replay-a-transact-sql-script-sql-server-profiler.md
+- name: Find a Value or Data Column While Tracing (SQL Server Profiler)
+  href: find-a-value-or-data-column-while-tracing-sql-server-profiler.md
+- name: Create a Transact-SQL Script for Running a Trace (SQL Server Profiler)
+  href: create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
+- name: Extract a Script from a Trace (SQL Server Profiler)
+  href: extract-a-script-from-a-trace-sql-server-profiler.md
+- name: Organize Columns Displayed in a Trace (SQL Server Profiler)
+  href: organize-columns-displayed-in-a-trace-sql-server-profiler.md
+- name: Correlate a Trace with Windows Performance Log Data
+  href: correlate-a-trace-with-windows-performance-log-data.md
+- name: Correlate a Trace with Windows Performance Log Data (SQL Server Profiler)
+  href: ../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md
+- name: View and Analyze Traces with SQL Server Profiler
+  href: view-and-analyze-traces-with-sql-server-profiler.md
+- name: Analyze Deadlocks with SQL Server Profiler
+  href: analyze-deadlocks-with-sql-server-profiler.md
+- name: Analyze Queries with SHOWPLAN Results in SQL Server Profiler
+  href: analyze-queries-with-showplan-results-in-sql-server-profiler.md
+- name: SQL Server Profiler F1 Help
+  href: sql-server-profiler-f1-help.md
+  items:
+  - name: Trace Properties (General Tab)
+    href: ../../database-engine/trace-properties-general-tab.md
+  - name: Trace Properties (Events Selection Tab)
+    href: ../../database-engine/trace-properties-events-selection-tab.md
+  - name: Trace Template Properties (General Tab)
+    href: ../../database-engine/trace-template-properties-general-tab.md
+  - name: Edit Trace Template Properties (General Tab)
+    href: ../../database-engine/edit-trace-template-properties-general-tab.md
+  - name: Trace Template Properties (Events Selection Tab)
+    href: ../../database-engine/trace-template-properties-events-selection-tab.md
+  - name: Trace File Properties (General Tab)
+    href: ../../database-engine/trace-file-properties-general-tab.md
+  - name: Trace File Properties (Events Selection Tab)
+    href: ../../database-engine/trace-file-properties-events-selection-tab.md
+  - name: Trace Table Properties (General Tab)
+    href: ../../database-engine/trace-table-properties-general-tab.md
+  - name: Trace Table Properties (Events Selection Tab)
+    href: ../../database-engine/trace-table-properties-events-selection-tab.md
+  - name: SQL Server Profiler - Performance Counters Limit
+    href: ../../database-engine/sql-server-profiler-performance-counters-limit.md
+  - name: SQL Server Profiler - Tools/Options (General Options Page)
+    href: ../../database-engine/sql-server-profiler-tools-options-general-options-page.md
+  - name: SQL Server Profiler - Source Table/Database Engine Tuning Advisor - Select Workload Table
+    href: ../../database-engine/select-workload-table-sql-server-profiler-source-table-database-engine-tuning-advisor.md
+  - name: SQL Server Profiler - Destination Table
+    href: ../../database-engine/sql-server-profiler-destination-table.md
+  - name: SQL Server Profiler - Replay Configuration (Basic Replay Options)
+    href: ../../database-engine/sql-server-profiler-replay-configuration-basic-replay-options.md
+  - name: SQL Server Profiler - Replay Configuration (Advanced Replay Options)
+    href: ../../database-engine/sql-server-profiler-replay-configuration-advanced-replay-options.md
+  - name: SQL Server Profiler - Find Dialog Box
+    href: ../../database-engine/sql-server-profiler-find-dialog-box.md
+  - name: SQL Server Profiler - Organize Columns
+    href: ../../database-engine/sql-server-profiler-organize-columns.md
+  - name: SQL Server Profiler - Edit Filter
+    href: ../../database-engine/sql-server-profiler-edit-filter.md
+  - name: Select Template Name
+    href: ../../database-engine/select-template-name.md

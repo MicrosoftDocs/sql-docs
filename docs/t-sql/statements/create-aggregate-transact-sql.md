@@ -2,12 +2,10 @@
 title: "CREATE AGGREGATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_AGGREGATE_TSQL"
@@ -21,13 +19,12 @@ helpviewer_keywords:
   - "aggregate functions [SQL Server], user-defined"
   - "user-defined functions [CLR integration]"
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
-caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a user-defined aggregate function whose implementation is defined in a class of an assembly in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. For the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to bind the aggregate function to its implementation, the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly that contains the implementation must first be uploaded into an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using a CREATE ASSEMBLY statement.  
   
@@ -58,7 +55,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  Is the name of the aggregate function you want to create.  
   
- **@** *param_name*  
+ **@** _param_name_  
  One or more parameters in the user-defined aggregate. The value of a parameter must be supplied by the user when the aggregate function is executed. Specify a parameter name by using an "at" sign (**@**) as the first character. The parameter name must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md). Parameters are local to the function.  
   
  *system_scalar_type*  
@@ -76,7 +73,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Is the name of a CLR user-defined type already created in the current database. If *udt_schema_name* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumes the type belongs to the schema of the current user.  
   
- *assembly_name* [ **.***class_name* ]  
+ *assembly_name* [ **.**_class_name_ ]  
  Specifies the assembly to bind with the user-defined aggregate function and, optionally, the name of the schema to which the assembly belongs and the name of the class in the assembly that implements the user-defined aggregate. The assembly must already have been created in the database by using a CREATE ASSEMBLY statement. *class_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier and match the name of a class that exists in the assembly. *class_name* may be a namespace-qualified name if the programming language used to write the class uses namespaces, such as C#. If *class_name* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assumes it is the same as *aggregate_name*.  
   
 ## Remarks  
@@ -88,7 +85,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  Requires CREATE AGGREGATE permission and also REFERENCES permission on the assembly that is specified in the EXTERNAL NAME clause.  
   
 ## Examples  
- The following example assumes that a StringUtilities.csproj sample application is compiled. For more information, see [String Utility Functions Sample](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ The following example assumes that a StringUtilities.csproj sample application is compiled. For more information, see [String Utility Functions Sample](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
   
  The example creates aggregate `Concatenate`. Before the aggregate is created, the assembly `StringUtilities.dll` is registered in the local database.  
   

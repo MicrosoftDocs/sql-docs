@@ -1,13 +1,11 @@
 ---
 title: "CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/27/2017"
-ms.prod: "sql-non-specified"
+ms.date: "02/28/2018"
+ms.prod: sql
+ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATABASE SCOPED CREDENTIAL"
@@ -21,13 +19,13 @@ helpviewer_keywords:
   - "DATABASE SCOPED CREDENTIAL statement"
   - "credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement"
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Creates a database credential. A database credential is not mapped to a server login or database user. The credential is used by the database to access to the external location anytime the database is performing an operation that requires access.  
   
@@ -47,12 +45,12 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Specifies the name of the database scoped credential being created. *credential_name* cannot start with the number (#) sign. System credentials start with ##.  
   
- IDENTITY **='***identity_name***'**  
- Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage, the identity name must be `SHARED ACCESS SIGNATURE`.  For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
+ IDENTITY **='**_identity\_name_**'**  
+ Specifies the name of the account to be used when connecting outside the server. To import a file from Azure Blob storage using share key, the identity name must be `SHARED ACCESS SIGNATURE`. To load data into SQL DW, any valid value can be used for identity. For more information about shared access signatures, see [Using Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
   
- SECRET **='***secret***'**  
- Specifies the secret required for outgoing authentication. `SECRET` is required to import a file from Azure Blob storage.   
->  [!WARNING]
+ SECRET **='**_secret_**'**  
+ Specifies the secret required for outgoing authentication. `SECRET` is required to import a file from Azure Blob storage. To load from Azure Blob storage into SQL DW or Parallel Data Warehouse, the Secret must be the Azure Storage Key.  
+> [!WARNING]
 >  The SAS key value might begin with a '?' (question mark). When you use the SAS key, you must remove the leading '?'. Otherwise your efforts might be blocked.  
   
 ## Remarks  
@@ -86,7 +84,7 @@ WITH IDENTITY = 'identity_name'
 ### A. Creating a database scoped credential for your application.
  The following example creates the database scoped credential called `AppCred`. The database scoped credential contains the Windows user `Mary5` and a password.  
   
-```tsql  
+```sql  
 -- Create a db master key if one does not already exist, using your own password.  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';  
   
@@ -97,8 +95,8 @@ GO
 ```  
 
 ### B. Creating a database scoped credential for a shared access signature.   
-The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can do bulk operations, such as [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).   
-```tsql
+The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can do bulk operations, such as [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Shared Access Signatures cannot be used with PolyBase in SQL Server, APS or SQL DW.
+```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -108,9 +106,9 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 The following example creates a database scoped credential that can be used to create an [external data source](../../t-sql/statements/create-external-data-source-transact-sql.md), which can be used by PolyBase in Azure SQL Data Warehouse.
 
 Azure Data Lake Store uses an Azure Active Directory Application for Service to Service Authentication.
-Please [create an AAD application](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
+Please [create an AAD application](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory)  and document your client_id, OAuth_2.0_Token_EndPoint, and Key before you try to create a database scoped credential.
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'

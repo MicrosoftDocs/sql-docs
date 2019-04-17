@@ -1,14 +1,12 @@
 ---
 title: "Deploy Packages with SSIS | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "sql-server-2016"
+ms.date: "08/20/2018"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: integration-services
+ms.topic: quickstart
 helpviewer_keywords: 
   - "deployment tutorial [Integration Services]"
   - "deploying packages [Integration Services]"
@@ -20,10 +18,9 @@ helpviewer_keywords:
   - "deployment utility [Integration Services]"
   - "deploying packages [Integration Services], configurations"
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Deploy Packages with SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides tools that make it easy to deploy packages to another computer. The deployment tools also manage any dependencies, such as configurations and files that the package needs. In this tutorial, you will learn how to use these tools to install packages and their dependencies on a target computer.    
@@ -39,37 +36,49 @@ You will then copy the deployment bundle to the target computer and run the Pack
 Finally, you will run the packages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] by using the Execute Package Utility.    
     
 It is the goal of this tutorial to simulate the complexity of real-life deployment issues that you may encounter. However, if it is not possible for you to deploy the packages to a different computer, you can still do this tutorial by installing the packages in the msdb database on a local instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], and then running the packages from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] on the same instance.    
-    
-## What You Will Learn    
+
+**Estimated time to complete this tutorial:** 2 hours
+
+## What You Learn    
 The best way to become acquainted with the new tools, controls, and features available in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is to use them. This tutorial walks you through the steps to create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project and then add the packages and other necessary files to the project. After the project is complete, you will create a deployment bundle, copy the bundle to the destination computer, and then install the packages on the destination computer.    
     
-## Requirements    
+## Prerequisites    
 This tutorial is intended for users who are already familiar with fundamental file system operations, but who have limited exposure to the new features available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. To better understand basic [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] concepts that you will put to use in this tutorial, you might find it useful to first complete the following [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutorial: [SSIS How to Create an ETL Package](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
-**Source computer.** The computer on which you will create the deployment bundle **must have the following components installed:**
-- SQL Server  
-- Sample data, completed packages, configurations, and a Readme. These files are installed together if you download the [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550).     
-> **Note!** Make sure you have permission to create and drop tables in AdventureWorks or other data you use.         
+### On the source computer
+
+The computer on which you create the deployment bundle **must have the following components installed:**
+
+- SQL Server. (Download a free evaluation or developer edition of SQL Server from [SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads).)
+
+- Sample data, completed packages, configurations, and a Readme. To download the sample data and the lesson packages as a Zip file, see [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827). Most of the files in the Zip file are read-only to prevent unintended changes. To write output to a file or to change it, you may have to turn off the read-only attribute in the file properties.
+
+-   The **AdventureWorks2014** sample database. To download the **AdventureWorks2014** database, download `AdventureWorks2014.bak` from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
+
+-   You must have permission to create and drop tables in the AdventureWorks database.
     
--   [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
-**Destination computer.** The computer to which you deploy packages **must have the following components installed:**    
+### On the destination computer
+
+The computer to which you deploy packages **must have the following components installed:**    
     
-- SQL Server
-- Sample data, completed packages, configurations, and a Readme. These files are installed together if you download the [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
+- SQL Server. (Download a free evaluation or developer edition of SQL Server from [SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads).)
+
+- Sample data, completed packages, configurations, and a Readme. To download the sample data and the lesson packages as a Zip file, see [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827). Most of the files in the Zip file are read-only to prevent unintended changes. To write output to a file or to change it, you may have to turn off the read-only attribute in the file properties.
+
+-   The **AdventureWorks2014** sample database. To download the **AdventureWorks2014** database, download `AdventureWorks2014.bak` from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
     
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. To install SSIS, see [Install Integration Services](install-windows/install-integration-services.md).
     
--   You must have permission to create and drop tables in AdventureWorks and to run packages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
+-   You must have permission to create and drop tables in the AdventureWorks database, and to run SSIS packages in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
     
--   You must have read and write permission on the sysssispackages table in the msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system database.    
+-   You must have read and write permission on the `sysssispackages` table in the `msdb` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] system database.    
     
 If you plan to deploy packages to the same computer as the one on which you create the deployment bundle, that computer must meet requirements for both the source and destination computers.    
-    
-**Estimated time to complete this tutorial:** 2 hours    
-    
+        
 ## Lessons in This Tutorial    
 [Lesson 1: Preparing to Create the Deployment Bundle](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 In this lesson, you will get ready to deploy an ETL solution by creating a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project and adding the packages and other required files to the project.    

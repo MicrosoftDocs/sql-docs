@@ -1,34 +1,17 @@
 ---
 title: "Processing Options and Settings (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "process data option [Analysis Services]"
-  - "processing objects [Analysis Services]"
-  - "unprocess option [Analysis Services]"
-  - "process full option [Analysis Services]"
-  - "process index option [Analysis Services]"
-  - "process structure option [Analysis Services]"
-  - "process incremental option [Analysis Services]"
-  - "process update option [Analysis Services]"
-  - "process clear structure option [Analysis Services]"
-  - "process default option [Analysis Services]"
-ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Processing Options and Settings (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   When you process objects in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can select a processing option to control the type of processing that occurs for each object. Processing types differ from one object to another, and by changes that have occurred to the object since it was last processed. If you enable [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to automatically select a processing method, it will use the method that returns the object to a fully processed state in the least time.  
   
  Processing settings let you control the objects that are processed, and the methods that are used to process those objects. Some processing settings are primarily used for batch processing jobs. For more information about batch processing, see [Batch Processing &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  

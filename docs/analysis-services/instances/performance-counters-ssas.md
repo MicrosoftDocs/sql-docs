@@ -1,23 +1,17 @@
 ---
 title: "Performance Counters (SSAS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Performance Counters (SSAS)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Using Performance Monitor, you can monitor the performance of a Microsoft SQL Server Analysis Services (SSAS) instance by using performance counters.  
   
  Performance Monitor is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Control (MMC) snap-in that tracks resource usage. You can start this MMC snap-in by typing in **PerfMon** at the command prompt or from Control Panel by clicking **Administrative Tools**, then **Performance Monitor**. Performance Monitor lets you track server and process performance and activity by using predefined objects and counters, and monitor events by using user-defined counters. Performance Monitor collects counts instead of data about the events, for example, memory usage, number of active transactions, or CPU activity. You can also set thresholds on specific counters to generate alerts that notify operators.  

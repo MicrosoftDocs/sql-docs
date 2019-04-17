@@ -2,13 +2,11 @@
 title: "Comparing String Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "comparing string data"
   - "comparison options [Integration Services]"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "converting string data"
   - "string comparisons"
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Comparing String Data
   String comparisons are an important part of many of the transformations performed by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and string comparisons are also used in the evaluation of expressions in variables and property expressions. For example, the Sort transformation compares values in a dataset to sort data in ascending or descending order.  
@@ -80,7 +77,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)   
- [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
+ [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

@@ -2,28 +2,23 @@
 title: "sp_helpmergefilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpmergefilter"
   - "sp_helpmergefilter_TSQL"
 helpviewer_keywords: 
   - "sp_helpmergefilter"
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helpmergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns information about merge filters. This stored procedure is executed at the Publisher on any database.  
   
@@ -39,13 +34,13 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default of **%**, which returns the names of all articles.  
   
- [ **@filtername=**] **'***filtername***'**  
+`[ @filtername = ] 'filtername'`
  Is the name of the filter about which to return information. *filtername* is **sysname**, with a default of **%**, which returns information about all the filters defined on the article or publication.  
   
 ## Result Sets  

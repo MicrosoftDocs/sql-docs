@@ -1,27 +1,20 @@
 ---
 title: "Deploying a Custom Assembly | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: custom-assemblies
+
+
+ms.topic: reference
 helpviewer_keywords: 
   - "deploying custom assemblies [Reporting Services]"
   - "custom assemblies [Reporting Services], deploying"
   - "custom assemblies [Reporting Services], updating"
   - "updating custom assemblies"
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-caps.latest.revision: 46
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Deploying a Custom Assembly
   To deploy a custom assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], place the assembly in the application folders of both Report Designer and the report server. By default, custom assemblies are granted **Execution** permission in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. To grant custom assemblies privileges beyond Execute permission, you will need to edit the rssrvpolicy.config configuration file for the report server and the rspreviewpolicy.config configuration file for the Report Designer preview window. Alternatively, you can install your custom assembly in the global assembly cache (GAC).  
@@ -64,6 +57,6 @@ manager: "erikre"
   
 ## See Also  
  [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Working with Assemblies and the Global Assembly Cache](http://go.microsoft.com/fwlink/?LinkId=63912)  
+ [Working with Assemblies and the Global Assembly Cache](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

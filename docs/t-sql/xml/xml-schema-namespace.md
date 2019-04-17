@@ -2,12 +2,9 @@
 title: "xml_schema_namespace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "xml_schema_namespace_TSQL"
@@ -21,13 +18,12 @@ helpviewer_keywords:
   - "schemas [SQL Server], XML"
   - "schema collections [SQL Server], reconstructing schemas"
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
-caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # xml_schema_namespace
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Reconstructs all the schemas or a specific schema in the specified XML schema collection. This function returns an **xml** data type instance.  
   
@@ -61,10 +57,10 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  You cannot use this function to construct XML schema documents from the **sys.sys** XML schema collection.  
   
 ## Examples  
- The following example retrieves the  XML schema collection `ProductDescriptionSchemaCollection` from the production relational schema in the `AdventureWorks2012` database.  
+ The following example retrieves the  XML schema collection `ProductDescriptionSchemaCollection` from the production relational schema in the `AdventureWorks` database.  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
 SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection');  
 GO  

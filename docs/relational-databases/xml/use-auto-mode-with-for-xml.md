@@ -2,25 +2,23 @@
 title: "Use AUTO Mode with FOR XML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, AUTO mode"
   - "ELEMENTS option"
   - "FOR XML AUTO mode"
   - "AUTO FOR XML mode"
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Use AUTO Mode with FOR XML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   As described in [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md), AUTO mode returns query results as nested XML elements. This does not provide much control over the shape of the XML generated from a query result. The AUTO mode queries are useful if you want to generate simple hierarchies. However, [Use EXPLICIT Mode with FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) and [Use PATH Mode with FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) provide more control and flexibility in deciding the shape of the XML from a query result.  
   
  Each table in the FROM clause, from which at least one column is listed in the SELECT clause, is represented as an XML element. The columns listed in the SELECT clause are mapped to attributes or subelements, if the optional ELEMENTS option is specified in the FOR XML clause.  

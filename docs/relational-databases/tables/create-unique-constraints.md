@@ -2,13 +2,11 @@
 title: "Create Unique Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 f1_keywords: 
   - "UNIQUE_TSQL"
 helpviewer_keywords: 
@@ -16,13 +14,13 @@ helpviewer_keywords:
   - "constraints [SQL Server], creating"
   - "constraints [SQL Server], unique"
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
-caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Unique Constraints
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   You can create a unique constraint in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] to ensure no duplicate values are entered in specific columns that do not participate in a primary key. Creating a unique constraint automatically creates a corresponding unique index.  
   
@@ -57,7 +55,7 @@ manager: "jhubbard"
   
 4.  In the grid under **General**, click **Type** and choose **Unique Key** from the drop-down list box to the right of the property.  
   
-5.  On the **File** menu, click **Save***table name*.  
+5.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

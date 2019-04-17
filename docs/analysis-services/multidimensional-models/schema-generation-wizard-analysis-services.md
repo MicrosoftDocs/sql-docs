@@ -1,25 +1,17 @@
 ---
 title: "Schema Generation Wizard (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "relational schema [Analysis Services]"
-ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Schema Generation Wizard (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] supports two methods of working with relational schemas when defining OLAP objects within an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or database. Generally, you will define OLAP objects based on a logical data model constructed in a data source view within an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project or database. This data source view is defined based on schema elements from one or more relational data sources, as customized in the data source view.  
   
  Alternatively, you can define OLAP objects first, and then generate a data source view, a data source, and the underlying relational database schema that supports these OLAP objects. This relational database is referred to as the subject area database.  

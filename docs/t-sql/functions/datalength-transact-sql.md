@@ -2,12 +2,10 @@
 title: "DATALENGTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATALENGTH_TSQL"
@@ -21,55 +19,50 @@ helpviewer_keywords:
   - "expressions [SQL Server], length"
   - "lengths [SQL Server], data"
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATALENGTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns the number of bytes used to represent any expression.
+This function returns the number of bytes used to represent any expression.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATALENGTH ( expression )   
 ```  
   
 ## Arguments  
 *expression*  
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any data type.
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any data type.
   
 ## Return types
-**bigint** if *expression* is of the **varchar(max)**, **nvarchar(max)** or **varbinary(max)** data types; otherwise **int**.
+**bigint** if *expression* has an **nvarchar(max)**, **varbinary(max)**, or **varchar(max)** data type; otherwise **int**.
   
 ## Remarks  
-DATALENGTH is especially useful with **varchar**, **varbinary**, **text**, **image**, **nvarchar**, and **ntext** data types because these data types can store variable-length data.
+`DATALENGTH` becomes really helpful when used with
+
+- **image**
+- **ntext**
+- **nvarchar**
+- **text**
+- **varbinary**
+- **varchar**
+
+data types, because these data types can store variable-length data.
   
-The DATALENGTH of NULL is NULL.
+For a NULL value, `DATALENGTH` returns NULL.
   
 > [!NOTE]  
->  Compatibility levels can affect return values. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+>  Compatibility levels can affect return values. See [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) for more information about compatibility levels.  
   
 ## Examples  
-The following example finds the length of the `Name` column in the `Product` table.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SELECT length = DATALENGTH(Name), Name  
-FROM Production.Product  
-ORDER BY Name;  
-GO  
-```  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-The following example finds the length of the `Name` column in the `Product` table.
+This example finds the length of the `Name` column in the `Product` table:
   
 ```sql
 -- Uses AdventureWorks  

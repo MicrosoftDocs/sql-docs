@@ -1,25 +1,18 @@
 ---
 title: "Setting Project Options (DB2ToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Setting Project Options (DB2ToSQL)
-For each SSMA project you can set project level options. These options specify object conversion, object loading, user interface and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], verify that the configuration options are appropriate for the project.  
+For each SSMA project you can set project level options. These options specify object conversion, object loading, user interface and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verify that the configuration options are appropriate for the project.  
   
 SSMA lets you configure default options for all projects. These options are applied to any new project that you create. You can then customize the options for each project.  
   
@@ -46,7 +39,7 @@ It also has four modes for configuring these settings:
   
 -   Custom  
   
-The Default mode is recommended for most users. The Optimistic mode keeps more of the current DB2 syntax, and is easier to read. However, keeping current syntax might not be accurate. If the DB2 syntax must be converted to equivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax, the Full mode performs the most complete conversion, but the resulting code might be more difficult to read. In the Custom mode, you set the options.  
+The Default mode is recommended for most users. The Optimistic mode keeps more of the current DB2 syntax, and is easier to read. However, keeping current syntax might not be accurate. If the DB2 syntax must be converted to equivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax, the Full mode performs the most complete conversion, but the resulting code might be more difficult to read. In the Custom mode, you set the options.  
   
 For more information about the settings and how the settings are applied in each mode, see the following topics:  
   
@@ -96,7 +89,7 @@ The next step in the migration depends on your project needs:
   
 -   To customize the mapping of source and target data types, see [Mapping DB2 and SQL Server Data Types &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
--   Otherwise, you can convert the DB2 database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] object definitions. For more information, see [Converting DB2 Schemas &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
+-   Otherwise, you can convert the DB2 database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object definitions. For more information, see [Converting DB2 Schemas &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
 ## See Also  
 [Mapping DB2 and SQL Server Data Types &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  

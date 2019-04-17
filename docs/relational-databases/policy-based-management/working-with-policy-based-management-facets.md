@@ -2,25 +2,23 @@
 title: "Working with Policy-Based Management Facets | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing Policy-Based Management facets"
   - "facets [Policy-Based Management], copying"
   - "facets [Policy-Based Management], viewing"
   - "copying Policy-Based Management facets"
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Working with Policy-Based Management Facets
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A Policy-Based Management facet is a set of logical properties that are related to an area of management interest. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes several predefined facets. For example, the Surface Area Configuration facet defines, as properties, the features that are off by default.  
   
  When you manage many similar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environments, you can configure a facet in one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], copy the state of the facet to a file, and then import that file into another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a policy. When the state has been converted to a policy, the policy can be applied to other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instance objects, databases, or database objects.  

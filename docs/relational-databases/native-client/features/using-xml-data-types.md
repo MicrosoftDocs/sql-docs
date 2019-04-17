@@ -2,12 +2,9 @@
 title: "Using XML Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IRowsetChange interface"
@@ -30,12 +27,13 @@ helpviewer_keywords:
   - "XML [SQL Server], SQL Server Native Client"
   - "COLUMNS rowset"
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using XML Data Types
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced an **xml** data type that enables you to store XML documents and fragments in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. The **xml** data type is a built-in data type in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], and is in some ways similar to other built-in types, such as **int** and **varchar**. As with other built-in types, you can use the **xml** data type as a column type when creating a table; as a variable type, a parameter type, or a function-return type; or in CAST and CONVERT functions.  
@@ -90,7 +88,7 @@ manager: "jhubbard"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass through<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Pass through<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>If a server type other than DBTYPE_XML is specified with **ICommandWithParameters::SetParameterInfo** and the accessor type is DBTYPE_XML, an error occurs when the statement is executed (DB_E_ERRORSOCCURRED, the parameter status is DBSTATUS_E_BADACCESSOR); otherwise the data is sent to the server, but the server returns an error indicating that there is no implicit conversion from XML to the parameter’s data type.  
+ <sup>1</sup>If a server type other than DBTYPE_XML is specified with **ICommandWithParameters::SetParameterInfo** and the accessor type is DBTYPE_XML, an error occurs when the statement is executed (DB_E_ERRORSOCCURRED, the parameter status is DBSTATUS_E_BADACCESSOR); otherwise the data is sent to the server, but the server returns an error indicating that there is no implicit conversion from XML to the parameter's data type.  
   
  <sup>2</sup>Beyond the scope of this topic.  
   
@@ -212,7 +210,7 @@ manager: "jhubbard"
 #### The IRowsetChange Interface  
  There are two ways a consumer can update an XML instance in a column. The first one is through the storage object **ISequentialStream** created by the provider. The consumer can call the **ISequentialStream::Write** method to directly update the XML instance returned by the provider.  
   
- The second approach is through **IRowsetChange::SetData** or **IRowsetChange::InsertRow** methods. In this approach, an XML instance in the consumer’s buffer can be specified in a binding of type DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML or DBTYPE_IUNKNOWN.  
+ The second approach is through **IRowsetChange::SetData** or **IRowsetChange::InsertRow** methods. In this approach, an XML instance in the consumer's buffer can be specified in a binding of type DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML or DBTYPE_IUNKNOWN.  
   
  In case of DBTYPE_BSTR, DBTYPE_WSTR, or DBTYPE_VARIANT, the provider stores the XML instance residing in the consumer buffer into the proper column.  
   

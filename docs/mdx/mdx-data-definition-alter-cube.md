@@ -1,35 +1,19 @@
 ---
 title: "ALTER CUBE Statement (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Cube"
-  - "ALTER_CUBE"
-  - "ALTER CUBE"
-  - "ALTER"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "ALTER CUBE statement"
-  - "cubes [Analysis Services], modifying"
-  - "modifying cubes"
-ms.assetid: 2f0af61b-f509-4e1a-990f-20a215d22994
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # MDX Data Definition - ALTER CUBE
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Alters the structure of a specified cube, typically used to support dimension writeback. For more information about using writeback in an application, see this blog post: [Building a Writeback Application with Analysis Services (blog)](http://go.microsoft.com/fwlink/?LinkId=394977)  
+
+  Alters the structure of a specified cube, typically used to support dimension writeback. For more information about using writeback in an application, see this blog post: [Building a Writeback Application with Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Note that concurrent dimension writebacks can result in a deadlock, where the first writeback is blocked from a commit because of the shared lock held by the second writeback. There is no error that is generated in this situation, but neither operation is able to progress. Eventually both time out and the changes are rolled back.  
   

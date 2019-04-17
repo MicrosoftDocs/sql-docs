@@ -2,12 +2,10 @@
 title: "GRANT Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,13 +15,12 @@ helpviewer_keywords:
   - "asymmetric keys [SQL Server], permissions"
   - "GRANT statement, asymmetric keys"
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
-caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # GRANT Asymmetric Key Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Grants permissions on an asymmetric key.  
   
@@ -43,7 +40,7 @@ GRANT { permission  [ ,...n ] }
  *permission*  
  Specifies a permission that can be granted on an asymmetric key. Listed below.  
   
- ON ASYMMETRIC KEY **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
  Specifies the asymmetric key on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

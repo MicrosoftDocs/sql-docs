@@ -1,21 +1,14 @@
 ---
 title: "Lesson 4: Define a Data Connection and Data Table for Child Report | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.date: 05/18/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: reporting-services
+
+ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Lesson 4: Define a Data Connection and Data Table for Child Report
 After you design the parent report, you next step is to create a data connection and a data table for the child report. In this tutorial the data connection is to the AdventureWorks2014 database.  
@@ -56,14 +49,14 @@ After you design the parent report, you next step is to create a data connection
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query** button. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about how to get the **AdventureWorks2014** sample database, see [Microsoft SQL Server Database Product Samples](http://msftdbprodsamples.codeplex.com/).  
+    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query** button. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about how to get the **AdventureWorks2014** sample database, see [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
   
 10. On the **Choose Methods to Generate** page, uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**, and then select **Finish**.  
   
     > [!WARNING]  
     > Be sure to uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**  
   
-    You have now completed configuring the ADO.NET [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) as a data source for your report. On the DataSet Designer page in Visual Studio, you should see the **DataTable** you added, listing the columns specified in the query. DataSet2 contains the data from the PurhcaseOrderDetail table, based on the query.  
+    You have now completed configuring the ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) as a data source for your report. On the DataSet Designer page in Visual Studio, you should see the **DataTable** you added, listing the columns specified in the query. DataSet2 contains the data from the PurhcaseOrderDetail table, based on the query.  
   
 11. Save the file.  
   

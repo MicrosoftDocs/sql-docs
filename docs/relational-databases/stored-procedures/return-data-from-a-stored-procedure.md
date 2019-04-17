@@ -2,27 +2,50 @@
 title: "Return Data from a Stored Procedure | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.technology: stored-procedures
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "stored procedures [SQL Server], returning data"
   - "returning data from stored procedure"
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Return Data from a Stored Procedure
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > For content related to previous versions of SQL Server, see [Return Data from a Stored Procedure](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+  There are three ways of returning data from a procedure to a calling program: result sets, output parameters, and return codes. This topic provides information on the three approaches.  
+  
+  ## Returning Data Using Result Sets
+ If you include a SELECT statement in the body of a stored procedure (but not a SELECT ... INTO or INSERT ... SELECT), the rows specified by the SELECT statement will be sent directly to the client.  For large result sets the stored procedure execution will not continue to the next statement until the result set has been completely sent to the client.  For small result sets the results will be spooled for return to the client and execution will continue.  If multiple such SELECT statements are run during the exeuction of the stored proceudre, multiple result sets will be sent to the client.  This behavior also applies to nested TSQL batches, nested stored procedures and top-level TSQL batches.
+ 
+ 
+ ### Examples of Returning Data Using a Result Set 
+  The following example shows a stored procedure that returns the LastName and SalesYTD values for all SalesPerson rows that also appear in the vEmployee view.
+  
+ ```sql
+USE AdventureWorks2012;  
+GO  
+IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
+    DROP PROCEDURE Sales.uspGetEmployeeSalesYTD;  
+GO  
+CREATE PROCEDURE Sales.uspGetEmployeeSalesYTD  
+AS    
+  
+    SET NOCOUNT ON;  
+    SELECT LastName, SalesYTD  
+    FROM Sales.SalesPerson AS sp  
+    JOIN HumanResources.vEmployee AS e ON e.BusinessEntityID = sp.BusinessEntityID  
+    
+RETURN  
+GO  
+  
+```  
 
-  There are two ways of returning result sets or data from a procedure to a calling program: output parameters and return codes. This topic provides information on both approaches.  
   
 ## Returning Data Using an Output Parameter  
  If you specify the OUTPUT keyword for a parameter in the procedure definition, the procedure can return the current value of the parameter to the calling program when the procedure exits. To save the value of the parameter in a variable that can be used in the calling program, the calling program must use the OUTPUT keyword when executing the procedure. For more information about what data types can be used as output parameters, see [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
@@ -30,7 +53,7 @@ manager: "jhubbard"
 ### Examples of Output Parameter  
  The following example shows a procedure with an input and an output parameter. The `@SalesPerson` parameter would receive an input value specified by the calling program. The SELECT statement uses the value passed into the input parameter to obtain the correct `SalesYTD` value. The SELECT statement also assigns the value to the `@SalesYTD` output parameter, which returns the value to the calling program when the procedure exits.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -53,7 +76,7 @@ GO
   
  The following example calls the procedure created in the first example and saves the output value returned from the called procedure in the `@SalesYTD` variable, which is local to the calling program.  
   
-```  
+```sql
 -- Declare the variable to receive the output value of the procedure.  
 DECLARE @SalesYTDBySalesPerson money;  
 -- Execute the procedure specifying a last name for the input parameter  
@@ -105,11 +128,11 @@ GO
     >  The closed state matters only at return time. For example, it is valid to close a cursor part of the way through the procedure, to open it again later in the procedure, and return that cursor's result set to the calling batch, procedure, or trigger.  
   
 ### Examples of Cursor Output Parameters  
- In the following example, a procedure is created that specified an output parameter, `@currency`_`cursor` using the **cursor** data type. The procedure is then called in a batch.  
-  
+ In the following example, a procedure is created that specified an output parameter, `@currency_cursor` using the **cursor** data type. The procedure is then called in a batch.  
+ 
  First, create the procedure that declares and then opens a cursor on the Currency table.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -130,7 +153,7 @@ GO
   
  Next, execute a batch that declares a local cursor variable, executes the procedure to assign the cursor to the local variable, and then fetches the rows from the cursor.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyCursor CURSOR;  
@@ -148,12 +171,12 @@ GO
 ## Returning Data Using a Return Code  
  A procedure can return an integer value called a return code to indicate the execution status of a procedure. You specify the return code for a procedure using the RETURN statement. As with OUTPUT parameters, you must save the return code in a variable when the procedure is executed in order to use the return code value in the calling program. For example, the assignment variable `@result` of data type **int** is used to store the return code from the procedure `my_proc`, such as:  
   
-```  
+```sql
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
   
- Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the @@ERROR function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement.  
+ Return codes are commonly used in control-of-flow blocks within procedures to set the return code value for each possible error situation. You can use the @@ERROR function after a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement to detect whether an error occurred during the execution of the statement.  Before the introduction of TRY/CATCH/THROW error handling in TSQL return codes were sometimes required to determine the success or failure of stored procedures.  Stored Procedures should always indicate failure with an error (generated with THROW/RAISERROR if necessary), and not rely on a return code to indicate the failure.  Also you should avoid using the return code to return application data.
   
 ### Examples of Return Codes  
  The following example shows the `usp_GetSalesYTD` procedure with error handling that sets special return code values for various errors. The following table shows the integer value that is assigned by the procedure to each possible error, and the corresponding meaning for each value.  
@@ -166,7 +189,7 @@ EXECUTE @result = my_proc;
 |3|Error has occurred getting sales value.|  
 |4|NULL sales value found for the salesperson.|  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
@@ -226,7 +249,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
  The following example creates a program to handle the return codes that are returned from the `usp_GetSalesYTD` procedure.  
   
-```  
+```sql
 -- Declare the variables to receive the output value and return code   
 -- of the procedure.  
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  
@@ -245,7 +268,7 @@ END
 ELSE IF @ret_code = 1  
    PRINT 'ERROR: You must specify a last name for the sales person.'  
 ELSE IF @ret_code = 2   
-   PRINT 'EERROR: You must enter a valid last name for the sales person.'  
+   PRINT 'ERROR: You must enter a valid last name for the sales person.'  
 ELSE IF @ret_code = 3  
    PRINT 'ERROR: An error occurred getting sales value.'  
 ELSE IF @ret_code = 4  

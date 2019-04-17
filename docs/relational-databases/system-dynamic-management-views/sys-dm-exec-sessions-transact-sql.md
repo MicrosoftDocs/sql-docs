@@ -1,13 +1,11 @@
 ---
 title: "sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/31/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/21/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_exec_sessions_TSQL"
@@ -19,13 +17,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_sessions dynamic management view"
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-caps.latest.revision: 60
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns one row per authenticated session on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_exec_sessions is a server-scope view that shows information about all active user connections and internal tasks. This information includes client version, client program name, client login time, login user, current session setting, and more. Use sys.dm_exec_sessions to first view the current system load and to identify a session of interest, and then learn more information about that session by using other dynamic management views or dynamic management functions.  
   
@@ -46,7 +44,7 @@ manager: "jhubbard"
 |login_name|**nvarchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name under which the session is currently executing. For the original login name that created the session, see original_login_name. Can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authenticated login name or a Windows authenticated domain user name. Is not nullable.|  
 |nt_domain|**nvarchar(128)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Windows domain for the client if the session is using Windows Authentication or a trusted connection. This value is NULL for internal sessions and non-domain users. Is nullable.|  
 |nt_user_name|**nvarchar(128)**|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Windows user name for the client if the session is using Windows Authentication or a trusted connection. This value is NULL for internal sessions and non-domain users. Is nullable.|  
-|status|**nvarchar(30)**|Status of the session. Possible values:<br /><br /> **Running** - Currently running one or more requests<br /><br /> **Sleeping** - Currently running no requests<br /><br /> **Dormant** – Session has been reset because of connection pooling and is now in prelogin state.<br /><br /> **Preconnect** - Session is in the Resource Governor classifier.<br /><br /> Is not nullable.|  
+|status|**nvarchar(30)**|Status of the session. Possible values:<br /><br /> **Running** - Currently running one or more requests<br /><br /> **Sleeping** - Currently running no requests<br /><br /> **Dormant** - Session has been reset because of connection pooling and is now in prelogin state.<br /><br /> **Preconnect** - Session is in the Resource Governor classifier.<br /><br /> Is not nullable.|  
 |context_info|**varbinary(128)**|CONTEXT_INFO value for the session. The context information is set by the user by using the [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) statement. Is nullable.|  
 |cpu_time|**int**|CPU time, in milliseconds, that was used by this session. Is not nullable.|  
 |memory_usage|**int**|Number of 8-KB pages of memory used by this session. Is not nullable.|  
@@ -103,6 +101,10 @@ Everyone can see their own session information.
 -   unsuccessful_logons  
   
  If this option is not enabled, these columns will return null values. For more information about how to set this server configuration option, see [common criteria compliance enabled Server Configuration Option](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
+ 
+ 
+ The admin connections on Azure SQL Database will see one row per authenticated session. The "sa" sessions that appear in the resultset, do not have any impact on the user quota for sessions. The non-admin connections will only see information related to their database user sessions.
+ 
   
 ## Relationship Cardinalities  
   
@@ -119,7 +121,7 @@ Everyone can see their own session information.
 ### A. Finding users that are connected to the server  
  The following example finds the users that are connected to the server and returns the number of sessions for each user.  
   
-```tsql  
+```sql  
 SELECT login_name ,COUNT(session_id) AS session_count   
 FROM sys.dm_exec_sessions   
 GROUP BY login_name;  
@@ -128,7 +130,7 @@ GROUP BY login_name;
 ### B. Finding long-running cursors  
  The following example finds the cursors that have been open for more than a specific period of time, who created the cursors, and what session the cursors are on.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT creation_time ,cursor_id   
@@ -142,7 +144,7 @@ WHERE DATEDIFF(mi, c.creation_time, GETDATE()) > 5;
 ### C. Finding idle sessions that have open transactions  
  The following example finds sessions that have open transactions and are idle. An idle session is one that has no request currently running.  
   
-```tsql  
+```sql  
 SELECT s.*   
 FROM sys.dm_exec_sessions AS s  
 WHERE EXISTS   
@@ -162,7 +164,7 @@ WHERE EXISTS
 ### D. Finding information about a queries own connection  
  Typical query to gather information about a queries own connection.  
   
-```tsql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

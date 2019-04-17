@@ -2,24 +2,22 @@
 title: "View Collation Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "collations [SQL Server], view"
 ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
-caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Collation Information
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-##  <a name="Top"></a> You can view the collation of a server, database, or column in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] using Object Explorer menu options or by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+<a name="Top"></a> You can view the collation of a server, database, or column in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] using Object Explorer menu options or by using [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##  <a name="Procedures"></a> How to View a Collation Setting  
  You can use one of the following:  
@@ -58,13 +56,13 @@ manager: "jhubbard"
   
 2.  In the query window, enter the following statement that uses the SERVERPROPERTY system function.  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
     ```  
   
 3.  Alternatively, you can use the sp_helpsort system stored procedure.  
   
-    ```  
+    ```sql  
     EXECUTE sp_helpsort;  
     ```  
   
@@ -74,7 +72,7 @@ manager: "jhubbard"
   
 2.  In the query window, enter the following statement that uses the SERVERPROPERTY system function.  
   
-    ```  
+    ```sql  
     SELECT name, description FROM sys.fn_helpcollations();  
     ```  
   
@@ -84,13 +82,13 @@ manager: "jhubbard"
   
 2.  In the query window, enter the following statement that uses the sys.databases system catalog view.  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.databases;  
     ```  
   
 3.  Alternatively, you can use the DATABASEPROPERTYEX system function.  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
@@ -100,7 +98,7 @@ manager: "jhubbard"
   
 2.  In the query window, enter the following statement that uses the sys.columns system catalog view.  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
@@ -110,6 +108,7 @@ manager: "jhubbard"
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)      
  [sp_helpsort &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
   
   

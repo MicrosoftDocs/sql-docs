@@ -2,31 +2,29 @@
 title: "Connect to Server (Connection Properties Page) Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.connecttoce.connectionproperties.f1"
   - "sql13.swb.connecttosqlserver.connectionproperties.f1"
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Connect to Server (Connection Properties Page) Database Engine
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use this tab to view or specify options when connecting to an instance of [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] or registering [!INCLUDE[ssDE](../../includes/ssde_md.md)] in **Registered Servers**. **Connect** and **Options** only appear in this dialog box when connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Test** and **Save** only appear in this dialog box when registering [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 **Connect to database**  
 Select a database to connect to from the list. If you select **<default>**, you connect to the default database for the server. If you select **<Browse server>**, you can browse the server for the database to which to connect.  
   
-When connecting to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine through [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)], you must use [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication and specify a database in the **Connect to Server** dialog box, on the **Connection Properties** tab. Ensure that you select the **Encrypt connection** checkbox.  
+When connecting to an instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine through [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], you must use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication and specify a database in the **Connect to Server** dialog box, on the **Connection Properties** tab. Ensure that you select the **Encrypt connection** checkbox.  
   
-By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connects to **master**. When connecting to [!INCLUDE[ssSDS](../../includes/sssds_md.md)], if you specify a user database, you only see that database and its objects in Object Explorer. If you connect to **master**, you can see all databases. For more information, see the [Windows Azure SQL Database Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
+By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connects to **master**. When connecting to [!INCLUDE[ssSDS](../../includes/sssds-md.md)], if you specify a user database, you only see that database and its objects in Object Explorer. If you connect to **master**, you can see all databases. For more information, see the [Microsoft Azure SQL Database Overview](/azure/sql-database/sql-database-technical-overview).  
   
 **Network protocol**  
 Select a protocol from the list. The available client protocols are configured using the Client Network Configuration in Computer Management.  

@@ -1,23 +1,20 @@
 ---
 title: "Shape APPEND Clause | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "shape commands [ADO]"
   - "data shaping [ADO], APPEND clause"
   - "append clause [ADO]"
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Shape APPEND Clause
 The shape command APPEND clause appends a column or columns to a **Recordset**. Frequently, these columns are chapter columns, which refer to a child **Recordset**.  
@@ -56,10 +53,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 ```  
 SHAPE [parent-command [[AS] parent-alias]]  
-   APPEND (child-recordset [ [[AS] child-alias]   
-      RELATE parent-column TO child-column | PARAMETER param-number, ... ])  
-   [[AS] chapter-alias]   
-   [, ... ]  
+   APPEND (child-recordset [ [[AS] child-alias]   
+      RELATE parent-column TO child-column | PARAMETER param-number, ... ])  
+   [[AS] chapter-alias]   
+   [, ... ]  
 ```  
   
 ## Remarks  

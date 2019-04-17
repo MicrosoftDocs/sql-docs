@@ -1,33 +1,28 @@
 ---
-title: "DBCC SHRINKLOG (Azure SQL Data Warehouse) | Microsoft Docs"
+title: "DBCC SHRINKLOG (Parallel Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
-ms.prod: "sql-non-specified"
+ms.date: "03/16/2018"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
-caps.latest.revision: 11
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
+author: pmasl
+ms.author: umajay
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
-# DBCC SHRINKLOG (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# DBCC SHRINKLOG (Parallel Data Warehouse)
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-Reduces the size of the transaction log *across the appliance* for the current [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database. The data is defragmented in order to shrink the transaction log. Over time, the database transaction log can become fragmented and inefficient. Use DBCC SHRINKLOG to reduce fragmentation and reduce the log size.
+Reduces the size of the transaction log *across the appliance* for the current [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database. The data is defragmented in order to shrink the transaction log. Over time, the database transaction log can become fragmented and inefficient. Use DBCC SHRINKLOG to reduce fragmentation and reduce the log size.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
 ```sql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
 DBCC SHRINKLOG   
     [ ( SIZE = { target_size [ MB | GB | TB ]  } | DEFAULT ) ]   
     [ WITH NO_INFOMSGS ]   
@@ -49,7 +44,7 @@ Requires ALTER SERVER STATE permission.
 ## General Remarks  
 DBCC SHRINKLOG does not change the log size stored in the metadata for the database. The metadata continues to contain the LOG_SIZE parameter that was specified in CREATE DATABASE or ALTER DATABASE statement.
   
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples 
 ### A. Shrink the transaction log to the original size specified by CREATE DATABASE.  
 Suppose the transaction log for the Addresses database was set to 100 MB when the Addresses database was created. That is, the CREATE DATABASE statement for Addresses had LOG_SIZE = 100 MB. Now, suppose the log has grown to 150 MB and you want to shrink it back to 100 MB.
   

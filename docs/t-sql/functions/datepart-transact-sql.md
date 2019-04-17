@@ -2,12 +2,10 @@
 title: "DATEPART (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATEPART_TSQL"
@@ -26,31 +24,33 @@ helpviewer_keywords:
   - "DATEPART function [SQL Server]"
   - "dates [SQL Server], dateparts"
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEPART (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Returns an integer that represents the specified *datepart* of the specified *date*.
+
+This function returns an integer representing the specified *datepart* of the specified *date*.
   
-For an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) for an overview of all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DATEPART ( datepart , date )  
 ```  
   
 ## Arguments  
 *datepart*  
-Is the part of *date* (a date or time value) for which an **integer** will be returned. The following table lists all valid *datepart* arguments. User-defined variable equivalents are not valid.
+The specific part of the *date* argument for which `DATEPART` will return an **integer**. This table lists all valid *datepart* arguments.
+
+> [!NOTE]
+> `DATEPART` does not accept user-defined variable equivalents for the *datepart* arguments.
   
 |*datepart*|Abbreviations|  
 |---|---|
@@ -71,8 +71,16 @@ Is the part of *date* (a date or time value) for which an **integer** will be re
 |**ISO_WEEK**|**isowk**, **isoww**|  
   
 *date*  
-Is an expression that can be resolved to a **time**, **date**, **smalldatetime**, **datetime**, **datetime2**, or **datetimeoffset** value. *date* can be an expression, column expression, user-defined variable, or string literal.  
-To avoid ambiguity, use four-digit years. For information about two digits years, see [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+An expression that resolves to one of the following data types: 
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+For *date*, `DATEPART` will accept a column expression, expression, string literal, or user-defined variable. Use four-digit years to avoid ambiguity issues. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
   
 ## Return Type  
  **int**  
@@ -80,9 +88,11 @@ To avoid ambiguity, use four-digit years. For information about two digits years
 ## Return Value  
 Each *datepart* and its abbreviations return the same value.
   
-The return value depends on the language environment set by using [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) and by the [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) of the login. If *date* is a string literal for some formats, the return value depends on the format specified by using [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md). SET DATEFORMAT does not affect the return value when the date is a column expression of a date or time data type.
+The return value depends on the language environment set by using [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md), and by the [Configure the default language Server Configuration Option](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) of the login. The return value depends on [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) if *date* is a string literal of some formats. SET DATEFORMAT does not change the return value when the date is a column expression of a date or time data type.
   
-The following table lists all *datepart* arguments with corresponding return values for the statement `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. The data type of the *date* argument is **datetimeoffset(7)**. The **nanosecond***datepart* return value has a scale of 9 (.123456700) and the last two positions are always 00.
+This table lists all *datepart* arguments, with corresponding return values, for the statement `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. The *date* argument has a **datetimeoffset(7)** data type. The last two positions of the **nanosecond** *datepart* return value are always `00` and this value has a scale of 9:
+
+**.123456700**
   
 |*datepart*|Return value|  
 |---|---|
@@ -102,11 +112,25 @@ The following table lists all *datepart* arguments with corresponding return val
 |**TZoffset, tz**|310|  
   
 ## Week and weekday datepart arguments
-When *datepart* is **week** (**wk**, **ww**) or **weekday** (**dw**), the return value depends on the value that is set by using [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
+For a **week** (**wk**, **ww**) or **weekday** (**dw**) *datepart*, the `DATEPART` return value depends on the value set by [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-January 1 of any year defines the starting number for the **week***datepart*, for example: DATEPART (**wk**, 'Jan 1, *xxx*x') = 1, where *xxxx* is any year.
+January 1 of any year defines the starting number for the **week**_datepart_. For example:
+
+DATEPART (**wk**, 'Jan 1, *xxx*x') = 1
+
+where *xxxx* is any year.
   
-The following table lists the return value for **week** and **weekday***datepart* for '2007-04-21 ' for each SET DATEFIRST argument. January 1 is a Monday in the year 2007. April 21 is a Saturday in the year 2007. SET DATEFIRST 7, Sunday, is the default for U.S. English.
+This table shows the return value for the **week** and **weekday** *datepart* for
+
+'2007-04-21 '
+
+for each SET DATEFIRST argument. January 1, 2007 falls on a Monday. April 21, 2007 falls on a Saturday. For U.S. English,
+
+SET DATEFIRST 7 -- ( Sunday )
+
+serves as the default. After setting DATEFIRST, use this suggested SQL statement for the datepart table values:
+
+`SELECT DATEPART(week, '2007-04-21 '), DATEPART(weekday, '2007-04-21 ')`
   
 |SET DATEFIRST<br /><br /> argument|week<br /><br /> returned|weekday<br /><br /> returned|  
 |---|---|---|
@@ -119,41 +143,43 @@ The following table lists the return value for **week** and **weekday***datepart
 |7|16|7|  
   
 ## year, month, and day datepart Arguments  
-The values that are returned for DATEPART (**year**, *date*), DATEPART (**month**, *date*), and DATEPART (**day**, *date*) are the same as those returned by the functions [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md), and [DAY](../../t-sql/functions/day-transact-sql.md), f respectively.
+The values that are returned for DATEPART (**year**, *date*), DATEPART (**month**, *date*), and DATEPART (**day**, *date*) are the same as those returned by the functions [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md), and [DAY](../../t-sql/functions/day-transact-sql.md), respectively.
   
 ## ISO_WEEK datepart  
-ISO 8601 includes the ISO week-date system, a numbering system for weeks. Each week is associated with the year in which Thursday occurs. For example, week 1 of 2004 (2004W01) ran from Monday 29 December 2003 to Sunday, 4 January 2004. The highest week number in a year might be 52 or 53. This style of numbering is typically used in European countries/regions, but rare elsewhere.
+ISO 8601 includes the ISO week-date system, a numbering system for weeks. Each week is associated with the year in which Thursday occurs. For example, week 1 of 2004 (2004W01) covered Monday, 29 December 2003 to Sunday, 4 January 2004. European countries / regions typically use this style of numbering. Non-European countries / regions typically do not use it.
+
+Note: the highest week number in a year could be either 52 or 53.
   
-The numbering system in different countries/regions might not comply with the ISO standard. There are at least six possibilities as shown in the following table
+The numbering systems of different countries/regions might not comply with the ISO standard. This table shows six possibilities:
   
 |First day of week|First week of year contains|Weeks assigned two times|Used by/in|  
 |---|---|---|---|
-|Sunday|1 January,<br /><br /> First Saturday,<br /><br /> 1–7 days of year|Yes|United States|  
-|Monday|1 January,<br /><br /> First Sunday,<br /><br /> 1–7 days of year|Yes|Most of Europe and the United Kingdom|  
-|Monday|4 January,<br /><br /> First Thursday,<br /><br /> 4–7 days of year|No|ISO 8601, Norway, and Sweden|  
+|Sunday|1 January,<br /><br /> First Saturday,<br /><br /> 1-7 days of year|Yes|United States|  
+|Monday|1 January,<br /><br /> First Sunday,<br /><br /> 1-7 days of year|Yes|Most of Europe and the United Kingdom|  
+|Monday|4 January,<br /><br /> First Thursday,<br /><br /> 4-7 days of year|No|ISO 8601, Norway, and Sweden|  
 |Monday|7 January,<br /><br /> First Monday,<br /><br /> 7 days of year|No||  
-|Wednesday|1 January,<br /><br /> First Tuesday,<br /><br /> 1–7 days of year|Yes||  
-|Saturday|1 January,<br /><br /> First Friday,<br /><br /> 1–7 days of year|Yes||  
+|Wednesday|1 January,<br /><br /> First Tuesday,<br /><br /> 1-7 days of year|Yes||  
+|Saturday|1 January,<br /><br /> First Friday,<br /><br /> 1-7 days of year|Yes||  
   
 ## TZoffset  
-The **TZoffset** (**tz**) is returned as the number of minutes (signed). The following statement returns a time zone offset of 310 minutes.
+`DATEPART` returns the **TZoffset** (**tz**) value as the number of minutes (signed). This statement returns a time zone offset of 310 minutes:
   
 ```sql
 SELECT DATEPART (TZoffset, '2007-05-10  00:00:01.1234567 +05:10');  
 ```  
-The TZoffset value is rendered as follows:
+`DATEPART` renders the TZoffset value as follows:
 - For datetimeoffset and datetime2, TZoffset returns the time offset in minutes, where the offset for datetime2 is always 0 minutes.
-- For data types that can be implicitly converted to datetimeoffset or datetime2, with the exception of the other date/time data types, it returns the time offset in minutes.
+- For data types that can implicitly convert to **datetimeoffset** or **datetime2**, `DATEPART` returns the time offset in minutes. Exception: other date / time data types.
 - Parameters of all other types result in an error.
   
   
 ## smalldatetime date Argument  
-When *date* is [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), seconds are returned as 00.
+For a [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) *date* value, `DATEPART` returns seconds as 00.
   
 ## Default Returned for a datepart That Is Not in a date Argument  
-If the data type of the *date* argument does not have the specified *datepart*, the default for that *datepart* will be returned only when a literal is specified for *date*.
+If the *date* argument data type does not have the specified *datepart*, `DATEPART` will return the default for that *datepart* only when a literal is specified for *date*.
   
-For example, the default year-month-day for any **date** data type is 1900-01-01. The following statement has date part arguments for *datepart*, a time argument for *date*, and returns `1900, 1, 1, 1, 2`.
+For example, the default year-month-day for any **date** data type is 1900-01-01. This statement has date part arguments for *datepart*, a time argument for *date*, and it returns `1900, 1, 1, 1, 2`.
   
 ```sql
 SELECT DATEPART(year, '12:10:30.123')  
@@ -163,7 +189,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-If *date* is specified as a variable or table column and the data type for that variable or column does not have the specified *datepart*, error 9810 is returned. The following code example fails because the date part year is not a valid for the **time** data type that is declared for the variable *@t*.
+If *date* is specified as a variable or table column, and the data type for that variable or column does not have the specified *datepart*, `DATEPART` will return error 9810. In this example, variable *@t* has a **time** data type. The example fails because the date part year is invalid for the **time** data type:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -171,7 +197,7 @@ SELECT DATEPART(year, @t);
 ```  
   
 ## Fractional seconds
-Fractional seconds are returned as shown in the following statements:
+These statements show that `DATEPART` returns fractional seconds:
   
 ```sql
 SELECT DATEPART(millisecond, '00:00:01.1234567'); -- Returns 123  
@@ -180,19 +206,19 @@ SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700
 ```  
   
 ## Remarks  
-DATEPART can be used in the select list, WHERE, HAVING, GROUP BY and ORDER BY clauses.
+`DATEPART` can be used in the select list, WHERE, HAVING, GROUP BY, and ORDER BY clauses.
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], DATEPART implicitly casts string literals as a **datetime2** type. This means that DATEPART does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
+DATEPART implicitly casts string literals as a **datetime2** type in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This means that DATENAME does not support the format YDM when the date is passed as a string. You must explicitly cast the string to a **datetime** or **smalldatetime** type to use the YDM format.
   
 ## Examples  
-The following example returns the base year. The base year is useful for date calculations. In the example, the date is specified as a number. Notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets 0 as January 1, 1900.
+This example returns the base year. The base year helps with date calculations. In the example, a number specifies the date. Notice that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets 0 as January 1, 1900.
   
 ```sql
 SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0);  
 -- Returns: 1900    1    1 */  
 ```  
   
-The following example returns the day part of the date `12/20/1974`.
+This example returns the day part of the date `12/20/1974`.
   
 ```sql
 -- Uses AdventureWorks  
@@ -202,11 +228,12 @@ SELECT TOP(1) DATEPART (day,'12/20/1974') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`--------`
+```
+--------
+20
+```  
   
- `20`  
-  
-The following example returns the year part of the date `12/20/1974`.
+This example returns the year part of the date `12/20/1974`.
   
 ```sql
 -- Uses AdventureWorks  
@@ -216,9 +243,10 @@ SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`--------`
-  
- `1974`  
+```
+--------
+1974
+```  
   
 ## See also
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

@@ -2,22 +2,19 @@
 title: "Interval Literal Syntax | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "literals [ODBC], interval"
   - "interval literals [ODBC]"
   - "ODBC literals [ODBC], interval"
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Interval Literal Syntax
 The following syntax is used for interval literals in ODBC.  

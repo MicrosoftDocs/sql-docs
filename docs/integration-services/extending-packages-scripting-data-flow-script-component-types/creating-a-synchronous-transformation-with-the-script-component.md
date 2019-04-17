@@ -2,15 +2,11 @@
 title: "Creating a Synchronous Transformation with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -18,10 +14,9 @@ helpviewer_keywords:
   - "transformation components [Integration Services]"
   - "Script component [Integration Services], transformation components"
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
-caps.latest.revision: 64
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Creating a Synchronous Transformation with the Script Component
   You use a transformation component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to modify and analyze data as it passes from source to destination. A transformation with synchronous outputs processes each input row as it passes through the component. A transformation with asynchronous outputs waits until it has received all input rows to complete its processing. This topic discusses a synchronous transformation. For information about asynchronous transformations, see [Creating an Asynchronous Transformation with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). For more information about the difference between synchronous and asynchronous components, see [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -39,7 +34,7 @@ manager: "jhubbard"
  To set the script language for the Script component, you set the **ScriptLanguage** property on the **Script** page of the **Script Transformation Editor**.  
   
 > [!NOTE]  
->  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [eneral Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  To set the default scripting language for the Script component, use the **Scripting language** option on the **General** page of the **Options** dialog box. For more information, see [eneral Page](../general-page-of-integration-services-designers-options.md).  
   
  A data flow transformation component has one input, and supports one or more outputs. Configuring the input and outputs for the component is one of the steps that you must complete in metadata design mode, by using the **Script Transformation Editor**, before you write your custom script.  
   
@@ -71,7 +66,7 @@ manager: "jhubbard"
 ### Adding Variables  
  If you want to use existing variables in your script, you can add them in the **ReadOnlyVariables** and **ReadWriteVariables** property fields on the **Script** page of the **Script Transformation Editor**.  
   
- When you add multiple variables in the property fields, separate the variable names by commas. You can also select multiple variables by clicking the ellipsis (**…**) button next to the **ReadOnlyVariables** and **ReadWriteVariables** property fields, and then selecting the variables in the **Select variables** dialog box.  
+ When you add multiple variables in the property fields, separate the variable names by commas. You can also select multiple variables by clicking the ellipsis (**...**) button next to the **ReadOnlyVariables** and **ReadWriteVariables** property fields, and then selecting the variables in the **Select variables** dialog box.  
   
  For general information about how to use variables with the Script component, see [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -155,7 +150,7 @@ else
   
 6.  Create and configure a destination component that expects the **AddressID** and **City** columns, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect the output of the transformation to the destination component. You can create a destination table by running the following [!INCLUDE[tsql](../../includes/tsql-md.md)] command in the **AdventureWorks** database:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -209,7 +204,7 @@ public class ScriptMain:
   
 7.  Create and configure two destination components that expect the **AddressID** and **City** columns, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination, a Flat File destination, or the sample destination component demonstrated in [Creating a Destination with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Then connect each of the outputs of the transformation to one of the destination components. You can create destination tables by running a [!INCLUDE[tsql](../../includes/tsql-md.md)] command similar to the following (with unique table names) in the **AdventureWorks** database:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2](  
         [AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL  
@@ -259,10 +254,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 ```  
   
 ## See Also  
- [Understanding Synchronous and Asynchronous Transformations](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md   
- [Creating an Asynchronous Transformation with the Script Component](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md   
- [Developing a Custom Transformation Component with Synchronous Outputs](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md  
-  
-  
-
-
+ [Understanding Synchronous and Asynchronous Transformations](~/integration-services/understanding-synchronous-and-asynchronous-transformations.md)  
+ [Creating an Asynchronous Transformation with the Script Component](~/integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
+ [Developing a Custom Transformation Component with Synchronous Outputs](~/integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
+ 

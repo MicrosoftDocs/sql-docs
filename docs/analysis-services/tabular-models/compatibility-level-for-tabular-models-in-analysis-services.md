@@ -1,26 +1,17 @@
 ---
 title: "Compatibility level for tabular models in Analysis Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.versioncompat.f1"
-ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Compatibility level for Analysis Services tabular models
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   The *compatibility level* refers to release-specific behaviors in the Analysis Services engine. For example, DirectQuery and tabular object metadata have different implementations depending on the compatibility level. In-general, you should choose the latest compatibility level supported by your servers.
 
@@ -29,7 +20,7 @@ manager: "erikre"
 Major features in the 1400 compatibility level include:
 
 *  New infrastructure for data connectivity and import into tabular models with support for TOM APIs and TMSL scripting. This enables support for additional data sources such as Azure Blob storage. Additional data sources will be included in future updates.
-*  Data transformation and data mashup capabilities by using Get Data and M expressions.
+*  Data transformation and data mashup capabilities by using Get Data and M expressions in SSDT.
 *  Measures now support a Detail Rows property with a DAX expression, enabling BI tools such as Microsoft Excel drill-down to detailed data from an aggregated report. For example, when end-users view total sales for a region and month, they can view the associated order details. 
 *  Object-level security for table and column names, in addition to the data within them.
 *  Enhanced support for ragged hierarchies.
@@ -41,7 +32,7 @@ Major features in the 1400 compatibility level include:
 |||  
 |-|-|- 
 |**Compatibility level**|**Server version**| 
-|1400|Azure Analysis Services (Preview), SQL Server 2017 |  
+|1400|Azure Analysis Services, SQL Server 2017 |  
 |1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 

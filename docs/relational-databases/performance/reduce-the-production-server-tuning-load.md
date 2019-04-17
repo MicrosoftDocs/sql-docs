@@ -2,13 +2,11 @@
 title: "Reduce the Production Server Tuning Load | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 helpviewer_keywords: 
   - "overhead [Database Engine Tuning Advisor]"
   - "tuning overhead [SQL Server]"
@@ -18,12 +16,13 @@ helpviewer_keywords:
   - "production servers [SQL Server]"
   - "offload tuning overhead [SQL Server]"
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Reduce the Production Server Tuning Load
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor relies on the query optimizer to analyze a workload and to make tuning recommendations. Performing this analysis on the production server adds to the server load and can hurt server performance during the tuning session. You can reduce the impact to the server load during a tuning session by using a test server in addition to the production server.  
   
 ## How Database Engine Tuning Advisor Uses a Test Server  
@@ -69,7 +68,7 @@ manager: "jhubbard"
   
 ```  
 <?xml version="1.0" encoding="utf-16" ?>  
-<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">  
+<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
   <DTAInput>  
     <Server>  
       <Name>MyServerName</Name>  

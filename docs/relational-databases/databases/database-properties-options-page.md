@@ -1,25 +1,21 @@
 ---
 title: "Database Properties (Options Page) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
+ms.custom: ""
+ms.date: "08/28/2017"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseproperties.options.f1"
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 67
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Database Properties (Options Page)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use this page to view or modify options for the selected database. For more information about the options available on this page, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
@@ -31,7 +27,7 @@ manager: "jhubbard"
  Specify one of the following models for recovering the database: **Full**, **Bulk-Logged**, or **Simple**. For more information about recovery models, see [Recovery Models &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Compatibility level**  
- Specify the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the database supports. Possible values are  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)**, and **SQL Server 2008 (100)**. When a SQL Server 2005 database is upgraded to SQL Server 2014, the compatibility level for that database is changed from 90 to 100.  The 90 compatibility level is not supported in SQL Server 2014. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Specify the latest version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that the database supports. For possible values, see [ALTER DATABASE (Transact-SQL) Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). When a SQL Server database is upgraded, the compatibility level for that database is retained if possible, or changed to the minimum level supported for the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
  **Containment type**  
  Specify none or partial to designate if this is a contained database. For more information about contained databases, see [Contained Databases](../../relational-databases/databases/contained-databases.md). The server property **Enable Contained Databases** must be set to **TRUE** before a database can be configured as contained.  
@@ -42,8 +38,8 @@ manager: "jhubbard"
 ## Automatic  
  **Auto Close**  
  Specify whether the database shuts down cleanly and frees resources after the last user exits. Possible values are **True** and **False**. When **True**, the database is shut down cleanly and its resources are freed after the last user logs off.  
-  
- Auto Create Incremental Statistics  
+
+ **Auto Create Incremental Statistics**  
  Specify whether to use the incremental option when per partition statistics are created. For information about incremental statistics, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Auto Create Statistics**  
@@ -56,14 +52,26 @@ manager: "jhubbard"
  Specify whether the database automatically updates out-of-date optimization statistics. Possible values are **True** and **False**. When **True**, any out-of-date statistics needed by a query for optimization are automatically built during optimization. For more information, see [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Auto Update Statistics Asynchronously**  
- When **True**, queries that initiate an automatic update of out-of-date statistics will not wait for the statistics to be updated before compiling. Subsequent queries will use the updated statistics when they are available.  
+ When **True**, queries that initiate an automatic update of out-of-date statistics do not wait for the statistics to be updated before compiling. Subsequent queries use the updated statistics when they are available.  
   
  When **False**, queries that initiate an automatic update of out-of-date statistics, wait until the updated statistics can be used in the query optimization plan.  
   
  Setting this option to **True** has no effect unless **Auto Update Statistics** is also set to **True**.  
+
+## Azure
+When connected to Azure SQL Database, this section has settings to control the Service Level Objective (SLO). The default SLO for a new database is Standard S2.
+
+  **Current Service Level Objective**
+  The specific SLO to use. Valid values are constrained by the selected edition. If your desired SLO value is not in the list, you can type the value.
+
+  **Edition**
+  The Azure SQL Database edition to use, such as Basic or Premium. If the edition value you need is not in the list, you can type the value, which must match the value used in Azure REST APIs.
+  
+  **Max Size**
+  The maximum size of the database. If the desired size value is not in the list, you can type the value. Leave blank for the default size of the given edition and SLO.
   
 ## Containment  
- In a contained databases, some settings usually configured at the server level can be configured at the database level.  
+ In a contained database, some settings usually configured at the server level can be configured at the database level.  
   
  **Default Fulltext Language LCID**  
  Specifies a default language for full-text indexed columns. Linguistic analysis of full-text indexed data is dependent on the language of the data. The default value of this option is the language of the server. For the language that corresponds to the displayed setting, see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
@@ -93,28 +101,28 @@ manager: "jhubbard"
  In SQL Server 2016 and in Azure SQL Database, there are a number of configuration properties that can be scoped to the database level. For more information for all of these settings, see [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
  **Legacy Cardinality Estimation**  
- Specify the query optimizer cardinality estimation model for the primary independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specify the query optimizer cardinality estimation model for the primary independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Legacy Cardinality Estimation for Secondary**  
- Specify the query optimizer cardinality estimation model for secondaries, if any, independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/en-us/kb/2801413).  
+ Specify the query optimizer cardinality estimation model for secondaries, if any, independent of the compatibility level of the database. This is equivalent to [Trace Flag 9481](https://support.microsoft.com/kb/2801413).  
   
  **Max DOP**  
- Specify the default [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) setting for the primary that should be used for statements.  
+ Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for the primary that should be used for statements.  
   
  **Max DOP for Secondary**  
- Specify the default [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) setting for secondaries, if any, that should be used for statements.  
+ Specify the default [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) setting for secondaries, if any, that should be used for statements.  
   
  **Parameter Sniffing**  
- Enables or disables parameter sniffing on the primary. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Enables or disables parameter sniffing on the primary. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/kb/980653).  
   
  **Parameter Sniffing for Secondary**  
- Enables or disables parameter sniffing on secondaries, if any. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653).  
+ Enables or disables parameter sniffing on secondaries, if any. This is equivalent to [Trace Flag 4136](https://support.microsoft.com/kb/980653).  
   
  **Query Optimizer Fixes**  
- Enables or disables query optimization hotfixes on the primary regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Enables or disables query optimization hotfixes on the primary regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/kb/974006).  
   
  **Query Optimizer Fixes for Secondary**  
- Enables or disables query optimization hotfixes on secondaries, if any, regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006).  
+ Enables or disables query optimization hotfixes on secondaries, if any, regardless of the compatibility level of the database. This is equivalent to [Trace Flag 4199](https://support.microsoft.com/kb/974006).  
   
 ## FILESTREAM  
  **FILESTREAM Directory Name**  
@@ -124,6 +132,9 @@ manager: "jhubbard"
  Specify one of the following options for non-transactional access through the file system to FILESTREAM data stored in FileTables: **OFF**, **READ_ONLY**, or **FULL**. If FILESTREAM is not enabled on the server, this value is set to OFF and is disabled. For more information, see [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## Miscellaneous  
+**Allow Snapshot Isolation**  
+Enables this feature.  
+
  **ANSI NULL Default**  
  Allow null values for all user-defined data types or columns that are not explicitly defined as **NOT NULL** during a **CREATE TABLE** or **ALTER TABLE** statement (the default state). For more information, see [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) and [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md).  
   
@@ -149,7 +160,13 @@ manager: "jhubbard"
  When **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains correlation statistics between any two tables in the database that are linked by a FOREIGN KEY constraint and have **datetime** columns.  
   
  When **False**, correlation statistics are not maintained.  
-  
+ 
+ **Delayed Durability**  
+ Enables this feature.  
+ 
+ **Is Read Committed Snapshot On**  
+ Enables this feature.  
+ 
  **Numeric Round-Abort**  
  Specify how the database handles rounding errors. Possible values are **True** and **False**. When **True**, an error is generated when loss of precision occurs in an expression. When **False**, losses of precision do not generate error messages, and the result is rounded to the precision of the column or variable storing the result. For more information, see [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md).  
   
@@ -186,14 +203,27 @@ manager: "jhubbard"
   
  **Target Recovery Time (Seconds)**  
  Specifies the maximum bound on the time, expressed in seconds, to recover the specified database in the event of a crash. For more information, see [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
-  
+
+## Service Broker  
+**Broker Enabled**  
+Enables or disables Service Broker.  
+
+**Honor Broker Priority**  
+Read-only Service Broker property.  
+
+**Serice Broker Identifier**  
+Read-only identifier.  
+
 ## State  
  **Database Read Only**  
- Specify whether the database is read only. Possible values are **True** and **False**. When **True**, users can only read data in the database. Users cannot modify the data or database objects; however, the database itself can be deleted using the DROP DATABASE statement. The database cannot be in use when a new value for the **Database Read Only** option is specified. The master database is the exception, and only the system administrator can use master while the option is being set.  
+ Specify whether the database is read-only. Possible values are **True** and **False**. When **True**, users can only read data in the database. Users cannot modify the data or database objects; however, the database itself can be deleted using the `DROP DATABASE` statement. The database cannot be in use when a new value for the **Database Read Only** option is specified. The master database is the exception, and only the system administrator can use master while the option is being set.  
   
  **Database State**  
  View the current state of the database. It is not editable. For more information about **Database State**, see [Database States](../../relational-databases/databases/database-states.md).  
-  
+
+ **Encryption Enabled**  
+ When **True**, this database is enabled for database encryption. A Database Encryption Key is required for encryption. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ 
  **Restrict Access**  
  Specify which users may access the database. Possible values are:  
   
@@ -209,11 +239,9 @@ manager: "jhubbard"
   
      Only members of the db_owner, dbcreator, or sysadmin roles can use the database.  
   
- **Encryption Enabled**  
- When **True**, this database is enabled for database encryption. A Database Encryption Key is required for encryption. For more information, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md).  
-  
+
+
 ## See Also  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
   

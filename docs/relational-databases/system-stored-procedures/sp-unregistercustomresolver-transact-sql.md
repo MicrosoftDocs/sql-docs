@@ -2,28 +2,23 @@
 title: "sp_unregistercustomresolver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_unregistercustomresolver_TSQL"
   - "sp_unregistercustomresolver"
 helpviewer_keywords: 
   - "sp_unregistercustomresolver"
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
-caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_unregistercustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Unregisters a previously registered business logic module. Business logic can be in the form of either a COM component or a [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework assembly. This stored procedure is executed on the Distributor where the custom business logic was registered.  
   
@@ -37,7 +32,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## Arguments  
- [ **@article_resolver =** ] **'***article_resolver***'**  
+`[ @article_resolver = ] 'article_resolver'`
  Specifies the name of the custom business logic being unregistered. *article_resolver* is **nvarchar(255)**, with no default. If the business logic being removed is a COM component, this parameter is the friendly name of the component. If the business logic is a .NET Framework assembly, this parameter is the name of the assembly.  
   
 ## Return Code Values  

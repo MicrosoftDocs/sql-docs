@@ -2,12 +2,10 @@
 title: "SQL Server Agent Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -15,13 +13,12 @@ helpviewer_keywords:
   - "SQL Server Agent, system tables"
   - "system tables [SQL Server], SQL Server Agent"
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # SQL Server Agent Tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   The topics in this section describe the system tables that store information used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. All tables are in the dbo schema in the msdb database.  
   

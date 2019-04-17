@@ -1,14 +1,12 @@
 ---
 title: "Back Up Files and Filegroups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
+ms.date: "08/03/2016"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up filegroups [SQL Server]"
   - "file backups [SQL Server], how-to topics"
@@ -16,12 +14,12 @@ helpviewer_keywords:
   - "backups [SQL Server], creating"
   - "filegroups [SQL Server], backing up"
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
-caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Back Up Files and Filegroups (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to back up files and filegroups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell. When the database size and performance requirements make a full database backup impractical, you can create a file backup instead. A *file backup* contains all the data in one or more files (or filegroups). For more information about file backups, see [Full File Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) and [Differential Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
   
@@ -44,8 +42,9 @@ manager: "jhubbard"
  BACKUP DATABASE and BACKUP LOG permissions default to members of the **sysadmin** fixed server role and the **db_owner** and **db_backupoperator** fixed database roles.  
   
  Ownership and permission problems on the backup device's physical file can interfere with a backup operation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to read and write to the device; the account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service runs must have write permissions. However, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), which adds an entry for a backup device in the system tables, does not check file access permissions. Such problems on the backup device's physical file may not appear until the physical resource is accessed when the backup or restore is attempted.  
-  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## Back up files and filegroups using SSMS   
   
 1.  After connecting to the appropriate instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], in Object Explorer, click the server name to expand the server tree.  
@@ -127,7 +126,7 @@ manager: "jhubbard"
   
      BACKUP DATABASE *database*  
   
-     { FILE **=***logical_file_name* | FILEGROUP **=***logical_filegroup_name* } [ **,**...*f* ]  
+     { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
   
      TO *backup_device* [ **,**...*n* ]  
   
@@ -136,10 +135,10 @@ manager: "jhubbard"
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Is the database from which the transaction log, partial database, or complete database is backed up.|  
-    |FILE **=***logical_file_name*|Specifies the logical name of a file to include in the file backup.|  
-    |FILEGROUP **=***logical_filegroup_name*|Specifies the logical name of a filegroup to include in the file backup. Under the simple recovery model, a filegroup backup is allowed only for a read-only filegroup.|  
+    |FILE _=_*logical_file_name*|Specifies the logical name of a file to include in the file backup.|  
+    |FILEGROUP _=_*logical_filegroup_name*|Specifies the logical name of a filegroup to include in the file backup. Under the simple recovery model, a filegroup backup is allowed only for a read-only filegroup.|  
     |[ **,**...*f* ]|Is a placeholder that indicates that multiple files and filegroups may be specified. The number of files or filegroups is unlimited.|  
-    |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } _=_*physical_backup_device_name*<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Optionally, specifies one or more additional options, such as DIFFERENTIAL.<br /><br /> Note: A differential file backup requires a full file backup as a base. For more information, see [Create a Differential Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
   
 2.  Under the full recovery model, you must also back up the transaction log. To use a complete set of full file backups to restore a database, you must also have enough log backups to span all the file backups, from the start of the first file backup. For more information, see [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
@@ -154,7 +153,7 @@ manager: "jhubbard"
 #### A. Create a file backup of two files  
  The following example creates a differential file backup of only the `SGrp1Fi2` file of the `SalesGroup1` and the `SGrp2Fi2` file of the `SalesGroup2` filegroup.  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -166,7 +165,7 @@ GO
 #### B. Create a full file backup of the secondary filegroups  
  The following example creates a full file backup of every file in both of the secondary filegroups.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -178,7 +177,7 @@ GO
 #### C. Create a differential file backup of the secondary filegroups  
  The following example creates a differential file backup of every file in both of the secondary filegroups.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -193,13 +192,13 @@ GO
   
 1.  Use the **Backup-SqlDatabase** cmdlet and specify **Files** for the value of the **-BackupAction** parameter. Also, specify one of the following parameters:  
   
-    -   To back up a specific file, specify the **-DatabaseFile***String* parameter, where *String* is one or more database files to be backed up.  
+    -   To back up a specific file, specify the _-DatabaseFile_*String* parameter, where *String* is one or more database files to be backed up.  
   
-    -   To back up all the files in a given filegroup, specify the **-DatabaseFileGroup***String* parameter, where *String* is one or more database filegroups to be backed up.  
+    -   To back up all the files in a given filegroup, specify the _-DatabaseFileGroup_*String* parameter, where *String* is one or more database filegroups to be backed up.  
   
      The following example creates a full file backup of every file in the secondary filegroups 'FileGroup1' and 'FileGroup2' in the `MyDB` database. The backups are created on the default backup location of the server instance `Computer\Instance`.  
   
-    ```  
+    ```sql  
     --Enter this command at the PowerShell command prompt, C:\PS>  
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Files -DatabaseFileGroup "FileGroup1","FileGroup2"  
     ```  

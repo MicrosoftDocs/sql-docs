@@ -1,32 +1,17 @@
 ---
 title: "Browse a Model Using the Microsoft Association Rules Viewer | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "itemsets [Analysis Services]"
-  - "mining models [Analysis Services], associations"
-  - "mining model content, viewing"
-  - "rules [Data Mining]"
-  - "Association Rules Viewer [Analysis Services]"
-  - "market basket analysis [Analysis Services]"
-  - "associations [Analysis Services]"
-  - "Microsoft Association Rules Viewer"
-  - "dependencies [Analysis Services]"
-ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Browse a Model Using the Microsoft Association Rules Viewer
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] displays mining models that are built with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm. The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm is an association algorithm for use in creating data mining models that you can use for market basket analysis. For more information about this algorithm, see [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
   
  Following are the primary reasons for using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association algorithm:  
@@ -76,7 +61,7 @@ manager: "jhubbard"
  [Back to Top](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Dependency"></a> Dependency Net  
- The **Dependency Net** tab includes a dependency network viewer. Each node in the viewer represents an item, such as "state = WA". The arrow between nodes represents the association between items. The direction of the arrow dictates the association between the items according to the rules that the algorithm discovered. For example, if the viewer contains three items, A, B, and C, and C is predicted by A and B, if you select node C, two arrows point toward node C — A to C and B to C.  
+ The **Dependency Net** tab includes a dependency network viewer. Each node in the viewer represents an item, such as "state = WA". The arrow between nodes represents the association between items. The direction of the arrow dictates the association between the items according to the rules that the algorithm discovered. For example, if the viewer contains three items, A, B, and C, and C is predicted by A and B, if you select node C, two arrows point toward node C - A to C and B to C.  
   
  The slider at the left of the viewer acts as a filter that is tied to the probability of the rules. Lowering the slider shows only the strongest links.  
   

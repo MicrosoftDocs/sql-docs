@@ -2,13 +2,11 @@
 title: "SQLCreateDataSource Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLCreateDataSource"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLCreateDataSource function [ODBC]"
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLCreateDataSource Function
 **Conformance**  
@@ -36,8 +33,8 @@ manager: "jhubbard"
 ```  
   
 BOOL SQLCreateDataSource(  
-     HWND    hwnd,  
-     LPSTR   lpszDS);  
+     HWND    hwnd,  
+     LPSTR   lpszDS);  
 ```  
   
 ## Arguments  

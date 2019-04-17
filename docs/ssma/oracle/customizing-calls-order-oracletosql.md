@@ -1,20 +1,16 @@
 ---
 title: "Customizing Calls Order (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Customizing order"
 ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
-caps.latest.revision: 4
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Customizing Calls Order (OracleToSQL)

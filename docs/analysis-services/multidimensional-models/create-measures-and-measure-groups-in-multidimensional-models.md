@@ -1,25 +1,17 @@
 ---
 title: "Create Measures and Measure Groups in Multidimensional Models | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "measure groups [Analysis Services], defining"
-ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
-caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Create Measures and Measure Groups in Multidimensional Models
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A *measure* is an aggregation of numeric data values, such as sum, count, minimum, maximum, average, or a custom MDX expression that you create. A *measure group* is a container for one or more measures. All measures exist in a measure group, even if there is only one measure. A cube must have at least one measure and measure group.  
   
  This topic includes the following sections:  
@@ -68,7 +60,7 @@ manager: "erikre"
   
 -   Measure columns define the measures contained by a measure group.  
   
- When you run the Cube Wizard, the foreign keys are filtered out. In the list of remaining columns to choose from, you will see measure columns, plus attribute columns that are not identified as a foreign key. In the **FactSalesQuote** example, the wizard will offer **CalendarYear** and **CalendarQuarter** in addition to **SalesAmountQuota**. Only the **SalesAmountQuota** measure column will result in a workable measure for your multidimensional model. The other date-based columns exist to qualify each quota amount. You should exclude the other columns, **CalendarYear** and **CalendarQuarter**, from the measure list in the Cube Wizard (or remove them from the measure group later in the designer).  
+ When you run the Cube Wizard, the foreign keys are filtered out. In the list of remaining columns to choose from, you will see measure columns, plus attribute columns that are not identified as a foreign key. In the **FactSalesQuota** example, the wizard will offer **CalendarYear** and **CalendarQuarter** in addition to **SalesAmountQuota**. Only the **SalesAmountQuota** measure column will result in a workable measure for your multidimensional model. The other date-based columns exist to qualify each quota amount. You should exclude the other columns, **CalendarYear** and **CalendarQuarter**, from the measure list in the Cube Wizard (or remove them from the measure group later in the designer).  
   
  The point to take away from this discussion is that not all columns offered by the wizard are useful as a measure. Rely on your understanding of the data and how it will be used when deciding which columns to use as measures. Remember that you can right-click a table in the data source view to explore the data, which can help you identify which columns to use as measures. See [Explore Data in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md) for more information.  
   

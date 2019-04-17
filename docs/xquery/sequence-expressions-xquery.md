@@ -2,12 +2,10 @@
 title: "Sequence Expressions (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -16,13 +14,12 @@ helpviewer_keywords:
   - "expressions [XQuery], sequence"
   - "filtering sequences [XQuery]"
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
-caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Sequence Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports the XQuery operators that are used to construct, filter, and combine a sequence of items. An item can be an atomic value or a node.  
   
@@ -100,8 +97,8 @@ go
  The following query is specified against the AdditionalContactInfo column of the **xml** type in the Contact table. This column stores additional contact information, such as one or more additional telephone numbers, pager numbers, and addresses. The \<telephoneNumber>, \<pager>, and other nodes can appear anywhere in the document. The query constructs a sequence that contains all the \<telephoneNumber> children of the context node, followed by the \<pager> children. Note the use of the comma sequence operator in the return expression, `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
- 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+ 'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.query('  
    for $a in /aci:AdditionalContactInfo   
@@ -114,13 +111,13 @@ WHERE ContactID=3
  This is the result:  
   
 ```  
-<act:telephoneNumber xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3333</act:number>  
 </act:telephoneNumber>  
-<act:telephoneNumber xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>333-333-3334</act:number>  
 </act:telephoneNumber>  
-<act:pager xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+<act:pager xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   <act:number>999-555-1244</act:number>  
   <act:SpecialInstructions>  
 Page only in case of emergencies.  

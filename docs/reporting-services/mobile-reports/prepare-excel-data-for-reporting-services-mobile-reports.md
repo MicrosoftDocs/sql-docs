@@ -1,20 +1,14 @@
 ---
 title: "Prepare Excel data for Reporting Services mobile reports | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 02/08/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: mobile-reports
+
+ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Prepare Excel data for Reporting Services mobile reports
   
@@ -49,7 +43,7 @@ When preparing an Excel file as a dataset for a mobile report, make sure you hav
   
 As you can see in the example above, the first row contains the name of the metric in that column. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] preserves these column headers for easy reference in gallery element settings. Column headers aren't required, however. If missing, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] generates headings using the Excel A,B,C,...,AA,BB,... convention.  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]automatically detects first-row headers when importing Excel worksheets by comparing the data types of the first two cells in each column. If the data types of the first two cells in any column don't match, the first row is determined to contain column headers. Thus, if a table has numeric column headers, prefix the header names with a string so they're detected as headers in the import process.  
+[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] automatically detects first-row headers when importing Excel worksheets by comparing the data types of the first two cells in each column. If the data types of the first two cells in any column don't match, the first row is determined to contain column headers. Thus, if a table has numeric column headers, prefix the header names with a string so they're detected as headers in the import process.  
   
 ## Cells  
   
@@ -87,8 +81,8 @@ Custom objects in Excel worksheets, including PivotTables, visualizations, and i
 ### See also  
 - [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  View [SQL Server mobile reports and KPIs in the iPad app](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
--  View [SQL Server mobile reports and KPIs in the iPhone app](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI for iOS)  
+-  View [SQL Server mobile reports and KPIs in the iPad app](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI for iOS)  
+-  View [SQL Server mobile reports and KPIs in the iPhone app](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI for iOS)  
   
   
   

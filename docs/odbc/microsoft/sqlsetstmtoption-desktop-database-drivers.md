@@ -2,22 +2,20 @@
 title: "SQLSetStmtOption (Desktop Database Drivers) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetStmtOption function [ODBC], Desktop Database Drivers"
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLSetStmtOption (Desktop Database Drivers)
+
 |*fOption*|Comments|  
 |---------------|--------------|  
 |SQL_ASYNC_ENABLE|Asynchronous processing is not supported. The SQL_ASYNC_ENABLE fOption will return SQLSTATE S1C00 (Driver not capable).|  

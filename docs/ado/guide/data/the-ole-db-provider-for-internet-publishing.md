@@ -1,14 +1,12 @@
 ---
 title: "The OLE DB Provider for Internet Publishing | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "OLE DB provider for Internet publishing [ADO]"
   - "ADO, Internet publishing"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "Internet publishing [ADO]"
   - "providers [ADO], OLE DB provider for Internet publishing"
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # The OLE DB Provider for Internet Publishing
 The ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) and [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects can be used with the Microsoft OLE DB Provider for Internet Publishing (Internet Publishing Provider) to access and manipulate resources, such as Web folders or files served by Microsoft FrontPage. With ADO, you can specify the source of a **Record**, **Stream**, or [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to be a URL. You can then upload, download, move, copy, and delete resources, or directly manipulate resource properties.  
@@ -33,20 +30,20 @@ The ADO [Record](../../../ado/reference/ado-api/record-object-ado.md) and [Strea
 -   Specify "URL=" in the connection string. For example:  
   
     ```  
-    objConn.Open "URL=http://servername"  
+    objConn.Open "URL=https://servername"  
     ```  
   
 -   Specify Msdaipp.dso for the *Provider* keyword of the connection string. For example:  
   
     ```  
-    objConn.Open "provider=MSDAIPP.DSO;data source=http://servername"  
+    objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
 -   Specify Msdaipp.dso for the [Provider](../../../ado/reference/ado-api/provider-property-ado.md) property of the [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object. For example:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  
-    objConn.Open "http://servername"  
+    objConn.Open "https://servername"  
     ```  
   
 > [!NOTE]

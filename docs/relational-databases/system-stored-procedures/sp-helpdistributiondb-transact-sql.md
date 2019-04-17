@@ -2,28 +2,23 @@
 title: "sp_helpdistributiondb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpdistributiondb_TSQL"
   - "sp_helpdistributiondb"
 helpviewer_keywords: 
   - "sp_helpdistributiondb"
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns properties of the specified distribution database. This stored procedure is executed at the Distributor on the distribution database.  
   
@@ -37,7 +32,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## Arguments  
- [ **@database=**]  **'***database_name***'**  
+`[ @database = ] 'database_name'`
  Is the database name for which properties are returned. *database_name* is **sysname**, with a default of **%** for all databases associated with the Distributor and on which the user has permissions.  
   
 ## Result Sets  

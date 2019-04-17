@@ -2,18 +2,15 @@
 title: "ODBC in Windows | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # ODBC in Windows
 The following items apply only to ODBC running in Microsoft® Windows NT®/Windows 2000 and Microsoft Windows® 95/98 operating systems.  

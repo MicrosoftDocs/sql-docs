@@ -2,13 +2,11 @@
 title: "SQLGetTranslator Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLGetTranslator"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetTranslator function [ODBC]"
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetTranslator Function
 **Conformance**  
@@ -36,14 +33,14 @@ manager: "jhubbard"
 ```  
   
 BOOL SQLGetTranslator(  
-     HWND      hwndParent,  
-     LPSTR     lpszName,  
-     WORD      cbNameMax,  
-     WORD *    pcbNameOut,  
-     LPSTR     lpszPath,  
-     WORD      cbPathMax,  
-     WORD *    pcbPathOut,  
-     DWORD *   pvOption);  
+     HWND      hwndParent,  
+     LPSTR     lpszName,  
+     WORD      cbNameMax,  
+     WORD *    pcbNameOut,  
+     LPSTR     lpszPath,  
+     WORD      cbPathMax,  
+     WORD *    pcbPathOut,  
+     DWORD *   pvOption);  
 ```  
   
 ## Arguments  

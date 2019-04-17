@@ -2,20 +2,17 @@
 title: "Set the Properties of a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "components [Integration Services], properties"
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Set the Properties of a Data Flow Component
   To set the properties of data flow components, which include sources, destinations, and transformations, use one of the following features:  
@@ -24,7 +21,7 @@ manager: "jhubbard"
   
 -   The **Properties** window lists the component-level custom properties of each element, as well as the properties common to all data flow elements.  
   
--   The **Advanced Editor** dialog box provides access to custom properties for each component. The **Advanced Editor** dialog box also provides access to the properties common to all data flow components—the properties of inputs, outputs, error outputs, columns, and external columns.  
+-   The **Advanced Editor** dialog box provides access to custom properties for each component. The **Advanced Editor** dialog box also provides access to the properties common to all data flow components-the properties of inputs, outputs, error outputs, columns, and external columns.  
   
 ## Set the properties of a data flow component with a component editor  
   

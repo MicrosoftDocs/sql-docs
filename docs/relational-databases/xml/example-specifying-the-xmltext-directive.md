@@ -2,22 +2,20 @@
 title: "Example: Specifying the XMLTEXT Directive | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XMLTEXT directive"
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Example: Specifying the XMLTEXT Directive
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   This example illustrates how data in the overflow column is addressed by using the **XMLTEXT** directive in a `SELECT` statement using EXPLICIT mode.  
   
  Consider the `Person` table. This table has an `Overflow` column that stores the unconsumed part of the XML document.  

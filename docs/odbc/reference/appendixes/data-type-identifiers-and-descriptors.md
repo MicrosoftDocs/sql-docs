@@ -1,14 +1,12 @@
 ---
 title: "Data Type Identifiers and Descriptors | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.date: "02/02/2019"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], identifiers"
   - "identifiers [ODBC], data types"
@@ -17,10 +15,9 @@ helpviewer_keywords:
   - "data types [ODBC], descriptors"
   - "concise data types [ODBC]"
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Data Type Identifiers and Descriptors
 The data types listed in the [SQL Data Types](../../../odbc/reference/appendixes/sql-data-types.md) and [C Data Types](../../../odbc/reference/appendixes/c-data-types.md) sections earlier in this appendix are "concise" data types: Each identifier refers to a single data type. There is a one-to-one correspondence between the identifier and the data type. Descriptors, however, do not in all cases use a single value to identify data types. In some cases, they use a "verbose" data type and a type subcode. For all data types except datetime and interval data types, the verbose type identifier is the same as the concise type identifier and the value in SQL_DESC_DATETIME_INTERVAL_CODE is equal to 0. For datetime and interval data types, however, a verbose type (SQL_DATETIME or SQL_INTERVAL) is stored in SQL_DESC_TYPE, a concise type is stored in SQL_DESC_CONCISE_TYPE, and a subcode for each concise type is stored in SQL_DESC_DATETIME_INTERVAL_CODE. Setting one of these fields affects the others. For more information about these fields, see the [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) function description.  
@@ -37,13 +34,13 @@ The data types listed in the [SQL Data Types](../../../odbc/reference/appendixes
 |SQL_INTERVAL_MONTH|SQL_C_INTERVAL_MONTH|SQL_INTERVAL|SQL_CODE_MONTH|  
 |SQL_INTERVAL_YEAR|SQL_C_INTERVAL_YEAR|SQL_INTERVAL|SQL_CODE_YEAR|  
 |SQL_INTERVAL_YEAR_TO_MONTH|SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_INTERVAL|SQL_CODE_YEAR_TO_MONTH|  
-QL_INTERVAL_DAY|SQL_C_INTERVAL_DAY|SQL_INTERVAL|SQL_CODE_DAY|  
+|SQL_INTERVAL_DAY|SQL_C_INTERVAL_DAY|SQL_INTERVAL|SQL_CODE_DAY|  
 |SQL_INTERVAL_HOUR|SQL_C_INTERVAL_HOUR|SQL_INTERVAL|SQL_CODE_HOUR|  
 |SQL_INTERVAL_MINUTE|SQL_C_INTERVAL_MINUTE|SQL_INTERVAL|SQL_CODE_MINUTE|  
 |SQL_INTERVAL_SECOND|SQL_C_INTERVAL_SECOND|SQL_INTERVAL|SQL_CODE_SECOND|  
 |SQL_INTERVAL_DAY_TO_HOUR|SQL_C_INTERVAL_DAY_TO_HOUR|SQL_INTERVAL|SQL_CODE_DAY_TO_HOUR|  
 |SQL_INTERVAL_DAY_TO_MINUTE|SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_INTERVAL|SQL_CODE_DAY_TO_MINUTE|  
-QL_INTERVAL_DAY_TO_SECOND|SQL_C_INTERVAL_DAY_TO_SECOND|SQL_INTERVAL|SQL_CODE_DAY_TO_SECOND|  
+|SQL_INTERVAL_DAY_TO_SECOND|SQL_C_INTERVAL_DAY_TO_SECOND|SQL_INTERVAL|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_INTERVAL|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND|SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_INTERVAL|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_INTERVAL|SQL_CODE_MINUTE_TO_SECOND|

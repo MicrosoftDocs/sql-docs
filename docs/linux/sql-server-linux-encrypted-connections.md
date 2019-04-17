@@ -1,110 +1,133 @@
 ---
 title: Encrypting Connections to SQL Server on Linux | Microsoft Docs
-description: This topic describes Encrypting Connections to SQL Server on Linux.
-author: tmullaney 
-ms.date: 06/14/2017
-ms.author: thmullan;rickbyh 
-manager: jhubbard
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
+description: This article describes Encrypting Connections to SQL Server on Linux.
+author: vin-yu 
+ms.date: 01/30/2018
+ms.author: vinsonyu 
+manager: craigg
+ms.topic: conceptual
+ms.prod: sql
+ms.custom: "sql-linux"
+ms.technology: linux
 ms.assetid: 
 helpviewer_keywords: 
   - "Linux, encrypted connections"
 ---
 # Encrypting Connections to SQL Server on Linux
 
-[!INCLUDE[tsql-appliesto-sslinx-only_md](../../docs/includes/tsql-appliesto-sslinx-only_md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] on Linux can use Transport Layer Security (TLS) to encrypt data that is transmitted across a network between a client application and an instance of [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] supports the same TLS protocols on both Windows and Linux: TLS 1.2, 1.1, and 1.0. However, the steps to configure TLS are specific to the operating system on which [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] is running.  
- 
-## Typical Scenario 
-TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]. When configured correctly, TLS provides both privacy and data integrity for communications between the client and the server.  
-The following steps describe a typical scenario:  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux can use Transport Layer Security (TLS) to encrypt data that is transmitted across a network between a client application and an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports the same TLS protocols on both Windows and Linux: TLS 1.2, 1.1, and 1.0. However, the steps to configure TLS are specific to the operating system on which [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running.  
 
-1. Database administrator generates a private key and a certificate signing request (CSR). The CSR's Common Name should match the server name that clients specify in their SQL Server connection string. This Common Name is usually the fully qualified domain name of the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host. To use the same certificate for multiple servers, you can use a wildcard in the Common Name (for example, `"*.contoso.com"` instead of `"node1.contoso.com"`).   
-2. The CSR is sent to a certificate authority (CA) for signing. The CA should be trusted by all client machines that connect to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]. The CA returns a signed certificate to the database administrator.   
-3. Database administrator configures [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use the private key and the signed certificate for TLS connections.   
-4. Clients specify `"Encrypt=True"` and `"TrustServerCertificate=False"` in their connection strings. (The specific parameter names may be different depending on which driver is being used). Clients now attempt encrypt connections to SQL Server and check the validity of SQL Server's certificate to prevent man-in-the-middle attacks.  
- 
-## Configuring TLS on Linux  
+## Requirements for Certificates 
+Before getting started, you need to make sure your certificates follow these requirements:
+- The current system time must be after the Valid from property of the certificate and before the Valid to property of the certificate.
+- The certificate must be meant for server authentication. This requires the Enhanced Key Usage property of the certificate to specify Server Authentication (1.3.6.1.5.5.7.3.1).
+- The certificate must be created by using the KeySpec option of AT_KEYEXCHANGE. Usually, the certificate's key usage property (KEY_USAGE) also includes key encipherment (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
+- The Subject property of the certificate must indicate that the common name (CN) is the same as the host name or fully qualified domain name (FQDN) of the server computer. Note: Wild Card Certificates are supported.
 
-Use `mssql-conf` to configure TLS for an instance of [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] running on Linux. The following options are supported:  
+## Configuring the OpenSSL Libraries for Use (Optional)
+You can create symbolic links in the `/opt/mssql/lib/` directory that reference which `libcrypto.so` and `libssl.so` libraries should be used for encryption. This is useful if you want to force SQL Server to use a specific version of OpenSSL other than the default provided by the system. If these symbolic links are not present, SQL Server will load the default configured OpenSSL libraries on the system.
 
-|Option |Description |
-|--- |--- |
-|`network.forceencryption` |If 1, then [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] forces all connections to be encrypted. By default, this option is 0. |  
-|`network.tlscert` |The absolute path to the certificate file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:   `/etc/ssl/certs/mssql.pem`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. |  
-|`network.tlskey` |The absolute path to the private key file that [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] uses for TLS. Example:  `/etc/ssl/private/mssql.key`  The certificate file must be accessible by the mssql account. Microsoft recommends restricting access to the file using `chown mssql:mssql <file>; chmod 400 <file>`. | 
-|`network.tlsprotocols` |A comma-separated list of which TLS protocols are allowed by SQL Server. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] always attempts to negotiate the strongest allowed protocol. If a client does not support any allowed protocol, [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] rejects the connection attempt.  For compatibility, all supported protocols are allowed by default (1.2, 1.1, 1.0).  If your clients support TLS 1.2, Microsoft recommends allowing only TLS 1.2. |  
-|`network.tlsciphers` |Specifies which ciphers are allowed by [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] for TLS. This string must be formatted per [OpenSSL's cipher list format](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). In general, you should not need to change this option. <br /> By default, the following ciphers are allowed: <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |   
-| | |
- 
-## Example 
-This example uses a self-signed certificate. In normal production scenarios, the certificate would be signed by a CA that is trusted by all clients.  
- 
-### Step 1: Generate private key and certificate 
-Open a command terminal on the Linux machine where [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] is running. Run the following commands:  
+These symbolic links should be named `libcrypto.so` and `libssl.so` and placed in the `/opt/mssql/lib/` directory.
 
-- Generate a self-signed certificate. Make sure the /CN matches your SQL Server host fully-qualified domain name. You may optionally use wildcards, for example `'/CN=*.contoso.com'`.    
-   ```  
-   openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
-   ```  
+## Overview
+TLS is used to encrypt connections from a client application to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. When configured correctly, TLS provides both privacy and data integrity for communications between the client and the server.  TLS connections can either be client initiated or server initiated. 
 
-- Restrict access to `mssql`  
-   ```  
-   sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 400 mssql.pem mssql.key 
-   ```  
- 
-- Move to system SSL directories (optional)  
-   ```  
-   sudo mv mssql.pem /etc/ssl/certs/ 
-   sudo mv mssql.key /etc/ssl/private/ 
-   ```  
- 
-### Step 2: Configure  [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]  
-Use `mssql-conf` to configure [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] to use the certificate and key for TLS. For increased security, you can also set TLS 1.2 as the only allowed protocol and force all clients to use encrypted connections.  
+## Client Initiated Encryption 
+- **Generate certificate** (/CN should match your SQL Server host fully qualified domain name)
 
-```  
-sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
-sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
-sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
-```
- 
-### Step 3: Restart [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] 
-[!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] must be restarted for these changes to take effect.  
-`sudo systemctl restart mssql-server`  
- 
-### Step 4: Copy self-signed certificate to client machines 
-Because this example uses a certificate self-signed by the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] host, the certificate (not the private key) must be copied and installed as a trusted root certificate on all client machines that connect to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]. If the certificate is signed by a CA that is already trusted by all clients, this step is not necessary. 
- 
-### Step 5: Connect from clients using TLS 
-Connect to [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] from a client with encryption enabled and `TrustServerCertificate` set to `False` in the connection string. Here are a few examples of how to specify these parameters using different tools and drivers. 
+> [!NOTE]
+> For this example we use a Self-Signed Certificate, this should not be used for production scenarios. You should use CA certificates. 
 
-sqlcmd  
-`sqlcmd -N -C -S mssql.contoso.com -U sa -P '<YourPassword>'`  
+        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+        sudo chown mssql:mssql mssql.pem mssql.key 
+        sudo chmod 600 mssql.pem mssql.key   
+        sudo mv mssql.pem /etc/ssl/certs/ 
+        sudo mv mssql.key /etc/ssl/private/ 
 
-[!INCLUDE[ssmanstudiofull-md](../../docs/includes/ssmanstudiofull-md.md)]   
+- **Configure SQL Server**
+
+        systemctl stop mssql-server 
+        cat /var/opt/mssql/mssql.conf 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+
+- **Register the certificate on your client machine (Windows, Linux, or macOS)**
+
+    -   If you are using CA signed certificate, you have to copy the Certificate Authority (CA) certificate instead of the user certificate to the client machine. 
+    -   If you are using the self-signed certificate, just copy the .pem file to the following folders respective to distribution and execute the commands to enable them 
+        - **Ubuntu**: Copy cert to ```/usr/share/ca-certificates/```  rename extension to .crt  use dpkg-reconfigure ca-certificates to enable it as system CA certificate. 
+        - **RHEL**: Copy cert to ```/etc/pki/ca-trust/source/anchors/``` use ```update-ca-trust``` to enable it as system CA certificate.
+        - **SUSE**: Copy cert to ```/usr/share/pki/trust/anchors/``` use ```update-ca-certificates``` to enable it as system CA certificate.
+        - **Windows**:  Import the .pem file as a certificate under current user -> trusted root certification authorities -> certificates
+        - **macOS**: 
+           - Copy the cert to ```/usr/local/etc/openssl/certs```
+           - Run the following command to get the hash value: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - Rename the cert to value. For example: ```mv mssql.pem dc2dd900.0```. Make sure dc2dd900.0 is in ```/usr/local/etc/openssl/certs```
+    
+-	**Example connection strings** 
+
+    - **[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]**   
   ![SSMS connection dialog](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "SSMS connection dialog")  
-  
-ADO.NET  
-`"Encrypt=true; TrustServerCertificate=true;"`  
+  
+    - **SQLCMD** 
 
-ODBC   
-`"Encrypt=yes; TrustServerCertificate=no;"`  
+            sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>' 
+    - **ADO.NET** 
 
-JDBC  
-`"encrypt=true; trustServerCertificate=false;" `
+            "Encrypt=True; TrustServerCertificate=False;" 
+    - **ODBC** 
 
- 
+            "Encrypt=Yes; TrustServerCertificate=no;" 
+    - **JDBC** 
+    
+            "encrypt=true; trustServerCertificate=false;" 
+
+## Server Initiated Encryption 
+
+- **Generate certificate** (/CN should match your SQL Server host fully-qualified domain name)
+        
+        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+        sudo chown mssql:mssql mssql.pem mssql.key 
+        sudo chmod 600 mssql.pem mssql.key   
+        sudo mv mssql.pem /etc/ssl/certs/ 
+        sudo mv mssql.key /etc/ssl/private/ 
+
+- **Configure SQL Server**
+
+        systemctl stop mssql-server 
+        cat /var/opt/mssql/mssql.conf 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+        
+-	**Example connection strings** 
+
+    - **SQLCMD**
+
+            sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>' 
+    - **ADO.NET** 
+
+            "Encrypt=False; TrustServerCertificate=False;" 
+    - **ODBC** 
+
+            "Encrypt=no; TrustServerCertificate=no;"  
+    - **JDBC** 
+    
+            "encrypt=false; trustServerCertificate=false;" 
+            
+> [!NOTE]
+> Set **TrustServerCertificate** to True if the client cannot connect to CA to validate the authenticity of the cert
+
 ## Common connection errors  
 
 |Error message |Fix |
 |--- |--- |
-|The certificate chain was issued by an authority that is not trusted.  |This error occurs when clients are unable to verify the signature on the certificate presented by SQL Server during the TLS handshake. Make sure the client trusts either the [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] certificate directly, or the CA which signed the SQL Server certificate. |
-|The target principal name is incorrect.  |Make sure that Common Name field on SQL Server's certificate matches the server name specified in the client's connection string. |  
-|An existing connection was forcibly closed by the remote host. |This error can occur when the client doesn't support the TLS protocol version required by SQL Server. For example, if [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] is configured to require TLS 1.2, make sure your clients also support the TLS 1.2 protocol. |
+|The certificate chain was issued by an authority that is not trusted.  |This error occurs when clients are unable to verify the signature on the certificate presented by SQL Server during the TLS handshake. Make sure the client trusts either the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] certificate directly, or the CA which signed the SQL Server certificate. |
+|The target principal name is incorrect.  |Make sure that Common Name field on SQL Server's certificate matches the server name specified in the client's connection string. |  
+|An existing connection was forcibly closed by the remote host. |This error can occur when the client doesn't support the TLS protocol version required by SQL Server. For example, if [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is configured to require TLS 1.2, make sure your clients also support the TLS 1.2 protocol. |
 | | |   
-

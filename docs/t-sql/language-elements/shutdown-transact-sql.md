@@ -2,12 +2,10 @@
 title: "SHUTDOWN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SHUTDOWN_TSQL"
@@ -21,13 +19,12 @@ helpviewer_keywords:
   - "stopping SQL Server"
   - "immediately stopping SQL Server"
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
 ---
 # SHUTDOWN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Immediately stops SQL Server.  
   
@@ -62,7 +59,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   By using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
--   By running **net stop mssqlserver** from a command prompt for a default instance, or by running **net stop mssql$***instancename* from a command prompt for a named instance.  
+-   By running **net stop mssqlserver** from a command prompt for a default instance, or by running **net stop mssql$**_instancename_ from a command prompt for a named instance.  
   
 -   By using Services in Control Panel.  
   

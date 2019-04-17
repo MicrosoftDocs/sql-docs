@@ -2,12 +2,10 @@
 title: "CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHANGE_TRACKING_CLEANUP_VERSION"
@@ -18,13 +16,13 @@ helpviewer_keywords:
   - "CHANGE_TRACKING_MIN_VALID_VERSION"
   - "change tracking [SQL Server], CHANGE_TRACKING_MIN_VALID_VERSION"
 ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
-caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the minimum version on the client that is valid for use in obtaining change tracking information from the specified table, when you are using the [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) function.  
     

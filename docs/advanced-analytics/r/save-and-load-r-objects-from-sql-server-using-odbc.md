@@ -1,41 +1,36 @@
 ---
-title: "Save and Load R Objects from SQL Server using ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: 6ac2e971-6b4f-4c73-ba57-29c716abd057
-caps.latest.revision: 8
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
----
-# Save and Load R Objects from SQL Server using ODBC
-SQL Server R Services can store serialized R objects in a table and then load the object from the table as needed, without you having to re-run the R code or retrain the model. This ability to save R objects in a database is critical for scenarios such as training and saving a model, and then using it later for scoring or analysis. 
+title: Save and load R objects from SQL Server using ODBC - SQL Server Machine Learning Services
+ms.prod: sql
+ms.technology: machine-learning
 
-To improve performance of this critical step, the **RevoScaleR** package now includes new serialization and deserialization functions that greatly improve performance, and store the object more compactly. Moreover, you can save R objects to SQL Server directly from an R environment, by calling these new functions over an ODBC connection using *RxOdbcData*.
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: dphansen
+ms.author: davidph
+manager: cgronlun
+---
+# Save and load R objects from SQL Server using ODBC
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+SQL Server R Services can store serialized R objects in a table and then load the object from the table as needed, without you having to re-run the R code or retrain the model. This ability to save R objects in a database is critical for scenarios such as training and saving a model, and then using it later for scoring or analysis.
+
+To improve performance of this critical step, the **RevoScaleR** package now includes new serialization and deserialization functions that greatly improve performance, and store the object more compactly. This article describes these functions and how to use them.
 
 ## Overview
 
-The **RevoScaleR** package now includes new functions that make it easier to save R objects to SQL Server and then read the objects from the SQL Server table. These functions require that a connection be established to SQL Server using the *RxOdbcData* data source.
+The **RevoScaleR** package now includes new functions that make it easier to save R objects to SQL Server and then read the objects from the SQL Server table. In general, each function call uses a simple key value store, in which the key is the name of the object, and the value associated with the key is the varbinary R object to be moved in or out of a table.
 
-In general, the function calls are modeled after a simple key value store, in which the key is the name of the object, and the value associated with the key is the varbinary R object to be moved in or out of a table. 
+To save R objects to SQL Server directly from an R environment, you must:
 
-- By default, any object that you call from R to move to SQL Server is serialized and compressed. 
-- Conversely, when you load an object from a SQL Server table to use in your R code, the object is deserialized and decompressed.
-- Optionally, you can specify that the object not be serialized, and you can choose a new compression algorithm to use instead of the default compression algorithm.
++ established a connection to SQL Server using the *RxOdbcData* data source.
++ Call the new functions over the ODBC connection
++ Optionally, you can specify that the object not be serialized. Then, choose a new compression algorithm to use instead of the default compression algorithm.
 
+By default, any object that you call from R to move to SQL Server is serialized and compressed. Conversely, when you load an object from a SQL Server table to use in your R code, the object is deserialized and decompressed.
 
-## New Functions
+## List of new functions
 
-- `rxWriteObject` writes an R object into SQL Server using the ODBC data source. 
+- `rxWriteObject` writes an R object into SQL Server using the ODBC data source.
 
 - `rxReadObject` reads an R object from a SQL Server database, using an ODBC data source
 
@@ -43,7 +38,7 @@ In general, the function calls are modeled after a simple key value store, in wh
 
 - `rxListKeys` lists as key-value pairs all the available objects. This helps you determine the names and versions of the R objects.
 
-For detailed help on the syntax of each function, use R help. Details will be available in the [ScaleR reference](https://msdn.microsoft.com/microsoft-r/scaler/scaler) on MSDN at a later date.
+For detailed help on the syntax of each function, use R help. Details are also available in the [ScaleR reference](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
 
 ## How to store R objects in SQL Server using ODBC
 
@@ -113,8 +108,3 @@ This procedure demonstrates how you can use the new functions to load a model fr
    ```R
     infertLogit2 <- rxReadObject(ds, "logit.model")
    ```
-
-## See Also
-
-[R Services Features and Tasks](../../advanced-analytics/r-services/sql-server-r-services-features-and-tasks.md)
-

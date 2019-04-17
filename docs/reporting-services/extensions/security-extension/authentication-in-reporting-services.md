@@ -1,27 +1,20 @@
 ---
 title: "Authentication in Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: extensions
+
+
+ms.topic: reference
 helpviewer_keywords: 
   - "security [Reporting Services], authentication"
   - "forms-based authentication [Reporting Services]"
   - "authentication [Reporting Services]"
   - "custom authentication [Reporting Services]"
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 25
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Authentication in Reporting Services
   Authentication is the process of establishing a user's right to an identity. There are many techniques that you can use to authenticate a user. The most common way is to use passwords. When you implement Forms Authentication, for example, you want an implementation that queries users for credentials (usually by some interface that requests a login name and password) and then validates users against a data store, such as a database table or configuration file. If the credentials can't be validated, the authentication process fails and the user will assume an anonymous identity.  

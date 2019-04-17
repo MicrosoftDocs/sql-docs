@@ -1,27 +1,22 @@
 ---
 title: "GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: wmi-provider-library-reference
+
+
+ms.topic: conceptual
 apiname: 
   - "GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)"
 apilocation: 
   - "reportingservices.mof"
-apitype: "MOFDef"
+apitype: MOFDef
 helpviewer_keywords: 
   - "GenerateDatabaseRightsScript method"
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: 26
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # ConfigurationSetting Method - GenerateDatabaseRightsScript
   Generates a SQL Script that can be used to grant a user rights to the report server database and other databases required for a report server to run. The caller is expected to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database server and execute the script.  
@@ -69,7 +64,7 @@ out Int32 HRESULT);
   
  When *IsWindowsUser* is set to **true**, the generated script grants login rights to the user for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], setting the report server database as the default database, and grants the **RSExec** role on the report server database, the report server temporary database, the master database and the MSDB system database.  
   
- When *IsWindowsUser* is set to **true**, the method accepts standard Windows SIDs as input. When a standard Windows SID or service account name is supplied, it is translated to a user name string. If the database is local, the account is translated to the correct localized representation of the account. If the database is remote, the account is represented as the computer’s account.  
+ When *IsWindowsUser* is set to **true**, the method accepts standard Windows SIDs as input. When a standard Windows SID or service account name is supplied, it is translated to a user name string. If the database is local, the account is translated to the correct localized representation of the account. If the database is remote, the account is represented as the computer's account.  
   
  The following table shows accounts that are translated and their remote representation.  
   
@@ -81,8 +76,8 @@ out Int32 HRESULT);
 |LocalSystem|Local System|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
 |NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-19)|Local Service|Error – see below.|  
-|NT AUTHORITY\LocalService|Local Service|Error – see below.|  
+|(S-1-5-19)|Local Service|Error - see below.|  
+|NT AUTHORITY\LocalService|Local Service|Error - see below.|  
   
  On [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)], if you are using a built-in account and the report server database is remote, an error is returned.  
   
@@ -92,9 +87,9 @@ out Int32 HRESULT);
   
 |Value of DatabaseServerName|Example|  
 |---------------------------------|-------------|  
-|“.”||  
-|“(local)”||  
-|“LOCAL”||  
+|"."||  
+|"(local)"||  
+|"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
 |\<MachineFQDN>|example.redmond.microsoft.com|  

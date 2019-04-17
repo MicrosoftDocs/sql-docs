@@ -2,12 +2,9 @@
 title: "sys.dm_exec_query_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_exec_query_plan_TSQL"
@@ -19,38 +16,40 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_query_plan dynamic management function"
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sys.dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
+Returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
   
- The XML schema for the Showplan is published and available at [this Microsoft Web site](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). It is also available in the directory where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
+The XML schema for the Showplan is published and available at [this Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). It is also available in the directory where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
-sys.dm_exec_query_plan ( plan_handle )  
+sys.dm_exec_query_plan(plan_handle)  
 ```  
   
 ## Arguments  
- *plan_handle*  
- Uniquely identifies a query plan for a batch that is cached or is currently executing.  
+*plan_handle*  
+Is a token that uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache, or is currently executing. *plan_handle* is **varbinary(64)**.   
+
+The *plan_handle* can be obtained from the following dynamic management objects:
   
- *plan_handle* is **varbinary(64)**. *plan_handle* can be obtained from the following dynamic management objects:  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
-  
- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## Table Returned  
   
@@ -73,10 +72,12 @@ sys.dm_exec_query_plan ( plan_handle )
   
  When an ad hoc query uses simple or forced parameterization, the **query_plan** column will contain only the statement text and not the actual query plan. To return the query plan, call **sys.dm_exec_query_plan** for the plan handle of the prepared parameterized query. You can determine whether the query was parameterized by referencing the **sql** column of the [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) view or the text column of the [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) dynamic management view.  
   
- Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_plan** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates error 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL. You can use the [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) dynamic management function to return the output of the query plan in text format.  
+> [!NOTE] 
+> Due to a limitation in the number of nested levels allowed in the **xml** data type, **sys.dm_exec_query_plan** cannot return query plans that meet or exceed 128 levels of nested elements. In earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this condition prevented the query plan from returning and generates error 6335. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 and later versions, the **query_plan** column returns NULL.   
+> You can use the [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) dynamic management function to return the output of the query plan in text format.  
   
 ## Permissions  
- To execute **sys.dm_exec_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the VIEW SERVER STATE permission on the server.  
+ To execute **sys.dm_exec_query_plan**, a user must be a member of the **sysadmin** fixed server role or have the `VIEW SERVER STATE` permission on the server.  
   
 ## Examples  
  The following examples show how to use the **sys.dm_exec_query_plan** dynamic management view.  
@@ -93,7 +94,7 @@ sys.dm_exec_query_plan ( plan_handle )
   
  First, retrieve the server process ID (SPID) for the process that is executing the query or batch by using the `sp_who` stored procedure:  
   
-```  
+```sql  
 USE master;  
 GO  
 exec sp_who;  
@@ -102,7 +103,7 @@ GO
   
  The result set that is returned by `sp_who` indicates that the SPID is `54`. You can use the SPID with the `sys.dm_exec_requests` dynamic management view to retrieve the plan handle by using the following query:  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -112,39 +113,44 @@ GO
   
  The table that is returned by **sys.dm_exec_requests** indicates that the plan handle for the slow-running query or batch is `0x06000100A27E7C1FA821B10600`, which you can specify as the *plan_handle* argument with `sys.dm_exec_query_plan` to retrieve the execution plan in XML format as follows. The execution plan in XML format for the slow-running query or batch is contained in the **query_plan** column of the table returned by `sys.dm_exec_query_plan`.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
+SELECT * 
+FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
 GO  
 ```  
   
 ### B. Retrieve every query plan from the plan cache  
  To retrieve a snapshot of all query plans residing in the plan cache, retrieve the plan handles of all query plans in the cache by querying the `sys.dm_exec_cached_plans` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_cached_plans`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_query_plan` as follows. The XML Showplan output for each plan currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_cached_plans AS cp 
+CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
 GO  
 ```  
   
 ### C. Retrieve every query plan for which the server has gathered query statistics from the plan cache  
  To retrieve a snapshot of all query plans for which the server has gathered statistics that currently reside in the plan cache, retrieve the plan handles of these plans in the cache by querying the `sys.dm_exec_query_stats` dynamic management view. The plan handles are stored in the `plan_handle` column of `sys.dm_exec_query_stats`. Then use the CROSS APPLY operator to pass the plan handles to `sys.dm_exec_query_plan` as follows. The XML Showplan output for each plan for which the server has gathered statistics currently in the plan cache is in the `query_plan` column of the table that is returned.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_stats qs CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_query_stats AS qs 
+CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
 GO  
 ```  
   
 ### D. Retrieve information about the top five queries by average CPU time  
  The following example returns the plans and average CPU time for the top five queries.  
   
-```  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-Plan_handle, query_plan   
+   plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
 CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
 ORDER BY total_worker_time/execution_count DESC;  
@@ -161,4 +167,3 @@ GO
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   
-

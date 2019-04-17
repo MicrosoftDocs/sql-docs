@@ -2,12 +2,10 @@
 title: "sp_help_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_log_shipping_secondary_database"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_log_shipping_secondary_database"
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # sp_help_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   This stored procedure retrieves the settings for one or more secondary databases.  
   
@@ -41,10 +38,10 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## Arguments  
- [ **@secondary_database =** ] '*secondary_database*'  
+`[ @secondary_database = ] 'secondary_database'`
  Is the name of the secondary database. *secondary_database* is **sysname**, with no default.  
   
- [ **@secondary_id =** ] '*secondary_id*'  
+`[ @secondary_id = ] 'secondary_id'`
  The ID for the secondary server in the log shipping configuration. *secondary_id* is **uniqueidentifier** and cannot be NULL.  
   
 ## Return Code Values  

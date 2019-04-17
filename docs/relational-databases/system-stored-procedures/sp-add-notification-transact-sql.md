@@ -2,12 +2,10 @@
 title: "sp_add_notification (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_notification_TSQL"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_notification"
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # sp_add_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Sets up a notification for an alert.  
   
@@ -38,13 +35,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## Arguments  
- [ **@alert_name=** ] **'***alert***'**  
+`[ @alert_name = ] 'alert'`
  The alert for this notification. *alert* is **sysname**, with no default.  
   
- [ **@operator_name=** ] **'***operator***'**  
+`[ @operator_name = ] 'operator'`
  The operator to be notified when the alert occurs. *operator* is **sysname**, with no default.  
   
- [ **@notification_method=** ] *notification_method*  
+`[ @notification_method = ] notification_method`
  The method by which the operator is notified. *notification_method* is **tinyint**, with no default. *notification_method* can be one or more of these values combined with an **OR** logical operator.  
   
 |Value|Description|  

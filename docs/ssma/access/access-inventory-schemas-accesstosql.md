@@ -1,17 +1,11 @@
 ---
 title: "Access Inventory Schemas (AccessToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "columns table"
   - "databases table"
@@ -40,13 +34,12 @@ helpviewer_keywords:
   - "SSMA_Access_InventoryTables"
   - "tables, inventory"
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Access Inventory Schemas (AccessToSQL)
-The following sections describe the tables that are created by SSMA when you export Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+The following sections describe the tables that are created by SSMA when you export Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Databases  
 Database metadata is exported to the **SSMA_Access_InventoryDatabases** table. This table contains the following columns:  
@@ -182,5 +175,5 @@ Module metadata is exported to the **SSMA_Access_InventoryModules** table. This 
 |**ModuleName**|**nvarchar(4000)**|The name of the module.|  
   
 ## See Also  
-[Exporting an Access Inventory](http://msdn.microsoft.com/en-us/7e1941fb-3d14-4265-aff6-c77a4026d0ed)  
+[Exporting an Access Inventory](exporting-an-access-inventory-accesstosql.md)  
   

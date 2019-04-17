@@ -2,23 +2,18 @@
 title: "Debug a Script by Setting Breakpoints in a Script Task and Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "breakpoints [Integration Services]"
   - "scripts [Integration Services], breakpoints"
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
-caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component
   This procedure describes how to set breakpoints in the scripts that are used in the Script task and Script component.  

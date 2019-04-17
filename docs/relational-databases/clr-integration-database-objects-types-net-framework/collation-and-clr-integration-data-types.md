@@ -2,24 +2,21 @@
 title: "Collation and CLR Integration Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data types [CLR integration]"
   - "parameter collation [CLR integration]"
   - "collations [CLR integration]"
 ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
-caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Collation and CLR Integration Data Types
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], the **CompareInfo** object handles collations. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] string application programming interfaces (APIs) use the **CompareInfo** property associated with the **CultureInfo** object of the current thread to perform string comparisons. The default setting of the **CultureInfo** object is based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows locale setting for the computer on which [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running. This determines the default comparison semantics, if no explicit **CultureInfo** is specified, for comparisons of **System.String** values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not explicitly change the **CompareInfo** property to the database or server collation. If required, users must set the appropriate **CompareInfo** property in their routines.  
   
 ## Parameter Collation  

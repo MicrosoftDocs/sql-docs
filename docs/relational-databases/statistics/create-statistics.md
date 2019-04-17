@@ -2,13 +2,10 @@
 title: "Create Statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: performance
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.stat.properties.f1"
   - "sql13.swb.statistics.filter.f1"
@@ -18,12 +15,13 @@ helpviewer_keywords:
   - "creating statistics"
   - "statistics [SQL Server], creating"
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: julieMSFT
+ms.author: jrasnick
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Statistics
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   You can create query optimization statistics on one or more columns of a table or indexed view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. For most queries, the query optimizer already generates the necessary statistics for a high-quality query plan; in a few cases, you need to create additional statistics.  
   
  **In This Topic**  
@@ -65,9 +63,9 @@ manager: "jhubbard"
   
 3.  Click the plus sign to expand the table in which you want to create a new statistic.  
   
-4.  Right-click the **Statistics** folder and select **New Statistics…**.  
+4.  Right-click the **Statistics** folder and select **New Statistics...**.  
   
-     The following properties show on the **General** page in the **New Statistics on Table***table_name* dialog box.  
+     The following properties show on the **General** page in the **New Statistics on Table**_table\_name_ dialog box.  
   
      **Table Name**  
      Displays the name of the table described by the statistics.  
@@ -111,12 +109,12 @@ manager: "jhubbard"
      **Update statistics for these columns**  
      Check to update the statistics when the dialog box is closed.  
   
-     The following property shows on the **Filter** page in the **New Statistics on Table***table_name* dialog box.  
+     The following property shows on the **Filter** page in the **New Statistics on Table**_table\_name_ dialog box.  
   
      **Filter Expression**  
      Defines which data rows to include in the filtered statistics. For example, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  In the **New Statistics on Table***table_name* dialog box, on the **General** page, click **Add**.  
+5.  In the **New Statistics on Table**_table\_name_ dialog box, on the **General** page, click **Add**.  
   
      The following properties show in the **Select Columns** dialog box. This information is read-only.  
   
@@ -137,7 +135,7 @@ manager: "jhubbard"
   
 6.  In the **Select Columns** dialog box, select the check box or check boxes of each column for which you want to create a statistic and then click **OK**.  
   
-7.  In the **New Statistics on Table***table_name* dialog box, click **OK**.  
+7.  In the **New Statistics on Table**_table\_name_ dialog box, click **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

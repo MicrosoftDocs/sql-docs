@@ -2,12 +2,10 @@
 title: "RESTORE REWINDONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "RESTORE_REWINDONLY_TSQL"
@@ -22,13 +20,12 @@ helpviewer_keywords:
   - "rewinding backup devices"
   - "RESTORE REWINDONLY statement"
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # RESTORE Statements - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Rewinds and closes specified tape devices that were left open by BACKUP or RESTORE statements executed with the NOREWIND option. This command is supported only for tape devices.  
   
@@ -58,11 +55,11 @@ FROM <backup_device> [ ,...n ]
   
  Specifies the logical or physical backup devices to use for the restore operation.  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* }  
- Is the logical name, which must follow the rules for identifiers, of the backup devices created by **sp_addumpdevice** from which the database is restored. If supplied as a variable (**@***logical_backup_device_name_var*), the backup device name can be specified either as a string constant (**@***logical_backup_device_name_var* = *logical_backup_device_name*) or as a variable of character string data type, except for the **ntext** or **text** data types.  
+ { *logical_backup_device_name* | **@**_logical\_backup\_device\_name\_var_ }  
+ Is the logical name, which must follow the rules for identifiers, of the backup devices created by **sp_addumpdevice** from which the database is restored. If supplied as a variable (**@**_logical\_backup\_device\_name\_var_), the backup device name can be specified either as a string constant (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
- Allows backups to be restored from the named disk or tape device. The device types of disk and tape should be specified with the actual name (for example, complete path and file name) of the device: DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'. If specified as a variable (**@***physical_backup_device_name_var*), the device name can be specified either as a string constant (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*') or as a variable of character string data type, except for the **ntext** or **text** data types.  
+ {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
+ Allows backups to be restored from the named disk or tape device. The device types of disk and tape should be specified with the actual name (for example, complete path and file name) of the device: DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'. If specified as a variable (**@**_physical\_backup\_device\_name\_var_), the device name can be specified either as a string constant (**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') or as a variable of character string data type, except for the **ntext** or **text** data types.  
   
  If using a network server with a UNC name (which must contain machine name), specify a device type of disk. For more information about using UNC names, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -84,8 +81,6 @@ FROM <backup_device> [ ,...n ]
  Specifies that the tape is automatically rewound and unloaded when the RESTORE is finished. UNLOAD is set by default when a new user session is started. It remains set until NOUNLOAD is specified. This option is used only for tape devices. If a non-tape device is being used for RESTORE, this option is ignored.  
   
  NOUNLOAD  
- Specifies that the tape is not unloaded automatically from the tape drive after a RESTORE. NOUNLOAD remains set until UNLOAD is specified.  
-  
  Specifies that the tape is not unloaded automatically from the tape drive after a RESTORE. NOUNLOAD remains set until UNLOAD is specified.  
   
 ## General Remarks  

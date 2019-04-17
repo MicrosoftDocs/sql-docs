@@ -2,12 +2,10 @@
 title: "SetDisable Method (ClientNetworkProtocol Class) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetDisable Method (ClientNetworkProtocol Class)"
@@ -17,13 +15,13 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetDisable method"
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "CarlRabeler"
+ms.author: "carlrab"
+manager: craigg
 ---
 # SetDisable Method (ClientNetworkProtocol Class)
-  Disables the client network protocol that is specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  Disables the client network protocol that is specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## Syntax  
   
@@ -42,6 +40,6 @@ object.SetDisable()
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

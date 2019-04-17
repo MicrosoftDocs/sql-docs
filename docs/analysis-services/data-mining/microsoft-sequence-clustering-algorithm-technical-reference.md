@@ -1,28 +1,17 @@
 ---
 title: "Microsoft Sequence Clustering Algorithm Technical Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MAXIMUM_SEQUENCE_STATES parameter"
-  - "MINIMUM_SUPPORT parameter"
-  - "MAXIMUM_STATES parameter"
-  - "sequence clustering algorithms [Analysis Services]"
-  - "CLUSTER_COUNT parameter"
-ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Sequence Clustering Algorithm Technical Reference
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The Microsoft Sequence Clustering algorithm is a hybrid algorithm that uses Markov chain analysis to identify ordered sequences, and combines the results of this analysis with clustering techniques to generate clusters based on the sequences and other attributes in the model. This topic describes the implementation of the algorithm, how to customize the algorithm, and special requirements for sequence clustering models.  
   
  For more general information about the algorithm, including how to browse and query sequence clustering models, see [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
@@ -98,7 +87,7 @@ manager: "jhubbard"
  The default is 64.  
   
  MAXIMUM_STATES  
- Specifies the maximum number of states for a non-sequence attribute that the algorithm supports. If the number of states for a non-sequence attribute is greater than the maximum number of states, the algorithm uses the attribute’s most popular states and treats the remaining states as **Missing**.  
+ Specifies the maximum number of states for a non-sequence attribute that the algorithm supports. If the number of states for a non-sequence attribute is greater than the maximum number of states, the algorithm uses the attribute's most popular states and treats the remaining states as **Missing**.  
   
  The default is 100.  
   

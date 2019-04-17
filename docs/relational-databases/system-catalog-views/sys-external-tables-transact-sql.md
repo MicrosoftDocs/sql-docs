@@ -2,23 +2,19 @@
 title: "sys.external_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.prod: sql
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.external_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Contains a row for each external table in the current database.  
   
@@ -30,10 +26,10 @@ manager: "jhubbard"
 |data_source_id|**int**|Object ID for the external data source.||  
 |file_format_id|**int**|For external tables over a HADOOP external data source, this is the Object ID for the external file format.||  
 |location|**nvarchar(4000)**|For external tables over a HADOOP external data source, this is the path of the external data in HDFS.||  
-|reject_type|**tinyint**|For external tables over a HADOOP external data source, this is the way rejected rows are counted when querying external data.|VALUE – the number of rejected rows.<br /><br /> PERCENTAGE – the percentage of rejected rows.|  
+|reject_type|**tinyint**|For external tables over a HADOOP external data source, this is the way rejected rows are counted when querying external data.|VALUE - the number of rejected rows.<br /><br /> PERCENTAGE - the percentage of rejected rows.|  
 |reject_value|**float**|For external tables over a HADOOP external data source:<br /><br /> For *reject_type =* value, this is the number of row rejections to allow before failing the query.<br /><br /> For *reject_type* = percentage, this is the percentage of row rejections to allow before failing the query.||  
 |reject_sample_value|**int**|For *reject_type* = percentage, this is the number of rows to load, either successfully or unsuccessfully, before calculating the percentage of rejected rows.|NULL if reject_type = VALUE.|  
-|distribution_type|**int**|For external tables over a SHARD_MAP_MANAGER external data source, this is the data distribution of the rows across the underlying base tables.|0 – Sharded<br /><br /> 1 – Replicated<br /><br /> 2 – Round robin|  
+|distribution_type|**int**|For external tables over a SHARD_MAP_MANAGER external data source, this is the data distribution of the rows across the underlying base tables.|0 - Sharded<br /><br /> 1 - Replicated<br /><br /> 2 - Round robin|  
 |distribution_desc|**nvarchar(120)**|For external tables over a SHARD_MAP_MANAGER external data source, this is the distribution type displayed as a string.||  
 |sharding_column_id|**int**|For external tables over a SHARD_MAP_MANAGER external data source and a sharded distribution, this is the column ID of the column that contains the sharding key values.||  
 |remote_schema_name|**sysname**|For external tables over a SHARD_MAP_MANAGER external data source, this is the schema where the base table is located on the remote databases (if different from the schema where the external table is defined).||  

@@ -2,12 +2,10 @@
 title: "Using the sql:identity and sql:guid Annotations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sql:guid"
@@ -23,12 +21,13 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], IDENTITY-type columns"
   - "updategrams [SQLXML], GUID values"
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: douglasl
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the sql:identity and sql:guid Annotations
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can specify the **sql:identity** and **sql:guid** annotations in an XSD schema on any node that maps to a database column in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Whereas the updategram format supports the **updg:at-identity** and **updg:guid** attributes, the DiffGram format does not. The **updg:at-identity** attribute defines the behavior in updating an IDENTITY-type column. The **updg:guid** attribute allows you to obtain a GUID value from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and use it in the updategram. For more information and working samples, see [Inserting Data Using XML Updategrams &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  The **sql:identity** and **sql:guid** annotations extend this functionality to DiffGrams.  
@@ -38,7 +37,7 @@ manager: "jhubbard"
  The **sql:identity** and **sql:guid** annotations can be defined on a complex content element.  
   
 ## sql:identity Annotation  
- You can specify the **sql:identity** annotation in the XSD schema on any node that maps to an IDENTITY-type database column. The value specified for this annotation defines how the IDENTITY-type column is updated (either by using the value provided in the updategram to modify the column or by ignoring the value, in which case a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]–generated value is used for this column).  
+ You can specify the **sql:identity** annotation in the XSD schema on any node that maps to an IDENTITY-type database column. The value specified for this annotation defines how the IDENTITY-type column is updated (either by using the value provided in the updategram to modify the column or by ignoring the value, in which case a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-generated value is used for this column).  
   
  The **sql:identity** annotation can be assigned two values:  
   

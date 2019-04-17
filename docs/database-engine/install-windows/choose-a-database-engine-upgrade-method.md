@@ -2,39 +2,36 @@
 title: "Choose a database engine upgrade method | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2017"
-ms.prod: 
-  - "sql-server-2016"
-  - "sql-server-2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: install
+ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
-caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+manager: craigg
 ---
 # Choose a database engine upgrade method
-  There are several approaches to consider when you are planning to upgrade the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from a prior release of SQL Server in order to minimize downtime and risk. You can perform an upgrade in-place, migrate to a new installation, or perform a rolling upgrade. The following diagram will help you to choose amongst these approaches. Each of the approaches in the diagram are also discussed below. To assist you with the decision points in the diagram, please also review [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+There are several approaches to consider when you are planning to upgrade the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from a prior release of SQL Server in order to minimize downtime and risk. You can perform an upgrade in-place, migrate to a new installation, or perform a rolling upgrade. The following diagram will help you to choose amongst these approaches. Each of the approaches in the diagram are also discussed below. To assist you with the decision points in the diagram, please also review [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Database Engine Upgrade Method Decision Tree](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Database Engine Upgrade Method Decision Tree")  
   
  **Download**  
   
--   To download [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server)**.  
+-   To download [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], go to  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
   
--   Have an Azure account?  Then go **[Here](http://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition already installed.  
+-   Have an Azure account?  Then go **[Here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** to spin up a Virtual Machine with [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition already installed.  
   
 > [!NOTE]  
->  You may also consider upgrading the Azure SQL Database or virtualizing your SQL Server environment as part of your upgrade plan. These topics are out of scope for this topic, but here are some links:
+>  You may also consider upgrading the Azure SQL Database or virtualizing your SQL Server environment as part of your upgrade plan. These articles are out of scope for this article, but here are some links:
 >   - [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/) 
->   - [Selecting a SQL Server option in Azure(https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
+>   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
+>   - [Selecting a SQL Server option in Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
   
-##  <a name="UpgradeInPlace"></a> Upgrade in-place  
+## Upgrade in-place  
  With this approach, the SQL Server setup program upgrades the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation by replacing the existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bits with the new [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] bits and then upgrades each of the system and user databases.  The upgrade in-place  approach is easiest, requires some amount of downtime, takes longer to fallback if a fallback is necessary, and it is not supported for all scenarios. For more information on supported and unsupported upgrade in-place scenarios, see [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
  This approach is frequently used in the following scenarios:  
@@ -55,7 +52,7 @@ manager: "jhubbard"
   
  For detailed steps, see [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
-##  <a name="NewInstallationUpgrade"></a> Migrate to a new installation  
+## Migrate to a new installation  
  With this approach, you maintain the current environment while you build a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment, frequently on new hardware and with a new version of the operating system. After installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the new environment, you perform a number of steps to prepare the new environment so that you can migrate the existing user databases from the existing environment to the new environment and minimize downtime. These steps include migrating the following:  
   
 -   **System objects:** Some applications depend on information, entities, and/or objects that are outside of the scope of a single user database. Typically, an application has dependencies on the master and msdb databases, and also on the user database. Anything stored outside of a user database that is required for the correct functioning of that database must be made available on the destination server instance. For example, the logins for an application are stored as metadata in the master database, and they must be re-created on the destination server. If an application or database maintenance plan depends on SQL Server Agent jobs, whose metadata is stored in the msdb database, you must re-create those jobs on the destination server instance. Similarly, the metadata for a server-level trigger is stored in master.  
@@ -74,21 +71,18 @@ manager: "jhubbard"
  After migrating the user database(s), you point new users to the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance using one of a variety of methods (e.g. renaming the  server, using a DNS entry, modifying connection strings).  The new installation  approach reduces risk and downtime as compared to an in-place upgrade , and facilitates hardware and operating system upgrades in conjunction with the upgrade to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  If you already have a high availability (HA) solution in place or some other multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance environment, go [Rolling upgrade](#RollingUpgrade). If you do not have a high availability solution in place, you can consider either temporarily configuring [Database Mirroring](http://msdn.microsoft.com/library/ms190941.aspx) to further minimize downtime to facilitate this upgrade or taking this opportunity to configure an [Always On Availability Group](http://msdn.microsoft.com/library/hh510260.aspx) as a   permanent HA solution.  
+>  If you already have a high availability (HA) solution in place or some other multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance environment, go [Rolling upgrade](#rolling-upgrade). If you do not have a high availability solution in place, you can consider either temporarily configuring [Database Mirroring](../database-mirroring/setting-up-database-mirroring-sql-server.md) to further minimize downtime to facilitate this upgrade or taking this opportunity to configure an [Always On Availability Group](https://msdn.microsoft.com/library/hh510260.aspx) as a   permanent HA solution.  
   
  For example, you may use this approach to upgrade:  
   
--   An installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an unsupported operating system.  
+-   An installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on an unsupported operating system.    
+-   An x86 installation of SQL Server as [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later do not support x86 installations.   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to new hardware and/or a new version of the operating system.    
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in conjunction with server consolidation.   
+-   SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from SQL Server 2005](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).
+
   
--   An x86 installation of SQL Server as [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later do not support x86 installations.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to new hardware and/or a new version of the operating system.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in conjunction with server consolidation.  
-  
--   SQL Server 2005 as [!INCLUDE[ss2016](../../includes/sssql15-md.md)] and later do not support the in-place upgrade of SQL Server 2005. For more information, see [Are you upgrading from SQL Server 2005](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).  
-  
- The steps required for a new installation upgrade vary slightly depending upon whether you are using attached storage or SAN storage.  
+The steps required for a new installation upgrade vary slightly depending upon whether you are using attached storage or SAN storage.  
   
 -   **Attached storage environment:** If you have a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment using attached storage, the following diagram and the links within the diagram to guide you through the steps required for a new installation upgrade of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -98,23 +92,16 @@ manager: "jhubbard"
   
      ![New installation upgrade method using detach and attach for SAN storage](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "New installation upgrade method using detach and attach for SAN storage")  
   
-##  <a name="RollingUpgrade"></a> Rolling upgrade  
- A rolling upgrade is required in SQL Server solution environments involving multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances that must be upgraded in a certain order to maximize uptime, minimize risk, and preserve functionality. A rolling upgrade is essentially the upgrade of multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in a particular order, either performing an upgrade in-place on each existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance or performing a new installation upgrade to facilitate upgrading hardware and/or the operating system as part of the upgrade project. There are   a number of scenarios in which you need to use the rolling upgrade approach. These are documented in the following topics:  
+## Rolling upgrade  
+ A rolling upgrade is required in SQL Server solution environments involving multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances that must be upgraded in a certain order to maximize uptime, minimize risk, and preserve functionality. A rolling upgrade is essentially the upgrade of multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in a particular order, either performing an upgrade in-place on each existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instance or performing a new installation upgrade to facilitate upgrading hardware and/or the operating system as part of the upgrade project. There are   a number of scenarios in which you need to use the rolling upgrade approach. These are documented in the following articles:  
   
--   Always-On Availability Groups: For detailed steps for performing a rolling upgrade in this environment, see [Upgrading Always On Availability Group Replica Instances](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).  
-  
--   Failover cluster instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade a SQL Server Failover Cluster Instance](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
--   Mirrored instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
-  
--   Log shipping instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrading Log Shipping for SQL Server &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md).  
-  
--   A replication environment: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md).
-  
+-   Always-On Availability Groups: For detailed steps for performing a rolling upgrade in this environment, see [Upgrading Always On Availability Group Replica Instances](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md).    
+-   Failover cluster instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade a SQL Server Failover Cluster Instance](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)    
+-   Mirrored instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).    
+-   Log shipping instances: For detailed steps for performing a rolling upgrade in this environment, see [Upgrading Log Shipping for SQL Server &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md).    
+-   A replication environment: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade Replicated Databases](../../database-engine/install-windows/upgrade-replicated-databases.md).  
 -   A SQL Server Reporting Services scale-out environment: For detailed steps for performing a rolling upgrade in this environment, see [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## Next steps
  [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Complete the Database Engine Upgrade](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
-  
-  

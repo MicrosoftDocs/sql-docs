@@ -1,22 +1,17 @@
 ---
 title: "Choose a Destination (SQL Server Import and Export Wizard) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.chooseadestination.f1"
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-caps.latest.revision: 104
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Choose a Destination (SQL Server Import and Export Wizard)
  After you provide info about the source of your data and about how to connect to it, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Choose a Destination**. On this page, you provide info about the destination for your data and about how to connect to it.
@@ -44,6 +39,9 @@ The following screen shot shows the first part of the **Choose a Destination** p
 -   **Do you have an ODBC driver for your destination?** ODBC drivers aren't listed in the drop-down list of destinations. If you have an ODBC driver for your destination, select the .Net Framework Data Provider for ODBC. Then enter the driver-specific info. The .Net Framework Data Provider for ODBC acts as a wrapper around the ODBC driver. For more info, see [Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 -   **64-bit and 32-bit providers.** If you're running the 64-bit wizard, you won't see destinations for which only a 32-bit provider is installed, and vice versa.
+
+> [!NOTE]
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
 
 ## After you choose a destination
 After you choose a destination, the rest of the **Choose a Destination** page has a variable number of options which depend on the data provider that you choose.

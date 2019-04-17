@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol
+  commentId: T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.messagebox.exceptionmessageboxsymbol(v=sql.120).aspx
+  name: ExceptionMessageBoxSymbol
+  name.vb: ExceptionMessageBoxSymbol
+  fullName: MessageBox.ExceptionMessageBoxSymbol
+  fullName.vb: MessageBox.ExceptionMessageBoxSymbol

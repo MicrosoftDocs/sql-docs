@@ -1,25 +1,17 @@
 ---
 title: "Define a Many-to-Many Relationship and Many-to-Many Relationship Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "many-to-many relationships [Analysis Services]"
-ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Define a Many-to-Many Relationship and Many-to-Many Relationship Properties
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   This topic explains many-to-many dimensions in Analysis Services, including when to use them and how to create them.  
   
 ## Introduction  

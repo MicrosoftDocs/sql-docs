@@ -1,27 +1,24 @@
 ---
-title: "Enable and Disable Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+title: "Enable or Disable availability group feature"
+description: "Steps to either enable or disable the Always On availability group feature using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
+ms.date: "08/30/2017"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], disabling"
   - "Availability Groups [SQL Server], enabling"
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Enable and Disable Always On Availability Groups (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# Enable or Disable Always On availability group feature
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Enabling [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is a prerequisite for a server instance to use availability groups. Before you can create and configure any availability group, the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must have been enabled on the each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host an availability replica for one or more availability groups.  
   
@@ -127,11 +124,11 @@ manager: "jhubbard"
 ###  <a name="SQLCM2Procedure"></a> Using SQL Server Configuration Manager  
  **To enable Always On Availability Groups**  
   
-1.  Connect to the Windows Server Failover Clustering (WSFC) node that hosts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance where you want to enable Always On Availability Groups.  
+1.  Connect to the Windows Server Failover Cluster (WSFC) node that hosts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance where you want to enable Always On Availability Groups.  
   
 2.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and  click **SQL Server Configuration Manager**.  
   
-3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<***instance name***>)**, where **\<***instance name***>** is the name of a local server instance for which you want to enable Always On Availability Groups, and click **Properties.**  
+3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<**_instance name_**>)**, where **\<**_instance name_**>** is the name of a local server instance for which you want to enable Always On Availability Groups, and click **Properties.**  
   
 4.  Select the **Always On High Availability** tab.  
   
@@ -146,22 +143,22 @@ manager: "jhubbard"
   
 1.  Change directory (**cd**) to a server instance that you want to enable for Always On Availability Groups.  
   
-2.  Use the **Enable-SqlAlways On** cmdlet to enable Always On Availability Groups.  
+2.  Use the **Enable-SqlAlwaysOn** cmdlet to enable Always On Availability Groups.  
   
      To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
     > [!NOTE]  
-    >  For information about how to control whether the **Enable-SqlAlways On** cmdlet restarts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service, see [When Does a Cmdlet Restart the SQL Server Service?](#WhenCmdletRestartsSQL), later in this topic.  
+    >  For information about how to control whether the **Enable-SqlAlwaysOn** cmdlet restarts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service, see [When Does a Cmdlet Restart the SQL Server Service?](#WhenCmdletRestartsSQL), later in this topic.  
   
  **To set up and use the SQL Server PowerShell provider**  
   
 -   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-####  <a name="ExmplEnable-SqlHadrServic"></a> Example: Enable-SqlAlways On  
+####  <a name="ExmplEnable-SqlHadrServic"></a> Example: Enable-SqlAlwaysOn  
  The following PowerShell command enables [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on an instance of SQL Server (*Computer*\\*Instance*).  
   
 ```  
-Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
 ```  
   
 ##  <a name="DisableAOAG"></a> Disable Always On Availability Groups  
@@ -191,11 +188,11 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="SQLCM3Procedure"></a> Using SQL Server Configuration Manager  
  **To disable Always On**  
   
-1.  Connect to the Windows Server Failover Clustering (WSFC) node that hosts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance where you want to disable Always On Availability Groups.  
+1.  Connect to the Windows Server Failover Cluster (WSFC) node that hosts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance where you want to disable Always On Availability Groups.  
   
 2.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and click **SQL Server Configuration Manager**.  
   
-3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<***instance name***>)**, where **\<***instance name***>** is the name of a local server instance for which you want to disable Always On Availability Groups, and click **Properties**.  
+3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<**_instance name_**>)**, where **\<**_instance name_**>** is the name of a local server instance for which you want to disable Always On Availability Groups, and click **Properties**.  
   
 4.  On the**Always On High Availability**tab, deselect the **Enable Always On Availability Groups** check box, and click **OK**.  
   
@@ -206,18 +203,18 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> Using SQL Server PowerShell  
  **To disable Always On**  
   
-1.  Change directory (**cd**) to a currently-enabled server instance that that you want to disenable for Always On Availability Groups.  
+1.  Change directory (**cd**) to a currently-enabled server instance that you want to disenable for Always On Availability Groups.  
   
-2.  Use the **Disable-SqlAlways On** cmdlet to enable Always On Availability Groups.  
+2.  Use the **Disable-SqlAlwaysOn** cmdlet to enable Always On Availability Groups.  
   
      For example, the following command disables Always On Availability Groups on an instance of SQL Server (*Computer*\\*Instance*).  This command requires restarting the instance, and you will be prompted to confirm this restart.  
   
     ```  
-    Disable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance  
+    Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
     ```  
   
     > [!IMPORTANT]  
-    >  For information about how to control whether the **Disable-SqlAlways On** cmdlet restarts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service, see [When Does a Cmdlet Restart the SQL Server Service?](#WhenCmdletRestartsSQL), later in this topic.  
+    >  For information about how to control whether the **Disable-SqlAlwaysOn** cmdlet restarts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service, see [When Does a Cmdlet Restart the SQL Server Service?](#WhenCmdletRestartsSQL), later in this topic.  
   
      To view the syntax of a cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
@@ -226,7 +223,7 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
 -   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ###  <a name="FollowUp"></a> Follow Up: After Disabling Always On  
- After you disable Always On Availability Groups, the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must be restarted. SQL Configuration Manager restarts the server instance automatically. However, if you used the **Disable-SqlAlways On** cmdlet, you will need to restart the server instance manually. For more information, see [sqlservr Application](../../../tools/sqlservr-application.md).  
+ After you disable Always On Availability Groups, the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must be restarted. SQL Configuration Manager restarts the server instance automatically. However, if you used the **Disable-SqlAlwaysOn** cmdlet, you will need to restart the server instance manually. For more information, see [sqlservr Application](../../../tools/sqlservr-application.md).  
   
  On the restarted server instance:  
   
@@ -240,14 +237,14 @@ Enable-SqlAlways On -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  If you did not remove the local availability replicas before disabling Always On, delete (drop) each availability group for which the server instance is hosting an availability replica. For information about deleting an availability group, see [Remove an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
   
-2.  To remove the metadata left behind, delete (drop) each affected availability group on a server instance that is part of the original WSFC cluster.  
+2.  To remove the metadata left behind, delete (drop) each affected availability group on a server instance that is part of the original WSFC.  
   
 3.  Any primary databases continue to be accessible to all connections but the data synchronization between the primary and secondary databases stops.  
   
 4.  The secondary databases enter the RESTORING state. You can delete them, or you can restore them by using RESTORE WITH RECOVERY. However, restored databases are no longer participating in availability-group data synchronization.  
   
 ##  <a name="WhenCmdletRestartsSQL"></a> When Does a Cmdlet Restart the SQL Server Service?  
- On a server instance that is currently running, using **Enable-SqlAlways On** or **Disable-SqlAlways On** to change the current Always On setting could cause the SQL Server service to restart. The restart behavior on depends on the following conditions:  
+ On a server instance that is currently running, using **Enable-SqlAlwaysOn** or **Disable-SqlAlwaysOn** to change the current Always On setting could cause the SQL Server service to restart. The restart behavior on depends on the following conditions:  
   
 |-NoServiceRestart parameter specified|-Force parameter specified|Is the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service restarted?|  
 |--------------------------------------------|---------------------------------|---------------------------------------------------------|  

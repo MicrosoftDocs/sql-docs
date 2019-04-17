@@ -2,24 +2,17 @@
 title: "Selecting and Configuring Objects to Test (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Parameter Comparision Setting"
   - "Tester Component,Selecting Objects"
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
-caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Selecting and Configuring Objects to Test (SybaseToSQL)
 At this step you select objects to test, and configure settings for comparing procedures' and functions' output parameters, as well as the return values of functions.  
@@ -37,7 +30,7 @@ Establish the comparison rules for output parameters and return values in the **
 ### Use During Comparisons  
 Enable using of the selected parameter in test results comparison.  
   
--   If you choose **True**, SSMA will compare the output value of this parameter after executing the procedure on Sybase with the corresponding value on [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   If you choose **True**, SSMA will compare the output value of this parameter after executing the procedure on Sybase with the corresponding value on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   If you choose**False**, the parameter will be excluded from results verification.  
   

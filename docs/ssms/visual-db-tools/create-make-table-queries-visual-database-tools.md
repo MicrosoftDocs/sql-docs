@@ -2,13 +2,11 @@
 title: "Create Make Table Queries (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], types"
   - "table creation [SQL Server], Make Table query"
@@ -16,12 +14,13 @@ helpviewer_keywords:
   - "Make Table query"
   - "adding tables"
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Create Make Table Queries (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can copy rows into a new table using a Make Table query, which is useful for creating subsets of data to work with or copying the contents of a table from one database to another. A Make Table query is similar to an Insert Results query but creates a new table to copy rows into.  
   
 When you create a Make Table query, you specify:  
@@ -38,7 +37,7 @@ When you create a Make Table query, you specify:
   
 -   Group By options, if you want to copy only summary information.  
   
-For example, the following query creates a new table called `uk`_`customers` and copies information from the `customers` table to it:  
+For example, the following query creates a new table called `uk_customers` and copies information from the `customers` table to it:  
   
 ```  
 SELECT *   
@@ -63,7 +62,7 @@ In order to use a Make Table query successfully:
   
     To create a destination table in another database, specify a fully qualified table name including the name of the target database, the owner (if required), and the name of the table.  
   
-4.  Specify the columns to copy by adding them to the query. For details, see [Add Columns to Queries (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Columns will be copied only if you add them to the query. To copy entire rows, choose **\&#42; (All Columns)**.  
+4.  Specify the columns to copy by adding them to the query. For details, see [Add Columns to Queries (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Columns will be copied only if you add them to the query. To copy entire rows, choose **&#42; (All Columns)**.  
   
     The Query and View Designer adds the columns you choose to the **Column** column of the Criteria pane.  
   

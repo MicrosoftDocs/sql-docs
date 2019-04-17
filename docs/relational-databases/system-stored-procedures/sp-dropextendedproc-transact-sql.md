@@ -1,13 +1,11 @@
 ---
 title: "sp_dropextendedproc (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.date: "10/04/2017"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropextendedproc"
@@ -17,34 +15,29 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropextendedproc"
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
-caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_dropextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Drops an extended stored procedure.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CLR Integration](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) instead.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 sp_dropextendedproc [ @functname = ] 'procedure'   
 ```  
   
 ## Arguments  
- [ **@functname =**] **'***procedure***'**  
+`[ @functname = ] 'procedure'`
  Is the name of the extended stored procedure to drop. *procedure* is **nvarchar(517)**, with no default.  
   
 ## Return Code Values  
@@ -56,7 +49,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## Remarks  
  Executing **sp_dropextendedproc** drops the user-defined extended stored procedure name from the [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) catalog view and removes the entry from the [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) catalog view. This stored procedure can be run only in the **master** database.  
   
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**sp_dropextendedproc** does not drop system extended stored procedures. Instead, the system administrator should deny EXECUTE permission on the extended stored procedure to the **public** role.  
+**sp_dropextendedproc** does not drop system extended stored procedures. Instead, the system administrator should deny EXECUTE permission on the extended stored procedure to the **public** role.  
   
  **sp_dropextendedproc** cannot be executed inside a transaction.  
   

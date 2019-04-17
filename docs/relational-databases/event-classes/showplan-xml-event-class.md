@@ -2,27 +2,25 @@
 title: "Showplan XML Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: supportability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan XML event class"
 ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
-caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan XML Event Class
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   The Showplan XML event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes an SQL statement. Include the Showplan XML event class to identify the Showplan operators. This event class stores each event as a well-defined XML document.  
   
  When the Showplan XML event class is included in a trace, the amount of overhead will significantly impede performance. Showplan XML stores a query plan that is created when the query is optimized. To minimize the overhead incurred, limit use of this event class to traces that monitor specific problems for brief periods of time.  
   
- The Showplan XML documents have a schema associated with them. This schema can be found at the [Microsoft Web Site](http://go.microsoft.com/fwlink/?LinkId=41740), or as part of your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
+ The Showplan XML documents have a schema associated with them. This schema can be found at the [Microsoft Web Site](https://go.microsoft.com/fwlink/?LinkId=41740), or as part of your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
 ## Showplan XML Event Class Data Columns  
   

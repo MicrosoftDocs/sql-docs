@@ -1,23 +1,17 @@
 ---
 title: "E-Mail Settings - Reporting Services Native mode (Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 06/01/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+
+ms.topic: conceptual
 f1_keywords: 
   - "SQL13.rsconfigtool.emailsettings.F1"
 helpviewer_keywords: 
   - "SQL11.rsconfigtool.emailsettings.F1"
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # E-Mail Settings - Reporting Services Native mode (Configuration Manager)
 Reporting Services includes an e-mail delivery extension so that you can distribute reports through e-mail. Depending on how you define the e-mail subscription, a delivery might consist of a notification, link, attachment, or embedded report. The e-mail delivery extension works with your existing mail server technology. The mail server must be an SMTP server or forwarder. The report server connects to an SMTP server through Collaboration Data Objects (CDO) libraries (cdosys.dll) that are provided by the operating system.
@@ -26,7 +20,7 @@ The report server e-mail delivery extension is not configured by default. You mu
 
 ## Configuration Requirements
 
-- Report server e-mail delivery is implemented on Collaboration Data Objects (CDO) and requires a local or remote Simple Mail Transfer Protocol (SMTP) server or SMTP forwarder. SMTP is not supported on all Windows operating systems. If you are using the Itanium-based edition of Windows Server 2008, SMTP is not supported. For more information about configuration options provided through CDO, see [Configuration CoClass](http://go.microsoft.com/fwlink/?LinkId=98237) on MSDN.
+- Report server e-mail delivery is implemented on Collaboration Data Objects (CDO) and requires a local or remote Simple Mail Transfer Protocol (SMTP) server or SMTP forwarder. SMTP is not supported on all Windows operating systems. If you are using the Itanium-based edition of Windows Server 2008, SMTP is not supported. For more information about configuration options provided through CDO, see [Configuration CoClass](https://go.microsoft.com/fwlink/?LinkId=98237) on MSDN.
 
 The configured authentication account must have permission on the SMTP server to send mail.
 
@@ -184,7 +178,7 @@ The connection between the report server and a local SMTP server or forwarder is
 
 3. Select the server to install Internet Information Server (IIS) onto and select **Next**.
 
-4. Select **Next** on the *Server Roles** page.
+4. Select **Next** on the *Server Roles* page.
      
 5. On the *Features* page, select **SMTP Server** and then select **Next**.
 

@@ -2,25 +2,24 @@
 title: "Create a User-Defined Data Type Alias | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.userdefineddatatype.general.f1"
   - "sql13.swb.new.datatype.properties.general.f1"
 helpviewer_keywords: 
   - "alias data types [SQL Server], creating"
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
-caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a User-Defined Data Type Alias
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This topic describes how to create a new user-defined data type alias in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
@@ -61,7 +60,7 @@ manager: "jhubbard"
      Select the base data type from the list box. The list box displays all data types except for the **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** , and **xml** data types. The data type of an existing user-defined data type is not editable.  
   
      **Default**  
-     Optionally select a rule or a default to bind to the user-defined data type alias.  
+     Optionally select a default to bind to the user-defined data type alias.  
   
      **Length/Precision**  
      Displays the length or precision of the data type as applicable. **Length** applies to character-based user-defined data types; **Precision** applies only to numeric-based user-defined data types. The label changes depending on the data type selected earlier. This box is not editable if the length or precision of the selected data type is fixed.  
@@ -85,10 +84,10 @@ manager: "jhubbard"
   
     |||  
     |-|-|  
-    |1 – 9|5|  
-    |10 – 19|9|  
-    |20 – 28|13|  
-    |29 – 38|17|  
+    |1 - 9|5|  
+    |10 - 19|9|  
+    |20 - 28|13|  
+    |29 - 38|17|  
   
      For **nchar** and **nvarchar** data types, the storage value is always two times the value in **Length**.  
   
@@ -116,7 +115,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates a data type alias based on the system-supplied `varchar` data type. The `ssn` data type alias is used for columns holding 11-digit social security numbers (999-99-9999). The column cannot be NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

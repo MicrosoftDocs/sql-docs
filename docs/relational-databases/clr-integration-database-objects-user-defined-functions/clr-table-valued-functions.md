@@ -2,12 +2,9 @@
 title: "CLR Table-Valued Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -18,12 +15,12 @@ helpviewer_keywords:
   - "table-valued functions [CLR integration]"
   - "TVFs [CLR integration]"
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
-caps.latest.revision: 88
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # CLR Table-Valued Functions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A table-valued function is a user-defined function that returns a table.  
   
  Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] extends the functionality of table-valued functions by allowing you to define a table-valued function in any managed language. Data is returned from a table-valued function through an **IEnumerable** or **IEnumerator** object.  
@@ -45,11 +42,11 @@ manager: "jhubbard"
  Table-valued parameters are user-defined table types that are passed into a procedure or function and provide an efficient way to pass multiple rows of data to the server. Table-valued parameters provide similar functionality to parameter arrays, but offer greater flexibility and closer integration with [!INCLUDE[tsql](../../includes/tsql-md.md)]. They also provide the potential for better performance. Table-valued parameters also help reduce the number of round trips to the server. Instead of sending multiple requests to the server, such as with a list of scalar parameters, data can be sent to the server as a table-valued parameter. A user-defined table type cannot be passed as a table-valued parameter to, or be returned from, a managed stored procedure or function executing in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. For more information about table-valued parameters, see [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## Output Parameters and Table-Valued Functions  
- Information may be returned from table-valued functions using output parameters. The corresponding parameter in the implementation code table-valued function should use a pass-by-reference parameter as the argument. Note that Visual Basic does not support output parameters in the same way that Visual C# does. You must specifiy the parameter by reference and apply the \<Out()> attribute to represent an output parameter, as in the following:  
+ Information may be returned from table-valued functions using output parameters. The corresponding parameter in the implementation code table-valued function should use a pass-by-reference parameter as the argument. Note that Visual Basic does not support output parameters in the same way that Visual C# does. You must specify the parameter by reference and apply the \<Out()> attribute to represent an output parameter, as in the following:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
-…  
+...  
 Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)  
 ```  
   
@@ -175,7 +172,7 @@ go
 ```  
   
 ## Sample: Returning the Results of a SQL Server Query  
- The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Light database from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. See [http://www.codeplex.com/sqlserversamples](http://go.microsoft.com/fwlink/?LinkId=87843) for more information on downloading AdventureWorks.  
+ The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Light database from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. See [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843) for more information on downloading AdventureWorks.  
   
  Name your source code file FindInvalidEmails.cs or FindInvalidEmails.vb.  
   

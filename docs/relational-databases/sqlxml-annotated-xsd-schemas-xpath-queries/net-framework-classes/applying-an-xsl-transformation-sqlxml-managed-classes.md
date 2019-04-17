@@ -2,12 +2,10 @@
 title: "Applying an XSL Transformation (SQLXML Managed Classes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "applying XSL transformations [SQLXML]"
@@ -15,12 +13,13 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, applying XSL transformations"
   - "XSL Transformations [SQLXML]"
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Applying an XSL Transformation (SQLXML Managed Classes)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In this example, an SQL query is executed against the AdventureWorks database. The XSL transformation is applied to the query result to generate a two-column table of the employees' first and last names.  
   
  The XslPath property of the SqlXmlCommand object is used to specify the XSL file and its directory path.  

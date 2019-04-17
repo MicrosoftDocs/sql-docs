@@ -1,30 +1,22 @@
 ---
-title: "Create and Manage Tabular Model Partitions (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Create and Manage Tabular Model Partitions | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# Create and Manage Tabular Model Partitions
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+# Create and manage tabular model partitions
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions defined for a model during model authoring are duplicated in a deployed model. Once deployed, you can manage those partitions by using the **Partitions** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or by using a script. Tasks provided in this topic describe how to create and manage partitions for a deployed model.  
   
   > [!NOTE]  
->  Partitions in Tabular models created at the 1400 compatibility level are defined using an M query statement. To learn more, see [M Reference](https://msdn.microsoft.com/library/mt211003.aspx). 
+>  Partitions in tabular models created at the 1400 compatibility level are defined using an M query statement. To learn more, see [M Reference](https://msdn.microsoft.com/library/mt211003.aspx). 
 >
   
 ## Tasks  
@@ -59,8 +51,8 @@ manager: "erikre"
   
 -   In the **Partitions** dialog box, in the **Partitions** list, select the partition you want to delete, and then click the **Delete** button.  
   
-## See Also  
- [Tabular Model Partitions](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Process Tabular Model Partitions](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
+## See also  
+ [Tabular model partitions](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
+ [Process tabular model partitions](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   
   

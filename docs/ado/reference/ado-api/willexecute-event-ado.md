@@ -1,14 +1,12 @@
 ---
 title: "WillExecute Event (ADO) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "WillExecute"
@@ -16,10 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "WillExecute event [ADO]"
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # WillExecute Event (ADO)
 The **WillExecute** event is called just before a pending command executes on a connection.  
@@ -62,7 +59,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** allows you to examine and modify the pending execution parameters. This event may return a request that the pending command be canceled.  
   
 > [!NOTE]
->  If the original source for a **Command** is a stream specified by the [CommandStream Property (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) property, assigning a new string to the **WillExecute***Source* parameter changes the source of the **Command**. The **CommandStream** property will be cleared and the [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) property will be updated with the new source. The original stream specified by **CommandStream** will be released and cannot be accessed.  
+>  If the original source for a **Command** is a stream specified by the [CommandStream Property (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md) property, assigning a new string to the **WillExecute**_Source_ parameter changes the source of the **Command**. The **CommandStream** property will be cleared and the [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) property will be updated with the new source. The original stream specified by **CommandStream** will be released and cannot be accessed.  
   
  If the dialect of the new source string differs from the original setting of the [Dialect Property](../../../ado/reference/ado-api/dialect-property.md) property (which corresponded to the **CommandStream**), the correct dialect must be specified by setting the **Dialect** property of the command object referenced by *pCommand*.  
   

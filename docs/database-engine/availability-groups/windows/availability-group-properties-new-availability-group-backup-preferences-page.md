@@ -1,25 +1,23 @@
 ---
-title: "Properties: New Availability Group (Backup Preferences Page) | Microsoft Docs"
-ms.custom: ""
+title: "Availability Group Properties: New Availability Group (Backup Preferences Page)"
+description: "A description of the various properties found on the 'Backup preference' page of the 'New Availability Group' wizard in SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroupproperties.backuppreferences.f1"
 helpviewer_keywords: 
   - "read-only routing"
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
-caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Availability Group Properties: New Availability Group (Backup Preferences Page)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use this dialog box to view and change the backup preferences of the selected availability group.  
   
  **To view availability group properties**  

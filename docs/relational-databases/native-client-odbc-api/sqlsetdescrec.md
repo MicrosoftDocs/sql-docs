@@ -2,22 +2,21 @@
 title: "SQLSetDescRec | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLSetDescRec function"
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
-caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLSetDescRec
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This topic discusses SQLSetDescRec functionality that is specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -27,7 +26,7 @@ manager: "jhubbard"
   
  The following table describes the mapping between parameters and descriptor fields.  
   
-|Parameter|Related attribute for non–table-valued parameter types, including table-valued parameter columns|Related attribute for table-valued parameters|  
+|Parameter|Related attribute for non-table-valued parameter types, including table-valued parameter columns|Related attribute for table-valued parameters|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
 |*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*SubType*|Ignored|For records of type SQL_DATETIME or SQL_INTERVAL, set this to SQL_DESC_DATETIME_INTERVAL_CODE.|  
@@ -58,7 +57,7 @@ manager: "jhubbard"
  **SQLSetDescRec** supports large CLR user-defined types (UDTs). For more information, see [Large CLR User-Defined Types &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## See Also  
- [SQLSetDescRec](http://go.microsoft.com/fwlink/?LinkId=80704)   
+ [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

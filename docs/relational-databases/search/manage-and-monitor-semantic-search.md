@@ -1,24 +1,21 @@
 ---
 title: "Manage and Monitor Semantic Search | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], managing"
   - "semantic search [SQL Server], monitoring"
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+manager: craigg
 ---
 # Manage and Monitor Semantic Search
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describes the process of semantic indexing and the tasks related to managing and monitoring the indexes.  
   
 ##  <a name="HowToMonitorStatus"></a> Check the status of semantic indexing  
@@ -27,7 +24,7 @@ manager: "jhubbard"
   
  The first phase of indexing includes the population of the full-text keyword index and the semantic key phrase index, as well as the extraction of document similarity data.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -54,7 +51,7 @@ GO
   
  The logical size is displayed in number of index pages.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -65,7 +62,7 @@ GO
 ### What is the total size of the full-text and semantic indexes for a full-text catalog?  
  Query the **IndexSize** property of the [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) metadata function.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -73,7 +70,7 @@ GO
 ### How many items are indexed in the full-text and semantic indexes for a full-text catalog?  
  Query the **ItemCount** property of the [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) metadata function.  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -101,7 +98,7 @@ GO
   
  When semantic indexing is disabled and suspended, queries over semantic data continue to work successfully and to return previously indexed data. This behavior is not consistent with the behavior of Full-Text Search.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  

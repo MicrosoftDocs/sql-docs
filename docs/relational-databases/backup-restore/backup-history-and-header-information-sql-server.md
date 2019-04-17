@@ -2,13 +2,11 @@
 title: "Backup History and Header Information (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backup headers [SQL Server]"
   - "history tables [SQL Server]"
@@ -33,12 +31,12 @@ helpviewer_keywords:
   - "restore history tables [SQL Server]"
   - "listing backed up files"
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Backup History and Header Information (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   A complete history of all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup and restore operations on a server instance is stored in the **msdb** database. This topic introduces the backup and restore history tables and also the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are used to access backup history. The topic also discusses when listing database and transaction log files is useful and when to use media-header information compared to when to use backup-header information.  
   
 > [!IMPORTANT]  
@@ -111,7 +109,7 @@ manager: "jhubbard"
  For more information, see [Comparison of Media-Header and Backup-Header Information](#CompareMediaHeaderBackupHeader), later in this topic.  
   
 ##  <a name="BackupHeader"></a> Backup-Header Information  
- Viewing the backup header displays information about all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup sets on the media. Information that is displayed includes the types of backup devices that are used, the types of backup (for example, database, transaction, file, or differential database), and backup start and stop date/time information. This information is useful when you have to determine which backup set on the tape to restore, or the backups that are contained on the media.  
+ Viewing the backup header displays information about all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup sets on the media. Information that is displayed includes the types of backup devices that are used, the types of backup (for example, database, transaction, file, or differential database), and backup start and stop date/time information. This information is useful when you have to determine which backup set on the tape to restore, or the backups that are contained on the media.  
   
 > [!NOTE]  
 >  Viewing backup header information can take a long time for high-capacity tapes, because the whole media must be scanned to display information about each backup on the media.  

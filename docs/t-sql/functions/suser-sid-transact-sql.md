@@ -2,12 +2,10 @@
 title: "SUSER_SID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "SUSER_SID"
@@ -24,13 +22,12 @@ helpviewer_keywords:
   - "identification numbers [SQL Server], logins"
   - "SUSER_SID function"
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # SUSER_SID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the security identification number (SID) for the specified login name.  
   
@@ -69,10 +66,10 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## Examples  
   
 ### A. Using SUSER_SID  
- The followng example returns the security identification number (SID) for the current security context.  
+ The following example returns the security identification number (SID) for the current security context.  
   
 ```  
-SELECT SUSER_SID('sa');  
+SELECT SUSER_SID();  
 ```  
   
 ### B. Using SUSER_SID with a specific login  

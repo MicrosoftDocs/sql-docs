@@ -2,25 +2,25 @@
 title: "Create Term-Based Relations | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.kbtermsbased.f1"
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Create Term-Based Relations
-  This topic describes how to create term-based relations for a domain in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A term-based relation (TBR) enables you to make a correction to a term that is part of a value in a domain. It enables multiple values that are identical except for the spelling of a common part of them to be considered identical synonyms. For example, you can set up a term-based relation that changes the term “Inc.” to “Incorporated”. The term “Inc.” will be changed each time it occurs in the domain. Instances of “Contoso, Inc.” will be changed “Contoso, Incorporated”, and the two values will be considered exact synonyms.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  This topic describes how to create term-based relations for a domain in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A term-based relation (TBR) enables you to make a correction to a term that is part of a value in a domain. It enables multiple values that are identical except for the spelling of a common part of them to be considered identical synonyms. For example, you can set up a term-based relation that changes the term "Inc." to "Incorporated". The term "Inc." will be changed each time it occurs in the domain. Instances of "Contoso, Inc." will be changed "Contoso, Incorporated", and the two values will be considered exact synonyms.  
   
- To use term-based relations, you build a list of Value/Correct To pairs, such as “Inc.” and “Incorporated”, or “Senior” and “Sr.”. Using a term-based relation enables you to change a term throughout the domain without manually setting individual domain values as synonyms. You can specify that a value be corrected even if knowledge discovery has not discovered that value previously. If a term-based relation transformation causes two values to be identical, then DQS will create a synonym relationship between them (in knowledge discovery), a correction relationship between them (in data correction), or an exact match (in matching).  
+ To use term-based relations, you build a list of Value/Correct To pairs, such as "Inc." and "Incorporated", or "Senior" and "Sr.". Using a term-based relation enables you to change a term throughout the domain without manually setting individual domain values as synonyms. You can specify that a value be corrected even if knowledge discovery has not discovered that value previously. If a term-based relation transformation causes two values to be identical, then DQS will create a synonym relationship between them (in knowledge discovery), a correction relationship between them (in data correction), or an exact match (in matching).  
   
  Term-based relations transformation and symbols transformation (in which special characters are replaced by a space or a null) are both done in a pre-processing stage before analysis. If composite domain parsing is requested, it will be performed before the two transformations, because delimiter parsing requires symbols. Other operations, such as domain rules and domain value changes, will be performed after the transformations. For matching, term-based relations are applied on the source data before the matching activity regardless of whether you run cleansing.  
   
@@ -95,7 +95,7 @@ manager: "jhubbard"
   
 6.  Click **Apply Changes** to apply the term-based relations to the domain.  
   
-7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Click **Finish** to complete the domain management activity, as described in [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
 ##  <a name="FollowUp"></a> Follow Up: After Creating Term-Based Relations  
  After you create term-based relations, you can perform other domain management tasks on the domain, you can perform knowledge discovery to add knowledge to the domain, or you can add a matching policy to the domain. For more information, see [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md), [Managing a Domain](../data-quality-services/managing-a-domain.md), or [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  

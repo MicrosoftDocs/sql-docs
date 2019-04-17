@@ -1,26 +1,17 @@
 ---
 title: "Dimension Objects (Analysis Services - Multidimensional Data) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "dimensions [Analysis Services], objects"
-ms.assetid: 7f3d55c7-cccb-4ad0-b6cb-3a2c9992dd68
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Dimension Objects (Analysis Services - Multidimensional Data)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A simple <xref:Microsoft.AnalysisServices.Dimension> object is composed of basic information, attributes, and hierarchies. Basic information includes the name of the dimension, the type of the dimension, the data source, the storage mode, and others. Attributes define the actual data in the dimension. Attributes do not necessarily belong to a hierarchy, but hierarchies are built from attributes. A hierarchy creates ordered lists of levels, and defines the ways a user can explore the dimension.  
   
 ## In This Section  

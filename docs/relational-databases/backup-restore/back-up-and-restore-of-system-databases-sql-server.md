@@ -2,13 +2,11 @@
 title: "Back Up and Restore of System Databases (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "system databases [SQL Server], backing up and restoring"
   - "restoring system databases [SQL Server]"
@@ -16,13 +14,12 @@ helpviewer_keywords:
   - "database backups [SQL Server], system databases"
   - "servers [SQL Server], backup"
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-caps.latest.revision: 57
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: mashamsft
+ms.author: mathoma
+manager: craigg
 ---
 # Back Up and Restore of System Databases (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains a set of system-level databases, s*ystem databases*, which are essential for the operation of a server instance. Several of the system databases must be backed up after every significant update. The system databases that you must always back up include **msdb**, **master**, and **model**. If any database uses replication on the server instance, there is a **distribution** system database that you must also back up. Backups of these system databases let you restore and recover the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system in the event of system failure, such as the loss of a hard disk.  
   
@@ -33,7 +30,7 @@ manager: "jhubbard"
 |[master](../../relational-databases/databases/master-database.md)|The database that records all of the system level information for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system.|Yes|Simple|Back up **master** as often as necessary to protect the data sufficiently for your business needs. We recommend a regular backup schedule, which you can supplement with an additional backup after a substantial update.|  
 |[model](../../relational-databases/databases/model-database.md)|The template for all databases that are created on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Yes|User configurable*|Back up **model** only when necessary for your business needs; for example, immediately after customizing its database options.<br /><br /> **Best practice:** We recommend that you create only full database backups of **model**, as required. Because **model** is small and rarely changes, backing up the log is unnecessary.|  
 |[msdb](../../relational-databases/databases/msdb-database.md)|The database used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for scheduling alerts and jobs, and for recording operators. **msdb** also contains history tables such as the backup and restore history tables.|Yes|Simple (default)|Back up **msdb** whenever it is updated.|  
-|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|A read-only database that contains copies of all system objects that ship with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|No|—|The **Resource** database resides in the mssqlsystemresource.mdf file, which contains only code. Therefore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot back up the **Resource** database.<br /><br /> Note: You can perform a file-based or a disk-based backup on the mssqlsystemresource.mdf file by treating the file as if it were a binary (.exe) file, instead of a database file. But you cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restore on the backups. Restoring a backup copy of mssqlsystemresource.mdf can only be done manually, and you must be careful not to overwrite the current **Resource** database with an out-of-date or potentially insecure version.|  
+|[Resource](../../relational-databases/databases/resource-database.md) (RDB)|A read-only database that contains copies of all system objects that ship with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|No|-|The **Resource** database resides in the mssqlsystemresource.mdf file, which contains only code. Therefore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot back up the **Resource** database.<br /><br /> Note: You can perform a file-based or a disk-based backup on the mssqlsystemresource.mdf file by treating the file as if it were a binary (.exe) file, instead of a database file. But you cannot use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restore on the backups. Restoring a backup copy of mssqlsystemresource.mdf can only be done manually, and you must be careful not to overwrite the current **Resource** database with an out-of-date or potentially insecure version.|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|A workspace for holding temporary or intermediate result sets. This database is re-created every time an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started. When the server instance is shut down, any data in **tempdb** is deleted permanently.|No|Simple|You cannot back up the **tempdb** system database.|  
 |[Configure Distribution](../../relational-databases/replication/configure-distribution.md)|A database that exists only if the server is configured as a replication Distributor. This database stores metadata and history data for all types of replication, and transactions for transactional replication.|Yes|Simple|For information about when to back up the **distribution** database, see [Back Up and Restore Replicated Databases](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
   

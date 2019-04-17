@@ -2,12 +2,10 @@
 title: "sp_create_removable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_create_removable"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_create_removable"
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_create_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a removable media database. Creates three or more files (one for the system catalog tables, one for the transaction log, and one or more for the data tables) and places the database on those files.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] We recommend that you use [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,36 +50,36 @@ sp_create_removable
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the name of the database to create for use on removable media. *dbname* is **sysname**.  
   
- [ **@syslogical=** ] **'***syslogical***'**  
+`[ @syslogical = ] 'syslogical'`
  Is the logical name of the file that contains the system catalog tables. *syslogical* is **sysname**.  
   
- [ **@sysphysical=** ] **'***sysphysical***'**  
+`[ @sysphysical = ] 'sysphysical'`
  Is the physical name. This includes a fully qualified path, of the file that holds the system catalog tables. *sysphysical* is **nvarchar(260)**.  
   
- [ **@syssize=** ] *syssize*  
+`[ @syssize = ] syssize`
  Is the size, in megabytes, of the file that holds the system catalog tables. *syssize* is **int**. The minimum *syssize* is 1.  
   
- [ **@loglogical=** ] **'***loglogical***'**  
+`[ @loglogical = ] 'loglogical'`
  Is the logical name of the file that contains the transaction log. *loglogical* is **sysname**.  
   
- [ **@logphysical=** ] **'***logphysical***'**  
+`[ @logphysical = ] 'logphysical'`
  Is the physical name. This includes a fully qualified path, of the file that contains the transaction log. *logphysical* is **nvarchar(260)**.  
   
- [ **@logsize=** ] *logsize*  
+`[ @logsize = ] logsize`
  Is the size, in megabytes, of the file that contains the transaction log. *logsize* is **int**. The minimum *logsize* is 1.  
   
- [ **@datalogical1=** ] **'***datalogical***'**  
+`[ @datalogical1 = ] 'datalogical'`
  Is the logical name of a file that contains the data tables. *datalogical* is **sysname**.  
   
  There must be from 1 through 16 data files. Typically, more than one data file is created when the database is expected to be large and must be distributed on multiple disks.  
   
- [ **@dataphysical1=** ] **'***dataphysical***'**  
+`[ @dataphysical1 = ] 'dataphysical'`
  Is the physical name. This includes a fully qualified path, of a file that contains data tables. *dataphysical* is **nvarchar(260)**.  
   
- [ **@datasize1=** ] **'***datasize***'**  
+`[ @datasize1 = ] 'datasize'`
  Is the size, in megabytes, of a file that contains data tables. *datasize* is **int**. The minimum *datasize* is 1.  
   
 ## Return Code Values  

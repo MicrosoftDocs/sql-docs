@@ -1,25 +1,22 @@
 ---
 title: "History Cleanup Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: sql
+ms.technology: supportability
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.maint.historycleanup.f1"
 helpviewer_keywords: 
   - "History Cleanup Task dialog box"
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
-caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ""
+manager: craigg
 ---
 # History Cleanup Task (Maintenance Plan)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **History Cleanup Task** dialog to discard old historical information from tables in the msdb database. This task supports deleting backup and restore history, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Job history, and maintenance plan history.  
   
  This statement uses the **sp_purge_jobhistory** and **sp_delete_backuphistory** statements.  

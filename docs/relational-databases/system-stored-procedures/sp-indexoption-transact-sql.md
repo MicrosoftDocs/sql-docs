@@ -2,12 +2,10 @@
 title: "sp_indexoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_indexoption"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_indexoption"
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_indexoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Sets locking option values for user-defined clustered and nonclustered indexes or tables with no clustered index.  
   
@@ -31,10 +28,6 @@ manager: "jhubbard"
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Instead, use [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +41,10 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## Arguments  
- [ **@IndexNamePattern=**] **'***table_or_index_name***'**  
+`[ @IndexNamePattern = ] 'table_or_index_name'`
  Is the qualified or nonqualified name of a user-defined table or index. *table_or_index_name* is **nvarchar(1035)**, with no default. Quotation marks are required only if a qualified index or table name is specified. If a fully qualified table name, including a database name, is provided, the database name must be the name of the current database. If a table name is specified with no index, the specified option value is set for all indexes on that table and the table itself if no clustered index exists.  
   
- [ **@OptionName =**] **'***option_name***'**  
+`[ @OptionName = ] 'option_name'`
  Is an index option name. *option_name* is **varchar(35)**, with no default. *option_name* can have one of the following values.  
   
 |Value|Description|  
@@ -61,7 +54,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|When TRUE, row locks are not used. When FALSE, row locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when row locks are used.|  
 |**DisAllowPageLocks**|When TRUE, page locks are not used. When FALSE, page locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when page locks are used.|  
   
- [ **@OptionValue =**] **'***value***'**  
+`[ @OptionValue = ] 'value'`
  Specifies whether the *option_name* setting is enabled (TRUE, ON, yes, or 1) or disabled (FALSE, OFF, no, or 0). *value* is **varchar(12)**, with no default.  
   
 ## Return Code Values  
@@ -90,9 +83,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## Examples  
   
 ### A. Setting an option on a specific index  
- The following example disallows page locks on the `IX`_`Customer`\_`TerritoryID` index on the `Customer` table.  
+ The following example disallows page locks on the `IX_Customer_TerritoryID` index on the `Customer` table.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',  
@@ -102,7 +95,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
 ### B. Setting an option on all indexes on a table  
  The following example disallows row locks on all indexes associated with the `Product` table. The `sys.indexes` catalog view is queried before and after executing the `sp_indexoption` procedure to show the results of the statement.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options for all indexes on the table.  
@@ -122,9 +115,9 @@ GO
 ```  
   
 ### C. Setting an option on a table with no clustered index  
- The following example disallows page locks on a table with no clustered index (a heap). The `sys.indexes` catalog view is queried before and after the `sp`_`indexoption` procedure is executed to show the results of the statement.  
+ The following example disallows page locks on a table with no clustered index (a heap). The `sys.indexes` catalog view is queried before and after the `sp_indexoption` procedure is executed to show the results of the statement.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Display the current row and page lock options of the table.   

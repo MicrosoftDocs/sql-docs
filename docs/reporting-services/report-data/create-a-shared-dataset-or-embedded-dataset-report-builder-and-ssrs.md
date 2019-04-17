@@ -1,25 +1,22 @@
 ---
 title: "Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 10/17/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-data
+
+
+ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
-caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Create a Shared Dataset or Embedded Dataset (Report Builder and SSRS)
 Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] report. Shared datasets on a report server can be used by multiple reports, both mobile and paginated. To create a dataset, you need an embedded or shared data source.  
   
- Use **Report Builder** for the following tasks:  
+## Report Builder tasks
+
+Use Report Builder for the following tasks:  
   
 1.  Create a shared dataset in Dataset Design View. Shared datasets must use published shared data sources.  
   
@@ -27,7 +24,9 @@ Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../incl
   
 3.   Save the dataset directly to the report server or SharePoint site.  
   
- Use **Report Designer** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the following tasks:  
+## Report Designer tasks
+
+Use Report Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] for the following tasks:  
   
 1.  Create a shared dataset in Solution Explorer. Shared datasets must use data sources from the Shared Data Sources folder in Solution Explorer.  
   
@@ -40,7 +39,7 @@ Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../incl
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## To open Report Builder and create a shared dataset  
+## To create a shared dataset in Report Builder
   
 1.  Open Report Builder. The **New report or dataset pane** opens, as shown in the following figure:  
   
@@ -113,7 +112,7 @@ Embedded datasets are for use in a single [!INCLUDE[ssRSnoversion_md](../../incl
  [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Dataset Fields Collection &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

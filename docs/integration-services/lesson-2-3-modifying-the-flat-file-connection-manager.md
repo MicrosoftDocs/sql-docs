@@ -1,47 +1,45 @@
 ---
-title: "Step 3: Modifying the Flat File Connection Manager | Microsoft Docs"
+title: "Step 3: Modify the Flat File connection manager | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.date: "01/03/2019"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: integration-services
+ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
-# Lesson 2-3 - Modifying the Flat File Connection Manager
-In this task, you will modify the Flat File connection manager that you created and configured in Lesson 1. When originally created, the Flat File connection manager was configured to statically load a single file. To enable the Flat File connection manager to iteratively load files, you must modify the ConnectionString property of the connection manager to accept the user-defined variable `User:varFileName`, which contains the path of the file to be loaded at run time.  
+# Lesson 2-3: Modify the Flat File connection manager
+
+In this task, you modify the Flat File connection manager from Lesson 1. That Flat File connection manager is configured to statically load a single file. To enable the Flat File connection manager to iteratively load files, you change the ConnectionString property of the connection manager to use the user-defined variable `User::varFileName`, which contains the path of the file to be loaded at run time.  
   
-By modifying the connection manager to use the value of the user-defined variable, `User::varFileName`, to populate the ConnectionString property of the connection manager, the connection manager will be able to connect to different flat files. At run time, each iteration of the Foreach Loop container will dynamically update the `User::varFileName` variable. Updating the variable, in turn, causes the connection manager to connect to a different flat file, and the data flow task to process a different set of data.  
+By modifying the connection manager to use the value of the user-defined variable to change the ConnectionString property, the connection manager connects to different flat files. At run time, each iteration of the Foreach Loop container updates the `User::varFileName` variable. Updating the variable, in turn, causes the connection manager to connect to a different flat file, and the data flow task to process a different set of data.  
   
-### To configure the Flat File connection manager to use a variable for the connection string  
+## Configure the Flat File connection manager to use a variable  
   
 1.  In the **Connection Managers** pane, right-click **Sample Flat File Source Data**, and select **Properties**.  
+
+2.  In the **Properties** window make sure the **PackagePath** starts with **\Package.Connections**. If not, in the **Connection Managers** pane, right-click **Sample Flat File Source Data**, and select **Convert to Package Connection**
   
-2.  In the Properties window, for **Expressions**, click in the empty cell, and then click the ellipsis button **(…)**.  
+3.  In the **Properties** window, for **Expressions**, select the empty cell, and then select the ellipsis button **(...)**.  
   
-3.  In the **Property Expressions Editor** dialog box, in the **Property** column, type or select **ConnectionString**.  
+4.  In the **Property Expressions Editor** dialog, in the **Property** column, select **ConnectionString**.  
   
-4.  In the **Expression** column, click the ellipsis button **(…)** to open the **Expression Builder** dialog box.  
+5.  In the **Expression** column, select the ellipsis button **(...)** to open the **Expression Builder** dialog box.  
   
-5.  In the **Expression Builder** dialog box, expand the **Variables** node.  
+6.  In the **Expression Builder** dialog, expand the **Variables** node.  
   
-6.  Drag the variable, **User::varFileName**, into the **Expression** box.  
+7.  Drag the variable **User::varFileName** into the **Expression** box.  
   
-7.  Click **OK** to close the **Expression Builder** dialog box.  
+8.  Select **OK** to close the **Expression Builder** dialog.  
   
-8.  Click **OK** again to close the **Property Expressions Editor** dialog box.  
+9.  Select **OK** again to close the **Property Expressions Editor** dialog.  
   
-## Next Lesson Task  
-[Step 4: Testing the Lesson 2 Tutorial Package](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+## Go to next task  
+[Step 4: Test the Lesson 2 tutorial package](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   
   

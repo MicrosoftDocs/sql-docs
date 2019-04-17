@@ -1,27 +1,17 @@
-﻿---
+---
 title: "Move an Analysis Services Database | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "moving databases [Anlysis Services]"
-  - "moving databases"
-  - "operations [Analysis Services - multidimensional data]"
-ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
-caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Move an Analysis Services Database
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   There are often situations when an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants to move a multidimensional or tabular model database to a different location. These situations are often driven by business needs, such as moving the database to a different disk for better performance, gaining room for database growth, or to upgrade a product.  
   
  A database can be moved in many ways. This document explains the following common scenarios:  
@@ -43,7 +33,7 @@ manager: "erikre"
   
 1.  Locate the database to be moved in the left or right pane of SSMS.  
   
-2.  Right-click on the database and select **Detach…**  
+2.  Right-click on the database and select **Detach...**  
   
 3.  Assign a password to the database to be detached, then click **OK** to execute the detach command.  
   
@@ -51,9 +41,9 @@ manager: "erikre"
   
 5.  Locate the **Databases** folder in the left or right pane of SSMS.  
   
-6.  Right-click on the **Databases** folder and select **Attach…**  
+6.  Right-click on the **Databases** folder and select **Attach...**  
   
-7.  In the **folder** text box, type the new location of the database folder. Alternatively, you can use the browse button (**…**) to locate the database folder.  
+7.  In the **folder** text box, type the new location of the database folder. Alternatively, you can use the browse button (**...**) to locate the database folder.  
   
 8.  Select the **ReadWrite** mode for the database.  
   
@@ -145,9 +135,9 @@ manager: "erikre"
  [Attach and Detach Analysis Services Databases](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Database Storage Location](../../analysis-services/multidimensional-models/database-storage-location.md)   
  [Database ReadWriteModes](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [Attach Element](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [Detach Element](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode Element](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation Element](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

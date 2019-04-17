@@ -2,13 +2,10 @@
 title: "Monitor Log Shipping (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], status"
   - "history tables [SQL Server]"
@@ -18,12 +15,12 @@ helpviewer_keywords:
   - "status information [SQL Server], log shipping"
   - "monitoring log shipping [SQL Server]"
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Monitor Log Shipping (Transact-SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   After you have configured log shipping, you can monitor information about the status of all the log shipping servers. The history and status of log shipping operations are always saved locally by the log shipping jobs. The history and status of the backup operation are stored at the primary server, and the history and status of the copy and restore operations are stored at the secondary server. If you have implemented a remote monitor server, this information is also stored on the monitor server.  
   
  You can configure alerts that will fire if log shipping operations fail to occur as scheduled. Errors are raised by an alert job that watches the status of the backup and restore operations. You can define alerts that notify an operator when these errors are raised. If a monitor server is configured, one alert job runs on the monitor server that raises errors for all operations in the log shipping configuration. If a monitor server is not specified, an alert job runs on the primary server instance, which monitors the backup operation. If a monitor server is not specified, an alert job also runs on each secondary server instance to monitor the local copy and restore operations.  

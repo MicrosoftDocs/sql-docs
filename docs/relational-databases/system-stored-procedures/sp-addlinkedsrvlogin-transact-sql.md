@@ -2,12 +2,10 @@
 title: "sp_addlinkedsrvlogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addlinkedsrvlogin_TSQL"
@@ -17,49 +15,43 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addlinkedsrvlogin"
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
-caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates or updates a mapping between a login on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and a security account on a remote server.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
-  
 sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'   
-     [ , [ @useself = ] 'TRUE' | 'FALSE' | NULL ]   
+     [ , [ @useself = ] { 'TRUE' | 'FALSE' | NULL } ]   
      [ , [ @locallogin = ] 'locallogin' ]   
      [ , [ @rmtuser = ] 'rmtuser' ]   
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
 ## Arguments  
- [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  Is the name of a linked server that the login mapping applies to. *rmtsrvname* is **sysname**, with no default.  
   
- [ @useself **=** ] **'**TRUE**'** | 'FALSE' | 'NULL'  
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Determines whether to connect to *rmtsrvname* by impersonating local logins or explicitly submitting a login and password. The data type is **varchar(**8**)**, with a default of TRUE.  
   
  A value of TRUE specifies that logins use their own credentials to connect to *rmtsrvname*, with the *rmtuser* and *rmtpassword* arguments being ignored. FALSE specifies that the *rmtuser* and *rmtpassword* arguments are used to connect to *rmtsrvname* for the specified *locallogin*. If *rmtuser* and *rmtpassword* are also set to NULL, no login or password is used to connect to the linked server.  
   
- [ @locallogin **=** ] **'***locallogin***'**  
+ `[ @locallogin = ] 'locallogin'`  
  Is a login on the local server. *locallogin* is **sysname**, with a default of NULL. NULL specifies that this entry applies to all local logins that connect to *rmtsrvname*. If not NULL, *locallogin* can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows login. The Windows login must have been granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] either directly, or through its membership in a Windows group granted access.  
   
- [ @rmtuser **=** ] **'***rmtuser***'**  
+ `[ @rmtuser = ] 'rmtuser'`  
  Is the remote login used to connect to *rmtsrvname* when @useself is FALSE. When the remote server is an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that does not use Windows Authentication, *rmtuser* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. *rmtuser* is **sysname**, with a default of NULL.  
   
- [ @rmtpassword **=** ] **'***rmtpassword***'**  
+ `[ @rmtpassword = ] 'rmtpassword'`  
  Is the password associated with *rmtuser*. *rmtpassword* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

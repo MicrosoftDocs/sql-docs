@@ -2,22 +2,20 @@
 title: "Advanced Edit (Condition) Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: security
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dmf.condition.advancededit.f1"
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # Advanced Edit (Condition) Dialog Box
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use the **Advanced Edit** dialog box to create complex expressions for Policy-Based Management conditions.  
   
 ## Options  
@@ -73,8 +71,8 @@ manager: "jhubbard"
 |**DateTime()**|DateTime DateTime (String *dateString*)|Creates a datetime value from a string.|*dateString* - Is the datetime value as a string.|Returns a datatime value created from the input string.|`DateTime('3/12/2006')`|  
 |**Divide()**|Numeric Divide (Numeric *expression_dividend*, Numeric *expression_divisor*)|Divides one number by another.|*expression_dividend* - Is the numeric expression to divide. The dividend can be any valid expression of any one of the data types of the numeric data type category, except the **datetime** data type.<br /><br /> *expression_divisor* - Is the numeric expression by which to divide the dividend. The divisor can be any valid expression of any one of the data types of the numeric data type category, except the **datetime** data type.|Returns the data type of the argument that has the greater precedence.|**Example:** `Divide(Property1, 2)`<br /><br /> Note: This will be a double operation. To do an integer compare, you must combine the results with `Round()`. For example: `Round(Divide(10, 3), 0) = 3`.|  
 |**Enum()**|Numeric Enum (String *enumTypeName*, String *enumValueName*)|Creates an enum value from a string.|*enumTypeName* - Is the name of the enum type.<br /><br /> *enumValueName* - Is the value of the enum.|Returns the enum value as a numeric value.|`Enum('CompatibilityLevel','Version100')`|  
-|**Escape()**|String Escape (String *replaceString*, String *stringToEscape*, String *escapeString*)|Escapes a substring of the input string with a given escape string.|*replaceString* – Is the input string.<br /><br /> *stringToEscape* – Is a substring of *replaceString*. This is the string that you want to add an escape string in front of.<br /><br /> *escapeString* – Is the escape string that you want to add in front of each instance of *stringToEscape*.|Returns a modified *replaceString* in which each instance of *stringToEscape* is preceded by *escapeString*.|`Escape("Hello", "l", "[")` returns "`He[l[lo`".|  
-|**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|Executes the [!INCLUDE[tsql](../../includes/tsql-md.md)] query against the target server.<br /><br /> For more information about ExecuteSql(), see [ExecuteSql() function](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx).|*returnType* - Specifies the return type of data returned by the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The valid literals for *returnType* are as follows: **Numeric**, **String**, **Bool**, **DateTime**, **Array**, and **Guid**.<br /><br /> *sqlQuery* - Is the string that contains query to be executed.||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> Runs a scalar-valued Transact-SQL query against a target instance of SQL Server. Only one column can be specified in a `SELECT` statement; additional columns beyond the first are ignored. The resulting query should return only one row; additional rows beyond the first are ignored. If the query returns an empty set, then the condition expression built around `ExecuteSQL` will evaluate to false. `ExecuteSql` supports the **On demand** and **On schedule** evaluation modes.<br /><br /> -`@@ObjectName`:<br />                      Corresponds to the name field in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). The variable will be replaced with the name of the current object.<br /><br /> -`@@SchemaName`:  Corresponds to the name field in [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md). The variable will be replaced with the name of the schema for the current object, if applicable.<br /><br /> Note: To include a single quotation mark in an ExecuteSQL statement, escape the single quotation mark with a second single quotation mark. For example, to include a reference to a user named O'Brian, type O''Brian.|  
+|**Escape()**|String Escape (String *replaceString*, String *stringToEscape*, String *escapeString*)|Escapes a substring of the input string with a given escape string.|*replaceString* - Is the input string.<br /><br /> *stringToEscape* - Is a substring of *replaceString*. This is the string that you want to add an escape string in front of.<br /><br /> *escapeString* - Is the escape string that you want to add in front of each instance of *stringToEscape*.|Returns a modified *replaceString* in which each instance of *stringToEscape* is preceded by *escapeString*.|`Escape("Hello", "l", "[")` returns "`He[l[lo`".|  
+|**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|Executes the [!INCLUDE[tsql](../../includes/tsql-md.md)] query against the target server.<br /><br /> For more information about ExecuteSql(), see [ExecuteSql() function](https://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx).|*returnType* - Specifies the return type of data returned by the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The valid literals for *returnType* are as follows: **Numeric**, **String**, **Bool**, **DateTime**, **Array**, and **Guid**.<br /><br /> *sqlQuery* - Is the string that contains query to be executed.||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> Runs a scalar-valued Transact-SQL query against a target instance of SQL Server. Only one column can be specified in a `SELECT` statement; additional columns beyond the first are ignored. The resulting query should return only one row; additional rows beyond the first are ignored. If the query returns an empty set, then the condition expression built around `ExecuteSQL` will evaluate to false. `ExecuteSql` supports the **On demand** and **On schedule** evaluation modes.<br /><br /> -`@@ObjectName`:<br />                      Corresponds to the name field in [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). The variable will be replaced with the name of the current object.<br /><br /> -`@@SchemaName`:  Corresponds to the name field in [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md). The variable will be replaced with the name of the schema for the current object, if applicable.<br /><br /> Note: To include a single quotation mark in an ExecuteSQL statement, escape the single quotation mark with a second single quotation mark. For example, to include a reference to a user named O'Brian, type O''Brian.|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string *returnType* , string *namespace*, string *wql*)|Executes the WQL script against the namespace that is provided. Select statement can contain only a single return column. If more than one column is provided, error will be thrown.|*returnType* - Specifies the return type of data that is returned by the WQL. The valid literals are **Numeric**, **String**, **Bool**, **DateTime**, **Array**, and **Guid**.<br /><br /> *namespace* - Is the WMI Namespace to execute against.<br /><br /> *wql* - Is the string that contains the WQL to be executed.||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|Returns the Boolean value FALSE.|None|Returns the Boolean value FALSE.|`IsDatabaseMailEnabled = False()`|  
 |**GetDate()**|DateTime GetDate()|Returns the system date.|None|Returns the system date as DateTime.|`@DateLastModified = GetDate()`|  

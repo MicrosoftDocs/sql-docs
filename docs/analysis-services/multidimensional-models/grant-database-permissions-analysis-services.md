@@ -1,26 +1,17 @@
 ---
 title: "Grant database permissions (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "permissions [Analysis Services], full control"
-  - "full control permissions [Analysis Services]"
-ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Grant database permissions (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   If you are approaching Analysis Services database administration with a background in relational databases, the first thing you need to understand is that, in terms of data access, the database is not the primary securable object in Analysis Services.  
   
  The primary query structure in Analysis Services is a cube (or a tabular model), with user permissions set on those particular objects. Contrasted with the relational database engine ─ where database logins and user permissions (often **db_datareader**) are set on the database itself ─ an Analysis Services database is mostly a container for the main query objects in a data model. If your immediate objective is to enable data access for a cube or tabular model, you can bypass database permissions for now and go straight to this topic: [Grant cube or model permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  

@@ -2,12 +2,10 @@
 title: "sp_query_store_remove_query (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "SP_QUERY_STORE_REMOVE_QUERY"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "sys.sp_query_store_remove_query"
   - "sp_query_store_remove_query"
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
-caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_remove_query (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Removes the query, as well as all associated plans and runtime stats from the query store.  
   
@@ -40,7 +38,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## Arguments  
- [ **@query_id =** ] *query_id*  
+`[ @query_id = ] query_id`
  Is the id of the query to be removed from the query store. *query_id* is a **bigint**, with no default.  
   
 ## Return Code Values  

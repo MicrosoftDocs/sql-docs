@@ -2,12 +2,10 @@
 title: "System Compatibility Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -23,13 +21,12 @@ helpviewer_keywords:
   - "compatibility [SQL Server], system tables"
   - "user IDs [SQL Server]"
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # System Compatibility Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Many of the system tables from earlier releases of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are now implemented as a set of views. These views are known as compatibility views, and they are meant for backward compatibility only. The compatibility views expose the same metadata that was available in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. However, the compatibility views do not expose any of the metadata related to features that are introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later. Therefore, when you use new features, such as [!INCLUDE[ssSB](../../includes/sssb-md.md)] or partitioning, you must switch to using the catalog views.  
   

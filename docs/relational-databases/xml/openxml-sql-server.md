@@ -2,13 +2,11 @@
 title: "OPENXML (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ColPattern [XML in SQL Server]"
   - "OPENXML statement, about OPENXML statement"
@@ -23,12 +21,12 @@ helpviewer_keywords:
   - "XML [SQL Server], OPENXML statement"
   - "element-centric mapping [SQL Server]"
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # OPENXML (SQL Server)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   OPENXML, a [!INCLUDE[tsql](../../includes/tsql-md.md)] keyword, provides a rowset over in-memory XML documents that is similar to a table or a view. OPENXML allows access to XML data as though it is a relational rowset. It does this by providing a rowset view of the internal representation of an XML document. The records in the rowset can be stored in database tables.  
   
  OPENXML can be used in SELECT and SELECT INTO statements wherever rowset providers, a view, or OPENROWSET can appear as the source. For information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  

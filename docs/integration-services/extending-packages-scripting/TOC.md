@@ -1,7 +1,0 @@
-# [Extending Packages with Scripting](extending-packages-with-scripting.md)
-# [Comparing the Script Task and the Script Component](comparing-the-script-task-and-the-script-component.md)
-# [Comparing Scripting Solutions and Custom Objects](comparing-scripting-solutions-and-custom-objects.md)
-# [Referencing Other Assemblies in Scripting Solutions](referencing-other-assemblies-in-scripting-solutions.md)
-# [Debug a Script by Setting Breakpoints in a Script Task and Script Component](debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)
-# [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)
-# [Extending the Data Flow with the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)

@@ -1,32 +1,17 @@
 ---
 title: "Microsoft Clustering Algorithm | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "segmentation algorithms [Analysis Services]"
-  - "nearest neighbor [Data Mining]"
-  - "clustering [Data Mining]"
-  - "clusters [Analysis Services]"
-  - "relationships [Analysis Services], clusters"
-  - "algorithms [data mining]"
-  - "classification algorithms [Analysis Services]"
-  - "datasets [Analysis Services]"
-  - "clustering algorithms [Analysis Services]"
-ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 62
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Microsoft Clustering Algorithm
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering algorithm is a *segmentation* or *clustering* algorithm that iterates over cases in a dataset to group them into clusters that contain similar characteristics. These groupings are useful for exploring data, identifying anomalies in the data, and creating predictions.  
   
  Clustering models identify relationships in a dataset that you might not logically derive through casual observation. For example, you might easily guess that people who commute to their jobs by bicycle do not typically live a long distance from where they work. The algorithm, however, can find other characteristics about bicycle commuters that are not as obvious. In the following diagram, cluster A represents data about people who tend to drive to work, while cluster B represents data about people who tend to ride bicycles to work.  

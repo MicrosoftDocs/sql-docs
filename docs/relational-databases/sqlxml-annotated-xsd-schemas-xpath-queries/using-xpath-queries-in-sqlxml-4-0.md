@@ -2,12 +2,10 @@
 title: "Using XPath Queries in SQLXML 4.0 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XPath queries [SQLXML]"
@@ -15,12 +13,13 @@ helpviewer_keywords:
   - "queries [SQLXML], XPath"
   - "XML views [SQLXML]"
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using XPath Queries in SQLXML 4.0
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support for annotated XSD schemas allows you to create XML views of the relational data stored in the database. You can use a subset of the XPath language to query the XML views created by an annotated XSD schema.  
   
 > [!NOTE]  

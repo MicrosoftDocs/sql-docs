@@ -2,13 +2,11 @@
 title: "Create Nonclustered Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "index creation [SQL Server], nonclustered indexes"
   - "nonclustered indexes [SQL Server], creating"
@@ -16,29 +14,15 @@ helpviewer_keywords:
   - "indexes [SQL Server], nonclustered"
   - "nonclustered indexes [SQL Server], PRIMARY KEY constraint"
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Nonclustered Indexes
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   You can create nonclustered indexes in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A nonclustered index is an index structure separate from the data stored in a table that reorders one or more selected columns. Nonclustered indexes can often help you find data more quickly than searching the underlying table; queries can sometimes be answered entirely by the data in the nonclustered index, or the nonclustered index can point the [!INCLUDE[ssDE](../../includes/ssde-md.md)] to the rows in the underlying table. Generally, nonclustered indexes are created to improve the performance of frequently used queries not covered by the clustered index or to locate rows in a table without a clustered index (called a heap). You can create multiple nonclustered indexes on a table or indexed view.  
-  
- **In This Topic**  
-  
--   **Before you begin:**  
-  
-     [Typical Implementations](#Implementations)  
-  
-     [Security](#Security)  
-  
--   **To create a nonclustered index, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   
@@ -82,7 +66,7 @@ manager: "jhubbard"
   
 8.  Click **Close**.  
   
-9. On the **File** menu, click **Save***table_name*.  
+9. On the **File** menu, click **Save**_table_name_.  
   
 #### To create a nonclustered index by using Object Explorer  
   
@@ -92,13 +76,13 @@ manager: "jhubbard"
   
 3.  Expand the table on which you want to create a nonclustered index.  
   
-4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index…**.  
+4.  Right-click the **Indexes** folder, point to **New Index**, and select **Non-Clustered Index...**.  
   
 5.  In the **New Index** dialog box, on the **General** page, enter the name of the new index in the **Index name** box.  
   
-6.  Under **Index key columns**, click **Add…**.  
+6.  Under **Index key columns**, click **Add...**.  
   
-7.  In the **Select Columns from***table_name* dialog box, select the check box or check boxes of the table column or columns to be added to the nonclustered index.  
+7.  In the **Select Columns from**_table_name_ dialog box, select the check box or check boxes of the table column or columns to be added to the nonclustered index.  
   
 8.  Click **OK**.  
   
@@ -114,7 +98,7 @@ manager: "jhubbard"
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find an existing index named IX_ProductVendor_VendorID and delete it if found.   
@@ -129,6 +113,6 @@ manager: "jhubbard"
     GO  
     ```  
   
- For more information, see [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+## Related content  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
+[SQL Server Index Design Guide](../../relational-databases/sql-server-index-design-guide.md) 

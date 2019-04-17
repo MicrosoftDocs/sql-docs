@@ -1,0 +1,122 @@
+- name: UI Designers and Dialog Boxes for Data Mining Analysis
+  href: ui-designers-dialog-boxes-data-mining.md
+- name: Data Mining Designers and Dialog Boxes
+  href: ../data-mining-designers-and-dialog-boxes.md
+  items:
+  - name: Data Mining Model Designer
+    href: ../data-mining-model-designer-analysis-services-data-mining.md
+  - name: Mining Structure View (Data Mining Model Designer)
+    href: ../mining-structure-view-data-mining-model-designer.md
+  - name: New Mining Model Dialog Box (Mining Structure View)
+    href: ../new-mining-model-dialog-box-mining-structure-view.md
+  - name: Select a Column Dialog Box (Mining Structure View)
+    href: ../select-a-column-dialog-box-mining-structure-view.md
+  - name: Select a Nested Table Key Column Dialog Box (Mining Structure View)
+    href: ../select-a-nested-table-key-column-dialog-box-mining-structure-view.md
+  - name: Create Data Mining Dimension Dialog
+    href: ../create-data-mining-dimension-dialog.md
+  - name: Mining Models View (Data Mining Model Designer)
+    href: ../mining-models-view-data-mining-model-designer.md
+  - name: Algorithm Parameters Dialog Box (Mining Models View)
+    href: ../algorithm-parameters-dialog-box-mining-models-view.md
+  - name: Data Set Filter/ Model Filter Dialog Box
+    href: ../data-set-filter-or-model-filter-dialog-box.md
+    items:
+    - name: Filter Dialog Box (Mining Accuracy Chart)
+      href: ../filter-dialog-box-mining-accuracy-chart.md
+- name: Mining Model Viewers
+  href: ../mining-model-viewers-data-mining-model-designer.md
+  items:
+  - name: Attribute Characteristics Tab
+    href: ../attribute-characteristics-tab-mining-model-viewer.md
+  - name: Attribute Discrimination Tab
+    href: ../attribute-discrimination-tab-mining-model-viewer.md
+  - name: Attribute Profiles Tab
+    href: ../attribute-profiles-tab-mining-model-viewer.md
+  - name: Chart Tab (Time Series Viewer)
+    href: ../chart-tab-mining-model-viewers.md
+  - name: Cluster Characteristics Tab
+    href: ../cluster-characteristics-tab-mining-model-viewer.md
+  - name: Cluster Diagram Tab
+    href: ../cluster-diagram-tab-mining-model-viewer.md
+  - name: Cluster Discrimination Tab
+    href: ../cluster-discrimination-tab-mining-model-viewer.md
+  - name: Cluster Profiles Tab
+    href: ../cluster-profiles-tab-mining-model-viewer.md
+  - name: Decision Tree Tab
+    href: ../decision-tree-tab-mining-model-viewer.md
+  - name: Dependency Network Tab
+    href: ../dependency-network-tab-mining-model-viewer.md
+  - name: Drill Through Dialog Box
+    href: ../drill-through-dialog-box-mining-model-viewer.md
+  - name: Find Node Dialog Box
+    href: ../find-node-dialog-box-mining-model-viewer.md
+  - name: Generic Content Tree Viewer
+    href: ../microsoft-generic-content-tree-viewer-data-mining.md
+  - name: Itemsets Tab
+    href: ../itemsets-tab-mining-model-viewer.md
+  - name: Mining Legend Dialog Box
+    href: ../mining-legend-dialog-box-mining-model-viewer.md
+  - name: Neural Network Tab
+    href: ../neural-network-mining-model-viewer.md
+  - name: Rules Tab
+    href: ../rules-tab-mining-model-viewer.md
+  - name: Sequence Clustering Cluster Diagram Tab
+    href: ../sequence-clustering-cluster-diagram-tab-mining-model-viewer.md
+  - name: Sequence Clustering Cluster Profiles Tab
+    href: ../sequence-clustering-cluster-profiles-tab-mining-model-viewer.md
+  - name: Sequence Clustering Cluster Characteristics Tab
+    href: ../sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md
+  - name: Sequence Clustering Cluster Discrimination Tab
+    href: ../sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md
+  - name: Sequence Clustering Cluster Transition Tab
+    href: ../sequence-clustering-cluster-transition-tab-mining-model-viewer.md
+  - name: Model Tab (Time Series Viewer)
+    href: ../model-tab-mining-model-viewers.md
+- name: Mining Accuracy Chart Designer (Data Mining)
+  href: ../mining-accuracy-chart-designer-data-mining.md
+  items:
+  - name: Input Selection Tab
+    href: ../input-selection-tab-mining-accuracy-chart-view.md
+  - name: Lift Chart Tab
+    href: ../lift-chart-tab-mining-accuracy-chart-view.md
+  - name: Classification Matrix Tab
+    href: ../classification-matrix-tab-mining-accuracy-chart-view.md
+  - name: Cross-Validation Tab
+    href: ../cross-validation-tab-mining-accuracy-chart-view.md
+  - name: Profit Chart Settings Dialog Box (Mining Accuracy Chart View)
+    href: ../profit-chart-settings-dialog-box-mining-accuracy-chart-view.md
+  - name: Specify Column Mapping Dialog Box (Mining Accuracy Chart)
+    href: ../specify-column-mapping-dialog-box-mining-accuracy-chart.md
+  - name: Select Mining Structure Dialog Box (Mining Accuracy Chart View)
+    href: ../select-mining-structure-dialog-box-mining-accuracy-chart-view.md
+  - name: Select Table Dialog Box (Mining Accuracy Chart View)
+    href: ../select-table-dialog-box-mining-accuracy-chart-view.md
+  - name: Modify Mapping Dialog Box (Mining Accuracy Chart)
+    href: ../modify-mapping-dialog-box-mining-accuracy-chart.md
+  - name: Specify Nested Join Dialog Box (Mining Accuracy Chart View)
+    href: ../specify-nested-join-dialog-box-mining-accuracy-chart-view.md
+- name: Prediction Query Builder
+  href: ../prediction-query-builder-data-mining.md
+  items:
+  - name: Design Pane
+    href: ../design-pane-mining-model-prediction-view.md
+  - name: Query Pane
+    href: ../query-pane-mining-model-prediction-view.md
+  - name: Result Pane
+    href: ../result-pane-mining-model-prediction-view.md
+  - name: Select Mining Model Dialog Box
+    href: ../select-mining-model-dialog-box-mining-model-prediction-view.md
+  - name: Save Data Mining Query Result Dialog Box
+    href: ../save-data-mining-query-result-dialog-box-mining-model-prediction-view.md
+- name: Mining Structure Properties Dialog
+  href: ../mining-structure-properties-dialog-analysis-services-data-mining.md
+  items:
+  - name: General (Mining Structure Dialog Box)
+    href: ../general-mining-structure-dialog-box-analysis-services-data-mining.md
+  - name: Error Configuration (Mining Structure Dialog Box)
+    href: ../error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md
+- name: Mining Model Properties Dialog Box
+  href: ../mining-model-properties-dialog-box-analysis-services-data-mining.md
+- name: DMX Query Editor
+  href: ../dmx-query-editor-analysis-services-data-mining.md

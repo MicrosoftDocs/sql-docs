@@ -2,28 +2,23 @@
 title: "sp_help_agent_default (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_help_agent_default"
   - "sp_help_agent_default_TSQL"
 helpviewer_keywords: 
   - "sp_help_agent_default"
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_help_agent_default (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retrieves the ID of the default configuration for the agent type passed as parameter. This stored procedure is executed at Distributor on any database.  
   
@@ -38,10 +33,10 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## Arguments  
- [ **@profile_id=**] *profile_id***OUTPUT**  
+`[ @profile_id = ] _profile_idOUTPUT`
  Is the ID of the default configuration for the type of agent. *profile_id* is **int**, with no default.*profile_id* is also an OUTPUT parameter and returns the ID of the default configuration for the type of agent.  
   
- [ **@agent_type=**] **'***agent_type***'**  
+`[ @agent_type = ] 'agent_type'`
  Is the type of agent. *agent_type* is **int**, with no default, and can be one of these values.  
   
 |Value|Description|  

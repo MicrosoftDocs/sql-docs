@@ -2,12 +2,10 @@
 title: "GRANT Certificate Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,13 +15,12 @@ helpviewer_keywords:
   - "permissions [SQL Server], certificates"
   - "GRANT statement, certificates"
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
-caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # GRANT Certificate Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Grants permissions on a certificate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
@@ -42,7 +39,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be granted on a certificate. Listed below.  
   
- ON CERTIFICATE **::***certificate_name*  
+ ON CERTIFICATE **::**_certificate_name_  
  Specifies the certificate on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

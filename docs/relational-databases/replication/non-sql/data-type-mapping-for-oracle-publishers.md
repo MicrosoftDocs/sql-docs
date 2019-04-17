@@ -2,24 +2,22 @@
 title: "Data Type Mapping for Oracle Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle publishing [SQL Server replication], data type mapping"
   - "data types [SQL Server replication], Oracle publishing"
   - "mapping data types [SQL Server replication]"
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Data Type Mapping for Oracle Publishers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Oracle data types and [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types do not always match exactly. Where possible, the matching data type is selected automatically when publishing an Oracle table. In cases that a single data type mapping is not clear, alternative data type mappings are provided. For information about how to select alternative mappings, see the "Specifying Alternative Data Type Mappings" section later in this topic.  
   
  The following table shows how data types are mapped by default between Oracle and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] when data is moved from the Oracle Publisher to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor. The Alternatives column indicates whether alternative mappings are available.  

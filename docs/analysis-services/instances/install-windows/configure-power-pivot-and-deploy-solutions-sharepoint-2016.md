@@ -1,21 +1,17 @@
 ---
 title: "Configure Power Pivot and Deploy Solutions (SharePoint 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Configure Power Pivot and Deploy Solutions (SharePoint 2016)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   This topics describes the deployment and configuration of middle-tier enhancements to the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] features in [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] including [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Gallery, Schedule data refresh, Management Dashboard, and data providers. Run **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 Configuration** tool to complete the following:  
   
 -   Deploy SharePoint solution files.  
@@ -26,22 +22,10 @@ manager: "erikre"
   
  For information on installing the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 Configuration tool, see [Install or Uninstall the Power Pivot for SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
- This topic contains the following sections:  
-  
- [Run Power Pivot for SharePoint 2016 configuration](#bkmk_run_configuration_tool)  
-  
- [Verify Power Pivot Configuration](#bkmk_verify_powerpivot)  
-  
- [Troubleshoot Issues](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
-  
 ##  <a name="bkmk_run_configuration_tool"></a> Run Power Pivot for SharePoint 2016 configuration  
  **Note:** To complete the following steps, you must be a farm administrator. If you see an error message similar to the following:  
   
--   “The user is not a farm administrator. Please address the validation failures and try again.”  
+-   "The user is not a farm administrator. Please address the validation failures and try again."  
   
  Either login as the account that installed SharePoint or configure the setup account as the primary administrator of the SharePoint Central Administration Site.  
   
@@ -61,7 +45,7 @@ manager: "erikre"
   
     4.  Click **Create Site Collection** in the left window. Note **Site URL** so you can reference it in later steps. If the SharePoint server is not already configured, then the configuration wizard defaults the web application, and site collection URLs to the root of `http://[ServerName]`. To modify the defaults review the following pages in the left window: **Create Default Web application** and **Deploy Web Application Solution**  
   
-5.  Optionally, review the remaining input values used to complete each action. Click each action in the left window to see and review the details of the action. For more information about each one, see the section “Input values used to configure the server in [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) in this topic.  
+5.  Optionally, review the remaining input values used to complete each action. Click each action in the left window to see and review the details of the action. For more information about each one, see the section "Input values used to configure the server in [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) in this topic.  
   
 6.  Optionally, remove any actions that you do not want to process at this time. For example, if you want to configure Secure Store Service later, select **Configure Secure Store Service**, and then clear the checkbox **Include this action in the task list**.  
   
@@ -69,7 +53,7 @@ manager: "erikre"
   
 8.  Select **Run** to process all of the actions in the task list. Note that **Run** becomes available after you validate the actions. If **Run** is not enabled, select **Validate** first.  
   
- For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)  
+ For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Verify Power Pivot Configuration  
  **Services:**  

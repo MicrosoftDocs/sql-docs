@@ -1,13 +1,11 @@
 ---
 title: "BETWEEN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/28/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "BETWEEN"
@@ -22,13 +20,13 @@ helpviewer_keywords:
   - "BETWEEN operator"
   - "range to test [SQL Server]"
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "douglaslMS"
+ms.author: "douglasl"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BETWEEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifies a range to test.  
   
@@ -37,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 test_expression [ NOT ] BETWEEN begin_expression AND end_expression  
 ```  
   
@@ -72,52 +68,49 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## Examples  
   
 ### A. Using BETWEEN  
- The following example returns the employees of [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] that have an hourly pay rate between `27` and `30`.  
+ The following example returns information about the database roles in a database. The first query returns all the roles. The second example uses the `BETWEEN` clause to limit the roles to the specified `database_id` values.  
   
-```  
--- Uses AdventureWorks  
-  
-SELECT e.FirstName, e.LastName, ep.Rate  
-FROM HumanResources.vEmployee e   
-JOIN HumanResources.EmployeePayHistory ep   
-    ON e.BusinessEntityID = ep.BusinessEntityID  
-WHERE ep.Rate BETWEEN 27 AND 30  
-ORDER BY ep.Rate;  
+```sql  
+SELECT principal_id, name 
+FROM sys.database_principals
+WHERE type = 'R';
+
+SELECT principal_id, name 
+FROM sys.database_principals
+WHERE type = 'R'
+AND principal_id BETWEEN 16385 AND 16390;
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `FirstName    LastName            Rate`  
-  
- `-----------  ------------------  ------------------`  
-  
- `Paula        Barreto de Mattos   27.1394`  
-  
- `Karen        Berg                27.4038`  
-  
- `Ramesh       Meyyappan           27.4038`  
-  
- `Dan          Bacon               27.4038`  
-  
- `Janaina      Bueno               27.4038`  
-  
- `David        Bradley             28.7500`  
-  
- `Hazem        Abolrous            28.8462`  
-  
- `Ovidiu       Cracium             28.8462`  
-  
- `Rob          Walters             29.8462`  
-  
- `Sheela       Word                30.0000`  
-  
- `(10 row(s) affected)`  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]   
+```  
+principal_id	name
+------------  ---- 
+0	            public
+16384	        db_owner
+16385	        db_accessadmin
+16386	        db_securityadmin
+16387	        db_ddladmin
+16389	        db_backupoperator
+16390	        db_datareader
+16391	        db_datawriter
+16392	        db_denydatareader
+16393	        db_denydatawriter
+```  
+```  
+principal_id	name
+------------  ---- 
+16385	        db_accessadmin
+16386	        db_securityadmin
+16387	        db_ddladmin
+16389	        db_backupoperator
+16390	        db_datareader
+```  
   
 ### B. Using > and < instead of BETWEEN  
  The following example uses greater than (`>`) and less than (`<`) operators and, because these operators are not inclusive, returns nine rows instead of ten that were returned in the previous example.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.FirstName, e.LastName, ep.Rate  
@@ -131,34 +124,24 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName   LastName             Rate`  
-  
- `---------   -------------------  ---------`  
-  
- `Paula       Barreto de Mattos    27.1394`  
-  
- `Janaina     Bueno                27.4038`  
-  
- `Dan         Bacon                27.4038`  
-  
- `Ramesh      Meyyappan            27.4038`  
-  
- `Karen       Berg                 27.4038`  
-  
- `David       Bradley              28.7500`  
-  
- `Hazem       Abolrous             28.8462`  
-  
- `Ovidiu      Cracium              28.8462`  
-  
- `Rob         Walters              29.8462`  
-  
- `(9 row(s) affected)`  
+ ```  
+ FirstName   LastName             Rate  
+ ---------   -------------------  ---------  
+ Paula       Barreto de Mattos    27.1394  
+ Janaina     Bueno                27.4038  
+ Dan         Bacon                27.4038  
+ Ramesh      Meyyappan            27.4038  
+ Karen       Berg                 27.4038  
+ David       Bradley              28.7500  
+ Hazem       Abolrous             28.8462  
+ Ovidiu      Cracium              28.8462  
+ Rob         Walters              29.8462  
+ ```    
   
 ### C. Using NOT BETWEEN  
  The following example finds all rows outside a specified range of `27` through `30`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.FirstName, e.LastName, ep.Rate  
@@ -173,7 +156,7 @@ GO
 ### D. Using BETWEEN with datetime values  
  The following example retrieves rows in which **datetime** values are between `'20011212'` and `'20020105'`, inclusive.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, RateChangeDate  
@@ -183,65 +166,15 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `BusinessEntityID RateChangeDate`  
-  
- `----------- -----------------------`  
-  
- `3           2001-12-12 00:00:00.000`  
-  
- `4           2002-01-05 00:00:00.000`  
-  
+ ```  
+ BusinessEntityID RateChangeDate  
+ ----------- -----------------------  
+ 3           2001-12-12 00:00:00.000  
+ 4           2002-01-05 00:00:00.000  
+ ```  
+ 
  The query retrieves the expected rows because the date values in the query and the **datetime** values stored in the `RateChangeDate` column have been specified without the time part of the date. When the time part is unspecified, it defaults to 12:00 A.M. Note that a row that contains a time part that is after 12:00 A.M. on 2002-01-05 would not be returned by this query because it falls outside the range.  
   
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### E. Using BETWEEN  
- The following example returns the employees of a company that have an hourly pay rate between `27` and `30`, inclusive.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName, BaseRate  
-FROM dimEmployee  
-WHERE BaseRate BETWEEN 27 AND 30  
-ORDER BY BaseRate DESC;  
-```  
-  
-### F. Using >= and <= instead of BETWEEN  
- The following example uses the greater than or equal to (`>=`) and less than or equal to (`<=`) operators to perform the same query as the BETWEEN query above.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName, BaseRate  
-FROM dimEmployee  
-WHERE BaseRate >= 27 AND BaseRate <= 30  
-ORDER BY BaseRate DESC;  
-```  
-  
-### G. Using NOT BETWEEN  
- The following example finds all rows outside the range of `27` through `30`.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName, BaseRate  
-FROM dimEmployee  
-WHERE BaseRate NOT BETWEEN 27 AND 30  
-ORDER BY BaseRate DESC;  
-```  
-  
-### H. Using BETWEEN with date values  
- The following example retrieves employees with **BirthDate** values are between `'1950-01-01'` and `'1969-12-31'`, inclusive.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT FirstName, LastName, BirthDate  
-FROM dimEmployee  
-WHERE BirthDate BETWEEN '1950-01-01' AND '1969-12-31'  
-ORDER BY BirthDate ASC;  
-```  
   
 ## See Also  
  [&#62; &#40;Greater Than&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   

@@ -2,12 +2,10 @@
 title: "hierarchyid (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "hierarchyid"
@@ -18,13 +16,12 @@ helpviewer_keywords:
   - "Hierarchy data type"
   - "hierarchyid data type"
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # hierarchyid data type method reference
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 The **hierarchyid** data type is a variable length, system data type. Use **hierarchyid** to represent position in a hierarchy. A column of type **hierarchyid** does not automatically represent a tree. It is up to the application to generate and assign **hierarchyid** values in such a way that the desired relationship between rows is reflected in the values.
   
@@ -72,8 +69,8 @@ If a user type with conflicting name exists during the upgrade, no special steps
 Columns of type **hierarchyid** can be used on any replicated table. The requirements for your application depend on whether replication is one directional or bidirectional, and on the versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are used.
   
 ### One-directional replication
-One-directional replication includes snapshot replication, transactional replication, and merge replication in which changes are not made at the Subscriber. How **hierachyid** columns work with one directional replication depends on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the Subscriber is running.
--   A [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Publisher can replicate **hierachyid** columns to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Subscriber without any special considerations.  
+One-directional replication includes snapshot replication, transactional replication, and merge replication in which changes are not made at the Subscriber. How **hierarchyid** columns work with one directional replication depends on the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] the Subscriber is running.
+-   A [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Publisher can replicate **hierarchyid** columns to a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Subscriber without any special considerations.  
 -   A [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Publisher must convert **hierarchyid** columns to replicate them to a Subscriber that is running [!INCLUDE[ssEW](../../includes/ssew-md.md)] or an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssEW](../../includes/ssew-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do not support **hierarchyid** columns. If you are using one of these versions, you can still replicate data to a Subscriber. To do this, you must set a schema option or the publication compatibility level (for merge replication) so the column can be converted to a compatible data type.  
   
 Column filtering is supported in both of these scenarios. This includes filtering out **hierarchyid** columns. Row filtering is supported as long as the filter does not include a **hierarchyid** column.
@@ -90,6 +87,6 @@ Bi-directional replication includes transactional replication with updating subs
   
 ## See also
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
-[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
+[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
   

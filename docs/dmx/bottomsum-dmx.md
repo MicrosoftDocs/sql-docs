@@ -1,29 +1,17 @@
 ---
 title: "BottomSum (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "BOTTOMSUM"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "BottomSum function"
-ms.assetid: fd4b0418-f814-4d83-b2fe-850117e1beb7
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # BottomSum (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Returns, in order of increasing rank, the bottom-most rows of a table whose cumulative total is at least a specified value.  
   
@@ -44,7 +32,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
  The **BottomSum** function returns the bottom-most rows in increasing order of rank. The rank is based on the evaluated value of the \<rank expression> argument for each row, such that the sum of the \<rank expression> values is at least the given total that is specified by the \<sum> argument. **BottomSum** returns the smallest number of elements possible while still meeting the specified sum value.  
   
 ## Examples  
- The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  To understand how BottomSum works, it might be helpful to first execute a prediction query that returns only the nested table.  
   
@@ -99,8 +87,8 @@ NATURAL PREDICTION JOIN
   
 |Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Road Bottle Cage|1195|0.08…|0.07…|  
-|Mountain Bottle Cage|1367|0.09…|0.08…|  
+|Road Bottle Cage|1195|0.08...|0.07...|  
+|Mountain Bottle Cage|1367|0.09...|0.08...|  
   
  **Note** This example is provided only to illustrate the usage of BottomSum. Depending on the size of your data set, this query might take a long time to run.  
   

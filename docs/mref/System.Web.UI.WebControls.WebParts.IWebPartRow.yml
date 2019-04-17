@@ -3,7 +3,7 @@ references:
 - uid: System.Web.UI.WebControls.WebParts.IWebPartRow
   name: IWebPartRow
   fullName: WebParts.IWebPartRow
-  href: https://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webparts.iwebpartrow(v=vs.110).aspx
+  href: https://msdn.microsoft.com/library/system.web.ui.webcontrols.webparts.iwebpartrow(v=vs.110).aspx
 - uid: System.Web.UI.WebControls.WebParts.IWebPartRow.GetRowData*
   name: GetRowData
   fullName: IWebPartRow.GetRowData

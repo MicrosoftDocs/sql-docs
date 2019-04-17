@@ -1,0 +1,11 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId*
+  commentId: P:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId
+  href: https://msdn.microsoft.com/library/ms153707(v=sql.120).aspx
+  name: SessionId
+  name.vb: SessionId
+  fullName: MergeSessionSummary.SessionId
+  fullName.vb: MergeSessionSummary.SessionId

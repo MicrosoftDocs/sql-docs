@@ -2,12 +2,10 @@
 title: "sp_syspolicy_add_policy_category_subscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syspolicy_add_policy_category_subscription"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_add_policy_category_subscription"
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # sp_syspolicy_add_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a policy category subscription to the specified database.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,18 +37,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## Arguments  
- [ **@target_type=** ] **'***target_type***'**  
+`[ @target_type = ] 'target_type'`
  Is the target type of the category subscription. *target_type* is **sysname**, is required, and must be set to 'DATABASE'.  
   
- [ **@target_object=** ] **'***target_object***'**  
+`[ @target_object = ] 'target_object'`
  Is the name of the database that will subscribe to the category. *target_object* is **sysname**, and is required.  
   
- [ **@policy_category=** ] **'***policy_category***'**  
+`[ @policy_category = ] 'policy_category'`
  Is the name of the policy category to subscribe to. *policy_category* is **sysname**, and is required.  
   
  To obtain values for *policy_category*, query the msdb.dbo.syspolicy_policy_categories system view.  
   
- [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`
  Is the identifier for the category subscription. *policy_category_subscription_id* is **int**, and is returned as OUTPUT.  
   
 ## Return Code Values  

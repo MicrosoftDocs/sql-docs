@@ -2,21 +2,14 @@
 title: "Connecting to Azure SQL DB (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Connecting to Azure SQL DB (SybaseToSQL)
 To migrate Sybase databases to Azure SQL DB, you must connect to the target instance of Azure SQL DB. When you connect, SSMA obtains metadata about all the databases in the instance of Azure SQL DB and displays database metadata in the Azure SQL DB Metadata Explorer. SSMA stores information of the instance of Azure SQL DB you are connected to, but does not store passwords.  
@@ -28,7 +21,7 @@ Metadata about the instance of Azure SQL DB is not automatically synchronized. I
 ## Required Azure SQL DB Permissions  
 The account that is used to connect to Azure SQL DB requires different permissions depending on the actions that the account performs:  
   
-1.  To convert Sybase objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, to update metadata from Azure SQL DB, or to save converted syntax to scripts, the account must have permission to log on to the instance of Azure SQL DB.  
+1.  To convert Sybase objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, to update metadata from Azure SQL DB, or to save converted syntax to scripts, the account must have permission to log on to the instance of Azure SQL DB.  
   
 2.  To load database objects into Azure SQL DB, the minimum permission requirement is membership in the  **db_owner** database role in the target database.  
   

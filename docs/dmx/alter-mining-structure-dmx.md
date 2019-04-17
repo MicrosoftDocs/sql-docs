@@ -1,34 +1,17 @@
 ---
 title: "ALTER MINING STRUCTURE (DMX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "ALTER_MINING_STRUCTURE"
-  - "ALTER MINING STRUCTURE"
-dev_langs: 
-  - "DMX"
-helpviewer_keywords: 
-  - "mining structures [DMX], creating"
-  - "WITH DRILLTHROUGH clause"
-  - "column definition lists [DMX]"
-  - "parameter lists [DMX]"
-  - "ALTER MINING STRUCTURE statement"
-ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Creates a new mining model that is based on an existing mining structure.  When you use the **ALTER MINING STRUCTURE** statement to create a new mining model, the structure must already exist. In contrast, when you use the statement, [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), you create a model and automatically generate its underlying mining structure at the same time.  
   
@@ -67,7 +50,7 @@ USING <algorithm> [(<parameter list>)]
  The name of a data mining algorithm, as defined by the provider.  
   
 > [!NOTE]  
->  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
+>  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
   
  *parameter list*  
  Optional. A comma-separated list of provider-defined parameters for the algorithm.  
@@ -154,7 +137,7 @@ USING <algorithm> [(<parameter list>)]
  The syntax of the parameter list is as follows:  
   
 ```  
-[<parameter> = <value>, <parameter> = <value>,…]  
+[<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
 ## Example 1: Add a Model to a Structure  

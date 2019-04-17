@@ -2,12 +2,10 @@
 title: "sp_helplinkedsrvlogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helplinkedsrvlogin_TSQL"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helplinkedsrvlogin"
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helplinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Provides information about login mappings defined against a specific linked server used for distributed queries and remote stored procedures.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +35,10 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## Arguments  
- [ **@rmtsrvname=**] **'***rmtsrvname***'**  
+`[ @rmtsrvname = ] 'rmtsrvname'`
  Is the name of the linked server that the login mapping applies to. *rmtsrvname* is **sysname**, with a default of NULL. If NULL, all login mappings defined against all the linked servers defined in the local computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are returned.  
   
- [ **@locallogin=**] **'***locallogin***'**  
+`[ @locallogin = ] 'locallogin'`
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login on the local server that has a mapping to the linked server *rmtsrvname*. *locallogin* is **sysname**, with a default of NULL. NULL specifies that all login mappings defined on *rmtsrvname* are returned. If not NULL, a mapping for *locallogin* to *rmtsrvname* must already exist. *locallogin* can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows user. The Windows user must have been granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] either directly or through its membership in a Windows group that has been granted access.  
   
 ## Return Code Values  

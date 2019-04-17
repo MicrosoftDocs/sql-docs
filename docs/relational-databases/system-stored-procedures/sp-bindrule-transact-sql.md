@@ -2,12 +2,10 @@
 title: "sp_bindrule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_bindrule_TSQL"
@@ -17,22 +15,18 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_bindrule"
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_bindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Binds a rule to a column or to an alias data type.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md) instead. CHECK constraints are created by using the CHECK keyword of the [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) or [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) statements.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,10 +40,10 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## Arguments  
- [ **@rulename=**] **'***rule***'**  
+`[ @rulename = ] 'rule'`
  Is the name of a rule created by the CREATE RULE statement. *rule* is **nvarchar(776)**, with no default.  
   
- [ **@objname=**] **'***object_name***'**  
+`[ @objname = ] 'object_name'`
  Is the table and column, or the alias data type to which the rule is to be bound. A rule cannot be bound to a **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR user-defined type, or **timestamp**column. A rule cannot be bound to a computed column.  
   
  *object_name* is **nvarchar(776)** with no default. If *object_name* is a one-part name, it is resolved as an alias data type. If it is a two- or three-part name, it is first resolved as a table and column; if this resolution fails, it is resolved as an alias data type. By default, existing columns of the alias data type inherit *rule* unless a rule has been bound directly to the column.  
@@ -60,7 +54,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Rules created on expressions that use alias data types can be bound to columns or alias data types, but fail to compile when they are referenced. Avoid using rules created on alias data types.  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+`[ @futureonly = ] 'futureonly_flag'`
  Is used only when binding a rule to an alias data type. *future_only_flag* is **varchar(15)** with a default of NULL. This parameter when set to **futureonly** prevents existing columns of an alias data type from inheriting the new rule. If *futureonly_flag* is NULL, the new rule is bound to any columns of the alias data type that currently have no rule or that are using the existing rule of the alias data type.  
   
 ## Return Code Values  

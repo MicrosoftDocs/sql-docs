@@ -2,29 +2,25 @@
 title: "Create Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/22/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "table creation [SQL Server], Visual Database Tools"
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
-caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Tables (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  You can create a new table, name it, and add it to an existing database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can create a new table, name it, and add it to an existing database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-> **NOTE:** If you are connected to a SQL Azure database, the new table option launches a create table template script. Edit the parameters, then run the script to create a new table. For more information, see [SQL Azure Overview](http://go.microsoft.com/fwlink/?LinkId=163948).  
-   
- 
+
   
 ##  <a name="Permissions"></a> Check your permissions first!  
 This task requires CREATE TABLE permission in the database, and ALTER permission on the schema in which the table is being created.  
@@ -42,7 +38,7 @@ This task requires CREATE TABLE permission in the database, and ALTER permission
   
 3.  In Object Explorer, right-click the **Tables** node of your database and then click **New Table**.  
   
-4.  Type column names, choose data types, and choose whether to allow nulls for each column as shown in the following illustration.  
+4.  Type column names, choose data types, and choose whether to allow nulls for each column as shown in the following illustration:  
   
      ![AddColumnsinTableDesigner](../../relational-databases/tables/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")  
   
@@ -50,7 +46,7 @@ This task requires CREATE TABLE permission in the database, and ALTER permission
   
 6.  To specify a column as a primary key, right-click the column and select **Set Primary Key**. For more information, see [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md).  
   
-7.  To create foreign key relationships, check constraints, or indexes, right-click in the Table Designer pane and select an object from the list as shown in the following illustration.  
+7.  To create foreign key relationships, check constraints, or indexes, right-click in the Table Designer pane and select an object from the list as shown in the following illustration:  
   
      ![AddTableObjects](../../relational-databases/tables/media/addtableobjects.gif "AddTableObjects")  
   

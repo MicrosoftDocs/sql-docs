@@ -1,24 +1,22 @@
 ---
 title: "Set the Service Account for the Full-text Filter Daemon Launcher | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account"
   - "FDHOST Launcher (MSSQLFDLauncher) [SQL Server]"
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-caps.latest.revision: 50
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set the Service Account for the Full-text Filter Daemon Launcher
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
  This topic describes how to set or change the service account for the SQL Full-text Filter Daemon Launcher service (MSSQLFDLauncher) by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. The default service account used by SQL Server setup is `NT Service\MSSQLFDLauncher`.
   
   
@@ -31,7 +29,7 @@ The SQL Full-text Filter Daemon Launcher service is an instance-aware service th
   
 1.  On the **Start** menu, point to **All Programs**, expand [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], and then click **SQL Server 2016 Configuration Manager**.  
   
-2.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click **SQL Full-text Filter Daemon Launcher (***instance name***)**, and then click **Properties**.  
+2.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click **SQL Full-text Filter Daemon Launcher (**_instance name_**)**, and then click **Properties**.  
   
 3.  Click the **Log On** tab of the dialog box, and then select or enter the account under which to run the processes that the SQL Full-text Filter Daemon Launcher service starts.  
   
@@ -74,7 +72,7 @@ The SQL Full-text Filter Daemon Launcher service is an instance-aware service th
      The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service acts as a named pipe server for the SQL Full-text Filter Daemon Launcher service client. If the named pipe was already created by another process before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts, an error will be logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log and the Windows Event Log, and full-text search will not be available.  Determine what process or application is attempting to use the same named pipe and stop the application.  
   
 ## See Also  
- [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](http://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
+ [Managing Services How-to Topics &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)   
  [Upgrade Full-Text Search](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

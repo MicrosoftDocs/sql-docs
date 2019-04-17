@@ -1,23 +1,18 @@
 ---
 title: "Defining and Using a Drillthrough Action | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
-caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 8-1 - Defining and Using a Drillthrough Action
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 Dimensioning fact data by a fact dimension without correctly filtering the data that the query returns can cause slow query performance. To avoid this, you can define a drillthrough action that restricts the total number of rows that are returned. This will significantly improve query performance.  
   
 In the tasks in this topic, you define a drillthrough action to return order detail information for sales to customers over the Internet.  
@@ -54,7 +49,7 @@ In the tasks in this topic, you define a drillthrough action to return order det
   
 8.  In the **Maximum Rows** box, type **10**.  
   
-9. In the **Caption** box, type **Drillthrough to Order Details…**.  
+9. In the **Caption** box, type **Drillthrough to Order Details...**.  
   
     These settings limit the number of rows returned and specify the caption that appears in the client application menu. The following image shows these settings in the **AdditionalProperties** box.  
   

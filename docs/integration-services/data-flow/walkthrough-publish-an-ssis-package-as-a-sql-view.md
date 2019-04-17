@@ -1,22 +1,18 @@
 ---
 title: "Walkthrough: Publish an SSIS Package as a SQL View | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.packagepublishwizard.f1"
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
   This walkthrough provides detailed steps to publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
@@ -26,7 +22,7 @@ manager: "jhubbard"
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] or later with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-2.  [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
+2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ## Step 1: Build and Deploy SSIS Project to the SSIS Catalog  
  In this step, you create an SSIS package that extracts data from an SSIS supported data source - in this example, we use a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database - and outputs the data using a Data Streaming Destination component. Then you build and deploy the SSIS project to the SSIS catalog.  
@@ -125,7 +121,7 @@ manager: "jhubbard"
   
         1.  Specify the database schema in which you want the view to be created (Schema field).  
   
-        2.  Specify whether data should be encrypted before sending it over the network (Encrypt field). See [Using Encryption Without Validation](http://msdn.microsoft.com/library/ms131691.aspx) topic for more details about this setting and the TrustServerCertificate setting.  
+        2.  Specify whether data should be encrypted before sending it over the network (Encrypt field). See [Using Encryption Without Validation](../../relational-databases/native-client/features/using-encryption-without-validation.md) topic for more details about this setting and the TrustServerCertificate setting.  
   
         3.  Specify whether a self-signed server certificate can be used when the encryption setting is enabled (**TrustServerCertificate** field).  
   
@@ -189,7 +185,7 @@ manager: "jhubbard"
 ### Create a Linked Server using the OLE DB Provider for SSIS  
  Create a linked server using the OLE DB Provider for SSIS (SSISOLEDB) by running the following query in SQL Server Management Studio.  
   
-```  
+```sql 
   
 USE [master]  
 GO  
@@ -208,9 +204,9 @@ GO
   
  At runtime, when the view is executed, the linked server query that is defined in the view starts the SSIS package specified in the query and receives the package output as a tabular result set.  
   
-1.  Before creating the view, type and run the following query in the new query window. OPENQUERY is a rowset function supported by SQL Server. It executes the specified pass-through query on the specified linked server using the OLE DB Provider associated with the linked server. OPENQUERY can be referenced in the FROM clause of a query as if it were a table name. See [OPENQUERY documentation on MSDN Library](http://msdn.microsoft.com/library/ms188427.aspx) for more information.  
+1.  Before creating the view, type and run the following query in the new query window. OPENQUERY is a rowset function supported by SQL Server. It executes the specified pass-through query on the specified linked server using the OLE DB Provider associated with the linked server. OPENQUERY can be referenced in the FROM clause of a query as if it were a table name. See [OPENQUERY documentation on MSDN Library](../../t-sql/functions/openquery-transact-sql.md) for more information.  
   
-    ```  
+    ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
     GO  
     ```  
@@ -220,7 +216,7 @@ GO
   
 2.  Create a view in the database **TestDB** for the purpose of this walkthrough) by running the following query.  
   
-    ```  
+    ```sql
   
     USE [TestDB]   
     GO   
@@ -233,15 +229,15 @@ GO
   
 3.  Test the view by running the following query.  
   
-    ```  
+    ```sql
     SELECT * FROM SSISPackageView  
     ```  
   
 ### OPENQUERY Function  
  The syntax for OPENQUERY function is:  
   
-```  
-SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
+```sql 
+SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters="<parameter_name_1>=<value1>; parameter_name_2=<value2>";Timeout=<Number of Seconds>;')  
 ```  
   
  Folder, Project, and Package parameters are mandatory. Use32BitRuntime, Timeout and Parameters are optional.  
@@ -250,19 +246,19 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Timeout indicates the number of seconds that the OLE DB provider for SSIS can wait before new data arrives from the SSIS package. By default, the timeout is 60 seconds. You can specify an integer value for the timeout between 20 and 32000.  
   
- Parameters contain the value of both package parameters and project parameters. The rules for parameters are same as parameters in [DTExec](http://msdn.microsoft.com/library/hh231187.aspx).  
+ Parameters contain the value of both package parameters and project parameters. The rules for parameters are same as parameters in [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
   
  The following list specifies the special characters allowed in the query clause:  
   
--   Single Quote (‘) – This is supported by the standard OPENQUERY. If you want to use the single quote in the query clause, use two single quotes (‘’).  
+-   Single Quote (') - This is supported by the standard OPENQUERY. If you want to use the single quote in the query clause, use two single quotes ('').  
   
--   Double-Quote (“) – The parameters part of the query is enclosed in double-quotes. If a parameter value itself contains a double-quote, use the escape character. For example: \”.  
+-   Double-Quote (") - The parameters part of the query is enclosed in double-quotes. If a parameter value itself contains a double-quote, use the escape character. For example: \".  
   
--   Left and right square brackets ([ and ]) – These characters are used to indicate leading/rear spaces. For example, “[ some spaces ]” represents the string “ some spaces ” with one leading space and one trailing space. If these characters themselves are used in the query clause, they must be escaped. For example: \\[ and \\].  
+-   Left and right square brackets ([ and ]) - These characters are used to indicate leading/rear spaces. For example, "[ some spaces ]" represents the string " some spaces " with one leading space and one trailing space. If these characters themselves are used in the query clause, they must be escaped. For example: \\[ and \\].  
   
--   Forward Slash (\\) – Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
+-   Forward Slash (\\) - Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
   
- Forward Slash (\\) – Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
+ Forward Slash (\\) - Every \ used in the query clause must use escape character. For example, \\\ is evaluated as \ in the query clause.  
   
 ## See Also  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   

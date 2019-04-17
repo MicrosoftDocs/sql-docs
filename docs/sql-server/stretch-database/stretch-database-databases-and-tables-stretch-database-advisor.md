@@ -1,59 +1,54 @@
 ---
-title: "Stretch Database databases and tables - Stretch Database Advisor | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/14/2016"
-ms.prod: "sql-server-2016"
+title: "Identify databases and tables for Stretch Database | Microsoft Docs"
+ms.date: "10/30/2017"
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, identifying databases"
   - "Stretch Database, identifying tables"
   - "identifying databases for Stretch Database"
   - "identifying tables for Stretch Database"
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
-# Stretch Database databases and tables - Stretch Database Advisor
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# Identify databases and tables for Stretch Database with Data Migration Assistant
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
-  To identify databases and tables that are candidates for Stretch Database, download SQL Server 2016 Upgrade Advisor and run the Stretch Database Advisor. Stretch Database Advisor also identifies blocking issues.  
-  
-## Download and install Upgrade Advisor  
- Download and install Upgrade Advisor from [here](https://www.microsoft.com/en-us/download/details.aspx?id=53595). This tool is not included on the [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] installation media.  
-  
-## Run the Stretch Database Advisor  
-  
-1.  Run Upgrade Advisor.  
-  
-2.  Select **Scenarios**, and then select **RUN STRETCH DATABASE ADVISOR**.  
-  
-3.  On the **Run Stretch Database Advisor** blade, click **SELECT DATABASES TO ANALYZE**.  
-  
-4.  On the **Select databases** blade, enter or select the server name and the authentication info. Click **Connect**.
 
-5.  A list of databases on the selected server appears. Select the databases that you want to analyze. Click **Select**.  
+  To identify databases and tables that are candidates for Stretch Database, along with potential blocking issues, download and run Microsoft Data Migration Assistant.
   
-6.  On the **Run Stretch Database Advisor** blade, click **Run**.  The analysis runs.  
+## Get Data Migration Assistant
+ Download and install Data Migration Assistant from [here](https://www.microsoft.com/download/details.aspx?id=53595). This tool is not included on the SQL Server installation media.  
   
+## Run Data Migration Assistant  
+  
+1.  Run Microsoft Data Migration Assistant.  
+
+2.  Create a new project of type **Assessment** and give it a name.
+
+3.  Select **SQL Server** as both the **Source server type** and the **Target server type**.
+
+4.  Select **Create**. 
+
+5. On the **Options** page (step 1), select **New features recommendation**. Optionally, clear the selection for **Compatibility issues**.
+
+6.  On the **Select sources** page (step 2), connect to a server, select a database, and then select **Add**.
+
+7.  Select **Start Assessment**.
+
 ## Review the results  
   
-1.  When the analysis is finished, on the **Analyzed databases** blade, select one of the databases that you analyzed to display the **Analysis results** blade.  
-  
-     The **Analysis results** blade lists recommended tables in the selected database that match the default recommendation criteria. 
-  
-2.  In the list of tables on the **Analysis results** blade, select one of the recommended tables to display the **Table results** blade.  
-  
-     If there are blocking issues, the **Table results** blade lists the blocking issues for the selected table. For information about blocking issues detected by Stretch Database Advisor, see [Limitations for Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
-  
-3.  In the list of blocking issues on the **Table results** blade, select one of the issues to display more info about the selected issue and proposes mitigation steps. Implement the suggested mitigation steps if you want to configure the selected table for Stretch Database.  
+1.  When the analysis is finished, on the **Review results** page (step 3), select the **Feature recommendations** option, and then select the **Storage** tab.
+
+2.  Review the recommendations related to Stretch Database. Each recommendation lists the tables for which Stretch Database may be appropriate, along with any potential blocking issues.
+
+## Historical note
+Stretch Database Advisor was previously a component of SQL Server 2016 Upgrade Advisor. At that time, you had to select and run Stretch Database Advisor as a separate action.
+
+With the release of Data Migration Assistant, which replaces and extends Upgrade Advisor, the functionality of Stretch Database Advisor is incorporated into this new tool. You don't have to select any options to get recommendations related to Stretch Database. When you run an Assessment in Data Migration Assistant, the results related to Stretch Database appear on the **Storage** tab of the **Feature recommendations**.
   
 ## Next step  
  Enable Stretch Database.  

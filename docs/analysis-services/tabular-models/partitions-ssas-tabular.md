@@ -1,23 +1,17 @@
 ---
-title: "Partitions (SSAS Tabular) | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
-caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Partitions in Analysis Services tabular models | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Partitions
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Partitions divide a table into logical parts. Each partition can then be processed (Refreshed) independent of other partitions. Partitions created by using the Partitions dialog box in SSDT during model authoring apply to the model workspace database. When the model is deployed, the partitions defined for the model workspace database are duplicated in the deployed model database. You can further create and manage partitions for a deployed model database by using the Partitions dialog box in SSMS.  Information provided in this topic describes partitions created during model authoring by using the Partition Manager dialog box in SSDT. For information about creating and managing partitions for a deployed model, see [Create and Manage Tabular Model Partitions](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ##  <a name="bkmk_benefits"></a> Benefits  
@@ -43,7 +37,7 @@ manager: "erikre"
 |Topic|Description|  
 |-----------|-----------------|  
 |[Create and Manage Partitions in the Workspace Database](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Describes how to create and manage partitions in the model workspace database by using Partition Manager in SSDT.|  
-|[Process Partitions in the Workspace Databse](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|Describes how to process (refresh) partitions in the model workspace database.|  
+|[Process Partitions in the Workspace Database](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)|Describes how to process (refresh) partitions in the model workspace database.|  
   
 ## See also  
  [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   

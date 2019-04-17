@@ -1,0 +1,235 @@
+- name: Database Engine Scripting
+  href: database-engine-scripting.md
+- name: Query and Text Editors (SQL Server Management Studio)
+  href: query-and-text-editors-sql-server-management-studio.md
+  items:
+  - name: Database Engine Query Editor (SQL Server Management Studio)
+    href: database-engine-query-editor-sql-server-management-studio.md
+  - name: XML Editor (SQL Server Management Studio)
+    href: xml-editor-sql-server-management-studio.md
+  - name: Configure Editors (SQL Server Management Studio)
+    href: configure-editors-sql-server-management-studio.md
+  - name: Associate File Extensions to a Code Editor
+    href: associate-file-extensions-to-a-code-editor.md
+  - name: Change Font Color, Size, and Style
+    href: change-font-color-size-and-style.md
+  - name: Use the Properties Window in Management Studio
+    href: use-the-properties-window-in-management-studio.md
+  - name: Query Options Pages F1 Help
+    href: ../../database-engine/query-options-pages-f1-help.md
+    items:
+    - name: New or Edit Server Registration (General Tab) (Reporting Services)
+      href: ../../database-engine/new-or-edit-server-registration-general-tab-reporting-services.md
+    - name: New or Edit Server Registration (General Tab) (Analysis Services - Multidimensional Data)
+      href: ../../database-engine/new-edit-server-registration-analysis-services-multidimensional-data.md
+    - name: New or Edit Server Registration (General Tab) (SSIS)
+      href: ../../database-engine/new-or-edit-server-registration-general-tab-ssis.md
+    - name: Query Options Execution (General Page)
+      href: ../../database-engine/query-options-execution-general-page.md
+    - name: Query Options Execution (Advanced Page)
+      href: ../../database-engine/query-options-execution-advanced-page.md
+    - name: Query Options Execution (ANSI Page)
+      href: ../../database-engine/query-options-execution-ansi-page.md
+    - name: Query Options Results (Grid Page)
+      href: ../../database-engine/query-options-results-grid-page.md
+    - name: Query Options Results (Text Page)
+      href: ../../database-engine/query-options-results-text-page.md
+    - name: Analysis Services Query Results (General Page)
+      href: ../../database-engine/analysis-services-query-results-general-page.md
+    - name: Analysis Services Query Execution Options (General Page)
+      href: ../../database-engine/analysis-services-query-execution-options-general-page.md
+    - name: Options (Text Editor - File Extension Page)
+      href: ../../database-engine/options-text-editor-file-extension-page.md
+    - name: Options (Text Editor - All Languages - General Page)
+      href: ../../database-engine/options-text-editor-all-languages-general-page.md
+    - name: Options (Text Editor - All Languages -Tabs Page)
+      href: ../../database-engine/options-text-editor-all-languages-tabs-page.md
+    - name: Options (Text Editor - Plain Text - General Page)
+      href: ../../database-engine/options-text-editor-plain-text-general-page.md
+    - name: Options (Text Editor - Plain Text - Tabs Page)
+      href: ../../database-engine/options-text-editor-plain-text-tabs-page.md
+    - name: Options (Text Editor/Transact-SQL/General Page)
+      href: ../../database-engine/options-text-editor-transact-sql-general-page.md
+    - name: Options (Text Editor/Transact-SQL/Tabs Page)
+      href: ../../database-engine/options-text-editor-transact-sql-tabs-page.md
+    - name: Options (Text Editor/Transact-SQL/IntelliSense)
+      href: ../../database-engine/options-text-editor-transact-sql-intellisense.md
+    - name: Options (Text Editor - XML - General Page)
+      href: ../../database-engine/options-text-editor-xml-general-page.md
+    - name: "Options (Text Editor:XML:Tabs Page)"
+      href: ../../database-engine/options-text-editor-xml-tabs-page.md
+    - name: Options (Text Editor - XML - Formatting Page)
+      href: ../../database-engine/options-text-editor-xml-formatting-page.md
+    - name: Options (Text Editor - XML - Miscellaneous Page)
+      href: ../../database-engine/options-text-editor-xml-miscellaneous-page.md
+    - name: "Options (Text Editor: Editor Tab and Status Bar Page)"
+      href: ../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md
+    - name: Options (Query Execution/SQL Server/General Page)
+      href: ../../database-engine/options-query-execution-sql-server-general-page.md
+    - name: "Options (Query Execution:SQL Server:Advanced Page)"
+      href: ../../database-engine/options-query-execution-sql-server-advanced-page.md
+    - name: Options (Query Execution/SQL Server/ANSI Page)
+      href: ../../database-engine/options-query-execution-sql-server-ansi-page.md
+    - name: Options (Query Results/SQL Server/General Page)
+      href: ../../database-engine/options-query-results-sql-server-general-page.md
+    - name: Options (Query Results/SQL Server/Results to Grid Page)
+      href: ../../database-engine/options-query-results-sql-server-results-to-grid-page.md
+    - name: Options (Query Results/SQL Server/Results to Text Page)
+      href: ../../database-engine/options-query-results-sql-server-results-to-text-page.md
+    - name: Options (Query Results-SQL Server-Multi-Server)
+      href: ../../database-engine/options-query-results-sql-server-multi-server.md
+    - name: Options (Query Execution/Analysis Server/General Page)
+      href: ../../database-engine/options-query-execution-analysis-server-general-page.md
+    - name: Options (Query Results/Analysis Server/General Page)
+      href: ../../database-engine/options-query-results-analysis-server-general-page.md
+    - name: Options (Query Results and Dependency Services Page)
+      href: ../../database-engine/options-query-results-and-dependency-services-page.md
+  - name: Open an Editor (SQL Server Management Studio)
+    href: open-an-editor-sql-server-management-studio.md
+  - name: Manage the Editor and View Mode
+    href: manage-the-editor-and-view-mode.md
+  - name: Manage Code Formatting
+    href: manage-code-formatting.md
+  - name: Navigate Code and Text
+    href: navigate-code-and-text.md
+  - name: Color Coding in Query Editors
+    href: color-coding-in-query-editors.md
+  - name: Code Outlining
+    href: code-outlining.md
+  - name: Drag and Drop Text
+    href: drag-and-drop-text.md
+  - name: Search and Replace
+    href: search-and-replace.md
+    items:
+    - name: Search an Active Document Incrementally
+      href: search-an-active-document-incrementally.md
+    - name: Search Documents Interactively
+      href: search-documents-interactively.md
+    - name: Search Documents Using Results Lists
+      href: search-documents-using-results-lists.md
+    - name: Search Text with Wildcards
+      href: search-text-with-wildcards.md
+    - name: Search Text with Regular Expressions
+      href: search-text-with-regular-expressions.md
+  - name: Find and Replace
+    href: find-and-replace.md
+    items:
+    - name: Find in Files
+      href: find-in-files.md
+    - name: Find Results Windows
+      href: find-results-windows.md
+    - name: Replace in Files
+      href: replace-in-files.md
+  - name: Manage Bookmarks
+    href: manage-bookmarks.md
+    items:
+    - name: Bookmarks F1 Help
+      href: bookmarks-f1-help.md
+  - name: Print Code and Results
+    href: print-code-and-results.md
+  - name: Edit SQLCMD Scripts with Query Editor
+    href: edit-sqlcmd-scripts-with-query-editor.md
+- name: IntelliSense (SQL Server Management Studio)
+  href: intellisense-sql-server-management-studio.md
+  items:
+  - name: Configure IntelliSense (SQL Server Management Studio)
+    href: configure-intellisense-sql-server-management-studio.md
+  - name: Parameter Info (IntelliSense)
+    href: parameter-info-intellisense.md
+  - name: Quick Info (IntelliSense)
+    href: quick-info-intellisense.md
+  - name: Complete Word (IntelliSense)
+    href: complete-word-intellisense.md
+  - name: Automatic Matching of Syntax Pairs
+    href: automatic-matching-of-syntax-pairs.md
+  - name: Troubleshooting IntelliSense (SQL Server Management Studio)
+    href: troubleshooting-intellisense.md
+  - name: Transact-SQL Syntax Supported by IntelliSense
+    href: transact-sql-syntax-supported-by-intellisense.md
+- name: Transact-SQL Code Snippets
+  href: transact-sql-code-snippets.md
+  items:
+  - name: Insert Transact-SQL Snippets
+    href: insert-transact-sql-snippets.md
+  - name: Insert Surround-with Transact-SQL snippets
+    href: insert-surround-with-transact-sql-snippets.md
+  - name: Complete Transact-SQL Snippets
+    href: complete-transact-sql-snippets.md
+  - name: Add Transact-SQL Snippets
+    href: add-transact-sql-snippets.md
+- name: Transact-SQL Debugger
+  href: transact-sql-debugger.md
+  items:
+  - name: Configure the Transact-SQL Debugger
+    href: configure-firewall-rules-before-running-the-tsql-debugger.md
+  - name: Run the Transact-SQL Debugger
+    href: run-the-transact-sql-debugger.md
+  - name: Step Through Transact-SQL Code
+    href: step-through-transact-sql-code.md
+    items:
+    - name: Transact-SQL Breakpoints
+      href: transact-sql-breakpoints.md
+    - name: Toggle a Breakpoint
+      href: toggle-a-breakpoint.md
+    - name: Enable, Disable, and Delete Breakpoints
+      href: enable-disable-and-delete-breakpoints.md
+    - name: Specify a Breakpoint Condition
+      href: specify-a-breakpoint-condition.md
+    - name: Specify a Hit Count
+      href: specify-a-hit-count.md
+    - name: Specify a Breakpoint Filter
+      href: specify-a-breakpoint-filter.md
+    - name: Specify a Breakpoint Action
+      href: specify-a-breakpoint-action.md
+    - name: Edit a Breakpoint Location
+      href: edit-a-breakpoint-location.md
+- name: Transact-SQL Debugger Information
+  href: transact-sql-debugger-information.md
+  items:
+  - name: Error List Window (Management Studio)
+    href: transact-sql-debugger-error-list-window.md
+  - name: Breakpoints Window
+    href: transact-sql-debugger-breakpoints-window.md
+  - name: Call Stack Window
+    href: transact-sql-debugger-call-stack-window.md
+  - name: Locals Window
+    href: transact-sql-debugger-locals-window.md
+  - name: Threads Window
+    href: transact-sql-debugger-threads-window.md
+  - name: Command Window
+    href: transact-sql-debugger-command-window.md
+  - name: Output Window
+    href: transact-sql-debugger-output-window.md
+  - name: Watch Window
+    href: transact-sql-debugger-watch-window.md
+  - name: QuickWatch Dialog Box
+    href: transact-sql-debugger-quickwatch-dialog-box.md
+- name: Status Bar (Database Engine Query Editor)
+  href: status-bar-database-engine-query-editor.md
+- name: View Spatial Data in Object Explorer
+  href: view-spatial-data-in-object-explorer.md
+  items:
+  - name: Spatial Results Window
+    href: spatial-results-window.md
+- name: sqlcmd How-to Topics
+  href: sqlcmd-how-to.md
+  items:
+  - name: Start the sqlcmd Utility
+    href: sqlcmd-start-the-utility.md
+  - name: Use the sqlcmd Utility
+    href: sqlcmd-use-the-utility.md
+  - name: Connect to the Database Engine With sqlcmd
+    href: sqlcmd-connect-to-the-database-engine.md
+  - name: Run Transact-SQL Script Files Using sqlcmd
+    href: sqlcmd-run-transact-sql-script-files.md
+  - name: Use sqlcmd with Scripting Variables
+    href: sqlcmd-use-with-scripting-variables.md
+- name: SQL Server PowerShell +
+  href: ../../powershell/sql-server-powershell.md
+- name: Generate Scripts (SQL Server Management Studio)
+  href: generate-scripts-sql-server-management-studio.md
+  items:
+  - name: Generate and Publish Scripts Wizard
+    href: generate-and-publish-scripts-wizard.md
+  - name: Objects Supported by the Generate Scripts Wizard
+    href: objects-supported-by-the-generate-scripts-wizard.md

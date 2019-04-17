@@ -2,12 +2,10 @@
 title: "sp_stored_procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_stored_procedures_TSQL"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_stored_procedures"
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_stored_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a list of stored procedures in the current environment.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,10 +37,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@sp_name =** ] **'***name***'**  
+`[ @sp_name = ] 'name'`
  Is the name of the procedure used to return catalog information. *name* is **nvarchar(390)**, with a default of NULL. Wildcard pattern matching is supported.  
   
- [ **@sp_owner =** ] **'***schema***'**  
+`[ @sp_owner = ] 'schema'`
  Is the name of the schema to which the procedure belongs. *schema* is **nvarchar(384)**, with a default of NULL. Wildcard pattern matching is supported. If *owner* is not specified, the default procedure visibility rules of the underlying DBMS apply.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the current schema contains a procedure with the specified name, that procedure is returned. If a nonqualified stored procedure is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] searches for the procedure in the following order:  
@@ -58,10 +51,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   The **dbo** schema in the current database.  
   
- [ **@qualifier =** ] **'***qualifier***'**  
- Is the name of the procedure qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables in the form (*qualifier***.***schema***.***name*. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualifier* represents the database name. In some products, it represents the server name of the database environment of the table.  
+`[ @qualifier = ] 'qualifier'`
+ Is the name of the procedure qualifier. *qualifier* is **sysname**, with a default of NULL. Various DBMS products support three-part naming for tables in the form (_qualifier_**.**_schema_**.**_name_. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualifier* represents the database name. In some products, it represents the server name of the database environment of the table.  
   
- [ **@fUsePattern =** ] **'***fUsePattern***'**  
+`[ @fUsePattern = ] 'fUsePattern'`
  Determines whether the underscore (_), percent (%), or brackets [ ]) are interpreted as wildcard characters. *fUsePattern* is **bit**, with a default of 1.  
   
  **0** = Pattern matching is off.  

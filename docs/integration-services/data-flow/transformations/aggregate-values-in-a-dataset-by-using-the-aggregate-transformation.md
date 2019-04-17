@@ -2,22 +2,19 @@
 title: "Aggregate Values in a Dataset by Using the Aggregate Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Aggregate transformation [Integration Services]"
   - "aggregate values [Integration Services]"
   - "datasets [Integration Services], aggregate values"
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Aggregate Values in a Dataset by Using the Aggregate Transformation
   To add and configure an Aggregate transformation, the package must already include at least one Data Flow task and one source.  

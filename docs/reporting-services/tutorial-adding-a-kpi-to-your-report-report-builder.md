@@ -1,24 +1,17 @@
 ---
 title: "Tutorial: Adding a KPI to Your Report (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.date: 06/15/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: reporting-services
+
+ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Tutorial: Adding a KPI to Your Report (Report Builder)
-In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] tutorial, you add a key performance indicator (KPI) to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.  
+In this [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] tutorial, you add a key performance indicator (KPI) to a [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report.  
 
 KPIs are measurable values with business significance. In this scenario, the sales summary by product subcategories is the KPI. The current state of the KPI is shown with colors, gauges, and indicators.
   
@@ -221,7 +214,7 @@ A gauge depicts a single value in a dataset. This tutorial uses a horizontal lin
   
     A gauge is added to the design surface.  
   
-7.  From the the dataset in the Report Data pane, drag the `Sales` field to the gauge. The **Gauge Data** pane opens.  
+7.  From the dataset in the Report Data pane, drag the `Sales` field to the gauge. The **Gauge Data** pane opens.  
   
     When you drop the `Sales` field onto the gauge, it goes to the **Values** list and is aggregated by using the built-in Sum function.  
    
@@ -344,6 +337,6 @@ You have successfully completed the Adding a KPI to Your Report tutorial. For mo
   
 ## See Also  
 * [Report Builder Tutorials](../reporting-services/report-builder-tutorials.md)
-* [Report Builder in SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+* [Report Builder in SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
 

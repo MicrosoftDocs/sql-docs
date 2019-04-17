@@ -1,17 +1,12 @@
 ---
 title: "MSdistribution_agents (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "10/28/2015"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSdistribution_agents_TSQL"
   - "MSdistribution_agents"
@@ -20,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistribution_agents system table"
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # MSdistribution_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   The **MSdistribution_agents** table contains one row for each Distribution Agent running at the local Distributor. This table is stored in the distribution database.  
   
@@ -66,6 +60,8 @@ manager: "jhubbard"
 |**job_step_uid**|**uniqueidentifier**|The unique ID of the SQL Server Agent job step in which the agent is started.|  
 |**subscriptionstreams**|**tinyint**|Sets the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber. A range of values from 1 to 64 is supported.|  
 |**memory_optimized**|**bit**|1 indicates that the subscriber can be used for memory optimized tables.|  
+|**job_login**|**sysname**||  
+|**job_password**|**nvarchar(524)**||  
   
 ## See Also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

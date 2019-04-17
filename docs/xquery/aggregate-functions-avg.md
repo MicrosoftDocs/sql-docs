@@ -2,12 +2,10 @@
 title: "avg Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -15,13 +13,12 @@ helpviewer_keywords:
   - "fn:avg function"
   - "avg function [XQuery]"
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
-caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Aggregate Functions - avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the average of a sequence of numbers.  
   
@@ -39,7 +36,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## Remarks  
  All the types of the atomized values that are passed to **avg()** have to be a subtype of exactly one of the three built-in numeric base types or xdt:untypedAtomic. They cannot be a mixture. Values of type xdt:untypedAtomic are treated as xs:double. The result of **avg()** receives the base type of the passed in types, such as xs:double in the case of xdt:untypedAtomic.  
   
- If the input is statically empty empty is implied and a static error is raised.  
+ If the input is statically empty, empty is implied and a static error is raised.  
   
  The **avg()** function returns the average of the numbers computed. For example:  
   

@@ -1,68 +1,61 @@
 ---
-title: "Query and Modify the SQL Server Data| Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-dev_langs: 
-  - "R"
-ms.assetid: 8c7007a9-9a8f-4dcd-8068-40060d4f6444
-caps.latest.revision: 17
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Query and modify the SQL Server data using RevoScaleR - SQL Server Machine Learning
+description: Tutorial walkthrough on how to query and modify data using the R language on SQL Server.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 11/27/2018  
+ms.topic: tutorial
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 ---
-# Query and Modify the SQL Server Data
+# Query and modify the SQL Server data (SQL Server and RevoScaleR tutorial)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Now that you've loaded the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can use the data sources you created  as arguments to R functions in [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], to get basic information about the variables, and generate summaries and histograms.
+This lesson is part of the [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) on how to use [RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) with SQL Server.
 
-In this step, you'll re-use the data sources to do some quick analysis and then enhance the data.
+In the previous lesson, you loaded the data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In this step, you can explore and modify data using **RevoScaleR**:
 
-## Query the Data
+> [!div class="checklist"]
+> * Return basic information about the variables
+> * Create categorical data from raw data
 
-First, get a list of the columns and their data types.
+Categorical data, or *factor variables*, are useful for exploratory data visualizations. You can use them as inputs to histograms to get an idea of what variable data looks like.
 
-1.  Use the function **rxGetVarInfo** and specify the data source you want to analyze.
+## Query for columns and types
+
+Use an R IDE or RGui.exe to run R script. 
+
+First, get a list of the columns and their data types. You can use the function [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) and specify the data source you want to analyze. Depending on your version of **RevoScaleR**, you could also use [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
-    ```R
-    rxGetVarInfo(data = sqlFraudDS)
-    ```
+```R
+rxGetVarInfo(data = sqlFraudDS)
+```
 
-    **Results**
-    
-    *Var 1: custID, Type: integer*
-    
-    *Var 2: gender, Type: integer*
-    
-    *Var 3: state, Type: integer*
-    
-    *Var 4: cardholder, Type: integer*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+**Results**
 
+```R
+Var 1: custID, Type: integer
+Var 2: gender, Type: integer
+Var 3: state, Type: integer
+Var 4: cardholder, Type: integer
+Var 5: balance, Type: integer
+Var 6: numTrans, Type: integer
+Var 7: numIntlTrans, Type: integer
+Var 8: creditLine, Type: integer
+Var 9: fraudRisk, Type: integer
+```
 
-## Modify Metadata
+## Create categorical data
 
-All the variables are stored as integers, but some variables represent categorical data,called *factor variables* in R. For example, the column *state* contains numbers used as identifiers for the 50 states plus the District of Columbia.  To make it easier to understand the data, you replace the numbers with a list of state abbreviations.
+All the variables are stored as integers, but some variables represent categorical data, called *factor variables* in R. For example, the column *state* contains numbers used as identifiers for the 50 states plus the District of Columbia. To make it easier to understand the data, you replace the numbers with a list of state abbreviations.
 
-In this step, you will provide a string vector containing the abbreviations, and then map these categorical values to the original integer identifiers. After this varaible is ready, you'll use it in the *colInfo* argument, to specify that this column be handled as a factor. Thereafter, the abbreviations will be used and the column handled as a factor whenever this data is analyzed or imported.
+In this step, you create a string vector containing the abbreviations, and then map these categorical values to the original integer identifiers. Then you use the new variable in the *colInfo* argument, to specify that this column be handled as a factor. Whenever you analyze the data or move it, the abbreviations are used and the column is handled as a factor.
 
-1. Begin by creating an R variable, *stateAbb*, and defining the vector of strings to add to it, as follows:
+Mapping the column to abbreviations before using it as a factor actually improves performance as well. For more information, see [R and data optimization](../r/r-and-data-optimization-r-services.md).
+
+1. Begin by creating an R variable, *stateAbb*, and defining the vector of strings to add to it, as follows.
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -97,7 +90,7 @@ In this step, you will provide a string vector containing the abbreviations, and
     )
     ```
   
-3. To create the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source that uses the updated data, call the *RxSqlServerData* function as before but add the *colInfo* argument.
+3. To create the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data source that uses the updated data, call the **RxSqlServerData** function as before, but add the *colInfo* argument.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -107,9 +100,8 @@ In this step, you will provide a string vector containing the abbreviations, and
   
     - For the *table* parameter, pass in the variable *sqlFraudTable*, which contains the data source you created earlier.
     - For the *colInfo* parameter, pass in the *ccColInfo* variable, which contains the column data types and factor levels.
-    - Mapping the column to abbreviations before using it as a factor actually improves performance as well. For more information, see [R and Data Optimization](https://msdn.microsoft.com/library/mt723575.aspx)
-  
-4.  You can now use the function rxGetVarInfo to view the variables in the new data source.
+
+4.  You can now use the function **rxGetVarInfo** to view the variables in the new data source.
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -117,33 +109,21 @@ In this step, you will provide a string vector containing the abbreviations, and
 
     **Results**
     
-    *Var 1: custID, Type: integer*
-    
-    *Var 2: gender  2 factor levels: Male Female*
-    
-    *Var 3: state   51 factor levels: AK AL AR AZ CA ... VT WA WI WV WY*
-    
-    *Var 4: cardholder  2 factor levels: Principal Secondary*
-    
-    *Var 5: balance, Type: integer*
-    
-    *Var 6: numTrans, Type: integer*
-    
-    *Var 7: numIntlTrans, Type: integer*
-    
-    *Var 8: creditLine, Type: integer*
-    
-    *Var 9: fraudRisk, Type: integer*
+    ```R
+    Var 1: custID, Type: integer
+    Var 2: gender  2 factor levels: Male Female
+    Var 3: state   51 factor levels: AK AL AR AZ CA ... VT WA WI WV WY
+    Var 4: cardholder  2 factor levels: Principal Secondary
+    Var 5: balance, Type: integer
+    Var 6: numTrans, Type: integer
+    Var 7: numIntlTrans, Type: integer
+    Var 8: creditLine, Type: integer
+    Var 9: fraudRisk, Type: integer
+    ```
 
-Now the three variables you specified (_gender_, _state_, and _cardholder_) are  treated as factors.
+Now the three variables you specified (*gender*, *state*, and *cardholder*) are  treated as factors.
 
-## Next Step
+## Next steps
 
-[Define and Use Compute Contexts](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
-
-## Previous Step
-
-[Create SQL Server Data Objects using RxSqlServerData](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)
-
-
-
+> [!div class="nextstepaction"]
+> [Define and use compute contexts](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

@@ -2,20 +2,17 @@
 title: "DELETE - SQL Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "DELETE [ODBC]"
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
-caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # DELETE - SQL Command
 Marks records for deletion.  
@@ -27,7 +24,7 @@ Marks records for deletion.
 ```  
   
 DELETE FROM [DatabaseName!]TableName  
-   [WHERE FilterCondition1 [AND | OR FilterCondition2 ...]]  
+   [WHERE FilterCondition1 [AND | OR FilterCondition2 ...]]  
 ```  
   
 ## Arguments  

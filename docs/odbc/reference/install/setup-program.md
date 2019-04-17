@@ -2,20 +2,17 @@
 title: "Setup Program | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installing ODBC components [ODBC], setup program"
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Setup Program
 > **NOTE:** Starting with Windows XP and Windows Server 2003, **ODBC is included in the Windows operation system**. You should only explicitly install ODBC on earlier versions of Windows.  

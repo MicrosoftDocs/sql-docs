@@ -1,0 +1,371 @@
+- name: SQL Server Installation
+  href: installation-for-sql-server.md
+- name: Planning a SQL Server Installation
+  href: ../../sql-server/install/planning-a-sql-server-installation.md
+  items:
+  - name: What's New in SQL Server Installation
+    href: ../../sql-server/install/what-s-new-in-sql-server-installation.md
+  - name: Hardware and Software Requirements for Installing SQL Server 2014
+    href: ../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+  - name: Security Considerations for a SQL Server Installation
+    href: ../../sql-server/install/security-considerations-for-a-sql-server-installation.md
+  - name: Network Protocols and Network Libraries
+    href: ../../sql-server/install/network-protocols-and-network-libraries.md
+  - name: Work with Multiple Versions and Instances of SQL Server
+    href: ../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
+  - name: Local Language Versions in SQL Server
+    href: ../../sql-server/install/local-language-versions-in-sql-server.md
+  - name: File Locations for Default and Named Instances of SQL Server
+    href: ../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+- name: Install SQL Server 2014
+  href: install-sql-server.md
+  items:
+  - name: About the SQL Server Database Engine
+    href: install-sql-server-database-engine.md
+  - name: Install Distributed Replay
+    href: ../../tools/distributed-replay/install-distributed-replay.md
+  - name: Distributed Replay Requirements
+    href: ../../tools/distributed-replay/distributed-replay-requirements.md
+  - name: Install Distributed Replay (Setup)
+    href: ../../sql-server/install/install-distributed-replay-setup.md
+  - name: Install Distributed Replay from the Command Prompt
+    href: ../../tools/distributed-replay/install-distributed-replay-overview.md
+  - name: Install Distributed Replay Using a Configuration File
+    href: ../../sql-server/install/install-distributed-replay-using-a-configuration-file.md
+  - name: Complete the Post-Installation Steps
+    href: ../../tools/distributed-replay/complete-the-post-installation-steps.md
+  - name: Modify the Controller and Client Services Accounts
+    href: ../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
+  - name: Repair a Distributed Replay Installation
+    href: ../../sql-server/install/repair-a-distributed-replay-installation.md
+  - name: Uninstall an Existing Instance of Distributed Replay
+    href: ../../sql-server/install/uninstall-an-existing-instance-of-distributed-replay.md
+  - name: Install SQL Server Replication
+    href: install-sql-server-replication.md
+  - name: Install SQL Server Management Tools
+    href: ../../sql-server/install/install-sql-server-management-tools.md
+  - name: Install SQL Server PowerShell
+    href: install-sql-server-powershell.md
+  - name: Install SQL Server 2014 on Server Core
+    href: install-sql-server-on-server-core.md
+  - name: Install SQL Server with SMB Fileshare as a Storage Option
+    href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
+  - name: Considerations for Installing SQL Server Using SysPrep
+    href: considerations-for-installing-sql-server-using-sysprep.md
+  - name: Validate a SQL Server Installation
+    href: validate-a-sql-server-installation.md
+  - name: Check Parameters for the System Configuration Checker
+    href: check-parameters-for-the-system-configuration-checker.md
+  - name: Configure SQL Server on a Server Core Installation
+    href: configure-sql-server-on-a-server-core-installation.md
+  - name: Configure the Windows Firewall to Allow SQL Server Access
+    href: ../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
+  - name: Configure a Multi-Homed Computer for SQL Server Access
+    href: ../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
+  - name: Installation How-to Topics
+    href: ../../sql-server/install/installation-how-to-topics.md
+  - name: Install SQL Server 2014 from the Installation Wizard (Setup)
+    href: install-sql-server-from-the-installation-wizard-setup.md
+  - name: Install SQL Server 2014 from the Command Prompt
+    href: install-sql-server-from-the-command-prompt.md
+  - name: Install SQL Server 2014 Using a Configuration File
+    href: install-sql-server-using-a-configuration-file.md
+  - name: Install SQL Server 2014 Using SysPrep
+    href: install-sql-server-using-sysprep.md
+  - name: Add Features to an Instance of SQL Server 2014 (Setup)
+    href: add-features-to-an-instance-of-sql-server-setup.md
+  - name: Drop a SQL Server 2014 Installation
+    href: repair-a-failed-sql-server-installation.md
+  - name: Rename a Computer that Hosts a Stand-Alone Instance of SQL Server
+    href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
+  - name: Install SQL Server 2014 Servicing Updates
+    href: install-sql-server-servicing-updates.md
+  - name: View and Read SQL Server Setup Log Files
+    href: view-and-read-sql-server-setup-log-files.md
+- name: Install SQL Server 2014 Business Intelligence Features
+  href: ../../sql-server/install/install-sql-server-business-intelligence-features.md
+  items:
+  - name: Install Analysis Services in Multidimensional and Data Mining Mode
+    href: ../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md
+  - name: Install Analysis Services in Tabular Mode
+    href: ../../analysis-services/instances/install-windows/install-analysis-services.md
+  - name: Install Data Quality Services
+    href: ../../data-quality-services/install-windows/install-data-quality-services.md
+  - name: Run DQSInstaller.exe to Complete Data Quality Server Installation
+    href: ../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md
+  - name: Grant DQS Roles to Users
+    href: ../../data-quality-services/install-windows/grant-dqs-roles-to-users.md
+  - name: Access Data for the DQS Operations
+    href: ../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md
+  - name: Export and Import DQS Knowledge Bases Using DQSInstaller.exe
+    href: ../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md
+  - name: Upgrade SQLCLR Assemblies After .NET Framework Update
+    href: ../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md
+  - name: Upgrade DQS Databases Schema After Installing SQL Server Update
+    href: ../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md
+  - name: Install Integration Services
+    href: ../../integration-services/install-windows/install-integration-services.md
+  - name: Interoperability and Coexistence
+    href: ../../integration-services/install-windows/installing-integration-services-versions-side-by-side.md
+  - name: Install Master Data Services
+    href: ../../master-data-services/install-windows/install-master-data-services.md
+  - name: Web Application Requirements (Master Data Services)
+    href: ../../master-data-services/install-windows/web-application-requirements-master-data-services.md
+  - name: Database Requirements (Master Data Services)
+    href: ../../master-data-services/install-windows/database-requirements-master-data-services.md
+  - name: Create a Master Data Services Database
+    href: ../../master-data-services/install-windows/create-a-master-data-services-database.md
+  - name: Create a Master Data Manager Web Application (Master Data Services)
+    href: ../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
+  - name: Secure a Master Data Manager Web Application
+    href: ../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md
+  - name: Associate a Master Data Services Database and Web Application
+    href: ../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
+  - name: Enable Data Quality Services Integration with Master Data Services
+    href: ../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
+  - name: Multi-Lingual and Global Deployments (Master Data Services)
+    href: ../../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md
+  - name: Install Reporting Services Native Mode Report Server
+    href: ../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
+  - name: Perform a Files-Only Installation of Reporting Services
+    href: ../../reporting-services/install-windows/files-only-installation-reporting-services.md
+  - name: Install Reporting Services and Internet Information Services Side-by-Side (SSRS Native Mode)
+    href: ../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
+  - name: Host a Report Server Database in a SQL Server Failover Cluster
+    href: ../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
+  - name: Reporting Services Configuration Manager (Native Mode)
+    href: ../../sql-server/install/reporting-services-configuration-manager-native-mode.md
+    items:
+    - name: Configure the Report Server Service Account (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+    - name: Configure a Service Account (SSRS Configuration Manager)
+      href: ../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md
+    - name: Configure Report Server URLs  (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
+    - name: About URL Reservations and Registration  (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+    - name: Configure a URL  (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+    - name: URL Reservation Syntax  (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+    - name: URLs in Configuration Files  (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+    - name: URL Reservations for Multi-Instance Report Server Deployments  (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+    - name: Create a Report Server Database  (SSRS Configuration Manager)
+      href: ../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md
+    - name: Create a Native Mode Report Server Database  (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+    - name: Configure a Report Server Database Connection
+      href: ../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+    - name: Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)
+      href: ../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md
+    - name: Configure the Unattended Execution Account (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+    - name: Configure and Manage Encryption Keys (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+    - name: Initialize a Report Server (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+    - name: Store Encrypted Report Server Data (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+    - name: Back Up and Restore Encryption Keys
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+    - name: Delete and Re-create Encryption Keys  (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+    - name: Add and Remove Encryption Keys for Scale-Out Deployment (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+    - name: Configure a Native Mode Report Server Scale-Out Deployment (SSRS Configuration Manager)
+      href: ../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+    - name: Reporting Services Configuration Manager F1 Help Topics (SSRS Native Mode)
+      href: ../../sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md
+    - name: Connect to a Native Mode Report Server
+      href: ../../sql-server/install/connect-to-a-native-mode-report-server.md
+    - name: Report Server Status (SSRS Native Mode)
+      href: ../../sql-server/install/report-server-status-ssrs-native-mode.md
+    - name: Service Account (SSRS Native Mode)
+      href: ../../sql-server/install/service-account-ssrs-native-mode.md
+    - name: Web Service URL (SSRS Native Mode)
+      href: ../../sql-server/install/web-service-url-ssrs-native-mode.md
+      items:
+      - name: Advanced Multiple Web Site Configuration (SSRS Native Mode)
+        href: ../../sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md
+    - name: Database (SSRS Native Mode)
+      href: ../../sql-server/install/database-ssrs-native-mode.md
+      items:
+      - name: Change Database Wizard (SSRS Native Mode)
+        href: ../../sql-server/install/change-database-wizard-ssrs-native-mode.md
+      - name: Change Credentials Wizard (SSRS Native Mode)
+        href: ../../sql-server/install/change-credentials-wizard-ssrs-native-mode.md
+    - name: Report Manager URL (SSRS Native Mode)
+      href: ../../sql-server/install/report-manager-url-ssrs-native-mode.md
+    - name: E-mail Settings - Configuration Manager (SSRS Native Mode)
+      href: ../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+    - name: Execution Account (SSRS Native Mode)
+      href: ../../sql-server/install/execution-account-ssrs-native-mode.md
+    - name: Encryption Keys (SSRS Native Mode)
+      href: ../../sql-server/install/encryption-keys-ssrs-native-mode.md
+      items:
+      - name: Backup Encryption Key (SSRS Native Mode)
+        href: ../../sql-server/install/backup-encryption-key-ssrs-native-mode.md
+      - name: Restore Encryption Key (SSRS Native Mode)
+        href: ../../sql-server/install/restore-encryption-key-ssrs-native-mode.md
+    - name: Scale-out Deployment (Native Mode Report Server)
+      href: ../../sql-server/install/scale-out-deployment-native-mode-report-server.md
+  - name: Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)
+    href: ../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md
+  - name: Deployment Topologies for SQL Server BI Features in SharePoint
+    href: ../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md
+  - name: Guidance for Using SQL Server BI Features in a SharePoint 2010 Farm
+    href: ../../sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md
+  - name: Checklists for Installing BI Features with SharePoint
+    href: ../../sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md
+    items:
+    - name: "Checklist: Reporting Services, Power View, and PowerPivot for SharePoint"
+      href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
+    - name: "Checklist: Scale-out by adding PowerPivot Servers to a SharePoint 2010 farm"
+      href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
+    - name: "Checklist: Install Reporting Services into an Existing SharePoint Farm"
+      href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
+    - name: "Checklist: Multi-Server Installation of PowerPivot for SharePoint 2010"
+      href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
+    - name: "CheckList: Use PowerShell to Verify PowerPivot for SharePoint"
+      href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+  - name: Reporting Services SharePoint Mode Installation (SharePoint 2010 and SharePoint 2013)
+    href: ../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
+    items:
+    - name: Hardware and Software Requirements for Reporting Services in SharePoint Mode
+      href: ../../sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md
+    - name: Supported Combinations of SharePoint and Reporting Services Server and Add-in
+      href: ../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
+    - name: Install Reporting Services  for SharePoint 2013
+      href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md
+    - name: Install Reporting Services for SharePoint 2010
+      href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md
+    - name: Install or Uninstall the Reporting Services Add-in for SharePoint
+      href: ../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+    - name: Where to find the SSRS add-in for SharePoint
+      href: ../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
+    - name: Add an Additional Report Server to a Farm (SSRS Scale-out)
+      href: ../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
+    - name: Add an Additional Reporting Services Web Front-end to a Farm
+      href: ../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
+    - name: Configure E-mail for a Reporting Services Service Application
+      href: ../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
+    - name: Provision Subscriptions and Alerts for SSRS Service Applications
+      href: ../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
+    - name: Claims to Windows Token Service (C2WTS) and SSRS
+      href: ../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md
+  - name: PowerPivot for SharePoint 2013 Installation
+    href: ../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
+    items:
+    - name: Hardware and Software Requirements for Analysis Services Server in SharePoint Mode (SQL Server 2014)
+      href: ../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md
+    - name: Example of a Minimum-Privilege Configuration for PowerPivot for SharePoint 2013
+      href: ../../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2013.md
+    - name: Install or Uninstall the PowerPivot for SharePoint Add-in (SharePoint 2013)
+      href: ../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+    - name: Configure PowerPivot and Deploy Solutions (SharePoint 2013)
+      href: ../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+    - name: Migrate PowerPivot to SharePoint 2013
+      href: ../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md
+    - name: Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
+      href: ../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+  - name: PowerPivot for SharePoint 2010 Installation
+    href: ../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md
+    items:
+    - name: Install PowerPivot for SharePoint 2010
+      href: ../../sql-server/install/install-powerpivot-for-sharepoint-2010.md
+    - name: Install the Analysis Services OLE DB Provider on SharePoint Servers
+      href: ../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md
+    - name: Install ADO.NET Data Services to support data feed exports of SharePoint lists
+      href: ../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md
+    - name: Install ADOMD.NET on Web Front-End Servers Running Central Administration
+      href: ../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md
+    - name: Install PowerPivot from the Command Prompt
+      href: ../../sql-server/install/install-powerpivot-from-the-command-prompt.md
+    - name: Repair PowerPivot for SharePoint
+      href: ../../sql-server/install/repair-powerpivot-for-sharepoint.md
+    - name: Initial Configuration for a PowerPivot Single-Server Installation
+      href: ../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md
+  - name: Command Prompt Installation of Reporting Services SharePoint Mode and Native Mode
+    href: ../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
+  - name: Verify or Troubleshoot an Installation
+    href: ../../sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md
+  - name: Verify a Reporting Services Installation
+    href: ../../reporting-services/install-windows/verify-a-reporting-services-installation.md
+  - name: Troubleshoot a Reporting Services Installation
+    href: ../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
+  - name: Verify a PowerPivot for SharePoint Installation
+    href: ../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
+  - name: Troubleshoot a PowerPivot for SharePoint Installation
+    href: ../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md
+- name: Upgrade to SQL Server 2014
+  href: upgrade-sql-server.md
+  items:
+  - name: Supported Version and Edition Upgrades
+    href: supported-version-and-edition-upgrades.md
+  - name: Are you upgrading from SQL Server 2005?
+    href: ../../sql-server/install/are-you-upgrading-from-sql-server-2005.md
+  - name: Use Upgrade Advisor to Prepare for Upgrades
+    href: ../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md
+  - name: Use the Distributed Replay Utility to Prepare for Upgrades
+    href: ../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md
+  - name: Upgrade Analysis Services
+    href: upgrade-analysis-services.md
+  - name: Upgrade Database Engine
+    href: upgrade-database-engine.md
+  - name: Migrate Query Plans
+    href: change-the-database-compatibility-mode-and-use-the-query-store.md
+  - name: Upgrade Data Quality Services
+    href: upgrade-data-quality-services.md
+  - name: Upgrade Integration Services
+    href: ../../integration-services/install-windows/upgrade-integration-services.md
+  - name: Upgrade Integration Services Packages
+    href: ../../integration-services/install-windows/upgrade-integration-services-packages.md
+  - name: Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard
+    href: ../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md
+  - name: Migrate Scripts to VSTA
+    href: ../../sql-server/install/migrate-scripts-to-vsta.md
+  - name: Upgrade Lookup Transformations
+    href: ../../sql-server/install/upgrade-lookup-transformations.md
+  - name: Upgrade Master Data Services
+    href: upgrade-master-data-services.md
+  - name: Upgrade PowerPivot for SharePoint
+    href: upgrade-power-pivot-for-sharepoint.md
+  - name: Upgrade Replicated Databases
+    href: upgrade-replicated-databases.md
+  - name: Upgrade and Migrate Reporting Services
+    href: ../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+  - name: Migrate a Reporting Services Installation (Native Mode)
+    href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
+  - name: Migrate a Reporting Services Installation (SharePoint Mode)
+    href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
+  - name: Native to SharePoint Migration (SSRS)
+    href: ../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
+  - name: Upgrade a Report Server Database
+    href: ../../reporting-services/install-windows/upgrade-a-report-server-database.md
+  - name: Upgrade Reports
+    href: ../../reporting-services/install-windows/upgrade-reports.md
+  - name: Backup and Restore Operations for Reporting Services
+    href: ../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
+  - name: Upgrade SQL Server Management Tools
+    href: upgrade-sql-server-management-tools.md
+  - name: Upgrade How-to Topics
+    href: ../../sql-server/install/upgrade-how-to-topics.md
+  - name: Upgrade to SQL Server 2014 Using the Installation Wizard (Setup)
+    href: upgrade-sql-server-using-the-installation-wizard-setup.md
+  - name: Upgrade to a Different Edition of SQL Server 2014 (Setup)
+    href: upgrade-to-a-different-edition-of-sql-server-setup.md
+- name: Uninstall SQL Server 2014
+  href: ../../sql-server/install/uninstall-sql-server.md
+  items:
+  - name: Uninstall an Existing Instance of SQL Server (Setup)
+    href: ../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
+  - name: Remove Data Quality Server Objects
+    href: ../../sql-server/install/remove-data-quality-server-objects.md
+  - name: Uninstall and Remove Master Data Services
+    href: ../../sql-server/install/uninstall-and-remove-master-data-services.md
+  - name: Uninstall PowerPivot for SharePoint
+    href: ../../sql-server/install/uninstall-power-pivot-for-sharepoint.md
+  - name: Uninstall Reporting Services
+    href: ../../sql-server/install/uninstall-reporting-services.md

@@ -2,24 +2,22 @@
 title: "Issue Element (ssbdiagnose) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: tools-other
+ms.topic: conceptual
 helpviewer_keywords: 
   - "issue element"
   - "XML output file format [ssbdiagnose], issue element"
   - "ssbdiagnose"
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # Issue Element (ssbdiagnose)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Reports an issue that was found by the **ssbdiagnose** utility. The **ssbdiagnose** XML output file has one Issue element per issue reported.  
   
 ## Syntax  

@@ -2,12 +2,10 @@
 title: "OBJECT_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "OBJECT_ID"
@@ -25,13 +23,13 @@ helpviewer_keywords:
   - "viewing object IDs"
   - "verifying object exists"
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-caps.latest.revision: 63
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Returns the database object identification number of a schema-scoped object.  
   
@@ -43,8 +41,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]   
   object_name' [ ,'object_type' ] )  
 ```  
@@ -128,7 +124,7 @@ GO
  The following example returns the object ID for the `FactFinance` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  
   
 ```  
-SELECT OBJECT_ID(AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
+SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   
 ## See Also  

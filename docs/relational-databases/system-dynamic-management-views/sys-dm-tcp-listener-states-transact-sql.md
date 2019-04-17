@@ -2,12 +2,9 @@
 title: "sys.dm_tcp_listener_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_tcp_listener_states"
@@ -21,13 +18,12 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], listeners"
   - "sys.dm_tcp_listener_states dynamic management view"
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
-caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # sys.dm_tcp_listener_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Returns a row containing dynamic-state information for each TCP listener.  
   
@@ -36,8 +32,8 @@ manager: "jhubbard"
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**listener_id**|**int**|Listener’s internal ID. Is not nullable.<br /><br /> Primary key.|  
-|**ip_address**|**nvarchar48**|The listener IP address that is online and currently being listening to. Either IPv4 and IPv6 is allowed. If a listener possesses both types of addresses, they are listed separately. An IPv4 wildcard, is displayed as “0.0.0.0”. An IPv6 wildcard, is displayed as “::”.<br /><br /> Is not nullable.|  
+|**listener_id**|**int**|Listener's internal ID. Is not nullable.<br /><br /> Primary key.|  
+|**ip_address**|**nvarchar(48)**|The listener IP address that is online and currently being listening to. Either IPv4 and IPv6 is allowed. If a listener possesses both types of addresses, they are listed separately. An IPv4 wildcard, is displayed as "0.0.0.0". An IPv6 wildcard, is displayed as "::".<br /><br /> Is not nullable.|  
 |**is_ipv4**|**bit**|Type of IP address<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|The port number on which the listener is listening. Is not nullable.|  
 |**type**|**tinyint**|Listener type, one of:<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = Database mirroring<br /><br /> Is not nullable.|  

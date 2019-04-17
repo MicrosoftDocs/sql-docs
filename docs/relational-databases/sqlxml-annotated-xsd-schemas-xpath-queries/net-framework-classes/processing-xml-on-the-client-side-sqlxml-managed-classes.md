@@ -2,12 +2,10 @@
 title: "Processing XML on the Client Side (SQLXML Managed Classes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "processing XML on client side [SQLXML]"
@@ -16,12 +14,13 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, client-side XML formatting"
   - "ClientSideXml property"
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
-caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing XML on the Client Side (SQLXML Managed Classes)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This example illustrates the use of the ClientSideXml property. The application executes a stored procedure on the server. The result of the stored procedure (a two-column rowset) is processed on the client side to produce an XML document.  
   
  The following GetContacts stored procedure returns **FirstName** and **LastName** of employees in the Person.Contact table in the AdventureWorks database.  

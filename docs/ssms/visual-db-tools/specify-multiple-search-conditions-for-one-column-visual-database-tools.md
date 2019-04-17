@@ -2,13 +2,11 @@
 title: "Specify Multiple Search Conditions for One Column | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], multiple conditions"
   - "multiple search conditions"
@@ -16,12 +14,13 @@ helpviewer_keywords:
   - "OR operator"
   - "AND, Criteria pane"
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Specify Multiple Search Conditions for One Column (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 In some instances, you might want to apply a number of search conditions to the same data column. For example, you might want to:  
   
 -   Search for several different names in an `employee` table or for employees who are in different salary ranges. This type of search requires an OR condition.  

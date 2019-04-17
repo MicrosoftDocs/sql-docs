@@ -1,23 +1,19 @@
 ---
 title: "Monitoring Memory-Optimized System-Versioned Temporal Tables | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
-caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: craigg
 ---
 # Monitoring Memory-Optimized System-Versioned Temporal Tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   You can use existing views to track detailed and summarized memory consumption for every system-versioned memory-optimized table.  
   
@@ -97,9 +93,6 @@ WHERE TemporalTableSchema = 'dbo' AND  TemporalTableName = 'FXCurrencyPairs'
 GROUP BY TemporalTableSchema, TemporalTableName ;  
   
 ```  
-  
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Monitoring%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
 ## See Also  
  [System-Versioned Temporal Tables with Memory-Optimized Tables](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   

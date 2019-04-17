@@ -2,21 +2,19 @@
 title: "Native Compilation of Tables and Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/20/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology:
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Native Compilation of Tables and Stored Procedures
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 In-Memory OLTP introduces the concept of native compilation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can natively compile stored procedures that access memory-optimized tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is also able to natively compile memory-optimized tables. Native compilation allows faster data access and more efficient query execution than interpreted (traditional) [!INCLUDE[tsql](../../includes/tsql-md.md)]. Native compilation of tables and stored procedures produce DLLs.
 
 Native compilation of memory optimized table types is also supported. For more information, see [Faster temp table and table variable by using memory optimization](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
@@ -32,7 +30,7 @@ In-Memory OLTP compiles memory-optimized tables when they are created, and nativ
 
 The following query shows all table and stored procedure DLLs currently loaded in memory on the server:
 
-```tsql
+```sql
 SELECT
 		mod1.name,
 		mod1.description
@@ -56,7 +54,7 @@ Creating a memory-optimized table using the **CREATE TABLE** statement results i
 
 Consider the following sample script, which creates a database and a memory-optimized table:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -149,7 +147,7 @@ For more information about natively compiled stored procedures, see [Natively Co
 
 Consider the following sample stored procedure, which inserts rows in the table t1 from the previous example:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
 	with native_compilation,
 	     schemabinding,

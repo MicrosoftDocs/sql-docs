@@ -2,18 +2,15 @@
 title: "Delete Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
-caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Delete Packages
   In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], you can delete packages saved to the file system. If you delete a package, it is deleted permanently and it cannot be restored to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  

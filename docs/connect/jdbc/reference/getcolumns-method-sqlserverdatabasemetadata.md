@@ -2,23 +2,20 @@
 title: "getColumns Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.getColumns"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # getColumns Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -76,7 +73,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|The scale of the column.|  
 |NUM_PREC_RADIX|**smallint**|The radix of the column.|  
 |NULLABLE|**smallint**|Indicates if the column is nullable. It can be one of the following values:<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**String**|The comments associated with the column.<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] always returns null for this column.|  
+|REMARKS|**String**|The comments associated with the column.<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] always returns null for this column.|  
 |COLUMN_DEF|**String**|The default value of the column.|  
 |SQL_DATA_TYPE|**smallint**|Value of the SQL data type as it appears in the TYPE field of the descriptor. This column is the same as the DATA_TYPE column, except for the datetime and SQL-92 interval data types. This column always returns a value.|  
 |SQL_DATETIME_SUB|**smallint**|Subtype code for datetime and SQL-92 interval data types. For other data types, this column returns NULL.|  
@@ -93,18 +90,18 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|The name of the catalog where an XML schema collection name is defined. If the catalog name cannot be found, this variable contains an empty string. <sup>1</sup>|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|The name of the schema where an XML schema collection name is defined. If the schema name cannot be found, this is an empty string. <sup>1</sup>|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|The name of an XML schema collection. If the name cannot be found, this is an empty string. <sup>1</sup>|  
-|SS_DATA_TYPE|**tinyint**|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data type that is used by extended stored procedures.<br /><br /> **Note** For more information about the data types returned by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], see "Data Types (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.|  
+|SS_DATA_TYPE|**tinyint**|The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data type that is used by extended stored procedures.<br /><br /> **Note** For more information about the data types returned by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], see "Data Types (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.|  
   
- (1) This column will not be present if you are connecting to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)].  
+ (1) This column will not be present if you are connecting to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 > [!NOTE]  
->  For more information about the data returned by the getColumns method, see "sp_columns (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  For more information about the data returned by the getColumns method, see "sp_columns (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
- In the [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0, you will see the following behavior changes from earlier versions of the JDBC Driver:  
+ In the [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, you will see the following behavior changes from earlier versions of the JDBC Driver:  
   
  The DATA_TYPE column has the following changes:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Data Type|Return Type in JDBC Driver 2.0 (or, if connected to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]) and Associated Numeric Constant|Return Type in JDBC Driver 3.0 when connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] or later|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Type|Return Type in JDBC Driver 2.0 (or, if connected to [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]) and Associated Numeric Constant|Return Type in JDBC Driver 3.0 when connected to [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] or later|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |user-defined type larger than 8 kB|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
@@ -119,7 +116,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  The COLUMN_SIZE column has the following changes:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Data Type|Return Type in JDBC Driver 2.0|Return Type in JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Type|Return Type in JDBC Driver 2.0|Return Type in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |nvarchar(max)|1073741823|2147483647 (database metadata)|  
 |xml|1073741823|2147483647 (database metadata)|  
@@ -131,20 +128,20 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  The BUFFER_LENGTH column has the following change:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Data Type|Return Type in JDBC Driver 2.0|Return Type in JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Type|Return Type in JDBC Driver 2.0|Return Type in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |user-defined type larger than 8 kB||2147483647|  
   
  The TYPE_NAME column has the following changes:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Data Type|Return Type in JDBC Driver 2.0|Return Type in JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Type|Return Type in JDBC Driver 2.0|Return Type in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|------------------------------------|------------------------------------|  
 |varchar(max)|text|varchar|  
 |varbinary(max)|image|varbinary|  
   
  The DECIMAL_DIGITS column has the following changes:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Type|JDBC Driver 2.0|JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Type|JDBC Driver 2.0|JDBC Driver 3.0|  
 |--------------------------------------------------------------|---------------------|---------------------|  
 |time|null|7 (or smaller if specified)|  
 |date|null|null|  
@@ -153,7 +150,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  The SQL_DATA_TYPE column has the following changes:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Data Type|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 Data Value in JDBC Driver 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 2008 Data Value in JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Data Type|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 Data Value in JDBC Driver 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 Data Value in JDBC Driver 3.0|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|-9|  
 |nvarchar(max)|-1|-9|  

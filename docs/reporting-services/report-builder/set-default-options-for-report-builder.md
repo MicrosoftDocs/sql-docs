@@ -1,22 +1,17 @@
 ---
 title: "Set default options for Report Builder | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-builder
+
+
+ms.topic: conceptual
 f1_keywords: 
   - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Set default options for Report Builder
   In Report Builder, you can set a number of useful defaults to make report authoring easier and faster.  For example, if you can set or change the default report server, Report Builder saves your reports to the same report server automatically, unless you specify otherwise.  

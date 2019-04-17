@@ -2,15 +2,15 @@
 title: "Raw File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.rawfiledest.f1"
+  - "sql13.dts.designer.rawfiledestinationconnectionmanager.f1"
+  - "sql13.dts.designer.rawfiledestinationcolumns.f1"
 helpviewer_keywords: 
   - "append options [Integration Services]"
   - "destinations [Integration Services], Raw File"
@@ -18,10 +18,9 @@ helpviewer_keywords:
   - "writing raw data"
   - "Raw File destination"
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Raw File Destination
   The Raw File destination writes raw data to a file. Because the format of the data is native to the destination, the data requires no translation and little parsing. This means that the Raw File destination can write data more quickly than other destinations such as the Flat File and the OLE DB destinations.  
@@ -86,7 +85,7 @@ manager: "jhubbard"
   
 -   1300, productE  
   
- The new data is appended to the end of the raw file, and the sorted keys (PK) are out of order. In addition, the append operation didn’t change the file metadata (sort information). If you read the file by using the Raw File source, the component indicates that the file is still sorted on PK even though the data in the file is no longer in the correct order.  
+ The new data is appended to the end of the raw file, and the sorted keys (PK) are out of order. In addition, the append operation didn't change the file metadata (sort information). If you read the file by using the Raw File source, the component indicates that the file is still sorted on PK even though the data in the file is no longer in the correct order.  
   
  To keep the sorted keys in the correct order while appending data, you can design the package data flow as follows:  
   
@@ -100,7 +99,7 @@ manager: "jhubbard"
   
 5.  Write to RawFile2 by using the Raw File destination.  
   
-     RawFile1 is locked because it’s being read from, in the data flow.  
+     RawFile1 is locked because it's being read from, in the data flow.  
   
 6.  Replace RawFile1 with RawFile2.  
   
@@ -120,7 +119,7 @@ manager: "jhubbard"
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Raw File Custom Properties](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
@@ -128,7 +127,91 @@ manager: "jhubbard"
  For information about how to set properties of the component, see [Set the Properties of a Data Flow Component](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## Related Content  
- Blog entry, [Raw Files Are Awesome](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), on sqlservercentral.com.  
+ Blog entry, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), on sqlservercentral.com.  
+  
+## Raw File Destination Editor (Connection Manager Page)
+  Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  
+  
+ **What do you want to do?**  
+  
+-   [Open the Raw File Destination Editor](#open)  
+  
+-   [Set options on the Connection Manager tab](#connection)  
+  
+-   [Set options on the Columns tab](#mapping)  
+  
+###  <a name="open"></a> Open the Raw File Destination Editor  
+  
+1.  Add the Raw File destination to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Right-click the component and then click **Edit**.  
+  
+###  <a name="connection"></a> Set options on the Connection Manager tab  
+ **Access mode**  
+ Select how the file name is specified. Select **File name** to enter the file name and path directly, of **File name from variable** to specify a variable that contains the file name.  
+  
+ **File name** or **Variable name**  
+ Enter the name and path of the raw file, or select the variable that contains the file name.  
+  
+ **Write option**  
+ Select the method used to create and write to the file.  
+  
+ **Generate initial raw file**  
+ Click the button to generate an empty raw file that contains only the columns (metadata-only file), without having to run the package. The file contains the columns that you selected on the **Columns** page of the **Raw File Destination Editor**. You can point the Raw File source to this metadata-only file.  
+  
+ When you click **Generate initial raw file**, a message box appears. Click **OK** to proceed with creating the file. Click **Cancel** to select a different list of columns on the **Columns** page.  
+  
+###  <a name="mapping"></a> Set options on the Columns tab  
+ **Available Input Columns**  
+ Select one or more input columns to write to the raw file.  
+  
+ **Input Column**  
+ An input column is automatically added to this table when you select it under **Available Input Columns**, or you can select the input column directly in this table.  
+  
+ **Output Alias**  
+ Specify an alternate name to use for the output column.  
+  
+## Raw File Destination Editor (Columns Page)
+  Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  
+  
+ **What do you want to do?**  
+  
+-   [Open the Raw File Destination Editor](#open)  
+  
+-   [Set options on the Connection Manager tab](#connection)  
+  
+-   [Set options on the Columns tab](#mapping)  
+  
+###  <a name="open"></a> Open the Raw File Destination Editor  
+  
+1.  Add the Raw File destination to an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Right-click the component and then click **Edit**.  
+  
+###  <a name="connection"></a> Set options on the Connection Manager tab  
+ **Access mode**  
+ Select how the file name is specified. Select **File name** to enter the file name and path directly, of **File name from variable** to specify a variable that contains the file name.  
+  
+ **File name** or **Variable name**  
+ Enter the name and path of the raw file, or select the variable that contains the file name.  
+  
+ **Write option**  
+ Select the method used to create and write to the file.  
+  
+ **Generate initial raw file**  
+ Click the button to generate an empty raw file that contains only the columns (metadata-only file), without having to run the package. You can point the Raw File source to the metadata-only file.  
+  
+ When you click the button, a list of the columns appears. You can click cancel and modify the columns or click OK to proceed with creating the file.  
+  
+###  <a name="mapping"></a> Set options on the Columns tab  
+ **Available Input Columns**  
+ Select one or more input columns to write to the raw file.  
+  
+ **Input Column**  
+ An input column is automatically added to this table when you select it under **Available Input Columns**, or you can select the input column directly in this table.  
+  
+ **Output Alias**  
+ Specify an alternate name to use for the output column.  
   
 ## See Also  
  [Raw File Source](../../integration-services/data-flow/raw-file-source.md)   

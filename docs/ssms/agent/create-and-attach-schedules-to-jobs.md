@@ -2,13 +2,11 @@
 title: "Create and Attach Schedules to Jobs | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "jobs [SQL Server]"
   - "scheduling jobs [SQL Server]"
@@ -18,13 +16,18 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, scheduling"
   - "idle time [SQL Server]"
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create and Attach Schedules to Jobs
-Scheduling [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs means defining the condition or conditions that cause the job to begin running without user interaction. You can schedule a job to run automatically by creating a new schedule for the job, or by attaching an existing schedule to the job.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
+
+Scheduling [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs means defining the condition or conditions that cause the job to begin running without user interaction. You can schedule a job to run automatically by creating a new schedule for the job, or by attaching an existing schedule to the job.  
   
 There are two ways to create a schedule:  
   
@@ -36,7 +39,7 @@ After a schedule has been created, you can attach that schedule to multiple jobs
   
 A schedule can be based upon time or an event. For example, you can schedule a job to run at the following times:  
   
--   Whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent starts.  
+-   Whenever [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent starts.  
   
 -   Whenever CPU utilization of the computer is at a level you have defined as idle.  
   
@@ -47,7 +50,7 @@ A schedule can be based upon time or an event. For example, you can schedule a j
 As an alternative to job schedules, you can also create an alert that responds to an event by running a job.  
   
 > [!NOTE]  
-> Only one instance of the job can be run at a time. If you try to run a job manually while it is running as scheduled, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent refuses the request.  
+> Only one instance of the job can be run at a time. If you try to run a job manually while it is running as scheduled, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent refuses the request.  
   
 To prevent a scheduled job from running, you must do one of the following:  
   
@@ -57,7 +60,7 @@ To prevent a scheduled job from running, you must do one of the following:
   
 -   Detach the schedule from the job.  
   
--   Stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service.  
+-   Stop the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.  
   
 -   Delete the schedule.  
   
@@ -73,22 +76,22 @@ When you are attaching a schedule to a job, you should review the start date tha
 You can change the schedule start date after you attach the schedule to a job.  
   
 ## CPU Idle Schedules  
-To maximize CPU resources, you can define a CPU idle condition for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent uses the CPU idle condition setting to determine the best time to run jobs. For example, you can schedule a job to rebuild indexes during CPU idle time and slow production periods.  
+To maximize CPU resources, you can define a CPU idle condition for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uses the CPU idle condition setting to determine the best time to run jobs. For example, you can schedule a job to rebuild indexes during CPU idle time and slow production periods.  
   
-Before you define jobs to run during CPU idle time, determine the load on the CPU during normal processing. To do this, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] or Performance Monitor to monitor server traffic and collect statistics. You can then use the information you gather to set the CPU idle time percentage and duration.  
+Before you define jobs to run during CPU idle time, determine the load on the CPU during normal processing. To do this, use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or Performance Monitor to monitor server traffic and collect statistics. You can then use the information you gather to set the CPU idle time percentage and duration.  
   
-Define the CPU idle condition as a percentage below which CPU usage must remain for a specified time. Next, set the amount of time. When the CPU usage is below the specified percentage for the specified amount of time, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent starts all jobs that have a CPU idle time schedule. For more information on using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] or Performance Monitor to monitor CPU usage, see [Monitoring CPU Usage](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
+Define the CPU idle condition as a percentage below which CPU usage must remain for a specified time. Next, set the amount of time. When the CPU usage is below the specified percentage for the specified amount of time, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent starts all jobs that have a CPU idle time schedule. For more information on using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] or Performance Monitor to monitor CPU usage, see [Monitoring CPU Usage](../../relational-databases/performance-monitor/monitor-cpu-usage.md).  
   
 ## Related Tasks  
   
 |||  
 |-|-|  
 |**Description**|**Topic**|  
-|Describes how to create a schedule for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
-|Describes how to schedule a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent job.|[Schedule a Job](../../ssms/agent/schedule-a-job.md)|  
+|Describes how to create a schedule for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
+|Describes how to schedule a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Schedule a Job](../../ssms/agent/schedule-a-job.md)|  
 |Explains how to define the CPU idle condition for your server.|[Set CPU Idle Time and Duration &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## See Also  
-[sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  
-[sysjobschedules](http://msdn.microsoft.com/en-us/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
+[sp_help_jobschedule](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)  
+[sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   

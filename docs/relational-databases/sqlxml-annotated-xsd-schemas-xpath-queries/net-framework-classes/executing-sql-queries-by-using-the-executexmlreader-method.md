@@ -2,12 +2,10 @@
 title: "Executing SQL Queries by Using the ExecuteXMLReader Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "queries [SQLXML], SQLXML Managed Classes"
@@ -16,12 +14,13 @@ helpviewer_keywords:
   - "ExecuteXmlReader method"
   - "SQL queries [SQLXML]"
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing SQL Queries by Using the ExecuteXMLReader Method
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Instead of using the ExecuteToStream method, you can use the ExecuteXmlReader method of the SqlXmlCommand object to execute commands. This method returns an XmlReader object that can be used for further processing of the result (which in this example is printing the element or attribute names and the values).  
   
 > [!NOTE]  

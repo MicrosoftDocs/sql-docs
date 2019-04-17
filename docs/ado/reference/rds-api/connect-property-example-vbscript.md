@@ -1,27 +1,24 @@
 ---
 title: "Connect Property Example (VBScript) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Connect property [ADO], VBScript example"
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Connect Property Example (VBScript)
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
  This code shows how to set the [Connect](../../../ado/reference/rds-api/connect-property-rds.md) property at design time:  
   
@@ -30,7 +27,7 @@ manager: "jhubbard"
 .  
    <PARAM NAME="SQL" VALUE="Select * from Sales">  
    <PARAM NAME="CONNECT" VALUE="Provider=SQLOLEDB;Integrated Security=SSPI;Initial Catalog=Pubs">  
-   <PARAM NAME="Server" VALUE="http://MyWebServer">  
+   <PARAM NAME="Server" VALUE="https://MyWebServer">  
 .  
 </OBJECT>  
 ```  
@@ -83,7 +80,7 @@ BODY {
 </TBODY>  
 </TABLE>  
 <FORM name="frmInput">  
-    SERVER: <INPUT Name="txtServer" Size="103" Value="http://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
+    SERVER: <INPUT Name="txtServer" Size="103" Value="https://<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
     DATA SOURCE: <INPUT Name="txtDataSource" Size="93" Value="<%=Request.ServerVariables("SERVER_NAME")%>"><BR>  
     CONNECT: <INPUT Name="txtConnect" Size="100"><BR>  
     SQL: <INPUT Name="txtSQL" Size="110" Value="Select FirstName, LastName from Employees">  

@@ -1,45 +1,36 @@
 ---
-title: "Python Libraries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Python-to-SQL data type conversions - SQL Server Machine Learning
+description: Review the implicit and explicit data type converstions between Python and SQL Server in data science and machine learning solutions.
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 12/10/2018  
+ms.topic: conceptual
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 ---
-# Python Libraries and Data Types
+# Data type mappings between Python and SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-This topic describes the Python libraries that are included with the following products:
-
-+ SQL Server Machine Learning Services (In-Database)
-+ Microsoft Machine Learning Server (Standalone)
-
-This topic also lists unsupported data types, and lists the data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
+For Python solutions that run on the Python integration feature in SQL Server Machine Learning Services, review the list of unsupported data types, and data type conversions that might be performed implicitly when data is passed between Python and SQL Server.
 
 ## Python Version
 
-SQL Server 2017 CTP 2.0 includes a portion of the Anaconda distribution and Python 3.6.
+SQL Server 2017 Anaconda 4.2 distribution and Python 3.6.
 
-A subset of the RevoScaleR functionality (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, maybe a few others) is provided using Python APIS, using a new Python package **RevoScalePy**. You can use this packages to work with data using Pandas data frames, .XDF files, or SQL data queries.
+A subset of the RevoScaleR functionality (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, maybe a few others) is provided using Python APIs, using a new Python package **revoscalepy**. You can use this package to work with data using Pandas data frames, XDF files, or SQL data queries.
 
-For more information, see [What Is revoscalepy?](what-is-revoscalepy.md).
+For more information, see [revoscalepy module in SQL Server](ref-py-revoscalepy.md) and [revoscalepy function reference](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+
+Python supports a limited number of data types in comparison to SQL Server. As a result, whenever you use data from SQL Server in Python scripts, data might be implicitly converted to a compatible data type. However, often an exact conversion cannot be performed automatically, and an error is returned.
 
 ## Python and SQL Data Types
-
-Python supports a limited number of data types in comparison to SQL Server.
-
-As a result, whenever you use data from  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Python scripts, data might be implicitly converted to a compatible data type. However, often an exact conversion cannot be performed automatically, and an error is returned.
 
 This table lists the implicit conversions that are provided. Other data types are not supported.
 
 |SQLtype|Python type|
-|-|-|
+|-------|-----------|
 |**bigint**|`numeric`|
 |**binary**|`raw`|
 |**bit**|`bool`|
@@ -57,5 +48,5 @@ This table lists the implicit conversions that are provided. Other data types ar
 |**varchar(n)**|`str`|
 |**varchar(max)**|`str`|
 
-
+## See also
 

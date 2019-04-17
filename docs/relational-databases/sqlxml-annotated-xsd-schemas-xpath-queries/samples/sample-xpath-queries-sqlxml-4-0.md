@@ -2,12 +2,10 @@
 title: "Sample XPath Queries (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "examples [SQLXML], XPath"
@@ -16,12 +14,13 @@ helpviewer_keywords:
   - "mapping schema [SQLXML], queries"
   - "XPath queries [SQLXML], samples"
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sample XPath Queries (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   This section provides examples of XPath queries for SQLXML 4.0. For illustration purposes, these example XPath queries are specified in a template executed using ADO. Therefore, you must use a mapping schema file, SampleSchema1.xml, which is also provided in this section. Save this file in the directory where your templates are stored.  
   
 > [!NOTE]  

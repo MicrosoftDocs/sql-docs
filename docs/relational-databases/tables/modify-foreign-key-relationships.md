@@ -2,13 +2,11 @@
 title: "Modify Foreign Key Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 f1_keywords: 
   - "vdtsql.chm:65538"
   - "vdt.ppg.relationships"
@@ -16,15 +14,15 @@ helpviewer_keywords:
   - "foreign keys [SQL Server], modifying"
   - "modifying foreign keys"
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Foreign Key Relationships
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  You can modify the foreign key side of a relationship in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modifying a table’s foreign key changes which columns are related to columns in the primary key table.  
+  You can modify the foreign key side of a relationship in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modifying a table's foreign key changes which columns are related to columns in the primary key table.  
   
  **In This Topic**  
   
@@ -82,7 +80,7 @@ manager: "jhubbard"
      Verify all existing data in the table before the constraint was created or re-enabled, against the constraint.  
   
      **Tables and Columns Specifications Category**  
-     Expand to show which columns from which tables act as the foreign key and primary (or unique) key in the relationship. To edit or define these values, click the ellipsis button (**…**) to the right of the property field.  
+     Expand to show which columns from which tables act as the foreign key and primary (or unique) key in the relationship. To edit or define these values, click the ellipsis button (**...**) to the right of the property field.  
   
      **Foreign Key Base Table**  
      Shows which table contains the column acting as a foreign key in the selected relationship.  
@@ -139,7 +137,7 @@ manager: "jhubbard"
   
     -   **Set Default** Sets the value to the default value that is defined for the column if all foreign key columns for the table have defaults defined for them.  
   
-4.  On the **File** menu, click **Save***table name*.  
+4.  On the **File** menu, click **Save**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
  **To modify a foreign key**  

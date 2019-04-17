@@ -2,13 +2,11 @@
 title: "SQLGetDescField Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLGetDescField"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetDescField function [ODBC]"
 ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
-caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetDescField Function
 **Conformance**  
@@ -36,12 +33,12 @@ manager: "jhubbard"
 ```  
   
 SQLRETURN SQLGetDescField(  
-     SQLHDESC        DescriptorHandle,  
-     SQLSMALLINT     RecNumber,  
-     SQLSMALLINT     FieldIdentifier,  
-     SQLPOINTER      ValuePtr,  
-     SQLINTEGER      BufferLength,  
-     SQLINTEGER *    StringLengthPtr);  
+     SQLHDESC        DescriptorHandle,  
+     SQLSMALLINT     RecNumber,  
+     SQLSMALLINT     FieldIdentifier,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
 ```  
   
 ## Arguments  

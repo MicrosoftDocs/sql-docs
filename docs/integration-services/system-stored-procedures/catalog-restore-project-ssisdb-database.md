@@ -2,28 +2,25 @@
 title: "catalog.restore_project (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # catalog.restore_project (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Restores a project in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog to a previous version.  
   
 ## Syntax  
   
-```tsql  
-restore_project [ @folder_name = ] folder_name  
+```sql  
+catalog.restore_project [ @folder_name = ] folder_name  
     , [ @project_name = ] project _name  
     , [ @object_version_lsn = ] object_version_lsn  
   

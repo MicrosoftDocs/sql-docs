@@ -1,13 +1,9 @@
 ---
 title: "sys.external_library_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/03/2017"
-ms.prod: "sql-server-2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
+ms.date: "10/05/2017"
+ms.prod: sql
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "external_library_files"
@@ -18,12 +14,13 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "sys.external_library_files catalog view"
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.external_library_files (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Lists a row for each file that makes up an external library.
 
@@ -35,6 +32,7 @@ Lists a row for each file that makes up an external library.
 |platform_desc | nvarchar(60) |Name of the host platform. Valid values are 'WINDOWS', 'LINUX'. |
 
 ### See also  
+
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
-[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)
-[Package management for SQL Server R Services](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)  
+[Package management for SQL Server Machine Learning Service](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

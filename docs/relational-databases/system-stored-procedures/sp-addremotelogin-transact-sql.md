@@ -2,12 +2,10 @@
 title: "sp_addremotelogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addremotelogin_TSQL"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addremotelogin"
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # sp_addremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Adds a new remote login ID on the local server. This enables remote servers to connect and execute remote procedure calls.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Use linked servers and linked server stored procedures instead.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,13 +39,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## Arguments  
- [ @remoteserver **=** ] **'***remoteserver***'**  
+ [ @remoteserver **=** ] **'**_remoteserver_**'**  
  Is the name of the remote server that the remote login applies to. *remoteserver* is **sysname**, with no default. If only *remoteserver* is specified, all users on *remoteserver* are mapped to existing logins of the same name on the local server. The server must be known to the local server. This is added by using sp_addserver. When users on *remoteserver* connect to the local server that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute a remote stored procedure, they connect as the local login that matches their own login on *remoteserver*. *remoteserver* is the server that initiates the remote procedure call.  
   
- [ @loginame **=** ] **'***login***'**  
+ [ @loginame **=** ] **'**_login_**'**  
  Is the login ID of the user on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* is **sysname**, with a default of NULL. *login*must already exist on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If *login* is specified, all users on *remoteserver* are mapped to that specific local login. When users on *remoteserver* connect to the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute a remote stored procedure, they connect as *login*.  
   
- [ @remotename **=** ] **'***remote_name***'**  
+ [ @remotename **=** ] **'**_remote_name_**'**  
  Is the login ID of the user on the remote server. *remote_name* is **sysname**, with a default of NULL. *remote_name* must exist on *remoteserver*. If *remote_name* is specified, the specific user *remote_name* is mapped to *login* on the local server. When *remote_name* on *remoteserver* connects to the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to execute a remote stored procedure, it connects as *login*. The login ID of *remote_name* can be different from the login ID on the remote server, *login*.  
   
 ## Return Code Values  

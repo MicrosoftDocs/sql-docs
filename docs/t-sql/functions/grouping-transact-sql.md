@@ -2,12 +2,10 @@
 title: "GROUPING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "GROUPING"
@@ -22,13 +20,12 @@ helpviewer_keywords:
   - "GROUPING function"
   - "CUBE operator"
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Indicates whether a specified column expression in a GROUP BY list is aggregated or not. GROUPING returns 1 for aggregated or 0 for not aggregated in the result set. GROUPING can be used only in the SELECT \<select> list, HAVING, and ORDER BY clauses when GROUP BY is specified.  
   
@@ -65,19 +62,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `SalesQuota     TotalSalesYTD       Grouping`  
-  
- `------------   -----------------   --------`  
-  
- `NULL           1533087.5999          0`  
-  
- `250000.00      33461260.59           0`  
-  
- `300000.00      9299677.9445          0`  
-  
- `NULL           44294026.1344         1`  
-  
- `(4 row(s) affected)`  
+ ```
+ SalesQuota     TotalSalesYTD       Grouping  
+------------   -----------------   --------  
+NULL           1533087.5999          0  
+250000.00      33461260.59           0  
+300000.00      9299677.9445          0  
+NULL           44294026.1344         1  
+
+(4 row(s) affected)
+```  
   
 ## See Also  
  [GROUPING_ID &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-id-transact-sql.md)   

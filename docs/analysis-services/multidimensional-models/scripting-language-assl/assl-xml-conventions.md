@@ -1,43 +1,22 @@
 ---
 title: "ASSL XML Conventions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "whitespace [Analysis Services Scripting Language]"
-  - "trailing whitespace"
-  - "XSD data types [Analysis Services Scripting Language]"
-  - "inheritance [Analysis Services Scripting Language]"
-  - "cardinality [Analysis Services Scripting Language]"
-  - "white space [Analysis Services Scripting Language]"
-  - "ASSL, XML conventions"
-  - "defaults [Analysis Services Scripting Language]"
-  - "leading whitespace"
-  - "Analysis Services Scripting Language, XML conventions"
-  - "XML [Analysis Services Scripting Language]"
-  - "hierarchies [Analysis Services Scripting Language]"
-  - "inherited defaults [Analysis Services Scripting Language]"
-ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
-caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # ASSL XML Conventions
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services Scripting Language (ASSL) represents the hierarchy of objects as a set of element types, each of which defines the child elements they can contain.  
   
  To represent the object hierarchy, ASSL uses the following XML conventions:  
   
--   All objects and properties are represented as elements, except for standard XML attributes such as ‘xml:lang’.  
+-   All objects and properties are represented as elements, except for standard XML attributes such as 'xml:lang'.  
   
 -   Both element names and enumeration values follow the Microsoft .NET Framework naming convention of Pascal casing with no underscores.  
   
@@ -50,7 +29,7 @@ manager: "erikre"
   
  `<Database>`  
   
- `…`  
+ `...`  
   
  `<Dimensions>`  
   
@@ -79,7 +58,7 @@ manager: "erikre"
   
  `<Cubes>`  
   
- `<Cube xsi:type=”RegularCube”>`  
+ `<Cube xsi:type="RegularCube">`  
   
  `<Name>Sales</Name>`  
   
@@ -87,7 +66,7 @@ manager: "erikre"
   
  `</Cube>`  
   
- `<Cube xsi:type=”VirtualCube”>`  
+ `<Cube xsi:type="VirtualCube">`  
   
  `<Name>SalesAndInventory</Name>`  
   
@@ -122,10 +101,10 @@ manager: "erikre"
  Analysis Services uses the following standard XML Schema definition language (XSD) data types:  
   
  **Int**  
- An integer value in the range of -231 to 231 – 1.  
+ An integer value in the range of -231 to 231 - 1.  
   
  **Long**  
- An integer value in range of -263 to 263 – 1.  
+ An integer value in range of -263 to 263 - 1.  
   
  **String**  
  A string value that conforms to the following global rules:  

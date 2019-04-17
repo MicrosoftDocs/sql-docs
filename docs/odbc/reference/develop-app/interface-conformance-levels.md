@@ -2,23 +2,20 @@
 title: "Interface Conformance Levels | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "interface conformance levels [ODBC]"
   - "conformance levels [ODBC], interface"
   - "data sources [ODBC], conformance levels"
   - "ODBC drivers [ODBC], conformance levels"
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Interface Conformance Levels
 The purpose of leveling is to inform the application what features are available to it from the driver. A leveling scheme based on functions does not sufficiently achieve this goal. In ODBC 3.*x*, drivers are classified based on the features they possess. Supporting the feature can include supporting the function; it can also include supporting a descriptor field, a statement attribute, a "Y" value for an information type returned by **SQLGetInfo**, and so on.  
@@ -33,7 +30,7 @@ The purpose of leveling is to inform the application what features are available
   
  There are three ODBC interface conformance levels: Core, Level 1, and Level 2.  
   
-> [!NOTE]  
+> [!NOTE]
 >  These conformance levels have different requirements than the ODBC API conformance levels of the same name in ODBC 2*.x*. In particular, all the features implied by ODBC 2*.x* API conformance Level 1 are now part of the Core interface conformance level. As a result, many ODBC drivers may report Core-level interface conformance.  
   
  This section contains the following topics.  

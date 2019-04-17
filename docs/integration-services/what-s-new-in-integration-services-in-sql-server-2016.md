@@ -2,29 +2,36 @@
 title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.date: "09/28/2017"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services, what's new"
   - "what's new [Integration Services]"
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-caps.latest.revision: 183
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # What&#39;s New in Integration Services in SQL Server 2016
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- This topic describes the features that have been added or updated in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
-  
-## Improvements grouped by category  
+This topic describes the features that have been added or updated in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. It also includes features added or updated in the [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) during the SQL Server 2016 time frame.  
+
+## New for SSIS in Azure Data Factory
+
+With the public preview of Azure Data Factory version 2 in September 2017, you can now do the following things:
+-   Deploy packages to the SSIS Catalog database (SSISDB) on Azure SQL Database.
+-   Run packages deployed to Azure on the Azure-SSIS Integration Runtime, a component of Azure Data Factory version 2.
+
+For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+These new capabilities require SQL Server Data Tools (SSDT) version 17.2 or later, but do not require SQL Server 2017 or SQL Server 2016. When you deploy packages to Azure, the Package Deployment Wizard always upgrades the packages to the latest package format.
+
+## 2016 improvements by category  
   
 -   **Manageability**  
   
@@ -143,16 +150,16 @@ manager: "jhubbard"
   
 -   You restored the database from an older version of SQL Server.  
   
--   You did not remove the database from an Always On Availability Group before upgrading the SQL Server instance. This prevents the automatic upgrade of the database. For more info, see [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+-   You did not remove the database from an Always On Availability Group before upgrading the SQL Server instance. This prevents the automatic upgrade of the database. For more info, see [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
   
- For more info, see [SSIS Catalog &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md). 
+ For more info, see [SSIS Catalog &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Support for Always On in the SSIS Catalog  
- The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](https://msdn.microsoft.com/library/hh510230.aspx).  
+ The Always On Availability Groups feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. An availability group supports a failover environment for a discrete set of user databases known as availability databases that fail over together. For more information, see [Always On Availability Groups](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], SSIS introduces new capabilities that let you easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide high availability for the SSISDB database and its contents - projects, packages, execution logs, and so on - you can add the SSISDB database to an Always On Availability Group, just like any other user database. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
+ In SQL Server 2016, SSIS introduces new capabilities that let you easily deploy to a centralized SSIS Catalog (i.e. SSISDB user database). In order to provide high availability for the SSISDB database and its contents - projects, packages, execution logs, and so on - you can add the SSISDB database to an Always On Availability Group, just like any other user database. When a failover occurs, one of the secondary nodes automatically becomes the new primary node.  
   
- For a detailed overview and step-by-step instructions for enabling Always On for SSISDB, see [SSIS Catalog](../integration-services/service/ssis-catalog.md).  
+ For a detailed overview and step-by-step instructions for enabling Always On for SSISDB, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).  
 
 ####  <a name="IncrementalDeployment"></a> Incremental package deployment  
 The Incremental Package Deployment feature lets you deploy one or more packages to an existing or new project without deploying the whole project. You can incrementally deploy packages by using the following tools.  
@@ -167,14 +174,14 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
   
 -   The Management Object Model (MOM) API  
   
- For more info, see [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md.  
+ For more info, see [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
 
 ####  <a name="encrypted"></a> Support for Always Encrypted in the SSIS Catalog  
  SSIS already supports the Always Encrypted feature in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more info, see the following blog posts.  
   
--   [SSIS with Always Encrypted](http://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
   
--   [Lookup transformation with Always Encrypted](http://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
 
 ### Better debugging
 
@@ -187,7 +194,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
  The new **RuntimeLineage** logging level in the SSIS catalog collects the data required to track lineage information in the data flow. You can parse this lineage information to map the lineage relationship between tasks. ISVs and developers  can build custom lineage mapping tools with this information. 
 
 ####  <a name="CustomLogging"></a> New custom logging level in the SSIS catalog  
- Previous versions of the SSIS catalog let you choose from four built-in logging levels when you run a package: **None, Basic, Performance, or Verbose**. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] adds the **RuntimeLineage** logging level. In addition, you can now create and save multiple customized logging levels in the SSIS catalog, and pick the logging level to use every time you run a package. For each customized logging level,  select only the statistics and events you want to capture. Optionally include the event context to see variable values, connection strings, and task properties. For more info, see [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Previous versions of the SSIS catalog let you choose from four built-in logging levels when you run a package: **None, Basic, Performance, or Verbose**. SQL Server 2016 adds the **RuntimeLineage** logging level. In addition, you can now create and save multiple customized logging levels in the SSIS catalog, and pick the logging level to use every time you run a package. For each customized logging level,  select only the statistics and events you want to capture. Optionally include the event context to see variable values, connection strings, and task properties. For more info, see [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="ErrorColumn"></a> Column names for errors in the data flow  
  When you redirect rows in the data flow that contain errors to an error output, the output contains a numeric identifier for the column in which the error occurred, but does not display the name of the column. There are now several ways to find or display the name of the column in which the error occurred.  
@@ -200,7 +207,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
   
 -   In the Script Component or a custom data flow component, call the new <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> method of the IDTSComponentMetadata100 interface.  
   
- For more info about this improvement, see the following blog post by SSIS developer Bo Fan: [Error Column Improvements for SSIS Data Flow](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
+ For more info about this improvement, see the following blog post by SSIS developer Bo Fan: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
   
 > [!NOTE]  
 >  (This support has been expanded in subsequent releases. For more info, see [Expanded support for error column names](#getidstring) and [New IDTSComponentMetaData130 interface in the API](#CMD130).)  
@@ -210,7 +217,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
   
  The method GetIdentificationStringByLineageID has been renamed to <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. For more info, see [Column names for errors in the data flow](#ErrorColumn).  
   
- For more info about this change and about the error column improvement, see the following updated blog post. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ For more info about this change and about the error column improvement, see the following updated blog post. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  (In RC0, this method has been moved to the new <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> interface. For more info, see [New IDTSComponentMetaData130 interface in the API](#CMD130).)  
@@ -272,7 +279,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
  The Excel Connection Manager, the Excel Source, and the Excel Destination now provide explicit support for Excel 2016 data sources.  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 released  
- The Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016 has been released as part of the SQL Server 2016 Feature Pack. To download components of the Feature Pack, see [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297).
+ The Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016 has been released as part of the SQL Server 2016 Feature Pack. To download components of the Feature Pack, see [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).
  
 #### <a name="oracleteradata"></a> Connectors v4.0 for Oracle and Teradata released
 The Microsoft Connectors v4.0 for Oracle and Teradata have been released. To download the connectors, see [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
@@ -283,7 +290,7 @@ The destination adapters for loading data into PDW with AU5 have been released. 
 ### Expanded connectivity to the cloud
 
 ####  <a name="AFP2016"></a> Azure Feature Pack for SSIS released for SQL Server 2016  
- The Azure Feature Pack for Integration Services has been released for [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. The feature pack contains connection managers to connect to Azure data sources and tasks to do common Azure operations. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ The Azure Feature Pack for Integration Services has been released for SQL Server 2016. The feature pack contains connection managers to connect to Azure data sources and tasks to do common Azure operations. For more info, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
 #### <a name="dynamics"></a> Support for Microsoft Dynamics online resources released in Service Pack 1
 
@@ -302,18 +309,18 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
 ### Better install experience
 
 ####  <a name="Upgrade"></a> Upgrade blocked when SSISDB belongs to an Availability Group  
- If the SSIS catalog database (SSISDB) belongs to an Always On Availability Group, you have to remove SSISDB from the availability group, upgrade SQL Server, then add SSISDB back to the availability group. For more info, see [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+ If the SSIS catalog database (SSISDB) belongs to an Always On Availability Group, you have to remove SSISDB from the availability group, upgrade SQL Server, then add SSISDB back to the availability group. For more info, see [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
 
 ### Better design experience
 
 ####  <a name="OneDesigner"></a> Multi-targeting and multi-version support in SSIS Designer  
- You can now use SSIS Designer in SQL Server Data Tools (SSDT) for Visual Studio 2015 to create, maintain, and run packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012. To get SSDT, see [Download Latest SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx). 
+ You can now use SSIS Designer in SQL Server Data Tools (SSDT) for Visual Studio 2015 to create, maintain, and run packages that target SQL Server 2016, SQL Server 2014, or SQL Server 2012. To get SSDT, see [Download Latest SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
  In Solution Explorer, right-click on an Integration Services project and select **Properties** to open the property pages for the project. On the **General** tab of **Configuration Properties**, select the **TargetServerVersion** property,  and then choose SQL Server 2016, SQL Server 2014, or SQL Server 2012.  
    
  ![TargetServerVersion property in project properties dialog box](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
 
->   [!IMPORTANT]
+> [!IMPORTANT]
 > If you develop custom extensions for SSIS, see [Support multi-targeting in your custom components](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) and [Getting your SSIS custom extensions to be supported by the multi-version support of SSDT 2015 for SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  
 
 ### Better management experience in SQL Server Management Studio
@@ -333,7 +340,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
  The SQL Server Import and Export Wizard can now import data from, and save data to, Azure Blob Storage. For more info, see [Choose a Data Source &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) and [Choose a Destination &#40;SQL Server Import and Export Wizard&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016 released  
- The Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016 have been released as part of the SQL Server 2016 Feature Pack.  These components now support Oracle 12c in classic installation. (Multitenant installation is not supported) To download components of the Feature Pack, see [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297).  
+ The Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016 have been released as part of the SQL Server 2016 Feature Pack.  These components now support Oracle 12c in classic installation. (Multitenant installation is not supported) To download components of the Feature Pack, see [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).  
   
 ####  <a name="cdc2016"></a> CDC components updated for SQL Server 2016  
  The CDC (Change Data Capture) Control Task, Source, and Splitter Transformation components have been updated to provide full compatibility with SQL Server 2016. There is no new functionality and there are no changes in behavior.  
@@ -347,7 +354,7 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
  The Dimension Processing Destination does not work for Tabular models with the SQL 2016 compatibility level.  The Analysis Services Processing Task and the Partition Processing Destination are all you need for tabular processing. 
 
 ####  <a name="builtinR"></a> Support for Built-in R Services  
- SSIS already supports the built-in R services in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can use SSIS not only to extract data and load the output of analysis, but to build, run and periodically retrain R models. For more info, see the following log post. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](http://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
+ SSIS already supports the built-in R services in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You can use SSIS not only to extract data and load the output of analysis, but to build, run and periodically retrain R models. For more info, see the following log post. [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx). 
 
 ####  <a name="ValidateXML"></a> Rich XML validation output in the XML Task  
  Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task. Before the **ValidationDetails** property was available, XML validation by the XML Task returned only a true or false result, with no information about errors or their locations. Now, when you set **ValidationDetails** to true, the output file contains detailed information about every error including the line number and the position. You can use this information to understand, locate, and fix errors in XML documents. For more info, see [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  

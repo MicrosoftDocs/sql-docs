@@ -2,23 +2,20 @@
 title: "getHostNameInCertificate Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "getHostNameInCertificate Method (SQLServerDataSource)"
 apilocation: 
   - "getHostNameInCertificate Method (SQLServerDataSource)"
 apitype: "Assembly"
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # getHostNameInCertificate Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -2,13 +2,11 @@
 title: "SQLGetFunctions Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLGetFunctions"
 apilocation: 
@@ -19,10 +17,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetFunctions function [ODBC]"
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
-caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLGetFunctions Function
 **Conformance**  
@@ -36,9 +33,9 @@ manager: "jhubbard"
 ```  
   
 SQLRETURN SQLGetFunctions(  
-     SQLHDBC           ConnectionHandle,  
-     SQLUSMALLINT      FunctionId,  
-     SQLUSMALLINT *    SupportedPtr);  
+     SQLHDBC           ConnectionHandle,  
+     SQLUSMALLINT      FunctionId,  
+     SQLUSMALLINT *    SupportedPtr);  
 ```  
   
 ## Arguments  
@@ -80,7 +77,7 @@ SQLRETURN SQLGetFunctions(
 ## Comments  
  **SQLGetFunctions** always returns that **SQLGetFunctions**, **SQLDataSources**, and **SQLDrivers** are supported. It does this because these functions are implemented in the Driver Manager. The Driver Manager will map an ANSI function to the corresponding Unicode function if the Unicode function exists and will map a Unicode function to the corresponding ANSI function if the ANSI function exists. For information about how applications use **SQLGetFunctions**, see [Interface Conformance Levels](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
- The following is a list of valid values for *FunctionId* for functions that conform to the ISO 92 standards–compliance level:  
+ The following is a list of valid values for *FunctionId* for functions that conform to the ISO 92 standards-compliance level:  
   
 |FunctionId Value|FunctionId Value|  
 |----------|----------|  
@@ -106,14 +103,14 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- The following is a list of valid values for *FunctionId* for functions conforming to the Open Group standards–compliance level:  
+ The following is a list of valid values for *FunctionId* for functions conforming to the Open Group standards-compliance level:  
   
 |FunctionId Value|FunctionId Value|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- The following is a list of valid values for *FunctionId* for functions conforming to the ODBC standards–compliance level.  
+ The following is a list of valid values for *FunctionId* for functions conforming to the ODBC standards-compliance level.  
   
 |FunctionId Value|FunctionId Value|  
 |-|-|  
@@ -139,7 +136,7 @@ SQLRETURN SQLGetFunctions(
 ## SQL_FUNC_EXISTS Macro  
  The SQL_FUNC_EXISTS(*SupportedPtr*, *FunctionID*) macro is used to determine support of ODBC 3*.x* or earlier functions after **SQLGetFunctions** has been called with a *FunctionId* argument of SQL_API_ODBC3_ALL_FUNCTIONS. The application calls SQL_FUNC_EXISTS with the *SupportedPtr* argument set to the *SupportedPtr* passed in *SQLGetFunctions*, and with the *FunctionID* argument set to the **#define** for the function. SQL_FUNC_EXISTS returns SQL_TRUE if the function is supported, and SQL_FALSE otherwise.  
   
-> [!NOTE]  
+> [!NOTE]
 >  When working with an ODBC 2*.x* driver, the ODBC 3*.x* Driver Manager will return SQL_TRUE for **SQLAllocHandle** and **SQLFreeHandle** because **SQLAllocHandle** is mapped to **SQLAllocEnv**, **SQLAllocConnect**, or **SQLAllocStmt**, and because **SQLFreeHandle** is mapped to **SQLFreeEnv**, **SQLFreeConnect**, or **SQLFreeStmt**. **SQLAllocHandle** or **SQLFreeHandle** with a *HandleType* argument of SQL_HANDLE_DESC is not supported, however, even though SQL_TRUE is returned for the functions, because there is no ODBC 2*.x* function to map to in this case.  
   
 ## Code Example  
@@ -177,8 +174,8 @@ retcode = SQLGetFunctions(hdbc, SQL_API_ODBC3_ALL_FUNCTIONS, fExists);
 // SQLGetFunctions is completed successfully and SQLTables, SQLColumns, and SQLStatistics are supported by the driver.  
 if (reccode == SQL_SUCCESS &&   
 SQL_FUNC_EXISTS(fExists, SQL_API_SQLTABLES) == SQL_TRUE &&  
-   SQL_FUNC_EXISTS(fExists, SQL_API_SQLCOLUMNS) == SQL_TRUE &&  
-   SQL_FUNC_EXISTS(fExists, SQL_API_SQLSTATISTICS) == SQL_TRUE)   
+   SQL_FUNC_EXISTS(fExists, SQL_API_SQLCOLUMNS) == SQL_TRUE &&  
+   SQL_FUNC_EXISTS(fExists, SQL_API_SQLSTATISTICS) == SQL_TRUE)   
 {  
   
    // Continue with application  
@@ -201,11 +198,11 @@ retcode = SQLGetFunctions(hdbc, SQL_API_ALL_FUNCTIONS, fExists);
 /* SQLGetFunctions is completed successfully and SQLTables, SQLColumns, and SQLStatistics are supported by the driver. */  
 if (retcode == SQL_SUCCESS &&   
 fExists[SQL_API_SQLTABLES] == SQL_TRUE &&  
-   fExists[SQL_API_SQLCOLUMNS] == SQL_TRUE &&  
-   fExists[SQL_API_SQLSTATISTICS] == SQL_TRUE)   
+   fExists[SQL_API_SQLCOLUMNS] == SQL_TRUE &&  
+   fExists[SQL_API_SQLSTATISTICS] == SQL_TRUE)   
 {  
   
-   /* Continue with application */  
+   /* Continue with application */  
   
 }  
   

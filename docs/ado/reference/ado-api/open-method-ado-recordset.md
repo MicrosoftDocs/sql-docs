@@ -1,14 +1,12 @@
 ---
 title: "Open Method (ADO Recordset) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "Recordset15::raw_Open"
@@ -16,10 +14,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Open method [ADO]"
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Open Method (ADO Recordset)
 Opens a cursor on a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  
@@ -58,7 +55,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Using the **Open** method on a **Recordset** object opens a cursor that represents records from a base table, the results of a query, or a previously saved **Recordset**.  
   
- Use the optional *Source* argument to specify a data source using one of the following: a **Command** object variable, an SQL statement, a stored procedure, a table name, a URL, or a complete file path name. If *Source* is a file path name, it can be a full path ("c:\dir\file.rst"), a relative path ("..\file.rst"), or a URL ("http://files/file.rst").  
+ Use the optional *Source* argument to specify a data source using one of the following: a **Command** object variable, an SQL statement, a stored procedure, a table name, a URL, or a complete file path name. If *Source* is a file path name, it can be a full path ("c:\dir\file.rst"), a relative path ("..\file.rst"), or a URL ("<https://files/file.rst>").  
   
  It is not a good idea to use the *Source* argument of the **Open** method to perform an action query that does not return records because there is no easy way to determine whether the call succeeded. The **Recordset** returned by such a query will be closed. To perform a query that does not return records, such as a SQL INSERT statement, call the [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) method of a **Command** object or the [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) method of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object instead.  
   

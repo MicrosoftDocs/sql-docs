@@ -2,12 +2,10 @@
 title: "CREATE SERVICE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_SERVICE_TSQL"
@@ -21,13 +19,12 @@ helpviewer_keywords:
   - "CREATE SERVICE statement"
   - "contracts [Service Broker], service creation"
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ---
 # CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a new service. A [!INCLUDE[ssSB](../../includes/sssb-md.md)] service is a name for a specific task or set of tasks. [!INCLUDE[ssSB](../../includes/sssb-md.md)] uses the name of the service to route messages, deliver messages to the correct queue within a database, and enforce the contract for a conversation.  
   
@@ -54,7 +51,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Sets the owner of the service to the specified database user or role. When the current user is **dbo** or **sa**, *owner_name* may be the name of any valid user or role. Otherwise, *owner_name* must be the name of the current user, the name of a user that the current user has IMPERSONATE permission for, or the name of a role to which the current user belongs.  
   
- ON QUEUE [ *schema_name***.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Specifies the queue that receives messages for the service. The queue must exist in the same database as the service. If no *schema_name* is provided, the schema is the default schema for the user that executes the statement.  
   
  *contract_name*  

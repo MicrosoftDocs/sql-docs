@@ -2,18 +2,14 @@
 title: "Get started with this simple example of the Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.technology: integration-services
+ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Get started with this simple example of the Import and Export Wizard
 Learn what to expect in the SQL Server Import and Export Wizard by walking through a common scenario - importing data from an Excel spreadsheet to a SQL Server database. Even if you plan to use a different source and a different destination, this topic shows you most of what you need to know about running the wizard.
@@ -38,6 +34,8 @@ You start the wizard from the Microsoft SQL Server 2016 group on the Windows Sta
 
 > [!NOTE]
 > For this example, you pick the 32-bit wizard because you have the 32-bit version of Microsoft Office installed. As a result, you have to use the 32-bit data provider to connect to Excel. For many other data sources, you can typically pick the 64-bit wizard.
+>
+> To use the 64-bit version of the SQL Server Import and Export Wizard, you have to install SQL Server. SQL Server Data Tools (SSDT) and SQL Server Management Studio (SSMS) are 32-bit applications and only install 32-bit files, including the 32-bit version of the wizard.
 
 For more info, see [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md).
 
@@ -51,9 +49,12 @@ You probably don't want to see this page again, so go ahead and click **Do not s
 ## Step 3 - Pick Excel as your data source
 On the next page, **Choose a Data Source**, you pick Microsoft Excel as your data source. Then you browse to pick the Excel file. Finally you specify the Excel version that you used to create the file.
 
+> [!IMPORTANT]
+> For detailed info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
 ![Choose the Excel data source](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-For more info about connecting to Excel, see [Connect to an Excel Data Source](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). For more info about this page of the wizard, see [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
+For more info about this page of the wizard, see [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## Step 4 - Pick SQL Server as your destination
 On the next page, **Choose a Destination**, you pick Microsoft SQL Server as your destination by picking one of the data providers in the list that connects to SQL Server. In this example, you pick the **.Net Framework Data Provider for SQL Server**.
@@ -81,7 +82,7 @@ For more info about this page of the wizard, see [Specify Table Copy or Query](.
 On the next page, **Select Source Tables and Views**, you pick the table or tables that you want to copy from the data source. Then you map each selected source table to a new or existing destination table.
 
 In this example, by default the wizard has mapped the **WizardWalkthrough$** worksheet in the **Source** column to a new table with the same name at the SQL Server destination. (The Excel workbook only contains a single worksheet.)
--   The dollar sign ($) on the name of the source table indicates an Excel worksheet. (A named ranged in Excel is represented by its name alone.)
+-   The dollar sign ($) on the name of the source table indicates an Excel worksheet. (A named range in Excel is represented by its name alone.)
 -   The starburst on the destination table icon indicates that the wizard is going to create a new destination table.
 
 ![Select the table (before renaming)](../../integration-services/import-export-data/media/select-the-table-before-renaming.jpg)
@@ -107,7 +108,7 @@ While the **Column Mappings** dialog box is open, optionally click the **Edit SQ
 For more info about this page of the wizard, see [Create Table SQL Statement](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md).
 
 ## Optional step 9 - Preview the data to copy
-After you click **OK** to close the **Create Table SQL Statement** dialog box, then click **OK** again to close the **Column Mappings** dialog box, you're back on the **Select Source Tables and Views** page. Optionally click the **Preview** button to see a sample of the data that the the wizard is going to copy. In this example, it looks OK.
+After you click **OK** to close the **Create Table SQL Statement** dialog box, then click **OK** again to close the **Column Mappings** dialog box, you're back on the **Select Source Tables and Views** page. Optionally click the **Preview** button to see a sample of the data that the wizard is going to copy. In this example, it looks OK.
 
 ![Preview data to copy](../../integration-services/import-export-data/media/preview-data-to-copy.jpg)
 
@@ -151,4 +152,4 @@ Learn more about how the wizard works.
 
 -   **Learn how to connect to data sources and destinations.** If you're looking for info about how to connect to your data, select the page you want from the list here - [Connect to data sources with the SQL Server Import and Export Wizard](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). There's a separate page of documentation for each of several commonly used data sources.
 
-
+-   **Learn more about loading data from and to Excel.** If you're looking for info about connecting to Excel files, and about limitations and known issues for loading data from or to Excel files, see [Load data from or to Excel with SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

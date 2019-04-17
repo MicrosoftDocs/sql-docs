@@ -2,12 +2,10 @@
 title: "Comparison Expressions (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
 dev_langs: 
   - "XML"
@@ -19,13 +17,12 @@ helpviewer_keywords:
   - "comparison operators [XQuery]"
   - "value comparison operators"
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "rothja"
+ms.author: "jroth"
+manager: craigg
 ---
 # Comparison Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery provides the following types of comparison operators:  
   
@@ -80,7 +77,7 @@ select @x.query('/a[1] < "17"')
  The following query returns small-size pictures of a product model from the product catalog provided in the AdventureWorks sample database. The query compares a sequence of atomic values returned by `PD:ProductDescription/PD:Picture/PD:Size` with a singleton sequence, "small". If the comparison is True, it returns the <Picture\> element.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
 SELECT CatalogDescription.query('         
     for $P in /PD:ProductDescription/PD:Picture[PD:Size = "small"]         
     return $P') as Result         
@@ -92,8 +89,8 @@ WHERE  ProductModelID=19
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.value('         
    /aci:AdditionalContactInfo//act:telephoneNumber/act:number = "112-111-1111"', 'nvarchar(10)') as Result         
@@ -105,8 +102,8 @@ WHERE ContactID=1
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo' AS aci)  
   
 SELECT AdditionalContactInfo.query('         
   if (/aci:AdditionalContactInfo//act:telephoneNumber/act:number = ("222-222-2222","112-111-1111"))         
@@ -123,11 +120,11 @@ WHERE ContactID=1
   
 ```  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
     111-111-1111  
 \</act:number>  
 \<act:number   
-  xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
+  xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
     112-111-1111  
 \</act:number>   
 ```  
@@ -154,7 +151,7 @@ WHERE ContactID=1
   
 ```  
 SELECT CatalogDescription.query('         
-              declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";         
+              declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";         
               for $P in /PD:ProductDescription/PD:Picture[PD:Size eq "small"]         
               return         
                     $P         
@@ -175,7 +172,7 @@ WHERE ProductModelID=19
   
 ```  
 \<PD:Picture   
-  xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+  xmlns:PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
   \<PD:Angle>front\</PD:Angle>  
   \<PD:Size>small\</PD:Size>  
   \<PD:ProductPhotoID>31\</PD:ProductPhotoID>  
@@ -190,7 +187,7 @@ WHERE ProductModelID=19
  The following query checks whether the work center location 10 is the first in the manufacturing process of a specific product model.  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS AWMI)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS AWMI)  
   
 SELECT ProductModelID, Instructions.query('         
     if (  (//AWMI:root/AWMI:Location[@LocationID=10])[1]         
@@ -226,8 +223,8 @@ ProductModelID       Result
   
 ```  
 WITH XMLNAMESPACES (  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
-  'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM)  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
+  'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM)  
   
 SELECT CatalogDescription.value('  
      (/PD:ProductDescription/PD:Features/WM:Warranty)[1] <<   

@@ -1,30 +1,28 @@
 ---
-title: "Monitor R Services using Custom Reports in Management Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: 13
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
+title: Monitor R Services using custom reports in Management Studio - SQL Server Machine Learning Services
+ms.prod: sql
+ms.technology: machine-learning
+
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 ---
-# Monitor R Services using Custom Reports in Management Studio
-To make it easier to manage SQL Server R Services, the product team has provided a number of sample custom reports that you can add to SQL Server Management Studio, to view R Services details such as:
+# Monitor Machine Learning Services using custom reports in Management Studio
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-- A list of the active R sessions
-- The R configuration of the current instance
-- Execution statistics for the R runtime
-- A list of extended events for R Services
-- A list of R packages installed on the current instance
+To make it easier to manage instance used for machine learning, the product team has provided a number of sample custom reports that you can add to SQL Server Management Studio. In these reports, you can view details such as:
 
-This topic explains how to install and use the reports. For more information about custom reports in Management Studio, see [Custom reports in Management Studio](~/ssms/object/custom-reports-in-management-studio.md).
+- Active R or Python sessions
+- Configuration settings for the instance
+- Execution statistics for machine learning jobs
+- Extended events for R Services
+- R or Python packages installed on the current instance
+
+This article explains how to install and use the custom reports provided specifically for machine leaerning. 
+
+For a general introduction to reports in Management Studio, see [Custom reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
 ## How to install the reports
 
@@ -39,10 +37,13 @@ To use these reports:
 
 ### Step 1. Download the reports
 
-1. Open the GitHub repository that contains [SQL Server product samples](https://github.com/Microsoft/sql-server-samples), and download the sample reports from this page: 
+1. Open the GitHub repository that contains [SQL Server product samples](https://github.com/Microsoft/sql-server-samples), and download the sample reports. 
 
-   + [SSMS Custom Reports](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/ssms-custom-reports)
-      
+    + [SSMS custom reports](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
+
+    > [!NOTE]
+    > The reports can be used with either SQL Server 2017 Machiine Learning Services, or SQL Server 2016 R Services.
+
 2. To download the samples, you can also log into GitHub and make a local fork of the samples. 
 
 ### Step 2. Copy the reports to Management Studio
@@ -59,64 +60,51 @@ To use these reports:
 ### Step 3. Run the reports
 
 5. In Management Studio, right-click the **Databases** node for the instance where you want to run the reports.
-6. Click **Reports**, and then click **Custom Reports**. 
+6. Click **Reports**, and then click **Custom Reports**.
 7. In the **Open File** dialog box, locate the custom reports folder.
 8. Select one of the RDL files you downloaded, and then click **Open**.
 
 > [!IMPORTANT]
-> On some computers, such as those with display devices with high DPI or greater than 1080p resolution, or in some remote desktop sessions, these reports cannot be used. There is a bug in the report viewer control in SSMS that crashes the report.  
+> On some computers, such as those with display devices with high DPI or greater than 1080p resolution, or in some remote desktop sessions, these reports cannot be used. There is a bug in the report viewer control in SSMS that crashes the report.
 
+## Report list
 
-## Report List
-
-The product samples repository in GitHub currently includes the following reports for SQL Server R Services:
+The product samples repository in GitHub currently includes the following reports:
 
 + **R Services - Active Sessions**
 
-  Use this report to view the users who are currently connected to the SQL instance and running R jobs. 
+  Use this report to view the users who are currently connected to the SQL Server instance and running machine learning jobs. 
   
 + **R Services - Configuration**
 
-  Use this report to view the properties of the R runtime and configuration of R Services. The report will indicate whether a restart is required, and will check for required network protocols. 
+  Use this report to view the configuration of the external script runtime and related services. The report will indicate whether a restart is required, and will check for required network protocols. 
   
-  Implied authentication is required for running R in a SQL compute context, To check this, the report verifies whether a database login exists for the group SQLRUserGroup.
-
-  > [!NOTE]
-  > For more information about these fields, see [Package metadata](http://r-pkgs.had.co.nz/description.html), by Hadley Wickam. For example, the *Nickname* field for the R runtime was introduced to help differentiate between releases. 
+  Implied authentication is required for machine learning tasks that run in SQL Server as a compute context. To verify that implied authentication is configured, the report verifies whether a database login exists for the group SQLRUserGroup.
 
  + **R Services - Configure Instance** 
 
-   This report is intended to help you configure R Services after installation. You can run it from the preceding report if R Services is not configured correctly.
+   This report is intended to help you configure machine learning. You can also run this report to fix configuration errors found in the preceding report.
  
 + **R Services - Execution Statistics**
 
-  Use this report to view the execution statistics of R Services. For example, you can get the total number of R scripts that were executed, the number of parallel executions, and the most frequently used RevoScaleR functions.
+  Use this report to view execution statistics for machine learning jobs. For example, you can get the total number of R scripts that were executed, the number of parallel executions, and the most frequently used RevoScaleR functions. Click **View SQL Script** to get the complete T-SQL code behind this report.
+
   Currently the report monitors only statistics for RevoScaleR package functions.
-  Click **View SQL Script** to get the T-SQL code for this report. 
 
 + **R Services - Extended Events**
 
-  Use this report to view a list of the extended events that are available for monitoring R script execution. 
-  Click **View SQL Script** to get the T-SQL code for this report.
+  Use this report to view a list of the extended events that are available for monitoring tasks related to external script runtimes. Click **View SQL Script** to get the complete T-SQL code behind this report.
 
 + **R Services - Packages**
 
-  Use this report to view a list of the R packages installed on the SQL Server instance. Currently the report includes these package properties: 
-  + Package (name)
-  + Version 
-  + Depends
-  + License
-  + Built
-  + Lib Path
+  Use this report to view a list of the R or Python packages installed on the SQL Server instance.
 
 + **R Services - Resource Usage**
 
-  Use this report to view consumption of CPU, memory, and I/O resources by SQL Server R scripts execution. You can also view the memory setting of external resource pools. 
+  Use this report to view consumption of CPU, memory, and I/O resources by external script execution. You can also view the memory setting of external resource pools.
 
+## See also
 
-## See Also
+[Monitoring services](managing-and-monitoring-r-solutions.md)
 
-[Monitoring R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
-
-[Extended events for R Services](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
-
+[Extended events for R Services](extended-events-for-sql-server-r-services.md)

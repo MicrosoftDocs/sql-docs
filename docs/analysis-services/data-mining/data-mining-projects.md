@@ -1,22 +1,17 @@
 ---
 title: "Data Mining Projects | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Data Mining Projects
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A data mining project is part of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution. During the design process, the objects that you create in this project are available for testing and querying as part of a workspace database. When you want users to be able to query or browse the objects in the project, you must deploy the project to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] running in multidimensional mode.  
   
  This topic provides you with the basic information needed to understand and create data mining projects.  
@@ -89,7 +84,7 @@ manager: "jhubbard"
   
  A single data mining project can reference multiple data sources. Even though a mining model can use only one data source at a time, the project could have multiple models drawing on different data sources.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports data from many external providers, and SQL Server Data Mining can use both relational and cube data as a data source. However, if you develop both types of projects—models based on relational sources and models based on OLAP cubes—you might wish to develop and manage these in separate projects.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports data from many external providers, and SQL Server Data Mining can use both relational and cube data as a data source. However, if you develop both types of projects-models based on relational sources and models based on OLAP cubes-you might wish to develop and manage these in separate projects.  
   
 -   Typically models that are based on an OLAP cube should be developed within the OLAP design solution. One reason is that models based on a cube must process the cube to update data. Generally, you should use cube data only when that is the principal means of data storage and access, or when you require the aggregations, dimensions, and attributes created by the multidimensional project.  
   
@@ -212,11 +207,11 @@ manager: "jhubbard"
 |Provides links to information about each of the mining model viewers|[Data Mining Model Viewers](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Learn how to create a lift chart, profit chart, or classification matrix, or test a mining structure|[Testing and Validation &#40;Data Mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Learn about processing options and permissions|[Processing Data Mining Objects](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Provides more information about Analysis Services|[Multidimensional Model Databases &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Provides more information about Analysis Services|[Multidimensional Model Databases](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## See Also  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
  [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Workspace Database &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
+ [Workspace Database](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

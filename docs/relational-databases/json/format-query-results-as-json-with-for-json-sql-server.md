@@ -1,27 +1,24 @@
 ---
 title: "Format Query Results as JSON with FOR JSON (SQL Server) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "07/18/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR JSON"
   - "JSON, exporting"
   - "exporting JSON"
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
-caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Format Query Results as JSON with FOR JSON (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Format query results as JSON, or export data from SQL Server as JSON, by adding the **FOR JSON** clause to a **SELECT** statement. Use the **FOR JSON** clause to simplify client applications by delegating the formatting of JSON output from the app to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -33,14 +30,14 @@ Format query results as JSON, or export data from SQL Server as JSON, by adding 
   
 Here's an example of a **SELECT** statement with the **FOR JSON** clause and its output.
   
- ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
+ ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## Option 1 - You control output with FOR JSON PATH
-In **PATH** mode, you can use the dot syntax – for example, `'Item.Price'` – to format nested output.  
+In **PATH** mode, you can use the dot syntax - for example, `'Item.Price'` - to format nested output.  
 
 Here's a sample query that uses **PATH** mode with the **FOR JSON** clause. The following example also uses the **ROOT** option to specify a named root element. 
   
- ![Diagram of flow of FOR JSON output](../../relational-databases/json/media/forjson-example1.png "Diagram of flow of FOR JSON output")  
+ ![Diagram of flow of FOR JSON output](../../relational-databases/json/media/forjson-example1.png) 
 
 ### More info about FOR JSON PATH
 For more detailed info and examples, see [Format Nested JSON Output with PATH Mode &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
@@ -94,9 +91,9 @@ The output of the **FOR JSON** clause has the following characteristics:
     -   A small result set may contain a single row.
     -   A large result set splits the long JSON string across multiple rows.
         -   By default, SQL Server Management Studio (SSMS) concatenates the results into a single row when the output setting is **Results to Grid**. The SSMS status bar displays the actual row count.
-        -   Other client applications may require code to recombine lengthy results into a single, valid JSON string by concatenating the contents of multiple rows. For an example of this code in a C# application, see [Use FOR JSON output in a C# client app](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+        -   Other client applications may require code to recombine lengthy results into a single, valid JSON string by concatenating the contents of multiple rows. For an example of this code in a C# application, see [Use FOR JSON output in a C# client app](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app).
   
-     ![Example of FOR JSON output](../../relational-databases/json/media/forjson-example2.png "Example of FOR JSON output")  
+     ![Example of FOR JSON output](../../relational-databases/json/media/forjson-example2.png)  
   
 2.  The results are formatted as an array of JSON objects.  
   
@@ -142,14 +139,24 @@ Here's an example that demonstrates how the **FOR JSON** clause formats the JSON
 ```  
 
  For more info about what you see in the output of the **FOR JSON** clause, see the following topics.  
+
 -   [How FOR JSON converts SQL Server data types to JSON data types &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
-The **FOR JSON** clause uses the rules described in this topic to convert SQL data types to JSON types in the JSON output.  
+    The **FOR JSON** clause uses the rules described in this topic to convert SQL data types to JSON types in the JSON output.  
 
 -   [How FOR JSON escapes special characters and control characters &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
- The **FOR JSON** clause escapes special characters and represents control characters in the JSON output as described in this topic.  
+    The **FOR JSON** clause escapes special characters and represents control characters in the JSON output as described in this topic.  
 
-## Learn more about the built-in JSON support in SQL Server  
-For lots of specific solutions, use cases, and recommendations, see the [blog posts about the built-in JSON support](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) in SQL Server and in Azure SQL Database by Microsoft Program Manager Jovan Popovic.
+## Learn more about JSON in SQL Server and Azure SQL Database  
+  
+### Microsoft videos
+
+For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:
+
+-   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+
+-   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+
+-   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## See Also  
  [FOR Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   

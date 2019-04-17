@@ -2,12 +2,10 @@
 title: "sp_fulltext_column (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_fulltext_column_TSQL"
@@ -17,22 +15,18 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_column"
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_column (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Specifies whether or not a particular column of a table participates in full-text indexing.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) instead.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +42,16 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## Arguments  
- [ **@tabname=** ] **'***qualified_table_name***'**  
+`[ @tabname = ] 'qualified_table_name'`
  Is a one- or two-part table name. The table must exist in the current database. The table must have a full-text index. *qualified_table_name* is **nvarchar(517)**, with no default value.  
   
- [ **@colname=** ] **'***column_name***'**  
+`[ @colname = ] 'column_name'`
  Is the name of a column in *qualified_table_name*. The column must be either a character, **varbinary(max)** or **image** column and cannot be a computed column. *column_name* is **sysname**, with no default.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can create full-text indexes of text data stored in columns that are of **varbinary(max)** or **image** data type. Images and pictures are not indexed.  
   
- [ **@action=** ] **'***action***'**  
+`[ @action = ] 'action'`
  Is the action to be performed. *action* is **varchar(20)**, with no default value, and can be one of the following values.  
   
 |Value|Description|  
@@ -65,13 +59,13 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 |**add**|Adds *column_name* of *qualified_table_name* to the table's inactive full-text index. This action enables the column for full-text indexing.|  
 |**drop**|Removes *column_name* of *qualified_table_name* from the table's inactive full-text index.|  
   
- [ **@language=** ] **'***language_term***'**  
+`[ @language = ] 'language_term'`
  Is the language of the data stored in the column. For a list of languages included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Use 'Neutral' when a column contains data in multiple languages or in an unsupported language. The default is specified by the configuration option 'default full-text language'.  
   
- [ **@type_colname =** ] **'***type_column_name***'**  
+`[ @type_colname = ] 'type_column_name'`
  Is the name of a column in *qualified_table_name* that holds the document type of *column_name*. This column must be **char**, **nchar**, **varchar**, or **nvarchar**. It is only used when the data type of *column_name* is of type **varbinary(max)** or **image**. *type_column_name* is **sysname**, with no default.  
   
 ## Return Code Values  

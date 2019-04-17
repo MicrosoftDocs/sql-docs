@@ -1,27 +1,24 @@
 ---
-title: "Failover and Failover Modes (Always On Availability Groups) | Microsoft Docs"
-ms.custom: ""
+title: "Failover modes for availability groups"
+description: "A description of the different failover modes available for databases participating in an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], failover"
   - "Availability Groups [SQL Server], failover modes"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 75
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # Failover and Failover Modes (Always On Availability Groups)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Within the context of an availability group, the primary role and secondary role of availability replicas are typically interchangeable in a process known as *failover*. Three forms of failover exist: automatic failover (without data loss), planned manual failover (without data loss), and forced manual failover (with possible data loss), typically called *forced failover*. Automatic and planned manual failover preserve all your data. An availability group fails over at the availability-replica level. That is, an availability group fails over to one of its secondary replicas (the current *failover target*).  
   
@@ -32,7 +29,7 @@ manager: "jhubbard"
   
  The form(s) of failover that a given availability replica supports is specified by the *failover mode* property. For a given availability replica, the possible failover modes depends on the [availability mode](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md) of the replica, as follows:  
   
--   **Synchronous-commit replicas** support two settings—automatic or manual. The "automatic" setting supports both automatic failover and manual failover. To prevent data loss, automatic failover and planned failover require that the failover target be a synchronous-commit secondary replica with a healthy synchronization state (this indicates that every secondary database on the failover target is synchronized with its corresponding primary database). Whenever a secondary replica does not meet both of these conditions, it supports only forced failover. Note that forced failover is also supported a replicas whose role is in the RESOLVING state.  
+-   **Synchronous-commit replicas** support two settings-automatic or manual. The "automatic" setting supports both automatic failover and manual failover. To prevent data loss, automatic failover and planned failover require that the failover target be a synchronous-commit secondary replica with a healthy synchronization state (this indicates that every secondary database on the failover target is synchronized with its corresponding primary database). Whenever a secondary replica does not meet both of these conditions, it supports only forced failover. Note that forced failover is also supported a replicas whose role is in the RESOLVING state.  
   
 -   **Asynchronous-commit replicas** support only the manual failover mode. Moreover, because they are never synchronized, they support only forced failover.  
   
@@ -66,7 +63,7 @@ manager: "jhubbard"
  A failover that can be initiated by a database administrator when no secondary replica is SYNCHRONIZED with the primary replica or the primary replica is not running and no secondary replica is failover ready. Forced failover risks possible data loss and is recommended strictly for disaster recovery. Forced failover is also known as forced manual failover because it can only be initiated manually. This is the only form of failover supported by in asynchronous-commit availability mode.  
   
  [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)]  
- Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An[!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
+ Within a given availability group, a pair of availability replicas (including the current primary replica) that are configured for synchronous-commit mode with automatic failover, if any. An [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]takes effect only if the secondary replica is currently SYNCHRONIZED with the primary replica.  
   
  [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)]  
  Within a given availability group, a set of two or three availability replicas (including the current primary replica) that are configured for synchronous-commit mode, if any. A [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]takes effect only if the secondary replicas are configured for manual failover mode and at least one secondary replica is currently SYNCHRONIZED with the primary replica.  
@@ -81,9 +78,9 @@ manager: "jhubbard"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Planned manual failover|No|Yes|Yes|  
-|Forced failover|Yes|Yes|Yes**\***|  
+|Forced failover|Yes|Yes|Yes**&#42;**|  
   
- **\***If you issue a forced failover command on a synchronized secondary replica, the secondary replica behaves the same as for a manual failover.  
+ **&#42;**If you issue a forced failover command on a synchronized secondary replica, the secondary replica behaves the same as for a manual failover.  
   
  The amount of time that the database is unavailable during a failover depends on the type of failover and its cause.  
   
@@ -250,7 +247,7 @@ manager: "jhubbard"
 ###  <a name="ForcedFailoverRisks"></a> Risks of Forcing Failover  
  It is essential to understand that forcing failover can cause data loss. Data loss is possible because the target replica cannot communicate with the primary replica and, therefore, cannot guarantee that the databases are synchronized. Forcing failover starts a new recovery fork. Because the original primary databases and secondary databases are on different recovery forks, each of them now contains data that the other database does not contain: each original primary database contains whatever changes were not yet sent from its send queue to the former secondary database (the unsent log); the former secondary databases contain whatever changes occur after failover was forced.  
   
- If failover is forced because the primary replica has failed, potential data loss is depends on whether any transaction logs had not been sent to the secondary replica before the failure. Under the asynchronous-commit mode, accumulated unsent log is always a possibility. Under synchronous-commit mode, this is possible only until the secondary databases becomes synchronized.  
+ If failover is forced because the primary replica has failed, potential data loss depends on whether or not any transaction logs had been sent to the secondary replica before the failure. Under the asynchronous-commit mode, accumulated unsent log is always a possibility. Under synchronous-commit mode, this is possible only until the secondary databases become synchronized.  
   
  The following table summarizes the possibility of data loss for a particular database on the replica to which you force failover.  
   
@@ -260,14 +257,14 @@ manager: "jhubbard"
 |Synchronous-commit|No|Yes|  
 |Asynchronous-commit|No|Yes|  
   
- Secondary databases track only two recovery forks, so if you perform multiple forced failovers, any secondary database that did start data synchronization with the previous force failover might not be able to resume. If this occurs, any secondary databases that cannot be resumed will need to be removed from the availability group, restored to the correct point in time, and rejoined to the availability group. A restore will not work across multiple recovery forks, therefore, be sure to perform a log backup after performing more than one forced failover.  
+ Secondary databases track only two recovery forks, so if you perform multiple forced failovers, any secondary database that did start data synchronization with the previous force failover might not be able to resume. If this occurs, any secondary databases that cannot be resumed will need to be removed from the availability group, restored to the correct point in time, and rejoined to the availability group. Error 1408 with state 103 may be observed in this scenario (Error: 1408, Severity: 16, State: 103). A restore will not work across multiple recovery forks, therefore, be sure to perform a log backup after performing more than one forced failover.  
   
 ###  <a name="WhyFFoPostForcedQuorum"></a> Why Forced Failover is Required After Forcing Quorum  
  After quorum is forced on the WSFC cluster (*forced quorum*) you need to perform a forced failover (with possible data loss) on each availability group. The forced failover is required because the real state of the WSFC cluster values might have been lost. Preventing normal failovers after a forced quorum is required because of the possibility than an unsynchronized secondary replica would appear to be synchronized on the reconfigured WSFC cluster.  
   
  For example, consider a WSFC cluster that hosts an availability group on three nodes:  Node A hosts the primary replica and Node B and Node C each hosts a secondary replica. Node C gets disconnected from the WSFC cluster while the local secondary replica is SYNCHRONIZED.  But Node A and Node B retain a healthy quorum and the availability group remains online. On Node A, the primary replica continues to accept updates, and on Node B, the secondary replica continues to synchronize with the primary replica. The secondary replica on Node C becomes unsynchronized and falls increasingly behind the primary replica. However, because Node C is disconnected, the replica remains, incorrectly, in the SYNCHRONIZED state.  
   
- If quorum is lost and is then forced on Node A, the synchronization state of the availability group on the WSFC cluster should be correct—with the secondary replica on Node C shown as UNSYNCHRONIZED. However, if quorum is forced on Node C, the synchronization of the availability group will be incorrect. The synchronization state on the cluster will have reverted back to when Node C was disconnected—with the secondary replica on Node C *incorrectly* shown as SYNCHRONIZED. Since planned manual failovers guarantee the safety of the data, they are disallowed for bring an availability group back online after quorum is forced.  
+ If quorum is lost and is then forced on Node A, the synchronization state of the availability group on the WSFC cluster should be correct-with the secondary replica on Node C shown as UNSYNCHRONIZED. However, if quorum is forced on Node C, the synchronization of the availability group will be incorrect. The synchronization state on the cluster will have reverted back to when Node C was disconnected-with the secondary replica on Node C *incorrectly* shown as SYNCHRONIZED. Since planned manual failovers guarantee the safety of the data, they are disallowed for bring an availability group back online after quorum is forced.  
   
 ###  <a name="TrackPotentialDataLoss"></a> Tracking Potential Data Loss  
  When the WSFC cluster has a healthy quorum, you can estimate the current potential for data loss on databases. For a given secondary replica, the current potential for data loss depends on how far the local secondary databases are lagging behind the corresponding primary databases. Because the amount of lag varies over time, we recommend that you periodically track potential data loss for your unsynchronized secondary databases. Tracking lag involves comparing the Last Commit LSN and Last Commit Time for each primary database and its secondary databases, as follows:  
@@ -346,7 +343,7 @@ manager: "jhubbard"
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

@@ -1,31 +1,25 @@
 ---
-title: "How to Create a Stored Procedure Using sqlrutils | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "r-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "R"
-ms.assetid: 5ba99b49-481e-4b30-967a-a429b855b1bd
-caps.latest.revision: 10
-author: "jeannt"
-ms.author: "jeannt"
-manager: "jhubbard"
----
-# Create a Stored Procedure Using sqlrutils
+title: How to create a stored procedure using sqlrutils - SQL Server Machine Learning Services
+description: Use the sqlrutils R package in SQL Server to bundle R language code into a single function that can be passed as an argument to a stored procedure.
+ms.prod: sql
+ms.technology: machine-learning
 
-This topic describes the steps for converting your R code to run as a T-SQL stored procedure. For best possible results, your code might need to be modified somewhat, to ensure that all inputs can be parameterized.
+ms.date: 04/15/2018  
+ms.topic: conceptual
+author: dphansen
+ms.author: davidph
+manager: cgronlun
+---
+# Create a stored pProcedure using sqlrutils
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+This article describes the steps for converting your R code to run as a T-SQL stored procedure. For best possible results, your code might need to be modified somewhat, to ensure that all inputs can be parameterized.
 
 ## <a name="bkmk_rewrite"></a>Step 1. Rewrite R Script
 
 For the best results, you should rewrite your R code to encapsulate it as a single function.
 
-All variables used by the function should be defined inside the function, or should be defined as input parameters. See the [sample code](#samples) in this topic.
+All variables used by the function should be defined inside the function, or should be defined as input parameters. See the [sample code](#samples) in this article.
 
 Also, because the input parameters for the R function will become the input parameters of the SQL stored procedure, you must ensure that your inputs and outputs conform to the following type requirements:
 
@@ -232,6 +226,6 @@ myetl1function <- function() {
 
 ## See Also
 
-[Generating a Stored Procedure using sqlrutils](../../advanced-analytics/r-services/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
+[sqlrutils (SQL)](ref-r-sqlrutils.md)
 
 

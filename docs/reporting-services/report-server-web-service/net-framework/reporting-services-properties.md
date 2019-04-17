@@ -1,17 +1,12 @@
 ---
 title: "Reporting Services Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: report-server-web-service
+
+
+ms.topic: reference
 helpviewer_keywords: 
   - "report servers [Reporting Services], properties"
   - "properties [Reporting Services], about properties"
@@ -22,10 +17,8 @@ helpviewer_keywords:
   - "Web service [Reporting Services], properties"
   - "properties [Reporting Services]"
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
-caps.latest.revision: 34
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Reporting Services Properties
   The report server defines a set of system properties that are global to the report server and a set of item properties that are associated with an individual item stored in the report server database. Properties defined by the report server cannot be deleted, and in some cases they are read-only. An application can extend system properties and item properties by adding additional user-defined properties to the system and item properties.  

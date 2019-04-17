@@ -2,12 +2,10 @@
 title: "sp_helpdb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpdb"
@@ -17,19 +15,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpdb"
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_helpdb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Reports information about a specified database or all databases.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +34,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***name***'**  
+`[ @dbname = ] 'name'`
  Is the name of the database for which information is reported. *name* is **sysname**, with no default. If *name* is not specified, **sp_helpdb** reports on all databases in the **sys.databases** catalog view.  
   
 ## Return Code Values  
@@ -85,14 +78,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### A. Returning information about a single database  
  The following example displays information about the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### B. Returning information about all databases  
  This following example displays information about all databases on the server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

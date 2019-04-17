@@ -2,12 +2,10 @@
 title: "sp_add_jobserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_jobserver"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_jobserver"
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sp_add_jobserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Targets the specified job at the specified server.  
   
@@ -38,17 +35,17 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## Arguments  
- [ **@job_id =** ] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@server_name =** ] **'***server***'**  
- The name of the server at which to target the job. *server* is **nvarchar(30)**, with a default of N'(LOCAL)'. *server*can be either **(LOCAL)** for a local server, or the name of an existing target server.  
+`[ @server_name = ] 'server'`
+ The name of the server at which to target the job. *server* is **nvarchar(30)**, with a default of N'(LOCAL)'. *server* can be either **(LOCAL)** for a local server, or the name of an existing target server.  
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  
@@ -70,7 +67,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Only members of the **sysadmin** fixed server role can execute **sp_add_jobserver** for jobs that involve multiple servers.  
   

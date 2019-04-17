@@ -1,16 +1,9 @@
 ---
 title: "sys.resource_usage (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: 
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.resource_usage_TSQL"
@@ -23,20 +16,20 @@ helpviewer_keywords:
   - "resource_usage"
   - "sys.resource_usage"
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-caps.latest.revision: 15
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: "jhubbard"
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.resource_usage (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  This feature is in a preview state. Do not take a dependency on the specific implementation of this feature because the feature might be changed or removed in a future release.  
->   
+> 
 >  While in a preview state, the [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] operations team might turn data collection off and on for this DMV:  
->   
+> 
 >  -   When turned on, the DMV returns current data as it is aggregated.  
 > -   When turned off, the DMV returns historical data, which might be stale.  
   

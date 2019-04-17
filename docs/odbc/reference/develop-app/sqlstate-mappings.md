@@ -2,22 +2,19 @@
 title: "SQLSTATE Mappings | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "compatibility [ODBC], SQLSTATE"
   - "backward compatibility [ODBC], SQLSTATE"
   - "SQLSTATE [ODBC]"
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
-caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # SQLSTATE Mappings
 This topic discusses SQLSTATE values for ODBC 2.*x* and ODBC 3.*x*. For more information on ODBC 3.*x* SQLSTATE values, see [Appendix A: ODBC Error Codes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  

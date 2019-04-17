@@ -1,15 +1,12 @@
 ---
 title: "Set Report Processing Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-server
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "on-demand reports"
   - "report processing [Reporting Services], execution properties"
@@ -18,15 +15,13 @@ helpviewer_keywords:
   - "report snapshots [Reporting Services], running reports from"
   - "report execution snapshots [Reporting Services]"
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-caps.latest.revision: 43
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Set Report Processing Properties
   Report execution properties control how a report is processed. Execution properties must be set for each report individually.  
   
- To set report execution properties, open the report in Report Manager, and then navigate to the Execution properties page. For more information, see [Processing Options Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). You can also set properties using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; see [Processing Options Properties Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ To set report execution properties, open the report in Report Manager, and then navigate to the Execution properties page. For more information, see [Processing Options Properties Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). You can also set properties using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; see [Processing Options Properties Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
   
 ## Report Execution Modes  
  You can run a report either on demand or as a snapshot. The following section describes each approach.  

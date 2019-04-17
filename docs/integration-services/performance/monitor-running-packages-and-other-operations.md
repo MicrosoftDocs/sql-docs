@@ -1,22 +1,19 @@
 ---
 title: "Monitor Running Packages and Other Operations | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.custom: supportability
+ms.date: 06/04/2018
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.ssms.isoperations.executions.f1"
   - "sql13.ssis.ssms.isoperations.general.f1"
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Monitor Running Packages and Other Operations
   You can monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package executions, project validations, and other operations by using one of more of the following tools. Certain tools such as data taps are available only for projects that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  
@@ -38,7 +35,12 @@ manager: "jhubbard"
      For more information, see [Performance Counters](../../integration-services/performance/performance-counters.md).  
   
 -   Data taps  
-  
+
+> [!NOTE]
+> This article describes how to monitor running SSIS packages in general, and how to monitor running packages on premises. You can also run and monitor SSIS packages in Azure SQL Database. For more info, see [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Although you can also run SSIS packages on Linux, no monitoring tools are provided on Linux. For more info, see [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+
 ## Operation Types  
  Several different types of operations are monitored in the **SSISDB** catalog, on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Each operation can have multiple messages associated with it. Each message can be classified into one of several different types. For example, a message can be of type Information, Warning, or Error. For the full list of message types, see the documentation for the Transact-SQL [catalog.operation_messages &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) view. For a full list of the operations types, see [catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
   
@@ -173,7 +175,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  When you add custom reports to the **SSISDB** node under the **Databases** node, the SSISDB prefix is not necessary.  
   
- For instructions on how to create and add a custom report, see [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f).  
+ For instructions on how to create and add a custom report, see [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md).  
 
 ## View Reports for the Integration Services Server
   In the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server.  For more information about the reports, see [Reports for the Integration Services Server](#reports).  
@@ -197,5 +199,5 @@ manager: "jhubbard"
     -   **All Connections**  
 
 ## See Also  
- [Execution of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)   
- [Troubleshooting Reports for Package Execution](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [Execution of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [Troubleshooting Reports for Package Execution](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

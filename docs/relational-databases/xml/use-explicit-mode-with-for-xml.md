@@ -2,24 +2,22 @@
 title: "Use EXPLICIT Mode with FOR XML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "EXPLICIT FOR XML mode"
   - "FOR XML clause, EXPLICIT mode"
   - "FOR XML EXPLICIT mode"
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Use EXPLICIT Mode with FOR XML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   As described in the topic, [Constructing XML Using FOR XML](../../relational-databases/xml/for-xml-sql-server.md), RAW and AUTO mode do not provide much control over the shape of the XML generated from a query result. However, EXPLICIT mode provides the most flexibility in generating the XML you want from a query result.  
   
  The EXPLICIT mode query must be written in a specific way so that the additional information about the required XML, such as expected nesting in the XML, is explicitly specified as part of the query. Depending on the XML you request, writing EXPLICIT mode queries can be cumbersome. You may find that [Using PATH Mode](../../relational-databases/xml/use-path-mode-with-for-xml.md) with nesting is a simpler alternative to writing EXPLICIT mode queries.  

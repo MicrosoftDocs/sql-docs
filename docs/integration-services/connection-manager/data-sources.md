@@ -2,20 +2,17 @@
 title: "Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Integration Services], about data sources"
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Data Sources
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] includes a design-time object that you can use in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages: the data source.  
@@ -24,7 +21,7 @@ manager: "jhubbard"
   
 > **NOTE:** You can add data sources only to projects that are configured to use the package deployment model. If a project is configured to use the project deployment model, you use connection managers created at the project level to share connections, in place of using data sources.  
 >   
->  For more information about the deployment models, see [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx). For more information about converting a project to the project deployment model, see [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  For more information about the deployment models, see [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). For more information about converting a project to the project deployment model, see [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
   
  The advantages of using data sources in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages include the following:  
   

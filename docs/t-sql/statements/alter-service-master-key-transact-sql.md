@@ -2,12 +2,10 @@
 title: "ALTER SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_SERVICE_MASTER_KEY_TSQL"
@@ -24,13 +22,12 @@ helpviewer_keywords:
   - "encryption [SQL Server], Service Master Key"
   - "service master key [SQL Server], modifying"
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
 ---
 # ALTER SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Changes the service master key of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -98,7 +95,7 @@ ALTER SERVICE MASTER KEY
 > [!CAUTION]  
 >  The service master key is the root of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encryption hierarchy. The service master key directly or indirectly protects all other keys and secrets in the tree. If a dependent key cannot be decrypted during a forced regeneration, the data the key secures will be lost.  
   
- If you move SQL to another machine, then you have to use the same service account to decrypt the SMK – SQL Server will fix the Machine account encryption automatically.  
+ If you move SQL to another machine, then you have to use the same service account to decrypt the SMK - SQL Server will fix the Machine account encryption automatically.  
   
 ## Permissions  
  Requires CONTROL SERVER permission on the server.  

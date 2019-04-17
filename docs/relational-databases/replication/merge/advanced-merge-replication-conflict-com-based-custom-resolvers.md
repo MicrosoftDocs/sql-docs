@@ -2,23 +2,21 @@
 title: "COM-Based Custom Resolvers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "COM-based resolvers [SQL Server replication]"
   - "custom resolvers [SQL Server replication]"
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
-caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Advanced Merge Replication Conflict - COM-Based Custom Resolvers
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Custom resolvers provide more flexibility than the default resolution mechanism, and they can implement business logic required by applications using the replicated data. A COM-based custom resolver is a dynamic-link library (DLL) that implements the **ICustomResolver** COM interface, its methods and properties, and other supporting interfaces and type definitions designed specifically for conflict resolution.  
   
 > [!NOTE]  
@@ -30,7 +28,7 @@ manager: "jhubbard"
   
 -   The types of row changes you want to resolve, such as updates, inserts, and deletes, and whether the resolver should be invoked during the upload of merge changes, the download of merge changes, or both. You can specify one type of change, all changes, or any combination. The default merge conflict resolver handles any conflicts not covered by a custom resolver.  
   
--   Whether to use column tracking when resolving the conflict. When column-level tracking is on, only data in those columns where a conflict exists are flagged as a conflict, otherwise the data is merged. However, conflicts are resolved in the same way as row-level tracking: the priority winner overwrites the entire row of data (but the data can be a mix of values from the Publisher, Subscribers, or some altered values that were from neither Publisher nor Subscribers). For more information, see [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+-   Whether to use column tracking when resolving the conflict. When column-level tracking is on, only data in those columns where a conflict exists are flagged as a conflict, otherwise the data is merged. However, conflicts are resolved in the same way as row-level tracking: the priority winner overwrites the entire row of data (but the data can be a mix of values from the Publisher, Subscribers, or some altered values that were from neither Publisher nor Subscribers). For more information, see [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  To implement a COM-based custom conflict resolver, see [Implement a Custom Conflict Resolver for a Merge Article](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   

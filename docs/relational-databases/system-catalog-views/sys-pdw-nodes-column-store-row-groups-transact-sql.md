@@ -2,23 +2,20 @@
 title: "sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: 10
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_row_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Provides clustered columnstore index information on a per-segment basis to help the administrator make system management decisions in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Use **sys.pdw_nodes_column_store_row_groups** to determine which row groups have a high percentage of deleted rows and should be rebuilt.  
   
@@ -30,7 +27,7 @@ manager: "jhubbard"
 |**row_group_id**|**int**|ID of this row group. This is unique within the partition.|  
 |**dellta_store_hobt_id**|**bigint**|The hobt_id for delta row groups, or NULL if the row group type is not delta. A delta row group is a read/write row group that is accepting new records. A delta row group has the **OPEN** status. A delta row group is still in rowstore format and has not been compressed to columnstore format.|  
 |**state**|**tinyint**|ID number associated with the state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
-|**state_desccription**|**nvarchar(60)**|Description of the persistent state of the row group:<br /><br /> OPEN – A read/write row group that is accepting new records. An open row group is still in rowstore format and has not been compressed to columnstore format.<br /><br /> CLOSED – A row group that has been filled, but not yet compressed by the tuple mover process.<br /><br /> COMPRESSED – A row group that has filled and compressed.|  
+|**state_desccription**|**nvarchar(60)**|Description of the persistent state of the row group:<br /><br /> OPEN - A read/write row group that is accepting new records. An open row group is still in rowstore format and has not been compressed to columnstore format.<br /><br /> CLOSED - A row group that has been filled, but not yet compressed by the tuple mover process.<br /><br /> COMPRESSED - A row group that has filled and compressed.|  
 |**total_rows**|**bigint**|Total rows physically stored in the row group. Some may have been deleted but they are still stored. The maximum number of rows in a row group is 1,048,576 (hexadecimal FFFFF).|  
 |**deleted_rows**|**bigint**|Number of rows physically stored in the row group that are marked for deletion.<br /><br /> Always 0 for DELTA row groups.|  
 |**size_in_bytes**|**int**|Combined size, in bytes, of all the pages in this row group. This size does not include the size required to store metadata or shared dictionaries.|  

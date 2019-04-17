@@ -1,23 +1,19 @@
 ---
 title: "Azure HDInsight Pig Task | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "02/28/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afppigtask.f1"
   - "sql14.dts.designer.afppigtask.f1"
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Azure HDInsight Pig Task
 Use the **Azure HDInsight Pig Task** to run Pig script on an Azure HDInsight cluster.

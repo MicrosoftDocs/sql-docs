@@ -2,13 +2,11 @@
 title: "View Filter Information (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying filter information"
   - "filters [SQL Server], viewing"
@@ -16,12 +14,12 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
   - "viewing filter information"
 ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # View Filter Information (Transact-SQL)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to use built-in functions to view trace filter information.  
   
 ### To view filter information  

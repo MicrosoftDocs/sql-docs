@@ -1,40 +1,17 @@
 ---
 title: "Cube Cells (Analysis Services - Multidimensional Data) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "storing data [Analysis Services], cells"
-  - "hierarchies [Analysis Services], cells"
-  - "OLAP objects [Analysis Services], cells"
-  - "data members [Analysis Services]"
-  - "cubes [Analysis Services], cells"
-  - "empty cells [Analysis Services]"
-  - "nonleaf members"
-  - "cubes [Analysis Services], examples"
-  - "storage [Analysis Services], cells"
-  - "nonleaf cells"
-  - "calculated cells [Analysis Services]"
-  - "dimensions [Analysis Services], cells"
-  - "cells [Analysis Services]"
-  - "leaf members"
-  - "leaf cells"
-ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
-caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Cube Cells (Analysis Services - Multidimensional Data)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A cube is composed of cells, organized by measure groups and dimensions. A cell represents the unique logical intersection in a cube of one member from every dimension in the cube. For example, the cube described by the following diagram contains one measure group that has two measures, organized along three dimensions named Source, Route, and Time.  
   
  ![Cube diagram identifying a single cell](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-cubeintro5.gif "Cube diagram identifying a single cell")  

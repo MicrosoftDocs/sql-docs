@@ -1,26 +1,28 @@
 ---
-title: "Add Reporting Services Content Types to a SharePoint Library | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Add Reporting Services content types to a SharePoint library | Microsoft Docs"
+ms.date: 09/25/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-server-sharepoint
+
+
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Add Reporting Services Content Types to a SharePoint Library
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides predefined SharePoint content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Adding a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type.  
-  
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
-  
+# Add Reporting Services content types to a SharePoint library
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides predefined SharePoint content types that are used to manage shared data source (.rsds) files, report models (.smdl), and Report Builder report definition (.rdl) files. Adding a **Report Builder Report**, **Report Model**, and **Report Data Source** content type to a library enables the **New** command so that you can create new documents of that type.
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
  To add content types to a library, you must be a site administrator or have Full Control level of permission.  
   
  The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types and content type management will automatically be enabled in all document libraries for existing site collections created from the following site template types:  
@@ -32,7 +34,7 @@ manager: "erikre"
 > [!TIP]  
 >  If you have **not** previously configured content types for a library, first enable management of content types, then enable the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content types. See the procedures on enabling content type management in a single document library.  
   
- **Short video:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Short video:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w) (https://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **In this topic:**  
   
@@ -66,7 +68,7 @@ manager: "erikre"
   
 5.  Refresh the browser then click **Activate** for the **Report Server Integration Feature**.  
   
-     ![rs_reportserver_integration_deactive](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactive.gif "rs_reportserver_integration_deactive")  
+     ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="bkmk_enable_content_management"></a> To enable content type management for a single document library (SharePoint 2013)  
   
@@ -106,7 +108,7 @@ manager: "erikre"
   
 8.  When you finish adding content types, click **OK**.  
   
-9. > [!NOTE]  
+    > [!NOTE]  
     >  If the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] content type group **SQL Server Reporting Services Content Types** is not visible on the **Add Content Types** page, one of the following conditions is true:  
   
     -   The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in for SharePoint products has not been installed. For more information, see [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). The topic includes information on installing the add-in and stepping through a files only installation of the add-in to work around issues.  
@@ -149,7 +151,7 @@ manager: "erikre"
   
 8.  When you finish adding content types, click **OK**.  
   
-##  <a name="bkmk_enable_multiple_sites"></a> To enable Content types and content management for multiple BI sites  
+##  <a name="bkmk_enable_multiple_sites"></a> To enable content types and content management for multiple BI sites  
   
 1.  For SQL Server Reporting Services 2008 and 2008 R2 report servers, you can enable content types and content management for multiple Business Intelligence Center sites:  
   
@@ -163,7 +165,7 @@ manager: "erikre"
   
 4.  Click **Ok**.  
   
-## See Also  
+## See also  
  [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)  
   

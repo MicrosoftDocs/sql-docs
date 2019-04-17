@@ -2,24 +2,22 @@
 title: "Save As | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 f1_keywords: 
   - "vs.saveas"
 helpviewer_keywords: 
   - "Save As dialog box"
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 6
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
 ---
 # Save As
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Used to save an instance of the current item at a specified location in a specified file format. Click **Save** *<file>* **As** on the **File** menu (where *<file>* is the name of the current item), or press ALT+F, A in the Code Editor.  
   
 ## Central Panel  
@@ -29,8 +27,8 @@ Locate the existing project folder from this drop-down menu. Selecting a folder 
 **File name**  
 Use this option to view the current file name, change the file name, or filter the files and folders that are displayed. To filter the files and folders that are displayed, enter a full or partial file name on which to filter. You can use the asterisk (`*`) as a wildcard.  
   
-> [!TIP]  
-> To display files on Web and network locations, enter a URL or network path in the **File name** box. For example, "http://mywebsite" displays the files available at the "mywebsite" Web location and "\\\myserver\myshare" displays the files available at the "myshare" location on "myserver".  
+> [!TIP]
+> To display files on Web and network locations, enter a URL or network path in the **File name** box. For example, "<https://mywebsite>" displays the files available at the "mywebsite" Web location and "\\\myserver\myshare" displays the files available at the "myshare" location on "myserver".  
   
 **Save as type**  
 Use this option to select a new file type for the selected item. The file types displayed include all available file types to which the selected item can be converted.  

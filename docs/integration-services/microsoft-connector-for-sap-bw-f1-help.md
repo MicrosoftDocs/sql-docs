@@ -2,24 +2,24 @@
 title: "Microsoft Connector for SAP BW F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.dts.designer.sapbw.f1"
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Microsoft Connector for SAP BW F1 Help
   This section contains the F1 Help topics for the three components of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. These topics are also available from the user interface by pressing the F1 key, or by clicking Help on wizard pages and dialog boxes.  
-  
+
+> [!IMPORTANT]
+> Microsoft does not anticipate providing an updated version of the Connector for SAP BW. Microsoft does not own the source code for the SAP BW components, which were developed by a third party, and as a result cannot update them. Consider purchasing the latest SAP connectivity components from a Microsoft ISV partner such as [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html). Microsoft's ISV partners have adapted their SAP connectivity components for SSIS for installation in Azure.
+
 > [!IMPORTANT]  
 >  The documentation for the Microsoft Connector 1.1 for SAP BW assumes familiarity with the SAP Netweaver BW environment. For more information about SAP Netweaver BW, or for information about how to configure SAP Netweaver BW objects and processes, see your SAP documentation.  
   

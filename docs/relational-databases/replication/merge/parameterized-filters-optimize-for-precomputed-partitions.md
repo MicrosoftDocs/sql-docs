@@ -2,31 +2,29 @@
 title: "Optimize Parameterized Filter Performance with Precomputed Partitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "precomputed partitions [SQL Server replication]"
   - "merge replication precomputed partitions [SQL Server replication]"
   - "merge replication precomputed partitions [SQL Server replication], about precomputed partitions"
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Parameterized Filters - Optimize for Precomputed Partitions
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Precomputed partitions is a performance optimization that can be used with filtered merge publications. Precomputed partitions is also a requirement for using logical records on filtered publications. For more information about logical records, see [Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  When a Subscriber synchronizes with a Publisher, the Publisher must evaluate the Subscriber's filters to determine which rows belong to that Subscriber's partition, or data set. This process of determining partition membership of changes at the Publisher for each Subscriber receiving a filtered dataset is referred to as *partition evaluation*. Without precomputed partitions, partition evaluation must be performed for each change made to a filtered column at the Publisher since the last time the Merge Agent ran for a specific Subscriber, and this process has to be repeated for every Subscriber that synchronizes with the Publisher.  
   
  However, if the Publisher and Subscriber are running on [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or a later version and you use precomputed partitions, partition membership for all changes at the Publisher is precomputed and persisted at the time that the changes are made. As a result, when a Subscriber synchronizes with the Publisher, it can immediately start to download changes relevant to its partition without having to go through the partition evaluation process. This can lead to significant performance gains when a publication has a large number of changes, Subscribers, or articles in the publication.  
   
- In addition to using precomputed partitions, pre-generate snapshots and/or allow Subscribers to request snapshot generation and application the first time they synchronize. Use one or both of these options to provide snapshots for publications that use parameterized filters. If you do not specify one of these options, subscriptions are initialized using a series of SELECT and INSERT statements, rather than using the **bcp** utility; this process is much slower. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md).  
+ In addition to using precomputed partitions, pre-generate snapshots and/or allow Subscribers to request snapshot generation and application the first time they synchronize. Use one or both of these options to provide snapshots for publications that use parameterized filters. If you do not specify one of these options, subscriptions are initialized using a series of SELECT and INSERT statements, rather than using the **bcp** utility; this process is much slower. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **To use precomputed partitions**  
   

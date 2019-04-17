@@ -2,20 +2,17 @@
 title: "Apply the Changes to the Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],applying changes"
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Apply the Changes to the Destination
   In the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the third and final task is to apply the changes to your destination. You will need one component to apply inserts, one to apply updates, and one to apply deletes.  
@@ -58,7 +55,7 @@ manager: "jhubbard"
   
      For example, an UPDATE statement for a Customer table might have the following syntax:  
   
-    ```  
+    ```sql
     update CDCSample.Customer  
     set TerritoryID  = ?,  
         CustomerType  = ?,  
@@ -90,7 +87,7 @@ manager: "jhubbard"
   
      For example, a DELETE statement for a Customer table might have the following syntax:  
   
-    ```  
+    ```sql
     delete from Customer where CustomerID = ?  
   
     ```  

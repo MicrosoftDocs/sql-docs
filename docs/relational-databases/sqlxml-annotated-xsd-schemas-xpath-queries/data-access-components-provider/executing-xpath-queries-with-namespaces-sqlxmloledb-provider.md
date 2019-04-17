@@ -2,12 +2,10 @@
 title: "Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXMLOLEDB Provider, executing XPath queries"
@@ -17,12 +15,13 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "namespaces [SQLXML], XPath queries"
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XPath queries can include namespaces. If the schema elements are namespace qualified (that is, if they include a target namespace), XPath queries against the schema must specify this namespace.  
   
  Because using the wildcard character (*) is not supported in SQLXML 4.0, you must specify the XPath query by using a namespace prefix. To resolve this prefix, use the namespaces property to specify the namespace binding.  

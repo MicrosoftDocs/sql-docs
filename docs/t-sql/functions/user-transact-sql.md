@@ -2,12 +2,10 @@
 title: "USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "USER"
@@ -22,13 +20,13 @@ helpviewer_keywords:
   - "names [SQL Server], database users"
   - "database usernames [SQL Server]"
 ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
-caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Allows a system-supplied value for the database user name of the current user to be inserted into a table when no default value is specified.  
   
@@ -37,8 +35,6 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 USER  
 ```  
   
@@ -68,11 +64,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----------------------------------------------------------------------`  
+ ```
+-----------------------------------------------------------------------  
+The current user's database username is: dbo  
   
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### B. Using USER with DEFAULT constraints  
  The following example creates a table by using `USER` as a `DEFAULT` constraint for the salesperson of a sales row.  
@@ -109,21 +106,17 @@ GO
   
  Here is the result set (note the `entry-person` value):  
   
- `part_id     description                    entry_person`  
+ ```
+part_id     description                    entry_person
+----------- ------------------------------ -------------------------
+100         Red pencil                     dbo
+101         Blue pencil                    dbo
+102         Green pencil                   dbo
+103         Black pencil                   dbo
+104         Yellow pencil                  dbo
   
- `----------- ------------------------------ -------------------------`  
-  
- `100         Red pencil                     dbo`  
-  
- `101         Blue pencil                    dbo`  
-  
- `102         Green pencil                   dbo`  
-  
- `103         Black pencil                   dbo`  
-  
- `104         Yellow pencil                  dbo`  
-  
- `(5 row(s) affected)`  
+(5 row(s) affected)
+```  
   
 ### C. Using USER in combination with EXECUTE AS  
  The following example illustrates the behavior of `USER` when called inside an impersonated session.  
@@ -143,31 +136,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DBO`  
-  
- `Mario`  
-  
- `DBO`  
-  
-## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### D. Using USER to return the database user name  
- The following example declares a variable as `char`, assigns the current value of USER to it, and then prints the variable with a text description.  
-  
+ ```
+DBO
+Mario
+DBO
 ```  
-DECLARE @usr char(30)  
-SET @usr = user  
-SELECT 'The current user''s database username is: '+ @usr  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `-----------------------------------------------------------------------`  
-  
- `The current user's database username is: dbo`  
-  
- `(1 row(s) affected)`  
   
 ## See Also  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

@@ -1,13 +1,11 @@
 ---
 title: "DBCC OPENTRAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/16/2017"
-ms.prod: "sql-non-specified"
+ms.date: "11/14/2017"
+ms.prod: sql
+ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC_OPENTRAN_TSQL"
@@ -25,18 +23,17 @@ helpviewer_keywords:
   - "checking open transactions"
   - "oldest transactions [SQL Server]"
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: umajay
+manager: craigg
 ---
 # DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 DBCC OPENTRAN helps to identify active transactions that may be preventing log truncation. DBCC OPENTRAN displays information about the oldest active transaction and the oldest distributed and nondistributed replicated transactions, if any, within the transaction log of the specified database. Results are displayed only if there is an active transaction that exists in the log or if the database contains replication information. An informational message is displayed if there are no active transactions in the log.
   
-> [!NOTE]  
->  DBCC OPENTRAN is not supported for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+> [!NOTE]
+>  DBCC OPENTRAN is not supported for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,7 +42,7 @@ DBCC OPENTRAN helps to identify active transactions that may be preventing log t
 ```sql
 DBCC OPENTRAN   
 [   
-    ( [ database_name | database_id | 0 ] ) ]  
+    ( [ database_name | database_id | 0 ] )   
     { [ WITH TABLERESULTS ]  
       [ , [ NO_INFOMSGS ] ]  
     }  
@@ -95,23 +92,17 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Transaction information for database 'master'.`
-  
-`Oldest active transaction:`
-  
-`SPID (server process ID) : 52`
-  
-`UID (user ID) : -1`
-  
-`Name          : user_transaction`
-  
-`LSN           : (518:1576:1)`
-  
-`Start time    : Jun  1 2004  3:30:07:197PM`
-  
-`SID           : 0x010500000000000515000000a065cf7e784b9b5fe77c87709e611500`
-  
-`DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
+```
+Transaction information for database 'master'.
+Oldest active transaction:
+SPID (server process ID) : 52
+UID (user ID) : -1
+Name          : user_transaction
+LSN           : (518:1576:1)
+Start time    : Jun  1 2004  3:30:07:197PM
+SID           : 0x010500000000000515000000a065cf7e784b9b5fe77c87709e611500
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
+```
   
 > [!NOTE]  
 >  The "UID (user ID)" result is meaningless and will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

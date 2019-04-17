@@ -2,20 +2,17 @@
 title: "Specify an Interval of Change Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],specifying interval"
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Specify an Interval of Change Data
   In the control flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package that performs an incremental load of change data, the first task is to calculate the endpoints of the change interval. These endpoints are **datetime** values and will be stored in package variables for use later in the package.  
@@ -89,7 +86,7 @@ manager: "jhubbard"
   
     4.  For **SQLStatement**, enter the following SQL statement:  
   
-        ```  
+        ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
           DATEADD(dd,0, DATEDIFF(dd,0,GETDATE())) AS ExtractEndTime  
   
@@ -98,7 +95,7 @@ manager: "jhubbard"
 3.  On the **Result Set** page of the **Execute SQL Task Editor**, map the ExtractStartTime result to the ExtractStartTime package variable, and map the ExtractEndTime result to the ExtractEndTime package variable.  
   
     > [!NOTE]  
-    >  When you use an expression to set the value of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, the expression is evaluated every time that that the value of the variable is accessed.  
+    >  When you use an expression to set the value of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variable, the expression is evaluated every time that the value of the variable is accessed.  
   
 ## Next Step  
  After you calculate the starting point and ending point for a range of changes, the next step is to determine whether the change data is ready.  
@@ -106,7 +103,7 @@ manager: "jhubbard"
  **Next topic:** [Determine Whether the Change Data Is Ready](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
 ## See Also  
- [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Integration Services &#40;SSIS&#41; Expressions](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Execute SQL Task](../../integration-services/control-flow/execute-sql-task.md)   
  [Script Task](../../integration-services/control-flow/script-task.md)  

@@ -2,12 +2,9 @@
 title: "Using the SQL Server Native Client Header and Library Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "header files [SQL Server Native Client]"
@@ -22,12 +19,13 @@ helpviewer_keywords:
   - "ODBC applications, header files"
   - "SQLNCLI, library files"
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the SQL Server Native Client Header and Library Files
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client header and library files are installed with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. When developing an application, it is important to copy and install all of the required files for development to your development environment. For more information about installing and redistributing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  

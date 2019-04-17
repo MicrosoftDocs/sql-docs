@@ -2,25 +2,23 @@
 title: "Replication Monitor, Main Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.main.f1"
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
-caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Replication Monitor, Main Page
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Replication Monitor allows you to track the status and performance of publications and subscriptions across a replication topology. The following topics provide more information:  
   
--   For an overview of Replication Monitor, see [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md).  
+-   For an overview of Replication Monitor, see [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md).  
   
 -   The left pane of Replication Monitor is focused on Publishers and groups of Publishers. Add one or more Publishers to Replication Monitor to display publication and subscription information. For more information, see [Add and Remove Publishers from Replication Monitor](../../relational-databases/replication/monitor/add-and-remove-publishers-from-replication-monitor.md).  
   
@@ -28,15 +26,7 @@ manager: "jhubbard"
   
     -   [Refresh Data in Replication Monitor](../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
   
-    -   [View Information and Perform Tasks for a Publisher &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
-  
-    -   [View Information and Perform Tasks for a Publication &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
-  
-    -   [View Information and Perform Tasks for the Agents Associated With a Publication &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
-  
-    -   [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
-  
-    -   [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
+    -   [View Information and Perform Tasks using Replication Monitor;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)    
   
     -   [Measure Latency and Validate Connections for Transactional Replication](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
@@ -46,6 +36,6 @@ manager: "jhubbard"
   
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

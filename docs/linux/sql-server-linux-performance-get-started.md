@@ -1,30 +1,20 @@
 ---
-# required metadata
-
 title: Get started with performance features of SQL Server on Linux | Microsoft Docs
-description: This topic provides an introduction of SQL Server performance features for Linux users who are new to SQL Server. Many of these examples work on all platforms, but the context of this article is Linux. 
+description: This article provides an introduction of SQL Server performance features for Linux users who are new to SQL Server. Many of these examples work on all platforms, but the context of this article is Linux. 
 author: rothja 
 ms.author: jroth 
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
-ms.prod: sql-linux
-ms.technology: database-engine
+ms.topic: conceptual
+ms.prod: sql
+ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-
-# optional metadata
-
-# keywords: ""
-# ROBOTS: ""
-# audience: ""
-# ms.devlang: ""
-# ms.reviewer: ""
-# ms.suite: ""
-# ms.tgt_pltfrm: ""
-ms.custom: H1Hack27Feb2017
-
+ms.custom: "sql-linux"
 ---
 # Walkthrough for the performance features of SQL Server on Linux
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the performance features. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the depth documentation for that area.
 
 > [!NOTE]
@@ -33,7 +23,7 @@ If you are a Linux user who is new to SQL Server, the following tasks walk you t
 ## Create a Columnstore Index
 A columnstore index is a technology for storing and querying large stores of data in a columnar data format, called a columnstore.  
 
-1. Add a Columnstore index to the SalesOrderDetail table by executing the T-SQL below:
+1. Add a Columnstore index to the SalesOrderDetail table by executing the following Transact-SQL commands:
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -42,7 +32,7 @@ A columnstore index is a technology for storing and querying large stores of dat
    GO
    ```
 
-2. Execute the following query that will use the Columnstore Index to scan the table:
+2. Execute the following query that uses the Columnstore Index to scan the table:
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -68,7 +58,7 @@ A columnstore index is a technology for storing and querying large stores of dat
 SQL Server provides In-Memory OLTP features that can greatly improve the performance of application systems.  This section of the Evaluation Guide will walk you through the steps to create a memory-optimized table stored in memory and a natively compiled stored procedure that can access the table without needing to be compiled or interpreted.
 
 ### Configure Database for In-Memory OLTP
-1. It’s recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP.  Use the query below to check the current compatibility level of AdventureWorks:  
+1. It's recommended to set the database to a compatibility level of at least 130 to use In-Memory OLTP.  Use the following query to check the current compatibility level of AdventureWorks:  
 
    ```sql
    USE AdventureWorks
@@ -87,7 +77,7 @@ SQL Server provides In-Memory OLTP features that can greatly improve the perform
    GO
    ```
 
-2. When a transaction involves both a disk-based table and a memory-optimized table, it’s essential that the memory-optimized portion of the transaction operate at the transaction isolation level named SNAPSHOT.  To reliably enforce this level for memory-optimized tables in a cross-container transaction, execute the following:
+2. When a transaction involves both a disk-based table and a memory-optimized table, it's essential that the memory-optimized portion of the transaction operate at the transaction isolation level named SNAPSHOT.  To reliably enforce this level for memory-optimized tables in a cross-container transaction, execute the following:
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
@@ -163,11 +153,11 @@ SQL Server supports natively compiled stored procedures that access memory-optim
 ### Learn More About In-Memory OLTP
 For more information about In-Memory OLTP, see the following topics:
 
-- [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](https://msdn.microsoft.com/library/mt694156.aspx)
-- [Migrating to In-Memory OLTP](https://msdn.microsoft.com/library/dn247639.aspx)
-- [Faster temp table and table variable by using memory optimization](https://msdn.microsoft.com/library/mt718711.aspx)
-- [Monitor and Troubleshoot Memory Usage](https://msdn.microsoft.com/library/dn465869.aspx)
-- [In-Memory OLTP (In-Memory Optimization)](https://msdn.microsoft.com/library/dn133186.aspx)
+- [Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [Migrating to In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
+- [Faster temp table and table variable by using memory optimization](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
+- [Monitor and Troubleshoot Memory Usage](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
+- [In-Memory OLTP (In-Memory Optimization)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 ## Use Query Store
 Query Store collects detailed performance information about queries, execution plans, and runtime statistics.

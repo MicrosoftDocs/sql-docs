@@ -1,24 +1,22 @@
 ---
 title: "Revert the Word Breakers Used by Search to the Previous Version | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.prod: sql
+ms.prod_service: "search, sql-database"
+ms.technology: search
+ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Revert the Word Breakers Used by Search to the Previous Version
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This topic describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installs and enables a version of the word breakers and stemmers for all languages supported by Full-Text Search with the exception of Korean. This article describes how to switch from this version of these components to the previous version, or to switch back from the previous version to the new version.  
   
- This topic does not discuss the following languages:  
+ This article does not discuss the following languages:  
   
 -   **English**. To revert or restore the English components, see [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -31,7 +29,7 @@ manager: "jhubbard"
  For general information about word breakers and stemmers, see [Configure and Manage Word Breakers and Stemmers for Search](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ##  <a name="overview"></a> Overview of reverting and restoring word breakers and stemmers  
- The instructions for reverting and restoring word breakers and stemmers depend on the language. The following table summarizes the 3 sets of actions that may be required to revert to the previous version of the components.  
+ The instructions for reverting and restoring word breakers and stemmers depend on the language. The following table summarizes the three sets of actions that may be required to revert to the previous version of the components.  
   
 |Current file|Previous file|Number of affected languages|Action for files|Action for registry entries|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
@@ -42,7 +40,7 @@ manager: "jhubbard"
 > [!WARNING]  
 >  If you replace the current version of the file NaturalLanguage6.dll with a different version, then the behavior of all the languages that use this file is affected.  
   
- The files described in this topic are DLL files that are installed in the `MSSQL\Binn` folder for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The full path is typically the following path:  
+ The files described in this article are DLL files that are installed in the `MSSQL\Binn` folder for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. The full path is typically the following path:  
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
@@ -376,6 +374,5 @@ manager: "jhubbard"
   
 ## See Also  
  [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Behavior Changes to Full-Text Search](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
-  
-  
+ [Behavior Changes to Full-Text Search](/sql/database-engine/behavior-changes-to-full-text-search)
+ 

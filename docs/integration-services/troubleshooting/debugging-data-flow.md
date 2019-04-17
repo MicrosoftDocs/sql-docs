@@ -2,13 +2,11 @@
 title: "Debugging Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "progress reporting [Integration Services]"
   - "data viewers [Integration Services]"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "debugging [Integration Services], data flow"
   - "counting rows"
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Debugging Data Flow
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] and the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer include features and tools that you can use to troubleshoot the data flows in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package.  
@@ -37,7 +34,7 @@ manager: "jhubbard"
   
  A data viewer can display data in a grid. Using a grid, you select the columns to display. The values for the selected columns display in a tabular format.  
   
- You can also include multiple data viewers on a path. You can display the same data in different formats—for example, create a chart view and a grid view of the data—or create different data viewers for different columns of data.  
+ You can also include multiple data viewers on a path. You can display the same data in different formats-for example, create a chart view and a grid view of the data-or create different data viewers for different columns of data.  
   
  When you add a data viewer to a path, [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer adds a data viewer icon to the design surface of the **Data Flow** tab, next to the path. Transformations that can have multiple outputs, such as the Conditional Split transformation, can include a data viewer on each path.  
   
@@ -74,22 +71,21 @@ manager: "jhubbard"
   
  The following example displays the number of rows sent between components of a package.  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, source_component_name, destination_component_name, rows_sent  
 from catalog.execution_data_statistics  
 where execution_id = 132  
-order by source_component_name, destination_component_name  
-  
+order by source_component_name, destination_component_name   
 ```  
   
  The following example calculates the number of rows per millisecond sent by each component for a specific execution. The calculated values are:  
   
 -   **total_rows** - the sum of all the rows sent by the component  
   
--   **wall_clock_time_ms** – the total elapsed execution time, in milliseconds, for each component  
+-   **wall_clock_time_ms** - the total elapsed execution time, in milliseconds, for each component  
   
--   **num_rows_per_millisecond** – the number of rows per millisecond sent by each component  
+-   **num_rows_per_millisecond** - the number of rows per millisecond sent by each component  
   
  The **HAVING** clause is used to prevent a divide-by-zero error in the calculations.  
   
@@ -104,7 +100,6 @@ where execution_id = 132
 group by source_component_name, destination_component_name  
 having (datediff(ms,min(created_time),max(created_time))) > 0  
 order by source_component_name desc  
-  
 ```  
 
 ## Configure an Error Output in a Data Flow Component
@@ -209,7 +204,7 @@ order by source_component_name desc
 9. In the Columns to display area, select the columns you want to display in the data viewer. By default, all the available columns are selected and listed in the **Displayed Columns** list. Move columns that you do not want to use to the **Unused Column** list by selecting them and then clicking the left arrow.  
   
     > [!NOTE]  
-    >  In the grid, values that represent the DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types appear as ISO 8601 formatted strings and a space separator replaces the **T** separator. Values that represent the DT_DATE and DT_FILETIME data types include seven digits for fractional seconds. Because the DT_FILETIME data type stores only three digits of fractional seconds, the grid displays zeros for the remaining four digits. Values that represent the DT_DBTIMESTAMP data type include three digits for fractional seconds. For values that represent the DT_DBTIME2, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types, the number of digits for fractional seconds corresponds to the scale specified for the column's data type. For more information about ISO 8601 formats, see [Date and Time Formats](http://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). For more information about data types, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+    >  In the grid, values that represent the DT_DATE, DT_DBTIME2, DT_FILETIME, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types appear as ISO 8601 formatted strings and a space separator replaces the **T** separator. Values that represent the DT_DATE and DT_FILETIME data types include seven digits for fractional seconds. Because the DT_FILETIME data type stores only three digits of fractional seconds, the grid displays zeros for the remaining four digits. Values that represent the DT_DBTIMESTAMP data type include three digits for fractional seconds. For values that represent the DT_DBTIME2, DT_DBTIMESTAMP2, and DT_DBTIMESTAMPOFFSET data types, the number of digits for fractional seconds corresponds to the scale specified for the column's data type. For more information about ISO 8601 formats, see [Date and Time Formats](https://msdn.microsoft.com/library/bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39). For more information about data types, see [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 10. Click **OK**.  
 
@@ -224,13 +219,11 @@ order by source_component_name desc
   
  Here is a sample SQL script that performs the steps described in the above scenario:  
   
-```  
-  
+```sql
 Declare @execid bigint  
 EXEC [SSISDB].[catalog].[create_execution] @folder_name=N'ETL Folder', @project_name=N'ETL Project', @package_name=N'Package.dtsx', @execution_id=@execid OUTPUT  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt'  
 EXEC [SSISDB].[catalog].[start_execution] @execid  
-  
 ```  
   
  The folder name, project name, and package name parameters of the create_execution stored procedure correspond to the folder, project, and package names in the Integration Services catalog. You can get the folder, project, and package names to use in the create_execution call from the SQL Server Management Studio as shown in the following image. If you do not see your SSIS project here, you may not have deployed the project to SSIS server yet. Right-click on SSIS project in Visual Studio and click Deploy to deploy the project to the expected SSIS server.  
@@ -254,18 +247,16 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
 ### Removing a data tap  
  You can remove a data tap before starting the execution by using the [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md) stored procedure. This stored procedure takes the ID of data tap as a parameter, which you can get as an output of the add_data_tap stored procedure.  
   
-```  
-  
+```sql
 DECLARE @tap_id bigint  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt' @data_tap_id=@tap_id OUTPUT  
 EXEC [SSISDB].[catalog].remove_data_tap @tap_id  
-  
 ```  
   
 ### Listing all data taps  
  You can also list all the data taps by using the catalog.execution_data_taps view. The following example extracts data taps for a specification execution instance (ID: 54).  
   
-```  
+```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
 ```  
   
@@ -273,7 +264,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
  Enabling verbose logging level and adding data taps increase the I/O operations performed by your data integration solution. Hence, we recommend that you add data taps only for troubleshooting purposes  
   
 ### Video  
- This [video on TechNet](http://technet.microsoft.com/sqlserver/dn600163) demonstrates how to add/use data taps in SQL Server 2012 SSISDB catalog that help with debugging packages programmatically and capturing the partial results at the runtime. It also discusses how to list/ remove these data taps and best practices for using data taps in SSIS packages.  
+ This [video on TechNet](https://technet.microsoft.com/sqlserver/dn600163) demonstrates how to add/use data taps in SQL Server 2012 SSISDB catalog that help with debugging packages programmatically and capturing the partial results at the runtime. It also discusses how to list/ remove these data taps and best practices for using data taps in SSIS packages.  
  
 ## See Also  
  [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)  

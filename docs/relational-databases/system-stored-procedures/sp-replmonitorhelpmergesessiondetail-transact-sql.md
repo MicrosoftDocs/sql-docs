@@ -2,28 +2,23 @@
 title: "sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replmonitorhelpmergesessiondetail"
   - "sp_replmonitorhelpmergesessiondetail_TSQL"
 helpviewer_keywords: 
   - "sp_replmonitorhelpmergesessiondetail"
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns detailed, article-level information about a specific replication Merge Agent session, which is used to monitor merge replication. The result set includes a detail row for each article that was synchronized during the session. It also includes a row that represents the session initialization and rows that summarize both the upload and download phases of the session. This stored procedure is executed at the Distributor on the distribution database, or at the Subscriber on the subscription database.  
   
@@ -37,7 +32,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## Arguments  
- [ **@session_id** = ] *session_id*  
+`[ @session_id = ] session_id`
  Specifies an agent session. *session_id* is **int** with no default.  
   
 ## Result Sets  

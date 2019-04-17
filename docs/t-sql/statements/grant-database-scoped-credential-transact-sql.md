@@ -2,13 +2,11 @@
 title: "GRANT Database Scoped Credential (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: t-sql
+ms.topic: conceptual
 f1_keywords: 
   - "GRANT DATABASE SCOPED CREDENTIAL"
   - "GRANT_DATABASE_SCOPED_CREDENTIAL_TSQL"
@@ -20,13 +18,13 @@ helpviewer_keywords:
   - "database scoped credential [SQL Server], permissions"
   - "GRANT statement, database scoped credentials"
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
-caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Scoped Credential Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Grants permissions on a database scoped credential. 
   
@@ -45,7 +43,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be granted on a database scoped credential. Listed below.  
   
- ON DATABASE SCOPED CREDENTIAL **::***credential_name*  
+ ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
  Specifies the database scoped credential on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

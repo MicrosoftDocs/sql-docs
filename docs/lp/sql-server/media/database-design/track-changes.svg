@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 110">
+  <title>2 - track-changes</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <g id="ICONS-64x">
+      <circle cx="147.639" cy="56.176" r="8.893" fill="#e5e5e5" stroke="#2e6ca4" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M189.139,59.14V56.176a41.5,41.5,0,1,0-25.344,38.239" fill="none" stroke="#2e6ca4" stroke-miterlimit="10" stroke-width="2"/>
+      <path d="M168.152,68.033A23.714,23.714,0,1,0,147.639,79.89" fill="none" stroke="#2e6ca4" stroke-miterlimit="10" stroke-width="2"/>
+      <rect x="175.8" y="68.033" width="4.446" height="28.071" fill="#2bc7f4"/>
+      <rect x="163.943" y="79.89" width="28.16" height="4.446" fill="#2bc7f4"/>
+    </g>
+  </g>
+</svg>

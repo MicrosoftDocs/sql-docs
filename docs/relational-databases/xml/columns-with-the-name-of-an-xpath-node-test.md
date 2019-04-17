@@ -2,23 +2,21 @@
 title: "Columns with the Name of an XPath Node Test | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
   - "XPath node test"
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Columns with the Name of an XPath Node Test
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   If the column name is one of the XPath node tests, the content is mapped as shown in the following table. When the column name is an XPath node test, the content is mapped to the corresponding node. If the SQL type of the column is **xml**, an error is returned.  
   
 |Column Name|Behavior|  

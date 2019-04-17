@@ -1,16 +1,9 @@
 ---
 title: "sp_delete_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
+ms.custom: ""
 ms.date: "08/04/2017"
-ms.prod: 
+ms.service: sql-database
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_database_firewall_rule"
@@ -22,34 +15,33 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_database_firewall_rule procedure"
 ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
-caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sp_delete_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Removes database-level firewall setting from your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Database firewall rules can be configured and deleted for the master database, and for user databases on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
   
  
 ## Syntax  
   
-```  
-  
+```    
 sp_delete_database_firewall_rule [@name =] [N]'name'
 [ ; ]  
 ```  
   
 ## Arguments  
- [**@name =**] **'***name***'**  
+ `[@name =] [N]'name'`  
  The name of the database-level firewall setting that will be removed. *name* is **nvarchar(128)** with no default value. The Unicode identifier `N` is optional for [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## Permissions  
- Only the server-level principal login created by the provisioning process can delete database level firewall rules.  
+ Only the server-level principal login created by the provisioning process or an Azure Active Directory principal assigned as admin can delete database-level firewall rules.  
   
 ## Example  
- The following example removes the database-level firewall setting named ‘Example DB Setting 1’.  
+ The following example removes the database-level firewall setting named `Example DB Setting 1`.
   
 ```  
 -- Remove database-level firewall setting  

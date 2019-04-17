@@ -1,22 +1,18 @@
 ---
 title: "Project Settings (Type Mapping) (OracleToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssma
+ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
-caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
+author: "Shamikg"
+ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Project Settings (Type Mapping) (OracleToSQL)
-The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts Oracle data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data types.  
+The Type Mapping page of the **Project Settings** dialog box contains settings that customize how SSMA converts Oracle data types into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.  
   
 The Type Mapping page is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   
@@ -33,7 +29,7 @@ The following table shows the **Type Mapping** tab options:
 The mapped Oracle data type.  
   
 **Target Type**  
-The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data type for the specified Oracle data type.  
+The target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data type for the specified Oracle data type.  
   
 See the tables in the next section for the default SSMA for Oracle type mappings.  
   
@@ -55,7 +51,7 @@ In SSMA for Oracle, you can set custom type mappings for arguments, columns, loc
 ### Default Argument Type and Return Value Type Mapping  
 The following table contains the default data type mapping for arguments and return values.  
   
-|Oracle Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Data Type|  
+|Oracle Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Type|  
 |--------------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float[53]|  
@@ -111,7 +107,7 @@ The following table contains the default data type mapping for arguments and ret
 ### Default Column Type Mapping  
 The following table contains the default type mapping for columns.  
   
-|Oracle Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Data Type|  
+|Oracle Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Type|  
 |--------------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float[53]|  
@@ -179,7 +175,7 @@ The following table contains the default type mapping for columns.
 ### Default Local Variable Type Mapping  
 The following table contains the default type mapping for local variables.  
   
-|Oracle Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Data Type|  
+|Oracle Data Type|Default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Type|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
 |binary_double|float[53]|  

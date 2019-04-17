@@ -2,12 +2,10 @@
 title: "DENSE_RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "DENSE_RANK_TSQL"
@@ -20,47 +18,45 @@ helpviewer_keywords:
   - "tied rows [SQL Server]"
   - "ranking rows"
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENSE_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns the rank of rows within the partition of a result set, without any gaps in the ranking. The rank of a row is one plus the number of distinct ranks that come before the row in question.  
+This function returns the rank of each row within a result set partition, with no gaps in the ranking values. The rank of a specific row is one plus the number of distinct rank values that come before that specific row.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
 ## Arguments  
  \<partition_by_clause>  
- Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the DENSE_RANK function is applied. For the PARTITION BY syntax, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+First divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions, and then the `DENSE_RANK` function is applied to each partition. See [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) for the `PARTITION BY` syntax.  
   
  \<order_by_clause>  
- Determines the order in which the DENSE_RANK function is applied to the rows in a partition.  
+Determines the order in which the `DENSE_RANK` function applies to the rows in a partition.  
   
 ## Return Types  
  **bigint**  
   
 ## Remarks  
- If two or more rows tie for a rank in the same partition, each tied rows receives the same rank. For example, if the two top salespeople have the same SalesYTD value, they are both ranked one. The salesperson with the next highest SalesYTD is ranked number two. This is one more than the number of distinct rows that come before this row. Therefore, the numbers returned by the DENSE_RANK function do not have gaps and always have consecutive ranks.  
+If two or more rows have the same rank value in the same partition, each of those rows will receive the same rank. For example, if the two top salespeople have the same SalesYTD value, they will both have a rank value of one. The salesperson with the next highest SalesYTD will have a rank value of two. This exceeds the number of distinct rows that come before the row in question by one. Therefore, the numbers returned by the `DENSE_RANK` function do not have gaps, and always have consecutive rank values.  
   
- The sort order used for the whole query determines the order in which the rows appear in a result. This implies that a row ranked number one does not have to be the first row in the partition.  
+The sort order used for the whole query determines the order of the rows in the result set. This implies that a row ranked number one does not have to be the first row in the partition.  
   
- DENSE_RANK is nondeterministic. For more information, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+`DENSE_RANK` is nondeterministic. See [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) for more information.  
   
 ## Examples  
   
 ### A. Ranking rows within a partition  
- The following example ranks the products in inventory the specified inventory locations according to their quantities. The result set is partitioned by `LocationID` and logically ordered by `Quantity`. Notice that products 494 and 495 have the same quantity. Because they are tied, they are both ranked one.  
+This example ranks the products in inventory, by the specified inventory locations, according to their quantities. `DENSE_RANK` partitions the result set by `LocationID` and logically orders the result set by `Quantity`. Notice that products 494 and 495 have the same quantity. Because they both have the same quantity value, they both have a rank value of one.  
   
 ```  
 USE AdventureWorks2012;  
@@ -97,7 +93,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### B. Ranking all rows in a result set  
- The following example returns the top ten employees ranked by their salary. Because a PARTITION BY clause was not specified, the DENSE_RANK function was applied to all rows in the result set.  
+This example returns the top ten employees ranked by their salary. Because the `SELECT` statement did not specify a `PARTITION BY` clause, the `DENSE_RANK` function applied to all result set rows.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,7 +121,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## C. Four ranking functions used in the same query  
- The following shows the four ranking functions used in the same query. For function specific examples, see each ranking function.  
+This example shows the four ranking functions
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+used in the same query. See each ranking function for function-specific examples.  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +170,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### D: Ranking rows within a partition  
- The following example ranks the sales representatives in each sales territory according to their total sales. The rowset is partitioned by `SalesTerritoryGroup` and sorted by `SalesAmountQuota`.  
+This example ranks the sales representatives in each sales territory according to their total sales. `DENSE_RANK` partitions the rowset by `SalesTerritoryGroup`, and sorts the result set by `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -178,45 +181,29 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName          TotalSales     SalesTerritoryGroup  RankResult`  
-  
- `----------------  -------------  -------------------  --------`  
-  
- `Pak               10514000.0000  Europe               1`  
-  
- `Varkey Chudukatil  5557000.0000  Europe               2`  
-  
- `Valdez             2287000.0000  Europe               3`  
-  
- `Carson            12198000.0000  North America        1`  
-  
- `Mitchell          11786000.0000  North America        2`  
-  
- `Blythe            11162000.0000  North America        3`  
-  
- `Reiter             8541000.0000  North America        4`  
-  
- `Ito                7804000.0000  North America        5`  
-  
- `Saraiva            7098000.0000  North America        6`  
-  
- `Vargas             4365000.0000  North America        7`  
-  
- `Campbell           4025000.0000  North America        8`  
-  
- `Ansman-Wolfe       3551000.0000  North America        9`  
-  
- `Mensa-Annan        2753000.0000  North America        10`  
-  
- `Tsoflias           1687000.0000  Pacific              1`  
-  
-
-
+```
+ LastName          TotalSales     SalesTerritoryGroup  RankResult  
+----------------  -------------  -------------------  --------  
+Pak               10514000.0000  Europe               1  
+Varkey Chudukatil  5557000.0000  Europe               2  
+Valdez             2287000.0000  Europe               3  
+Carson            12198000.0000  North America        1  
+Mitchell          11786000.0000  North America        2  
+Blythe            11162000.0000  North America        3  
+Reiter             8541000.0000  North America        4  
+Ito                7804000.0000  North America        5  
+Saraiva            7098000.0000  North America        6  
+Vargas             4365000.0000  North America        7  
+Campbell           4025000.0000  North America        8  
+Ansman-Wolfe       3551000.0000  North America        9  
+Mensa-Annan        2753000.0000  North America        10  
+Tsoflias           1687000.0000  Pacific              1 
+```  
 
 ## See Also  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   

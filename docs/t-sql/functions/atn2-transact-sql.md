@@ -2,12 +2,10 @@
 title: "ATN2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ATN2"
@@ -19,13 +17,13 @@ helpviewer_keywords:
   - "tangent"
   - "ATN2 function"
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
-caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ATN2 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Returns the angle, in radians, between the positive x-axis and the ray from the origin to the point (y, x), where x and y are the values of the two specified float expressions.
   
@@ -34,14 +32,12 @@ Returns the angle, in radians, between the positive x-axis and the ray from the 
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 ATN2 ( float_expression , float_expression )  
 ```  
   
 ## Arguments  
-*float_expression*
-Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the **float** data type.
+*float_expression*  
+An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of data type **float**.
   
 ## Return types
 **float**
@@ -51,32 +47,14 @@ The following example calculates the `ATN2` for the specified `x` and `y` compon
   
 ```sql
 DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar,ATN2(@x,@y ));  
+SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar, ATN2(@y, @x));  
 GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```sql
-The ATN2 of the angle is: 0.265345                         
-(1 row(s) affected)  
-```  
-  
-## Examples:
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
-
-The following example calculates the `ATN2` for the specified `x` and `y` components.
-  
-```sql
-DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar,ATN2(@x,@y ));  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-The ATN2 of the angle is: 0.265345                         
+The ATN2 of the angle is: 1.30545                         
 (1 row(s) affected)  
 ```  
   

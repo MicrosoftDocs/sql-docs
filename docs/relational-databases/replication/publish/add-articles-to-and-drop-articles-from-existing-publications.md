@@ -2,13 +2,11 @@
 title: "Add Articles to and Drop Articles from Existing Publications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: replication
+ms.topic: conceptual
 helpviewer_keywords: 
   - "articles [SQL Server replication], dropping"
   - "deleting articles"
@@ -19,18 +17,18 @@ helpviewer_keywords:
   - "publications [SQL Server replication], adding and dropping articles"
   - "articles [SQL Server replication], adding"
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
-caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "MashaMSFT"
+ms.author: "mathoma"
+manager: craigg
 ---
 # Add Articles to and Drop Articles from Existing Publications
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   After a publication is created, it is possible to add and drop articles. Articles can be added at any time, but the actions required for dropping articles depend on the type of replication and when the article is dropped.  
   
 ## Adding Articles  
  Adding an article involves: adding the article to the publication; creating a new snapshot for the publication; synchronizing the subscription to apply the schema and data for the new article.  
   
-> [!NOTE]  
+> [!NOTE]
 >  If you add an article to a merge publication and an existing article depends on the new article, you must specify a processing order for both articles using the **@processing_order** parameter of [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) and [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Consider the following scenario: you publish a table but you do not publish a function that the table references. If you do not publish the function, the table cannot be created at the Subscriber. When you add the function to the publication: specify a value of **1** for the **@processing_order** parameter of **sp_addmergearticle**; and specify a value of **2** for the **@processing_order** parameter of **sp_changemergearticle**, specifying the table name for the parameter **@article**. This processing order ensures that you create the function at the Subscriber before the table that depends on it. You can use different numbers for each article, as long as the number for the function is lower than the number for the table.  
   
 1.  Add one or more articles through one of the following methods:  
@@ -79,7 +77,7 @@ manager: "jhubbard"
  As noted above, in some cases dropping an article requires subscriptions to be dropped, recreated, and then synchronized. For more information, see [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md) and [Synchronize Data](../../../relational-databases/replication/synchronize-data.md).  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** or above and **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** or above support dropping a table using **DROP TABLE** DLL command for articles participating in Transactional Replication. If a DROP TABLE DDL is supported by the publication(s), then the DROP TABLE operation will drop the table from the publication and the database. The log reader agent will post a cleanup command for the distribution database of the dropped table and do the cleanup of the publisher metadata. If the log reader hasn't processed all the log records that refer to the dropped table, then it will ignore new commands that are associated with the dropped table. Already processed records will be delivered to distribution database. They may be applied on Subscriber database if the Distribution Agent processes them before Log Reader cleans up the obsolete (dropped) article(s). The **default** setting for all transactional replication publications is to not support DROP TABLE DLL. [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) has more details about this improvement.
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** or above and **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** or above support dropping a table using **DROP TABLE** DLL command for articles participating in Transactional Replication. If a DROP TABLE DDL is supported by the publication(s), then the DROP TABLE operation will drop the table from the publication and the database. The log reader agent will post a cleanup command for the distribution database of the dropped table and do the cleanup of the publisher metadata. If the log reader hasn't processed all the log records that refer to the dropped table, then it will ignore new commands that are associated with the dropped table. Already processed records will be delivered to distribution database. They may be applied on Subscriber database if the Distribution Agent processes them before Log Reader cleans up the obsolete (dropped) article(s). The **default** setting for all transactional replication publications is to not support DROP TABLE DLL. [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) has more details about this improvement.
 
   
 ## See Also  

@@ -1,13 +1,11 @@
 ---
 title: "sys.dm_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/23/2017"
-ms.prod: "sql-non-specified"
+ms.date: "12/17/2018"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_exec_requests_TSQL"
@@ -19,21 +17,16 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_requests dynamic management view"
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Returns information about each request that is executing within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-> [!NOTE]  
->  To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode. Time values returned by this dynamic management view do not include time spent in preemptive mode.  
-  
-> [!NOTE]  
->  To call this from [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use the name **sys.dm_pdw_nodes_exec_requests**.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+Returns information about each request that is executing within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,10 +35,10 @@ manager: "jhubbard"
 |start_time|**datetime**|Timestamp when the request arrived. Is not nullable.|  
 |status|**nvarchar(30)**|Status of the request. This can be one of the following:<br /><br /> Background<br />Running<br />Runnable<br />Sleeping<br />Suspended<br /><br /> Is not nullable.|  
 |command|**nvarchar(32)**|Identifies the current type of command that is being processed. Common command types include the following:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> The text of the request can be retrieved by using sys.dm_exec_sql_text with the corresponding sql_handle for the request. Internal system processes set the command based on the type of task they perform. Tasks can include the following:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Is not nullable.|  
-|sql_handle|**varbinary(64)**|Hash map of the SQL text of the request. Is nullable.|  
+|sql_handle|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure that the query is part of. Is nullable.|  
 |statement_start_offset|**int**|Number of characters into the currently executing batch or stored procedure at which the currently executing statement starts. Can be used together with the sql_handle, the statement_end_offset, and the sys.dm_exec_sql_text dynamic management function to retrieve the currently executing statement for the request. Is nullable.|  
 |statement_end_offset|**int**|Number of characters into the currently executing batch or stored procedure at which the currently executing statement ends. Can be used together with the sql_handle, the statement_end_offset, and the sys.dm_exec_sql_text dynamic management function to retrieve the currently executing statement for the request. Is nullable.|  
-|plan_handle|**varbinary(64)**|Hash map of the plan for SQL execution. Is nullable.|  
+|plan_handle|**varbinary(64)**|Is a token that uniquely identifies a query execution plan for a batch that is currently executing. Is nullable.|  
 |database_id|**smallint**|ID of the database the request is executing against. Is not nullable.|  
 |user_id|**int**|ID of the user who submitted the request. Is not nullable.|  
 |connection_id|**uniqueidentifier**|ID of the connection on which the request arrived. Is nullable.|  
@@ -96,67 +89,99 @@ manager: "jhubbard"
 |parallel_worker_count |**int** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The number of reserved parallel workers if this is a parallel query.  |  
 |external_script_request_id |**uniqueidentifier** |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> The external script request ID associated with the current request. |  
 |is_resumable |**bit** |**Applies to**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indicates whether the request is a resumable index operation. |  
-|pdw_node_id|**int**|**Applies to**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> The identifier for the node that this distribution is on.|  
-  
-## Permissions  
- If the user has `VIEW SERVER STATE` permission on the server, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session. `VIEW SERVER STATE` cannot be granted in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] so `sys.dm_exec_requests` is always limited to the current connection. 
+|page_resource |**binary(8)** |**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> An 8-byte hexadecimal representation of the page resource if the `wait_resource` column contains a page. |
+
+## Remarks 
+To execute code that is outside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (for example, extended stored procedures and distributed queries), a thread has to execute outside the control of the non-preemptive scheduler. To do this, a worker switches to preemptive mode. Time values returned by this dynamic management view do not include time spent in preemptive mode.
+
+When executing parallel requests in [row mode](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns a worker thread to coordinate the worker threads responsible for completing tasks assigned to them. In this DMV only the coordinator thread is visible for the request. The columns **reads**, **writes**, **logical_reads**, and **row_count** are **not updated** for the coordinator thread. The columns **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**, and **granted_query_memory** are **only updated** for the coordinator thread. For more information, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md).
+
+## Permissions
+If the user has `VIEW SERVER STATE` permission on the server, the user will see all executing sessions on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; otherwise, the user will see only the current session. `VIEW SERVER STATE` cannot be granted in [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] so `sys.dm_exec_requests` is always limited to the current connection.
   
 ## Examples  
   
-### A. Finding the query text for a running batch  
+### A. Finding the query text for a running batch
+
  The following example queries `sys.dm_exec_requests` to find the interesting query and copy its `sql_handle` from the output.  
-  
-```  
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
-  
- Then, to obtain the statement text, use the copied `sql_handle` with system function `sys.dm_exec_sql_text(sql_handle)`.  
-  
-```  
+
+Then, to obtain the statement text, use the copied `sql_handle` with system function `sys.dm_exec_sql_text(sql_handle)`.  
+
+```sql
 SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);  
 GO  
-```  
-  
-### B. Finding all locks that a running batch is holding  
- The following example queries **sys.dm_exec_requests** to find the interesting batch and copy its `transaction_id` from the output.  
-  
-```  
+```
+
+### B. Finding all locks that a running batch is holding
+
+The following example queries **sys.dm_exec_requests** to find the interesting batch and copy its `transaction_id` from the output.
+
+```sql
 SELECT * FROM sys.dm_exec_requests;  
+GO
+```
+
+Then, to find lock information, use the copied `transaction_id` with the system function **sys.dm_tran_locks**.  
+
+```sql
+SELECT * FROM sys.dm_tran_locks
+WHERE request_owner_type = N'TRANSACTION'
+    AND request_owner_id = < copied transaction_id >;
 GO  
-```  
-  
- Then, to find lock information, use the copied `transaction_id` with the system function **sys.dm_tran_locks**.  
-  
-```  
-SELECT * FROM sys.dm_tran_locks   
-WHERE request_owner_type = N'TRANSACTION'   
-    AND request_owner_id = < copied transaction_id >;  
-GO  
-```  
-  
-### C. Finding all currently blocked requests  
- The following example queries **sys.dm_exec_requests** to find information about blocked requests.  
-  
-```  
+```
+
+### C. Finding all currently blocked requests
+
+The following example queries **sys.dm_exec_requests** to find information about blocked requests.  
+
+```sql
 SELECT session_id ,status ,blocking_session_id  
-    ,wait_type ,wait_time ,wait_resource   
-    ,transaction_id   
-FROM sys.dm_exec_requests   
+    ,wait_type ,wait_time ,wait_resource
+    ,transaction_id
+FROM sys.dm_exec_requests
 WHERE status = N'suspended';  
 GO  
 ```  
-  
-## See Also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
-  
-  
 
+### D. Ordering existing requests by CPU
 
+```sql
+SELECT 
+   req.session_id
+   , req.start_time
+   , cpu_time 'cpu_time_ms'
+   , object_name(st.objectid,st.dbid) 'ObjectName' 
+   , substring
+      (REPLACE
+        (REPLACE
+          (SUBSTRING
+            (ST.text
+            , (req.statement_start_offset/2) + 1
+            , (
+               (CASE statement_end_offset
+                  WHEN -1
+                  THEN DATALENGTH(ST.text)  
+                  ELSE req.statement_end_offset
+                  END
+                    - req.statement_start_offset)/2) + 1)
+       , CHAR(10), ' '), CHAR(13), ' '), 1, 512)  AS statement_text  
+FROM sys.dm_exec_requests AS req  
+   CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) as ST
+   ORDER BY cpu_time desc;
+GO
+```
 
+## See Also
+
+- [Dynamic Management Views and Functions](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Execution Related Dynamic Management Views and Functions](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
+- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
+- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
+- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
+- [sys.dm_exec_sql_text &#40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

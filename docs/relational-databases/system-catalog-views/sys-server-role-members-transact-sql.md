@@ -2,12 +2,10 @@
 title: "sys.server_role_members (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "server_role_members"
@@ -19,13 +17,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_role_members catalog view"
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
-caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.server_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Returns one row for each member of each fixed and user-defined server role.  
   
@@ -37,7 +35,7 @@ manager: "jhubbard"
  To add or remove server role membership, use the [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)statement.  
   
 ## Permissions  
- Logins can view their own server role membership and can view the principal_id’s of the members of the fixed server roles. To view all server role membership requires the **VIEW DEFINITION ON SERVER ROLE** permission or membership in the **securityadmin** fixed server role.  
+ Logins can view their own server role membership and can view the principal_id's of the members of the fixed server roles. To view all server role membership requires the **VIEW DEFINITION ON SERVER ROLE** permission or membership in the **securityadmin** fixed server role.  
   
  For more information, see [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

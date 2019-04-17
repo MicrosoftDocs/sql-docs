@@ -1,13 +1,11 @@
 ---
 title: "sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-non-specified"
+ms.date: "10/20/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_exec_sql_text"
@@ -19,13 +17,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_sql_text dynamic management function"
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_sql_text (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Returns the text of the SQL batch that is identified by the specified *sql_handle*. This table-valued function replaces the system function **fn_get_sql**.  
   
@@ -33,13 +31,14 @@ manager: "jhubbard"
 ## Syntax  
   
 ```  
-  
 sys.dm_exec_sql_text(sql_handle | plan_handle)  
 ```  
   
 ## Arguments  
- *sql_handle*  
- Is the SQL handle of the batch to be looked up. *sql_handle* is **varbinary(64)**. *sql_handle* can be obtained from the following dynamic management objects:  
+*sql_handle*  
+Is a token that uniquely identifies a batch that has executed or is currently executing. *sql_handle* is **varbinary(64)**. 
+
+The *sql_handle* can be obtained from the following dynamic management objects:  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -53,10 +52,20 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
- *plan_handle*  
- Is an identifier for the query plan.  
+*plan_handle*  
+Is a token that uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache, or is currently executing. *plan_handle* is **varbinary(64)**.   
+
+The *plan_handle* can be obtained from the following dynamic management objects:    
   
- For more information, see [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md).  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+  
+-   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+  
+-   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
   
 ## Table Returned  
   
@@ -69,18 +78,25 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |**text**|**nvarchar(max** **)**|Text of the SQL query.<br /><br /> Is NULL for encrypted objects.|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+ Requires `VIEW SERVER STATE` permission on the server.  
   
 ## Remarks  
- For batches, the SQL handles are hash values based on the SQL text. For database objects such as stored procedures, triggers or functions, the SQL handles are derived from the database ID, object ID, and object number. *plan_handle* is a hash value derived from the compiled plan of the entire batch.  
+For ad hoc queries, the SQL handles are hash values based on the SQL text being submitted to the server, and can originate from any database. 
+
+For database objects such as stored procedures, triggers or functions, the SQL handles are derived from the database ID, object ID, and object number. 
+
+Plan handle is a hash value derived from the compiled plan of the entire batch. 
+
+> [!NOTE]
+> **dbid** cannot be determined from *sql_handle* for ad hoc queries. To determine **dbid** for ad hoc queries, use *plan_handle* instead.
   
 ## Examples 
 
 ### A. Conceptual Example
 The following is a basic example to illustrate passing a **sql_handle** either directly or with **CROSS APPLY**.
   1.  Create activity.  
-Execute the following T-SQL in a new query window in SQL Server Management Studio.   
-        ```tsql
+Execute the following T-SQL in a new query window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -88,10 +104,11 @@ Execute the following T-SQL in a new query window in SQL Server Management Studi
       -- Create activity
         WAITFOR DELAY '00:02:00';
       ```
+      
     2.  Using **CROSS APPLY**.  
-    The sql_handle from **sys.dm_exec_requests** will be passed to **sys.dm_exec_sql_text** using **CROSS APPLY**.  Open a new query window and pass the spid identified in step 1.  In this example the spid happens to be `59`.
+    The sql_handle from **sys.dm_exec_requests** will be passed to **sys.dm_exec_sql_text** using **CROSS APPLY**. Open a new query window and pass the spid identified in step 1. In this example the spid happens to be `59`.
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -99,9 +116,9 @@ Execute the following T-SQL in a new query window in SQL Server Management Studi
          ```      
  
     2.  Passing **sql_handle** directly.  
-Acquire the **sql_handle** from **sys.dm_exec_requests**. Then, pass the **sql_handle** directly to **sys.dm_exec_sql_text**.  Open a new query window and pass the spid identified in step 1 to **sys.dm_exec_requests**. In this example the spid happens to be `59`.  Then pass the returned **sql_handle** as an argument to **sys.dm_exec_sql_text**.
+Acquire the **sql_handle** from **sys.dm_exec_requests**. Then, pass the **sql_handle** directly to **sys.dm_exec_sql_text**. Open a new query window and pass the spid identified in step 1 to **sys.dm_exec_requests**. In this example the spid happens to be `59`. Then pass the returned **sql_handle** as an argument to **sys.dm_exec_sql_text**.
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -113,7 +130,7 @@ Acquire the **sql_handle** from **sys.dm_exec_requests**. Then, pass the **sql_h
 ### B. Obtain information about the top five queries by average CPU time  
  The following example returns the text of the SQL statement and average CPU time for the top five queries.  
   
-```  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -128,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### C. Provide batch-execution statistics  
  The following example returns the text of SQL queries that are being executed in batches and provides statistical information about them.  
   
-```  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   
@@ -157,14 +174,13 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
 ```  
   
 ## See also  
- [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [Using APPLY](https://msdn.microsoft.com/library/ms177634.aspx#Anchor_3)   
-  
-  
+ [Using APPLY](../../t-sql/queries/from-transact-sql.md#using-apply)   
+ [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

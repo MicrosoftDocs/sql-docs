@@ -1,23 +1,20 @@
 ---
 title: "Source Property Example (VC++) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "Source property [ADO], VC++ example"
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Source Property Example (VC++)
 This example demonstrates the [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) property by opening three [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects based on different data sources.  
@@ -75,7 +72,7 @@ void SourceX() {
       pCmdSQL->CommandText = strCmdSQL;  
       pRstTitles = pCmdSQL->Execute(NULL, NULL, adCmdText);  
   
-      // Open a recordset based on a a table  
+      // Open a recordset based on a table  
       TESTHR(pRstPublishers.CreateInstance(__uuidof(Recordset)));  
       pRstPublishers->Open ("publishers", _variant_t((IDispatch *) pConnection, true),  
          adOpenForwardOnly, adLockReadOnly, adCmdTable);  

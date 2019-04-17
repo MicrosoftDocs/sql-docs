@@ -1,25 +1,18 @@
 ---
 title: "Report Server System Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.date: 03/06/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: report-server-web-service
+
+
+ms.topic: reference
 helpviewer_keywords: 
   - "report servers [Reporting Services], properties"
   - "system-specific properties [Reporting Services]"
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-caps.latest.revision: 55
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Reporting Services Properties - Report Server System Properties
   The following system property names are reserved. You cannot create user-defined properties of the same name. You can read or modify many of these properties using the Web service methods.  

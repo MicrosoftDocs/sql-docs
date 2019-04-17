@@ -2,12 +2,10 @@
 title: "sys.sp_cdc_add_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cdc_add_job_TSQL"
@@ -19,19 +17,14 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_add_job"
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # sys.sp_cdc_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Creates a change data capture cleanup or capture job in the current database.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,23 +43,23 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## Arguments  
- [ **@job_type=** ] **'***job_type***'**  
+`[ @job_type = ] 'job\_type'`
  Type of job to add. *job_type* is **nvarchar(20)** and cannot be NULL. Valid inputs are **'capture'** and **'cleanup'**.  
   
- [ **@start_job=** ] *start_job*  
+`[ @start_job = ] start_job`
  Flag indicating whether the job should be started immediately after it is added. *start_job* is **bit** with a default of 1.  
   
- [ **@maxtrans** ] = *max_trans*  
+`[ @maxtrans ] = max_trans`
  Maximum number of transactions to process in each scan cycle. *max_trans* is **int** with a default of 500. If specified, the value must be a positive integer.  
   
  *max_trans* is valid only for capture jobs.  
   
- [ **@maxscans** ] **=***max_scans*  
+`[ @maxscans ] = max\_scans_`
  Maximum number of scan cycles to execute in order to extract all rows from the log. *max_scans* is **int** with a default of 10.  
   
  *max_scan* is valid only for capture jobs.  
   
- [ **@continuous** ] **=***continuous*  
+`[ @continuous ] = continuous_`
  Indicates whether the capture job is to run continuously (1), or run only once (0). *continuous* is **bit** with a default of 1.  
   
  When *continuous* = 1, the [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) job scans the log and processes up to (*max_trans* \* *max_scans*) transactions. It then waits the number of seconds specified in *polling_interval* before beginning the next log scan.  
@@ -75,17 +68,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *continuous* is valid only for capture jobs.  
   
- [ **@pollinginterval** ] **=***polling_interval*  
+`[ @pollinginterval ] = polling\_interval_`
  Number of seconds between log scan cycles. *polling_interval* is **bigint** with a default of 5.  
   
  *polling_interval* is valid only for capture jobs when *continuous* is set to 1. If specified, the value cannot be negative and cannot exceed 24 hours. If a value of 0 is specified, there is no wait between log scans.  
   
- [ **@retention** ] **=***retention*  
+`[ @retention ] = retention_`
  Number of minutes that change data rows are to be retained in change tables. *retention* is **bigint** with a default of 4320 (72 hours). The maximum value is 52494800 (100 years). If specified, the value must be a positive integer.  
   
  *retention* is valid only for cleanup jobs.  
   
- [ **@threshold =** ] **'***delete_threshold***'**  
+`[ @threshold = ] 'delete\_threshold'`
  Maximum number of delete entries that can be deleted by using a single statement on cleanup. *delete_threshold* is **bigint** with a default of 5000.  
   
 ## Return Code Values  
@@ -99,7 +92,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Because the cleanup and capture jobs are created by default, this stored procedure is necessary only when a job has been explicitly dropped and must be recreated.  
   
- The name of the job is **cdc.***<database_name>***_cleanup** or **cdc.***<database_name>***_capture**, where *<database_name>* is the name of the current database. If a job with the same name already exists, the name is appended with a period (**.**) followed by a unique identifier, for example: **cdc.AdventureWorks_capture.A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ The name of the job is **cdc.**_\<database\_name\>_**\_cleanup** or **cdc.**_\<database\_name\>_**\_capture**, where *<database_name>* is the name of the current database. If a job with the same name already exists, the name is appended with a period (**.**) followed by a unique identifier, for example: **cdc.AdventureWorks_capture.A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  To view the current configuration of a cleanup or capture job, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). To change the configuration of a job, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

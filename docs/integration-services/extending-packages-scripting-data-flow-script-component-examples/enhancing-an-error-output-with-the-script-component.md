@@ -1,26 +1,21 @@
-﻿---
+---
 title: "Enhancing an Error Output with the Script Component | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.date: "01/04/2019"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: integration-services
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "transformations [Integration Services], components"
   - "Script component [Integration Services], examples"
   - "error outputs [Integration Services], enhancing"
   - "Script component [Integration Services], transformation components"
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # Enhancing an Error Output with the Script Component
   By default, the two extra columns in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] error output, ErrorCode and ErrorColumn, contain only numeric codes that represent an error number and the ID of the column in which the error occurred. These numeric values may be of limited use without the corresponding error description and column name.  
@@ -37,7 +32,7 @@ manager: "jhubbard"
   
 #### To configure this Script Component example  
   
-1.  Before creating the new Script component, configure an upstream component in the data flow to redirect rows to its error output when an error or truncation occurs. For testing purposes, you may want to configure a component in a manner that ensures that errors will occur—for example, by configuring a Lookup transformation between two tables where the lookup will fail.  
+1.  Before creating the new Script component, configure an upstream component in the data flow to redirect rows to its error output when an error or truncation occurs. For testing purposes, you may want to configure a component in a manner that ensures that errors will occur-for example, by configuring a Lookup transformation between two tables where the lookup will fail.  
   
 2.  Add a new Script component to the Data Flow designer surface and configure it as a transformation.  
   
@@ -62,44 +57,55 @@ manager: "jhubbard"
 10. Attach the output of the Script component to a suitable destination. A Flat File destination is the easiest to configure for ad hoc testing.  
   
 11. Run the package.  
-  
-```vb  
-Public Class ScriptMain  
-    Inherits UserComponent  
-    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)  
-  
-      Row.ErrorDescription = _  
-        Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)  
-  
-      Dim componentMetaData130 = TryCast(Me.ComponentMetaData, IDTSComponentMetaData130)  
-      If componentMetaData130 IsNot Nothing Then  
-        Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)  
-         End If  
-  
-    End Sub  
-End Class  
-```  
-  
-```csharp  
-public class ScriptMain:  
-    UserComponent  
-{  
-    public override void Input0_ProcessInputRow(Input0Buffer Row)  
-    {  
-  
-      Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);  
-  
-      var componentMetaData130 = this.ComponentMetaData as IDTSComponentMetaData130;  
-      if (componentMetaData130 != null)  
-        {  
-            Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);  
-        }  
-  
-    }  
-}  
-  
-```  
-  
+
+```vb
+Public Class ScriptMain      ' VB
+    Inherits UserComponent
+    Public Overrides Sub Input0_ProcessInputRow(ByVal Row As Input0Buffer)
+
+        Row.ErrorDescription = _
+            Me.ComponentMetaData.GetErrorDescription(Row.ErrorCode)
+
+        Dim componentMetaData130 = TryCast(Me.ComponentMetaData, IDTSComponentMetaData130)
+
+        If componentMetaData130 IsNot Nothing Then
+
+            If 0 = Row.ErrorColumn Then
+                ' 0 means no specific column is identified by ErrorColumn, this time.
+                Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            Else
+                Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
+            End If
+        End If
+    End Sub
+End Class
+```
+
+```csharp
+public class ScriptMain:      // C#
+    UserComponent
+{
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);
+
+        var componentMetaData130 = this.ComponentMetaData as IDTSComponentMetaData130;
+        if (componentMetaData130 != null)
+        {
+            // 0 means no specific column is identified by ErrorColumn, this time.
+            if (Row.ErrorColumn == 0)
+            {
+                Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
+            }
+            else
+            {
+                Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);
+            }
+        }
+    }
+}
+```
+
 ## See Also  
  [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)   
  [Using Error Outputs in a Data Flow Component](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   

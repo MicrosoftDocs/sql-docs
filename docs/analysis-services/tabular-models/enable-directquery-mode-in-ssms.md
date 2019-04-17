@@ -1,30 +1,22 @@
 ---
-title: "Enable DirectQuery mode in SSMS | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
-caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Enable in Analysis Services DirectQuery mode in SSMS | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Enable DirectQuery mode in SSMS
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   You can  change the data access properties of a tabular model that has already been deployed, enabling DirectQuery mode, where queries execute against a backend relational data source rather than cached data residing in-memory.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], steps for DirectQuery configuration differ based on the model's compatibility level. Below you'll find steps that work for all compatibility levels.  
   
- This topic assumes that you have created and validated an in-memory tabular model at compatibility level 1200 or higher, and only need to enable DirectQuery access and update connection strings. If you're starting from a lower compatibility level, you need to manually upgrade it first. See [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) for steps.  
+ This article assumes that you have created and validated an in-memory tabular model at compatibility level 1200 or higher, and only need to enable DirectQuery access and update connection strings. If you're starting from a lower compatibility level, you need to manually upgrade it first. See [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) for steps.  
   
 > [!IMPORTANT]  
 >  We recommend using [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] instead of Management Studio to switch data storage modes. When you use  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] to change  model, and then follow that up with deployment to the server,  the model and database stay in sync. Moreover, changing the storage modes in the model lets you review any validation errors that occur. When using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as described in this article, validation errors are not reported.  
@@ -34,7 +26,7 @@ manager: "erikre"
   
 -   Ensure that the model does not have features which might cause validation errors in DirectQuery mode, and then change the data storage mode on the model from in-memory to DirectQuery.  
   
-     A list of feature restrictions is documented in [DirectQuery Mode &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
+     A list of feature restrictions is documented in [DirectQuery Mode](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).  
   
 -   Review  the connection string and credentials used by the deployed database to retrieve data from the backend external database. Make sure there is only one connection, and that its settings are suitable for query execution.  
   
@@ -91,7 +83,7 @@ manager: "erikre"
   
 -   When both the cache and the relational data source are available, you can set the preferred connection method, but ultimately the client controls which source is used, using the DirectQueryMode connection string property.  
   
--   You can configure partitions on the cache in such a way that the primary partition used for DirectQuery mode is never processed and must always reference the relational source. There are many ways to use partitions to optimize the model design and reporting experience. For more information, see [Define partitions in DirectQuery models &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
+-   You can configure partitions on the cache in such a way that the primary partition used for DirectQuery mode is never processed and must always reference the relational source. There are many ways to use partitions to optimize the model design and reporting experience. For more information, see [Define partitions in DirectQuery models](../../analysis-services/tabular-models/define-partitions-in-directquery-models-ssas-tabular.md).  
   
 -   After the model has been deployed, you can change the preferred connection method. For example, you might use a hybrid mode for testing, and switch the model over to **DirectQuery only** mode only after thoroughly testing any reports or queries that use the model. For more information, see [Set or Change the Preferred Connection Method for DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
@@ -102,7 +94,7 @@ manager: "erikre"
   
 1.  In Object Explorer, expand **Connections** and double-click a connection to view its properties.  
   
-     For DirectQuery models, there should only be one connection defined for the database, and the data source must be relational, and of a supported database type. See [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
+     For DirectQuery models, there should only be one connection defined for the database, and the data source must be relational, and of a supported database type. See [Data Sources Supported](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md).  
   
 2.  **Connection string** should specify the server, database name, and the authentication method used in DirectQuery operations. If you're using SQL Server authentication, you can specify the database login here.  
   
@@ -127,9 +119,9 @@ manager: "erikre"
 3.  In the trace, you should see evidence of query execution on the relational database.  
   
 ## See also  
- [Compatibility Level for Tabular models in Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
- [Data Sources Supported &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
- [Extended Events](../../relational-databases/extended-events/extended-events.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+ [Compatibility level](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
+ [Data sources supported](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Extended events](../../relational-databases/extended-events/extended-events.md)   
+
   
   

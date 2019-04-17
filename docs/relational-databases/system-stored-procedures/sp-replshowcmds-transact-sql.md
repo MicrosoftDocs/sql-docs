@@ -2,28 +2,23 @@
 title: "sp_replshowcmds (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replshowcmds"
   - "sp_replshowcmds_TSQL"
 helpviewer_keywords: 
   - "sp_replshowcmds"
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
-caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_replshowcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns the commands for transactions marked for replication in readable format. **sp_replshowcmds** can be run only when client connections (including the current connection) are not reading replicated transactions from the log. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -37,7 +32,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## Arguments  
- [ **@maxtrans** = ] *maxtrans*  
+`[ @maxtrans = ] maxtrans`
  Is the number of transactions about which to return information. *maxtrans* is **int**, with a default of **1**, which specifies the maximum number of transactions pending replication for which **sp_replshowcmds** returns information.  
   
 ## Result Sets  

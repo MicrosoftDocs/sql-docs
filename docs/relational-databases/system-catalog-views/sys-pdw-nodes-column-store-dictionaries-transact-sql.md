@@ -1,23 +1,21 @@
 ---
 title: "sys.pdw_nodes_column_store_dictionaries (Transact-SQL) | Microsoft Docs"
 ms.date: "03/03/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.custom: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
-caps.latest.revision: 7
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
+author: ronortloff
+ms.author: rortloff
+manager: craigg
+monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contains a row for each dictionary used in columnstore indexes. Dictionaries are used to encode some, but not all data types, therefore not all columns in a columnstore index have dictionaries. A dictionary can exist as a primary dictionary (for all segments) and possibly for other secondary dictionaries used for a subset of the column's segments.  
   
@@ -28,7 +26,7 @@ manager: "jhubbard"
 |**column_id**|**int**|ID of the columnstore column.|  
 |**dictionary_id**|**int**|Id of the dictionary.|  
 |**version**|**int**|Version of the dictionary format.|  
-|**type**|**int**|Dictionary type:<br /><br /> 1 – Hash dictionary containing **int** values<br /><br /> 2 – Not used<br /><br /> 3 – Hash dictionary containing string values<br /><br /> 4 – Hash dictionary containing **float** values|  
+|**type**|**int**|Dictionary type:<br /><br /> 1 - Hash dictionary containing **int** values<br /><br /> 2 - Not used<br /><br /> 3 - Hash dictionary containing string values<br /><br /> 4 - Hash dictionary containing **float** values|  
 |**last_id**|**int**|The last data id in the dictionary.|  
 |**entry_count**|**bigint**|Number of entries in the dictionary.|  
 |**on_disc_size**|**bigint**|Size of dictionary in bytes.|  

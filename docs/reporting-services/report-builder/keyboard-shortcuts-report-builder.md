@@ -1,23 +1,18 @@
 ---
 title: "Keyboard Shortcuts (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/01/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-builder
+
+
+ms.topic: conceptual
 helpviewer_keywords: 
   - "keyboard shortcuts"
   - "shortcuts"
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Keyboard Shortcuts (Report Builder)
   When you create and edit paginated [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated reports in Report Builder, you have access to all the shortcut keys for navigation that are provided by the Windows environment. You can select from several standard keyboard mapping schemes.  
@@ -91,7 +86,7 @@ manager: "erikre"
 |Accelerator mode for pan and zoom in map view area when a map viewport is selected.|CTRL +Left click|  
   
 ## See Also  
- [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Glossary &#40;Report Builder&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   

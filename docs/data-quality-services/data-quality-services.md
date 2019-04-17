@@ -2,21 +2,21 @@
 title: "Data Quality Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2013"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: data-quality-services
+ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: leolimsft
+ms.author: lle
+manager: craigg
 ---
 # Data Quality Services
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) is a knowledge-driven data quality product. DQS enables you to build a knowledge base and use it to perform a variety of critical data quality tasks, including correction, enrichment, standardization, and de-duplication of your data. DQS enables you to perform data cleansing by using cloud-based reference data services provided by reference data providers. DQS also provides you with profiling that is integrated into its data-quality tasks, enabling you to analyze the integrity of your data.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) is a knowledge-driven data quality product. DQS enables you to build a knowledge base and use it to perform a variety of critical data quality tasks, including correction, enrichment, standardization, and de-duplication of your data. DQS enables you to perform data cleansing by using cloud-based reference data services provided by reference data providers. DQS also provides you with profiling that is integrated into its data-quality tasks, enabling you to analyze the integrity of your data.  
   
  DQS consists of [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] and [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], both of which are installed as part of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] is a SQL Server instance feature that consists of three SQL Server catalogs with data-quality functionality and storage. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] is a SQL Server shared feature that business users, information workers, and IT professionals can use to perform computer-assisted data quality analyses and manage their data quality interactively. You can also perform data quality processes by using the [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] and Master Data Services (MDS) data quality functionality, both of which are based on DQS.  
   
@@ -44,7 +44,7 @@ manager: "jhubbard"
 ## See Also  
  [Introduction to Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Data Quality Services Concepts](../data-quality-services/data-quality-services-concepts.md)   
- [DQS Resources](http://technet.microsoft.com/sqlserver/hh780961)   
- [SQL Server Resource Center](http://go.microsoft.com/fwlink/?linkID=219676)  
+ [DQS Resources](https://technet.microsoft.com/sqlserver/hh780961)   
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

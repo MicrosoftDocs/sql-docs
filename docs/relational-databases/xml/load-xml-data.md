@@ -2,23 +2,21 @@
 title: "Load XML Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "XML data [SQL Server], loading"
   - "loading XML data"
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Load XML Data
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   You can transfer XML data into [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in several ways. For example:  
   
 -   If you have your data in an [n]text or image column in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, you can import the table by using [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Change the column type to XML by using the ALTER TABLE statement.  
@@ -64,7 +62,7 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
-  <xsd:schema …  
+  <xsd:schema ...  
 ```  
   
  You should then include an N to make the XML instance an instance of Unicode. For example:  
@@ -72,11 +70,11 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
 -- Assign XML instance to a variable.  
 DECLARE @X XML  
-SET @X = N'…'  
+SET @X = N'...'  
 -- Insert XML instance into an xml type column.  
-INSERT INTO T VALUES (N'…')  
+INSERT INTO T VALUES (N'...')  
 -- Create an XML schema collection  
-CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema … '  
+CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
 ## See Also  

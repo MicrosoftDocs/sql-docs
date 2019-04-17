@@ -2,12 +2,10 @@
 title: "sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_xtp_checkpoint_force_garbage_collection_TSQL"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_xtp_checkpoint_force_garbage_collection"
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
-caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Marks source files used in the merge operation with the log sequence number (LSN) after which they are not needed and can be garbage collected. Also, it moves the files whose associated LSN is lower than the log truncation point to filestream garbage collection.  
   

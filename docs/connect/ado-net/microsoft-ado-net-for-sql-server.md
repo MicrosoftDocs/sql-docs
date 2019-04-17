@@ -2,18 +2,15 @@
 title: "Microsoft ADO.NET for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Microsoft ADO.NET for SQL Server
 
@@ -33,13 +30,13 @@ ADO.NET is the core data access technology for .NET languages. Use the System.Da
 * [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## Community  
-* [ADO.NET Managed Providers Forum](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
-* [ADO.NET DataSet Forum](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
+* [ADO.NET Managed Providers Forum](https://social.msdn.microsoft.com/Forums/adodotnetdataproviders/threads/)  
+* [ADO.NET DataSet Forum](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
   
 ## More Samples  
 * [ADO.NET Code Examples](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [Getting Started with .NET Framework on Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [Getting Started with .NET Core on macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/mac/)
+* [Getting Started with .NET Core on macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [Getting Started with .NET Core on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
 * [Getting Started with .NET Core on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

@@ -1,13 +1,11 @@
 ---
 title: "Introduction to Annotated XSD Schemas (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.date: 01/11/2019
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
   - "namespaces [SQLXML], annotated XSD schemas"
@@ -21,12 +19,13 @@ helpviewer_keywords:
   - "annotated XSD schemas, examples"
   - "XML views [SQLXML]"
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Annotated XSD Schemas (SQLXML 4.0)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can create XML views of relational data by using the XML Schema Definition (XSD) language. These views can then be queried by using XML Path language (XPath) queries. This is similar to creating views by using CREATE VIEW statements and then specifying SQL queries against the view.  
   
  An XML schema describes the structure of an XML document and also describes the various constraints on the data in the document. When you specify XPath queries against the schema, the structure of the XML document returned is determined by the schema against which the XPath query is executed.  

@@ -2,25 +2,22 @@
 title: "Setting Up the Visual FoxPro ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "installing Visual FoxPro ODBC driver [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], installing"
   - "FoxPro ODBC driver [ODBC], installing"
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
-caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Setting Up the Visual FoxPro ODBC Driver
-For information about downloading and installing the Visual FoxPro ODBC driver, see [Visual FoxPro ODBC Driver](http://go.microsoft.com/fwlink/?LinkId=121318) on MSDN Downloads.  
+For information about downloading and installing the Visual FoxPro ODBC driver, see [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318) on MSDN Downloads.  
   
  You use the Microsoft Visual FoxPro ODBC Driver Setup program to do the following:  
   

@@ -1,26 +1,20 @@
 ---
-title: "String Storage and Collation in Tabular Models | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "String storage and collation in Analysis Services tabular models | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
-# String Storage and Collation in Tabular Models
+# String storage and collation in tabular models
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Strings (text values) are stored in a highly compressed format in tabular models; because of this compression, you can get unexpected results when you retrieve entire or partial strings. Also, because string locale and collations are inherited hierarchically from the closest parent object, if the string language is not explicitly defined, the locale and collation of the parent can affect how each string is stored and whether the string is unique or conflated with similar strings as defined by the parent collation.  
   
- This topic describes the mechanism by which strings are compressed and stored, and provides examples of how collation and language affect the results of text formulas in tabular models.  
+ This article describes the mechanism by which strings are compressed and stored, and provides examples of how collation and language affect the results of text formulas in tabular models.  
   
 ## Storage  
  In tabular models all data is highly compressed to better fit in memory. As a consequence, all strings that can be considered lexically equivalent are stored only once. The first instance of the string is used as the canonical representation and thereafter each equivalent string is indexed to the same compressed value as the first occurrence.  
@@ -54,7 +48,7 @@ manager: "erikre"
 |trEE|  
 |PlAnT|  
   
- If you use the column, **Classification – English**, in your model, wherever you display plant classification you will see not the original values, with their various uses of upper and lower case, but only the first instance. The reason is that all the uppercase and lowercase variants of **tree** are considered equivalent in this collation and locale; therefore, only one string was preserved and the first instance of that string that is encountered by the system is the one that is saved.  
+ If you use the column, **Classification - English**, in your model, wherever you display plant classification you will see not the original values, with their various uses of upper and lower case, but only the first instance. The reason is that all the uppercase and lowercase variants of **tree** are considered equivalent in this collation and locale; therefore, only one string was preserved and the first instance of that string that is encountered by the system is the one that is saved.  
   
 > [!WARNING]  
 >  You might decide that you want to define which string will be the first to store, according to what you consider correct, but this could be very hard to so. There is no simple way to determine in advance which row should be processed first by the engine, given that all values are considered to be the same. Instead, if you need to set the standard value, you should cleanse all your strings before loading the model.  

@@ -1,13 +1,11 @@
 ---
 title: "@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.date: "08/18/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@CURSOR_ROWS"
@@ -20,21 +18,20 @@ helpviewer_keywords:
   - "last-opened cursor"
   - "asynchronous cursors [SQL Server]"
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# @@CURSOR_ROWS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# &#x40;&#x40;CURSOR_ROWS (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Returns the number of qualifying rows currently in the last cursor opened on the connection. To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can populate large keyset and static cursors asynchronously. @@CURSOR_ROWS can be called to determine that the number of the rows that qualify for a cursor are retrieved at the time @@CURSOR_ROWS is called.
+This returns the number of qualifying rows currently in the last cursor opened on the connection. To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can populate large keyset and static cursors asynchronously. `@@CURSOR_ROWS` can be called to determine that the number of the rows that qualify for a cursor are retrieved at the time of the @@CURSOR_ROWS call.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```sql
+```
 @@CURSOR_ROWS  
 ```  
   
@@ -45,16 +42,16 @@ Returns the number of qualifying rows currently in the last cursor opened on the
   
 |Return value|Description|  
 |---|---|
-|-*m*|The cursor is populated asynchronously. The value returned (-*m*) is the number of rows currently in the keyset.|  
-|-1|The cursor is dynamic. Because dynamic cursors reflect all changes, the number of rows that qualify for the cursor is constantly changing. It can never be definitely stated that all qualified rows have been retrieved.|  
+|-*m*|The cursor populates asynchronously. The value returned (-*m*) is the number of rows currently in the keyset.|  
+|-1|The cursor is dynamic. Because dynamic cursors reflect all changes, the number of rows that qualify for the cursor constantly changes. The cursor does not necessarily retrieve all qualified rows.|  
 |0|No cursors have been opened, no rows qualified for the last opened cursor, or the last-opened cursor is closed or deallocated.|  
 |*n*|The cursor is fully populated. The value returned (*n*) is the total number of rows in the cursor.|  
   
 ## Remarks  
-The number returned by @@CURSOR_ROWS is negative if the last cursor was opened asynchronously. Keyset-driver or static cursors are opened asynchronously if the value for sp_configure cursor threshold is greater than 0 and the number of rows in the cursor result set is greater than the cursor threshold.
+`@@CURSOR_ROWS` returns a negative number if the last cursor opened asynchronously. Keyset-driver or static cursors open asynchronously if the value for sp_configure cursor threshold exceeds 0, and the number of rows in the cursor result set exceeds the cursor threshold.
   
 ## Examples  
-The following example declares a cursor and uses `SELECT` to display the value of `@@CURSOR_ROWS`. The setting has a value of `0` before the cursor is opened and a value of `-1` to indicate that the cursor keyset is populated asynchronously.
+This example first declares a cursor, and then uses `SELECT` to display the value of `@@CURSOR_ROWS`. The setting has a value of `0` before the cursor opens and then has a value of `-1`, to indicate that the cursor keyset populates asynchronously.
   
 ```sql
 USE AdventureWorks2012;  
@@ -72,19 +69,21 @@ GO
   
 Here are the result sets.
   
-`-----------`
-  
- `0`  
-  
-`LastName`
-  
-`---------------`
-  
-`Sanchez`
-  
-`-----------`
-  
- `-1`  
+```
+-----------
+0  
+```
+
+```
+LastName
+---------------
+Sanchez
+```
+
+```
+-----------
+-1
+```  
   
 ## See also
 [Cursor Functions &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  

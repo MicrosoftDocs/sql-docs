@@ -1,29 +1,24 @@
 ---
 title: "Restore Stretch-enabled databases (Stretch Database) | Microsoft Docs"
-ms.custom: ""
 ms.date: "07/06/2016"
-ms.prod: "sql-server-2016"
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
-caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "craigg"
+author: rothja
+ms.author: jroth
+manager: craigg
 ---
 # Restore Stretch-enabled databases (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+
 
   Restore a backed up database when necessary to recover from many types of failures, errors, and disasters.
   
   For more info about backup, see [Backup Stretch-enabled databases](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md).
 
 > [!TIP]
-> Backup is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> Backup is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../database-engine/sql-server-business-continuity-dr.md).
 
 ## Restore your SQL Server data
 To recover from hardware failure or corruption, restore the Stretch-enabled SQL Server database from a backup. You can continue to use the SQL Server restore methods that you currently use. For more info, see [Restore and Recovery Overview](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).
@@ -67,7 +62,7 @@ To restore a deleted Azure database to the point when it was deletedby using the
   
     -   Specify whether to make a copy of the remote data and connect to the copy (recommended).  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

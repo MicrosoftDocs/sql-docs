@@ -2,26 +2,24 @@
 title: "TCP/IP Properties (IP Addresses Tab) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: configuration
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ports [SQL Server], listening on"
   - "listening [SQL Server], on ports"
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
 ---
 # TCP/IP Properties (IP Addresses Tab)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Use the **TCP/IP Properties (IP Addresses Tab)** dialog box to configure the TCP/IP protocol options for a specific IP address. Only **TCP Dynamic Ports** and **TCP Port** can be configured for all addresses at once by selecting **IP All**.  
   
- Changes take effect when SQL Server SQL Server is restarted. For information about starting and stopping the SQL Server Browser service, see [Start and Stop the SQL Server Browser Service](https://msdn.microsoft.com/library/hh403394.aspx).  
+ Changes take effect when SQL Server SQL Server is restarted. For information about starting and stopping the SQL Server Browser service, see [Start and Stop the SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ## Static vs. Dynamic Ports  
  The default instance of SQL Server listens for incoming connections on port 1433. The port can be changed for security reasons or because of a client application requirement. By default, named instances (including SQL Server Express) are configured to listen on dynamic ports. To configure a static port, leave the **TCP Dynamic Ports** box blank and provide an available port number in the **TCP Port** box. For more information about opening ports in the firewall, see Configuring the Windows Firewall to Allow SQL Server Access in Books Online.  
@@ -59,7 +57,7 @@ manager: "jhubbard"
   
 ## See Also  
  [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [Creating a Valid Connection String Using TCP IP](https://msdn.microsoft.com/library/ms191260.aspx)   
- [SQL Server Browser Service](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
+ [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)   
+ [SQL Server Browser Service](sql-server-browser-service.md)  
   
   

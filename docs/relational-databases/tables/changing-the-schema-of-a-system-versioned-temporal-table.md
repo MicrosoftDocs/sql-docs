@@ -1,23 +1,20 @@
 ---
 title: "Changing the Schema of a System-Versioned Temporal Table | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
+ms.custom: ""
 ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Changing the Schema of a System-Versioned Temporal Table
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Use the **ALTER TABLE** statement to add, alter or remove a column.  
   
@@ -57,7 +54,7 @@ ALTER TABLE dbo.Department
   
 -   During an **ALTER TABLE** operation, the system holds a schema lock on both tables.  
   
--   Specified schema change is propagated to history table in appropriate way (depending on type of change)  
+-   Specified schema change is propagated to history table appropriately (depending on type of change).  
   
 -   If you add a non-nullable column or alter existing column to become non-nullable, you must specify the default value for existing rows. The system will generate an additional default with the same value and apply it to the history table. Adding **DEFAULT** to a non-empty table is a size of data operation on all editions other than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (on which it is a metadata operation).  
   
@@ -100,9 +97,7 @@ ALTER TABLE dbo.Department
   
         ```  
   
-## Did this Article Help You? We’re Listening  
- What information are you looking for, and did you find it? We’re listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page)  
-  
+ 
 ## See Also  
  [Temporal Tables](../../relational-databases/tables/temporal-tables.md)   
  [Getting Started with System-Versioned Temporal Tables](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

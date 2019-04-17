@@ -2,23 +2,20 @@
 title: "getIndexInfo Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.getIndexInfo"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # getIndexInfo Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,13 +76,13 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**short**|The type of the index. It can be one of the following values:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|The ordinal position of the column in the index. The first column in the index is 1.|  
 |COLUMN_NAME|**String**|The name of the column.|  
-|ASC_OR_DESC|**String**|The order used in the collation of the index. It can be one of the following values:<br /><br /> A (ascending)<br /><br /> D (descending)<br /><br /> NULL (not applicable)<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] always returns "A".|  
+|ASC_OR_DESC|**String**|The order used in the collation of the index. It can be one of the following values:<br /><br /> A (ascending)<br /><br /> D (descending)<br /><br /> NULL (not applicable)<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] always returns "A".|  
 |CARDINALITY|**int**|The number of rows in the table or unique values in the index.|  
 |PAGES|**int**|The number of pages used to store the index or table.|  
-|FILTER_CONDITION|**String**|The filter condition.<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] always returns null.|  
+|FILTER_CONDITION|**String**|The filter condition.<br /><br /> **Note:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] always returns null.|  
   
 > [!NOTE]  
->  For more information about the data returned by the getIndexInfo method, see "sp_indexes (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  For more information about the data returned by the getIndexInfo method, see "sp_indexes (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
  The following example demonstrates how to use the getIndexInfo method to return information about the indexes and statistics of the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  

@@ -2,20 +2,17 @@
 title: "FINDSTRING (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 helpviewer_keywords: 
   - "FINDSTRING function"
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # FINDSTRING (SSIS Expression)
   Returns the location of the specified occurrence of a string within a character expression. The return result is the one-based index of the occurrence. The string parameter must evaluate to a character expression, and the occurrence parameter must evaluate to an integer. If the string is not found, the return value is 0. If the string occurs fewer times than the occurrence argument specifies, the return value is 0.  
@@ -62,10 +59,10 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- This example uses the **Name** column. It returns the location of the value n in the **Name** column. The return result varies depending on the value in **Name**. If **Name** contains Anderson, the function returns 8.  
+ This example uses the **Name** column. It returns the location of the second "n" in the **Name** column. The return result varies depending on the value in **Name**. If **Name** contains Anderson, the function returns 8.  
   
 ```  
-FINDSTRING(Name,"n", 2)   
+FINDSTRING(Name, "n", 2)   
 ```  
   
  This example uses the **Name** and **Size** columns. It returns the location of the leftmost character of the **Size** value in the **Name** column. The return result varies depending on column values. If **Name** contains Mountain,500Red,42 and **Size** contains 42, the return result is 17.  

@@ -1,23 +1,18 @@
 ---
 title: "Lesson 4: Defining Advanced Attribute and Dimension Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
-caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Lesson 4: Defining Advanced Attribute and Dimension Properties
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 In this lesson, you will learn how to use some of the advanced properties of attributes, attribute hierarchies, and dimension properties.  
   
 > [!NOTE]  
@@ -40,7 +35,7 @@ In this task, you learn how and when to disable or hide attribute hierarchies.
 [Sorting Attribute Members Based on a Secondary Attribute](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
 In this task, you learn how to sort dimension members based on a secondary attribute, to achieve the sort order that you want.  
   
-[Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../analysis-services/4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+[Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy](../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
 In this task, you learn how to define member properties for attributes and to specify aggregation relationships between them. For more information, see [Define Attribute Relationships](../analysis-services/multidimensional-models/attribute-relationships-define.md) and [User Hierarchy Properties](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
 [Defining the Unknown Member and Null Processing Properties](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  

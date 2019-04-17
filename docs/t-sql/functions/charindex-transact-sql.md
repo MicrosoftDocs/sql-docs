@@ -2,12 +2,10 @@
 title: "CHARINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHARINDEX"
@@ -20,47 +18,45 @@ helpviewer_keywords:
   - "pattern searching [SQL Server]"
   - "starting point of expression in character string"
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHARINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Searches an expression for another expression and returns its starting position if found.
+This function searches for one character expression inside a second character expression, returning the starting position of the first expression if found.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
 ```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   
 ## Arguments  
 *expressionToFind*  
-Is a character [expression](../../t-sql/language-elements/expressions-transact-sql.md) that contains the sequence to be found. *expressionToFind* is limited to 8000 characters.
+A character [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the sequence to find. *expressionToFind* has an 8000 character limit.
   
 *expressionToSearch*  
-Is a character expression to be searched.
+A character expression to search.
   
 *start_location*  
-Is an **integer** or **bigint** expression at which the search starts. If *start_location* is not specified, is a negative number, or is 0, the search starts at the beginning of *expressionToSearch*.
+An **integer** or **bigint** expression at which the search starts. If *start_location* is not specified, has a negative value, or has a zero (0) value, the search starts at the beginning of *expressionToSearch*.
   
 ## Return types
-**bigint** if *expressionToSearch* is of the **varchar(max)**, **nvarchar(max)**, or **varbinary(max)** data types; otherwise, **int**.
+**bigint** if *expressionToSearch* has an **nvarchar(max)**, **varbinary(max)**, or **varchar(max)** data type; **int** otherwise.
   
 ## Remarks  
-If either *expressionToFind* or *expressionToSearch* is of a Unicode data type (**nvarchar** or **nchar**) and the other is not, the other is converted to a Unicode data type. CHARINDEX cannot be used with **text**, **ntext**, and **image** data types.
+If either the *expressionToFind* or *expressionToSearch* expression has a Unicode data type (**nchar** or **nvarchar**), and the other expression does not, the CHARINDEX function converts that other expression to a Unicode data type. CHARINDEX cannot be used with **image**, **ntext**, or **text** data types.
   
-If either *expressionToFind* or *expressionToSearch* is NULL, CHARINDEX returns NULL.
+If either the *expressionToFind* or *expressionToSearch* expression has a NULL value, CHARINDEX returns NULL.
   
-If *expressionToFind* is not found within *expressionToSearch*, CHARINDEX returns 0.
+If CHARINDEX does not find *expressionToFind* within *expressionToSearch*, CHARINDEX returns 0.
   
-CHARINDEX performs comparisons based on the collation of the input. To perform a comparison in a specified collation, you can use COLLATE to apply an explicit collation to the input.
+CHARINDEX performs comparisons based on the input collation. To perform a comparison in a specified collation, use COLLATE to apply an explicit collation to the input.
   
 The starting position returned is 1-based, not 0-based.
   
@@ -72,7 +68,7 @@ When using SC collations, both *start_location* and the return value count surro
 ## Examples  
   
 ### A. Returning the starting position of an expression  
-The following example returns the position at which the sequence of characters `bicycle` starts in the `DocumentSummary` column of the `Document` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+This example searches for `bicycle` in the searched string value variable `@document`.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -90,7 +86,7 @@ GO
 ```  
   
 ### B. Searching from a specific position  
-The following example uses the optional *start_location* parameter to start looking for `vital` at the fifth character of the `DocumentSummary` column in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.
+This example uses the optional *start_location* parameter to start the search for `vital` at the fifth character of the searched string value variable `@document`.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -111,7 +107,7 @@ GO
 ```  
   
 ### C. Searching for a nonexistent expression  
-The following example shows the result set when *expressionToFind* is not found within *expressionToSearch*.
+This example shows the result set when CHARINDEX does not find *expressionToFind* within *expressionToSearch*.
   
 ```sql
 DECLARE @document varchar(64);  
@@ -124,14 +120,15 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+0
   
- `0`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### D. Performing a case-sensitive search  
-The following example performs a case-sensitive search for the string `'TEST'` in `'This is a Test``'`.
+This example shows a case-sensitive search for the string `'TEST'` in searched string `'This is a Test``'`.
   
 ```sql
 USE tempdb;  
@@ -144,11 +141,12 @@ SELECT CHARINDEX ( 'TEST',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+0
+```  
   
- `0`  
-  
-The following example performs a case-sensitive search for the string `'Test'` in `'This is a Test'`.
+This example shows a case-sensitive search for the string `'Test'` in `'This is a Test'`.
   
 ```sql
   
@@ -161,12 +159,13 @@ SELECT CHARINDEX ( 'Test',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+11
+```  
   
 ### E. Performing a case-insensitive search  
-The following example performs a case-insensitive search for the string `'TEST'` in `'This is a Test'`.
+This example shows a case-insensitive search for the string `'TEST'` in `'This is a Test'`.
   
 ```sql
   
@@ -180,14 +179,15 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+11
+```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### F. Searching from the start of a string expression  
-The following example returns the first location of the `is` string in `This is a string`, starting from position 1 (the first character) in the string.
+This example returns the first location of the string `is` in string `This is a string`, starting from position 1 (the first character) of `This is a string`.
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string');  
@@ -195,12 +195,13 @@ SELECT CHARINDEX('is', 'This is a string');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `3`  
+```
+---------
+3
+```  
   
 ### G. Searching from a position other than the first position  
-The following example returns the first location of the `is` string in `This is a string`, starting with the fourth position.
+This example returns the first location of the string `is` in string `This is a string`, starting the search from position 4 (the fourth character).
   
 ```sql
 SELECT CHARINDEX('is', 'This is a string', 4);  
@@ -208,12 +209,13 @@ SELECT CHARINDEX('is', 'This is a string', 4);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `6`  
+```
+---------
+ 6
+ ```  
   
 ### H. Results when the string is not found  
-The following example shows the return value when the *string_pattern* is not found in the searched string.
+This example shows the return value when CHARINDEX does not find string *string_pattern* in the searched string.
   
 ```sql
 SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;  
@@ -221,14 +223,17 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `0`  
+```
+---------
+0
+```  
   
 ## See also
-[String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+ [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
+ [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
+ [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [+ &#40;String Concatenation&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

@@ -1,20 +1,15 @@
 ---
 title: "Create a Document Map (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 05/24/2018
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: report-design
+
+
+ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 
 # Create a Document Map (Report Builder and SSRS)
@@ -29,7 +24,7 @@ A document map provides a set of navigational links to report items in a rendere
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="DocMapRenderExtensions"></a> Document Maps and Rendering Extensions  
- The document map is intended for use in the HTML rendering extension—for example, in Preview and the Report Viewer. Other rendering extensions have different ways of articulating a document map:  
+ The document map is intended for use in the HTML rendering extension-for example, in Preview and the Report Viewer. Other rendering extensions have different ways of articulating a document map:  
   
 -   PDF renders a document map as the Bookmarks pane.  
   
@@ -79,19 +74,19 @@ A document map provides a set of navigational links to report items in a rendere
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### To hide the document map when you view a report  
   
-1.  In Report Manager, browse to the report that has the document map.  
+1.  In the web portal, browse to the report that has the document map.  
   
      For example, for the [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] sample reports, the following URL specifies the report named Product Catalog.  
   
     ```  
-    http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     ```  
   
 2.  Copy the report path on the server. In the example, the report path is `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`.  
   
 3.  Create a new URL with the following three components:  
   
-    -   The report viewer on the report server: `http://localhost/ReportServer/Pages/ReportViewer.aspx?`  
+    -   The report viewer on the report server: `https://localhost/ReportServer/Pages/ReportViewer.aspx?`  
   
     -   The name of the report you copied in step 1, for example: `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
@@ -100,19 +95,19 @@ A document map provides a set of navigational links to report items in a rendere
      The following URL consists of these three components appended in the order they are listed.  
   
     ```  
-    http://localhost/ReportServer/Pages/ReportViewer.aspx?  
+    https://localhost/ReportServer/Pages/ReportViewer.aspx?  
     %2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     &rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False  
     ```  
   
      To use this URL, copy it and remove all line breaks.  
   
-4.  Paste the URL in Report Manager, and then press ENTER. The report runs, and the document map is hidden.  
+4.  Paste the URL in the web portal, and then press ENTER. The report runs, and the document map is hidden.  
   
 > [!NOTE]  
->  For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+>  For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
->  For more information, see "URL Access" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+>  For more information, see "URL Access" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
 
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

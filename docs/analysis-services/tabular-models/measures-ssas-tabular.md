@@ -1,23 +1,17 @@
 ---
-title: "Measures| Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+title: "Measures in Analysis Services tabular models | Microsoft Docs"
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Measures
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   In tabular models, a measure is a calculation created using a DAX formula for use in a reporting client. Measures are evaluated based on fields, filters, and slicers users select in the reporting client application.  
   
 ##  <a name="bkmk_understanding"></a> Benefits  
@@ -50,7 +44,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |**Grand Total**|**$4,691,673,731.53**|  
   
 ##  <a name="bkmk_def_mg"></a> Defining measures by using the measure grid  
- Measures are created at design time by using the measure grid in the model designer. Each table has a measure grid. By default, the measure grid is displayed below each table in the model designer. You can also choose not to view the measure grid for a particular table. To toggle the display of a table’s measure grid, click the **Table** menu, and then click **Show Measure Grid**.  
+ Measures are created at design time by using the measure grid in the model designer. Each table has a measure grid. By default, the measure grid is displayed below each table in the model designer. You can also choose not to view the measure grid for a particular table. To toggle the display of a table's measure grid, click the **Table** menu, and then click **Show Measure Grid**.  
   
  In the measure grid, you can create measures in the following ways:  
   

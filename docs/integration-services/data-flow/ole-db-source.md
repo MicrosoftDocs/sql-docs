@@ -2,23 +2,23 @@
 title: "OLE DB Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: integration-services
+ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.oledbsource.f1"
+  - "sql13.dts.designer.oledbsourceadapter.connection.f1"
+  - "sql13.dts.designer.oledbsourceadapter.columns.f1"
+  - "sql13.dts.designer.oledbsourceadapter.errorhandling.f1"
 helpviewer_keywords: 
   - "sources [Integration Services], OLE DB"
   - "OLE DB source [Integration Services]"
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: janinezhang
+ms.author: janinez
+manager: craigg
 ---
 # OLE DB Source
   The OLE DB source extracts data from a variety of OLE DB-compliant relational databases by using a database table, a view, or an SQL command. For example, the OLE DB source can extract data from tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
@@ -78,7 +78,7 @@ manager: "jhubbard"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- The stored procedure expects the variables, `@StartProductID` and `@CheckDate`, to provide parameter values. The order in which the parameters appear in the **Mappings** list is irrelevant. The only requirement is that the parameter names match the variable names in the stored procedure, including the @ sign.  
+ The stored procedure expects the variables, `@StartProductID` and `@CheckDate`, to provide parameter values. The order in which the parameters appear in the **Mappings** list is irrelevant. The only requirement is that the parameter names match the variable names in the stored procedure, including the \@ sign.  
   
 ### Mapping Parameters to Variables  
  The parameters are mapped to variables that provide the parameter values at run time. The variables are typically user-defined variables, although you can also use the system variables that [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides. If you use user-defined variables, make sure that you set the data type to a type that is compatible with the data type of the column that the mapped parameter references. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  
@@ -89,17 +89,9 @@ manager: "jhubbard"
 ## Configuring the OLE DB Source  
  You can set properties programmatically or through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer.  
   
- For more information about the properties that you can set in the **OLE DB Source Editor** dialog box, click one of the following topics:  
-  
--   [OLE DB Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/ole-db-source-editor-connection-manager-page.md)  
-  
--   [OLE DB Source Editor &#40;Columns Page&#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)  
-  
--   [OLE DB Source Editor &#40;Error Output Page&#41;](../../integration-services/data-flow/ole-db-source-editor-error-output-page.md)  
-  
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -114,7 +106,119 @@ manager: "jhubbard"
 -   [Sort Data for the Merge and Merge Join Transformations](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## Related Content  
- Wiki article, [SSIS with Oracle Connectors](http://go.microsoft.com/fwlink/?LinkId=220670), on social.technet.microsoft.com.  
+ Wiki article, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), on social.technet.microsoft.com.  
+  
+## OLE DB Source Editor (Connection Manager Page)
+  Use the **Connection Manager** page of the **OLE DB Source Editor** dialog box to select the OLE DB connection manager for the source. This page also lets you select a table or view from the database.  
+  
+> [!NOTE]  
+>  To load data from a data source that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, use an OLE DB source. You cannot use an Excel source to load data from an Excel 2007 data source. For more information, see [Configure OLE DB Connection Manager](../../integration-services/connection-manager/configure-ole-db-connection-manager.md).  
+>   
+>  To load data from a data source that uses [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 or earlier, use an Excel source. For more information, see [Excel Source Editor &#40;Connection Manager Page&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).  
+  
+> [!NOTE]  
+>  The **CommandTimeout** property of the OLE DB source is not available in the **OLE DB Source Editor**, but can be set by using the **Advanced Editor**. For more information on this property, see the Excel Source section of [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+  
+### Open the OLE DB Source Editor (Connection Manager Page)  
+  
+1.  Add the OLE DB source to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package, in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  
+2.  Right-click the source component and when click **Edit**.  
+  
+3.  Click **Connection Manager**.  
+  
+### Static Options  
+ **OLE DB connection manager**  
+ Select an existing connection manager from the list, or create a new connection by clicking **New**.  
+  
+ **New**  
+ Create a new connection manager by using the **Configure OLE DB Connection Manager** dialog box.  
+  
+ **Data access mode**  
+ Specify the method for selecting data from the source.  
+  
+|Option|Description|  
+|------------|-----------------|  
+|Table or view|Retrieve data from a table or view in the OLE DB data source.|  
+|Table name or view name variable|Specify the table or view name in a variable.<br /><br /> **Related information:** [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|SQL command|Retrieve data from the OLE DB data source by using a SQL query.|  
+|SQL command from variable|Specify the SQL query text in a variable.|  
+  
+ **Preview**  
+ Preview results by using the **Data View** dialog box. **Preview** can display up to 200 rows.  
+  
+> [!NOTE]  
+>  When you preview data, columns with a CLR user-defined type do not contain data. Instead the values \<value too big to display> or System.Byte[] display. The former displays when the data source is accessed using the SQL OLE DB provider, the latter when using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client provider.  
+  
+### Data Access Mode Dynamic Options  
+  
+#### Data access mode = Table or view  
+ **Name of the table or the view**  
+ Select the name of the table or view from a list of those available in the data source.  
+  
+#### Data access mode = Table name or view name variable  
+ **Variable name**  
+ Select the variable that contains the name of the table or view.  
+  
+#### Data access mode = SQL command  
+ **SQL command text**  
+ Enter the text of a SQL query, build the query by clicking **Build Query**, or locate the file that contains the query text by clicking **Browse**.  
+  
+ **Parameters**  
+ If you have entered a parameterized query by using ? as a parameter placeholder in the query text, use the **Set Query Parameters** dialog box to map query input parameters to package variables.  
+  
+ **Build query**  
+ Use the **Query Builder** dialog box to construct the SQL query visually.  
+  
+ **Browse**  
+ Use the **Open** dialog box to locate the file that contains the text of the SQL query.  
+  
+ **Parse query**  
+ Verify the syntax of the query text.  
+  
+#### Data access mode = SQL command from variable  
+ **Variable name**  
+ Select the variable that contains the text of the SQL query.  
+  
+## OLE DB Source Editor (Columns Page)
+  Use the **Columns** page of the **OLE DB Source Editor** dialog box to map an output column to each external (source) column.  
+  
+### Options  
+ **Available External Columns**  
+ View the list of available external columns in the data source. You cannot use this table to add or delete columns.  
+  
+ **External Column**  
+ View external (source) columns in the order in which you will see them when configuring components that consume data from this source. You can change this order by first clearing the selected columns in the table, and then selecting external columns from the list in a different order.  
+  
+ **Output Column**  
+ Provide a unique name for each output column. The default is the name of the selected external (source) column; however, you can choose any unique, descriptive name. The name provided will be displayed within the SSIS Designer.  
+  
+## OLE DB Source Editor (Error Output Page)
+  Use the **Error Output** page of the **OLE DB Source Editor** dialog box to select error handling options and to set properties on error output columns.  
+  
+### Options  
+ **Input/Output**  
+ View the name of the data source.  
+  
+ **Column**  
+ View the external (source) columns that you selected on the **Connection Manager** page of the **OLE DB Source Editor**dialog box.  
+  
+ **Error**  
+ Specify what should happen when an error occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Related Topics:** [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **Truncation**  
+ Specify what should happen when a truncation occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Description**  
+ View the description of the error.  
+  
+ **Set this value to selected cells**  
+ Specify what should happen to all the selected cells when an error or truncation occurs: ignore the failure, redirect the row, or fail the component.  
+  
+ **Apply**  
+ Apply the error handling option to the selected cells.  
   
 ## See Also  
  [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)   

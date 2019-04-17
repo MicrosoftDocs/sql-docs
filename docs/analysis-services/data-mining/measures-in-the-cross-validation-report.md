@@ -1,28 +1,17 @@
 ---
 title: "Measures in the Cross-Validation Report | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "root mean square error [data mining]"
-  - "cross-validation [data mining]"
-  - "mean absolute error [data mining]"
-  - "log score [data mining]"
-  - "likelihood [data mining]"
-ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Measures in the Cross-Validation Report
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   During cross-validation, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] divides the data in a mining structure into multiple cross-sections and then iteratively tests the structure and any associated mining models. Based on this analysis, it outputs a set of standard accuracy measures for the structure and each model.  
   
  The report contains some basic information about the number of folds in the data and the amount of data in each fold, and a set of general metrics that describe data distribution. By comparing the general metrics for each cross-section, you can assess the reliability of the structure or model.  

@@ -1,28 +1,17 @@
 ---
 title: "Root (MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Root"
-dev_langs: 
-  - "kbMDX"
-helpviewer_keywords: 
-  - "Root function"
-ms.assetid: f6c42e87-5a52-4e43-9dd1-ca757f2db79c
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Root (MDX)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
 
   Returns a tuple that consists of the **All** members from each attribute hierarchy within the current scope in a cube, dimension, or tuple. For more information about Scope, see [SCOPE Statement &#40;MDX&#41;](../mdx/mdx-scripting-scope.md).  
   

@@ -1,23 +1,17 @@
 ---
 title: "Power Pivot Server Administration and Configuration in Central Administration | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Power Pivot Server Administration and Configuration in Central Administration
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] server administration and configuration is performed by SharePoint service application administrators, using SharePoint Central Administration.  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint must be configured before it can be used. After you install [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] for SharePoint using SQL Server Setup, you can configure it using any of the following approaches:  
@@ -53,10 +47,10 @@ manager: "erikre"
 |[Create and Configure a Power Pivot Service Application in Central Administration](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|Required|This step provisions the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] System Service.|  
 |[Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|Required|This step turns on [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] features at the site collection level.|  
 |[Add MSOLAP.5 as a Trusted Data Provider in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Required|This step adds the Analysis Services OLE DB provider as a trusted provider in Excel Services.|  
-|[Power Pivot Data Refresh with SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|Recommended|Data refresh is optional but recommended. It allows you to schedule unattended updates to the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] data in published Excel workbooks.|  
-|[Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)|Recommended|This step provisions a special-purpose account that can be used to run data refresh jobs on the server.|  
+|[Power Pivot Data Refresh with SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|Recommended|Data refresh is optional but recommended. It allows you to schedule unattended updates to the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] data in published Excel workbooks.|  
+|[Configure the Power Pivot Unattended Data Refresh Account (Power Pivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)|Recommended|This step provisions a special-purpose account that can be used to run data refresh jobs on the server.|  
 |[Configure Usage Data Collection for &#40;Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Optional|Usage data collection is configured by default. You can use these steps to modify the default settings.|  
-|[Configure Dedicated Data Refresh or Query-Only Processing (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/5e027605-1086-4941-bb01-f315df8f829b)|Optional|A [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] instance can be dedicated to just data refresh jobs or queries. In addition, you can modify default settings for parallel data refresh jobs.|  
+|[Configure Dedicated Data Refresh or Query-Only Processing (Power Pivot for SharePoint)](http://msdn.microsoft.com/5e027605-1086-4941-bb01-f315df8f829b)|Optional|A [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] instance can be dedicated to just data refresh jobs or queries. In addition, you can modify default settings for parallel data refresh jobs.|  
 |[Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)|Optional|Explains how to update passwords or change service accounts.|  
 |[Connect a Power Pivot Service Application to a SharePoint Web Application in Central Administration](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Optional|Explains how to modify service associations.|  
 |[Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Optional|Explains how to add the [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Gallery as a trusted location.|  
@@ -66,7 +60,7 @@ manager: "erikre"
 |[Add a BI Semantic Model Connection Content Type to a Library &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|Optional|Explains how to extend a document library to support the creation of BI semantic model connection files.|  
   
 ## See Also  
- [Power Pivot for SharePoint 2010 Installation](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [Power Pivot for SharePoint 2010 Installation](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Configuration Setting Reference &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Disaster Recovery for Power Pivot for SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   

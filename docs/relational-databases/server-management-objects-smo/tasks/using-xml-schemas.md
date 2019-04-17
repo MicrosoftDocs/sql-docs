@@ -1,23 +1,25 @@
 ---
 title: "Using XML Schemas | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2017"
-ms.prod: "sql-server-2016"
+ms.date: 01/11/2019
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML [SMO]"
 ms.assetid: 9d04de01-efeb-4b2d-8c28-3234bc7ff2f3
-caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using XML Schemas
+
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
   XML programming in SMO is limited to providing XML data types, XML namespaces, and simple indexing on XML data type columns.  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides native storage for XML document instances. XML schemas let you define complex XML data types, which can be used to validate XML documents to ensure data integrity. The XML schema is defined in the <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection> object.  

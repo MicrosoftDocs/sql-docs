@@ -1,27 +1,20 @@
 ---
 title: "Post-install Configuration (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Post-install Configuration (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   After installing Analysis Services, further configuration is required to make the server fully operational and available for general use. This section introduces the additional tasks that complete the installation. Depending on connection requirements, you might also need to configure authentication (see [Connect to Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
- Later, additional work will be required once you have databases that are ready to deploy. Namely, you will need to configure role memberships on the database to grant user access to the data, design a database backup and recovery strategy, and determine whether you need a scheduled processing workload to refresh data at regular intervals. More information about database deployment and administration can be found at these links: [Multidimensional Model Databases &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) and [Tabular Model Databases &#40;SSAS Tabular&#41;](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
+ Later, additional work will be required once you have databases that are ready to deploy. Namely, you will need to configure role memberships on the database to grant user access to the data, design a database backup and recovery strategy, and determine whether you need a scheduled processing workload to refresh data at regular intervals. More information about database deployment and administration can be found at these links: [Multidimensional Model Databases](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) and [Tabular Model Databases](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## Instance Configuration  
  Analysis Services is a replicable service, meaning you can install multiple instances of the service on a single server. Each additional instance is installed separately as a named instance, using SQL Server Setup, and configured independently to support its intended purpose. For example, a development server might run Flight Recorder or use default values for data storage that you might otherwise change on servers supporting production workloads. Another example that calls for adjusting system configuration is installing Analysis Services instance on hardware shared by other services. When hosting multiple data-intensive applications on the same hardware, you might want to configure server properties that lower the memory thresholds to optimize available resources across all of the applications.  

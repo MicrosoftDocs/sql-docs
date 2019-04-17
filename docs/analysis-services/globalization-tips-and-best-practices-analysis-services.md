@@ -1,27 +1,18 @@
 ---
 title: "Globalization Tips and Best Practices (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "translations [Analysis Services], client applications"
-  - "date comparisons"
-  - "day-of-week comparisons [Analysis Services]"
-  - "time [Analysis Services]"
-  - "month comparisons [Analysis Services]"
-ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
-caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom:
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Globalization Tips and Best Practices (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
   [!INCLUDE[applies](../includes/applies-md.md)] Multidimensional only  
   
  These tips and guidelines can help increase the portability of your business intelligence solutions and avoid errors that are directly related to language and collation settings.  

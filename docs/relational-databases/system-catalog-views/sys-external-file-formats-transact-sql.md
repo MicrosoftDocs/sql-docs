@@ -2,23 +2,21 @@
 title: "sys.external_file_formats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
-caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: "stevestein"
+ms.author: "sstein"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.external_file_formats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contains a row for each external file format in the current database for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)], and [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
@@ -32,7 +30,7 @@ manager: "jhubbard"
 |field_terminator|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the field terminator.||  
 |string_delimiter|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the string delimiter.||  
 |date_format|**nvarchar(50)**|For format_type = DELIMITEDTEXT, this is the user-defined date and time format.||  
-|use_type_default|**bit**|For format_type = DELIMITED TEXT, specifies how to handle missing values when PolyBase is importing data from HDFS text files into [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – store missing values as the string 'NULL'.<br /><br /> 1 – store missing values as the column default value.|  
+|use_type_default|**bit**|For format_type = DELIMITED TEXT, specifies how to handle missing values when PolyBase is importing data from HDFS text files into [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 - store missing values as the string 'NULL'.<br /><br /> 1 - store missing values as the column default value.|  
 |serde_method|**nvarchar(255)**|For format_type = RCFILE, this is the serialization/deserialization method.||  
 |row_terminator|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the character string that terminates each row in the external Hadoop file.|Always '\n'.|  
 |encoding|**nvarchar(10)**|For format_type = DELIMITEDTEXT, this is the encoding method for the external Hadoop file.|Always 'UTF8'.|  

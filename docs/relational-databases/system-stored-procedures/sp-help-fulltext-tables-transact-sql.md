@@ -2,12 +2,10 @@
 title: "sp_help_fulltext_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_fulltext_tables"
@@ -17,22 +15,17 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_tables"
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
-caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
-manager: "jhubbard"
+manager: craigg
 ---
 # sp_help_fulltext_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Returns a list of tables that are registered for full-text indexing.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use **sys.fulltext_indexes** catalog view instead. For more information, see [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,10 +38,10 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## Arguments  
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`
  Is the name of the full-text catalog. *fulltext_catalog_name* is **sysname**, with a default of NULL. If *fulltext_catalog_name* is omitted or is NULL, all full-text indexed tables associated with the database are returned. If *fulltext_catalog_name* is specified, but *table_name* is omitted or is NULL, the full-text index information is retrieved for every full-text indexed table associated with this catalog. If both *fulltext_catalog_name* and *table_name* are specified, a row is returned if *table_name* is associated with *fulltext_catalog_name*; otherwise, an error is raised.  
   
- [ **@table_name=**] **'***table_name***'**  
+`[ @table_name = ] 'table_name'`
  Is the one- or two-part table name for which the full-text metadata is requested. *table_name* is **nvarchar(517)**, with a default value of NULL. If only *table_name* is specified, only the row relevant to *table_name* is returned.  
   
 ## Return Code Values  

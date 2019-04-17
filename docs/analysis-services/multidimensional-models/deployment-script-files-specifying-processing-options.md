@@ -1,27 +1,18 @@
 ---
 title: "Specifying Processing Options | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services deployments, processing options"
-  - "input files [Analysis Services]"
-  - "deploying [Analysis Services], processing options"
-  - "modifying processing options"
-  - "Analysis Services Deployment Wizard, processing options"
-ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Deployment Script Files - Specifying Processing Options
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard reads the processing options from the \<*project name*>.deploymentoptions file. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] creates this file when you build the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] uses the processing options specified on the **Deployment** page of *\<project name>* **Properties Pages** dialog box to create the \<*project name*>.deploymentoptions file.  
   
 ## Reviewing the Processing Options for Deployment  
@@ -29,12 +20,13 @@ manager: "erikre"
   
 -   **Processing Method** This setting controls whether the deployed objects are processed after deployment and the type of processing that will be performed. There are three processing options:  
   
-    -   Default processing (default)  
+    -   Default processing (default) detects the process state of database objects, and performs processing necessary to deliver unprocessed or partially processed objects to a fully processed state.
   
-    -   Full processing  
+    -   Full processing processes an object and all the objects that it contains. When Process Full is executed against an object that has already been processed, Analysis Services drops all data in the object, and then processes the object. 
   
-    -   None  
-  
+    -   None means no processing is performed.
+
+
 -   **Writeback Table Options** If writeback is enabled in the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, this setting defines how writeback is handled. There are three writeback table options:  
   
     -   By default, if a writeback table exists, it will be used. If a writeback table does not exist, a new writeback table will be created.  
@@ -58,11 +50,11 @@ manager: "erikre"
   
 -   Run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard interactively. On the **Processing Options** page, specify the processing options for the project being deployed.  
   
-     —or—  
+     -or-  
   
 -   Run the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Deployment Wizard at the command prompt and set the wizard to run in answer file mode. For more information about answer file mode, see [Running the Analysis Services Deployment Wizard](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     —or—  
+     -or-  
   
 -   Modify the \<*project name*>.deploymentoptions file by using any text editor.  
   

@@ -1,24 +1,21 @@
 ---
 title: "Views and Fields Collections Example (VB) | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Views collection [ADOX], Visual Basic example"
   - "Fields collection [ADOX]"
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
-caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Views and Fields Collections Example (VB)
 The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property and the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object to retrieve field information for the view.  

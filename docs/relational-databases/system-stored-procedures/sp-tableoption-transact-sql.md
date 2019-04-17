@@ -1,13 +1,11 @@
 ---
 title: "sp_tableoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/23/2016"
-ms.prod: "sql-non-specified"
+ms.date: "09/11/2017"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_tableoption_TSQL"
@@ -17,23 +15,20 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_tableoption"
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_tableoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Sets option values for user-defined tables. sp_tableoption can be used to control the in-row behavior of tables with **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, or large user-defined type columns.  
   
 > [!IMPORTANT]  
 >  The text in row feature will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To store large value data, we recommend that you use of the **varchar(max)**, **nvarchar(max)** and **varbinary(max)** data types.  
   
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-  
+
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
@@ -111,20 +106,16 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ### A. Storing xml data out of the row  
  The following example specifies that the **xml** data in the `HumanResources.JobCandidate` table be stored out of row.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
 ```  
   
 ### B. Enabling vardecimal storage format on a table  
- The following example modifies the `Production.WorkOrderRouting` table to store the `decimal` data type in the `vardecimal``storage format`.  
-  
-||  
-|-|  
-|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-  
-```  
+ The following example modifies the `Production.WorkOrderRouting` table to store the `decimal` data type in the `vardecimal` storage format.  
+
+```sql  
 USE master;  
 GO  
 -- The database must be enabled for vardecimal storage format  

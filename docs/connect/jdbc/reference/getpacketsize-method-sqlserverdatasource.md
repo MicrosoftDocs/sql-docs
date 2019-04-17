@@ -2,28 +2,25 @@
 title: "getPacketSize Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 apiname: 
   - "SQLServerDataSource.getPacketSize"
 apilocation: 
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
-caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # getPacketSize Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Returns the current network packet size used to communicate with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], specified in bytes.  
+  Returns the current network packet size used to communicate with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], specified in bytes.  
   
 ## Syntax  
   

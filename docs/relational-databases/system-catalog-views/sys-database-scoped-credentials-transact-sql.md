@@ -2,13 +2,11 @@
 title: "sys.database_scoped_credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: system-objects
+ms.topic: conceptual
 f1_keywords: 
   - "sys.database_scoped_credentials"
   - "sys.database_scoped_credentials_TSQL"
@@ -17,13 +15,13 @@ f1_keywords:
 helpviewer_keywords: 
   - "sys.database_scoped_credentials catalog view"
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
-caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: VanMSFT
+ms.author: vanto
+manager: craigg
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_scoped_credentials (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Returns one row for each database scoped credential in the database.  
   

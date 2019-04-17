@@ -2,27 +2,24 @@
 title: "Create a Full Database Backup (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: backup-restore
+ms.topic: conceptual
 helpviewer_keywords: 
   - "backing up databases [SQL Server], full backups"
   - "backing up databases [SQL Server], SQL Server Management Studio"
   - "backups [SQL Server], creating"
   - "database backups [SQL Server], SQL Server Management Studio"
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Create a Full Database Backup (SQL Server)
-
- > For SQL Server 2014, go to [Create a Full Database Backup (SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ > For SQL Server 2014, go to [Create a Full Database Backup (SQL Server)](create-a-full-database-backup-sql-server.md).
 
   This topic describes how to create a full database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or PowerShell.  
   
@@ -40,7 +37,7 @@ manager: "jhubbard"
   
 ###  <a name="Recommendations"></a> Recommendations  
   
--   As a database increases in size full database backups take more time to complete, and require more storage space. For a large database, consider supplementing a full database backup with a series of [differential database backups]((../../relational-databases/backup-restore/differential-backups-sql-server.md). For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   As a database increases in size full database backups take more time to complete, and require more storage space. For a large database, consider supplementing a full database backup with a series of [differential database backups](../../relational-databases/backup-restore/differential-backups-sql-server.md). For more information, see [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Estimate the size of a full database backup by using the [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) system stored procedure.  
   
@@ -147,7 +144,7 @@ manager: "jhubbard"
 22. In the **Encryption** section, use the **Encrypt backup** checkbox to decide whether to use encryption for the backup. Use the **Algorithm** drop-down list to select an encryption algorithm.  Use the **Certificate or Asymmetric key** drop-down list, to select an existing Certificate or Asymmetric key. Encryption is supported in SQL Server 2014 or later. For more details on the Encryption options, see [Back Up Database &#40;Backup Options Page&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md).  
   
   
-You can use the [Maintenance Plan Wizard](https://msdn.microsoft.com/library/ms191002.aspx) to create database backups. 
+You can use the [Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md) to create database backups. 
 
 ### Examples  
 #### **A.  Full back up to disk to default location**
@@ -208,19 +205,19 @@ A stored access policy has been created with read, write, and list rights.  The 
 *
     5.	Select `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from the **Azure storage container:** text box
 
-    6.  In the **Backup File:** text box enter `Sales_stripe1of2_20160601.bak`.
+   6.  In the **Backup File:** text box enter `Sales_stripe1of2_20160601.bak`.
 
-    7.  Click **OK**.
+   7.  Click **OK**.
 
-    8.  Repeat Steps **4** and **5**.
+   8.  Repeat Steps **4** and **5**.
 
-    9.  In the **Backup File:** text box enter `Sales_stripe2of2_20160601.bak`.
+   9.  In the **Backup File:** text box enter `Sales_stripe2of2_20160601.bak`.
 
-    10.  Click **OK**.
+   10.  Click **OK**.
 
-    11.   Click **OK**.
+   11.   Click **OK**.
 
-    **D2.  A shared access signature exists and a SQL Server Credential does not exist**
+   **D2.  A shared access signature exists and a SQL Server Credential does not exist**
   5.	Enter `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` in the **Azure storage container:** text box
   
   6.	Enter the shared access signature in the **Shared Access Policy:** text box.
@@ -229,7 +226,7 @@ A stored access policy has been created with read, write, and list rights.  The 
   
   8.	Click **OK**.
 
-    **D3.  A shared access signature does not exist**
+   **D3.  A shared access signature does not exist**
   5.	Click the **New container** button and the **Connect to a Microsoft Subscription** dialog box will open.  
   
   6.	Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select Backup Destination** dialog box.  See [See Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.
@@ -260,7 +257,7 @@ A stored access policy has been created with read, write, and list rights.  The 
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Is the database that is to be backed up.|  
-    |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Specifies a list of from 1 to 64 backup devices to use for the backup operation. You can specify a physical backup device, or you can specify a corresponding logical backup device, if already defined. To specify a physical backup device, use the DISK or TAPE option:<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Optionally, specifies one or more additional options, *o*. For information about some of the basic with options, see step 2.|  
   
 2.  Optionally, specify one or more WITH options. A few basic WITH options are described here. For information about all the WITH options, see [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -273,10 +270,10 @@ A stored access policy has been created with read, write, and list rights.  The 
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          In SQL Server 2014 or later only, specify the encryption algorithm to use, and the Certificate or Asymmetric key to use to secure the encryption.  
   
-         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+         DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
          Specifies the free-form text that describes the backup set. The string can have a maximum of 255 characters.  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *backup_set_name* | **@**_backup\_set\_name\_var_ }  
          Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.  
   
     -   Basic backup set WITH options:  
@@ -285,7 +282,7 @@ A stored access policy has been created with read, write, and list rights.  The 
   
          Alternatively, to format the backup media, use the FORMAT option:  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@***media_name_variable* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***text_variable* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]  
          Use the FORMAT clause when you are using media for the first time or you want to overwrite all existing data. Optionally, assign the new media a media name and description.  
   
         > [!IMPORTANT]  
@@ -296,7 +293,7 @@ A stored access policy has been created with read, write, and list rights.  The 
 #### **A. Back up to a disk device**  
  The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to disk, by using `FORMAT` to create a new media set.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -310,7 +307,7 @@ GO
 #### **B. Back up to a tape device**  
  The following example backs up the complete [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to tape, appending the backup to the previous backups.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -323,7 +320,7 @@ GO
 #### **C. Back up to a logical tape device**  
  The following example creates a logical backup device for a tape drive. The example then backs up the complete [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database to that device.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  
@@ -359,7 +356,7 @@ $FileName = 'Sales.bak';
 $database = 'Sales';
 $BackupFile = $container + '/' + $FileName ;
   
-Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile $BackupFile;
+Backup-SqlDatabase -ServerInstance "MyServer" -Database $database -BackupFile $BackupFile;
 ```
  
  **To set up and use the SQL Server PowerShell provider**  
@@ -383,7 +380,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
 -   [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
 ## See also  
-**[Troubleshooting SQL Server backup and restore operations](https://support.microsoft.com/en-us/kb/224071)**          
+**[Troubleshooting SQL Server backup and restore operations](https://support.microsoft.com/kb/224071)**          
 [Backup Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

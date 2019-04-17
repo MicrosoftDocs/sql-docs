@@ -1,24 +1,21 @@
 ---
 title: "StreamOpenOptionsEnum | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
   - "StreamOpenOptionsEnum"
 helpviewer_keywords: 
   - "StreamOpenOptionsEnum enumeration [ADO]"
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # StreamOpenOptionsEnum
 Specifies options for opening a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object. The values can be combined with an OR operation.  

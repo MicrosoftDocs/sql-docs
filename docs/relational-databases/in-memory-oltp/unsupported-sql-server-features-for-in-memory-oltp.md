@@ -2,21 +2,19 @@
 title: "Unsupported SQL Server Features for In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: in-memory-oltp
+ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 55
-author: "MightyPen"
-ms.author: "genemi"
-manager: "craigg"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unsupported SQL Server Features for In-Memory OLTP
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This topic discusses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are not supported for use with memory-optimized objects.  
   
@@ -29,7 +27,7 @@ The following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features
 |-------------------------|-------------------------|  
 |Data compression for memory-optimized tables.|You can use the data compression feature to help compress the data inside a database, and to help reduce the size of the database. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |Partitioning of memory-optimized tables and HASH indexes, and of nonclustered indexes.|The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. For more information, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).|  
-| Replication | Replication configurations, other than transactional replication to memory-optimized tables on subscribers, are incompatible with tables or views referencing memory-optimized tables.<br /><br />If there is a memory-optimized filegroup, replication using sync_mode=’database snapshot’ is not supported.<br /><br />For more information, see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
+| Replication | Replication configurations, other than transactional replication to memory-optimized tables on subscribers, are incompatible with tables or views referencing memory-optimized tables.<br /><br />If there is a memory-optimized filegroup, replication using sync_mode='database snapshot' is not supported.<br /><br />For more information, see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
 |Mirroring|Database mirroring is not supported for databases with a MEMORY_OPTIMIZED_DATA filegroup. For more information about mirroring, see [Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Rebuild log|Rebuilding the log, either through attach or ALTER DATABASE, is not supported for databases with a MEMORY_OPTIMIZED_DATA filegroup.|  
 |Linked Server|You cannot access linked servers in the same query or transaction as memory-optimized tables. For more information, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
@@ -60,8 +58,8 @@ With a few exceptions, cross-database transactions are not supported. The follow
   
 - Keyset and dynamic cursors on queries accessing memory-optimized tables. These cursors are degraded to static and read-only.  
   
-- Using **MERGE INTO** *target*, where *target* is a memory-optimized table, is unsupported.
-    - **MERGE USING** *source* is supported for memory-optimized tables.  
+- Using **MERGE INTO** _target_, where *target* is a memory-optimized table, is unsupported.
+    - **MERGE USING** _source_ is supported for memory-optimized tables.  
   
 - The ROWVERSION (TIMESTAMP) data type is not supported. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).
   

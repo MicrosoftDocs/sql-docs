@@ -2,13 +2,11 @@
 title: "Examples: Using OPENXML | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: xml
+ms.topic: conceptual
 helpviewer_keywords: 
   - "ColPattern [XML in SQL Server]"
   - "XML [SQL Server], mapping data"
@@ -26,12 +24,12 @@ helpviewer_keywords:
   - "element-centric mapping [SQL Server]"
   - "edge tables"
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Examples: Using OPENXML
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   The examples in this topic show how OPENXML is used to create a rowset view of an XML document. For information about the syntax of OPENXML, see [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). The examples show all aspects of OPENXML, but do not specify metaproperties in OPENXML. For more information about how to specify metaproperties in OPENXML, see [Specify Metaproperties in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## Examples  
@@ -93,7 +91,7 @@ LILAS      Carlos Gonzlez
   
  Because the <`Customer`> elements do not have any subelements, if the same SELECT statement is executed with *flags* set to **2** to indicate element-centric mapping, the values of **CustomerID** and **ContactName** for both the customers are returned as NULL.  
   
- The @xmlDocument can also be of **xml** type or of **(n)varchar(max)** type.  
+ The \@xmlDocument can also be of **xml** type or of **(n)varchar(max)** type.  
   
  If <`CustomerID`> and <`ContactName`> in the XML document are subelements, the element-centric mapping retrieves the values.  
   
@@ -466,7 +464,7 @@ EXEC sp_xml_removedocument @docHandle
   
  The OPENXML statement illustrates the following:  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) ends with an XML attribute, **ProductID**. In the resulting rowset, a row is created for each attribute node selected in the XML document.  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) ends with an XML attribute, **ProductID**. In the resulting rowset, a row is created for each attribute node selected in the XML document.  
   
 -   In this example, the *flags* parameter is not specified. Instead, the mappings are specified by the *ColPattern* parameter.  
   
@@ -474,9 +472,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   The XPath pattern (**.**) specified as *ColPattern* for the **ProdID** column in the rowset identifies the context node, current node. As per the *rowpattern* specified, it is the **ProductID** attribute of the <`OrderDetail`> element.  
   
--   The *ColPattern*, **../@Quantity**, specified for the **Qty** column in the rowset identifies the **Quantity** attribute of the parent, <`OrderDetail`>, node of the context node, \<ProductID>.  
+-   The *ColPattern*, **../\@Quantity**, specified for the **Qty** column in the rowset identifies the **Quantity** attribute of the parent, <`OrderDetail`>, node of the context node, \<ProductID>.  
   
--   Similarly, the *ColPattern*, **../../@OrderID**, specified for the **OID** column in the rowset identifies the **OrderID** attribute of the parent, <`Order`>, of the parent node of the context node. The parent node is <`OrderDetail`>, and the context node is <`ProductID`>.  
+-   Similarly, the *ColPattern*, **../../\@OrderID**, specified for the **OID** column in the rowset identifies the **OrderID** attribute of the parent, <`Order`>, of the parent node of the context node. The parent node is <`OrderDetail`>, and the context node is <`ProductID`>.  
   
  The SELECT statement then retrieves all the columns in the rowset provided by OPENXML.  
   
@@ -574,7 +572,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Specifically, you are passing an **xml** type variable (@x) to the **sp_xml_preparedocument()** function.  
+ Specifically, you are passing an **xml** type variable (\@x) to the **sp_xml_preparedocument()** function.  
   
  This is the result:  
   

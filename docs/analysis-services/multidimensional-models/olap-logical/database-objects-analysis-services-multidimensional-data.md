@@ -1,31 +1,17 @@
 ---
 title: "Database Objects (Analysis Services - Multidimensional Data) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "objects [Analysis Services], about objects"
-  - "SQL Server Analysis Services, objects"
-  - "Analysis Services objects, about Analysis Services objects"
-  - "SSAS, objects"
-  - "Analysis Services objects"
-  - "objects [Analysis Services]"
-ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
-caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Database Objects (Analysis Services - Multidimensional Data)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance contains database objects and assemblies for use with online analytical processing (OLAP) and data mining.  
   
 -   Databases contain OLAP and data mining objects, such as data sources, data source views, cubes, measures, measure groups, dimensions, attributes, hierarchies, mining structures, mining models and roles.  
@@ -69,7 +55,7 @@ manager: "erikre"
   
 ## See Also  
  [Supported Data Sources &#40;SSAS - Multidimensional&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [Multidimensional Model Solutions &#40;SSAS&#41;](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Multidimensional Model Solutions](../../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Data Mining Solutions](../../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

@@ -1,28 +1,17 @@
 ---
 title: "Work with Diagrams in Data Source View Designer (Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.dsvdesigner.findtable.f1"
-  - "sql13.asvs.dsvdesigner.diagramorganizerpane.f1"
-  - "sql13.asvs.dsvdesigner.diagrampane.f1"
-helpviewer_keywords: 
-  - "data source views [Analysis Services], diagrams"
-  - "diagrams [Analysis Services]"
-ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
-caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Work with Diagrams in Data Source View Designer (Analysis Services)
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   A data source view (DSV) diagram is a visual representation of the objects in a DSV. You can work with the diagram interactively to add, hide, delete or modify specific objects. You can also create multiple diagrams on the same DSV to focus attention on a subset of the objects.  
   
  To change the area of the diagram that appears in the diagram pane, click the four-headed arrow in the lower right corner of the pane, and then drag the selection box over the thumbnail diagram until you select the area that is to appear in the diagram pane.  
@@ -44,7 +33,7 @@ manager: "erikre"
   
  To create a new diagram, right-click anywhere in the **Diagram Organizer** pane, click **New Diagram**.  
   
- When you initially define a data source view (DSV) in an Analysis Services project, all tables and views added to the data source view are added to the \<All Tables> diagram. This diagram appears in the Diagram Organizer pane in Data Source View Designer, the tables in this diagram (and their columns and relationships) are listed in the Tables pane, and the tables in this diagram (and their columns and relationships) are displayed graphically in the schema pane. However, as you add tables, views and named queries to the \<All Tables> diagram, the sheer number of objects in this diagram makes it difficult to visualize relationships—particularly as multiple fact tables are added to the diagram, and dimension tables relate to multiple fact tables.  
+ When you initially define a data source view (DSV) in an Analysis Services project, all tables and views added to the data source view are added to the \<All Tables> diagram. This diagram appears in the Diagram Organizer pane in Data Source View Designer, the tables in this diagram (and their columns and relationships) are listed in the Tables pane, and the tables in this diagram (and their columns and relationships) are displayed graphically in the schema pane. However, as you add tables, views and named queries to the \<All Tables> diagram, the sheer number of objects in this diagram makes it difficult to visualize relationships-particularly as multiple fact tables are added to the diagram, and dimension tables relate to multiple fact tables.  
   
  To reduce the visual clutter when you only want to view a subset of the tables in the data source view, you can define sub-diagrams (simply called diagrams) consisting of selected subsets of the tables, views, and named queries in the data source view. You can use diagrams to group items in the data source view according to business or solution needs.  
   
@@ -66,9 +55,9 @@ manager: "erikre"
   
      To center the display on a table that is already included in the diagram, select the table in the **Tables** pane.  
   
--   Table locator in **Diagram** pane—The table locator is a 4-way arrow icon located at the intersection of the vertical and horizontal scroll bars in the lower right corner of the **Diagram** pane. It opens a thumbnail representation of the current diagram in the Diagram pane. You can use this thumbnail to change the view in the Diagram pane to any location on the diagram.  
+-   Table locator in **Diagram** pane-The table locator is a 4-way arrow icon located at the intersection of the vertical and horizontal scroll bars in the lower right corner of the **Diagram** pane. It opens a thumbnail representation of the current diagram in the Diagram pane. You can use this thumbnail to change the view in the Diagram pane to any location on the diagram.  
   
--   Use the **Find Table** dialog box— Right-click on open area in the Diagram pane and click **Find Table**. Or, click the **Find Table** command on the toolbar or the **Data Source View** menu.  
+-   Use the **Find Table** dialog box- Right-click on open area in the Diagram pane and click **Find Table**. Or, click the **Find Table** command on the toolbar or the **Data Source View** menu.  
   
      You can type strings and wildcard characters in the Filter box to view subsets of the tables in the diagram.  
   

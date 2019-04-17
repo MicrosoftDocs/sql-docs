@@ -1,25 +1,22 @@
 ---
-title: "Maintaining an Always On Publication Database (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Manage a replicated Publisher database as part of an availability group"
+description: "A description for how to manage and maintain a database that is acting as a Publisher in a SQL replication and is also participating in an Always On availability group. "
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
+ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: high-availability
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
-caps.latest.revision: 9
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
-# Maintaining an Always On Publication Database (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# Manage a replicated Publisher database as part of an Always On availability group
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic discusses special considerations for maintaining a publication database when you use Always On availability groups.  
   
@@ -74,7 +71,7 @@ manager: "jhubbard"
     > [!NOTE]  
     >  When an availability group is removed that has published member databases, or a published database is removed from an availability group, all copies of the published databases will be left in the recovering state. If restored, each will appear as a published database. Only one copy should be retained with publication metadata. To disable replication for a published database copy, first remove all subscriptions and publications from the database.  
   
-     Run **sp_dropsubscription** to remove publication subscriptions. Make sure to set the parameter *@ignore_distributributor* to 1 to preserve the metadata for the active publishing database at the distributor.  
+     Run **sp_dropsubscription** to remove publication subscriptions. Make sure to set the parameter *@ignore_distributor* to 1 to preserve the metadata for the active publishing database at the distributor.  
   
     ```  
     USE MyDBName;  
@@ -112,7 +109,7 @@ manager: "jhubbard"
   
 -   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Replication Subscribers and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

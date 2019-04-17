@@ -2,12 +2,10 @@
 title: "Bulk Copy Data Using IRowsetFastLoad (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [ODBC], text data"
@@ -15,12 +13,13 @@ helpviewer_keywords:
   - "bulk copy [ODBC], data files"
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   This sample shows the use of IRowsetFastLoad for bulk copying of records into a table.  
@@ -29,10 +28,10 @@ manager: "jhubbard"
   
  A complete sample is available that illustrates the use of **IRowsetFastLoad** for bulk copying of the records into a table. In this sample, 10 records are added to the table **IRFLTable**. You need to create the table **IRFLTable** in the database.  
   
- This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page.  
+ This sample requires the AdventureWorks sample database, which you can download from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### To bulk copy data into a SQL Server table  
   
@@ -53,11 +52,11 @@ manager: "jhubbard"
 ## Example  
  In this example, 10 records are added to the table IRFLTable. You need to create the table IRFLTable in the database. This sample is not supported on IA64.  
   
- Execute the first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to create the table used by the application.  
+ Execute the first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to create the table used by the application.  
   
  Compile with ole32.lib oleaut32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
- Execute the third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
+ Execute the third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
   
 ```  
 USE AdventureWorks  

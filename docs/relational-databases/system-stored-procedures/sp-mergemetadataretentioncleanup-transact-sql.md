@@ -2,28 +2,23 @@
 title: "sp_mergemetadataretentioncleanup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_mergemetadataretentioncleanup"
   - "sp_mergemetadataretentioncleanup_TSQL"
 helpviewer_keywords: 
   - "sp_mergemetadataretentioncleanup"
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
-caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: stevestein
+ms.author: sstein
+manager: craigg
 ---
 # sp_mergemetadataretentioncleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Performs a manual cleanup of metadata in the [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md), and [MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md) system tables. This stored procedure is executed at each Publisher and Subscriber in the topology.  
   
@@ -40,16 +35,16 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## Arguments  
- [ **@num_genhistory_rows=** ] *num_genhistory_rows* OUTPUT  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT`
  Returns the number of rows cleaned-up from the [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) table. *num_genhistory_rows* is **int**, with a default of **0**.  
   
- [ **@num_contents_rows=** ] *num_contents_rows* OUTPUT  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT`
  Returns the number of rows cleaned-up from the [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) table. *num_contents_rows* is **int**, with a default of **0**.  
   
- [ **@num_tombstone_rows=** ] *num_tombstone_rows* OUTPUT  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT`
  Returns the number of rows cleaned-up from the [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) table. *num_tombstone_rows* is **int**, with a default of **0**.  
   
- [ **@aggressive_cleanup_only=** ] *aggressive_cleanup_only*  
+`[ @aggressive_cleanup_only = ] aggressive_cleanup_only`
  Internal use only.  
   
 ## Return Code Values  

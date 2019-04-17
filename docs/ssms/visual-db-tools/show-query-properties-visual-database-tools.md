@@ -2,25 +2,24 @@
 title: "Show Query Properties (Visual Database Tools) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "tools-ssms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: ssms
+ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing query properties"
   - "displaying query properties"
   - "showing query properties"
   - "queries [SQL Server], properties"
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
-manager: "jhubbard"
+manager: craigg
+
 ---
 # Show Query Properties (Visual Database Tools)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 You can display properties for a query in the Properties window from Query and View Designer.  
   
 ### To display properties for a query  

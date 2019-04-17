@@ -1,42 +1,35 @@
 ---
 title: "Installing SSMA for MySQL Client (MySQLToSQL) | Microsoft Docs"
-ms.prod: "sql-non-specified"
+ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "sql-ssma"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
+ms.technology: ssma
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Installing client,Licensing"
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
-caps.latest.revision: 22
-author: "sabotta"
-ms.author: "carlasab"
-manager: "lonnyb"
+author: "Shamikg"
+ms.author: "Shamikg"
+manager: craigg
 ---
 # Installing SSMA for MySQL Client (MySQLToSQL)
 The SSMA for MySQL client consists of the program files that perform the following tasks:  
   
 -   Connect to a MySQL database.  
   
--   Connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+-   Connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
--   Convert the MySQL database objects to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure objects.  
+-   Convert the MySQL database objects to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects.  
   
--   Load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+-   Load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
--   Migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or SQL Azure.  
+-   Migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure.  
   
 This topic provides the installation prerequisites and instructions for installing SSMA for MySQL client.  
   
 ## Prerequisites  
-SSMA for MySQL is designed to work with MySQL 4.1 or later versions and all editions of SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016 and Azure SQL DB.  
+SSMA for MySQL is designed to work with MySQL 4.1 or later versions and all editions of SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017, and Azure SQL DB.  
   
 Before you install SSMA, make sure that the computer meets the following requirements:  
   
@@ -44,7 +37,7 @@ Before you install SSMA, make sure that the computer meets the following require
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 or a later version.  
   
--   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.0 or a later version. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.0 is available on the SQL Server product media. You can also obtain it from the [.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882).  
+-   The [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.0 or a later version. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] version 4.0 is available on the SQL Server product media. You can also obtain it from the [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=48882).  
   
 -   MySQL ODBC 5.1 Driver and connectivity to the MySQL databases that you want to migrate. You can install the MySQL from the MySQL Web site. For information about connectivity, see [Connecting to MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
@@ -55,7 +48,7 @@ Before you install SSMA, make sure that the computer meets the following require
 -   4 GB RAM recommended.  
   
 ## Installing SSMA for MySQL Client  
-SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](http://aka.ms/ssmaformysql).  
+SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmaformysql).  
   
 After you download the latest version, you must extract the installation files before you can install SSMA.  
   

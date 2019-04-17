@@ -1,27 +1,22 @@
 ---
 title: "SetDatabaseConnection Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.date: 03/14/2017
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.technology: wmi-provider-library-reference
+
+
+ms.topic: conceptual
 apiname: 
   - "SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)"
 apilocation: 
   - "reportingservices.mof"
-apitype: "MOFDef"
+apitype: MOFDef
 helpviewer_keywords: 
   - "SetDatabaseConnection method"
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
-caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # ConfigurationSetting Method - SetDatabaseConnection
   Sets the report server database connection to a particular report server database.  
@@ -52,7 +47,7 @@ public void BackupEncryptionKey(string Server,
   
 -   0 - Windows  
   
--   1 – [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   1 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   2 - Windows Service  
   
@@ -71,9 +66,9 @@ public void BackupEncryptionKey(string Server,
 ## Remarks  
  When the *CredentialsType* parameter is set to 0 (Windows), the *UserName* and *Password* parameters must be set. The *UserName* parameter must be in the form "domain\username", and the value must represent a valid Windows logon.  
   
- When the *CredentialsType* parameter is set to 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), the value passed in the *UserName* parameter must conform to the requirements of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name.  
+ When the *CredentialsType* parameter is set to 1 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), the value passed in the *UserName* parameter must conform to the requirements of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login name.  
   
- When the *CredentialsType* parameter is set to 2 (Windows Service), the report server uses integrated security to connect to the report server database and the *UserName* and *Password* parameters are ignored. The Reporting Server Web service will use either the [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] account or an application pool’s account and the Windows service account to access the report server database.  
+ When the *CredentialsType* parameter is set to 2 (Windows Service), the report server uses integrated security to connect to the report server database and the *UserName* and *Password* parameters are ignored. The Reporting Server Web service will use either the [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] account or an application pool's account and the Windows service account to access the report server database.  
   
  When called, the SetDatabaseConnection method encrypts and stores the credentials and database information in the configuration file for the specified report server.  
   

@@ -1,35 +1,22 @@
 ---
 title: "Write-Enabled Dimensions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
-helpviewer_keywords: 
-  - "write-enabled dimensions [Analysis Services]"
-  - "dimensions [Analysis Services], write-enabled"
-  - "dimension writeback [Analysis Services]"
-  - "write-enabled cubes [Analysis Services]"
-  - "writeback [Analysis Services], dimensions"
-ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Write-Enabled Dimensions
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- The data in a dimension is generally read-only. However, for certain scenarios, you may want to write-enable a dimension. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], write-enabling a dimension enables business users to modify the contents of the dimension and see the immediate affect of changes on the hierarchies of the dimension. Any dimension that is based on a single table can be write-enabled. In a write-enabled dimension, business users and administrators can change, move, add, and delete attribute members within the dimension. These updates are referred to collectively as *dimension writeback*.  
+ The data in a dimension is generally read-only. However, for certain scenarios, you may want to write-enable a dimension. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], write-enabling a dimension enables business users to modify the contents of the dimension and see the immediate effect of changes on the hierarchies of the dimension. Any dimension that is based on a single table can be write-enabled. In a write-enabled dimension, business users and administrators can change, move, add, and delete attribute members within the dimension. These updates are referred to collectively as *dimension writeback*.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports dimension writeback on all dimension attributes and any member of a dimension may be modified. For a write-enabled cube or partition, updates are stored in a writeback table separate from the cube's source tables. However, for a write-enabled dimension, updates are recorded directly in the dimension's table. Also, if the write-enabled dimension is included in a cube with multiple partitions where some or all their data sources have copies of the dimension table, only the original dimension table is updated during a writeback process.  
   

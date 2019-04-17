@@ -2,12 +2,10 @@
 title: "sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_log_shipping_primary_database"
@@ -17,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_log_shipping_primary_database"
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
 ---
 # sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Sets up the primary database for a log shipping configuration, including the backup job, local monitor record, and remote monitor record.  
   
@@ -53,56 +50,56 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## Arguments  
- [ **@database=** ] '*database*'  
+`[ @database = ] 'database'`
  Is the name of the log shipping primary database. *database* is **sysname**, with no default, and cannot be NULL.  
   
- [ **@backup_directory=** ] '*backup_directory*'  
+`[ @backup_directory = ] 'backup_directory'`
  Is the path to the backup folder on the primary server. *backup_directory* is **nvarchar(500)**, with no default, and cannot be NULL.  
   
- [ **@backup_share=** ] '*backup_share*'  
+`[ @backup_share = ] 'backup_share'`
  Is the network path to the backup directory on the primary server. *backup_share* is **nvarchar(500)**, with no default, and cannot be NULL.  
   
- [ **@backup_job_name=** ] '*backup_job_name*'  
+`[ @backup_job_name = ] 'backup_job_name'`
  Is the name of the SQL Server Agent job on the primary server that copies the backup into the backup folder. *backup_job_name* is **sysname** and cannot be NULL.  
   
- [ **@backup_retention_period=** ] *backup_retention_period*  
+`[ @backup_retention_period = ] backup_retention_period`
  Is the length of time, in minutes, to retain the log backup file in the backup directory on the primary server. *backup_retention_period* is **int**, with no default, and cannot be NULL.  
   
- [ **@monitor_server=** ] '*monitor_server*'  
+`[ @monitor_server = ] 'monitor_server'`
  Is the name of the monitor server. *Monitor_server* is **sysname**, with no default, and cannot be NULL.  
   
- [ **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode`
  The security mode used to connect to the monitor server.  
   
  1 = Windows Authentication.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. *monitor_server_security_mode* is **bit** and cannot be NULL.  
   
- [ **@monitor_server_login=** ] '*monitor_server_login*'  
+`[ @monitor_server_login = ] 'monitor_server_login'`
  Is the username of the account used to access the monitor server.  
   
- [ **@monitor_server_password=** ] '*monitor_server_password*'  
+`[ @monitor_server_password = ] 'monitor_server_password'`
  Is the password of the account used to access the monitor server.  
   
- [ **@backup_threshold=** ] *backup_threshold*  
+`[ @backup_threshold = ] backup_threshold`
  Is the length of time, in minutes, after the last backup before a *threshold_alert* error is raised. *backup_threshold* is **int**, with a default of 60 minutes.  
   
- [ **@threshold_alert=** ] *threshold_alert*  
+`[ @threshold_alert = ] threshold_alert`
  Is the alert to be raised when the backup threshold is exceeded. *threshold_alert* is **int**, with a default of 14,420.  
   
- [ **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled`
  Specifies whether an alert will be raised when *backup_threshold* is exceeded. The value of zero (0), the default, means that the alert is disabled and will not be raised. *threshold_alert_enabled* is **bit**.  
   
- [ **@history_retention_period=** ] *history_retention_period*  
+`[ @history_retention_period = ] history_retention_period`
  Is the length of time in minutes in which the history will be retained. *history_retention_period* is **int**, with a default of NULL. A value of 14420 will be used if none is specified.  
   
- [ **@backup_job_id=** ] *backup_job_id* OUTPUT  
+`[ @backup_job_id = ] backup_job_id OUTPUT`
  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job ID associated with the backup job on the primary server. *backup_job_id* is **uniqueidentifier** and cannot be NULL.  
   
- [ **@primary_id=** ] *primary_id* OUTPUT  
+`[ @primary_id = ] primary_id OUTPUT`
  The ID of the primary database for the log shipping configuration. *primary_id* is **uniqueidentifier** and cannot be NULL.  
   
- [ **@backup_compression**= ] *backup_compression_option*  
+`[ @backup_compression = ] backup_compression_option`
  Specifies whether a log shipping configuration uses [backup compression](../../relational-databases/backup-restore/backup-compression-sql-server.md). This parameter is supported only in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (or a later version).  
   
  0 = Disabled. Never compress log backups.  

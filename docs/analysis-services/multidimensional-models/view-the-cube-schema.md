@@ -1,23 +1,17 @@
 ---
 title: "View the Cube Schema | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # View the Cube Schema
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   The **Data Source View** pane of the **Cube Structure** tab in **Cube Designer** displays the cube schema. The schema is the set of tables from which the measures and dimensions for a cube are derived. Every cube schema consists of one or more fact tables and one or more dimension tables on which the measures and dimensions in the cube are based.  
   
  The **Data Source View** pane of the **Cube Structure** tab displays a diagram of the data source view on which the cube is based. This diagram is a subset of the main diagram of the data source view. You can hide and show tables in the **Data Source View** pane and view any existing diagrams. However, you cannot make changes (such as adding new relationships or named queries) to the underlying schema. To make changes to the schema, use Data Source View Designer.  

@@ -2,22 +2,19 @@
 title: "Pattern Value Arguments | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
-ms.prod: "sql-non-specified"
+ms.prod: sql
+ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "drivers"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords: 
   - "catalog functions [ODBC], arguments"
   - "arguments in catalog functions [ODBC], pattern value"
   - "pattern value arguments [ODBC]"
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-caps.latest.revision: 5
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # Pattern Value Arguments
 Some arguments in the catalog functions, such as the *TableName* argument in **SQLTables**, accept search patterns. These arguments accept search patterns if the SQL_ATTR_METADATA_ID statement attribute is set to SQL_FALSE; they are identifier arguments that do not accept a search pattern if this attribute is set to SQL_TRUE.  
@@ -41,7 +38,7 @@ Some arguments in the catalog functions, such as the *TableName* argument in **S
   
  Special care must be taken to escape search pattern characters in arguments that accept search patterns. This is particularly true for the underscore character, which is commonly used in identifiers. A common mistake in applications is to retrieve a value from one catalog function and pass that value to a search pattern argument in another catalog function. For example, suppose an application retrieves the table name MY_TABLE from the result set for **SQLTables** and passes this to **SQLColumns** to retrieve a list of columns in MY_TABLE. Instead of getting the columns for MY_TABLE, the application will get the columns for all the tables that match the search pattern MY_TABLE, such as MY_TABLE, MY1TABLE, MY2TABLE, and so on.  
   
-> [!NOTE]  
+> [!NOTE]
 >  ODBC 2.*x* drivers do not support search patterns in the *CatalogName* argument in **SQLTables**. ODBC 3*.x* drivers accept search patterns in this argument if the SQL_ATTR_ ODBC_VERSION environment attribute is set to SQL_OV_ODBC3; they do not accept search patterns in this argument if it is set to SQL_OV_ODBC2.  
   
- Passing a null pointer to a search pattern argument does not constrain the search for that argument; that is, a null pointer and the search pattern % (any characters) are equivalent. However, a zero-length search pattern — that is, a valid pointer to a string of length zero — matches only the empty string ("").
+ Passing a null pointer to a search pattern argument does not constrain the search for that argument; that is, a null pointer and the search pattern % (any characters) are equivalent. However, a zero-length search pattern - that is, a valid pointer to a string of length zero - matches only the empty string ("").

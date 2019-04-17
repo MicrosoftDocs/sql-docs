@@ -1,13 +1,11 @@
 ---
 title: "int, bigint, smallint, and tinyint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/22/2017"
-ms.prod: "sql-non-specified"
+ms.date: 09/08/2017
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "bigint_TSQL"
@@ -27,15 +25,15 @@ helpviewer_keywords:
   - "int data type"
   - "smallint data type"
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
-caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # int, bigint, smallint, and tinyint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Exact-number data types that use integer data.
+Exact-number data types that use integer data. To save space in the database, use the smallest data type that can reliably contain all possible values. For example, tinyint would be sufficient for a person's age because no one lives to be more than 255 years old. But tinyint would not be sufficient for a building's age because a building can be more than 255 years old.
   
 |Data type|Range|Storage|  
 |---|---|---|
@@ -56,7 +54,7 @@ Functions return **bigint** only if the parameter expression is a **bigint** dat
 >   
 >  Therefore, similar expressions in queries can sometimes produce different results. When a query is not autoparameterized, the constant value is first converted to **numeric**, whose precision is just large enough to hold the value of the constant, before converting to the specified data type. For example, the constant value 1 is converted to **numeric (1, 0)**, and the constant value 250 is converted to **numeric (3, 0)**.  
 >   
->  When a query is autoparameterized, the constant value is always converted to **numeric (10, 0)** before converting to the final data type. When the / operator is involved, not only can the result type's precision differ among similar queries, but the result value can differ also. For example, the result value of an autoparameterized query that includes the expression `SELECT CAST (1.0 / 7 AS float)` will differ from the result value of the same query that is not autoparameterized, because the results of the autoparameterized query will be truncated to fit into the **numeric (10, 0)** data type.  
+>  When a query is autoparameterized, the constant value is always converted to **numeric (10, 0)** before converting to the final data type. When the / operator is involved, not only can the result type's precision differ among similar queries, but the result value can differ also. For example, the result value of an autoparameterized query that includes the expression `SELECT CAST (1.0 / 7 AS float)`, differs from the result value of the same query that is not autoparameterized, because the results of the autoparameterized query, are truncated to fit into the **numeric (10, 0)** data type.  
   
 ## Converting integer data
 When integers are implicitly converted to a character data type, if the integer is too large to fit into the character field, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enters ASCII character 42, the asterisk (*).
@@ -88,7 +86,7 @@ CREATE TABLE dbo.MyTable
   
 GO  
   
-INSERT INTO dbo.MyTable VALUES (9223372036854775807, 214483647,32767,255);  
+INSERT INTO dbo.MyTable VALUES (9223372036854775807, 2147483647,32767,255);  
  GO  
 SELECT MyBigIntColumn, MyIntColumn, MySmallIntColumn, MyTinyIntColumn  
 FROM dbo.MyTable;  
@@ -99,7 +97,7 @@ FROM dbo.MyTable;
 ```sql
 MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn  
 -------------------- ----------- ---------------- ---------------  
-9223372036854775807  214483647   32767            255  
+9223372036854775807  2147483647  32767            255  
   
 (1 row(s) affected)  
 ```  

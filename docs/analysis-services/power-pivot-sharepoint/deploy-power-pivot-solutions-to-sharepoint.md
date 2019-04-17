@@ -1,21 +1,17 @@
 ---
 title: "Deploy Power Pivot Solutions to SharePoint | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
+ms.author: owend
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ---
 # Deploy Power Pivot Solutions to SharePoint
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Use the following instructions to manually deploy two solution packages that add [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] features to a SharePoint Server 2010 environment. Deploying the solutions is a required step for configuring [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint on a SharePoint 2010 server. To view the complete list of required steps, see [Power Pivot Server Administration and Configuration in Central Administration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Alternatively, you can use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool to deploy the solutions. Using the configuration tool is easier and more efficient for a single server installation, but you might want to use Central Administration and PowerShell if you prefer using a familiar tool or if you are configuring multiple features at the same time. For more information about using the configuration tool, see [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
@@ -46,7 +42,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  The return value should be **false**. If it is **true**, you cannot access [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data with this web application.  
   
 ##  <a name="bkmk_farm"></a> Step 1: Deploy the Farm Solution  
- This section shows you how to deploy solutions using PowerShell, but you can also use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool to complete this task. For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ This section shows you how to deploy solutions using PowerShell, but you can also use the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool to complete this task. For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  This task only needs to be performed once, after you install [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint.  
   
@@ -55,7 +51,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 2.  Run the following cmdlet to add the farm solution.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotFarm.wsp"  
     ```  
   
      The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you will deploy the solution.  
@@ -63,7 +59,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Run the next cmdlet to deploy the farm solution:  
   
     ```  
-    Install-SPSolution –Identity PowerPivotFarm.wsp –GACDeployment -Force  
+    Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
 ##  <a name="deployCA"></a> Step 2: Deploy the Power Pivot Web Application Solution to Central Administration  
@@ -80,7 +76,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 3.  Run the following cmdlet to add the farm solution.  
   
     ```  
-    Add-SPSolution –LiteralPath “C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp”  
+    Add-SPSolution -LiteralPath "C:\Program Files\Microsoft SQL Server\110\Tools\PowerPivotTools\ConfigurationTool\Resources\PowerPivotWebApp.wsp"  
     ```  
   
      The cmdlet returns the name of the solution, its solution ID, and Deployed=False. In the next step, you will deploy the solution.  
@@ -117,7 +113,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Click **Retract Solution**.  
   
- If you encounter server deployment issues that you trace back to the farm solution, you can redeploy it by running the **Repair** option in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool. Repair operations via the tool is preferred because it requires fewer steps on your part. For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ If you encounter server deployment issues that you trace back to the farm solution, you can redeploy it by running the **Repair** option in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Configuration Tool. Repair operations via the tool is preferred because it requires fewer steps on your part. For more information, see [Configure or Repair Power Pivot for SharePoint 2010 (Power Pivot Configuration Tool)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  If you still want to re-deploy all solutions, be sure to do so in this order:  
   

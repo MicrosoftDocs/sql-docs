@@ -2,13 +2,11 @@
 title: "Move an Existing Index to a Different Filegroup | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql
+ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.technology: table-view-index
+ms.topic: conceptual
 helpviewer_keywords: 
   - "moving tables"
   - "switching filegroups for index"
@@ -16,13 +14,12 @@ helpviewer_keywords:
   - "indexes [SQL Server], moving"
   - "filegroups [SQL Server], switching"
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
-caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ---
 # Move an Existing Index to a Different Filegroup
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to move an existing index from its current filegroup to a different filegroup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -73,7 +70,7 @@ manager: "jhubbard"
   
 8.  Click **Close**.  
   
-9. On the **File** menu, select **Save***table_name*.  
+9. On the **File** menu, select **Save**_table_name_.  
   
 #### To move an existing index to a different filegroup in Object Explorer  
   
@@ -99,7 +96,7 @@ manager: "jhubbard"
   
 8.  Click **OK**.  
   
- The following information is available on the **Storage** page of the **Index Properties –** *index_name* dialog box:  
+ The following information is available on the **Storage** page of the **Index Properties -** _index_name_ dialog box:  
   
  **Filegroup**  
  Stores the index in the specified filegroup. The list only displays standard (row) filegroups. The default list selection is the PRIMARY filegroup of the database.  

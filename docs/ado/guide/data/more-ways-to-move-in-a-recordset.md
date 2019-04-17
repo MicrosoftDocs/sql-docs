@@ -1,14 +1,12 @@
 ---
 title: "More Ways to Move in a Recordset | Microsoft Docs"
-ms.prod: "sql-non-specified"
-ms.technology:
-  - "drivers"
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "MoveNext method [ADO]"
   - "MoveLast method [ADO]"
@@ -16,10 +14,9 @@ helpviewer_keywords:
   - "Recordset object [ADO], moving"
   - "MovePrevious method [ADO]"
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-caps.latest.revision: 11
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ---
 # More Ways to Move in a Recordset
 The following four methods are used to move around, or scroll, in the **Recordset**: [MoveFirst, MoveLast, MoveNext, and MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Some of these methods are unavailable on forward-only cursors.)  
@@ -48,8 +45,8 @@ If oRs.BOF Then oRs.MoveFirst
   
  The behavior of the various Move methods of the **Recordset** object depends, to some extent, on the data within the **Recordset**. New records added to the **Recordset** are initially added in a particular order, which is defined by the data source and may be dependent implicitly or explicitly on the data in the new record. For example, if a sort or a join is done within the query that populates the **Recordset**, the new record will be inserted in the appropriate place within the **Recordset**. If ordering is not explicitly specified when creating the **Recordset**, changes in the data source implementation may cause the ordering of the returned rows to change inadvertently. In addition, the sorting, filtering, and editing functions of the **Recordset** can affect the order and possibly which rows in the recordset will be visible.  
   
- Therefore, **MoveNext**, **MovePrevious**, **MoveFirst**, **MoveLast**, and **Move** are all sensitive to other operations performed on the same **Recordset**. ADO will always try to maintain your current position until you explicitly move it, but sometimes, intervening changes make it difficult to understand the effects of a subsequent move. For example, if you call **MoveFirst** to position on the first row of a sorted **Recordset** and you change the sort from ascending order to descending order, you are still on the same row — but now it is the last row in the **Recordset**. **MoveFirst** will take you to a different row (the new first row).  
+ Therefore, **MoveNext**, **MovePrevious**, **MoveFirst**, **MoveLast**, and **Move** are all sensitive to other operations performed on the same **Recordset**. ADO will always try to maintain your current position until you explicitly move it, but sometimes, intervening changes make it difficult to understand the effects of a subsequent move. For example, if you call **MoveFirst** to position on the first row of a sorted **Recordset** and you change the sort from ascending order to descending order, you are still on the same row - but now it is the last row in the **Recordset**. **MoveFirst** will take you to a different row (the new first row).  
   
  As another example, if you are positioned on a particular row in the middle of a **Recordset** and you call **Delete** and then call **MoveNext**, you are now on the record immediately following the deleted record. But calling **MovePrevious** makes the record preceding the one you deleted the current record, because the deleted record is no longer counted in the active membership of the **Recordset**.  
   
- It is particularly difficult to define consistent move semantics across all providers for methods that move relative to the current record — **MovePrevious**, **MoveNext**, and **Move** — in the face of changing data in the current record. For example, if you are working with a sorted, filtered **Recordset**, and you change the data in the current record so that it would precede all other records, but your changed data also no longer matches the filter, it is not clear where a **MoveNext** operation should take you. The safest conclusion is that relative movement within a **Recordset** is riskier than absolute movement (such as using **MoveFirst** or **MoveLast**) when the data is changing while records are being edited, added, or deleted. Sorting and filtering should be based on a primary key or ID, because this type of value should not change.
+ It is particularly difficult to define consistent move semantics across all providers for methods that move relative to the current record - **MovePrevious**, **MoveNext**, and **Move** - in the face of changing data in the current record. For example, if you are working with a sorted, filtered **Recordset**, and you change the data in the current record so that it would precede all other records, but your changed data also no longer matches the filter, it is not clear where a **MoveNext** operation should take you. The safest conclusion is that relative movement within a **Recordset** is riskier than absolute movement (such as using **MoveFirst** or **MoveLast**) when the data is changing while records are being edited, added, or deleted. Sorting and filtering should be based on a primary key or ID, because this type of value should not change.

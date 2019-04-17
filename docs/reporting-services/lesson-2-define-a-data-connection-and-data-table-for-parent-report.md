@@ -1,21 +1,14 @@
 ---
 title: "Lesson 2: Define a Data Connection and Data Table for Parent Report | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.date: 05/18/2016
+ms.prod: reporting-services
+ms.prod_service: "reporting-services-native"
+ms.technology: reporting-services
+
+ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
+author: markingmyname
+ms.author: maghan
 ---
 # Lesson 2: Define a Data Connection and Data Table for Parent Report
 After you create a new website project using the ASP.NET website template for Visual C#, your next step is to create a data connection and a data table for the parent report. In this tutorial the data connection is to the AdventureWorks2014 database.  
@@ -28,11 +21,11 @@ After you create a new website project using the ASP.NET website template for Vi
   
     This adds a new XSD file **DataSet1.xsd** to the project and opens the DataSet Designer.  
   
-3.  From the Toolbox window, drag a **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx.aspx)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
+3.  From the Toolbox window, drag a **[TableAdapter](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)** control to the design surface. This launches the **TableAdapter** Configuration Wizard.  
   
 4.  On the **Choose Your Data Connection** page, select **New Connection**.  
   
-5.  If this is the first time you’ve created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
+5.  If this is the first time you've created a data source in Visual Studio, you will see the **Choose Data Source** page. In the **Data Source** box, select **Microsoft SQL Server**.  
   
 6.  In the **Add Connection** dialog box, perform the following steps:  
   
@@ -58,7 +51,7 @@ After you create a new website project using the ASP.NET website template for Vi
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  
     ```  
   
-    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query**. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about how to get the **AdventureWorks2014** sample database, see [Microsoft SQL Server Database Product Samples](http://msftdbprodsamples.codeplex.com/).  
+    You can also create the query by selecting **Query Builder**, and then verify the query by selecting **Execute Query**. If the query does not return the expected data, you might be using an earlier version of AdventureWorks. For more information about how to get the **AdventureWorks2014** sample database, see [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases).  
   
 11. On the **Choose Methods to Generate** page, be sure to uncheck **Create methods to send updates directly to the database (GenerateDBDirectMethods)**, and then select **Finish**.  
   

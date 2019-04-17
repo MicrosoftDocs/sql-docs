@@ -71,7 +71,7 @@ Starting in CTP 2.5, most big data cluster settings are defined in a JSON deploy
 
 The following sections provide more details on how to configure your big data cluster deployments as well as examples of common customizations.
 
-## <a id="configfile"></a> Configuration files
+## <a id="configfile"></a> Default configurations
 
 Big data cluster deployment options are defined in JSON configuration files. There are three standard deployment profiles with default settings for dev/test environments:
 
@@ -81,16 +81,16 @@ Big data cluster deployment options are defined in JSON configuration files. The
 | **kubeadm-dev-test.json** | Multiple machines (kubeadm) |
 | **minikube-dev-test.json** | minikube |
 
-You can deploy a big data cluster using the default values in one of these deployment profiles. For example, the following command deploys a big data cluster to AKS:
+You can deploy a big data cluster by running **mssqlctl cluster create**. This prompts you to choose one of the default configurations and then guides you through the deployment.
 
 ```bash
-mssqlctl cluster create --configfile aks-dev-test.json
+mssqlctl cluster create
 ```
 
 > [!TIP]
-> In this example, you are prompted for any settings that are not defined in the configuration file. Note that the Docker information is provided to you by Microsoft as part of the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup).
+> In this example, you are prompted for any settings that are not part of the default configuration, such as passwords. Note that the Docker information is provided to you by Microsoft as part of the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup).
 
-### <a id="customconfig"></a> Create a custom configuration file
+## <a id="customconfig"></a> Custom configurations
 
 It is also possible to customize your own deployment configuration file. You can do this with the following steps:
 
@@ -103,13 +103,13 @@ It is also possible to customize your own deployment configuration file. You can
 1. To customize your deployment, create a copy of the deployment profile with the **mssqlctl cluster config init** command. For example, the following command creates a copy of the **aks-dev-test.json** deployment configuration file in the current directory:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target aks-customized.json
+   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
    ```
 
-1. To customize settings in your deployment configuration file, it is best to use the **mssqlctl cluster config section set** command rather than manually editing the file. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:
+1. To customize settings in your deployment configuration file, you can call **mssqlctl cluster config section set**. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
 
    ```bash
-   mssqlctl cluster config section set --config-file aks-customized.json --json-values "metadata.name=test-cluster"
+   mssqlctl cluster config section set --config-file custom.json --json-values 'metadata.name=test-cluster'
    ```
 
    In addition to passing key-value pairs, you can also provide inline JSON values. For more information, see the [deployment examples](#examples). You can also use the **--patch-file** parameter to provide path to a JSON patch file. For more information, see [Customize a big data cluster deployment with a JSON patch file](deployment-json-patch-files.md).
@@ -117,7 +117,7 @@ It is also possible to customize your own deployment configuration file. You can
 1. Then pass the custom configuration file to **mssqlctl cluster create**:
 
    ```bash
-   mssqlctl cluster create --configfile aks-customized.json
+   mssqlctl cluster create --config-file custom.json
    ```
 
 > [!TIP]
@@ -139,7 +139,7 @@ The following environment variables are used for security settings that are not 
 | **KNOX_PASSWORD** | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | The password of SA user for SQL master instance. |
 
-These environment variables can be set prior to calling **mssqlctl cluster create** or by using the **--envvar** parameter. If any variable is not set, you are prompted for it.
+These environment variables can be set prior to calling **mssqlctl cluster create** or by using the **--env-var** parameter. If any variable is not set, you are prompted for it.
 
 The following example shows how to pass the environment variables on the command-line for Linux (bash) and Windows (PowerShell):
 
@@ -247,7 +247,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
    },
    ```
 
-1. All cluster endpoints are also outlined in the **Service Endpoints** tab in the Cluster Administration Portal. You can access the portal using the Management Portal endpoint in the previous step (for example, `https://\<ip-address>:30777/portal`). The credentials for accessing the administration portal are the values for the controller username and password that you specified during deployment. You can also use the Cluster Administration Portal to monitor the deployment.
+1. All cluster endpoints are also outlined in the **Service Endpoints** tab in the Cluster Administration Portal. You can access the portal using the Management Portal endpoint in the previous step (for example, `https://<ip-address>:30777/portal`). The credentials for accessing the administration portal are the values for the controller username and password that you specified during deployment. You can also use the Cluster Administration Portal to monitor the deployment.
 
 ### Minikube
 

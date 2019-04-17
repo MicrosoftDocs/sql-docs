@@ -40,7 +40,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 | Prompted deployments | `mssqlctl cluster create` now prompts for any necessary settings for default deployments. |
 | Service endpoint and pod name changes | For more information, see the [big data cluster release notes](../big-data-cluster/release-notes-big-data-cluster.md). |
 | **mssqlctl** improvements | Use **mssqlctl** to [list external endpoints](../big-data-cluster/deployment-guidance.md#endpoints) and check the version of **mssqlctl** with the `--version` parameter. |
-| Offline install | Guidance for offline big data cluster deployments. |
+| Offline install | [Guidance for offline big data cluster deployments](../big-data-cluster/deploy-offline.md). |
 | HDFS tiering improvements | S3 tiering, mount caching, and OAuth support for ADLS Gen2. |
 | New `mssql` Spark-SQL Server connector | |
 | &nbsp; | &nbsp; |

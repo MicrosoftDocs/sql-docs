@@ -275,7 +275,7 @@ Each of the examples in this section assume that you have created a copy of one 
 
 ### Change cluster name
 
-The cluster name is specified in the following portion of the deployment configuration file:
+The cluster name is both the name of the big data cluster and the Kubernetes namespace. It is specified in the following portion of the deployment configuration file:
 
 ```json
 "metadata": {
@@ -371,10 +371,16 @@ You can also change the storage class and characteristics that are used for each
 mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "newStorageClass","size": "20Gi","accessMode": "ReadWriteOnce","usePersistentVolume": true},"type": "Storage"}'
 ```
 
-The following example only updates the size of the storage pool:
+The following example only updates the size of the storage pool to `32Gi`:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec.storage.size=20Gi'
+mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec.storage.size=32Gi'
+```
+
+The following example updates the size of all pools to `32Gi`:
+
+```bash
+mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi'
 ```
 
 > [!NOTE]

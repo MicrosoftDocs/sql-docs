@@ -45,7 +45,7 @@ The figure below shows the type of information regarding soft-NUMA that you see 
 ```   
 
 > [!NOTE]
-> Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use trace flag 8079 to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use Automatic Soft-NUMA. Starting with  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] this behavior is controlled by the engine and trace flag 8079 has no effect. For more information, see [DBCC TRACEON - Trace Flags](../../sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+> Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use trace flag 8079 to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use Automatic Soft-NUMA. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] this behavior is controlled by the engine and trace flag 8079 has no effect. For more information, see [DBCC TRACEON - Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ## Manual Soft-NUMA  
 To manually configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use soft-NUMA, disable automatic soft-NUMA, and edit the registry to add a node configuration affinity mask. When using this method, the soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). After modifying the registry, you must restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for the soft-NUMA configuration to take effect.  

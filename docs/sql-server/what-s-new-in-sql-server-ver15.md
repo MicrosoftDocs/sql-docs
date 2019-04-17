@@ -49,11 +49,11 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:---|:---|
-| PolyBase on Linux | Install PolyBase on Linux for non-Hadoop connectors. |
-| New Java language SDK for SQL Server | Simplifies development of Java programs that can be run from SQL Server. |
-| Expanded the scope of plans available in DMF `sys.dm_exec_query_plan_stats`. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
-| New `LAST_QUERY_PLAN_STATS` database scoped configuration to enable `sys.dm_exec_query_plan_stats`. |[ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|
-| New spatial reference identifiers (SRIDs). |Australian GDA2020 datum in accordance with ESPG definitions:<br/> 7843 - geographic 2D<br/> 7844 - geographic 3D <br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view contains definitions of new SRIDs. |
+| PolyBase on Linux. | Install PolyBase on Linux for non-Hadoop connectors. |
+| New Java language SDK for SQL Server. | Simplifies development of Java programs that can be run from SQL Server. See [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md). |
+| Expanded the scope of plans available in DMF `sys.dm_exec_query_plan_stats`. |See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+| New `LAST_QUERY_PLAN_STATS` database scoped configuration to enable `sys.dm_exec_query_plan_stats`. |See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|
+| New spatial reference identifiers (SRIDs). |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) provides more robust and accurate datum which is more closely aligned to global positioning systems. The new SRIDs are:<br/><br/> - 7843 - geographic 2D<br/> - 7844 - geographic 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view contains definitions of new SRIDs. |
 | &nbsp; | &nbsp; |
 
 ><sup>1</sup>

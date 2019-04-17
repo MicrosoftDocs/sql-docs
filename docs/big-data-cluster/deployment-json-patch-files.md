@@ -15,12 +15,127 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-TBD: intro on what this is.
+This article explains how to use a JSON patch file to modify a big data cluster [deployment configuration file](deployment-guidance.md#configfile). A JSON patch file contains 
 
-## TBD: steps
+## Prerequisites
 
-For more information, see [JSON Patches in Python](https://github.com/stefankoegl/python-json-patch) and the [JSONPath Online Evaluator](https://jsonpath.com/).
+[Install mssqlctl](deploy-install-mssqlctl.md).
+
+## Create the JSON patch file
+
+Create a file named **patch.json** in your current directory with the following contents:
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port",
+      "value": 30000
+    },
+    {
+      "op": "replace",
+      "path": "spec.controlPlane.spec.endpoints",
+      "value": [
+        {
+          "serviceType": "LoadBalancer",
+          "port": 30001,
+          "name": "Controller"
+        },
+        {
+            "serviceType": "LoadBalancer",
+            "port": 30778,
+            "name": "ServiceProxy"
+        },
+        {
+            "serviceType": "LoadBalancer",
+            "port": 30778,
+            "name": "AppServiceProxy"
+        },
+        {
+            "serviceType": "LoadBalancer",
+            "port": 30443,
+            "name": "Knox"
+        }
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "spec.controlPlane.spec.storage",
+      "value": {
+        "usePersistentVolume":true,
+        "accessMode":"ReadWriteMany",
+        "className":"managed-premium",
+        "size":"10Gi"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "spec.controlPlane.spec.storage.className",
+      "value": "default"
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "replicas": 2,
+        "type": "Storage",
+        "storage": {
+          "usePersistentVolume": true,
+          "accessMode": "ReadWriteOnce",
+          "className": "managed-premium",
+          "size": "10Gi"
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
+      "value": {
+        "driverMemory": "2g",
+        "driverCores": 1,
+        "executorInstances": 3,
+        "executorCores": 1,
+        "executorMemory": "1536m"
+      }
+    }
+  ]
+}
+```
+
+This example JSON patch file makes the following changes:
+
+- Updates the port of single endpoint.
+- Updates all endpoints (**port** and **serviceType**). You must update the entire array to update all the endpoints.
+- Update the control plane storage.
+- Update the storage class name in control plane storage.
+- Update pool storage, including replicas (storage pool).
+- Update Spark settings for a specific pool (storage pool).
+
+For example, the following section changes only the controller port to 30001:
+
+```json
+{
+  "op": "replace",
+  "path": "$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port",
+  "value": 30000
+},
+```
+
+But the section that immediately follows replaces the entire **endpoints** section. This includes the controller port, so you typically would not do both of these actions. But it is provided here to demonstrate different techniques in the patch file.
+
+For more information about the structure and options for changing a deployment configuration file, see [Deployment configuration file reference for big data clusters](reference-deployment-config.md).
+
+## Apply the patch file
+
+Use **mssqlctl cluster config section set** to apply the changes in the JSON patch file. The following example applies the **patch.json** file to a target deployment configuration file **custom.json**.
+
+```bash
+mssqlctl cluster config section set -f custom.json -p ./patch.json
+```
 
 ## Next steps
 
-For more information about deploying big data clusters, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md).
+For more information about JSON patches, see [JSON Patches in Python](https://github.com/stefankoegl/python-json-patch) and the [JSONPath Online Evaluator](https://jsonpath.com/).
+
+For more information about using configuration files in big data cluster deployments, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md#configfile).

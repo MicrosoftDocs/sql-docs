@@ -112,7 +112,7 @@ It is also possible to customize your own deployment configuration file. You can
    mssqlctl cluster config section set --config-file custom.json --json-values 'metadata.name=test-cluster'
    ```
 
-   In addition to passing key-value pairs, you can also provide inline JSON values. For more information, see the [deployment examples](#examples). You can also use the **--patch-file** parameter to provide path to a JSON patch file. For more information, see [Customize a big data cluster deployment with a JSON patch file](deployment-json-patch-files.md).
+   In addition to passing key-value pairs, you can also provide inline JSON values. For more information, see the [deployment examples](#examples). You can also use the **--patch-file** parameter to provide path to a JSON patch file. For more information, see [Customize a big data cluster deployment with a JSON patch file](deployment-json-patch-files.md). Also, a useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
 
 1. Then pass the custom configuration file to **mssqlctl cluster create**:
 

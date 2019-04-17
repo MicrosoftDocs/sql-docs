@@ -3,7 +3,7 @@ title: Download and install
 titleSuffix: Azure Data Studio
 description: Download and Install Azure Data Studio for Windows, macOS, or Linux
 ms.custom: "seodec18"
-ms.date: "04/18/2019"
+ms.date: "04/19/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"

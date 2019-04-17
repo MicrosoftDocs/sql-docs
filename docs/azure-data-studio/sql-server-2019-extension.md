@@ -3,7 +3,7 @@ title: SQL Server 2019 extension (preview)
 titleSuffix: Azure Data Studio
 description: SQL Server 2019 Preview extension for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "03/18/2019"
+ms.date: "04/19/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio

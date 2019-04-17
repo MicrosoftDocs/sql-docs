@@ -31,10 +31,10 @@ LocalDB installation copies a minimal set of files necessary to start the [!INCL
 
 - To download and install SQL Server Express LocalDB, go to **[SQL Server downloads](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB is a feature you select during installation, and is available when you download the media. If you download the media, either choose **Express Advanced** or the LocalDB package. In the **Visual Studio Installer**, you can install SQL Server Express LocalDB as part of the **.NET desktop development** workload or as an individual component.
 
->[!TIP]
-> You can also install LocalDB as part of Visual Studio. During Visual Studio installation, select the **.NET desktop development** workload, which includes SQL Server Express LocalDB.
+ >[!TIP]
+ > You can also install LocalDB as part of Visual Studio. During Visual Studio installation, select the **.NET desktop development** workload, which includes SQL Server Express LocalDB.
 
-- Have an Azure account?Then go **[here](https://azure.microsoft.com/services/virtual-machines/sql-server/)** to spin up a Virtual Machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.
+- Have an Azure account? [Get started](https://azure.microsoft.com/services/virtual-machines/sql-server/) and spin up a virtual machine with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] already installed.
 
 ## Install LocalDB
 
@@ -66,7 +66,7 @@ The instance collation for LocalDB is set to `SQL_Latin1_General_CP1_CI_AS` and 
 
 - An instance of LocalDB owned by the built-in accounts such as `NT AUTHORITY\SYSTEM` can have manageability issues due to windows file system redirection. Instead use a normal windows account as the owner.
 
-### Automatic and Named Instances
+### Automatic and named instances
 
 LocalDB supports two kinds of instances: Automatic instances and named instances.
 
@@ -82,7 +82,7 @@ To support scenarios where multiple users of the computer need to connect to a s
 
 Only an administrator on the computer can create a shared instance of LocalDB. A shared instance of LocalDB can be unshared by an administrator or by the owner of the shared instance of LocalDB. To share and unshared an instance of LocalDB, use the `LocalDBShareInstance` and `LocalDBUnShareInstance` methods of the LocalDB API, or the share and unshared options of the `SqlLocalDb` utility.
 
-## Starting LocalDB and Connecting to LocalDB
+## Start LocalDB and connect to LocalDB
 
 ### Connect to the automatic instance
 
@@ -91,7 +91,7 @@ The easiest way to use LocalDB is to connect to the automatic instance owned by 
 >[!NOTE]
 >The first time a user on a computer tries to connect to LocalDB, the automatic instance must be both created and started. The extra time for the instance to be created can cause the connection attempt to fail with a timeout message. When this happens, wait a few seconds to let the creation process complete, and then connect again.
 
-### Creating and Connecting to a Named Instances
+### Create and connect to a named instance
 
 In addition to the automatic instance, LocalDB also supports named instances. Use the SqlLocalDB.exe program to create, start, and stop a named instance of LocalDB. For more information about SqlLocalDB.exe, see [SqlLocalDB Utility](../../tools/sqllocaldb-utility.md).
 
@@ -120,7 +120,7 @@ REM Gather information about the instance of LocalDB
 >[!NOTE]
 >If your application uses a version of .NET before 4.0.2 you must connect directly to the named pipe of the LocalDB. The Instance pipe name value is the named pipe that the instance of LocalDB is listening on. The portion of the Instance pipe name after LOCALDB# will change each time the instance of LocalDB is started. To connect to the instance of LocalDB by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], type the instance pipe name in the **Server name** box of the **Connect to [!INCLUDE[ssDE](../../includes/ssde-md.md)]** dialog box. From your custom program you can establish connection to the instance of LocalDB using a connection string similar to `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`
 
-### Connecting to a shared instance of LocalDB
+### Connect to a shared instance of LocalDB
 
 To connect to a shared instance of LocalDB add `.\` (dot + backslash) to the connection string to reference the namespace reserved for shared instances. For example, to connect to a shared instance of LocalDB named `AppData` use a connection string such as `(localdb).AppData` as part of the connection string. A user connecting to a shared instance of LocalDB that they do not own must have a Windows Authentication or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login.
 

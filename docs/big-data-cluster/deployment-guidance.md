@@ -90,35 +90,38 @@ mssqlctl cluster create --configfile aks-dev-test.json
 > [!TIP]
 > In this example, you are prompted for any settings that are not defined in the configuration file. Note that the Docker information is provided to you by Microsoft as part of the SQL Server 2019 [Early Adoption Program](https://aka.ms/eapsignup).
 
-### Custom deployment configuration files
+### <a id="customconfig"></a> Create a custom configuration file
 
 It is also possible to customize your own deployment configuration file. You can do this with the following steps:
 
-1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  `mssqlctl cluster config list` command to list them:
+1. Start with one of the standard deployment profiles that match your Kubernetes environment. You can use the  **mssqlctl cluster config list** command to list them:
 
    ```bash
    mssqlctl cluster config list
    ```
 
-1. To customize your deployment, create a copy of the deployment profile with the `mssqlctl cluster config init` command. For example, the following command creates a copy of the **aks-dev-test.json** deployment configuration file in the current directory:
+1. To customize your deployment, create a copy of the deployment profile with the **mssqlctl cluster config init** command. For example, the following command creates a copy of the **aks-dev-test.json** deployment configuration file in the current directory:
 
    ```bash
    mssqlctl cluster config init --src aks-dev-test.json --target aks-customized.json
    ```
 
-1. To customize settings in your deployment configuration file, it is best to use the `mssqlctl cluster config section set` command rather than manually editing the file. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:
+1. To customize settings in your deployment configuration file, it is best to use the **mssqlctl cluster config section set** command rather than manually editing the file. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:
 
    ```bash
    mssqlctl cluster config section set --config-file aks-customized.json --json-values "metadata.name=test-cluster"
    ```
 
-   In addition to passing key-value pairs, you can also provide inline JSON values. See the [examples section](#examples). You can also use the `--patch-file` parameter to provide path to a JSON patch file. For more inforamtion, see [Customize a big data cluster deployment with a JSON patch file](deployment-json-patch-files.md).
+   In addition to passing key-value pairs, you can also provide inline JSON values. For more information, see the [deployment examples](#examples). You can also use the **--patch-file** parameter to provide path to a JSON patch file. For more information, see [Customize a big data cluster deployment with a JSON patch file](deployment-json-patch-files.md).
 
-1. Then pass the custom configuration file to `mssqlctl cluster create`:
+1. Then pass the custom configuration file to **mssqlctl cluster create**:
 
    ```bash
    mssqlctl cluster create --configfile aks-customized.json
    ```
+
+> [!TIP]
+> For more examples on how to customize your deployment settings, see the [deployment examples](#examples) section in this article.
 
 ## <a id="env"></a> Environment variables
 
@@ -130,13 +133,13 @@ The following environment variables are used for security settings that are not 
 | **DOCKER_REPOSITORY** | The private repository within the above registry where images are stored. |
 | **DOCKER_USERNAME** | The username to access the container images in case they are stored in a private repository. |
 | **DOCKER_PASSWORD** | The password to access the above private repository. |
-| **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to `latest`. |
+| **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to **latest**. |
 | **CONTROLLER_USERNAME** | The username for the cluster administrator. |
 | **CONTROLLER_PASSWORD** | The password for the cluster administrator. |
 | **KNOX_PASSWORD** | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | The password of SA user for SQL master instance. |
 
-These environment variables can be set prior to calling `mssqlctl cluster create` or by using the `--envvar` parameter. If any variable is not set, you are prompted for it.
+These environment variables can be set prior to calling **mssqlctl cluster create** or by using the **--envvar** parameter. If any variable is not set, you are prompted for it.
 
 The following example shows how to pass the environment variables on the command-line for Linux (bash) and Windows (PowerShell):
 
@@ -151,7 +154,7 @@ mssqlctl cluster create --config-file aks-dev-test.json \
    KNOX_PASSWORD=<password>,\
    DOCKER_USERNAME=<docker-username>,\
    DOCKER_PASSWORD=<docker-password>,\
-   DOCKER_IMAGE_TAG=latest
+   DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 ```PowerShell
@@ -165,17 +168,19 @@ mssqlctl cluster create --config-file aks-dev-test.json `
    KNOX_PASSWORD=<password>,`
    DOCKER_USERNAME=<docker-username>,`
    DOCKER_PASSWORD=<docker-password>,`
-   DOCKER_IMAGE_TAG=latest
+   DOCKER_IMAGE_TAG=ctp2.5
 ```
 
-> [!IMPORTANT]
->- For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
->- Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the MSSQL_SA_PASSWORD to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
->- The **SA** account is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the MSSQL_SA_PASSWORD environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
+Please note the following guidelines:
+
+- For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
+- Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
+- The **SA** account is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
+- The **DOCKER_IMAGE_TAG** in this example controls which release you are installing. In this example it is the CTP 2.5 release.
 
 ## <a id="unattended"></a> Unattended install
 
-For an unattended deployment, you must set all required environment variables, use a configuration file, and call `mssqlctl cluster create`  with the `--accept-eula yes`. The examples in the previous section demonstrate how to do this.
+For an unattended deployment, you must set all required environment variables, use a configuration file, and call `mssqlctl cluster create` command with the `--accept-eula yes` parameter. The examples in the previous section demonstrate the syntax for an unattended installation.
 
 ## <a id="monitor"></a> Monitor the deployment
 
@@ -221,7 +226,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
    > kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
    > ```
 
-1. Log in to the big data cluster with `mssqlctl login`. Set the `--endpoint` parameter to the Management Proxy.
+1. Log in to the big data cluster with **mssqlctl login**. Set the **--endpoint** parameter to the Management Proxy.
 
    ```bash
    mssqlctl login --endpoint https://<ip-address>:30777
@@ -229,7 +234,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
 
    Specify the username and password that you configured for the controller during deployment.
 
-1. Run `mssqlctl cluster endpoints list` to get a list with a description of each endpoint and their corresponding IP address and port values. For example, the following displays the output for the Management Portal endpoint:
+1. Run **mssqlctl cluster endpoints list** to get a list with a description of each endpoint and their corresponding IP address and port values. For example, the following displays the output for the Management Portal endpoint:
 
    ```output
    {
@@ -264,18 +269,118 @@ For more information on how to connect to the big data cluster, see [Connect to 
 
 ## <a id="examples"></a> Deployment examples
 
-The following sections provide examples for how to customize a big data cluster deployment.
+The following sections provide examples for how to customize a big data cluster deployment. These examples specify the change on the command-line. However, you can also pass a JSON patch file. For more information, see [Customize a big data cluster deployment with a JSON patch file](deployment-json-patch-files.md).
 
-### Deploy with default settings
+Each of the examples in this section assume that you have created a copy of one of the standard configuration files. For more information, see [Create a custom configuration file](#customconfig).
 
 ### Change cluster name
+
+The cluster name is specified in the following portion of the deployment configuration file:
+
+```json
+"metadata": {
+    "kind": "Cluster",
+    "name": "mssql-cluster"
+},
+```
+
+The following command sends a key-value pair to the **--json-values** parameter to change the big data cluster name to **test-cluster**:
+
+```bash
+mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-cluster"
+```
 
 > [!IMPORTANT]
 > The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
 
+### Update endpoint ports
+
+Endpoints are defined for the control plane as well as for individual pools. The following portion of the configuration file shows the endpoint definitions for the control plane:
+
+```json
+"endpoints": [
+    {
+        "name": "Controller",
+        "serviceType": "LoadBalancer",
+        "port": 30080
+    },
+    {
+        "name": "ServiceProxy",
+        "serviceType": "LoadBalancer",
+        "port": 30777
+    },
+    {
+        "name": "AppServiceProxy",
+        "serviceType": "LoadBalancer",
+        "port": 30778
+    },
+    {
+        "name": "Knox",
+        "serviceType": "LoadBalancer",
+        "port": 30443
+    }
+]
+```
+
+The following example uses inline JSON to change the port for the **Controller** endpoint:
+
+```bash
+mssqlctl cluster config section set -f custom.json -j '$.spec.controlPlane.spec.endpoints[?(@.name=="Controller")].port=30000'
+```
+
 ### Configure pool replicas
 
+The characteristics of each pool, such as the storage pool, is defined in the configuration file. For example, the following portion shows a storage pool definition:
+
+```json
+"pools": [
+    {
+        "metadata": {
+            "kind": "Pool",
+            "name": "default"
+        },
+        "spec": {
+            "type": "Storage",
+            "replicas": 2,
+            "storage": {
+                "usePersistentVolume": true,
+                "className": "managed-premium",
+                "accessMode": "ReadWriteOnce",
+                "size": "10Gi"
+            }
+        }
+    }
+]
+```
+
+You can configure the number of instances in a pool by modifying the **replicas** value for each pool. The following example uses inline JSON to change these values for the storage and data pools to `10` and `4` respectively:
+
+```bash
+mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec.replicas=10'
+mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Data")].spec.replicas=4'
+```
+
+> [!IMPORTANT]
+> In this release, you cannot change the number of instances in the computer pool.
+
 ### Configure storage
+
+You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool:
+
+```bash
+mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "newStorageClass","size": "20Gi","accessMode": "ReadWriteOnce","usePersistentVolume": true},"type": "Storage"}'
+```
+
+The following example only updates the size of the storage pool:
+
+```bash
+mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec.storage.size=20Gi'
+```
+
+> [!NOTE]
+> A configuration file based on **kubeadm-dev-test.json** does not have a storage definition for each pool, but this can be added manually if needed.
+
+For more information about storage configuration, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
 
 ## Next steps
 

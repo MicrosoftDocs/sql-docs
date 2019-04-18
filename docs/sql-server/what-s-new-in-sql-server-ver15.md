@@ -40,20 +40,20 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 | Prompted deployments | `mssqlctl cluster create` now prompts for any necessary settings for default deployments. |
 | Service endpoint and pod name changes | For more information, see the [big data cluster release notes](../big-data-cluster/release-notes-big-data-cluster.md). |
 | **mssqlctl** improvements | Use **mssqlctl** to [list external endpoints](../big-data-cluster/deployment-guidance.md#endpoints) and check the version of **mssqlctl** with the `--version` parameter. |
-| Offline install | Guidance for offline big data cluster deployments. |
+| Offline install | [Guidance for offline big data cluster deployments](../big-data-cluster/deploy-offline.md). |
 | HDFS tiering improvements | S3 tiering, mount caching, and OAuth support for ADLS Gen2. |
-| New `mssql` Spark-SQL Server connector | |
+| Spark to SQL Server connector | [Read and write to SQL Server from Spark using the MSSQL JDBC Connector](../big-data-cluster/spark-mssql-connector.md) |
 | &nbsp; | &nbsp; |
 
 ### Database engine
 
 | New feature or update | Details |
 |:---|:---|
-| PolyBase on Linux | Install PolyBase on Linux for non-Hadoop connectors. |
-| New Java language SDK for SQL Server | Simplifies development of Java programs that can be run from SQL Server. |
-| Expanded the scope of plans available in DMF `sys.dm_exec_query_plan_stats`. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
-| New `LAST_QUERY_PLAN_STATS` database scoped configuration to enable `sys.dm_exec_query_plan_stats`. |[ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|
-| New spatial reference identifiers (SRIDs). |Australian GDA2020 datum in accordance with ESPG definitions:<br/> 7843 - geographic 2D<br/> 7844 - geographic 3D <br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view contains definitions of new SRIDs. |
+| PolyBase on Linux. | Install PolyBase on Linux for non-Hadoop connectors. |
+| New Java language SDK for SQL Server. | Simplifies development of Java programs that can be run from SQL Server. See [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md). |
+| Expanded the scope of plans available in DMF `sys.dm_exec_query_plan_stats`. |See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+| New `LAST_QUERY_PLAN_STATS` database scoped configuration to enable `sys.dm_exec_query_plan_stats`. |See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|
+| New spatial reference identifiers (SRIDs). |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) provides more robust and accurate datum which is more closely aligned to global positioning systems. The new SRIDs are:<br/><br/> - 7843 - geographic 2D<br/> - 7844 - geographic 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) view contains definitions of new SRIDs. |
 | &nbsp; | &nbsp; |
 
 ><sup>1</sup>
@@ -385,7 +385,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
+> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is [enabled by request during public preview](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). After it is enabled, the feature is on by default.
 
 If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
 

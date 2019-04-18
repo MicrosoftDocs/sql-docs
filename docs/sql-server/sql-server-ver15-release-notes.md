@@ -120,12 +120,6 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.5.
 
-### Hive MetaStore Thrift API over HTTP allows clients to call all get methods
-
-- **Issue / customer impact**: Hive MetaStore Thrift API over HTTP allows clients to call all get methods, but many methods do not apply to Hive MetaStore.
-
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.5.
-
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

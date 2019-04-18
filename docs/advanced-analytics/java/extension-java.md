@@ -124,7 +124,7 @@ JRE_HOME is a system environment variable that specifies the location of the Jav
 
 ### Grant access to non-default JRE folder (Windows only)
 
-If you did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
+If you did not install the JDK or JRE under the `Program Files` folder, you need to perform the following steps. Run the **icacls** commands from an *elevated* command prompt to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 
 #### SQLRUserGroup permissions
 

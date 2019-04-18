@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "SetEmailConfiguration method"
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SetEmailConfiguration Method (WMI MSReportServer_ConfigurationSetting)

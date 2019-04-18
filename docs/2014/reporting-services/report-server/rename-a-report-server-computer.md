@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "renaming report servers"
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Rename a Report Server Computer

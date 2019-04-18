@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SMTPServer property"
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - SMTPServer
   Gets the SMTP server property from the report server configuration file. Read-only.  

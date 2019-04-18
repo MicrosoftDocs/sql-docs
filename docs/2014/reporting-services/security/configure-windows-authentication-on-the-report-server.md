@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Windows authentication [Reporting Services]"
   - "Reporting Services, configuration"
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure Windows Authentication on the Report Server

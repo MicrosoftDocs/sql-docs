@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.definequeryparameters.f1"
   - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Define Query Parameters Dialog Box

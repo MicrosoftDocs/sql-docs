@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], data processing extensions"
   - "data processing extensions [Reporting Services], debugging"
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Debugging Data Processing Extension Code

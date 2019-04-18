@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "library [Reporting Services]"
   - "assigning namespaces to extensions"
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Creating a Delivery Extension Library

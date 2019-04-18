@@ -3,8 +3,8 @@ title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
 ---

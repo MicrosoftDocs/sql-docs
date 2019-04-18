@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "MSReportServer_Instance class"
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # MSReportServer_Instance Properties
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  

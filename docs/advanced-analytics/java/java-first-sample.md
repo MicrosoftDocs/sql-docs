@@ -21,7 +21,7 @@ For a given text in the text column sent to the Java class, the code checks if t
 
 This particular sample uses a regular expression that checks if a text contains the word "Java" or "java".
 
-## Java Extension SDK for Microsoft SQL Server​
+## Microsoft Extensibility SDK for Java for Microsoft SQL Server
 
  In CTP 2.5, we are changing the way you implement Java code that uses the Java language extension to communicate with SQL Server. This will provide a better developer experience when interacting with SQL Server from Java.
 
@@ -30,7 +30,7 @@ You should think about the SDK as a helper interface, that will make it easier t
 > [!NOTE]
 > Please note that the introduction of the SDK is a big change from previous CTPs, and that any previous samples you had working will need to be updated to use the SDK.
 
-You can find details about the SDK here. [TODO: LINK TO SDK]
+You can find details about the [SDK](java-sdk.md) here.
 
 ## Prerequisites
 

@@ -20,25 +20,26 @@ This article maps SQL Server data types to Java data types for data structures a
 
 The following SQL and Java data types are currently supported for Input and Output data sets.
 
+
 | SQL data type        | Java data type | Comment | |
-| ------------- |-------------|-|
-| Bit      | boolean | |
-| Tinyint      | short      | |
-| Smallint | short      | |
-| Int | int      | |
-| Real | float      | |
-| Bigint | long      | |
-| float | double      | |
-| nchar(n) | String      | |
-| nvarchar(n) | String  | |
-| binary(n) | byte[]      | |
-| varbinary(n) | byte[]      | |
-| nvarchar(max) | String | |
-| varbinary(max) | byte[] | |
-| uniqueidentifier | String | |
-| char(n) | String | Only UTF8 Strings supported |
-| varchar(n) | String | Only UTF8 Strings supported |
-| varchar(max) | String | Only UTF8 Strings supported |
+| ------------- |-------------|-|-|
+| Bit      | boolean | | |
+| Tinyint      | short      | | |
+| Smallint | short      | | |
+| Int | int      | | |
+| Real | float      | | |
+| Bigint | long      | | |
+| float | double      | | |
+| nchar(n) | String      | | |
+| nvarchar(n) | String      | | |
+| binary(n) | byte[]      | | |
+| varbinary(n) | byte[]      | | |
+| nvarchar(max) | String      | | |
+| varbinary(max) | byte[]      | | |
+| uniqueidentifier | String | | |
+| char(n) | String | Only UTF8 Strings supported | |
+| varchar(n) | String | Only UTF8 Strings supported | |
+| varchar(max) | String | Only UTF8 Strings supported | |
 
 ## Data types for input parameters
 

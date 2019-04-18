@@ -1,10 +1,10 @@
 ---
-title: Java Extension SDK for SQL Server 2019
-description: Description of the Java extension SDK for SQL Server
+title: SDK for Java extension
+description: Description of the Microsoft Extensibility SDK for Java for Microsoft SQL Server 2019
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/17/2019
+ms.date: 04/18/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
@@ -13,14 +13,14 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# Java Extension SDK for Microsoft SQL Server​
+# Microsoft Extensibility SDK for Java for Microsoft SQL Server
 
 In CTP 2.5, we are changing the way you implement a Java program that uses the Java language extension to communicate with SQL Server. This will provide a better developer experience when interacting with SQL Server from Java.
 
 > [!Note]
 > Please note that this is a big change from previous CTPs, and that any samples you had working will need to be updated to use the SDK instead.
 
-We are introducing a Java extension SDK for SQL Server. This is an interface the Java extension uses to exchange data with SQL Server and to execute Java code from SQL Server.
+We are introducing an extension Java SDK for SQL Server. This is an interface the Java extension uses to exchange data with SQL Server and to execute Java code from SQL Server.
 
 ## Implementation requirements
 
@@ -54,7 +54,7 @@ To inherit from this abstract class, you extend with the abstract class name in 
 ```java
 public class <MyClass> extends AbstractSqlServerExtensionExecutor {}
 ```
-At a minimum, your main class needs to implement the following methods.
+At a minimum, your main class needs to implement the execute(...) method.
 
 ### Method execute
 
@@ -63,12 +63,12 @@ The execute method is the method that is called from SQL Server via the Java lan
 To pass method arguments to Java from SQL Server, use the @param parameter in sp_execute_external_script. The method **execute**** takes its arguments that way.
 
 ```java
-public PrimitiveDataset execute(PrimitiveDataset input, LinkedHashMap<String, Object> params)  {}
+public AbstractSqlServerExtensionDataset execute(AbstractSqlServerExtensionDataset input, LinkedHashMap<String, Object> params)  {}
 ```
 
 ### Method init
 
-The init method 
+The init method is executed after the constructor and before execute method. Any operations that need to be performed prior to execute(...) can be done in this method.
 
 ```java
 public void init(String sessionId, int taskId, int numtask)
@@ -99,6 +99,7 @@ public abstract class AbstractSqlServerExtensionExecutor {
 
 	public AbstractSqlServerExtensionExecutor() { }
 
+    /*The init method is executed after the constructor and before execute method*/
 	public void init(String sessionId, int taskId, int numTasks) {
 		/* Default implementation of init() is no-op */
 	}
@@ -117,13 +118,12 @@ public abstract class AbstractSqlServerExtensionExecutor {
 
  This is an abstract class containing an interface for handling input and output data used by the Java language extension for SQL Server.
 
-If you implement your own dataset class instead of using **PrimitiveDataset**, you will need to inherit from this abstract class.
+If you wish to implement your own dataset class, you can use **PrimitiveDataset** as an example.
  
 ```java
 package com.microsoft.sqlserver.javalangextension;
 
 import java.lang.UnsupportedOperationException;
-import java.sql.Date;
 
 /*
  Abstract class containing interface for handling input and output data used by the Java extension.
@@ -195,10 +195,6 @@ public class AbstractSqlServerExtensionDataset {
 		throw new UnsupportedOperationException("addBinaryColumn is not implemented");
 	}
 
-	public void addDateColumn(int columnId, Date[] rows) {
-		throw new UnsupportedOperationException("addDateColumn is not implemented");
-	}
-
 	/**
 	 * Retrieving column interfaces
 	 */
@@ -233,10 +229,6 @@ public class AbstractSqlServerExtensionDataset {
 	public byte[][] getBinaryColumn(int columnId) {
 		throw new UnsupportedOperationException("getBinaryColumn is not implemented");
 	}
-
-	public Date[] getDateColumn(int columnId) {
-		throw new UnsupportedOperationException("getDateColumn is not implemented");
-	}
 }
 ```
 
@@ -244,7 +236,7 @@ public class AbstractSqlServerExtensionDataset {
 
 This class is an implementation of **AbstractSqlServerExtensionDataset** that stores simple types as primitives arrays. It is provided in the SDK simply as a helper class that is optional to use.
 
-If you don't use this class, you need to implement your own class that inherits from AbstractSqlServerExtensionDataset.  
+If you don't use this class, you need to implement your own class that inherits from **AbstractSqlServerExtensionDataset**.  
 
 ```java
 package com.microsoft.sqlserver.javalangextension;
@@ -254,7 +246,6 @@ import java.lang.IllegalArgumentException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.sql.Date;
 
 /**
  * Implementation of AbstractSqlServerExtensionDataset that stores
@@ -425,9 +416,6 @@ public class PrimitiveDataset extends AbstractSqlServerExtensionDataset {
 		columns.put(columnId, rows);
 	}
 
-	public void addDateColumn(int columnId, Date[] rows) {
-		columns.put(columnId, rows);
-	}
 
 	/**
 	 * Retrieving column data interfaces. For primitive types, calling getColumnNullMap() for the column ID
@@ -503,15 +491,6 @@ public class PrimitiveDataset extends AbstractSqlServerExtensionDataset {
 		}
 
 		return (byte[][])columns.get(columnId);
-	}
-
-	public Date[] getDateColumn(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
-		return (Date[])columns.get(columnId);
 	}
 }
 ```

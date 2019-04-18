@@ -23,7 +23,7 @@ This particular sample uses a regular expression that checks if a text contains 
 
 ## Microsoft Extensibility SDK for Java for Microsoft SQL Server
 
- In CTP 2.5, we are changing the way you implement Java code that uses the Java language extension to communicate with SQL Server. This will provide a better developer experience when interacting with SQL Server from Java.
+ In CTP 2.5, the way you implement Java code that uses the Java language extension to communicate with SQL Server has changed. 
 
 You should think about the SDK as a helper interface, that will make it easier to implement Java code running against SQL Server.
 

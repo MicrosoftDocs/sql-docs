@@ -18,14 +18,6 @@ This extension provides rich PowerShell language support for [Azure Data Studio]
 Now you can write and debug PowerShell scripts using the excellent IDE-like interface
 that Azure Data Studio provides.
 
-## Platform support
-
-- **Windows 7 through 10** with Windows PowerShell v3 and higher, and PowerShell Core
-- **Linux** with PowerShell Core (all PowerShell-supported distributions)
-- **macOS** with PowerShell Core
-
-Read the [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) for answers to common questions.
-
 ## Features
 
 - Syntax highlighting
@@ -52,14 +44,13 @@ You can also install a VSIX package from our [Releases page](https://github.com/
 azuredatastudio --install-extension PowerShell-<version>.vsix
 ```
 
-## Reporting Problems
+## Platform support
 
-If you experience any problems with the PowerShell Extension, see
-[the troubleshooting docs](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md) for information
-on diagnosing and reporting issues.
+- **Windows 7 through 10** with Windows PowerShell v3 and higher, and PowerShell Core
+- **Linux** with PowerShell Core (all PowerShell-supported distributions)
+- **macOS** with PowerShell Core
 
-#### Security Note
-For any security issues, please see [here](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security).
+Read the [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) for answers to common questions.
 
 ## Installing PowerShell Core
 
@@ -231,6 +222,15 @@ FOREACH {
     Get-SqlAgentJobHistory -ServerInstance  $_.Name -Since Midnight -OutcomesType Failed
 }
 ```
+
+## Reporting Problems
+
+If you experience any problems with the PowerShell Extension, see
+[the troubleshooting docs](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md) for information
+on diagnosing and reporting issues.
+
+#### Security Note
+For any security issues, please see [here](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security).
 
 ## Contributing to the Code
 

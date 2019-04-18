@@ -25,7 +25,7 @@ This particular sample uses a regular expression that checks if a text contains 
 
  In CTP 2.5, the way you implement Java code that uses the Java language extension to communicate with SQL Server has changed. 
 
-You should think about the SDK as a helper interface, that will make it easier to implement Java code running against SQL Server.
+The SDK is a helper interface that will make it easier to implement Java code running against SQL Server.
 
 > [!NOTE]
 > Please note that the introduction of the SDK is a big change from previous CTPs, and that any previous samples you had working will need to be updated to use the SDK.

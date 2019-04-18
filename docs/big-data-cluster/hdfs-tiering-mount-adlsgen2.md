@@ -1,18 +1,18 @@
 ---
-title: Mount ADLS Gen2
+title: Mount ADLS Gen2 for HDFS tiering
 titleSuffix: How to mount ADLS Gen2
 description: This article explains how to configure HDFS tiering to mount an external Azure Data Lake Storage file system into HDFS on a SQL Server 2019 big data cluster (preview).
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/11/2019
+ms.date: 04/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Mount instructions for ADLS Gen2
+# How to mount ADLS Gen2 for HDFS tiering in a big data cluster
 
 The following sections provide an example of how to configure HDFS tiering with an Azure Data Lake Storage Gen2 data source.
 
@@ -39,7 +39,7 @@ The following section describes how to set up Azure Data Lake Storage Gen2 for t
 
 In order to use OAuth credentials to mount, you need to follow the below steps:
 
-1. Go to the Azure portal [TODO: LINK]
+1. Go to the [Azure portal](https://portal.azure.com)
 1. Go to "services" in the left navigation pane, and clock on "Azure Active Directory"
 1. Using “App Registrations” in the menu, create a “Web Application and follow the wizard. **Remember the name you create here**. You will need to add this name to your ADLS account as an authorized user.
 1. Once the web application is created, go to “keys” under “settings” for the app.

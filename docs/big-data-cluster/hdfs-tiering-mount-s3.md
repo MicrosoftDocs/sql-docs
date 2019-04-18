@@ -1,6 +1,6 @@
 ---
-title: Mount S3
-titleSuffix: How to mount S3
+title: Mount S3 for HDFS tiering
+titleSuffix: SQL Server big data clusters
 description: This article explains how to configure HDFS tiering to mount an external S3 file system into HDFS on a SQL Server 2019 big data cluster (preview).
 author: nelgson
 ms.author: negust
@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Mount instructions for ADLS Gen2
+# How to mount S3 for HDFS tiering in a big data cluster
 
 The following sections provide an example of how to configure HDFS tiering with an S3 Storage data source.
 
@@ -25,13 +25,11 @@ The following sections provide an example of how to configure HDFS tiering with 
 - Create and upload data to an S3 bucket 
   - Upload CSV or Parquet files to your S3 bucket. This is the external HDFS data that will be mounted to HDFS in the big data cluster.
 
-## Credentials for mounting
-
 ## Access keys
 
 1. Open a command-prompt on a client machine that can access your big data cluster.
 
-1. Create a local file named **filename.creds** that contains your Azure Data Lake Storage Gen2 account credentials using the following format:
+1. Create a local file named **filename.creds** that contains your S3 account credentials using the following format:
 
    ```text
     fs.s3a.access.key=<Access Key ID of the key>
@@ -48,23 +46,19 @@ Now that you have prepared a credential file with access keys, you can start mou
 1. Use **kubectl** to find the IP Address for the **mgmtproxy-svc-external** service in your big data cluster. Look for the **External-IP**.
 
    ```bash
-   kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
    ```
 
-1. Log in with **mssqlctl** using the service proxy endpoint with your cluster username and password:
+1. Log in with **mssqlctl** using the external IP address of the management proxy endpoint with your cluster username and password:
 
    ```bash
-
    mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
-
    ```
 
 1. Mount the remote HDFS storage in Azure using **mssqlctl storage mount create**. Replace the placeholder values before running the following command:
 
    ```bash
-
-    mssqlctl storage mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
-
+   mssqlctl storage mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]

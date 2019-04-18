@@ -110,7 +110,11 @@
         - name: Query HDFS data
           href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
         - name: HDFS tiering
-          href: ../big-data-cluster/hdfs-tiering.md  
+          href: ../big-data-cluster/hdfs-tiering.md 
+        - name: Mount ADLS Gen2 for HDFS tiering
+          href: ../big-data-cluster/hdfs-tiering-mount-adlsgen2.md
+        - name: Mount S3 for HDFS tiering
+          href: ../big-data-cluster/hdfs-tiering-mount-s3.md 
     - name: Data ingestion
       items:
       - name: Load data with curl

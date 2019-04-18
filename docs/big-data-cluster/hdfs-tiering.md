@@ -6,7 +6,7 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/28/2018
+ms.date: 04/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -16,8 +16,9 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview). 
-At this time, CTP 2.4 supports connecting to Azure Data Lake Storage Gen2 and Amazon S3. Instructions on how to mount against these storage types can be found here [TODO' ADD LINK to how-to-mount-adlsgen2 and how-to-mount-s3].
+HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview).  
+
+At this time, CTP 2.4 supports connecting to Azure Data Lake Storage Gen2 and Amazon S3.
 
 ## HDFS tiering overview
 
@@ -41,8 +42,10 @@ The following sections provide an example of how to configure HDFS tiering with 
 
 ## Mounting instructions
 
+At this time, CTP 2.4 supports connecting to Azure Data Lake Storage Gen2 and Amazon S3. Instructions on how to mount against these storage types can be found in the following articles:
 
-[*TODO*: LINK to ADLSgen2 and S3 topics]
+- [How to mount ADLS Gen2 for HDFS tiering in a big data cluster](hdfs-tiering-mount-adlsgen2.md)
+- [How to mount S3 for HDFS tiering in a big data cluster](hdfs-tiering-mount-s3.md)
 
 ## <a id="issues"></a> Known issues and limitations
 

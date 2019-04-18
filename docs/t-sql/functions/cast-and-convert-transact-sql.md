@@ -46,15 +46,16 @@ These functions convert an expression of one data type to another.
 
 **Cast**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original,
+       CAST(9.5 AS INT) AS [int],
+       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
 **Convert**
 ```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+SELECT 9.5 AS Original,
+       CONVERT(INT, 9.5) AS [int],
+       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 

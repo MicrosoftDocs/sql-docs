@@ -146,7 +146,7 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## Configure script execution
 
-At this point, you are almost ready to run Java code on Linux or Windows. As a last step, switch to SQL Server Management Studio, Azure data studio, SQL CMD or another tool that lets you run Transact-SQL script to enable external script execution.
+At this point, you are almost ready to run Java code on Linux or Windows. As a last step, switch to SQL Server Management Studio, Azure data studio, SQL CMD, or another tool that runs Transact-SQL script to enable external script execution.
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1

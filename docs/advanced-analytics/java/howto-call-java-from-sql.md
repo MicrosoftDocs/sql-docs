@@ -77,7 +77,7 @@ The easiest option is to make SQL Server automatically find your classes by crea
 
 **Option 2: Register a system environment variable**
 
-Just as you created a system environment variable for the Java runtime , you can create a system environment variable and provide the paths to your jar file that contains the classes. To do this, you need to create a system environment variable called "CLASSPATH".
+You can create a system environment variable and provide the paths to your jar file that contains the classes. To do this, you need to create a system environment variable called **CLASSPATH**.
 
 <a name="external-library"></a>
 

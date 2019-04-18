@@ -129,7 +129,7 @@ GO
 
 This step is not needed if you use external libraries. The recommended way of working is to create an external library from you jar.
 
-If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions [here](extension-java.md).
+If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. For more information about setting permissions, see [Java language extension in SQL Server 2019](extension-java.md).
 
 ### On Linux
 

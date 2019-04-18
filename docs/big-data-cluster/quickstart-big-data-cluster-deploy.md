@@ -5,7 +5,7 @@ description: Walkthrough a deployment of SQL Server 2019 big data clusters (prev
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -109,7 +109,7 @@ After 10 to 20 minutes, you should be notified that the controller pod is runnin
 ```
 
 > [!IMPORTANT]
-> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see the  [deployment troubleshooting](deployment-guidance.md#troubleshoot) section of the deployment guidance article.
+> The entire deployment can take a long time due to the time required to download the container images for the components of the big data cluster. However, it should not take several hours. If you are experiencing problems with your deployment, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
 ## Inspect the cluster
 
@@ -144,7 +144,7 @@ Open a new command window to use **kubectl** during the deployment process.
    ```
 
 > [!TIP]
-> For more details about how to monitor and troubleshoot a deployment, see the [deployment troubleshooting](deployment-guidance.md#troubleshoot) section of the deployment guidance article.
+> For more details about how to monitor and troubleshoot a deployment, see [Monitoring and troubleshoot SQL Server big data clusters](cluster-troubleshooting-commands.md).
 
 ### Use the Cluster Administration Portal
 

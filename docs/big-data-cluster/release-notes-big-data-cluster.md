@@ -45,7 +45,7 @@ The following sections describe the known issues and limitations with this relea
 - Upgrading a big data data cluster from a previous release is not supported.
 
    > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 
@@ -179,7 +179,7 @@ The following sections describe the known issues and limitations with this relea
 - Upgrading a big data data cluster from a previous release is not supported.
 
    > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 
@@ -323,7 +323,7 @@ The following sections describe the known issues and limitations with this relea
 - Upgrading a big data data cluster from a previous release is not supported.
 
    > [!IMPORTANT]
-   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+   > You must backup your data and then delete your existing big data cluster (using the previous version of **mssqlctl**) before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - The **ACCEPT_EULA** environment variable must be "yes" or "Yes" to accept the EULA. Previous releases permitted "y" and "Y" but these are no longer accepted and will cause the deployment to fail.
 
@@ -373,7 +373,7 @@ If you use kubeadm to deploy Kubernetes on multiple machines, the cluster admini
    mssqlctl cluster create --name <cluster_name>
    ```
 
-- For important information about upgrading to the latest version of big data clusters and **mssqlctl**, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+- For important information about upgrading to the latest version of big data clusters and **mssqlctl**, see [Upgrade to a new release](deployment-upgrade.md).
 
 #### External tables
 
@@ -432,7 +432,7 @@ The following sections describe the known issues and limitations with this relea
 
 #### Deployment
 
-- Upgrading a big data data cluster from a previous release is not supported. You must backup and delete any existing big data cluster before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+- Upgrading a big data data cluster from a previous release is not supported. You must backup and delete any existing big data cluster before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 
@@ -500,7 +500,7 @@ The following sections provide known issues for SQL Server big data clusters in 
 
 #### Deployment
 
-- Upgrading a big data data cluster from a previous release is not supported. You must backup and delete any existing big data cluster before deploying the latest release. For more information, see [Upgrade to a new release](deployment-guidance.md#upgrade).
+- Upgrading a big data data cluster from a previous release is not supported. You must backup and delete any existing big data cluster before deploying the latest release. For more information, see [Upgrade to a new release](deployment-upgrade.md).
 
 - After deploying on AKS, you might see the following two warning events from the deployment. Both of these events are known issues, but they do not prevent you from successfully deploying the big data cluster on AKS.
 

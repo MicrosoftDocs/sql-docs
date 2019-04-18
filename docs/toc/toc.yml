@@ -61,20 +61,30 @@
         href: ../big-data-cluster/deploy-big-data-tools.md
       - name: Install mssqlctl
         href: ../big-data-cluster/deploy-install-mssqlctl.md
-    - name: Deployment scripts
-      items:
-      - name: Azure Kubernetes Service
-        href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-    - name: Deployment guidance
+    - name: Deploy
       items:
       - name: Deployment guidance
         href: ../big-data-cluster/deployment-guidance.md
-      - name: Azure Kubernetes Service
-        href: ../big-data-cluster/deploy-on-aks.md
-      - name: Kubeadm
-        href: ../big-data-cluster/deploy-with-kubeadm.md
-      - name: Minikube
-        href: ../big-data-cluster/deploy-on-minikube.md
+      - name: Upgrade to a new release
+        href: ../big-data-cluster/deployment-upgrade.md
+      - name: Customize with patch files
+        href: ../big-data-cluster/deployment-json-patch-files.md 
+      - name: Configure storage
+        href: ../big-data-cluster/concept-data-persistence.md
+      - name: Offline deployments
+        href: ../big-data-cluster/deploy-offline.md
+      - name: Deployment targets
+        items:
+        - name: Azure Kubernetes Service
+          href: ../big-data-cluster/deploy-on-aks.md
+        - name: Kubeadm
+          href: ../big-data-cluster/deploy-with-kubeadm.md
+        - name: Minikube
+          href: ../big-data-cluster/deploy-on-minikube.md
+      - name: Deployment scripts
+        items:
+        - name: Azure Kubernetes Service
+          href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
   - name: Concepts
     items:
     - name: Application deployment
@@ -141,6 +151,8 @@
         href: ../big-data-cluster/sparklyr-from-RStudio.md
       - name: GPU support and TensorFlow
         href: ../big-data-cluster/spark-gpu-tensorflow.md
+      - name: Integrate Spark with SQL Server
+        href: ../big-data-cluster/spark-mssql-connector.md
     - name: Manage SQL Server big data cluster
       items:
       - name: Connect to a big data cluster
@@ -167,6 +179,10 @@
         href: ../big-data-cluster/spark-history-server.md
   - name: Reference
     items:
+    - name: Deployment reference
+      items:
+      - name: Deployment configuration file
+        href: ../big-data-cluster/reference-deployment-config.md
     - name: mssqlctl reference
       items:
       - name: mssqlctl
@@ -4139,8 +4155,8 @@
       href: ../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md
     - name: Diagnostic Connection for Database Administrators
       href: ../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md
-    - name: SQL Server 2016 Express LocalDB
-      href: ../database-engine/configure-windows/sql-server-2016-express-localdb.md
+    - name: SQL Server Express LocalDB
+      href: ../database-engine/configure-windows/sql-server-express-localdb.md
     - name: Remote Servers
       href: ../database-engine/configure-windows/remote-servers.md
     - name: SQL Server Monitor Overview
@@ -10098,6 +10114,8 @@
       items:
       - name: Use SSMS to manage
         href: ../linux/sql-server-linux-manage-ssms.md
+      - name: Use Azure Data Studio to manage
+        href: ../azure-data-studio/quickstart-sql-server.md
       - name: Use PowerShell to manage
         href: ../linux/sql-server-linux-manage-powershell.md
       - name: Use log shipping

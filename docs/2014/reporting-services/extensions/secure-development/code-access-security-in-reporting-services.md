@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "code access security [Reporting Services], about code access security"
   - "named permission sets [Reporting Services]"
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Code Access Security in Reporting Services

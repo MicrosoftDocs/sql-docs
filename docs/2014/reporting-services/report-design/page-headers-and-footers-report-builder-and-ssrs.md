@@ -21,8 +21,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.pagefooter.general.f1"
   - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Page Headers and Footers (Report Builder and SSRS)

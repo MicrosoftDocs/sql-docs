@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "methods [Reporting Services], arguments"
   - "XML Web service [Reporting Services], methods"
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Supplying Web Service Method Arguments

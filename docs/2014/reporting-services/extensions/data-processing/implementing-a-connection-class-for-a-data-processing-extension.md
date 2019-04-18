@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Connection class"
   - "data processing extensions [Reporting Services], connections"
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Implementing a Connection Class for a Data Processing Extension

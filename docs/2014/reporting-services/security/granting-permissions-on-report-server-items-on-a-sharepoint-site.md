@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "permissions [Reporting Services], native mode"
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Granting Permissions on Report Server Items on a SharePoint Site

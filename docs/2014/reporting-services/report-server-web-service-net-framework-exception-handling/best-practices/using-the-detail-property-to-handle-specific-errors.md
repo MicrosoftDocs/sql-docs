@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Detail property"
   - "InnerText property"
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the Detail Property to Handle Specific Errors

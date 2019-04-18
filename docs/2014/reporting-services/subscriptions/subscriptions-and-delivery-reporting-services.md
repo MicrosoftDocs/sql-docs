@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], about subscriptions"
   - "subscriptions [Reporting Services]"
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Subscriptions and Delivery (Reporting Services)

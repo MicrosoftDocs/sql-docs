@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Data Source Properties Dialog Box, Credentials (Report Builder)

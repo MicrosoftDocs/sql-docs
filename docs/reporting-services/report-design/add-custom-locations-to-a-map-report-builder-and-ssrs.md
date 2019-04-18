@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE"
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add Custom Locations to a Map (Report Builder and SSRS)
   After you add a map to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, you can add your own point locations.  

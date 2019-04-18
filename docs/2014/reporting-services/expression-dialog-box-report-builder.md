@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "expressions"
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Expression Dialog Box (Report Builder)

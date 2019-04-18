@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "URL access [Reporting Services], vs. SOAP"
   - "Web service [Reporting Services], application integration"
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Choosing Between URL Access and SOAP

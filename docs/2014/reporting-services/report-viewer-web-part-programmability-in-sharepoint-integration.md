@@ -9,8 +9,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: "reference"
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Viewer Web Part Programmability in SharePoint Integration

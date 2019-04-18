@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "locking [Reporting Services]"
   - "multiple Web service methods"
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Batching Methods

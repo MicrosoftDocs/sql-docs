@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "custom assemblies [Reporting Services], updating"
   - "updating custom assemblies"
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Deploying a Custom Assembly

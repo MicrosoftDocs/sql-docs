@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rpt.rptdesigner.cubeselection.f1"
   - "10130"
 ms.assetid: 03584db6-9bc0-4866-9f6d-18895322ea87
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Cube Selection Dialog Box

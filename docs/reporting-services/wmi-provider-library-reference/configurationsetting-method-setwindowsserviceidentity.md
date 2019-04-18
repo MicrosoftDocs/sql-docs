@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SetWindowsServiceIdentity method"
 ms.assetid: 9bbc734c-9e69-48c2-8bec-8abe7c6cc987
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - SetWindowsServiceIdentity
   Makes the Report Server Windows service run as a specified Windows user, and grants this account sufficient file system permissions to allow the report server to operate.  

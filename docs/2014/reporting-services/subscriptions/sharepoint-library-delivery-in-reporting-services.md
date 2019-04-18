@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "delivering reports [Reporting Services]"
   - "subscriptions [Reporting Services], SharePoint library delivery"
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SharePoint Library Delivery in Reporting Services

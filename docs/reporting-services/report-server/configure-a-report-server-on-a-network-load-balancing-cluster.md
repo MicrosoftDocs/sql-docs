@@ -1,7 +1,7 @@
 ---
 title: "Configure a Report Server on a Network Load Balancing Cluster | Microsoft Docs"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server

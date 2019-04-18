@@ -13,7 +13,7 @@ ms.author: "alayu"
 manager: craigg
 ---
 # SandDance for Azure Data Studio (Preview)
-Azure Data Studio now offers a way to create quick visualizations for the .csv and .tsv files that you are working on whether they are local files or files on HDFS in your SQL Server 2019 Big Data Cluster. This is especially helpful when you are trying to have a quick look at the data and understand what's going on. We leverage a technology called SandDance from Microsoft Research which can generate in-place visualizations of the data.
+Azure Data Studio now offers a way to create quick visualizations for the .csv and .tsv files that you are working on. This includes local files or files on HDFS in your SQL Server 2019 Big Data Cluster. This extension is helpful when you are trying to have a quick look at the data and understand what's going on. We use a technology called SandDance from Microsoft Research, which can generate in-place visualizations of the data.
 
 ![sanddance-animation](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)
 
@@ -32,7 +32,7 @@ Right-click on a .csv or .tsv file in HDFS if you are connected to SQL Server 20
 
 Currently your data should have the first column as a unique identifier.
 
-Currently we do not cap the row count that is visualized, but be aware that memory consumption goes up proportionally to the number of rows, so we recommend that the data set or view is limited to around 100k rows.
+Currently we do not cap the row count that is visualized. However, memory consumption goes up proportionally to the number of rows, so we recommend that the data set or view is limited to around 100k rows.
 
 See [known issues](https://microsoft.github.io/SandDance/#known-issues)
 
@@ -43,4 +43,4 @@ See [known issues](https://microsoft.github.io/SandDance/#known-issues)
 Initial release of azdata-sanddance
 
 ## Next Steps
-To learn more, [visit the Github repo.](https://github.com/Microsoft/SandDance)
+To learn more, [visit the GitHub repo.](https://github.com/Microsoft/SandDance)

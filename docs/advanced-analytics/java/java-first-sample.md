@@ -75,7 +75,7 @@ INSERT INTO testdata(id, "text") VALUES (1, 'This sentence contains java')
 INSERT INTO testdata(id, "text") VALUES (2, 'This sentence does not')
 INSERT INTO testdata(id, "text") VALUES (3, 'I love Java!')
 GO
-Select * FROM testdata
+SELECT * FROM testdata
 ```
 
 ## 2 - Class RegexSample.java

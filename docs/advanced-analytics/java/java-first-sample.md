@@ -46,7 +46,7 @@ Command-line compilation using **javac** is sufficient for this tutorial.
 
 ## 1 - Get SDK jar file
 
-The Java Extensibility SDK for Microsoft SQL Server is packaged into a .jar file. Please download the Java Extension SDK [jar file](http://aka.ms/mssql-java-lang-extension) mssql-java-lang-extension.jar.
+The Java Extensibility SDK for Microsoft SQL Server is packaged into a .jar file. Please download the [Java Extension SDK jar file mssql-java-lang-extension.jar](http://aka.ms/mssql-java-lang-extension).
 
 ## 1 - Create sample data in a SQL Server table
 

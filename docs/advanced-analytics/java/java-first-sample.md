@@ -28,7 +28,7 @@ This particular sample uses a regular expression that checks if a text contains 
 The SDK is a helper interface that will make it easier to implement Java code running against SQL Server.
 
 > [!NOTE]
-> Please note that the introduction of the SDK is a big change from previous CTPs, and that any previous samples you had working will need to be updated to use the SDK.
+> The SDK in CTP 2.5 is a big change from previous CTPs. Any previous samples will need to be updated to use the SDK.
 
 You can find details about the [SDK](java-sdk.md) here.
 

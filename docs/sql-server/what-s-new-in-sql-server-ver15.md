@@ -42,7 +42,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 | **mssqlctl** improvements | Use **mssqlctl** to [list external endpoints](../big-data-cluster/deployment-guidance.md#endpoints) and check the version of **mssqlctl** with the `--version` parameter. |
 | Offline install | [Guidance for offline big data cluster deployments](../big-data-cluster/deploy-offline.md). |
 | HDFS tiering improvements | S3 tiering, mount caching, and OAuth support for ADLS Gen2. |
-| New `mssql` Spark-SQL Server connector | |
+| Spark to SQL Server connector | [Read and write to SQL Server from Spark using the MSSQL JDBC Connector](../big-data-cluster/spark-mssql-connector.md) |
 | &nbsp; | &nbsp; |
 
 ### Database engine

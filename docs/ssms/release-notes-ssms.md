@@ -40,7 +40,7 @@ GeneMi. 2019/04/02.
 
 Download: &nbsp; &nbsp; [Download SSMS 18.0 (GA)](download-sql-server-management-studio-ssms.md)<br/>
 Build number: &nbsp; &nbsp; 15.0.18098.0<br/>
-Release date: &nbsp; &nbsp; March 28, 2019
+Release date: &nbsp; &nbsp; April 24, 2019
 
 The general availability (GA) release of SSMS 18.0 is available. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
@@ -56,12 +56,12 @@ This section lists what's new in SSMS 18.0 (GA).
 | **SSMS:** Smaller download size.|The current size of the bundle is less than half of what SSMS 17.x is (~500MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as big as it used to be.|
 | **SSMS:** is based on the new VS 2017 Isolated Shell | This means a modern shell (we picked up VS 2017 15.9.11). The new shell unlocks all the accessibility fixes that went in to both SSMS and Visual Studio, and includes the latest security fixes that went into Visual Studio.|
 |**SSMS:** can be installed in a custom folder.|This option is now available from both the command line (useful for unattended installation) and the setup UI. From the command line, pass this extra argument to the SSMS-Setup-ENU.exe: `SSMSInstallRoot=C:\MySSMS18`<br>By default, the new install location for SSMS is: `%ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`<br> Note that this does not mean that SSMS is multi-instance|
-|**SSMS:** allows installing in a language other than the OS.|The block on mixed languages setup has been lifted. You can, for example, install SSMS German on a French version of Windows (if the OS language does not match the SSMS language, the user needs to change the language under **Tools** > **Options** > **International Settings**, otherwise SSMS will show the English UI)|
+|**SSMS:** allows installing in a language other than the OS.|The block on mixed languages setup has been removed. You can, for example, install SSMS German on a French version of Windows (if the OS language does not match the SSMS language, the user needs to change the language under **Tools** > **Options** > **International Settings**, otherwise SSMS will show the English UI)|
 |**SSMS:** ships with the MS OLEDB driver. |For details, see [Download Microsoft OLE DB Driver for SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server).|
 |**SSMS:** Removed support for `UTF8_BIN2` collation.| This was added in preview 7, but support for `UTF8_BIN2` has been removed for GA.|
 |**SSIS:** Deployment Wizard now supports creating and deploying to Azure Data Factory SSIS Integration Runtime. |For details, see [Integration runtime in Azure Data Factory](/azure/data-factory/concepts-integration-runtime/).|
-|**Vulnerability Assessment:** Added a new feature to export the vulnerability assessment scan results to Excel.|For details, see [SQL Vulnerability Assessment](../relational-databases/security/sql-vulnerability-assessment.md)|
-|**Replication tools:** Added support for non-default port specification feature in Replication Monitor and SSMS.|&nbsp;|
+|**Vulnerability Assessment:** Added a new feature to export the vulnerability assessment scan results to Excel.|For information about vulnerability assessment, see [SQL Vulnerability Assessment](../relational-databases/security/sql-vulnerability-assessment.md).|
+|**Replication tools:** Added support for non-default port specification feature in Replication Monitor and SSMS.|For information about replication tools, see [Monitoring Replication](../relational-databases/replication/monitor/monitoring-replication.md). |
 | &nbsp; | &nbsp; |
 
 ### Bug fixes

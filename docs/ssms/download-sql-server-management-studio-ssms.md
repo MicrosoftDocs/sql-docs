@@ -35,7 +35,7 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 SSMS is free!
 
-## SSMS 18.0 (GA)
+## Download SSMS 18.0 (GA)
 
 **SSMS 18.0 General Availability release (GA) is now available, and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 

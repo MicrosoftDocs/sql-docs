@@ -35,7 +35,7 @@ It is recommended to perform the following configuration tasks after you install
 
 ### Advanced Configuration
 
-The following recommendations are optional configuration settings that you may elect to perform after installation of SQL Server on Linux. These choices are based on the requirements of your workload and configuration of your Linux Operating System.
+The following recommendations are optional configuration settings that you may select to perform after installation of SQL Server on Linux. These choices are based on the requirements of your workload and configuration of your Linux Operating System.
 
 - **Set a memory limit with mssql-conf**
 

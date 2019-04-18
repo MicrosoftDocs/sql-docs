@@ -14,7 +14,7 @@ manager: matthend
 ---
 # PowerShell Language Support for Azure Data Studio
 
-This extension provides rich PowerShell language support for [Azure Data Studio](github.com/Microsoft/azuredatastudio).
+This extension provides rich PowerShell language support for [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
 Now you can write and debug PowerShell scripts using the excellent IDE-like interface
 that Azure Data Studio provides.
 
@@ -42,7 +42,7 @@ Read the [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) for ans
 ## Installing the Extension
 
 You can install the official release of the PowerShell extension by following the steps
-in the [Azure Data Studio documentation](docs.microsoft.com/sql/azure-data-studio/extensions).
+in the [Azure Data Studio documentation](https://docs.microsoft.com/sql/azure-data-studio/extensions).
 In the Extensions pane, search for "PowerShell" extension and install it there.  You will
 get notified automatically about any future extension updates!
 
@@ -61,15 +61,15 @@ on diagnosing and reporting issues.
 #### Security Note
 For any security issues, please see [here](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security).
 
-# Installing PowerShell Core
+## Installing PowerShell Core
 
 If you are running Azure Data Studio on MacOS or Linux, you may also need to install PowerShell Core.
 
 PowerShell Core is an Open Source project on [GitHub](https://github.com/powershell/powershell).
 See the following articles for more information on installing PowerShell Core on MacOS or Linux platforms.
 
-- [Installing PowerShell Core on Linux](Installing-PowerShell-Core-on-Linux.md)
-- [Installing PowerShell Core on macOS](Installing-PowerShell-Core-on-macOS.md)
+- [Installing PowerShell Core on Linux](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [Installing PowerShell Core on macOS](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## Example Scripts
 
@@ -234,7 +234,7 @@ FOREACH {
 
 ## Contributing to the Code
 
-Check out the [development documentation](docs/development.md) for more details
+Check out the [development documentation](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md) for more details
 on how to contribute to this extension!
 
 ## Maintainers
@@ -245,8 +245,8 @@ on how to contribute to this extension!
 
 ## License
 
-This extension is [licensed under the MIT License](LICENSE.txt).  Please see the
-[third-party notices](Third%20Party%20Notices.txt) file for details on the third-party
+This extension is [licensed under the MIT License](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt).  Please see the
+[third-party notices](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt) file for details on the third-party
 binaries that we include with releases of this project.
 
 ## [Code of Conduct][conduct-md]

@@ -1,7 +1,7 @@
 ---
 title: "ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/18/2018"
+ms.date: "04/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -39,21 +39,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ALTER CERTIFICATE certificate_name   
       REMOVE PRIVATE KEY  
-    | WITH PRIVATE KEY ( <private_key_options> )  
+    | WITH PRIVATE KEY ( <private_key_spec> [ ,... ] )  
     | WITH ACTIVE FOR BEGIN_DIALOG = [ ON | OFF ]  
   
-<private_key_options> ::=  
-      {   
-        FILE = 'path_to_private_key'  
-         [ , DECRYPTION BY PASSWORD = 'password' ]  
-         [ , ENCRYPTION BY PASSWORD = 'password' ]    
-      }  
-    |  
-      {   
-        BINARY = private_key_bits  
-         [ , DECRYPTION BY PASSWORD = 'password' ]  
-         [ , ENCRYPTION BY PASSWORD = 'password' ]    
-      }  
+<private_key_spec> ::=   
+    [ FILE = 'path_to_private_key' | BINARY = private_key_bits ]
+    | DECRYPTION BY PASSWORD = 'key_password'   
+    | ENCRYPTION BY PASSWORD = 'password'   
 ```  
   
 ```  

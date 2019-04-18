@@ -88,7 +88,7 @@ This main class is importing the SDK. Therefore, the jar file downloaded in step
 
 > [!NOTE]
 > This class imports the Java extension SDK package.
-See the article about the [Java extension SDK](java-sdk.md) for more details.
+> For more information, see the [Java extension SDK](java-sdk.md).
 
 ```java
 TODO: JAVA CODE GOES HERE

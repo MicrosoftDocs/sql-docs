@@ -151,6 +151,8 @@
         href: ../big-data-cluster/sparklyr-from-RStudio.md
       - name: GPU support and TensorFlow
         href: ../big-data-cluster/spark-gpu-tensorflow.md
+      - name: Integrate Spark with SQL Server
+        href: ../big-data-cluster/spark-mssql-connector.md
     - name: Manage SQL Server big data cluster
       items:
       - name: Connect to a big data cluster

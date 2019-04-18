@@ -98,7 +98,7 @@ TODO: JAVA CODE GOES HERE
 
 We recommend that you package your classes and dependencies into .jar files. Most Java IDEs like Eclipse or IntelliJ support generating jar files when you build/compile the project. In this sample, we have named the jar file **regex.jar**.
 
-If you are manually creating a .jar file, you can follow the steps, see [How to create a jar file](extension-java.md#create-jar).
+If you are manually creating a .jar file, follow the steps in [How to create a jar file](extension-java.md#create-jar).
 
 > [!NOTE]
 > This sample is using packages, which means that the package "pkg" given at the top of the class makes sure the compiled code is saved in a sub folder called "pkg". This is automatically taken care of if you use an IDE, but if you are manually compiling classes using **javac**, you will need to place the compiled code in the pkg sub folder manually.

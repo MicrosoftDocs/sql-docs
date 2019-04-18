@@ -1368,7 +1368,7 @@ GO
 -- The keyword CONSTRAINT is optional. The keyword COLUMN is required.
 ALTER TABLE dbo.doc_exc
 
-    DROP CONSTRAINT CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
+    DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
 GO
 ```
 

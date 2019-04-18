@@ -78,7 +78,7 @@ To grant read and execute access to a jar file, run the following **chmod** comm
 chmod ug+rx <MyJarFile.jar>
 ```
 
-You also need to give mssql_satellite permissions the jar file to read/execute.
+You also need to give mssql_satellite permissions to the jar file to read/execute.
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>

@@ -1,7 +1,7 @@
 ---
 title: "Errors and Events Reference (Reporting Services) | Microsoft Docs"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: troubleshooting

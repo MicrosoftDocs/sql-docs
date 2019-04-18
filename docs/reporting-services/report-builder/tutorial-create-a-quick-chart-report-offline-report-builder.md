@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "tutorials, getting started"
   - "creating reports"
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)

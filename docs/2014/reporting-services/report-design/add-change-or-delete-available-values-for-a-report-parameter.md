@@ -12,8 +12,8 @@ f1_keywords:
   - "10455"
   - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Add, Change, or Delete Available Values for a Report Parameter (Report Builder and SSRS)

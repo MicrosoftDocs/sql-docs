@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], size"
   - "denial of service attacks [Reporting Services]"
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report and Snapshot Size Limits

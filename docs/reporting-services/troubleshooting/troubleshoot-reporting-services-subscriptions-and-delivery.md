@@ -8,8 +8,8 @@ ms.technology: troubleshooting
 
 ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Reporting Services Subscriptions and Delivery
   

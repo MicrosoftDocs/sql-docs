@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ReportViewer controls"
   - "integrating reports [Reporting Services]"
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Integrating Reporting Services Using the ReportViewer Controls

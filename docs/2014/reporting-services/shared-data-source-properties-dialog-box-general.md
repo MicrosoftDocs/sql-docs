@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.shareddatasource.general.f1"
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Shared Data Source Properties Dialog Box, General

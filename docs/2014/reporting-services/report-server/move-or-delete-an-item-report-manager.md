@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "moving items"
   - "items [Reporting Services], moving"
 ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Move or Delete an Item (Report Manager)

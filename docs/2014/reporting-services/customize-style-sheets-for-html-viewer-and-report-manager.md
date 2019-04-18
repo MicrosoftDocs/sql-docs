@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "style sheets [Reporting Services]"
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Customize Style Sheets for HTML Viewer and Report Manager

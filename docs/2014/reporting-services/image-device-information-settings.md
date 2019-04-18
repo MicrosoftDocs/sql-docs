@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "images [Reporting Services], rendering"
   - "device information settings [Reporting Services], IMAGE rendering"
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Image Device Information Settings

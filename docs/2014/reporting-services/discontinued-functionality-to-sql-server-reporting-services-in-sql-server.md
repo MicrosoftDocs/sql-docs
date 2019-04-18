@@ -1,7 +1,7 @@
 ---
 title: Discontinued Functionality
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: "sql-server-2014"
 ms.reviewer: ""

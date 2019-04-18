@@ -18,24 +18,21 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: "=azuresqldb-current||= azure-sqldw-latest ||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Removes the space character `char(32)` or other specified characters from the start or end of a string.  
- 
-## Syntax   
-``` 
--- Syntax for SQL Server and Azure SQL Database
-TRIM ( [ characters FROM ] string ) 
-```
-[//]: # "[ BOTH | LEADING | TRAILING ] not yet available."
 
+## Syntax
+
+```sql
+-- Syntax for SQL Server and Azure SQL Database
+TRIM ( [ characters FROM ] string )
 ```
--- Syntax for Azure SQL Data Warehouse
-TRIM ( string )
-```
+
 ## Arguments
 
 characters
@@ -45,35 +42,40 @@ string
 Is an expression of any character type (`nvarchar`, `varchar`, `nchar`, or `char`) where characters should be removed.
 
 ## Return Types
+
 Returns a character expression with a type of string argument where the space character `char(32)` or other specified characters are removed from both sides. Returns `NULL` if input string is `NULL`.
 
 ## Remarks
+
 By default `TRIM` function removes the space character `char(32)` from both sides. This behavior is equivalent to `LTRIM(RTRIM(@string))`. Behavior of `TRIM` function with specified characters is identical to behavior of `REPLACE` function where characters from start or end are replaced with empty strings.
 
-
 ## Examples
-### A.  Removes the space character from both sides of string   
-The following example removes spaces from before and after the word `test`.   
+
+### A.  Removes the space character from both sides of string
+
+The following example removes spaces from before and after the word `test`.
+
 ```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
-[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
 `test`
 
+### B.  Removes specified characters from both sides of string
 
-### B.  Removes specified characters from both sides of string   
 The following example removes a trailing period and trailing spaces.
+
 ```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 
-[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]   
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 `#     test`
 
-
 ## See Also
+
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  

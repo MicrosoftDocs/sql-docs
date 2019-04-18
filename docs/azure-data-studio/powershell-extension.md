@@ -8,8 +8,8 @@ ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "aanelson"
-ms.author: "aaronnelson"
+author: "SQLvariant"
+ms.author: "aanelson"
 manager: matthend
 ---
 # PowerShell Language Support for Azure Data Studio

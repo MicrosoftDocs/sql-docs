@@ -105,7 +105,7 @@ JRE_HOME is a system environment variable that specifies the location of the Jav
 1. Find and copy the JRE home path (for example, `C:\Program Files\Zulu\zulu-8\jre\`).
 
     Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above.
-    Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the jre folder in that case.
+    Even if you have a JDK installed, you often will get a JRE sub folder as part of that installation. In that case, point to the JRE folder.
     The Java extension will attempt to load the jvm.dll from the path %JRE_HOME%\bin\server.
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.

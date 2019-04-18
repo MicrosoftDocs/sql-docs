@@ -87,7 +87,7 @@ In this step, create a class called **RegexSample.java** and copy the following 
 This main class is importing the SDK. Therefore, the jar file downloaded in step 1 needs to be discoverable from this class.
 
 > [!NOTE]
-> Note that this class imports the Java extension SDK package.
+> This class imports the Java extension SDK package.
 See the article about the [Java extension SDK](java-sdk.md) for more details.
 
 ```java

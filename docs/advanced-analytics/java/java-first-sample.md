@@ -159,7 +159,7 @@ Make sure both security identities have 'Read and Execute' permissions on the fo
 To call the Java code from SQL Server, you create a stored procedure that calls sp_execute_external_script. In the "script" parameter, you define which [package].[class] you want to call. In this sample, the class belongs to a package called **pkg** and a class file called **RegexSample.java**.
 
 > [!NOTE]
->We are not defining which method to call. By default, the **execute** method will be called. This means that you need to follow the SDK interface and implement an execute method in your Java class, if you want to be able to call the class from SQL Server.
+>You are not defining which method to call. By default, the **execute** method will be called. This means that you need to follow the SDK interface and implement an execute method in your Java class, if you want to be able to call the class from SQL Server.
 
 ```sql
 -- This stored procedure takes an input query (input dataset) and a regular-

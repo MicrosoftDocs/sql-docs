@@ -1,7 +1,7 @@
 ---
 title: "Release notes for SSMS | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2019"
+ms.date: "04/25/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -36,68 +36,79 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## 18.0 (RC1), March 2019
+## 18.0 (GA), April 2019
 
-Download: &nbsp; &nbsp; [Download SSMS 18.0 (RC1)](download-sql-server-management-studio-ssms.md)<br/>
+Download: &nbsp; &nbsp; [Download SSMS 18.0 (GA)](download-sql-server-management-studio-ssms.md)<br/>
 Build number: &nbsp; &nbsp; 15.0.18098.0<br/>
 Release date: &nbsp; &nbsp; March 28, 2019
 
-This section lists what's new in SSMS 18.0 RC1.
+The general availability (GA) release of SSMS 18.0 is available. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
 
-Release Candidate 1 (RC1) is a public preview of SSMS 18.0. Until version 18 is released for General Availability (GA), version 17.\* is the latest version that has been released for GA.
+This section lists what's new in SSMS 18.0 (GA).
 
 > [!NOTE]
-> For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 Preview - cumulative changelog through RC1](#180-preview---cumulative-changelog-through-rc1).
+> For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 - cumulative changelog through GA](#180---cumulative-changelog-through-ga).
 
-### What's new in RC1
+### What's new in 18.0 (GA)
 
 | New item | Details |
 | :------- | :------ |
-| **SSMS:** &nbsp; &nbsp; Enabling XMLA endpoint connectivity to PowerBI datasets. | XML for Analysis (XMLA) endpoints provide access to the Analysis Services engine in the Power BI Service. This allows tools such as SSMS and SQL Profiler to connect to Power BI datasets for monitoring, management, debugging, etc.<br/><br/> For extended information, see the blog post [XMLA endpoint connectivity](https://go.microsoft.com/fwlink/?linkid=2085204), dated March 28, 2019. |
-| **SMO:** &nbsp; &nbsp; Added cascade delete support to _Edge Constraints_. | Addition was made in both SSMS and SQL Server Management Objects (SMO). |
-| **SMO:** &nbsp; &nbsp; Added support for data classification _read-write_ permissions. | &nbsp; |
-| **Audit files:** &nbsp; &nbsp; Updated list of known audit actions. | The list now includes FEATURE RESTRICTION ADD/CHANGE GROUP/DROP. |
+| **SSMS:** Smaller download size.|The current size of the bundle is less than half of what SSMS 17.x is (~500MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as big as it used to be.|
+| **SSMS:** is based on the new VS 2017 Isolated Shell | This means a modern shell (we picked up VS 2017 15.9.11). The new shell unlocks all the accessibility fixes that went in to both SSMS and Visual Studio, and includes the latest security fixes that went into Visual Studio.|
+|**SSMS:** can be installed in a custom folder.|This option is now available from both the command line (useful for unattended installation) and the setup UI. From the command line, pass this extra argument to the SSMS-Setup-ENU.exe: `SSMSInstallRoot=C:\MySSMS18`<br>By default, the new install location for SSMS is: `%ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`<br> Note that this does not mean that SSMS is multi-instance|
+|**SSMS:** allows installing in a language other than the OS.|The block on mixed languages setup has been lifted. You can, for example, install SSMS German on a French version of Windows (if the OS language does not match the SSMS language, the user needs to change the language under **Tools** > **Options** > **International Settings**, otherwise SSMS will show the English UI)|
+|**SSMS:** ships with the MS OLEDB driver. |For details, see [Download Microsoft OLE DB Driver for SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server).|
+|**SSMS:** Removed support for `UTF8_BIN2` collation.| This was added in preview 7, but support for `UTF8_BIN2` has been removed for GA.|
+|**SSIS:** Deployment Wizard now supports creating and deploying to Azure Data Factory SSIS Integration Runtime. |For details, see [Integration runtime in Azure Data Factory](/azure/data-factory/concepts-integration-runtime/).|
+|**Vulnerability Assessment:** Added a new feature to export the vulnerability assessment scan results to Excel.|For details, see [SQL Vulnerability Assessment](../relational-databases/security/sql-vulnerability-assessment.md)|
+|**Replication tools:** Added support for non-default port specification feature in Replication Monitor and SSMS.|&nbsp;|
 | &nbsp; | &nbsp; |
 
 ### Bug fixes
 
 | Bug fix | Details |
 | :------ | :------ |
-| **General SSMS:** &nbsp; &nbsp; Fixed an issue that was preventing multi-factor authenticaion (MFA) when user identifiers belonged to multiple tenants. | &nbsp; |
-| **General SSMS:** &nbsp; &nbsp; Fixed an issue where the Perf Dashboard Report was reporting PAGELATCH and PAGEIOLATCH waits that could not found in subreports. | &nbsp; |
-| **SSMS editor:** &nbsp; &nbsp; Fixed an issue where several system views and table values functions were not properly colorized. | &nbsp; |
-| **Object Explorer:** Added proper escaping in Object Explorer filtering. | See [Azure feedback 36678803](https://feedback.azure.com/forums/908035/suggestions/36678803). |
-| **SMO:** &nbsp; &nbsp; Fixed an issue where `GetDbComparer` was incorrectly defaulting the collation to CI for all Azure databases. | &nbsp; |
-| **Managed Instance support:** &nbsp; &nbsp; Improved display of Managed Instances server specific properties. | These properties include hardware generation, service tier, and storage both used and reserved. |
-| **Azure SQL Database:** &nbsp; &nbsp; Fixed issue where Service Level Objectives (SLO) were hardcoded, making it harder for SSMS to support newer SQL Azure SLOs. | Now users can sign in to Azure and allow SSMS to retrieve all the applicable SLO data.<br/>The applicable SLO data items are Edition and Max Size). |
-| **Result grid:** &nbsp; &nbsp; Fixed an issue that resulted in an _Index out of range_ exception when clicking on the grid. | &nbsp; |
-| **Result grid:** &nbsp; &nbsp; Fixed an issue where the grid result background color was being ignored. | See [Azure feedback 32895916](https://feedback.azure.com/forums/908035/suggestions/32895916). |
-| **Profiler:** &nbsp; &nbsp; Fixed issue that prevented the SQL Profiler from starting on Windows 7 SP1. | &nbsp; |
-| **ShowPlan:** &nbsp; &nbsp; Add four attributes in `RunTimeCountersPerThread` about the actual execution xml plan. | &bull; &nbsp; &nbsp; `HpcRowCount` - the number of rows processed by hpc device.<br/><br/>&bull; &nbsp; &nbsp; `HpcKernelElapsedUs` - the elapsed time wait for kernel execution in use.<br/><br/>&bull; &nbsp; &nbsp; `HpcHostToDeviceBytes` - the bytes transferred from host to device.<br/><br/>&bull; &nbsp; &nbsp; `HpcDeviceToHostBytes` - the bytes transferred from device to host. |
-| **Data-tier Application Wizard:** &nbsp; &nbsp; Fixed an issue where the user was not able to import a Data-tier Application (.dacpac) due to limited access to the server. | For example, the users could not import a .dacpac file if they had no access to all the databases on the same server. |
-| **Data-tier Application Wizard:** &nbsp; &nbsp; Fixed an issue that caused the import to be extremely slow when many databases happened to be hosted on the same Azure SQL server. | &nbsp; |
+| **General SSMS:** Mitigated  an issue where SSMS was becoming unresponsive when editing large T-SQL scripts.|&nbsp;|
+| **General SSMS:** Fixed an issue that was causing SSMS to run out of memory when handling big datasets returned by queries.|&nbsp;|
+| **General SSMS:** Another round of fixes to make SSMS more multi-monitor aware by having it open dialogs in the correct monitor.|&nbsp;|
+| **SSMS Editor:** Fixed an issue where several system views and table values functions were not properly colorized.|&nbsp;|
+| **SSMS Editor:** Fixed an issue where clicking on editor tabs could cause the tab to be closed instead of getting the focus. For details, see [Query tabs are closed in SSMS rather than given the focus after they are restored when reopening an existing solution](https://feedback.azure.com/forums/908035/suggestions/37291114).|
+|**Object Explorer:** Fixed/improved the view in Object Explorer Details to show numbers with proper separators.| For details, see [Format the values in the lower Info Bar of Object Explorer Details](https://feedback.azure.com/forums/908035/suggestions/32900944).|
+|**Object Explorer:** Fixed context menu on **Tables** node when connected to SQL Express, where the *new* fly-out was missing, graph tables were incorrectly listed, and system-versioned table was missing. | For details, see [SSMS Create Table, New, is missing when using SQL Server Express](https://feedback.azure.com/forums/908035/suggestions/37245529).|
+|**Object Scripting:** Fixed an issue where the **Generate script wizard** shows incorrect table having scripting error when **Continue scripting on Error** is set to false.|&nbsp;|
+|**Object Scripting:** Improved script generation on SQL Server 2019.|&nbsp;|
+|**Integration Services (IS):** Fixed an issue that SSIS Integration Runtime Creation Wizard stops responding when the customer account belongs to more than one tenant.|&nbsp;|
+|**Azure SQL Database Managed Instance support:** Fixed an issue where scripting of a database ("Script as Create…") was not scripting extra filegroups and files. | For details, see [bug in scripting multi filegroup database in Azure SQL Managed Instance to SQL2017EntEdtn](https://feedback.azure.com/forums/908035/suggestions/37326799).|
+|**ShowPlan:** Fixed an issue where the similar plan nodes are highlighted in the wrong position.|&nbsp;|
 | &nbsp; | &nbsp; |
 
-### Deprecated Features
+### Deprecated features
 
-| Deprecated feature | Details |
-| :----------------- | :------ |
-| Removed the Static Data Masking (preview) feature. | &nbsp; |
-| &nbsp; | &nbsp; |
+The following features are no longer available in SSMS:
+
+- T-SQL Debugger
+- Database Diagrams
+- The following tools are no longer installed with SSMS:
+  - OSQL.EXE
+  - DReplay.exe
+  - SQLdiag.exe
+  - SSBDiagnose.exe
+
+
 
 ### Known issues
 
-- None.
+- **SSIS Integration Runtime Creation Wizard** only shows SQL databases under one tenant when the customer account belongs to more than one tenant.
 
-## 18.0 preview - cumulative changelog through RC1
+## 18.0 - cumulative changelog through GA
 
-If there is no *preview 5*, *preview 6*, *preview 7*, or *RC1* label it indicates the change appeared in our first public preview of SSMS 18.0, which was SSMS 18.0 *preview 4*.
+If there is no *preview 5*, *preview 6*, *preview 7*, *RC1*, or *GA* label it indicates the change appeared in our first public preview of SSMS 18.0, which was SSMS 18.0 *preview 4*.
 
 ### What's new
 
 - **SSMS**
   - Smaller Download Size
-    - The current size of the bundle is less than half of what SSMS 17.x is (~400 MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as large as it used to be.
+    - The current size of the bundle is less than half of what SSMS 17.x is (~500 MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as large as it used to be.
   - SSMS is based on the new VS 2017 Isolated Shell
     - This means a modern shell (we picked up VS 2017 15.6.4). The new shell unlocks all the accessibility fixes that went in both SSMS and Visual Studio.
   - SSMS accessibility improvements
@@ -144,7 +155,6 @@ If there is no *preview 5*, *preview 6*, *preview 7*, or *RC1* label it indicate
   - [New in Preview 6] Added "Migrate to Azure" under Tools menu – We have integrated [Database Migration Assistant](https://aka.ms/get-dma) and [Azure Database Migration Service](https://aka.ms/get-dms) to provide quick and easy access to help accelerate your migrations to Azure.
   - [New in Preview 6] Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to **CTRL+ALT+J**. In Preview 6 and later, the key binding has been restored to **CTRL+U**, like it was in SSMS 17.x.
   - [New in Preview 6] Added logic to prompt the user to commit open transactions when "Change connection" is used.
-  - [New in Preview 7] Added support for `UTF8_BIN2` collation.
 
 - **SMO**
   - Extend SMO Support for Resumable Index Creation
@@ -169,7 +179,7 @@ If there is no *preview 5*, *preview 6*, *preview 7*, or *RC1* label it indicate
   - Modified tooltip and added comment when clicking on Edit Query Button for a ShowPlan, to indicate to user that the ShowPlan might be truncated by the SQL engine if the query is over 4000 characters.
   - Added logic to display the "Materializer Operator (External Select)"
   - Add new showplan attribute BatchModeOnRowStoreUsed to easily identify queries that are using the " batch-mode scan on rowstores" feature. Anytime a query performs batch-mode scan on rowstores, a new attribute (BatchModeOnRowStoreUsed="true") gets added to StmtSimple element.
-  - [New in Preview 7] Added Showplan support to LocalCube RelOp for `DW ROLLUP` and `CUBE`.
+  - [New in Preview 7] Added ShowPlan support to LocalCube RelOp for `DW ROLLUP` and `CUBE`.
 
 - **Database Compatibility Level Upgrade**
   - [New in Preview 5] Added a new option under <Database name> -> Tasks -> Database Upgrade. This will start the new Query Tuning Assistant (QTA) to guide the user through the process of:
@@ -184,18 +194,6 @@ If there is no *preview 5*, *preview 6*, *preview 7*, or *RC1* label it indicate
   - [New in Preview 5] Improved usability of some reports (Overall Resource Consumptions) by adding thousands separator to numbers displayed on the Y-axis of the charts.
   - [New in Preview 5] Added a new Query Wait Statistics report.
 
-- **Data Masking**
-  - [New in Preview 5] Added Static Data Masking. Static Data Masking is a data protection tool that allows users to create a copy of their SQL database and mask sensitive data on the copy. The feature will prove useful for those who share their production database with nonproduction users such as dev/test team or analytics team. For more information, see [Static Data Masking for Azure SQL Database and SQL Server](https://azure.microsoft.com/blog/static-data-masking-preview/).
-  - [New in Preview 7] JSON config files now supported
-  - [New in Preview 7] XML config file format has been changed to be more flexible moving forward.  Existing config files will need to be recreated.
-  - [New in Preview 7] Databases containing memory-optimized and temporal tables are now able to be masked.  Some restrictions still apply to the memory-optimized and temporal tables themselves.
-  - [New in Preview 7] Database copy operation for on-premises databases now uses the `COPY_ONLY` option for the `BACKUP DATABASE` step.
-  - [New in Preview 7] Masked database is now set to `SIMPLE` recovery model while the masking operation is in progress to reduce log use, then returns to its original value after completion.
-  - [New in Preview 7] Masked database is now named `<output database name>-MaskInProgress` while the operation is in progress, and renamed to `<output database name>` once the masking operation has succeeded.
-  - [New in Preview 7] Changes display order of columns in configuration UI to be ordinal rather than alphabetical.
-  - [New in Preview 7] Removed option to bulk-select columns in configuration UI to prevent unexpected behavior.
-  - [New in Preview 7] Improved internal retry logic for connection and command failures.
- 
 - **Always On**
   - Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. Documentation is being updated at https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups
 
@@ -440,9 +438,6 @@ If there is no *preview 5*, *preview 6*, *preview 7*, or *RC1* label it indicate
   - [New in Preview 6] New mem grant operator properties display incorrectly when there is more than one thread.
   - [New in RC1] Add the following 4 attributes in RunTimeCountersPerThread of actual execution xml plan: HpcRowCount (Number of rows processed by hpc device), HpcKernelElapsedUs (elapsed time wait for kernel execution in use), HpcHostToDeviceBytes (bytes transferred from host to device), and HpcDeviceToHostBytes (bytes transferred from device to host).
 
-- **Data Masking**
-  - [New in Preview 7] Fixed a bug where on-premises databases with multiple log and filestream memory-optimized table files would fail to be copied automatically.
-
 - **Data-tier Application Wizard**
   - [New in RC1] Fixed an issue where the user was not able to import a Data-tier Application (.dacpac) due to limited access to the server (e.g. no access to all the databases on the same server).
   - [New in RC1] Fixed an issue which was causing the import to be extremely slow when many databases happened to be hosted on the same Azure SQL server.
@@ -453,10 +448,13 @@ The following features are no longer available in SSMS:
 
 - T-SQL Debugger
 - Database Diagrams
-- OSQL.EXE
-- Dreplay Admin UI
+- [New in GA] The following tools are no longer installed with SSMS:
+  - OSQL.EXE
+  - DReplay.exe
+  - SQLdiag.exe
+  - SSBDiagnose.exe
 - Configuration Manager tools:
-  - Both SQL Server  Configuration Manager and Reporting Server Configuration Manager are not part of SSMS setup anymore.
+  - Both SQL Server Configuration Manager and Reporting Server Configuration Manager are not part of SSMS setup anymore.
 
 - DMF Standard Policies
   - The policies are not installed with SSMS anymore. They are moved to Git. Users are able to contribute and download/install them, if they want to.
@@ -470,12 +468,13 @@ The following features are no longer available in SSMS:
 
 ### Known issues
 
-- N/A
+- [New in GA] **SSIS Integration Runtime Creation Wizard** only shows SQL databases under one tenant when the customer account belongs to more than one tenant.
 
+## Previous SSMS releases
 
-## 17.9.1 (latest GA release)
+Download previous SSMS versions by clicking the title links in the following sections:
 
-![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
+## ![download](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - Release number: 17.9.1<br>
 - Build number: 14.0.17289.0<br>
@@ -494,9 +493,8 @@ The following features are no longer available in SSMS:
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-## 17.9
 
-![download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
+## ![download](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
 Build number: 14.0.17285.0<br>
 Release date: September 04, 2018
@@ -579,11 +577,6 @@ Help:
 > When using *Active Directory - Universal with MFA Support* authentication with the SQL query editor, users may experience their connection being closed and reopened with each query invocation. Side effects of such closure include global temporary tables being dropped unexpectedly and sometimes a new SPID being given to the connection. This closure will not occur if there is an open transaction on the connection. To work around this issue, users can set `persist security info=true` in the connection parameters.
 
 
-
-
-## Previous SSMS releases
-
-Download previous SSMS versions by clicking the title links in the following sections:
 
 ## ![download](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *A bug was discovered in 17.8 related to provisioning SQL databases, so SSMS 17.8.1 replaces 17.8.*

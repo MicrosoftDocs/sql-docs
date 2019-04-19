@@ -21,7 +21,7 @@ This article explains how to configure big data cluster deployments by modifying
 
 - [Install mssqlctl](deploy-install-mssqlctl.md).
 
-- Each of the examples in this section assume that you have created a copy of one of the standard configuration files. For more information, see [Create a custom configuration file](deployment-guidance#customconfig). For example, the following command creates a **custom.json** file based on the default **aks-dev-test.json** configuration:
+- Each of the examples in this section assume that you have created a copy of one of the standard configuration files. For more information, see [Create a custom configuration file](deployment-guidance.md#customconfig). For example, the following command creates a **custom.json** file based on the default **aks-dev-test.json** configuration:
 
    ```bash
    mssqlctl cluster config init --src aks-dev-test.json --target custom.json

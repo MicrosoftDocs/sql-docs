@@ -21,39 +21,18 @@ manager: craigg
 # Join a secondary replica to an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to join a secondary replica to an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. After a secondary replica is added to an Always On availability group, the secondary replica must be joined to the availability group. The join-replica operation must be performed on the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is hosting the secondary replica.  
+
   
--   **Before you begin:**  
+##  <a name="Prerequisites"></a> Prerequisites  
   
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To prepare a secondary database, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:** [Configure Secondary Databases](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
-  
--   The primary replica of the availability group must currently be online.  
-  
--   You must be connected to the server instance that hosts a secondary replica that has not yet have been joined to the availability group.  
-  
+-   The primary replica of the availability group must currently be online.    
+-   You must be connected to the server instance that hosts a secondary replica that has not yet have been joined to the availability group.    
 -   The local server instance must be able to connect to the database mirroring endpoint of the server instance that is hosting the primary replica.  
   
 > [!IMPORTANT]  
 >  If any prerequisite is not met, the join operation fails. After a failed join attempt, you might need to connect to the server instance that hosts the primary replica to remove and re-add the secondary replica before you can join it to the availability group. For more information, see [Remove a Secondary Replica from an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) and [Add a Secondary Replica to an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  

@@ -24,25 +24,7 @@ manager: "erikre"
  A key benefit of using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data sources is to leverage readable secondary replicas as a reporting data source while, at the same time the secondary replicas are providing a failover for a primary database.  
   
  For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Always On FAQ for SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
-  
- **In This Topic:**  
-  
--   [Requirements for using Reporting Services and Always On Availability Groups](#bkmk_requirements)  
-  
--   [Report Data Sources and Availability Groups](#bkmk_reportdatasources)  
-  
--   [Report Design and Availability Groups](#bkmk_reportdesign)  
-  
--   [Report Server Databases and Availability Groups](#bkmk_reportserverdatabases)  
-  
--   -   [Differences between SharePoint Native Mode](#bkmk_differences_in_server_mode)  
-  
-    -   [Prepare Report Server Databases for Availability Groups](#bkmk_prepare_databases)  
-  
-    -   [Steps to complete disaster recovery of Report Server Databases](#bkmk_steps_to_complete_failover)  
-  
-    -   [Report Server Behavior When a Failover Occurs](#bkmk_failover_behavior)  
-  
+
 ##  <a name="bkmk_requirements"></a> Requirements for using Reporting Services and Always On Availability Groups  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and Power BI Report Server uses the .Net framework 4.0 and supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties for use with data sources.  
   

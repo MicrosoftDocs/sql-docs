@@ -26,31 +26,6 @@ manager: craigg
 > [!NOTE]  
 >  For the majority of the common listener configurations, you can create the first availability group listener simply by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements or PowerShell cmdlets. For more information, see [Related Tasks](#RelatedTasks), later in this topic.  
   
- **In This Topic:**  
-  
--   [Availability Group Listeners](#AGlisteners)  
-  
--   [Using a Listener to Connect to the Primary Replica](#ConnectToPrimary)  
-  
--   [Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)](#ConnectToSecondary)  
-  
-    -   [To Configure Availability Replicas for Read-Only Routing](#ConfigureARsForROR)  
-  
-    -   [Read-Only Application Intent and Read-Only Routing](#ReadOnlyAppIntent)  
-  
--   [Bypassing Availability Group Listeners](#BypassAGl)  
-  
--   [Behavior of Client Connections on Failover](#CCBehaviorOnFailover)  
-  
--   [Supporting Availability Group Multi-Subnet Failovers](#SupportAgMultiSubnetFailover)  
-  
--   [Availability Group Listeners and SSL Certificates](#SSLcertificates)  
-  
--   [Availability Group Listeners and Server Principal Names (SPNs)](#SPNs)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
   
 ##  <a name="AGlisteners"></a> Availability Group Listeners  
  You can provide client connectivity to the database of a given availability group by creating an availability group listener. An availability group listener is a virtual network name (VNN) to which clients can connect in order to access a database in a primary or secondary replica of an Always On availability group. An availability group listener enables a client to connect to an availability replica without knowing the name of the physical instance of SQL Server to which the client is connecting.  The client connection string does not need to be modified to connect to the current location of the current primary replica.  
@@ -61,13 +36,8 @@ manager: craigg
   
  For essential information about availability group listeners, see [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **In This Section:**  
   
--   [Availability Group Listener Configuration](#AGlConfig)  
-  
--   [Selecting an Availability Group Listener Port](#SelectListenerPort)  
-  
-###  <a name="AGlConfig"></a> Availability Group Listener Configuration  
+##  <a name="AGlConfig"></a> Availability Group Listener Configuration  
  An availability group listener is defined by the following:  
   
  A unique DNS name  
@@ -89,7 +59,7 @@ manager: craigg
   
  Hybrid network configurations and DHCP across subnets are not supported for availability group listeners. This is because when a failover happens, a dynamic IP might expire or be released, which jeopardizes overall high availability.  
   
-###  <a name="SelectListenerPort"></a> Selecting an Availability Group Listener Port  
+##  <a name="SelectListenerPort"></a> Selecting an Availability Group Listener Port  
  When configuring an availability group listener, you must designate a port.  You can configure the default port to 1433 in order to allow for simplicity of the client connection strings. If using 1433, you do not need to designate a port number in a connection string.   Also, since each availability group listener will have a separate virtual network name, each availability group listener configured on a single WSFC can be configured to reference the same default port of 1433.  
   
  You can also designate a non-standard listener port; however this means that you will also need to explicitly specify a target port in your connection string whenever connecting to the availability group listener.  You will also need to open permission on the firewall for the non-standard port.  
@@ -116,7 +86,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 
 -   The connection string references an availability group listener, and the application intent of the incoming connection is set to read-only (for example, by using the **Application Intent=ReadOnly** keyword in the ODBC or OLEDB connection strings or connection attributes or properties). For more information, see [Read-Only Application Intent and Read-Only Routing](#ReadOnlyAppIntent), later in this section.  
   
-###  <a name="ConfigureARsForROR"></a> To Configure Availability Replicas for Read-Only Routing  
+##  <a name="ConfigureARsForROR"></a> To Configure Availability Replicas for Read-Only Routing  
  A database administrator must configure the availability replicas as follows:  
   
 1.  For each availability replica that you want to configure as a readable secondary replica, a database administrator must configure the following settings, which take effect only under the secondary role:  
@@ -133,7 +103,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 -   [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> Read-Only Application Intent and Read-Only Routing  
+##  <a name="ReadOnlyAppIntent"></a> Read-Only Application Intent and Read-Only Routing  
  The application intent connection string property expresses the client application's request to be directed either to a read-write or read-only version of an availability group database. To use read-only routing, a client must use an application intent of read-only in the connection string when connecting to the availability group listener. Without the read-only application intent, connections to the availability group listener are directed to the database on the primary replica.  
   
  The application intent attribute is stored in the client's session during login and the instance of SQL Server will then process this intent and determine what to do according to the configuration of the availability group and the current read-write state of the target database in the secondary replica.  
@@ -165,7 +135,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Alternatively, while migrating from database mirroring to [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], applications can specify the database mirroring connection string as long as only one secondary replica exists and it disallows user connections. For more information, see [Using Database-Mirroring Connection Strings with Availability Groups](#DbmConnectionString), later in this section.  
   
-###  <a name="DbmConnectionString"></a> Using Database-Mirroring Connection Strings with Availability Groups  
+##  <a name="DbmConnectionString"></a> Using Database-Mirroring Connection Strings with Availability Groups  
  If an availability group possesses only one secondary replica and is configured with either ALLOW_CONNECTIONS = READ_ONLY or ALLOW_CONNECTIONS = NONE for the secondary replica, clients can connect to the primary replica by using a database mirroring connection string. This approach can be useful while migrating an existing application from database mirroring to an availability group, as long as you limit the availability group to two availability replicas (a primary replica and one secondary replica). If you add additional secondary replicas, you will need to create an availability group listener for the availability group and update your applications to use the availability group listener DNS name.  
   
  When using database mirroring connection strings, the client can use either [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client or .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The connection string provided by a client must minimally supply the name of one server instance, the *initial partner name*, to identify the server instance that initially hosts the availability replica to which you intend to connect. Optionally, the connection string can also supply the name of another server instance, the *failover partner name*, to identify the server instance that initially hosts the secondary replica as the failover partner name.  

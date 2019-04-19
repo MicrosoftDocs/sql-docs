@@ -21,31 +21,14 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to change the failover mode of an availability replica in an Always On availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell. The failover mode is a replica property that determines the failover mode for replicas that run under synchronous-commit availability mode. For more information, see [Failover and Failover Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) and [Availability Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
--   **Before you begin:**  
-  
-     [Prerequisites and Restrictions](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To change the availability mode of an availability replica, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites and Restrictions  
+## <a name="Prerequisites"></a> Prerequisites and Restrictions  
   
 -   This task is supported only on primary replicas. You must be connected to the server instance that hosts the primary replica.  
   
 -   SQL Server Failover Cluster Instances (FCIs) do not support automatic failover by availability groups, so any availability replica that is hosted by an FCI can only be configured for manual failover.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  

@@ -15,23 +15,7 @@ manager: craigg
 # Monitor performance for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The performance aspect of Always On Availability Groups is crucial to maintaining the service-level agreement (SLA) for your mission-critical databases. Understanding how availability groups ship logs to secondary replicas can help you estimate the recovery time objective (RTO) and recovery point objective (RPO) of your availability implementation and identify bottlenecks in poorly performing availability groups or replicas. This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios.  
-  
- The following topics are covered:  
-  
--   [Data synchronization process](#data-synchronization-process)  
-  
--   [Flow control gates](#flow-control-gates)  
-  
--   [Estimating failover time (RTO)](#estimating-failover-time-rto)  
-  
--   [Estimating potential data loss (RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [Monitoring for RTO and RPO](#monitoring-for-rto-and-rpo)  
-  
--   [Performance troubleshooting scenarios](#BKMK_SCENARIOS)  
-  
--   [Useful extended events](#BKMK_XEVENTS)  
-  
+   
 ##  Data synchronization process  
  To estimate the time to full synchronization and to identify the bottleneck, you need to understand the synchronization process. Performance bottleneck can be anywhere in the process, and locating the bottleneck can help you dig deeper into the underlying issues. The following figure and table illustrate the data synchronization process:  
   

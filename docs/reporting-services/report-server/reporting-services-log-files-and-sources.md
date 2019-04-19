@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "report server log files"
   - "files [Reporting Services], logs"
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Reporting Services Log Files and Sources
   A report server and report server environment uses a variety of log destinations to record information about server operations and status. There are two basic categories of logging, execution logging and trace logging. Execution logging includes information about report execution statistics, auditing, performance diagnosis and optimization. Trace logging is information about error messages and general diagnostics.  

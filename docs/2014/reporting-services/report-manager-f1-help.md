@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Manager [Reporting Services], help"
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Manager F1 Help

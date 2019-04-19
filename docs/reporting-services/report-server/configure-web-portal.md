@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "the web portal [Reporting Services], configuring"
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure the web portal
 

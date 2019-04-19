@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "query designers, text-based"
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Text-based Query Designer User Interface (Report Builder)

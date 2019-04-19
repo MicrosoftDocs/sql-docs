@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "custom authentication [Reporting Services]"
   - "extensions [Reporting Services], custom security"
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Implementing a Security Extension

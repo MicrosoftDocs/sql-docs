@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "schedules [Reporting Services], clock settings"
   - "schedules [Reporting Services], time zones"
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Change Time Zones and Clock Settings on a Report Server

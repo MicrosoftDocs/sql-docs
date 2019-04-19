@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 4d2afca6-ab7a-4695-b9c9-bc2bdaa4060e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Image, Text Box, Rectangle, Line F1 Help

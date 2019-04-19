@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Report Server Web service, SOAP"
   - "XML Web service [Reporting Services], SOAP"
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # The Role of SOAP in Reporting Services

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, backward compatibility"
   - "backward compatibility [Reporting Services]"
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Backward Compatibility

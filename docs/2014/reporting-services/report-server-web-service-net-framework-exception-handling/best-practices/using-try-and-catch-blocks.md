@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "exceptions [Reporting Services], try/catch blocks"
   - "try/catch blocks [Reporting Services]"
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using Try and Catch Blocks

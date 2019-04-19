@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "standard subscriptions [Reporting Services]"
   - "subscriptions [Reporting Services], standard"
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)

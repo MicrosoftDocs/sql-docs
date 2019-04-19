@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "methods [Reporting Services], execution options"
   - "methods [Reporting Services], rendering"
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Rendering and Execution Methods

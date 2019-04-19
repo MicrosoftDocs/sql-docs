@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "report server database"
   - "upgrading Reporting Services"
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Upgrade a Report Server Database

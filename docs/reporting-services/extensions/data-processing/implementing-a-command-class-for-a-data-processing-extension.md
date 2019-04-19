@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Command class"
   - "commands [Reporting Services]"
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Implementing a Command Class for a Data Processing Extension
   The **Command** object formulates a request and passes it on to the data source. The command text can take many different syntactical forms, including text and XML. If results are returned, the **Command** object returns results as a **DataReader** object.  

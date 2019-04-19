@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SendUsingSMTPServer property"
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - SendUsingSMTPServer
   Specifies whether the **SendUsing** element in the in the e-mail configuration for the report server is set to **true**.  

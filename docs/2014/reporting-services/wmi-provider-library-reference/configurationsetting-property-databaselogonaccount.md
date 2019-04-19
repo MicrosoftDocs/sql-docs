@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseLogonAccount property"
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # DatabaseLogonAccount Property (WMI MSReportServer_ConfigurationSetting)

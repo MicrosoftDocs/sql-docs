@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "stored credentials [Reporting Services]"
   - "data sources [Reporting Services], stored credentials"
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Store Credentials in a Reporting Services Data Source

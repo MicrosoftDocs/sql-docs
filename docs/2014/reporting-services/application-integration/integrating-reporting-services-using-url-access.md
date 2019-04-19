@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "URL access [Reporting Services], about URL access"
   - "integrating reports [Reporting Services]"
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Integrating Reporting Services Using URL Access

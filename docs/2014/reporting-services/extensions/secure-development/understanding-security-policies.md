@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "security policies [Reporting Services]"
   - "named permission sets [Reporting Services]"
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Understanding Security Policies

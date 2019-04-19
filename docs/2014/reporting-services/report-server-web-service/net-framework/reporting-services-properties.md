@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Web service [Reporting Services], properties"
   - "properties [Reporting Services]"
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Properties

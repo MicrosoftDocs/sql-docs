@@ -7,8 +7,8 @@ ms.technology: mobile-reports
 
 ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add navigators to Reporting Services mobile reports
 In [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], you add *navigators* to filter the data in visualizations by time or by selection. 

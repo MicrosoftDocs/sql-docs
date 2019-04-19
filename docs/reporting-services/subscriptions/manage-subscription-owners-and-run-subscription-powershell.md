@@ -1,7 +1,7 @@
 ---
 title: "Manage Subscription Owners and Run Subscription - PowerShell | Microsoft Docs"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"

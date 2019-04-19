@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "components [Reporting Services], browsers"
   - "Web browsers [Reporting Services]"
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Browser Support for Reporting Services and Power View
 

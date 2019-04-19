@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "GenerateDatabaseRightsScript method"
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # GenerateDatabaseRightsScript Method (WMI MSReportServer_ConfigurationSetting)

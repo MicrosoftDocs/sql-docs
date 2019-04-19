@@ -6,8 +6,8 @@ ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "rsSharePoint"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ""
 ms.custom: ""

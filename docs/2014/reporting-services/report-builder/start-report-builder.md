@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], starting Report Builder"
   - "starting Report Builder"
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Start Report Builder (Report Builder)

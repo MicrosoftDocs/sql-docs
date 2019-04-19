@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
   - "logins [Reporting Services]"
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Data Connections, Data Sources, and Connection Strings in Reporting Services

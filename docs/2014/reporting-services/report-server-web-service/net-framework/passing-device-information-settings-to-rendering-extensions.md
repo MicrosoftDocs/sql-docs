@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], about device information settings"
   - "extensions [Reporting Services], device information settings"
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Passing Device Information Settings to Rendering Extensions

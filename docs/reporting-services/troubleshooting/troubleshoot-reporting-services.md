@@ -9,8 +9,8 @@ ms.technology:
 
 ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Reporting Services
   The topics in this section help identify and troubleshoot issues with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "SenderEmailAddress property"
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SenderEmailAddress Property (WMI MSReportServer_ConfigurationSetting)

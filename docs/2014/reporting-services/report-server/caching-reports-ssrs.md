@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "expiration [Reporting Services]"
   - "snapshots [Reporting Services], caching"
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Caching Reports (SSRS)

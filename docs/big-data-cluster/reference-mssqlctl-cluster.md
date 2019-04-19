@@ -5,7 +5,7 @@ description: Reference article for mssqlctl cluster commands.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -17,48 +17,61 @@ ms.technology: big-data-cluster
 
 The following article provides reference for the **cluster** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 
-## <a id="commands"></a> Commands
-
-|||
-|---|---|
-| [create](#create) | Create cluster. |
-| [delete](#delete) | Delete cluster. |
-| [config](reference-mssqlctl-cluster-config.md) | Cluster configuration commands. |
-| [debug](reference-mssqlctl-cluster-debug.md) | Debug commands. |
-
-## <a id="create"></a> mssqlctl cluster create
-
-Create cluster.
-
+## Commands
+|     |     |
+| --- | --- |
+[mssqlctl cluster create](#mssqlctl-cluster-create) | Create cluster.
+[mssqlctl cluster delete](#mssqlctl-cluster-delete) | Delete cluster.
+[mssqlctl cluster config](reference-mssqlctl-cluster-config.md) | Cluster configuration commands.
+[mssqlctl cluster debug](reference-mssqlctl-cluster-debug.md) | Debug commands.
+## mssqlctl cluster create
+Create a SQL Server Big Data Cluster.
+```bash
+mssqlctl cluster create [--config-file -f] 
+                        [--accept-eula -e]  
+                        [--env-var -v]
 ```
-mssqlctl cluster create
-   --name
-   --accept-eula
+### Optional Parameters
+#### `--config-file -f`
+Cluster config profile, used for deploying the cluster: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
+#### `--accept-eula -e`
+Do you accept the license terms? [yes/no].
+#### `--env-var -v`
+Key/Value list (i.e. key1=value1,key2=value2) of environment variables to be set: ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'DOCKER_REGISTRY', 'DOCKER_REPOSITORY', 'DOCKER_USERNAME', 'DOCKER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD']
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
+## mssqlctl cluster delete
+Delete the SQL Server Big Data Cluster.
+```bash
+mssqlctl cluster delete --name -n 
+                        [--force -f]
 ```
-
-### Parameters
-
-| Parameters | Description |
-|---|---|
-| **--name -n** | Cluster name, used for kubernetes namespace. |
-| **--accept-eula -e** | Do you accept the license terms? \[yes/no\].  Allowed values: no, yes. Required. |
-
-## <a id="delete"></a> mssqlctl cluster delete
-
-Delete cluster.
-
-```
-mssqlctl cluster delete
-   --name
-   [--force]
-```
-
-### Parameters
-
-| Parameters | Description |
-|---|---|
-| **--name -n** | Cluster name, used for kubernetes namespace. Required. |
-| **--force -f** | Force delete cluster. |
+### Required Parameters
+#### `--name -n`
+Cluster name, used for kubernetes namespace.
+### Optional Parameters
+#### `--force -f`
+Force delete cluster.
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 

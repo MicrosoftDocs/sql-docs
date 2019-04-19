@@ -5,7 +5,7 @@ description: Reference article for mssqlctl commands.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -20,11 +20,11 @@ The following article provides reference for the **mssqlctl** tool for [SQL Serv
 ## Commands
 |     |     |
 | --- | --- |
-|[mssqlctl app](app.md) | Create, delete, run, and manage applications. |
-|[mssqlctl cluster](cluster.md) | Select, manage, and operate clusters. |
+|[mssqlctl app](reference-mssqlctl-app.md) | Create, delete, run, and manage applications. |
+|[mssqlctl cluster](reference-mssqlctl-cluster.md) | Select, manage, and operate clusters. |
 [mssqlctl login](#mssqlctl-login) | Log in to the cluster.
 [mssqlctl logout](#mssqlctl-logout) | Log out of cluster.
-|[mssqlctl storage](storage.md) | Manage cluster storage. |
+|[mssqlctl storage](reference-mssqlctl-storage.md) | Manage cluster storage. |
 ## mssqlctl login
 Log in to the cluster.
 ```bash

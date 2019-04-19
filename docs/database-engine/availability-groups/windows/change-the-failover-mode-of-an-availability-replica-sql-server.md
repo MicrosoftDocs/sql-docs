@@ -59,7 +59,7 @@ manager: craigg
             }  )
    ```
 
-   In the preceeding script:
+   In the preceding script:
 
       - *group_name* is the name of the availability group.  
   

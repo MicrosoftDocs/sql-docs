@@ -19,13 +19,7 @@ manager: craigg
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Alwayson_health session](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [Extended events for debugging](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Always On Availability Groups extended events reference](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health session  
  The alwayson_health extended events session is created automatically when you create the availability group, and captures a subset of the availability group related events. This session is preconfigured as a useful and convenient tool to help you get started quickly while troubleshooting an availability group. The Create Availability Group Wizard automatically starts the session on every participating availability replica configured in the wizard.  
   
@@ -85,7 +79,7 @@ For information on some of the events covered by alwayson_health, see the [exten
 |Column|Description|  
 |------------|-----------------|  
 |Name|availability_replica_state_change|  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Operational|  
   
 #### Event fields  
@@ -116,14 +110,14 @@ GO
 |Column|Description|  
 |------------|-----------------|  
 |Name|availability_group_lease_expired|  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Operational|  
   
 #### Event fields  
   
 |Name|Type_name|Description|  
 |----------|----------------|-----------------|  
-|availability_group_id|guid|The id of availability group.|  
+|availability_group_id|guid|The ID of availability group.|  
 |availability_group_name|unicode_string|The name of availability group.|  
   
 #### alwayson_health session definition  
@@ -144,7 +138,7 @@ GO
 |Name|Description|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Analytic|  
   
 #### Event fields  
@@ -189,11 +183,11 @@ GO
 |Error Number|Description|  
 |------------------|-----------------|  
 |35201|A connection timeout has occurred while attempting to establish a connection to availability replica '%ls'.|  
-|35202|A connection for availability group '%ls' from availability replica '%ls' with id  [%ls] to '%ls' with id [%ls] has been successfully established.  This is an informational message only. No user action is required.|  
+|35202|A connection for availability group '%ls' from availability replica '%ls' with ID  [%ls] to '%ls' with ID [%ls] has been successfully established.  This is an informational message only. No user action is required.|  
 |35206|A connection timeout has occurred on a previously established connection to availability replica '%ls'.|  
 |35204|Connection between instance '%ls' and '%ls' has been disabled due to endpoint shutdown.|  
 |Timeout + connected|  
-|35207|Connection attempt on availability group id '%ls' from replica id '%ls' to replica id '%ls' failed because of error %d severity %d state %d.  severity %d state %d. (this may not have a good DBA use. Check and remove later in that case)|  
+|35207|Connection attempt on availability group ID '%ls' from replica ID '%ls' to replica ID '%ls' failed because of error %d severity %d state %d.  severity %d state %d. (this may not have a good DBA use. Check and remove later in that case)|  
 |9642|An error occurred in a Service Broker/Database Mirroring transport connection endpoint  Error: %i  State: %i. (Near endpoint role: %S_MSG  far endpoint address: '%.*hs') Error: %i State: %i. (Near endpoint role: %S_MSG far endpoint address: '%.\*hs')|  
 |9666|The %S_MSG endpoint is in disabled or stopped state.|  
 |9691|The %S_MSG endpoint has stopped listening for connections.|  
@@ -244,7 +238,7 @@ GO
 |Column|Description|  
 |------------|-----------------|  
 |Name|data_movement_suspend_resume|  
-|Category|Alwayson|  
+|Category|Always on|  
 |Channel|Operational|  
   
 #### Event fields  
@@ -252,12 +246,12 @@ GO
 ||||  
 |-|-|-|  
 |Name|Type_name|Description|  
-|availability_group_id|guid|The id of the availability group.|  
+|availability_group_id|guid|The ID of the availability group.|  
 |availability_group_name|unicode_string|The name of the availability group, if available.|  
-|availability_replica_id|guid|The id of the availability replica.|  
-|database_replica_id|guid|The id of the availability database.|  
+|availability_replica_id|guid|The ID of the availability replica.|  
+|database_replica_id|guid|The ID of the availability database.|  
 |database_replica_name|unicode_string|The name of the availability database.|  
-|database_id|uint32|The id of the availability database.|  
+|database_id|uint32|The ID of the availability database.|  
 |suspend_status|suspend_status_type|The suspend status values.<br /><br /> SUSPEND_NULL<br /><br /> RESUMED<br /><br /> SUSPENDED<br /><br /> SUSPENDED_INVALID|  
 |suspend_source|suspend_source_type|The source of the suspend or resume action.|  
 |suspend_reason|unicode_string|The suspend reason captured in database replica manager.|  
@@ -280,14 +274,14 @@ GO
 ```  
   
 ###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
- Occurs when an availability group data definition language (DDL) statement is being executed, including CREATE, ALTER or DROP. The main purpose of the event is to indicate an issue with a user action on an availability replica, or to indicate the starting point of an operational action, which is followed by a runtime issue such as a manual failover, a forced failover, suspended data movement, or resumed data movement.  
+ Occurs when an availability group data definition language (DDL) statement is being executed, including CREATE, ALTER, or DROP. The main purpose of the event is to indicate an issue with a user action on an availability replica, or to indicate the starting point of an operational action, which is followed by a runtime issue such as a manual failover, a forced failover, suspended data movement, or resumed data movement.  
   
 #### Event information  
   
 |Column|Description|  
 |------------|-----------------|  
 |Name|alwayson_ddl_execution|  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Analytic|  
   
 #### Event fields  
@@ -296,8 +290,8 @@ GO
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|The ID of the availability group.|  
 |availability_group_name|unicode_string|The name of the availability group.|  
-|ddl_action|alwayson_ddl_action|Indicates the type of DDL action: CREATE, ALTER or DROP.|  
-|ddl_phase|ddl_opcode|Indicates the phase of the DDL operation: BEGIN, COMMIT or ROLLBACK.|  
+|ddl_action|alwayson_ddl_action|Indicates the type of DDL action: CREATE, ALTER, or DROP.|  
+|ddl_phase|ddl_opcode|Indicates the phase of the DDL operation: BEGIN, COMMIT, or ROLLBACK.|  
 |Statement|unicode_string|The text of the statement that was executed.|  
   
 #### alwayson_health session definition  
@@ -320,7 +314,7 @@ GO
 |Column|Description|  
 |------------|-----------------|  
 |Name|availability_replica_manager_state_change|  
-|Category|alwayson|  
+|Category|always on|  
 |Channel|Operational|  
   
 #### Event fields  

@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 In CTP 2.5, the way you implement a Java program that uses the Java language extension to communicate with SQL Server has changed.```
 
 > [!Note]
-> Please note that this is a big change from previous CTPs, and that any samples you had working will need to be updated to use the SDK instead.
+> The SDK in CTP 2.5 is a big change from previous CTPs. Any samples you had working will need to be updated to use the SDK instead.
 
 We are introducing an extension Java SDK for SQL Server. This is an interface the Java extension uses to exchange data with SQL Server and to execute Java code from SQL Server.
 

@@ -84,53 +84,12 @@ More details can be found below in source code:
 ```java
 package com.microsoft.sqlserver.javalangextension;
 
-import com.microsoft.sqlserver.javalangextension.AbstractSqlServerExtensionDataset;
 import java.lang.UnsupportedOperationException;
-import java.util.LinkedHashMap;
 
 /**
- * Abstract class containing interface used by the Java extension
+ * Abstract class containing interface for handling input and output data used by the Java
+ * extension.
  */
-public abstract class AbstractSqlServerExtensionExecutor {
-	/* Supported versions of the Java extension */
-	public final int SQLSERVER_JAVA_LANG_EXTENSION_V1 = 1;
-
-	/* Members used by the extension to determine application specifics */
-	protected int executorExtensionVersion;
-	protected String executorInputDatasetClassName;
-	protected String executorOutputDatasetClassName;
-
-	public AbstractSqlServerExtensionExecutor() { }
-
-    /*The init method is executed after the constructor and before execute method*/
-	public void init(String sessionId, int taskId, int numTasks) {
-		/* Default implementation of init() is no-op */
-	}
-
-	public AbstractSqlServerExtensionDataset execute(AbstractSqlServerExtensionDataset input, LinkedHashMap<String, Object> params) {
-		throw new UnsupportedOperationException("AbstractSqlServerExtensionExecutor execute() is not implemented");
-	}
-
-	public void cleanup() {
-		/* Default implementation of cleanup() is no-op */
-	}
-}
-```
-
-### AbstractSqlServerExtensionDataset
-
- This is an abstract class containing an interface for handling input and output data used by the Java language extension for SQL Server.
-
-If you wish to implement your own dataset class, you can use **PrimitiveDataset** as an example.
- 
-```java
-package com.microsoft.sqlserver.javalangextension;
-
-import java.lang.UnsupportedOperationException;
-
-/*
- Abstract class containing interface for handling input and output data used by the Java extension.
-*/
 public class AbstractSqlServerExtensionDataset {
 	/**
 	 * Column metadata interfaces
@@ -272,7 +231,7 @@ public class PrimitiveDataset extends AbstractSqlServerExtensionDataset {
 	}
 
 	/**
-	 * Column metadata interfaces. Metadata is stored in a hash map, using the   column ID as the key
+	 * Column metadata interfaces. Metadata is stored in a hash map, using the column ID as the key
 	 */
 	public void addColumnMetadata(int columnId, String columnName, int sqlType, int precision, int scale) {
 		if (columnTypes.containsKey(columnId))
@@ -291,47 +250,27 @@ public class PrimitiveDataset extends AbstractSqlServerExtensionDataset {
 	}
 
 	public String getColumnName(int columnId) {
-		if (!columnNames.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return columnNames.get(columnId);
 	}
 
 	public int getColumnPrecision(int columnId) {
-		if (!columnPrecisions.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return columnPrecisions.get(columnId).intValue();
 	}
 
 	public int getColumnScale(int columnId) {
-		if (!columnScales.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return columnScales.get(columnId).intValue();
 	}
 
 	public int getColumnType(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return columnTypes.get(columnId).intValue();
 	}
 
 	public boolean[] getColumnNullMap(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return columnNullMaps.get(columnId);
 	}
 
@@ -342,158 +281,100 @@ public class PrimitiveDataset extends AbstractSqlServerExtensionDataset {
 	 * A null indicator array indicates that there are no null values in that column.
 	 */
 	public void addIntColumn(int columnId, int[] rows, boolean[] nullMap) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		columns.put(columnId, rows);
 		columnNullMaps.put(columnId, nullMap);
 	}
 
 	public void addBooleanColumn(int columnId, boolean[] rows, boolean[] nullMap) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		columns.put(columnId, rows);
 		columnNullMaps.put(columnId, nullMap);
 	};
 
 	public void addLongColumn(int columnId, long[] rows, boolean[] nullMap) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		columns.put(columnId, rows);
 		columnNullMaps.put(columnId, nullMap);
 	}
 
 	public void addFloatColumn(int columnId, float[] rows, boolean[] nullMap) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		columns.put(columnId, rows);
 		columnNullMaps.put(columnId, nullMap);
 	}
 
 	public void addDoubleColumn(int columnId, double[] rows, boolean[] nullMap) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		columns.put(columnId, rows);
 		columnNullMaps.put(columnId, nullMap);
 	}
 
 	public void addShortColumn(int columnId, short[] rows, boolean[] nullMap) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		columns.put(columnId, rows);
 		columnNullMaps.put(columnId, nullMap);
 	}
 
 	public void addStringColumn(int columnId, String[] rows) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		columns.put(columnId, rows);
 	}
 
 	public void addBinaryColumn(int columnId, byte[][] rows) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		columns.put(columnId, rows);
 	}
 
-
 	/**
-	 * Retrieving column data interfaces. For primitive types, calling getColumnNullMap() for the column ID
+	 * Retreiving column data interfaces. For primitive types, calling getColumnNullMap() for the column ID
 	 * will return the boolean array indicating null values.
 	 */
 	public int[] getIntColumn(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return (int[])columns.get(columnId);
 	}
 
 	public long[] getLongColumn(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return (long[])columns.get(columnId);
 	}
 
 	public float[] getFloatColumn(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return (float[])columns.get(columnId);
 	}
 
 	public short[] getShortColumn(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return (short[])columns.get(columnId);
 	}
 
 	public boolean[] getBooleanColumn(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return (boolean[])columns.get(columnId);
 	}
 
 	public double[] getDoubleColumn(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return (double[])columns.get(columnId);
 	}
 
 	public String[] getStringColumn(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return (String[])columns.get(columnId);
 	}
 
 	public byte[][] getBinaryColumn(int columnId) {
-		if (!columnTypes.containsKey(columnId))
-		{
-			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exists");
-		}
-
+		checkColumnMetadata(columnId);
 		return (byte[][])columns.get(columnId);
+	}
+
+	private void checkColumnMetadata(int columnId)
+	{
+		if (!columnTypes.containsKey(columnId)) {
+			throw new IllegalArgumentException("Metadata for column ID #: " + columnId + " does not exist");
+		}
 	}
 }
 ```

@@ -67,7 +67,7 @@ ALTER CERTIFICATE certificate_name
  FILE **='**_path\_to\_private\_key_**'**  
  Specifies the complete path, including file name, to the private key. This parameter can be a local path or a UNC path to a network location. This file will be accessed within the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. When you use this option, you must make sure that the service account has access to the specified file.  
   
- BINARY =*private_key_bits*  
+ BINARY **='**_private\_key\_bits_**'**  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Private key bits specified as binary constant. These bits can be in encrypted form. If encrypted, the user must provide a decryption password. Password policy checks are not performed on this password. The private key bits should be in a PVK file format.  

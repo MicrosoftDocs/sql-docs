@@ -47,7 +47,7 @@ Below follows details and source code for each class in the Java language extens
 
 ## AbstractSqlServerExtensionExecutor
 
-This is an Abstract class containing the interface used to execute Java code by the Java language extension for SQL Server.
+This is an abstract class containing the interface used to execute Java code by the Java language extension for SQL Server.
 
 Your main Java class needs to inherit from this class. Inheriting from this class means that there are certain methods in the class you need to implement in your own class.
 

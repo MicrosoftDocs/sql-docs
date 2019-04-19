@@ -197,6 +197,8 @@
           href: ../big-data-cluster/reference-mssqlctl-cluster.md
         - name: mssqlctl cluster config
           href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: mssqlctl cluster config section
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
         - name: mssqlctl cluster debug
           href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
       - name: Storage

@@ -21,7 +21,7 @@ The following article provides reference for the **mssqlctl** tool for [SQL Serv
 
 |||
 |---|---|
-| [app](reference-mssqlctl-app.md) | Create, delete, run, and manage applications. |
+| [app](reference-mssqlctl-app.md) | Create, delete, run, and manage applications.  |
 | [cluster](reference-mssqlctl-cluster.md) | Select, manage, and operate clusters. |
 | [login](#login) | Log in to the cluster. |
 | [logout](#logout) | Log out of cluster. |

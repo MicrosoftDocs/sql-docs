@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "accessing data, query designer"
   - "relational query designer"
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Relational Query Designer User Interface (Report Builder)

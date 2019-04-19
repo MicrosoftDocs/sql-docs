@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Concepts (SSRS)

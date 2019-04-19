@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription

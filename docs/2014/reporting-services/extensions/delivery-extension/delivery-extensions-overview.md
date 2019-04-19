@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], delivery extensions"
   - "delivery extensions [Reporting Services], about extensions"
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Delivery Extensions Overview

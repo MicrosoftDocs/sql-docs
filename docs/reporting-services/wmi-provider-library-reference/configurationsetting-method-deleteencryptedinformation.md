@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "DeleteEncryptedInformation method"
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - DeleteEncryptedInformation
   Deletes the encrypted information from the report server database.  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "administering [Reporting Services]"
   - "Reporting Services, administration"
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Report Server (Native Mode)

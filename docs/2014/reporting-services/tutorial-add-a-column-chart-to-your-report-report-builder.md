@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Tutorial: Add a Column Chart to Your Report (Report Builder)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ItemNamespaceHeader SOAP header"
   - "GetProperties method"
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Setting the Item Namespace for the GetProperties Method

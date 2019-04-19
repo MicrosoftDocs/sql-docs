@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], publishing to a library"
   - "publishing reports [Reporting Services], to a SharePoint library"
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Publish a Shared Data Source to a SharePoint Library

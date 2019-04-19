@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], data"
   - "data sources [Reporting Services], methods"
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Data Sources and Connection Methods
   You can use these methods to set and manage data source connections and credentials.  

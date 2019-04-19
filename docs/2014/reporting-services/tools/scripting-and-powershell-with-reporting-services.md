@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Reporting Services, scripting"
   - "scripting [Reporting Services]"
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Scripting and PowerShell with Reporting Services

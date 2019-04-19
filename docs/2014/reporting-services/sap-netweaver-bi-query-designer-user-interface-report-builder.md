@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "query designers, SAP"
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SAP NetWeaver BI Query Designer User Interface (Report Builder)

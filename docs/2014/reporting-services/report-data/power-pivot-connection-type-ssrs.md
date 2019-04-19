@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # PowerPivot Connection Type (SSRS)

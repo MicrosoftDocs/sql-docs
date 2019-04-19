@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Site Settings Page (Report Manager)

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], My Subscriptions page"
   - "My Subscriptions page [Reporting Services]"
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Use My Subscriptions (Native Mode Report Server)
 The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web portal includes a **My Subscriptions** page that organizes all of your subscriptions into one place. You can use *My Subscriptions* to view, modify, enable, disable, and delete existing subscriptions. However, you cannot use it to create subscriptions.  My Subscriptions shows only the subscriptions that you create. It does not list subscriptions that are owned by other users, even if you are added as a subscriber to those subscriptions, nor does it show data-driven subscriptions.

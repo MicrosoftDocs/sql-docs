@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "files [Reporting Services], restoring"
   - "files [Reporting Services], backing up"
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Backup and Restore Operations for Reporting Services

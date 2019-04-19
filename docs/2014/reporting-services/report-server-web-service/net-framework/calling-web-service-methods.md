@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], SOAP"
   - "SOAP [Reporting Services], calls"
 ms.assetid: f6f0c6e3-8bb5-4c44-9d19-1872edc72746
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Calling Web Service Methods

@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Chart Dialog Boxes (Report Builder and SSRS)

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "mail [Reporting Services]"
   - "Web service [Reporting Services], delivery extension settings"
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Delivery Extension Settings

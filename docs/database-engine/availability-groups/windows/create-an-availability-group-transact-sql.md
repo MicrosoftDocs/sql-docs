@@ -21,22 +21,6 @@ manager: craigg
 > [!NOTE]  
 >  For an introduction to availability groups, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
--   **Before you begin:**  
-  
-     [Prerequisites](#PrerequisitesRestrictions)  
-  
-     [Security](#Security)  
-  
-     [Summary of Tasks and Corresponding Transact-SQL Statements](#SummaryTsqlStatements)  
-  
--   **To create and configure an availability group, using:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Example:**  [Configuring an Availability Group that Uses Windows Authentication](#ExampleConfigAGWinAuth)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
 > [!NOTE]  
 >  As an alternative to using [!INCLUDE[tsql](../../../includes/tsql-md.md)], you can use the Create Availability Group wizard or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlets. For more information, see [Use the Availability Group Wizard &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md), or [Create an Availability Group &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
 
@@ -48,8 +32,6 @@ manager: craigg
   
 ##  <a name="Permissions"></a> Permissions  
  Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
-  
-
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL to Create and Configure an Availability Group 
 

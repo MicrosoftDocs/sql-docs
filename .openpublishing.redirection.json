@@ -382,7 +382,7 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/2014/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md",
+            "source_path": "docs/2014/relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md",
             "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor?view=sql-server-2014",
             "redirect_document_id": false
         },

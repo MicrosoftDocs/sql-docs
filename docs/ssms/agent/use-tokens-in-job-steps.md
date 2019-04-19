@@ -72,7 +72,7 @@ The following tables list and describe the tokens and macros that [!INCLUDE[ssNo
 |**(MSSA)**|Master SQLServerAgent service name.|  
 |**(OSCMD)**|Prefix for the program used to run **CmdExec** job steps.|  
 |**(SQLDIR)**|The directory in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed. By default, this value is C:\Program Files\Microsoft SQL Server\MSSQL.|  
-|**(SQLLOGDIR)**|Replacement token for the SQL Server error log folder path - for example, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Replacement token for the SQL Server error log folder path - for example, $(ESCAPE_SQUOTE(SQLLOGDIR)). This token is only available on SQL Server 2014 and above.|  
 |**(STEPCT)**|A count of the number of times this step has executed (excluding retries). Can be used by the step command to force termination of a multistep loop.|  
 |**(STEPID)**|Step ID.|  
 |**(SRVR)**|Name of the computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is a named instance, this includes the instance name.|  

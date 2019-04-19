@@ -379,7 +379,7 @@ public class PrimitiveDataset extends AbstractSqlServerExtensionDataset {
 }
 ```
 
-## See also
+## Next steps
 
 + [End to end Java sample using the SDK](java-first-sample.md)
 + [How to call Java in SQL Server](howto-call-java-from-sql.md)

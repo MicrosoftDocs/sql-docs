@@ -65,11 +65,19 @@ This inventory can be in one of two forms:
 - SQL Server table
 
 ### If using a CSV file
+> [!IMPORTANT]
+> Ensure that the inventory file is saved as a comma-separated (CSV) file.
+>
+> For default instances, set the instance name to MSSQLServer.
+
 When using a csv file to import the data, ensure there are only two columns of data - **Instance Name** and **Database Name**, and that the columns don't have header rows.
  
  ![csv file contents](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
 ### If using SQL Server table
+> [!IMPORTANT]
+> For default instances, set the instance name to MSSQLServer.
+
 Create a database called **EstateInventory** and a table called **DatabaseInventory**. The table containing this inventory data can have any number of columns, as long as following four columns exist:
 - ServerName
 - InstanceName
@@ -147,9 +155,6 @@ You can also use the LoadWarehouse script to provide the basic TSQL statements f
 
 1. Open the DMA Reports Power BI template in the Power BI Desktop.
 2. Enter server details that point to your **DMAWarehouse** database, and then select **Load**.
-
-    > [!IMPORTANT]
-    > Do not press Enter to accept the values.
 
       ![DMA Reports Power BI template loaded](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 

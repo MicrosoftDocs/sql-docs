@@ -33,14 +33,14 @@ Before deploying SQL Server 2019 big data cluster, first [install the big data t
 - **Azure Data Studio**
 - **SQL Server 2019 extension**
 
-## <a id="prereqs"></a> Kubernetes cluster prerequisites
+## <a id="prereqs"></a> Kubernetes prerequisites
 
 SQL Server big data clusters require a minimum Kubernetes version of at least v1.10 for both server and client (kubectl).
 
 > [!NOTE]
 > Note that the client and server Kubernetes versions should be +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
-## <a id="kubernetes"></a> Kubernetes cluster setup
+### <a id="kubernetes"></a> Kubernetes cluster setup
 
 If you already have a Kubernetes cluster that meets above prerequisites, then you can skip directly to the [deployment step](#deploy). This section assumes a basic understanding of Kubernetes concepts.  For detailed information on Kubernetes, see the [Kubernetes documentation](https://kubernetes.io/docs/home).
 
@@ -55,7 +55,7 @@ You can choose to deploy Kubernetes in any of three ways:
 > [!TIP]
 > For a sample python script that deploys both AKS and a SQL Server big data cluster in one step, see [Quickstart: Deploy SQL Server big data cluster on Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md).
 
-## Verify Kubernetes configuration
+### Verify Kubernetes configuration
 
 Run the **kubectl** command to view the cluster configuration. Ensure that kubectl is pointed to the correct cluster context.
 
@@ -115,7 +115,7 @@ It is also possible to customize your own deployment configuration file. You can
    > [!TIP]
    > A useful tool for finding JSON paths is the [JSONPath Online Evaluator](https://jsonpath.com/).
 
-   In addition to passing key-value pairs, you can also provide inline JSON values. For more information, see the [deployment examples](#examples). You can also use the **--patch-file** parameter to provide path to a JSON patch file. For more information, see [Customize a big data cluster deployment with a JSON patch file](deployment-json-patch-files.md).
+   In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
 
 1. Then pass the custom configuration file to **mssqlctl cluster create**:
 
@@ -124,7 +124,7 @@ It is also possible to customize your own deployment configuration file. You can
    ```
 
 > [!TIP]
-> For more information, see the [Deployment configuration file reference](reference-deployment-config.md). See the [deployment examples](#examples) section in this article for more examples.
+> For more information on the structure of a deployment configuration file, see the [Deployment configuration file reference](reference-deployment-config.md). For more configuration examples, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
 
 ## <a id="env"></a> Environment variables
 
@@ -270,155 +270,10 @@ kubectl get svc -n <your-cluster-name>
 
 For more information on how to connect to the big data cluster, see [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md).
 
-## <a id="examples"></a> Deployment examples
-
-The following sections provide examples for how to customize a big data cluster deployment. These examples specify the change on the command-line. However, you can also pass a JSON patch file. For more information, see [Customize a big data cluster deployment with a JSON patch file](deployment-json-patch-files.md).
-
-Each of the examples in this section assume that you have created a copy of one of the standard configuration files. For more information, see [Create a custom configuration file](#customconfig).
-
-### Change cluster name
-
-The cluster name is both the name of the big data cluster and the Kubernetes namespace. It is specified in the following portion of the deployment configuration file:
-
-```json
-"metadata": {
-    "kind": "Cluster",
-    "name": "mssql-cluster"
-},
-```
-
-The following command sends a key-value pair to the **--json-values** parameter to change the big data cluster name to **test-cluster**:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-cluster"
-```
-
-> [!IMPORTANT]
-> The name of your cluster must be only lower case alpha-numeric characters, no spaces. All Kubernetes artifacts (containers, pods, statefull sets, services) for the cluster will be created in a namespace with same name as the cluster name specified.
-
-### Update endpoint ports
-
-Endpoints are defined for the control plane as well as for individual pools. The following portion of the configuration file shows the endpoint definitions for the control plane:
-
-```json
-"endpoints": [
-    {
-        "name": "Controller",
-        "serviceType": "LoadBalancer",
-        "port": 30080
-    },
-    {
-        "name": "ServiceProxy",
-        "serviceType": "LoadBalancer",
-        "port": 30777
-    },
-    {
-        "name": "AppServiceProxy",
-        "serviceType": "LoadBalancer",
-        "port": 30778
-    },
-    {
-        "name": "Knox",
-        "serviceType": "LoadBalancer",
-        "port": 30443
-    }
-]
-```
-
-The following example uses inline JSON to change the port for the **Controller** endpoint:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.controlPlane.spec.endpoints[?(@.name=="Controller")].port=30000'
-```
-
-### Configure pool replicas
-
-The characteristics of each pool, such as the storage pool, is defined in the configuration file. For example, the following portion shows a storage pool definition:
-
-```json
-"pools": [
-    {
-        "metadata": {
-            "kind": "Pool",
-            "name": "default"
-        },
-        "spec": {
-            "type": "Storage",
-            "replicas": 2,
-            "storage": {
-                "usePersistentVolume": true,
-                "className": "managed-premium",
-                "accessMode": "ReadWriteOnce",
-                "size": "10Gi"
-            }
-        }
-    }
-]
-```
-
-You can configure the number of instances in a pool by modifying the **replicas** value for each pool. The following example uses inline JSON to change these values for the storage and data pools to `10` and `4` respectively:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec.replicas=10'
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Data")].spec.replicas=4'
-```
-
-> [!IMPORTANT]
-> In this release, you cannot change the number of instances in the computer pool.
-
-### Configure storage
-
-You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "newStorageClass","size": "20Gi","accessMode": "ReadWriteOnce","usePersistentVolume": true},"type": "Storage"}'
-```
-
-The following example only updates the size of the storage pool to `32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec.storage.size=32Gi'
-```
-
-The following example updates the size of all pools to `32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi'
-```
-
-> [!NOTE]
-> A configuration file based on **kubeadm-dev-test.json** does not have a storage definition for each pool, but this can be added manually if needed.
-
-For more information about storage configuration, see [Data persistence with SQL Server big data cluster on Kubernetes](concept-data-persistence.md).
-
-### Configure pod placement using Kubernetes labels
-You can control pod placement on Kubernetes nodes that have specific resources to accommodate various types of workloads requirements. For example, you might want to ensure the storage pool pods are placed on nodes with more storage, or SQL Server master instances lands on nodes that have higher CPU and memory resources. In this case, you will first build a heterogeneous Kubernetes cluster with different types of hardware and then [assign node labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) accordingly. At the time of deploying big data cluster, you can specify same labels at pool level in the cluster deployment configuration file. Kubernetes will then take care of  affinitizing the pods on nodes that match the specified labels.
-
-The following example shows how to edit a custom configuration file to include a node label setting for SQL Server Master instance. Note that there is no *nodeLabel* key in the built in configurations so you will need to either edit a custom configuration file manually or create a patch file and apply it to the custom configuration file.
-
-Create a file named **patch.json** in your current directory with the following contents:
-
-```json
-{
-  "patch": [
-     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
-      "value": {
-        "nodeLabel": "<yourNodeLabel>"
-       }
-    }
-  ]
-}
-```
-
-```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
-```
-
 ## Next steps
 
-To learn more about the SQL Server big data clusters, see the following resources:
+To learn more about big data cluster deployment, see the following resources:
 
-- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [Configure deployment settings for big data clusters](deployment-custom-configuration.md)
+- [Perform an offline deployment of a SQL Server big data cluster](deploy-offline.md)
 - [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

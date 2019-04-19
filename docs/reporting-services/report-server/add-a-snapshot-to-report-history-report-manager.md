@@ -42,7 +42,7 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the elipses (...).
+1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the ellipses (...).
 
 2. In the drop-down menu, click **View Report History**.  
 

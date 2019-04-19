@@ -261,7 +261,7 @@ manager: craigg
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  The following figure illustrates the series of actions performed at the remote data center in response a catastrophic failure at the main data center.  
   
- ![Steps for responding to failure of main data cente](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data cente")  
+ ![Steps for responding to failure of main data center](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data center")  
   
  The steps in this figure indicate the following steps:  
   

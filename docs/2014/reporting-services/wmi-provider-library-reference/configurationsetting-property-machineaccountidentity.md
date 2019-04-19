@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "MachineAccountIdentity property"
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # MachineAccountIdentity Property (WMI)

@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "DatabaseServerName property"
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - DatabaseServerName
   Specifies the name of the server on which the report server database is installed. Read/write.  

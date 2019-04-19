@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "methods [Reporting Services], about methods"
   - "methods [Reporting Services]"
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Server Namespace Management Methods

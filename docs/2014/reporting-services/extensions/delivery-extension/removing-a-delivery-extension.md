@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "deleting delivery extensions"
   - "delivery extensions [Reporting Services], removing"
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Removing a Delivery Extension

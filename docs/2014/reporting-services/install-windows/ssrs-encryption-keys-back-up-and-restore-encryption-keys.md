@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "encryption keys [Reporting Services]"
   - "symmetric keys [Reporting Services]"
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Back Up and Restore Reporting Services Encryption Keys

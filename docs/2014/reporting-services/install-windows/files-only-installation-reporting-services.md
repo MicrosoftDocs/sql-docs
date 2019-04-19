@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "files-only installation [Reporting Services]"
   - "installation options [Reporting Services]"
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Files-Only Installation (Reporting Services)

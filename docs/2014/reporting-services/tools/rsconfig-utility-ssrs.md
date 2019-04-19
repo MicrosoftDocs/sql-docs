@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "command prompt utilities [Reporting Services]"
   - "command prompt utilities [SQL Server], rsconfig"
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # rsconfig Utility (SSRS)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Report Server service, starting"
   - "starting Report Server service"
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Start and Stop the Report Server Service

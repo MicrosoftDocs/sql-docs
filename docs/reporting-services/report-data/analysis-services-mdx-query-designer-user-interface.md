@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "MDX [Reporting Services], creating datasets"
   - "query designers [Reporting Services]"
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Analysis Services MDX Query Designer User Interface
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides graphical query designers for building Multidimensional Expression (MDX) queries and Data Mining Expression (DMX) queries for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data source. This topic describes the MDX query designer. For more information about the DMX query designer, see [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).  

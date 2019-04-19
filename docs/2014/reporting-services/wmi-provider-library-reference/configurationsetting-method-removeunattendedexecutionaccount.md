@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "RemoveUnattendedExecutionAccount method"
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # RemoveUnattendedExecutionAccount Method (WMI MSReportServer_ConfigurationSetting)

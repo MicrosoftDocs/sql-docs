@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptwizard.finish.f1"
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Complete the Report Wizard

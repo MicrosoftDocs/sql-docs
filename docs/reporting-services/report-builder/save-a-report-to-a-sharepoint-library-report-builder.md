@@ -8,8 +8,8 @@ ms.technology: report-builder
 
 ms.topic: conceptual
 ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Save a Report to a SharePoint Library (Report Builder)
   To save a report to a report server configured for SharePoint integration, you must browse to the SharePoint server and establish a connection to the report server. In the report definition, all references to items related to the report must use values that are specific to a SharePoint report server. Related items include subreports, drillthrough reports, and resources such as Web-based images. For more information, see [Specifying Paths to External Items &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md).  

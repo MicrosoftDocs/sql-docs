@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Report Manager [Reporting Services]"
   - "components [Reporting Services], Report Manager"
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Manager  (SSRS Native Mode)

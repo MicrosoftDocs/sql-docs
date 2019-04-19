@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "locales [Reporting Services]"
 ms.assetid: df115b01-184b-47f0-b5ec-0ad965ff9bee
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Set the Locale for a Report or Text Box (Reporting Services)

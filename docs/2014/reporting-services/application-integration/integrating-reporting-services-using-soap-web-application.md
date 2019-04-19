@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], SOAP"
   - "Web applications [Reporting Services]"
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the SOAP API in a Web Application

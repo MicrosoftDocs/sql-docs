@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "data mining [Reporting Services]"
   - "passing parameters [Reporting Services]"
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Analysis Services Connection Type for DMX (SSRS)

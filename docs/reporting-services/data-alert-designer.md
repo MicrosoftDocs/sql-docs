@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "updating, alerts"
   - "creating, data alerts"
   - "creating, alerts"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 

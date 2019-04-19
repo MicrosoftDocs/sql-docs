@@ -1,8 +1,8 @@
 ---
 title: "Develop with the REST APIs for Reporting Services| Microsoft Docs"
 ms.description: "The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog."
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"

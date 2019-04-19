@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], custom"
   - "custom assemblies [Reporting Services], about custom assemblies"
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using Custom Assemblies with Reports

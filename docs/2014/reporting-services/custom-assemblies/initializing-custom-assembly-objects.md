@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "custom assemblies [Reporting Services], initializing"
   - "OnInit method"
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Initializing Custom Assembly Objects

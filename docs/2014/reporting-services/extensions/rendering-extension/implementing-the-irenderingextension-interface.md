@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "IRenderingExtension interface"
   - "rendering extensions [Reporting Services], IRenderingExtension interface"
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Implementing the IRenderingExtension Interface

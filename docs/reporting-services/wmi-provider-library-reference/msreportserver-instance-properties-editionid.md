@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "EditionID property"
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # MSReportServer_Instance Properties - EditionID
   Returns the edition of the report server. Read-only.  

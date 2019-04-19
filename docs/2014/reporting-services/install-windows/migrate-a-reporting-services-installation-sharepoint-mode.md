@@ -8,8 +8,8 @@ ms.technology:
   - "database-engine"
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Migrate a Reporting Services Installation (SharePoint Mode)

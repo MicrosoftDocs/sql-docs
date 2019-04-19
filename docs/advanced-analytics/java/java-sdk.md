@@ -63,7 +63,7 @@ At a minimum, your main class needs to implement the execute(...) method.
 
 The execute method is the method that is called from SQL Server via the Java language extension, to invoke Java code from SQL Server. You should view this as a key method where you include the main operations you wish to execute from SQL Server.
 
-To pass method arguments to Java from SQL Server, use the @param parameter in sp_execute_external_script. The method **execute**** takes its arguments that way.
+To pass method arguments to Java from SQL Server, use the `@param` parameter in sp_execute_external_script. The method **execute** takes its arguments that way.
 
 ```java
 public AbstractSqlServerExtensionDataset execute(AbstractSqlServerExtensionDataset input, LinkedHashMap<String, Object> params)  {}

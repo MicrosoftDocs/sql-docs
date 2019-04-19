@@ -1,6 +1,6 @@
 ---
 title: "Add a Snapshot to Report History (Report Manager) | Microsoft Docs"
-ms.prod: "sql-server-2014"
+ms.prod: "reporting-services-2014"
 ms.technology: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT
@@ -25,8 +25,6 @@ Report snapshots are not saved in a particular rendering format. Instead, report
   
 ## To manually add snapshots to report history
 
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
-
 1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the drop-down arrow.
   
 2. In the drop-down menu, click **View Report History**.  
@@ -37,23 +35,6 @@ Report snapshots are not saved in a particular rendering format. Instead, report
     > In order to do this, the report history must be configured by the administrator to **Allow history to be created manually**. For more information, see [Limit Report History &#40;Report Manager&#41;](../reports/limit-report-history-report-manager.md).
 
 4. Click **Apply**.
-
-::: moniker-end
-
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-
-1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the elipses (...).
-
-2. In the drop-down menu, click **View Report History**.  
-
-3. Click **New history snapshot**. A new snapshot is created and listed.
-
-    > [!NOTE]  
-    > In order to do this, the report history must be configured by the administrator to **Allow history to be created manually**. For more information, see [Limit Report History &#40;Report Manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md).
-
-4. Click **Apply**.
-
-::: moniker-end
 
 ## To automatically add all snapshots to report history  
   

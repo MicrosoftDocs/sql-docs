@@ -15,11 +15,11 @@ ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article introduces [SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) and walks you through a couple of examples on how to use it with SQL Server on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
+This article introduces [SQL Server PowerShell](../powershell/sql-server-powershell.md) and walks you through a couple of examples on how to use it with SQL Server on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 ## Install the newest version of SQL PowerShell on Windows
 
-[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) on Windows is included with [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md). When working with SQL Server, you should always use the most recent version of SSMS and SQL PowerShell. The latest version of SSMS is continually updated and optimized and currently works with SQL Server on Linux. To download and install the latest version, see [Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). To stay up-to-date, the latest version of SSMS prompts you when there is a new version available to download.
+[SQL PowerShell](../powershell/download-sql-server-ps-module.md) on Windows is maintained in the PowerShell Gallery. When working with SQL Server, you should always use the most recent version of the SqlServer PowerShell module.
 
 ## Before you begin
 
@@ -52,8 +52,7 @@ PowerShell should display information similar to the following output:
 ```
 ModuleType Version    Name          ExportedCommands
 ---------- -------    ----          ----------------
-Script     0.0        SqlServer
-Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
+Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
 ## Connect to SQL Server and get server information
@@ -62,7 +61,6 @@ Let's use PowerShell on Windows to connect to your SQL Server instance on Linux 
 
 Copy and paste the following commands at the PowerShell prompt. When you run these commands, PowerShell will:
 - Display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server instance on Linux
-- Load the SQL Server Management Objects (SMO) assembly
 - Create an instance of the [Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx) object
 - Connect to the **Server** and display a few properties
 
@@ -73,26 +71,17 @@ Remember to replace **\<your_server_instance\>** with the IP address or the host
 $serverInstance = "<your_server_instance>"
 $credential = Get-Credential
 
-# Load the SMO assembly and create a Server object
-[System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.SMO') | out-null
-$server = New-Object ('Microsoft.SqlServer.Management.Smo.Server') $serverInstance
-
-# Set credentials
-$server.ConnectionContext.LoginSecure=$false
-$server.ConnectionContext.set_Login($credential.UserName)
-$server.ConnectionContext.set_SecurePassword($credential.Password)
-
 # Connect to the Server and get a few properties
-$server.Information | Select-Object Edition, HostPlatform, HostDistribution | Format-List
+Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 # done
 ```
 
 PowerShell should display information similar to the following output:
 
 ```
-Edition          : Developer Edition (64-bit)
-HostPlatform     : Linux
-HostDistribution : Ubuntu
+Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution                
+-------------                   -------    ------------ -----------  ------------ ----------------                
+your_server_instance            14.0.3048  RTM          CU13         Linux        Ubuntu 
 ```
 > [!NOTE]
 > If nothing is displayed for these values, the connection to the target SQL Server instance most likely failed. Make sure that you can use the same connection information to connect from SQL Server Management Studio. Then review the [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection).

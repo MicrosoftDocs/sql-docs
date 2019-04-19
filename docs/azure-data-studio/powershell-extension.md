@@ -94,7 +94,8 @@ In order to use these examples (below), you need to install the SqlServer module
 Install-Module -Name SqlServer
 ```
 
-> NOTE: With version `21.1.18102` and up, the `SqlServer` module supports [PowerShell Core](https://github.com/PowerShell/PowerShell) 6.2 and up, in addion to Windows PowerShell.
+> [!NOTE]
+> With version `21.1.18102` and up, the `SqlServer` module supports [PowerShell Core](https://github.com/PowerShell/PowerShell) 6.2 and up, in addion to Windows PowerShell.
 
 In this example, we use the `Get-SqlInstance` cmdlet to Get the Server SMO objects for ServerA & ServerB.  The default output for this command will include the Instance name, version, Service Pack, & CU Update Level of the instances.
 

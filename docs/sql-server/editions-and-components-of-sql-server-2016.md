@@ -125,7 +125,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per SQL Server instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions. 
 
 ##  <a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -153,7 +153,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>2</sup> For more information about Basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).  
 
-<sup>3</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.
+<sup>3</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1 as part of creating a common programmability surface area (CPSA) accross editions. 
   
 ##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
   
@@ -178,7 +178,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.  
 
 <sup>3</sup> This feature is not included in the LocalDB installation option.
 
@@ -198,7 +198,8 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Contained databases|Yes|Yes|Yes|Yes|Yes| 
 |Encryption for backups|Yes|Yes|No|No|No|  
 
-<sup>1</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.  
+<sup>1</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.      
+
 ##  <a name="Replication"></a> Replication  
   
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|   
@@ -258,7 +259,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
   
  <sup>1</sup> For more information, see [Considerations for Installing SQL Server Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1. 
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.      
   
 ##  <a name="DevTools"></a> Development Tools  
   
@@ -296,7 +297,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 
 <sup>1</sup> Scale out with multiple compute nodes requires a head node.
 
-<sup>2</sup> Applies to [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1.
+<sup>2</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.     
   
 ## <a name="IS"></a> Integration Services
 
@@ -318,7 +319,8 @@ For info about the Integration Services (SSIS) features supported by the edition
 |Parallel query processing on partitioned tables and indexes|Yes|No|No|No|No|   
 |Global batch aggregation|Yes|No|No|No|No| 
 
-<sup>1</sup> Applies to [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1.  
+<sup>1</sup> Applies to [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 as part of creating a common programmability surface area (CPSA) accross editions.     
+
 ##  <a name="SSAS"></a> Analysis Services  
   
 For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of SQL Server](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md). 

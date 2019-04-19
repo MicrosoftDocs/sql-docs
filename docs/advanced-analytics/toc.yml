@@ -21,6 +21,8 @@
     href: ../advanced-analytics/java/howto-call-java-from-sql.md
   - name: Java sample
     href: ../advanced-analytics/java/java-first-sample.md
+  - name: SDK for Java
+    href: ../advanced-analytics/java/java-sdk.md
   - name: Java and SQL data types
     href: ../advanced-analytics/java/java-sql-datatypes.md
 - name: Install

@@ -4,7 +4,7 @@ description: Map data types from Java to SQL Server for input and output data st
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/28/2019
+ms.date: 04/19/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -20,25 +20,26 @@ This article maps SQL Server data types to Java data types for data structures a
 
 The following SQL and Java data types are currently supported for Input and Output data sets.
 
+
 | SQL data type        | Java data type | Comment | |
-| ------------- |-------------|-|
-| Bit      | boolean | |
-| Tinyint      | short      | |
-| Smallint | short      | |
-| Int | int      | |
-| Real | float      | |
-| Bigint | long      | |
-| float | double      | |
-| nchar(n) | String      | |
-| nvarchar(n) | String  | |
-| binary(n) | byte[]      | |
-| varbinary(n) | byte[]      | |
-| nvarchar(max) | String | |
-| varbinary(max) | byte[] | |
-| uniqueidentifier | String | |
-| char(n) | String | Only UTF8 Strings supported |
-| varchar(n) | String | Only UTF8 Strings supported |
-| varchar(max) | String | Only UTF8 Strings supported |
+| ------------- |-------------|-|-|
+| Bit      | boolean | | |
+| Tinyint      | short      | | |
+| Smallint | short      | | |
+| Int | int      | | |
+| Real | float      | | |
+| Bigint | long      | | |
+| float | double      | | |
+| nchar(n) | String      | | |
+| nvarchar(n) | String      | | |
+| binary(n) | byte[]      | | |
+| varbinary(n) | byte[]      | | |
+| nvarchar(max) | String      | | |
+| varbinary(max) | byte[]      | | |
+| uniqueidentifier | String | | |
+| char(n) | String | Only UTF8 Strings supported | |
+| varchar(n) | String | Only UTF8 Strings supported | |
+| varchar(max) | String | Only UTF8 Strings supported | |
 
 ## Data types for input parameters
 
@@ -64,7 +65,7 @@ The following SQL and Java data types are currently supported for input paramete
 | varchar(n) | String | Only UTF8 Strings supported | |
 | varchar(max) | String | Only UTF8 Strings supported | |
 
-## See also
+## Next steps
 
 + [How to call Java in SQL Server](howto-call-java-from-sql.md)
 + [Java sample in SQL Server](java-first-sample.md)

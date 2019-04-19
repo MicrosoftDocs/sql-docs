@@ -60,7 +60,7 @@ Read the [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) for ans
 If you are running Azure Data Studio on MacOS or Linux, you may also need to install PowerShell Core.
 
 PowerShell Core is an Open Source project on [GitHub](https://github.com/powershell/powershell).
-See the following articles for more information on installing PowerShell Core on MacOS or Linux platforms.
+For more information on installing PowerShell Core on MacOS or Linux platforms, see the following articles:
 
 - [Installing PowerShell Core on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [Installing PowerShell Core on macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
@@ -68,8 +68,7 @@ See the following articles for more information on installing PowerShell Core on
 ## Example Scripts
 
 There are some example scripts in the extension's `examples` folder that you can
-use to discover PowerShell editing and debugging functionality.  Please
-check out the included [README.md](https://github.com/PowerShell/vscode-powershell/blob/master/examples/README.md) file to learn more about
+use to discover PowerShell editing and debugging functionality.  Check out the included [README.md](https://github.com/PowerShell/vscode-powershell/blob/master/examples/README.md) file to learn more about
 how to use them.
 
 This folder can be found at the following path:
@@ -98,7 +97,7 @@ Install-Module -Name SqlServer
 ```
 
 > [!NOTE]
-> With version `21.1.18102` and up, the `SqlServer` module supports [PowerShell Core](https://github.com/PowerShell/PowerShell) 6.2 and up, in addion to Windows PowerShell.
+> With version `21.1.18102` and up, the `SqlServer` module supports [PowerShell Core](https://github.com/PowerShell/PowerShell) 6.2 and up, in addition to Windows PowerShell.
 
 In this example, we use the `Get-SqlInstance` cmdlet to Get the Server SMO objects for ServerA & ServerB.  The default output for this command will include the Instance name, version, Service Pack, & CU Update Level of the instances.
 
@@ -150,7 +149,7 @@ Out-GridView -PassThru |
 Backup-SqlDatabase -CompressionOption On
 ```
 
-This example, again, gets list of all SQL Server instances listed in your Registered Servers file, then calls the `Get-SqlAgentJobHistory` which reports every failed SQL Agent Job since Midnight, for each SQL Server instances listed.
+This example, again, gets list of all SQL Server instances listed in your Registered Servers file, then calls the `Get-SqlAgentJobHistory` which reports every failed SQL Agent Job since Midnight, for each SQL Server instance listed.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
@@ -217,7 +216,7 @@ Out-GridView -PassThru |
 Backup-SqlDatabase -CompressionOption On
 ```
 
-This example, again, gets list of all SQL Server instances listed in your Registered Servers file, then calls the `Get-SqlAgentJobHistory` which reports every failed SQL Agent Job since Midnight, for each SQL Server instances listed.
+This example, again, gets a list of all SQL Server instances listed in your Registered Servers file, then calls the `Get-SqlAgentJobHistory` which reports every failed SQL Agent Job since Midnight, for each SQL Server instance listed.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
@@ -234,7 +233,8 @@ If you experience any problems with the PowerShell Extension, see
 on diagnosing and reporting issues.
 
 #### Security Note
-For any security issues, please see [here](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security).
+
+For any security issues, see [here](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security).
 
 ## Contributing to the Code
 
@@ -249,14 +249,13 @@ on how to contribute to this extension!
 
 ## License
 
-This extension is [licensed under the MIT License](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt).  Please see the
-[third-party notices](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt) file for details on the third-party
-binaries that we include with releases of this project.
+This extension is [licensed under the MIT License](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). For details on the third-party
+binaries that we include with releases of this project, see the [third-party notices](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt) file.
 
 ## [Code of Conduct][conduct-md]
 
 This project has adopted the [Microsoft Open Source Code of Conduct][conduct-code].
-For more information see the [Code of Conduct FAQ][conduct-FAQ] or contact [opencode@microsoft.com][conduct-email] with any additional questions or comments.
+For more information, see the [Code of Conduct FAQ][conduct-FAQ] or contact [opencode@microsoft.com][conduct-email] with any additional questions or comments.
 
 [conduct-code]: http://opensource.microsoft.com/codeofconduct/
 [conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/

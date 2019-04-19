@@ -4,7 +4,7 @@ description: Map data types from Java to SQL Server for input and output data st
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 02/28/2019
+ms.date: 04/19/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -65,7 +65,7 @@ The following SQL and Java data types are currently supported for input paramete
 | varchar(n) | String | Only UTF8 Strings supported | |
 | varchar(max) | String | Only UTF8 Strings supported | |
 
-## See also
+## Next steps
 
 + [How to call Java in SQL Server](howto-call-java-from-sql.md)
 + [Java sample in SQL Server](java-first-sample.md)

@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.sparklines.f1"
   - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Sparklines and Data Bars (Report Builder and SSRS)

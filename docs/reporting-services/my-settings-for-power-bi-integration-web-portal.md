@@ -11,8 +11,8 @@ f1_keywords:
   - "power bi"
   - "power bi integration"
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # My Settings for Power BI Integration (web portal)

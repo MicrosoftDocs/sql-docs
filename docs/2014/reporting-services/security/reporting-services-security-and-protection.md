@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "security [Reporting Services]"
   - "Reporting Services, security"
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Security and Protection

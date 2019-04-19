@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], removing"
   - "removing data processing extensions"
 ms.assetid: 1d89e32b-0631-44f6-8178-a57fb791d26d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Removing a Data Processing Extension

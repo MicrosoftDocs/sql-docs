@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "extensions [Reporting Services], rendering"
   - "rendering extensions [Reporting Services], implementing"
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Implementing a Rendering Extension

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "shared data sources [Reporting Services]"
   - "data sources [Reporting Services], shared"
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Bind a Report to a Shared Data Source (SSRS)
   In some situations, such as when you move a report from a test server to a production server, you might want to save the file to your local computer and then upload it to a different report server. When you upload the report to the new server, you need to rebind it to a shared data source that is stored on the new report server. If you don't rebind the report, it will not work correctly when accessed from the new report server.  

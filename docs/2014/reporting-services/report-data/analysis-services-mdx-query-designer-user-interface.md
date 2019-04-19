@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "MDX [Reporting Services], creating datasets"
   - "query designers [Reporting Services]"
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Analysis Services MDX Query Designer User Interface

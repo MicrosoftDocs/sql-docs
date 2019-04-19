@@ -7,8 +7,8 @@ ms.technology: report-data
 
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Data Connections, Data Sources, and Connection Strings (Report Builder and SSRS)
 

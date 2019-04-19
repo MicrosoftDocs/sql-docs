@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.columnvisibility.f1"
   - "10127"
 ms.assetid: ca59d1cd-d782-4298-aa61-4f312c32eb50
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Column Visibility Dialog Box

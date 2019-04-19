@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "remote data source [Reporting Services]"
   - "EnableRemoteError server property"
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Enable Remote Errors (Reporting Services)

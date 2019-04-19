@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Images, Text Boxes, Rectangles, and Lines (Report Builder and SSRS)
   In addition to data regions like tables, matrices, and charts, [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports use other report items like images, text boxes, and rectangles to add visual interest, highlight key information, or provide related information. You can change the formatting of a report item. For example, you can add a border or padding, change the initial visibility or direction, or specify an exact size and location for the item.  

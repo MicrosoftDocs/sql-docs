@@ -8,8 +8,8 @@ ms.technology: reports
 
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)

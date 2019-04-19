@@ -140,7 +140,7 @@ manager: "erikre"
   
 -   **Report Server Credentials:** You need to create the appropriate report server credentials on the secondary replicas that you created on the primary. The exact steps depend on what type of authentication you are using in your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] environment; Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service account, Windows user account, or SQL Server authentication. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
--   Update the database connection to use the Listener DNS Name. for natve mode report servers, change the **Report Server Database Name** in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration manager. For SharePoint mode, change the **Database server name** for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application(s).  
+-   Update the database connection to use the Listener DNS Name. for native mode report servers, change the **Report Server Database Name** in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration manager. For SharePoint mode, change the **Database server name** for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application(s).  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> Steps to complete disaster recovery of Report Server Databases  
  The following steps need to be completed after a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] failover to a secondary replica:  

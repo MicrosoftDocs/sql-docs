@@ -28,7 +28,7 @@ We are introducing an extension Java SDK for SQL Server. This is an interface th
 
 The SDK interface defines a set of requirements that need to be fulfilled for SQL Server to communicate with the Java runtime. This means that you need to follow some implementation rules in your main class. SQL Server can then execute a specific method in the Java class and exchange data using the Java language extension.
 
-Please see this end-to-end [sample](java-first-sample.md) for an example of how the SDK can be used.
+For an example of how you can use the SDK, see the [end-to-end sample](java-first-sample.md).
 
 ## SDK Classes
 

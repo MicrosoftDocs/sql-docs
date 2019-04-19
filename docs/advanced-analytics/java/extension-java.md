@@ -26,7 +26,7 @@ As with any programming language extension, the system stored procedure [sp_exec
 
 A SQL Server 2019 preview instance is required. Earlier versions do not have the Java integration.
 
-Java 8 is currently the supported version and support for newer versions is coming. You should still be able to use newer versions like Java 11 with this language extension. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
+Java 8 is currently the supported version. Newer versions, like Java 11, should with the language extension but is currently not supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
 You can use your preferred Java 8 distribution. Below are two suggested distributions:
 

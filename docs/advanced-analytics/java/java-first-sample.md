@@ -296,9 +296,7 @@ After executing the call, you should get a result set with two of the rows.
 
 + When you compile your classes, the "pkg" sub folder should contain the compiled code for all three classes.
 
-+ The length of classpath cannot exceed the declared value (`DECLARE @myClassPath nvarchar(50)`). If it does, the path is truncated to the first 50 characters and your compiled code will not be loaded. You can do a `SELECT @myClassPath` to check the value. Increase the length if 50 characters is insufficient. 
-
-+ Finally, check permissions on *each* folder, from root to "pkg" subfolder, to ensure that the security identities running the external process have permission to read and execute your code.
++ Finally, if you are not using external libraries, check permissions on *each* folder, from root to "pkg" sub folder, to ensure that the security identities running the external process have permission to read and execute your code.
 
 ## See also
 

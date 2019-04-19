@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "dialog boxes"
   - "Help, dialog boxes"
   - "user interface, dialog boxes"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Builder F1 Help

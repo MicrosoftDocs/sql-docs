@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "extensions [Reporting Services], delivery"
   - "delivery extensions [Reporting Services]"
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Implementing a Delivery Extension

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Extension element"
   - "deploying [Reporting Services], extensions"
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Deploying a Delivery Extension

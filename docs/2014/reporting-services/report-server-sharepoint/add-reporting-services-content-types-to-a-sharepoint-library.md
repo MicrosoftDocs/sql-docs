@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], Web Parts"
   - "Report Viewer Web Part [Reporting Services]"
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Add the Report Viewer Web Part to a Web Page (Reporting Services in SharePoint Integrated Mode)

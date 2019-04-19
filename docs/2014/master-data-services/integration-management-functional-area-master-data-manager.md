@@ -17,7 +17,7 @@ manager: craigg
 ## Import Data  
  [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
- [Load or Update Members in Master Data Services by Using the Staging Process](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [Load or Update Members in Master Data Services by Using the Staging Process](add-update-and-delete-data-master-data-services.md)  
   
  [Move Explicit Hierarchy Members by Using the Staging Process &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
   

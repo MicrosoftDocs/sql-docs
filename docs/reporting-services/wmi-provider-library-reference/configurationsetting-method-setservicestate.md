@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SetServiceState method"
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - SetServiceState
   Turns the Report Server Windows and Web services on and off.  

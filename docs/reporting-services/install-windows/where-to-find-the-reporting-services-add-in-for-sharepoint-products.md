@@ -8,8 +8,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "rsSharePoint"
 ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data streams [Reporting Services]"
   - "delivery extensions [Reporting Services], data streams"
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the RenderedOutputFile Class for a Delivery Extension

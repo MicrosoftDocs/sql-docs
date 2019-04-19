@@ -24,6 +24,9 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # CREATE WORKLOAD CLASSIFIER (Transact-SQL) (Preview)
 
+> [!Note]
+> Workload classification is available for preview on SQL Data Warehouse Gen2. Workload Management Classification and Importance preview is for builds with a release date of April 9th, 2019 or later.  Users should avoid using builds earlier than this date for workload management testing.  To determine if your build is workload management capable, run select @@version when connected to your SQL Data Warehouse instance.
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Creates a Workload Management Classifier.  The classifier assigns incoming requests to a workload group and assigns importance based on the parameters specified in the classifier statement definition.  Classifiers are evaluated with every request submitted.  If a request is not matched to a classifier, it is assigned to the default workload group.  The default workload group is the smallrc resource class.  

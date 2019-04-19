@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "calling class members"
   - "custom assemblies [Reporting Services], expressions"
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Accessing Custom Assemblies Through Expressions

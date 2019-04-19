@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services], report information"
   - "Report class"
 ms.assetid: 1145ac63-eafd-452a-82af-16f85b1676dd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the Report Class for a Delivery Extension

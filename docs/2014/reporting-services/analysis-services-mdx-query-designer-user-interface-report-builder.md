@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "query designers, Analysis Services"
 ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Analysis Services MDX Query Designer User Interface (Report Builder)

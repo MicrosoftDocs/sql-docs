@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "displaying jobs"
   - "subscriptions [Reporting Services], running processes"
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Manage a Running Process

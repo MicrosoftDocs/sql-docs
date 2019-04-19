@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services], settings"
   - "Setting class"
 ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the Setting Class for a Delivery Extension

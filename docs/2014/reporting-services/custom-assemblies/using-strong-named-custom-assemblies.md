@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "assemblies [Reporting Services], strong names"
   - "custom assemblies [Reporting Services], strong-named"
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using Strong-Named Custom Assemblies

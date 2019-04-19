@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "adding snapshots to report history"
   - "report snapshots [Reporting Services], adding"
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Add a Snapshot to Report History (Report Manager)

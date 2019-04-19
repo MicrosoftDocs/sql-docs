@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "MSReportServer_Instance class"
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # MSReportServer_Instance Methods

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "EditionName property"
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # EditionName Property (WMI MSReportServer_Instance)

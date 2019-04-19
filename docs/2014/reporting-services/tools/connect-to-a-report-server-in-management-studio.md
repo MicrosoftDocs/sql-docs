@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "registering report servers"
   - "report servers [Reporting Services], registering"
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Connect to a Report Server in Management Studio

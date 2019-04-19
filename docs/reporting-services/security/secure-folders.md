@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "folders [Reporting Services], security"
   - "security [Reporting Services], folders"
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Secure Folders
   Folder security is the foundation for securing all content in a report server. Because security is inherited throughout the folder structure, you can designate large or small sections of the folder hierarchy to allow for certain kinds of access.  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "modifying role assignments"
   - "deleting role assignments"
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Grant user access to a report server
 

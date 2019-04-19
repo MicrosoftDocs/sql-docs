@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: "sql-server-2019"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -146,7 +146,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
+> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is [enabled by request during public preview](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). After it is enabled, the feature is on by default.
 
 If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
 

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "extensions [Reporting Services], library"
   - "library [Reporting Services]"
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Extension Library

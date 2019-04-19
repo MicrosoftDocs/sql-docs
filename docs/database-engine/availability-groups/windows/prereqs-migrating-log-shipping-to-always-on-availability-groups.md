@@ -23,15 +23,6 @@ manager: craigg
 > [!NOTE]  
 >  You can configure any primary or secondary database (possibly readable) in an availability group as a log shipping primary database.  
   
- **In This Topic:**  
-  
--   [Availability Group Prerequisites](#AGPrereqsRealAddress)  
-  
--   [Log Shipping Prerequisites](#LogShipPrereqs)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
   
 ##  <a name="AGPrereqsRealAddress"></a> Availability Group Prerequisites  
  To allow backup jobs to run on the primary replica of the availability group, use the following Always On Availability Groups backup settings:  

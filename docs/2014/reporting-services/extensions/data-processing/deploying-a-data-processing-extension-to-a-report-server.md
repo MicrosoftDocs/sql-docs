@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], deploying"
   - "assemblies [Reporting Services], data processing extension deployments"
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # How to: Deploy a Data Processing Extension to a Report Server

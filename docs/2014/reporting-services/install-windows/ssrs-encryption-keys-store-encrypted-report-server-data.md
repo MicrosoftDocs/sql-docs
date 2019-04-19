@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "encryption [Reporting Services]"
   - "databases [Reporting Services], encryption"
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Store Encrypted Report Server Data (SSRS Configuration Manager)

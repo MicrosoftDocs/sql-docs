@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "delivery extensions [Reporting Services], class creation"
   - "IDeliveryExtension interface"
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Implementing the IDeliveryExtension Interface for a Delivery Extension

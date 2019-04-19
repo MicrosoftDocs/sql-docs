@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "limited permission sets"
   - "security configuration files [Reporting Services]"
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Asserting Permissions in Custom Assemblies

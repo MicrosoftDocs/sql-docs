@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "XML Web service [Reporting Services], authentication"
   - "Report Server Web service, authentication"
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Web Service Authentication

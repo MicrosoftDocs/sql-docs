@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Web service [Reporting Services], proxies"
   - "Web references [Reporting Services]"
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Setting the Url Property of the Web Service

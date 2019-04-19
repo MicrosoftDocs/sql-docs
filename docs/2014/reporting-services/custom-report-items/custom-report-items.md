@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Reporting Services, extending"
   - "custom report items"
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Custom Report Items

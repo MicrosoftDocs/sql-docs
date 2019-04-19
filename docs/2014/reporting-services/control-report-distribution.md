@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], security"
   - "mail [Reporting Services]"
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Control Report Distribution

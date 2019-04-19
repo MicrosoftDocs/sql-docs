@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SenderEmailAddress property"
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - SenderEmailAddress
   Gets the address used to send e-mail from the report server. Read-only.  

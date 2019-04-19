@@ -5,8 +5,8 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Install SQL Server Reporting Services (2017 and later)

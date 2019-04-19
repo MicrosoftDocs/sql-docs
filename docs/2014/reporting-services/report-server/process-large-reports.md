@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "size [SQL Server], reports"
   - "distributing reports [Reporting Services], large reports"
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Process Large Reports

@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "ReportViewer controls"
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the WebForms ReportViewer Control

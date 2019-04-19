@@ -7,8 +7,8 @@ helpviewer_keywords:
   - "Reporting Services, upgrades"
   - "SQL Server Reporting Services, upgrading"
   - "upgrading Reporting Services"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017

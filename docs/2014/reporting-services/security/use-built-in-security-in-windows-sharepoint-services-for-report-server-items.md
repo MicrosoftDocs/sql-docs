@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], permissions"
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Use Built-in Security in Windows SharePoint Services for Report Server Items

@@ -1853,7 +1853,7 @@
            "redirect_document_id": false
         },
         {
-           "source_path": "docs/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md",
+           "source_path": "docs/relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md",
            "redirect_url": "/sql/relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor",
            "redirect_document_id": false
         },

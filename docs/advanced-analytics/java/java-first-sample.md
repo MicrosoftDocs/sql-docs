@@ -28,9 +28,9 @@ This particular sample uses a regular expression that checks if a text contains 
 You should think about the SDK as a helper interface, that will make it easier to implement Java code running against SQL Server.
 
 > [!NOTE]
-> Please note that the introduction of the SDK is a big change from previous CTPs, and that any previous samples you had working will need to be updated to use the SDK.
+> The introduction of the SDK is a big change from previous CTPs. Any previous samples you had working will need to be updated to use the SDK.
 
-You can find details about the [SDK](java-sdk.md) here.
+For more information, see the [SDK documentation](java-sdk.md).
 
 ## Prerequisites
 
@@ -298,7 +298,7 @@ After executing the call, you should get a result set with two of the rows.
 
 + Finally, if you are not using external libraries, check permissions on *each* folder, from root to "pkg" sub folder, to ensure that the security identities running the external process have permission to read and execute your code.
 
-## See also
+## Next steps
 
 + [Microsoft Extensibility SDK for Java for Microsoft SQL Server](java-sdk.md)
 + [How to call Java in SQL Server](howto-call-java-from-sql.md)

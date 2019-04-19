@@ -23,12 +23,12 @@ This particular sample uses a regular expression that checks if a text contains 
 
 ## Microsoft Extensibility SDK for Java for Microsoft SQL Server
 
- In CTP 2.5, we are changing the way you implement Java code that uses the Java language extension to communicate with SQL Server. This will provide a better developer experience when interacting with SQL Server from Java.
+ In CTP 2.5, the way you implement Java code that uses the Java language extension to communicate with SQL Server has changed. 
 
-You should think about the SDK as a helper interface, that will make it easier to implement Java code running against SQL Server.
+The SDK is a helper interface that will make it easier to implement Java code running against SQL Server.
 
 > [!NOTE]
-> Please note that the introduction of the SDK is a big change from previous CTPs, and that any previous samples you had working will need to be updated to use the SDK.
+> The SDK in CTP 2.5 is a big change from previous CTPs. Any previous samples will need to be updated to use the SDK.
 
 You can find details about the [SDK](java-sdk.md) here.
 
@@ -46,7 +46,7 @@ Command-line compilation using **javac** is sufficient for this tutorial.
 
 ## 1 - Get SDK jar file
 
-The Java Extensibility SDK for Microsoft SQL Server is packaged into a .jar file. Please download the Java Extension SDK [jar file](http://aka.ms/mssql-java-lang-extension) mssql-java-lang-extension.jar.
+The Java Extensibility SDK for Microsoft SQL Server is packaged into a .jar file. Please download the [Java Extension SDK jar file mssql-java-lang-extension.jar](http://aka.ms/mssql-java-lang-extension).
 
 ## 1 - Create sample data in a SQL Server table
 
@@ -75,7 +75,7 @@ INSERT INTO testdata(id, "text") VALUES (1, 'This sentence contains java')
 INSERT INTO testdata(id, "text") VALUES (2, 'This sentence does not')
 INSERT INTO testdata(id, "text") VALUES (3, 'I love Java!')
 GO
-Select * FROM testdata
+SELECT * FROM testdata
 ```
 
 ## 2 - Class RegexSample.java
@@ -84,11 +84,16 @@ Start by creating the main class.
 
 In this step, create a class called **RegexSample.java** and copy the following Java code into that file.
 
-This main class is importing the SDK, which means that the jar file downloaded in step1 needs to be discoverable from this class.
+This main class is importing the SDK. Therefore, the jar file downloaded in step 1 needs to be discoverable from this class.
 
 > [!NOTE]
+<<<<<<< HEAD
 > Note that this class imports the Java extension SDK package.
 See the article about the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](java-sdk.md) for more details.
+=======
+> This class imports the Java extension SDK package.
+> For more information, see the [Java extension SDK](java-sdk.md).
+>>>>>>> e18b3d1d9bd558f9a0378c64716246fff23a7529
 
 ```java
 package pkg;
@@ -196,7 +201,7 @@ public class RegexSample extends AbstractSqlServerExtensionExecutor {
 
 We recommend that you package your classes and dependencies into .jar files. Most Java IDEs like Eclipse or IntelliJ support generating jar files when you build/compile the project. In this sample, we have named the jar file **regex.jar**.
 
-If you are manually creating a .jar file, you can follow the steps, see [How to create a jar file](extension-java.md#create-jar).
+If you are manually creating a .jar file, follow the steps in [How to create a jar file](extension-java.md#create-jar).
 
 > [!NOTE]
 > This sample is using packages, which means that the package "pkg" given at the top of the class makes sure the compiled code is saved in a sub folder called "pkg". This is automatically taken care of if you use an IDE, but if you are manually compiling classes using **javac**, you will need to place the compiled code in the pkg sub folder manually.
@@ -233,7 +238,7 @@ GO
 
 This step is not needed if you use external libraries. The recommended way of working is to create an external library from you jar.
 
-If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions [here](extension-java.md).
+If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. For more information about setting permissions, see [Java language extension in SQL Server 2019](extension-java.md).
 
 ### On Linux
 
@@ -260,10 +265,10 @@ Make sure both security identities have 'Read and Execute' permissions on the fo
 
 ## 2 - Call the Java class
 
-To call the Java code from SQL Server, we will create a stored procedure that calls sp_execute_external_script. In the "script" parameter, we will define which [package].[class] we want to call. In this sample, the class belongs to a package called **pkg** and a class file called **RegexSample.java**.
+To call the Java code from SQL Server, you create a stored procedure that calls sp_execute_external_script. In the "script" parameter, you define which [package].[class] you want to call. In this sample, the class belongs to a package called **pkg** and a class file called **RegexSample.java**.
 
 > [!NOTE]
->We are not defining which method to call. By default, the **execute** method will be called. This means that you need to follow the SDK interface and implement an execute method in your Java class, if you want to be able to call the class from SQL Server.
+>You are not defining which method to call. By default, the **execute** method will be called. This means that you need to follow the SDK interface and implement an execute method in your Java class, if you want to be able to call the class from SQL Server.
 
 ```sql
 /*

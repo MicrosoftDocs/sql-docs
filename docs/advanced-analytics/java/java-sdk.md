@@ -22,7 +22,7 @@ In CTP 2.5, we are changing the way you implement a Java program that uses the J
 
 We are introducing an extension Java SDK for SQL Server. This is an interface the Java extension uses to exchange data with SQL Server and to execute Java code from SQL Server.
 
- Download [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension) mssql-java-lang-extension.jar.
+ Download the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension).
 
 ## Implementation requirements
 

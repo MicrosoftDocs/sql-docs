@@ -67,8 +67,8 @@
         href: ../big-data-cluster/deployment-guidance.md
       - name: Upgrade to a new release
         href: ../big-data-cluster/deployment-upgrade.md
-      - name: Customize with patch files
-        href: ../big-data-cluster/deployment-json-patch-files.md 
+      - name: Customize deployments
+        href: ../big-data-cluster/deployment-custom-configuration.md 
       - name: Configure storage
         href: ../big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
@@ -99,8 +99,6 @@
       href: ../big-data-cluster/concept-storage-pool.md
     - name: Compute pool
       href: ../big-data-cluster/concept-compute-pool.md
-    - name: Data persistence
-      href: ../big-data-cluster/concept-data-persistence.md
     - name: Security
       href: ../big-data-cluster/concept-security.md
   - name: How-to guides

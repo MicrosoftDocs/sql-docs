@@ -903,7 +903,7 @@ When you disable Stretch for a table, you have two options for the remote data t
 - To disable Stretch for a table and copy the remote data for the table from Azure back to SQL Server, run the following command. This command can't be canceled.
 
     ```sql
-    ALTER TABLE <table name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 

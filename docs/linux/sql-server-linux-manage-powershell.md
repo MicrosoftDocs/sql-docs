@@ -15,11 +15,11 @@ ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article introduces [SQL Server PowerShell](https://docs.microsoft.com/en-us/sql/powershell/sql-server-powershell) and walks you through a couple of examples on how to use it with SQL Server on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
+This article introduces [SQL Server PowerShell](../powershell/sql-server-powershell.md) and walks you through a couple of examples on how to use it with SQL Server on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 
 ## Install the newest version of SQL PowerShell on Windows
 
-[SQL PowerShell](https://docs.microsoft.com/en-us/sql/powershell/download-sql-server-ps-module?view=sql-server-2017) on Windows is maintained in the PowerShell Gallery. When working with SQL Server, you should always use the most recent version of the SqlServer PowerShell module.
+[SQL PowerShell](../powershell/download-sql-server-ps-module.md) on Windows is maintained in the PowerShell Gallery. When working with SQL Server, you should always use the most recent version of the SqlServer PowerShell module.
 
 ## Before you begin
 

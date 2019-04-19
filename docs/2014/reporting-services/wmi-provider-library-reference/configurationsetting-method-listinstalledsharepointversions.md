@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ListInstalledSharePointVersions method"
 ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # ListInstalledSharePointVersions Method (WMI)

@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom report items, creating"
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Creating a Custom Report Item Design-Time Component

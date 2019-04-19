@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], creating"
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create an Embedded or Shared Data Source (SSRS)

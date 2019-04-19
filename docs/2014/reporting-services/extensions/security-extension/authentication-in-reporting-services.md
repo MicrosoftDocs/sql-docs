@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "authentication [Reporting Services]"
   - "custom authentication [Reporting Services]"
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Authentication in Reporting Services

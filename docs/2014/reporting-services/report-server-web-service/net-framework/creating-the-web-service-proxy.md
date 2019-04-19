@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Web service [Reporting Services], proxies"
   - "Web references [Reporting Services]"
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Creating the Web Service Proxy

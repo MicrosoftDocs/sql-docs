@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ListSSLCertificateBindings method"
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - ListSSLCertificateBindings
   Returns a list of installed SSL certificates on the computer.  

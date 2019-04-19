@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "extensions [Reporting Services], security"
   - "permissions [Reporting Services], extensions"
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Security Considerations for Extensions

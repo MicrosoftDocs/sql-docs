@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ElementPath syntax"
   - "XML [Reporting Services], data retrieval"
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Element Path Syntax for XML Report Data (SSRS)
   In Report Designer, you specify the data to use for a report from an XML data source by defining a case-sensitive element path. An element path indicates how to traverse the XML hierarchical nodes and their attributes in the XML data source. To use the default element path, leave the dataset query or the XML **ElementPath** of the XML **Query** empty. When data is retrieved from the XML data source, element nodes that have text values and element node attributes become columns in the result set. The values of the nodes and attributes become the row data when you run the query. The columns appear as the dataset field collection in the Report Data pane. This topic describes the element path syntax.  

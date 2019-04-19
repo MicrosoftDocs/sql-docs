@@ -6,8 +6,8 @@ ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 description: In this article you learn about altering the appearance of the web portal by branding it to your business through a brand package. The brand package is designed so you don't need deep cascading style sheet (CSS) knowledge to create it.
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Branding the web portal

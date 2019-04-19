@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.datasourceproperties.credentials.f1"
   - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Data Source Properties Dialog Box, Credentials

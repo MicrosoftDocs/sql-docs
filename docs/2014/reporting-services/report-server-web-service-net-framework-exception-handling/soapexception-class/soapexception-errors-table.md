@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SoapException class"
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SoapException Errors Table

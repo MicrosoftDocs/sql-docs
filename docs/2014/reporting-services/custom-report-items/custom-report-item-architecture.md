@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom report items, architecture"
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Custom Report Item Architecture

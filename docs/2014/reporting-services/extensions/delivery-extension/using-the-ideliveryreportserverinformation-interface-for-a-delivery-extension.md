@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "IDeliveryReportServerInformation interface"
   - "delivery extensions [Reporting Services], retrieving report server information"
 ms.assetid: adbce647-18f3-470c-8114-42f8bcc95dc2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Using the IDeliveryReportServerInformation Interface for a Delivery Extension

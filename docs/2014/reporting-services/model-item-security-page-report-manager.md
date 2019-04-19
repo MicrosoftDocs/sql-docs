@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.modelproperties.modelitemsecurity.f1"
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Model Item Security Page (Report Manager)

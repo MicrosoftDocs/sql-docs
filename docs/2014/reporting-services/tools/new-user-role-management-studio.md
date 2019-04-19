@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.newrole.f1"
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # New User Role (Management Studio)

@@ -20,9 +20,8 @@ manager: craigg
 
 This topic introduces the steps for configuring instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and for creating, managing, and monitoring an availability group.  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
   
-###  <a name="RecommendedReading"></a> Recommended Reading  
+##  <a name="RecommendedReading"></a> Recommended Reading  
  Before you create your first availability group, we recommend that you read the following topics:  
   
 -   [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

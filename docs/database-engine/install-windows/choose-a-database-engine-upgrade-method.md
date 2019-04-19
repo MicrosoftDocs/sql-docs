@@ -39,7 +39,11 @@ There are several approaches to consider when you are planning to upgrade the [!
 -   A development environment without a high-availability (HA) configuration.  
   
 -   A non-mission critical production environment that can tolerate downtime and that is running on a recent hardware and software. The amount of downtime is dependent upon the size of your database and the speed of your I/O subsystem. Upgrading SQL Server 2014 when memory-optimized tables are in use will take some extra time. For more information, see [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
-  
+
+> [!NOTE]
+> For an example of how Microsoft has used this strategy, see the following blog post: [To upgrade or not to upgrade](https://azure.microsoft.com/blog/azure-sql-server-to-upgrade-or-not-to-upgrade-that-is-the-question/). 
+
+
 > [!WARNING]  
 >  When running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup program, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance is stopped and restarted as part of running the pre-upgrade checks.  
   

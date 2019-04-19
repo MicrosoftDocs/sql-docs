@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "modifying role assignments"
   - "deleting role assignments"
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Modify or Delete a Role Assignment (Report Manager)

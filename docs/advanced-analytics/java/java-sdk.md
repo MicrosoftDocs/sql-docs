@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # Microsoft Extensibility SDK for Java for Microsoft SQL Server
 
-In CTP 2.5, we are changing the way you implement a Java program that uses the Java language extension to communicate with SQL Server. This will provide a better developer experience when interacting with SQL Server from Java.
+In CTP 2.5, the way you implement a Java program that uses the Java language extension to communicate with SQL Server has changed.```
 
 > [!Note]
 > Please note that this is a big change from previous CTPs, and that any samples you had working will need to be updated to use the SDK instead.

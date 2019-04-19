@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "WMI provider [Reporting Services], library"
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services WMI Provider Library Reference (SSRS)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "security [Reporting Services], predefined roles"
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions

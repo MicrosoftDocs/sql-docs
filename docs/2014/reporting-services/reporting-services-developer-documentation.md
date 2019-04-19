@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Reporting Services, programming"
   - "programming [Reporting Services]"
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Developer&#39;s Guide (Reporting Services)

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Report Builder 1.0, configuring access"
   - "configuring servers [Reporting Services]"
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure Report Builder Access

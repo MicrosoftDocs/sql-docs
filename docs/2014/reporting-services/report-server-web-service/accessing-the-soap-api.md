@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Report Server Web service, WSDL"
   - "referencing WSDL"
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Accessing the SOAP API

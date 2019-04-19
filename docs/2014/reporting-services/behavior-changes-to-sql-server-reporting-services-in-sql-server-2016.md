@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "initializing installations [Reporting Services]"
   - "behavior changes [Reporting Services]"
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Behavior Changes to SQL Server Reporting Services  in SQL Server 2014

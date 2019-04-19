@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "default security"
   - "role-based security [Reporting Services], defaults"
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Predefined Roles

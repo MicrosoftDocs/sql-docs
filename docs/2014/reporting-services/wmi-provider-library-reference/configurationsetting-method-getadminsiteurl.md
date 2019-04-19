@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "GetAdminSiteUrl method"
 ms.assetid: fbc5bf3c-120c-4aec-a4f2-f5391bd415f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # GetAdminSiteUrl Method (WMI)

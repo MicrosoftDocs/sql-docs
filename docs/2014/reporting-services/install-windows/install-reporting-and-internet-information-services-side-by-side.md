@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "deploying [Reporting Services], IIS"
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Install Reporting Services and Internet Information Services Side-by-Side (SSRS Native Mode)

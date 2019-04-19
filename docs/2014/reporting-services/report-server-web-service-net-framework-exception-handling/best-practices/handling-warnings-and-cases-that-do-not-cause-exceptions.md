@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "exceptions [Reporting Services], warnings that don't cause"
   - "warnings [Reporting Services]"
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Handling Warnings and Cases That Do Not Cause Exceptions

@@ -1,11 +1,10 @@
 ---
 title: "Errors and Events Reference (Reporting Services) | Microsoft Docs"
-ms.date: 03/18/2017
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: troubleshooting
-
-
 ms.topic: conceptual
 helpviewer_keywords: 
   - "messages [Reporting Services]"
@@ -13,10 +12,9 @@ helpviewer_keywords:
   - "Reporting Services, errors and events"
   - "troubleshooting [Reporting Services], errors"
   - "events [Reporting Services]"
-ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-author: markingmyname
-ms.author: maghan
+ms.date: 03/18/2017
 ---
+
 # Errors and Events Reference (Reporting Services)
   This topic provides information about errors and events for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -58,9 +56,7 @@ ms.author: maghan
 |133|Error|Management|Report Server<br /><br /> Report Manager<br /><br /> Scheduling and Delivery Processor|A configuration file failed to load. This error may occur if the XML is not valid.|  
 |134|Error|Management|Report Server|The report server failed to encrypt values for a setting in a configuration file.|  
   
-## See Also  
- [Monitor Reporting Services Subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+## See Also
+
+ [Monitor Reporting Services Subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+ [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

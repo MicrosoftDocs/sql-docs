@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "managing, alerts"
   - "managing, data alerts"
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Manage My Data Alerts in Data Alert Manager

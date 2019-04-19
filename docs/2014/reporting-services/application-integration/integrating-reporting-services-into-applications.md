@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "application integration [Reporting Services]"
   - "reports [Reporting Services], integrating"
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Integrating Reporting Services into Applications

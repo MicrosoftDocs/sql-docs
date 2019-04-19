@@ -3,7 +3,7 @@ title: PowerShell extension
 titleSuffix: Azure Data Studio
 description: Install and use the PowerShell for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "04/17/2019"
+ms.date: "04/19/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,11 +12,13 @@ author: "SQLvariant"
 ms.author: "aanelson"
 manager: matthend
 ---
-# PowerShell Language Support for Azure Data Studio
+# PowerShell Editor Support for Azure Data Studio
 
-This extension provides rich PowerShell language support for [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
-Now you can write and debug PowerShell scripts using the excellent IDE-like interface
-that Azure Data Studio provides.
+This extension provides rich PowerShell editor support in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
+Now you can write and debug PowerShell scripts using the excellent IDE-like interface that Azure Data Studio provides.
+
+![PowerShell extension](media/powershell-extension/powershell-extension.png)
+
 
 ## Features
 
@@ -30,6 +32,7 @@ that Azure Data Studio provides.
 - Run selected selection of PowerShell code using <kbd>F8</kbd>
 - Launch online help for the symbol under the cursor using <kbd>Ctrl</kbd>+<kbd>F1</kbd>
 - Basic interactive console support!
+
 
 ## Installing the Extension
 

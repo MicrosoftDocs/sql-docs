@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "deploying [Reporting Services], reports"
   - "Report Designer [Reporting Services], publishing reports"
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Publishing Reports to a Report Server

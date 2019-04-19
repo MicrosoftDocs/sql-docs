@@ -178,7 +178,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<**_instance name_**>)**, where **\<**_instance name_**>** is the name of a local server instance for which you want to disable Always On Availability Groups, and click **Properties**.  
   
-4.  On the**Always On High Availability**tab, deselect the **Enable Always On Availability Groups** check box, and click **OK**.  
+4.  On the **Always On High Availability** tab, deselect the **Enable Always On Availability Groups** check box, and click **OK**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager saves your change and restarts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service. When the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service restarts, Always On will be disabled, and the **IsHadrEnabled** server property will be set to 0, to indicate that Always On Availability Groups is disabled.  
   

@@ -22,6 +22,8 @@ In CTP 2.5, we are changing the way you implement a Java program that uses the J
 
 We are introducing an extension Java SDK for SQL Server. This is an interface the Java extension uses to exchange data with SQL Server and to execute Java code from SQL Server.
 
+ Download [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension) mssql-java-lang-extension.jar.
+
 ## Implementation requirements
 
 The SDK interface defines a set of requirements that need to be fulfilled for SQL Server to communicate with the Java runtime. This means that you need to follow some implementation rules in your main class. SQL Server can then execute a specific method in the Java class and exchange data using the Java language extension.
@@ -54,11 +56,12 @@ To inherit from this abstract class, you extend with the abstract class name in 
 ```java
 public class <MyClass> extends AbstractSqlServerExtensionExecutor {}
 ```
+
 At a minimum, your main class needs to implement the execute(...) method.
 
 ### Method execute
 
-The execute method is the method that is called from SQL Server via the Java language extension, to invoke Java code. You should view this as a key method where you include the main operations you wish to execute from SQL Server.
+The execute method is the method that is called from SQL Server via the Java language extension, to invoke Java code from SQL Server. You should view this as a key method where you include the main operations you wish to execute from SQL Server.
 
 To pass method arguments to Java from SQL Server, use the @param parameter in sp_execute_external_script. The method **execute**** takes its arguments that way.
 
@@ -68,15 +71,15 @@ public AbstractSqlServerExtensionDataset execute(AbstractSqlServerExtensionDatas
 
 ### Method init
 
-The init method is executed after the constructor and before execute method. Any operations that need to be performed prior to execute(...) can be done in this method.
+The init method is executed after the constructor and before the execute method. Any operations that need to be performed prior to execute(...) can be done in this method.
 
 ```java
-public void init(String sessionId, int taskId, int numtask)
+public void init(String sessionId, int taskId, int numtask) {}
 ```
 
 ### AbstractSqlServerExtensionExecutor source code
 
-Details about other methods and variables can be found below in source code:
+More details can be found below in source code:
 
 ```java
 package com.microsoft.sqlserver.javalangextension;

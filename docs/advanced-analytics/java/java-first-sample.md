@@ -88,10 +88,108 @@ This main class is importing the SDK, which means that the jar file downloaded i
 
 > [!NOTE]
 > Note that this class imports the Java extension SDK package.
-See the article about the [Java extension SDK](java-sdk.md) for more details.
+See the article about the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](java-sdk.md) for more details.
 
 ```java
-TODO: JAVA CODE GOES HERE
+package pkg;
+
+import com.microsoft.sqlserver.javalangextension.PrimitiveDataset;
+import com.microsoft.sqlserver.javalangextension.AbstractSqlServerExtensionExecutor;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.regex.*;
+
+public class RegexSample extends AbstractSqlServerExtensionExecutor {
+    private Pattern expr;
+
+    public RegexSample() {
+        // Setup the expected extension version, and class to use for input and output dataset
+        executorExtensionVersion = SQLSERVER_JAVA_LANG_EXTENSION_V1;
+        executorInputDatasetClassName = PrimitiveDataset.class.getName();
+        executorOutputDatasetClassName = PrimitiveDataset.class.getName();
+    }
+    
+    public PrimitiveDataset execute(PrimitiveDataset input, LinkedHashMap<String, Object> params) {
+        // Validate the input parameters and input column schema
+        validateInput(input, params);
+
+        int[] inIds = input.getIntColumn(0);
+        String[] inValues = input.getStringColumn(1);
+        int rowCount = inValues.length;
+
+        String regexExpr = (String)params.get("regexExpr");
+        expr = Pattern.compile(regexExpr);
+
+        System.out.println("regex expression: " + regexExpr);
+
+        // Lists to store the output data
+        LinkedList<Integer> outIds = new LinkedList<Integer>();
+        LinkedList<String> outValues = new LinkedList<String>();
+
+        // Evaluate each row
+        for(int i = 0; i < rowCount; i++) {
+            if (check(inValues[i])) {
+                outIds.add(inIds[i]);
+                outValues.add(inValues[i]);
+            }
+        }
+
+        int outputRowCount = outValues.size();
+
+        int[] idOutputCol = new int[outputRowCount];
+        String[] valueOutputCol = new String[outputRowCount];
+
+        // Convert the list of output columns to arrays
+        outValues.toArray(valueOutputCol);
+
+        ListIterator<Integer> it = outIds.listIterator(0);
+        int rowId = 0;
+
+        System.out.println("Output data:");
+        while (it.hasNext()) {
+            idOutputCol[rowId] = it.next().intValue();
+
+            System.out.println("ID: " + idOutputCol[rowId] + " Value: " + valueOutputCol[rowId]);
+            rowId++;
+        }
+
+        // Construct the output dataset
+        PrimitiveDataset output = new PrimitiveDataset();
+
+        output.addColumnMetadata(0, "ID", java.sql.Types.INTEGER, 0, 0);
+        output.addColumnMetadata(1, "Text", java.sql.Types.NVARCHAR, 0, 0);
+
+        output.addIntColumn(0, idOutputCol, null);
+        output.addStringColumn(1, valueOutputCol);
+
+        return output;
+    }
+
+    private void validateInput(PrimitiveDataset input, LinkedHashMap<String, Object> params) {
+        // Check for the regex expression input parameter
+        if (params.get("regexExpr") == null) {
+            throw new IllegalArgumentException("Input parameter 'regexExpr' is not found");
+        }
+
+        // The expected input schema should be at least 2 columns, (INTEGER, STRING)
+        if (input.getColumnCount() < 2) {
+            throw new IllegalArgumentException("Unexpected input schema, schema should be an (INTEGER, NVARCHAR or VARCHAR)");
+        }
+
+        // Check that the input column types are expected
+        if (input.getColumnType(0) != java.sql.Types.INTEGER &&
+                (input.getColumnType(1) != java.sql.Types.VARCHAR && input.getColumnType(1) == java.sql.Types.NVARCHAR )) {
+            throw new IllegalArgumentException("Unexpected input schema, schema should be an (INTEGER, NVARCHAR or VARCHAR)");
+        }
+    }
+
+    private boolean check(String text) {
+        Matcher m = expr.matcher(text);
+
+        return m.find();
+    }
+}
 ```
 
 ## 3 Compile and create .jar file
@@ -109,18 +207,24 @@ By creating an external library, SQL Server will automatically have access to th
 
 In this sample, you will need to create two external libraries. One for the SDK, and one for the Regex Java sample.
 
+1.  Download [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension) mssql-java-lang-extension.jar.
+
+1. Create external library for the sdk
+
 ```sql
--- Create external library for the sample
-CREATE EXTERNAL LIBRARY regex
-FROM (CONTENT = '<path>/regex.jar')
+-- Create external library for the SDK
+CREATE EXTERNAL LIBRARY sdk
+FROM (CONTENT = '<path>/mssql-java-lang-extension.jar')
 WITH (LANGUAGE = 'Java');
 GO
 ```
 
+3. Create external library for the regex sample
+
 ```sql
--- Create external library for the SDK
+-- Create external library for the regex sample
 CREATE EXTERNAL LIBRARY regex
-FROM (CONTENT = '<path>/mssql-java-lang-extension.jar')
+FROM (CONTENT = '<path>/regex.jar')
 WITH (LANGUAGE = 'Java');
 GO
 ```
@@ -162,10 +266,10 @@ To call the Java code from SQL Server, we will create a stored procedure that ca
 >We are not defining which method to call. By default, the **execute** method will be called. This means that you need to follow the SDK interface and implement an execute method in your Java class, if you want to be able to call the class from SQL Server.
 
 ```sql
--- This stored procedure takes an input query (input dataset) and a regular-
--- expression and returns the rows that fulfilled the given regular expression
--- This sample uses a regular expression that checks if a text contains the 
--- word "Java" or "java" ([Jj]ava)
+/*
+This stored procedure takes an input query (input dataset) and a regular expression and returns the rows that fulfilled the given regular expression. This sample uses a regular expression that checks if a text contains the word "Java" or "java" ([Jj]ava) 
+*/
+
 CREATE OR ALTER PROCEDURE [dbo].[java_regex] @expr nvarchar(200), @query nvarchar(400)
 AS
 BEGIN
@@ -202,7 +306,7 @@ After executing the call, you should get a result set with two of the rows.
 
 ## See also
 
-+ [Java extension SDK for SQL Server](java-sdk.md)
++ [Microsoft Extensibility SDK for Java for Microsoft SQL Server](java-sdk.md)
 + [How to call Java in SQL Server](howto-call-java-from-sql.md)
 + [Java extensions in SQL Server](extension-java.md)
 + [Java and SQL Server data types](java-sql-datatypes.md)

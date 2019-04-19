@@ -156,7 +156,7 @@ At this point, you are almost ready to run Java code on Linux or Windows. As a l
 
 ## Verify installation
 
-To confirm the installation is operational, create and run a [sample application](java-first-sample.md) using the Java Runtime you just installed (JRE_), placing the files in the classpath you configured earlier.
+To confirm the installation is operational, create and run a [sample application](java-first-sample.md) using the Java Runtime you just installed and added to JRE_HOME.
 
 ## Differences in CTP 2.5
 
@@ -189,4 +189,5 @@ Make sure the path to **jar.exe** is part of the system path variable. Alternati
 
 + [How to call Java in SQL Server](howto-call-java-from-sql.md)
 + [Java sample in SQL Server](java-first-sample.md)
++ [Microsoft Extensibility SDK for Java for Microsoft SQL Server](java-sdk.md)
 + [Java and SQL Server data types](java-sql-datatypes.md)

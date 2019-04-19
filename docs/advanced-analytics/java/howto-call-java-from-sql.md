@@ -4,7 +4,7 @@ description: Learn how to call Java classes from SQL Server stored procedures us
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/17/2019
+ms.date: 04/18/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -42,7 +42,7 @@ There are two methods for calling Java classes in SQL Server:
 * "params" is used to pass parameters to a Java class. Calling a method that requires arguments is not supported, which makes parameters the only way to pass argument values to your method. 
 
 > [!Note]
-> This note restates supported and unsupported operations specific to Java in CTP 3.x.
+> This note restates supported and unsupported operations specific to Java in CTP 2.x.
 > * On the stored procedure, input parameters are supported. Output parameters are not.
 > * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported.
 > * Partitioning using @input_data_1_partition_by_columns is not supported.

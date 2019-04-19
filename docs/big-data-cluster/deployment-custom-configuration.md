@@ -157,7 +157,7 @@ Create a file named **patch.json** in your current directory with the following 
       "op": "add",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
-        "nodeLabel": "<yourNodeLabel>"
+      "nodeLabel": "<yourNodeLabel>"
        }
     }
   ]

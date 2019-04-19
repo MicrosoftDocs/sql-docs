@@ -111,7 +111,9 @@ DBCC CHECKIDENT
   
 ## Permissions
 
- Caller must own the schema that contains the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.  
+ Caller must own the schema that contains the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
+
+Azure SQL Data Warehouse requires **db_owner** permissions.
   
 ## Examples  
   

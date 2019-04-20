@@ -144,6 +144,9 @@ The following environment variables are used for security settings that are not 
 
 These environment variables can be set prior to calling **mssqlctl cluster create** or by using the **--env-var** parameter. If any variable is not set, you are prompted for it.
 
+> [!IMPORTANT]
+> If you are passing the environment variables through the **--env-var** parameter, the environment variables are process scoped, and not set at system level. Hence, they will exist only in the context of the create command. Hence, subsequent commands will require login or setting the environment variables corresponding to controller credentials.
+
 The following example shows how to pass the environment variables on the command-line for Linux (bash) and Windows (PowerShell):
 
 ```bash

@@ -44,7 +44,7 @@ To use persistent storage during deployment, set the values of **usePersistentVo
 > [!WARNING]
 > Running without persistent storage can work in a test environment, but it could result in a non-functional cluster. Upon pod restarts, cluster metadata and/or user data will be lost permanently. We do not recommend to run in this configuration. 
 
-This section provides more examples on how to configure storage settings for your SQL Server big data cluster deployment.
+[Configure storage](#config-samples) section provides more examples on how to configure storage settings for your SQL Server big data cluster deployment.
 
 ## AKS storage classes
 
@@ -56,7 +56,7 @@ AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/a
 
 ## Minikube storage class
 
-Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. The built in configuration file for minikube *minikube-dev-test.json* has the storage configuration settings in the control plane spec. Same settings will be applied to all pools specs. You can also customize a copy of this file and use it for your big data cluster deployment on minikube. You can manually edit the custom file and change the size of the persistent volumes claims for specific pools to accommodate the workloads you want to run. Or, see this section for examples on how to do edits using *mssqlctl* commands.
+Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. The built in configuration file for minikube *minikube-dev-test.json* has the storage configuration settings in the control plane spec. Same settings will be applied to all pools specs. You can also customize a copy of this file and use it for your big data cluster deployment on minikube. You can manually edit the custom file and change the size of the persistent volumes claims for specific pools to accommodate the workloads you want to run. Or, see [Configure storage](#config-samples) section for examples on how to do edits using *mssqlctl* commands.
 
 ## Kubeadm storage classes
 
@@ -92,7 +92,7 @@ The following example updates the size of persistent volume claims for all pools
 mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi'
 ```
 
-### Configure storage class
+### <a id="config-samples"></a> Configure storage class
 
 Following example shows how to modify the storage class for the control plane:
 

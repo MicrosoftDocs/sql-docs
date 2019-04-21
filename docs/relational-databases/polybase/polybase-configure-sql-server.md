@@ -3,11 +3,11 @@ title: "Configure PolyBase to access external data in SQL Server | Microsoft Doc
 ms.custom: ""
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---

@@ -16,15 +16,15 @@ ms.custom: seodec18
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) provide a plugin model for storage in Kubernetes where how storage is provided is completed abstracted from how it is consumed. Therefore, you can bring your own highly available storage and plug it into the SQL Server big data cluster cluster. This gives you full control over the type of storage, availability, and performance that you require. Kubernetes supports various kinds of storage solutions including Azure disks/files, NFS, local storage, and more.
+[Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) provide a plugin model for storage in Kubernetes. How storage is provided is abstracted from how it is consumed. Therefore, you can bring your own highly available storage and plug it into the SQL Server big data cluster. This gives you full control over the type of storage, availability, and performance that you require. Kubernetes supports various kinds of storage solutions including Azure disks/files, NFS, local storage, and more.
 
 ## Configure persistent volumes
 
-The way SQL Server big data cluster consumes these persistent volumes is by using [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/). You can create different storage classes for different kind of storage and specify them at the big data cluster deployment time. You can configure which storage class and the persistent volume claim size to use for which purpose at pool level. SQL Server big data cluster creates [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) with the specified storage class name for each component that requires persistent volumes. It then mounts the corresponding persistent volume(s) in the pod. 
+The way a SQL Server big data cluster consumes these persistent volumes is by using [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/). You can create different storage classes for different kind of storage and specify them at the big data cluster deployment time. You can configure which storage class and the persistent volume claim size to use for which purpose at the pool level. A SQL Server big data cluster creates [persistent volume claims](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) with the specified storage class name for each component that requires persistent volumes. It then mounts the corresponding persistent volume(s) in the pod. 
 
 ## Configure big data cluster storage settings
 
-Similar to other customizations, you can specify storage settings in the cluster configuration files at deployment time for each pool and control plane. If there are no storage configuration settings in the pool specifications, then the control plane storage settings will be used. This is a sample of the storage configuration section that you can include in the spec:
+Similar to other customizations, you can specify storage settings in the cluster configuration files at deployment time for each pool and the control plane. If there are no storage configuration settings in the pool specifications, then the control plane storage settings will be used. This is a sample of the storage configuration section that you can include in the spec:
 
 ```json
     "storage": 
@@ -36,7 +36,7 @@ Similar to other customizations, you can specify storage settings in the cluster
     }
 ```
 
-To use persistent storage during deployment, set the values of **usePersistentVolume** key to *true* and **className** key to the name of the storage class you want to use for the respective pool. You can also customize the size of the persistent volume claims created as part of the deployment. As best practice, we recommend to use storage classes with a *Retain* [reclaim policy](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
+To use persistent storage during deployment, set the values of **usePersistentVolume** key to *true* and **className** key to the name of the storage class you want to use for the respective pool. You can also customize the size of the persistent volume claims created as part of the deployment. As a best practice, we recommend to use storage classes with a *Retain* [reclaim policy](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!NOTE]
 > In CTP 2.5, you can't modify storage configuration setting post deployment. Also, only `ReadWriteOnce` access mode for the whole cluster is supported.
@@ -56,14 +56,14 @@ AKS comes with [two built-in storage classes](https://docs.microsoft.com/azure/a
 
 ## Minikube storage class
 
-Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. The built in configuration file for minikube *minikube-dev-test.json* has the storage configuration settings in the control plane spec. Same settings will be applied to all pools specs. You can also customize a copy of this file and use it for your big data cluster deployment on minikube. You can manually edit the custom file and change the size of the persistent volumes claims for specific pools to accommodate the workloads you want to run. Or, see this section for examples on how to do edits using *mssqlctl* commands.
+Minikube comes with a built-in storage class called **standard** along with a dynamic provisioner for it. The built in configuration file for minikube *minikube-dev-test.json* has the storage configuration settings in the control plane spec. The same settings will be applied to all pools specs. You can also customize a copy of this file and use it for your big data cluster deployment on minikube. You can manually edit the custom file and change the size of the persistent volumes claims for specific pools to accommodate the workloads you want to run. Or, see this section for examples on how to do edits using *mssqlctl* commands.
 
 ## Kubeadm storage classes
 
 Kubeadm does not come with a built-in storage class. You must create your own storage classes and persistent volumes using local storage or your preferred provisioner, such as [Rook](https://github.com/rook/rook). In that case, you would set the **className** to the storage class you configured. 
 
 > [!NOTE]
-> In the built in deployment configuration file for kubeadm *kubeadm-dev-test.json* the default value for **usePersistentVolume** key is *true*, so you must set the value for **className** otherwise the pre deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. In CTP2.5, for the default cluster size you must create at least 23 volumes. [Here](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) is an example on how to create persistent volumes using local provisioner.
+> In the built in deployment configuration file for kubeadm *kubeadm-dev-test.json*, the default value for **usePersistentVolume** key is *true*, so you must set the value for **className** otherwise the pre-deployment validations will fail. Deployment also has a validation step that checks for the existence of the storage class, but not for the necessary persistent volumes. You must ensure you create enough volumes depending on the scale of your cluster. In CTP2.5, for the default cluster size you must create at least 23 volumes. [Here](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) is an example on how to create persistent volumes using local provisioner.
 
 
 ## Customize storage configurations for each pool
@@ -134,5 +134,5 @@ mssqlctl cluster config section set -f custom.json -p ./patch.json
 
 For complete documentation about volumes in Kubernetes, see the [Kubernetes documentation on Volumes](https://kubernetes.io/docs/concepts/storage/volumes/).
 
-For more information about deploying SQL Server big data cluster, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md).
+For more information about deploying a SQL Server big data cluster, see [How to deploy SQL Server big data cluster on Kubernetes](deployment-guidance.md).
 

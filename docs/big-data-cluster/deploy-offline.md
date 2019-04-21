@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Perform an offline deployment of a SQL Server big data cluster
 
-This article describes how to perform an offline deployment of a SQL Server 2019 big data cluster (preview). Big data clusters must have access to a Docker repository from which to pull container images. An offline installation is one where the required images are placed into a private Docker repository. That private repository is then used as the target for a new deployment.
+This article describes how to perform an offline deployment of a SQL Server 2019 big data cluster (preview). Big data clusters must have access to a Docker repository from which to pull container images. An offline installation is one where the required images are placed into a private Docker repository. That private repository is then used as the image source for a new deployment.
 
 ## Prerequisites
 
@@ -26,9 +26,9 @@ This article describes how to perform an offline deployment of a SQL Server 2019
 The following steps describe how to pull the big data cluster container images from the Microsoft repository and then push them into your private repository.
 
 > [!TIP]
-> The following steps explain the process. However, to simplify task, you can use the [automated script](#automated) instead of manually running these commands.
+> The following steps explain the process. However, to simplify the task, you can use the [automated script](#automated) instead of manually running these commands.
 
-1. First log in to the Microsoft Docker registry with the **docker login** command. Use the username and password that Microsoft provided to you as part of the gated public preview.
+1. First, log in to the Microsoft Docker registry with the **docker login** command. Use the username and password that Microsoft provided to you as part of the Early Adoption Program.
 
    ```PowerShell
    docker login private-repo.microsoft.com -u  <SOURCE_DOCKER_USERNAME> -p <SOURCE_DOCKER_PASSWORD>

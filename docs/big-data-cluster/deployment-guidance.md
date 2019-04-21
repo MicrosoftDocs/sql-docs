@@ -16,17 +16,17 @@ ms.custom: seodec18
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-SQL Server big data cluster can be deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
+SQL Server big data cluster is deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 
-- Set up Kubernetes cluster on a single VM, cluster of VMs, or in Azure Kubernetes Service (AKS).
+- Set up a Kubernetes cluster on a single VM, cluster of VMs, or in Azure Kubernetes Service (AKS).
 - Install the cluster configuration tool **mssqlctl** on your client machine.
-- Deploy SQL Server big data cluster in a Kubernetes cluster.
+- Deploy a SQL Server big data cluster in a Kubernetes cluster.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## Deploy SQL Server 2019 big data tools
+## Install SQL Server 2019 big data tools
 
-Before deploying SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):
+Before deploying a SQL Server 2019 big data cluster, first [install the big data tools](deploy-big-data-tools.md):
 
 - **mssqlctl**
 - **kubectl**
@@ -38,11 +38,11 @@ Before deploying SQL Server 2019 big data cluster, first [install the big data t
 SQL Server big data clusters require a minimum Kubernetes version of at least v1.10 for both server and client (kubectl).
 
 > [!NOTE]
-> Note that the client and server Kubernetes versions should be +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> Note that the client and server Kubernetes versions should be within +1 or -1 minor version. For more information, see [Kubernetes supported releases and component skew](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
 ### <a id="kubernetes"></a> Kubernetes cluster setup
 
-If you already have a Kubernetes cluster that meets above prerequisites, then you can skip directly to the [deployment step](#deploy). This section assumes a basic understanding of Kubernetes concepts.  For detailed information on Kubernetes, see the [Kubernetes documentation](https://kubernetes.io/docs/home).
+If you already have a Kubernetes cluster that meets the above prerequisites, then you can skip directly to the [deployment step](#deploy). This section assumes a basic understanding of Kubernetes concepts.  For detailed information on Kubernetes, see the [Kubernetes documentation](https://kubernetes.io/docs/home).
 
 You can choose to deploy Kubernetes in any of three ways:
 
@@ -67,7 +67,7 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 
 ## <a id="deploy"></a> Deployment overview
 
-Starting in CTP 2.5, most big data cluster settings are defined in a JSON deployment configuration file. You can use a default deployment profile for AKS, kubeadm, or minikube. Or you can customize your own deployment configuration file to use during setup. For security reasons, authentication settings are passed with environment variables.
+Starting in CTP 2.5, most big data cluster settings are defined in a JSON deployment configuration file. You can use a default deployment profile for AKS, kubeadm, or minikube or you can customize your own deployment configuration file to use during setup. For security reasons, authentication settings are passed via environment variables.
 
 The following sections provide more details on how to configure your big data cluster deployments as well as examples of common customizations.
 
@@ -179,10 +179,10 @@ mssqlctl cluster create --config-file aks-dev-test.json `
 
 Please note the following guidelines:
 
-- For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [EAP registration](https://aka.ms/eapsignup).
-- Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure they are sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
-- The **SA** account is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
-- The **DOCKER_IMAGE_TAG** in this example controls which release you are installing. In this example it is the CTP 2.5 release.
+- For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [Early Adoption Program registration](https://aka.ms/eapsignup).  Signup for the Early Adoption Program is required to test SQL Server big data clusters.
+- Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
+- The **SA** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
+- The **DOCKER_IMAGE_TAG** in this example controls which release you are installing. In this example, it is the CTP 2.5 release.
 
 ## <a id="unattended"></a> Unattended install
 
@@ -196,7 +196,7 @@ During cluster bootstrap, the client command window will output the deployment s
 2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-After 15 to 30 minutes, you should be notified that the controller pod is running:
+In less than 15 to 30 minutes, you should be notified that the controller pod is running:
 
 ```output
 2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
@@ -238,7 +238,7 @@ After the deployment script has completed successfully, you can obtain the IP ad
    mssqlctl login --endpoint https://<ip-address>:30777
    ```
 
-   Specify the username and password that you configured for the controller during deployment.
+   Specify the username and password that you configured for the controller (CONTROLLER_USERNAME and CONTROLLER_PASSWORD) during deployment.
 
 1. Run **mssqlctl cluster endpoints list** to get a list with a description of each endpoint and their corresponding IP address and port values. For example, the following displays the output for the Management Portal endpoint:
 

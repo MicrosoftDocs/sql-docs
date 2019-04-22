@@ -43,37 +43,8 @@ manager: craigg
 > [!NOTE]  
 >  For more information about the prerequisites and recommendations for forcing failover and for an example scenario that uses a forced failover to recover from a catastrophic failure, see [Example Scenario: Using a Forced Failover to Recover from a Catastrophic Failure](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy), later in this topic.  
   
--   **Before you begin:**  
   
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Potential Ways to Avoid Data Loss After Quorum is Forced](#WaysToAvoidDataLoss)  
-  
-     [Security](#Security)  
-  
--   **To force failover (with possible data loss), using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:** [Essential Tasks After a Forced Failover](#FollowUp)  
-  
--   **Example Scenario:** [Using a Forced Failover to Recover from a Catastrophic Failure](#ExampleRecoveryFromCatastrophy)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   The only time that you cannot perform a forced failover is when Windows Server Failover Clustering (WSFC) cluster lacks quorum.  
   
@@ -88,13 +59,13 @@ manager: craigg
     > [!NOTE]  
     >  Support for cross-database and distributed transactions vary by SQL Server and operating system versions. For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   The WSFC cluster has quorum. If the cluster lacks quorum, see [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 -   You must be able to connect to a server instance that hosts a replica whose role is in the SECONDARY or RESOLVING state.  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations  
   
 -   Do not force failover while the primary replica is still running.  
   
@@ -107,7 +78,7 @@ manager: craigg
   
 -   If clients are able to connect to the original primary, a forced failover incurs some risk of split brain behavior. Before you force failover, we strongly recommend that you prevent clients from accessing the original primary replica. Otherwise, after failover is forced, the original primary databases and the current primary databases could be updated independently of the other.  
   
-###  <a name="WaysToAvoidDataLoss"></a> Potential Ways to Avoid Data Loss After Quorum is Forced  
+##  <a name="WaysToAvoidDataLoss"></a> Potential Ways to Avoid Data Loss After Quorum is Forced  
  Under some failure conditions after quorum is lost, you can avoid prevent data loss, as follows:  
   
 -   **If the original primary replica comes online**  
@@ -134,9 +105,8 @@ manager: craigg
     > [!NOTE]  
     >  When you force failover to a secondary replica, the amount of data loss will depend on how far the failover target is lagging behind the primary replica. Unfortunately, when the WSFC cluster lacks quorum or quorum has been forced, you cannot assess the amount of potential data loss. Note, however, that once the WSFC cluster regains a healthy quorum, you could begin to track potential data loss. For more information, see "Tracking Potential Data Loss" in [Failover and Failover Modes &#40;Always On Availability Groups&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
@@ -291,7 +261,7 @@ manager: craigg
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  The following figure illustrates the series of actions performed at the remote data center in response a catastrophic failure at the main data center.  
   
- ![Steps for responding to failure of main data cente](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data cente")  
+ ![Steps for responding to failure of main data center](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data center")  
   
  The steps in this figure indicate the following steps:  
   

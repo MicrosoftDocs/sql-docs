@@ -21,39 +21,21 @@ manager: craigg
 > [!NOTE]  
 >  For an introduction to availability groups, see [Overview of Always On Availability Groups &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
--   **Before you begin:**  
-  
-     [Prerequisites, Restrictions, and Recommendations](#PrerequisitesRestrictions)  
-  
-     [Security](#Security)  
-  
-     [Summary of Tasks and Corresponding PowerShell Cmdlets](#SummaryPSStatements)  
-  
-     [To Set Up and Use the SQL Server PowerShell Provider](#PsProviderLinks)  
-  
--   **To create and configure an availability group, using:**  [Using PowerShell to Create and Configure an Availability Group](#PowerShellProcedure)  
-  
--   **Examples:**  [Using PowerShell to Create an Availability Group](#ExampleConfigureGroup)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
 > [!NOTE]  
 >  As an alternative to using PowerShell cmdlets, you can use the Create Availability Group wizard or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. For more information, see [Use the New Availability Group Dialog Box &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md) or [Create an Availability Group &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
- We strongly recommend that you read this section before attempting to create your first availability group.  
   
-###  <a name="PrerequisitesRestrictions"></a> Prerequisites, Restrictions, and Recommendations  
+##  <a name="PrerequisitesRestrictions"></a> Prerequisites, Restrictions, and Recommendations  
   
 -   Before creating an availability group, verify that the host instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] each resides on a different Windows Server Failover Clustering (WSFC) node of a single WSFC failover cluster. Also, verify that your server instances met the other server-instance prerequisites and that all of the other [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requirements are meet and that you are aware of the recommendations. For more information, we strongly recommend that you read [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires membership in the **sysadmin** fixed server role and either CREATE AVAILABILITY GROUP server permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
+  
+##  <a name="PowerShellProcedure"></a> Using PowerShell to Create and Configure an Availability Group  
+
 ###  <a name="SummaryPSStatements"></a> Summary of Tasks and Corresponding PowerShell Cmdlets  
  The following table lists the basic tasks involved in configuring an availability group and indicates those that are supported by PowerShell cmdlets. The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tasks must be performed in the sequence in which they are presented in the table.  
   
@@ -72,8 +54,6 @@ manager: craigg
 -   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
-  
-##  <a name="PowerShellProcedure"></a> Using PowerShell to Create and Configure an Availability Group  
   
 > [!NOTE]  
 >  To view the syntax and an example of a given cmdlet, use the **Get-Help** cmdlet in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  

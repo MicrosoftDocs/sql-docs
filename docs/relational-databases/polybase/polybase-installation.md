@@ -34,12 +34,13 @@ To install a trial version of SQL Server, go to [SQL Server evaluations](https:/
    
 - TCP/IP must be enabled for PolyBase to function correctly. TCP/IP is enabled by default on all editions of SQL Server except for the Developer and Express SQL Server editions. For PolyBase to function correctly on the Developer and Express editions, you must enable TCP/IP connectivity. See [Enable or disable a server network protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
-- MSVC++ 2012. 
 
-> [!NOTE]
-> 
+> [!NOTE] 
 > PolyBase can be installed on only one SQL Server instance per machine.
-> 
+
+
+>[!NOTE] In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
+
 > [!IMPORTANT]
 > 
 > To use the computation pushdown functionality against Hadoop, the target Hadoop cluster must have the core components of HDFS, YARN and MapReduce, with the job history server enabled. PolyBase submits the pushdown query via MapReduce and pulls status from the job history server. Without either component, the query fails.

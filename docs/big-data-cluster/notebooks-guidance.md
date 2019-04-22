@@ -16,7 +16,7 @@ ms.custom: seodec18
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article describes how to launch the Notebook experience in Azure Data Studio and how to start authoring your own notebooks. It also shows how to write Notebooks using different kernels.
+This article describes how to launch the Notebook experience in the latest release of [**Azure Data Studio**](../azure-data-studio/download.md) and how to start authoring your own notebooks. It also shows how to write Notebooks using different kernels.
 
 ## Connect to SQL Server
 
@@ -43,7 +43,7 @@ There are multiple ways to launch a new notebook.
 
 The Notebook Installation in Azure Data Studio natively supports SQL Kernel. If you are a SQL developer and would like to use Notebooks, then this would be your chosen Kernel. 
 
-The SQL Kernel can also be used to connect to PostgreSQL server instances. If you are a PostgreSQL developer and would like to connect to your PostgreSQL Server, then download the [**PostgreSQL extension**](../azure-data-studio/postgres-extension.md) in the Azure Data Studio extension marketplace.
+The SQL Kernel can also be used to connect to PostgreSQL server instances. If you are a PostgreSQL developer and would like to connect the notebooks to your PostgreSQL Server, then download the [**PostgreSQL extension**](../azure-data-studio/postgres-extension.md) in the Azure Data Studio extension marketplace and then launch **New Notebook** to open a notebook instance to connect to the PostgreSQL server.
 
 ![PostgreSQL connection](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -113,6 +113,17 @@ Clicking outside the text cell will show the markdown text.
 Notebooks open in Azure Data Studio are default **Trusted**.
 
 If you open a Notebook from some other source, it will be opened in **Non Trusted** mode and then you can make it **Trusted**.
+
+### Run Cells
+If you want to run all cells in the Notebook then click on the **Run Cells** button in the toolbar.
+
+![Markdown text](media/notebooks-guidance/run-cell.png)
+
+### Clear Results
+
+If you want to clear the results of all the executed cells in the Notebook,then you can click on the **Clear Results** button in the toolbar.
+
+![Markdown text](media/notebooks-guidance/clear-results.png)
 
 ### Save
 

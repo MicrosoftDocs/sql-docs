@@ -1,7 +1,7 @@
 ---
 title: "ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/18/2018"
+ms.date: "04/18/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -43,7 +43,7 @@ ALTER CERTIFICATE certificate_name
     | WITH ACTIVE FOR BEGIN_DIALOG = [ ON | OFF ]  
   
 <private_key_spec> ::=   
-      FILE = 'path_to_private_key'   
+    [ FILE = 'path_to_private_key' | BINARY = private_key_bits ]
     | DECRYPTION BY PASSWORD = 'key_password'   
     | ENCRYPTION BY PASSWORD = 'password'   
 ```  
@@ -66,6 +66,11 @@ ALTER CERTIFICATE certificate_name
   
  FILE **='**_path\_to\_private\_key_**'**  
  Specifies the complete path, including file name, to the private key. This parameter can be a local path or a UNC path to a network location. This file will be accessed within the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. When you use this option, you must make sure that the service account has access to the specified file.  
+  
+ BINARY **='**_private\_key\_bits_**'**  
+ **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+ Private key bits specified as binary constant. These bits can be in encrypted form. If encrypted, the user must provide a decryption password. Password policy checks are not performed on this password. The private key bits should be in a PVK file format.  
   
  DECRYPTION BY PASSWORD **='**_key\_password_**'**  
  Specifies the password that is required to decrypt the private key.  

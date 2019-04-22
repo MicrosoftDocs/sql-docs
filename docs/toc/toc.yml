@@ -8116,6 +8116,10 @@
         href: ../azure-data-studio/sql-server-import-extension.md
       - name: SQL Server Profiler (preview)
         href: ../azure-data-studio/sql-server-profiler-extension.md
+      - name: SandDance extension (preview)
+        href: ../azure-data-studio/sanddance-extension.md
+      - name: PowerShell extension
+        href: ../azure-data-studio/powershell-extension.md
     - name: Extension Authoring
       items:
       - name: Extensibility overview
@@ -10098,6 +10102,8 @@
       items:
       - name: Use SSMS to manage
         href: ../linux/sql-server-linux-manage-ssms.md
+      - name: Use Azure Data Studio to manage
+        href: ../azure-data-studio/quickstart-sql-server.md
       - name: Use PowerShell to manage
         href: ../linux/sql-server-linux-manage-powershell.md
       - name: Use log shipping

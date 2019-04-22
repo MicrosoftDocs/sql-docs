@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "report server log files"
   - "files [Reporting Services], logs"
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Log Files and Sources

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "shared data sources"
   - "data sources"
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Embedded and Shared Data Connections or Data Sources (Report Builder and SSRS)

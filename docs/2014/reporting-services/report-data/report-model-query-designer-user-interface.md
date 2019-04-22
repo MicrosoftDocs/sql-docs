@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "datasets [Reporting Services], creating"
   - "query designers [Reporting Services]"
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Model Query Designer User Interface

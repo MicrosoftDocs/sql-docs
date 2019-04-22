@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "PathName property"
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # PathName Property (WMI MSReportServer_ConfigurationSetting)

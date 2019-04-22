@@ -8,8 +8,8 @@ ms.technology:
   - "database-engine"
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Add an Additional Reporting Services Web Front-end to a Farm

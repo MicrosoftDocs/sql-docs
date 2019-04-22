@@ -24,51 +24,9 @@ manager: "erikre"
 > [!IMPORTANT]  
 >  To create the first availability group listener of an availability group, we strongly recommend that you use [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Avoid creating a listener directly in the WSFC cluster except when necessary, for example, to create an additional listener.  
   
--   **Before you begin:**  
-  
-     [Does a Listener Exist for this Availability Group Already?](#DoesListenerExist)  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Requirements for the DNS Name of an Availability Group Listener](#DNSnameReqs)  
-  
-     [Windows Permissions](#WinPermissions)  
-  
-     [SQL Server Permissions](#SqlPermissions)  
-  
--   **To create or configure an availability group listener, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Troubleshooting**  
-  
-     [Failure to Create An Availability Group Listener Because of Active Directory Quotas](#ADQuotas)  
-  
--   **Follow-up: After Creating an Availability Group Listener**  
-  
-     [MultiSubnetFailover Keyword and Associated Features](#MultiSubnetFailover)  
-  
-     [RegisterAllProvidersIP Setting](#RegisterAllProvidersIP)  
-  
-     [HostRecordTTL Setting](#HostRecordTTL)  
-  
-     [Sample PowerShell Script to Disable RegisterAllProvidersIP and Reduce TTL](#SampleScript)  
-  
-     [Follow-up Recommendations](#FollowUpRecommendations)  
-  
-     [Create an Additional Listener for an Availability Group (Optional)](#CreateAdditionalListener)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="DoesListenerExist"></a> Does a Listener Exist for this Availability Group Already?  
+ 
+##  <a name="DoesListenerExist"></a> Does a Listener Exist for this Availability Group Already?  
+
  **To determine whether a listener already exists for the availability group**  
   
 -   [View Availability Group Listener Properties &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
@@ -76,14 +34,14 @@ manager: "erikre"
 > [!NOTE]  
 >  If a listener already exists and you want to create an additional listener, see [To Create An Additional Listener for an Availability Group (Optional)](#CreateAdditionalListener), later in this topic.  
   
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+##  <a name="Restrictions"></a> Limitations and Restrictions  
   
 -   You can create only one listener per availability group through [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Typically, each availability group requires only one listener. However, some customer scenarios require multiple listeners for one availability group.   After creating a listener through SQL Server, you can use Windows PowerShell for failover clusters or the WSFC Failover Cluster Manager to create additional listeners. For more information, see [To Create An Additional Listener for an Availability Group (Optional)](#CreateAdditionalListener), later in this topic.  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations  
  Using a static IP address is recommended, although not required, for multiple subnet configurations.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   You must be connected to the server instance that hosts the primary replica.  
   
@@ -100,7 +58,7 @@ manager: "erikre"
 > [!IMPORTANT]  
 >  NetBIOS recognizes only the first 15 chars in the dns_name. If you have two WSFC clusters that are controlled by the same Active Directory and you try to create availability group listeners in both of clusters using names with more than 15 characters and an identical 15 character prefix, you will get an error reporting that the Virtual Network Name resource could not be brought online. For information about prefix naming rules for DNS names, see [Assigning Domain Names](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
-###  <a name="WinPermissions"></a> Windows Permissions  
+##  <a name="WinPermissions"></a> Windows Permissions  
   
 |Permissions|Link|  
 |-----------------|----------|  
@@ -110,7 +68,7 @@ manager: "erikre"
 > [!TIP]  
 >  Generally, it is simplest not to prestage the computer account for a listener virtual network name. If you can, let the account to be created and configured automatically when you run the WSFC High Availability wizard.  
   
-###  <a name="SqlPermissions"></a> SQL Server Permissions  
+##  <a name="SqlPermissions"></a> SQL Server Permissions  
   
 |Task|Permissions|  
 |----------|-----------------|  

@@ -4,17 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-  - "analysis-services/multidimensional-tabular"
-  - "data-quality-services"
-  - "database-engine"
-  - "integration-services"
-  - "master-data-services"
-  - "replication"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+ms.technology: sql
 ms.topic: conceptual
 helpviewer_keywords: 
   - "definitions [SQL Server]"
@@ -26,8 +16,24 @@ ms.author: heidist
 manager: craigg
 ---
 # Glossary
-  
-  
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
+  - "analysis-services"
+  - "analysis-services/data-mining"
+  - "analysis-services/multidimensional-tabular"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+-->
+
 ## Terms  
   
 |Term|Definition|  

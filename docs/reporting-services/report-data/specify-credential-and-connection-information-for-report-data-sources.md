@@ -26,8 +26,8 @@ helpviewer_keywords:
   - "security [Reporting Services], data sources"
   - "Windows integrated security [Reporting Services]"
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Specify Credential and Connection Information for Report Data Sources
   A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. You can specify credentials that use Windows Authentication, database authentication, no authentication, or custom authentication. When sending a connection request over the network, the report server will either impersonate a user account or the unattended execution account. For more information about the security context under which a connection request is made, see [Data Source Configuration and Network Connections](#DataSourceConfigurationConnections) further on in this topic.  

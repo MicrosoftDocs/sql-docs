@@ -1,1 +1,1 @@
- SQL Server 2016 Reporting Services and later (SSRS)
+ SQL Server 2016 Reporting Services or later (SSRS)

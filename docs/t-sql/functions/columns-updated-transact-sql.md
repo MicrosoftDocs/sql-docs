@@ -57,7 +57,7 @@ FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'Person';  
 ```  
 
-If a column is listed in a statement that leads to a trigger, the `COLUMNS_UPDATED` value will return as `true` or `1`, even if the column value remains unchanged. This is by-design, and the trigger should implement business logic that determines if the insert/update/delete operation is permissible or not. This can range from checking for modification of column values, disallowing certain combinations to be updated, allowing only single-row updates and so on. 
+If a trigger applies to a column, the `COLUMNS_UPDATED` returns as `true` or `1`, even if the column value remains unchanged. This is by-design, and the trigger should implement business logic that determines if the insert/update/delete operation is permissible or not. This can range from checking for modification of column values, disallowing certain combinations to be updated, allowing only single-row updates and so on. 
   
 ## Column sets
 When a column set is defined on a table, the `COLUMNS_UPDATED` function behaves in the following ways:

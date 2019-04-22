@@ -25,8 +25,7 @@ At this time, CTP 2.4 supports connecting to Azure Data Lake Storage Gen2 and Am
 With tiering, applications can seamlessly access data in a variety of external stores as though the data resides in the local HDFS. Mounting is a metadata operation, where the metadata that describes the namespace on the external file system is copied over to your local HDFS. This metadata includes information about the external directories and files along with their permissions and ACLs. The corresponding data is only copied on-demand, when the data itself is accessed through for example a query. The external file-system data can now be accessed from the SQL Server big data cluster. You can run Spark jobs and SQL queries on this data in the same way that you would run them on any local data stored in HDFS on the cluster.
 
 ### Caching
-Today, by default, 1% of the total HDFS storage will be reserved for caching of mounted data. Caching as a global setting across mounts. In future CTPs, we will allow user to set a cache size/fraction at the time of mount.
-
+Today, by default, 1% of the total HDFS storage will be reserved for caching of mounted data. Caching is a global setting across mounts.
 
 > [!NOTE]
 > HDFS Tiering is a feature developed by Microsoft, and an earlier version of it has been released as part of Apache Hadoop 3.1 distribution. For more information, see [https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806) for details.

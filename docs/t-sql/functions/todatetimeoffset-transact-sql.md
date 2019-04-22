@@ -1,7 +1,7 @@
 ---
 title: "TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "04/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -64,7 +64,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 DECLARE @todaysDateTime datetime2;  
 SET @todaysDateTime = GETDATE();  
 SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
--- RETURNS 2007-08-30 15:51:34.7030000 -07:00  
+-- RETURNS 2019-04-22 16:23:51.7666667 -07:00  
 ```  
   
 ### B. Changing the time zone offset in minutes  

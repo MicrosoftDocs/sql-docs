@@ -1,7 +1,7 @@
 ---
 title: "PDO::setAttribute | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/11/2019"
+ms.date: "04/22/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -19,8 +19,7 @@ Sets a predefined PDO attribute or a custom driver attribute.
   
 ## Syntax  
   
-```  
-  
+```
 bool PDO::setAttribute ( $attribute, $value );  
 ```  
   

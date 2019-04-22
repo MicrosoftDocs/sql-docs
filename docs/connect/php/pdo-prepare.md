@@ -1,7 +1,7 @@
 ---
 title: "PDO::prepare | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "04/22/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -39,23 +39,22 @@ The following table lists the possible *key_pair* values.
   
 |Key|Description|  
 |-------|---------------|  
-|PDO::ATTR_CURSOR|Specifies cursor behavior. The default is PDO::CURSOR_FWDONLY. PDO::CURSOR_SCROLL is a static cursor.<br /><br />For example, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />If you use PDO::CURSOR_SCROLL, you can use PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE, which is described below.<br /><br />See [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) for more information about result sets and cursors in the PDO_SQLSRV driver.|  
+|PDO::ATTR_CURSOR|Specifies cursor behavior. The default is PDO::CURSOR_FWDONLY, a non-scrollable forward cursor. PDO::CURSOR_SCROLL is a scrollable cursor.<br /><br />For example, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />When set to PDO::CURSOR_SCROLL, you can then use PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE to set the type of scrollable cursor, which is described below.<br /><br />See [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) for more information about result sets and cursors in the PDO_SQLSRV driver.|  
 |PDO::ATTR_EMULATE_PREPARES|By default, this attribute is false, which can be changed by this `PDO::ATTR_EMULATE_PREPARES => true`. See [Emulate Prepare](#emulate-prepare) for details and example.|
+|PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|Specifies the type of scrollable cursor. Only valid when PDO::ATTR_CURSOR is set to PDO::CURSOR_SCROLL. See below for the values this attribute can take.|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (default)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|When True, specifies direct query execution. False means prepared statement execution. For more information about PDO::SQLSRV_ATTR_DIRECT_QUERY, see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|For more information, see [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|  
   
-When you use PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, you can use PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE. For example,  
-  
+When using PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, you can use PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE to specify the type of cursor. For example, pass the following array to PDO::prepare to set a dynamic cursor:
 ```  
 array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_DYNAMIC));  
-```  
-  
-The following table shows the possible values for PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE.  
+```
+The following table shows the possible values for PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE. For more information about scrollable cursors, see [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
   
 |Value|Description|  
 |---------|---------------|  
-|PDO::SQLSRV_CURSOR_BUFFERED|Creates a client-side (buffered) static cursor. For more information about client-side cursors, see [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_CURSOR_BUFFERED|Creates a client-side (buffered) static cursor, which buffers the result set in memory on the local machine.|  
 |PDO::SQLSRV_CURSOR_DYNAMIC|Creates a server-side (unbuffered) dynamic cursor, which lets you access rows in any order and will reflect changes in the database.|  
 |PDO::SQLSRV_CURSOR_KEYSET_DRIVEN|Creates a server-side keyset cursor. A keyset cursor does not update the row count if a row is deleted from the table (a deleted row is returned with no values).|  
 |PDO::SQLSRV_CURSOR_STATIC|Creates a server-side static cursor, which lets you access rows in any order but will not reflect changes in the database.<br /><br />PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL implies PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_STATIC.|  
@@ -63,7 +62,7 @@ The following table shows the possible values for PDO::SQLSRV_ATTR_CURSOR_SCROLL
 You can close a PDOStatement object by setting it to null.  
   
 ## Example  
-This example shows how to use the PDO::prepare method with parameter markers and a forward-only cursor.  
+This example shows how to use PDO::prepare with parameter markers and a forward-only cursor.  
   
 ```  
 <?php  
@@ -90,7 +89,7 @@ $stmt = null
 ```  
 
 ## Example  
-This example shows how to use the PDO::prepare method with a client-side cursor. For a sample showing a server-side cursor, see [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).  
+This example shows how to use PDO::prepare with a server-side static cursor. For a sample showing a client-side cursor, see [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).  
   
 ```  
 <?php  
@@ -133,7 +132,7 @@ print_r($row);
 
 ## Example 
 
-This example shows how to use the PDO::prepare method with `PDO::ATTR_EMULATE_PREPARES` set to true. 
+This example shows how to use PDO::prepare with `PDO::ATTR_EMULATE_PREPARES` set to true. 
 
 ```
 <?php

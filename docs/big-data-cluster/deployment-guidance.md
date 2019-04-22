@@ -142,10 +142,7 @@ The following environment variables are used for security settings that are not 
 | **KNOX_PASSWORD** | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | The password of SA user for SQL master instance. |
 
-These environment variables can be set prior to calling **mssqlctl cluster create** or by using the **--env-var** parameter. If any variable is not set, you are prompted for it.
-
-> [!IMPORTANT]
-> If you are passing the environment variables through the **--env-var** parameter, the environment variables are process scoped, and not set at system level. Hence, they will exist only in the context of the create command. Hence, subsequent commands will require login or setting the environment variables corresponding to controller credentials.
+These environment variables must be set prior to calling **mssqlctl cluster create**. If any variable is not set, you are prompted for it.
 
 The following example shows how to set the environment variables for Linux (bash) and Windows (PowerShell):
 
@@ -173,10 +170,10 @@ SET DOCKER_PASSWORD=<docker-password>
 SET DOCKER_IMAGE_TAG=ctp2.5
 ```
 
-Upon setting the environment variables, you run mssqlctl cluster create command to trigger the deployment:
+Upon setting the environment variables, you must run mssqlctl cluster create command to trigger the deployment. This example uses the cluster configuration file created above:
 
 ```
-mssqlctl cluster create --config-file aks-dev-test.json --accept-eula yes
+mssqlctl cluster create --config-file custom.json --accept-eula yes
 ```
 
 Please note the following guidelines:

@@ -41,7 +41,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 | Service endpoint and pod name changes | For more information, see the [big data cluster release notes](../big-data-cluster/release-notes-big-data-cluster.md). |
 | **mssqlctl** improvements | Use **mssqlctl** to [list external endpoints](../big-data-cluster/deployment-guidance.md#endpoints) and check the version of **mssqlctl** with the `--version` parameter. |
 | Offline install | [Guidance for offline big data cluster deployments](../big-data-cluster/deploy-offline.md). |
-| HDFS tiering improvements | HDFS tiering against Amazon S3 storage. OAuth support for ADLS Gen2. Caching functionality for better performance. For more information, see [HSDFS Tiering](hdfs-tiering.md) |
+| HDFS tiering improvements | HDFS tiering against Amazon S3 storage. OAuth support for ADLS Gen2. Caching functionality for better performance. For more information, see [HSDFS Tiering](../big-data-cluster/hdfs-tiering.md) |
 | Spark to SQL Server connector | [Read and write to SQL Server from Spark using the MSSQL JDBC Connector](../big-data-cluster/spark-mssql-connector.md) |
 | &nbsp; | &nbsp; |
 

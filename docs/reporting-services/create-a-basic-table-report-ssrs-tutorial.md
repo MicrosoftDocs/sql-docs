@@ -16,7 +16,7 @@ ms.author: maggies
 ---
 # Create a Basic Table Report (SSRS Tutorial)
 
-In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssrscurrent-md](../includes/ssrscurrent-md)] paginated report with a table, based on the **[!INCLUDE[sssampledbadventureworks2016_md](../includes/sssampledbadventureworks2016-md.md)]** database. You can also create [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
+In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssrscurrent-md](../includes/ssrscurrent-md)] paginated report with a table, based on the **[!INCLUDE[sssampledbadventureworks2016_md](../includes/sssampledbadventureworks2016-md.md)]** database. You can also create [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
 
 As you go through this tutorial, you will create a report project, set up connection information, define a query, add a Table data region, group and total some fields, and preview the report.  
   
@@ -25,8 +25,8 @@ As you go through this tutorial, you will create a report project, set up connec
 Your system must have the following installed to use this tutorial:
 
 - [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] database engine.  
-- [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].
-- The [!INCLUDE[ssSampleDBAdventureworks2017_md](../includes/sssampledbadventureworks2017-md.md)] database.  For more information, see [Adventure Works Sample Databases)](https://github.com/Microsoft/sql-server-samples/releases).  
+- [!INCLUDE[ssrscurrent-md](../includes/ssrscurrent-md.md)].
+- The [!INCLUDE[ssSampleDBAdventureworks2016_md](../includes/sssampledbadventureworks2016-md.md)] database.  For more information, see [Adventure Works Sample Databases)](https://github.com/Microsoft/sql-server-samples/releases).  
   
  - Make sure the Visual Studio [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) option and the Visual Studio Extension for "Reporting Services" are installed so you have the SSRS Report Designer.
   

@@ -136,7 +136,7 @@ The following environment variables are used for security settings that are not 
 | **DOCKER_REPOSITORY** | The private repository within the above registry where images are stored. |
 | **DOCKER_USERNAME** | The username to access the container images in case they are stored in a private repository. |
 | **DOCKER_PASSWORD** | The password to access the above private repository. |
-| **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to **latest**. |
+| **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to **latest**, but we receommend using the tag corresponding to the release to avoid version incompatibility issues. |
 | **CONTROLLER_USERNAME** | The username for the cluster administrator. |
 | **CONTROLLER_PASSWORD** | The password for the cluster administrator. |
 | **KNOX_PASSWORD** | The password for Knox user. |
@@ -147,34 +147,36 @@ These environment variables can be set prior to calling **mssqlctl cluster creat
 > [!IMPORTANT]
 > If you are passing the environment variables through the **--env-var** parameter, the environment variables are process scoped, and not set at system level. Hence, they will exist only in the context of the create command. Hence, subsequent commands will require login or setting the environment variables corresponding to controller credentials.
 
-The following example shows how to pass the environment variables on the command-line for Linux (bash) and Windows (PowerShell):
+The following example shows how to set the environment variables for Linux (bash) and Windows (PowerShell):
 
 ```bash
-mssqlctl cluster create --config-file aks-dev-test.json \
-   --accept-eula yes --env-var \
-   CONTROLLER_USERNAME=admin,\
-   CONTROLLER_PASSWORD=<password>,\
-   DOCKER_REGISTRY=<docker-registry>,\
-   DOCKER_REPOSITORY=<docker-repository>,\
-   MSSQL_SA_PASSWORD=<password>,\
-   KNOX_PASSWORD=<password>,\
-   DOCKER_USERNAME=<docker-username>,\
-   DOCKER_PASSWORD=<docker-password>,\
-   DOCKER_IMAGE_TAG=ctp2.5
+export CONTROLLER_USERNAME=<controller_user>
+export CONTROLLER_PASSWORD=<password>
+export DOCKER_REGISTRY=<docker-registry>
+export DOCKER_REPOSITORY=<docker-repository>
+export MSSQL_SA_PASSWORD=<password>
+export KNOX_PASSWORD=<password>
+export DOCKER_USERNAME=<docker-username>
+export DOCKER_PASSWORD=<docker-password>
+export DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 ```PowerShell
-mssqlctl cluster create --config-file aks-dev-test.json `
-   --accept-eula yes --env-var `
-   CONTROLLER_USERNAME=admin,`
-   CONTROLLER_PASSWORD=<password>,`
-   DOCKER_REGISTRY=<docker-registry>,`
-   DOCKER_REPOSITORY=<docker-repository>,`
-   MSSQL_SA_PASSWORD=<password>,`
-   KNOX_PASSWORD=<password>,`
-   DOCKER_USERNAME=<docker-username>,`
-   DOCKER_PASSWORD=<docker-password>,`
-   DOCKER_IMAGE_TAG=ctp2.5
+SET CONTROLLER_USERNAME=admin
+SET CONTROLLER_PASSWORD=<password>
+SET DOCKER_REGISTRY=<docker-registry>
+SET DOCKER_REPOSITORY=<docker-repository>
+SET MSSQL_SA_PASSWORD=<password>
+SET KNOX_PASSWORD=<password>
+SET DOCKER_USERNAME=<docker-username>
+SET DOCKER_PASSWORD=<docker-password>
+SET DOCKER_IMAGE_TAG=ctp2.5
+```
+
+Upon setting the environment variables, you run mssqlctl cluster create command to trigger the deployment:
+
+```
+mssqlctl cluster create --config-file aks-dev-test.json --accept-eula yes
 ```
 
 Please note the following guidelines:

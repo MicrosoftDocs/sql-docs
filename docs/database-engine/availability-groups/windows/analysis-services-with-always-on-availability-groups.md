@@ -21,18 +21,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
  Processing and querying are read-only workloads. You can improve performance by offloading these workloads to a readable secondary replica. Additional configuration is required for this scenario. Use the checklist in this topic to ensure you follow all the steps.  
   
- [Prerequisites](#bkmk_prereq)  
-  
- [Checklist: Use a secondary replica for read-only operations](#bkmk_UseSecondary)  
-  
- [Create an Analysis Services data source using an Always On availability database](#bkmk_ssasAODB)  
-  
- [Test the configuration](#bkmk_test)  
-  
- [What happens after a failover occurs](#bkmk_whathappens)  
-  
- [Writeback when using an Always On availability database](#bkmk_writeback)  
-  
 ##  <a name="bkmk_prereq"></a> Prerequisites  
  You must have a SQL Server login on all replicas. You must be a **sysadmin** to configure availability groups, listeners, and databases, but users only need **db_datareader** permissions to access the database from an Analysis Services client.  
   

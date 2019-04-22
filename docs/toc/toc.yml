@@ -8120,6 +8120,10 @@
         href: ../azure-data-studio/sql-server-import-extension.md
       - name: SQL Server Profiler (preview)
         href: ../azure-data-studio/sql-server-profiler-extension.md
+      - name: SandDance extension (preview)
+        href: ../azure-data-studio/sanddance-extension.md
+      - name: PowerShell extension
+        href: ../azure-data-studio/powershell-extension.md
     - name: Extension Authoring
       items:
       - name: Extensibility overview

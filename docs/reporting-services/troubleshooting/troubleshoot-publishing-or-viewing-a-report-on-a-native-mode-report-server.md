@@ -8,8 +8,8 @@ ms.technology: troubleshooting
 
 ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server
   

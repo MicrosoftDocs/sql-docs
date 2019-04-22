@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Login Dialog Box (Report Builder)

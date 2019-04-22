@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "report processing [Reporting Services], verifying execution"
   - "checking report execution"
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Verifying a Report Run

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SharePoint List Query Designer (Report Builder)

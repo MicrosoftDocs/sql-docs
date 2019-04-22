@@ -24,25 +24,7 @@ manager: "erikre"
  A key benefit of using [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data sources is to leverage readable secondary replicas as a reporting data source while, at the same time the secondary replicas are providing a failover for a primary database.  
   
  For general information on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Always On FAQ for SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
-  
- **In This Topic:**  
-  
--   [Requirements for using Reporting Services and Always On Availability Groups](#bkmk_requirements)  
-  
--   [Report Data Sources and Availability Groups](#bkmk_reportdatasources)  
-  
--   [Report Design and Availability Groups](#bkmk_reportdesign)  
-  
--   [Report Server Databases and Availability Groups](#bkmk_reportserverdatabases)  
-  
--   -   [Differences between SharePoint Native Mode](#bkmk_differences_in_server_mode)  
-  
-    -   [Prepare Report Server Databases for Availability Groups](#bkmk_prepare_databases)  
-  
-    -   [Steps to complete disaster recovery of Report Server Databases](#bkmk_steps_to_complete_failover)  
-  
-    -   [Report Server Behavior When a Failover Occurs](#bkmk_failover_behavior)  
-  
+
 ##  <a name="bkmk_requirements"></a> Requirements for using Reporting Services and Always On Availability Groups  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and Power BI Report Server uses the .Net framework 4.0 and supports [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] connection string properties for use with data sources.  
   
@@ -158,7 +140,7 @@ manager: "erikre"
   
 -   **Report Server Credentials:** You need to create the appropriate report server credentials on the secondary replicas that you created on the primary. The exact steps depend on what type of authentication you are using in your [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] environment; Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service account, Windows user account, or SQL Server authentication. For more information, see [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
--   Update the database connection to use the Listener DNS Name. for natve mode report servers, change the **Report Server Database Name** in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration manager. For SharePoint mode, change the **Database server name** for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application(s).  
+-   Update the database connection to use the Listener DNS Name. for native mode report servers, change the **Report Server Database Name** in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuration manager. For SharePoint mode, change the **Database server name** for the [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] service application(s).  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> Steps to complete disaster recovery of Report Server Databases  
  The following steps need to be completed after a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] failover to a secondary replica:  

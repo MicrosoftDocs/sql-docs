@@ -1,7 +1,7 @@
 ---
 title: Discontinued functionality
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ""
 ms.prod: reporting-services

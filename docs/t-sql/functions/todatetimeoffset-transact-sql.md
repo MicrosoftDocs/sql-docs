@@ -60,7 +60,7 @@ TODATETIMEOFFSET ( expression , time_zone )
 ### A. Changing the time zone offset of the current date and time  
  The following example changes the zone offset of the current date and time to time zone `-07:00`.  
   
-```  
+```sql  
 DECLARE @todaysDateTime datetime2;  
 SET @todaysDateTime = GETDATE();  
 SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
@@ -70,7 +70,7 @@ SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');
 ### B. Changing the time zone offset in minutes  
  The following example changes the current time zone to `-120` minutes.  
   
-```  
+```sql  
 SELECT TODATETIMEOFFSET(SYSDATETIME(), -120)
 -- RETURNS: 2019-04-22 11:39:21.6986813 -02:00  
 ```  
@@ -78,7 +78,7 @@ SELECT TODATETIMEOFFSET(SYSDATETIME(), -120)
 ### C. Adding a 13-hour time zone offset  
  The following example adds a 13-hour time zone offset to a date and time.  
   
-```  
+```sql  
 SELECT TODATETIMEOFFSET(SYSDATETIME(), '+13:00')
 -- RETURNS: 2019-04-22 11:39:29.0339301 +13:00
 ```  

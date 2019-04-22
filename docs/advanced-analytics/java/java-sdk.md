@@ -1,10 +1,10 @@
 ---
-title: SDK for Java extension
+title: SDK for Java extension - SQL Server Language Extensions
 description: Description of the Microsoft Extensibility SDK for Java for Microsoft SQL Server 2019
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/18/2019
+ms.date: 04/22/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust
@@ -13,16 +13,14 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# Microsoft Extensibility SDK for Java for Microsoft SQL Server
+# Microsoft Extensibility SDK for Java for SQL Server
 
-In CTP 2.5, the way you implement a Java program that uses the Java language extension to communicate with SQL Server has changed.```
+In SQL Server CTP 2.5, you can implement a Java program for SQL Server using the Microsoft Extensibility SDK for Java. This is an interface for the Java language extension that is used to exchange data with SQL Server and to execute Java code from SQL Server.
 
 > [!Note]
 > The SDK in CTP 2.5 is a big change from previous CTPs. Any samples you had working will need to be updated to use the SDK instead.
 
-We are introducing an extension Java SDK for SQL Server. This is an interface the Java extension uses to exchange data with SQL Server and to execute Java code from SQL Server.
-
- Download the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension).
+Download the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension).
 
 ## Implementation requirements
 

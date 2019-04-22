@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article provides guidance on how to upgrade a SQL Server 2019 big data cluster to a new release. The steps in this article specifically apply to how to upgrade between preview releases.
+This article provides guidance on how to upgrade a SQL Server big data cluster to a new release. The steps in this article specifically apply to how to upgrade between preview releases.
 
 ## Backup and delete the old cluster
 
@@ -73,7 +73,7 @@ mssqlctl --version
 
 ## Install the new release
 
-After removing the previous big data cluster and installing the latest **mssqlctl**, deploy the new big data cluster by using the current deployment instructions. For more information, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md). Then restore any required databases or files.
+After removing the previous big data cluster and installing the latest **mssqlctl**, deploy the new big data cluster by using the current deployment instructions. For more information, see [How to deploy SQL Server big data clusters on Kubernetes](deployment-guidance.md). Then, restore any required databases or files.
 
 ## Next steps
 

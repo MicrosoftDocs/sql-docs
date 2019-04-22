@@ -18,6 +18,7 @@ ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 author: rothja
 ms.author: jroth
 manager: craigg
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # PolyBase query scenarios
 

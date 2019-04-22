@@ -40,7 +40,7 @@ You can confirm that Machine Learning Services (is enabled for your SQL Server i
     EXECUTE sp_execute_external_script
     @language =N'Python',
     @script=N'import sys
-	print(sys.version)';
+    print(sys.version)';
     GO
     ```
 
@@ -141,4 +141,4 @@ Microsoft provides a number of Python packages pre-installed with Machine Learni
 Now that you have confirmed your instance is ready to work with Python, take a closer look at a basic Python interaction.
 
 > [!div class="nextstepaction"]
-> [Quickstart: "Hello world" Python script in SQL Server ](quickstart-python-run-using-t-sql.md)
+> [Quickstart: "Hello world" Python script in SQL Server](quickstart-python-run-using-t-sql.md)

@@ -34,7 +34,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'** | *session ID* | **'ACTIVE'**  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'`
  Is used to filter the result set.  
   
  *login* is **sysname** that identifies processes belonging to a particular login.  

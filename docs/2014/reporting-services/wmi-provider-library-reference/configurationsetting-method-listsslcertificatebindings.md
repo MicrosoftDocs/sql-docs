@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ListSSLCertificateBindings method"
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # ListSSLCertificateBindings Method (WMI MSReportServer_ConfigurationSetting)
   Returns a list of installed SSL certificates on the computer.  

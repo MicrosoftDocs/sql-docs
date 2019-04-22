@@ -1,11 +1,11 @@
 ---
 title: Ingest data with Spark jobs
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This tutorial demonstrates how to ingest data into the data pool of a SQL Server 2019 big data cluster (preview) using Spark jobs in Azure Data Studio.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,6 +13,8 @@ ms.custom: seodec18
 ---
 
 # Tutorial: Ingest data into a SQL Server data pool with Spark jobs
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This tutorial demonstrates how to use Spark jobs to load data into the [data pool](concept-data-pool.md) of a SQL Server 2019 big data cluster (preview). 
 
@@ -44,7 +46,15 @@ The following steps create an external table in the data pool named **web_clicks
 
    ![SQL Server master instance query](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. Create an external table named **web_clickstreams_spark_results** in the data pool. The `SqlDataPool` data source is a special data source type that can be used from the master instance of any big data cluster.
+1. Create an external data source to the data pool if it does not already exist.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. Create an external table named **web_clickstreams_spark_results** in the data pool.
 
    ```sql
    USE Sales
@@ -59,7 +69,7 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 2.2, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 2.4, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Start a Spark streaming job
 

@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "reports [Reporting Services], properties"
   - "properties [Reporting Services], general"
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Configure General Properties for a Report (Report Manager)
     

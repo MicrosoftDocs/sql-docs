@@ -1,18 +1,21 @@
 ---
 title: What is the controller?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This article describes the controller of a SQL Server 2019 big data cluster (preview).
 author: mihaelablendea 
-ms.author: mihaelab 
+ms.author: mihaelab
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
-# What is the controller on a SQL Server 2019 big data cluster?
+# What is the controller on a SQL Server big data cluster?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 The controller hosts the core logic for deploying and managing a big data cluster. It takes care of all interactions with Kubernetes, SQL Server instances that are part of the cluster and other components like HDFS and Spark. 
 
@@ -24,15 +27,15 @@ The controller service provides the following core functionality:
 - Expose monitoring tools to observe the state of the cluster
 - Expose troubleshooting tools to detect and repair unexpected issues
 - Manage cluster security: ensure secure cluster endpoints, manage users and roles, configure credentials for intra-cluster communication
-- Manage the workflow of upgrades so that they are implemented safely (not available in CTP 2.2)
-- Manage high availability and DR for statefull services in the cluster (not available in CTP 2.2)
+- Manage the workflow of upgrades so that they are implemented safely (not available in CTP 2.4)
+- Manage high availability and DR for statefull services in the cluster (not available in CTP 2.4)
 
 ## Deploying the controller service
 
 The controller is deployed and hosted in the same Kubernetes namespace where the customer wants to build out a big data cluster. This service is installed by a Kubernetes administrator during cluster bootstrap, using the mssqlctl command-line utility:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 The buildout workflow will layout on top of Kubernetes a fully functional SQL Server big data cluster that includes all the components described in the [Overview](big-data-cluster-overview.md) article. The bootstrap workflow first creates the controller service, and once this is deployed, the controller service will coordinate the installation and configuration of rest of the services part of master, compute, data, and storage pools.
@@ -62,6 +65,7 @@ Authentication to the controller service endpoint is based on username and passw
 
 ## Next steps
 
-To learn more about the SQL Server big data clusters, see the following overview:
+To learn more about the SQL Server big data clusters, see the following resources:
 
 - [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

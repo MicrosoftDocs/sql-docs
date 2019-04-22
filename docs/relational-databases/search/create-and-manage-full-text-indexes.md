@@ -4,14 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes [SQL Server], about"
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -45,6 +45,7 @@ For more info, see [Populate Full-Text Indexes](../../relational-databases/searc
 
 ##  <a name="view"></a> View the properties of a full-text index
 ### View the properties of a full-text index with Transact-SQL
+
 |Catalog or Dynamic Management View|Description|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Returns a row for each full-text catalog to full-text index reference.|  
@@ -68,8 +69,8 @@ For more info, see [Populate Full-Text Indexes](../../relational-databases/searc
   
     |Page|Description|  
     |----------|-----------------|  
-    |**General**|Displays basic properties of the full-text index. These include several modifiable properties and a number of unchangeable properties such as database name, table name, and the name of full-text key column. The modifiable properties are:<br /><br /> **Full-Text Index Stoplist**<br /><br /> **Full-Text Indexing Enabled**<br /><br /> **Change Tracking**<br /><br /> **Search Property List**<br /><br />For more info, see [Full-Text Index Properties &#40;General Page&#41;](https://msdn.microsoft.com/library/f4dff61c-8c2f-4ff9-abe4-70a34421448f).|  
-    |**Columns**|Displays the table columns that are available for full-text indexing. The selected column or columns are full-text indexed. You can select as many of the available columns as you want to include in the full-text index. For more info, see [Full-Text Index Properties &#40;Columns Page&#41;](https://msdn.microsoft.com/library/75e52edb-0d07-4393-9345-8b5af4561e35).|  
+    |**General**|Displays basic properties of the full-text index. These include several modifiable properties and a number of unchangeable properties such as database name, table name, and the name of full-text key column. The modifiable properties are:<br /><br /> **Full-Text Index Stoplist**<br /><br /> **Full-Text Indexing Enabled**<br /><br /> **Change Tracking**<br /><br /> **Search Property List**|  
+    |**Columns**|Displays the table columns that are available for full-text indexing. The selected column or columns are full-text indexed. You can select as many of the available columns as you want to include in the full-text index. For more info, see [Populate Full-Text Indexes](populate-full-text-indexes.md).|
     |**Schedules**|Use this page to create or manage schedules for a SQL Server Agent job that starts an incremental table population for the full-text index populations. For more info, see [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Note: After you exit the **Full-Text Index Properties** dialog box, any newly created schedule is associated with a SQL Server Agent job (Start Incremental Table Population on *database_name*.*table_name*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] to save any changes and exit the **Full-text index Properties** dialog box.  

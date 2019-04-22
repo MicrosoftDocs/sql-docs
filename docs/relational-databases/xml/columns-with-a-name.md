@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Columns with a Name
@@ -151,7 +151,7 @@ FOR XML PATH, ELEMENTS XSINIL
  This is the result:  
   
 ```  
-<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

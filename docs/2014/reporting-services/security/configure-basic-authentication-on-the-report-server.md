@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "Reporting Services, configuration"
   - "Basic authentication"
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Configure Basic Authentication on the Report Server
   By default, Reporting Services accepts requests that specify Negotiate and NTLM authentication. If your deployment includes client applications or browsers that use Basic authentication, you must add Basic authentication to the list of supported types. In addition, if you want to use Report Builder, you must enable Anonymous access to the Report Builder files.  

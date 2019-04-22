@@ -11,9 +11,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapviewport.optimization.f1"
   - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Map Viewport Properties Dialog Box, Optimization
   Select **Optimization** for the **Map Viewport Properties** dialog box to help control the resolution for viewing a map in a report.  

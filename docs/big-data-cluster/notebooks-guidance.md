@@ -1,11 +1,11 @@
 ---
 title: Run notebooks in Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
-description: This article explains how to run Jupyter Notebooks in Azure Data Studio conneected to a SQL Server 2019 big data cluster.
+titleSuffix: SQL Server big data clusters
+description: This article explains how to run Jupyter Notebooks in Azure Data Studio connected to a SQL Server 2019 big data cluster.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -14,167 +14,166 @@ ms.custom: seodec18
 
 # How to use notebooks in SQL Server 2019 preview
 
-This article describes how to launch Jupyter Notebooks on a big data cluster and how to start authoring your own Notebooks. It also shows how to submit jobs against the cluster.
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-## Prerequisites
+This article describes how to launch the Notebook experience in Azure Data Studio and how to start authoring your own notebooks. It also shows how to write Notebooks using different kernels.
 
-To use notebooks, you must install the following prerequisites:
+## Connect to SQL Server
 
-- [A SQL Server 2019 big data cluster](deployment-guidance.md)
-- [SQL Server 2019 big data tools](deploy-big-data-tools.md):
-   - **Azure Data Studio**
-   - **SQL Server 2019 extension**
-   - **kubectl**
+You can connect to the Microsoft SQL Server connection type in Azure Data Studio.
+In Azure Data Studio, you can also press F1, and click **New Connection** and connect to your SQL Server.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+![Connection info](media/notebooks-guidance/connection-info.png)
 
-## Connect to the Hadoop Gateway Knox end point
-
-You can connect to different end points in the cluster. You can connect to the Microsoft SQL Server connection type or to the HDFS/Spark gateway end point.
-In Azure Data Studio (preview), press F1, and click **New Connection** and you can connect to your HDFS/Spark gateway end point.
-
-![image1](media/notebooks-guidance/image1.png)
-
-## Browse HDFS
-
-Once you connect, you will be able to browse your HDFS folder. WebHDFS is started when the deployment is completed, and you will be able to **Refresh**, add **New Directory**, **Upload** files, and **Delete**.
-
-![image2](media/notebooks-guidance/image2.png)
-
-These simple operations let you bring your own data into HDFS.
-
-## Launch new Notebooks
-
->[!NOTE]
->If you have multiple Python processes running in your environment, first delete the `.scaleoutdata` folder under your installed directory. This should trigger the `Reinstall Notebook dependencies` task in Azure Data Studio. It will take few minutes for all the dependencies to be installed.
-
-If there are issues installing notebook dependencies, click on Ctrl+Shift+P or for Macintosh Cmd+Shift+P, and type `Reinstall Notebook dependencies` in the command palette.
-
-![image3](media/notebooks-guidance/image3.png)
+## Launch Notebooks
 
 There are multiple ways to launch a new notebook.
 
-1. From the **Manage Dashboard**. After making a new connection, you will see a dashboard. Click **New Notebook** task from the dashboard.
+- Go to the **File Menu** in Azure Data Studio and then click on **New Notebook**.
 
-  ![image4](media/notebooks-guidance/image4.png)
+    ![New notebook](media/notebooks-guidance/file-new-notebook.png)
 
-1. Right-click the HDFS/Spark connection and click **New Notebook** in the context menu.
+- Right click on the **SQL Server** connection and then launch **New Notebook**.
 
-  ![image5](media/notebooks-guidance/image5.png)
+    ![New notebook](media/notebooks-guidance/server-new-notebook.png)
 
-  Provide a name of your Notebook, for example, `Test.ipynb`. Click **Save**.
-
-![image6](media/notebooks-guidance/image6.png)
+- Open the command palette (**Ctrl+Shift+P**)) and then type in **New Notebook**. A new file named `Notebook-1.ipynb` opens.
 
 ## Supported kernels and attach to context
 
-The Notebook Installation supports PySpark and Spark, Spark Magic kernels, which allow you to write Python and Scala code using Spark. Optionally, you can  choose Python for local development purposes.
+The Notebook Installation in Azure Data Studio natively supports SQL Kernel. If you are a SQL developer and would like to use Notebooks, then this would be your chosen Kernel. 
 
-![image7](media/notebooks-guidance/image7.png)
+The SQL Kernel can also be used to connect to PostgreSQL server instances. If you are a PostgreSQL developer and would like to connect to your PostgreSQL Server, then download the [**PostgreSQL extension**](../azure-data-studio/postgres-extension.md) in the Azure Data Studio extension marketplace.
 
-When you select one of these kernels, we will install that kernel in the virtual environment and you can start writing code in the supported language.
+![PostgreSQL connection](media/notebooks-guidance/sql-kernel-dropdown.png)
+
+### SQL Kernel
+
+In the code cells within the Notebook, similar to our query editor, we support modern SQL coding experience that makes your everyday tasks easier with built-in features such as a rich SQL editor, IntelliSense, and built-in code snippets. Code snippets allow you to generate the proper SQL syntax to create databases, tables, views, stored procedures, etc., and to update existing database objects. Use code snippets to quickly create copies of your database for development or testing purposes and to generate and execute scripts.
+
+Click **Run** to execute each cell.
+
+SQL Kernel to connect to SQL Server instance
+
+![SQL Kernel](media/notebooks-guidance/intellisense-code-cell.png)
+
+Query Results
+
+![Query results](media/notebooks-guidance/sql-cell-results.png)
+
+SQL Kernel to connect to PostgreSQL Server instance 
+
+![PostgreSQL connection](media/notebooks-guidance/pgsql-code-cell.png)
+
+Query Results
+
+![Query results](media/notebooks-guidance/pgsql-cell-results.png)
+
+### Configure Python for Notebooks
+
+When you select any of the other kernels apart from SQL from the kernel dropdown, this prompts you to **Configure Python for Notebooks**. The Notebook dependencies get installed in a specified location but you can decide whether to set the installation location. This installation can take some time and it is recommended to not close the application until the installation is complete. Once the installation finishes, you can start writing code in the supported language.
+
+![Configure python](media/notebooks-guidance/configure-python.png)
+
+Once the installation succeeds, you will find a notification in the Task History along with the location of the Jupyter backend server running in the Output Terminal.
+
+![Jupyter backend](media/notebooks-guidance/jupyter-backend.png)
 
 |Kernel|Description
 |:-----|:-----
-|PySpark Kernel|For writing Python code using Spark compute from the cluster.
-|Spark Kernel|For writing Scala code using Spark compute from the cluster.
-|Python Kernel|For writing Python code for local development.
+| SQL Kernel | Write SQL Code targeted at your relational database.
+|PySpark3 and PySpark Kernel| Write Python code using Spark compute from the cluster.
+|Spark Kernel|Write Scala and R code using Spark compute from the cluster.
+|Python Kernel|Write Python code for local development.
 
-The `Attach to` provides the context for the Kernel to attach. When you are connected to the HDFS/Spark gateway (Knox) end point the default `Attach to` is that end point of the cluster.
+`Attach to` provides the context for the Kernel to attach. If you are using SQL Kernel, then you can `Attach to` any of your SQL Server instances.
 
-![image8](media/notebooks-guidance/image8.png)
+If you are using Python3 Kernel the `Attach to` is `localhost`. You can use this kernel for your local Python development.
 
-## Hello world in different contexts
+When you are connected to SQL Server 2019 big data cluster, the default `Attach to` is that end point of the cluster and will let you submit Python, Scala and R code using the Spark compute of the cluster.
 
-### Pyspark kernel
+### Code Cells and Markdown Cells
 
-Choose the PySpark Kernel and in the cell type in the following code:
-
-![image9](media/notebooks-guidance/image9.png)
-
-Click Run and you should see the Spark Application being started and you will see the following output:
-
-![image10](media/notebooks-guidance/image10.png)
-
-The output should look something similar to the following image.
-
-![image11](media/notebooks-guidance/image11.png)
-
-### Spark kernel
 Add a new code cell by clicking the **+Code** command in the toolbar.
 
-![image12](media/notebooks-guidance/image12.png)
-
-You can also view the "Cell Options" when you click on the options icon below -
-
-![image13](media/notebooks-guidance/image13.png)
-
-Here are the options for every cell -
-
-![image14](media/notebooks-guidance/image14.png)-
-
-Now, choose the Spark Kernel in the dropdown for the kernels and in the cell type/paste in -
-
-![image15](media/notebooks-guidance/image15.png)
-
-Click **Run** and you should see the Spark Application being started and this will create the Spark session as **spark** and will define the **HelloWorld** object.
-
-The Notebook should look similar to the following image.
-
-![image16](media/notebooks-guidance/image16.png)
-
-Once you define the object then in the next Notebook cell, type in the following code:
-
-![image17](media/notebooks-guidance/image17.png)
-
-Click **Run** in the Notebook menu and you should see the "Hello, world!" in the output.
-
-![image18](media/notebooks-guidance/image18.png)
-
-### Local python kernel
-Choose the local Python Kernel and in the cell type in -
-
-![image19](media/notebooks-guidance/image19.png)
-
-You should see the following output:
-
-![image20](media/notebooks-guidance/image20.png)
-
-### Markdown Text
 Add a new text cell by clicking the **+Text** command in the toolbar.
 
-![image21](media/notebooks-guidance/image21.png)
+![Notebook toolbar](media/notebooks-guidance/notebook-toolbar.png)
 
-Click on the preview icon to add your markdown
+The cell changes to edit mode and now type markdown and you will see the preview at the same time
 
-![image22](media/notebooks-guidance/image22.png)
+![Markdown cell](media/notebooks-guidance/notebook-markdown-cell.png)
 
-Click on the preview icon again to toggle to see just the markdown
+Clicking outside the text cell will show the markdown text.
 
-![image23](media/notebooks-guidance/image23.png)
+![Markdown text](media/notebooks-guidance/notebook-markdown-preview.png)
+
+### Trusted and Non Trusted
+
+Notebooks open in Azure Data Studio are default **Trusted**.
+
+If you open a Notebook from some other source, it will be opened in **Non Trusted** mode and then you can make it **Trusted**.
+
+### Save
+
+You can save the Notebook by **Ctrl+S** or clicking the **File Save**, **File Save As...** and **File Save All** commands from the File menu and **File: Save** commands entered in the command palette.
+
+### Pyspark3/PySpark kernel
+
+Choose the `PySpark Kernel` and in the cell type in the following code.
+
+Click **Run**.
+
+The Spark Application is started and returns the following output:
+
+![Spark application](media/notebooks-guidance/pyspark.png)
+
+### Spark kernel | Scala language
+
+Choose the `Spark|Scala Kernel` and in the cell type in the following code.
+
+![Spark Scala](media/notebooks-guidance/spark-scala.png)
+
+You can also view the "Cell Options" when you click on the options icon below –
+
+![Cell options](media/notebooks-guidance/scala-cell-options.png)
+
+### Spark kernel | R language
+
+Choose the Spark | R in the dropdown for the kernels. In the cell, type or paste in the code. Click **Run** to see the following output.
+
+![Spark R](media/notebooks-guidance/spark-r.png)
+
+### Local Python kernel
+
+Choose the local Python Kernel and in the cell type in -
+
+![Local python](media/notebooks-guidance/local-python.png)
 
 ## Manage Packages
-One of the things we optimized for local Python development was to include the ability to install packages which customers would need for their scenarios. By default, we include the common packages like pandas, numpy etc., but if you are expecting a package that is not included then write the following code in the Notebook cell: 
+
+One of the things we optimized for local Python development was to include the ability to install packages which customers would need for their scenarios. By default, we include the common packages like `pandas`, `numpy` etc., but if you are expecting a package that is not included then write the following code in the notebook cell: 
 
 ```python
 import <package-name>
 ```
 
-When you run this command, you will get a `Module not found` error. If your package exists, then you will not get the error.
+When you run this command, `Module not found` is returned. If your package exists, then you will not get the error.
 
-If you find a `Module not Found` error, then click on **Manage Packages** to launch the terminal with the path for your Virtualenv identified. You can now install packages locally. Use the following commands to install the packages:
+If it returns a `Module not Found` error, then click on **Manage Packages** to launch the terminal. You can now install packages locally. Use the following commands to install the packages:
 
 ```bash
 ./pip install <package-name>
 ```
+
+   > [!Tip]
+   > On Mac please follow the instructions in the Terminal window for installing packages. 
 
 After the package is installed, you should be able to go in the Notebook cell and type in following command:
 
 ```python
 import <package-name>
 ```
-
-Now when you run the cell, you should no longer get the `Module not found` error.
 
 To uninstall a package, use the following command from your terminal:
 

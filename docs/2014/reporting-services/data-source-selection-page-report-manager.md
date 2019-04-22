@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Data Source Selection Page (Report Manager)
   Use the Data Source Selection page to select an existing shared data source item to use with a report or a report model. You can also use this page to select a different data source. To view the data source type or connection string, you must navigate to the shared data source and open the property pages.  

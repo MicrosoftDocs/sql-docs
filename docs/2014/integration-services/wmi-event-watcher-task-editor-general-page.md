@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "WMI Event Watcher Task Editor"
 ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # WMI Event Watcher Task Editor (General Page)

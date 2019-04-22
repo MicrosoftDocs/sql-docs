@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Getting Started with Always Encrypted with secure enclaves using SSMS | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/04/2018"
+ms.date: "04/05/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -18,7 +18,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
-- How to create a simple environment for testing and evaluating Always Encrypted with secure enclaves.
+- How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
 - How to encrypt data in-place and issue rich queries against encrypted columns using SQL Server Management Studio (SSMS).
 
 ## Prerequisites
@@ -30,11 +30,20 @@ To get started with Always Encrypted with secure enclaves, you need at least two
 
 ### SQL Server computer requirements
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later
-- Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] or later.
+- Windows 10 Enterprise version 1809, or Windows Server 2019 Datacenter.
+- If your SQL Server computer is a physical machine, it must meet the [Hyper-V Hardware Requirements](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements):
+   - 64-bit Processor with Second Level Address Translation (SLAT)
+   - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs)
+   - Virtualization support enabled (Intel VT-x or AMD-V)
+- If your SQL Server computer is a virtual machine, the VM must be configured to allow nested virtualization.
+   - On Hyper-V 2016 or later, [enable nested virtualization extensions](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) on the VM processor.
+   - In Azure, make sure you're running a VM size that supports nested virtualization, such as the Dv3 and Ev3 series VMs. See [Create a nesting capable Azure VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+   - On VMWare vSphere 6.7 or later, enable Virtualization Based Security support for the VM as described in the [VMware documentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+   - Other hypervisors and public clouds may support using Always Encrypted with secure enclaves in a VM as long as virtualization extensions (sometimes called nested virtualization) are exposed to the VM. Check your virtualization solution’s documentation for compatibility and configuration instructions.
 - [SQL Server Management Studio (SSMS) 18.0 or later](../../ssms/download-sql-server-management-studio-ssms.md).
 
-Alternatively, you can install SSMS on another machine.
+As an alternative, you can install SSMS on another machine.
 
 >[!WARNING] 
 >In production environments, you should never use SSMS or other tools to manage Always Encrypted keys or run queries on encrypted data on the SQL Server computer, as this may reduce or completely defeat the purpose of using Always Encrypted.
@@ -86,18 +95,34 @@ In this step, you will configure the SQL Server computer as a guarded host regis
 >[!NOTE]
 >Host key attestation is only recommended for use in test environments. You should use TPM attestation for production environments.
 
-1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and install the Guarded Host feature, which will also install Hyper-V (if it is not installed already).
+1. Sign in to your SQL Server computer as an administrator, open an elevated Windows PowerShell console, and retrieve the name of your computer by accessing the computername variable.
+
+   ```powershell
+   $env:computername 
+   ```
+
+2. Install the Guarded Host feature, which will also install Hyper-V (if it is not installed already).
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
    ```
 
-2. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
-3. Retrieve the value of the below variable to determine the name of your SQL Server computer.
+3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
 
-   ```powershell
-   $env:computername 
-   ```
+4. If your SQL Server computer is a virtual machine or if it is a legacy physical machine that does not support UEFI Secure Boot or is not equipped with IOMMU, you need to remove the VBS requirement for platform security features.
+    1. Remove the requirement in Windows registry.
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. Restart the computer again to get VBS to come online with the lowered requirements.
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. Sign in to the SQL Server computer as an administrator again, open an elevated Windows PowerShell console, generate a unique host key, and export the resulting public key to a file.
 
@@ -106,14 +131,15 @@ In this step, you will configure the SQL Server computer as a guarded host regis
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. Copy the host key file, generated in the previous step, to the HGS machine. The below instructions assume your file name is hostkey.cer and you are coping it to your Desktop on the HGS machine.
+5. Manually copy the host key file, generated in the previous step, to the HGS machine. The below instructions assume your file name is hostkey.cer and you are copying it to your Desktop on the HGS machine.
+
 6. On the HGS computer, open an elevated Windows PowerShell console and register the host key of your SQL Server computer with HGS:
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. On the SQL Server computer, run the following command in an elevated Windows PowerShell console, to tell the SQL Server computer where to attest. Make sure you specify the IP address or the DNS name of your HGS computer. 
+7. On the SQL Server computer, run the following command in an elevated Windows PowerShell console, to tell the SQL Server computer where to attest. Make sure you specify the IP address or the DNS name of your HGS computer in both address locations. 
 
    ```powershell
    # use http, and not https
@@ -133,11 +159,11 @@ If all else fails, run Clear-HgsClientHostKey and repeat steps 4-7.
 In this step, you will enable the functionality of Always Encrypted using enclaves in your SQL Server instance.
 
 1. Open SSMS, connect to your SQL Server instance as sysadmin, and open a new query window.
-2. Configure the secure enclave type to VBS.
+2. Set the secure enclave type to Virtualization Based Security (VBS).
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. Restart your SQL Server instance for the previous change to take effect. You can restart the instance in SSMS by right-clicking on it in Object Explorer and selecting Restart. Once the instance restarts, reconnect to it.
@@ -146,10 +172,10 @@ In this step, you will enable the functionality of Always Encrypted using enclav
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    The query should return a row that looks like the following:  
+    The query should return the following result:  
 
     | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -158,7 +184,7 @@ In this step, you will enable the functionality of Always Encrypted using enclav
 5. To enable rich computations on encrypted columns, run the following query:
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -171,12 +197,15 @@ In this step, you will create a database with some sample data, which you will e
 2. Create a new database, named ContosoHR.
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. Make sure you are connected to the newly created database. Create a new table, named Employees.
 
     ```sql
+    USE [ContosoHR];
+    GO
+    
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -184,8 +213,7 @@ In this step, you will create a database with some sample data, which you will e
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. Add a few employee records to the Employees table.
@@ -200,9 +228,8 @@ In this step, you will create a database with some sample data, which you will e
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -212,8 +239,7 @@ In this step, you will create a database with some sample data, which you will e
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## Step 5: Provision enclave-enabled keys
@@ -228,11 +254,11 @@ In this step, you will create a column master key and a column encryption key th
     3. Make sure you select either **Windows Certificate Store (Current User or Local Machine)** or **Azure Key Vault**.
     4. Select **Allow enclave computations**.
     5. If you selected Azure Key Vault, sign in to Azure and select your key vault. For more information on how to create a key vault for Always Encrypted, see [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
-    6. Select your key if it already exists, or follow the directions on the form to create a new key.
+    6. Select your certificate or Azure Key Value key if it already exists, or click the **Generate Certificate** button to create a new one.
     7. Select **OK**.
 
         ![Allow enclave computations](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. Create a new enclave-enabled column encryption key:
 
     1. Right-click **Always Encrypted Keys** and select **New Column Encryption Key**.
@@ -248,60 +274,61 @@ In this step, you will encrypt the data stored in the SSN and Salary columns ins
     1. In SSMS, open a new query window.
     2. Right-click anywhere in the new query window.
     3. Select Connection \> Change Connection.
-    4. Select **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL.
+    4. Select **Options**. Navigate to the **Always Encrypted** tab, select **Enable Always Encrypted**, and specify your enclave attestation URL (for example, ht<span>tp://</span>hgs.bastion.local/Attestation).
     5. Select **Connect**.
+    6. If prompted to enable parameterization for Always Encrypted queries, click **Enable**.
 2. In SSMS, configure another query window with Always Encrypted disabled for the database connection.
     1. In SSMS, open a new query window.
     2. Right-click anywhere in the new query window.
     3. Select Connection \> Change Connection.
     4. Select on **Options**. Navigate to the **Always Encrypted** tab, make sure **Enable Always Encrypted** is not selected.
     5. Select **Connect**.
-3. Encrypt the SSN and Salary columns. In the query window with Always Encrypted enabled, paste in and execute the below statements:
+    6. Change the database context to the ContosoHR database.
+1. Encrypt the SSN and Salary columns. In the query window with Always Encrypted enabled, paste in and execute the below script:
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > Notice the ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE statement to clear the query plan cache for the database in the above script. After you have altered the table, you need to clear the plans for all batches and stored procedures that access the table, to refresh parameters encryption information. 
 
 4. To verify the SSN and Salary columns are now encrypted, paste in and execute the below statement in the query window with Always Encrypted disabled. The query window should return encrypted values in the SSN and Salary columns. With the Always Encrypted enabled query window, try the same query to see the data decrypted.
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## Step 7: Run rich queries against encrypted columns
 
 Now, you can run rich queries against the encrypted columns. Some query processing will be performed inside your server-side enclave. 
 
-1. Enable Parameterization for Always Encrypted.
+1. Make sure that Parameterization for Always Encrypted is enabled.
     1. Select **Query** from the main menu of SSMS.
     2. Select **Query Options...**.
     3. Navigate to **Execution** > **Advanced**.
-    4. Select or unselect Enable Parameterization for Always Encrypted.
+    4. Ensure that Enable Parameterization for Always Encrypted is checked.
     5. Select OK.
 2. In the query window with Always Encrypted enabled, paste in and execute the below query. The query should return plaintext values and rows meeting the specified search criteria.
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
+3. Try the same query again in the query window that does not have Always Encrypted enabled, and note the failure that occurs.
 
 ## Next Steps
 See [Configure Always Encrypted with secure enclaves](encryption/configure-always-encrypted-enclaves.md) for ideas about other use cases. You can also try the following:

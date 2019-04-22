@@ -1,6 +1,6 @@
 ---
 title: Run a sample notebook | Microsoft Docs
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This tutorial shows how you can load an run a sample Spark notebook on a SQL Server 2019 big data cluster (preview).
 author: rothja 
 ms.author: jroth 
@@ -12,7 +12,9 @@ ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
-# Tutorial: Run a sample notebook on a SQL Server 2019 big data cluster
+# Tutorial: Run a sample notebook on a SQL Server big data cluster
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This tutorial demonstrates how to load and run a notebook in Azure Data Studio on a SQL Server 2019 big data cluster (preview). This allows data scientists and data engineers to run Python, R, or Scala code against the cluster.
 

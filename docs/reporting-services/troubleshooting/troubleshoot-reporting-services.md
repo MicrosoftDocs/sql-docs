@@ -9,8 +9,8 @@ ms.technology:
 
 ms.topic: conceptual
 ms.assetid: 6eeed553-512d-4603-9b14-0492a9d052b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Reporting Services
   The topics in this section help identify and troubleshoot issues with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.author: maghan
 
 +  [Troubleshoot Publishing or Viewing a Report on a Native Mode Report Server](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [Troubleshoot Server and Database Connection Problems with Reporting Serivces](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
++  [Troubleshoot Server and Database Connection Problems with Reporting Services](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
  ![Small File Folder Icon](../../reporting-services/troubleshooting/media/filefolder-small.png)   **Error and Events Reference**  
  + [Errors and Events Reference &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

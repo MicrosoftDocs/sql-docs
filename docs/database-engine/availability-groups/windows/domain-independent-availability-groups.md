@@ -165,4 +165,4 @@ Creating a Domain Independent Availability Group cannot currently be achieved co
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png
+[4]: ./media/diag-successful-dns-suffix.png 

@@ -37,16 +37,16 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication in which the article exists. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article to change. *article* is **sysname**, with no default.  
   
- [ **@property=**] **'***property***'**  
+`[ @property = ] 'property'`
  Is the property to change for the given article and publication. *property* is **nvarchar(30)**, and can be one of the values listed in the table.  
   
- [ **@value=**] **'***value***'**  
+`[ @value = ] 'value'`
  Is the new value for the specified property. *value* is **nvarchar(1000)**, and can be one of the values listed in the table.  
   
  This table describes the properties of articles and the values for those properties.  
@@ -143,7 +143,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|Digital signature on a custom resolver is not verified to determine if it is from a trusted source.|  
 |NULL (default)||Returns the list of supported values for *property*.|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
   
  **0** specifies that changes to the merge article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
@@ -152,7 +152,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  See the Remarks section for the properties that, when changed, require the generation of a new snapshot.  
   
- [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
+`[ @force_reinit_subscription = ] force_reinit_subscription`
  Acknowledges that the action taken by this stored procedure may require existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit**, with a default of **0**.  
   
  **0** specifies that changes to the merge article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  

@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.dqs.dm.testcdrule.f1"
   - "sql13.dqs.dm.cdrules.f1"
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Create a Cross-Domain Rule

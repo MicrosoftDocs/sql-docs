@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Open Integration Services Projects in Data Quality Client
@@ -32,8 +32,6 @@ manager: craigg
 ####  <a name="Permissions"></a> Permissions  
  You must have the dqs_kb_editor or dqs_kb_operator role on the DQS_MAIN database to open an Integration Services project.  
   
- ![Arrow icon used with Back to Top link](../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Topic](#Intro)  
-  
 ##  <a name="Open"></a> Open an Integration Services Project  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Run the Data Quality Client Application](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -54,10 +52,6 @@ manager: craigg
   
 6.  After exporting the data, click **Finish** to close the Integration Services project.  
   
- ![Arrow icon used with Back to Top link](../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [In This Topic](#Intro)  
-  
 ## See Also  
  [DQS Cleansing Transformation](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Integration Services &#40;SSIS&#41; Projects](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  

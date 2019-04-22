@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "InitializeReportServer method"
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # InitializeReportServer Method (WMI MSReportServer_ConfigurationSetting)
   Initializes the specified report service instance.  

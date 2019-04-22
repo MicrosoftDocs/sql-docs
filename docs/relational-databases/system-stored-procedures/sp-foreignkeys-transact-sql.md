@@ -40,25 +40,25 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'**_table_server_**'**  
+`[ @table_server = ] 'table_server'`
  Is the name of the linked server for which to return table information. *table_server* is **sysname**, with no default.  
   
- [ **@pktab_name =** ] **'**_pktab_name_**'**  
+`[ @pktab_name = ] 'pktab_name'`
  Is the name of the table with a primary key. *pktab_name* is **sysname**, with a default of NULL.  
   
- [ **@pktab_schema =** ] **'**_pktab_schema_**'**  
+`[ @pktab_schema = ] 'pktab_schema'`
  Is the name of the schema with a primary key. *pktab_schema*is **sysname**, with a default of NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this contains the owner name.  
   
- [ **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
+`[ @pktab_catalog = ] 'pktab_catalog'`
  Is the name of the catalog with a primary key. *pktab_catalog*is **sysname**, with a default of NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this contains the database name.  
   
- [ **@fktab_name =** ] **'**_fktab_name_**'**  
+`[ @fktab_name = ] 'fktab_name'`
  Is the name of the table with a foreign key. *fktab_name*is **sysname**, with a default of NULL.  
   
- [ **@fktab_schema =** ] **'**_fktab_schema_**'**  
+`[ @fktab_schema = ] 'fktab_schema'`
  Is the name of the schema with a foreign key. *fktab_schema*is **sysname**, with a default of NULL.  
   
- [ **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
+`[ @fktab_catalog = ] 'fktab_catalog'`
  Is the name of the catalog with a foreign key. *fktab_catalog*is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

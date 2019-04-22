@@ -13,9 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Expression dialog box [Reporting Services]"
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Expression Dialog Box
   Use the **Expression** dialog box to write [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] expressions for report item properties. You can use expressions to set many properties, including color, font, and borders. At run time, the report processor evaluates expressions and substitutes the result for the value of the property.  

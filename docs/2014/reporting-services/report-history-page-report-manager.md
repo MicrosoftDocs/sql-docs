@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Report History Page (Report Manager)
   Use the Report History page to view report snapshots that are generated and stored over time. Depending on options that are set on the report server, report history may contain only the more recent snapshots.  

@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], Excel rendering"
   - "Excel [Reporting Services], rendering"
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Excel Device Information Settings
   The following table lists the device information settings for rendering in [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] format.  

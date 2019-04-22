@@ -20,9 +20,9 @@ helpviewer_keywords:
   - "transferrng reports"
   - "reports [Reporting Services], migrating"
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Script Deployment and Administrative Tasks
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports the use of scripts to automate routine installation, deployment, and administrative tasks. Deploying a report server is a multi-step process. You must use several tools and processes to configure a deployment; there is no single program or approach that can be used to automate all the tasks.  

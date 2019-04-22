@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Help, dialog boxes"
   - "user interface, dialog boxes"
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Report Builder Help for Dialog Boxes, Panes, and Wizards
   This section contains Help for many of the Report Builder wizards, views, panes, and dialog boxes. Alternatively, you can open Help by pressing F1 or by clicking the Help button displayed in the dialog box.  

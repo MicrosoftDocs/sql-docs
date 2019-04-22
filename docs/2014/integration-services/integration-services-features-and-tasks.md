@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "development [Integration Services]"
   - "Integration Services, programming"
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Features and Tasks

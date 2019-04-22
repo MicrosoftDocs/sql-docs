@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # dtexec Utility
@@ -663,6 +663,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  [Run a Package in SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
   
 ## Related Content  
- Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](https://go.microsoft.com/fwlink/?LinkId=251523), on www.mattmasson.com.  
+ Blog entry, [Exit Codes, DTEXEC, and SSIS Catalog](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), on www.mattmasson.com.  
   
   

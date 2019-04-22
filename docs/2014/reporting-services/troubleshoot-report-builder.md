@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Troubleshoot Report Builder
   Report Builder is a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report authoring tool that you can use to build reports from many different kinds of data sources and to publish your reports to a report server or SharePoint site. The reports that you create can be viewed in Report Builder, in a Web browser, or as part of a [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows application or SharePoint site.  

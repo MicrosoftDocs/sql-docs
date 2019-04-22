@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], XML"
   - "xml data type [SQL Server], FOR XML clause"
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # FOR XML Support for the xml Data Type

@@ -11,9 +11,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapembeddedpointlayerproperties.marker.f1"
   - "10530"
 ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Map Embedded Point Properties Dialog Box, Marker
   Select **Marker** on the **Embedded Point Properties** dialog box to change marker type and marker size options for the following map elements:  

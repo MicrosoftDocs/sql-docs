@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Lesson 2-3: Modify the Flat File connection manager
@@ -21,20 +21,22 @@ By modifying the connection manager to use the value of the user-defined variabl
 ## Configure the Flat File connection manager to use a variable  
   
 1.  In the **Connection Managers** pane, right-click **Sample Flat File Source Data**, and select **Properties**.  
+
+2.  In the **Properties** window make sure the **PackagePath** starts with **\Package.Connections**. If not, in the **Connection Managers** pane, right-click **Sample Flat File Source Data**, and select **Convert to Package Connection**
   
-2.  In the **Properties** window, for **Expressions**, select the empty cell, and then select the ellipsis button **(...)**.  
+3.  In the **Properties** window, for **Expressions**, select the empty cell, and then select the ellipsis button **(...)**.  
   
-3.  In the **Property Expressions Editor** dialog, in the **Property** column, select **ConnectionString**.  
+4.  In the **Property Expressions Editor** dialog, in the **Property** column, select **ConnectionString**.  
   
-4.  In the **Expression** column, select the ellipsis button **(...)** to open the **Expression Builder** dialog box.  
+5.  In the **Expression** column, select the ellipsis button **(...)** to open the **Expression Builder** dialog box.  
   
-5.  In the **Expression Builder** dialog, expand the **Variables** node.  
+6.  In the **Expression Builder** dialog, expand the **Variables** node.  
   
-6.  Drag the variable **User::varFileName** into the **Expression** box.  
+7.  Drag the variable **User::varFileName** into the **Expression** box.  
   
-7.  Select **OK** to close the **Expression Builder** dialog.  
+8.  Select **OK** to close the **Expression Builder** dialog.  
   
-8.  Select **OK** again to close the **Property Expressions Editor** dialog.  
+9.  Select **OK** again to close the **Property Expressions Editor** dialog.  
   
 ## Go to next task  
 [Step 4: Test the Lesson 2 tutorial package](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "cleansing threshold values"
   - "matching,threshold value"
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Configure Threshold Values for Cleansing and Matching

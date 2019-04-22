@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "methods [Reporting Services], about methods"
   - "methods [Reporting Services]"
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Report Server Namespace Management Methods
   The Report Server Management Web service contains methods that you can use to manage reports, folders, and resources in the report server database.  

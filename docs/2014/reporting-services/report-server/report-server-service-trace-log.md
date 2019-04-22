@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "system information [Reporting Services]"
   - "versions [Reporting Services]"
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Report Server Service Trace Log
   The [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server trace log is an ASCII text file that contains detailed information for Report Server service operations, including operations performed by the Report Server Web service, Report Manager, and background processing. The trace log file includes redundant information that is recorded in other log files, plus additional information that is not otherwise available. Trace log information might be useful if you are debugging an application that includes a report server, or investigating a specific problem that was written to the event log or execution log.  

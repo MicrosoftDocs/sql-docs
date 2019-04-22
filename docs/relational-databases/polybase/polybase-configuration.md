@@ -29,6 +29,8 @@ A common way to secure communication in a hadoop cluster is by changing the hado
    </property> 
 ```
 
+To use 'Privacy' or 'Integrity' for hadoop.rpc.protection, SQL Server must be at least SQL Server 2016 SP1 CU7, SQL Server 2016 SP2, or SQL Server 2017 CU3.
+
 ## Example XML files for CDH 5.X cluster
 
 Yarn-site.xml with yarn.application.classpath and mapreduce.application.classpath configuration.
@@ -107,7 +109,7 @@ Note that we added the property mapreduce.application.classpath. In CDH 5.x you 
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!-- Put site-specific property overrides in this file. -->
-<configuration xmlns:xi="https://www.w3.org/2001/XInclude">
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
    <property>
      <name>mapred.min.split.size</name>
        <value>1073741824</value>

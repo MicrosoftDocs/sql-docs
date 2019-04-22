@@ -2,7 +2,7 @@
 title: "Analyze consolidated Data Migration Assistant assessment reports with Power BI (SQL Server) | Microsoft Docs"
 description: Learn how to use Power BI to analyze Data Migration Assessment reports that you've imported and consolidated in SQL Server
 ms.custom: ""
-ms.date: "10/20/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
 
@@ -30,23 +30,23 @@ You can download examples of Power BI reports for consolidated migration assessm
 
 The following reports are included: 
 
-- [Dashboard](#dashboard--details)
+- [Dashboard](#dashboard-report)
 
   Includes snapshot stats and a drill-down report.
 
-- [On-premises upgrade readiness](#on-premises-upgrade-readiness--details)
+- [On-premises upgrade readiness](#on-premises-upgrade-readiness-report)
 
   The data source is the UpgradeSuccessRanking view in the DMAReporting database.  This report shows the percentage upgrade success for your assessed databases.
 
-- [On-premises feature parity](#on-premise-feature-parity--details)
+- [On-premises feature parity](#on-premises-feature-parity-report)
 
   Shows the feature recommendations for the target SQL Server version.
 
-- [Azure SQL DB upgrade readiness](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL DB upgrade readiness](#azure-sql-db-upgrade-readiness-report)
 
   The data source is the UpgradeSuccessRanking view in the DMAReporting database.  This report shows the percentage upgrade success for databases assessed for Azure SQL DB migrations.
 
-- [Azure SQL DB unsupported features](#azure-sql-db-unsupported-features--details)
+- [Azure SQL DB unsupported features](#azure-sql-db-unsupported-features-report)
 
   Shows features in your existing databases that aren't supported in Azure SQL DB (V12).
 

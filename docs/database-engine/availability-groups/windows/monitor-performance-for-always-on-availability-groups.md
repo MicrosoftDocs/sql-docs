@@ -15,23 +15,7 @@ manager: craigg
 # Monitor performance for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The performance aspect of Always On Availability Groups is crucial to maintaining the service-level agreement (SLA) for your mission-critical databases. Understanding how availability groups ship logs to secondary replicas can help you estimate the recovery time objective (RTO) and recovery point objective (RPO) of your availability implementation and identify bottlenecks in poorly performing availability groups or replicas. This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios.  
-  
- The following topics are covered:  
-  
--   [Data synchronization process](#BKMK_DATA_SYNC_PROCESS)  
-  
--   [Flow control gates](#BKMK_FLOW_CONTROL_GATES)  
-  
--   [Estimating failover time (RTO)](#BKMK_RTO)  
-  
--   [Estimating potential data loss (RPO)](#BKMK_RPO)  
-  
--   [Monitoring for RTO and RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
-  
--   [Performance troubleshooting scenarios](#BKMK_SCENARIOS)  
-  
--   [Useful extended events](#BKMK_XEVENTS)  
-  
+   
 ##  Data synchronization process  
  To estimate the time to full synchronization and to identify the bottleneck, you need to understand the synchronization process. Performance bottleneck can be anywhere in the process, and locating the bottleneck can help you dig deeper into the underlying issues. The following figure and table illustrate the data synchronization process:  
   
@@ -325,7 +309,7 @@ It is possible to query the DMVs [sys.dm_hadr_database_replica_states](../../../
 ##  Monitoring for RTO and RPO  
  This section demonstrates how to monitor your availability groups for RTO and RPO metrics. This demonstration is similar to the GUI tutorial given in [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
- Elements of the failover time and potential data loss calculations in [Estimating failover time (RTO)](#BKMK_RTO) and [Estimating potential data loss (RPO)](#BKMK_RPO) are conveniently provided as performance metrics in the policy management facet **Database Replica State** (see [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). You can monitor these two metrics on a schedule and be alerted when the metrics exceed your RTO and RPO, respectively.  
+ Elements of the failover time and potential data loss calculations in [Estimating failover time (RTO)](#estimating-failover-time-rto) and [Estimating potential data loss (RPO)](#estimating-potential-data-loss-rpo) are conveniently provided as performance metrics in the policy management facet **Database Replica State** (see [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). You can monitor these two metrics on a schedule and be alerted when the metrics exceed your RTO and RPO, respectively.  
   
  The demonstrated scripts create two system policies that are run on their respective schedules, with the following characteristics:  
   
@@ -468,5 +452,3 @@ To create the policies, follow the instructions below on all server instances th
 |hadr_dump_primary_progress|`alwayson`|Debug|Primary|  
 |hadr_dump_log_progress|`alwayson`|Debug|Primary|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analytic|Secondary|  
-  
-  

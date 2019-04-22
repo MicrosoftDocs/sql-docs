@@ -4,13 +4,14 @@ description: R in SQL Server or Python on SQL Server installation steps for SQL 
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 10/01/2018  
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Install SQL Server Machine Learning Services on Windows
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Starting in SQL Server 2017, R and Python support for in-database analytics is provided in **SQL Server Machine Learning Services**, the successor to [SQL Server R Services](../r/sql-server-r-services.md) introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
@@ -23,7 +24,9 @@ This article explains how to install the machine learning component by running t
 
 + A database engine instance is required. You cannot install just R or Python features, although you can add them incrementally to an existing instance.
 
-- Installing Machine Learning Services is *not supported* on a failover cluster in SQL Server 2017. However, it *is supported* with SQL Server 2019. 
++ For business continuity, [Always On Availabilty Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Machine Learning Services. You have to install Machine Learning Services, and configure packages, on each node.
+
++ Installing Machine Learning Services is *not supported* on a failover cluster in SQL Server 2017. However, it *is supported* with SQL Server 2019. 
  
 + Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
 
@@ -170,8 +173,8 @@ Use the following steps to verify that all components used to launch external sc
     ```sql
     EXEC sp_execute_external_script  @language =N'R',
     @script=N'
-	OutputDataSet <- InputDataSet;
-	',
+    OutputDataSet <- InputDataSet;
+    ',
     @input_data_1 =N'SELECT 1 AS hello'
     WITH RESULT SETS (([hello] int not null));
     GO
@@ -182,8 +185,8 @@ Use the following steps to verify that all components used to launch external sc
     ```sql
     EXEC sp_execute_external_script  @language =N'Python',
     @script=N'
-	OutputDataSet = InputDataSet;
-	',
+    OutputDataSet = InputDataSet;
+    ',
     @input_data_1 =N'SELECT 1 AS hello'
     WITH RESULT SETS (([hello] int not null));
     GO
@@ -196,6 +199,13 @@ Use the following steps to verify that all components used to launch external sc
     | hello |
     |----|
     | 1|
+
+
+<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
+Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
+due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
+I will inform HeidiSteen  [GeneMi, 2019/01/17]
+-->
 
 
 > [!NOTE]
@@ -236,6 +246,7 @@ At the instance level, additional configuration might include:
 * [Firewall configuration for SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md)
 * [Enable additional network protocols](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Enable remote connections](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [Create a login for SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
@@ -243,7 +254,6 @@ At the instance level, additional configuration might include:
 On the database, you might need the following configuration updates:
 
 * [Give users permission to SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
-* [Add SQLRUserGroup as a database user](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > Whether additional configuration is required depends on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts.

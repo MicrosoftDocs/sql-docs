@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "Report Server Web service, SOAP"
   - "XML Web service [Reporting Services], SOAP"
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-author: markingmyname
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+author: maggiesMSFT
+ms.author: maggies
 ---
 # The Role of SOAP in Reporting Services
   The Report Server Web service uses Simple Object Access Protocol (SOAP) messaging to send text-based commands over a network. These commands take the form of XML text that is sent over the World Wide Web using HTTP. By using SOAP as its communication protocol, the Report Server Web service allows applications and components to exchange data with the report server using an open and widely accepted infrastructure. The SOAP standard is defined at www.w3.org/TR/SOAP.  
@@ -27,7 +27,7 @@ ms.author: maghan
  SOAP messages in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] take many different forms, depending on the type of request made by the client. The following example represents a simple SOAP client request to remove an item from the report server database.  
   
 ```  
-<soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
         <DeleteItem xmlns="https://www.microsoft.com/sql/ReportingServer">  
             <item>/Samples/Report1</item>  
@@ -45,7 +45,7 @@ public void DeleteItem(string item);
  The response from the server might look like the following:  
   
 ```  
-<soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
         <DeleteItemResponse xmlns="https://www.microsoft.com/sql/ReportingServer" />  
     </soap:Body>  

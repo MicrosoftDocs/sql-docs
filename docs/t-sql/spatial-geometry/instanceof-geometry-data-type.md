@@ -22,7 +22,7 @@ manager: craigg
 # InstanceOf (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-A method that tests if the **geometry** instance is the same as the specified type. Returns 1 if the type of a **geometry** instance is the same as the specified type, or if the specified type is an ancestor of the instance type; otherwise, returns 0.
+A method that tests if the **geometry** instance is the same as the specified type. Returns 1 if the type of a **geometry** instance is the same as the specified type. This method also returns 1 if the specified type is an ancestor of the instance type. Otherwise, this method returns 0.
   
 ## Syntax  
   
@@ -32,8 +32,8 @@ A method that tests if the **geometry** instance is the same as the specified ty
 ```  
   
 ## Arguments  
- *geometry_type*  
- Is an **nvarchar(4000)** string specifying one of 15 types exposed in the **geometry** type hierarchy.  
+*geometry_type*  
+**nvarchar(4000)** string specifying one of 15 types exposed in the **geometry** type hierarchy.  
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
@@ -41,7 +41,7 @@ A method that tests if the **geometry** instance is the same as the specified ty
  CLR return type: **SqlBoolean**  
   
 ## Remarks  
- The input for the method must be one of the following: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString**, and **MultiPoint**. This method throws an **ArgumentException** if any other strings are used for the input.  
+ The input for the method must be one of the following types: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString**, and **MultiPoint**. This method throws an **ArgumentException** if any other strings are used for the input.  
   
 ## Examples  
  The following example creates a `MultiPoint` instance and uses `InstanceOf()` to see if the instance is a `GeometryCollection`.  

@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "Scheduling and Delivery Processor performance object [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Performance Counters for the MSRS 2014 Web Service SharePoint Mode and MSRS 2014 Windows Service SharePoint Mode Performance Objects (SharePoint Mode)
   This topic describes performance counters for the `MSRS 2014 Web Service SharePoint Mode` and `MSRS 2014 Windows Service SharePoint Mode` performance objects that are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode deployment.  

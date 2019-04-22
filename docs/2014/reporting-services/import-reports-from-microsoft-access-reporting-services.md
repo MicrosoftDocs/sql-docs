@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "Access reports [Reporting Services]"
   - "importing reports"
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Import Reports from Microsoft Access (Reporting Services)
   In Report Designer, you can import reports from a [!INCLUDE[msCoName](../includes/msconame-md.md)] Access database or project. Access 2002 or a later version must be installed on the same computer on which Report Designer is installed.  

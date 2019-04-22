@@ -4,10 +4,10 @@ description: R and Python packages installed by SQL Server for R Services, R Ser
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 05/29/2018  
+ms.date: 01/19/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Default R and Python packages in SQL Server
@@ -19,7 +19,7 @@ This article lists the R and Python packages installed with SQL Server and where
 
 R packages are installed with [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) and [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) when you select the R feature during setup. 
 
-Packages         | 2016 | 2017 | Description |
+|Packages         | 2016 | 2017 | Description |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Used for remote compute contexts, streaming, parallel execution of rx functions for data import and transformation, modeling, visualization, and analysis. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Used for including R script in stored procedures. |

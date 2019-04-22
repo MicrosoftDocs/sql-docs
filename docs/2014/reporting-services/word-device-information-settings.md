@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "Word [Reporting Services]"
   - "device information settings [Reporting Services], Word"
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Word Device Information Settings
   The following table lists the device information settings for rendering in [!INCLUDE[ofprword](../includes/ofprword-md.md)] format.  

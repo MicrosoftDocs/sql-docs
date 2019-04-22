@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "MSReportServer_Instance class"
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # MSReportServer_Instance Members
   The MSReportServer_Instance class provides basic information required for a client to connect to an installed report server.  

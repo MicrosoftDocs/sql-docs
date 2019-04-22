@@ -1,7 +1,7 @@
 ---
 title: "Integration Services Programming Overview | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/09/2017"
+ms.date: 01/19/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: integration-services
@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "data flow engine [Integration Services]"
   - "languages [Integration Services]"
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Programming Overview
@@ -65,9 +65,7 @@ manager: craigg
 |Microsoft.SqlServer.RuntimeWrapper.dll|Contains the primary interop assembly (PIA), or wrapper, for the native run-time engine.|  
 |Microsoft.SqlServer.PipelineHost.dll|Contains the managed data flow engine.|  
 |Microsoft.SqlServer.PipelineWrapper.dll|Contains the primary interop assembly (PIA), or wrapper, for the native data flow engine.|  
-  
-||  
-|-|  
+
 ![Integration Services icon (small)](media/dts-16.gif "Integration Services icon (small)")  **Stay Up to Date with Integration Services**<br /> For the latest downloads, articles, samples, and videos from Microsoft, as well as selected solutions from the community, visit the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] page on MSDN:<br /><br /> [Visit the Integration Services page on MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> For automatic notification of these updates, subscribe to the RSS feeds available on the page.  
   
   

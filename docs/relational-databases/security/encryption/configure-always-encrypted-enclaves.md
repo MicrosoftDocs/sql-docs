@@ -138,7 +138,7 @@ The introduction of enclave-enabled keys does not fundamentally change the [key 
 - The **ENCLAVE_COMPUTATIONS** property in the column master key metadata in the database is set.
 - The column master key property values (including the setting of **ENCLAVE_COMPUTATIONS**) are digitally signed. The tool adds the signature, which is produced using the actual column master key, to the metadata. The purpose of the signature is to prevent malicious DBAs and computer admins from tampering with the **ENCLAVE_COMPUTATIONS** setting. The SQL client drivers verify the signatures before allowing the enclave use. This provides security administrators with control over which column data can be computed inside the enclave.
 
-The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable - you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). For more information about the **ENCLAVE_COMPUTATIONS** property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+The **ENCLAVE_COMPUTATIONS** property of a column master key is immutable - you cannot change it after the key has been provisioned. You can, however, replace the column master key with a new key that has a different value of the **ENCLAVE_COMPUTATIONS** property than the original key, via a process called a [column master key rotation](#make-columns-enclave-enabled-by-rotating-their-column-master-key). For more information about the **ENCLAVE_COMPUTATIONS** property, see [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 To provision an enclave-enabled column encryption key, you need to make sure that the column master key that encrypts the column encryption key, is enclave-enabled.
 
@@ -218,8 +218,8 @@ This can be also done using Azure portal. For details, see [Manage your key vaul
 
 
 ```powershell
-Import-Module AzureRM
-Connect-AzureRmAccount
+Import-Module Az
+Connect-AzAccount
 
 # User values
 $SubscriptionId = "<Azure SubscriptionId>"
@@ -229,16 +229,16 @@ $akvName = "<key vault name>"
 $akvKeyName = "<key name>"
 
 # Set the context to the specified subscription.
-$azureCtx = Set-AzureRMConteXt -SubscriptionId $SubscriptionId
+$azureCtx = Set-AzContext -SubscriptionId $SubscriptionId
 
 # Create a new resource group - skip, if your desired group already exists.
-New-AzureRmResourceGroup -Name $resourceGroup -Location $azureLocation
+New-AzResourceGroup -Name $resourceGroup -Location $azureLocation
 
 # Create a new key vault - skip if your vault already exists.
-New-AzureRmKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
+New-AzKeyVault -VaultName $akvName -ResourceGroupName $resourceGroup -Location $azureLocation
 
 # Grant yourself permissions needed to create and use the column master key.
-Set-AzureRmKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
+Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup -PermissionsToKeys get, create, list, update, wrapKey,unwrapKey, sign, verify -UserPrincipalName $azureCtx.Account
 
 # Create a column master key in Azure Key Vault.
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"

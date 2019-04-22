@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "rsModelGenerationError"
 ms.assetid: 3a0ad63f-87f9-4ca1-b0c2-c85fa991634a
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # rsModelGenerationError - Reporting Services Error
     

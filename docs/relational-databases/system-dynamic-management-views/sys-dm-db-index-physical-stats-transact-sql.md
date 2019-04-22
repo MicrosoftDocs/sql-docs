@@ -191,7 +191,7 @@ GO
   
 -   Use ALTER INDEX REBUILD, the replacement for DBCC DBREINDEX, to rebuild the index online or offline. For more information, see [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- Fragmentation alone is not a sufficient reason to reorganize or rebuild an index. The main effect of fragmentation is that it slows down page read-ahead throughput during index scans. This causes slower response times. If the query workload on a fragmented table or index does not involve scans, because the workload is primarily singleton lookups, removing fragmentation may have no effect. For more information, see this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=31012).  
+ Fragmentation alone is not a sufficient reason to reorganize or rebuild an index. The main effect of fragmentation is that it slows down page read-ahead throughput during index scans. This causes slower response times. If the query workload on a fragmented table or index does not involve scans, because the workload is primarily singleton lookups, removing fragmentation may have no effect.
   
 > [!NOTE]  
 >  Running DBCC SHRINKFILE or DBCC SHRINKDATABASE may introduce fragmentation if an index is partly or completely moved during the shrink operation. Therefore, if a shrink operation must be performed, you should do it before fragmentation is removed.  

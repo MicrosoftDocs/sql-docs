@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Security Page (Site Settings. Report Manager)
   Use the Security page to view the system role assignments that control access to the report server site. System role assignments exist outside of the scope of the report server namespace or folder hierarchy. System role assignments are global and cannot vary for specific items. Operations that are supported through system role assignments include creating and using shared schedules, using Report Builder, and setting default values for some server features.  

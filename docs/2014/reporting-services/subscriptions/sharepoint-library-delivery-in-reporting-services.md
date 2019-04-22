@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "delivering reports [Reporting Services]"
   - "subscriptions [Reporting Services], SharePoint library delivery"
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # SharePoint Library Delivery in Reporting Services
   A report server that is configured for SharePoint integration includes a delivery extension that you can use to send a report to a SharePoint library.  

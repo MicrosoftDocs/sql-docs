@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "XML [Reporting Services], rendering"
   - "device information settings [Reporting Services], PDF rendering"
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # XML Device Information Settings
   The following table lists the device information settings for rendering in XML format.  

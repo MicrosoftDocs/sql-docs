@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "query designers [Reporting Services]"
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Reporting Services Query Designers
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides graphical and text-based query designers to help you build queries for each data source type in your report.  

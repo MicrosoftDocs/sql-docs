@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Show Hidden Datasets for Parameter Values for Multidimensional Data (Report Builder and SSRS)
   Your report might include automatically-generated datasets (also known as hidden datasets) that do not appear by default in the Report Data pane. These datasets are created in the following ways:  

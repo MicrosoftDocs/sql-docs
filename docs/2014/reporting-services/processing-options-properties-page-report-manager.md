@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Processing Options Properties Page (Report Manager)
   Use the Processing Options properties page to set report execution properties for the currently selected report. These options determine when data processing for the report occurs. You can set these options to retrieve report data during off-peak hours. If you have a report that is accessed frequently, you can temporarily cache copies of it to eliminate wait time if multiple users are accessing the same report within minutes of each other.  

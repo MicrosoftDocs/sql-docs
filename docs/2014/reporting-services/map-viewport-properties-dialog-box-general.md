@@ -11,9 +11,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapviewport.general.f1"
   - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Map Viewport Properties Dialog Box, General
   Select **General** on the **Map Viewport Properties** dialog box to change the coordinate system, the projection, and the boundary options.  

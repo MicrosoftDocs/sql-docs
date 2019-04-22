@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Chart Dialog Boxes (Report Builder and SSRS)
   This section contains Help for some of the dialog boxes for charts. Alternatively, you can open Help by pressing F1 or by clicking the Help button displayed in the dialog box.  

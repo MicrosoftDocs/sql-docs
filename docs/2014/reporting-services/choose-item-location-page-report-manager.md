@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Choose Item Location Page (Report Manager)
   Use the Choose Item Location page to select a folder for a new linked report or a new model. If you are creating a linked report or a model for a specific group of users, you may want to place the item in a folder that contains other reports and models they use. You must choose a folder that already exists and for which you have permission to add contents.  

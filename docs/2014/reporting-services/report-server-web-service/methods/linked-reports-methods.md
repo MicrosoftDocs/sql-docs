@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "linked reports [Reporting Services], methods"
   - "methods [Reporting Services], linked reports"
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Linked Reports Methods
   You can use these methods to create and manage linked items.  

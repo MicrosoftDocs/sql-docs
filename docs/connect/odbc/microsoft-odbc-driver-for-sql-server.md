@@ -1,7 +1,7 @@
 ---
 title: "Microsoft ODBC Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
+ms.date: "02/05/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -40,6 +40,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Using Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Using Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
 - [Using Transparent Network IP Resolution](../../connect/odbc/using-transparent-network-ip-resolution.md)
+- [Using XA Transactions](../../connect/odbc/use-xa-with-dtc.md)
 
 ### Linux and macOS
 
@@ -52,7 +53,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Installing the Driver Manager](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 - [Known Issues](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [Programming Guidelines](../../connect/odbc/linux-mac/programming-guidelines.md)
-- [Release Notes](../../connect/odbc/linux-mac/release-notes.md)
+- [Release Notes](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 - [Support for High Availability and Disaster Recovery](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 - [Using Integrated Authentication (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 
@@ -62,7 +63,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Connection Resiliency in the Windows ODBC Driver](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [Driver-Aware Connection Pooling](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 - [Features and Behavior Changes](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
-- [Release Notes](../../connect/odbc/windows/release-notes.md)
+- [Release Notes for ODBC to SQL Server on Windows](windows/release-notes-odbc-sql-server-windows.md)
 - [System Requirements, Installation, and Driver Files](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
 

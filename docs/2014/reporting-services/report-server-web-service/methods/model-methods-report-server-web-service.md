@@ -9,9 +9,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: "reference"
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Model Methods
   You can use these methods to manage models.  

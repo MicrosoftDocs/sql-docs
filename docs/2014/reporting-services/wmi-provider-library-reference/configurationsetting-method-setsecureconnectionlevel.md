@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "SetSecureConnectionLevel method"
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # SetSecureConnectionLevel Method (WMI MSReportServer_ConfigurationSetting)
   Sets the secure connection level of the report server.  

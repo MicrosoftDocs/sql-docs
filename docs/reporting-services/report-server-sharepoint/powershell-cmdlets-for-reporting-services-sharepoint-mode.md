@@ -7,8 +7,8 @@ ms.technology: report-server-sharepoint
 
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # PowerShell cmdlets for Reporting Services SharePoint mode
@@ -30,7 +30,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
 
 ## Cmdlet summary
 
- To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/library/hh847814.aspx). In the following cmdlet summaries, the references to service application 'databases', refer to all of the databases created and used by a Reporting Services service application. This includes the configuration, alerting, and temp databases.  
+ To run the cmdlets you need to open the SharePoint Management Shell. You can also use the graphical user interface editor that is included with Microsoft Windows, **Windows PowerShell Integrated Scripting Environment (ISE)**. For more information, see [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). In the following cmdlet summaries, the references to service application 'databases', refer to all of the databases created and used by a Reporting Services service application. This includes the configuration, alerting, and temp databases.  
   
  If you see an error message similar to the following when you type the PowerShell examples:  
   
@@ -90,7 +90,7 @@ When you install SQL Server 2016 Reporting Services SharePoint mode, PowerShell 
 |Mount-SPRSDatabase|Mounts databases for a Reporting Services service application.|  
 |New-SPRSDatabase|Create new service application databases for the specified Reporting Services service application.|  
 |Get-SPRSDatabaseCreationScript|Outputs the database creation script to the screen for a Reporting Services service application. You can then run the script in SQL Server Management Studio.|  
-|Get-SPRSDatabase|Gets one or more Reporting Services service application databases. Use the command to get the ID of service application database so you can use the Set-SPRSDatabase comdlet to modify properties, for example the `querytimeout`. See the example in this topic, [Get and set Properties of the Reporting Service application database](#bkmk_example_db_properties).|  
+|Get-SPRSDatabase|Gets one or more Reporting Services service application databases. Use the command to get the ID of service application database so you can use the Set-SPRSDatabase comdlet to modify properties, for example the `querytimeout`. See the example in this topic, [Get and set Properties of the Reporting Service application database](#get-and-set-properties-of-the-reporting-service-application-database).|  
 |Get-SPRSDatabaseRightsScript|Outputs the database rights script to the screen for a Reporting Services service application. It will prompt for desired user and database then returns transact SQL you can run to modify permissions. You can then run this script in SQL Server Management Studio.|  
 |Get-SPRSDatabaseUpgradeScript|Outputs a database upgrade script to the screen. The script will upgrade Reporting Services service application databases to the database version of the current Reporting Services installation.|  
   

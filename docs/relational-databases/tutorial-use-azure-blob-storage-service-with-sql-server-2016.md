@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Use Azure Blob storage service with SQL Server 2016 | Microsoft Docs"
 ms.custom: ""
-ms.date: 01/09/2019
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: 
 ms.prod_service: "database-engine"
@@ -37,7 +37,9 @@ To use this tutorial, you need an Azure storage account, SQL Server Management S
 - Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Download [AdventureWorks2016 sample databases](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Assign the user account to the role of [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) and grant [alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) permissions. 
- 
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## 1 - Create stored access policy and shared access storage
 
 In this section, you will use an [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) script to create a shared access signature on an Azure Blob container using a stored access policy.  
@@ -82,35 +84,35 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     $resourceGroupName=$prefixName + 'rg'   
   
     # Add an authenticated Azure account for use in the session   
-    Login-AzureRmAccount    
+    Connect-AzAccount    
   
     # Set the tenant, subscription and environment for use in the rest of   
-    Set-AzureRmContext -SubscriptionId $subscriptionID   
+    Set-AzContext -SubscriptionId $subscriptionID   
   
     # Create a new resource group - comment out this line to use an existing resource group  
-    New-AzureRmResourceGroup -Name $resourceGroupName -Location $locationName   
+    New-AzResourceGroup -Name $resourceGroupName -Location $locationName   
   
     # Create a new Azure Resource Manager storage account - comment out this line to use an existing Azure Resource Manager storage account  
-    New-AzureRmStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
+    New-AzStorageAccount -Name $storageAccountName -ResourceGroupName $resourceGroupName -Type Standard_RAGRS -Location $locationName   
   
     # Get the access keys for the Azure Resource Manager storage account  
-    $accountKeys = Get-AzureRmStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
+    $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
-    $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
+    $storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
 
     # Creates a new container in blob storage  
-    $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+    $container = New-AzStorageContainer -Context $storageContext -Name $containerName  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+    $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
 
     # Gets the Shared Access Signature for the policy  
-    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
+    $sas = New-AzStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
     # Sets the variables for the new container you just created
-    $container = Get-AzureStorageContainer -Context $storageContext -Name $containerName
+    $container = Get-AzStorageContainer -Context $storageContext -Name $containerName
     $cbc = $container.CloudBlobContainer 
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
@@ -120,7 +122,7 @@ To create a policy on the container and generate a Shared Access Signature (SAS)
     Write-Host $tSql 
 
     # Once you're done with the tutorial, remove the resource group to clean up the resources. 
-    # Remove-AzureRmResourceGroup -Name $resourceGroupName  
+    # Remove-AzResourceGroup -Name $resourceGroupName  
     ```  
 
 3.  After the script completes, the CREATE CREDENTIAL statement will be in your clipboard for use in the next section.  
@@ -142,17 +144,21 @@ To create a SQL Server credential, follow these steps:
     The script will look like the following code.  
   
     ```sql   
+    /* Example:
     USE master  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
-
+    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] 
+    WITH IDENTITY='SHARED ACCESS SIGNATURE'   
+    , SECRET = 'sharedaccesssignature' 
+    GO */
+    
     USE master  
-    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
+    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      -- this name must match the container path, start with https and must not contain a forward slash at the end
+    WITH IDENTITY='SHARED ACCESS SIGNATURE' 
+      -- this is a mandatory string and should not be changed   
+     , SECRET = 'sharedaccesssignature' 
+       -- this is the shared access signature key that you obtained in section 1.   
+    GO    
     ```  
   
 4.  To see all available credentials, you can run the following statement in a query window connected to your instance:  
@@ -459,13 +465,13 @@ To delete the resource group, run the following powershell code:
   $resourceGroupName=$prefixName + 'rg'   
   
   # Adds an authenticated Azure account for use in the session   
-  Login-AzureRmAccount    
+  Connect-AzAccount    
   
   # Set the tenant, subscription and environment for use in the rest of   
-  Set-AzureRmContext -SubscriptionId $subscriptionID    
+  Set-AzContext -SubscriptionId $subscriptionID    
     
   # Remove the resource group
-  Remove-AzureRmResourceGroup -Name $resourceGroupName   
+  Remove-AzResourceGroup -Name $resourceGroupName   
   ```
 
 

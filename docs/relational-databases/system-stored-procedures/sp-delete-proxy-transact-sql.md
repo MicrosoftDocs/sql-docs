@@ -35,10 +35,10 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## Arguments  
- [ **@proxy_id**= ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to remove. The *proxy_id* is **int**, with a default of NULL.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to remove. The *proxy_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

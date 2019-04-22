@@ -34,7 +34,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## Arguments  
- [ **@database_name=** ] *database_name*  
+`[ @database_name = ] database_name`
  Specifies the name of the database involved in backup and restore operations. *database_name* is **sysname**, with no default.  
   
 ## Return Code Values  

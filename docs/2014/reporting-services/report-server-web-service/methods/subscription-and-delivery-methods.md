@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "methods [Reporting Services], subscription and delivery"
   - "subscriptions [Reporting Services], about subscriptions"
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Subscription and Delivery Methods
   You can use these methods to create and manage subscriptions and delivery of catalog items.  

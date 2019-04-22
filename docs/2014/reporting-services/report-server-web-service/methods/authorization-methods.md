@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "tasks [Reporting Services]"
   - "roles [Reporting Services], methods"
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Authorization Methods
   You can use these methods to manage tasks, roles, and policies on the report server.  

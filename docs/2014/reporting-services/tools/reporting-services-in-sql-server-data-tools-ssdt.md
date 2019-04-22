@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Reporting Services in SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] environment with enhancements that are specific to business intelligence solutions. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] is included with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -25,9 +25,7 @@ manager: craigg
   
 ##  <a name="bkmk_SolutionsandProjects"></a> Solutions and Projects  
  A report project acts as a container for report definitions and resources. Every file in the report project is published to the report server when the project is deployed. When you create a project for the first time, a solution is also created as a container for the project. You can add multiple projects to a single solution.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_Configurations"></a> Configurations  
  To create multiple sets of project properties for deployment variations such as enterprise test and production report servers, use the Configuration Manager. For more information, see [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -39,9 +37,7 @@ manager: craigg
 -   **Report Server Project Wizard.** When you select a Report Server Wizard Project, a report server project is automatically created, and the Report Wizard opens. In the wizard, you can create a report by following instructions on each page to create a connection string to a data source, set data source credentials, design a query, add a table or matrix data region, specify report data and groups, pick a font and color style, publish the report to a report server, and preview the report locally. After you create a report with the wizard, you can change the report data and the report designer by using Report Designer in the Report Server project.  
   
  ![New Project templates in SSDT](../../analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Report Designer Windows and Panes  
  Report Designer supports two views: **Design** to define the report data and report layout, and **Preview** to display a rendered view of the report. In each view, you can display multiple windows to help you design or view a rendered report.  
   
@@ -66,9 +62,7 @@ manager: craigg
   
 > [!NOTE]  
 >  If you do not see the Report Data pane, on the **View** menu, click **Report Data**. If the Report Data pane is floating, you can anchor it. For more information, see [Dock the Report Data Pane in Report Designer &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_GroupingPane"></a> Grouping Pane  
  Use the Grouping pane to define groups for a tablix data region. You can define row groups and detail groups for tables and row and column groups for matrices. You cannot use the Grouping pane to define groups for Charts or other data regions. For more information, see [Understanding Groups &#40;Report Builder and SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   
@@ -84,9 +78,7 @@ manager: craigg
 >  To toggle between **Default** and **Advanced** modes, right-click the down arrow to the right of the **Column Groups** icon.  
   
  For more information, see [Grouping Pane](grouping-pane.md).  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_Toolbox"></a> Toolbox  
  The Toolbox contains report items that you can drag to the design surface. Data regions are report items that you use to organize data on the report. Table, Matrix, List, Chart, Gauge, Data Bar, Sparkline, and Indicator are data regions. Other report items include Map, Text Box, Rectangle, Line, Image, and Subreport. Custom report items might also appear on this list if they have been installed and registered by your system administrator.  
   
@@ -102,9 +94,7 @@ manager: craigg
 -   Set properties for the currently selected group member in the Grouping pane. Group member properties help control how static group header and footer rows repeat for each group instance. For more information, see [Display Headers and Footers with a Group &#40;Report Builder and SSRS&#41;](../report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  To display the Properties pane, from the **View** menu, click **Properties Window**. You can undock this pane and move it to another area of the [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]window, or display it as a tabbed view on the design surface.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_SolutionExplorer"></a> Solution Explorer  
  Solution Explorer is a standard [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] component that displays all the items in your project. For a Report Server project, this includes folders to organize shared data sources, shared datasets, reports and resources. Folder items are automatically alphabetized when you open the solution file. To view item properties in the Properties pane, select the item.  
   
@@ -112,9 +102,7 @@ manager: craigg
  The Output window displays processing errors when you preview a report, and publishing errors when you deploy a report or a shared data source.  
   
  Use the Output and the Document Outline windows to help debug errors in expressions.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_DocumentOutline"></a> Document Outline  
  The Document Outline window displays a hierarchical list of all report items in the report definition. To open the Document Outline pane, from the **View** menu, point to **Other Windows** and click **Document Window**.  
   
@@ -122,9 +110,7 @@ manager: craigg
   
 ###  <a name="bkmk_TaskList"></a> Task List  
  The Task List window displays build errors for unsupported features when you import a report from another application, such as [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerDesignView"></a> Report Designer Design View  
  By default, when you create a Report Server project, Report Designer opens in Design view and displays the design surface. By default, the design surface displays the report body and the report background.  
   
@@ -133,9 +119,7 @@ manager: craigg
  Use the zoom control to increase or decrease the magnification of the report.  
   
  To design a report, drag report items from the Toolbox to the design surface, and then configure their properties and alter their arrangement on the report.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerPreview"></a> Report Designer Preview  
  Use Preview to run the report and view the rendered report in the report viewer. Preview caches report data locally. You can also set configuration properties to run the report in debug view, using a browser.  
   
@@ -148,9 +132,7 @@ manager: craigg
 -   **Previewing the Report using Configuration Manager and Debug.** In [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], project properties define how you want to deploy and debug your reports. These properties apply to all reports and shared data sources in the project. To set the project properties, from the **Project** menu, click **Properties**. Use these settings to test your reports and publish them to the report server.  
   
 -   **Monitoring the Output Pane for Error Messages.** When you preview a report and the report processor detects a problem, it writes error messages to the Output pane.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerMenus"></a> Report Designer Menus  
  When a Report Designer project is active in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], the following toolbars are added to the main toolbar. The Report Designer menus are visible only when in Design view.  
   
@@ -225,9 +207,7 @@ manager: craigg
 -   **Refresh Project Toolbox Items** Refresh the toolbox cache when you install new custom report items in your project.  
   
 -   **Properties** Open the **Property Pages** dialog box for this project. For more information, see [Project Property Pages Dialog Box](project-property-pages-dialog-box.md).  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerToolbars"></a> Report Designer Toolbars  
  Report Designer provides the following specialized toolbars to use when designing reports:  
   
@@ -242,9 +222,7 @@ manager: craigg
 -   **Standard** Open or save projects, display windows, and select the Debug configuration.  
   
  Use the **View** menu to control whether to display these toolbars. Other [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] toolbars may be disabled if their functionality does not apply to Report Designer features.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_SourceControl"></a> Source Control  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] can integrate with source plug-ins. Use the Projects and Solutions pages in the **Options** dialog box to specify the plug-in and configure properties.  
   
@@ -252,9 +230,7 @@ manager: craigg
  To use custom reports as templates for new reports, you simply copy them to the ReportProject folder on the computer on which [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] is installed. By default, this folder is in \<drive>:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. When you add a new item to the report project, your custom report appears in the Templates pane.  
   
  You can also add custom styles to the report wizard.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Command Line Support for SQL Server Data Tools  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] is based on [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 and the underlying devenv.exe application. Before you can use these options, you must set valid values for following two items:  
   
@@ -283,9 +259,7 @@ manager: craigg
     ```  
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2010\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_KeyboardShortcuts"></a> Keyboard Shortcuts in Reporting Services  
  Use keyboard shortcuts to:  
   
@@ -314,9 +288,7 @@ manager: craigg
     |In a text box, select text from the current cursor position to the beginning of the expression|CTRL+SHIFT+HOME|  
     |In a text box, select text from the current cursor position to the end of the expression|CTRL+SHIFT+END|  
     |Open the shortcut menu for the selected report item|SHIFT+F10+Property Key on newer keyboards|  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#bkmk_Top)  
-  
+
 ## See Also  
  [Solution Explorer](../../ssms/solution/solution-explorer.md)   
  [Reporting Services Reports &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   

@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, what's new"
   - "SSRS, what's new"
 ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # What&#39;s New (Reporting Services)
   

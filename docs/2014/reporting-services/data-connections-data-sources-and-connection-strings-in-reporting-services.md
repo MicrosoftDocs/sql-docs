@@ -17,9 +17,9 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
   - "logins [Reporting Services]"
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Data Connections, Data Sources, and Connection Strings in Reporting Services
   To include data in a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report, you must first create *data sources* and *datasets*. This topic explains the type of data sources, how to create data sources, and important information related to data source credentials. A data source includes the data source type, connection information, and the type of credentials to use. There are two types of data sources: embedded and shared. An embedded data source is defined in the report and used only by that report. A shared data source is defined independently from a report and can be used by multiple reports. For more information, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) and [Embedded and Shared Datasets &#40;Report Builder and SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -80,7 +80,7 @@ manager: craigg
   
 -   **Data source type** The connection type, for example, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Choose this value from the drop-down list of connection types.  
   
--   **Connection information** Connection information includes the name and location of the data source, and connection properties that are specific to each data provider. The *connection string* is the text representation of connection information. For example, if the data source is a SQL Server database, you can specify the name of the database. For embedded data sources, you can also write expression-based connection strings that are evaluated at run time. For more information, see [Expression-based Connection Strings](#Expressions) later in this topic.  
+-   **Connection information** Connection information includes the name and location of the data source, and connection properties that are specific to each data provider. The *connection string* is the text representation of connection information. For example, if the data source is a SQL Server database, you can specify the name of the database. For embedded data sources, you can also write expression-based connection strings that are evaluated at run time. For more information, see [Expression-based Connection Strings](#bkmk_Expressions_in_connection_strings) later in this topic.  
   
 -   **Credentials** You provide the credentials that are needed to access the data. The data source owner must have granted you the appropriate permissions to access both the data source and the specific data on the data source. For example, to connect to the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sample database installed on a network server, you must have permission to connect to the server and also read-only permission to access the database.  
   
@@ -179,5 +179,3 @@ manager: craigg
  [Set Deployment Properties &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

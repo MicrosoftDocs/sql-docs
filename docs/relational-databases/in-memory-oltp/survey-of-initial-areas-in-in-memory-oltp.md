@@ -1,7 +1,7 @@
 ---
 title: "Quick Start 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/05/2017"
+ms.date: 09/05/2017
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

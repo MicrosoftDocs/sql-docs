@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptwizard.welcome.f1"
 ms.assetid: d78d0bfb-143e-4442-99c3-8e7cfef06c25
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Welcome to the Report Wizard
   Use this page of the Report Wizard to see a summary of tasks to perform.  

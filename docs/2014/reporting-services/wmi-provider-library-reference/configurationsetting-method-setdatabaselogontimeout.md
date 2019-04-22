@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "SetDatabaseLogonTimeout method"
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # SetDatabaseLogonTimeout Method (WMI MSReportServer_ConfigurationSetting)
   Specifies the default timeout value for report server database connections.  

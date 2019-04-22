@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], paths"
   - "sources [Integration Services], paths"
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Paths

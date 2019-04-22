@@ -6,8 +6,8 @@ ms.technology: machine-learning
   
 ms.date: 10/01/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Install SQL Server 2016 R Services
@@ -22,6 +22,8 @@ In SQL Server 2017, R integration is offered in [Machine Learning Services](../r
 ## Pre-install checklist
 
 + A database engine instance is required. You cannot install just R, although you can add it incrementally to an existing instance.
+
++ For business continuity, [Always On Availabilty Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for R Services. You have to install R Services, and configure packages, on each node.
 
 + Do not install R Services on a failover cluster. The security mechanism used for isolating R processes is not compatible with a Windows Server failover cluster environment.
 

@@ -16,7 +16,9 @@ author: "rothja"
 ms.author: "jroth"
 manager: craigg
 ---
+
 # CLR Integration Security
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The security model of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integration with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) manages and secures access between different types of CLR and non-CLR objects running within [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. These objects may be called by a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement or another CLR object running in the server. The calls between objects are referred to as links. The types of security checks performed on these objects depend on the types of links involved.  
   
@@ -49,7 +51,7 @@ manager: craigg
  [Allowing Partially Trusted Callers](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Discusses issues that arise when a managed method invokes a method in a class contained in another assembly.  
   
- [Application Domains and CLR Integration Security](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [Application Domains and CLR Integration Security](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  Describes how assemblies are loaded into application domains.  
   
 ## See Also  

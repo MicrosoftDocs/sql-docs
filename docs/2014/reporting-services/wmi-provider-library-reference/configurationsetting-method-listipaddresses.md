@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ListIPAddresses method"
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # ListIPAddresses Method (WMI MSReportServer_ConfigurationSetting)
   Lists the IP addresses for the report server computer.  

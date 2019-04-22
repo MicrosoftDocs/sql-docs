@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Reporting Services Data Alerts
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] data alerts are a data driven alerting solution that helps you be informed about report data that is interesting or important to you, and at a relevant time. By using data alerts you no longer have to seek out information, it comes to you.  

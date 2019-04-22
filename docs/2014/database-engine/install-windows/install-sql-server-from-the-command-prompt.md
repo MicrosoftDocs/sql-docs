@@ -165,11 +165,11 @@ manager: craigg
   
 -   [Feature Parameters](#Feature)  
   
--   [Role Parameters](install-sql-server-from-the-command-prompt.md#role)  
+-   [Role Parameters](install-sql-server-from-the-command-prompt.md#Role)  
   
--   [Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter](install-sql-server-from-the-command-prompt.md#rollownership)  
+-   [Controlling Failover Behavior using the /FAILOVERCLUSTERROLLOWNERSHIP Parameter](install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
--   [Instance ID or InstanceID Configuration](install-sql-server-from-the-command-prompt.md#instanceid)  
+-   [Instance ID or InstanceID Configuration](install-sql-server-from-the-command-prompt.md#InstanceID)  
   
 ##  <a name="Install"></a> Installation Parameters  
  Use the parameters in the following table to develop command line scripts for installation.  
@@ -845,5 +845,3 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
  [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
  [SQL Server Failover Cluster Installation](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Install SQL Server 2014 BI Features](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
-  
-  

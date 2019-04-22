@@ -11,9 +11,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.definequeryparameters.f1"
   - "10026"
 ms.assetid: a9697101-aa52-4a62-8f33-fad8f5bc2a0c
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Define Query Parameters Dialog Box
   Use the **Define Query Parameters** dialog box to specify parameter values when you run a query in a query designer at design time to see sample data. Query parameters filter data on the data source and help to limit the amount of data that a report processes. These values are not saved in the report definition.  

@@ -37,10 +37,10 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the Windows user or group to be added. The Windows user or group must be qualified with a Windows domain name in the form *Domain*\\*User*. *login* is **sysname**, with no default.  
   
- [ **@logintype =** ] **'***logintype***'**  
+`[ @logintype = ] 'logintype'`
  Is the security level of the login being granted access. *logintype* is **varchar(5)**, with a default of NULL. Only **admin** can be specified. If **admin** is specified, *login* is granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and added as a member of the **sysadmin** fixed server role.  
   
 ## Return Code Values  

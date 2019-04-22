@@ -77,6 +77,7 @@
 
     "globalMetadata": {
       "layout": "Conceptual",
+      "uhfHeaderId": "MSDocsHeader-DocsSQL",
       "contributors_to_exclude": ["hexiaokai", "openpublishingbuild","sudeepku","saldana","iRaindrop"],
       "searchScope": ["sql"],
       "_op_documentIdPathDepotMapping": {
@@ -85,35 +86,47 @@
           "folder_relative_path_in_docset": "."
         }
       },
+      "extendBreadcrumb": true,
+      "toc_preview": true,
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/sql-docs",
       "feedback_product_url": "https://feedback.azure.com/forums/908035-sql-server/",
-      "titleSuffix": "SQL Server"
-  },
+      "titleSuffix": "SQL Server"
+    },
 
     "fileMetadata": {
 
       "feedback_system": {
+        "advanced-analytics/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
-        "linux/**/*.md": "GitHub"
+        "database-engine/**/*.md": "GitHub",
+        "linux/**/*.md": "GitHub",
+        "powershell/**/*.md": "GitHub",
+        "relational-databases/**/*.md": "GitHub",
+        "sql-server/**/*.md": "GitHub",
+        "ssms/**/*.md": "GitHub",
+        "tools/**/*.md": "GitHub",
+        "t-sql/**/*.md": "GitHub"
       },
       "feedback_product_url": {
         "azure-data-studio/**/*.md": "https://github.com/microsoft/azuredatastudio/issues/"
       },
 
       "titleSuffix": {
-        "2014/analysis-services/**/*.md": "SQL Server 2014 Analysis Services",
-        "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
-        "2014/database-engine/availability-groups/**/*.md": "SQL Server Always On",
-        "2014/relational-database/replication/**/*.md": "SQL Server Replication",
-        "2014/sql-server/failover-clusters/**/*.md": "SQL Server Always On",
+        "2014/analysis-services/**/*.md": "SQL Server 2014 Analysis Services",
+        "2014/database-engine/availability-groups/**/*.md": "SQL Server Always On",
+        "2014/integration-services/**/*.md": "SQL Server 2014 Integration Services",
+        "2014/relational-database/replication/**/*.md": "SQL Server Replication",
+        "2014/reporting-services/**/*.md": "SQL Server 2014 Reporting Services",
+        "2014/sql-server/failover-clusters/**/*.md": "SQL Server Always On",
     
-        "analysis-services/**/*.md": "",
-        "azure-data-studio/**/*.md": "Azure Data Studio",
-        "database-engine/availability-groups/**/*.md": "SQL Server Always On",
-        "relational-database/replication/**/*.md": "SQL Server Replication",
-        "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
-        "sql-server/failover-clusters/**/*.md": "SQL Server Always On"
+        "analysis-services/**/*.md": "",
+        "azure-data-studio/**/*.md": "Azure Data Studio",
+        "database-engine/availability-groups/**/*.md": "SQL Server Always On",
+        "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
+        "relational-database/replication/**/*.md": "SQL Server Replication",
+        "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
+        "sql-server/failover-clusters/**/*.md": "SQL Server Always On"
       },
 
       "breadcrumb_path": {
@@ -123,7 +136,6 @@
       
       "layout":{
         "**/index.yml": "LandingPage"
-
       },
       
       "monikerRange": {
@@ -148,12 +160,14 @@
         "mdx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "powershell/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "relational-databases/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
+        "relational-databases/resource-governor/**/*.md": "=azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "reporting-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "reporting-services/mobile-reports/**/*.md": ">= sql-server-2017 || = sqlallproducts-allversions",
         "samples/**/*.md": "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "sql-server/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "ssdt/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "ssms/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions",
+        "toc/**/*.md": "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions",
         "tools/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "t-sql/**/*.md": "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "xquery/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
@@ -176,6 +190,53 @@
       }
     },
 
-    "xref":["mref/sql130.zip","mref/System.Reflection.Assembly.Load.yml","mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml","2014/mref/Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.yml","2014/mref/Microsoft.AnalysisServices.ClrAssembly.yml","2014/mref/Microsoft.AnalysisServices.Cube.yml","2014/mref/Microsoft.AnalysisServices.Dimension.CurrentStorageMode.yml","2014/mref/Microsoft.AnalysisServices.Dimension.ProcessingMode.yml","2014/mref/Microsoft.AnalysisServices.ProcessableMajorObject.yml","2014/mref/Microsoft.AnalysisServices.Server.yml","2014/mref/Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.yml","2014/mref/Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput.yml","2014/mref/Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask.yml","2014/mref/Microsoft.SqlServer.Management.Common.ServerConnection.yml","2014/mref/Microsoft.SqlServer.Management.Smo.Database.yml","2014/mref/Microsoft.SqlServer.Management.Smo.DataType.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBox.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions.yml","2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.yml","2014/mref/Microsoft.SqlServer.MessageBox.yml","2014/mref/Microsoft.SqlServer.Replication.DistributionPublisher.yml","2014/mref/Microsoft.SqlServer.Replication.IProcessSecurityContext.yml","2014/mref/Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId.yml","2014/mref/Microsoft.SqlServer.Replication.MergeArticle.yml","2014/mref/Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription.yml","2014/mref/Microsoft.SqlServer.Replication.TracerToken.TracerTokenId.yml","2014/mref/System.Windows.Forms.MessageBox.yml","2014/mref/System.Data.OracleClient.yml","2014/mref/System.Data.SqlClient.SqlConnection.yml","2014/mref/System.Web.Services.yml","2014/mref/System.Exception.yml","2014/mref/ReportService2006.ReportingService2006.yml","2014/mref/ReportService2010.ReportingService2010.CreateReportEditSession.yml","2014/mref/Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties.yml","2014/mref/ReportService2005.ReportingService2005.yml","2014/mref/System.Xml.Serialization.yml","2014/mref/System.Windows.Forms.DialogResult.yml"]
+    "xref":[
+      "mref/sql130.zip",
+      "mref/System.Reflection.Assembly.Load.yml",
+      "mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml",
+
+      "2014/mref/Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.yml",
+      "2014/mref/Microsoft.AnalysisServices.ClrAssembly.yml",
+      "2014/mref/Microsoft.AnalysisServices.Cube.yml",
+      "2014/mref/Microsoft.AnalysisServices.Dimension.CurrentStorageMode.yml",
+      "2014/mref/Microsoft.AnalysisServices.Dimension.ProcessingMode.yml",
+      "2014/mref/Microsoft.AnalysisServices.ProcessableMajorObject.yml",
+      "2014/mref/Microsoft.AnalysisServices.Server.yml",
+
+      "2014/mref/Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.yml",
+
+      "2014/mref/Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput.yml",
+      "2014/mref/Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask.yml",
+      "2014/mref/Microsoft.SqlServer.Management.Common.ServerConnection.yml",
+      "2014/mref/Microsoft.SqlServer.Management.Smo.Database.yml",
+      "2014/mref/Microsoft.SqlServer.Management.Smo.DataType.yml",
+      "2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBox.yml",
+      "2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.yml",
+      "2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton.yml",
+      "2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult.yml",
+      "2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions.yml",
+      "2014/mref/Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.yml",
+      "2014/mref/Microsoft.SqlServer.MessageBox.yml",
+      "2014/mref/Microsoft.SqlServer.Replication.DistributionPublisher.yml",
+      "2014/mref/Microsoft.SqlServer.Replication.IProcessSecurityContext.yml",
+      "2014/mref/Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId.yml",
+      "2014/mref/Microsoft.SqlServer.Replication.MergeArticle.yml",
+      "2014/mref/Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription.yml",
+      "2014/mref/Microsoft.SqlServer.Replication.TracerToken.TracerTokenId.yml",
+      "2014/mref/Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties.yml",
+
+      "2014/mref/ReportService2005.ReportingService2005.yml",
+      "2014/mref/ReportService2006.ReportingService2006.yml",
+      "2014/mref/ReportService2010.ReportingService2010.CreateReportEditSession.yml",
+
+      "2014/mref/System.Data.OracleClient.yml",
+      "2014/mref/System.Data.SqlClient.SqlConnection.yml",
+      "2014/mref/System.Exception.yml",
+      "2014/mref/System.Web.Services.yml",
+      "2014/mref/System.Windows.Forms.DialogResult.yml",
+      "2014/mref/System.Windows.Forms.MessageBox.yml",
+
+      "2014/mref/System.Xml.Serialization.yml"
+    ]
   }
 }

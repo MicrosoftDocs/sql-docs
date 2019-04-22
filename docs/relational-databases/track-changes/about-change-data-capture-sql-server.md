@@ -31,7 +31,7 @@ manager: craigg
 ## Understanding Change Data Capture and the Capture Instance  
  Before changes to any individual tables within a database can be tracked, change data capture must be explicitly enabled for the database. This is done by using the stored procedure [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md). When the database is enabled, source tables can be identified as tracked tables by using the stored procedure [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md). When a table is enabled for change data capture, an associated capture instance is created to support the dissemination of the change data in the source table. The capture instance consists of a change table and up to two query functions. Metadata that describes the configuration details of the capture instance is retained in the change data capture metadata tables **cdc.change_tables**, **cdc.index_columns**, and **cdc.captured_columns**. This information can be retrieved by using the stored procedure [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
- All objects that are associated with a capture instance are created in the change data capture schema of the enabled database. The requirements for the capture instance name is that it be a valid object name, and that it be unique across the database capture instances. By default, the name is \<*schema name*_*table name*> of the source table. Its associated change table is named by appending **_CT** to the capture instance name. The function that is used to query for all changes is named by prepending **fn_cdc_get_all_changes_** to the capture instance name. If the capture instance is configured to support **net changes**, the **net_changes** query function is also created and named by prepending **fn_cdc_get_net_changes\_** to the capture instance name.  
+ All objects that are associated with a capture instance are created in the change data capture schema of the enabled database. The requirements for the capture instance name is that it be a valid object name, and that it be unique across the database capture instances. By default, the name is \<*schema name*\_*table name*> of the source table. Its associated change table is named by appending **_CT** to the capture instance name. The function that is used to query for all changes is named by prepending **fn_cdc_get_all_changes_** to the capture instance name. If the capture instance is configured to support **net changes**, the **net_changes** query function is also created and named by prepending **fn_cdc_get_net_changes\_** to the capture instance name.  
   
 ## Change Table  
  The first five columns of a change data capture change table are metadata columns. These provide additional information that is relevant to the recorded change. The remaining columns mirror the identified captured columns from the source table in name and, typically, in type. These columns hold the captured column data that is gathered from the source table.  
@@ -113,7 +113,7 @@ Please consider one of the following approaches to ensure change captured data i
 
 For example, if you have one database that uses a collation of  SQL_Latin1_General_CP1_CI_AS, consider the following table:
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
@@ -121,7 +121,7 @@ CREATE TABLE T1(
 
 CDC might fail to capture the binary data for column C2, because its collation is different (Chinese_PRC_CI_AI). Use NVARCHAR to avoid this problem:
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)

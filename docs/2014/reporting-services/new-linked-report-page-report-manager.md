@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # New Linked Report Page (Report Manager)
   Use the New Linked Report page to create a linked report. A linked report is a report with settings and properties of its own, but links to the report definition of another report. Linked reports are useful when you have a base report that you want to vary for specific groups or users; for example, a regional report that returns different data based on a regional code that you specify as a parameter. A linked report is typically created from a parameterized report when you want to vary and then save different parameter values with each report instance. However, you can create a linked report from any report to which you have access.  

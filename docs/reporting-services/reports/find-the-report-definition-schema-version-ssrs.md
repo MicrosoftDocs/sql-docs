@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Report Definition Language, XML schema"
   - "schemas [Reporting Services]"
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Find the Report Definition Schema Version (SSRS)
@@ -69,7 +69,7 @@ A report definition file specifies the RDL namespace for the version of the repo
     ```  
     <xsd:schema   
     targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
-    xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
     xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  

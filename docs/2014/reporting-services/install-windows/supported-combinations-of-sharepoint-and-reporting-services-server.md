@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "SharePoint mode"
   - "add-in for sharepoint"
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Supported Combinations of SharePoint and Reporting Services Server and Add-in (SQL Server 2014)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers can be installed in SharePoint mode and integrated with a SharePoint deployment. Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. This topic summarizes the supported combinations. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] the integration is a result of the combination of the following:  

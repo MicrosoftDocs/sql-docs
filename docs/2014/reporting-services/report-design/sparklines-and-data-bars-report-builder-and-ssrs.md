@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Sparklines and Data Bars (Report Builder and SSRS)
   Sparklines and data bars are small, simple charts that convey a lot of information in a little space, often inline with text. Sparklines and data bars are often used in tables and matrices. Their impact comes from viewing many of them together and being able to quickly compare them one above the other, rather than viewing them singly. They make it easy to see the outliers, the rows that are not performing like the others. Although they are small, each sparkline often represents multiple data points, often over time. Data bars can represent multiple data points, but typically illustrate only one. Each sparkline typically presents a single series. You cannot add a sparkline to a detail group in a table. Because sparklines display aggregated data, they must go in a cell associated with a group. Sparklines and data bars have the same basic chart elements of categories, series, and values, but they have no legend, axis lines, labels, or tick marks.  
@@ -53,9 +53,7 @@ manager: craigg
 -   [Bar Charts &#40;Report Builder and SSRS&#41;](bar-charts-report-builder-and-ssrs.md): Basic, stacked, and 100% stacked bar charts.  
   
 -   [Column Charts &#40;Report Builder and SSRS&#41;](charts-report-builder-and-ssrs.md): Basic, stacked, and 100% stacked column charts. Column charts can be either sparklines or data bars.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="AlignDatainTableMatrix"></a> Aligning Sparkline Data in a Table or Matrix  
  When you insert a sparkline in a table or matrix, it is usually important for the data points in each sparkline to align with the data points of the other sparklines in that column. Otherwise it is hard to compare the data in the different rows. For example, when you compare sales data by month for different salespeople in your company, you would want the months to align. If an employee was out for the month of April, there would be no data for that employee for that month. You would want to see a gap for that month, and see the data for subsequent months align with the data for the other employees. You can do this by aligning the horizontal axis. For more information, see the section about sparklines in [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md), and see [Align the Data in a Chart in a Table or Matrix &#40;Report Builder and SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
@@ -64,9 +62,7 @@ manager: craigg
  ![rs_SparklineAlignData](../media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
   
  In this image, the column chart shows daily sales for each employee. Note that for days that an employee has no sales, the chart leaves a blank and aligns subsequent days. This is an example of horizontal alignment. Also note that for some employees, every bar is short, and no bar reaches the top of the cell. This is an example of vertical alignment; without it, in the rows with no tall bars, the short bars would expand to fill the height of the cell.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="UnderstandScope"></a> Understanding the Data Supplied to a Sparkline or Data Bar  
  When you add a sparkline or data bar to a table or matrix, this is referred to as *nesting* one data region inside another. Nesting means that the data supplied to the sparkline or data bar is controlled by the dataset that the table or matrix is based on, and by where you put it in the table or matrix. For more information, see [Nested Data Regions &#40;Report Builder and SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
@@ -75,9 +71,7 @@ manager: craigg
   
 > [!NOTE]  
 >  You cannot convert a full chart to a sparkline or data bar with one click. However, you can make a sparkline or data bar from a full chart just by deleting all the chart elements that are not in sparklines and data bars.  
-  
- ![Arrow icon used with Back to Top link](../../2014-toc/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Back to Top](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> How-to Topics  
  [Add Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -109,5 +103,3 @@ manager: craigg
  [Tutorial: Add a Sparkline to Your Report &#40;Report Builder&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
  [Sparklines, Bar Charts, and Indicators in Report Builder (video)](https://technet.microsoft.com/bi/video/ff877165)   
  [How to: Create a Sparkline in a Table (video)](https://go.microsoft.com/fwlink/?LinkId=197092)  
-  
-  

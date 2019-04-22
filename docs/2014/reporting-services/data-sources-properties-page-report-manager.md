@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Data Sources Properties Page (Report Manager)
   Use the Data Sources properties page to define how the current report connects to an external data source. You can override the data source connection information that was originally published with the report. If multiple data sources are used with a report, each data source has its own section in the properties page. Data sources are listed in the order in which they are defined in the report.  

@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], creating"
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Create an Embedded or Shared Data Source (SSRS)
   A report data source specifies a name and connection information. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports two types of data sources: embedded and shared. An embedded data source is defined in a report definition and used only by that report. A shared data source is defined as a separate item and can be used by multiple reports. For more information, see [Embedded and Shared Data Connections or Data Sources &#40;Report Builder and SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  

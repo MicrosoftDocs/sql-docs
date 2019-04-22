@@ -35,16 +35,16 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the remote server. *publisher* is **sysname**, with a default of **%**, which returns information for all Publishers.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with a default of **%**, which returns all the Publisher databases.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**, which returns all the publications. If this parameter equals to ALL, only pull subscriptions with independent_agent = **0** are returned.  
   
- [ **@show_push=**] **'***show_push***'**  
+`[ @show_push = ] 'show_push'`
  Is whether all push subscriptions are to be returned. *show_push*is **nvarchar(5)**, with a default of FALSE, which does not return push subscriptions.  
   
 ## Result Sets  

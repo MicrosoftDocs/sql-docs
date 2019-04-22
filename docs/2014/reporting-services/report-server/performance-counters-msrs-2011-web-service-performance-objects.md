@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "counters [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Performance Counters for the MSRS 2014 Web Service and MSRS 2014 Windows Service Performance Objects (Native Mode)
   This topic describes performance counters for the `MSRS 2014 Web Service` and `MSRS 2014 Windows Service` performance objects  

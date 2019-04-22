@@ -138,7 +138,7 @@ manager: craigg
 |**Synchronous commit**|Under synchronous-commit mode, before committing transactions, a synchronous-commit primary replica waits for a synchronous-commit secondary replica to acknowledge that it has finished hardening the log. Synchronous-commit mode ensures that once a given secondary database is synchronized with the primary database, committed transactions are fully protected.|  
 |**Asynchronous commit**|Under asynchronous-commit mode, the primary replica commits transactions without waiting for acknowledgement that an asynchronous-commit secondary replica has hardened the log. Asynchronous-commit mode minimizes transaction latency on the secondary databases but allows them to lag behind the primary databases, making some data loss possible.|  
   
- For more information, see [ Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md).  
+ For more information, see [Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md).  
   
  **Failover Mode**  
  Displays the failover mode of the server instance, one of:  
@@ -195,7 +195,7 @@ manager: craigg
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md)   
+ [Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md)   
  [Failover and Failover Modes &#40;AlwaysOn Availability Groups&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [Perform a Planned Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [Perform a Forced Manual Failover of an Availability Group &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   

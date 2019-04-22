@@ -22,7 +22,7 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): Use LocalDB during development to write and test Transact-SQL code without having to manage a full server instance of SQL Server.
 
 ## SQL Data tools
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : Use  SSDT to build relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : Use  SSDT to build relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.
 * [SQL Server Management Tools](../ssms/download-sql-server-management-studio-ssms.md):  Use SSMS configure, monitor, and administer instances of SQL Server.
 
 ## SQL Data access

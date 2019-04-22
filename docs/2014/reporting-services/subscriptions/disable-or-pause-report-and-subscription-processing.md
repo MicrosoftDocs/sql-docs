@@ -19,9 +19,9 @@ helpviewer_keywords:
   - "roles [Reporting Services], modifying"
   - "shared schedules [Reporting Services], pausing"
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Pause Report and Subscription Processing
   You cannot pause a report or subscription directly. However, you can interrupt report and subscription processing prior to the process starting or when a data source connection is made. You can also prevent a report or subscription from processing by making it inaccessible to users.  

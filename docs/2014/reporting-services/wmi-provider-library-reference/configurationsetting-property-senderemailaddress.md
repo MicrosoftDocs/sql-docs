@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "SenderEmailAddress property"
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # SenderEmailAddress Property (WMI MSReportServer_ConfigurationSetting)
   Gets the address used to send e-mail from the report server. Read-only.  

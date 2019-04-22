@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "Report Designer [Reporting Services], configuration file"
   - "RSReportDesigner configuration file"
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # RSReportDesigner Configuration File
   The RSReportDesigner.config file stores settings about the rendering and data processing extensions available to Report Designer. Data processing extension information is stored in the `Data` element. Rendering extension information is stored in the `Render` element. The `Designer` element enumerates the query builders that are used in Report Designer.  

@@ -1,18 +1,20 @@
 ---
 title: What is the master instance?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: This article describes the SQL Server master instance in a SQL Server 2019 big data cluster (preview).
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
-# What is the master instance in a SQL Server 2019 big data cluster?
+# What is the master instance in a SQL Server big data cluster?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article describes the role of the *SQL Server master instance* in a SQL Server 2019 big data cluster. The master instance is a SQL Server instance running in a SQL Server big data cluster [control plane](big-data-cluster-overview.md#controlplane).
 
@@ -24,7 +26,7 @@ The SQL Server master instance provides an externally accessible TDS endpoint fo
 
 ## Scale-out query management
 
-The SQL Server master instance contains the scale-out query engine that is used to distribute queries across SQL Server instances on nodes in the [compute pool](concept-compute-pool.md). The scale-out query engine also provides access through Transact-SQL to all Hive tables in the cluster without any additional configuration. (Hive tables support is not in CTP 2.2)
+The SQL Server master instance contains the scale-out query engine that is used to distribute queries across SQL Server instances on nodes in the [compute pool](concept-compute-pool.md). The scale-out query engine also provides access through Transact-SQL to all Hive tables in the cluster without any additional configuration.
 
 ## Metadata and user databases
 
@@ -61,6 +63,7 @@ With SQL Server 2019 big data clusters, you can do more with your enterprise dat
 
 ## Next steps
 
-To learn more about the SQL Server big data clusters, see the following overview:
+To learn more about the SQL Server big data clusters, see the following resources:
 
 - [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

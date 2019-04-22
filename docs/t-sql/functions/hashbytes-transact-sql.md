@@ -38,7 +38,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## Arguments  
  **'**\<algorithm>**'**  
- Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated. Older algorithms (not recommended) will continue working, but they will raise a deprecation event.  
+ Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated.  
   
  **@input**  
  Specifies a variable containing the data to be hashed. **@input** is **varchar**, **nvarchar**, or **varbinary**.  
@@ -54,43 +54,45 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## Return Value  
  **varbinary** (maximum 8000 bytes)  
-  
+
+## Remarks  
+Consider using `CHECKSUM` or `BINARY_CHECKSUM` as alternatives to compute a hash value.
+
+The MD2, MD4, MD5, SHA, and SHA1 algorithms are deprecated starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Use SHA2_256 or SHA2_512 instead. Older algorithms will continue working, but they will raise a deprecation event.
+
 ## Examples  
-  
-### A: Return the hash of a variable  
+### Return the hash of a variable  
  The following example returns the `SHA1` hash of the **nvarchar** data stored in variable `@HashThis`.  
   
-```  
+```sql  
 DECLARE @HashThis nvarchar(4000);  
 SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA1', @HashThis);  
-  
 ```  
   
-### B: Return the hash of a table column  
+### Return the hash of a table column  
  The following example returns the SHA1 hash of the values in column `c1` in the table `Test1`.  
   
-```  
+```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 -------------------------------------------  
 0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
 0xF643A82F948DEFB922B12E50B950CEE130A934D6  
   
 (2 row(s) affected)  
-  
 ```  
   
 ## See Also  
- [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-  
+[Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
   

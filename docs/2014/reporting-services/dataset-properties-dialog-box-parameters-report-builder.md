@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Dataset Properties Dialog Box, Parameters (Report Builder)
   Select **Parameters** on the **Dataset Properties** dialog box to add, change, and delete query parameters.  

@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "removing encryption keys"
   - "resetting encryption keys"
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Delete and Re-create Encryption Keys  (SSRS Configuration Manager)
   Deleting and re-creating encryption keys are activities that fall outside of routine encryption key maintenance. You perform these tasks in response to a specific threat to your report server, or as a last resort when you can no longer access a report server database.  

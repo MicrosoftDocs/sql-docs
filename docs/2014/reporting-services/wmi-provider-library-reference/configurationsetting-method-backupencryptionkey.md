@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "BackupEncryptionKey method"
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)
   Backs up the encryption key for the specified report server instance. The encryption key is stored encrypted with a password.  

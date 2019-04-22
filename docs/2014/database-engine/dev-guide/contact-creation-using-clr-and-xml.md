@@ -1380,7 +1380,7 @@ End Class
   
  This is the [!INCLUDE[tsql](../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assembly and creates the stored procedure in the database.  
   
-```tsql  
+```sql  
 use AdventureWorks  
 GO  
   

@@ -25,7 +25,7 @@ manager: craigg
   
  Use the following query to retrieve information about the data and delta files,  
   
-```tsql  
+```sql  
 select checkpoint_file_id, file_type_desc, internal_storage_slot, file_size_in_bytes, file_size_used_in_bytes,   
 inserted_row_count, deleted_row_count, lower_bound_tsn, upper_bound_tsn   
 from sys.dm_db_xtp_checkpoint_files  
@@ -35,7 +35,7 @@ order by file_type_desc, upper_bound_tsn
   
  Assume that you found three data files that have not been merged. Using the `lower_bound_tsn` value of the first data file and the `upper_bound_tsn` of the last data file, you can issue the following command:  
   
-```tsql  
+```sql  
 exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890  
 ```  
   

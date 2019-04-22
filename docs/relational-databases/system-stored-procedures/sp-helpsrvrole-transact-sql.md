@@ -34,7 +34,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## Arguments  
- [ **@srvrolename=** ] **'***role***'**  
+`[ @srvrolename = ] 'role'`
  Is the name of the fixed server role. *role* is **sysname**, with a default of NULL. *role* can be one of the following values.  
   
 |Fixed server role|Description|  

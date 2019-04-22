@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Reporting Services Site Collection Features
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode provides three SharePoint site collection features. The features support the general [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode reporting environment, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], a feature of the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition, and management operations for [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint Central Administration.  

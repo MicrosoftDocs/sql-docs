@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "mapping result sets to variables [Integration Services]"
   - "variables [Integration Services], mapping result sets to"
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Map Result Sets to Variables in an Execute SQL Task

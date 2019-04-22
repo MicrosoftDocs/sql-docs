@@ -4,7 +4,7 @@ description: Quickstart for Python script in SQL Server. Learn the basics of cal
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 01/11/2019
+ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
@@ -93,4 +93,4 @@ Inputs to this stored procedure include:
 Now that you have run a couple of simple Python scripts, take a closer look at structuring inputs and outputs.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Handle inputs and outputs](quickstart-python-run-using-t-sql.md)
+> [Quickstart: Handle inputs and outputs](quickstart-python-inputs-and-outputs.md)

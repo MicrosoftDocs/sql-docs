@@ -1,7 +1,7 @@
 ---
 title: "Metadata (Master Data Services) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/06/2017"
+ms.date: 01/19/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "metadata [Master Data Services]"
   - "user-defined metadata [Master Data Services]"
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Metadata (Master Data Services)
@@ -49,7 +49,7 @@ manager: craigg
 |Task Description|Topic|  
 |----------------------|-----------|  
 |Add metadata to a model object.|[Add Metadata &#40;Master Data Services&#41;](add-metadata-master-data-services.md)
-)|  
+|&nbsp;|&nbsp;|
   
 ## Related Content  
   

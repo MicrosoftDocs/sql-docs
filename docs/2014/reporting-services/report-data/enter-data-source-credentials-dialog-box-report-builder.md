@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "10128"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)
   Use the **Enter Data Source Credentials** dialog box to provide your credentials so that you can retrieve data from the data source.  

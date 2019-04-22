@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SetVirtualDirectory method"
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # SetVirtualDirectory Method (WMI MSReportServer_ConfigurationSetting)
   Sets the name of the virtual directory for a given application.  

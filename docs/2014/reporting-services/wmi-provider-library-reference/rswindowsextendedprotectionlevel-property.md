@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # RSWindowsExtendedProtectionLevel Property (WMI MSReportServer_ConfigurationSetting)
   Returns a string value that indicates the level of protection the report server is configured to support. This property is read-only.  

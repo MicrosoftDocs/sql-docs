@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "WindowsServiceIdentityConfigured property"
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # WindowsServiceIdentityConfigured Property (WMI MSReportServer_ConfigurationSetting)
   Returns the identity that the Report Server Windows service was last configured to run under. Read-only.  

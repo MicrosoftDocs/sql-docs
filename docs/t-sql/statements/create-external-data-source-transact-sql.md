@@ -162,7 +162,7 @@ For Azure Data Lake Store, location specifies the URI for connecting to your Azu
 
 
 **SHARD_MAP_MANAGER**   
- For SHARD_MAP_MANAGER, specifies the logical server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
+ For SHARD_MAP_MANAGER, specifies the SQL Database server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -183,7 +183,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 For a step-by-step tutorial, see [Getting started with elastic queries for sharding (horizontal partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
 **RDBMS**   
-For RDBMS, specifies the logical server name of the remote database in Azure SQL Database.  
+For RDBMS, specifies the SQL Database server name of the remote database in Azure SQL Database.  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -320,6 +320,10 @@ To ensure successful PolyBase queries in the event of Hadoop NameNode failover, 
  All data sources defined on the same Hadoop cluster location must use the same setting for RESOURCE_MANAGER_LOCATION or JOB_TRACKER_LOCATION. If there is inconsistency, a runtime error will occur.  
   
  If the Hadoop cluster is set up with a name and the external data source uses the IP address for the cluster location, PolyBase must still be able to resolve the cluster name when the data source is used. To resolve the name, you must enable a DNS forwarder.  
+ 
+Currently an SAS token with type `hadoop` is unsupported, and it is only supported with a Storage account access key. Attempting to create an external data source with type `hadoop` and using a SAS credential might fail with the error:
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## Locking  
  Takes a shared lock on the EXTERNAL DATA SOURCE object.  
@@ -399,7 +403,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## Examples: Azure SQL Database
 
 ### E. Create a Shard map manager external data source
-To create an external data source to reference a SHARD_MAP_MANAGER, specify the logical server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
+To create an external data source to reference a SHARD_MAP_MANAGER, specify the SQL Database server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -419,7 +423,7 @@ WITH (
 ```
 
 ### F. Create an RDBMS external data source
-To create an external data source to reference a RDBMS, specifies the logical server name of the remote database in Azure SQL Database.
+To create an external data source to reference a RDBMS, specifies the SQL Database server name of the remote database in Azure SQL Database.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';

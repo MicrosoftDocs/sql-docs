@@ -2,7 +2,7 @@
 title: "Prerequisites, Restrictions, and Recommendations for availability groups"
 description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group."
 ms.custom: "seodec18"
-ms.date: "06/05/2018"
+ms.date: "03/22/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -51,7 +51,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  Also ensure that your environment is correctly configured for connecting to an availability group. For more information, see [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="ComputerRecommendations"></a> Recommendations for Computers That Host Availability Replicas (Windows System)  
+##  <a name="ComputerRecommendations"></a> Recommendations for Computers That Host Availability Replicas (Windows System)  
   
 -   **Comparable systems:**  For a given availability group, all the availability replicas should run on comparable systems that can handle identical workloads.  
   
@@ -154,7 +154,7 @@ manager: craigg
     -   A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. Serial Redo threads are released after ~15 seconds of inactivity. 
     
     > [!NOTE]
-    > Databases are chosen to go single-threaded based on their ascending database ID. As such, the database creation order should be considered for SQL Server instances that host more availability group databases than available worker threads. For example, on a system with 32 or more CPU cores, all databases starting with the 7th database that joined the availability group will be in serial redo mode irrespective of the actual redo workload for each database. Databases that require parallel redo should be added to the availability group first.    
+    > Databases are chosen to go single-threaded based on their ascending database ID. As such, the database creation order should be considered for SQL Server instances that host more availability group databases than available worker threads. For example, on a system with 32 or more CPU cores, the first six databases (ordered by database ID) in an availability group or groups will use parallel redo mode, and all subsequent databases will use single redo mode.
   
 -   In addition, availability groups use unshared threads, as follows:  
   
@@ -261,7 +261,7 @@ manager: craigg
   
 -   **Availability replicas:**  Each availability group supports one primary replica and up to eight secondary replicas. All of the replicas can run under asynchronous-commit mode, or up to three of them can run under synchronous-commit mode (one primary replica with two synchronous secondary replicas).  
   
--   **Maximum number of availability groups and availability databases per computer:** The actual number of databases and availability groups you can put on a computer (VM or physical) depends on the hardware and workload, but there is no enforced limit. Microsoft has extensively tested with 10 AGs and 100 DBs per physical machine. Signs of overloaded systems can include, but are not limited to, worker thread exhaustion, slow response times for availability group system views and DMVs, and/or stalled dispatcher system dumps. Please make sure to thoroughly test your environment with a production-like workload to ensure it can handle peak workload capacity within your application SLAs. When considering SLAs be sure to consider load under failure conditions as well as expected response times.  
+-   **Maximum number of availability groups and availability databases per computer:** The actual number of databases and availability groups you can put on a computer (VM or physical) depends on the hardware and workload, but there is no enforced limit. Microsoft has tested up to 10 AGs and 100 DBs per physical machine, however this is not a binding limit. Depending on the hardware specification on the server and the workload, you can put a higher number of databases and availability groups on an instance of SQL Server. Signs of overloaded systems can include, but are not limited to, worker thread exhaustion, slow response times for availability group system views and DMVs, and/or stalled dispatcher system dumps. Please make sure to thoroughly test your environment with a production-like workload to ensure it can handle peak workload capacity within your application SLAs. When considering SLAs be sure to consider load under failure conditions as well as expected response times.  
   
 -   **Do not use the Failover Cluster Manager to manipulate availability groups:**  
   

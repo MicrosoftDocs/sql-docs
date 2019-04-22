@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "REVOKE statements, database scoped credentials"
   - "revoking permissions [SQL Server], database scoped credentials"
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], properties"
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Set Report Server Properties (Management Studio)
   You can set report server system properties in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to enable features or set server defaults.  

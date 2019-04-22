@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "ISubscriptionBaseUIUserControl interface"
   - "delivery extensions [Reporting Services], user controls"
 ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Implementing the ISubscriptionBaseUIUserControl Interface for a Delivery Extension
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extensions can contain an implementation of a subscription user interface (UI) for gathering extension-specific information in Report Manager. The UI is invoked when a user creates a new subscription or modifies an existing one. When a new subscription is being created, the UI displays suitable default values and enables users to interact with the delivery provider. When a subscription is being modified, the UI is pre-populated with the information in the current subscription.  

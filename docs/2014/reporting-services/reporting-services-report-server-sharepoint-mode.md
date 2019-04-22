@@ -1,27 +1,28 @@
 ---
 title: "Reporting Services Report Server (SharePoint Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
-ms.reviewer: ""
 ms.technology: 
   - "reporting-services-native"
 ms.topic: conceptual
-ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "06/13/2017"
 ---
+
 # Reporting Services Report Server (SharePoint Mode)
-  A [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server configured for **SharePoint Mode** can run within a deployment of a SharePoint product. A report server in SharePoint mode can use the collaboration and management features of SharePoint for reports and other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content types. SharePoint mode requires installing the appropriate version of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products on your SharePoint Web Front Ends.  
+
+A [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server configured for **SharePoint Mode** can run within a deployment of a SharePoint product. A report server in SharePoint mode can use the collaboration and management features of SharePoint for reports and other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] content types. SharePoint mode requires installing the appropriate version of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products on your SharePoint Web Front Ends.  
   
- For more information on installing and configuring, see the following:  
+For more information on installing and configuring, see the following:  
   
--   [Install Reporting Services SharePoint Mode for SharePoint 2013](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
+- [Install Reporting Services SharePoint Mode for SharePoint 2013](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)  
   
--   [Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+- [Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
--   [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+- [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
  For information on what's new in this release, see the 'SharePoint' section in [What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md).  
   
@@ -41,7 +42,8 @@ manager: craigg
   
 -   [Related Tasks](#bkmk_relatedtasks)  
   
-##  <a name="bkmk_featuresum"></a> Feature Summary  
+##  <a name="bkmk_featuresum"></a> Feature Summary
+
  Configuring a report server to run in SharePoint integrated mode provides the following additional functionality that is only available when you deploy a report server in this mode:  
   
 -   Use SharePoint document management and collaboration features, including alerts. A SharePoint site provides a unified portal for accessing and managing all report items in one place.  
@@ -68,14 +70,16 @@ manager: craigg
   
 -   AAM zones, internet facing deployments, and SharePoint user tokens for SharePoint lists.  
   
-##  <a name="bkmk_connectedandlocal"></a> Connected Mode and Local Mode  
+##  <a name="bkmk_connectedandlocal"></a> Connected Mode and Local Mode
+
  The SQL Server 2008 R2 release introduced a new *local mode* for viewing reports from a SharePoint 2010 server that has the Microsoft SQL Server 2008 R2 or later Reporting Services Add-In for SharePoint 2010 products installed.  
   
 -   *Local Mode*: Local mode allows reports to be rendered locally from the SharePoint document library, without integration with a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] add-in for SharePoint products is required but a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server is not. The add-in can be installed several different ways, including the SharePoint 2010 products preparation tool. For more information on local mode, see [Local Mode vs. Connected Mode Reports in the Report Viewer &#40;Reporting Services in SharePoint Mode&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) and [Where to find the Reporting Services add-in for SharePoint Products](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   *Connected Mode*: Connected mode is supported by integrating a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server into the SharePoint farm using SharePoint Central Administration. The integration with a report server enables full end-to-end reporting, providing the collaboration features of SharePoint 2010 and the server based features of a report server including: Subscriptions, Snapshots, and server based processing.  
   
-##  <a name="bkmk_unsupportedsharepoint"></a> Unsupported SharePoint Features  
+##  <a name="bkmk_unsupportedsharepoint"></a> Unsupported SharePoint Features
+
  Not all SharePoint features are available for integrated operations. The following is a list of the SharePoint features [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] does not directly integrate with:  
   
 -   Secure Store Service.  
@@ -92,13 +96,15 @@ manager: craigg
   
      Document library version history is configured on the "Versioning Settings" page of "Library Settings".  
   
-##  <a name="bkmk_supportedcombinations"></a> Supported combinations of the SharePoint add-in and Report Server  
+##  <a name="bkmk_supportedcombinations"></a> Supported combinations of the SharePoint add-in and Report Server
+
  Not all features are supported in all combinations of report server, Reporting Services add-in for SharePoint, and SharePoint Products. For more information, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  The correct version of the Reporting Services add-in must be used with the corresponding version of SharePoint Products.  
   
-##  <a name="bkmk_components"></a> Components That Provide Integration  
+##  <a name="bkmk_components"></a> Components That Provide Integration
+
  To combine the servers in a single deployment, you integrate an installation of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] with an instance of SharePoint products  
   
  Integration is provided through [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for SharePoint Products. The [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in is a freely distributable component that you can download and then install on a server that is running the appropriate version of SharePoint.  
@@ -112,7 +118,8 @@ manager: craigg
   
  After you install the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in on SharePoint and configure the two servers for integration, you can upload or publish report server content types to a SharePoint library, and then view and manage those documents from a SharePoint site. Uploading or publishing report server content is an important first step; the Web Part and pages become available when you select report definitions (.rdl), report models (.smdl) and shared data sources (.rsds) on a SharePoint site.  
   
-##  <a name="bkmk_language"></a> Language Considerations  
+##  <a name="bkmk_language"></a> Language Considerations
+
  [!INCLUDE[SPF2010](../includes/spf2010-md.md)] and [!INCLUDE[SPS2010](../includes/sps2010-md.md)] products are available in many more languages than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  When you configure a report server to run within a deployment of a SharePoint product, you might see a combination of languages. The user interface, documentation, and messages will appear in the following languages:  
@@ -125,7 +132,8 @@ manager: craigg
   
  If the language of your SharePoint product or technology differs from the report server language, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] will try to use a language from the same language family that provides the closest match. If a close substitute is not available, the report server uses English.  
   
-##  <a name="bkmk_relatedtasks"></a> Related Tasks  
+##  <a name="bkmk_relatedtasks"></a> Related Tasks
+
  The following table summarizes tasks related to a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode report server:  
   
 |**Task**|**Link**|  
@@ -137,9 +145,6 @@ manager: craigg
 |Recent information for this release, found on the TechNet Wiki.|[SQL Server 2012 Reporting Services Tips, Tricks, and Troubleshooting](https://go.microsoft.com/fwlink/?LinkId=221297).|  
   
 ## See Also  
- [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)   
- [Report Viewer Web Part on a SharePoint Site](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [Quiz: Configuring SSRS 2012 for SharePoint Integration](https://go.microsoft.com/fwlink/?LinkId=306443)  
-  
-  
+ [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+ [Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)
+ [Report Viewer Web Part on a SharePoint Site](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)

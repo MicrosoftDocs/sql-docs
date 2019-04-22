@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcdest.columns.f1"
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ODBC Destination Editor (Mappings Page)

@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], embedded"
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Configure Data Source Properties for a Report  (Report Manager)
   When you run a report, the report server retrieves property information to determine how to connect to a data source. The data source type, connection string, and credential information are specified in the Data Source property pages of the published report. You can set the properties to vary the data source connection information from the original values that were specified when the report was created.  

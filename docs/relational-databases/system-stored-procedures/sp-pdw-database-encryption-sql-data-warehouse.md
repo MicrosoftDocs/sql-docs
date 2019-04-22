@@ -2,8 +2,7 @@
 title: "sp_pdw_database_encryption (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.service: sql-data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -28,7 +27,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### Parameters  
- [ **@enabled=** ] *enabled*  
+`[ @enabled = ] enabled`
  Determines whether transparent data encryption is enabled. *enabled* is **int**, and can be one of the following values:  
   
 -   0 = Disabled  

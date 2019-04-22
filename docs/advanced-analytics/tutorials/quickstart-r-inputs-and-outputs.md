@@ -83,8 +83,6 @@ Let's look at the default input and output variables of sp_execute_external_scri
 
     Note that R is case-sensitive, so the case of the input and output variables in `@input_data_1_name` and `@output_data_1_name` have to match the ones in the R code in `@script`. 
 
-    Also, the order of the parameters is important. You must specify the required parameters *@input_data_1* and *@output_data_1* first, in order to use the optional parameters *@input_data_1_name* and *@output_data_1_name*.
-
     Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your R code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results. 
 
     The `WITH RESULT SETS` statement defines the schema for the data which is used in SQL Server. You need to provide SQL compatible data types for each column you return from R. You can use the schema definition to provide new column names too as you do not need to use the column names from the R data frame.

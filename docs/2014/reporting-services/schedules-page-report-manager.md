@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Schedules Page (Report Manager)
   Use the Schedules page to create, modify, delete, pause, or resume shared schedules. A shared schedule is a named schedule that you can create and manage separately from reports, subscriptions, and other processes that consume schedule information. Users can select shared schedules that you provide.  

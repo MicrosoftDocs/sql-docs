@@ -4,13 +4,10 @@ ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: application-integration
-
-
-
 ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Integrating Reporting Services Using the Report Viewer Controls - Get Started
 
@@ -52,7 +49,7 @@ The final page should look like the following.
 
 <!DOCTYPE html>
 
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
     <title></title>
@@ -174,7 +171,7 @@ If setting the height of the viewer control to 100% the parent element is requir
 
 ```
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <style>
         html,body,form,#div1 {
@@ -198,11 +195,11 @@ If setting the height of the viewer control to 100% the parent element is requir
 
 ### Setting the parent's height attribute
 
-For more information about viewport percentage lengths, see [Viewport-percentage lengths](https://www.w3.org/TR/css3-values/#viewport-relative-lengths).
+For more information about viewport percentage lengths, see [Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths).
 
 ```
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 </head>
 <body>

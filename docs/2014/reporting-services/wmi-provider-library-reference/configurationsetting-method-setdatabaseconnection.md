@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "SetDatabaseConnection method"
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # SetDatabaseConnection Method (WMI MSReportServer_ConfigurationSetting)
   Sets the report server database connection to a particular report server database.  

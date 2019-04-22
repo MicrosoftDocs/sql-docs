@@ -1,7 +1,7 @@
 ---
 title: "Data type conversion (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/23/2017"
+ms.date: "07/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -94,7 +94,7 @@ The following table describes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 |**datetime**, **smalldatetime**|**Date**|  
 |Anything set to NULL|**Variant** set to Null|  
   
-All single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] values are converted to a single [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] value with the exception of **binary**, **varbinary**, and **image** values. These values are converted to a one-dimensional **Byte()** array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. This array has a range of **Byte(**0 to *length*1**)** where *length* is the number of bytes in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary**, or **image** values.
+All single [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] values are converted to a single [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] value with the exception of **binary**, **varbinary**, and **image** values. These values are converted to a one-dimensional **Byte()** array in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. This array has a range of **Byte(** 0 to _length_ 1**)** where *length* is the number of bytes in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary**, or **image** values.
   
 These are the conversions from [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] data types to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types.
   

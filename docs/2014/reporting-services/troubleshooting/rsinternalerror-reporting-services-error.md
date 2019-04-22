@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "rsInternalError"
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # rsInternalError - Reporting Services Error
     

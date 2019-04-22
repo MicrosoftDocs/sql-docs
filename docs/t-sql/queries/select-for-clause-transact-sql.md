@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "BROWSE option"
   - "FOR clause [Transact-SQL]"
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SELECT - FOR Clause (Transact-SQL)

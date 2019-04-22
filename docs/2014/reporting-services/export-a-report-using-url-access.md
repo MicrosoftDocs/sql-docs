@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "formats [Reporting Services], URL rendering"
   - "URL access [Reporting Services], rendering formats"
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Export a Report Using URL Access
   You can optionally specify the format in which to render a report by using the *rs:Format* parameter. For example, to get a PDF copy of a report directly from a native mode report server:  

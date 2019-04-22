@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "modifying role assignments"
   - "deleting role assignments"
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Modify or Delete a Role Assignment (Report Manager)
   A role assignment maps a group or user account to a predefined role definition that includes tasks that can be performed. It determines the types of operations that a user can perform relative to a folder, report, model, or other content type. To create, modify, or delete role assignments, you use Report Manager. After you create a role assignment for a particular user or group, you can modify it later by selecting a different role. If you want to revoke permissions to a report server, you can delete a role assignment from the report server.  

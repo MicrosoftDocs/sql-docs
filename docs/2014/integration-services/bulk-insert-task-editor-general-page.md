@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Bulk Insert Task Editor"
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Bulk Insert Task Editor (General Page)

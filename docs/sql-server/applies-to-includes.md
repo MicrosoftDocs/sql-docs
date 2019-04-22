@@ -1,7 +1,7 @@
 ---
 title: "SQL Server documentation include files | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/15/2018"
+ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology:
@@ -11,7 +11,6 @@ manager: craigg
 ms.topic: conceptual
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
-
 # SQL Server include files for versioning and applies-to
 
 References in the documentation can be easily modified without changing the actual text of individual articles by using include files in Markdown. There are three types of include files in the SQL content world: SQL version, applies-to, and referential text. **SQL Server version** include files are used to indicate the version of SQL being discussed, such as SQL Server 2016 or 2017. The **applies-to** include files indicate what SQL products and services the document applies to, such as SQL Server on Linux or Azure SQL Database. **Referential text** include files don't fall in the other two categories, such as the "Get Help" include, a list of links that customers can use to get help with SQL Server.
@@ -62,7 +61,7 @@ These applies-to include files omit the version of SQL Server.
 
 These applies-to include files specify which versions of SQL the documentation applies to.
 
- File Name| Markdown Example |Image|
+| File Name| Markdown Example |Image|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
@@ -135,3 +134,5 @@ These applies-to include files are used with Reporting Services documentation.
 ## Next steps
 
 For more information on how to use these include files, see [Applies-to includes](sql-server-docs-contribute.md#applies-to-includes).
+
+this is a test

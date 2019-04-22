@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Reference Data Services in DQS
@@ -25,7 +25,7 @@ manager: craigg
 -   Supports using reference data from Windows Azure Marketplace as well as directly from third party reference data providers.  
   
 ##  <a name="Marketplace"></a> Using Reference Data from Windows Azure Marketplace  
- DQS supports using reference data from Windows Azure Marketplace to enable content providers to provide reference data services through Marketplace. Marketplace is a service from Microsoft that provides a single marketplace and delivery channel for high-quality data and applications as cloud services. For more information about Marketplace, see [Learn About Windows Azure Marketplace](https://go.microsoft.com/fwlink/?LinkId=211291) (https://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS supports using reference data from Windows Azure Marketplace to enable content providers to provide reference data services through Marketplace. Marketplace is a service from Microsoft that provides a single marketplace and delivery channel for high-quality data and applications as cloud services. For more information about Marketplace, see [Learn About Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/).  
   
  The seamless integration between Marketplace and DQS simplifies the steps associated with discovering, exploring, and acquiring information for data quality projects from within DQS. The data is consumed from DQS, and helps DQS users achieve high data quality by bringing together DQS, Marketplace, and reference data service providers in an innovative way.  
   
@@ -49,7 +49,7 @@ manager: craigg
   
 1.  **Configuring the reference data provider details in DQS**: Before you can use reference data in DQS, you must configure reference data service details in DQS.  
   
-    1.  If you are using Marketplace, provide a valid Marketplace account key, browse to the [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) data category in Marketplace, and subscribe to the required providers.  
+    1.  If you are using Marketplace, provide a valid Marketplace account key, browse to the [Data Quality Services](../data-quality-services/data-quality-services.md) data category in Marketplace, and subscribe to the required providers.  
   
     2.  If you are using a direct online reference data provider, you must add direct reference data provider details in DQS before you can use it.  
   

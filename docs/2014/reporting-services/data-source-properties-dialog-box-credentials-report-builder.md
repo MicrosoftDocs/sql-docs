@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Data Source Properties Dialog Box, Credentials (Report Builder)
   Select **Credentials** on the **Data Source Properties** dialog box to display and modify credentials to connect to an embedded data source in the report. The credentials that you provide are used to access the data source for previewing reports. For more information about credentials, see [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md).  

@@ -37,7 +37,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@devname =** ] **'***name***'**  
+`[ @devname = ] 'name'`
  Is the name of the backup device for which information is reported. The value of *name* is always **sysname**.  
   
 ## Return Code Values  

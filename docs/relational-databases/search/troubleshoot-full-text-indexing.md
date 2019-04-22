@@ -1,10 +1,8 @@
 ---
 title: "Troubleshoot Full-Text Indexing | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,8 +10,9 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
   - "troubleshooting [full-text search]"
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Contents Page (Report Manager)
   Use the Contents page to view the contents of the current folder, select items to view, or navigate to other folders. This page opens when you select a folder. It is also the home page for Report Manager.  

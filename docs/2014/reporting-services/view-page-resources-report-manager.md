@@ -8,9 +8,9 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # View Page, Resources (Report Manager)
   Use the View page for resources to view a resource. A resource is an item stored and managed on a report server, but is not processed on a report server (a report server processes reports and models). You can use resources when you want to store arbitrary documents, images, or other files that are not processed by the server. Most image files (such as JPG, GIF, and PNG files) can be viewed within the View page of Report Manager. Other resources open in a separate application window.  

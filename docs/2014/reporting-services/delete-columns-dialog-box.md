@@ -13,9 +13,9 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete Columns dialog box"
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Delete Columns Dialog Box
   Use the **Delete Columns** dialog box to delete columns from a table, matrix, or list data region. For columns that are associated with groups, you can also delete the group definition.  

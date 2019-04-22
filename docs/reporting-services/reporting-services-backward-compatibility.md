@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Reporting Services, backward compatibility"
   - "backward compatibility [Reporting Services]"
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 #  Reporting Services Backward Compatibility
 Learn about changes in behavior of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. This covers features that are no longer available or are scheduled to be removed in a future release.

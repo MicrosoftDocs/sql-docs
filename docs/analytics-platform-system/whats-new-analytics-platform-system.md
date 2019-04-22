@@ -22,13 +22,14 @@ Release date - December 2018
 APS CU7.3 improves query performance with common subexpression elimination in SQL query optimizer. The improvement improves queries in two ways. The first benefit is the ability to identify and eliminate such expressions help reduce SQL compilation time. The second and more important benefit is data movement operations for these redundant subexpressions are eliminated thus execution time for queries becomes faster. Detailed explanation of this feature can be found [here](common-sub-expression-elimination.md).
 
 ### APS Informatica connector for Informatica 10.2.0 published
-We have released a new version of Informatica connectors for APS that works with Informatica version 10.2.0. The new connectors can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
+We have released a new version of Informatica connectors for APS that works with Informatica version 10.2.0 and 10.2.0 Hotfix 1. The new connectors can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### Supported Versions
+
 | APS Version | Informatica PowerCenter | Driver |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 and later | 10.2.0 | SQL Server Native Client 11.x |
+| APS 2016 and later | 10.2.0, 10.2.0 Hotfix 1 | SQL Server Native Client 11.x |
 
 <a name="h2-aps-cu7.2"></a>
 ## APS CU7.2
@@ -113,7 +114,7 @@ APS AU7 creates and updates statistics automatically, by default. To update stat
 ### T-SQL
 Select @var is now supported. For more information, see [select local variable](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query ](/sql/t-sql/queries/hints-transact-sql-query)
+Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### Feature Switch
 APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.

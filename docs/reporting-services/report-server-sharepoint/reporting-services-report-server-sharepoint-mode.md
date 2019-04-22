@@ -4,11 +4,10 @@ ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-server-sharepoint
-
-
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 
@@ -111,11 +110,11 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
  When you configure a report server to run within a deployment of a SharePoint product, you might see a combination of languages. The user interface, documentation, and messages will appear in the following languages:  
   
--   All application pages, tools, errors, warnings, and messages that originate from Reporting Services will appear in the language used by the Reporting Services instance in one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] languages.  
+- All application pages, tools, errors, warnings, and messages that originate from Reporting Services will appear in the language used by the Reporting Services instance in one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] languages.  
   
--   Application pages that you open on a SharePoint site, the Report Viewer web part, and Report Builder will appear in one of the supported languages for the Reporting Services Add-in. To view the list of supported languages, go to [SQL Server downloads](https://msdn.microsoft.com/sql/downloads/) and find the download page for the SQL Server 2016 Reporting Services Add-in.  
+- Application pages that you open on a SharePoint site, the Report Viewer web part, and Report Builder will appear in one of the supported languages for the Reporting Services Add-in. To view the list of supported languages, go to [SQL Server downloads](https://msdn.microsoft.com/sql/downloads/) and find the download page for the SQL Server 2016 Reporting Services Add-in.  
   
--   SharePoint sites, SharePoint Central Administration, online help, and messages are available in the languages supported by Office Server products.  
+- SharePoint sites, SharePoint Central Administration, online help, and messages are available in the languages supported by Office Server products.  
   
  If the language of your SharePoint product or technology differs from the report server language, Reporting Services will try to use a language from the same language family that provides the closest match. If a close substitute is not available, the report server uses English.  
   
@@ -133,8 +132,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 
 ## Next steps
 
-[Install or uninstall the Reporting Services sdd-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Report Viewer web part on a SharePoint site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Quiz: Configuring SSRS 2012 for SharePoint integration](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[Install or uninstall the Reporting Services sdd-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[Report Viewer web part on a SharePoint site](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

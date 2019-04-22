@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.modelproperties.general.f1"
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # General Properties Page, Models (Report Manager)
   Use the General properties page for report models to rename, delete, move, or replace the model definition (.smdl) file. Details about who created or modified the model and when the changes took place are indicated at the top of the page.  

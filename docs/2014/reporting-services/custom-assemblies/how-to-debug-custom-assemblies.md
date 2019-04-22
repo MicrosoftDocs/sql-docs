@@ -13,9 +13,9 @@ helpviewer_keywords:
   - "debugging custom assemblies [Reporting Services]"
   - "troubleshooting [Reporting Services], custom assemblies"
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # How to: Debug Custom Assemblies
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your custom assembly code and locate errors in it. The best tool to use will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  

@@ -11,9 +11,9 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.datasourceproperties.credentials.f1"
   - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Data Source Properties Dialog Box, Credentials
   Select **Credentials** on the **Data Source Properties** dialog box to display and modify credentials to connect to a data source in the report. The credentials that you provide are used to access the data source and to cache a copy of the data for previewing reports. For more information about how preview data is cached, see [Previewing Reports](reports/previewing-reports.md). For more information about credentials, see [Specify Credential and Connection Information for Report Data Sources](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

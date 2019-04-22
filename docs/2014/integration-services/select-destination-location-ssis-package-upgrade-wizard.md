@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.selectdestinationlocation.f1"
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select Destination Location (SSIS Package Upgrade Wizard)

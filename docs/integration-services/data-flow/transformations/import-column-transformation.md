@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "importing data, SSIS packages"
   - "inserting data"
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Import Column Transformation

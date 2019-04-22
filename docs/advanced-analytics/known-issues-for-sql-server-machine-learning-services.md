@@ -3,10 +3,10 @@ title: Known issues for R language and Python integration - SQL Server Machine L
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 12/13/2018  
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Known issues in Machine Learning Services

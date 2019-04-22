@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "InstanceID property"
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # InstallationID Property (WMI MSReportServer_ConfigurationSetting)
   This property returns a unique identifier for a specific report server instance.  

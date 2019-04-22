@@ -49,7 +49,7 @@ manager: craigg
   
 4.  Replace references to **system_function_schema** with **dbo** in all scripts that contain user-defined function DDL statements.  
   
-5.  Modify scripts that invoke these functions to use either the two-part name dbo**.***function_name*, or the three-part name *database_name***.**dbo.*function_name*.  
+5.  Modify scripts that invoke these functions to use either the two-part name dbo**.**_function_name_, or the three-part name _database_name_**.**dbo.*function_name*.  
   
  For more information, see the following topics in SQL Server Books Online:  
   
@@ -60,7 +60,7 @@ manager: craigg
 -   "Resource Database"  
   
 ## See Also  
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)   
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Remove statements that modify system objects](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [Remove statements that drop system objects](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

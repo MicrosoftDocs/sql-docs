@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "SetServiceState method"
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # SetServiceState Method (WMI MSReportServer_ConfigurationSetting)
   Turns the Report Server Windows and Web services on and off.  

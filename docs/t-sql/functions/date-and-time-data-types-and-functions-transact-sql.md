@@ -25,9 +25,6 @@ manager: craigg
 # Date and Time Data Types and Functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
-
 The sections in this topic cover all [!INCLUDE[tsql](../../includes/tsql-md.md)] date and time data types and functions.
 -   [Date and Time Data Types](#DateandTimeDataTypes)  
 -   [Date and Time Functions](#DateandTimeFunctions)  

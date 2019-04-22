@@ -16,9 +16,9 @@ topic_type:
 helpviewer_keywords: 
   - "RestoreEncryptionKey method"
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # RestoreEncryptionKey Method (WMI MSReportServer_ConfigurationSetting)
   Reapplies the specified encryption key to the report server database.  

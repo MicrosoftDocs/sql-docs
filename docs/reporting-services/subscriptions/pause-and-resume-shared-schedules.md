@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "schedules [Reporting Services], resuming"
   - "schedules [Reporting Services], pausing"
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Pause and Resume Shared Schedules
   You can pause and resume a shared schedule that is in use. Pausing a shared schedule provides a way to temporarily freeze a schedule that is used to trigger report processing and subscriptions. Only shared schedules can be paused and resumed. You cannot pause report-specific schedules.  

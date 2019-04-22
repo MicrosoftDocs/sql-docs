@@ -15,9 +15,9 @@ helpviewer_keywords:
   - "report snapshots [Reporting Services], running reports from"
   - "report execution snapshots [Reporting Services]"
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Set Report Processing Properties
   Report execution properties control how a report is processed. Execution properties must be set for each report individually.  

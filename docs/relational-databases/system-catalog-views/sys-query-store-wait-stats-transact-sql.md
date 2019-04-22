@@ -40,7 +40,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 |**avg_query_wait_time_ms**|**float**|Average wait duration for the query plan per execution within the aggregation interval and wait category (reported in milliseconds).|
 |**last_query_wait_time_ms**|**bigint**|Last wait duration for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**min_query_wait_time_ms**|**bigint**|Minimum `CPU wait` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
-|**max_query_wait_time_ms**|**bigint**|Maximum '`CPU wait`` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
+|**max_query_wait_time_ms**|**bigint**|Maximum `CPU wait` time for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 |**stdev_query_wait_time_ms**|**float**|`Query wait` duration standard deviation for the query plan within the aggregation interval and wait category (reported in milliseconds).|
 
 ## Wait categories mapping table
@@ -63,7 +63,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 |**11**|**Idle**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**Preemptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(but not BROKER_RECEIVE_WAITFOR)**|
-|**14**|**Tran Log IO**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOGF|
+|**14**|**Tran Log IO**|LOGMGR, LOGBUFFER, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
 |**15**|**Network IO**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
 |**16**|**Parallelism**|CXPACKET, EXCHANGE|
 |**17**|**Memory**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMPARTITIONED, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
@@ -78,7 +78,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 
 ## Permissions
 
- Requires the **VIEW DATABASE STATE** permission.  
+ Requires the `VIEW DATABASE STATE` permission.  
   
 ## See Also
 

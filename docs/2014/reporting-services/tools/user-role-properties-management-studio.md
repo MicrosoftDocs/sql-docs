@@ -10,9 +10,9 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.userroleproperties.f1"
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # User Role Properties (Management Studio)
   Use this page to view which tasks are included in an item-level role definition. You can also use this page to change the task list or modify a role description.  

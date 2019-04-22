@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], tutorials"
@@ -14,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: 63436bbd-0f73-4012-b6f1-358c81e4d92a
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Lesson 4: Building a Sequence Clustering Scenario (Intermediate Data Mining Tutorial)
   The marketing department of [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] wants to understand how customers move through the [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] Web site. The company suspects that there is a pattern to the order in which customers put products into their shopping baskets. They want to analyze the order of purchase sequences to learn how customers add related items to their baskets. They can then use this information to streamline the flow of the Web site so that it leads customers to purchase additional products.  

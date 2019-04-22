@@ -205,19 +205,19 @@ A stored access policy has been created with read, write, and list rights.  The 
 *
     5.	Select `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` from the **Azure storage container:** text box
 
-    6.  In the **Backup File:** text box enter `Sales_stripe1of2_20160601.bak`.
+   6.  In the **Backup File:** text box enter `Sales_stripe1of2_20160601.bak`.
 
-    7.  Click **OK**.
+   7.  Click **OK**.
 
-    8.  Repeat Steps **4** and **5**.
+   8.  Repeat Steps **4** and **5**.
 
-    9.  In the **Backup File:** text box enter `Sales_stripe2of2_20160601.bak`.
+   9.  In the **Backup File:** text box enter `Sales_stripe2of2_20160601.bak`.
 
-    10.  Click **OK**.
+   10.  Click **OK**.
 
-    11.   Click **OK**.
+   11.   Click **OK**.
 
-    **D2.  A shared access signature exists and a SQL Server Credential does not exist**
+   **D2.  A shared access signature exists and a SQL Server Credential does not exist**
   5.	Enter `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` in the **Azure storage container:** text box
   
   6.	Enter the shared access signature in the **Shared Access Policy:** text box.
@@ -226,7 +226,7 @@ A stored access policy has been created with read, write, and list rights.  The 
   
   8.	Click **OK**.
 
-    **D3.  A shared access signature does not exist**
+   **D3.  A shared access signature does not exist**
   5.	Click the **New container** button and the **Connect to a Microsoft Subscription** dialog box will open.  
   
   6.	Complete the **Connect to a Microsoft Subscription** dialog box and then click **OK** to return the **Select Backup Destination** dialog box.  See [See Connect to a Microsoft Azure Subscription](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) for additional information.

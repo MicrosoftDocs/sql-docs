@@ -1454,80 +1454,77 @@ For the latest release of SQL Server Management Studio, For details, see [Downlo
 
 | New item | Details |
 | :------- | :------ |
-|Smaller download size| [Updated in GA] The current size of the bundle is less than half of what SSMS 17.x is (~500MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as big as it was.|
-|	SSMS is based on the new VS 2017 Isolated Shell | [Updated in GA] The new shell (we picked up VS 2107 15.9.11) unlocks all the accessibility fixes that went into both SSMS and Visual Studio, and includes the latest security fixes.|
-|SSMS accessibility improvements | A lot of work went in to address Accessibility issues in all the tools (SSMS, DTA, and Profiler)|
-|SSMS can be installed in custom folder | [Updated in GA] Currently, this is only available on the command line setup. This option is available from both the command line (useful for unattended installation) and the setup UI. From the command line, pass this extra argument to the SSMS-Setup-ENU.exe:<br>SSMSInstallRoot=C:\MySSMS18<br>By default, the new install location for SSMS is: %ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe<br>This does not mean what SSMS is multi-instance.|
-|SSMS allows installing in a language other than the OS language|[New in GA] The block on mixed languages setup has been lifted. You can, for example, install SSMS German on a French Windows. If the OS language does not match the SSMS language, the user eeds to change the language under **Tools** > **Options** > **International Settings**, otherwise SSMS will show the English UI).|
-|SSMS does not share components with SQL Engine anymore |A lot of effort went in to avoid sharing components with SQL Engine, which often resulted in serviceability issues (one clobbering the files installed by the other).|
-|SSMS requires NetFx 4.7.2 or greater|We upgraded our minimum requirement from NetFx4.6.1 to NetFx4.7.2: this will allow us to take advantage of the new functionality exposed by the new framework.|
-|SSMS Settings migration| Migrate settings from 17.x to 18|
-|SSMS ships with MS OLEDB driver. | [New in GA] See https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server.|
-|SSMS not supported on Windows 8 and Windows Server 2012; Windows 10 / Windows Server 2016 will require at least version 1607 (10.0.14393)|[Changed in Preview 2] Due to the new dependency on NetFx 4.7.2, SSMS 18.0 does not install on Windows 8 and Windows Server 2012 and older versions of Windows 10 and Windows Server 2016. SSMS setup will block on those OSes. Note: "Windows 8.1" is still supported.|
-|SSMS is no longer added to the PATH environment variable.|Path to SSMS.EXE (and Tools in general) is not added to the path anymore. The users can either add it themselves or, if on a modern Windows, rely on the Start menu.|
-|SSMS| Exposing AUTOGROW_ALL_FILES config option for Filegroups in SSMS.|
-|SSMS|[New in Preview 2] Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (see https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
-|SSMS|[New in Preview 2] SQL Editor honors the CTRL+D shortcut to duplicate lines (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
-|SSMS|[New in Preview 2] New menu and key bindings to creates files: **CTRL+ALT+N**. **CTRL+N** will continue to create a new query.|
-|SSMS|[New in Preview 3] Note: if you are migrating from "SSMS 18.0 Preview 1", you must reset the user settings from **Tools** > **Import Export Settings** > **Reset all settings**. Once you do that, you will see this in under **File** > **New**|
-|SSMS|[New in Preview 2] "New Firewall Rule" dialog now allow the user to specify a rule name, instead of automatically generating one on behalf of the user (see https://feedback.azure.com/forums/08035-sql-server/suggestions/32902039)|
-|SSMS|[New in Preview 2] Data Classification: updated the recommendations.|
-|SSMS|[New in Preview 3] Improved intellisense in Editor especially for v140 T-SQL.|
-|SSMS|[New in Preview 3] Support for all Tier-1 language (in preview previews, English was the only available language).|
-|SSMS|[New in Preview 3, may need a blog by the time we GA] Added support in SSMS UI for UTF-8 on collation dialog.|
-|SSMS|[New in Preview 3, may need a blog by the time we GA] Switched to "Windows Credential Manager" for connection dialog MRU passwords. This will address a long outstanding issue where persistence of asswords was not always reliable. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486.|
-|SSMS|[New in Preview 4] Improved support for multi-monitor systems by making sure that more and more dialogs and windows pop up on the expected monitor.|
-|SSMS|[New in Preview 4] Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. See https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974.|
-|SSMS|[New in Preview 5] Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". See  https://feedback.azure.com/forums/908035/suggestions/33624115 |
-|SSMS|[New in Preview 6] Added "Migrate to Azure" under Tools menu – We have integrated Database Migration Assistant and Azure Database Migration Service to provide quick and easy access to help ccelerate your migrations to Azure. |
-|SSMS|[New in Preview 6, in cycle] Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to CTRL+ALT+J. In Preview 6 and later, the key binding has been restored to CTRL+U, just like it used to be in SSMS 17.x.|
-|SSMS|[New in Preview 6] Added logic to prompt the user to commit open transactions when "Change connection" is used.|
-|Object Scripting|[New in Preview 5] Add new menu items for "CREATE OR ALTER" when scripting objects.|
-|SSMS ShowPlan |
-|SSMS ShowPlan |[New in Preview 2] Added actual time elapsed, actual vs estimated rows under ShowPlan operator node if they are available. This will make actual plan look consistent with Live Query Stats plan.|
-|SSMS ShowPlan |[New in Preview 2] Modified tooltip and added comment when clicking on Edit Query Button for a ShowPlan, to indicate to user that the ShowPlan might be truncated by the SQL engine if the query is over 4000 characters.|
-|SSMS ShowPlan |[New in Preview 4] Added logic to display the "Materializer Operator (External Select)".|
-|SSMS ShowPlan |[New in Preview 4] Add new showplan attribute BatchModeOnRowStoreUsed to easily identify queries that are using the " batch-mode scan on rowstores" feature. Anytime a query performs batch-mode scan on rowstores, a new attribute (BatchModeOnRowStoreUsed="true") gets added to StmtSimple element.|
-|SSMS ShowPlan |[New in Preview 7] Added Showplan Support to LocalCube RelOp for DW ROLLUP and CUBE.|
-|Database Compatibility Level Upgrade|[New in Preview 5] Added a new option under **<Database name>** > **Tasks** > **Database Upgrade**. This starts the new **Query Tuning Assistant (QTA)** to guide the user through the process of:<br>Collecting a performance baseline before upgrading the database compatibility level.<br>Upgrading to the desired database compatibility level.<br>Collecting a 2nd pass of performance data over the same workload.<br>Detect workload regressions, and provide tested recommendations to improve workload performance.<br>This is close to the database upgrade process documented in [query store usage scenarios](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), except for the last step where QTA does not rely on a previously known good state to generate recommendations.|
-|Query Store|[New in Preview 5] Improved usability of some reports (Overall Resource Consumptions) by adding thousands separator to numbers displayed on the Y-axis of the charts.|
-|Query Store|[New in Preview 5] Added a new Query Wait Statistics report.|
-|Query Store|[New in GA] Added "Execution Count" metric to "Tracked Query" View.|
-|Always On|[New in Preview 3] Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. Documentation is being updated at https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.|
-|Audit Files|[New in Preview 3] Changed authentication method from Storage Account Key based to Azure AD based authentication.|
-|Audit Files|[New in RC1] Updated list of known audit actions to include FEATURE RESTRICTION ADD/CHANGE GROUP/DROP.|
-|SSIS|[New in Preview 3] Added back support for SSIS, which was missing in Preview 1 and Preview 2 (see known issues at the bottom).|
-|SSIS|[New in Preview 5] Added support to allow customers to schedule SSIS packages on Azure-SSIS IRs which are in Azure Government cloud.|
-|SSIS|[New in Preview 6] When you use SQL Agent of MI by SSMS, you can configure parameter and connection manager in SSIS agent job step.|
-|SSIS|[New in Preview 7] When connecting to Azure SQL DB/Managed Instance, you can connect to it with "<default>" as initial db.|
-|SSIS|[New in Preview 7] Added a new entry item "Try SSIS in Azure Data Factory" under "Integration Services Catalogs" node, which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.
-|SSIS|[New in Preview 7] A- Added "Create SSIS IR" button in "Catalog Creation Wizard", which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.|
-|SSIS|[New in Preview 7] ISDeploymentWizard now supports SQL Auth, Azure Active Directory Integrated Auth, and Azure Active Directory Password Auth in command-line mode.|
-|SSIS|[New in GA] Deployment Wizard now supports creating and deploying to Azure Data Factory SSIS Integration Runtime.|
-|Data Classification|[New in Preview 4]  Reorganized data classification task menu: added sub menu to the database tasks menu and added an option to open the report from the menu without opening the classify data window first.|
-|Data Classification|[New in Preview 7] Added new feature 'Data classification' to SMO. Column object exposes new properties: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId, and IsClassified (read-only). For more information see: https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=azuresqldb-current |
-|Data Classification|[New in Preview 7] Added new "Classification Report" menu item to the "Data Classification" flyout.|
-|Vulnerability Assessment|[New in Preview 5]  Enabled Vulnerability Assessment tasks menu on SQL Azure DW.|
-|Vulnerability Assessment|[New in Preview 7] Change the set of vulnerability assessment rules that are run on SQL Azure Managed Instance servers, so that "Vulnerability Assessment" scan results will be consistent with the ones in SQL Azure DB.|
-|Vulnerability Assessment|[New in Preview 7]  "Vulnerability Assessment" now supports Azure SQL DW.|
-|Vulnerability Assessment|[New in GA] Added a new exporting feature to export the vulnerability assessment scan results to Excel.|
-|Always Encrypted|[New in Preview 4]  The Enable Always Encrypted checkbox in the new Always Encrypted tab in the Connect to Server dialog now provides an easy way to enable/disable Always Encrypted for a database connection.|
-|Always Encrypted with secure enclaves|[New in Preview 4]  Several enhancements have been made to support  Always Encrypted with secure enclaves in SQL Server 2019 preview:<br>A text field for specifying enclave attestation URL in the Connect to Server dialog (the new Always Encrypted tab).<br>The new checkbox in the New Column Master Key dialog to control weather a new column master key allows enclave computations.<br>Other Always Encrypted key management dialogs now expose the information on which column master keys allow enclave computations.|
-|Flat File Import Wizard|[New in Preview 7] Added logic to notify the user that an import may have resulted in a renaming of the columns.|
-|Data-tier Application Wizard|[New in Preview 7] Added support to import/export data tier application with graph tables.|
-|Azure SQL Managed Instance|[New in Preview 7] Added new "AAD logins" as a new login type in SMO and SSMS when connected to an Azure SQL Managed Instance.|
-|XEvent Viewer|[New in Preview 7] XEvent Viewer: enabled showplan window for more XEvents.|
-|Replication Tools|[New in GA] Added support for non-default port specification feature in Replication Monitor and SSMS.|
 |Support for SQL Server SQL2019|This is the first release of SSMS that is fully *aware* of SQL Server 2019 (compatLevel 150, etc…).|
 |Support for SQL Server SQL2019|Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQLSERVER2018 and managed instance in SSMS.|
 |Support for SQL Server SQL2019|SMO support for UDF Inlining.|
 |Support for SQL Server SQL2019|GraphDB: Add flag in showplan for Graph TC Sequence.|
 |Support for SQL Server SQL2019|[New in Preview 2] Always Encrypted: added support for AEv2 / Enclave.|
 |Support for SQL Server SQL2019|[New in Preview 4] Always Encrypted: connection dialog has a new tab "Always Encryped" when the user clicks on the "Options" button to enable/configure Enclave support.|
+|Smaller download size| [Updated in GA] The current size of the bundle is less than half of what SSMS 17.x is (~500MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as big as it was.|
+|SSMS is based on the new VS 2017 Isolated Shell | [Updated in GA] The new shell (we picked up VS 2107 15.9.11) unlocks all the accessibility fixes that went into both SSMS and Visual Studio, and includes the latest security fixes.|
+|SSMS accessibility improvements | A lot of work went in to address Accessibility issues in all the tools (SSMS, DTA, and Profiler)|
+|SSMS can be installed in custom folder | [Updated in GA] Currently, this is only available on the command line setup. This option is available from both the command line (useful for unattended installation) and the setup UI. From the command line, pass this extra argument to the SSMS-Setup-ENU.exe:<br>SSMSInstallRoot=C:\MySSMS18<br>By default, the new install location for SSMS is: %ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe<br>This does not mean what SSMS is multi-instance.|
+|SSMS allows installing in a language other than the OS language|[New in GA] The block on mixed languages setup has been lifted. You can, for example, install SSMS German on a French Windows. If the OS language does not match the SSMS language, the user eeds to change the language under **Tools** > **Options** > **International Settings**, otherwise SSMS will show the English UI).|
+|SSMS does not share components with SQL Engine anymore |A lot of effort went in to avoid sharing components with SQL Engine, which often resulted in serviceability issues (one clobbering the files installed by the other).|
+|SSMS requires NetFx 4.7.2 or greater|We upgraded our minimum requirement from NetFx4.6.1 to NetFx4.7.2: this will allow us to take advantage of the new functionality exposed by the new framework.|
+|SSMS Settings migration| Migrate settings from 17.x to 18|
+|Support for High DPI| High DPI is now enabled by default.|
+|SSMS ships with MS OLEDB driver. | [New in GA] See https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server.|
+|SSMS not supported on Windows 8 and Windows Server 2012; Windows 10 / Windows Server 2016 will require at least version 1607 (10.0.14393)|[Changed in Preview 2] Due to the new dependency on NetFx 4.7.2, SSMS 18.0 does not install on Windows 8 and Windows Server 2012 and older versions of Windows 10 and Windows Server 2016. SSMS setup will block on those OSes. Note: "Windows 8.1" is still supported.|
+|SSMS is no longer added to the PATH environment variable.|Path to SSMS.EXE (and Tools in general) is not added to the path anymore. The users can either add it themselves or, if on a modern Windows, rely on the Start menu.|
 |Package IDs no longer needed to develop SSMS Extensions| In the past, SSMS was selectively loading only well-known packages, thus requiring developers to register their own package. This is no longer the case.|
-|Support for High DPI| High DPI is enabled by default.|
+|General SSMS| Exposing AUTOGROW_ALL_FILES config option for Filegroups in SSMS.|
+|SSMS|[New in Preview 2] Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI (see https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)
+|General SSMS|[New in Preview 2] SQL Editor honors the CTRL+D shortcut to duplicate lines (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
+|General SSMS|[New in Preview 2] New menu and key bindings to creates files: **CTRL+ALT+N**. **CTRL+N** will continue to create a new query.|
+|General SSMS|[New in Preview 3] Note: if you are migrating from "SSMS 18.0 Preview 1", you must reset the user settings from **Tools** > **Import Export Settings** > **Reset all settings**. Once you do that, you will see this in under **File** > **New**|
+|General SSMS|[New in Preview 2] "New Firewall Rule" dialog now allow the user to specify a rule name, instead of automatically generating one on behalf of the user (see https://feedback.azure.com/forums/08035-sql-server/suggestions/32902039)|
+|General SSMS|[New in Preview 2] Data Classification: updated the recommendations.|
+|General SSMS|[New in Preview 3] Improved intellisense in Editor especially for v140 T-SQL.|
+|General SSMS|[New in Preview 3] Support for all Tier-1 language (in preview previews, English was the only available language).|
+|General SSMS|[New in Preview 3, may need a blog by the time we GA] Added support in SSMS UI for UTF-8 on collation dialog.|
+|General SSMS|[New in Preview 3, may need a blog by the time we GA] Switched to "Windows Credential Manager" for connection dialog MRU passwords. This will address a long outstanding issue where persistence of asswords was not always reliable. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32896486.|
+|General SSMS|[New in Preview 4] Improved support for multi-monitor systems by making sure that more and more dialogs and windows pop up on the expected monitor.|
+|General SSMS|[New in Preview 4] Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. See https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974.|
+|General SSMS|[New in Preview 5] Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". See  https://feedback.azure.com/forums/908035/suggestions/33624115 |
+|General SSMS|[New in Preview 6] Added "Migrate to Azure" under Tools menu – We have integrated Database Migration Assistant and Azure Database Migration Service to provide quick and easy access to help ccelerate your migrations to Azure. |
+|General SSMS|[New in Preview 6, in cycle] Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to CTRL+ALT+J. In Preview 6 and later, the key binding has been restored to CTRL+U, just like it used to be in SSMS 17.x.|
+|General SSMS|[New in Preview 6] Added logic to prompt the user to commit open transactions when "Change connection" is used.|
+|Azure Data Studio integration|[New in Preview 4] Added menu item to start/download Azure Data Studio.|
+|Azure Data Studio integration|[New in Preview 5] Added "Start Azure Data Studio" menu item to Object Explorer.|
+|Azure Data Studio integration|[New in Preview 7] When right clicking on a database node in OE, the user is presented with context menus to either run a query or create a new notebook in Azure Data Studio.|
 |Better Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of SQL Azure databases.|
 |Better Azure SQL support|[New in Preview 4]  Added support for recently added vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.|
+|Azure SQL Managed Instance|[New in Preview 7] Added new "AAD logins" as a new login type in SMO and SSMS when connected to an Azure SQL Managed Instance.|
+|Always On|[New in Preview 3] Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. Documentation is being updated at https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.|
+|Always Encrypted|[New in Preview 4]  The Enable Always Encrypted checkbox in the new Always Encrypted tab in the Connect to Server dialog now provides an easy way to enable/disable Always Encrypted for a database connection.|
+|Always Encrypted with secure enclaves|[New in Preview 4]  Several enhancements have been made to support  Always Encrypted with secure enclaves in SQL Server 2019 preview:<br>A text field for specifying enclave attestation URL in the Connect to Server dialog (the new Always Encrypted tab).<br>The new checkbox in the New Column Master Key dialog to control weather a new column master key allows enclave computations.<br>Other Always Encrypted key management dialogs now expose the information on which column master keys allow enclave computations.|
+|Audit Files|[New in Preview 3] Changed authentication method from Storage Account Key based to Azure AD based authentication.|
+|Audit Files|[New in RC1] Updated list of known audit actions to include FEATURE RESTRICTION ADD/CHANGE GROUP/DROP.|
+|Data Classification|[New in Preview 4]  Reorganized data classification task menu: added sub menu to the database tasks menu and added an option to open the report from the menu without opening the classify data window first.|
+|Data Classification|[New in Preview 7] Added new feature 'Data classification' to SMO. Column object exposes new properties: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId, and IsClassified (read-only). For more information see: https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql?view=azuresqldb-current |
+|Data Classification|[New in Preview 7] Added new "Classification Report" menu item to the "Data Classification" flyout.|
+|Database Compatibility Level Upgrade|[New in Preview 5] Added a new option under **<Database name>** > **Tasks** > **Database Upgrade**. This starts the new **Query Tuning Assistant (QTA)** to guide the user through the process of:<br>Collecting a performance baseline before upgrading the database compatibility level.<br>Upgrading to the desired database compatibility level.<br>Collecting a 2nd pass of performance data over the same workload.<br>Detect workload regressions, and provide tested recommendations to improve workload performance.<br>This is close to the database upgrade process documented in [query store usage scenarios](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), except for the last step where QTA does not rely on a previously known good state to generate recommendations.|
+|Data-tier Application Wizard|[New in Preview 7] Added support to import/export data tier application with graph tables.|
+|Flat File Import Wizard|[New in Preview 7] Added logic to notify the user that an import may have resulted in a renaming of the columns.|
+|Integration Sevices (SSIS)|[New in Preview 3] Added back support for SSIS, which was missing in Preview 1 and Preview 2 (see known issues at the bottom).|
+|Integration Sevices (SSIS)|[New in Preview 5] Added support to allow customers to schedule SSIS packages on Azure-SSIS IRs which are in Azure Government cloud.|
+|Integration Sevices (SSIS)|[New in Preview 6] When you use SQL Agent of MI by SSMS, you can configure parameter and connection manager in SSIS agent job step.|
+|Integration Sevices (SSIS)|[New in Preview 7] When connecting to Azure SQL DB/Managed Instance, you can connect to it with "<default>" as initial db.|
+|Integration Sevices (SSIS)|[New in Preview 7] Added a new entry item "Try SSIS in Azure Data Factory" under "Integration Services Catalogs" node, which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.
+|Integration Sevices (SSIS)|[New in Preview 7] A- Added "Create SSIS IR" button in "Catalog Creation Wizard", which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.|
+|Integration Sevices (SSIS)|[New in Preview 7] ISDeploymentWizard now supports SQL Auth, Azure Active Directory Integrated Auth, and Azure Active Directory Password Auth in command-line mode.|
+|Integration Sevices (SSIS)|[New in GA] Deployment Wizard now supports creating and deploying to Azure Data Factory SSIS Integration Runtime.|
+|Object Scripting|[New in Preview 5] Add new menu items for "CREATE OR ALTER" when scripting objects.|
+|Query Store|[New in Preview 5] Improved usability of some reports (Overall Resource Consumptions) by adding thousands separator to numbers displayed on the Y-axis of the charts.|
+|Query Store|[New in Preview 5] Added a new Query Wait Statistics report.|
+|Query Store|[New in GA] Added "Execution Count" metric to "Tracked Query" View.|
+|Replication Tools|[New in GA] Added support for non-default port specification feature in Replication Monitor and SSMS.|
+|ShowPlan |[New in Preview 2] Added actual time elapsed, actual vs estimated rows under ShowPlan operator node if they are available. This will make actual plan look consistent with Live Query Stats plan.|
+|ShowPlan |[New in Preview 2] Modified tooltip and added comment when clicking on Edit Query Button for a ShowPlan, to indicate to user that the ShowPlan might be truncated by the SQL engine if the query is over 4000 characters.|
+|ShowPlan |[New in Preview 4] Added logic to display the "Materializer Operator (External Select)".|
+|ShowPlan |[New in Preview 4] Add new showplan attribute BatchModeOnRowStoreUsed to easily identify queries that are using the " batch-mode scan on rowstores" feature. Anytime a query performs batch-mode scan on rowstores, a new attribute (BatchModeOnRowStoreUsed="true") gets added to StmtSimple element.|
+|ShowPlan |[New in Preview 7] Added Showplan Support to LocalCube RelOp for DW ROLLUP and CUBE.|
 |SMO| Extend SMO Support for Resumable Index Creation.|
 |SMO| [New in Preview 2] Added new event on SMO objects ("PropertyMissing") to help application authors to detect SMO performance issues sooner.|
 |SMO| [New in Preview 4] Exposed new DefaultBackupChecksum property on the Configuration object which maps to the "backup checksum default" server configuration.|
@@ -1538,10 +1535,11 @@ For the latest release of SQL Server Management Studio, For details, see [Downlo
 |SMO|[New in Preview 7] Added support for "Edge Constraints" in both SMO and SSMS.|
 |SMO|[New in RC1] Added cascade delete support to "Edge Constraints" in both SMO and SSMS.|
 |SMO|[New in RC1] Added support for data classification "read-write" permissions.|
-|Azure Data Studio integration|[New in Preview 4] Added menu item to start/download Azure Data Studio.|
-|Azure Data Studio integration|[New in Preview 5] Added "Start Azure Data Studio" menu item to Object Explorer.|
-|Azure Data Studio integration|[New in Preview 7] When right clicking on a database node in OE, the user is presented with context menus to either run a query or create a new notebook in Azure Data Studio.|
-
+|Vulnerability Assessment|[New in Preview 5]  Enabled Vulnerability Assessment tasks menu on SQL Azure DW.|
+|Vulnerability Assessment|[New in Preview 7] Change the set of vulnerability assessment rules that are run on SQL Azure Managed Instance servers, so that "Vulnerability Assessment" scan results will be consistent with the ones in SQL Azure DB.|
+|Vulnerability Assessment|[New in Preview 7]  "Vulnerability Assessment" now supports Azure SQL DW.|
+|Vulnerability Assessment|[New in GA] Added a new exporting feature to export the vulnerability assessment scan results to Excel.|
+|XEvent Viewer|[New in Preview 7] XEvent Viewer: enabled showplan window for more XEvents.|
 
 
 ## Bug fixes
@@ -1569,22 +1567,10 @@ For the latest release of SQL Server Management Studio, For details, see [Downlo
 |General SSMS|[New in RC1] Fixed an issue which was preventing MFA authentication when user ids belonged to multiple tenants.|
 |General SSMS|[New in RC1] Fixed an issue where the Perf Dashboard Report was reporting PAGELATCH and PAGEIOLATCH waits that could not found in subreports.|
 |General SSMS|[New in GA] Another round of fixes to make SSMS more multi-monitor aware by having it open dialog in the correct monitor.|
-
-
-
-
-
-
-#######
-
-
-
 |Connection dialog|Enabled the removal of usernames from previous username list by pressing the DEL key. For details, see [Allow deletion of users from SSMS login window](https://feedback.azure.com/forums/908035/suggestions/32897632).|
 |XEvent|Added two columns "action_name" and "class_type_desc" that show action id and class type fields as readable strings.|
 |XEvent|[New in Preview 2] Removed the event XEvent Viewer cap of 1,000,000 events.|
 |External Tables|Added support for Rejected_Row_Location in template, SMO, intellisense, and property grid.|
-
-|SSMS Options|
 |SSMS Options|Fixed an issue where "Tools | Options | SQL Server Object Explorer | Commands" page was not resizing properly.|
 |SSMS Options|SSMS will now by default disable automatic download of DTD in XMLA editor -- XMLA script editor (which uses the xml language service) will by default now prevent automatically downloading the DTD for potentially malicious xmla files.  This is controlled by turning off the “Automatically download DTDs and Schemas” setting in **Tools** > **Options** > **Environment** > **Text Editor** > **XML** > **Miscellaneous**. |
 |SSMS Options|[New in Preview 5] Restored **CTRL+D** to be the shortcut as it used to be in older version of SSMS. See https://feedback.azure.com/forums/908035/suggestions/35544754.|
@@ -1648,8 +1634,7 @@ For the latest release of SQL Server Management Studio, For details, see [Downlo
 |Integration Services (IS)|[New in Preview 5, in cycle] Fixed an issue that deployment wizard will stuck if the project under deployment is renamed.|
 |Integration Services (IS)|[New in Preview 5, in cycle] Enabled environment setting in Azure-SSIS IR schedule feature.|
 |Integration Services (IS)|[New in GA, added 4/15/2019] Fixed an issue that SSIS Integration Runtime Creation Wizard stops responding when the customer account belongs to more than 1 tenants.|
-|Flat File Import Wizard|[New in Preview 3, will be in SSMS 17.9] Fixed issue where Flat File Import does not allow changing destination table when table is already existing
-		(see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186).|
+|Flat File Import Wizard|[New in Preview 3, will be in SSMS 17.9] Fixed issue where Flat File Import does not allow changing destination table when table is already existing (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186).|
 |Flat File Import Wizard|[New in Preview 3] Fixed an issue where the "Import Flat File Wizard" was not handling double quotes correctly (escaping) (see https://feedback.azure.com/forums/908035/suggestions/32897998).|
 |Flat File Import Wizard|[New in Preview 3] Fixed an issue where related to incorrect handling of floating-point types (on locales that use a different delimiter for floating points).|
 |Flat File Import Wizard|[New in Preview 3] Fixed an issue related to importing of bits when values are 0 or 1. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535.|

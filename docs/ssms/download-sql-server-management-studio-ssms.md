@@ -46,7 +46,7 @@ SSMS 18.0 is no longer in preview and is the first general availability (GA) ver
 **Version Information**
 
 - Release number: 18.0 (GA)<br>
-- Build number: 15.0.18116.0<br>
+- Build number: 15.0.18118.0<br>
 - Release date: April 24, 2019
 
 If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback).

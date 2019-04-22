@@ -39,7 +39,7 @@ GeneMi. 2019/04/02.
 ## 18.0 (GA), April 2019
 
 Download: &nbsp; &nbsp; [Download SSMS 18.0 (GA)](download-sql-server-management-studio-ssms.md)<br/>
-Build number: &nbsp; &nbsp; 15.0.18098.0<br/>
+Build number: &nbsp; &nbsp; 15.0.18118.0<br/>
 Release date: &nbsp; &nbsp; April 24, 2019
 
 The general availability (GA) release of SSMS 18.0 is available. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
@@ -47,7 +47,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 This section lists what's new in SSMS 18.0 (GA).
 
 > [!NOTE]
-> For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 - cumulative changelog through GA](#180---cumulative-changelog-through-ga).
+> The following section lists changes since SSMS 18.0 preview 7. For a complete changelog since SSMS 17.9.1, see [SSMS 18.0 - cumulative changelog through GA](#180---cumulative-changelog-through-ga).
 
 ### What's new in 18.0 (GA)
 

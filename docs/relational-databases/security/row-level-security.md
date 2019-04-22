@@ -246,6 +246,14 @@ ON dbo.Sales
 WITH (STATE = ON);  
 ```
 
+Allow SELECT permissions to the fn_securitypredicate function 
+```sql
+GRANT SELECT ON security.fn_securitypredicate TO Manager;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales1;  
+GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
+```
+
+
 Now test the filtering predicate, by selected from the Sales table as each user.
 
 ```sql

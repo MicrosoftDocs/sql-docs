@@ -127,7 +127,7 @@ If there is no *preview 5*, *preview 6*, *preview 7*, *RC1*, or *GA* label it in
     - Due to the new dependency on NetFx 4.7.2, SSMS 18.0 does not install on Windows 8 and Windows Server 2012 and older versions of Windows 10 and Windows Server 2016. SSMS setup will block on those OSes. Note: "Windows 8.1" is still supported.
   - SSMS is not added to the PATH environment variable
     - Path to SSMS.EXE (and Tools in general) is not added to the path anymore. The users can either add it themselves or, if on a modern Windows, rely on the Start menu.
-  - Support for SQL Server SQL2019
+  - SQL Server 2019 support
     - This is the first release of SSMS that would be fully aware of SQL Server 2019 (compatLevel 150, etc…)
     - Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQLSERVER2018 and managed instance in SSMS
     - SMO support for UDF Inlining
@@ -1454,12 +1454,12 @@ For the latest release of SQL Server Management Studio, For details, see [Downlo
 
 | New item | Details |
 | :------- | :------ |
-|Support for SQL Server SQL2019|This is the first release of SSMS that is fully *aware* of SQL Server 2019 (compatLevel 150, etc…).|
-|Support for SQL Server SQL2019|Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQLSERVER2018 and managed instance in SSMS.|
-|Support for SQL Server SQL2019|SMO support for UDF Inlining.|
-|Support for SQL Server SQL2019|GraphDB: Add flag in showplan for Graph TC Sequence.|
-|Support for SQL Server SQL2019|[New in Preview 2] Always Encrypted: added support for AEv2 / Enclave.|
-|Support for SQL Server SQL2019|[New in Preview 4] Always Encrypted: connection dialog has a new tab "Always Encryped" when the user clicks on the "Options" button to enable/configure Enclave support.|
+|SQL Server 2019 support|This is the first release of SSMS that is fully *aware* of SQL Server 2019 (compatLevel 150, etc…).|
+|SQL Server 2019 support|Support "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQLSERVER2018 and managed instance in SSMS.|
+|SQL Server 2019 support|SMO support for UDF Inlining.|
+|SQL Server 2019 support|GraphDB: Add flag in showplan for Graph TC Sequence.|
+|SQL Server 2019 support|[New in Preview 2] Always Encrypted: added support for AEv2 / Enclave.|
+|SQL Server 2019 support|[New in Preview 4] Always Encrypted: connection dialog has a new tab "Always Encryped" when the user clicks on the "Options" button to enable/configure Enclave support.|
 |Smaller download size| [Updated in GA] The current size of the bundle is less than half of what SSMS 17.x is (~500MB). The size will eventually grow a little when the IS components are added back to SSMS, but it should not be as big as it was.|
 |SSMS is based on the new VS 2017 Isolated Shell | [Updated in GA] The new shell (we picked up VS 2107 15.9.11) unlocks all the accessibility fixes that went into both SSMS and Visual Studio, and includes the latest security fixes.|
 |SSMS accessibility improvements | A lot of work went in to address Accessibility issues in all the tools (SSMS, DTA, and Profiler)|
@@ -1555,7 +1555,7 @@ For the latest release of SQL Server Management Studio, For details, see [Downlo
 |Crashes and freezes|[New in Preview 5] Fixed a hang in Object Explorer by optimizing the way IsFullTextEnabled  propery is retrieved.|
 |Crashes and freezes|[New in Preview 5] Fixed a hang in "Copy Database Wizard" by avoiding to build unnecessary queries to retrieve Database properties.|
 |Crashes and freezes|[New in Preview 7] Fixed an issue that was causing SSMS to hang/crash while editing T-SQL.|
-|Crashes and freezes|[New in GA, in-cycle; do not mention in consolidated RelNotes] Fixed an issue which was causing the profiler to crash when capturing "Performance | Showplan XML" events. See https://feedback.azure.com/forums/908035/suggestions/37103467.|
+|Crashes and freezes|[New in GA, in-cycle; do not mention in consolidated RelNotes] Fixed an issue which was causing the profiler to crash when capturing "Performance > Showplan XML" events. See https://feedback.azure.com/forums/908035/suggestions/37103467.|
 |Crashes and freezes|[New in GA, in-cycle; do not mention in consolidated RelNotes] Fixed an issue which was causing an exception to be thrown when the user was trying to reorder the steps  of a SQL Agent job. https://feedback.azure.com/forums/908035/suggestions/37254568.|
 |Crashes and freezes|[New in GA] Mitigated  an issue where SSMS was becoming unresponsive when editing large T-SQL scripts.|
 |Crashes and freezes|[New in GA] Fixed an issue that was causing SSMS to run out of memory when handling the big datasets returned by queries.|
@@ -1571,8 +1571,8 @@ For the latest release of SQL Server Management Studio, For details, see [Downlo
 |XEvent|Added two columns "action_name" and "class_type_desc" that show action id and class type fields as readable strings.|
 |XEvent|[New in Preview 2] Removed the event XEvent Viewer cap of 1,000,000 events.|
 |External Tables|Added support for Rejected_Row_Location in template, SMO, intellisense, and property grid.|
-|SSMS Options|Fixed an issue where "Tools | Options | SQL Server Object Explorer | Commands" page was not resizing properly.|
-|SSMS Options|SSMS will now by default disable automatic download of DTD in XMLA editor -- XMLA script editor (which uses the xml language service) will by default now prevent automatically downloading the DTD for potentially malicious xmla files.  This is controlled by turning off the “Automatically download DTDs and Schemas” setting in **Tools** > **Options** > **Environment** > **Text Editor** > **XML** > **Miscellaneous**. |
+|SSMS Options|Fixed an issue where **Tools** > **Options** > **SQL Server Object Explorer** > **Commands** page was not resizing properly.|
+|SSMS Options|SSMS will now by default disable automatic download of DTD in XMLA editor -- XMLA script editor (which uses the xml language service) will by default now prevent automatically downloading the DTD for potentially malicious xmla files. This is controlled by turning off the “Automatically download DTDs and Schemas” setting in **Tools** > **Options** > **Environment** > **Text Editor** > **XML** > **Miscellaneous**. |
 |SSMS Options|[New in Preview 5] Restored **CTRL+D** to be the shortcut as it used to be in older version of SSMS. See https://feedback.azure.com/forums/908035/suggestions/35544754.|
 |SSMS Editor|[New in Preview 2] Fixed an issue where "SQL System Table" where restoring the default colors was chancing the color to lime green, rather than the default green, making it very hard to read on a white background (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906).|
 |SSMS Editor|[New in Preview 2] Fixed issue where intellisense was not working when connected to Azure SQLDW using AAD authentication.|

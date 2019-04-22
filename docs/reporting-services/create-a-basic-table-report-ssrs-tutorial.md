@@ -16,21 +16,21 @@ ms.author: maghan
 ---
 # Create a Basic Table Report (SSRS Tutorial)
 
-In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated report with a table, based on the **[!INCLUDE[ssSampleDBAdventureworks2017_md](../includes/sssampledbadventureworks2017-md.md)]** database. You can also create [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
+In this tutorial, you use Report Designer in SQL Server Data Tools to create a basic [!INCLUDE[ssrscurrent-md](../includes/ssrscurrent-md)] paginated report with a table, based on the **[!INCLUDE[sssampledbadventureworks2016_md](../includes/sssampledbadventureworks2016-md.md)]** database. You can also create [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] paginated reports with Report Builder. 
 
 As you go through this tutorial, you will create a report project, set up connection information, define a query, add a Table data region, group and total some fields, and preview the report.  
   
-## Requirements 
+## Requirements
 
-Your system must have the following installed to use this tutorial: 
+Your system must have the following installed to use this tutorial:
 
-- [!INCLUDE[ssSql17](../includes/sssql17-md.md)] database engine.  
+- [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] database engine.  
 - [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].
 - The [!INCLUDE[ssSampleDBAdventureworks2017_md](../includes/sssampledbadventureworks2017-md.md)] database.  For more information, see [Adventure Works Sample Databases)](https://github.com/Microsoft/sql-server-samples/releases).  
   
- - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) with the "SQL Server Reporting Services" Visual Studio Extension installed, which now installs automatically by selecting the "Data Storage and Processing Workload" during installation, then installing the Report Services Extension, so you have the Report Designer.
+ - Make sure the Visual Studio [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) option and the Visual Studio Extension for "Reporting Services" are installed so you have the SSRS Report Designer.
   
-You must also have read-only permissions to retrieve data from the [!INCLUDE[ssSampleDBAdventureworks2017](../includes/sssampledbadventureworks2017-md.md)] database.
+You must also have read-only permissions to retrieve data from the [!INCLUDE[sssampledbadventureworks2016](../includes/sssampledbadventureworks2016-md.md)] database.
 
 **Estimated time to complete the tutorial:** 30 minutes.
   

@@ -136,7 +136,7 @@ The following environment variables are used for security settings that are not 
 | **DOCKER_REPOSITORY** | The private repository within the above registry where images are stored. |
 | **DOCKER_USERNAME** | The username to access the container images in case they are stored in a private repository. |
 | **DOCKER_PASSWORD** | The password to access the above private repository. |
-| **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to **latest**, but we receommend using the tag corresponding to the release to avoid version incompatibility issues. |
+| **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to **latest**, but we recommend using the tag corresponding to the release to avoid version incompatibility issues. |
 | **CONTROLLER_USERNAME** | The username for the cluster administrator. |
 | **CONTROLLER_PASSWORD** | The password for the cluster administrator. |
 | **KNOX_PASSWORD** | The password for Knox user. |
@@ -170,7 +170,7 @@ SET DOCKER_PASSWORD=<docker-password>
 SET DOCKER_IMAGE_TAG=ctp2.5
 ```
 
-Upon setting the environment variables, you must run mssqlctl cluster create command to trigger the deployment. This example uses the cluster configuration file created above:
+Upon setting the environment variables, you must run `mssqlctl cluster create` to trigger the deployment. This example uses the cluster configuration file created above:
 
 ```
 mssqlctl cluster create --config-file custom.json --accept-eula yes
@@ -178,7 +178,7 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
 Please note the following guidelines:
 
-- For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [Early Adoption Program registration](https://aka.ms/eapsignup).  Signup for the Early Adoption Program is required to test SQL Server big data clusters.
+- At this, credentials for the private Docker registry will be provided to you upon triaging your [Early Adoption Program registration](https://aka.ms/eapsignup). Early Adoption Program registration is required to test SQL Server big data clusters.
 - Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
 - The **SA** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
 - The **DOCKER_IMAGE_TAG** in this example controls which release you are installing. In this example, it is the CTP 2.5 release.

@@ -117,10 +117,10 @@ It is also possible to customize your own deployment configuration file. You can
 
    In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
 
-1. Then pass the custom configuration file to **mssqlctl cluster create**:
+1. Then pass the custom configuration file to **mssqlctl cluster create**. Note that you must set the required [environment variables](#env), otherwise you will be prompted for the values:
 
    ```bash
-   mssqlctl cluster create --config-file custom.json
+   mssqlctl cluster create --config-file custom.json --accept-eula yes
    ```
 
 > [!TIP]

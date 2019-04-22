@@ -83,13 +83,13 @@ By default, the size of the persistent volume claims provisioned for each of the
 The following example only updates the size of persistent volume claims in the storage pool to 32Gi:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec.storage.size=32Gi'
+mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
 ```
 
 The following example updates the size of persistent volume claims for all pools to 32Gi:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi'
+mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
 ### Configure storage class
@@ -97,7 +97,7 @@ mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.typ
 Following example shows how to modify the storage class for the control plane:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.controlPlace.spec.storage.className=<yourStorageClassName>'
+mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.storage.className=<yourStorageClassName>"
 ```
 
 Another option is to manually edit the custom configuration file or to use jsonpatch like in the following example that changes the storage class for Storage pool. Create a *patch.json*

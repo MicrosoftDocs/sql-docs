@@ -1,5 +1,5 @@
 ---
-title: Java data types supported in SQL Server 2019 - SQL Server Machine Learning Services
+title: Java data types supported in SQL Server 2019 - SQL Server Language Extensions
 description: Map data types from Java to SQL Server for input and output data structures, and for input parameters on the sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning

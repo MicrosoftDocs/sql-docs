@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This article explains how to configure big data cluster deployments by modifying deployment configuration files. It provides examples for how to change the configuration for different scenarios. For more information about how configuration files are used in deployments, see the [deployment guidance](deployment-guidance.md#configfile).
+To customize your cluster deployment configuration file, you can use any json format editor like VSCode. For scripting these edits for automation purposes, we provide a **mssqlctl cluster config section** command. This article explains how to configure big data cluster deployments by modifying deployment configuration files. It provides examples for how to change the configuration for different scenarios. For more information about how configuration files are used in deployments, see the [deployment guidance](deployment-guidance.md#configfile).
 
 ## Prerequisites
 
@@ -79,7 +79,7 @@ Endpoints are defined for the control plane as well as for individual pools. The
 The following example uses inline JSON to change the port for the **Controller** endpoint:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.controlPlane.spec.endpoints[?(@.name=="Controller")].port=30000'
+mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> Configure pool replicas
@@ -110,8 +110,8 @@ The characteristics of each pool, such as the storage pool, is defined in the co
 You can configure the number of instances in a pool by modifying the **replicas** value for each pool. The following example uses inline JSON to change these values for the storage and data pools to `10` and `4` respectively:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec.replicas=10'
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Data")].spec.replicas=4'
+mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
 ```
 
 > [!IMPORTANT]
@@ -122,19 +122,19 @@ mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.typ
 You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec={"replicas": 2,"storage": {"className": "newStorageClass","size": "20Gi","accessMode": "ReadWriteOnce","usePersistentVolume": true},"type": "Storage"}'
+mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec={""replicas"": 2,""storage"": {""className"": ""newStorageClass"",""size"": ""20Gi"",""accessMode"": ""ReadWriteOnce"",""usePersistentVolume"": true},""type"": ""Storage""}"
 ```
 
 The following example only updates the size of the storage pool to `32Gi`:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type == "Storage")].spec.storage.size=32Gi'
+mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
 ```
 
 The following example updates the size of all pools to `32Gi`:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j '$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi'
+mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
 > [!NOTE]

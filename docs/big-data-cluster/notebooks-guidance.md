@@ -2,7 +2,7 @@
 title: Run notebooks in Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: This article explains how to run Jupyter Notebooks in Azure Data Studio connected to a SQL Server 2019 big data cluster.
-author: rothja 
+author: achatter
 ms.author: jroth 
 manager: craigg
 ms.date: 03/27/2019
@@ -69,6 +69,19 @@ Query Results
 
 ![Query results](media/notebooks-guidance/pgsql-cell-results.png)
 
+If you would like to add text cells to your existing Notebook attached to the SQL Kernel, click the **+Text** command in the toolbar.
+
+![Notebook toolbar](media/notebooks-guidance/notebook-toolbar.png)
+
+The cell changes to edit mode and now type markdown and you will see the preview at the same time
+
+![Markdown cell](media/notebooks-guidance/notebook-markdown-cell.png)
+
+Clicking outside the text cell will show the markdown text.
+
+![Markdown text](media/notebooks-guidance/notebook-markdown-preview.png)
+
+
 ### Configure Python for Notebooks
 
 When you select any of the other kernels apart from SQL from the kernel dropdown, this prompts you to **Configure Python for Notebooks**. The Notebook dependencies get installed in a specified location but you can decide whether to set the installation location. This installation can take some time and it is recommended to not close the application until the installation is complete. Once the installation finishes, you can start writing code in the supported language.
@@ -117,13 +130,14 @@ If you open a Notebook from some other source, it will be opened in **Non Truste
 ### Run Cells
 If you want to run all cells in the Notebook then click on the **Run Cells** button in the toolbar.
 
-![Markdown text](media/notebooks-guidance/run-cell.png)
+![Markdown text](media/notebooks-guidance/Runcell.png)
+
 
 ### Clear Results
 
 If you want to clear the results of all the executed cells in the Notebook,then you can click on the **Clear Results** button in the toolbar.
 
-![Markdown text](media/notebooks-guidance/clear-results.png)
+![Markdown text](media/notebooks-guidance/ClearResults.png)
 
 ### Save
 

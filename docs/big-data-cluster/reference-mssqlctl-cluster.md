@@ -29,15 +29,12 @@ Create a SQL Server Big Data Cluster.
 ```bash
 mssqlctl cluster create [--config-file -f] 
                         [--accept-eula -e]  
-                        [--env-var -v]
 ```
 ### Optional Parameters
 #### `--config-file -f`
 Cluster config profile, used for deploying the cluster: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
 #### `--accept-eula -e`
 Do you accept the license terms? [yes/no].
-#### `--env-var -v`
-Key/Value list (i.e. key1=value1,key2=value2) of environment variables to be set: ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'DOCKER_REGISTRY', 'DOCKER_REPOSITORY', 'DOCKER_USERNAME', 'DOCKER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD']
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

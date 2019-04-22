@@ -73,6 +73,9 @@ Provides the syntax and related information for the [!INCLUDE[ssHADR](../../incl
 [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 Provides the syntax and related information for the SET options of ALTER DATABASE that are related to database compatibility levels.
 
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+Provides the syntax related to database scoped configurations used for individual database level settings such as query optimization and query execution related behaviors. 
+
 ## Syntax
 
 ```

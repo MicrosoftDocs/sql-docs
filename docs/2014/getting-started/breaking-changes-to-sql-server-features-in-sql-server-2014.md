@@ -4,14 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "data-quality-services"
-  - "database-engine"
-  - "integration-services"
-  - "master-data-services"
-  - "replication"
-  - "reporting-services-native"
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 73ab6859-9605-419e-bd78-798f68cc66f8
 author: mightypen

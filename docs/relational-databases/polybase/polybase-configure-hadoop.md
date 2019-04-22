@@ -9,6 +9,7 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Configure PolyBase to access external data in Hadoop
 

@@ -10,7 +10,7 @@ ms.author: aboke
 ms.reviewer: jroth
 manager: craigg
 ms.custom: ""
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
 # Configure PolyBase to access external data in Oracle
 

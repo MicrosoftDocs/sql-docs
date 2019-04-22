@@ -81,8 +81,15 @@ SELECT TODATETIMEOFFSET (@todaysDate, -120);
  The following example adds a 13-hour time zone offset to a date and time.  
   
 ```  
-DECLARE @dateTime datetimeoffset(7)= '2007-08-28 18:00:30';  
-SELECT TODATETIMEOFFSET (@dateTime, '+13:00');  
+-- option 1
+select TODATETIMEOFFSET(SYSDATETIME(), -120)
+-- returns: 2019-04-22 11:39:21.6986813 -02:00
+
+-- option 2
+select TODATETIMEOFFSET(SYSDATETIME(), '+13:00')
+-- returns: 2019-04-22 11:39:29.0339301 +13:00
+
+ 
 -- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
 ```  
   

@@ -1,6 +1,6 @@
 ---
 title: "Key Concepts in MDX (Analysis Services) | Microsoft Docs"
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -51,11 +51,11 @@ manager: kfile
   
  ![PivotTable with all member called out](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "PivotTable with all member called out")  
   
- Expand the hierarchy, and eventually you get to the lowest level. This is called the **leaf member**. A leaf member is a member of a hierarchy that has no children. In this example, Australia is the leaf member.  
+ Expand the hierarchy, and eventually you get to the lowest level. This is called the **leaf member**. A leaf member is a member of a hierarchy that has no children. In this example, Southwest is the leaf member.  
   
  ![PivotTable with leaf member calle dout](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "PivotTable with leaf member calle dout")  
   
- Anything above it is called a **parent member**. Pacific is the parent of Australia.  
+ Anything above it is called a **parent member**. United States is the parent of Southwest.  
   
  **Components of an attribute hierarchy**  
   

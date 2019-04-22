@@ -1,6 +1,6 @@
 ---
 title: "Add a Snapshot to Report History (Report Manager) | Microsoft Docs"
-ms.prod: "sql-server-2014"
+ms.prod: "reporting-services-2014"
 ms.technology: "reporting-services-native"
 ms.topic: conceptual
 author: maggiesMSFT
@@ -14,7 +14,7 @@ helpviewer_keywords:
   - "adding snapshots to report history"
   - "report snapshots [Reporting Services], adding"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 04/19/2019
 ---
 
 # Add a Snapshot to Report History (Report Manager)
@@ -24,7 +24,7 @@ Report history is a collection of report snapshots that you create over time. A 
 Report snapshots are not saved in a particular rendering format. Instead, report snapshots are rendered in a final viewing format (such as HTML) only when a user or an application requests it. Deferred rendering makes a snapshot portable. The report can be rendered in the correct format for the requesting device or Web browser.  
   
 ## To manually add snapshots to report history
-
+  
 ::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
 
 1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the drop-down arrow.
@@ -42,7 +42,7 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the elipses (...).
+1. In Report Manager, navigate to the **Contents** page, and hover over the item that you want to view history for, and click the ellipses (...).
 
 2. In the drop-down menu, click **View Report History**.  
 
@@ -54,8 +54,8 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 4. Click **Apply**.
 
 ::: moniker-end
-
-## To automatically add all snapshots to report history  
+  
+### To automatically add all snapshots to report history  
   
 1. For a report that is already configured to run as a report execution snapshot, you can set additional properties to save a copy of the snapshot to report history each time the snapshot is refreshed.  
   
@@ -80,15 +80,14 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 4. Select the check box for **Use the following schedule to add snapshots to report history**. Perform one of the following:  
   
     - Select **Report-specific schedule**. Fill in the schedule details, select the start and end dates for the schedule, and then click **OK**.  
-  
+
     - Select **Shared schedule**. From the list, select the preferred schedule.  
-  
+
 5. Click **Apply**.  
   
 ## See Also
 
-- [Configure Execution Properties for a Report  &#40;Report Manager&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
-- [Open and Close a Report &#40;Report Manager&#41;](../reports/open-and-close-a-report-report-manager.md)
-- [Limit Report History &#40;Report Manager&#41;](../reports/limit-report-history-report-manager.md)
-- [Schedules](../subscriptions/schedules.md)   
-- [Report Manager  &#40;SSRS Native Mode&#41;](../report-manager-ssrs-native-mode.md)
+- [Configure Execution Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
+- [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)- [Limit Report History &#40;Report Manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
+- [Schedules](../../reporting-services/subscriptions/schedules.md)   
+- [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)

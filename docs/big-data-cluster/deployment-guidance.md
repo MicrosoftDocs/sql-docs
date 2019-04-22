@@ -106,7 +106,7 @@ It is also possible to customize your own deployment configuration file. You can
    mssqlctl cluster config init --src aks-dev-test.json --target custom.json
    ```
 
-1. To customize settings in your deployment configuration file, you can call **mssqlctl cluster config section set**. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
+1. To customize settings in your deployment configuration file, you can edit it in a tool that is good for editing json docs like VS Code. For scripted automation, you can edit the custom configuration file using **mssqlctl cluster config section set** command. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
 
    ```bash
    mssqlctl cluster config section set --config-file custom.json --json-values 'metadata.name=test-cluster'

@@ -887,7 +887,7 @@
     href: ../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
   - name: Add or Remove a Page Header or Footer
     href: ../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
-  - name: Keep Headers Visible When Scrolling Through a Repor
+  - name: Keep Headers Visible When Scrolling Through a Report
     href: ../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
   - name: Display Page Numbers or Other Report Properties
     href: ../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
@@ -1396,7 +1396,7 @@
     href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
   - name: Enum SQL Agent Subsystems 
     href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
-  - name: Delete Pincipal Profile
+  - name: Delete Principal Profile
     href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
 - name: WMI Provider Library Reference Overview
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md

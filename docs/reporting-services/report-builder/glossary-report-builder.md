@@ -4,21 +4,19 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-builder
-
-
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 author: maggiesMSFT
 ms.author: maggies
 ---
+
 # Glossary (Report Builder)
-  
   
 |Term|Definition|  
 |----------|----------------|  
 |.NET Framework|An integral Windows component that supports building, deploying, and running the next generation of applications and  Web services. It provides a highly productive, standards-based, multilanguage environment for integrating existing investments with next generation applications and services, as well as the agility to solve the challenges of deployment and operation of Internet-scale applications. The .NET Framework consists of three main parts: the common language runtime, a hierarchical set of unified class libraries, and a componentized version of ASP called ASP.NET. See also: ASP.NET, common language runtime, .NET Framework class library.|  
 |ActiveX Data Objects|Component Object Model objects that provide access to data sources. This API provides a layer between OLE DB and programming languages such as Visual Basic, Visual Basic for Applications, Active Server Pages, and Microsoft Internet Explorer Visual Basic Scripting.|  
-|ad hoc report|An .rdl report created with Report Builder 1.0 that accesses report models.|  
+|ad hoc report|  
 |adornment|A control or status area that is attached to the edge of a pane or window, such as a toolbar or ruler.|  
 |aggregate|A summary value comprised of multiple individual values.|  
 |aggregate function|A function that performs a calculation on multiple values and returns a single summary value.|  
@@ -56,7 +54,6 @@ ms.author: maggies
 |chart data region|A report item on a report layout that displays data in a graphical format.|  
 |child|A member in the next lower level in a hierarchy that is directly related to the current member.|  
 |clause|In Transact-SQL, a subunit of an SQL statement. A clause begins with a keyword.|  
-|clickthrough report|A report that displays related report model data when you click data within a rendered Report Builder report.|  
 |client application|An application that retrieves data from a server and performs local analysis and presentation of data from relational or multidimensional databases.|  
 |client cursor|A cursor that is implemented on the client. The entire result set is first transferred to the client, and the client API software implements the cursor functionality from this cached result set.|  
 |CLR|See Other Term: common language runtime|  

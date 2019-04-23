@@ -89,6 +89,8 @@ To open/view the extension's examples in Azure Data Studio, run the following fr
 azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.PowerShell-*\examples)[-1]
 ```
 
+### Creating and opening files
+
 To create and open a new file inside the editor, use the New-EditorFile from within the PowerShell Integrated Terminal.
 
 ```powershell
@@ -100,6 +102,24 @@ This command works for any file type, not just PowerShell files.
 ```powershell
 PS C:\temp> New-EditorFile ImportData.py
 ```
+
+To open one or more files in Azure Data Studio, use the `Open-EditorFile` command.
+
+```powershell
+Open-EditorFile ExportData.ps1, ImportData.py
+```
+
+### No focus on console when executing
+
+For those who are used to working with SSMS, you're used to being able to run a query, and then being able to re-run it again without having to switch back to the query pane.  In this case, the default behavior of the code editor may feel strange to you.  To keep the focus in the editor when you execute with <kbd>F8</kbd> change the following setting:
+
+```json
+"powershell.integratedConsole.focusConsoleOnExecute": false
+```
+
+The default is `true` for accessibility purposes.
+
+Please be aware this will prevent the focus from changeing to the console, even when you use a command that explicitly calls for input, like `Get-Credential`.
 
 ## SQL PowerShell Examples
 In order to use these examples (below), you need to install the SqlServer module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).

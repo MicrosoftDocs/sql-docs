@@ -83,7 +83,7 @@ or if you're using the preview version of the extension
 $HOME/.azuredatastudio/extensions/ms-vscode.powershell-preview-<version>/examples
 ```
 
-To open/view the extension's examples in Azure Data Studio, run the following from your PowerShell command prompt:
+To open/view the extension's examples in Azure Data Studio, run the following code from your PowerShell command prompt:
 
 ```powershell
 azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.PowerShell-*\examples)[-1]
@@ -111,7 +111,7 @@ Open-EditorFile ExportData.ps1, ImportData.py
 
 ### No focus on console when executing
 
-For those who are used to working with SSMS, you're used to being able to run a query, and then being able to re-run it again without having to switch back to the query pane.  In this case, the default behavior of the code editor may feel strange to you.  To keep the focus in the editor when you execute with <kbd>F8</kbd> change the following setting:
+For those users who are used to working with SSMS, you're used to being able to execute a query, and then being able to re-execute it again without having to switch back to the query pane.  In this case, the default behavior of the code editor may feel strange to you.  To keep the focus in the editor when you execute with <kbd>F8</kbd> change the following setting:
 
 ```json
 "powershell.integratedConsole.focusConsoleOnExecute": false
@@ -119,7 +119,7 @@ For those who are used to working with SSMS, you're used to being able to run a 
 
 The default is `true` for accessibility purposes.
 
-Please be aware this will prevent the focus from changeing to the console, even when you use a command that explicitly calls for input, like `Get-Credential`.
+Be aware this setting will prevent the focus from changing to the console, even when you use a command that explicitly calls for input, like `Get-Credential`.
 
 ## SQL PowerShell Examples
 In order to use these examples (below), you need to install the SqlServer module from the [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).

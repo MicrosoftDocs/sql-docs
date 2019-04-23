@@ -71,6 +71,12 @@ ALTER CERTIFICATE certificate_name
  *certificate_name*  
  Is the unique name by which the certificate is known in the database.  
   
+ REMOVE PRIVATE KEY  
+ Specifies that the private key should no longer be maintained inside the database.  
+  
+ WITH PRIVATE KEY
+ Specifies that the private key of the certificate is loaded into SQL Server.
+
  FILE ='*path_to_private_key*'  
  Specifies the complete path, including file name, to the private key. This parameter can be a local path or a UNC path to a network location. This file will be accessed within the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. When you use this option, you must make sure that the service account has access to the specified file.  
   
@@ -85,9 +91,6 @@ ALTER CERTIFICATE certificate_name
  ENCRYPTION BY PASSWORD ='*new_password*'  
  Specifies the password used to encrypt the private key of the certificate in the database. *new_password* must meet the Windows password policy requirements of the computer that is running the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Password Policy](../../relational-databases/security/password-policy.md).  
   
- REMOVE PRIVATE KEY  
- Specifies that the private key should no longer be maintained inside the database.  
-  
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  Makes the certificate available to the initiator of a [!INCLUDE[ssSB](../../includes/sssb-md.md)] dialog conversation.  
   
@@ -98,12 +101,14 @@ ALTER CERTIFICATE certificate_name
   
  When the private key of a certificate that already exists in the database is imported, the private key will be automatically protected by the database master key. To protect the private key with a password, use the ENCRYPTION BY PASSWORD clause.  
   
- The REMOVE PRIVATE KEY option will delete the private key of the certificate from the database. You can remove the private key when the certificate will be used to verify signatures or in [!INCLUDE[ssSB](../../includes/sssb-md.md)] scenarios that do not require a private key. Do not remove the private key of a certificate that protects a symmetric key.  
+ The REMOVE PRIVATE KEY option will delete the private key of the certificate from the database. You can remove the private key when the certificate will be used to verify signatures or in [!INCLUDE[ssSB](../../includes/sssb-md.md)] scenarios that do not require a private key. Do not remove the private key of a certificate that protects a symmetric key. The private key will need to be restored in order to sign any additional modules or strings that should be verified with the certificate, or to decrypt a value that has been encrypted with the certificate.   
   
  You do not have to specify a decryption password when the private key is encrypted by using the database master key.  
+ 
+ To change the password used for encrypting the private key, do not specify either the FILE or BINARY clauses.
   
 > [!IMPORTANT]  
->  Always make an archival copy of a private key before removing it from a database. For more information, see [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md).  
+>  Always make an archival copy of a private key before removing it from a database. For more information, see [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md) and [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md).  
   
  The WITH PRIVATE KEY option is not available in a contained database.  
   

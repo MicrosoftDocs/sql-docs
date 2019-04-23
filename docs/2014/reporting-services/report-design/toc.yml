@@ -445,5 +445,3 @@
       href: built-in-collections-report-and-group-variables-references-report-builder.md
     - name: ReportItems Collection References
       href: built-in-collections-reportitems-collection-references-report-builder.md
-  - name: Formulas in Report Model Queries
-    href: formulas-in-report-model-queries-report-builder-and-ssrs.md

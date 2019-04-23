@@ -45,9 +45,10 @@ You will be prompted to restart the SQL Server instance. Use the following comma
 sudo systemctl restart mssql-server
 ```
 
->[!NOTE] After installation, you must [enable the PolyBase feature](#enable).
+>[!NOTE]
+>After installation, you must [enable the PolyBase feature](#enable).
 
-If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Install on Ubuntu</a>
 
@@ -66,7 +67,7 @@ sudo systemctl restart mssql-server
 >[!NOTE]
 >After installation, you must [enable the PolyBase feature](#enable).
 
-If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Install on SLES</a>
 
@@ -86,7 +87,7 @@ sudo systemctl restart mssql-server
 >After installation, you must [enable the PolyBase feature](#enable).
 
 
-If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 
 ## <a name="enable">Enable PolyBase</a> 

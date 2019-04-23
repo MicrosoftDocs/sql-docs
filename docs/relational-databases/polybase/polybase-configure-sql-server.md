@@ -72,7 +72,8 @@ The following Transact-SQL commands are used in this section:
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
->[!IMPORTANT] Once the external data Source is configured, you must [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to validate that the external data source has the correct connection information.
+>[!IMPORTANT]
+>Once the external data Source is configured, you must [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to validate that the external data source has the correct connection information.
 
 ## SQL Server connector compatible types
 

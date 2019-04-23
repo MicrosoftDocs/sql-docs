@@ -24,7 +24,7 @@ Smooth animated transitions between views help you to maintain context as you in
 
 ## Usage
 
-Right-click on a local .csv or .tsv file and choose *View in SandDance*.
+Starting from the File menu, use Open Folder or [Ctrl+K Ctrl+O] to open the directory containing the .CSV file.  Next, from within the Explorer panel, Right-click on the .csv or .tsv file and choose *View in SandDance*.
 
 Right-click on a .csv or .tsv file in HDFS if you are connected to SQL Server 2019 Big Data Cluster and choose *View in SandDance*.
 

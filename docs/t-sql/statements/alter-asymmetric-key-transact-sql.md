@@ -104,7 +104,7 @@ GO
  The following example removes the password protection from a private key and protects it with the database master key.  
   
 ```  
-OPEN MASTER KEY;  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  
 GO  

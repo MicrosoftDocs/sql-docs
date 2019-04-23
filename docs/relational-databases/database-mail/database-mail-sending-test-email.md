@@ -22,18 +22,18 @@ Use the Send Test E-Mail dialog box to test the ability to send mail using a spe
 
 ## Permissions
 
-You must be a member of the sysadmin fixed server role to use the Send Test E-Mail dialog box. Users who are not members of the sysadmin fixed server role can test Database Mail using the sp_send_dbmail procedure.
+You must be a member of the sysadmin fixed server role to use the Send Test E-Mail dialog box. Users who are not members of the sysadmin fixed server role can test Database Mail using the [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) procedure.
 
 ## Procedure
 
-1. Using Object Explorer, connect to an instance of SQL Server Database Engine where Database Mail is configured, expand Management, right-click Database Mail, and then select Send Test E-Mail. If no Database Mail profiles exist, a dialog prompts the user to create a profile and opens the Database Mail Configuration Wizard.
-1. In the Send Test E-Mail from <instance name> dialog box, in the Database Mail Profile box select the profile you want to test.
-1. In the To box, type the e-mail name of the recipient of the test e-mail.
-1. In the Subject box, type the subject line for the test e-mail. Change the default subject to better identify your e-mail for troubleshooting.
-1. In the Body box, type to body of the test e-mail. Change the default subject to better identify your e-mail for troubleshooting.
-1. Select Send Test E-Mail to send the test e-mail to the Database Mail queue.
+1. Using Object Explorer in [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md), connect to an instance of SQL Server Database Engine where Database Mail is configured, expand Management, right-click Database Mail, and then select Send Test E-Mail. If no Database Mail profiles exist, a dialog prompts the user to create a profile and opens the Database Mail Configuration Wizard.
+1. In the **Send Test E-Mail** from <instance name> dialog box, in the Database Mail Profile box select the profile you want to test.
+1. In the **To** box, type the e-mail name of the recipient of the test e-mail.
+1. In the **Subject** box, type the subject line for the test e-mail. Change the default subject to better identify your e-mail for troubleshooting.
+1. In the **Body** box, type to body of the test e-mail. Change the default subject to better identify your e-mail for troubleshooting.
+1. Select **Send Test E-Mail** to send the test e-mail to the Database Mail queue.
 1. Sending the test e-mail opens the Database Mail Test E-Mail dialog box. Make a note of the number displayed in the Sent e-mail box. This is the mailitem_id of the test message. Select OK.
-1. On the Toolbar select New Query to open a Query Editor window. Execute the following statement to determine the status of the test e-mail message:
+1. On the Toolbar select New Query to open a Query Editor window. Run the following T-SQL statement to determine the status of the test e-mail message:
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_allitems 

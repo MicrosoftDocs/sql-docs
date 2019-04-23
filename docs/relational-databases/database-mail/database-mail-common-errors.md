@@ -26,9 +26,9 @@ The [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md)
 Use [Database Mail Configuration Wizard](configure-database-mail.md) to enable and configure database mail.
 
 ## Profile not valid
-There are two possible causes for this message. Either the profile specified does not exist, or the user running [sp_send_dbmail (Transact-SQL)](./system-stored-procedures/sp-send-dbmail-transact-sql.md) does not have permission to access the profile.
+There are two possible causes for this message. Either the profile specified does not exist, or the user running [sp_send_dbmail (Transact-SQL)](../system-stored-procedures/sp-send-dbmail-transact-sql.md) does not have permission to access the profile.
 
-To check permissions for a profile, run the stored procedure sysmail_help_principalprofile_sp (Transact-SQL) with name of the profile. Use the stored procedure [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) or the [Database Mail Configuration Wizard](configure-database-mail.md) to grant permission for a msdb user or group to access a profile.
+To check permissions for a profile, run the stored procedure [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) with name of the profile. Use the stored procedure [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) or the [Database Mail Configuration Wizard](configure-database-mail.md) to grant permission for a msdb user or group to access a profile.
 
 ## Permission denied on sp_send_dbmail
 

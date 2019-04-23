@@ -1,16 +1,19 @@
 ---
 title: "Frequently Asked Questions in PolyBase | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/08/2019
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
-manager: 
+ms.reviewer: jroth
+manager: craigg
 ---
+
 # Frequently asked questions
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## PolyBase VS. linked servers
 The following table highlights the differences between PolyBase and linked server features:

@@ -2,11 +2,11 @@
 title: GPU support and TensorFlow 
 titleSuffix: SQL Server big data clusters
 description: Deploy a big data cluster with GPU support and use TensorFlow in Azure Data Studio Notebooks.
-author: lgongmsft
-ms.author: shivprashant
+author: inchiosa
+ms.author: marinch
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -1,7 +1,7 @@
 ---
 title: "Frequently Asked Questions in PolyBase | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/08/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual

@@ -80,7 +80,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |General SSMS|Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. For details, see https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974.|
 |General SSMS|Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". For details, see  https://feedback.azure.com/forums/908035/suggestions/33624115 |
 |General SSMS|Added "Migrate to Azure" under Tools menu – We have integrated Database Migration Assistant and Azure Database Migration Service to provide quick and easy access to help accelerate your migrations to Azure. |
-|General SSMS|Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to CTRL+ALT+J. In Preview 6 and later, the key binding has been restored to CTRL+U, just like it used to be in SSMS 17.x.|
+|General SSMS|Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to **CTRL+ALT+J**. In Preview 6 and later, the key binding has been restored to **CTRL+U**, just like it used to be in SSMS 17.x.|
 |General SSMS|Added logic to prompt the user to commit open transactions when "Change connection" is used.|
 |Azure Data Studio integration|Added menu item to start/download Azure Data Studio.|
 |Azure Data Studio integration|Added "Start Azure Data Studio" menu item to Object Explorer.|
@@ -736,7 +736,7 @@ Showplan:
 XE Profiler:
 - Renamed to XEvent Profiler.
 - Stop/Start menu commands now stop/start the session by default.
-- Enabled keyboard shortcuts (for example, CTRL-F to search).
+- Enabled keyboard shortcuts (for example, **CTRL+F** to search).
 - Added database\_name and client\_hostname actions to appropriate events in XEvent Profiler sessions. For the change to take effect, you may need to delete existing QuickSessionStandard or QuickSessionTSQL session instances on the servers - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981)
 
 Command line:
@@ -949,7 +949,7 @@ https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would
   - New Historical latches subreport.
 - Showplan node search allows searching in plan properties. Easily look for any operator property such as table name. To use this option when viewing a plan:
   - Right-click on plan, and in the context menu click on Find Node option
-  - Use CTRL+F
+  - Use **CTRL+F**
 
 
 **Analysis Services (AS)**
@@ -1006,7 +1006,7 @@ Added tooltips to CEK dropdown to make it easier to distinguish CEKs with long n
 Fixed an issue where some CNG key store providers would not be displayed in the New Column Master Key dialog for Always Encrypted
 - Fixed inconsistent "Application Name" for SSMS connections. https://connect.microsoft.com/SQLServer/feedback/details/3135115
 - Fixed an issue where SSMS was not generating correct scripts for Azure SQL (tables and indexes with DATA_COMPRESSIONS option). https://connect.microsoft.com/SQLServer/feedback/details/3133148
-- Fixed an issue where user was not able to use CTRL+Q shortcut for Quick Launch (note: the new key bindings to toggle the "IntelliSense Enabled" option in Query Editor is now CTRL+B, CTRL+I. https://connect.microsoft.com/SQLServer/feedback/details/3131968
+- Fixed an issue where user was not able to use **CTRL+Q** shortcut for Quick Launch (note: the new key bindings to toggle the "IntelliSense Enabled" option in Query Editor is now **CTRL+B**, **CTRL+I**. https://connect.microsoft.com/SQLServer/feedback/details/3131968
 - Fixed an issue in "Restore Database" where SSMS was throwing an exception when trying to select a storage account from a subscription that has accounts with custom domains defined
 - Fixed an issue in "Database Diagram" where SSMS was throwing an "Index was outside the bounds of the array" error; also, the user was not able to change the "Table View" to anything but standard. https://connect.microsoft.com/SQLServer/feedback/details/3133792 and https://connect.microsoft.com/SQLServer/feedback/details/3135326
 - Fixed an issue in "Backup/Restore to URL" where SSMS was not enumerating classic storage accounts.

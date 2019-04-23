@@ -39,7 +39,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ALTER CERTIFICATE certificate_name   
       REMOVE PRIVATE KEY  
-    | WITH PRIVATE KEY ( <private_key_spec> [ ,... ] )  
+    | WITH PRIVATE KEY ( <private_key_options> )  
     | WITH ACTIVE FOR BEGIN_DIALOG = { ON | OFF }  
   
 <private_key_spec> ::=   

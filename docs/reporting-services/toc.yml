@@ -1037,8 +1037,6 @@
       href: ../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md
     - name: Hyperion Essbase Query Designer User Interface
       href: ../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md
-    - name: Report Model Query Designer User Interface
-      href: ../reporting-services/report-data/report-model-query-designer-user-interface.md
     - name: SAP NetWeaver BI Query Designer User Interface
       href: ../reporting-services/report-data/sap-netweaver-bi-query-designer-user-interface.md
     - name: SharePoint List Query Designer

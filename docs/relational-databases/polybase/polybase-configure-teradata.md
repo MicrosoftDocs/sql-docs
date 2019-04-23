@@ -1,19 +1,19 @@
 ---
 title: "Configure PolyBase to access external data in Teradata | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
 # Configure PolyBase to access external data in Teradata
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This article explains how to use PolyBase on a SQL Server instance to query external data in Teradata.
 

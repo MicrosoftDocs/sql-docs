@@ -1,7 +1,7 @@
 ---
 title: "Configure PolyBase to access external data with ODBC Generic Types | Microsoft Docs"
 ms.custom: ""
-ms.date: 10/16/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: polybase
@@ -9,11 +9,11 @@ ms.topic: conceptual
 author: Abiola
 ms.author: aboke
 manager: craigg
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
 # Configure PolyBase to access external data in SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 PolyBase in SQL Server 2019 allows you to connect to ODBC -compatible data sources through the ODBC connector. 
 

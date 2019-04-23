@@ -1,7 +1,7 @@
 ---
 title: "PolyBase Transact-SQL reference | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: polybase
@@ -13,10 +13,11 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # PolyBase Transact-SQL reference
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 To use  PolyBase, you must create external tables to reference your external data.  
   

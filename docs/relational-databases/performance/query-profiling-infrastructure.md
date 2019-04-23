@@ -1,7 +1,7 @@
 ---
 title: "Query Profling Infrastruture | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/26/2018"
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -137,6 +137,35 @@ WITH (MAX_MEMORY=4096 KB,
   TRACK_CAUSALITY=OFF,
   STARTUP_STATE=OFF);
 ```
+
+#### Example 1 - Extended Event session using standard profiling
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### Example 2 - Extended Event session using lightweight profiling
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
 
 ## Remarks
 

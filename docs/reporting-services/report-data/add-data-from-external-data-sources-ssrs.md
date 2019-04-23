@@ -1,16 +1,17 @@
 ---
 title: "Add Data from External Data Sources (SSRS) | Microsoft Docs"
-ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-data
-
-
 ms.topic: conceptual
-ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: maggiesMSFT
 ms.author: maggies
+manager: kfile
+reviewer: ""
+ms.custom: ""
+ms.date: 03/17/2017
 ---
+
 # Add Data from External Data Sources (SSRS)
   To retrieve data from an external data source, you use a data connection. Data connection information is usually provided by the owner of the external data source, who is responsible for granting permissions and specifying which types of credentials to use. Data connection information is saved as a report data source. The data source type specifies which data extension to use to retrieve the data.  
   
@@ -84,10 +85,9 @@ ms.author: maggies
 |[OLE DB Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)|OLE DB|  
 |[ODBC Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md)|ODBC|  
 |[XML Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)|XML|  
-|[Report Model Connection &#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)|.smdl model|  
   
-  
-##  <a name="Related"></a> Related Sections  
+##  <a name="Related"></a> Related Sections
+
  These sections of the documentation provide in-depth conceptual information about report data, as well as procedural information about how to define, customize, and use parts of a report that are related to data.  
   
 |Topic|Description|  

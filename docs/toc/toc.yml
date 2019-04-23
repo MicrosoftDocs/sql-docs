@@ -6308,6 +6308,8 @@
           href: ../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
         - name: Check the Status of E-Mail Messages Sent With Database Mail
           href: ../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md
+      - name: Troubleshooting
+        href: ../relational-databases/database-mail/database-mail-general-troubleshooting.md
     - name: Data compression
       href: ../relational-databases/data-compression/data-compression.md
       items:

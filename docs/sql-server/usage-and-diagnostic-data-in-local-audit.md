@@ -30,7 +30,7 @@ As of SQL Server 2016 CU2, is configurable at the instance level for SQL Server 
  - Removing or disabling the SQL CEIP service is not supported. 
  - Removing the SQL CEIP resources from the Cluster Group is not supported. 
 
-To opt out of the data collection, see [Turning local audit on or off](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)
+To opt out of the data collection, see [Turning local audit on or off](#turning-local-audit-on-or-off)
 
 ## Prerequisites 
 

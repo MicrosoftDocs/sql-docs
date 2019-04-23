@@ -1,7 +1,7 @@
 ---
 title: What's new - SQL Server Machine Learning Services | Microsoft Docs
 description: New feature announcements for each release of SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -24,6 +24,7 @@ This release adds the top-requested features for R and Python machine learning o
 
 | Release | Feature update |
 |---------|----------------|
+| CTP 2.5 | New [Microsoft Extensibility SDK for Java](java/java-sdk.md). |
 | CTP 2.4 | Linux support for [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) for R, Python, and Java. |
 | | The environment variable that specifies the location of the Java interpreter has changed from `JAVA_HOME` to `JRE_HOME`. |
 | CTP 2.3 | New supported [Java data types](java/java-sql-datatypes.md). |

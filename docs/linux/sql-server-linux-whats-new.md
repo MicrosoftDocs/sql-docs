@@ -4,7 +4,7 @@ description: This article highlights what's new for SQL Server 2017 on Linux.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/21/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"

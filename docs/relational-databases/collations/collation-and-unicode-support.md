@@ -1,7 +1,7 @@
 ---
 title: "Collation and Unicode Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/24/2017"
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 

@@ -1,7 +1,7 @@
 ---
 title: "Query Profling Infrastruture | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/26/2018"
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance

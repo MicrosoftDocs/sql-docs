@@ -4,7 +4,7 @@ description: Description of the Microsoft Extensibility SDK for Java for Microso
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/22/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: nelgson
 ms.author: negust

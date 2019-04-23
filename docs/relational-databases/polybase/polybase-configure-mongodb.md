@@ -1,19 +1,19 @@
 ---
 title: "Configure PolyBase to access external data in MongoDB | Microsoft Docs"
 ms.custom: ""
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
 # Configure PolyBase to access external data in MongoDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 The article explains how to use PolyBase on a SQL Server instance to query external data in MongoDB.
 
@@ -21,82 +21,52 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md).
 
-## Configure an External Table
+Before creating a database scoped credential a [Master Key](../../t-sql/statements/create-master-key-transact-sql.md) must be created. 
+    
 
-To query the data from an MongoDB data source, you must create external tables to reference the external data. This section provides sample code to create these external tables.
+## Configure a MongoDB external data source
 
-These objects will create in this section:
+To query the data from a MongoDB data source, you must create external tables to reference the external data. This section provides sample code to create these external tables.
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
-- CREATE EXTERNAL DATA SOURCE (Transact-SQL)
-- CREATE EXTERNAL TABLE (Transact-SQL)
-- CREATE STATISTICS (Transact-SQL)
+The following Transact-SQL commands are used in this section:
 
-1. Create a master key on the database, if one does not already exist. This is required to encrypt the credential secret.
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-     ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
-     ```
-    ## Arguments
-    PASSWORD ='password'
+1.  Create a database scoped credential for accessing the MongoDB source.
 
-    Is the password that is used to encrypt the master key in the database. password must meet the Windows password policy requirements of the computer that is hosting the instance of SQL Server.
-
-1.   Create a database scoped credential for accessing the MongoDB source.
-
-     ```sql
-     /*  specify credentials to external data source
-     *  IDENTITY: user name for external source.  
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL credential_name 
-     WITH IDENTITY = 'username', Secret = 'password';
-     ```
-
+ 
+  ```sql
+  /*  specify credentials to external data source
+  *  IDENTITY: user name for external source.  
+  *  SECRET: password for external source.
+  */
+  CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
+   ```
 1.  Create an external data source with [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-     ```sql
-     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *CONNECTION_OPTIONS: Specify driver location
-    *  CREDENTIAL: the database scoped credential, created above.
-    */  
-    CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH (
-    LOCATION = mongodb://<server>[:<port>],
-    -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = credential_name
-    );
-     ```
-
-1.  Create external tables that represent data stored in external MongoDB system [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
-
-     ```sql
-     /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
-     *  DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE customers(
-     [O_ORDERKEY] DECIMAL(38) NOT NULL,
-     [O_CUSTKEY] DECIMAL(38) NOT NULL,
-     [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
-     [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
-     [O_ORDERDATE] DATETIME2(0) NOT NULL,
-     [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
-     )
-     WITH (
-     LOCATION='customer',
-     DATA_SOURCE= external_data_source_name
-     );
-     ```
-
+  ```sql
+  /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
+  *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+  *CONNECTION_OPTIONS: Specify driver location
+  *  CREDENTIAL: the database scoped credential, created above.
+  */  
+  CREATE EXTERNAL DATA SOURCE external_data_source_name
+  WITH (LOCATION = 'mongodb://<server>[:<port>]',
+  -- PUSHDOWN = ON | OFF,
+  CREDENTIAL = credential_name);
+```
 1. **Optional:** Create statistics on an external table.
 
-    We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
+  We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
 
-     ```sql
-      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
-     ```
+  ```sql
+  CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+  ```
 
+>[!IMPORTANT] 
+>Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source. 
 
 ## Flattening
  flattening  is enabled for nested and repeated data from MongoDB document collections. User is required to enable `create an external table` and explicitly specify a relational schema over MongoDB document collections that may have nested and/or repeated data. We will enable auto-schema detection over mongo document collections in future milestones.

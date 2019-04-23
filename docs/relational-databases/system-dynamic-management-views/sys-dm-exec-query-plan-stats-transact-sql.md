@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -19,7 +19,7 @@ ms.author: "pelopes"
 manager: amitban
 ---
 # sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Returns the equivalent of the last known actual execution plan for a previously cached query plan. 
 
@@ -58,7 +58,7 @@ The *plan_handle* can be obtained from the following dynamic management objects:
 ## Remarks
 This system function is available starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-This is an opt-in feature and requires [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled.   
+This is an opt-in feature and requires [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 to be enabled. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 and in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], to accomplish this at the database level, see the LAST_QUERY_PLAN_STATS option in [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 This system function works under the **lightweight** query execution statistics profiling infrastructure. For more information, see [Query Profiling Infrastructure](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -74,7 +74,7 @@ Under the following conditions, a **simplified <sup>1</sup>** Showplan output is
     **AND**    
 -   The query is simple enough, usually categorized as part of an OLTP workload.
 
-<sup>1</sup> This refers to a Showplan that only contains the root node operator (SELECT). For [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 only this refers to the cached plan as available through sys.dm_exec_cached_plans.
+<sup>1</sup> Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, this refers to a Showplan that only contains the root node operator (SELECT). For [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 this refers to the cached plan as available through `sys.dm_exec_cached_plans`.
 
 Under the following conditions, **no output is returned** from **sys.dm_exec_query_plan_stats**:
 
@@ -126,6 +126,16 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps
 WHERE st.text LIKE 'SELECT * FROM Person.Person%';  
 GO  
 ```   
+
+### D. Look at cached events for trigger
+
+```sql
+SELECT *
+FROM sys.dm_exec_cached_plans
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)
+WHERE objtype ='Trigger';
+GO
+```
 
 ## See Also
   [Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  

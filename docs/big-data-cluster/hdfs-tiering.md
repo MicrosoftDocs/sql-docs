@@ -16,9 +16,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview).  
-
-At this time, CTP 2.4 supports connecting to Azure Data Lake Storage Gen2 and Amazon S3.
+HDFS Tiering provides the ability to mount external, HDFS-compatible file system in HDFS. This article explains how to configure HDFS tiering for SQL Server 2019 big data clusters (preview). At this time, CTP 2.5 only supports connecting to Azure Data Lake Storage Gen2, which is the focus of this article.
 
 ## HDFS tiering overview
 
@@ -39,12 +37,76 @@ The following sections provide an example of how to configure HDFS tiering with 
   - **mssqlctl**
   - **kubectl**
 
-## Mounting instructions
+## <a id="load"></a> Load data into Azure Data Lake Storage
+
+The following section describes how to set up Azure Data Lake Storage Gen2 for testing HDFS tiering. If you already have data stored in Azure Data Lake Storage, you can skip this section to use your own data.
+
+1. [Create a storage account with Data Lake Storage Gen2 capabilities](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+
+1. [Create a blob container](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) in this storage account for your external data.
+
+1. Upload a CSV or Parquet file into the container. This is the external HDFS data that will be mounted to HDFS in the big data cluster.
+
+## <a id="mount"></a> Mount the remote HDFS storage
+
+The following steps mount the remote HDFS storage in Azure Data Lake into the local HDFS storage of your big data cluster.
+
+1. Open a command-prompt on a client machine that can access your big data cluster.
+
+1. Create a local file named **files.creds** that contains your Azure Data Lake Storage Gen2 account credentials using the following format:
+
+   ```text
+   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+   ```
+
+   > [!TIP]
+   > For more information on how to find the access key (`<storage-account-access-key>`) for your storage account, see [View and copy access keys](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
+
+1. Use **kubectl** to find the IP Address for the **mgmtproxy-svc-external** service in your big data cluster. Look for the **External-IP**.
+
+   ```bash
+   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   ```
 
 At this time, CTP 2.4 supports connecting to Azure Data Lake Storage Gen2 and Amazon S3. Instructions on how to mount against these storage types can be found in the following articles:
 
-- [How to mount ADLS Gen2 for HDFS tiering in a big data cluster](hdfs-tiering-mount-adlsgen2.md)
-- [How to mount S3 for HDFS tiering in a big data cluster](hdfs-tiering-mount-s3.md)
+   ```bash
+   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   ```
+
+1. Mount the remote HDFS storage in Azure using **mssqlctl storage mount create**. Replace the placeholder values before running the following command:
+
+   ```bash
+   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   ```
+
+   > [!NOTE]
+   > The mount create command is asynchronous. At this time, there is no message indicating whether the mount succeeded. See the [status](#status) section to check the status of your mounts.
+
+If mounted successfully, you should be able to query the HDFS data and run Spark jobs against it. It will appear in the HDFS for your big data cluster in the location specified by `--local-path`.
+
+## <a id="status"></a> Get the status of mounts
+
+To list the status of all mounts in your big data cluster, use the following command:
+
+```bash
+mssqlctl storage mount status
+```
+
+To list the status of a mount at a specific path in HDFS, use the following command:
+
+```bash
+mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+```
+
+## <a id="delete"></a> Delete the mount
+
+To delete the mount, use the **mssqlctl storage mount delete** command, and specify the mount path in HDFS:
+
+```bash
+mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+```
 
 ## <a id="issues"></a> Known issues and limitations
 

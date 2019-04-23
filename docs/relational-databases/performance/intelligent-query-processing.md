@@ -2,7 +2,7 @@
 title: "Intelligent query processing in Microsoft SQL databases | Microsoft Docs"
 description: "Intelligent query processing features to improve query performance in SQL Server and Azure SQL Database."
 ms.custom: ""
-ms.date: 03/05/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -218,6 +218,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 A USE HINT query hint takes precedence over a database scoped configuration or trace flag setting.
 
 ## Row mode memory grant feedback
+
 **Applies to:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] as a public preview feature
 
 > [!NOTE]

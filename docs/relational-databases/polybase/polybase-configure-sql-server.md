@@ -11,6 +11,7 @@ ms.reviewer: jroth
 manager: craigg
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
+
 # Configure PolyBase to access external data in SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,9 +72,7 @@ The following Transact-SQL commands are used in this section:
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
->[!IMPORTANT] Once the external data Source is configured, you must [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to validate that the external data source has the correct connection information. 
- 
-
+>[!IMPORTANT] Once the external data Source is configured, you must [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to validate that the external data source has the correct connection information.
 
 ## SQL Server connector compatible types
 

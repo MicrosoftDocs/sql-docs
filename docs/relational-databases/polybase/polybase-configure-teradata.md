@@ -73,8 +73,8 @@ CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Se
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
->[!IMPORTANT] Once the external data Source is configured, you must [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to validate that the external data source has the correct connection information. 
- 
+>[!IMPORTANT]
+>Once the external data Source is configured, you must [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to validate that the external data source has the correct connection information.
 
 ## Next steps
 

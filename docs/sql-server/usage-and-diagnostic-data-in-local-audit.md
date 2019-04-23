@@ -15,15 +15,22 @@ ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
-# Local audit for SQL Server usage and diagnostic data collection
+# Local audit for SQL Server usage and diagnostic data collection (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## Introduction
 
-Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The local audit component of [SQL Server Usage and Diagnostic Data collection](https://support.microsoft.com/kb/3153756) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the local audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
+Microsoft SQL Server contains Internet-enabled features that can collect and send information about your computer or device. This is called *standard computer information*. The local audit component of [SQL Server Usage and Diagnostic Data collection](usage-and-diagnostic-data-configuration-for-sql-server.md) writes data collected by the service to a designated folder, representing the data (logs) that will be sent to Microsoft. The purpose of the local audit is to allow customers to see all data Microsoft collects with this feature, for compliance, regulatory or privacy validation reasons.  
 
 As of SQL Server 2016 CU2, is configurable at the instance level for SQL Server Database Engine and Analysis Services (SSAS). In SQL Server 2016 CU4 and SQL Server 2016 SP1, local audit is also enabled for SQL Server Integration Services (SSIS). Other SQL Server components that get installed during Setup and SQL Server Tools that are downloaded or installed after Setup do not have local audit capability for usage and diagnostic data collection.
+
+## Remarks
+
+ - Removing or disabling the SQL CEIP service is not supported. 
+ - Removing the SQL CEIP resources from the Cluster Group is not supported. 
+
+To opt out of the data collection, see [Turning local audit on or off](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)
 
 ## Prerequisites 
 

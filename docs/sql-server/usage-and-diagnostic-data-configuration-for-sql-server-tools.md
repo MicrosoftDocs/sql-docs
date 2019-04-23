@@ -1,5 +1,5 @@
 ---
-title: "Configure usage and diagnostic data collection for SQL Server tools | Microsoft Docs"
+title: "Configure usage and diagnostic data collection for SQL Server tools (CEIP) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
 ms.prod: sql
@@ -12,7 +12,7 @@ ms.author: "sstein"
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Configure usage and diagnostic data collection for SQL Server tools
+# Configure usage and diagnostic data collection for SQL Server tools (CEIP)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -23,7 +23,7 @@ Learn how the Customer Experience Improvement Program (CEIP) helps Microsoft ide
   
 ## Opting in and out of CEIP for SQL Server Data Tools  
 
- The Customer Experience Improvement Program is a program designed to help Microsoft improve its products over time. This program collects information about computer hardware and how people use our product, without interrupting the users in their tasks at the computer. The information that is collected helps Microsoft identify which features to improve. In this document we will cover how to opt-in or out of CEIP for SQL Server Data Tools (SSDT) for Visual Studio 2017, Visual Studio 2015, and Visual Studio 2013.  
+ The Customer Experience Improvement Program is a program designed to help Microsoft improve its products over time. This program collects information about computer hardware and how people use our product, without interrupting the users in their tasks at the computer. The information that is collected helps Microsoft identify which features to improve. In this document we will cover how to opt-in or out of CEIP for SQL Server Data Tools (SSDT) for Visual Studio 2017, Visual Studio 2015, and Visual Studio 2013.  For information on opting out of CEIP for SQL Server, see [Usage and diagnostics data collection for SQL Server](usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 ### Choice and Control over  CEIP and SQL Server Data Tools for Visual Studio 2017
 

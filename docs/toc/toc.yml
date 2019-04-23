@@ -7263,6 +7263,8 @@
         items:
         - name: Install on Windows
           href: ../relational-databases/polybase/polybase-installation.md
+        - name: Install on Linux
+          href: ../relational-databases/polybase/polybase-linux-setup.md
         - name: Features & limitations
           href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
       - name: Configure external data sources
@@ -7285,6 +7287,8 @@
           href: ../relational-databases/polybase/polybase-configure-mongodb.md
         - name: ODBC Generic Types
           href: ../relational-databases/polybase/polybase-configure-odbc-generic.md
+        - name: Type mapping
+          href: ../relational-databases/polybase/polybase-type-mapping.md
       - name: Scale-out groups
         items:
         - name: Configure a scale-out group

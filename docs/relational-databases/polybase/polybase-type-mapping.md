@@ -1,4 +1,4 @@
- ---
+---
 title: "Type mapping with PolyBase | Microsoft Docs"
 ms.date: 09/24/2018
 ms.prod: sql
@@ -137,6 +137,7 @@ MongoDB uses BSON documents to store data records. Unlike the previous scenarios
 |TIME WITH TIME ZONE |Time             |
 |TIMESTAMP WITH TIME ZONE|Time         |
 
+::: moniker-end
 
 ## Next steps
 

@@ -49,7 +49,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 
 | New feature or update | Details |
 |:---|:---|
-| PolyBase on Linux. | Install PolyBase on Linux for non-Hadoop connectors. |
+| PolyBase on Linux. | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[Polybase type matching](../relational-databases/polybase/polybase-type-mapping.md). |
 | New Java language SDK for SQL Server. | Simplifies development of Java programs that can be run from SQL Server. See [What's new in SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md). |
 | Expanded the scope of plans available in DMF `sys.dm_exec_query_plan_stats`. |See [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | New `LAST_QUERY_PLAN_STATS` database scoped configuration to enable `sys.dm_exec_query_plan_stats`. |See [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|

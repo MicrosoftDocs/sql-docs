@@ -230,7 +230,7 @@ GO
 > Azure SQL Database does not support creating a certificate from a file.
 
 > [!IMPORTANT]
-> Starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], the ['CLR strict security'](../../t-sql/functions/certencoded-transact-sql.md) server configuration option prevents loading assemblies without setting up the security for them first. Load the certificate and then load the assembly.
+> Starting in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], the ['CLR strict security'](../../database-engine/configure-windows/clr-strict-security.md) server configuration option prevents loading assemblies without setting up the security for them first. Load the certificate, create a login from it, grant `UNSAFE ASSEMBLY` to that login, and then load the assembly.
 
 ### D. Creating a self-signed certificate  
  The following example creates a certificate called `Shipping04` without specifying an encryption password. This example can be used with [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].

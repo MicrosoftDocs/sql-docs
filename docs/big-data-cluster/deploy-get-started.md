@@ -5,7 +5,7 @@ description: Learn the steps and resources for deploying SQL Server 2019 big dat
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -1,7 +1,7 @@
 ---
 title: "Restore and Recovery Overview (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""

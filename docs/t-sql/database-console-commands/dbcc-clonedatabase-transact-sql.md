@@ -1,7 +1,7 @@
 ---
 title: "DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2018"
+ms.date: 04/23/2019
 ms.prod: "sql"
 ms.prod_service: "sql-database"
 ms.reviewer: ""

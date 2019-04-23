@@ -849,8 +849,6 @@
         href: ../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md
       - name: Built-in Collections - ReportItems Collection References
         href: ../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md
-    - name: Formulas in Report Model Queries
-      href: ../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md
 - name: Interactive Sort, Document Maps, and Links
   href: ../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
   items:
@@ -928,8 +926,6 @@
   href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
 - name: Create a Linked Report
   href: ../reporting-services/reports/create-a-linked-report.md
-- name: Clickthrough Reports (SSRS)
-  href: ../reporting-services/reports/clickthrough-reports-ssrs.md
 - name: View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: Report Data in SSRS Overview

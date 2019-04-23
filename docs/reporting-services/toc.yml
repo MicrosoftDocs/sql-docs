@@ -983,8 +983,6 @@
       href: ../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md
     - name: Element Path Syntax for XML Report Data
       href: ../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md
-  - name: Report Model Connection
-    href: ../reporting-services/report-data/report-model-connection-ssrs.md
   - name: Analysis Services Connection Type for DMX
     href: ../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md
     items:

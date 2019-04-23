@@ -78,7 +78,9 @@ ALTER CERTIFICATE certificate_name
  Specifies that the private key of the certificate is loaded into SQL Server.
 
  FILE ='*path_to_private_key*'  
- Specifies the complete path, including file name, to the private key. This parameter can be a local path or a UNC path to a network location. This file will be accessed within the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. When you use this option, you must make sure that the service account has access to the specified file.  
+ Specifies the complete path, including file name, to the private key. This parameter can be a local path or a UNC path to a network location. This file will be accessed within the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account. When you use this option, you must make sure that the service account has access to the specified file.
+ 
+ If only a file name is specified, the file will be saved in the instance's default user data folder (which may or may not be the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA folder). For SQL Server Express LocalDB, the instance's default user data folder is the path specified by the `%USERPROFILE%` environment variable for the account that created the instance.  
   
  BINARY ='*private_key_bits*'  
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

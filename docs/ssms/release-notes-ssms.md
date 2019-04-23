@@ -69,7 +69,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |Package IDs are no longer needed to develop SSMS Extensions| In the past, SSMS was selectively loading only well-known packages, thus requiring developers to register their own package. This is no longer the case.|
 |General SSMS|Exposing AUTOGROW_ALL_FILES config option for Filegroups in SSMS.|
 |General SSMS|Removed risky 'lightweight pooling' and 'priority boost' options from SSMS GUI. For details, see [Priority boost details – and why it’s not recommended](https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/).
-|General SSMS|SQL Editor honors the CTRL+D shortcut to duplicate lines (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
+|General SSMS|SQL Editor honors the **CTRL+D** shortcut to duplicate lines. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896594)
 |General SSMS|New menu and key bindings to creates files: **CTRL+ALT+N**. **CTRL+N** will continue to create a new query.|
 |General SSMS|Note: if you are migrating from "SSMS 18.0 Preview 1", you must reset the user settings from **Tools** > **Import Export Settings** > **Reset all settings**. Once you do that, you will see this in under **File** > **New**|
 |General SSMS|"New Firewall Rule" dialog now allow the user to specify a rule name, instead of automatically generating one on behalf of the user.|
@@ -77,8 +77,8 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |General SSMS|Added support in SSMS UI for UTF-8 on collation dialog.|
 |General SSMS|Switched to "Windows Credential Manager" for connection dialog MRU passwords. This addresses a long outstanding issue where persistence of passwords was not always reliable.|
 |General SSMS|Improved support for multi-monitor systems by making sure that more and more dialogs and windows pop up on the expected monitor.|
-|General SSMS|Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. See https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974.|
-|General SSMS|Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". See  https://feedback.azure.com/forums/908035/suggestions/33624115 |
+|General SSMS|Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. For details, see https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974.|
+|General SSMS|Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". For details, see  https://feedback.azure.com/forums/908035/suggestions/33624115 |
 |General SSMS|Added "Migrate to Azure" under Tools menu – We have integrated Database Migration Assistant and Azure Database Migration Service to provide quick and easy access to help accelerate your migrations to Azure. |
 |General SSMS|Previous version of SSMS 18.0 (< Preview 6) had the "Available Databases" key shortcut bound to CTRL+ALT+J. In Preview 6 and later, the key binding has been restored to CTRL+U, just like it used to be in SSMS 17.x.|
 |General SSMS|Added logic to prompt the user to commit open transactions when "Change connection" is used.|
@@ -185,11 +185,11 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |Azure SQL DB Managed Instance support|Fixed an issue which was causing right-clicking on a "TempDB" to show errors.|
 |Azure SQL DB Managed Instance support|Fixed an issue where trying to scripting ALTER DB ADD FILE statement in SMO was causing the generated T-SQL script to be empty.|
 |Azure SQL DB Managed Instance support|Improved display of Managed Instances server specific properties (hardware generation, service tier, storage used and reserved).|
-|Azure SQL DB Managed Instance support|Fixed an issue where scripting of a database ("Script as Create…") was not scripting extra filegroups and files. See https://feedback.azure.com/forums/908035/suggestions/37326799.|
+|Azure SQL DB Managed Instance support|Fixed an issue where scripting of a database ("Script as Create…") was not scripting extra filegroups and files. For details, see https://feedback.azure.com/forums/908035/suggestions/37326799.|
 |Backup/Restore/Attach/Detach DB|Fixed an issue where the user was unable to attach a database when physical filename of .mdf file does not match the original filename.|
-|Backup/Restore/Attach/Detach DB|Fixed an issue where SSMS might not find a valid restore plan or might find one which is sub-optimal. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.|
+|Backup/Restore/Attach/Detach DB|Fixed an issue where SSMS might not find a valid restore plan or might find one which is sub-optimal. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752.|
 |Backup/Restore/Attach/Detach DB|in cycle fix] Fixed a crash in SSMS when trying to restore a URL backup (this was a regression introduced in previous previews).|
-|Backup/Restore/Attach/Detach DB|Fixed issue where the "Attach Database" wizard was not displaying secondary files that were renamed. Now, the file is displayed and a comment about it is is added (e.g. "Not Found"). See https://feedback.azure.com/forums/908035/suggestions/32897434.|
+|Backup/Restore/Attach/Detach DB|Fixed issue where the "Attach Database" wizard was not displaying secondary files that were renamed. Now, the file is displayed and a comment about it is is added (e.g. "Not Found"). For details, see https://feedback.azure.com/forums/908035/suggestions/32897434.|
 |Copy Database Wizard|Generate scripts/Transfer/Copy Database Wizard try to create a table with an in memory table doesn't force ansi_padding on.|
 |Copy Database Wizard|Transfer Database task/Copy Database Wizard broken on SQL Server 2017 and SQL Server 2019.|
 |Copy Database Wizard|Generate scripts/Transfer/Copy Database Wizard script table creation before creation of associated external data source.|
@@ -202,13 +202,13 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |External Tables|Added support for Rejected_Row_Location in template, SMO, intellisense, and property grid.|
 |Flat File Import Wizard|Fixed an issue where the "Import Flat File Wizard" was not handling double quotes correctly (escaping) (see https://feedback.azure.com/forums/908035/suggestions/32897998).|
 |Flat File Import Wizard|Fixed an issue where related to incorrect handling of floating-point types (on locales that use a different delimiter for floating points).|
-|Flat File Import Wizard|Fixed an issue related to importing of bits when values are 0 or 1. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535.|
+|Flat File Import Wizard|Fixed an issue related to importing of bits when values are 0 or 1. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898535.|
 |Flat File Import Wizard|Fixed an issue where floats were entered as nulls.|
 |Flat File Import Wizard|Fixed an issue where the import wizard was not able to process negative decimal values.|
 |Flat File Import Wizard|Fixed an issue where the wizard was not able to import from single column CSV files.|
 |Flat File Import Wizard|will be in SSMS 17.9] Fixed issue where Flat File Import does not allow changing destination table when table is already existing (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186).|
 |Help Viewer|Improved logic around honoring the online/offline modes (there may still be a few issues that need to be addressed).|
-|Help Viewer|Fixed the "View Help" to honor the online/offline settings. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791.|
+|Help Viewer|Fixed the "View Help" to honor the online/offline settings. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32897791.|
 |High Availability Disaster Recovery (HADR)<BR> Availability Groups (AG)|Fixed an issue where roles in "Fail Over Availability Groups" wizard was always displayed as "Resolving".|
 |High Availability Disaster Recovery (HADR)<BR> Availability Groups (AG)|Fixed an issue where SSMS was showing truncated warnings in "AG Dashboard".|
 |Integration Services (IS)|Fixed a SxS issue that deployment wizard will fail to connect to sql server when SQL Server 2019 and SSMS 18.0 are installed on the same machine.|
@@ -223,18 +223,18 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |Object Explorer|Fixed an issue where the "Import Data-Tier application" wizard was failing to launch from the Azure Storage tree.|
 |Object Explorer|Fixed an issue in "Database Mail Configuration" where the status of the SSL checkbox was not persisted (see https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541).|
 |Object Explorer|Fixed an issue where SSMS grayed out option to close existing connections when trying to restore database with is_auto_update_stats_async_on.|
-|Object Explorer|Fixed an issue where right-clicking on nodes in OE the (e.g. "Tables" and wanting to perform an action such as filtering tables by going to Filter > Filter Settings, the filter settings form can appear on the other screen than where SSMS is currently active). See https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106.|
-|Object Explorer|Fixed a long outstanding issue where the DELETE key was not working in OE while trying to rename an object. See https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510.|
-|Object Explorer|When displaying the properties of existing database files, the size appears under a column "Size (MB)" instead of "Initial Size (MB)" which is what is displayed when creating a new database. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024.|
+|Object Explorer|Fixed an issue where right-clicking on nodes in OE the (e.g. "Tables" and wanting to perform an action such as filtering tables by going to Filter > Filter Settings, the filter settings form can appear on the other screen than where SSMS is currently active). For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106.|
+|Object Explorer|Fixed a long outstanding issue where the DELETE key was not working in OE while trying to rename an object. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510.|
+|Object Explorer|When displaying the properties of existing database files, the size appears under a column "Size (MB)" instead of "Initial Size (MB)" which is what is displayed when creating a new database. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024.|
 |Object Explorer|Disabled the "Design" context-menu item on "Graph Tables" since there is no support for those kind of tables in the current version of SSMS.|
-|Object Explorer|Fixed an issue where the "New Job Schedule" dialog was not rendering properly on High DPI monitors. See https://feedback.azure.com/admin/v3/suggestions/35541262.|
-|Object Explorer|Fixed/improved the way an issue where a database size ("Size (MB)") is displayed in Object Explorer details: only 2 decimal digits and formatted using the thousands separator. See https://feedback.azure.com/forums/908035/suggestions/34379308.|
+|Object Explorer|Fixed an issue where the "New Job Schedule" dialog was not rendering properly on High DPI monitors. For details, see https://feedback.azure.com/admin/v3/suggestions/35541262.|
+|Object Explorer|Fixed/improved the way an issue where a database size ("Size (MB)") is displayed in Object Explorer details: only 2 decimal digits and formatted using the thousands separator. For details, see https://feedback.azure.com/forums/908035/suggestions/34379308.|
 |Object Explorer|Fixed an issue that was causing the creation of a "Spatial Index" to fail with an error like "To accomplish this action, set property PartitionScheme".|
 |Object Explorer|Minor performance improvements in Object Explorer to avoid issuing extra queries, when possible.|
 |Object Explorer|Extended logic to request confirmation when renaming a database to all the schema objects (the setting can be configured and this disabled).|
-|Object Explorer|Added proper escaping in Object Explorer filtering. See https://feedback.azure.com/forums/908035/suggestions/36678803.|
-|Object Explorer|Fixed/improved the view in Object Explorer Details to show numbers with proper separators. See https://feedback.azure.com/forums/908035/suggestions/32900944.|
-|Object Explorer|Fixed context menu on "Tables" node when connected to SQL Express, where the "New" fly-out was missing, Graph tables were incorrectly listed, and System-Versioned table was missing. See https://feedback.azure.com/forums/908035/suggestions/37245529.|
+|Object Explorer|Added proper escaping in Object Explorer filtering. For details, see https://feedback.azure.com/forums/908035/suggestions/36678803.|
+|Object Explorer|Fixed/improved the view in Object Explorer Details to show numbers with proper separators. For details, see https://feedback.azure.com/forums/908035/suggestions/32900944.|
+|Object Explorer|Fixed context menu on "Tables" node when connected to SQL Express, where the "New" fly-out was missing, Graph tables were incorrectly listed, and System-Versioned table was missing. For details, see https://feedback.azure.com/forums/908035/suggestions/37245529.|
 |Object Scripting|Overall perf improvements - Generate Scripts of WideWorldImporters takes half the time compared to SSMS 17.7.|
 |Object Scripting|When scripting objects, DB Scoped configuration which have default values are omitted.|
 |Object Scripting|Don't generate dynamic T-SQL when scripting(see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391).|
@@ -246,7 +246,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |Object Scripting|Fixed an issue where trying to script a table in a SQL DW database with both "Clustered Columnstore Indexes" and "Clustered Indexes" was generating incorrect T-SQL (duplicate statements).|
 |Object Scripting|Fix Partitioned table scripting with no range values (SQL DW databases).|
 |Object Scripting|Fixed an issue where the user would be unable to script an audit/audit specification SERVER_PERMISSION_CHANGE_GROUP.|
-|Object Scripting|Fix and issue where the user is unable to script statistics from SQL DW. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296.|
+|Object Scripting|Fix and issue where the user is unable to script statistics from SQL DW. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32897296.|
 |Object Scripting|Fixed an issue where the "Generate script wizard" shows incorrect table having scripting error when "Continue scripting on Error" is set to false.|
 |Object Scripting|Improved script generation on SQL Server 2019.|
 |Profiler|Added "Aggregate Table Rewrite Query" event to Profiler events.|
@@ -255,11 +255,11 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |Query Data Store|Fixed an issue when trying to set a custom time interval in the build-in Query Store reports the user was not able to select AM or PM on the start/end interval.|
 |Results Grid|Fixed an issue that was causing the in High Contrast mode (selected line numbers not visible).|
 |Results Grid|Fixed an issue which resulted in an "Index out of range" exception when clicking on the grid.|
-|Results Grid|Fixed an issue where the grid result background color was being ignored. See https://feedback.azure.com/forums/908035/suggestions/32895916.|
+|Results Grid|Fixed an issue where the grid result background color was being ignored. For details, see https://feedback.azure.com/forums/908035/suggestions/32895916.|
 |ShowPlan|New mem grant operator properties display incorrectly when there is more than one thread.|
 |ShowPlan|Add the following 4 attributes in RunTimeCountersPerThread of actual execution xml plan: HpcRowCount (Number of rows processed by hpc device), HpcKernelElapsedUs (elapsed time wait for kernel execution in use), HpcHostToDeviceBytes (bytes transferred from host to device), and HpcDeviceToHostBytes (bytes transferred from device to host).|
 |ShowPlan|Fixed an issue where the similar plan nodes are highlighted in the wrong position.|
-|SMO|Fixed an issue where SMO/ServerConnection did not SqlCredential-based connections correctly. See https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941.|
+|SMO|Fixed an issue where SMO/ServerConnection did not SqlCredential-based connections correctly. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941.|
 |SMO|Fixed an issue where an application written using SMO would encounter an error if it tried to enumerate databases from the same server on multiple threads even though it uses separate SqlConnection instances on each thread.|
 |SMO|Fixed performance regression in Transfer from External Tables [12576484].|
 |SMO|Fixed issue in ServerConnection thread-safety which was causing SMO to leak SqlConnection instances when targeting Azure.|
@@ -269,15 +269,15 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |SSMS Editor|Fixed issue where intellisense was not working when connected to Azure SQLDW using AAD authentication.|
 |SSMS Editor|Fixed intellisense in Azure when user lacks master access.|
 |SSMS Editor|Fixed code snippets to create "temporal tables" which were broken when the collation of the target database was case sensitive.|
-|SSMS Editor|New TRANSLATE function now recognized by intellisense. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430|
-|SSMS Editor|Improved intellisense on FORMAT built-in function. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676|
-|SSMS Editor|LAG and LEAD are now recognized as built-in functions. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757|
+|SSMS Editor|New TRANSLATE function now recognized by intellisense. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898430|
+|SSMS Editor|Improved intellisense on FORMAT built-in function. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898676|
+|SSMS Editor|LAG and LEAD are now recognized as built-in functions. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32898757|
 |SSMS Editor|Fixed an issue where intellisense was giving a warning when using "ALTER TABLE...ADD CONSTRAINT...WITH(ONLINE=ON)".|
 |SSMS Editor|Fixed an issue where several system views and table values functions were not properly colorized.|
-|SSMS Editor|Fixed an issue where clicking on editor tabs could cause the tab to be closed instead of getting the focus. See https://feedback.azure.com/forums/908035/suggestions/37291114.|
+|SSMS Editor|Fixed an issue where clicking on editor tabs could cause the tab to be closed instead of getting the focus. For details, see https://feedback.azure.com/forums/908035/suggestions/37291114.|
 |SSMS Options|Fixed an issue where **Tools** > **Options** > **SQL Server Object Explorer** > **Commands** page was not resizing properly.|
 |SSMS Options|SSMS will now by default disable automatic download of DTD in XMLA editor -- XMLA script editor (which uses the xml language service) will by default now prevent automatically downloading the DTD for potentially malicious xmla files. This is controlled by turning off the “Automatically download DTDs and Schemas” setting in **Tools** > **Options** > **Environment** > **Text Editor** > **XML** > **Miscellaneous**. |
-|SSMS Options|Restored **CTRL+D** to be the shortcut as it used to be in older version of SSMS. See https://feedback.azure.com/forums/908035/suggestions/35544754.|
+|SSMS Options|Restored **CTRL+D** to be the shortcut as it used to be in older version of SSMS. For details, see https://feedback.azure.com/forums/908035/suggestions/35544754.|
 |Table Designer|Fixed a crash in "Edit 200 rows".|
 |Table Designer|Fixed an issue where the designer was allowing to add a table when connected to a Azure SQL database.|
 |Vulnerability Assessment|Fixed an issue where the scan results are not being loaded properly.|

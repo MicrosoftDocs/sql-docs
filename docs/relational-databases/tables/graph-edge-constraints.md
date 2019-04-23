@@ -1,7 +1,7 @@
 ---
 title: "Graph edge constraints | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/11/2018"
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

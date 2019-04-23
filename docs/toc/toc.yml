@@ -6310,6 +6310,17 @@
           href: ../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md
       - name: Troubleshooting
         href: ../relational-databases/database-mail/database-mail-general-troubleshooting.md
+        items:
+        - name: Sending test email
+          href: ../relational-databases/database-mail/database-mail-sending-test-email.md
+        - name: Common errors
+          href: ../relational-databases/database-mail/database-mail-common-errors.md
+        - name: Mail queued, not delivered 
+          href: ../relational-databases/database-mail/database-mail-mail-queued-not-delivered.md
+        - name: Mail queued, no entries in log
+          href: ../relational-databases/database-mail/database-mail-mail-queued-no-entries-in-log.md 
+        - name: Send mail from remote server
+          href: ../relational-databases/database-mail/database-mail-send-mail-from-remote-server.md
     - name: Data compression
       href: ../relational-databases/data-compression/data-compression.md
       items:

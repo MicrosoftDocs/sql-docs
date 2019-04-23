@@ -109,9 +109,9 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> If you have columnstore indexes, see [Considerations when you tune the queries with Columnstore indexes on clone databases](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) to update columnstore index statistics before you run the **DBCC CLONEDATABASE** command.  Starting with SQL Server 2019, the manual steps outlined in the article above will no longer be required as the **DBCC CLONEDATABASE** command gathers this information automatically.
+> If you have columnstore indexes, see [Considerations when you tune the queries with Columnstore indexes on clone databases](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294) to update columnstore index statistics before you run the **DBCC CLONEDATABASE** command.  Starting with SQL Server 2019, the manual steps outlined in the article above will no longer be required as the **DBCC CLONEDATABASE** command gathers this information automatically.
 
-For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
+For information related to data security on cloned databases, see [Understanding data security in cloned databases](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287).
 
 ## Internal Database Snapshot
 DBCC CLONEDATABASE uses an internal database snapshot of the source database for the transactional consistency that is needed to perform the copy. Using this snapshot prevents blocking and concurrency problems when these commands are executed. If a snapshot can't be created, DBCC CLONEDATABASE will fail. 

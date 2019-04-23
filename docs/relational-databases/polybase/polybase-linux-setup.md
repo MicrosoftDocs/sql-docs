@@ -13,12 +13,12 @@ ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ---
 # Install PolyBase on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-The following steps install [PolyBase](../relational-databases/search/full-text-search.md) (**mssql-server-polybase**) on Linux. PolyBase enables you to run external queries against remote data sources. 
+The following steps install [PolyBase](../../relational-databases/search/full-text-search.md) (**mssql-server-polybase**) on Linux. PolyBase enables you to run external queries against remote data sources. 
 
-> [!NOTE]
-> Before installing Polybase, first [install SQL Server](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the **mssql-server-polybase** package.
+>[!NOTE]
+> Before installing Polybase, first [install SQL Server](../../linux/sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the **mssql-server-polybase** package.
 
 > Scale-out for PolyBase on Linux is currently unavailable.
 
@@ -45,10 +45,10 @@ You will be prompted to restart the SQL Server instance. Use the following comma
 sudo systemctl restart mssql-server
 ```
 
-> [!NOTE] After installation, you must [enable the PolyBase feature](#enable).
+>[!NOTE]
+>After installation, you must [enable the PolyBase feature](#enable).
 
-
-If you need an offline installation, locate the PolyBase package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 ## <a name="ubuntu">Install on Ubuntu</a>
 
@@ -64,9 +64,10 @@ You will be prompted to restart the SQL Server instance. Use the following comma
 sudo systemctl restart mssql-server
 ```
 
-> [!NOTE] After installation, you must [enable the PolyBase feature](#enable).
+>[!NOTE]
+>After installation, you must [enable the PolyBase feature](#enable).
 
-If you need an offline installation, locate the PolyBase package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 ## <a name="SLES">Install on SLES</a>
 
@@ -82,10 +83,11 @@ You will be prompted to restart the SQL Server instance. Use the following comma
 sudo systemctl restart mssql-server
 ```
 
-> [!NOTE] After installation, you must [enable the PolyBase feature](#enable).
+>[!NOTE]
+>After installation, you must [enable the PolyBase feature](#enable).
 
 
-If you need an offline installation, locate the PolyBase package download in the [Release notes](sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](sql-server-linux-setup.md#offline).
+If you need an offline installation, locate the PolyBase package download in the [Release notes](../../linux/sql-server-linux-release-notes.md). Then use the same offline installation steps described in the article [Install SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 
 ## <a name="enable">Enable PolyBase</a> 
@@ -143,7 +145,8 @@ You will be prompted to restart the SQL Server instance. Use the following comma
 sudo systemctl restart mssql-server
 ```
 
-> [!NOTE] After installation, you must [enable the PolyBase feature](#enable).
+>[!NOTE]
+>After installation, you must [enable the PolyBase feature](#enable).
 
 ## Next steps
 
@@ -155,6 +158,5 @@ PolyBase on Linux can access the following data sources. Follow the provided lin
 - [Oracle](../../relational-databases/polybase/polybase-configure-oracle.md)
 - [Teradata](../../relational-databases/polybase/polybase-configure-teradata.md)
 - [MongoDB (& Cosmos DB)](../../relational-databases/polybase/polybase-configure-mongodb.md)
-
 
 For more information on how this is used, see Transact-SQL reference article for [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).

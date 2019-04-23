@@ -69,7 +69,7 @@ After you have configured your Kubernetes cluster, you can proceed with the depl
 
 Starting in CTP 2.5, most big data cluster settings are defined in a JSON deployment configuration file. You can use a default deployment profile for AKS, kubeadm, or minikube or you can customize your own deployment configuration file to use during setup. For security reasons, authentication settings are passed via environment variables.
 
-The following sections provide more details on how to configure your big data cluster deployments as well as examples of common customizations.
+The following sections provide more details on how to configure your big data cluster deployments as well as examples of common customizations. Also, you can always edit the custom deployment configuration file using an editor like VSCode for example.
 
 ## <a id="configfile"></a> Default configurations
 
@@ -106,10 +106,10 @@ It is also possible to customize your own deployment configuration file. You can
    mssqlctl cluster config init --src aks-dev-test.json --target custom.json
    ```
 
-1. To customize settings in your deployment configuration file, you can call **mssqlctl cluster config section set**. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
+1. To customize settings in your deployment configuration file, you can edit it in a tool that is good for editing json docs like VS Code. For scripted automation, you can edit the custom configuration file using **mssqlctl cluster config section set** command. For example, the following command alters a custom configuration file to change the name of the deployed cluster from the default (**mssql-cluster**) to **test-cluster**:  
 
    ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values 'metadata.name=test-cluster'
+   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
    ```
 
    > [!TIP]
@@ -117,10 +117,10 @@ It is also possible to customize your own deployment configuration file. You can
 
    In addition to passing key-value pairs, you can also provide inline JSON values or pass JSON patch files. For more information, see [Configure deployment settings for big data clusters](deployment-custom-configuration.md).
 
-1. Then pass the custom configuration file to **mssqlctl cluster create**:
+1. Then pass the custom configuration file to **mssqlctl cluster create**. Note that you must set the required [environment variables](#env), otherwise you will be prompted for the values:
 
    ```bash
-   mssqlctl cluster create --config-file custom.json
+   mssqlctl cluster create --config-file custom.json --accept-eula yes
    ```
 
 > [!TIP]
@@ -136,50 +136,49 @@ The following environment variables are used for security settings that are not 
 | **DOCKER_REPOSITORY** | The private repository within the above registry where images are stored. |
 | **DOCKER_USERNAME** | The username to access the container images in case they are stored in a private repository. |
 | **DOCKER_PASSWORD** | The password to access the above private repository. |
-| **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to **latest**. |
+| **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to **latest**, but we recommend using the tag corresponding to the release to avoid version incompatibility issues. |
 | **CONTROLLER_USERNAME** | The username for the cluster administrator. |
 | **CONTROLLER_PASSWORD** | The password for the cluster administrator. |
 | **KNOX_PASSWORD** | The password for Knox user. |
 | **MSSQL_SA_PASSWORD** | The password of SA user for SQL master instance. |
 
-These environment variables can be set prior to calling **mssqlctl cluster create** or by using the **--env-var** parameter. If any variable is not set, you are prompted for it.
+These environment variables must be set prior to calling **mssqlctl cluster create**. If any variable is not set, you are prompted for it.
 
-> [!IMPORTANT]
-> If you are passing the environment variables through the **--env-var** parameter, the environment variables are process scoped, and not set at system level. Hence, they will exist only in the context of the create command. Hence, subsequent commands will require login or setting the environment variables corresponding to controller credentials.
-
-The following example shows how to pass the environment variables on the command-line for Linux (bash) and Windows (PowerShell):
+The following example shows how to set the environment variables for Linux (bash) and Windows (PowerShell):
 
 ```bash
-mssqlctl cluster create --config-file aks-dev-test.json \
-   --accept-eula yes --env-var \
-   CONTROLLER_USERNAME=admin,\
-   CONTROLLER_PASSWORD=<password>,\
-   DOCKER_REGISTRY=<docker-registry>,\
-   DOCKER_REPOSITORY=<docker-repository>,\
-   MSSQL_SA_PASSWORD=<password>,\
-   KNOX_PASSWORD=<password>,\
-   DOCKER_USERNAME=<docker-username>,\
-   DOCKER_PASSWORD=<docker-password>,\
-   DOCKER_IMAGE_TAG=ctp2.5
+export CONTROLLER_USERNAME=<controller_user>
+export CONTROLLER_PASSWORD=<password>
+export DOCKER_REGISTRY=<docker-registry>
+export DOCKER_REPOSITORY=<docker-repository>
+export MSSQL_SA_PASSWORD=<password>
+export KNOX_PASSWORD=<password>
+export DOCKER_USERNAME=<docker-username>
+export DOCKER_PASSWORD=<docker-password>
+export DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 ```PowerShell
-mssqlctl cluster create --config-file aks-dev-test.json `
-   --accept-eula yes --env-var `
-   CONTROLLER_USERNAME=admin,`
-   CONTROLLER_PASSWORD=<password>,`
-   DOCKER_REGISTRY=<docker-registry>,`
-   DOCKER_REPOSITORY=<docker-repository>,`
-   MSSQL_SA_PASSWORD=<password>,`
-   KNOX_PASSWORD=<password>,`
-   DOCKER_USERNAME=<docker-username>,`
-   DOCKER_PASSWORD=<docker-password>,`
-   DOCKER_IMAGE_TAG=ctp2.5
+SET CONTROLLER_USERNAME=admin
+SET CONTROLLER_PASSWORD=<password>
+SET DOCKER_REGISTRY=<docker-registry>
+SET DOCKER_REPOSITORY=<docker-repository>
+SET MSSQL_SA_PASSWORD=<password>
+SET KNOX_PASSWORD=<password>
+SET DOCKER_USERNAME=<docker-username>
+SET DOCKER_PASSWORD=<docker-password>
+SET DOCKER_IMAGE_TAG=ctp2.5
+```
+
+Upon setting the environment variables, you must run `mssqlctl cluster create` to trigger the deployment. This example uses the cluster configuration file created above:
+
+```
+mssqlctl cluster create --config-file custom.json --accept-eula yes
 ```
 
 Please note the following guidelines:
 
-- For the duration of the limited private preview, credentials for the private Docker registry will be provided to you upon triaging your [Early Adoption Program registration](https://aka.ms/eapsignup).  Signup for the Early Adoption Program is required to test SQL Server big data clusters.
+- At this time, credentials for the private Docker registry will be provided to you upon triaging your [Early Adoption Program registration](https://aka.ms/eapsignup). Early Adoption Program registration is required to test SQL Server big data clusters.
 - Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
 - The **SA** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
 - The **DOCKER_IMAGE_TAG** in this example controls which release you are installing. In this example, it is the CTP 2.5 release.

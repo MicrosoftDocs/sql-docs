@@ -68,7 +68,8 @@ The following Transact-SQL commands are used in this section:
   CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
   ```
 
->[!IMPORTANT] Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source. 
+>[!IMPORTANT] 
+>Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source. 
 
 For more information and examples, see the following articles:
 

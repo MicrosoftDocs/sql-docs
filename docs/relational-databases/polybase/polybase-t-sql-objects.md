@@ -31,7 +31,8 @@ To use  PolyBase, you must create external tables to reference your external dat
   
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
 
->[!NOTE] In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
+>[!NOTE]
+>In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
 
 ## Prerequisites  
 

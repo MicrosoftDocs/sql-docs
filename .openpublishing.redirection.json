@@ -13937,12 +13937,12 @@
         },
         {
             "source_path": "docs/2014/reporting-services/report-data/report-model-query-designer-user-interface.md",
-            "redirect_url": "/reporting-services/report-data/query-design-tools-ssrs",
+            "redirect_url": "/sql/reporting-services/report-data/query-design-tools-ssrs",
             "redirect_document_id": false
         },
         {
             "source_path": "docs/reporting-services/report-data/report-model-query-designer-user-interface.md",
-            "redirect_url": "/reporting-services/report-data/query-design-tools-ssrs",
+            "redirect_url": "/sql/reporting-services/report-data/query-design-tools-ssrs",
             "redirect_document_id": false
         }
     ]

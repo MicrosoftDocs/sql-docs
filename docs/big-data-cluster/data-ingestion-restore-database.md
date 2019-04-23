@@ -5,7 +5,7 @@ description: This article shows how to restore a database into the master instan
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -99,10 +99,6 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool'
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
 BEGIN
-  IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-    WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-  ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
     CREATE EXTERNAL DATA SOURCE SqlStoragePool
     WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
 END

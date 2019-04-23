@@ -1,9 +1,11 @@
 ---
-title: SQL Server 2016 Reporting Services or later (SSRS)
-description: Include for current SSRS version or later
 author: {ccsmike}
-ms.author: {v-hassmi}
+ms.service: reporting-services
+ms.topic: include
 ms.date: {@date}
-ms.topic: conceptual
+ms.author: {v-hassmi}
 ---
+
+# SQL Server 2016 Reporting Services or later (SSRS)
+
 SQL Server 2016 Reporting Services or later (SSRS)

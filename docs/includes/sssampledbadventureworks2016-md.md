@@ -1,12 +1,11 @@
 ---
-title: "AdventureWorks2016"
-description: Include for AdventureWorks2016 DB 
 author: {ccsmike}
-ms.author: {v-hassmi}
+ms.service: reporting-services
+ms.topic: include
 ms.date: {@date}
-ms.topic: conceptual
+ms.author: {v-hassmi}
 ---
 
 # AdventureWorks2016
 
-**AdventureWorks2016**
+AdventureWorks2016

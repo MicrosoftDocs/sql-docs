@@ -1,19 +1,20 @@
 ---
 title: "Configure PolyBase to access external data in Oracle | Microsoft Docs"
-ms.custom: ""
+description: This article demonstrates how to use PolyBase to create an external data source to access Oracle data.
 ms.date: 04/10/2019
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
+ms.custom: ""
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
 # Configure PolyBase to access external data in Oracle
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 The article explains how to use PolyBase on a SQL Server instance to query external data in Oracle.
 
@@ -70,6 +71,7 @@ The following Transact-SQL commands are used in this section:
 >[!IMPORTANT] Once the external data Source is configured, you must [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to validate that the external data source has the correct connection information. 
  
 
-## Next steps
+For more information and examples, see the following articles:
 
-To learn more about PolyBase, see [Overview of SQL Server PolyBase](polybase-guide.md).
+- [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md).
+- [Overview of SQL Server PolyBase](polybase-guide.md).

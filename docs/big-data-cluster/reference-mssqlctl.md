@@ -5,7 +5,7 @@ description: Reference article for mssqlctl commands.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -17,77 +17,73 @@ ms.technology: big-data-cluster
 
 The following article provides reference for the **mssqlctl** tool for [SQL Server 2019 big data clusters (preview)](big-data-cluster-overview.md). For more information about how to install the **mssqlctl** tool, see [Install mssqlctl to manage SQL Server 2019 big data clusters](deploy-install-mssqlctl.md).
 
-## <a id="commands"></a> Commands
-
-|||
-|---|---|
-| [app](reference-mssqlctl-app.md) | Create, delete, run, and manage applications. |
-| [cluster](reference-mssqlctl-cluster.md) | Select, manage, and operate clusters. |
-| [login](#login) | Log in to the cluster. |
-| [logout](#logout) | Log out of cluster. |
-| [storage](reference-mssqlctl-storage.md) | Manage cluster storage. |
-
-## <a id="login"></a> mssqlctl login
-
+## Commands
+|     |     |
+| --- | --- |
+|[mssqlctl app](reference-mssqlctl-app.md) | Create, delete, run, and manage applications. |
+|[mssqlctl cluster](reference-mssqlctl-cluster.md) | Select, manage, and operate clusters. |
+[mssqlctl login](#mssqlctl-login) | Log in to the cluster.
+[mssqlctl logout](#mssqlctl-logout) | Log out of cluster.
+|[mssqlctl storage](reference-mssqlctl-storage.md) | Manage cluster storage. |
+## mssqlctl login
 Log in to the cluster.
-
+```bash
+mssqlctl login [--username -u] 
+               [--password -p]  
+               [--endpoint -e]
 ```
-mssqlctl login
-   --endpoint
-   --password
-   --username
-```
-
-### Parameters
-
-| Parameter | Description |
-|---|---|
-|**--endpoint -e**| Cluster host and port (ex) `http://host:port"`. |
-|**--password -p**| Password credentials. |
-|**--username -u**| Account user. |
-
 ### Examples
-
 Log in interactively.
-
-```
+```bash
 mssqlctl login
 ```
-
 Log in with user name and password.
-
-```
+```bash
 mssqlctl login -u johndoe@contoso.com -p VerySecret
 ```
-
 Log in with user name, password, and cluster endpoint.
-
-```
+```bash
 mssqlctl login -u johndoe@contoso.com -p VerySecret --endpoint https://host.com:12800
 ```
-
-## <a id="logout"></a> mssqlctl logout
-
+### Optional Parameters
+#### `--username -u`
+Account user.
+#### `--password -p`
+Password credentials.
+#### `--endpoint -e`
+Cluster host and port (ex) "http://host:port".
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
+## mssqlctl logout
 Log out of cluster.
-
+```bash
+mssqlctl logout 
 ```
-mssqlctl logout
-   --username
-```
-
-### Parameters
-
-| Parameters | Description |
-|---|---|
-| **--username -u** | Account user, if missing, logout the current active account. |
-
 ### Examples
-
 Log out this user.
-
+```bash
+mssqlctl logout
 ```
-mssqlctl logout --username admin
-```
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 

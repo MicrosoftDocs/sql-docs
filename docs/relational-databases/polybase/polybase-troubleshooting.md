@@ -15,10 +15,11 @@ ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: rothja
 ms.author: jroth
 manager: craigg
+monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Monitor and troubleshoot PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 To troubleshoot PolyBase, use the techniques found in this topic.
 

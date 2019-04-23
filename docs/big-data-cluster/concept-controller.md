@@ -17,7 +17,7 @@ ms.custom: seodec18
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-The controller hosts the core logic for deploying and managing a big data cluster. It takes care of all interactions with Kubernetes, SQL Server instances that are part of the cluster and other components like HDFS and Spark. 
+The controller hosts the core logic for deploying and managing a big data cluster. It takes care of all interactions with Kubernetes, SQL Server instances that are part of the cluster and other components like HDFS and Spark.
 
 The controller service provides the following core functionality:
 
@@ -26,9 +26,10 @@ The controller service provides the following core functionality:
 - Manage compute, data, and storage pools
 - Expose monitoring tools to observe the state of the cluster
 - Expose troubleshooting tools to detect and repair unexpected issues
-- Manage cluster security: ensure secure cluster endpoints, manage users and roles, configure credentials for intra-cluster communication
-- Manage the workflow of upgrades so that they are implemented safely (not available in CTP 2.4)
-- Manage high availability and DR for statefull services in the cluster (not available in CTP 2.4)
+- Manage cluster security:
+  - Ensure secure cluster endpoints
+  - Manage users and roles
+  - Configure credentials for intra-cluster communication
 
 ## Deploying the controller service
 

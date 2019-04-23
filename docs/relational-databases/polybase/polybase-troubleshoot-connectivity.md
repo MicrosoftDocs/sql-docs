@@ -2,6 +2,7 @@
 title: Troubleshoot PolyBase Kerberos connectivity | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
+ms.reviewer: jroth
 manager: craigg
 ms.technology: polybase
 ms.custom: ""
@@ -10,7 +11,7 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: "polybase, sql-data-warehouse, pdw"
-
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Troubleshoot PolyBase Kerberos connectivity
 

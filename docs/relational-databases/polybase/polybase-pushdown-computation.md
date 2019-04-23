@@ -9,9 +9,9 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
+monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Pushdown computations in PolyBase
-
 
 ## DMV
 

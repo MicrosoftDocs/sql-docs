@@ -22,7 +22,7 @@ The article explains how to use PolyBase on a SQL Server instance to query exter
 
 If you haven't installed PolyBase, see [PolyBase installation](polybase-installation.md).
 
-  Before creating a database scoped credential a [Master Key](../../t-sql/statements/create-master-key-transact-sql.md) must be created. 
+  Before creating a database scoped credential, a [Master Key](../../t-sql/statements/create-master-key-transact-sql.md) must be created. 
 
 ## Configure an Oracle external data source
 
@@ -35,7 +35,7 @@ The following Transact-SQL commands are used in this section:
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 
-1.  Create a database scoped credential for accessing the MongoDB source.
+1.  Create a database scoped credential for accessing the Oracle source.
 
   ```sql
   /*  specify credentials to external data source
@@ -68,8 +68,7 @@ The following Transact-SQL commands are used in this section:
   CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
   ```
 
->[!IMPORTANT] Once the external data Source is configured, you must [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) to validate that the external data source has the correct connection information. 
- 
+>[!IMPORTANT] Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source. 
 
 For more information and examples, see the following articles:
 

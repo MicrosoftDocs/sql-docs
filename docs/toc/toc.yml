@@ -7291,8 +7291,6 @@
           href: ../relational-databases/polybase/polybase-configure-mongodb.md
         - name: ODBC Generic Types
           href: ../relational-databases/polybase/polybase-configure-odbc-generic.md
-        - name: Type mapping
-          href: ../relational-databases/polybase/polybase-type-mapping.md
       - name: Scale-out groups
         items:
         - name: Configure a scale-out group
@@ -7315,6 +7313,8 @@
       items:
       - name: T-SQL reference
         href: ../relational-databases/polybase/polybase-t-sql-objects.md
+      - name: Type mapping
+        href: ../relational-databases/polybase/polybase-type-mapping.md
     - name: Resources
       items:
       - name: DBA Stack Exchange +

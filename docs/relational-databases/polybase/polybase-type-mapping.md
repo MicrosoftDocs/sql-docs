@@ -1,4 +1,4 @@
- ---
+---
 title: "Type mapping with PolyBase | Microsoft Docs"
 ms.date: 09/24/2018
 ms.prod: sql

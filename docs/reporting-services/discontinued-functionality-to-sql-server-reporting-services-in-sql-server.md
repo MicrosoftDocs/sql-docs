@@ -24,8 +24,6 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 
 |Feature|Replacment or workaround|
 |-|-|
-|Upload report models through the web portal|This can still be done through the SOAP API.|
-|Manage report models through the web portal|This can still be done through the SOAP API.|
 |Customize style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
 
 ## Next steps

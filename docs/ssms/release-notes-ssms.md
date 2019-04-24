@@ -254,7 +254,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |SMO|Fixed issue in ServerConnection thread-safety which was causing SMO to leak SqlConnection instances when targeting Azure.|
 |SMO|Fixed an issue which was causing a StringBuilder.FormatError when trying to restore a database which had curly braces in its name.|
 |SMO|Fixed an issue where Azure databases in SMO were defaulting to Case-Insensitive collation for all string comparisons instead of using the specified collation for the database.|
-|SSMS Editor|Fixed an issue where "SQL System Table" where restoring the default colors was chancing the color to lime green, rather than the default green, making it very hard to read on a white background. See https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906. Note: the issue still persists on non-English versions of SSMS.|
+|SSMS Editor|Fixed an issue where "SQL System Table" where restoring the default colors was chancing the color to lime green, rather than the default green, making it very hard to read on a white background. For details, see [Restoring wrong default color for SQL System Table](https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906). The issue still persists on non-English versions of SSMS.|
 |SSMS Editor|Fixed issue where intellisense was not working when connected to Azure SQLDW using AAD authentication.|
 |SSMS Editor|Fixed intellisense in Azure when user lacks access to **master** database.|
 |SSMS Editor|Fixed code snippets to create "temporal tables" which were broken when the collation of the target database was case sensitive.|
@@ -296,7 +296,7 @@ Deprecated / Removed Features
 - Generate Scripts > Publish to Web Service removed
   - This deprecated feature was removed from the SSMS UI.
 - Removed node "Maintenance > Legacy" in Object Explorer.
-  - The really old "Database Maintenance Plan" and "SQL Mail" nodes won't be accessible anymore. Note: the modern "Database Mail" and "Maintenance Plans" nodes will continue to work as usual.
+  - The really old "Database Maintenance Plan" and "SQL Mail" nodes won't be accessible anymore. The modern "Database Mail" and "Maintenance Plans" nodes will continue to work as usual.
 
 
 
@@ -516,7 +516,7 @@ Telemetry:
 - Fixed issue where  SSMS crashes then trying to connect to a server, after opting out of sending telemetry.
  
 Azure SQL Database: 
-- Fixed an issue  where the user was not able to set or change compatibility level (the drop-down from empty). Note: in order to set the compatibility level to 150, the user still needs to use the *Script* button and manually edit the script. 
+- Fixed an issue  where the user was not able to set or change compatibility level (the drop-down from empty). In order to set the compatibility level to 150, the user still needs to use the *Script* button and manually edit the script. 
  
 SMO: 
 - Exposed Error Log Size setting in SMO. For details, see [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
@@ -1119,8 +1119,7 @@ Templates to create graph node and edge tables available
 3 new tasks available via Quick Launch (Ctr-Q)
 PresentOn - Turn on presentation mode
 PresentEdit - Edit the presentation font sizes for presentation mode.  "Text Editor font" for the Query Editor.  "Environment font" for other components.
-RestoreDefaultFonts - Revert back to default settings.
-*Note: there is currently no PresentOff command at this time.  Use RestoreDefaultFonts to turn off Presentation Mode*
+RestoreDefaultFonts - Revert back to default settings. There is currently no PresentOff command at this time. Use RestoreDefaultFonts to turn off Presentation Mode*
 
 ### Bug fixes
 

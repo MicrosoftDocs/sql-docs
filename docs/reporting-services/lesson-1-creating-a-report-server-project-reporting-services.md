@@ -15,7 +15,8 @@ ms.author: maggies
 
 In this lesson, you'll create a *report server project* and a *report definition (.rdl)* file using the Report Designer tool within SQL Server Data Tools (SSDT) / Visual Studio.  
 
-> **Note**: SSDT is a free subset of Visual Studio to create projects for Reporting Services, Integration Services and Analysis Services. More detailed information about SSDT can be found here: [Reporting Services in SQL Server Data Tools (SSDT)](tools/reporting-services-in-sql-server-data-tools-ssdt.md)
+> [!Note] 
+> SSDT is a free subset of Visual Studio to create projects for Reporting Services, Integration Services and Analysis Services. For more detailed information about SSDT, see [Reporting Services in SQL Server Data Tools (SSDT)](tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
 When using the Report Designer to create a report, create a Report Server project first to contain the report files and other resource files used by the reports.
 
@@ -31,7 +32,8 @@ When using the Report Designer to create a report, create a Report Server projec
 
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
-   >**Tip**: If you don't see **Reporting Services** in the left column or **Report Services** objects in the center column, you need to add the Report Designer to Visual Studio / SSDT by installing the Reporting Services extensions. See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) if you are using SSDT, or install the SSDT workload from the Visual Studio installation manager, then the Reporting Services extensions from the Market Place.
+   > [!Tip]
+   > If you don't see **Reporting Services** in the left column or **Report Services** objects in the center column, you need to add the Report Designer to Visual Studio / SSDT by installing the Reporting Services extensions. See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) if you are using SSDT, or install the SSDT workload from the Visual Studio installation manager, then the Reporting Services extensions from the Market Place.
   
 4. Select the **Report Server Project** icon displayed here (the other one is a Report Project Wizard) &nbsp;&nbsp;![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;in the center template display area.
 
@@ -47,7 +49,8 @@ When using the Report Designer to create a report, create a Report Server projec
 
      ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
 
-    >**Tip**: If you don't see the **Solution Explorer** pane, on the **View** menu, select the **Solution Explorer** tab on the far right (outlined with a red rectangle).
+       > [!Tip]
+       > If you don't see the **Solution Explorer** pane, on the **View** menu, select the **Solution Explorer** tab on the far right (outlined with a red rectangle).
 
     ![Position of the Solution Explorer pane in Visual Studio](media/lesson-1-creating-a-report-server-project-reporting-services/position-of-solution-explorer-in-vs-layout.png)
 
@@ -61,7 +64,8 @@ When using the Report Designer to create a report, create a Report Server projec
 
     ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
   
-     > **NOTE** Report Designer is a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] component that runs in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].
+        > [!Note]
+        > Report Designer is a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] component that runs in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].
   
      The Report Designer has:
     - A **Report Data** pane to define and select data fields.
@@ -78,7 +82,8 @@ When using the Report Designer to create a report, create a Report Server projec
 
  See [Lesson 2: Specifying Connection Information &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
 
->**NOTE**: When running a report, the data is retrieved as defined in the data set from the data source and formatted by the report layout. The report output is then displayed on your screen, where you may view it, print it, export it to another data format, or save it to a file.  
+> [!Note]
+> When running a report, the data is retrieved as defined in the data set from the data source and formatted by the report layout. The report output is then displayed on your screen, where you may view it, print it, export it to another data format, or save it to a file.  
 
 ## See Also
 

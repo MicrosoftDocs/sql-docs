@@ -276,7 +276,6 @@ ms.author: maggies
 |report layout|The placement of data regions, report items, and text within a report and  the applied formatting.|  
 |report layout template|A pre-designed table, matrix, or chart report template in Report Builder.|  
 |report link|A URL to a hyperlinked report.|  
-|report model|A metadata description of business data used for creating ad hoc reports in Report Builder.|  
 |report parameter|A parameter that is defined within a report definition. All query parameters have report parameters, but report parameters can be created independent of a query.|  
 |report parts|Report items that have been published separately to a report server and that can be reused in other reports. Report items such as tables, matrices, charts, and images can be published as report parts. Report parts have an .rsc file extension and they conform to the schema componentdefinition.xsd.|  
 |report processing extension|A component in Reporting Services that is used to extend the report processing logic.|  

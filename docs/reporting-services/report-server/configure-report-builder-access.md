@@ -19,11 +19,11 @@ ms.date: 03/14/2017
   
 -   Role assignments or permissions that make Report Builder available to individual users or groups.  
   
--   Authentication settings that determine whether user credentials can be passed through to the report server or anonymous access is configured on application files.  
-  
- To use Report Builder, you must have a published report model to work with.  
-  
+-   Authentication settings that determine whether user credentials can be passed through to the report server or anonymous access is configured on application files.
+-   
+
 ## Prerequisites  
+
  Report Builder is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
   
  The client computer must have the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 installed. The [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] provides the infrastructure for running [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] applications.  

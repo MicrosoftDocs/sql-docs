@@ -17,8 +17,8 @@ This article introduces [SQL Server PowerShell](../powershell/sql-server-powersh
 
 ## Installing PowerShell Core
 
-See the following articles for more information on installing PowerShell Core on various supported
-and experimental platforms.
+For more information on installing PowerShell Core on various supported
+and experimental platforms, see the following articles.
 
 - [Installing PowerShell Core on Windows](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
 - [Installing PowerShell Core on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
@@ -35,7 +35,7 @@ To install the SqlServer module, open a PowerShell Core session and run the foll
 Install-Module -Name SqlServer
 ```
 
-For additional details on how to install the SqlServer module from the PowerShell Gallery, see this [page](../powershell/download-sql-server-ps-module.md).
+For more information on how to install the SqlServer module from the PowerShell Gallery, see this [page](../powershell/download-sql-server-ps-module.md).
 
 ## Using the SqlServer module
 
@@ -99,7 +99,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 
 ## Using the SQL Server PowerShell Provider
 
-Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  This allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
+Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  Using the provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
 
 You can also navigate a SQL Server instance via SQL authentication with the SQL Server PowerShell Provider by creating a new PSDrive and supplying the proper credentials in order to connect.
 
@@ -140,7 +140,7 @@ If you need to see all databases on your instance, one option is to use the `Get
 
 ## Get Databases
 
-An important cmdlet to know is the Get-SqlDatabase.  For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used.  If you supply values for the both the `-ServerInstance` and `-Database` parameters, only that one database object will be retrieved.  However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance will be returned.
+An important cmdlet to know is the Get-SqlDatabase.  For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used.  If you supply values for both the `-ServerInstance` and `-Database` parameters, only that one database object will be retrieved.  However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance will be returned.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -171,7 +171,7 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 
 Let's use PowerShell Core to examine error logs connect on your SQL Server instance on Linux. 
 
-Copy and paste the following commands at the PowerShell prompt. They might take a few minutes to run. These commands do the following:
+Copy and paste the following commands at the PowerShell prompt. They might take a few minutes to run. These commands do the following steps:
 - Display the *PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server instance on Linux
 - Use the **Get-SqlErrorLog** cmdlet to connect to the SQL Server instance on Linux and retrieve error logs since **Yesterday**
 
@@ -188,7 +188,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## Explore cmdlets currently available in PS Core
-While the SqlServer module currently has 106 cmdlets available in Windows PowerShell, only 59 of those 106 are available in PSCore. A full list of 59 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
+While the SqlServer module currently has 106 cmdlets available in Windows PowerShell, only 59 of the 106 are available in PSCore. A full list of 59 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |

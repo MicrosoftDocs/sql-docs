@@ -48,7 +48,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 
 | New item | Details |
 | :------- | :------ |
-|Support for SQL Server 2019|SSMS 18.0 is the first release that is fully *aware* of SQL Server 2019 (compatLevel 150, etc…).|
+|Support for SQL Server 2019|SSMS 18.0 is the first release that is fully *aware* of SQL Server 2019 (compatLevel 150).|
 |Support for SQL Server 2019|Support for "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQL Server 2019 and SQL Managed Instance.|
 |Support for SQL Server 2019|SMO: Added support for UDF Inlining.|
 |Support for SQL Server 2019|GraphDB: Add flag in showplan for Graph TC Sequence.|
@@ -57,7 +57,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |Smaller SSMS download size| The current size is ~500 MB, approximately half of the SSMS 17.x bundle.
 |SSMS is based on the Visual Studio 2017 Isolated Shell |The new shell (SSMS is based on up Visual Studio 2017 15.9.11) unlocks all the accessibility fixes that went into both SSMS and Visual Studio, and includes the latest security fixes.|
 |SSMS accessibility improvements | Much work went in to address accessibility issues in all the tools (SSMS, DTA, and Profiler)|
-|SSMS can now be installed in a custom folder | This option is available from both the command line (useful for unattended installation) and the setup UI. From the command line, pass this extra argument to the SSMS-Setup-ENU.exe (note the missing / in fronto of the paramter!):<br>   SSMSInstallRoot=C:\MySSMS18<br>   By default, the new install location for SSMS is: %ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe<br>This does not mean what SSMS is multi-instance.|
+|SSMS can now be installed in a custom folder | This option is available from both the command line (useful for unattended installation) and the setup UI. From the command line, pass this extra argument to the SSMS-Setup-ENU.exe (note the missing / in front of the paramter!):<br>   SSMSInstallRoot=C:\MySSMS18<br>   By default, the new install location for SSMS is: %ProgramFiles(x86)%\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe<br>This does not mean what SSMS is multi-instance.|
 |SSMS allows installing in a language other than the OS language|The block on mixed languages setup has been lifted. You can, for example, install SSMS German on a French Windows. If the OS language does not match the SSMS language, the user needs to change the language under **Tools** > **Options** > **International Settings**, otherwise SSMS will show the English UI.|
 |SSMS no longer shares components with the SQL Engine |Much effort went in to avoid sharing components with SQL Engine, which often resulted in serviceability issues (one clobbering the files installed by the other).|
 |SSMS requires NetFx 4.7.2 or greater|We upgraded our minimum requirement from NetFx4.6.1 to NetFx4.7.2: this allows us to take advantage of the new functionality exposed by the new framework.|
@@ -117,7 +117,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |SMO| Extend SMO Support for Resumable Index Creation.|
 |SMO| Added new event on SMO objects ("PropertyMissing") to help application authors to detect SMO performance issues sooner.|
 |SMO| Exposed new DefaultBackupChecksum property on the Configuration object which maps to the "backup checksum default" server configuration.|
-|SMO| Exposed new ProductUpdateLevel property on the Server object, which maps to the servicing level for the version of SQL in use (e.g. CU12, RTM, etc…).|
+|SMO| Exposed new ProductUpdateLevel property on the Server object, which maps to the servicing level for the version of SQL in use (for example, CU12, RTM).|
 |SMO| Exposed new LastGoodCheckDbTime property on  Database object, which maps to "lastgoodcheckdbtime" database property. If such property is not available, a default value of 1/1/1900 12:00:00 AM will be returned.|
 |SMO|Moved location for RegSrvr.xml file (Registered Server configuration file) to "%AppData%\Microsoft\SQL Server Management Studio" (unversioned, so it can be shared across versions of SSMS).|
 |SMO|Added "Cloud Witness" as a new quorum type and as a new resource type.|
@@ -387,7 +387,7 @@ Activity Monitor:
 
 Microsoft Azure integration: 
 
-- Fixed an issue where SSMS only shows the first 50 subscriptions (Always Encrypted dialogs, Backup/Restore from URL dialogs, etc...). 
+- Fixed an issue where SSMS only shows the first 50 subscriptions (Always Encrypted dialogs, Backup/Restore from URL dialogs, and other dialogs).
 - Fixed an issue where SSMS was throwing an exception ("Index out of range") while trying to sign in to a Microsoft Azure account that did not have any storage account (in Restore Backup from URL dialog). 
 
 Object Scripting: 
@@ -642,7 +642,7 @@ Generally available | Build number: 14.0.17224.0
 Data Discovery & Classification:
 
 - Added a new SQL Data Discovery & Classification feature for discovering, classifying, labeling & reporting sensitive data in your databases. 
-- Auto-discovering and classifying your most sensitive data (business, financial, healthcare, personal data, etc.) can play a pivotal role in your organizational information protection stature.
+- Auto-discovering and classifying your most sensitive data (for example, business, financial, healthcare, personal data) can play a pivotal role in your organizational information protection stature.
 - Learn more at [SQL Data Discovery & Classification](../relational-databases/security/sql-data-discovery-and-classification.md).
 
 Query Editor:
@@ -722,7 +722,7 @@ Showplan:
 - Allow single plan analysis directly from actual plan produced.
 - New set of icons.
 - Added support for recognize "Apply logical operators" like GbApply, InnerApply.
-		
+
 XE Profiler:
 - Renamed to XEvent Profiler.
 - Stop/Start menu commands now stop/start the session by default.
@@ -923,7 +923,7 @@ Generally available | Build number: 14.0.17177.0
 Additionally, all the scripting options have been moved to their own section - *Version Options*. They are no longer under *General Scripting Options*.
 
 - Added support for National Clouds in "Restore from URL"
-- QueryStoreUI reports now supports additional metrics (RowCount, DOP, CLR Time etc.) from sys.query_store_runtime_stats.
+- QueryStoreUI reports now supports additional metrics (for example, RowCount, DOP, CLR Time) from sys.query_store_runtime_stats.
 - IntelliSense is now supported for Azure SQL Database
 https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
 - Security: connection dialog will default to not trusting server certificates and to requesting encryption for Azure SQL DB connections
@@ -996,7 +996,7 @@ Added tooltips to CEK dropdown to make it easier to distinguish CEKs with long n
 Fixed an issue where some CNG key store providers would not be displayed in the New Column Master Key dialog for Always Encrypted
 - Fixed inconsistent "Application Name" for SSMS connections. https://connect.microsoft.com/SQLServer/feedback/details/3135115
 - Fixed an issue where SSMS was not generating correct scripts for Azure SQL (tables and indexes with DATA_COMPRESSIONS option). https://connect.microsoft.com/SQLServer/feedback/details/3133148
-- Fixed an issue where user was not able to use **CTRL+Q** shortcut for Quick Launch (note: the new key bindings to toggle the "IntelliSense Enabled" option in Query Editor is now **CTRL+B**, **CTRL+I**. https://connect.microsoft.com/SQLServer/feedback/details/3131968
+- Fixed an issue where user was not able to use **CTRL+Q** shortcut for Quick Launch (the new key bindings to toggle the "IntelliSense Enabled" option in Query Editor is now **CTRL+B**, **CTRL+I**. https://connect.microsoft.com/SQLServer/feedback/details/3131968
 - Fixed an issue in "Restore Database" where SSMS was throwing an exception when trying to select a storage account from a subscription that has accounts with custom domains defined
 - Fixed an issue in "Database Diagram" where SSMS was throwing an "Index was outside the bounds of the array" error; also, the user was not able to change the "Table View" to anything but standard. https://connect.microsoft.com/SQLServer/feedback/details/3133792 and https://connect.microsoft.com/SQLServer/feedback/details/3135326
 - Fixed an issue in "Backup/Restore to URL" where SSMS was not enumerating classic storage accounts.
@@ -1249,7 +1249,7 @@ The following issues were fixed this release:
 
 If your SSMS installation is having problems, and a standard uninstall and reinstall doesn't resolve them, you can first try [repairing](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) the Visual Studio 2015 IsoShell. If repairing the Visual Studio 2015 IsoShell doesn't resolve the problem, the following steps have been found to fix many random issues:
 
-1.	Uninstall SSMS the same way you uninstall any application (using *Apps & features*, *Programs and features*, etc. depending on your version of Windows).
+1.	Uninstall SSMS the same way you uninstall any application (using *Apps & features*, *Programs and features*, depending on your version of Windows).
 
 2.	Uninstall Visual Studio 2015 IsoShell **from an elevated cmd prompt**:
    

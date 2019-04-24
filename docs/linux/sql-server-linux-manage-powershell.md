@@ -59,7 +59,7 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  This provider allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
 
-You can also navigate a SQL Server instance via SQL authentication with the SQL Server PowerShell Provider. To do this, you need to create use the `New-PSDrive` cmdlet and supply the proper credentials in order to connect.
+You can also navigate a SQL Server instance via SQL authentication with the SQL Server PowerShell Provider. To do this, you need to use the `New-PSDrive` cmdlet to create a new connection, and supply the proper credentials in order to connect.
 
 In this example below, you will see one example of how to create a new PSDrive using SQL authentication.
 

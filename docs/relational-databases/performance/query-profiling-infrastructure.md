@@ -34,8 +34,8 @@ The *query execution statistics profile infrastructure*, or standard profiling, 
 - [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> Using live query statistics with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] leverages the standard profiling infrastructure.    
-> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if [lightweight profiling infrastructure](#lwp) is enabled, then it is leveraged by Live Query Statistics instead of standard profiling.
+> Clicking the button *Include Live Query Statistics* in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] leverages the standard profiling infrastructure.    
+> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the [lightweight profiling infrastructure](#lwp) is enabled, then it is leveraged by live query statistics instead of standard profiling when viewed through [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md) or directly querying the [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV. 
 
 The following methods of collecting execution plan information globally for **all sessions** leverage the standard profiling infrastructure:
 
@@ -165,7 +165,6 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
-
 
 ## Remarks
 

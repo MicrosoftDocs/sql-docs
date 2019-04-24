@@ -88,7 +88,8 @@ FROM dbo.Tool;
 GO  
   
 -- Try to insert an explicit ID value of 3;  
--- should return a warning.  
+-- should return an error:
+-- An explicit value for the identity column in table 'AdventureWorks2012.dbo.Tool' can only be specified when a column list is used and IDENTITY_INSERT is ON.
 INSERT INTO dbo.Tool (ID, Name) VALUES (3, 'Garden shovel');  
 GO  
 -- SET IDENTITY_INSERT to ON.  

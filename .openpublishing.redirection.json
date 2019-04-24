@@ -13941,13 +13941,23 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/2014/reporting-services/report-data/report-model-connection-ssrs.md",
-            "redirect_url": "/sql/reporting-services/report-data/report-data-ssrs",
+            "source_path": "docs/2014/reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md",
+            "redirect_url": "/sql/reporting-services/report-design/report-builder-functions-previous-function",
             "redirect_document_id": false
         },
         {
-            "source_path": "docs/reporting-services/report-data/report-model-connection-ssrs.md",
-            "redirect_url": "/sql/reporting-services/report-data/report-data-ssrs",
+            "source_path": "docs/reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md",
+            "redirect_url": "/sql/reporting-services/report-design/report-builder-functions-previous-function",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/2014/reporting-services/reports/clickthrough-reports-ssrs.md",
+            "redirect_url": "/sql/reporting-services/reports/previewing-reports",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/reports/clickthrough-reports-ssrs.md",
+            "redirect_url": "/sql/reporting-services/reports/previewing-reports",
             "redirect_document_id": false
         }
     ]

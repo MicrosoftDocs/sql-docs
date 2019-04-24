@@ -849,8 +849,6 @@
         href: ../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md
       - name: Built-in Collections - ReportItems Collection References
         href: ../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md
-    - name: Formulas in Report Model Queries
-      href: ../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md
 - name: Interactive Sort, Document Maps, and Links
   href: ../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
   items:
@@ -889,7 +887,7 @@
     href: ../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
   - name: Add or Remove a Page Header or Footer
     href: ../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
-  - name: Keep Headers Visible When Scrolling Through a Repor
+  - name: Keep Headers Visible When Scrolling Through a Report
     href: ../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
   - name: Display Page Numbers or Other Report Properties
     href: ../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
@@ -928,8 +926,6 @@
   href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
 - name: Create a Linked Report
   href: ../reporting-services/reports/create-a-linked-report.md
-- name: Clickthrough Reports (SSRS)
-  href: ../reporting-services/reports/clickthrough-reports-ssrs.md
 - name: View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
   href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: Report Data in SSRS Overview
@@ -1400,7 +1396,7 @@
     href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
   - name: Enum SQL Agent Subsystems 
     href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
-  - name: Delete Pincipal Profile
+  - name: Delete Principal Profile
     href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
 - name: WMI Provider Library Reference Overview
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md

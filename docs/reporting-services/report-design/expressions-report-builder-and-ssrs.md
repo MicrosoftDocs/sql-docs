@@ -52,13 +52,9 @@ ms.author: maggies
   
  For more information, see [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
-### Report Model Formulas  
- When you are designing a query for a dataset that uses a report model as a data source, you can create *formulas*. Formulas are calculations performed on values in a report that are based on data from a report model.  
-  
- For more information, see [Formulas in Report Model Queries &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
-   
-##  <a name="DisplayText"></a> Understanding Prefix Symbols in Simple Expressions  
- Simple expressions use symbols to indicate whether the reference is to a field, a parameter, a built-in collection, or the ReportItems collection. The following table shows examples of display and expression text:  
+## <a name="DisplayText"></a> Understanding Prefix Symbols in Simple Expressions  
+
+Simple expressions use symbols to indicate whether the reference is to a field, a parameter, a built-in collection, or the ReportItems collection. The following table shows examples of display and expression text:  
   
 |Item|Display text example|Expression text example|  
 |----------|--------------------------|-----------------------------|  

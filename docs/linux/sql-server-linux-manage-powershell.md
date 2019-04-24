@@ -55,6 +55,46 @@ ModuleType Version    Name          ExportedCommands
 Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
+## Using the SQL Server PowerShell Provider
+
+Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  This allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
+
+You can also navigate a SQL Server instance via SQL authentication with the SQL Server PowerShell Provider by creating a new PSDrive and supplying the proper credentials in order to connect.
+
+In this example below, you will see one example of how to create a new PSDrive using SQL authentication.
+
+```powershell
+# NOTE: We are reusing the values saved in the $credential variable from the above example.
+New-PSDrive -Name SQLonDocker -PSProvider SqlServer -Root 'SQLSERVER:\SQL\localhost,10002\Default\' -Credential $credential
+```
+
+You can confirm that the drive was created by running the `Get-PSDrive` cmdlet.
+
+```powershell
+Get-PSDrive
+```
+
+Once you have created your new PSDrive, you can start navigating it.
+
+```powershell
+dir SQLonDocker:\Databases
+```
+
+Here is what the output might look like.  You will notice this output is similar to what SSMS will display at the Databases node.  It displays the user databases, but not the system databases.
+
+```powershell
+Name                 Status           Size     Space  Recovery Compat. Owner
+                                            Available  Model     Level
+----                 ------           ---- ---------- -------- ------- -----
+AdventureWorks2016   Normal      209.63 MB    1.31 MB Simple       130 sa
+AdventureWorksDW2012 Normal      167.00 MB   32.47 MB Simple       110 sa
+AdventureWorksDW2014 Normal      188.00 MB   78.10 MB Simple       120 sa
+AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
+AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
+```
+
+If you need to see all databases on your instance, one option is to use the [Get-SqlDatabase](https://docs.microsoft.com/powershell/module/sqlserver/Get-SqlDatabase) cmdlet.
+
 ## Connect to SQL Server and get server information
 
 Let's use PowerShell on Windows to connect to your SQL Server instance on Linux and display a couple of server properties.

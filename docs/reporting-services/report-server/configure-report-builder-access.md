@@ -1,20 +1,15 @@
 ---
 title: "Configure Report Builder Access | Microsoft Docs"
-ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-server
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "Reporting Services, Report Builder"
-  - "Report Builder 1.0, configuring access"
-  - "configuring servers [Reporting Services]"
-ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 author: maggiesMSFT
 ms.author: maggies
+manager: kfile
+ms.date: 03/14/2017
 ---
+
 # Configure Report Builder Access
   Report Builder is an ad hoc reporting tool that installs with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server configured for either native mode or SharePoint integration mode.  
   
@@ -139,29 +134,15 @@ ms.author: maggies
  If you use custom permission levels, you must include Add Items and Edit Items in the permission level. For more information about Report Builder access through built-in permission levels, see [Use Built-in Security in Windows SharePoint Services for Report Server Items](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md). For more information about permission requirements for custom permission levels, see [Set Permissions for Report Server Operations in a SharePoint Web Application](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  
   
 ## Authentication Considerations and Credential Reuse  
- Report Builder uses ClickOnce technology to download and install its application files on a client computer. ClickOnce technology is intended for one-way application deployment that places program files on a client computer and runs the application as a separate process under the identity of the default user. Because Report Builder must connect back to the report server to get application files and report server data, it is important to understand how ClickOnce sets the security context and issues requests to remote computers under different scenarios:  
+
+- Report Builder opens its own connection to a report server. If you are not using Windows integrated security with single sign on, users must re-type their credentials for the Report Builder connection to the report server.  
   
--   ClickOnce always runs as a separate process on the client computer. The process identity is the default Windows user credentials. ClickOnce does not share session data with Internet Explorer or obtain the current user security context from Internet Explorer.  
-  
--   ClickOnce sends requests that specify Windows integrated security in the authentication header. If a server is configured for a different authentication type, the server will fail requests from ClickOnce with an authentication error. To work around this issue, you must either configure a server for Windows integrated security or you must enable Anonymous access to eliminate the authentication check.  
-  
--   Report Builder opens its own connection to a report server. If you are not using Windows integrated security with single sign on, users must re-type their credentials for the Report Builder connection to the report server.  
-  
- The following table describes the authentication types supported by the report server, and whether additional configuration is required to access Report Builder.  
-  
-|Report Server Authentication Type|How Report Builder and ClickOnce Application launcher responds|  
-|---------------------------------------|--------------------------------------------------------------------|  
-|Negotiate (default)<br /><br /> NTLM (default)|Under Windows integrated security, authenticated requests from ClickOnce and Report Builder typically succeed if the client and server are deployed in the same domain, the user is logged in to the client computer using a domain account with permission to access the Report Builder, and the report server is configured for Windows Authentication.<br /><br /> Requests succeed because ClickOnce and the browser connection to the report server have the same user identity.<br /><br /> Requests will fail if the user opened Internet Explorer with Run As and specified non-default credentials. If the user session on the report server is established under a specific account, and ClickOnce runs under a different account, the report server will deny access to the files.|  
-|Kerberos|Internet Explorer, which is required for using Report Builder, does not support Kerberos directly.|  
-|Basic authentication|ClickOnce does not support Basic authentication. It will not formulate requests that specify Basic authentication in the authentication header. It will not pass credentials or prompt the user to provide them. You can work around these issues by enabling Anonymous access to the Report Builder application files.<br /><br /> Requests will succeed if you enable Anonymous access to the Report Builder application files because the report server ignores the authentication header. For more information about how to enable Anonymous access to Report Builder, see [Configure Basic Authentication on the Report Server](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md).<br /><br /> After ClickOnce retrieves the application files, Report Builder opens a separate connection to a report server. Users must re-type their credentials to get Report Builder to connect to the report server. Report Builder does not collect credentials from Internet Explorer or ClickOnce.<br /><br /> Requests will fail if the report server is configured for Basic authentication and you did not enable Anonymous access to the Report Builder program files. The request fails because ClickOnce specifies Windows integrated security on its requests. If you configure the report server for Basic authentication, the server will reject the request because it specifies an invalid security package and because it lacks the credentials that the report server expects.<br /><br /> Additionally, if the report server is configured to use SharePoint integrated mode and the SharePoint site uses Basic authentication, users will encounter a 401 error when they try to use ClickOnce to install Report Builder on their client computers. This happens because SharePoint uses a cookie to keep a user authenticated for the duration of the session, but ClickOnce does not support the cookie. When a user launches a ClickOnce application, such as Report Builder, the application does not pass the cookie to SharePoint and thus SharePoint denies access and returns a 401 error.<br /><br /> You can work around this issue by trying one of the following options:<br /><br /> -Select the **Remember my password** option when you provide your user credentials.<br /><br /> -Enable Anonymous access to the SharePoint site collection.<br /><br /> -Configure the environment so that the user does not provide credentials. For example, in an intranet environment you might configure the SharePoint server to belong to a Workgroup and then create user accounts on the local computer.|  
-|Custom|When you configure a report server to use custom authentication, Anonymous access is enabled on the report server and requests are accepted with no authentication check.<br /><br /> After ClickOnce retrieves the application files, Report Builder opens a separate connection to a report server. Users must re-type their credentials to get Report Builder to connect to the report server. Report Builder does not collect credentials from Internet Explorer or ClickOnce.|  
+The following table describes the authentication types supported by the report server, and whether additional configuration is required to access Report Builder.  
   
 ## See Also  
- [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)   
- [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
-  
-  
+
+- [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)
+- [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md)
+- [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

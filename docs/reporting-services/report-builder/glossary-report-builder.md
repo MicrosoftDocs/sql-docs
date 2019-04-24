@@ -281,7 +281,6 @@ ms.author: maggies
 |report parts|Report items that have been published separately to a report server and that can be reused in other reports. Report items such as tables, matrices, charts, and images can be published as report parts. Report parts have an .rsc file extension and they conform to the schema componentdefinition.xsd.|  
 |report processing extension|A component in Reporting Services that is used to extend the report processing logic.|  
 |report rendering|The action of combining the report layout with the data from the data source for the purpose of viewing the report.|  
-|report server|A location on the network where the ClickOnce version of Report Builder is launched from and a report is saved, managed, and published.|  
 |report server administrator|A user with elevated privileges who can access all settings and content of a report server.|  
 |report server database|A database that provides internal storage for a report server.|  
 |report server execution account|The account under which the Report Server Web service and Report Server Windows service run.|  

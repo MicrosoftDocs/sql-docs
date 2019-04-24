@@ -37,7 +37,7 @@ The following sections provide an example of how to configure HDFS tiering with 
    ```
 
    > [!TIP]
-   > For more information on how to create S3 access keys (`<s3-access-key>`), see [S3 access keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
+   > For more information on how to create S3 access keys, see [S3 access keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
 ## <a id="mount"></a> Mount the remote HDFS storage
 

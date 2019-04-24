@@ -15,7 +15,7 @@ ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This article introduces [SQL Server PowerShell](../powershell/sql-server-powershell.md) and walks you through a couple of examples on how to use it with SQL Server on Linux. PowerShell support for SQL Server is currently available on Windows, so you can use it when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
+This article introduces [SQL Server PowerShell](../powershell/sql-server-powershell.md) and walks you through a couple of examples on how to use it with SQL Server on Linux. PowerShell support for SQL Server is currently available on Windows, MacOS, & Linux. This article walks you through using a Windows machine to connect to a remote SQL Server instance on Linux.
 
 ## Install the newest version of SQL PowerShell on Windows
 
@@ -59,7 +59,7 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 Another option for connecting to your SQL Server instance is to use the [SQL Server PowerShell Provider](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider).  This allows you to navigate SQL Server instance similar to as if you were navigating the tree structure in Object Explorer, but at the cmdline.  By default this provider is presented as a PSDrive named `SQLSERVER:\` which you can use to connect & navigate SQL Server instances that your domain account has access to.  See [Configuration steps](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps) for information on how to setup Active Directory authentication for SQL Server on Linux.
 
-You can also navigate a SQL Server instance via SQL authentication with the SQL Server PowerShell Provider by creating a new PSDrive and supplying the proper credentials in order to connect.
+You can also navigate a SQL Server instance via SQL authentication with the SQL Server PowerShell Provider. To do this you need to create use the `New-PSDrive` cmdlet and supply the proper credentials in order to connect.
 
 In this example below, you will see one example of how to create a new PSDrive using SQL authentication.
 
@@ -80,7 +80,7 @@ Once you have created your new PSDrive, you can start navigating it.
 dir SQLonDocker:\Databases
 ```
 
-Here is what the output might look like.  You will notice this output is similar to what SSMS will display at the Databases node.  It displays the user databases, but not the system databases.
+Here is what the output might look like.  Notice this output is similar to what SSMS will display at the Databases node.  It displays the user databases, but not the system databases.
 
 ```powershell
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -131,7 +131,7 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 Let's use PowerShell on Windows to examine error logs connect on your SQL Server instance on Linux. We will also use the **Out-GridView** cmdlet to show information from the error logs in a grid view display.
 
 Copy and paste the following commands at the PowerShell prompt. They might take a few minutes to run. These commands do the following:
-- Display the *Windows PowerShell credential request* dialog that prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server instance on Linux
+- Display the *Windows PowerShell credential request* dialog which prompts you for the credentials (*SQL username* and *SQL password*) to connect to your SQL Server instance on Linux
 - Use the **Get-SqlErrorLog** cmdlet to connect to the SQL Server instance on Linux and retrieve error logs since **Yesterday**
 - Pipe the output to the **Out-GridView** cmdlet
 

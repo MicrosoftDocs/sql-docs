@@ -10,7 +10,8 @@ ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
 ---
-<!-- # Lesson 1: Creating a Report Server Project (Reporting Services) -->
+
+# Lesson 1: Creating a Report Server Project (Reporting Services)
 
 In this lesson, you'll create a *report server project* and a *report definition (.rdl)* file using the Report Designer tool within SQL Server Data Tools (SSDT) / Visual Studio.  
 

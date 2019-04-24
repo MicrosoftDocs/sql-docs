@@ -45,7 +45,7 @@ manager: craigg
 ## Manage Logins and Passwords in Replication
 Specify the logins and passwords for replication agents when you configure replication. After configuring replication, you can change logins and passwords. For more information, see [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md). If you change the password for an account used by a replication agent, execute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md).  
 
-Support for the use of group Managed Service Accounts (gMSA) is introduced in SQL Server 2014. For more information, see the blog [Replicatoin and group Managed Service Accounts](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/).
+Support for the use of group Managed Service Accounts (gMSA) is introduced in SQL Server 2014. For more information, see the blog [Replication and group Managed Service Accounts](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/).
   
 ## See Also  
  [Threat and Vulnerability Mitigation &#40;Replication&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md)

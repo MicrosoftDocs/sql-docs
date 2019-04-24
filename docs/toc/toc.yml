@@ -61,20 +61,30 @@
         href: ../big-data-cluster/deploy-big-data-tools.md
       - name: Install mssqlctl
         href: ../big-data-cluster/deploy-install-mssqlctl.md
-    - name: Deployment scripts
-      items:
-      - name: Azure Kubernetes Service
-        href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-    - name: Deployment guidance
+    - name: Deploy
       items:
       - name: Deployment guidance
         href: ../big-data-cluster/deployment-guidance.md
-      - name: Azure Kubernetes Service
-        href: ../big-data-cluster/deploy-on-aks.md
-      - name: Kubeadm
-        href: ../big-data-cluster/deploy-with-kubeadm.md
-      - name: Minikube
-        href: ../big-data-cluster/deploy-on-minikube.md
+      - name: Upgrade to a new release
+        href: ../big-data-cluster/deployment-upgrade.md
+      - name: Customize deployments
+        href: ../big-data-cluster/deployment-custom-configuration.md 
+      - name: Configure storage
+        href: ../big-data-cluster/concept-data-persistence.md
+      - name: Offline deployments
+        href: ../big-data-cluster/deploy-offline.md
+      - name: Deployment targets
+        items:
+        - name: Azure Kubernetes Service
+          href: ../big-data-cluster/deploy-on-aks.md
+        - name: Kubeadm
+          href: ../big-data-cluster/deploy-with-kubeadm.md
+        - name: Minikube
+          href: ../big-data-cluster/deploy-on-minikube.md
+      - name: Deployment scripts
+        items:
+        - name: Azure Kubernetes Service
+          href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
   - name: Concepts
     items:
     - name: Application deployment
@@ -89,8 +99,6 @@
       href: ../big-data-cluster/concept-storage-pool.md
     - name: Compute pool
       href: ../big-data-cluster/concept-compute-pool.md
-    - name: Data persistence
-      href: ../big-data-cluster/concept-data-persistence.md
     - name: Security
       href: ../big-data-cluster/concept-security.md
   - name: How-to guides
@@ -145,6 +153,8 @@
         href: ../big-data-cluster/sparklyr-from-RStudio.md
       - name: GPU support and TensorFlow
         href: ../big-data-cluster/spark-gpu-tensorflow.md
+      - name: Integrate Spark with SQL Server
+        href: ../big-data-cluster/spark-mssql-connector.md
     - name: Manage SQL Server big data cluster
       items:
       - name: Connect to a big data cluster
@@ -171,6 +181,10 @@
         href: ../big-data-cluster/spark-history-server.md
   - name: Reference
     items:
+    - name: Deployment reference
+      items:
+      - name: Deployment configuration file
+        href: ../big-data-cluster/reference-deployment-config.md
     - name: mssqlctl reference
       items:
       - name: mssqlctl
@@ -187,6 +201,8 @@
           href: ../big-data-cluster/reference-mssqlctl-cluster.md
         - name: mssqlctl cluster config
           href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: mssqlctl cluster config section
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
         - name: mssqlctl cluster debug
           href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
       - name: Storage
@@ -7251,6 +7267,8 @@
         items:
         - name: Install on Windows
           href: ../relational-databases/polybase/polybase-installation.md
+        - name: Install on Linux
+          href: ../relational-databases/polybase/polybase-linux-setup.md
         - name: Features & limitations
           href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
       - name: Configure external data sources
@@ -7295,6 +7313,8 @@
       items:
       - name: T-SQL reference
         href: ../relational-databases/polybase/polybase-t-sql-objects.md
+      - name: Type mapping
+        href: ../relational-databases/polybase/polybase-type-mapping.md
     - name: Resources
       items:
       - name: DBA Stack Exchange +

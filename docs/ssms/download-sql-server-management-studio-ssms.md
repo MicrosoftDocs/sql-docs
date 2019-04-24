@@ -1,7 +1,7 @@
 ---
 title: "Download SQL Server Management Studio (SSMS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/29/2019"
+ms.date: "04/25/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -35,53 +35,19 @@ Use SSMS to query, design, and manage your databases and data warehouses, wherev
 
 SSMS is free!
 
-[SSMS 18.0 Release Candidate 1 (RC1) is now available](#ssms-180-rc1), and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+## Download SSMS 18.0 (GA)
 
-## SSMS 17.9.1 is the current General Availability (GA) version of SSMS
+**SSMS 18.0 General Availability release (GA) is now available, and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
 
-[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
+**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (GA)](https://go.microsoft.com/fwlink/?linkid=2088649)**
 
-[![download](../ssdt/media/download.png) Download SQL Server Management Studio 17.9.1 Upgrade Package (upgrades 17.x to 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
-
-**Version Information**
-
-- Release number: 17.9.1<br>
-- Build number: 14.0.17289.0<br>
-- Release date: November 21, 2018
-
-### Available Languages (SSMS 17.9.1)
-
-> [!NOTE]
-> Non-English localized releases of SSMS 17.x require the [KB 2862966 security update package](https://support.microsoft.com/kb/2862966) if installing on: Windows 8, Windows 7, Windows Server 2012, and Windows Server 2008 R2.
-
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
-
-For additional details about SSMS 17.9.1, please see the [SSMS 17.9.1 changelog](release-notes-ssms.md#1791-latest-ga-release).
-
-## SSMS installation tips and issues (SSMS 17.9.1)
-
-### Minimize Installation Reboots
-
-* Take the following actions to reduce the chances of SSMS setup requiring a reboot at the end of installation:
-  * Make sure you are running an up-to-date version of the Visual C++ 2013 Redistributable Package. Version 12.0.40649.5 (or greater) is required. Only the x64 version is needed.
-  * Verify the version of .NET Framework on the computer is 4.6.1 (or greater).
-  * Close every instance of Visual Studio that are open on the computer.
-  * Make sure all the latest OS updates are installed on the computer.
-  * The noted actions are typically required only once. There are few cases where a reboot is required during additional upgrades to the same major version of SSMS. For minor upgrades, all the prerequisites for SSMS are already installed on the computer.
-
-## SSMS 18.0 (RC1)
-
-**SSMS 18.0 Release Candidate 1 (RC1) is now available, and is the latest generation of *SQL Server Management Studio* that provides support for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
-
-**[![download](../ssdt/media/download.png) Download SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
-
-*RC1* is the latest public preview of SSMS 18.0. If you have a previous SSMS 18.0 Preview installed, uninstall it before installing SSMS 18.0 RC1.
+SSMS 18.0 is no longer in preview and is the first general availability (GA) version of SSMS 18.0. If you have a preview versions of SSMS 18.0 installed, uninstall it before installing SSMS 18.0 GA.
 
 **Version Information**
 
-- Release number: 18.0 (RC1)<br>
-- Build number: 15.0.18098.0<br>
-- Release date: March 28, 2019
+- Release number: 18.0 (GA)<br>
+- Build number: 15.0.18118.0<br>
+- Release date: April 24, 2019
 
 If you have comments or suggestions, or you want to report issues, the best way to reach out to the SSMS Team is at [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -89,32 +55,32 @@ The SSMS 18.x installation does not upgrade or replace SSMS versions 17.x or ear
 
 If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**:
  
-## Available Languages (SSMS 18.0 RC1)
+## Available Languages (SSMS 18.0 GA)
 
 This release of SSMS can be installed in the following languages:
 
-SQL Server Management Studio 18.0 (RC1):<br>
-[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x40a)
+SQL Server Management Studio 18.0 (GA):<br>
+[Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
 
 SQL Server Management Studio 18.0 Upgrade Package (upgrades to 18.0):<br>
-No upgrade option is available at this time. If you have a previous SSMS 18.0 preview installed, uninstall it before installing SSMS 18.0 RC1.
+No upgrade option is available at this time. If you have a previous SSMS 18.0 preview installed, uninstall it before installing SSMS 18.0 GA.
 
 > [!NOTE]
 > The SQL Server PowerShell module is a separate install through the PowerShell Gallery. For more information, see [Download SQL Server PowerShell Module](download-sql-server-ps-module.md).
 
-## New in this Release (SSMS 18.0 RC1)
+## New in this Release (SSMS 18.0 GA)
 
-SSMS 18.0 (RC1) is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019 preview.
+SSMS 18.0 (GA) is the latest version of SQL Server Management Studio. The 18.x generation of SSMS provides support for almost all feature areas on SQL Server 2008 through SQL Server 2019 preview.
 
 For details about what's new in this release, see [the SSMS release notes](release-notes-ssms.md).
 
-## Supported SQL offerings (SSMS 18.0 RC1)
+## Supported SQL offerings (SSMS 18.0 GA)
 
 * This version of SSMS works with all [supported versions of SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) and provides the greatest level of support for working with the latest cloud features in Azure SQL Database and Azure SQL Data Warehouse.
 * Additionally, SSMS 18.x can be installed side by side with SSMS 17.x, SSMS 16.x, or SQL Server 2014 SSMS and earlier.
 * SQL Server Integration Services (SSIS) - SSMS version 17.x or later does not support connecting to the legacy SQL Server Integration Services service. To connect to an earlier version of the legacy Integration Services, use the version of SSMS aligned with the version of SQL Server. For example, use SSMS 16.x to connect to the legacy SQL Server 2016 Integration Services service. SSMS 17.x and SSMS 16.x can be installed side-by-side on the same computer. Since the release of SQL Server 2012, the SSIS Catalog database, SSISDB, is the recommended way to store, manage, run, and monitor Integration Services packages. For details, see [SSIS Catalog](../integration-services/catalog/ssis-catalog.md).
 
-## Supported Operating systems (SSMS 18.0 RC1)
+## Supported Operating systems (SSMS 18.0 GA)
 
 This release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
 
@@ -129,9 +95,9 @@ This release of SSMS supports the following 64-bit platforms when used with the 
 > [!NOTE]
 > SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).
   
-## Release Notes (SSMS 18.0 RC1)
+## Release Notes (SSMS 18.0 GA)
 
-N/A
+- **SSIS Integration Runtime Creation Wizard** only shows SQL databases under one tenant when the customer account belongs to more than one tenant.
 
 ## Previous releases
 

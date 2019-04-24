@@ -60,7 +60,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Install SQL Server 2019 preview Machine Learning Services R and Python support on Linux](sql-server-linux-setup-machine-learning.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
-- [PolyBase Linux setup](..\relational-databases\polybase\polybase-linux-setup.md)
+- [PolyBase Linux setup](../relational-databases/polybase/polybase-linux-setup.md)
 
 ## <a id="CTP25"></a> CTP 2.5 (Apr 2019)
 

@@ -57,7 +57,7 @@ Read the [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) for ans
 
 ## Installing PowerShell Core
 
-If you are running Azure Data Studio on MacOS or Linux, you may also need to install PowerShell Core.
+If you are running Azure Data Studio on macOS or Linux, you may also need to install PowerShell Core.
 
 PowerShell Core is an Open Source project on [GitHub](https://github.com/powershell/powershell).
 For more information on installing PowerShell Core on MacOS or Linux platforms, see the following articles:
@@ -145,7 +145,7 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-The `SqlServer` module contains a Provider called `SQLRegistration` which allows you to programatically access the follwing types of saved SQL Server connections:
+The `SqlServer` module contains a Provider called `SQLRegistration` which allows you to programmatically access the following types of saved SQL Server connections:
 
 + Database Engine Server (Registered Servers)
 + Central Management Server (CMS)
@@ -153,7 +153,7 @@ The `SqlServer` module contains a Provider called `SQLRegistration` which allows
 + Integration Services
 + Reporting Services
 
- In the following example, we will do a `dir` (alias for `Get-ChildItem`) to get the list of all SQL Server instances listed in your Registered Servers file.
+In the following example, we will do a `dir` (alias for `Get-ChildItem`) to get the list of all SQL Server instances listed in your Registered Servers file.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse 
@@ -171,7 +171,7 @@ Mode Name
 -    localhost\SQL2017
 ```
 
-For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used.  If you supply values for the both the `-ServerInstance` and `-Database` parameters, only that one database object will be retrieved.  However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance will be returned.
+For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used.  If you supply values for both the `-ServerInstance` and `-Database` parameters, only that one database object will be retrieved.  However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance will be returned.
 
 Here is a sample of what that output will look like:
 

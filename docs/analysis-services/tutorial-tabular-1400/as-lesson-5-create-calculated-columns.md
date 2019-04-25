@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services tutorial lesson 5: Create calculated columns | Microsoft Docs"
-ms.date: 03/08/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -79,7 +79,7 @@ The DayOfWeek calculated column provides a sortable name for the day of week.
 #### Create a ProductSubcategoryName calculated column in the DimProduct table  
   
   
-1.  In the **DimProduct** table, scroll to the far right of the table. Notice the right-most column is named **Add Column** (italicized), click the column heading.  
+1.  In the **DimProduct** table, scroll to the far right of the table. Notice the right-most column is named ***Add Column***, click the column heading.  
   
 2.  In the formula bar, type the following formula:  
     

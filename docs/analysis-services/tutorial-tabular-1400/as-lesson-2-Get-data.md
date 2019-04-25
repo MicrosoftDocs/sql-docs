@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services tutorial lesson 2: Get data | Microsoft Docs"
-ms.date: 03/08/2019
+ms.date: 04/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -52,11 +52,11 @@ This article is part of a tabular modeling tutorial, which should be completed i
   
 5.  In Navigator, select the **AdventureWorksDW** database, and then click **OK**.This creates the connection to the database. 
   
-6.  In Navigator, select the check box for the following tables: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, and **FactInternetSales**.  
+6.  In Navigator, select the check box for the following tables: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, and **FactInternetSales**. After selecting the tables, click **Edit**. 
 
     ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
-After you click OK, Query Editor opens. In the next section, you select only the data you want to import.
+After you click Edit, Query Editor opens. In the next section, you select only the data you want to import.
 
   
 ## Filter the table data  

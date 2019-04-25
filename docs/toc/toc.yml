@@ -1,5 +1,5 @@
 - name: Welcome
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Overview
   items:
   - name: New with SQL Server
@@ -28,7 +28,7 @@
     - name: SQL Server 2019
       href: ../sql-server/sql-server-ver15-release-notes.md
     - name: SQL Server 2017
-      href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
+      href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
     - name: SQL Server 2016
       href: ../sql-server/sql-server-2016-release-notes.md
     - name: SQL Server 2014

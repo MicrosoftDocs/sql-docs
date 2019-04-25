@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Analysis Services tutorial lesson 2: Get data | Microsoft Docs"
 ms.date: 04/24/2019
 ms.prod: sql
@@ -50,7 +50,7 @@ This article is part of a tabular modeling tutorial, which should be completed i
     > [!NOTE]  
     > Using a Windows user account and password provides the most secure method of connecting to a data source.
   
-5.  In Navigator, select the **AdventureWorksDW** database, and then click **OK**.This creates the connection to the database. 
+5.  In Navigator, select the **AdventureWorksDW** database, and then click **OK**. This creates the connection to the database. 
   
 6.  In Navigator, select the check box for the following tables: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, and **FactInternetSales**. After selecting the tables, click **Edit**. 
 

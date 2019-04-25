@@ -17,7 +17,7 @@ ms.service: "sql-database"
 ms.tgt_pltfrm:
 ms.devlang: 
 ms.topic: conceptual
-ms.date: "06/28/2018"
+ms.date: "25/04/2019"
 ms.author: "aliceku"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

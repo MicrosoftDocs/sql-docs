@@ -1,5 +1,5 @@
 - name: SQL Server ++
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 
 - name: About SQL Server Analysis Services
   href: ../analysis-services/analysis-services.md

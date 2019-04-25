@@ -37,7 +37,7 @@ following requirements:
 - The logical SQL server and the key vault need to be in the same region
 - The key vault needs to be up and running, learn about [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview) to check on the key vault status 
 - The logical server needs to have an AAD identity (APPID) in order to authenticate to the key vault
-- The APPID needs to have access to the key vault and wrap, unwrap, and get permissions in for the keys selected TDE Protectors
+- The APPID needs to have access to the key vault and wrap, unwrap, and get permissions to the keys selected as TDE Protectors
 
 Most issues encountered are due to one of the following:
 

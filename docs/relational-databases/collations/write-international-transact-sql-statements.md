@@ -24,9 +24,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Databases and database applications that use [!INCLUDE[tsql](../../includes/tsql-md.md)] statements will become more portable from one language to another, or will support multiple languages, if the following guidelines are followed:  
 
--   Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], use either **char**, **varchar**, and **varchar(max)** data types with a [UTF-8 enabled collation](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support), or **nchar**, **nvarchar**, and **nvarchar(max)** with any collation. By doing this, you do not have to consider code page conversion issues. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], use either:
+    -   The **char**, **varchar**, and **varchar(max)** data types with a [UTF-8 enabled collation](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support).
+    -   The **nchar**, **nvarchar**, and **nvarchar(max)** data types with any collation.      
 
--   Up to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], replace all uses of the **char**, **varchar**, and **varchar(max)** data types with **nchar**, **nvarchar**, and **nvarchar(max)**. By doing this, you do not have to consider code page conversion issues. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+    This avoids code page conversion issues. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+
+-   Up to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], replace all uses of the **char**, **varchar**, and **varchar(max)** data types with **nchar**, **nvarchar**, and **nvarchar(max)**. This avoids code page conversion issues. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
     > [!IMPORTANT]
     > The **text** data type is deprecated and should not be used in new development work. Plan to convert **text** data to **varchar(max)**.
   

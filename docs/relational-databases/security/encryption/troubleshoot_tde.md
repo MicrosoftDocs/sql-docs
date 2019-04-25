@@ -25,77 +25,76 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic provides information about the following issues:  
   
--   Basic troubleshooting steps.  
+-   Troubleshooting Overview  
    
 -   How to resolve the most common errors.
   
--   How to resolve Azure Insights.
 
--   How to reconfigure TDE with AKV after moving subscriptions
 
-## Basic Troubleshooting Steps
-In order to troubleshoot the [TDE with customer-managed TDE Protector in AKV configuration](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault), it is recommended to confirm the
+## Troubleshooting Overview
+In order to troubleshoot the [TDE with customer-managed TDE Protector in AKV configuration](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault), it is recommended to confirm the
 following requirements:
-- The logical server and AKV need to be in the same region
-- The AKV needs to be up and running 
-- The logical server needs to have an identity (APPID) in order to receive permissions to AKV
-- The APPID needs to have current wrap, unwrap, and get permissions in AKV
-- The TDE Protector selected for the logical server needs to be present and accessible in the key vault at all times
+- The logical SQL server and the key vault need to be in the same region
+- The key vault needs to be up and running, learn about [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview) to check on the key vault status 
+- The logical server needs to have an AAD identity (APPID) in order to authenticate to the key vault
+- The APPID needs to have access to the key vault and wrap, unwrap, and get permissions in for the keys selected TDE Protectors
 
+Most issues encountered are due to one of the following:
 
-## How to resolve the most common errors
 ### Key vault unavailable or doesn't exist?
+- Key vault unavailable
 - Key vault accidentally deleted
 - Firewall configured for Azure Key Vault without allowing access to Microsoft services
 - Permissions for SQL APPID revoked
 - SQL APPID accidentally deleted
+
 ### No permissions to access the key or key doesn't exist?
 - Key accidentally deleted
 - Permissions on key no sufficient
-- Permissions on key revoked
+
+In the next section we are going to list the most common errors and troubleshooting steps.
 
 
-## How to resolve Azure Insights
+## How to identify and resolve the most common errors
 
-### Missing permissions 
-Identify the key vault  
-Go to Azure portal and browse to the key vault identified in the previous step 
-Then go to Access policies and locate the Sql Server APPID  
-If the APPID is not present, add it using Add new button. 
-If the APPID is present, ensure that it has the following key permissions Get, Wrap and Unwrap 
+Identify the key uri/key vault: 
+Use the following command to get the key uri of a given logical SQL server and then use the key uri to identify the keyvault. 
+[Powershell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0) 
+[Cli](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
  
+ 
+### Missing permissions 
+"401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault."
+Identify the key vault  
+In the Azure portal, browse to the key vault, go to Access policies and locate the Sql Server APPID:  
+- If the APPID is not present, add it using Add new button. 
+- If the APPID is present, ensure that it has the following key permissions: Get, Wrap and Unwrap 
  
 ### Missing key 
+"404 ServerKeyNotFound - The requested server key was not found on the current subscription."
+"409 ServerKeyDoesNotExists - The server key does not exist."
 Identify the key uri added to the logical SQL server using the Get-AzSqlServerKeyVaultKey cmdlet to return the list of keys.
 Identify the key vault 
-Go to Azure portal and browse to the key vault identified in the previous step 
+In the Azure portal, browse to the key vault
 Ensure that the key identified by key uri is present 
  
- 
-### Missing key vault 
+### Missing key vault
+"503 AzureKeyVaultConnectionFailed - The operation could not be completed on the server because attempts to connect to Azure Key Vault have failed"
 Identify the key uri and key vault 
 Go to Azure portal and ensure that the key vault identified in the previous step is present 
 If the key vault is behind a firewall, ensure the checkbox to allow Microsoft services to access the key vault is checked
- 
- 
- 
-Identify the key uri/key vault: 
-Use the following command to get the key uri of a given server and then use the key uri to identify the keyvault. 
-[Powershell](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0) 
-[Cli](https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
- 
- 
-Ensure identity is present: 
-Use the following command to get the server information and ensure that an identity has been assigned to the logical SQL server 
-[Powershell](https://docs.microsoft.com/en-us/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
-[Cli](https://docs.microsoft.com/en-us/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show) 
- 
- 
-Configure AD identity for the logical SQL server: 
-Use the following command and use option [-AssignIdentity](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) [--assign_identity](https://docs.microsoft.com/en-us/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) 
-https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server 
 
-### How to reconfigure TDE with AKV after moving subscriptions
-Configure identity for the server: 
-Use the following command and use option -AssignIdentity(powershell) --assign_identity(cli) 
-https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server
+### Missing Identity
+"401 AzureKeyVaultNoServerIdentity - The server identity is not correctly configured on server. Please contact support."
+Use the following command to ensure that an identity has been assigned to the logical SQL server: 
+[Powershell](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+[Cli](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+
+How to configure an AD identity for the logical SQL server:
+
+Use the following command and use option [-AssignIdentity](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) [--assign_identity](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) 
+[Learn more](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)
+
+> [!IMPORTANT]
+> If the logical SQL server has been moved to a new subscription after the initial configuration of TDE with AKV, the step to configure the AAD identity has to be repeated to create the new APPID.  The new APPID then needs to get registered with they key vault and the correct permissions have to be reassigned. 
+>

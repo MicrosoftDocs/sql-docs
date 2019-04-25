@@ -91,7 +91,7 @@ ms.date: 12/15/2018
                                           <div class="cardText">
                                               <h3>SQL Server on Windows</h3>
                                               <ul class="noBullet">
-                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?toc=..%2ftoc%2ftoc.json"><strong>On-premises</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?toc=../toc/toc.json"><strong>On-premises</strong></a></li>
                                               <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>On an Azure VM</strong></a></li>
                                               <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-ver15/"><strong>What's new</strong></a></li>
                                               </ul>

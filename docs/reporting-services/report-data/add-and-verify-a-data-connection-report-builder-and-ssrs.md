@@ -20,10 +20,10 @@ To add a shared data source to your report, browse to a report server and select
 
 To create an embedded data source, you must have connection information to the external source of data and you must know which permissions you need to access the data. This information usually comes from the owner of the data source. You can test the connection to verify that the credentials that are specified are sufficient.
 
-For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) and [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md)
+For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) and [Specify Credentials in Report Builder](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017)
 
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
 ## To create a connection to a shared data source in Report Builder
 
@@ -54,7 +54,7 @@ The data source appears in the Report Data pane.
 
 5. Click **Details**, and use the information to correct the issue.
 
-    For more information, see [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md).
+    For more information, see [Specify Credentials in Report Builder](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017).
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

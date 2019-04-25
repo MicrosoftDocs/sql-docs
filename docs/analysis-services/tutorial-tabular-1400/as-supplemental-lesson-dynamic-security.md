@@ -144,10 +144,9 @@ In this task, you create a user role. This role includes a row filter defining w
 9. For the **DimSalesTerritory** table, type the following formula:  
 
     ```  
-    ='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 
-      'Employee Security'[Login Id], USERNAME(), 
-      'Employee Security'[Sales Territory Id], 
-      'Sales Territory'[Sales Territory Id]) 
+    ='DimSalesTerritory'[SalesTerritoryKey]=LOOKUPVALUE('EmployeeSecurity'[SalesTerritoryId], 
+      'EmployeeSecurity'[LoginId], USERNAME(), 
+      'EmployeeSecurity'[SalesTerritoryId], 'DimSalesTerritory'[SalesTerritoryKey]) 
     ```
   
     In this formula, the LOOKUPVALUE function returns all values for the DimEmployeeSecurity[SalesTerritoryId] column, where the EmployeeSecurity[LoginId] is the same as the current logged on Windows user name, and EmployeeSecurity[SalesTerritoryId] is the same as the DimSalesTerritory[SalesTerritoryId].  

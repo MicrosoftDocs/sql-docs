@@ -152,6 +152,7 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 
 ## Recommended System Requirements
 For an optimal experience, please use the recommended system requirements.
+[Need update here to quantify memory]
 
 |             | CPU Cores | Memory/RAM |
 |:-----------:|:---------:|:----------:|

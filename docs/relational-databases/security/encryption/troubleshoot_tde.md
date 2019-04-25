@@ -50,7 +50,7 @@ Most issues encountered are due to one of the following:
 
 ### No permissions to access the key or key doesn't exist?
 - Key accidentally deleted
-- Permissions on key no sufficient
+- Permissions on key not sufficient
 
 In the next section we are going to list the most common errors and troubleshooting steps.
 

@@ -1,7 +1,7 @@
 ---
 title: "PDO::prepare | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/22/2019"
+ms.date: "04/25/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -41,8 +41,12 @@ The following table lists the possible *key_pair* values.
 |PDO::ATTR_CURSOR|Specifies cursor behavior. The default is `PDO::CURSOR_FWDONLY`, a non-scrollable forward cursor. `PDO::CURSOR_SCROLL` is a scrollable cursor.<br /><br />For example, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />When set to `PDO::CURSOR_SCROLL`, you can then use `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` to set the type of scrollable cursor, which is described below.<br /><br />See [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) for more information about result sets and cursors in the PDO_SQLSRV driver.|
 |PDO::ATTR_EMULATE_PREPARES|By default, this attribute is false, which can be changed by this `PDO::ATTR_EMULATE_PREPARES => true`. See [Emulate Prepare](#emulate-prepare) for details and example.|
 |PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE|Specifies the type of scrollable cursor. Only valid when `PDO::ATTR_CURSOR` is set to `PDO::CURSOR_SCROLL`. See below for the values this attribute can take.|
-|PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (default)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
+|PDO::SQLSRV_ATTR_DECIMAL_PLACES|Specifies the number of decimal places when formatting fetched money values. This option works only when PDO::SQLSRV_ATTR_FORMAT_DECIMALS is true. For more information, see [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|When True, specifies direct query execution. False means prepared statement execution. For more information about `PDO::SQLSRV_ATTR_DIRECT_QUERY`, see [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
+|PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (default)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Specifies whether to retrieve date and time types as [PHP DateTime](http://php.net/manual/en/class.datetime.php) objects. For more information, see [How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Handles numeric fetches from columns with numeric SQL types. For more information, see [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
+|PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Specifies whether to add leading zeroes to decimal strings when appropriate. If set, this option enables the PDO::SQLSRV_ATTR_DECIMAL_PLACES option for formatting money types. For more information, see [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|For more information, see [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 
 When using `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`, you can use `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` to specify the type of cursor. For example, pass the following array to PDO::prepare to set a dynamic cursor:

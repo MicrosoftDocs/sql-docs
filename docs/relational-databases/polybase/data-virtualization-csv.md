@@ -29,6 +29,9 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePo
     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
       CREATE EXTERNAL DATA SOURCE SqlStoragePool
       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
   END
 ```
 

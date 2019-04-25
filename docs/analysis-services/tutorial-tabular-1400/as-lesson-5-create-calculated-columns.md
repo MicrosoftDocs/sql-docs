@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Analysis Services tutorial lesson 5: Create calculated columns | Microsoft Docs"
 ms.date: 04/25/2019
 ms.prod: sql
@@ -41,7 +41,7 @@ This article is part of a tabular modeling tutorial, which should be completed i
   
     A new column named **Calculated Column 1** is inserted to the left of the **Calendar Quarter** column.  
   
-4.  In the formula bar above the table, type the following DAX formula: AutoComplete helps you type the fully qualified names of columns and tables, and lists the functions that are available.  
+4.  In the formula bar above the table, type the following DAX formula: Auto-Complete helps you type the fully qualified names of columns and tables, and lists the functions that are available.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  

@@ -74,7 +74,7 @@ The following steps create an external table in the data pool named **web_clicks
       );
    ```
   
-1. In CTP 2.4, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
+1. In CTP 2.5, the creation of the data pool is asynchronous, but there is no way to determine when it completes yet. Wait for two minutes to make sure the data pool is created before continuing.
 
 ## Load data
 

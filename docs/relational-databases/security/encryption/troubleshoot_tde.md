@@ -63,27 +63,6 @@ Use the following command to get the key uri of a given logical SQL server and t
 [Cli](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
  
  
-### Missing permissions 
-"401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault."
-Identify the key vault  
-In the Azure portal, browse to the key vault, go to Access policies and locate the Sql Server APPID:  
-- If the APPID is not present, add it using Add new button. 
-- If the APPID is present, ensure that it has the following key permissions: Get, Wrap and Unwrap 
- 
-### Missing key 
-"404 ServerKeyNotFound - The requested server key was not found on the current subscription."
-"409 ServerKeyDoesNotExists - The server key does not exist."
-- Identify the key uri added to the logical SQL server using the Get-AzSqlServerKeyVaultKey cmdlet to return the list of keys.
-- Identify the key vault 
-- In the Azure portal, browse to the key vault
-- Ensure that the key identified by key uri is present 
- 
-### Missing key vault
-"503 AzureKeyVaultConnectionFailed - The operation could not be completed on the server because attempts to connect to Azure Key Vault have failed"
-- Identify the key uri and key vault 
-- Go to Azure portal and ensure that the key vault identified in the previous step is present 
-- If the key vault is behind a firewall, ensure the checkbox to allow Microsoft services to access the key vault is checked
-
 ### Missing Identity
 "401 AzureKeyVaultNoServerIdentity - The server identity is not correctly configured on server. Please contact support."
 Use the following command to ensure that an identity has been assigned to the logical SQL server: 
@@ -98,3 +77,26 @@ Use the following command and use option [-AssignIdentity](https://docs.microsof
 > [!IMPORTANT]
 > If the logical SQL server has been moved to a new subscription after the initial configuration of TDE with AKV, the step to configure the AAD identity has to be repeated to create the new APPID.  The new APPID then needs to get registered with they key vault and the correct permissions have to be reassigned. 
 >
+  
+### Missing key vault
+"503 AzureKeyVaultConnectionFailed - The operation could not be completed on the server because attempts to connect to Azure Key Vault have failed"
+- Identify the key uri and key vault 
+- Go to Azure portal and ensure that the key vault identified in the previous step is present 
+- If the key vault is behind a firewall, ensure the checkbox to allow Microsoft services to access the key vault is checked
+
+### Missing key 
+"404 ServerKeyNotFound - The requested server key was not found on the current subscription."
+"409 ServerKeyDoesNotExists - The server key does not exist."
+- Identify the key uri added to the logical SQL server using the Get-AzSqlServerKeyVaultKey cmdlet to return the list of keys.
+- Identify the key vault 
+- In the Azure portal, browse to the key vault
+- Ensure that the key identified by key uri is present
+
+### Missing permissions 
+"401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault."
+Identify the key vault  
+In the Azure portal, browse to the key vault, go to Access policies and locate the Sql Server APPID:  
+- If the APPID is not present, add it using Add new button. 
+- If the APPID is present, ensure that it has the following key permissions: Get, Wrap and Unwrap 
+
+

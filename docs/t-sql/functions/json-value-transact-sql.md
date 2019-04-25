@@ -117,9 +117,10 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 
-SET @jsonInfo=N'<array of address info>'
+SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}';
 
-SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
+SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- Paris
+SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London
 ```  
   
 ### Example 3  

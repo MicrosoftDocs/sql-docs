@@ -20,7 +20,7 @@ To add a shared data source to your report, browse to a report server and select
 
 To create an embedded data source, you must have connection information to the external source of data and you must know which permissions you need to access the data. This information usually comes from the owner of the data source. You can test the connection to verify that the credentials that are specified are sufficient.
 
-For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) and [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md)
+For more information, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) and [Specify Credentials in Report Builder](../../2014/reporting-services/specify-credentials-in-report-builder.md)
 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]

@@ -77,6 +77,9 @@ The storage pool contains web clickstream data in a CSV file stored in HDFS. Use
      ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
    END
    ```
 

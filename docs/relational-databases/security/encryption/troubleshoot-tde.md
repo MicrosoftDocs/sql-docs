@@ -5,30 +5,23 @@ helpviewer_keywords:
   - "troublshooting, tde akv"
   - "tde akv configuration, troubleshooting"
   - "tde troubleshooting"
-documentationcenter:
 author: "aliceku"
 manager: craigg
-editor:
-ms.prod: 
-ms.reviewer: ""
-ms.suite: sql
-ms.prod_service: sql-database, sql-data-warehouse
-ms.service: "sql-database"
-ms.tgt_pltfrm:
-ms.devlang: 
+ms.prod: sql
+ms.technology: security
+ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: "04/26/2019"
 ms.author: "aliceku"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Transparent Data Encryption (TDE) with customer-managed keys in Azure Key Vault (AKV) Troubleshooting
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic provides information about the following issues:  
   
--   Troubleshooting overview  
--   How to identify and resolve the most common errors
-  
-
+- Troubleshooting overview  
+- How to identify and resolve the most common errors
 
 ## Troubleshooting overview
 To troubleshoot the [TDE with customer-managed TDE Protector in AKV configuration](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault), let's get started with confirming the following requirements:
@@ -97,6 +90,4 @@ Use the following command and use option [-AssignIdentity](https://docs.microsof
 - Identify the key vault  
 - In the Azure portal, browse to the key vault, go to Access policies, and locate the Sql Server APPID:  
   - If the APPID is not present, add it using the Add New button. 
-  - If the APPID is present, ensure that it has the following key permissions: Get, Wrap, and Unwrap. 
-
-
+  - If the APPID is present, ensure that it has the following key permissions: Get, Wrap, and Unwrap.

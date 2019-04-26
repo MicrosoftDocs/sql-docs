@@ -17,7 +17,7 @@ ms.service: "sql-database"
 ms.tgt_pltfrm:
 ms.devlang: 
 ms.topic: conceptual
-ms.date: "25/04/2019"
+ms.date: "04/26/2019"
 ms.author: "aliceku"
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -26,12 +26,11 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
   This topic provides information about the following issues:  
   
 -   Troubleshooting overview  
-   
 -   How to identify and resolve the most common errors
   
 
 
-## Troubleshooting Overview
+## Troubleshooting overview
 To troubleshoot the [TDE with customer-managed TDE Protector in AKV configuration](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault), let's get started with confirming the following requirements:
 - The logical SQL server and the key vault need to be located in the same region.
 - The logical SQL server APPID is limited to a tenant in the original subscription, see help with subscription move below.
@@ -61,10 +60,10 @@ In the next section, we are going to list the troubleshooting steps for the most
 ### Missing server identity
 "401 AzureKeyVaultNoServerIdentity - The server identity is not correctly configured on server. Please contact support."
 Use the following command to ensure that an identity has been assigned to the logical SQL server: 
-- [Powershell](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
-- [Cli](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- [Azure PowerShell](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- [Azure CLI](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
-How to configure an Azure Active Directory (AAD) identity for the logical SQL server:
+How to configure an Azure Active Directory (Azure AD) identity for the logical SQL server:
 
 Use the following command and use option [-AssignIdentity](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) [--assign_identity](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) 
 [Learn more](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)
@@ -81,9 +80,9 @@ Use the following command and use option [-AssignIdentity](https://docs.microsof
 
 >[!NOTE]
 >How to identify the key uri and key vault 
-Use the following command to get the key uri of a given logical SQL server and then use the key uri to identify the key vault: 
-- [Powershell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0) 
-- [Cli](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+>Use the following command to get the key uri of a given logical SQL server and then use the key uri to identify the key vault: 
+>- [Azure PowerShell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0) 
+>- [Azure Cli](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 >
 
 ### Missing key 

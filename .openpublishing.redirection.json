@@ -56,7 +56,7 @@
             "redirect_document_id": true
         }, 
         {
-            "source_path": "docs/sql/relational-databases/performance/adaptive-query-processing.md",
+            "source_path": "docs/relational-databases/performance/adaptive-query-processing.md",
             "redirect_url": "/sql/relational-databases/performance/intelligent-query-processing",
             "redirect_document_id": true 
         },

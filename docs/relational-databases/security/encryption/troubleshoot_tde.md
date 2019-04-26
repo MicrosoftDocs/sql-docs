@@ -40,10 +40,9 @@ To troubleshoot the [TDE with customer-managed TDE Protector in AKV configuratio
 - The logical server needs to have an Azure Active Directory (AAD) identity (APPID) in order to authenticate to the key vault
 - The APPID needs to have access to the key vault and wrap, unwrap, and get permissions to the keys selected as TDE Protectors
 
-Most issues encountered when using TDE with AKV are due to one of the following:
+Most issues encountered when using TDE with AKV are due to one of the following misconfigurations:
 
 ### Key vault unavailable or doesn't exist?
-- Key vault unavailable
 - Key vault accidentally deleted
 - Firewall configured for Azure Key Vault without allowing access to Microsoft services
 - Permissions for SQL APPID revoked
@@ -54,7 +53,7 @@ Most issues encountered when using TDE with AKV are due to one of the following:
 - Key accidentally deleted
 - Permissions granted to APPID for keys not sufficient (wrap, unwrap, get)
 
-In the next section we are going to list the troubleshooting steps for the most common errors.
+In the next section, we are going to list the troubleshooting steps for the most common errors.
 
 
 ## How to identify and resolve the most common errors
@@ -81,8 +80,8 @@ Use the following command and use option [-AssignIdentity](https://docs.microsof
 - If the key vault is behind a firewall, ensure the checkbox to allow Microsoft services to access the key vault is checked.
 
 >[!NOTE]
->To identify the key uri and key vault: 
-Use the following command to get the key uri of a given logical SQL server and then use the key uri to identify the key vault. 
+>How to identify the key uri and key vault 
+Use the following command to get the key uri of a given logical SQL server and then use the key uri to identify the key vault: 
 - [Powershell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0) 
 - [Cli](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 >
@@ -97,7 +96,7 @@ Use the following command to get the key uri of a given logical SQL server and t
 ### Missing permissions 
 "401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault."
 Identify the key vault  
-In the Azure portal, browse to the key vault, go to Access policies and locate the Sql Server APPID:  
+In the Azure portal, browse to the key vault, go to Access policies, and locate the Sql Server APPID:  
 - If the APPID is not present, add it using the Add New button. 
 - If the APPID is present, ensure that it has the following key permissions: Get, Wrap, and Unwrap. 
 

@@ -75,7 +75,7 @@ Use the following command and use option [-AssignIdentity](https://docs.microsof
 >How to identify the key uri and key vault 
 >Use the following command to get the key uri of a given logical SQL server and then use the key uri to identify the key vault: 
 >- [Azure PowerShell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0) 
->- [Azure Cli](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+>- [Azure CLI](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 >
 
 ### Missing key 

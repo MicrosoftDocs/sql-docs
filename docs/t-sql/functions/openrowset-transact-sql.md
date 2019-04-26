@@ -407,6 +407,14 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
+```sql
+select *
+from openrowset('MSDASQL'
+				,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
+				,'select * from E:\Tlog\TerritoryData.csv') 
+;
+```
+
 > [!IMPORTANT]
 > Azure SQL Database does not support reading from Windows files.
 

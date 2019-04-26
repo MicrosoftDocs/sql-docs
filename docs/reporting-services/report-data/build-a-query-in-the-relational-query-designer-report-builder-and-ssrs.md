@@ -1,12 +1,12 @@
 ---
-title: "Build a Query in the Relational Query Designer (Report Builder and SSRS) | Microsoft Docs"
+title: "Build a Query in the Relational Query Designer (Report Builder and SSRS"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile: ""
+manager: kfile
 ms.reviewer: ""
 ms.custom: ""
 ms.date: 04/25/2019
@@ -20,7 +20,7 @@ A query designer helps you specify which data to retrieve from an external data 
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
  A dataset is based on a data source. The type of data source and the authoring environment determines which query designer opens when you define the dataset query. Query designer features vary based on the underlying data source. For more information about data layers, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
-  
+
  You can use a query designer for the following tasks:  
   
 -   Explore the metadata for multiple schemas on the external data source  

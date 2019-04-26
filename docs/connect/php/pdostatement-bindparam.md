@@ -136,7 +136,7 @@ $stmt->execute();
 ```
 
 
-## See Also  
+## See also  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

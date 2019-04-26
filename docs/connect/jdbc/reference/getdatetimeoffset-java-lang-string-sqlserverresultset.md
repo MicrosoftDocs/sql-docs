@@ -39,7 +39,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String columnName)
 ## Remarks  
  You can update a [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) value with [SQLServerResultSet.updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md).  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -86,6 +86,6 @@ print_r($row);
 ?>
 ```
 
-## See Also
+## See also
 [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)
 

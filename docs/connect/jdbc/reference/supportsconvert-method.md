@@ -37,7 +37,7 @@ public boolean supportsConvert()
 ## Remarks  
  This supportsConvert method is specified by the supportsConvert method in the java.sql.DatabaseMetaData interface.  
   
-## See Also  
+## See also  
  [supportsConvert Method &#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

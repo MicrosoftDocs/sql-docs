@@ -28,7 +28,7 @@ ms.author: genemi
 |[position (java.sql.Blob, long)](../../../connect/jdbc/reference/position-method-java-sql-blob-long.md)|Returns the position of a specified pattern in the BLOB based on the given pattern and the starting index.|  
 |[position (byte&#91;&#93;, long)](../../../connect/jdbc/reference/position-method-byte-long.md)|Returns the position of a specified pattern in the BLOB based on the given **byte** array pattern and the starting index.|  
   
-## See Also  
+## See also  
  [SQLServerBlob Methods](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  

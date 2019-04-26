@@ -44,7 +44,7 @@ public final void setString(int index,
 ## Remarks  
  This setString method is specified by the setString method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

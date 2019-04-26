@@ -37,7 +37,7 @@ public java.sql.Statement createStatement()
 ## Remarks  
  This createStatement method is specified by the createStatement method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [createStatement Method &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

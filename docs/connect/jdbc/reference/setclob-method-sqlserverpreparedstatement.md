@@ -27,7 +27,7 @@ ms.author: genemi
 ## Remarks  
  No server driver behavior. For details see JSE 6 API spec.  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

@@ -37,7 +37,7 @@ public java.sql.Connection getConnection()
 ## Remarks  
  This getConnection method is specified by the getConnection method in the javax.sql.DataSource interface.  
   
-## See Also  
+## See also  
  [getConnection Method &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)   
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

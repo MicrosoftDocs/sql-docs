@@ -37,7 +37,7 @@ public interface ISQLServerConnection
 |public final static int TRANSACTION_SNAPSHOT|[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|  
 |public UUID getClientConnectionId()|[getClientConnectionID()](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|  
   
-## See Also  
+## See also  
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

@@ -39,7 +39,7 @@ public final int getMaxRows()
   
  This getMaxRows method always returns 0 for dynamic scrollable cursors.  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

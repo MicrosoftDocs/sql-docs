@@ -65,6 +65,6 @@ The [unixODBC documentation](http://www.unixodbc.org/doc/UserManual/) explains t
 
 - System DSNs --- these DSNs are available for every user on the system to connect using them, but can only be added, modified, and removed by a system administrator. If a user has a user DSN with the same name as a system DSN, the user DSN will be used upon connections by that user.
 
-## See Also
+## See also
 
 - [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)

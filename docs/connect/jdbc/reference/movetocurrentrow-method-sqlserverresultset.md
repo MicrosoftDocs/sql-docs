@@ -36,7 +36,7 @@ public void moveToCurrentRow()
   
  This method has no effect if the cursor is not on the insert row.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

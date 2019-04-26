@@ -43,7 +43,7 @@ public boolean isWrapperFor(Class iface)
   
  For more information, see [Wrappers and Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## See Also  
+## See also  
  [unwrap Method &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)   
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

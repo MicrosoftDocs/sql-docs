@@ -49,7 +49,7 @@ public int setBytes(long pos,
   
  Data is overwritten starting at the specified position and can overrun the initial length of the BLOB. Specifying a position+1 values will append bytes. Passing a position+2 or greater (or zero or less) value will cause a position error to be thrown. Passing a zero-length **byte** array will return zero because no bytes were written.  
   
-## See Also  
+## See also  
  [setBytes Method &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob Methods](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   

@@ -37,7 +37,7 @@ public boolean supportsANSI92EntryLevelSQL()
 ## Remarks  
  This supportsANSI92EntryLevelSQL method is specified by the supportsANSI92EntryLevelSQL method in the java.sql.DatabaseMetaData interface.  
   
-## See Also  
+## See also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

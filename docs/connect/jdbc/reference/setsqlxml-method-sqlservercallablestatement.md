@@ -39,7 +39,7 @@ public final void setSQLXML(java.lang.String parameterName,
 ## Remarks  
  This setSQLXML method is specified by the setSQLXML method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

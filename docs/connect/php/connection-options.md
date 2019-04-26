@@ -65,5 +65,5 @@ This topic lists the options that are permitted in the associative array (when u
 
 Many of the supported keys are ODBC connection string attributes. For information about ODBC connection strings, see [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
-## See Also  
+## See also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)  

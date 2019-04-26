@@ -32,7 +32,7 @@ public class SQLServerStatement
   
  This class supports unwrapping to SQLServerStatement class, the ISQLServerStatement interface, and the java.sql.Statement interface. For more information, see [Wrappers and Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

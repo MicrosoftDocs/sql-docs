@@ -497,7 +497,7 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## See Also  
+## See also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)
 
 [Comparing Execution Functions](../../connect/php/comparing-execution-functions.md)

@@ -39,7 +39,7 @@ public void rollback(javax.transaction.xa.Xid xid)
 ## Remarks  
  This rollback method is specified by the rollback method in the javax.transaction.xa.XAResource interface.  
   
-## See Also  
+## See also  
  [SQLServerXAResource Methods](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource Members](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource Class](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

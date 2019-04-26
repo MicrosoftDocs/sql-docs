@@ -44,7 +44,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
   
  If the parameter **flag** is not XAResource.TMSTARTRSCAN or XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, a recovery scan must be in progress.  
   
-## See Also  
+## See also  
  [SQLServerXAResource Methods](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource Members](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource Class](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

@@ -39,7 +39,7 @@ public java.lang.String getCatalog()
   
  Returns the current catalog property of the SQLServerConnection object, or null if it is not set. The catalog property is set explicitly with the [setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md) method, or is implicitly updated by reading the environment change on TDS for the current catalog.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -103,7 +103,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## See Also  
+## See also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Retrieving Data](../../connect/php/retrieving-data.md)  

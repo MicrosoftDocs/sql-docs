@@ -140,6 +140,6 @@ Uses data types from an earlier version of [!INCLUDE[ssNoVersion](../../../inclu
 - -x  
 Used with the format and -f format_file options, generates an XML-based format file instead of the default non-XML format file.  
   
-## See Also
+## See also
 
 [Connecting with **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

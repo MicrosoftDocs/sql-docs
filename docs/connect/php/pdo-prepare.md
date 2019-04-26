@@ -222,7 +222,7 @@ As you can see, binding is done internally by the driver. A valid query is sent 
     - When a prepared statement invokes a stored procedure with a placeholder as the argument for an output parameter, no exception is thrown because the driver cannot detect the output parameter. However, the variable that the user provides for the output parameter will remain unchanged.
 - Duplicated placeholders for a binary encoded parameter will not work
 
-## See Also
+## See also
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)

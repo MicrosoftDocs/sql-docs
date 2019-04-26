@@ -53,7 +53,7 @@ public final boolean getMoreResults(int mode)
 > [!NOTE]  
 >  The JDBC driver does not support using the KEEP_CURRENT_RESULT constant. If it is used, an exception will be thrown.  
   
-## See Also  
+## See also  
  [getMoreResults Method &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)   
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

@@ -34,7 +34,7 @@ public class SQLServerDataSourceObjectFactory
   
  When the Java Application Server has to dereference the Reference object, it creates an instance of the SQLServerDataSourceObjectFactory object and calls the [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) method, passing in the Reference object, to retrieve the data source instance.  
   
-## See Also  
+## See also  
  [SQLServerDataSourceObjectFactory Members](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

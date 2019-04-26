@@ -35,7 +35,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
 ## Return Value  
  Returns a DateTimeOffset object representing the point in time given by the java.sql.Timestamp object at the given offset, in minutes, from GMT.  
   
-## See Also  
+## See also  
  [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

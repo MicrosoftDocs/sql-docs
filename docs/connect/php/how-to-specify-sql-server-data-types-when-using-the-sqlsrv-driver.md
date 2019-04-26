@@ -128,7 +128,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## See Also  
+## See also  
 [Retrieving Data](../../connect/php/retrieving-data.md)
 
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)

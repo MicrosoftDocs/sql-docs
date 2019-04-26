@@ -54,7 +54,7 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  You can locate the connection ID in the extended events log to see if the failure was on the server if the extended event for logging connection ID is enabled. You can also locate the connection ID in the connection ring buffer ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://go.microsoft.com/fwlink/?LinkId=207752)) for certain connection errors. If the connection ID is not in the connection ring buffer, you can assume a network error.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

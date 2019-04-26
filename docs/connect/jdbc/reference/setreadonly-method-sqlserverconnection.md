@@ -42,7 +42,7 @@ public void setReadOnly(boolean readOnly)
 ## Remarks  
  This setReadOnly method is specified by the setReadOnly method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -49,7 +49,7 @@ public void setNull(java.lang.String sCol,
 ## Remarks  
  This setNull method is specified by the setNull method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [setNull Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

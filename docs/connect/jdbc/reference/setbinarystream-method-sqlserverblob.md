@@ -44,7 +44,7 @@ public java.io.OutputStream setBinaryStream(long pos)
   
  Data in the BLOB is overwritten by the output stream starting at the specified position and can over-run the initial length of the BLOB. Specifying a position+1 value will append bytes. Passing a position+2 or greater (or zero or less) value will cause a position error to be thrown.  
   
-## See Also  
+## See also  
  [SQLServerBlob Methods](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  

@@ -16,7 +16,7 @@ ms.author: genemi
 
   For information about the members of [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md), see [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md).  
   
-## See Also  
+## See also  
  [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   

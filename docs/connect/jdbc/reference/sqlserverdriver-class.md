@@ -29,7 +29,7 @@ ms.author: genemi
 public final class SQLServerDriver  
 ```  
   
-## See Also  
+## See also  
  [SQLServerDriver Members](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

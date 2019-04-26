@@ -34,7 +34,7 @@ public void truncate(long len)
 ## Remarks  
  This truncate method is specified by the truncate method in the java.sql.NClob interface.  
   
-## See Also  
+## See also  
  [SQLServerNClob Methods](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob Class](../../../connect/jdbc/reference/sqlservernclob-class.md)  

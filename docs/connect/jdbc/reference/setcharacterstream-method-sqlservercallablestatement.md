@@ -24,7 +24,7 @@ ms.author: genemi
 |[setCharacterStream Method &#40;java.lang.String, java.io.Reader, int&#41;](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-int.md)|Sets the designated parameter to the specified java.io.Reader object, which is the specified number of characters long.|  
 |[setCharacterStream Method &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader-long.md)|Sets the designated parameter to the specified java.io.Reader object, which is the specified number of characters long.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

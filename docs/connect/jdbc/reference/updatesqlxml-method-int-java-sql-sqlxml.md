@@ -39,7 +39,7 @@ public void updateSQLXML(int columnIndex,
 ## Remarks  
  This updateSQLXML method is specified by the updateSQLXML method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateSQLXML Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

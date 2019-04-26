@@ -32,6 +32,6 @@ Topics in this section provide information about handling errors and warnings wi
   
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
-## See Also  
+## See also  
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

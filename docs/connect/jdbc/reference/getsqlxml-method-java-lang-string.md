@@ -37,7 +37,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String parameterName)
 ## Remarks  
  This getSQLXML method is specified by the getSQLXML method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [getSQLXML Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   

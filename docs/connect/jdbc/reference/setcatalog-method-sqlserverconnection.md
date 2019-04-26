@@ -41,7 +41,7 @@ public void setCatalog(java.lang.String catalog)
   
  The *catalog* argument is escaped by the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automatically. Using this method sets the catalog property for the Connection object. It is not set implicitly in any other way.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

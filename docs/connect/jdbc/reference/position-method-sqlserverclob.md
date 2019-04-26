@@ -28,7 +28,7 @@ ms.author: genemi
 |[position (java.sql.Clob, long)](../../../connect/jdbc/reference/position-method-java-sql-clob-long.md)|Returns the character position of the specified CLOB object in the CLOB based on the given starting position.|  
 |[position (java.lang.String, long)](../../../connect/jdbc/reference/position-method-java-lang-string-long.md)|Returns the character position of the specified substring in the CLOB based on the given starting position.|  
   
-## See Also  
+## See also  
  [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  

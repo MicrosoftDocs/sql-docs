@@ -32,7 +32,7 @@ public boolean isPoolable() throws SQLException
 ## Remarks  
  [setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md) changes the poolable behavior of an object.  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

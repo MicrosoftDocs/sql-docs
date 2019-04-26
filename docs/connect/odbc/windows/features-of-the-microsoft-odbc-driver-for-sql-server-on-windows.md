@@ -66,5 +66,5 @@ Another difference is that specifying both `-h` and `-y0` now produces an error 
   
 Note that `-y0` can cause performance issues on both the server and the network, depending on the size of the data returned.
 
-## See Also  
+## See also  
 [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  

@@ -30,7 +30,7 @@ public void setMultiSubnetFailover(boolean multiSubnetFailover);
 ## Remarks  
  For more information about the **multiSubnetFailover** connection property, see [Setting the Connection Properties](../../../connect/jdbc/setting-the-connection-properties.md).  
   
-## See Also  
+## See also  
  [SQLServerDataSource.getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)   
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

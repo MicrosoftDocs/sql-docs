@@ -60,7 +60,7 @@ ms.author: pelopes
   
 -   [Updating Data in Rowsets](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

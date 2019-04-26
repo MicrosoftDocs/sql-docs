@@ -60,7 +60,7 @@ ms.author: pelopes
   
 -   [Streaming Support for BLOB Output Parameters](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [Using Large Value Types](../../oledb/features/using-large-value-types.md)  
   

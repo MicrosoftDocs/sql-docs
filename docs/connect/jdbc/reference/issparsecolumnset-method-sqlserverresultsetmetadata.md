@@ -33,7 +33,7 @@ public boolean isSparseColumnSet(int column)
 ## Remarks  
  This method does not retrieve information from the database.  
   
-## See Also  
+## See also  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData Members](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

@@ -28,7 +28,7 @@ ms.author: genemi
 |[getInt (int)](../../../connect/jdbc/reference/getint-method-int.md)|Retrieves the value of the designated parameter as an **int** in the Java programming language given the parameter index.|  
 |[getInt (java.lang.String)](../../../connect/jdbc/reference/getint-method-java-lang-string.md)|Retrieves the value of the designated parameter as an **int** in the Java programming language given the parameter name.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

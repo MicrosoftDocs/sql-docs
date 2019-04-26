@@ -40,7 +40,7 @@ public void refreshRow()
   
  All values are refetched subject to the transaction isolation level and cursor sensitivity. If this method is called after calling an updater method, but before calling the [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) method, the updates made to the row are lost. Calling this method frequently will probably slow performance.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -45,7 +45,7 @@ public final void setMaxRows(int max)
   
  For more information about the SET ROWCOUNT SQL statement, see the "[SET ROWCOUNT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=139522)" topic in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

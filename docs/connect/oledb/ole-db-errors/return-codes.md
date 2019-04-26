@@ -42,7 +42,7 @@ ms.author: pelopes
   
  The OLE DB Driver for SQL Server member functions don't return the success code S_FALSE. All OLE DB Driver for SQL Server member functions always return S_OK to indicate success.  
   
-## See Also  
+## See also  
  [Errors](../../oledb/ole-db-errors/errors.md)  
   
   

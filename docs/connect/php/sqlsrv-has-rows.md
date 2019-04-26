@@ -52,6 +52,6 @@ If there are rows in the result set, the return value will be **true**. If there
 ?>  
 ```  
   
-## See Also  
+## See also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
   

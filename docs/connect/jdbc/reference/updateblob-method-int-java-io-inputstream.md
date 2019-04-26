@@ -39,7 +39,7 @@ public void updateBlob(int columnIndex,
 ## Remarks  
  This updateBlob method is specified by the updateBlob method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateBlob Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

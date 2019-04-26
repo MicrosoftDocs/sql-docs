@@ -181,7 +181,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## See Also  
+## See also  
 [Converting Data Types](../../connect/php/converting-data-types.md)
 
 [Security Considerations for the Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)

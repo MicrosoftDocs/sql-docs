@@ -213,7 +213,7 @@ SAFE_EXIT:
     }  
 ```  
   
-## See Also  
+## See also  
  [Tables and Indexes](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

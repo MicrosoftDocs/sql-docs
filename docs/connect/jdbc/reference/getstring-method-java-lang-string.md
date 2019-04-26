@@ -48,7 +48,7 @@ public java.lang.String getString(java.lang.String sCol)
   
  User-defined types are returned as hexadecimal string values.  
   
-## See Also  
+## See also  
  [getString Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

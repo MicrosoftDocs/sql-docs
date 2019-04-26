@@ -50,7 +50,7 @@ ms.author: genemi
 |--------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
+## See also  
  [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

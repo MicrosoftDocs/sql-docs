@@ -42,7 +42,7 @@ The following SQL Server data types can be retrieved as streams with the SQLSRV 
   
 -   XML  
   
-## See Also  
+## See also  
 [Retrieving Data as a Stream Using the SQLSRV Driver](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
 
 [Default PHP Data Types](../../connect/php/default-php-data-types.md)

@@ -44,7 +44,7 @@ public final void setURL(int parameterIndex,
 ## Remarks  
  This setURL method is specified by the setURL method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

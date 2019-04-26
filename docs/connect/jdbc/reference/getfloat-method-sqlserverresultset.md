@@ -28,7 +28,7 @@ ms.author: genemi
 |[getFloat (int)](../../../connect/jdbc/reference/getfloat-method-int-sqlserverresultset.md)|Retrieves the value of the designated column index in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a **float** in the Java programming language.|  
 |[getFloat (java.lang.String)](../../../connect/jdbc/reference/getfloat-method-java-lang-string-sqlserverresultset.md)|Retrieves the value of the designated column name in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a **float** in the Java programming language.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -23,6 +23,6 @@ You can create a result set with rows that you can access in any order, dependin
   
 -   [Cursor Types &#40;PDO_SQLSRV Driver&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)  
   
-## See Also  
+## See also  
 [Retrieving Data](../../connect/php/retrieving-data.md)  
   

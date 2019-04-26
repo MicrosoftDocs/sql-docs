@@ -31,7 +31,7 @@ protected java.lang.Object[][] getContents()
 ## Return Value  
  A multi-dimensional array of **Object** values.  
   
-## See Also  
+## See also  
  [SQLServerResource Methods](../../../connect/jdbc/reference/sqlserverresource-methods.md)   
  [SQLServerResource Members](../../../connect/jdbc/reference/sqlserverresource-members.md)   
  [SQLServerResource Class](../../../connect/jdbc/reference/sqlserverresource-class.md)  

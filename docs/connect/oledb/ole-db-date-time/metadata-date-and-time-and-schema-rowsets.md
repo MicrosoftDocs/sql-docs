@@ -88,7 +88,7 @@ ms.author: pelopes
   
  OLE DB only defines MINIMUM_SCALE and MAXIMUM_SCALE for numeric and decimal types, so OLE DB Driver for SQL Server's use of these columns for time, datetime2 and datetimeoffset is non-standard.  
   
-## See Also  
+## See also  
  [Metadata &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

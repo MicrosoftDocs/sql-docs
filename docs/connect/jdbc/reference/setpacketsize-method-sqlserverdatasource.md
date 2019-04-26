@@ -42,7 +42,7 @@ public void setPacketSize(int packetSize)
   
  For more information about using SSL, see [Using SSL Encryption](../../../connect/jdbc/using-ssl-encryption.md).  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

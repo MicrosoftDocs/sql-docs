@@ -47,7 +47,7 @@ ms.author: genemi
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
+## See also  
  [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   

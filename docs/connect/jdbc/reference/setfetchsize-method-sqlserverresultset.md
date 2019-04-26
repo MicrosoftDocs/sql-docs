@@ -43,7 +43,7 @@ public void setFetchSize(int rows)
   
  This method changes the block fetch size for server cursors, and takes effect the next time the JDBC driver needs to call sp_cursorfetch. Setting the fetch size to zero restores the default fetch size for the cursor type that is currently in use  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

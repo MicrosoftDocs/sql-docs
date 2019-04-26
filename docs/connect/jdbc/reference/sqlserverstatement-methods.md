@@ -16,7 +16,7 @@ ms.author: genemi
 
   For information about the members of SQLServerStatement, see [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md).  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

@@ -16,7 +16,7 @@ ms.author: genemi
 
   For information about the members of ISQLServerConnection, see [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md).  
   
-## See Also  
+## See also  
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

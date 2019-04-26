@@ -39,7 +39,7 @@ public final boolean getMoreResults()
   
  Calling the getMoreResults method implicitly closes any currently open result set objects that are obtained with the [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) method.  
   
-## See Also  
+## See also  
  [getMoreResults Method &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)   
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

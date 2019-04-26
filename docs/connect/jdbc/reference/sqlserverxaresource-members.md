@@ -52,7 +52,7 @@ ms.author: genemi
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
+## See also  
  [SQLServerXAResource Class](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   

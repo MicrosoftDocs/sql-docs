@@ -75,6 +75,6 @@ $conn = null;
 ?>  
 ```  
   
-## See Also  
+## See also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
   

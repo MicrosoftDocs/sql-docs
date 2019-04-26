@@ -99,7 +99,7 @@ public static void executeStoredProcedure(Connection con) {
 }   
 ```  
   
-## See Also  
+## See also  
  [isWrapperFor Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

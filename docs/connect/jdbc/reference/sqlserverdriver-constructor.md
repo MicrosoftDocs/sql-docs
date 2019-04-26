@@ -28,7 +28,7 @@ ms.author: genemi
 public SQLServerDriver()  
 ```  
   
-## See Also  
+## See also  
  [SQLServerDriver Constructors](../../../connect/jdbc/reference/sqlserverdriver-constructors.md)   
  [SQLServerDriver Members](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [SQLServerDriver Class](../../../connect/jdbc/reference/sqlserverdriver-class.md)  

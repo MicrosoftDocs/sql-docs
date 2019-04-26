@@ -48,7 +48,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  The trustStorePassword property can be specified along with the trustStore property and its value is used to open the trustStore file. For more information, see [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

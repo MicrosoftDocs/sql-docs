@@ -48,7 +48,7 @@ COMPUTE
 > [!NOTE]  
 >  When you use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursors, command execution creates the cursor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] returns success or failure on the cursor creation; therefore, the round trip to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is complete upon the return from command execution. Each **GetNextRows** call then becomes a round trip. In this way, multiple active command objects can exist, each processing a rowset that is the result of a fetch from the server cursor. For more information, see [Rowsets and SQL Server Cursors](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## See Also  
+## See also  
  [Commands](../../oledb/ole-db-commands/commands.md)  
   
   

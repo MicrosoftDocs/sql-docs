@@ -44,7 +44,7 @@ public final void setInt(int n,
 ## Remarks  
  This setInt method is specified by the setInt method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

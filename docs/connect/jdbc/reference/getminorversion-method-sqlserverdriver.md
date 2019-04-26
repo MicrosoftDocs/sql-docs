@@ -34,7 +34,7 @@ public int getMinorVersion()
 ## Remarks  
  This getMinorVersion method is specified by the getMinorVersion method in the java.sql.Driver interface.  
   
-## See Also  
+## See also  
  [SQLServerDriver Methods](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [SQLServerDriver Members](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [SQLServerDriver Class](../../../connect/jdbc/reference/sqlserverdriver-class.md)  

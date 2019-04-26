@@ -122,7 +122,7 @@ The following Linux and Mac operating system versions (64-bit only) are supporte
 |macOS El Capitan (64-bit)           |   |Y  |Y  |Y  |   |   |   |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-## See Also
+## See also
 
 [Release Notes](../../connect/php/release-notes-php-sql-driver.md)
 

@@ -38,7 +38,7 @@ public SQLServerSavepoint(SQLServerConnection con,
   
  A **String** that contains the name of the savepoint.  
   
-## See Also  
+## See also  
  [SQLServerSavepoint Constructors](../../../connect/jdbc/reference/sqlserversavepoint-constructors.md)   
  [SQLServerSavepoint Members](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
  [SQLServerSavepoint Class](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  

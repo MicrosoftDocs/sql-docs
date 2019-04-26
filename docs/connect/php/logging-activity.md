@@ -108,7 +108,7 @@ By adding integer values together, you can specify more than one option at a tim
   
 `sqlsrv.LogSeverity = 3`  
   
-## See Also  
+## See also  
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

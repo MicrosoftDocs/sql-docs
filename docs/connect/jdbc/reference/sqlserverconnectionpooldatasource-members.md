@@ -88,7 +88,7 @@ ms.author: genemi
 |java.sql.Wrapper|isWrapperFor, unwrap|  
 |javax.sql.ConnectionPoolDataSource|getLoginTimeout, getLogWriter, setLoginTimeout, setLogWriter, getPooledConnection|  
   
-## See Also  
+## See also  
  [SQLServerConnectionPoolDataSource Class](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
   

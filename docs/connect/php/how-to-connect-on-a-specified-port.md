@@ -37,7 +37,7 @@ This topic describes how to connect to SQL Server on a specified port with the [
     $conn = new PDO( "sqlsrv:server=$serverName;Database=$database", "", "");  
     ```  
   
-## See Also  
+## See also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)
 
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

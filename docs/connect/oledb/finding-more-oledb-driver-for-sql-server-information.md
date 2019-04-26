@@ -33,7 +33,7 @@ ms.author: pelopes
  The Window DAC SDK includes documentation for ActiveX Data Objects (ADO), OLE DB, and Open Database Connectivity (ODBC).  
   
 
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)  
   
   

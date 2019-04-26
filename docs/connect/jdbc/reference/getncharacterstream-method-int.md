@@ -39,7 +39,7 @@ public final java.io.Reader getNCharacterStream(int parameterIndex)
   
  This getNCharacterStream method is specified by the getNCharacterStream method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [getNCharacterStream Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   

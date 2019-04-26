@@ -52,7 +52,7 @@ public java.sql.Connection getConnection(java.lang.String username,
 > [!NOTE]  
 >  The user name and password that are set inside the URL by using a call to the [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) method will not be changed in this case.  
   
-## See Also  
+## See also  
  [getConnection Method &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)   
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

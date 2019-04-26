@@ -38,7 +38,7 @@ public final class SQLServerResultSet
   
  This class supports unwrapping to SQLServerResultSet class, ISQLServerResultSet interface, and java.sql.ResultSet interface. For more information, see [Wrappers and Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

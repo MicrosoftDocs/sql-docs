@@ -42,7 +42,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql)
 ## Remarks  
  This prepareCall method is specified by the prepareCall method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [prepareCall Method &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

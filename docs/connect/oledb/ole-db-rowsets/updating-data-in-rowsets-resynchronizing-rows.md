@@ -23,7 +23,7 @@ ms.author: pelopes
 
   The OLE DB Driver for SQL Server supports **IRowsetResynch** on [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor-supported rowsets only. **IRowsetResynch** is not available on demand. The consumer must request the interface before opening the rowset.  
   
-## See Also  
+## See also  
  [Updating Data in Rowsets](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
   

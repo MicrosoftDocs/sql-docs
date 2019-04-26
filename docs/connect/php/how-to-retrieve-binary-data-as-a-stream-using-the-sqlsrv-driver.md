@@ -83,7 +83,7 @@ sqlsrv_close( $conn);
   
 Specifying the return type in the example demonstrates how to specify the PHP return type as a binary stream. Technically, it is not required in the example because the *LargePhoto* field has SQL Server type varbinary(max) and is therefore returned as a binary stream by default. For information about default PHP data types, see [Default PHP Data Types](../../connect/php/default-php-data-types.md). For information about how to specify PHP return types, see [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## See Also  
+## See also  
 [Retrieving Data](../../connect/php/retrieving-data.md)
 
 [Retrieving Data as a Stream Using the SQLSRV Driver](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

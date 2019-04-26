@@ -37,7 +37,7 @@ public java.lang.String getURL()
 > [!NOTE]  
 >  If the setURL method is not called before calling the getURL method, getURL returns the default value of "jdbc:sqlserver://".  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

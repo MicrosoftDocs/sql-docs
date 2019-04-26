@@ -39,7 +39,7 @@ public final java.sql.ResultSet getGeneratedKeys()
   
  For more information about how to use this method, see [Using Auto Generated Keys](../../../connect/jdbc/using-auto-generated-keys.md).  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

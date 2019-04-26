@@ -52,7 +52,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
 ## Remarks  
  This prepareStatement method is specified by the prepareStatement method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [SQLServerConnection Methods](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

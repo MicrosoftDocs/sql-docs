@@ -38,7 +38,7 @@ The following forums provide community support for FastCGI on IIS:
 -   [FastCGI Handler](https://forums.iis.net/1103.aspx)  
 -   [IIS 7 - FastCGI Module](https://forums.iis.net/1104.aspx)  
   
-## See Also  
+## See also  
 [Getting Started with the Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

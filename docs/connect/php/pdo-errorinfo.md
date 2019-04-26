@@ -54,7 +54,7 @@ print_r ($conn->errorInfo());
 ?>  
 ```  
   
-## See Also  
+## See also  
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

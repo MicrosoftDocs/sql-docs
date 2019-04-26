@@ -45,7 +45,7 @@ ms.author: genemi
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
+## See also  
  [SQLServerDriver Class](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   

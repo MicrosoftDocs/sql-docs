@@ -28,7 +28,7 @@ ms.author: genemi
 |[updateArray (int, java.sql.Array)](../../../connect/jdbc/reference/updatearray-method-int-java-sql-array.md)|Updates the designated column with an Array object given the column index.|  
 |[updateArray (java.lang.String, java.sql.Array)](../../../connect/jdbc/reference/updatearray-method-java-lang-string-java-sql-array.md)|Updates the designated column with an Array object given the column name.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -235,7 +235,7 @@ If the results returned by this query are retrieved with **sqlsrv_fetch_object**
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## See Also  
+## See also  
 [Retrieving Data](../../connect/php/retrieving-data.md)  
 
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)  

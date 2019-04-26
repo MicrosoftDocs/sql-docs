@@ -34,7 +34,7 @@ public final void clearBatch()
 ## Remarks  
  This clearBatch method is specified by the clearBatch method in the java.sql.Statement interface.  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

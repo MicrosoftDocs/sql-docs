@@ -44,6 +44,6 @@ There are several points to note when you execute the code examples in the [!INC
   
     For more information about handling errors and warnings, see [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).  
   
-## See Also  
+## See also  
 [Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
   

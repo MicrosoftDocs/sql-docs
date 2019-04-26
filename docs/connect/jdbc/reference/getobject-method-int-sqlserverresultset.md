@@ -56,7 +56,7 @@ public java.lang.Object getObject(int columnIndex)
   
 -   A value of type datetimeoffset will be returned as a microsoft.sql.DateTimeOffset object.  
   
-## See Also  
+## See also  
  [getObject Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

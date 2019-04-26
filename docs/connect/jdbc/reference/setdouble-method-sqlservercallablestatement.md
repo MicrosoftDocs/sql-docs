@@ -44,7 +44,7 @@ public void setDouble(java.lang.String sCol,
 ## Remarks  
  This setDouble method is specified by the setDouble method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

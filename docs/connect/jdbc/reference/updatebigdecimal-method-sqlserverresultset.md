@@ -28,7 +28,7 @@ ms.author: genemi
 |[updateBigDecimal (int, java.math.BigDecimal)](../../../connect/jdbc/reference/updatebigdecimal-method-int-java-math-bigdecimal.md)|Updates the designated column with a BigDecimal object given the column index.|  
 |[updateBigDecimal (java.lang.String, java.math.BigDecimal)](../../../connect/jdbc/reference/updatebigdecimal-method-java-lang-string-java-math-bigdecimal.md)|Updates the designated column with a BigDecimal object given the column name.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

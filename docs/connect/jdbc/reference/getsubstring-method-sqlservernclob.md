@@ -44,7 +44,7 @@ public java.lang.String getSubString(long pos,
   
  Trying to get zero characters from a null or zero-length NCLOB returns an empty string. Trying to get any length of characters at any position other than position 1 in a zero-length NCLOB will cause a position exception to be thrown.  
   
-## See Also  
+## See also  
  [SQLServerNClob Methods](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob Class](../../../connect/jdbc/reference/sqlservernclob-class.md)  

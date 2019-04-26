@@ -51,7 +51,7 @@ If **sqlsrv_configure** is called with an unsupported setting or value, the func
   
 (3) For more information about configuring error and warning handling, see [How to: Configure Error and Warning Handling Using the SQLSRV Driver](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
-## See Also  
+## See also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md) 

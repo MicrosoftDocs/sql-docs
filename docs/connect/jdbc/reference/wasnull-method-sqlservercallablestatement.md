@@ -37,7 +37,7 @@ public boolean wasNull()
 ## Remarks  
  This wasNull method is specified by the wasNull method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

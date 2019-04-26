@@ -16,7 +16,7 @@ ms.author: genemi
 
   For information about the members of SQLServerCallableStatement, see [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md).  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

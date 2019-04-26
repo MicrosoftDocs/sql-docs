@@ -34,7 +34,7 @@ public javax.naming.Reference getReference()
 ## Remarks  
  This getReference method is specified by the getReference method in the javax.naming.Referenceable interface.  
   
-## See Also  
+## See also  
  [SQLServerXADataSource Methods](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
  [SQLServerXADataSource Members](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource Class](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

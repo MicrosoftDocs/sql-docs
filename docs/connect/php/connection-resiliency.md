@@ -124,5 +124,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## See Also
+## See also
 [Connection Resiliency in the Windows ODBC Driver](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

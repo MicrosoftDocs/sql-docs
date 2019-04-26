@@ -47,7 +47,7 @@ ms.author: genemi
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Clob|free, getAsciiStream, getCharacterStream, getSubString, length, position, setAsciiStream, setCharacterStream, setString, truncate|  
   
-## See Also  
+## See also  
  [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

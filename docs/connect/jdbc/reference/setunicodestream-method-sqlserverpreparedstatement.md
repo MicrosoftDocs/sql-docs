@@ -52,7 +52,7 @@ public final void setUnicodeStream(int n,
 ## Remarks  
  This setUnicodeStream method is specified by the setUnicodeStream method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

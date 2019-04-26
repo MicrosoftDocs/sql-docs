@@ -48,7 +48,7 @@ ms.author: pelopes
   
  The OLE DB Driver for SQL Server sets the DBPROP_OUTPUTPARAMETERAVAILABILITY property to DBPROPVAL_OA_ATROWRELEASE to indicate that return codes and output parameters are not returned until the result set is processed or released.  
   
-## See Also  
+## See also  
  [Stored Procedures](../../oledb/ole-db/stored-procedures.md)  
   
   

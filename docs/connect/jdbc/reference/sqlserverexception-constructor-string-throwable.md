@@ -36,7 +36,7 @@ public SQLServerException(java.lang.String errText,
   
  A throwable object that contains the cause of the exception.
   
-## See Also  
+## See also  
  [SQLServerException Constructors](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
  [SQLServerException Members](../../../connect/jdbc/reference/sqlserverexception-members.md)   
  [SQLServerException Class](../../../connect/jdbc/reference/sqlserverexception-class.md)  

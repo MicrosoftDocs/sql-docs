@@ -40,7 +40,7 @@ A PreparedStatement object.
 ## Remarks
 This prepareStatement method is specified by the prepareStatement method in the java.sql.Connection interface.
 
-## See Also
+## See also
 
 [prepareStatement Method &#40;SQLServerConnection&#41;](./preparestatement-method-sqlserverconnection.md)
 

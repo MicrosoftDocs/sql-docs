@@ -30,7 +30,7 @@ ms.author: genemi
 |[getDate (java.lang.String)](../../../connect/jdbc/reference/getdate-method-java-lang-string-sqlserverresultset.md)|Retrieves the value of the designated column name in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a java.sql.Date object in the Java programming language.|  
 |[getDate (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-java-lang-string-java-util-calendar-sqlserverresultset.md)|Retrieves the value of the designated column name in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a java.sql.Date object in the Java programming language, using the given Calendar object.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

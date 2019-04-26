@@ -36,7 +36,7 @@ public void setLogWriter(java.io.PrintWriter out)
 ## Remarks  
  This setLogWriter method is specified by the setLogWriter method in the javax.sql.DataSource interface.  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -49,7 +49,7 @@ public int setString(long pos,
   
  Character data is overwritten starting at the specified position and can over-run the initial length of the CLOB. Specifying a position+1 value will append the string. Specifying a position+2 or greater (or zero or less) values will cause a position error to be thrown.  
   
-## See Also  
+## See also  
  [setString Method &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   

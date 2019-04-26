@@ -39,7 +39,7 @@ public final void setQueryTimeout(int seconds)
 ## Remarks  
  This setQueryTimeout method is specified by the setQueryTimeout method in the java.sql.Statement interface.  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

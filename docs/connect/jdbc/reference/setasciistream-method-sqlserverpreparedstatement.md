@@ -24,7 +24,7 @@ ms.author: genemi
 |[setAsciiStream Method &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|Sets the designated parameter number to the specified java.io.InputStream object with the specified number of bytes.|  
 |[setAsciiStream Method &#40;int, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-long.md)|Sets the designated parameter number to the specified  java.io.InputStream object with the specified number of bytes.|  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

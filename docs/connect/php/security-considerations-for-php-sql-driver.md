@@ -46,6 +46,6 @@ Develop applications with the **WarningsAsErrors** setting set to **true** so th
 ## Secure Logs for Deployed Application  
 For deployed applications, make sure that logs are written to a secure location or that logging is turned off. This helps protect against the possibility of end-users accessing information that has been written to the log files. For more information, see [Logging Activity](../../connect/php/logging-activity.md).  
   
-## See Also  
+## See also  
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

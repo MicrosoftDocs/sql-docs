@@ -55,7 +55,7 @@ HRESULT BCPWriteFmt(
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) method was not called before calling this method.  
   
-## See Also  
+## See also  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Performing Bulk Copy Operations](../../oledb/features/performing-bulk-copy-operations.md) 
   

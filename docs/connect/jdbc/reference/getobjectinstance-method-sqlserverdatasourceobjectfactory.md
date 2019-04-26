@@ -57,7 +57,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
 ## Remarks  
  This getObjectInstance method is specified by the getObjectInstance method in the javax.naming.spi.ObjectFactory interface.  
   
-## See Also  
+## See also  
  [SQLServerDataSourceObjectFactory Methods](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   
  [SQLServerDataSourceObjectFactory Members](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
  [SQLServerDataSourceObjectFactory Class](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)  

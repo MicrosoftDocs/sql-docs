@@ -214,7 +214,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## See Also  
+## See also  
  [Errors](../../oledb/ole-db-errors/errors.md)  
   
   

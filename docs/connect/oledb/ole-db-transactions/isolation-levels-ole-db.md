@@ -36,7 +36,7 @@ ms.author: pelopes
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduced snapshot isolation level. For more information, see [Working with Snapshot Isolation](../../oledb/features/working-with-snapshot-isolation.md).  
   
-## See Also  
+## See also  
  [Transactions](../../oledb/ole-db-transactions/transactions.md)  
   
   

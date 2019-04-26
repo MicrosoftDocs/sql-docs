@@ -45,7 +45,7 @@ ms.author: pelopes
 ### Use Date/Time/Datetime/Datetimeoffset Data with Client-Side Conversions Consistent with Existing Conversions  
  The conversions are extended in a consistent manner to include conversions between all date and time types introduced in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

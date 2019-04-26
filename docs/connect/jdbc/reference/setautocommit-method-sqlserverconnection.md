@@ -48,7 +48,7 @@ public void setAutoCommit(boolean value)
 > [!NOTE]  
 >  If this method is called during a transaction, the transaction is committed.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

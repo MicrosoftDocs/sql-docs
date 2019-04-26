@@ -34,7 +34,7 @@ public java.lang.String getTrustStore()
 ## Remarks  
  If the trustStore property is not set, the [getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md) method returns null.  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

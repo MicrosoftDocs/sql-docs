@@ -60,7 +60,7 @@ public boolean updatesAreDetected(int type)
 ## Remarks  
  This updatesAreDetected method is specified by the updatesAreDetected method in the java.sql.DatabaseMetaData interface.  
   
-## See Also  
+## See also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

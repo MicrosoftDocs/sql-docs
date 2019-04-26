@@ -85,7 +85,7 @@ else
   
 -   [Persisted Data Source Objects](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

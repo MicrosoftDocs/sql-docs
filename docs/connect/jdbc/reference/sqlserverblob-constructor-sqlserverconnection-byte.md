@@ -41,7 +41,7 @@ public SQLServerBlob(SQLServerConnection connection,
   
  A **byte** array.  
   
-## See Also  
+## See also  
  [SQLServerBlob Constructors](../../../connect/jdbc/reference/sqlserverblob-constructors.md)   
  [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  

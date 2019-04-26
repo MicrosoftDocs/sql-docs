@@ -43,7 +43,7 @@ ms.author: pelopes
   
 -   [Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -193,7 +193,7 @@ function DisplayWarnings()
 ?>  
 ```  
   
-## See Also  
+## See also  
 [How to: Configure Error and Warning Handling Using the SQLSRV Driver](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  

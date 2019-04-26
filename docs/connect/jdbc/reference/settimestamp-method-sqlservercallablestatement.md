@@ -28,7 +28,7 @@ ms.author: genemi
 |[setTimestamp (java.lang.String, java.sql.Timestamp)](../../../connect/jdbc/reference/settimestamp-method-java-lang-string-java-sql-timestamp.md)|Sets the designated parameter to the given timestamp value.|  
 |[setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/settimestamp-method-java-lang-string-java-sql-timestamp-java-util-calendar.md)|Sets the designated parameter to the given timestamp and calendar values.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

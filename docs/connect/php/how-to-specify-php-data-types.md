@@ -98,7 +98,7 @@ Retrieving the fourth field (*Comments*) as a stream is for demonstration purpos
 > [!NOTE]  
 > The [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) function provides a way to obtain field information, including type information, before executing a query.  
   
-## See Also  
+## See also  
 [Retrieving Data](../../connect/php/retrieving-data.md)
 
 [About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)

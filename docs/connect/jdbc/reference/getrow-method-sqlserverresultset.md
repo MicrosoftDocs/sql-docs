@@ -37,7 +37,7 @@ public int getRow()
 ## Remarks  
  This getRow method is specified by the getRow method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

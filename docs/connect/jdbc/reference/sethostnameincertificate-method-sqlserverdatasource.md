@@ -38,7 +38,7 @@ public void setHostNameInCertificate(java.lang.String hostNameInCertificate)
   
  If the hostNameInCertificate property is set to null or unspecified, the [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] will use the serverName property value to validate against the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL certificate. If the hostNameInCertificate property is set to a string or an empty string "", the driver will use that value to validate the server SSL certificate.  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

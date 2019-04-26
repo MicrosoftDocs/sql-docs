@@ -79,7 +79,7 @@ if (sqlsrv_execute($stmt)) {
 }
 ```
 
-## See Also
+## See also
 [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)
 
 [Retrieving Data](../../connect/php/retrieving-data.md)

@@ -55,7 +55,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## See Also  
+## See also  
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

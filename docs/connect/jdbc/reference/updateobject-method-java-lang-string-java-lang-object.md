@@ -44,7 +44,7 @@ public void updateObject(java.lang.String columnName,
 ## Remarks  
  This updateObject method is specified by the updateObject method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateObject Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

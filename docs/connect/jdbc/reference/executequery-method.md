@@ -37,7 +37,7 @@ public java.sql.ResultSet executeQuery()
 ## Remarks  
  This executeQuery method is specified by the executeQuery method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [executeQuery Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

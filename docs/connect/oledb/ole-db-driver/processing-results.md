@@ -39,7 +39,7 @@ ms.author: pelopes
   
  After the DBBINDING structures are specified, an accessor is created (**IAccessor::CreateAccessor**). An accessor is a collection of bindings and is used to get or set the data in the consumer buffer.  
   
-## See Also  
+## See also  
  [Creating an OLE DB Driver for SQL Server Application](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

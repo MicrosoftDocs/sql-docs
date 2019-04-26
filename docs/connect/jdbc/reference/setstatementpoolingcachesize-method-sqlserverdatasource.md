@@ -34,7 +34,7 @@ public void setStatementPoolingCacheSize(boolean statementPoolingCacheSize);
 ## Remarks  
  This method is available from JDBC driver version 6.4 and onward.
  
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

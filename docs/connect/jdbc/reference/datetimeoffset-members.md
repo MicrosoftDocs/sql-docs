@@ -40,7 +40,7 @@ ms.author: genemi
 |---------------------------|-------------|  
 |class java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait,|  
   
-## See Also  
+## See also  
  [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)  
   
   

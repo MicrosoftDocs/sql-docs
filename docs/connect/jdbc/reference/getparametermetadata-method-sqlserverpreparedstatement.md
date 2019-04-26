@@ -37,7 +37,7 @@ public final java.sql.ParameterMetaData getParameterMetaData()
 ## Remarks  
  This getParameterMetaData method is specified by the getParameterMetaData method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

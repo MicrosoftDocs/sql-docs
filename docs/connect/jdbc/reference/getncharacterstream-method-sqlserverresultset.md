@@ -23,7 +23,7 @@ ms.author: genemi
 |[getNCharacterStream Method &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-int-sqlserverresultset.md)|Retrieves the value of the designated column in the current row of the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a Reader object.|  
 |[getNCharacterStream Method &#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-java-lang-string-sqlserverresultset.md)|Retrieves the value of the designated column in the current row of the [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a Reader object.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

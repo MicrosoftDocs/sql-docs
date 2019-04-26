@@ -37,7 +37,7 @@ public long length()
 ## Remarks  
  This length method is specified by the length method in the java.sql.Blob interface.  
   
-## See Also  
+## See also  
  [SQLServerBlob Methods](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  

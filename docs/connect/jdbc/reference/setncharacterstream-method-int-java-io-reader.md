@@ -41,7 +41,7 @@ public final void setNCharacterStream(int parameterIndex,
   
  This method should be used for **NCHAR**, **NVARCHAR**, **NTEXT**, and **XML** data types.  
   
-## See Also  
+## See also  
  [setNCharacterStream Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

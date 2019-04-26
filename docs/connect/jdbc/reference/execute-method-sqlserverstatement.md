@@ -30,7 +30,7 @@ ms.author: genemi
 |[execute (java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/execute-method-java-lang-string.md)|Runs the given SQL statement, which can return multiple results, and signals the JDBC driver that the auto-generated keys that are indicated in the given array should be made available for retrieval.|  
 |[execute (java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/execute-method-java-lang-string-java-lang-string.md)|Runs the given SQL statement, which can return multiple results, and signals the JDBC driver that the auto-generated keys that are indicated in the given array should be made available for retrieval.|  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

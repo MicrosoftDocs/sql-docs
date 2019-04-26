@@ -174,7 +174,7 @@ The **sqlsrv_fetch_array** function always returns data according to the [Defaul
   
 If a field with no name is retrieved, the associative key for the array element will be an empty string (""). For more information, see [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
-## See Also  
+## See also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Retrieving Data](../../connect/php/retrieving-data.md)

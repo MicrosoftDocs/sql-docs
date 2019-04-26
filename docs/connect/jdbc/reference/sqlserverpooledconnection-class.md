@@ -32,7 +32,7 @@ public final class SQLServerPoolingDataSource
 ## Remarks  
  The SQLServerPooledConnection class provides methods for the connection pool manager to manage the connection pool. Applications typically do not instantiate these connections directly.  
   
-## See Also  
+## See also  
  [SQLServerPooledConnection Members](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

@@ -24,7 +24,7 @@ ms.author: genemi
 |[setCharacterStream Method &#40;int, java.io.Reader, int&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-int.md)|Sets the designated parameter to the specified java.io.Reader object, which is the specified number of characters long.|  
 |[setCharacterStream Method &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader-long.md)|Sets the designated parameter to the specified java.io.Reader object, which is the specified number of characters long.|  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

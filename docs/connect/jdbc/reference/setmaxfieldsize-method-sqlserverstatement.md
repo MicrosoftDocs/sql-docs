@@ -39,7 +39,7 @@ public final void setMaxFieldSize(int max)
 ## Remarks  
  This setMaxFieldSize method is specified by the setMaxFieldSize method in the java.sql.Statement interface.  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

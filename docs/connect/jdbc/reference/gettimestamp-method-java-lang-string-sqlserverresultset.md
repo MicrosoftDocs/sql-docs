@@ -44,7 +44,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
   
  This method returns values only from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime and smalldatetime columns.  
   
-## See Also  
+## See also  
  [getTimestamp Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

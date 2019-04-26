@@ -54,7 +54,7 @@ ms.author: pelopes
   
 -   [Use Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

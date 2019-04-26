@@ -91,7 +91,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## See Also  
+## See also  
 [Logging Activity](../../connect/php/logging-activity.md)
 
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

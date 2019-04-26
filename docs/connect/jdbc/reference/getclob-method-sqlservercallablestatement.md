@@ -28,7 +28,7 @@ ms.author: genemi
 |[getClob (int)](../../../connect/jdbc/reference/getclob-method-int.md)|Retrieves the value of the designated JDBC BLOB parameter as a Clob object in the Java programming language given the parameter index.|  
 |[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string.md)|Retrieves the value of the designated JDBC BLOB parameter as a Clob object in the Java programming language given the parameter name.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

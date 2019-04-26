@@ -53,7 +53,7 @@ public void setFetchDirection(int direction)
 > [!NOTE]  
 >  Using this method when the cursor type is forward-only has no effect.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

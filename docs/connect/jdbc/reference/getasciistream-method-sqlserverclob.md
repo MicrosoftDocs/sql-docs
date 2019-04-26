@@ -39,7 +39,7 @@ public java.io.InputStream getAsciiStream()
   
  Always returns a stream of bytes and assumes that the data in the CLOB is in an ASCII format because it has no way of knowing if it is in Unicode or any other multi-byte code page.  
   
-## See Also  
+## See also  
  [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  

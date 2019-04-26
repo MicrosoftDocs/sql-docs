@@ -51,7 +51,7 @@ ms.author: pelopes
   
 -   [Dropping a SQL Server Index](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/create-index-transact-sql.md)   

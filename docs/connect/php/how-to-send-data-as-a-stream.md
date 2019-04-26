@@ -156,7 +156,7 @@ Although the examples in this topic send character data to the server, data in a
 ?>  
 ```  
   
-## See Also  
+## See also  
 [Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [Retrieving Data as a Stream Using the SQLSRV Driver](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

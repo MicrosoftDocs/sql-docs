@@ -123,7 +123,7 @@ ms.author: pelopes
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## See Also  
+## See also  
  [Stored Procedures](../../oledb/ole-db/stored-procedures.md)  
   
   

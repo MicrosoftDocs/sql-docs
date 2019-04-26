@@ -628,6 +628,6 @@ FoundProv:
 
 ```
 
-## See Also
+## See also
 
 [Using Always Encrypted with the ODBC Driver](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

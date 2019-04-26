@@ -37,7 +37,7 @@ public boolean execute()
 ## Remarks  
  This execute method is specified by the execute method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [execute Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

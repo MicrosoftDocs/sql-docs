@@ -88,7 +88,7 @@ ms.author: genemi
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.lang.Wrapper|isWrapperFor, unwrap|  
   
-## See Also  
+## See also  
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

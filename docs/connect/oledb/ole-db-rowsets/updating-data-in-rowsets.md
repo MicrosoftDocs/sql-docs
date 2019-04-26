@@ -38,7 +38,7 @@ ms.author: pelopes
   
 -   [Resynchronizing Rows](../../oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
-## See Also  
+## See also  
  [Rowsets](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

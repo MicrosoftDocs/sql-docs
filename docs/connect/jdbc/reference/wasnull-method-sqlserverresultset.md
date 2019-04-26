@@ -37,7 +37,7 @@ public boolean wasNull()
 ## Remarks  
  This wasNull method is specified by the wasNull method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -28,7 +28,7 @@ ms.author: genemi
 |[setNull (java.lang.String, int)](../../../connect/jdbc/reference/setnull-method-java-lang-string-int.md)|Sets the designated parameter to a null value, given the type of parameter to set.|  
 |[setNull (java.lang.String, int, java.lang.String)](../../../connect/jdbc/reference/setnull-method-java-lang-string-int-java-lang-string.md)|Sets the designated parameter to a null value, given the type and name of the parameter to set.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

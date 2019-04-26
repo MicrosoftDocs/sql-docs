@@ -28,7 +28,7 @@ ms.author: genemi
 public SQLServerConnectionPoolDataSource()  
 ```  
   
-## See Also  
+## See also  
  [SQLServerConnectionPoolDataSource Constructors](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-constructors.md)   
  [SQLServerConnectionPoolDataSource Members](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   
  [SQLServerConnectionPoolDataSource Class](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  

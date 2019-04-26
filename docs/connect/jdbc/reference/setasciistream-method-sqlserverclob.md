@@ -44,7 +44,7 @@ public java.io.OutputStream setAsciiStream(long pos)
   
  Character data in the CLOB is overwritten by the output stream starting at the given position and can overrun the initial length of the CLOB. Specifying a position+1 value will append ASCII characters. Specifying a position+2 or greater (or zero or less) value will cause a position error to be thrown.  
   
-## See Also  
+## See also  
  [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  

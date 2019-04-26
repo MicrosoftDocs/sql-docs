@@ -49,7 +49,7 @@ int setString(long pos,
 ## Remarks  
  This setString method is specified by the setString method in the java.sql.NClob interface.  
   
-## See Also  
+## See also  
  [SQLServerNClob Methods](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob Class](../../../connect/jdbc/reference/sqlservernclob-class.md)  

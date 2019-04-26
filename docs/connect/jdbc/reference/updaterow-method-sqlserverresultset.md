@@ -38,7 +38,7 @@ public void updateRow()
   
  If this method is called when no column values have changed, an exception will be thrown.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

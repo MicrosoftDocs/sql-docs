@@ -36,7 +36,7 @@ public void close()
   
  Calling the close method in the middle of a transaction causes the transaction to be rolled back.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

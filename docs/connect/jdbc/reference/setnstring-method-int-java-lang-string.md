@@ -41,7 +41,7 @@ public final void setNString(int parameterIndex,
   
  This setNString method is specified by the setNString method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

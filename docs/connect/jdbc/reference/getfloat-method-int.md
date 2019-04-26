@@ -44,7 +44,7 @@ public float getFloat(int index)
   
  This method returns all number-based types with Java **float** fidelity.  
   
-## See Also  
+## See also  
  [getFloat Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

@@ -544,7 +544,7 @@ MacOS: `/usr/local/share/msodbcsql17/resources/en_US/`
 
 
   
-## See Also
+## See also
 
 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 

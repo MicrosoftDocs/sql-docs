@@ -54,7 +54,7 @@ ms.author: pelopes
  For information about how snapshot isolation is supported in transactions, see [Supporting Local Transactions](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
 
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [Rowset Properties and Behaviors](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   

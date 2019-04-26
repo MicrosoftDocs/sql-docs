@@ -18,7 +18,7 @@ ms.author: pelopes
 
   The OLE DB standard specification allows providers to specify VT_EMPTY for **DBPROPINFO::vValues**. However, OLE DB Driver for SQL Server OLE DB always returns VT_EMPTY when you call **IDBProperties::GetPropertyInfo** with **DBPROPSET_ROWSETALL** to retrieve rowset properties.  
   
-## See Also  
+## See also  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

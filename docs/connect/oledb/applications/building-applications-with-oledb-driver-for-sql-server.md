@@ -48,6 +48,6 @@ ms.reviewer: mikeray
  [Support policies for OLE DB Driver for SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  Discusses how various data-access components can be used with different versions of OLE DB Driver for SQL Server.  
 
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [OLE DB how-to topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

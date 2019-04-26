@@ -34,7 +34,7 @@ When sending data to the server, the [!INCLUDE[ssDriverPHP](../../includes/ssdri
 |Object|Not supported.|Not supported.|  
 |DateTime (1)|datetime|Not supported.|  
   
-## See Also  
+## See also  
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

@@ -44,7 +44,7 @@ public void updateLong(int index,
 ## Remarks  
  This updateLong method is specified by the updateLong method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateLong Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

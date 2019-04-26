@@ -37,7 +37,7 @@ public java.sql.Savepoint setSavepoint()
 ## Remarks  
  This setSavePoint method is specified by the setSavePoint method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [setSavepoint Method &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

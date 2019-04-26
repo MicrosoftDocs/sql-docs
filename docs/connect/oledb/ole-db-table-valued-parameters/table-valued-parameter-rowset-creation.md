@@ -46,7 +46,7 @@ ms.author: pelopes
   
  The *pTableID* and *pUnkOuter* parameters should be set as in the static scenario. The OLE DB Driver for SQL Server then obtains the type information (column information and constraints) from the server, and return a table-valued parameter rowset object through the *ppRowset* parameter. This operation requires communication with the server, and therefore doesn't perform as well as the static scenario. The dynamic scenario works only with parameterized procedure calls.  
   
-## See Also  
+## See also  
  [Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Use Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

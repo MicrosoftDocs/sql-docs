@@ -49,7 +49,7 @@ public void setTimestamp(java.lang.String sCol,
 ## Remarks  
  This setTimestamp method is specified by the setTimestamp method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [setTimestamp Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

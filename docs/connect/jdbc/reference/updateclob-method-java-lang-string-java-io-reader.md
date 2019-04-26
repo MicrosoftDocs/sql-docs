@@ -39,7 +39,7 @@ public void updateClob(java.lang.String columnLabel,
 ## Remarks  
  This updateClob method is specified by the updateClob method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateClob Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -28,7 +28,7 @@ ms.author: genemi
 |[updateBoolean (int, boolean)](../../../connect/jdbc/reference/updateboolean-method-int-boolean.md)|Updates the designated column with a **boolean** value given the column index.|  
 |[updateBoolean (java.lang.String, boolean)](../../../connect/jdbc/reference/updateboolean-method-java-lang-string-boolean.md)|Updates the designated column with a **boolean** value given the column name.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

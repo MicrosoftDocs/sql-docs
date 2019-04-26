@@ -44,7 +44,7 @@ public void updateByte(java.lang.String columnName,
 ## Remarks  
  This updateByte method is specified by the updateByte method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateByte Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebyte-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

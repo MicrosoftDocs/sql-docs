@@ -38,7 +38,7 @@ ms.author: pelopes
   
  The OLE DB Driver for SQL Server consumer allowing dynamic specification of query text should check error interfaces after every member function execution regardless of the value of the return code, the presence or absence of a returned **IRowset** or **IMultipleResults** interface reference, or a count of affected rows.  
   
-## See Also  
+## See also  
  [Errors](../../oledb/ole-db-errors/errors.md)  
   
   

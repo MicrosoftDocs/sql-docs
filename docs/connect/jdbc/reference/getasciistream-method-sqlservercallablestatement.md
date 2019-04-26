@@ -28,7 +28,7 @@ ms.author: genemi
 |[getAsciiStream &#40;int&#41;](../../../connect/jdbc/reference/getasciistream-int.md)|Retrieves the value of the designated parameter as a stream of **ASCII** characters given the parameter index.|  
 |[getAsciiStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|Retrieves the value of the designated parameter as a stream of **ASCII** characters given the parameter name.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

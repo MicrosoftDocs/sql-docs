@@ -16,7 +16,7 @@ ms.author: genemi
 
   For information about the members of SQLServerResultSet, see [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md).  
   
-## See Also  
+## See also  
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

@@ -103,5 +103,5 @@ ms.author: pelopes
 
  Both OLE DB Driver for SQL Server and MDAC support read committed transaction isolation using row versioning, but only OLE DB Driver for SQL Server supports snapshot transaction isolation. (In programming terms, read committed transaction isolation using row versioning is the same as read-committed transaction.).  
 
-## See Also  
+## See also  
  [Building Applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

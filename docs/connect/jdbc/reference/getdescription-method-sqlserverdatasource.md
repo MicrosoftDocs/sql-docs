@@ -31,7 +31,7 @@ public java.lang.String getDescription()
 ## Return Value  
  A **String** that contains the data source description or null if no value is set.  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -36,7 +36,7 @@ ms.author: pelopes
   
 -   [Using IRow::GetColumns](../../oledb/ole-db-rowsets/using-irow-getcolumns.md)   
   
-## See Also  
+## See also  
  [Rowsets](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

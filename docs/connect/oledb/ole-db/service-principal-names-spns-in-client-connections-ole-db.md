@@ -55,7 +55,7 @@ ms.author: pelopes
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo will include the new data source initialization properties SSPROP_INIT_SERVERSPN and SSPROP_INIT_FAILOVERPARTNERSPN, or the new data source properties SSPROP_AUTHENTICATION_METHOD and SSPROP_MUTUALLYAUTHENTICATED.|  
 |IDBProperties::SetProperties|IDBProperties::SetProperties can be called to set the values of the new data source initialization properties SSPROP_INITSERVERSPN and SSPROP_INIT_FAILOVERPARTNERSPN.<br /><br /> These properties can be set at any time, but if the data source is already open, the following error will be returned: DB_E_ERRORSOCCURRED, "Multiple-step OLE DB operation generated errors. Check each OLE DB status value, if available. No work was done."|  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

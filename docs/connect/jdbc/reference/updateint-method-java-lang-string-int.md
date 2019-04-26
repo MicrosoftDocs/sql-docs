@@ -44,7 +44,7 @@ public void updateInt(java.lang.String columnName,
 ## Remarks  
  This updateInt method is specified by the updateInt method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateInt Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -39,7 +39,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
 ## Remarks  
  You can set a [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) parameter value with [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
   
-## See Also  
+## See also  
  [getDateTimeOffset Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

@@ -48,7 +48,7 @@ public java.lang.String getString(int columnIndex)
   
  User-defined types are returned as hexadecimal **String** values.  
   
-## See Also  
+## See also  
  [getString Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

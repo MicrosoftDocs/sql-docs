@@ -33,7 +33,7 @@ See [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) for an ex
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## See Also  
+## See also  
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

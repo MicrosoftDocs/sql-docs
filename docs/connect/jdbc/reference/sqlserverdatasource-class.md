@@ -30,7 +30,7 @@ public class SQLServerDataSource
 ## Remarks  
  This class supports unwrapping to SQLServerDataSource class, the ISQLServerDataSource interface, and the DataSource interface. For more information, see [Wrappers and Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

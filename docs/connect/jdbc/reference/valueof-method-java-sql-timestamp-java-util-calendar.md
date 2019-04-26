@@ -38,7 +38,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
 ## Remarks  
  This method also sets the java.util.Calendar object to the point in time given by the java.sql.Timestamp object.  
   
-## See Also  
+## See also  
  [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

@@ -23,7 +23,7 @@ ms.author: genemi
 |[getDateTimeOffset Method (int)](../../../connect/jdbc/reference/getdatetimeoffset-int-sqlserverresultset.md)|Retrieves the value of the designated column as a [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) object in the Java programming language given the parameter index.|  
 |[getDateTimeOffset (java.lang.string)](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|Retrieves the value of the designated column as a [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) object in the Java programming language given the parameter index.|  
   
-## See Also  
+## See also  
  [setDateTimeOffset&#40;int, java.sql.DateTimeOffset&#41; &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setdatetimeoffset-int-java-sql-datetimeoffset-sqlserverstatement.md)  
   
   

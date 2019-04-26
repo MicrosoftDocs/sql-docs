@@ -37,7 +37,7 @@ public java.io.InputStream getBinaryStream()
 ## Remarks  
  This getBinaryStream method is specified by the getBinaryStream method in the java.sql.Blob interface.  
   
-## See Also  
+## See also  
  [SQLServerBlob Methods](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob Class](../../../connect/jdbc/reference/sqlserverblob-class.md)  

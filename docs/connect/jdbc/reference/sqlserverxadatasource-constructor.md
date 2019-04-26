@@ -28,7 +28,7 @@ ms.author: genemi
 public SQLServerXADataSource()  
 ```  
   
-## See Also  
+## See also  
  [SQLServerXADataSource Constructors](../../../connect/jdbc/reference/sqlserverxadatasource-constructors.md)   
  [SQLServerXADataSource Members](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource Class](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

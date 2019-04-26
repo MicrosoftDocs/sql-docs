@@ -28,7 +28,7 @@ ms.author: genemi
 |[supportsConvert ()](../../../connect/jdbc/reference/supportsconvert-method.md)|Retrieves whether this database supports the CONVERT function between SQL types.|  
 |[supportsConvert (int, int)](../../../connect/jdbc/reference/supportsconvert-method-int-int.md)|Retrieves whether this database supports the CONVERT for two given SQL types.|  
   
-## See Also  
+## See also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData Class](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

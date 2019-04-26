@@ -37,7 +37,7 @@ public int executeUpdate()
 ## Remarks  
  This executeUpdate method is specified by the executeUpdate method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [executeUpdate Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

@@ -44,7 +44,7 @@ public double getDouble(int columnIndex)
   
  This method returns all number-based data types with Java **double** fidelity.  
   
-## See Also  
+## See also  
  [getDouble Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -44,7 +44,7 @@ public void registerOutParameter(java.lang.String s,
 ## Remarks  
  This registerOutParameter method is specified by the registerOutParameter method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [registerOutParameter Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

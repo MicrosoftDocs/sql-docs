@@ -44,7 +44,7 @@ public byte[] getBytes(java.lang.String sCol)
   
  This getBytes method is specified by the getBytes method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [getBytes Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

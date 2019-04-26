@@ -45,7 +45,7 @@ public java.lang.String nativeSQL(java.lang.String sql)
 ## Remarks  
  This nativeSQL method is specified by the nativeSQL method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

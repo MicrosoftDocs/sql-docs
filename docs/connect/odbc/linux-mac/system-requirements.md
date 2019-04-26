@@ -80,7 +80,7 @@ The installation packages for the [!INCLUDE[msCoName](../../../includes/msconame
     -   `krb5`  
     -   `libopenssl0_9_8`  
   
-## See Also
+## See also
 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  

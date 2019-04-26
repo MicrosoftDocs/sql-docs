@@ -42,7 +42,7 @@ The following steps summarize how to retrieve data as a stream:
 |[How to: Retrieve Character Data as a Stream Using the SQLSRV Driver](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Demonstrates how to retrieve character data as a stream.|  
 |[How to: Retrieve Binary Data as a Stream Using the SQLSRV Driver](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Demonstrates how to retrieve binary data as a stream.|  
   
-## See Also  
+## See also  
 [Retrieving Data](../../connect/php/retrieving-data.md)
 
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

@@ -44,7 +44,7 @@ public boolean isCurrency(int column)
   
  This method will return **true** only with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] money and smallmoney data types.  
   
-## See Also  
+## See also  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData Members](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

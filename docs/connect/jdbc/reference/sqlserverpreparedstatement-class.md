@@ -36,7 +36,7 @@ public class SQLServerPreparedStatement
   
  This class supports unwrapping to SQLServerPreparedStatement class, ISQLServerPreparedStatement interface, java.sql.PreparedStatement interface, and the classes and interfaces supported by SQLServerStatement for unwrapping. For more information, see [Wrappers and Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

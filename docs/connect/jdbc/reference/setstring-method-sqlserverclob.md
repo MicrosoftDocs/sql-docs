@@ -28,7 +28,7 @@ ms.author: genemi
 |[setString (long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|Writes the given stringto the CLOB starting at the given position.|  
 |[setString (long, java.lang.String, int, int)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int.md)|Writes the given string to the CLOB starting at the given position, based on the given offset and length.|  
   
-## See Also  
+## See also  
  [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  

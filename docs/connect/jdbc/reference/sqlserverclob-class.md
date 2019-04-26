@@ -32,7 +32,7 @@ public class SQLServerClob
 ## Remarks  
  A CLOB is stored in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] as a TEXT or NTEXT data type.  
   
-## See Also  
+## See also  
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

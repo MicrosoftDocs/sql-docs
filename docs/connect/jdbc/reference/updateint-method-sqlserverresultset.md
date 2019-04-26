@@ -28,7 +28,7 @@ ms.author: genemi
 |[updateInt (int, int)](../../../connect/jdbc/reference/updateint-method-int-int.md)|Updates the designated column with an **int** value given the column index.|  
 |[updateInt (java.lang.String, int)](../../../connect/jdbc/reference/updateint-method-java-lang-string-int.md)|Updates the designated column with an **int** value given the column name.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

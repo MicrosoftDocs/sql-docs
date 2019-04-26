@@ -104,7 +104,7 @@ unset($conn);
 ?>
 ```
 
-## See Also
+## See also
 [Formatting Decimal Strings and Money Values (SQLSRV Driver)](../../connect/php/formatting-decimals-sqlsrv-driver.md)
 
 [Retrieving Data](../../connect/php/retrieving-data.md)

@@ -39,7 +39,7 @@ public void setBinaryStream(java.lang.String parameterName,
 ## Remarks  
  This setBinaryStream method is specified by the setBinaryStream method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [setBinaryStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   

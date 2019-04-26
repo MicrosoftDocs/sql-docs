@@ -26,7 +26,7 @@ The topics in this section describe how to use directional parameters when calli
 |[How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Demonstrates how to call a stored procedure with an output parameter and how to retrieve its value.|  
 |[How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Demonstrates how to call a stored procedure with an input/output parameter and how to retrieve its value.|  
   
-## See Also  
+## See also  
 [Retrieving Data](../../connect/php/retrieving-data.md)  
 
 [Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

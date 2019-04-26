@@ -28,7 +28,7 @@ ms.author: genemi
 |[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Updates the designated column with a **float** value given the column index.|  
 |[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Updates the designated column with a **float** value given the column name.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

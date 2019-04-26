@@ -39,7 +39,7 @@ ms.author: pelopes
   
 -   sp_describe_undeclared_parameters  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

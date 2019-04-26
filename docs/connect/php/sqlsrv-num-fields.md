@@ -83,7 +83,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## See Also  
+## See also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  

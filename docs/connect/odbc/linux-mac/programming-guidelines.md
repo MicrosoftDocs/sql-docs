@@ -132,7 +132,7 @@ Starting with version 17.4, the driver loads OpenSSL dynamically, which allows i
 
 3.  When using the driver with highly multithreaded applications, unixODBC's handle validation may become a performance bottleneck. In such scenarios, significantly more performance may be obtained by compiling unixODBC with the `--enable-fastvalidate` option. However, beware that this may cause applications which pass invalid handles to ODBC APIs to crash instead of returning `SQL_INVALID_HANDLE` errors.
 
-## See Also  
+## See also  
 [Frequently Asked Questions](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)

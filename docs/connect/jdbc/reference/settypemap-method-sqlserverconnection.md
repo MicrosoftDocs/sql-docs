@@ -42,7 +42,7 @@ public void setTypeMap(java.util.Map map)
 ## Remarks  
  This setTypeMap method is specified by the setTypeMap method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

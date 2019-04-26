@@ -44,7 +44,7 @@ ms.author: pelopes
   
 -   [SQL Server Message Results](../../oledb/ole-db-errors/sql-server-message-results.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

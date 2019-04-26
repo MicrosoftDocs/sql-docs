@@ -42,7 +42,7 @@ public java.io.Reader getCharacterStream(long pos,
 ## Remarks  
  This getCharacterStream method is specified by the getCharacterStream method in the java.sql.Clob interface.  
   
-## See Also  
+## See also  
  [getCharacterStream Method &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)   
  [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)  

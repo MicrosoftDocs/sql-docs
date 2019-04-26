@@ -28,7 +28,7 @@ ms.author: genemi
 |[getShort (int)](../../../connect/jdbc/reference/getshort-method-int.md)|Retrieves the value of the designated parameter as a **short** in the Java programming language given the parameter index.|  
 |[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string.md)|Retrieves the value of the designated parameter as a **short** in the Java programming language given the parameter name.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

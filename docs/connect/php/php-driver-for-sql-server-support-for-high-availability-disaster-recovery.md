@@ -96,6 +96,6 @@ The driver will return an error if database mirroring is used on the primary dat
 [!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
 
 
-## See Also  
+## See also  
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)  
   

@@ -16,7 +16,7 @@ ms.author: genemi
 
   For information about the members of DateTimeOffset, see [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md).  
   
-## See Also  
+## See also  
  [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)  
   
   

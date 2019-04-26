@@ -42,7 +42,7 @@ public java.sql.Clob getClob(java.lang.String sCol)
 ## Remarks  
  This getClob method is specified by the getClob method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [getClob Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

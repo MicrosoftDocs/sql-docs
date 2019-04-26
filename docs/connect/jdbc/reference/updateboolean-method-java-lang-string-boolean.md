@@ -44,7 +44,7 @@ public void updateBoolean(java.lang.String columnName,
 ## Remarks  
  This updateBoolean method is specified by the updateBoolean method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateBoolean Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

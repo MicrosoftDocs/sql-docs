@@ -200,7 +200,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
 
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  
   

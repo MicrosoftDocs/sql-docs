@@ -28,7 +28,7 @@ ms.author: genemi
 |[setDate (int, java.sql.Date)](../../../connect/jdbc/reference/setdate-method-int-java-sql-date.md)|Sets the designated parameter to the given date value.|  
 |[setDate (int, java.sql.Date, java.util.Calendar)](../../../connect/jdbc/reference/setdate-method-int-java-sql-date-java-util-calendar.md)|Sets the designated parameter to the given date and calendar values.|  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

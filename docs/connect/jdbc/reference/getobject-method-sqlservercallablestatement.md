@@ -30,7 +30,7 @@ ms.author: genemi
 |[getObject (java.lang.String)](../../../connect/jdbc/reference/getobject-method-java-lang-string.md)|Retrieves the value of the designated parameter as an object in the Java programming language given the parameter name.|  
 |[getObject (java.lang.String, java.util.Map)](../../../connect/jdbc/reference/getobject-method-java-lang-string-java-util-map.md)|Retrieves the value of the designated parameter as an object in the Java programming language given the parameter name, using the given Map object.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

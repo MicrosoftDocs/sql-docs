@@ -36,7 +36,7 @@ public void cancelRowUpdates()
   
  This method can be called after calling an updater method and before calling the [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) method to roll back the updates that were made to a row. If no updates have been made or updateRow has already been called, this method has no effect.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

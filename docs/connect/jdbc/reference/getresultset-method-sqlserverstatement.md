@@ -37,7 +37,7 @@ public final java.sql.ResultSet getResultSet()
 ## Remarks  
  This getResultSet method is specified by the getResultSet method in the java.sql.Statement interface.  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

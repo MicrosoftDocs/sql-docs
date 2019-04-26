@@ -40,7 +40,7 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
   
  This setNString method is specified by the setNString method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

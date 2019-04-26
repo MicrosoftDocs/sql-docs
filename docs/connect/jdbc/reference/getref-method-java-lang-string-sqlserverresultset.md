@@ -42,7 +42,7 @@ public java.sql.Ref getRef(java.lang.String colName)
 ## Remarks  
  This getRef method is specified by the getRef method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [getRef Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -39,7 +39,7 @@ public void forget(javax.transaction.xa.Xid xid)
 ## Remarks  
  This forget method is specified by the forget method in the javax.transaction.xa.XAResource interface.  
   
-## See Also  
+## See also  
  [SQLServerXAResource Methods](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource Members](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource Class](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

@@ -82,7 +82,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
-## See Also  
+## See also  
  [Fetching BLOB Data Using IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

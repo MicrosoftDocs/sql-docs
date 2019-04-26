@@ -45,7 +45,7 @@ ms.author: genemi
 |java.util.ResourceBundle|getBundle, getLocale, getObject, getString, getStringArray, setParent|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
+## See also  
  [SQLServerResource Class](../../../connect/jdbc/reference/sqlserverresource-class.md)  
   
   

@@ -37,7 +37,7 @@ public final java.lang.String getNString(java.lang.String parameterName)
 ## Remarks  
  This getNString method is specified by the getNString method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [getNString Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Methods](../../../connect/jdbc/reference/sqlservercallablestatement-methods.md)  
   

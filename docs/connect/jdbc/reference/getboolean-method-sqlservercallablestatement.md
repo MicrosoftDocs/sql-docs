@@ -28,7 +28,7 @@ ms.author: genemi
 |[getBoolean (int)](../../../connect/jdbc/reference/getboolean-method-int.md)|Retrieves the value of the designated parameter as a **boolean** value given the parameter index.|  
 |[getBoolean (java.lang.String)](../../../connect/jdbc/reference/getboolean-method-java-lang-string.md)|Retrieves the value of the designated parameter as a **boolean** value given the parameter name.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -63,6 +63,6 @@ The following sample shows that when context from a previous statement is requir
 ?>  
 ```  
   
-## See Also  
+## See also  
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

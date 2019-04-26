@@ -28,7 +28,7 @@ ms.author: genemi
 public SQLServerResource()  
 ```  
   
-## See Also  
+## See also  
  [SQLServerResource Constructors](../../../connect/jdbc/reference/sqlserverresource-constructors.md)   
  [SQLServerResource Members](../../../connect/jdbc/reference/sqlserverresource-members.md)   
  [SQLServerResource Class](../../../connect/jdbc/reference/sqlserverresource-class.md)  

@@ -46,6 +46,6 @@ Connection Attribute|	Size/Type|	Default| Value|	Description
 
 For more information about MultiSubnetFailover, see [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 --------------------------------------------------
-## See Also  
+## See also  
 * [Microsoft ODBC Driver for SQL Server on Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
 * [SQL Server Multi-Subnet Clustering (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)

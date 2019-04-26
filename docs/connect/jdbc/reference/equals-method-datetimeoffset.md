@@ -31,7 +31,7 @@ public boolean equals(Object o)
 ## Return Value  
  Returns true if this **DateTimeOffset** object represents the same point in time at the same offset from GMT as another **DateTimeOffset**.  
   
-## See Also  
+## See also  
  [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

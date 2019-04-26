@@ -65,7 +65,7 @@ The PDOStatement class contains the following methods:
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## See Also  
+## See also  
 [PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md) 
 
 [Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)

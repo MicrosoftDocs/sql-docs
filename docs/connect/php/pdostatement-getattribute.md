@@ -34,7 +34,7 @@ See [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md)
   
 Support for PDO was added in version 2.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## See Also  
+## See also  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

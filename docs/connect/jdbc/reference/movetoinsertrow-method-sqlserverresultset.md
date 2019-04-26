@@ -38,7 +38,7 @@ public void moveToInsertRow()
   
  Only the updater, getter, and [insertRow](../../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) methods can be called when the cursor is on the insert row. All the columns in a result set must be given a value each time this method is called, and before calling insertRow. An updater method must be called before a getter method can be called on a column value.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -44,7 +44,7 @@ public void setBoolean(java.lang.String sCol,
 ## Remarks  
  This setBoolean method is specified by the setBoolean method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

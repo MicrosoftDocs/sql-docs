@@ -108,6 +108,6 @@ Documentation for JDBC version 6.0, and some later versions, is also here. But f
 
 
 
-## See Also  
+## See also  
  [Overview of the JDBC Driver](../../../connect/jdbc/overview-of-the-jdbc-driver.md)
 

@@ -42,7 +42,7 @@ public byte getByte(int index)
 ## Remarks  
  This getByte method is specified by the getByte method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [getByte Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

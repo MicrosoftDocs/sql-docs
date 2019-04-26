@@ -37,7 +37,7 @@ public javax.transaction.xa.XAResource getXAResource()
 ## Remarks  
  This getXAResource method is specified by the getXAResource method in the javax.sql.XAConnection interface.  
   
-## See Also  
+## See also  
  [SQLServerXAConnection Methods](../../../connect/jdbc/reference/sqlserverxaconnection-methods.md)   
  [SQLServerXAConnection Members](../../../connect/jdbc/reference/sqlserverxaconnection-members.md)   
  [SQLServerXAConnection Class](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)  

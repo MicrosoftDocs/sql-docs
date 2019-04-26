@@ -26,7 +26,7 @@ ms.author: pelopes
   
  Specify the table name as a Unicode character string in the *pwszName* member of the *uName* union in the *pTableID* parameter. The *eKind* member of *pTableID* must be DBKIND_NAME.  
   
-## See Also  
+## See also  
  [Tables and Indexes](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

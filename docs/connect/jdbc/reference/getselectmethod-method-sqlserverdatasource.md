@@ -34,7 +34,7 @@ public java.lang.String getSelectMethod()
 ## Remarks  
  The selectMethod property specifies the default cursor type that is used for a result set. This property is useful when you are dealing with large result sets and do not want to store the entire result set in memory on the client side. By setting the property to "cursor," you can create a server-side cursor that can fetch smaller chunks of data at a time. If the selectMethod property is not set, getSelectMethod returns the default value of "direct".  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -44,7 +44,7 @@ public boolean getBoolean(int columnIndex)
   
  This method is supported only on number and character data types. It converts values "1", 1, and "**true**" to **true**, and values "0", 0, and "**false**" to **false**. For all other values the behavior is undefined.  
   
-## See Also  
+## See also  
  [getBoolean Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

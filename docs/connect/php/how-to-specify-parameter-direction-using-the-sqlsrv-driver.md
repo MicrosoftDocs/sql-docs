@@ -76,7 +76,7 @@ This topic describes how to use the SQLSRV driver to specify parameter direction
     sqlsrv_query($conn, $tsql, $params);  
     ```  
   
-## See Also  
+## See also  
 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  

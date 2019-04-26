@@ -28,7 +28,7 @@ ms.author: genemi
 |[getCharacterStream &#40;int&#41;](../../../connect/jdbc/reference/getcharacterstream-int.md)|Retrieves the value of the designated parameter as a java.io.Reader object given the parameter index.|  
 |[getCharacterStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getcharacterstream-java-lang-string.md)|Retrieves the value of the designated parameter as a java.io.Reader object given the parameter name.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -16,7 +16,7 @@ ms.author: genemi
 
   For more information on the SQLServerDataSource constructors, see [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md).  
   
-## See Also  
+## See also  
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   

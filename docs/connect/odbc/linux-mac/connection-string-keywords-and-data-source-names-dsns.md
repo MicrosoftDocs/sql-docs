@@ -108,6 +108,6 @@ settings in the driver's section in `odbcinst.ini`. If the setting is not presen
 - `KeepAliveInterval=<integer>` determines the interval separating keep-alive retransmissions until a response is received.  The default is **1** second.
 
 
-## See Also  
+## See also  
 [Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)

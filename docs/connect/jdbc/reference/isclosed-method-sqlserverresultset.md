@@ -32,7 +32,7 @@ public boolean isClosed()
 ## Remarks  
  This isClosed method is specified by the isClosed method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

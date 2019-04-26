@@ -40,7 +40,7 @@ public boolean isReadOnly()
 ## Remarks  
  This isReadOnly method is specified by the isReadOnly method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

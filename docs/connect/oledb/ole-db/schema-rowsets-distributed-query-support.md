@@ -43,7 +43,7 @@ ms.author: pelopes
  
  The OLE DB Driver for SQL Server defines the schema rowset LINKEDSERVERS, returning a list of OLE DB data sources registered as linked servers.  
   
-## See Also  
+## See also  
  [Schema Rowset Support &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS Rowset &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   

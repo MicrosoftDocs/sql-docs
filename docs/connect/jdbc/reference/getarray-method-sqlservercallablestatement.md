@@ -28,7 +28,7 @@ ms.author: genemi
 |[getArray (int)](../../../connect/jdbc/reference/getarray-method-int.md)|Retrieves the value of the designated parameter as an Array object given the parameter index.|  
 |[getArray (java.lang.String)](../../../connect/jdbc/reference/getarray-method-java-lang-string.md)|Retrieves the value of the designated parameter as an Array object given the parameter name.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

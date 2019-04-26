@@ -27,7 +27,7 @@ ms.author: genemi
 public class SQLServerResource  
 ```  
   
-## See Also  
+## See also  
  [SQLServerResource Members](../../../connect/jdbc/reference/sqlserverresource-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

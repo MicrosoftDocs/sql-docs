@@ -42,7 +42,7 @@ public java.lang.String getColumnClassName(int column)
 ## Remarks  
  This getColumnClassName method is specified by the getColumnClassName method in the java.sql.ResultSetMetaData interface.  
   
-## See Also  
+## See also  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData Members](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

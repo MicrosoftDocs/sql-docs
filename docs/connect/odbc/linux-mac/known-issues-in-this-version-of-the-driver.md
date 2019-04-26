@@ -28,7 +28,7 @@ Additional issues will be posted on the [Microsoft ODBC driver team blog](https:
 
 For example, if your encoding is UTF-8 and you specify 1 for both *BufferLength* and *ColumnSize* in **SQLBindParameter** for an out-parameter, and then attempt to retrieve the preceding character stored in a `char(1)` column on the server (using CP-1252), the driver attempts to convert it to the 3-byte UTF-8 encoding, but cannot fit the result into a 1-byte buffer. In the other direction, it compares *ColumnSize* with the *BufferLength* in **SQLBindParameter** before doing the conversion between the different code pages on the client and server. Because a *ColumnSize* of 1 is less than a *BufferLength* of (for example) 3, the driver generates an error. To avoid this error, ensure that the length of the data after conversion fits into the specified buffer or column. Note that *ColumnSize* cannot be greater than 8000 for the `varchar(n)` type.
 
-## See Also  
+## See also  
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)  
 [Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
 

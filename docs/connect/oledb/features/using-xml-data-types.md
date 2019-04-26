@@ -223,7 +223,7 @@ ms.author: pelopes
  The **IRowsetFind::FindNextRow** method does not work with the **xml** data type. When **IRowsetFind::FindNextRow** is called and the *hAccessor* argument specifies a column of DBTYPE_XML, DB_E_BADBINDINFO is returned. This occurs regardless of the type of column that is being searched. For any other binding type, the **FindNextRow** fails with DB_E_BADCOMPAREOP if the column to be searched is of the **xml** data type.  
  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

@@ -95,7 +95,7 @@ Discusses new authentication methods introduced in OLE DB driver 18.2.1 that hav
  [OLE DB Driver for SQL Server Support for LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Discusses OLE DB Driver for SQL Server support for the LocalDB feature.  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [Installing OLE DB Driver for SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  

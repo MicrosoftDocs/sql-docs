@@ -34,7 +34,7 @@ public final void addBatch()
 ## Remarks  
  This addBatch method is specified by the addBatch method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [addBatch Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

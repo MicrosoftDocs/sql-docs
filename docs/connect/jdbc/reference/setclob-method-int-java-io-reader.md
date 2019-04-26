@@ -39,7 +39,7 @@ public final void setClob(int parameterIndex,
 ## Remarks  
  This setClob method is specified by the setClob method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [setClob Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

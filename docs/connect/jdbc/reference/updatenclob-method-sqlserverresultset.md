@@ -27,7 +27,7 @@ ms.author: genemi
 |[updateNClob Method &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader.md)|Updates the designated column using the specified **Reader** object.|  
 |[updateNClob Method &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader-long.md)|Updates the designated column using the specified **Reader** object, which is the specified number of characters long.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

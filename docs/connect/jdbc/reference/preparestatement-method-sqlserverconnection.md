@@ -32,7 +32,7 @@ ms.author: genemi
 |[prepareStatement (java.lang.String, int, int, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int-int-int.md)|Creates a [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) object that generates [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objects with the given type, concurrency, and holdability.|  
 |[prepareStatement (java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-java-lang-string.md)|Creates a [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) object for sending parameterized SQL statements to the database.|  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

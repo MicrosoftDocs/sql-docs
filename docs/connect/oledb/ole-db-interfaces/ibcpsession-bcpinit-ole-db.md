@@ -84,7 +84,7 @@ HRESULT BCPInit(
  E_INVALIDARG  
  One or more of the arguments was not correctly specified. For example, an invalid file name was given.  
   
-## See Also  
+## See also  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Performing Bulk Copy Operations](../../oledb/features/performing-bulk-copy-operations.md)  
   

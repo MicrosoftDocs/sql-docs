@@ -44,7 +44,7 @@ public void updateTime(int index,
 ## Remarks  
  This updateTime method is specified by the updateTime method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateTime Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

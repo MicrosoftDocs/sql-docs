@@ -97,7 +97,7 @@ ms.author: pelopes
 |SSPROP_QP_NOTIFICATION_OPTIONS|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_BSTR<br /><br /> Default: Empty string<br /><br /> Description: The query notification options. These are specified in a string with `name=value`. The user is responsible for creating the service and reading notifications off of the queue. The syntax of the query notifications options string is:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> For example:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_UI4<br /><br /> Default: 432000 seconds (5 days)<br /><br /> Minimum: 1 seconds<br /><br /> Maximum: 2^31-1 seconds<br /><br /> Description: The number of seconds that the query notification is to remain active.|  
   
-## See Also  
+## See also  
  [Rowsets](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

@@ -42,7 +42,7 @@ public java.sql.Blob getBlob(java.lang.String colName)
 ## Remarks  
  This getBlob method is specified by the getBlob method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [getBlob Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

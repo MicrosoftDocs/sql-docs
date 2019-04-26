@@ -37,7 +37,7 @@ public void clearWarnings()
 ## Remarks  
  This clearWarnings method is specified by the clearWarnings method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

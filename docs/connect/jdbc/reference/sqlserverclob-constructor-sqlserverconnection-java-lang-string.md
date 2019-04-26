@@ -41,7 +41,7 @@ public SQLServerClob(SQLServerConnection connection,
   
  The CLOB data.  
   
-## See Also  
+## See also  
  [SQLServerClob Constructors](../../../connect/jdbc/reference/sqlserverclob-constructors.md)   
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  

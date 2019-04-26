@@ -29,7 +29,7 @@ ms.author: pelopes
   
 -   [Commands Generating Multiple-Rowset Results](../../oledb/ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

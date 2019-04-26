@@ -45,7 +45,7 @@ ColumnID.uName.pwszName = L"MyColumnName";
 hr = m_pITableDefinition->DropColumn(&TableID, &ColumnID);  
 ```  
   
-## See Also  
+## See also  
  [Tables and Indexes](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

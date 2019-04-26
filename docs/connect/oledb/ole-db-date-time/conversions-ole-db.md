@@ -66,7 +66,7 @@ ms.author: pelopes
  [Conversions Performed from Server to Client](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Describes date/time conversions performed between [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (or later) and a client application written with OLE DB Driver for SQL Server.  
   
-## See Also  
+## See also  
  [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

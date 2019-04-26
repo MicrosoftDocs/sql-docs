@@ -37,7 +37,7 @@ public int getPortNumber()
 > [!NOTE]  
 >  The [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) method does not do any range checking on the port value passed in. You can pass tort numbers that are not valid, like 99999, without triggering an error.  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

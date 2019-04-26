@@ -31,7 +31,7 @@ public static final int CONCUR_SS_OPTIMISTIC_CC
 ## Field Value  
  An **int** value of 1008.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

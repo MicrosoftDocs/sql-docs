@@ -31,7 +31,7 @@ public static final int TYPE_SS_SCROLL_KEYSET
 ## Field Value  
  An **int** value of 1005.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

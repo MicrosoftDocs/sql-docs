@@ -27,7 +27,7 @@ The [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] allows you to spec
 |[How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Demonstrates how to use [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]'s built-in support for UTF-8 data.<br /><br />Support for UTF-8 characters was added in version 1.1 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[How to: Send and Retrieve ASCII Data in Linux and macOS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Demonstrates how to use [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]'s support for ASCII data in Linux or macOS.<br /><br />Support for ASCII characters in non-Windows environments was added in version 5.2 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
   
-## See Also  
+## See also  
 [Programming Guide for the Microsoft Drivers for PHP for SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)

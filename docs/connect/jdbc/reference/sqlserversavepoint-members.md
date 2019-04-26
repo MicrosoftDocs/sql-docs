@@ -43,7 +43,7 @@ ms.author: genemi
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## See Also  
+## See also  
  [SQLServerSavepoint Class](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   
   

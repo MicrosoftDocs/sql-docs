@@ -39,7 +39,7 @@ public final void setAsciiStream(int parameterIndex,
 ## Remarks  
  This setAsciiStream method is specified by the setAsciiStream method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [setAsciiStream Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setasciistream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

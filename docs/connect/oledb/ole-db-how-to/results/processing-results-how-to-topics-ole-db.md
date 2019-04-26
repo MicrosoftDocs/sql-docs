@@ -30,7 +30,7 @@ ms.author: pelopes
   
 -   [Fetch Rows from a Result Set &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
-## See Also  
+## See also  
  [OLE DB How-to Topics](../../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -29,7 +29,7 @@ public void free()
 ## Remarks  
  This free method is specified by the free method in the java.sql.Clob interface.  
   
-## See Also  
+## See also  
  [SQLServerClob Methods](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob Members](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob Class](../../../connect/jdbc/reference/sqlserverclob-class.md)  

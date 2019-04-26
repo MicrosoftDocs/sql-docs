@@ -28,7 +28,7 @@ ms.author: genemi
 |[getMoreResults ()](../../../connect/jdbc/reference/getmoreresults-method.md)|Moves to the next result of this [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object.|  
 |[getMoreResults (int)](../../../connect/jdbc/reference/getmoreresults-method-int.md)|Moves to the next result of this [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) object, and deals with any currently open result set objects according to the instructions specified by the given mode.|  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

@@ -44,7 +44,7 @@ public void updateShort(int index,
 ## Remarks  
  This updateShort method is specified by the updateShort method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateShort Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

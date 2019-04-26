@@ -43,7 +43,7 @@ ms.author: genemi
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |javax.sql.PooledConnection|addConnectionEventListener, close, getConnection, removeConnectionEventListener|  
   
-## See Also  
+## See also  
  [SQLServerXAConnection Class](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)  
   
   

@@ -41,7 +41,7 @@ public void addBatch(java.lang.String sql)
   
  Calling this method will result in an exception since the SQL statement for the SQLServerPreparedStatement object is specified when the object is created.  
   
-## See Also  
+## See also  
  [addBatch Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

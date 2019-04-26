@@ -42,7 +42,7 @@ public boolean setTransactionTimeout(int seconds)
 ## Remarks  
  This setTransactionTimeout method is specified by the setTransactionTimeout method in the javax.transaction.xa.XAResource interface.  
   
-## See Also  
+## See also  
  [SQLServerXAResource Methods](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource Members](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource Class](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

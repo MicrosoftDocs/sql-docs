@@ -61,7 +61,7 @@ ms.author: pelopes
   
 -   [Next Fetch Position](../../oledb/ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
-## See Also  
+## See also  
  [Rowsets](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

@@ -86,6 +86,6 @@ echo "\nRow count for second result set = $row_count\n";
 ?>  
 ```  
   
-## See Also  
+## See also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
   

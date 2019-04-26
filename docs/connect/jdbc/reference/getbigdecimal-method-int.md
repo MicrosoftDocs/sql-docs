@@ -42,7 +42,7 @@ public java.math.BigDecimal getBigDecimal(int index)
 ## Remarks  
  This getBigDecimal method is specified by the getBigDecimal method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [getBigDecimal Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

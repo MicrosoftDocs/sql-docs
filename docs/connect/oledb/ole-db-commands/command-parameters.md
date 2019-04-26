@@ -56,7 +56,7 @@ ms.author: pelopes
 > [!NOTE]  
 >  To expose support for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML and user-defined types (UDT), the OLE DB Driver for SQL Server implements a new [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) interface.  
   
-## See Also  
+## See also  
  [Commands](../../oledb/ole-db-commands/commands.md)  
   
   

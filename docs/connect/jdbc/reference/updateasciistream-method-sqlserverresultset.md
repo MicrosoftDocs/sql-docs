@@ -32,7 +32,7 @@ ms.author: genemi
 |[updateAsciiStream (java.lang.String, java.io.InputStream, int)](../../../connect/jdbc/reference/updateasciistream-method-java-lang-string-java-io-inputstream-int.md)|Updates the designated column name with an ASCII stream value, which will have the specified number of bytes.|  
 |[updateAsciiStream Method &#40;java.lang.String, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/updateasciistream-method-java-lang-string-java-io-inputstream-long.md)|Updates the designated column with an ASCII stream value, which will have the specified number of bytes.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

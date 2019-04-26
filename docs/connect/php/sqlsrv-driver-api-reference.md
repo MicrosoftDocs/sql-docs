@@ -51,7 +51,7 @@ The SQLSRV driver contains the following functions:
 ## Reference  
 [PHP Manual](https://php.net/manual)  
   
-## See Also  
+## See also  
 [Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

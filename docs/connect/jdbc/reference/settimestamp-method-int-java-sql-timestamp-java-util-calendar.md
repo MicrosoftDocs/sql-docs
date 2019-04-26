@@ -49,7 +49,7 @@ public final void setTimestamp(int n,
 ## Remarks  
  This setTimestamp method is specified by the setTimestamp method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [setTimestamp Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

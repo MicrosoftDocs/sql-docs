@@ -29,7 +29,7 @@ ms.author: genemi
 public class SQLServerSavepoint  
 ```  
   
-## See Also  
+## See also  
  [SQLServerSavepoint Members](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

@@ -243,7 +243,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## See Also  
+## See also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)

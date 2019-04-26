@@ -33,7 +33,7 @@ public void setDatabaseName(java.lang.String databaseName)
   
  A **String** that contains the database name.  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

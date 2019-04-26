@@ -30,7 +30,7 @@ ms.author: genemi
 |[getTimestamp (java.lang.String)](../../../connect/jdbc/reference/gettimestamp-method-java-lang-string.md)|Retrieves the value of the designated parameter as a java.sql.Timestamp object in the Java programming language given the parameter name.|  
 |[getTimestamp (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/gettimestamp-method-java-lang-string-java-util-calendar.md)|Retrieves the value of the designated parameter as a java.sql.Timestamp object in the Java programming language given the parameter name, using a Calendar object.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

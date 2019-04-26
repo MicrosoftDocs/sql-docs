@@ -183,7 +183,7 @@ EXIT:
 > [!NOTE]  
 >  In the preceding example, the **IDBCreateCommand** interface is used because the **ICommand** interface implements the **GetDBSession** method, the only method in command or rowset scope that allows an object to determine the session on which it was created. Therefore, a command object, and only a command object, allows an application to retrieve a data source object pointer from which additional sessions can be created.  
   
-## See Also  
+## See also  
  [Data Source Objects &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

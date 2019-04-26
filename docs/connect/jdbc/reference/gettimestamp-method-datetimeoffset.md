@@ -26,7 +26,7 @@ public java.sql.Timestamp getTimestamp()
 ## Return Value  
  A value of type java.sql.Timestamp.  
   
-## See Also  
+## See also  
  [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

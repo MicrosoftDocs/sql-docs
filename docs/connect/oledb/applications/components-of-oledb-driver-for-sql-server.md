@@ -29,5 +29,5 @@ ms.author: pelopes
 |msoledbsql.h|The OLE DB Driver for SQL Server header file that contains all of the new definitions needed in order to use OLE DB Driver for SQL Server. This header file replaces the sqloledb.h header file.<br /><br /> Note: You can reference msoledbsql.h and sqloledb.h in same program as long as sqloledb.h is defined first.|  
 |msoledbsql.lib|The library file needed to directly call the [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) function that is part of the OLE DB Driver for SQL Server.<br /><br /> Note: If you do reference the msoledbsql.lib file in your programming code, you need to make sure that the msoledbsql.dll file is in your system path, and in the system path of the users that make use of your application.|  
 
-## See Also  
+## See also  
  [Building Applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

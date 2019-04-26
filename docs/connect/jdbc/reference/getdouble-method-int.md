@@ -44,7 +44,7 @@ public double getDouble(int index)
   
  This method returns all number-based data types with Java **double** fidelity.  
   
-## See Also  
+## See also  
  [getDouble Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

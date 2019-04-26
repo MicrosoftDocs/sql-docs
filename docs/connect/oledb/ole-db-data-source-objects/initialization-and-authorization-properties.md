@@ -87,7 +87,7 @@ Server=MyServer;UID=MyUserName;
   
  For a list of the keywords available in the OLE DB Driver for SQL Server, see [Using Connection String Keywords with OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
-## See Also  
+## See also  
  [Data Source Objects &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

@@ -42,7 +42,7 @@ public int prepare(javax.transaction.xa.Xid xid)
 ## Remarks  
  This prepare method is specified by the prepare method in the javax.transaction.xa.XAResource interface.  
   
-## See Also  
+## See also  
  [SQLServerXAResource Methods](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource Members](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource Class](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

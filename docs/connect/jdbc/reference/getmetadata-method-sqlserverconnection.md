@@ -37,7 +37,7 @@ public java.sql.DatabaseMetaData getMetaData()
 ## Remarks  
  This getMetaData method is specified by the getMetaData method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

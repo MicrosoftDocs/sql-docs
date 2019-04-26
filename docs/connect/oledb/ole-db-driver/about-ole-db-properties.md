@@ -43,7 +43,7 @@ ms.author: pelopes
   
 7.  Calling a method to set properties and passing the count and the array of DBPROPSET structures.  
   
-## See Also  
+## See also  
  [Creating an OLE DB Driver for SQL Server Application](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
  [Properties (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   

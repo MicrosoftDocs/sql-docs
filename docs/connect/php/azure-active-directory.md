@@ -231,7 +231,7 @@ try {
 ?>
 ```
 
-## See Also
+## See also
 [Using Azure Active Directory with the ODBC Driver](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)
 
 [What is managed identities for Azure resources?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)

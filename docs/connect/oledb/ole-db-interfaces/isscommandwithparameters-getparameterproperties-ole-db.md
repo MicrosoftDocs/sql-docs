@@ -63,7 +63,7 @@ HRESULT GetParameterProperties(
 |*cPropertySets*|The number of DBPROPSET structures in *rgPropertySets*.|  
 |*rgPropertySets*|A pointer to memory in which to return an array of DBPROPSET structures.|  
   
-## See Also  
+## See also  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

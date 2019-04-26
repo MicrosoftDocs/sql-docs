@@ -34,7 +34,7 @@ ms.author: pelopes
   
  The rowset is sorted on SRV_NAME and a single restriction is supported on SRV_NAME.  
   
-## See Also  
+## See also  
  [Schema Rowset Support &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

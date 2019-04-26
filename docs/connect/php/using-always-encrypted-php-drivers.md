@@ -322,7 +322,7 @@ PDO_SQLSRV only:
  
 The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL Server and the database. See [Limitations of the ODBC driver when using Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) and [Always Encrypted Feature Details](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details).  
   
-## See Also  
+## See also  
 [Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
 [PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  

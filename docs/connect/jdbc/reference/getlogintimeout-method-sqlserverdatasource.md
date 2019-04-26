@@ -36,7 +36,7 @@ public int getLoginTimeout()
   
  This getLoginTimeout method is specified by the getLoginTimeout method in the javax.sql.DataSource interface.  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

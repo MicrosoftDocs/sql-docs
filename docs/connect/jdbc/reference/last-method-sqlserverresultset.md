@@ -37,7 +37,7 @@ public boolean last()
 ## Remarks  
  This last method is specified by the last method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

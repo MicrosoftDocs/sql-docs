@@ -37,7 +37,7 @@ public boolean isValid(int timeout)
 ## Remarks  
  This isValid method is specified by the isValid method in the java.sql.Connection interface.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

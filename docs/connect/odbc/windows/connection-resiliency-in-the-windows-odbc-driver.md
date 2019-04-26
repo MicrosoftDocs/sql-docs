@@ -166,7 +166,7 @@ int main() {
 }  
 ```  
   
-## See Also  
+## See also  
  [Microsoft ODBC Driver for SQL Server on Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

@@ -38,7 +38,7 @@ public int compareTo(DateTimeOffset other)
 ## Remarks  
  When two **DateTimeOffset** objects have the same time at GMT, there is no additional ordering of the objects based on the offset.  
   
-## See Also  
+## See also  
  [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset Members](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

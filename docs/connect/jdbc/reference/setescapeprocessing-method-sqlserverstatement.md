@@ -42,7 +42,7 @@ public final void setEscapeProcessing(boolean enable)
 ## Remarks  
  This setEscapeProcessing method is specified by the setEscapeProcessing method in the java.sql.Statement interface.  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

@@ -28,7 +28,7 @@ ms.author: genemi
 public SQLServerDataSourceObjectFactory()  
 ```  
   
-## See Also  
+## See also  
  [SQLServerDataSourceObjectFactory Constructors](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructors.md)   
  [SQLServerDataSourceObjectFactory Members](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
  [SQLServerDataSourceObjectFactory Class](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)  

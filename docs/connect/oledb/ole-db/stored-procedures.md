@@ -37,7 +37,7 @@ ms.author: pelopes
   
 -   [Calling a Stored Procedure &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

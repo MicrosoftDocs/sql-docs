@@ -39,7 +39,7 @@ public boolean isLast()
   
  If this method is used with forward and dynamic cursors, an exception is thrown.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

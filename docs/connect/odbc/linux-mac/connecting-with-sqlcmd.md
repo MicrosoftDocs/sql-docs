@@ -219,6 +219,6 @@ If the same option is specified in both the DSN and the `sqlcmd` or `bcp` comman
 
 Existing scripts that invoke `isql` can be modified to use `sqlcmd` by defining the following alias: `alias isql="sqlcmd -D"`.  
 
-## See Also  
+## See also  
 [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  

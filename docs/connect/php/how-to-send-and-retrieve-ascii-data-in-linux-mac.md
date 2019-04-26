@@ -158,7 +158,7 @@ try {
 ?>  
 ```  
 
-## See Also  
+## See also  
 [Retrieving Data](../../connect/php/retrieving-data.md)  
 [Working with UTF-8 Data](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
 [Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

@@ -37,7 +37,7 @@ public int getParameterCount()
 ## Remarks  
  This getParameterCount method is specified by the getParameterCount method in the java.sql.ParameterMetaData interface.  
   
-## See Also  
+## See also  
  [SQLServerParameterMetaData Methods](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [SQLServerParameterMetaData Members](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData Class](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  

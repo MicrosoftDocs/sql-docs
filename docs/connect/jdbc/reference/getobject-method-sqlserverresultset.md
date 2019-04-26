@@ -30,7 +30,7 @@ ms.author: genemi
 |[getObject (java.lang.String)](../../../connect/jdbc/reference/getobject-method-java-lang-string-sqlserverresultset.md)|Gets the value of the designated column name in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as an object in the Java programming language.|  
 |[getObject (java.lang.String, java.util.Map)](../../../connect/jdbc/reference/getobject-method-java-lang-string-java-util-map-sqlserverresultset.md)|Gets the value of the designated column name in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as an object in the Java programming language, using the given Map object.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

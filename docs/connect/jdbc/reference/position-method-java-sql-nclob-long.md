@@ -42,7 +42,7 @@ long position(java.sql.NClob searchstr,
 ## Remarks  
  This position method is specified by the position method in the java.sql.NClob interface.  
   
-## See Also  
+## See also  
  [position Method &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [SQLServerNClob Methods](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   

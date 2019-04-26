@@ -37,7 +37,7 @@ public final int getFetchSize()
 ## Remarks  
  This getFetchSize method is specified by the getFetchSize method in the java.sql.Statement interface.  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

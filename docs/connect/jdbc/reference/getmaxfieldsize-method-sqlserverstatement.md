@@ -37,7 +37,7 @@ public final int getMaxFieldSize()
 ## Remarks  
  This getMaxFieldSize method is specified by the getMaxFieldSize method in the java.sql.Statement interface.  
   
-## See Also  
+## See also  
  [SQLServerStatement Methods](../../../connect/jdbc/reference/sqlserverstatement-methods.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

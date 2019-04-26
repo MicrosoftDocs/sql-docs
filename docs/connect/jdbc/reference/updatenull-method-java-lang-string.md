@@ -39,7 +39,7 @@ public void updateNull(java.lang.String columnName)
 ## Remarks  
  This updateNull method is specified by the updateNull method in the java.sql.ResultSet interface.  
   
-## See Also  
+## See also  
  [updateNull Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

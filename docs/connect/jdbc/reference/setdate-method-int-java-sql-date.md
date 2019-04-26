@@ -44,7 +44,7 @@ public final void setDate(int n,
 ## Remarks  
  This setDate method is specified by the setDate method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [setDate Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

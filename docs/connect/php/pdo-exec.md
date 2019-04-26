@@ -59,7 +59,7 @@ This example deletes rows in Table1 that have 'xxxyy' in col1. The example then 
 ?>  
 ```  
   
-## See Also  
+## See also  
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

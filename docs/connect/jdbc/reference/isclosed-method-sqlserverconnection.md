@@ -39,7 +39,7 @@ public boolean isClosed()
   
  Verifies the state of the called SQLServerConnection object. A connection is closed if the [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) method has been called on it, or if certain fatal errors have occurred. This method will return **true** only when it is called after the close method has been called.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -118,6 +118,6 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 In version 2.0, support for the PDO_SQLSRV driver was added. For more information, see [PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md).  
 
-## See Also
+## See also
 
 [Overview of the Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)

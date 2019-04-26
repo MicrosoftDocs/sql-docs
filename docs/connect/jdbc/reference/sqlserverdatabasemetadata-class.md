@@ -29,7 +29,7 @@ ms.author: genemi
 public final class SQLServerDatabaseMetaData  
 ```  
   
-## See Also  
+## See also  
  [SQLServerDatabaseMetaData Members](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

@@ -28,7 +28,7 @@ ms.author: genemi
 |[getByte (int)](../../../connect/jdbc/reference/getbyte-method-int-sqlserverresultset.md)|Retrieves the value of the designated column index in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a **byte** in the Java programming language.|  
 |[getByte (java.lang.String)](../../../connect/jdbc/reference/getbyte-method-java-lang-string-sqlserverresultset.md)|Retrieves the value of the designated column name in the current row of this [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) object as a **byte** in the Java programming language.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

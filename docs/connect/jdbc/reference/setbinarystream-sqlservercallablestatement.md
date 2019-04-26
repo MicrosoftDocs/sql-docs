@@ -24,7 +24,7 @@ ms.author: genemi
 |[setBinaryStream Method  &#40;java.lang.String, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream-int.md)|Sets the designated parameter to the specified input stream, which will have the specified number of bytes.|  
 |[setBinaryStream Method &#40;java.lang.String, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream-long.md)|Sets the designated parameter to the specified input stream, which will have the specified number of bytes.|  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

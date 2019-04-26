@@ -32,7 +32,7 @@ ms.author: genemi
 |[updateBinaryStream (java.lang.String, java.io.InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|Updates the designated column with a binary stream value, which will have the specified number of bytes.|  
 |[updateBinaryStream(java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|Updates the designated column with a binary stream value, which will have the specified number of bytes.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

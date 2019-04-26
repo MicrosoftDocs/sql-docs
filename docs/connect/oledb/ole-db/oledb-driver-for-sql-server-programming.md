@@ -70,7 +70,7 @@ ms.author: pelopes
   
 -   [OLE DB How-to Topics](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

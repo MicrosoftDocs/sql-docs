@@ -31,7 +31,7 @@ public static final int CONCUR_SS_SCROLL_LOCKS
 ## Field Value  
  An **int** value of 1009.  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

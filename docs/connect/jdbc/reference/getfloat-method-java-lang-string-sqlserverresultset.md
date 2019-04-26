@@ -44,7 +44,7 @@ public float getFloat(java.lang.String columnName)
   
  This method returns all number-based types with Java **float** fidelity.  
   
-## See Also  
+## See also  
  [getFloat Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

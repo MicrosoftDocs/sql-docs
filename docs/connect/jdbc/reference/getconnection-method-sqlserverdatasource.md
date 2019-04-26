@@ -28,7 +28,7 @@ ms.author: genemi
 |[getConnection ()](../../../connect/jdbc/reference/getconnection-method.md)|Tries to establish a connection with the data source that this [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) object represents.|  
 |[getConnection (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/getconnection-method-java-lang-string-java-lang-string.md)|Tries to establish a connection with the data source that this [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) object represents by using the given user name and password.|  
   
-## See Also  
+## See also  
  [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource Class](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -146,7 +146,7 @@ function perform_trans_ops($conn, $orderId)
 ### Comments  
 For the purpose of focusing on transaction behavior, some recommended error handling is not included in the previous example. For a production application, we recommend checking any call to a **sqlsrv** function for errors and handling them accordingly.
   
-## See Also  
+## See also  
 [Updating Data &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [Transactions (Database Engine)](https://msdn.microsoft.com/library/ms190612.aspx)

@@ -23,7 +23,7 @@ ms.author: genemi
 |[setNCharacterStream Method &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md)|Sets the designated parameter to the specified java.io.Reader object.|  
 |[setNCharacterStream Method &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader-long.md)|Sets the designated parameter to the specified java.io.Reader object.|  
   
-## See Also  
+## See also  
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

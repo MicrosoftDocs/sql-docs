@@ -43,7 +43,7 @@ ms.author: pelopes
  Describes date/time types and **IRowsetFind**.  
  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Programming](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

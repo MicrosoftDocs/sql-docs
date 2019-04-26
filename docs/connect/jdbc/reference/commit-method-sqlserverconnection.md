@@ -38,7 +38,7 @@ public void commit()
   
  Note that this method will fail and throw an exception if the client starts a manual transaction and then for some reason SQL Server rolls back the manual transaction. For example, an exception is thrown if the client calls a stored procedure that explicitly calls ROLLBACK TRANSACTION, and then the client calls the commit method. In addition, if SQL Server raises an error of sufficient severity (16 or higher) to roll back the client initiated manual transaction; a subsequent call to the commit method will throw an exception.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

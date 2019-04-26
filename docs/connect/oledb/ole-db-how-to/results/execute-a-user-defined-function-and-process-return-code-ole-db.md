@@ -361,7 +361,7 @@ drop function fn_RectangleArea
 go  
 ```  
   
-## See Also  
+## See also  
  [Processing Results How-to Topics &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

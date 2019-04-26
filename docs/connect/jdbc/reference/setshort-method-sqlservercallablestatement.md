@@ -44,7 +44,7 @@ public void setShort(java.lang.String sCol,
 ## Remarks  
  This setShort method is specified by the setShort method in the java.sql.CallableStatement interface.  
   
-## See Also  
+## See also  
  [SQLServerCallableStatement Members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement Class](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

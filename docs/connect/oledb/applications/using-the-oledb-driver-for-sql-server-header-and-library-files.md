@@ -73,7 +73,7 @@ include "msoledbsql.h";
   
  For more information, see Performing [Performing Bulk Copy Operations](../../oledb/features/performing-bulk-copy-operations.md).  
   
-## See Also  
+## See also  
  [Building Applications with OLE DB Driver for SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
   
   

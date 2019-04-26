@@ -29,7 +29,7 @@ ms.author: genemi
 public class SQLServerNClob  
 ```  
   
-## See Also  
+## See also  
  [SQLServerNClob Members](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [JDBC Driver API Reference](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

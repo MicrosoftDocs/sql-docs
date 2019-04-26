@@ -28,7 +28,7 @@ ms.author: genemi
 |[updateDouble (int, double)](../../../connect/jdbc/reference/updatedouble-method-int-double.md)|Updates the designated column with a **double** value given the column index.|  
 |[updateDouble (java.lang.String, double)](../../../connect/jdbc/reference/updatedouble-method-java-lang-string-double.md)|Updates the designated column with a **double** value given the column name.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -209,7 +209,7 @@ class Bid2Etw_MSOLEDBSQL_1_Trace_TextW : Bid2Etw_MSOLEDBSQL_1_Trace
 };  
 ```  
   
-## See Also  
+## See also  
  [Handling Errors](../../oledb/ole-db-errors/errors.md)  
   
   

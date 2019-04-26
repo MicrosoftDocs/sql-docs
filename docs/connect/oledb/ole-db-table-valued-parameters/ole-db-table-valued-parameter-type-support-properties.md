@@ -91,7 +91,7 @@ ms.author: pelopes
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W: Read/Write<br /><br /> Default: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Description: Consumers use this property to specify which set of columns in the rowset are to be treated as defaults. No values will be sent for those columns. While fetching data from the consumer rowset object, the provider does not require a binding for such columns.<br /><br /> Each element of the array should be an ordinal of a column in the rowset object. Invalid ordinals will result in errors at command execute time.|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W: Read/Write<br /><br /> Default: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Description: This property is used by the consumer to provide a hint to the server to indicate the sort ordering of column data. The provider does not perform any validation and assumes that the consumer is conforming to the specification that was provided. The server uses this property to perform optimizations.<br /><br /> Column order information for each column is represented by a pair of elements in the array. The first element in the pair is the number of the column. The second element in the pair will be 1 for ascending order or 2 for descending order.|  
   
-## See Also  
+## See also  
  [OLE DB Table-Valued Parameter Type Support](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Use Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

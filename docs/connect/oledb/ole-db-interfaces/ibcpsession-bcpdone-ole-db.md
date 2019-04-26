@@ -456,7 +456,7 @@ void wmain() {
 }  
 ```  
   
-## See Also  
+## See also  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Performing Bulk Copy Operations](../../oledb/features/performing-bulk-copy-operations.md)  
   

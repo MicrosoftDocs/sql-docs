@@ -47,7 +47,7 @@ public final void setResponseBuffering(java.lang.String value)
   
  If the application specifies an invalid parameter value to the [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) method, a [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) is thrown.  
   
-## See Also  
+## See also  
  [SQLServerStatement Members](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement Class](../../../connect/jdbc/reference/sqlserverstatement-class.md)   
  [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md)  

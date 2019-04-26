@@ -506,7 +506,7 @@ _Exit:
 }
 ```  
   
-## See Also  
+## See also  
  [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

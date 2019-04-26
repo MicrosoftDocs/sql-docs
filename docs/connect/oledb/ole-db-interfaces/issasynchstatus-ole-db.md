@@ -40,7 +40,7 @@ ms.author: pelopes
   
 -   **IMultipleResults::GetResult**  
   
-## See Also  
+## See also  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [Performing Asynchronous Operations](../../oledb/features/performing-asynchronous-operations.md)  
   

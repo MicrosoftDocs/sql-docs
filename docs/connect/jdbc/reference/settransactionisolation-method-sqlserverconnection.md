@@ -51,7 +51,7 @@ public void setTransactionIsolation(int level)
   
  Transactions are not committed if this method is called in the middle of a transaction.  
   
-## See Also  
+## See also  
  [SQLServerConnection Members](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection Class](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -42,7 +42,7 @@ public final void setCharacterStream(int parameterIndex,
 ## Remarks  
  This setCharacterStream method is specified by the setCharacterStream method in the java.sql.PreparedStatement interface.  
   
-## See Also  
+## See also  
  [setCharacterStream Method &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement Members](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

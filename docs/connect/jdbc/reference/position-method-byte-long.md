@@ -47,7 +47,7 @@ public long position(byte[] bPattern,
 ## Remarks  
  This position method is specified by the position method in the java.sql.Blob interface.  
   
-## See Also  
+## See also  
  [position Method &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
  [SQLServerBlob Methods](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob Members](../../../connect/jdbc/reference/sqlserverblob-members.md)   

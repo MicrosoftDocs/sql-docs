@@ -212,7 +212,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## See Also  
+## See also  
 [Retrieving Data](../../connect/php/retrieving-data.md)
 
 [Working with ASCII Data in non-Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)

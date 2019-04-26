@@ -80,7 +80,7 @@ This example shows how to connect to a server, specifying the database later.
 ?>  
 ```  
   
-## See Also  
+## See also  
 [PDO Class](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

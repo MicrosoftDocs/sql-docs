@@ -92,7 +92,7 @@ An ODBC application that uses [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]
 |[SQLConnect Function](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** supports both **ApplicationIntent** and **MultiSubnetFailover** via a data source name (DSN) or connection attribute.|  
 |[SQLDriverConnect Function](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** supports **ApplicationIntent** and **MultiSubnetFailover** via DSN, connection string keyword, or connection attribute.|
   
-## See Also  
+## See also  
 
 [Connection String Keywords and Data Source Names (DSNs)](../../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 

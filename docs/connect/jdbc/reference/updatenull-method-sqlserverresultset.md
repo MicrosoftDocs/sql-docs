@@ -28,7 +28,7 @@ ms.author: genemi
 |[updateNull (int)](../../../connect/jdbc/reference/updatenull-method-int.md)|Updates the designated column with a null value given the column index.|  
 |[updateNull (java.lang.String)](../../../connect/jdbc/reference/updatenull-method-java-lang-string.md)|Updates the designated column with a null value given the column name.|  
   
-## See Also  
+## See also  
  [SQLServerResultSet Members](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet Class](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

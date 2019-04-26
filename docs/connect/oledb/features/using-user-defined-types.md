@@ -187,7 +187,7 @@ ms.author: pelopes
  You can differentiate a server UDT column from other binary types when the DBCOLUMN_TYPE is set to DBTYPE_UDT by looking at the added UDT metadata specified in the preceding table. If that data is partially complete, the server type is a UDT. For non-UDT server types, these columns are always returned as NULL.  
  
   
-## See Also  
+## See also  
  [OLE DB Driver for SQL Server Features](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

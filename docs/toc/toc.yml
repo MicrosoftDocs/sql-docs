@@ -7915,10 +7915,10 @@
       items:
       - name: Choose an algorithm
         href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
-      - name: Configure Always Encrypted with Secure Enclaves
-        href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
       - name: Troubleshoot TDE
         href: ../relational-database/security/encryption/troubleshoot-tde.md
+      - name: Configure Always Encrypted with Secure Enclaves
+        href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:
         - name: SQL Server Management Studio
           href: ../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md

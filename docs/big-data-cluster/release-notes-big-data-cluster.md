@@ -71,7 +71,7 @@ The following sections describe the known issues and limitations with this relea
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    BEGIN
      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
    END
    ```
 

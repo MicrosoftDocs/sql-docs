@@ -270,6 +270,7 @@ This feature may provide significant storage savings, depending on the character
 ##  <a name="Related_Content"></a> Related Content    
 [SQL Server Best Practices Collation Change](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Use Unicode Character Format to Import or Export Data &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[Write International Transact-SQL Statements](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - No longer maintained   
 [Unicode Consortium Web site](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

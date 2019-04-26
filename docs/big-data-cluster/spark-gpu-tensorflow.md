@@ -48,11 +48,11 @@ The following steps use the Azure CLI to create an AKS cluster that supports GPU
 1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named `gpucluster` in the `sqlbigdatagroupgpu` resource group.
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6s_v3 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
    ```
 
    > [!NOTE]
-   > This cluster uses the  **Standard_NC6** [GPU-optimized virtual machine size](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), which is one of the specialized virtual machines available with single or multiple NVIDIA GPUs. For more information, see [Use GPUs for compute-intensive workloads on Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
+   > This cluster uses the  **Standard_NC6s_v3** [GPU-optimized virtual machine size](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), which is one of the specialized virtual machines available with single or multiple NVIDIA GPUs. For more information, see [Use GPUs for compute-intensive workloads on Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
 
 1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command.
 
@@ -64,7 +64,7 @@ The following steps use the Azure CLI to create an AKS cluster that supports GPU
 
 1. Use **kubectl** to create a Kubernetes namespace named `gpu-resources`.
 
-   ```
+   ```bash
    kubectl create namespace gpu-resources
    ```
 
@@ -117,69 +117,31 @@ The following steps use the Azure CLI to create an AKS cluster that supports GPU
 
 1. Now use the kubectl apply command to create the DaemonSet. **nvidia-device-plugin-ds.yaml** must be in the working directory when you run the following command:
 
-   ```
+   ```bash
    kubectl apply -f nvidia-device-plugin-ds.yaml
    ```
 
 ## Deploy the big data cluster
 
-To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you must deploy from a specific docker registry and repository. Specifically, you use different values for **DOCKER_REGISTRY**, **DOCKER_REPOSITORY**, **DOCKER_USERNAME**, **DOCKER_PASSWORD**, and **DOCKER_EMAIL**. The following sections provide examples of how to set the environment variables. Use either the Windows or Linux sections depending on the platform of the client you are using to deploy the big data cluster.
+To deploy a SQL Server 2019 big data cluster (preview) that supports GPUs, you must deploy from a specific docker registry and repository. The following environment variables are different for a GPU deployment:
 
-### Windows
+| Environment variable | Value |
+|---|---|
+| **DOCKER_REGISTRY** | `marinchcreus3.azurecr.io` |
+| **DOCKER_REPOSITORY** | `ctp25-8-0-61-gpu` |
+| **DOCKER_USERNAME** | `<your username, gpu-specific credentials provided by Microsoft>` |
+| **DOCKER_PASSWORD** | `<your password, gpu-specific credentials provided by Microsoft>` |
 
-   1. Using a CMD window (not PowerShell), configure the following environment variables. Do not use quotes around the values.
+Use **mssqlctl** to deploy the cluster, select the aks-dev-test.json configuration, and supply the custom values above when prompted.
 
-      ```cmd
-      SET ACCEPT_EULA=yes
-      SET CLUSTER_PLATFORM=aks
+```bash
+mssqlctl cluster create
+```
 
-      SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-      SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-      SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-      SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+> [!TIP]
+> The default name of the big data cluster is `mssql-cluster`.
 
-      SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
-      SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_EMAIL=<your email address>
-      SET DOCKER_PRIVATE_REGISTRY=1
-      SET STORAGE_SIZE=10Gi
-      ```
-
-   1. Deploy the big data cluster:
-
-      ```cmd
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
-
-### Linux
-
-   1. Initialize the following environment variables. In bash, you can use quotes around each value.
-
-      ```bash
-      export ACCEPT_EULA=yes
-      export CLUSTER_PLATFORM="aks"
-
-      export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-      export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-      export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-      export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-      export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
-      export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_EMAIL="<your email address>"
-      export DOCKER_PRIVATE_REGISTRY="1"
-      export STORAGE_SIZE="10Gi"
-      ```
-
-   1. Deploy the big data cluster:
-
-      ```bash
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
+You can also customize your deployment further by passing a custom deployment configuration file. For more information, see the [deployment guidance](deployment-guidance.md#customconfig).
 
 ## Run the TensorFlow example
 
@@ -193,7 +155,7 @@ The following two example notebooks demonstrate training two image classificatio
 Place the appropriate notebook file to your local machine, and then open and run it in Azure Data Studio using the PySpark3 kernel. Unless you have a specific need for an older version of CUDA or TensorFlow, choose CUDA 9/CUDNN 7/TensorFlow 1.12.0. For more information about how to use notebooks with big data clusters, see [How to use notebooks in SQL Server 2019 preview](notebooks-guidance.md).
 
 > [!NOTE]
-> Note that the notebooks install software in system locations. This is possible because notebooks currently run with root privileges in CTP 2.4.
+> Note that the notebooks install software in system locations. This is possible because notebooks currently run with root privileges in CTP 2.5.
 
 After installing NVIDIA GPU libraries and TensorFlow for GPU, the notebooks list GPU devices available. They then fit and evaluate a TensorFlow model to recognize handwritten digits using the MNIST data set. After checking available disk space, they download and run the CIFAR 10 image classification example from [https://github.com/tensorflow/models.git](https://github.com/tensorflow/models.git). By running the CIFAR 10 example on clusters having different GPUs, you can observe the speed increase offered by each generation of GPU available in Azure.
 
@@ -201,7 +163,7 @@ After installing NVIDIA GPU libraries and TensorFlow for GPU, the notebooks list
 
 To delete the big data cluster, use the following command:
 
-```
+```bash
 mssqlctl cluster delete --name gpubigdatacluster
 ```
 

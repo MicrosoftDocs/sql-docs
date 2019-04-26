@@ -16,8 +16,8 @@ ms.author: maggies
 In this lesson, you'll create a *report server project* and a *report definition (.rdl)* file using the Report Designer tool within SQL Server Data Tools (SSDT) / Visual Studio.  
 
 >[!NOTE]
-> SSDT is a free development tool of MSSQL Server (a shell of Visual Studio to create projects for Reporting Services, Integration Services and Analysis Services. More detailed information about SSDT can be found here: [Reporting Services in SQL Server Data Tools (SSDT)](tools/reporting-services-in-sql-server-data-tools-ssdt.md)
->
+> SSDT is a free development tool of MSSQL Server (a shell of Visual Studio to create projects for Reporting Services, Integration Services and Analysis Services.) More detailed information about SSDT can be found here: [Reporting Services in SQL Server Data Tools (SSDT)](tools/reporting-services-in-sql-server-data-tools-ssdt.md)
+
 When using the Report Designer to create a report, create a Report Server project first to contain the report files and other resource files used by the reports.
 
 ## To create a report server project  
@@ -34,7 +34,7 @@ When using the Report Designer to create a report, create a Report Server projec
 
     > [!TIP]  
     > If you don't see **Reporting Services** in the left column or **Report Services** objects in the center column, you need to add the Report Designer to Visual Studio / SSDT by installing the Reporting Services extensions. See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) if you are using SSDT, or install the SSDT workload from the Visual Studio installation manager, then the Reporting Services extensions from the Market Place.
-  
+
 4. Select the **Report Server Project** icon displayed here (the other one is a Report Project Wizard) &nbsp;&nbsp;![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;in the center template display area.
 
 5. In the **Name** text box, type **Tutorial** for the project name. By default, the **Tutorial** project is created in its own folder in your "Documents\Visual Studio 20xx\"Projects\" folder.
@@ -69,7 +69,7 @@ When using the Report Designer to create a report, create a Report Server projec
 The Report Designer has:
 >
 - a **Report Data** pane to define and select data fields
-- a  **Design** view to define your report layout
+- a **Design** view to define your report layout
 - a **Preview** view to display the current output of the report as you design it  
   
 ## Next lesson

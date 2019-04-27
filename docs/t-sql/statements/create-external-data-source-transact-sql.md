@@ -72,7 +72,7 @@ Provides the connectivity protocol and path to the external data source.
 | SQL Server                | sqlserver       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | Oracle                    | oracle          | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | Teradata                  | teradata        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| MongoDB or Azure CosmosDB | mongodb         | `<server_name>[:port]`                                | SQL Server (2019+)                          |
+| MongoDB or CosmosDB       | mongodb         | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | ODBC                      | odbc            |                                                       | SQL Server (2019+)                          |
 | Bulk Operations           | https           | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), SQL DB                  |
 | Elastic Query (shard)     | Not required    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                      |
@@ -91,7 +91,7 @@ Additional notes and guidance when setting the location:
 
 - The SQL engine does not verify the existence of the external data source when the object is created. To validate the external create an external table over the data source.
 - Use the same external data source for all tables when querying Hadoop. This ensures consistent semantics in the query.
-- You can use the `sqlserver` location prefix when connecting from SQL Server 2019 to also connect to Azure SQL Database or Azure SQL Data Warehouse.
+- You can use the `sqlserver` location prefix when connecting from SQL Server 2019 to also connect to SQL Database or SQL Data Warehouse.
 - `wasb` is the default protocol for Azure blob storage. `wasbs` is optional but strongly recommended as data will be sent using a secure SSL connection.
 - To ensure successful PolyBase queries in the event of Hadoop Namenode fail-over, consider using a virtual IP address for the Namenode of the Hadoop cluster. If you do not use a virtual IP address for the Hadoop Namenode, in the event of a Hadoop Namenode fail-over you will have to ALTER EXTERNAL DATA SOURCE object to point to the new location.
 
@@ -108,7 +108,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - the expiration period should be valid (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE` refer to [I. Create an external data source to perform bulk operations and retrieve data from Azure Blob Storage into Azure SQL Database](#j.-create-an-external-data-source-for-bulk-operations-retrieving-data-from-Azure-Blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE` refer to [I. Create an external data source to perform bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j.-create-an-external-data-source-for-bulk-operations-retrieving-data-from-Azure-Blob-storage)
 
 To create a credential, see [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md).
 
@@ -117,8 +117,8 @@ To create a credential, see [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/state
 Specifies the type of the external data source being configured. This parameter is not always required.
 
 - Use HADOOP when the external data source is Cloudera, Hortonworks, Azure Blob Storage, Azure Data Lake Store Gen 1 or Azure Data Lake Store Gen 2.
-- Use RDBMS for cross-database queries using elastic query from Azure SQL Database.  
-- Use SHARD_MAP_MANAGER when creating an external data source when connecting to a sharded Azure SQL Database.
+- Use RDBMS for cross-database queries using elastic query from SQL Database.  
+- Use SHARD_MAP_MANAGER when creating an external data source when connecting to a sharded SQL Database.
 - Use BLOB_STORAGE when performing bulk operations using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) or [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
@@ -172,7 +172,7 @@ For an example showing how to create an external data source where `TYPE` = `SHA
 
 ## Permissions
 
-Requires CONTROL permission on database in SQL Server, Parallel Data Warehouse, Azure SQL Database and Azure SQL Data Warehouse.
+Requires CONTROL permission on database in SQL Server, Parallel Data Warehouse, SQL Database and SQL Data Warehouse.
 
 > [!IMPORTANT]
 > In previous releases of PDW, create external data source required ALTER ANY EXTERNAL DATA SOURCE permissions.
@@ -237,7 +237,7 @@ WITH
 ;
 ```
 
-## Examples: SQL Server (2016+), Azure SQL Data Warehouse and Parallel Data Warehouse
+## Examples: SQL Server (2016+), SQL Data Warehouse and Parallel Data Warehouse
 
 ### D. Create external data source to reference Azure blob storage
 
@@ -267,11 +267,11 @@ WITH
 ;
 ```
 
-## Examples: Azure SQL Database
+## Examples: SQL Database
 
 ### E. Create a Shard map manager external data source
 
-To create an external data source to reference a SHARD_MAP_MANAGER, specify the SQL Database server name that hosts the shard map manager in Azure SQL Database or a SQL Server database on an Azure virtual machine.
+To create an external data source to reference a SHARD_MAP_MANAGER, specify the SQL Database server name that hosts the shard map manager in SQL Database or a SQL Server database on a virtual machine.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
@@ -298,7 +298,7 @@ For a step-by-step tutorial, see [Getting started with elastic queries for shard
 
 ### F. Create an RDBMS external data source
 
-To create an external data source to reference a RDBMS, specifies the SQL Database server name of the remote database in Azure SQL Database.
+To create an external data source to reference a RDBMS, specifies the SQL Database server name of the remote database in SQL Database.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
@@ -322,7 +322,7 @@ WITH
 
 For a step-by-step tutorial on RDBMS, see [Getting started with cross-database queries (vertical partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).
 
-## Examples: Azure SQL Data Warehouse
+## Examples: SQL Data Warehouse
 
 ### G. Create external data source to reference Azure Data Lake Store Gen 1
 

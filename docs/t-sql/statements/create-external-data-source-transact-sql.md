@@ -57,7 +57,7 @@ WITH
 
 ### Data_Source_Name
 
-Specifies the user-defined name for the data source. The name must be unique within the database in SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. The name must be unique within the server in Parallel Data Warehouse.
+Specifies the user-defined name for the data source. The name must be unique within the database in SQL Server, SQL Database (SQL DB), and SQL Data Warehouse (SQL DW). The name must be unique within the server in Parallel Data Warehouse (PDW).
 
 ### LOCATION = *`'<prefix>://<path[:port]>'`*
 
@@ -65,22 +65,22 @@ Provides the connectivity protocol and path to the external data source.
 
 | External Data Source      | Location prefix | Location path                                         | Supported locations by product / service    |
 | ------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera or Hortonworks   | hdfs            | `<Namenode>[:port]`                                   | SQL Server (2016+), Parallel Data Warehouse |
-| Azure Blob Storage        | wasb[s]         | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), Parallel Data Warehouse, Azure SQL Data Warehouse |
-| ADLS Gen 1                | adl             | `<storage_account>.azuredatalake.net`                 | Azure SQL Data Warehouse                    |
-| ADLS Gen 2                | abfs            | `<container>@<storage_account>.dfs.core.windows.net`  | Azure SQL Data Warehouse                    |
+| Cloudera or Hortonworks   | hdfs            | `<Namenode>[:port]`                                   | SQL Server (2016+), PDW                     |
+| Azure Blob Storage        | wasb[s]         | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), PDW, SQL DW             |
+| ADLS Gen 1                | adl             | `<storage_account>.azuredatalake.net`                 | SQL DW                                      |
+| ADLS Gen 2                | abfs            | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
 | SQL Server                | sqlserver       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | Oracle                    | oracle          | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | Teradata                  | teradata        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | MongoDB or Azure CosmosDB | mongodb         | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | ODBC                      | odbc            |                                                       | SQL Server (2019+)                          |
-| Bulk Operations           | https           | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), Azure SQL Database      |
-| Elastic Query (shard)     | Not required    | `<shard_map_server_name>.database.windows.net`        | Azure SQL Database                          |
-| Elastic Query (remote)    | Not required    | `<remote_server_name>.database.windows.net`           | Azure SQL Database                          |
+| Bulk Operations           | https           | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), SQL DB                  |
+| Elastic Query (shard)     | Not required    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                      |
+| Elastic Query (remote)    | Not required    | `<remote_server_name>.database.windows.net`           | SQL DB                                      |
 
 Location path parameters:
 
-- `Namenode` = the machine name or IP address of the Namenode in the Hadoop cluster.
+- `Namenode` = the machine name, name service URI or IP address of the Namenode in the Hadoop cluster. PolyBase must be able to resolve any DNS names used by the Hadoop cluster. For highly available hadoop configurations you may alternatively provide the Nameservice ID as the `LOCATION`.
 - `port` = The port that the external data source is listening on. For Hadoop this can be found using the `fs.default.name` configuration parameter in Hadoop. If the value is not specified, 8020 will be used by default.
 - `<storage_account>` = the storage account name of the azure resource
 - `<container>` = the container of the storage account holding the data. Root containers are read-only, so data cannot be written back to the container.
@@ -89,8 +89,8 @@ Location path parameters:
 
 Additional notes and guidance when setting the location:
 
-- The `LOCATION` path must be valid as it is validated at creation time.
-- Do not put a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL.
+- The SQL engine does not verify the existence of the external data source when the object is created. To validate the external create an external table over the data source.
+- Use the same external data source for all tables when querying Hadoop. This ensures consistent semantics in the query.
 - You can use the `sqlserver` location prefix when connecting from SQL Server 2019 to also connect to Azure SQL Database or Azure SQL Data Warehouse.
 - `wasb` is the default protocol for Azure blob storage. `wasbs` is optional but strongly recommended as data will be sent using a secure SSL connection.
 - To ensure successful PolyBase queries in the event of Hadoop Namenode fail-over, consider using a virtual IP address for the Namenode of the Hadoop cluster. If you do not use a virtual IP address for the Hadoop Namenode, in the event of a Hadoop Namenode fail-over you will have to ALTER EXTERNAL DATA SOURCE object to point to the new location.
@@ -177,20 +177,6 @@ Requires CONTROL permission on database in SQL Server, Parallel Data Warehouse, 
 > [!IMPORTANT]
 > In previous releases of PDW, create external data source required ALTER ANY EXTERNAL DATA SOURCE permissions.
 
-## Error Handling
-
-A runtime error will occur if the external Hadoop data sources are inconsistent about having RESOURCE_MANAGER_LOCATION defined. That is, you cannot specify two external data sources that reference the same Hadoop cluster and then providing resource manager location for one and not for the other.  
-  
-The SQL engine does not verify the existence of the external data source when it creates the external data source object. If the data source does not exist during query execution, an error will occur.
-
-## Limitations and Restrictions
-
-All data sources defined on the same Hadoop cluster location must use the same setting for RESOURCE_MANAGER_LOCATION. If there is inconsistency, a runtime error will occur.
-
-If the Hadoop cluster is set up with a name and the external data source uses the IP address for the cluster location, PolyBase must still be able to resolve the cluster name when the data source is used. To resolve the name, you must enable a DNS forwarder.
-
-For PolyBase, the external data source is database-scoped in SQL Server and SQL Data Warehouse. It is server-scoped in Parallel Data Warehouse.
-  
 ## Locking
 
 Takes a shared lock on the EXTERNAL DATA SOURCE object.  
@@ -199,7 +185,7 @@ Takes a shared lock on the EXTERNAL DATA SOURCE object.
 
 ### A. Create external data source to reference Hadoop
 
-To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name or IP address of the Hadoop Namenode and port.  
+To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop Namenode and port. For highly available hadoop configurations you may alternatively provide the Nameservice ID as the `LOCATION`
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
@@ -391,6 +377,9 @@ WITH
 
 ## Examples: Bulk Operations
 
+> [!NOTE]
+> Do not put a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
+
 ### I. Create an external data source for bulk operations retrieving data from Azure Blob storage
 
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
@@ -400,7 +389,8 @@ Use the following data source for bulk operations using [BULK INSERT](../../t-sq
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
 WITH
      IDENTITY = 'SHARED ACCESS SIGNATURE'
-,    SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************'
+--   REMOVE ? FROM THE BEGINNING OF THE SAS TOKEN
+,    SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************'
 ;
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices

@@ -13959,6 +13959,26 @@
             "source_path": "docs/reporting-services/reports/clickthrough-reports-ssrs.md",
             "redirect_url": "/sql/reporting-services/reports/previewing-reports",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/2014/reporting-services/report-data/define-query-parameters-dialog-box.md",
+            "redirect_url": "/sql/reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/report-data/define-query-parameters-dialog-box.md",
+            "redirect_url": "/sql/reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/2014/reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md",
+            "redirect_url": "/sql/reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md",
+            "redirect_url": "/sql/reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site",
+            "redirect_document_id": false
         }
     ]
 }

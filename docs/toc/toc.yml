@@ -7915,6 +7915,8 @@
       items:
       - name: Choose an algorithm
         href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
+      - name: Troubleshoot TDE
+        href: ../relational-databases/security/encryption/troubleshoot-tde.md
       - name: Configure Always Encrypted with Secure Enclaves
         href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
         items:

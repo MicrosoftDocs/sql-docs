@@ -34,8 +34,8 @@ This article is part of a tabular modeling tutorial, which should be completed i
 3.  In the formula bar, above the table, type the following formula: 
  
     ```  
-    InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
-    ```
+    InternetCurrentQuarterSalesPerformance :=IF([InternetPreviousQuarterSalesProportionToQTD]<>0,([InternetCurrentQuarterSales]-[InternetPreviousQuarterSalesProportionToQTD])/[InternetPreviousQuarterSalesProportionToQTD],BLANK()) 
+  ```
 
     This measure serves as the Base measure for the KPI.  
   

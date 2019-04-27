@@ -47,12 +47,12 @@ If the **Report Data** pane is not visible, from the **View** menu, select **Rep
   
 7. [!INCLUDE[clickOK](../includes/clickok-md.md)] The data source **AdventureWorks2014** is added to the **Report Data** pane.  
 
-  ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
+      ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
 
-## Next Task  
+## Next task  
 
 We have successfully defined a connection to the [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] sample database. Next, you will create the report. See [Lesson 3: Defining a Dataset for the Table Report &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
-## See Also
+## See also
 
 [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

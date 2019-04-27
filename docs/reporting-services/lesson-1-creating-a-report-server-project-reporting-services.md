@@ -15,8 +15,8 @@ ms.author: maggies
 
 In this lesson, you'll create a *report server project* and a *report definition (.rdl)* file using the Report Designer tool within SQL Server Data Tools (SSDT) / Visual Studio.  
 
->[!NOTE]
-> SSDT is a free development tool of MSSQL Server (a shell of Visual Studio to create projects for Reporting Services, Integration Services and Analysis Services.) More detailed information about SSDT can be found here: [Reporting Services in SQL Server Data Tools (SSDT)](tools/reporting-services-in-sql-server-data-tools-ssdt.md)
+> [!NOTE]
+> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT features the Report Designer authoring environment, where you can open, modify, preview, save, and deploy [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report definitions, shared data sources, shared datasets, and report parts.
 
 When using the Report Designer to create a report, create a Report Server project first to contain the report files and other resource files used by the reports.
 
@@ -41,7 +41,7 @@ When using the Report Designer to create a report, create a Report Server projec
 
 6. Select **OK** to create the project. The Tutorial project is displayed in the Solution Explorer pane on the right.
   
-## To create a new report definition file  
+## To create a new report definition file (RDL)  
   
 1. In the **Solution Explorer** pane, right-click on the **Reports**  folder then:
     a. Select **Add** > **New Item**
@@ -68,23 +68,23 @@ When using the Report Designer to create a report, create a Report Server projec
 >
 The Report Designer has:
 >
-- a **Report Data** pane to define and select data fields
-- a **Design** view to define your report layout
-- a **Preview** view to display the current output of the report as you design it  
+- a **Report data** pane to define and select data fields.
+- a **Design** view to define your report layout.
+- a **Preview** view to display the current output of the report as you design it.  
   
 ## Next lesson
 
 In this lesson, we created the "Tutorial" report project and the "Sales Orders" report. In the remaining lessons, you'll learn how to:
 
-- select a data source for the report
-- create a dataset from the data source
-- design and format the report layout
+- Configure a data source for the report.
+- Create a dataset from the data source.
+- Design and format the report layout.
 
  See [Lesson 2: Specifying Connection Information &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
 
 > [!NOTE]
 > When running a report, the data is retrieved as defined in the data set from the data source and formatted by the report layout. The report output is then displayed on your screen, where you may view it, print it, export it to another data format, or save it to a file.  
 
-## See Also
+## See also
 
 [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "lengths [SQL Server], prefix characters"
   - "data formats [SQL Server], prefix length"
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

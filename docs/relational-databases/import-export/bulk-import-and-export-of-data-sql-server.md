@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server]"
   - "importing data"
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

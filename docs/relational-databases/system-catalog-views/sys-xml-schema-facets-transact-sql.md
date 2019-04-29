@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_facets catalog view"
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # sys.xml_schema_facets (Transact-SQL)

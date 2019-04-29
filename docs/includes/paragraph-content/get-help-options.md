@@ -1,6 +1,5 @@
 ##  ![info_tip](../media/info-tip.png) Get Help
 
-- [All the ways to get help](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
 - [UserVoice - Suggestion to improve SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
 - [Setup and Upgrade -  MSDN Forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - MSDN forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
@@ -13,5 +12,4 @@
 - [Support options for business users](https://support.microsoft.com/gp/support-options-for-business)
 - [Contact Microsoft](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
 - [Edit SQL Docs](https://aka.ms/editsqldocs)
-- [SQL Docs Feedback](https://aka.ms/sqldocsfeedback)
-- [SQL Docs Survey](https://aka.ms/sqldocsurvey)
+- [All the ways to get help](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)

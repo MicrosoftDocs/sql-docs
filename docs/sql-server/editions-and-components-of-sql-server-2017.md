@@ -151,7 +151,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Always On availability groups<sup>3</sup>|Yes|No|No|No|No|
 |Basic availability groups <sup>4</sup>|No|Yes|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
-|Online indexing|Yes|No|No|No|No|
+|Online index create and rebuild|Yes|No|No|No|No|
 |Resumable online index rebuilds|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
 |Fast recovery|Yes|No|No|No|No|

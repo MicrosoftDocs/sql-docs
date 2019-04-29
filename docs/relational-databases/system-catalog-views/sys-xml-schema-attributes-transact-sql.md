@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_attributes catalog view"
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # sys.xml_schema_attributes (Transact-SQL)

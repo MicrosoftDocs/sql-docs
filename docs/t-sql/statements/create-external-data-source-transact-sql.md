@@ -129,7 +129,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - the expiration period should be valid (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE` refer to [I. Create an external data source to perform bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j.-create-an-external-data-source-for-bulk-operations-retrieving-data-from-Azure-Blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE` refer to [J. Create an external data source to perform bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j.-create-an-external-data-source-for-bulk-operations-retrieving-data-from-Azure-Blob-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][CREATE_DATABASE_SCOPED_CREDENTIAL].
 
@@ -172,7 +172,7 @@ For a complete list of Hadoop distributions and versions supported by each conne
 > [!IMPORTANT]  
 > The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
 
-For an example showing the `RESOURCE_MANAGER_LOCATION` enabled refer to ["Create external data source to reference Hadoop with push-down enabled"](B.-create-external-data-source-to-reference-Hadoop-with-push-down-enabled)
+For an example showing the `RESOURCE_MANAGER_LOCATION` enabled refer to ["Create external data source to reference Hadoop with push-down enabled"](C.-create-external-data-source-to-reference-Hadoop-with-push-down-enabled)
 
 ### DATABASE_NAME = *database_name*
 
@@ -183,13 +183,13 @@ Configure this argument when the `TYPE` is set to `RDBMS` or `SHARD_MAP_MANAGER`
 | RDBMS             | The name of the remote database on the server provided using `LOCATION` |
 | SHARD_MAP_MANAGER | Name of the database operating as the shard map manager                 |
 
-For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to ["Create an RDBMS external data source"](F.-create-an-rdbms-external-data-source)
+For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to ["Create an RDBMS external data source"](G.-create-an-rdbms-external-data-source)
 
 ### SHARD_MAP_NAME = *shard_map_name*
 
 Used when the `TYPE` argument is set to `SHARD_MAP_MANAGER` only to set the name of the shard map.
 
-For an example showing how to create an external data source where `TYPE` = `SHARD_MAP_MANAGER` refer to ["Create a shard map manager external data source"](E.-create-a-shard-map-manager-external-data-source)
+For an example showing how to create an external data source where `TYPE` = `SHARD_MAP_MANAGER` refer to ["Create a shard map manager external data source"](F.-create-a-shard-map-manager-external-data-source)
 
 ## Permissions
 
@@ -241,7 +241,7 @@ WITH
 ;
 ```
 
-### A. Create external data source to reference Hadoop
+### B. Create external data source to reference Hadoop
 
 To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop Namenode and port. For highly available hadoop configurations you may alternatively provide the Nameservice ID as the `LOCATION`
   
@@ -254,7 +254,7 @@ WITH
 ;
 ```
 
-### B. Create external data source to reference Hadoop with push-down enabled
+### C. Create external data source to reference Hadoop with push-down enabled
 
 Specify the RESOURCE_MANAGER_LOCATION option to enable push-down computation to Hadoop for PolyBase queries. Once enabled, PolyBase uses a cost-based decision to determine whether the query computation should be pushed to Hadoop or all the data should be moved to process the query in SQL Server.
   
@@ -268,7 +268,7 @@ WITH
 ;
 ```
 
-### C. Create external data source to reference Kerberos-secured Hadoop
+### D. Create external data source to reference Kerberos-secured Hadoop
 
 To verify if the Hadoop cluster is Kerberos-secured, check the value of hadoop.security.authentication property in Hadoop core-site.xml. To reference a Kerberos-secured Hadoop cluster, you must specify a database scoped credential that contains your Kerberos username and password. The database master key is used to encrypt the database scoped credential secret.
   
@@ -297,7 +297,7 @@ WITH
 
 ## Examples: SQL Server (2016+), SQL Data Warehouse and Parallel Data Warehouse
 
-### D. Create external data source to reference Azure blob storage
+### E. Create external data source to reference Azure blob storage
 
 In this example, the external data source is an Azure blob storage container called `daily` under Azure storage account named `logs`. The Azure storage external data source is for data transfer only; and it does not support predicate push-down.
 
@@ -327,7 +327,7 @@ WITH
 
 ## Examples: SQL Database
 
-### E. Create a Shard map manager external data source
+### F. Create a Shard map manager external data source
 
 To create an external data source to reference a SHARD_MAP_MANAGER, specify the SQL Database server name that hosts the shard map manager in SQL Database or a SQL Server database on a virtual machine.
 
@@ -354,7 +354,7 @@ WITH
 
 For a step-by-step tutorial, see [Getting started with elastic queries for sharding (horizontal partitioning)][sharded_eq_tutorial].
 
-### F. Create an RDBMS external data source
+### G. Create an RDBMS external data source
 
 To create an external data source to reference a RDBMS, specifies the SQL Database server name of the remote database in SQL Database.
 
@@ -382,7 +382,7 @@ For a step-by-step tutorial on RDBMS, see [Getting started with cross-database q
 
 ## Examples: SQL Data Warehouse
 
-### G. Create external data source to reference Azure Data Lake Store Gen 1
+### H. Create external data source to reference Azure Data Lake Store Gen 1
 
 Azure Data lake Store connectivity is based on your ADLS URI and your Azure Active directory Application's service principle. Documentation for creating this application can be found at[Data lake store authentication using Active Directory][azure_ad[].
 
@@ -408,7 +408,7 @@ WITH
 ;
 ```
 
-### H. Create external data source to reference Azure Data Lake Store (ADLS) Gen 2
+### I. Create external data source to reference Azure Data Lake Store (ADLS) Gen 2
 
 Currently connecting to ADLS Gen 2 requires the storage account key as the secret for the database scoped credential. Oauth2.0 support is not available today. This is a temp
 
@@ -440,7 +440,7 @@ WITH
 > [!NOTE]
 > Do not put a trailing **/**, file name, or shared access signature parameters at the end of the `LOCATION` URL when configuring an external data source for bulk operations.
 
-### I. Create an external data source for bulk operations retrieving data from Azure Blob storage
+### J. Create an external data source for bulk operations retrieving data from Azure Blob storage
 
 **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Use the following data source for bulk operations using [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. The credential used, must be created using `SHARED ACCESS SIGNATURE` as the identity, should not have the leading `?` in SAS token, must have at least read permission on the file that should be loaded (for example `srt=o&sp=r`), and the expiration period should be valid (all dates are in UTC time). For more information on shared access signatures, see [Using Shared Access Signatures (SAS)][sas_token].

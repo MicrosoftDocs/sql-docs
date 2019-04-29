@@ -46,11 +46,13 @@ For SQL Server 2017, in cumulative updates 5 through 7, there is a regression in
 
 The error you will see when running R script includes the following messages:
 
-> *Unable to communicate with the runtime for 'R' script. Please check the requirements of 'R' runtime.*
->
-> STDERR message(s) from external script: 
->
-> *Fatal error: cannot create 'R_TempDir'*
+```
+Unable to communicate with the runtime for 'R' script. Please check the requirements of 'R' runtime.
+
+STDERR message(s) from external script: 
+
+Fatal error: cannot create 'R_TempDir'
+```
 
 **Workaround**
 
@@ -74,11 +76,13 @@ The following example shows the commands with the default instance "MSSQL14.MSSQ
 
 If you try to install SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services on a domain controller, setup fails, with these errors:
 
-> *An error occurred during the setup process of the feature*
-> 
-> *Cannot find group with identity*
-> 
-> *Component error code: 0x80131509*
+```
+An error occurred during the setup process of the feature
+
+Cannot find group with identity
+
+Component error code: 0x80131509
+```
 
 The failure occurs because, on a domain controller, the service cannot create the 20 local accounts required to run machine learning. In general, we do not recommend installing SQL Server on a domain controller. For more information, see [Support bulletin 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
@@ -124,7 +128,9 @@ This issue is fixed in the release version. Also, this limitation does not apply
 
 When you run R code in a SQL Server 2016 compute context, you might see the following error:
 
-> *You are running version 9.0.0 of Microsoft R Client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.*
+```
+You are running version 9.0.0 of Microsoft R Client on your computer, which is incompatible with the Microsoft R Server version 8.0.3. Download and install a compatible version.
+```
 
 This message is displayed if either of the following two statements is true,
 
@@ -151,7 +157,9 @@ To get the latest installers, see [Install machine learning components without i
 
 If you install SQL Server R Services separately from the database engine, and the build versions are different, you might see the following error in the System Event log:
 
-> *The SQL Server Launchpad service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion.*
+```
+The SQL Server Launchpad service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion.
+```
 
 For example, this error might occur if you install the database engine by using the release version, apply a patch to upgrade the database engine, and then add the R Services feature by using the release version.
 
@@ -187,7 +195,9 @@ In general, avoid calling the machine learning libraries that are used by SQL Se
 
 When you use Visual Studio or SQL Server Data Tools to publish a database project, if any principal has permissions specific to external script execution, you might get an error like this one:
 
-> *TSQL Model: Error detected when reverse engineering the database. The permission was not recognized and was not imported.*
+```
+TSQL Model: Error detected when reverse engineering the database. The permission was not recognized and was not imported.
+```
 
 Currently the DACPAC model does not support the permissions used by R Services or Machine Learning Services, such as GRANT ANY EXTERNAL SCRIPT, or EXECUTE ANY EXTERNAL SCRIPT. This issue will be fixed in a later release.
 
@@ -211,7 +221,9 @@ For additional known issues that might affect R solutions, see the [Machine Lear
 
 If the instance of SQL Server has been installed to a non-default location, such as outside the `Program Files` folder, the warning ACCESS_DENIED is raised when you try to run scripts that install a package. For example:
 
-> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": Access is denied*
+```
+In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": Access is denied
+```
 
 The reason is that an R function attempts to read the path, and fails if the built-in users group **SQLRUserGroup**, does not have read access. The warning that is raised does not block execution of the current R script, but the warning might recur repeatedly whenever the user runs any other R script.
 
@@ -223,7 +235,9 @@ This issue ia addressed in an upcoming service release. As a workaround, provide
 
 When you pass a model using a serialized format to a remote SQL Server instance, you might get the error: 
 
-> *Error in memDecompress(data, type = decompress) internal error -3 in memDecompress(2).*
+```
+Error in memDecompress(data, type = decompress) internal error -3 in memDecompress(2).
+```
 
 This error is raised if you saved the model using a recent version of the serialization function, [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), but the SQL Server instance where you deserialize the model has an older version of the RevoScaleR APIs, from SQL Server 2017 CU2 or earlier.
 
@@ -347,7 +361,9 @@ For more information about implicit data-type conversion, see [R libraries and d
 
 To transform data while you are modeling, you can pass a *transformFunc* argument in a function such as `rxLinmod` or `rxLogit`. However, nested function calls can lead to scoping errors in the SQL Server compute context, even if the calls work correctly in the local compute context.
 
-> *The sample data set for the analysis has no variables*
+```
+The sample data set for the analysis has no variables
+```
 
 For example, assume that you have defined two functions, `f` and `g`, in your local global environment, and `g` calls `f`. In distributed or remote calls involving `g`, the call to `g` might fail with this error, because `f` cannot be found, even if you have passed both `f` and `g` to the remote call.
 
@@ -405,19 +421,21 @@ Ordered factors are treated the same as factors in all RevoScaleR analysis funct
 
 Using `data.table` as an `OutputDataSet` in R is not supported in SQL Server 2017 Cumulative Update 13 (CU13) and earlier. The following message might appear:
 
-> *Msg 39004, Level 16, State 20, Line 2*
-> *A 'R' script error occurred during execution of 'sp_execute_external_script' with HRESULT 0x80004004.*
-> *Msg 39019, Level 16, State 2, Line 2*
-> *An external script error occurred:*
-> *Error in alloc.col(newx) :*
->   *Internal error: length of names (0) is not length of dt (11)*
-*Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col*
-> 
-> *Error in execution.  Check the output for more information.*
-> *Error in eval(expr, envir, enclos) :* 
->   *Error in execution.  Check the output for more information.*
-> *Calls: source -> withVisible -> eval -> eval -> .Call*
-> *Execution halted*
+```
+Msg 39004, Level 16, State 20, Line 2
+A 'R' script error occurred during execution of 'sp_execute_external_script' with HRESULT 0x80004004.
+Msg 39019, Level 16, State 2, Line 2
+An external script error occurred: 
+Error in alloc.col(newx) : 
+  Internal error: length of names (0) is not length of dt (11)
+Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col
+
+Error in execution.  Check the output for more information.
+Error in eval(expr, envir, enclos) : 
+  Error in execution.  Check the output for more information.
+Calls: source -> withVisible -> eval -> eval -> .Call
+Execution halted
+```
 
 `data.table` as an `OutputDataSet` in R is supported in SQL Server 2017 Cumulative Update 14 (CU14) and later.
 
@@ -440,7 +458,9 @@ There are several potential workarounds:
 
 When you pass a model to a remote SQL Server instance, and try to read the binary model using the `rx_unserialize` function in [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), you might get the error: 
 
-> *NameError: name 'rx_unserialize_model' is not defined*
+```
+NameError: name 'rx_unserialize_model' is not defined
+```
 
 This error is raised if you saved the model using a recent version of the serialization function, but the SQL Server instance where you deserialize the model does not recognize the  serialization API.
 
@@ -476,9 +496,11 @@ go
 
 Beginning with SQL Server 2017 CU2, the following message might appear even if Python code otherwise runs successfully:
 
-> *STDERR message(s) from external script:*
-> *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
-> *SyntaxWarning: telemetry_state is used prior to global declaration*
+```
+STDERR message(s) from external script:
+~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger
+SyntaxWarning: telemetry_state is used prior to global declaration
+```
 
 This issue has been fixed in SQL Server 2017 Cumulative Update 3 (CU3). 
 
@@ -486,10 +508,12 @@ This issue has been fixed in SQL Server 2017 Cumulative Update 3 (CU3).
 
 Beginning with SQL Server 2017 Cumulative Update 12 (CU12), numeric, decimal and money data types in WITH RESULT SETS are unsupported when using Python with `sp_execute_external_script`. The following message might appear:
 
-> *[Code: 39004, SQL State: S1000]  A 'Python' script error occurred during execution of'sp_execute_external_script' with HRESULT 0x80004004.*
+```
+[Code: 39004, SQL State: S1000]  A 'Python' script error occurred during execution of'sp_execute_external_script' with HRESULT 0x80004004.
 
-> *[Code: 39019, SQL State: S1000]  An external script error occurred:*
-> *SqlSatelliteCall error: Unsupported type in output schema. Supported types: bit, smallint, int, datetime, smallmoney, real and float. char, varchar are partially supported.*
+[Code: 39019, SQL State: S1000]  An external script error occurred: 
+SqlSatelliteCall error: Unsupported type in output schema. Supported types: bit, smallint, int, datetime, smallmoney, real and float. char, varchar are partially supported.
+```
 
 This has been fixed in SQL Server 2017 Cumulative Update 14 (CU14).
 

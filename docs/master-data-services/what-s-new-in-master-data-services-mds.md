@@ -16,8 +16,6 @@ manager: craigg
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
   This topic summarizes the changes and updates in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] release of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
  For an overview of how you organize data in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], see [Master Data Services Overview](../master-data-services/master-data-services-overview-mds.md). 
@@ -223,12 +221,12 @@ manager: craigg
  **Sample Model Deployment Packages Updated**  
   
  The sample packages were updated to support new scenarios. For more information, see [SQL Server Samples: Model Deployment Packages (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
 ## See Also  
  [Master Data Services and Data Quality Services Features Supported by the Editions of SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [Deprecated Master Data Services Features](../master-data-services/deprecated-master-data-services-features.md)   
- [Discontinued Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
+ [Deprecated Master Data Services Features](../master-data-services/deprecated-master-data-services-features.md)
+ [Discontinued Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)

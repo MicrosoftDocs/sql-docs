@@ -11,5 +11,4 @@
 - [Microsoft SQL Server License Terms and Information](https://www.microsoft.com/download/details.aspx?id=39299)
 - [Support options for business users](https://support.microsoft.com/gp/support-options-for-business)
 - [Contact Microsoft](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
-- [Edit SQL Docs](https://aka.ms/editsqldocs)
 - [All the ways to get help](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)

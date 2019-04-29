@@ -28,9 +28,31 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## CTP 2.5 April 2019
+## CTP 3.0
 
-Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance. In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.5.
+Community technology preview (CTP) 3.0 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
+
+CTP 3.0 supports:
+
+- Side-by-side installation. You can install instances of SQL Server 2019 CTP 3.0 on servers that are also running previous supported versions of SQL Server.
+- Upgrade from one build to another. You can upgrade an instance of SQL Server from a previous supported release of SQL Server to SQL Server 2019 CTP 3.0.
+- Production support. Customers in early adopter programs can run SQL Server 2019 CTP 3.0 in production environments.
+
+In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0.
+
+### Big data clusters
+
+| New feature or update | Details |
+|:---|:---|
+| &nbsp; | &nbsp; |
+
+### Database engine
+
+| New feature or update | Details |
+|:---|:---|
+| &nbsp; | &nbsp; |
+
+## CTP 2.5 April 2019
 
 ### Big data clusters
 
@@ -110,7 +132,7 @@ Community technology preview (CTP) 2.5 is the latest public release of [!INCLUDE
 | Deleting a cluster with **mssqlctl cluster delete** now deletes only the objects in the namespace that were part of the big data cluster. | The namespace is not deleted. However, in earlier releases this command did delete the entire namespace. |
 | _Security_ endpoint names have been changed and consolidated. | **service-security-lb** and **service-security-nodeport** have been consolidated into the **endpoint-security** endpoint. |
 | _Proxy_ endpoint names have been changed and consolidated. | **service-proxy-lb** and **service-proxy-nodeport** have been consolidated into the **endpoint-service-proxy** endpoint. |
-| _Controller_ endpoint names have been changed and consolidated. | **service-mssql-controller-lb** and **service-mssql-controller-nodeport** have been consolidated into the **endpoint-controller** enpoint. |
+| _Controller_ endpoint names have been changed and consolidated. | **service-mssql-controller-lb** and **service-mssql-controller-nodeport** have been consolidated into the **endpoint-controller** endpoint. |
 | &nbsp; | &nbsp; |
 
 ### Database engine

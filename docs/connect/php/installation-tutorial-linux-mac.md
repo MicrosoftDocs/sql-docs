@@ -1,6 +1,6 @@
 ---
 title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.date: "02/11/2019"
+ms.date: "04/29/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -51,7 +51,7 @@ exit
 ### Step 4. Install Apache and configure driver loading
 ```
 sudo su
-apt-get install libapache2-mod-php7.2 apache2
+apt-get install libapache2-mod-php7.3 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.3
@@ -272,7 +272,7 @@ apachectl -V | grep SERVER_CONFIG_FILE
 ``` 
 and substitute the path for `httpd.conf` in the following commands:
 ```
-echo "LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
+echo "LoadModule php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
 ### Step 5. Restart Apache and test the sample script

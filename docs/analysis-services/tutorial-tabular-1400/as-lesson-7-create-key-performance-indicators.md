@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Analysis Services tutorial lesson 7: Create Key Performance Indicators | Microsoft Docs"
 ms.date: 03/08/2019
 ms.prod: sql

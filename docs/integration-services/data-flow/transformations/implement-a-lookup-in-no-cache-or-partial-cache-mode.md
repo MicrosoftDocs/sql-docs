@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "lookups [Integration Services]"
   - "exact matches [Integration Services]"
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Implement a Lookup in No Cache or Partial Cache Mode
@@ -58,11 +55,11 @@ manager: craigg
   
     -   Click **Use results of an SQL query**, and then build a query in the **SQL Command** window.  
   
-         —or—  
+         -or-  
   
          Click **Build Query** to build a query by using the graphical tools that the **Query Builder** provides.  
   
-         —or—  
+         -or-  
   
          Click **Browse** to import an SQL statement from a file.  
   

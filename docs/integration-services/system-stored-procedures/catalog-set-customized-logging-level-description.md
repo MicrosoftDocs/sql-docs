@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
-caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.set_customized_logging_level_description

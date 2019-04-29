@@ -5,11 +5,8 @@ ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|applications"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords:
   - "MDAC [SQL Server]"
@@ -17,12 +14,12 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, vs. MDAC"
   - "data access [OLE DB Driver for SQL Server], vs. MDAC"
   - "OLE DB Driver for SQL Server, updating applications"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Updating an Application to OLE DB Driver for SQL Server from MDAC
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -48,7 +45,7 @@ manager: craigg
 
 -   OLE DB Driver for SQL Server supports access to previous [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] databases.  
 
--   OLE DB Driver for SQL Server does not contain XML integration. OLE DB Driver for SQL Server supports SELECT … FOR XML queries, but does not support any other XML functionality. However, OLE DB Driver for SQL Server does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   OLE DB Driver for SQL Server does not contain XML integration. OLE DB Driver for SQL Server supports SELECT ... FOR XML queries, but does not support any other XML functionality. However, OLE DB Driver for SQL Server does support the **xml** data type introduced in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 -   OLE DB Driver for SQL Server supports configuring client-side network libraries using only connection string attributes. If you need more complete network library configuration, you must use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.  
 
@@ -56,7 +53,7 @@ manager: craigg
 
 -   Minor changes have occurred to warnings and errors. Warnings and errors returned by the server now retain the same severity when passed to OLE DB Driver for SQL Server. You should ensure you have thoroughly tested your application if you depend on trapping particular warnings and errors.  
 
--   OLE DB Driver for SQL Server has stricter error checking than MDAC, which means that some applications that do not conform strictly to the OLE DB specifications may behave differently. For example, the SQLOLEDB provider did not enforce the rule that parameter names must start with '@' for result parameters, but the OLE DB Driver for SQL Server does.  
+-   OLE DB Driver for SQL Server has stricter error checking than MDAC, which means that some applications that do not conform strictly to the OLE DB specifications may behave differently. For example, the SQLOLEDB provider did not enforce the rule that parameter names must start with '\@' for result parameters, but the OLE DB Driver for SQL Server does.  
 
 -   OLE DB Driver for SQL Server behaves differently from MDAC regarding failed connections. For example, MDAC returns cached property values for a connection that has failed, whereas OLE DB Driver for SQL Server reports an error to the calling application.  
 

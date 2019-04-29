@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "33128 (Database Engine error)"
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

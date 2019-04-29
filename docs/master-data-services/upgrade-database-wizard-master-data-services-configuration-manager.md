@@ -5,13 +5,9 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg

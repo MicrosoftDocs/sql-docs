@@ -5,24 +5,20 @@ ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|ole-db-interfaces"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: connectivity
 ms.topic: "reference"
 apiname: 
   - "ISSAsynchStatus::Abort (OLE DB)"
 apitype: "COM"
 helpviewer_keywords: 
   - "Abort method"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # ISSAsynchStatus::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -44,7 +40,7 @@ HRESULT Abort(
  *eOperation*[in]  
  The operation to abort. The following value should be used:  
   
- DBASYNCHOP_OPEN—The request to cancel applies to the asynchronous opening or population of a rowset or to the asynchronous initialization of a data source object.  
+ DBASYNCHOP_OPEN-The request to cancel applies to the asynchronous opening or population of a rowset or to the asynchronous initialization of a data source object.  
   
 ## Return Code Values  
  S_OK  

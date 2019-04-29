@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_who_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_who"
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_who (Transact-SQL)
@@ -38,7 +34,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'** | *session ID* | **'ACTIVE'**  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'`
  Is used to filter the result set.  
   
  *login* is **sysname** that identifies processes belonging to a particular login.  

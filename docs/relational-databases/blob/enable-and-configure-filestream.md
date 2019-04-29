@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
+ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], enabling"
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -81,7 +76,7 @@ manager: craigg
 |RAID level|Write performance|Read performance|Fault tolerance|Remarks|  
 |RAID 5|Normal|Normal|Excellent|Performance is better than one disk or JBOD; and less than RAID 0 or RAID 5 with striping.|  
 |RAID 0|Excellent|Excellent|None||  
-|RAID 5 + stripping|Excellent|Excellent|Excellent|Most expensive option.|  
+|RAID 5 + striping|Excellent|Excellent|Excellent|Most expensive option.|  
   
   
 ###  <a name="database"></a> Physical database design  

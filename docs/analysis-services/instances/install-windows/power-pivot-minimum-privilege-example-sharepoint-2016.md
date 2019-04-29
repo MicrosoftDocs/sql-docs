@@ -15,7 +15,7 @@ manager: kfile
   This topic describes an example [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 configuration with minimum privileges. The configuration utilizes a different account for each of the three components and each account has the minimum level of privileges.  
   
 ## Summary of Accounts  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 supports the use of the Network Service account for the Analysis Services service account. The Network Service account is not a supported scenario with SharePoint 2010. For more information on Service accounts, see [Configure Windows Service Accounts and Permissions](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 supports the use of the Network Service account for the Analysis Services service account. The Network Service account is not a supported scenario with SharePoint 2010. For more information on Service accounts, see [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  The following table summarizes the three accounts used in this example of a minimum privileged configuration.  
   

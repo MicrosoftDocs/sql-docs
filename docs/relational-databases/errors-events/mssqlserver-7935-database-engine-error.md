@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "7935 (Database Engine error)"
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
+ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows Firewall [Database Engine], FILESTREAM"
   - "FILESTREAM [SQL Server], Windows Firewall"
 ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
-caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

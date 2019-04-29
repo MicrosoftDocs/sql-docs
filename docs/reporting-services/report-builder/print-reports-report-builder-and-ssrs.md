@@ -1,22 +1,15 @@
 ---
 title: "Print Reports (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-builder"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-builder
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Print Reports - Reporting Services (SSRS)
   After you save a report to a report server, you can view and print the report from the web portal or any application that you use to view an exported report. Before saving a report, you can print it when you preview it.  

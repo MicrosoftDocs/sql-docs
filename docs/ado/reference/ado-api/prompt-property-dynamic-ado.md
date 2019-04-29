@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "Prompt property [ADO]"
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

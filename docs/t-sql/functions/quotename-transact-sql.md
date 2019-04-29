@@ -1,14 +1,11 @@
-﻿---
+---
 title: "QUOTENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "QUOTENAME_TSQL"
@@ -22,11 +19,10 @@ helpviewer_keywords:
   - "QUOTENAME function"
   - "valid identifiers [SQL Server]"
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +42,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Is a string of Unicode character data. *character_string* is **sysname** and is limited to 128 characters. Inputs greater than 128 characters return NULL.  
   
  '*quote_character*'  
- Is a one-character string to use as the delimiter. Can be a single quotation mark ( **'** ), a left or right bracket ( **[]** ), or a double quotation mark ( **"** ). If *quote_character* is not specified, brackets are used.  
+ Is a one-character string to use as the delimiter. Can be a single quotation mark ( **'** ), a left or right bracket ( **[]** ), a double quotation mark ( **"** ), a left or right parenthesis ( **()** ), a greater than or less than sign ( **><** ), a left or right brace ( **{}** ) or a backtick ( **\`** ). NULL returns if an unacceptable character is supplied. If *quote_character* is not specified, brackets are used.  
   
 ## Return Types  
  **nvarchar(258)**  

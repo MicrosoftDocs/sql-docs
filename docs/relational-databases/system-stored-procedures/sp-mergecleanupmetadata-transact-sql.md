@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_mergecleanupmetadata_TSQL"
   - "sp_mergecleanupmetadata"
 helpviewer_keywords: 
   - "sp_mergecleanupmetadata"
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_mergecleanupmetadata (Transact-SQL)
@@ -40,10 +33,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**, which cleans up metadata for all publications. The publication must already exist if explicitly specified.  
   
- [ **@reinitialize_subscriber =** ] **'***subscriber***'**  
+`[ @reinitialize_subscriber = ] 'subscriber'`
  Specifies whether to reinitialize the Subscriber. *subscriber* is **nvarchar(5)**, can be **TRUE** or **FALSE**, with a default of **TRUE**. If **TRUE**, subscriptions are marked for reinitialization. If **FALSE**, the subscriptions are not marked for reinitialization.  
   
 ## Return Code Values  
@@ -52,10 +45,10 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## Remarks  
  **sp_mergecleanupmetadata** should be used only in replication topologies that include servers running versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Topologies that include only [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 or later should use automatic retention based metadata cleanup. When running this stored procedure, be aware of the necessary and potentially large growth of the log file on the computer on which the stored procedure is running.  
   
-> [!CAUTION]  
+> [!CAUTION]
 >  After **sp_mergecleanupmetadata** is executed, by default, all subscriptions at the Subscribers of publications that have metadata stored in **MSmerge_genhistory**, **MSmerge_contents** and **MSmerge_tombstone** are marked for reinitialization, any pending changes at the Subscriber are lost, and the current snapshot is marked obsolete.  
-  
-> [!NOTE]  
+> 
+> [!NOTE]
 >  If there are multiple publications on a database, and any one of those publications uses an infinite publication retention period (**@retention**=**0**), running **sp_mergecleanupmetadata** does not clean up the merge replication change tracking metadata for the database. For this reason, use infinite publication retention with caution.  
   
  When executing this stored procedure, you can choose whether to reinitialize Subscribers by setting the **@reinitialize_subscriber** parameter to **TRUE** (the default) or **FALSE**. If **sp_mergecleanupmetadata** is executed with the **@reinitialize_subscriber** parameter set to **TRUE**, a snapshot is reapplied at the Subscriber even if the subscription was created without an initial snapshot (for example, if the snapshot data and schema were manually applied or already existed at the Subscriber). Setting the parameter to **FALSE** should be used with caution, because if the publication is not reinitialized, you must ensure that data at the Publisher and Subscriber is synchronized.  
@@ -66,7 +59,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  It is recommended, but not required, that you stop all updates to the publication and subscription databases. If updates continue, any updates made at a Subscriber since the last merge are lost when the publication is reinitialized, but data convergence is maintained.  
   
-2.  Execute a merge by running the Merge Agent. We recommend that you use the **–Validate** agent command line option at each Subscriber when you run the Merge Agent. If you are running continuous mode merges, see *Special Considerations for Continuous Mode Merges* later in this section.  
+2.  Execute a merge by running the Merge Agent. We recommend that you use the **-Validate** agent command line option at each Subscriber when you run the Merge Agent. If you are running continuous mode merges, see *Special Considerations for Continuous Mode Merges* later in this section.  
   
 3.  After all merges have completed, execute **sp_mergecleanupmetadata**.  
   
@@ -82,7 +75,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  Stop **all** updates to the publication and subscription databases.  
   
-2.  Execute a merge by running the Merge Agent. We recommend that you use the **–Validate** agent command line option at each Subscriber when you run the Merge Agent. If you are running continuous mode merges, see *Special Considerations for Continuous Mode Merges* later in this section.  
+2.  Execute a merge by running the Merge Agent. We recommend that you use the **-Validate** agent command line option at each Subscriber when you run the Merge Agent. If you are running continuous mode merges, see *Special Considerations for Continuous Mode Merges* later in this section.  
   
 3.  After all merges have completed, execute **sp_mergecleanupmetadata**.  
   
@@ -106,7 +99,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  When you have completed step 3 of running **sp_mergecleanupmetadata**, resume continuous mode merges based on how you stopped them. Either:  
   
--   Add the **–Continuous** parameter back for the Merge Agent.  
+-   Add the **-Continuous** parameter back for the Merge Agent.  
   
 -   Reactivate the publication with **sp_changemergepublication.**  
   

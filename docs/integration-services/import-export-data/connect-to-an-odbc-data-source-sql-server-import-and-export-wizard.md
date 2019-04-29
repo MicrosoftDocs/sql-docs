@@ -3,16 +3,12 @@ title: "Connect to an ODBC Data Source (SQL Server Import and Export Wizard) | M
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect to an ODBC Data Source (SQL Server Import and Export Wizard)

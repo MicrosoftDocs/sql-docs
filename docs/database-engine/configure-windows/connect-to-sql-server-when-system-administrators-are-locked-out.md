@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sa account"
   - "connecting when locked out [SQL Server]"
   - "locked out [SQL Server]"
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -64,7 +61,7 @@ manager: craigg
   
 6.  Click **OK**, and after the message to restart, right-click your server name, and then click **Restart**.  
   
-7.  After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has restarted your server will be in single-user mode. Make sure that that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running. If started, it will take your only connection.  
+7.  After [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has restarted your server will be in single-user mode. Make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent is not running. If started, it will take your only connection.  
   
 8.  On the Windows 8 start screen, right-click the icon for [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. At the bottom of the screen, select **Run as administrator**. (This will pass your administrator credentials to SSMS.)  
   

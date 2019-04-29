@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_change_agent_profile"
   - "sp_change_agent_profile_TSQL"
 helpviewer_keywords: 
   - "sp_change_agent_profile"
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_change_agent_profile (Transact-SQL)
@@ -41,13 +34,13 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## Arguments  
- [ **@profile_id=** ] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile. *profile_id* is **int**, with no default.  
   
- [ **@property=** ] **'***property***'**  
+`[ @property = ] 'property'`
  Is the name of the property. *property* is **sysname**, with no default.  
   
- [ **@value=** ] **'***value***'**  
+`[ @value = ] 'value'`
  Is the new value of the property. *value* is **nvarchar(3000)**, with no default.  
   
  This table describes the profile properties that can be changed.  

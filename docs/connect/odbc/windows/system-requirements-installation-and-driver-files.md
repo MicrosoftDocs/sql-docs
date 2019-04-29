@@ -5,12 +5,9 @@ ms.date: "02/14/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -18,13 +15,13 @@ manager: craigg
 # System Requirements, Installation, and Driver Files
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supports connections to SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro_md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)], and [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)].  
+The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports connections to SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)], and [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
-The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows can be installed on a computer that also has one or more versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client.  
+The ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows can be installed on a computer that also has one or more versions of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-The ODBC Driver 13 and 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], in addition to the above, supports SQL Server 2016. 
+The ODBC Driver 13 and 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], in addition to the above, supports SQL Server 2016. 
 
-The ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supports all the above ones and also SQL Server 2017.
+The ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports all the above ones and also SQL Server 2017.
   
 The driver name that you specify in a connection string is `ODBC Driver 11 for SQL Server` or `ODBC Driver 13 for SQL Server` (for both 13 and 13.1) or `ODBC Driver 17 for SQL Server`.
   
@@ -50,7 +47,10 @@ The driver is installed when you run `msodbcsql.msi` from one of the following l
 - [Download the Microsoft ODBC Driver 13 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Download the Microsoft ODBC Driver 11 for SQL Server on Windows](https://www.microsoft.com/download/details.aspx?id=36434). 
 
-It can be installed side-by-side with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client.  
+> [!NOTE]
+> For those who have Driver 17.1.0.1 or below installed, it is recommended that it be uninstalled manually prior to installing the newer version of the Driver
+
+It can be installed side-by-side with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
 
 When you invoke `msodbcsql.msi`, only the client components are installed by default. The client components are files that support running an application that was developed using the driver. To install the SDK components, specify `ADDLOCAL=ALL` on the command line. For example:  
   
@@ -78,7 +78,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## Command-Line Tools: sqlcmd.exe and bcp.exe
 
-The `bcp.exe` and `sqlcmd.exe` tools for use with the driver can be downloaded at [Microsoft Command Line Utilities 11 for SQL Server](http://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Command Line Utilities 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), or [Microsoft Command Line Utilities 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). The driver is a prerequisite to install `sqlcmd.exe` and `bcp.exe`.
+The `bcp.exe` and `sqlcmd.exe` tools for use with the driver can be downloaded at [Microsoft Command Line Utilities 11 for SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Command Line Utilities 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680), or [Microsoft Command Line Utilities 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). The driver is a prerequisite to install `sqlcmd.exe` and `bcp.exe`.
   
 `bcp.exe` and `sqlcmd.exe` are installed in the `110\Tools` subfolder of `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` for version 11, and `130\Tools` for 13 and 13.1.
 
@@ -86,7 +86,7 @@ An application that uses BCP functions must specify the driver from the same ver
 
 For example, when you compile an ODBC application with `msodbcsql11.lib` and `msodbcsql.h`, use "DRIVER={ODBC Driver 11 for SQL Server}" in the connection string.
 
-## Components of the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] on Windows 
+## Components of the Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows 
  The ODBC driver on Windows contains the following components:
  
 |Component|Description|  

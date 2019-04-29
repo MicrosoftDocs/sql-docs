@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "MovePrevious method [ADO], VC++ example"
   - "MoveFirst method [ADO], VC++ example"
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

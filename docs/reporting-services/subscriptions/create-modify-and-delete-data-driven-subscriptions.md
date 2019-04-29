@@ -1,16 +1,11 @@
 ---
 title: "Create, Modify, and Delete Data-Driven Subscriptions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "subscriptions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: subscriptions
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query-based subscriptions [Reporting Services]"
@@ -18,10 +13,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], data-driven"
   - "data-driven subscriptions"
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 51
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Create, Modify, and Delete Data-Driven Subscriptions
   A data-driven subscription is a query-based subscription that gets the data values used for processing the subscription at run time. When the subscription is triggered, a query is processed to get up-to-date information about recipients, report delivery options, rendering formats, and parameter settings. The query results are combined with the subscription definition to create a dynamic subscription that uses data you already maintain in an employee database, a customer database, or any other database that contains information that can be used as subscriber data.  
@@ -39,7 +32,7 @@ manager: "kfile"
 -   [Running the Subscription](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Managing and Deleting a Data-Driven Subscription  
- A data-driven subscription that is in progress cannot be stopped or deleted through the Manage Jobs page of Report Manager. For this reason, it is advantageous to use a shared schedule to trigger data-driven subscription. That way, if you want to temporarily prevent a subscription from processing, you can pause the schedule that triggers the subscription. For more information, see [old_Create and Manage Subscriptions for Native Mode Report Servers](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
+ A data-driven subscription that is in progress cannot be stopped or deleted through the Manage Jobs page of Report Manager. For this reason, it is advantageous to use a shared schedule to trigger data-driven subscription. That way, if you want to temporarily prevent a subscription from processing, you can pause the schedule that triggers the subscription. For more information, see [old_Create and Manage Subscriptions for Native Mode Report Servers](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
   
  To delete a data-driven subscription, select it from the My Subscriptions page or the Subscriptions page of a report and then click **Delete**.  
   
@@ -104,9 +97,9 @@ manager: "kfile"
 ## See Also  
  [Create and Manage Subscriptions for Native Mode Report Servers](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [old_Create and Manage Subscriptions for Native Mode Report Servers](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Subscriptions Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [My Subscriptions Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [old_Create and Manage Subscriptions for Native Mode Report Servers](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [Subscriptions Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [My Subscriptions Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

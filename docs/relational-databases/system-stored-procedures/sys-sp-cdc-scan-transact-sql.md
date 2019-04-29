@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_cdc_scan_TSQL"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_scan"
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # sys.sp_cdc_scan (Transact-SQL)
@@ -43,16 +39,16 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## Arguments  
- [ **@maxtrans=** ] *max_trans*  
+`[ @maxtrans = ] max_trans`
  Maximum number of transactions to process in each scan cycle. *max_trans* is **int** with a default of 500.  
   
- [ **@maxscans=** ] *max_scans*  
+`[ @maxscans = ] max_scans`
  Maximum number of scan cycles to execute in order to extract all rows from the log. *max_scans* is **int** with a default of 10.  
   
- [ **@continuous=** ] *continuous*  
+`[ @continuous = ] continuous`
  Indicates whether the stored procedure should end after executing a single scan cycle (0) or run continuously, pausing for the time specified by *polling_interval* before reexecuting the scan cycle (1). *continuous* is **tinyint** with a default of 0.  
   
- [ **@pollinginterval=** ] *polling_interval*  
+`[ @pollinginterval = ] polling_interval`
  Number of seconds between log scan cycles. *polling_interval* is **bigint** with a default of 0.  
   
 ## Return Code Values  

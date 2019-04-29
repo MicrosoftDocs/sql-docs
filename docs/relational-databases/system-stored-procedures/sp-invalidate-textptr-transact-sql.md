@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_invalidate_textptr_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_invalidate_textptr"
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_invalidate_textptr (Transact-SQL)
@@ -38,7 +34,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## Arguments  
- [ **@TextPtrValue=** ] *textptr_value*  
+`[ @TextPtrValue = ] textptr_value`
  Is the in-row text pointer that to be invalidated. *textptr_value* is **varbinary(**16**)**, with a default of NULL. If NULL, **sp_invalidate_textptr** invalidates all in-row text pointers in the transaction.  
   
 ## Return Code Values  

@@ -1,12 +1,9 @@
 ---
 title: "Get started by running the Enable Database for Stretch Wizard | Microsoft Docs"
-ms.custom: ""
 ms.date: "08/05/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 f1_keywords: 
   - "sql13.swb.stretchwizard.f1"
   - "sql13.swb.stretchwizard.createdatabasecredentials.f1"
@@ -21,8 +18,8 @@ helpviewer_keywords:
   - "Stretch Database, wizard"
   - "Enable Database for Stretch Wizard"
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-author: MikeRayMSFT
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Get started by running the Enable Database for Stretch Wizard

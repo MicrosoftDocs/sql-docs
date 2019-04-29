@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "trace_categories"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_categories catalog view"
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
-caps.latest.revision: 26
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sys.trace_categories (Transact-SQL)

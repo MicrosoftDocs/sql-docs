@@ -1,14 +1,11 @@
-﻿---
+---
 title: "THROW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "THROW_TSQL"
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords: 
   - "THROW statement"
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Raises an exception and transfers execution to a CATCH block of a TRY…CATCH construct in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Raises an exception and transfers execution to a CATCH block of a TRY...CATCH construct in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +49,7 @@ THROW [ { error_number | @local_variable },
 ## Remarks  
  The statement before the THROW statement must be followed by the semicolon (;) statement terminator.  
   
- If a TRY…CATCH construct is not available, the statement batch is terminated. The line number and procedure where the exception is raised are set. The severity is set to 16.  
+ If a TRY...CATCH construct is not available, the statement batch is terminated. The line number and procedure where the exception is raised are set. The severity is set to 16.  
   
  If the THROW statement is specified without parameters, it must appear inside a CATCH block. This causes the caught exception to be raised. Any error that occurs in a THROW statement causes the statement batch to be terminated.  
   
@@ -110,7 +106,7 @@ END CATCH;
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
  ```
- PRINT 'In catch block.';  
+ In catch block. 
  Msg 2627, Level 14, State 1, Line 1  
  Violation of PRIMARY KEY constraint 'PK__TestReth__3214EC272E3BD7D3'. Cannot insert duplicate key in object 'dbo.TestRethrow'.  
  The statement has been terminated.

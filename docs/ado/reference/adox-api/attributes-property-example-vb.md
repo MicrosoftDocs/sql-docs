@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Attributes property [ADOX], Visual Basic example"
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

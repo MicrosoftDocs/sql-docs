@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xml data type [SQL Server], variables"
   - "xml data type [SQL Server], columns"
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Create XML Data Type Variables and Columns

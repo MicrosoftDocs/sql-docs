@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "41325 (Database Engine error)"
 ms.assetid: 97c6a8bb-139a-44f3-9ed5-f46d047e8ed3
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

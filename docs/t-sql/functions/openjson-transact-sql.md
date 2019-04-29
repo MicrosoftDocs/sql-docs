@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "OPENJSON"
@@ -19,10 +15,9 @@ helpviewer_keywords:
   - "JSON, importing"
   - "JSON, converting from"
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
-caps.latest.revision: 32
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: douglasl
+ms.reviewer: genemi
 manager: craigg
 ---
 # OPENJSON (Transact-SQL)

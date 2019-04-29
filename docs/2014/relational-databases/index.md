@@ -1,3 +1,3 @@
 ---
-redirect_url: /sql/relational-databases/sqltoolsvsnativehelpers-framewindowvisible?view=sql-server-2014
+redirect_url: /sql/relational-databases/database-features?view=sql-server-2014
 ---

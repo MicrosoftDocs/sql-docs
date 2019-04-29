@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "ADO code examples, Visual C++"
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

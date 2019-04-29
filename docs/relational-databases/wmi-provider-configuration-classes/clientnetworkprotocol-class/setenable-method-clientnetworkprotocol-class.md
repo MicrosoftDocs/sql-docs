@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetEnable Method (ClientNetworkProtocol Class)"
@@ -19,14 +15,13 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetEnable method"
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
-caps.latest.revision: 34
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
 ---
 # SetEnable Method (ClientNetworkProtocol Class)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Enables the client network protocol that is specified by the [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx).  
+  Enables the client network protocol that is specified by the [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## Syntax  
   
@@ -45,6 +40,6 @@ object.SetEnableMethod()
 ## Remarks  
   
 ## See Also  
- [Configuring Client Network Protocols and Net-Libraries](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuring Client Network Protocols and Net-Libraries](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

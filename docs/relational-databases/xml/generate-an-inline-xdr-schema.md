@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XDR schemas [SQL Server]"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "XMLDATA option"
   - "FOR XML clause, inline XDR schema generation"
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
-caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Generate an Inline XDR Schema

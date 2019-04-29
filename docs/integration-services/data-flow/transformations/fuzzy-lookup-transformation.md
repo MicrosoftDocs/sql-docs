@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.fuzzylookuptrans.f1"
@@ -33,16 +31,15 @@ helpviewer_keywords:
   - "missing values replaced [Integration Services]"
   - "similarity thresholds [Integration Services]"
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Fuzzy Lookup Transformation
   The Fuzzy Lookup transformation performs data cleaning tasks such as standardizing data, correcting data, and providing missing values.  
   
 > [!NOTE]  
->  For more detailed information about the Fuzzy Lookup transformation, including performance and memory limitations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604).  
+>  For more detailed information about the Fuzzy Lookup transformation, including performance and memory limitations, see the white paper, [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
  The Fuzzy Lookup transformation differs from the Lookup transformation in its use of fuzzy matching. The Lookup transformation uses an equi-join to locate matching records in the reference table. It returns records with at least one matching record, and returns records with no matching records. In contrast, the Fuzzy Lookup transformation uses fuzzy matching to return one or more close matches in the reference table.  
   
@@ -120,14 +117,14 @@ manager: craigg
 ## Temporary Tables and Indexes  
  At run time, the Fuzzy Lookup transformation creates temporary objects, such as tables and indexes, in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database that the transformation connects to. The size of these temporary tables and indexes is proportionate to the number of rows and tokens in the reference table and the number of tokens that the Fuzzy Lookup transformation creates; therefore, they could potentially consume a significant amount of disk space. The transformation also queries these temporary tables. You should therefore consider connecting the Fuzzy Lookup transformation to a non-production instance of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, especially if the production server has limited disk space available.  
   
- The performance of this transformation may improve if the tables and indexes it uses are located on the local computer. If the reference table that the Fuzzy Lookup transformation uses is on the production server, you should consider copying the table to a non-production server and configuring the Fuzzy Lookup transformation to access the copy. By doing this, you can prevent the lookup queries from consuming resources on the production server. In addition, if the Fuzzy Lookup transformation maintains the match index—that is, if MatchIndexOptionsis set to **GenerateAndMaintainNewIndex**—the transformation may lock the reference table for the duration of the data cleaning operation and prevent other users and applications from accessing the table.  
+ The performance of this transformation may improve if the tables and indexes it uses are located on the local computer. If the reference table that the Fuzzy Lookup transformation uses is on the production server, you should consider copying the table to a non-production server and configuring the Fuzzy Lookup transformation to access the copy. By doing this, you can prevent the lookup queries from consuming resources on the production server. In addition, if the Fuzzy Lookup transformation maintains the match index-that is, if MatchIndexOptionsis set to **GenerateAndMaintainNewIndex**-the transformation may lock the reference table for the duration of the data cleaning operation and prevent other users and applications from accessing the table.  
   
 ## Configuring the Fuzzy Lookup Transformation  
  You can set properties through [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically.  
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

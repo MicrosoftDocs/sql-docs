@@ -3,21 +3,16 @@ title: "Protecting Your SQL Server Intellectual Property | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "security"
+ms.prod_service: security
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "protecting intellectual property"
   - "intellectual property"
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
-caps.latest.revision: 3
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Protecting Your SQL Server Intellectual Property
@@ -26,7 +21,7 @@ manager: craigg
 Software developers often ask how to distribute their [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] data application to customers, and yet prevent customers from analyzing and deconstructing their application. The key principal here, is that protecting your intellectual property, is a legal issue, and the protection rests in your license agreement. When [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is installed on a computer that others administer, you inherently lose some aspects of control. 
 
 ## Nature of the Problem
-The owner/administrator of a computer can always access the instance of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] that is installed on that computer. If you deploy your application to a customer’s computer, since they are administrators, they can connect to the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] as members of the **sysadmin** fixed server role. This includes the ability to grant permissions, manage backups (including restoring backups to other computers), decrypt and move data files, etc. For more information, see [Connect to SQL Server When System Administrators Are Locked Out](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md). 
+The owner/administrator of a computer can always access the instance of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] that is installed on that computer. If you deploy your application to a customer's computer, since they are administrators, they can connect to the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] as members of the **sysadmin** fixed server role. This includes the ability to grant permissions, manage backups (including restoring backups to other computers), decrypt and move data files, etc. For more information, see [Connect to SQL Server When System Administrators Are Locked Out](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md). 
 
 Stored procedures and data can be encrypted, but the data structure cannot be hidden and users who can attach a debugger to the server process can retrieve decrypted procedures and data from memory at runtime.
 

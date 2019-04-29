@@ -5,17 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "derived hierarchies"
   - "hierarchies [Master Data Services], derived hierarchies"
   - "derived hierarchies, about derived hierarchies"
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
-caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -66,7 +62,7 @@ manager: craigg
  This type of hierarchy prevents you from moving a member to a level that is not valid. For example, you can move the Road-650 bike from one subcategory, Road Bikes, to another, Mountain Bikes. You cannot move Road-650 directly under a category, like 1 {Bikes}. Each time you move a member in the hierarchy tree, the member's domain-based attribute value changes to reflect the move.  
   
 ## Notes  
- All members in a derived hierarchy tree are sorted by code. You cannot change the sort order.  
+ All members in a derived hierarchy tree are sorted by ID. You cannot change the sort order.  
   
  If a member's domain-based attribute is blank and the attribute is used for a derived hierarchy, the member is not displayed in the hierarchy. Create business rules to require attributes to be populated. For more information, see [Require Attribute Values &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   

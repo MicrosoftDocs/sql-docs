@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Unique property [ADOX], VC++ example"
   - "PrimaryKey property [ADOX], VC++ example"
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

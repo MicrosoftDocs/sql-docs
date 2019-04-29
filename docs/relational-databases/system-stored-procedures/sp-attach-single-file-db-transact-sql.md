@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_attach_single_file_db"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_attach_single_file_db"
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-caps.latest.revision: 68
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -45,10 +41,10 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the name of the database to be attached to the server. The name must be unique. *dbname* is **sysname**, with a default of NULL.  
   
- [ **@physname=** ] **'***physical_name***'**  
+`[ @physname = ] 'physical_name'`
  Is the physical name, including path, of the database file. *physical_name* is **nvarchar(260)**, with a default of NULL.  
   
 > [!NOTE]  

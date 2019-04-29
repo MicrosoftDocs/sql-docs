@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CDATA directive"
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Example: Specifying the CDATA Directive

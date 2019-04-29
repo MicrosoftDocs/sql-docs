@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.finish.f1"
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Finish the Slowly Changing Dimension Wizard

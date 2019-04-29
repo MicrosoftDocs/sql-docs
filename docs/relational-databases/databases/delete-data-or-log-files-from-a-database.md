@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [SQL Server], files"
@@ -20,7 +16,6 @@ helpviewer_keywords:
   - "file deletion [SQL Server]"
   - "deleting data"
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
-caps.latest.revision: 33
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

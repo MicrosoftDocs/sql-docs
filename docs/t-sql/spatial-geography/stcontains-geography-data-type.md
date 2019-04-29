@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "STContains method (geography)"
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

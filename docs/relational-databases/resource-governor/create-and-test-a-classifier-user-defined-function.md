@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "07/11/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Resource Governor, classifier function create"
@@ -14,13 +12,12 @@ helpviewer_keywords:
   - "classifier function [SQL Server], create"
   - "Resource Governor, classifier function test"
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
-caps.latest.revision: 25
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Create and Test a Classifier User-Defined Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   This topic shows how to create and test a classifier user-defined function (UDF). The steps involve executing [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor.  
   
  The example shown in the following procedure illustrates the possibilities for creating a fairly complex classifier user-defined function.  
@@ -113,7 +110,7 @@ manager: craigg
     go  
     ```  
   
-4.  Create the classifier function that uses time functions and values that can be evaluated against the times in the lookup table. For information about using Lookup Tables in a classifier function, see “Best practices for using Lookup Tables in a classifier function” in this topic.  
+4.  Create the classifier function that uses time functions and values that can be evaluated against the times in the lookup table. For information about using Lookup Tables in a classifier function, see "Best practices for using Lookup Tables in a classifier function" in this topic.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduced an expanded set of date and time data types and functions. For more information, see [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  

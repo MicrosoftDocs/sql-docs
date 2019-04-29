@@ -5,18 +5,15 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "concatenation [Integration Services]"
   - "+ (concatenate operator)"
   - "concatenate operator (+)"
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # + (Concatenate) (SSIS Expression)

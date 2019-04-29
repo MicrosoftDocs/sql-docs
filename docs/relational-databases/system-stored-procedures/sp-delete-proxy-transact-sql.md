@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_proxy"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sp_delete_proxy"
   - "DROP PROXY statement"
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
-caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -39,10 +35,10 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## Arguments  
- [ **@proxy_id**= ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to remove. The *proxy_id* is **int**, with a default of NULL.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to remove. The *proxy_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

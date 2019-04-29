@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.nullsAreSortedAtEnd"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 713cf636-40f2-474a-8a5d-5aba4a310a9c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

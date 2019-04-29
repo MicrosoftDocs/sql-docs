@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: scripting
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
@@ -34,7 +31,7 @@ Characters that are not supported in Windows PowerShell path names can be repres
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**Character**|\|/|:|%|\<|>|*|?|[|]|&#124;|  
+|**Character**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**Hexadecimal Encoding**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> Encoding an Identifier  
@@ -65,7 +62,7 @@ Set-Location (Encode-SqlName "Table:Test")
  Use the **Decode-Sqlname** cmdlet to replace the hexadecimal encodings with the characters represented by the encoding.  
   
 ### Examples (Decoding)  
- This example returns “Table:Test”:  
+ This example returns "Table:Test":  
   
 ```  
 Decode-SqlName "Table%3ATest"  

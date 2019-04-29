@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.restoretlog.markedtransaction.f1"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], marked transactions"
   - "marked transactions [SQL Server], restoring"
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

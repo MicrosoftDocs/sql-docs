@@ -1,16 +1,12 @@
 ---
 title: "Extended Events for Stretch Database | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
-caps.latest.revision: 4
-author: MikeRayMSFT
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Extended Events for Stretch Database
@@ -19,7 +15,7 @@ manager: craigg
 
 Stretch Database provides a set of extended events for troubleshooting.  
   
-For more info, see [Extended Events](../../relational-databases/extended-events/extended-events.md). For info about how to start an extended events session for troubleshooting, see [Create an Extended Events Session](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
+For more info, see [Extended Events](../../relational-databases/extended-events/extended-events.md). For info about how to start an extended events session for troubleshooting, see [Create an Extended Events Session](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)  
   
 ## List of extended events for Stretch Database  
   

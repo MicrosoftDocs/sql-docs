@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "remote login errors [SQL Server]"
@@ -18,9 +16,9 @@ helpviewer_keywords:
   - "deleting remote logins"
   - "dropping remote logins"
 ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Rename a Computer that Hosts a Stand-Alone Instance of SQL Server
@@ -107,7 +105,7 @@ The following steps cannot be used to rename an instance of [!INCLUDE[ssNoVersio
   
  **Linked Server Configurations** - Linked server configurations will be affected by the computer renaming operation. Use **sp_addlinkedserver** or **sp_setnetname** to update computer name references. For more information, see the [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) or [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md).  
   
- **Client Alias Names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid and. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](http://go.microsoft.com/fwlink/?LinkId=111063).  
+ **Client Alias Names** - Client aliases that use named pipes will be affected by the computer renaming operation. For example, if an alias "PROD_SRVR" was created to point to SRVR1 and uses the named pipes protocol, the pipe name will look like `\\SRVR1\pipe\sql\query`. After the computer is renamed, the path of the named pipe will no longer be valid and. For more information about named pipes, see the [Creating a Valid Connection String Using Named Pipes](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
 ## See also  
  [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  

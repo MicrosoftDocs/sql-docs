@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetStmtAttr"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetStmtAttr function [ODBC]"
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -39,11 +36,11 @@ manager: craigg
 ```  
   
 SQLRETURN SQLGetStmtAttr(  
-     SQLHSTMT        StatementHandle,  
-     SQLINTEGER      Attribute,  
-     SQLPOINTER      ValuePtr,  
-     SQLINTEGER      BufferLength,  
-     SQLINTEGER *    StringLengthPtr);  
+     SQLHSTMT        StatementHandle,  
+     SQLINTEGER      Attribute,  
+     SQLPOINTER      ValuePtr,  
+     SQLINTEGER      BufferLength,  
+     SQLINTEGER *    StringLengthPtr);  
 ```  
   
 ## Arguments  

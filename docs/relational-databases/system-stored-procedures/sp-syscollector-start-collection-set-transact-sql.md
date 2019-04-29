@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_start_collection_set_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_start_collection_set"
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -42,10 +38,10 @@ sp_syscollector_start_collection_set
 ```  
   
 ## Arguments  
- [ **@collection_set_id =** ] *collection_set_id*  
+`[ @collection_set_id = ] collection_set_id`
  Is the unique local identifier for the collection set. *collection_set_id* is **int** with a default value of NULL. *collection_set_id* must have a value if *name* is NULL.  
   
- [ **@name =** ] '*name*'  
+`[ @name = ] 'name'`
  Is the name of the collection set. *name* is **sysname** with a default value of NULL. *name* must have a value if *collection_set_id* is NULL.  
   
 ## Return Code Values  

@@ -1,20 +1,14 @@
-﻿---
+---
 title: "sys.pdw_loader_backup_run_details (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-catalog-views"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg

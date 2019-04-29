@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "21892 (Database Engine error)"
 ms.assetid: 199818e8-28f4-440e-ad85-7bea88f51153
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -28,7 +25,7 @@ manager: craigg
 |Event Source|MSSQLSERVER|  
 |Component|SQLEngine|  
 |Symbolic Name|SQLErrorNum21892|  
-|Message Text|Unable to query sys.availability_replicas at the availability group primary associated with virtual network name '%s' for the server names of the member replicas: error = %d, error message = %s.',|  
+|Message Text|Unable to query sys.availability_replicas at the availability group primary associated with virtual network name '%s' for the server names of the member replicas: error = %d, error message = %s.'|  
   
 ## Explanation  
 **sp_validate_replica_hosts_as_publishers** queries the current primary of the availability group associated with the redirected publisher, to determine the instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that host the member replicas.  When this query fails, error 21892 is returned.  

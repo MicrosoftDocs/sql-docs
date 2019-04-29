@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.database_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/19/2016"
-ms.prod: ""
+ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.database_files"
@@ -20,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_files catalog view"
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-caps.latest.revision: 61
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

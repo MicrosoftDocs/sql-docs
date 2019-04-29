@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_log_shipping_primary_secondary_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_log_shipping_primary_secondary"
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
-caps.latest.revision: 19
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_add_log_shipping_primary_secondary (Transact-SQL)
@@ -41,13 +37,13 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## Arguments  
- [ **@primary_database** = ] '*primary_database*'  
+`[ @primary_database = ] 'primary_database'`
  Is the name of the database on the primary server. *primary_database* is **sysname**, with no default.  
   
- [ **@secondary_server** = ] '*secondary_server*',  
+`[ @secondary_server = ] 'secondary_server',`
  Is the name of the secondary server. *secondary_server* is **sysname**, with no default.  
   
- [ **@secondary_database** = ] '*secondary_database*'  
+`[ @secondary_database = ] 'secondary_database'`
  Is the name of the secondary database. *secondary_database* is **sysname**, with no default.  
   
 ## Return Code Values  

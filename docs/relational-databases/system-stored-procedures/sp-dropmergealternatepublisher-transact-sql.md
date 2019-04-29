@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_dropmergealternatepublisher"
   - "sp_dropmergealternatepublisher_TSQL"
 helpviewer_keywords: 
   - "sp_dropmergealternatepublisher"
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_dropmergealternatepublisher (Transact-SQL)
@@ -39,22 +32,22 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the current Publisher. *publisher*is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the current publication database. *publisher_db*is **sysname**, with no default.  
   
- [ **@publication =**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the current publication. *publication* is **sysname**, with no default.  
   
- [ **@alternate_publisher=**] **'***alternate_publisher***'**  
+`[ @alternate_publisher = ] 'alternate_publisher'`
  Is the name of the alternate Publisher to drop as the alternate synchronization partner. *alternate_publisher*is **sysname**, with no default.  
   
- [ **@alternate_publisher_db=**] **'***alternate_publisher_db***'**  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'`
  Is the name of the publication database to drop as the alternate synchronization partner publication database. *alternate_publisher_db*is **sysname**, with no default.  
   
- [ **@alternate_publication=**] **'***alternate_publication***'**  
+`[ @alternate_publication = ] 'alternate_publication'`
  Is the name of the publication to drop as the alternate synchronization partner publication. *alternate_publication*is **sysname**, with no default.  
   
 ## Return Code Values  

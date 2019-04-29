@@ -1,14 +1,11 @@
 ---
 title: "CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/09/2017"
+ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREDENTIAL_TSQL"
@@ -24,18 +21,15 @@ helpviewer_keywords:
   - "CREATE CREDENTIAL statement"
   - "credentials [SQL Server], CREATE CREDENTIAL statement"
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: 51
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates a server-level credential. A credential is a record that contains the authentication information that is required to connect to a resource outside SQL Server. Most credentials include a Windows user and password. For example, saving a database backup to some location might require SQL Server to provide special credentials to access that location. For more information, see [Credentials (Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]  
 >  To make the credential  at the database-level use [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Use a server-level credential when you need to use the same credential for multiple databases on the server. Use a database-scoped credential to make the database more portable. When a database is moved to a new server, the database scoped credential will move with it. Use database scoped credentials on [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -56,10 +50,13 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Specifies the name of the credential being created. *credential_name* cannot start with the number (#) sign. System credentials start with ##.  When using a shared access signature (SAS), this name must match the container path, start with https and must not contain a forward slash. See example D below.  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  Specifies the name of the account to be used when connecting outside the server. When the credential is used to access the Azure Key Vault, the **IDENTITY** is the name of the key vault. See example C below. When the credential is using a shared access signature (SAS), the **IDENTITY** is *SHARED ACCESS SIGNATURE*. See example D below.  
-  
- SECRET **='***secret***'**  
+ 
+> [!IMPORTANT]
+> Azure SQL Database only supports Azure Key Vault and Shared Access Signature identities. Windows user identities are not supported.
+ 
+ SECRET **='**_secret_**'**  
  Specifies the secret required for outgoing authentication.  
   
  When the credential is used to access the Azure Key Vault the **SECRET** argument of **CREATE CREDENTIAL** requires the *\<Client ID>* (without hyphens) and *\<Secret>* of a **Service Principal** in the Azure Active Directory to be passed together without a space between them. See example C below. When the credential is using a shared access signature, the **SECRET** is the shared access signature token. See example D below.  For information about creating a stored access policy and a shared access signature on an Azure container, see [Lesson 1: Create a stored access policy and a shared access signature  on an Azure container](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
@@ -94,7 +91,7 @@ GO
 ```  
   
 ### B. Creating a Credential for EKM  
- The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM’s Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:  
+ The following example uses a previously created account called `User1OnEKM` on an EKM module through the EKM's Management tools, with a basic account type and password. The **sysadmin** account on the server creates a credential that is used to connect to the EKM account, and assigns it to the `User1`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account:  
   
 ```  
 CREATE CREDENTIAL CredentialForEKM  
@@ -141,18 +138,20 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ```  
   
 ### D. Creating a Credential using a SAS Token  
- **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  The following example creates a shared access signature credential using a SAS token.  For a tutorial on creating a stored access policy and a shared access signature on an Azure container, and then creating a credential using the shared access signature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 >  THE **CREDENTIAL NAME** argument requires that the name match the container path, start with https and not contain a trailing forward slash. The **IDENTITY** argument requires the name, *SHARED ACCESS SIGNATURE*. The **SECRET** argument requires the shared access signature token.  
+>
+>  The **SHARED ACCESS SIGNATURE secret** should not have the leading **?**.
   
 ```  
 USE master  
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.  
    WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-   , SECRET = 'sharedaccesssignature' –- this is the shared access signature token   
+   , SECRET = 'sharedaccesssignature' -- this is the shared access signature token   
 GO    
 ```  
   
@@ -165,6 +164,6 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Lesson 2: Create a SQL Server credential using a shared access signature](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
- [Shared Access Signatures](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+ [Shared Access Signatures](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

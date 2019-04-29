@@ -5,11 +5,11 @@ ms.date: "11/27/2017"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
 # Validate SQL Server Integration Services (SSIS) packages deployed to Azure

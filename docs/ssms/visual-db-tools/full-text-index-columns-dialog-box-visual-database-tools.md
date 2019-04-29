@@ -4,16 +4,12 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.fulltextcolumn"
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -21,7 +17,7 @@ manager: craigg
 ---
 # Full-Text Index Columns Dialog Box (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-This dialog box lists the columns participating in the full-text index for the table open in Table Designer. To access this dialog box, right-click the table in Table Designer, choose **Full-Text Index**, and in the **Full-Text Index** dialog box, click the index with columns you want to view or edit, click the **Columns** field in the grid to the right, and click the ellipses (**…**).  
+This dialog box lists the columns participating in the full-text index for the table open in Table Designer. To access this dialog box, right-click the table in Table Designer, choose **Full-Text Index**, and in the **Full-Text Index** dialog box, click the index with columns you want to view or edit, click the **Columns** field in the grid to the right, and click the ellipses (**...**).  
   
 ## Options  
 **Column**  
@@ -39,7 +35,7 @@ Columns with the data type **image** can contain Microsoft Office files (.doc, .
 Lists available languages. Choose the language from the drop-down list appropriate for your column data. For example, if you are using an English operating system, but you want to index a column that contains German text, choose German from the drop-down list to improve the index's performance.  
   
 **Statistical Semantics**  
-Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search placeholder](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Select whether to enable semantic indexing for the selected column. For more information, see [Semantic Search placeholder](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
   
 If you select a **Language** prior to selecting **Statistical Semantics**, and the selected language does not have an associated Semantic Language Model, then the **Statistical Semantics** checkbox is disabled. If you select **Statistical Semantics** prior to selecting a **Language**, the languages available in the drop-down combo box will be restricted to those for which there is Semantic Language Model support.  
   

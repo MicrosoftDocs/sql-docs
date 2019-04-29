@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "exponential functions"
   - "EXP function"
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
-caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # EXP (SSIS Expression)

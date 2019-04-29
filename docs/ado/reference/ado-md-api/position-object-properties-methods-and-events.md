@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "Position object [ADO MD], members"
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

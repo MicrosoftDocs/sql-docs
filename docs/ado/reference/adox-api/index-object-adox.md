@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Index object [ADOX]"
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

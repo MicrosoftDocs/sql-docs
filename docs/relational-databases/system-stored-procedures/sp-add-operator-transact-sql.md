@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_operator"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_operator"
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -51,13 +47,13 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of an operator (notification recipient). This name must be unique and cannot contain the percent (**%**) character. *name* is **sysname**, with no default.  
   
- [ **@enabled=** ] *enabled*  
+`[ @enabled = ] enabled`
  Indicates the current status of the operator. *enabled* is **tinyint**, with a default of **1** (enabled). If **0**, the operator is not enabled and does not receive notifications.  
   
- [ **@email_address=** ] **'***email_address***'**  
+`[ @email_address = ] 'email_address'`
  The e-mail address of the operator. This string is passed directly to the e-mail system. *email_address* is **nvarchar(100)**, with a default of NULL.  
   
  You can specify either a physical e-mail address or an alias for *email_address*. For example:  
@@ -67,28 +63,28 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  You must use the e-mail address for Database Mail.  
   
- [ **@pager_address=** ] **'***pager_address***'**  
+`[ @pager_address = ] 'pager_address'`
  The pager address of the operator. This string is passed directly to the e-mail system. *pager_address* is **narchar(100)**, with a default of NULL.  
   
- [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time`
  The time after which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sends pager notification to the specified operator on the weekdays, from Monday through Friday. *weekday_pager_start_time*is **int**, with a default of **090000**, which indicates 9:00 A.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time`
  The time after which **SQLServerAgent** service no longer sends pager notification to the specified operator on the weekdays, from Monday through Friday. *weekday_pager_end_time*is **int**, with a default of 180000, which indicates 6:00 P.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@saturday_pager_start_time =**] *saturday_pager_start_time*  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time`
  The time after which **SQLServerAgent** service sends pager notification to the specified operator on Saturdays. *saturday_pager_start_time* is **int**, with a default of 090000, which indicates 9:00 A.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time`
  The time after which **SQLServerAgent** service no longer sends pager notification to the specified operator on Saturdays. *saturday_pager_end_time*is **int**, with a default of **180000**, which indicates 6:00 P.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time`
  The time after which **SQLServerAgent** service sends pager notification to the specified operator on Sundays. *sunday_pager_start_time*is **int**, with a default of **090000**, which indicates 9:00 A.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time`
  The time after which **SQLServerAgent** service no longer sends pager notification to the specified operator on Sundays. *sunday_pager_end_time*is **int**, with a default of **180000**, which indicates 6:00 P.M. on a 24-hour clock, and must be entered using the form HHMMSS.  
   
- [ **@pager_days=** ] *pager_days*  
+`[ @pager_days = ] pager_days`
  Is a number that indicates the days that the operator is available for pages (subject to the specified start/end times). *pager_days*is **tinyint**, with a default of **0** indicating the operator is never available to receive a page. Valid values are from **0** through **127**. *pager_days*is calculated by adding the individual values for the required days. For example, from Monday through Friday is **2**+**4**+**8**+**16**+**32** = **62**. The following table lists the value for each day of the week.  
   
 |Value|Description|  
@@ -101,10 +97,10 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Friday|  
 |**64**|Saturday|  
   
- [ **@netsend_address=** ] **'***netsend_address***'**  
+`[ @netsend_address = ] 'netsend_address'`
  The network address of the operator to whom the network message is sent. *netsend_address*is **nvarchar(100)**, with a default of NULL.  
   
- [ **@category_name=** ] **'***category***'**  
+`[ @category_name = ] 'category'`
  The name of the category for this operator. *category* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

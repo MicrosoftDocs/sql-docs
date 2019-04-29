@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statement handles [ODBC]"
   - "handles [ODBC], statement"
   - "freeing statement handles [ODBC]"
 ms.assetid: ee18e2f1-2690-4cc1-9e5c-e20244e5d480
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

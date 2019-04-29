@@ -1,0 +1,36 @@
+---
+title: "Building a Knowledge Base | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.technology: data-quality-services
+ms.topic: conceptual
+ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
+author: leolimsft
+ms.author: lle
+manager: craigg
+---
+# Building a Knowledge Base
+  A knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) is a repository of knowledge about your data that enables you to understand your data and maintain its integrity. A knowledge base consists of domains, each of which represents the data in a data field. The knowledge base is used by DQS to perform data cleansing and deduplication on a database. To prepare the knowledge base for data cleansing, you can run a computer-assisted analysis of a data sample, and interactively manage values in the domains. DQS enables you to import knowledge, create rules and relationships, change data values directly, and leverage a default database.  
+  
+## In This Section  
+ You can perform the following operations on a knowledge base:  
+  
+|||  
+|-|-|  
+|Create a new knowledge base from scratch, from an existing knowledge base, or from a .dqs data file.|[Create a Knowledge Base](../../2014/data-quality-services/create-a-knowledge-base.md)|  
+|Open an existing knowledge base to perform knowledge discovery, domain management, or add a matching policy.|[Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)|  
+|Perform management actions on a knowledge base, including opening it, unlocking it, discarding your work on it, renaming it, deleting it, or viewing its properties.|[Manage a Knowledge Base](../../2014/data-quality-services/manage-a-knowledge-base.md)|  
+|Add knowledge to a knowledge base through knowledge discovery; domain value management; adding a matching policy; importing a knowledge, domain, or values; or using the default knowledge base, DQS Data.|[Adding Knowledge to a Knowledge Base](../../2014/data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
+|Analyze a data sample for data quality criteria.|[Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)|  
+  
+## Related Tasks  
+  
+|Task Description|Topic|  
+|----------------------|-----------|  
+|Importing knowledge into, or exporting it from, a knowledge base.|[Importing and Exporting Knowledge](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
+|Creating a single domain, and adding knowledge to the domain.|[Managing a Domain](../../2014/data-quality-services/managing-a-domain.md)|  
+|Creating a composite domain, and adding knowledge to the domain.|[Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md)|  
+  
+  

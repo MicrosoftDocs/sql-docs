@@ -5,12 +5,8 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -21,9 +17,8 @@ helpviewer_keywords:
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
-caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Discovering Data Flow Components Programmatically

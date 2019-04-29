@@ -1,0 +1,47 @@
+---
+title: "How Cursors Are Implemented | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/06/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.technology: native-client
+ms.topic: "reference"
+helpviewer_keywords: 
+  - "SQL Server Native Client ODBC driver, cursors"
+  - "ODBC cursors, about ODBC cursors"
+  - "ODBC applications, cursors"
+  - "cursors [ODBC], about ODBC cursors"
+ms.assetid: 2b1d7dd4-08a4-43fc-b3eb-70c183d0941f
+author: MightyPen
+ms.author: genemi
+manager: craigg
+---
+# How Cursors Are Implemented
+  ODBC applications control the behavior of a cursor by setting one or more statement attributes before executing an SQL statement. ODBC has two different ways to specify the characteristics of a cursor:  
+  
+-   Cursor type  
+  
+     Cursor types are set using the SQL_ATTR_CURSOR_TYPE attribute of [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). The ODBC cursor types are forward-only, static, keyset-driven, mixed, and dynamic. Setting the cursor type was the original method of specifying cursors in ODBC.  
+  
+-   Cursor behavior  
+  
+     Cursor behavior is set using the SQL_ATTR_CURSOR_SCROLLABLE and SQL_ATTR_CURSOR_SENSITIVITY attributes of **SQLSetStmtAttr**. These attributes are modeled on the SCROLL and SENSITIVE keywords defined for the DECLARE CURSOR statement in ISO standards. These two ISO options were introduced in ODBC version 3.0.  
+  
+ The characteristics of an ODBC cursor should be specified using either one or the other of these two methods, with the preference being to use the ODBC cursor types.  
+  
+ In addition to setting the type of a cursor, ODBC applications also set other options, such as the number of rows returned on each fetch, concurrency options, and transaction isolation levels. These options can be set for either ODBC-style cursors (forward-only, static, keyset-driven, mixed, and dynamic) or ISO style cursors (scrollability and sensitivity).  
+  
+ The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver supports several ways to physically implement the various types of cursors. The driver implements some types of cursors using a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] default result set; it implements others as server cursors or by using the ODBC Cursor Library.  
+  
+## In This Section  
+  
+-   [Using SQL Server Default Result Sets](using-sql-server-default-result-sets.md)  
+  
+-   [Using Server Cursors](using-server-cursors.md)  
+  
+-   [ODBC Cursor Library](odbc-cursor-library.md)  
+  
+## See Also  
+ [Using Cursors &#40;ODBC&#41;](../using-cursors-odbc.md)  
+  
+  

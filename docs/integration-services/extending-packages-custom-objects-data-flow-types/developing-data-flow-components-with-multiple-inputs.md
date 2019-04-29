@@ -5,16 +5,11 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing Data Flow Components with Multiple Inputs

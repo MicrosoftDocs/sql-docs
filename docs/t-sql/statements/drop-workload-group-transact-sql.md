@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_WORKLOAD_GROUP_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP WORKLOAD GROUP statement"
 ms.assetid: 1cd68450-5b58-4106-a2bc-54197ced8616
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP WORKLOAD GROUP (Transact-SQL)

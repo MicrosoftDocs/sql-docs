@@ -42,7 +42,7 @@ manager: kfile
   
  The dialog box lists tables, columns, constraints, and relationships that will be deleted or added in the DSV. The report also lists any named query or calculation that cannot be successfully prepared. The affected objects are listed in a tree view with columns and relationships nested under tables and the type of change (deletion or addition) indicated for each object. The standard data source view object icons indicate the type of object affected.  
   
- Refresh is based completely on the names of the underlying objects. Therefore, if an underlying object is renamed in the data source, Data Source View Designer treats the renamed object as two separate operations—a deletion and an addition. In this case, you may have to manually add the renamed object back to the data source view. You may also have to re-create relationships or logical primary keys.  
+ Refresh is based completely on the names of the underlying objects. Therefore, if an underlying object is renamed in the data source, Data Source View Designer treats the renamed object as two separate operations-a deletion and an addition. In this case, you may have to manually add the renamed object back to the data source view. You may also have to re-create relationships or logical primary keys.  
   
 > [!IMPORTANT]  
 >  If you are aware that a table has been renamed in a data source, you may want to use the **Replace Table** command to replace the table with the renamed table before you refresh the data source view. For more information, see [Replace a Table or a Named Query in a Data Source View &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md).  

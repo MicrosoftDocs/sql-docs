@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerStatement.getQueryTimeout"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 8dff954f-b458-4fa6-abe6-be62ff75e2b9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

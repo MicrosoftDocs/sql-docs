@@ -1,16 +1,11 @@
 ---
 title: "Configure and Administer a Report Server (SSRS Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2017"
+ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, components"
@@ -21,10 +16,8 @@ helpviewer_keywords:
   - "components [Reporting Services], configuring"
   - "configuring servers [Reporting Services]"
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
-caps.latest.revision: 51
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure and Administer a Report Server (SSRS Native Mode)
   This topic summarizes the approaches that you can use to configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. It also includes a list of topics that explain how to configure specific components, features, or server capabilities. To configure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can:  
@@ -50,7 +43,7 @@ manager: "kfile"
  [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Describes how to modify the connection string used by the report server to connect to the report server database.  
   
- [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
  Describes how to configure a report server to support e-mail report distribution.  
   
  [Configure the Unattended Execution Account &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  

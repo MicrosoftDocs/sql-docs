@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "dynamic management objects [SQL Server], replication"
   - "replication dynamic management objects [SQL Server]"
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg

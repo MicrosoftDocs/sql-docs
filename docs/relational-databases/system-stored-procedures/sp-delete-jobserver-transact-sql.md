@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_jobserver"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_jobserver"
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-caps.latest.revision: 36
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -39,16 +35,16 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job from which the specified target server will be removed. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job from which the specified target server will be removed. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified; both cannot be specified.  
   
- [ **@server_name=** ] **'***server***'**  
+`[ @server_name = ] 'server'`
  The name of the target server to remove from the specified job. *server* is **nvarchar(30)**, with no default. *server* can be **(LOCAL)**or the name of a remote target server.  
   
 ## Return Code Values  

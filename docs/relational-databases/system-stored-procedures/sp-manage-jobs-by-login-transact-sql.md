@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_manage_jobs_by_login"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_manage_jobs_by_login"
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,13 +37,13 @@ sp_manage_jobs_by_login
 ```  
   
 ## Arguments  
- [ **@action=** ] **'***action***'**  
+`[ @action = ] 'action'`
  The action to take for the specified login. *action* is **varchar(10)**, with no default. When *action*is **DELETE**, **sp_manage_jobs_by_login** deletes all jobs owned by *current_owner_login_name*. When *action* is **REASSIGN**, all jobs are assigned to *new_owner_login_name*.  
   
- [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
+`[ @current_owner_login_name = ] 'current_owner_login_name'`
  The login name of the current job owner. *current_owner_login_name* is **sysname**, with no default.  
   
- [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
+`[ @new_owner_login_name = ] 'new_owner_login_name'`
  The login name of the new job owner. Use this parameter only if *action* is **REASSIGN**. *new_owner_login_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

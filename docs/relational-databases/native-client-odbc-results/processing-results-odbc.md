@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-results"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "result sets [ODBC], about result sets"
@@ -20,11 +16,10 @@ helpviewer_keywords:
   - "result sets [ODBC]"
   - "COMPUTE BY clause"
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing Results (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,6 +77,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 ## See Also  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Processing Results How-to Topics &#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+ [Processing Results How-to Topics &#40;ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_COLUMN_ENCRYPTION_KEY_TSQL"
@@ -29,17 +26,16 @@ helpviewer_keywords:
   - "column encryption key"
   - "CREATE COLUMN ENCRYPTION KEY statement"
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Creates a column encryption key with the initial set of values, encrypted with the specified column master keys. This is a metadata operation. A CEK can have up to two values which allows for a column master key rotation. Creating a CEK is required before any column in the database can be encrypted using the [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature. CEK's can also be created by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Before creating a CEK, you must define a CMK by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or the [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) statement.  
+Creates a column encryption key (CEK) with the initial set of values, encrypted with the specified column master keys (CMKs). This encryption is a metadata operation. A CEK might have up to two values, which allows for a CMK rotation. Creating a CEK is required before the [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) feature encrypts any column in the database. CEKs can also be created by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Before creating a CEK, you must define a CMK by using [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] or the [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) statement.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -60,39 +56,39 @@ WITH VALUES
 ```  
   
 ## Arguments  
- *key_name*  
- Is the name by which the column encryption key will be known in the database.  
+_key\_name_  
+Is the name by which the column encryption key will be known in the database.  
   
- *column_master_key_name*  
- Specifies the name of the custom column master key (CMK) used for encrypting the column encryption key (CEK).  
+_column\_master\_key\_name_ 
+Specifies the name of the custom CMK used for encrypting the CEK.  
   
- *algorithm_name*  
- Name of the encryption algorithm used to encrypt the value of the column encryption key. The algorithm for the system providers must be **RSA_OAEP**.  
+_algorithm\_name_  
+Name of the encryption algorithm used to encrypt the value of the column encryption key. The algorithm for the system providers must be **RSA_OAEP**.  
   
- *varbinary_literal*  
- The encrypted CEK value BLOB.  
+_varbinary\_literal_  
+The encrypted CEK value BLOB.  
   
 > [!WARNING]  
 >  Never pass plaintext CEK values in this statement. Doing so will comprise the benefit of this feature.  
   
 ## Remarks  
- The CREATE COLUMN ENCRYPTION KEY statement must include at least one VALUES clause and may have up to two. If only one is provided, you can use the ALTER COLUMN ENCRYPTION KEY statement to add a second value later. You can also use the ALTER COLUMN ENCRYPTION KEY statement to remove a VALUES clause.  
+The CREATE COLUMN ENCRYPTION KEY statement must include at least one VALUES clause and may have up to two. If only one is provided, you can use the ALTER COLUMN ENCRYPTION KEY statement to add a second value later. You can also use the ALTER COLUMN ENCRYPTION KEY statement to remove a VALUES clause.  
   
- Typically, a column encryption key is created with just one encrypted value. When a column master key needs to be rotated (the current column master key needs to be replaced with the new column master key), you can add a new value of the column encryption key, encrypted with the new column master key. This will allow you to ensure client applications can access data encrypted with the column encryption key, while the new column master key is being made available to client applications. An Always Encrypted enabled driver in a client application that does not have access to the new master key, will be able to use the column encryption key value encrypted with the old column master key to access sensitive data.  
+Typically, a CEK is created with just one encrypted value. At times, you need to rotate a CMK. Replace the current CMK with the new CMK. When you need to rotate the key, add a new value of the column encryption key, encrypted with the new CMK. This rotation allows you to ensure client applications can access data encrypted with the CEK, while the new CMK is made available to client applications. An Always Encrypted enabled driver in a client application that doesn't have access to the new master key, will use the CEK value encrypted with the old CMK to access sensitive data.  
   
- The encryption algorithms, Always Encrypted supports, require the plaintext value to have 256 bits.  
+The encryption algorithms, Always Encrypted supports, require the plaintext value to have 256 bits.  
   
- An encrypted value should be generated using a key store provider that encapsulates the key store holding the column master key. For more information, see [Always Encrypted &#40;client development&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md).  
+An encrypted value should be generated using a key store provider that encapsulates the key store holding the CMK. For more information, see [Always Encrypted &#40;client development&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md).  
   
- Use [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) and [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) to view information about column encryption keys.  
+Use [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md), and [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) to view information about column encryption keys.  
   
 ## Permissions  
- Requires the **ALTER ANY COLUMN ENCRYPTION KEY** permission.  
+Requires the **ALTER ANY COLUMN ENCRYPTION KEY** permission.  
   
 ## Examples  
   
 ### A. Creating a column encryption key  
- The following example creates a column encryption key called `MyCEK`.  
+The following example creates a column encryption key called `MyCEK`.  
   
 ```  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
@@ -105,8 +101,8 @@ WITH VALUES
 GO  
 ```  
   
-### Creating a Column Encryption Key with 2 Values  
- The following example creates a column encryption key called `TwoValueCEK` with two values.  
+### Creating a Column Encryption Key with Two Values  
+The following example creates a column encryption key called `TwoValueCEK` with two values.  
   
 ```  
   
@@ -126,12 +122,12 @@ GO
 ```  
   
 ## See Also  
- [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
- [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
- [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+[ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
+[DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+[Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
+[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
+[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

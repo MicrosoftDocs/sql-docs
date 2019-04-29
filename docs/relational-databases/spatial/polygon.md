@@ -1,25 +1,19 @@
-﻿---
+---
 title: "Polygon | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry subtypes [SQL Server]"
   - "Polygon geometry subtype [SQL Server]"
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-caps.latest.revision: 27
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Polygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,13 +22,13 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ## Polygon instances  
  A **Polygon** instance can be formed from a ring that has at least three distinct points. A **Polygon** instance can also be empty.  
   
- The exterior and any interior rings of a **Polygon** define its boundary. The space within the rings defines the interior of the **Polygon**.  
+The exterior and any interior rings of a **Polygon** define its boundary. The space within the rings defines the interior of the **Polygon**.  
   
- The illustration below shows examples of **Polygon** instances.  
+The illustration below shows examples of **Polygon** instances.  
   
  ![Examples of geometry Polygon instances](../../relational-databases/spatial/media/polygon.gif "Examples of geometry Polygon instances")  
   
- As shown in the illustration:  
+As shown in the illustration:  
   
 1.  Figure 1 is a **Polygon** instance whose boundary is defined by an exterior ring.  
   
@@ -46,20 +40,17 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  Accepted **Polygon** instances are instances that can be stored in a **geometry** or **geography** variable without throwing an exception. The following are accepted **Polygon** instances:  
   
 -   An Empty **Polygon** instance  
-  
 -   A **Polygon** instance that has an acceptable exterior ring and zero or more acceptable interior rings  
   
- The following criteria are needed for a ring to be acceptable.  
+The following criteria are needed for a ring to be acceptable.  
   
 -   The **LineString** instance must be accepted.  
-  
 -   The **LineString** instance must have at least four points.  
-  
 -   The starting and ending points of the **LineString** instance must be the same.  
   
- The following example shows accepted **Polygon** instances.  
+The following example shows accepted **Polygon** instances.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 1))';  
 DECLARE @g3 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 3 3, 0 3, 0 0))';  
@@ -67,18 +58,18 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- As `@g4` and `@g5` show an accepted **Polygon** instance may not be a valid **Polygon** instance. `@g5` also shows that a Polygon instance needs to only contain a ring with any four points to be accepted.  
+As `@g4` and `@g5` show an accepted **Polygon** instance may not be a valid **Polygon** instance. `@g5` also shows that a Polygon instance needs to only contain a ring with any four points to be accepted.  
   
- The following examples throw a `System.FormatException` because the **Polygon** instances are not accepted.  
+The following examples throw a `System.FormatException` because the **Polygon** instances are not accepted.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` is not accepted because the **LineString** instance for the exterior ring does not contain enough points. `@g2` is not accepted because the starting point of the exterior ring **LineString** instance is not the same as the ending point. The following example has an acceptable exterior ring, but the interior ring is not acceptable. This also throws a `System.FormatException`.  
+`@g1` is not accepted because the **LineString** instance for the exterior ring does not contain enough points. `@g2` is not accepted because the starting point of the exterior ring **LineString** instance is not the same as the ending point. The following example has an acceptable exterior ring, but the interior ring is not acceptable. This also throws a `System.FormatException`.  
   
-```  
+```sql  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
@@ -87,7 +78,7 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
   
  The following example shows valid **Polygon** instances.  
   
-```  
+```sql  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
 DECLARE @g2 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0))';  
 DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (-10 0, 0 10, -5 -10, -10 0))';  
@@ -96,7 +87,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
  `@g3` is valid because the two interior rings touch at a single point and do not cross each other. The following example shows `Polygon` instances that are not valid.  
   
-```  
+```sql   
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
 DECLARE @g2 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (5 0, 1 5, 1 -5, 5 0))';  
 DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0, 0 10, 0 -10, 10 0), (-10 0, 0 10, 0 -10, -10 0))';  
@@ -109,34 +100,39 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
  `@g1` is not valid because the inner ring touches the exterior ring in two places. `@g2` is not valid because the second inner ring in within the interior of the first inner ring. `@g3` is not valid because the two inner rings touch at multiple consecutive points. `@g4` is not valid because the interiors of the two inner rings overlap. `@g5` is not valid because the exterior ring is not the first ring. `@g6` is not valid because the ring does not have at least three distinct points.  
   
 ## Examples  
- The following example creates a simple `geometry``Polygon` instance with a hole and SRID 10.  
+### Example A.  
+The following example creates a simple `geometry``Polygon` instance with a hole and SRID 10.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
 ```  
   
- Aninstance that is not valid may be entered and converted to a valid `geometry` instance. In the following example of a `Polygon`, the interior and exterior rings overlap and the instance is not valid.  
+
+### Example B.   
+An instance that is not valid may be entered and converted to a valid `geometry` instance. In the following example of a `Polygon`, the interior and exterior rings overlap and the instance is not valid.  
   
-```  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
 ```  
   
- In the following example, the invalid instance is made valid with `MakeValid()`.  
+### Example C.  
+In the following example, the invalid instance is made valid with `MakeValid()`.  
   
-```  
+```sql  
 SET @g = @g.MakeValid();  
 SELECT @g.ToString();  
 ```  
   
- The `geometry` instance returned from the above example is a `MultiPolygon`.  
+The `geometry` instance returned from the above example is a `MultiPolygon`.  
   
-```  
+```sql  
 MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
 ```  
   
- Here is another example of converting an invalid instance to a valid geometry instance. In the following example the `Polygon` instance has been created using three points that are exactly the same:  
+### Example D.  
+This is another example of converting an invalid instance to a valid geometry instance. In the following example the `Polygon` instance has been created using three points that are exactly the same:  
   
 ```sql  
 DECLARE @g geometry  
@@ -145,7 +141,7 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- The geometry instance returned above is a `Point(1 3)`.  If the `Polygon` given is `POLYGON((1 3, 1 5, 1 3, 1 3))` then `MakeValid()` would return `LINESTRING(1 3, 1 5)`.  
+The geometry instance returned above is a `Point(1 3)`.  If the `Polygon` given is `POLYGON((1 3, 1 5, 1 3, 1 3))` then `MakeValid()` would return `LINESTRING(1 3, 1 5)`.  
   
 ## See Also  
  [STArea &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   

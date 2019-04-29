@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "transmission_queue"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.transmission_queue catalog view"
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
-caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_indexoption"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_indexoption"
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_indexoption (Transact-SQL)
@@ -45,10 +41,10 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## Arguments  
- [ **@IndexNamePattern=**] **'***table_or_index_name***'**  
+`[ @IndexNamePattern = ] 'table_or_index_name'`
  Is the qualified or nonqualified name of a user-defined table or index. *table_or_index_name* is **nvarchar(1035)**, with no default. Quotation marks are required only if a qualified index or table name is specified. If a fully qualified table name, including a database name, is provided, the database name must be the name of the current database. If a table name is specified with no index, the specified option value is set for all indexes on that table and the table itself if no clustered index exists.  
   
- [ **@OptionName =**] **'***option_name***'**  
+`[ @OptionName = ] 'option_name'`
  Is an index option name. *option_name* is **varchar(35)**, with no default. *option_name* can have one of the following values.  
   
 |Value|Description|  
@@ -58,7 +54,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|When TRUE, row locks are not used. When FALSE, row locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when row locks are used.|  
 |**DisAllowPageLocks**|When TRUE, page locks are not used. When FALSE, page locks are allowed when accessing the index. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] determines when page locks are used.|  
   
- [ **@OptionValue =**] **'***value***'**  
+`[ @OptionValue = ] 'value'`
  Specifies whether the *option_name* setting is enabled (TRUE, ON, yes, or 1) or disabled (FALSE, OFF, no, or 0). *value* is **varchar(12)**, with no default.  
   
 ## Return Code Values  

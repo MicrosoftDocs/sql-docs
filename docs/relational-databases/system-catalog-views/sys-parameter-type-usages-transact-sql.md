@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.parameter_type_usages"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.parameter_type_usages catalog view"
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
-caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.parameter_type_usages (Transact-SQL)

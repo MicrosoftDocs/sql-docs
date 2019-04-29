@@ -5,18 +5,15 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data flow [Integration Services], transformations"
   - "transformations [Integration Services], about transformations"
   - "transforming data [Integration Services]"
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Transform Data with Transformations
@@ -42,7 +39,7 @@ manager: craigg
   
  You can also write custom transformations. For more information, see [Developing a Custom Data Flow Component](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) and [Developing Specific Types of Data Flow Components](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- After you add the transformation to the data flow designer, but before you configure the transformation, you connect the transformation to the data flow by connecting the output of another transformation or source in the data flow to the input of this transformation. The connector between two data flow components is called a path. For more information about connecting components and working with paths, see [Connect Components with Paths](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ After you add the transformation to the data flow designer, but before you configure the transformation, you connect the transformation to the data flow by connecting the output of another transformation or source in the data flow to the input of this transformation. The connector between two data flow components is called a path. For more information about connecting components and working with paths, see [Connect Components with Paths](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
   
 ### To add a transformation to a data flow  
   
@@ -59,7 +56,7 @@ manager: craigg
 ## See Also  
  [Data Flow Task](../../../integration-services/control-flow/data-flow-task.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)   
- [Connect Components with Paths](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Connect Components with Paths](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [Error Handling in Data](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Data Flow](../../../integration-services/data-flow/data-flow.md)  
   

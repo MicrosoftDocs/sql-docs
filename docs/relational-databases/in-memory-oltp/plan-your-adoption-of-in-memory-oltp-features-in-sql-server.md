@@ -1,21 +1,17 @@
-﻿---
+---
 title: "Plan your adoption of In-Memory OLTP Features in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/21/2017"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ A memory-optimized table which contains 200 GB of data requires more than 200 GB
 
 For a database hosted in the Azure SQL Database cloud service, your chosen service tier affects the amount of active memory your database is allowed to consume. You should plan to monitor the memory usage of your database by using an alert. For details, see:
 
-- Review the In-Memory OLTP Storage limits for your [Pricing Tier](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Review the In-Memory OLTP Storage limits for your [Pricing Tier](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
 - [Monitor In-Memory OLTP Storage](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### Memory-optimized table variables
@@ -214,7 +210,7 @@ For an overview of indexes on memory-optimized tables, see:
 
 Hash indexes can be the fastest format for accessing one specific row by its exact primary key value by using the '**=**' operator.
 
-- Inexact operators such as '**!=**', '**>**', or '**BETWEEN**' would harm performace if used with a hash index.
+- Inexact operators such as '**!=**', '**>**', or '**BETWEEN**' would harm performance if used with a hash index.
 
 - A hash index might not be the best choice if the rate of key value duplication becomes too high.
 
@@ -295,7 +291,7 @@ In SQL Server 2016:
 You can make your Transact-SQL scripts more robust against a possible transaction error by adding *retry logic* to your scripts. Retry logic is more likely to help when UPDATE and DELETE calls are frequent, or if the memory-optimized table is referenced by a foreign key in another table. For details, see:
 
 - [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)
-- [Transaction dependency limits with memory optimized tables – Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
+- [Transaction dependency limits with memory optimized tables - Error 41839](https://blogs.msdn.microsoft.com/sqlcat/2016/07/11/transaction-dependency-limits-with-memory-optimized-tables-error-41839/)
 
 
 

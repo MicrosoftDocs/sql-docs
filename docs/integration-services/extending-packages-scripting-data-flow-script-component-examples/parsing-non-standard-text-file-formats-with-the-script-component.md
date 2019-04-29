@@ -5,21 +5,16 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "text file reading [Integration Services]"
   - "Script component [Integration Services], non-standard text file formats"
   - "transformations [Integration Services], components"
   - "Script component [Integration Services], examples"
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Parsing Non-Standard Text File Formats with the Script Component

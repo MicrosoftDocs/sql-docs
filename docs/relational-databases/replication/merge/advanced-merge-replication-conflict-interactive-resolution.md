@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "interactive conflict resolution [SQL Server replication]"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "articles [SQL Server replication], conflict resolution"
   - "conflict resolution [SQL Server replication], merge replication"
 ms.assetid: 172c60c7-f605-4eb5-b185-54ae9e9d3c60
-caps.latest.revision: 34
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -36,7 +31,7 @@ manager: craigg
   
  To use the Interactive Resolver, interactive resolution must be enabled for each article and subscription that requires it. After it is enabled for one or more articles and subscriptions, the Interactive Resolver is used when a conflict is detected during merge synchronization.  
   
- To use the Interactive Resolver, see [Specify Interactive Conflict Resolution for Merge Articles](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md) and [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
+ To use the Interactive Resolver, see [Specify Merge Replication options](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) and [Synchronize a Subscription Using Windows Synchronization Manager &#40;Windows Synchronization Manager&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
 ## See Also  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  

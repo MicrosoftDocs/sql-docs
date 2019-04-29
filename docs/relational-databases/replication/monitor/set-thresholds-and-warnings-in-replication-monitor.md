@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "alerts [SQL Server replication]"
@@ -19,7 +15,6 @@ helpviewer_keywords:
   - "Replication Monitor, thresholds and warnings"
   - "monitoring performance [SQL Server replication], thresholds and warnings"
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
-caps.latest.revision: 33
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -163,6 +158,6 @@ manager: craigg
 5.  Click **Close**.  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

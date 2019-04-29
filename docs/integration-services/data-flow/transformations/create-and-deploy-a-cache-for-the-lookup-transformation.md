@@ -5,18 +5,15 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "creating cache files for Lookup transformation"
   - "deploying cache files for Lookup transformation"
   - "Lookup transformation cache files"
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create and Deploy a Cache for the Lookup Transformation

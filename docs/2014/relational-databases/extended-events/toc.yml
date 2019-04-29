@@ -1,0 +1,69 @@
+- name: Extended Events
+  href: extended-events.md
+- name: Create an Extended Events Session
+  href: ../../database-engine/create-an-extended-events-session.md
+  items:
+  - name: Create an Extended Events Session Using Query Editor
+    href: ../../database-engine/create-an-extended-events-session-using-query-editor.md
+  - name: Create an Extended Events Session Using the Wizard (Object Explorer)
+    href: ../../database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md
+  - name: Create an Extended Events Session Using the New Session Dialog
+    href: ../../database-engine/create-an-extended-events-session-using-the-new-session-dialog.md
+- name: Manage Event Sessions in the Object Explorer
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: View Event Session Data
+  href: ../../database-engine/view-event-session-data.md
+- name: Extended Events Packages
+  href: sql-server-extended-events-packages.md
+- name: Extended Events Targets
+  href: ../../database-engine/sql-server-extended-events-targets.md
+  items:
+  - name: Event Counter Target
+    href: ../../database-engine/event-counter-target.md
+  - name: Event File Target
+    href: ../../database-engine/event-file-target.md
+  - name: Event Pairing Target
+    href: ../../database-engine/event-pairing-target.md
+  - name: Histogram Target
+    href: ../../database-engine/histogram-target.md
+  - name: Ring Buffer Target
+    href: ../../database-engine/ring-buffer-target.md
+  - name: Event Tracing for Windows Target
+    href: event-tracing-for-windows-target.md
+- name: Extended Events Engine
+  href: sql-server-extended-events-engine.md
+- name: Extended Events Sessions
+  href: sql-server-extended-events-sessions.md
+- name: Extended Events Tools
+  href: extended-events-tools.md
+  items:
+  - name: Use the system_health Session
+    href: use-the-ssms-xe-profiler.md
+  - name: Use the PowerShell Provider for Extended Events
+    href: use-the-powershell-provider-for-extended-events.md
+- name: Script an Extended Event Session
+  href: ../../database-engine/script-an-extended-event-session.md
+- name: Alter an Extended Events Session
+  href: alter-an-extended-events-session.md
+- name: Copy or Export Target Data
+  href: ../../database-engine/copy-or-export-target-data.md
+- name: Modify the Trace Results View
+  href: ../../database-engine/modify-the-trace-results-view.md
+- name: Get the Fields for All Events
+  href: ../../database-engine/get-the-fields-for-all-events.md
+- name: View the Events for Registered Packages
+  href: ../../database-engine/view-the-events-for-registered-packages.md
+- name: View the Extended Events Targets for Registered Packages
+  href: ../../database-engine/view-the-extended-events-targets-for-registered-packages.md
+- name: View the Extended Events Equivalents to SQL Trace Event Classes
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: Get the Configurable Parameters for the ADD TARGET Argument
+  href: ../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md
+- name: Convert an Existing SQL Trace Script to an Extended Events Session
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: Determine Which Queries Are Holding Locks
+  href: determine-which-queries-are-holding-locks.md
+- name: Find the Objects That Have the Most Locks Taken on Them
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: Monitor System Activity Using Extended Events
+  href: monitor-system-activity-using-extended-events.md

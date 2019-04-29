@@ -4,21 +4,15 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
-caps.latest.revision: 3
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
 ---
 # Connect to SQL Server (DB2ToSQL)
-Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] that you want to migrate to. To access the **Connect to SQL Server** dialog box, on the **File** menu, click **Connect to SQL Server**.  
+Use the **Connect to SQL Server** dialog box to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you want to migrate to. To access the **Connect to SQL Server** dialog box, on the **File** menu, click **Connect to SQL Server**.  
   
 ## Options  
 **Server name**  
@@ -31,19 +25,19 @@ Enter or select the instance of SQL Server to connect to. By default, the instan
 -   If you are connecting to a named instance on another computer, enter the computer name, a backslash, and the instance name, such as *MyServer*\\*MyInstance*.  
   
 **Server port**  
-If your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] is not configured to accept connections on the default port (1433), enter the port number. Otherwise, leave this value blank.  
+If your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not configured to accept connections on the default port (1433), enter the port number. Otherwise, leave this value blank.  
   
 **Database**  
-Specify the database to migrate objects and data to. This option is not available when reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Specify the database to migrate objects and data to. This option is not available when reconnecting to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Authentication**  
-Select the authentication method that is used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. To use your current Windows account, select Windows Authentication. To specify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] login and password, select [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication.  
+Select the authentication method that is used to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To use your current Windows account, select Windows Authentication. To specify a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login and password, select [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
 **User name**  
-If you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, enter the login for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. If you are using Windows Authentication, this option is not available.  
+If you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, enter the login for that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you are using Windows Authentication, this option is not available.  
   
 **Password**  
-If you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, enter the password for the login on that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. If you are using Windows Authentication, this option is not available.  
+If you are using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, enter the password for the login on that instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you are using Windows Authentication, this option is not available.  
   
 **Encrypt Connection**  
 If you want to securely connect to SQL Server, make use of Encrypt connection by checking the **Encrypt connection** checkbox.  
@@ -52,5 +46,5 @@ If you want to securely connect to SQL Server, make use of Encrypt connection by
 If you want to use this option, select the **Trust Server Certificate** checkbox.  
   
 > [!NOTE]  
-> To enable **Trust Server Certificate**, “Encrypt” must be set to **True**.  
+> To enable **Trust Server Certificate**, "Encrypt" must be set to **True**.  
   

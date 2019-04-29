@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "system objects [SQL Server]"
   - "GRANT statement, system objects"
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT System Object Permissions (Transact-SQL)

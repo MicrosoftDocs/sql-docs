@@ -1,0 +1,133 @@
+- name: SQL Server Management Objects (SMO) Programming Guide
+  href: sql-server-management-objects-smo-programming-guide.md
+- name: Overview (SMO)
+  href: overview-smo.md
+- name: Getting Started in SMO
+  href: getting-started-in-smo.md
+  items:
+  - name: SMO Syntax Conventions
+    href: smo-syntax-conventions.md
+  - name: Files and Version Numbers
+    href: files-and-version-numbers.md
+  - name: Link to Programming Samples
+    href: link-to-programming-samples.md
+  - name: Installing SMO
+    href: installing-smo.md
+- name: SMO Object Model
+  href: smo-object-model.md
+  items:
+  - name: SMO Namespaces
+    href: smo-object-model-namespaces.md
+  - name: SMO Object Model Diagram
+    href: smo-object-model-diagram.md
+- name: Programming Languages
+  href: smo-programming-languages.md
+  items:
+  - name: Getting Started in Visual Basic .NET
+    href: ../../database-engine/dev-guide/getting-started-in-visual-basic-net.md
+  - name: Getting Started in Visual C# .NET
+    href: smo-programming-getting-started-in-visual-csharp-net.md
+- name: Backward Compatibility in SMO
+  href: backward-compatibility-in-smo.md
+- name: Creating SMO Programs
+  href: create-program/creating-smo-programs.md
+  items:
+  - name: Connecting to an Instance of SQL Server
+    href: create-program/connecting-to-an-instance-of-sql-server.md
+  - name: Disconnecting from an Instance of SQL Server
+    href: create-program/disconnecting-from-an-instance-of-sql-server.md
+  - name: Calling Methods
+    href: create-program/calling-methods.md
+  - name: Setting Properties
+    href: create-program/setting-properties-smo.md
+  - name: Using Collections
+    href: create-program/using-collections.md
+  - name: Working with Data Types
+    href: create-program/working-with-data-types.md
+  - name: Using Transactions
+    href: create-program/using-transactions.md
+  - name: Using Capture Mode
+    href: create-program/using-capture-mode.md
+  - name: Handling SMO Events
+    href: create-program/handling-smo-events.md
+  - name: Handling SMO Exceptions
+    href: create-program/handling-smo-exceptions.md
+- name: Programming Specific Tasks
+  href: tasks/programming-specific-tasks.md
+  items:
+  - name: Configuring SQL Server in SMO
+    href: tasks/configuring-sql-server-in-smo.md
+  - name: Using Table and Index Partitioning
+    href: tasks/using-table-and-index-partitioning.md
+  - name: Using Filegroups and Files to Store Data
+    href: tasks/using-filegroups-and-files-to-store-data.md
+  - name: Working with Database Objects
+    href: tasks/creating-altering-and-removing-database-objects.md
+    items:
+    - name: Creating, Altering, and Removing Databases
+      href: tasks/creating-altering-and-removing-databases.md
+    - name: Creating, Altering, and Removing Tables
+      href: tasks/creating-altering-and-removing-tables.md
+    - name: Creating, Altering, and Removing Indexes
+      href: tasks/creating-altering-and-removing-indexes.md
+    - name: Creating, Altering, and Removing Foreign Keys
+      href: tasks/creating-altering-and-removing-foreign-keys.md
+    - name: Creating, Altering, and Removing Defaults
+      href: tasks/creating-altering-and-removing-defaults.md
+    - name: Creating, Altering, and Removing Rules
+      href: tasks/creating-altering-and-removing-rules.md
+    - name: Creating, Altering, and Removing Views
+      href: tasks/creating-altering-and-removing-views.md
+    - name: Creating, Altering, and Removing Triggers
+      href: tasks/creating-altering-and-removing-triggers.md
+    - name: Creating, Altering, and Removing Stored Procedures
+      href: tasks/creating-altering-and-removing-stored-procedures.md
+    - name: Creating, Altering, and Removing User-Defined Functions
+      href: tasks/creating-altering-and-removing-user-defined-functions.md
+    - name: Creating, Altering, and Removing Schemas
+      href: tasks/creating-altering-and-removing-schemas.md
+  - name: Managing Users, Roles, and Logins
+    href: tasks/managing-users-roles-and-logins.md
+  - name: Granting, Revoking, and Denying Permissions
+    href: tasks/granting-revoking-and-denying-permissions.md
+  - name: Using Encryption
+    href: tasks/using-encryption.md
+  - name: Scheduling Automatic Administrative Tasks in SQL Server Agent
+    href: tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md
+  - name: Backing Up and Restoring Databases and Transaction Logs
+    href: tasks/backing-up-and-restoring-databases-and-transaction-logs.md
+  - name: Scripting
+    href: tasks/scripting.md
+  - name: Transferring Data
+    href: tasks/transferring-data.md
+  - name: Using Database Mail
+    href: tasks/using-database-mail.md
+  - name: Managing Service Broker
+    href: tasks/managing-service-broker.md
+  - name: Using XML Schemas
+    href: tasks/using-xml-schemas.md
+  - name: Using Synonyms
+    href: tasks/using-synonyms.md
+  - name: Using Messages
+    href: tasks/using-messages.md
+  - name: Implementing Full-Text Search
+    href: tasks/implementing-full-text-search.md
+  - name: Implementing Endpoints
+    href: tasks/implementing-endpoints.md
+  - name: Creating and Updating Statistics
+    href: tasks/creating-and-updating-statistics.md
+  - name: Tracing and Replaying Events
+    href: tasks/tracing-and-replaying-events.md
+  - name: Managing Services and Network Settings by Using WMI Provider
+    href: tasks/managing-services-and-network-settings-by-using-wmi-provider.md
+  - name: Using Linked Servers in SMO
+    href: tasks/using-linked-servers-in-smo.md
+  - name: Using User-Defined Tables
+    href: tasks/using-user-defined-tables.md
+- name: SMO How-to Topics
+  href: ../../database-engine/dev-guide/smo-how-to-topics.md
+  items:
+  - name: Create a Visual C# SMO Project in Visual Studio .NET
+    href: how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
+  - name: Create a Visual Basic SMO Project in Visual Studio .NET
+    href: ../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "syspolicy_policy_category_subscriptions_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "syspolicy_policy_group_subscriptions view"
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
-caps.latest.revision: 16
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # syspolicy_policy_category_subscriptions (Transact-SQL)

@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "receiving multiple Recordsets [ADO]"
   - "Recordset object [ADO], receiving multiple Recordsets"
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg

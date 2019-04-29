@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -17,7 +15,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Groups collection [ADOX]"
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

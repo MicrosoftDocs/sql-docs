@@ -5,12 +5,9 @@ ms.date: "03/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -21,7 +18,7 @@ manager: craigg
 This topic discusses the use of the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute to specify direct statement execution instead of the default, which is prepared statement execution. Using a prepared statement can result in better performance if the statement is executed more than once using parameter binding.  
   
 ## Remarks  
-If you want to send a [!INCLUDE[tsql](../../includes/tsql_md.md)] statement directly to the server without statement preparation by the driver, you can set the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (or as a driver option passed to [PDO::__construct](../../connect/php/pdo-construct.md)) or when you call [PDO::prepare](../../connect/php/pdo-prepare.md). By default, the value of PDO::SQLSRV_ATTR_DIRECT_QUERY is False (use prepared statement execution).  
+If you want to send a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement directly to the server without statement preparation by the driver, you can set the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute with [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (or as a driver option passed to [PDO::__construct](../../connect/php/pdo-construct.md)) or when you call [PDO::prepare](../../connect/php/pdo-prepare.md). By default, the value of PDO::SQLSRV_ATTR_DIRECT_QUERY is False (use prepared statement execution).  
   
 If you use [PDO::query](../../connect/php/pdo-query.md), you might want direct execution. Before calling [PDO::query](../../connect/php/pdo-query.md), call [PDO::setAttribute](../../connect/php/pdo-setattribute.md) and set PDO::SQLSRV_ATTR_DIRECT_QUERY to True.  Each call to [PDO::query](../../connect/php/pdo-query.md) can be executed with a different setting for PDO::SQLSRV_ATTR_DIRECT_QUERY.  
   
@@ -31,8 +28,12 @@ After you call [PDO::prepare](../../connect/php/pdo-prepare.md), the value of PD
   
 If a query requires the context that was set in a previous query, then execute your queries with PDO::SQLSRV_ATTR_DIRECT_QUERY set to True. For example, if you use temporary tables in your queries, PDO::SQLSRV_ATTR_DIRECT_QUERY must be set to True.  
   
-The following sample shows that when context from a previous statement is required, you need to set PDO::SQLSRV_ATTR_DIRECT_QUERY to True.  This sample uses temporary tables, which are only available to subsequent statements in your program when queries are executed directly.  
+The following sample shows that when context from a previous statement is required, you need to set PDO::SQLSRV_ATTR_DIRECT_QUERY to True. This sample uses temporary tables, which are only available to subsequent statements in your program when queries are executed directly.  
   
+> [!NOTE]
+> If the query is to invoke a stored procedure and temporary tables are used in this 
+> stored procedure, use [PDO::exec](../../connect/php/pdo-exec.md) instead.
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  

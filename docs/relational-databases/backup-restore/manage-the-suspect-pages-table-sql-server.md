@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "824 (Database Engine error)"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "suspect pages [SQL Server]"
   - "restoring [SQL Server], pages"
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

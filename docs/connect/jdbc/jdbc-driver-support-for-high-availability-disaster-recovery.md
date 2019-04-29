@@ -5,12 +5,9 @@ ms.date: "04/04/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -18,7 +15,7 @@ manager: craigg
 # JDBC Driver Support for High Availability, Disaster Recovery
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  This topic discusses [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] support for high-availability, disaster recovery -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. For more information about [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Books Online.  
+  This topic discusses [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] support for high-availability, disaster recovery -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. For more information about [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], see [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Books Online.  
   
  Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], you can specify the availability group listener of a (high-availability, disaster-recovery) availability group (AG) in the connection property. If a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] application is connected to an AlwaysOn database that fails over, the original connection is broken and the application must open a new connection to continue work after the failover. The following [connection properties](../../connect/jdbc/setting-the-connection-properties.md) were added in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]:  
   
@@ -37,25 +34,25 @@ Please note that:
 * transparentNetworkIPResolution is ignored if there are more than 64 IP addresses
 * When transparentNetworkIPResolution is true, the first connection attempt uses a timeout value of 500ms. Rest of the connection attempts follow the same logic as in the multiSubnetFailover feature. 
 
-> [!NOTE]  
-If you are using Microsoft JDBC Driver 4.2 (or lower) for SQL Server and if **multiSubnetFailover** is false, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] attempts to connect to the first IP address. If the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] cannot establish a connection with first IP address, the connection fails. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will not attempt to connect to any subsequent IP address associated with the server. 
-
-  
-> [!NOTE]  
+> [!NOTE]
+> If you are using Microsoft JDBC Driver 4.2 (or lower) for SQL Server and if **multiSubnetFailover** is false, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] attempts to connect to the first IP address. If the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] cannot establish a connection with first IP address, the connection fails. The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will not attempt to connect to any subsequent IP address associated with the server. 
+> 
+> 
+> [!NOTE]
 >  Increasing connection timeout and implementing connection retry logic will increase the probability that an application will connect to an availability group. Also, because a connection can fail because of an availability group failover, you should implement connection retry logic, retrying a failed connection until it reconnects.  
   
  
   
 ## Connecting With MultiSubnetFailover  
- Always specify **multiSubnetFailover=true** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] availability group or a [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Failover Cluster Instance. **multiSubnetFailover** enables faster failover for all Availability Groups and failover cluster instances in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] and will significantly reduce failover time for single and multi-subnet AlwaysOn topologies. During a multi-subnet failover, the client will attempt connections in parallel. During a subnet failover, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will aggressively retry the TCP connection.  
+ Always specify **multiSubnetFailover=true** when connecting to the availability group listener of a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] availability group or a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Failover Cluster Instance. **multiSubnetFailover** enables faster failover for all Availability Groups and failover cluster instances in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and will significantly reduce failover time for single and multi-subnet AlwaysOn topologies. During a multi-subnet failover, the client will attempt connections in parallel. During a subnet failover, the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will aggressively retry the TCP connection.  
   
- The **multiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance by trying to connect to all the IP addresses. When **MultiSubnetFailover=true** is specified for a connection, the client retries TCP connection attempts faster than the operating system’s default TCP retransmit intervals. This enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
+ The **multiSubnetFailover** connection property indicates that the application is being deployed in an availability group or Failover Cluster Instance and that the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] will try to connect to the database on the primary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance by trying to connect to all the IP addresses. When **MultiSubnetFailover=true** is specified for a connection, the client retries TCP connection attempts faster than the operating system's default TCP retransmit intervals. This enables faster reconnection after failover of either an AlwaysOn Availability Group or an AlwaysOn Failover Cluster Instance, and is applicable to both single- and multi-subnet Availability Groups and Failover Cluster Instances.  
   
  For more information about connection string keywords in the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], see [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md).  
   
  Specifying **multiSubnetFailover=true** when connecting to something other than an availability group listener or Failover Cluster Instance may result in a negative performance impact, and is not supported.  
   
- If the security manager is not installed, the Java Virtual Machine caches virtual IP addresses (VIPs) for a finite period of time, by default, defined by your JDK implementation and the Java properties networkaddress.cache.ttl and networkaddress.cache.negative.ttl. If the JDK security manager is installed, the Java Virtual Machine will cache VIPs, and will not refresh the cache by default. You should set "time-to-live" (networkaddress.cache.ttl) to one day for the Java Virtual Machine cache. If you don’t change the default value to one day (or so), the old value will not be purged from the Java Virtual Machine cache when a VIP is added or updated. For more information about networkaddress.cache.ttl and networkaddress.cache.negative.ttl, see [http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
+ If the security manager is not installed, the Java Virtual Machine caches virtual IP addresses (VIPs) for a finite period of time, by default, defined by your JDK implementation and the Java properties networkaddress.cache.ttl and networkaddress.cache.negative.ttl. If the JDK security manager is installed, the Java Virtual Machine will cache VIPs, and will not refresh the cache by default. You should set "time-to-live" (networkaddress.cache.ttl) to one day for the Java Virtual Machine cache. If you don't change the default value to one day (or so), the old value will not be purged from the Java Virtual Machine cache when a VIP is added or updated. For more information about networkaddress.cache.ttl and networkaddress.cache.negative.ttl, see [https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
   
  Use the following guidelines to connect to a server in an availability group or Failover Cluster Instance:  
   
@@ -65,9 +62,9 @@ If you are using Microsoft JDBC Driver 4.2 (or lower) for SQL Server and if **mu
   
 -   To connect to an availability group, specify the availability group listener of the availability group as the server in your connection string. For example, jdbc:sqlserver://VNN1.  
   
--   Connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instance configured with more than 64 IP addresses will cause a connection failure.  
+-   Connecting to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance configured with more than 64 IP addresses will cause a connection failure.  
   
--   Behavior of an application that uses the **multiSubnetFailover** connection property is not affected based on the type of authentication: [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Authentication, Kerberos Authentication, or Windows Authentication.  
+-   Behavior of an application that uses the **multiSubnetFailover** connection property is not affected based on the type of authentication: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, Kerberos Authentication, or Windows Authentication.  
   
 -   Increase the value of **loginTimeout** to accommodate for failover time and reduce application connection retry attempts.  
   

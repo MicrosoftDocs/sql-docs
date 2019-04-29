@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_refreshview"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_refreshview"
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_refreshview (Transact-SQL)
@@ -38,7 +34,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## Arguments  
- [ **@viewname=** ] **'***viewname***'**  
+`[ @viewname = ] 'viewname'`
  Is the name of the view. *viewname* is **nvarchar**, with no default. *viewname* can be a multipart identifier, but can only refer to views in the current database.  
   
 ## Return Code Values  

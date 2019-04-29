@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic joins"
   - "joins [SQL Server], creating"
   - "joins [SQL Server], automatic"
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syspolicy_set_log_on_success_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_set_log_on_success"
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
-caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_set_log_on_success (Transact-SQL)
@@ -39,7 +35,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## Arguments  
- [ **@value=** ] *value*  
+`[ @value = ] value`
  Determines whether successful policy evaluations are logged. *value* is **sqlvariant**, and can be one of the following values:  
   
 -   0 or 'false' = Successful policy evaluations are not logged.  

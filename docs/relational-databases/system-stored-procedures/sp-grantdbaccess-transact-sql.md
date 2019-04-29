@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_grantdbaccess"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_grantdbaccess"
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_grantdbaccess (Transact-SQL)
@@ -42,10 +38,10 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login* **'**  
+`[ @loginame = ] 'login_ '`
  Is the name of the Windows group, Windows login or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to be mapped to the new database user. Names of Windows groups and Windows logins must be qualified with a Windows domain name in the form *Domain*\\*login*; for example, **LONDON\Joeb**. The login cannot already be mapped to a user in the database. *login* is a **sysname**, with no default.  
   
- [ **@name_in_db=**] **'***name_in_db***'** [ **OUTPUT**]  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``
  Is the name for the new database user. *name_in_db* is an OUTPUT variable with a data type of **sysname**, and a default of NULL. If not specified, *login* is used. If specified as an OUTPUT variable with a value of NULL, **@name_in_db** is set to *login*. *name_in_db* must not already exist in the current database.  
   
 ## Return Code Values  

@@ -4,17 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Find Databases Wizard"
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -52,5 +46,5 @@ The date and time the database was created.
 The date and time the database was last updated.  
   
 ## See Also  
-[User Interface Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

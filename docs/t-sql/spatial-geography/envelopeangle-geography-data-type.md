@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "EnvelopeAngle"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "EnvelopeAngle method"
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
-caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

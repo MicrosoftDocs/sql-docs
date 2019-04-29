@@ -1,58 +1,85 @@
 ---
-title: End-to-end data science walkthrough for R and SQL Server | Microsoft Docs
+title: Tutorial for data scientists using R language - SQL Server Machine Learning
+description: Tutorial showing how to create an end-to-end R solution for in-database analytics.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 11/26/2018  
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
-# End-to-end data science walkthrough for R and SQL Server
+# Tutorial: SQL development for R data scientists
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In this walkthrough, you develop an end-to-end solution for predictive modeling based on Microsoft R with SQL Server 2016 or SQL Server 2017.
+In this tutorial for data scientists, learn how to build end-to-end solution for predictive modeling based on R feature support in either SQL Server 2016 or SQL Server 2017. This tutorial uses a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. 
 
-This walkthrough is based on a popular set of public data, the New York City taxi dataset. You use a combination of R code, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data, and custom SQL functions to build a classification model that indicates the probability that the driver might get a tip on a particular taxi trip. You also deploy your R model to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and use server data to generate scores based on the model.
+You use a combination of R code, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data, and custom SQL functions to build a classification model that indicates the probability that the driver might get a tip on a particular taxi trip. You also deploy your R model to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and use server data to generate scores based on the model.
 
 This example can be extended to all kinds of real-life problems, such as predicting customer responses to sales campaigns, or predicting spending or attendance at events. Because the model can be invoked from a stored procedure, you can easily embed it in an application.
 
 Because the walkthrough is designed to introduce R developers to [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], R is used wherever possible. However, this does not mean that R is necessarily the best tool for each task. In many cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] might provide better performance, particularly for tasks such as data aggregation and feature engineering.  Such tasks can particularly benefit from new features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], such as memory optimized columnstore indexes. We try to point out possible optimizations along the way.
 
+## Prerequisites
+
++ [SQL Server 2017 Machine Learning Services with R integration](../install/sql-machine-learning-services-windows-install.md#verify-installation) or [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
+
++ [Database permissions](../security/user-permission.md) and a SQL Server database user login
+
++ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+
++ [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
+
++ An R IDE such as RStudio or the built-in RGUI tool included with R
+
+We recommend that you do this walkthrough on a client workstation. You must be able to connect, on the same network, to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer with SQL Server and the R language enabled. For instructions on workstation configuration, see [Set up a data science client for R development](../r/set-up-a-data-science-client.md).
+
+Alternatively, you can run the walkthrough on a computer that has both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and an R development environment, but we don't recommend this configuration for a production environment. If you need to put client and server on the same computer, be sure to install a second set of Microsoft R libraries for sending R script from a "remote" client. Do not use the R libraries that are installed in the program files of the SQL Server instance. Specifically, if you are using one computer, you need the RevoScaleR library in both of these locations to support client and server operations.
+
++ C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
+
+<a name="add-packages"></a>
+
+## Additional R packages
+
+This walkthrough requires several R libraries that are not installed by default as part of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]. You must install the packages both on the client where you develop the solution, and on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer where you deploy the solution.
+
+### On a client workstation
+
+In your R environment, copy the following lines and execute the code in a Console window (Rgui or an IDE). Some packages also install required packages. In all, about 32 packages are installed. You must have an internet connection to complete this step.
+    
+  ```R
+  # Install required R libraries, if they are not already installed.
+  if (!('ggmap' %in% rownames(installed.packages()))){install.packages('ggmap')}
+  if (!('mapproj' %in% rownames(installed.packages()))){install.packages('mapproj')}
+  if (!('ROCR' %in% rownames(installed.packages()))){install.packages('ROCR')}
+  if (!('RODBC' %in% rownames(installed.packages()))){install.packages('RODBC')}
+  ```
+
+### On the server
+
+You have several options for installing packages on SQL Server. For example, SQL Server provides [R package management](../r/install-additional-r-packages-on-sql-server.md) feature that lets database administrators create a package repository and assign user the rights to install their own packages. However, if you are an administrator on the computer, you can install new packages using R, as long as you install to the correct library.
+
 > [!NOTE]
-> The walkthrough was originally developed for and tested on SQL Server 2016. However, screenshots and procedures have been updated to use the latest version of SQL Server Management Studio, which works with SQL Server 2017.
+> On the server, **do not** install to a user library even if prompted. If you install to a user library, the SQL Server instance cannot find or run the packages. For more information, see [Installing new R Packages on SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
-## Overview
+1. On the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, open RGui.exe **as an administrator**.  If you have installed SQL Server R Services using the defaults, Rgui.exe can be found in C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64).
 
-The estimated times do not include setup. For more information, see [Prerequisites for the walkthrough](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md).
+2. At an R prompt, run the following R commands:
+  
+  ```R
+  install.packages("ggmap", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("mapproj", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
+  ```
+  This example uses the R grep function to search the vector of available paths and find the path that includes "Program Files". For more information, see [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep).
 
-|Topic list|Estimated time|
-|-|------------------------------|
-|[Prepare the R walkthrough data](../tutorials/walkthrough-prepare-the-data.md) <br /><br />Obtain the data used for building a model. Download a public dataset and load it into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|30 minutes|
-|[Explore the data using SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Understand your data using SQL tools and summaries.|10 minutes|
-|[Summarize the data using R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Use R to explore the data and generate summaries.|10 minutes|
-|[Create plots using R in SQL Server](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />Create plots in local and remote compute contexts by mixing R and SQL.|10 minutes|
-|[Create data features using R and T-SQL)](../tutorials/walkthrough-create-data-features.md) <br /><br />Perform feature engineering using custom functions in R and [!INCLUDE[tsql](../../includes/tsql-md.md)]. Compare the performance of R and T-SQL for featurization tasks. |10 minutes|
-|[Build an R model and save it in SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />Train and tune a predictive model. Assess model performance. This walkthrough creates a classification model. Plot the model's accuracy using R.|15 minutes|
-|[Deploy the R model using SQL Server](../tutorials/walkthrough-deploy-and-use-the-model.md) <br /><br />Deploy the model in production by saving the model to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Call the model from a stored procedure to generate predictions.|10 minutes|
+  If you think the packages are already installed, check the list of installed packages by running `installed.packages()`.
 
-### Intended audience
+## Next steps
 
-This walkthrough is intended for R or SQL developers. It provides an introduction into how R can be integrated into enterprise workflows using [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  You should be familiar with database operations, such as creating databases and tables, importing data, and running queries.
-
-+ All SQL and R scripts are included.
-+ You might need to modify strings in the scripts, to run in your environment. You can do this with any code editor, such as [Visual Studio Code](https://code.visualstudio.com/Download).
-
-### Prerequisites
-
-+ You must have access to an instance of SQL Server 2016, or an evaluation version of SQL Server 2017.
-+ At least one instance on the SQL Server computer must have [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] installed.
-+ If you want to run R commands from a remote computer, such as a laptop or other networked computer, you must install the Microsoft R Open libraries. You can install either Microsoft R Client or Microsoft R Server. The remote computer must be able to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
-+ If you need to put client and server on the same computer, be sure to install a separate set of Microsoft R libraries for use in sending R script from a "remote" client. Do not use the R libraries that are installed for use by the SQL Server instance for this purpose.
-
-For details about how to set up these server and client environments, see [Prerequisites for R and SQL Server data science walkthrough](../tutorials/walkthrough-prerequisites-for-data-science-walkthroughs.md).
-
-## Next lesson
-
-[Prepare the R walkthrough data](../tutorials/walkthrough-prepare-the-data.md)
+> [!div class="nextstepaction"]
+> [Explore and summarize the data](walkthrough-view-and-summarize-data-using-r.md)

@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1dcc3d4f-ae30-45c0-afad-a531358807af
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -43,9 +40,9 @@ public void updateAsciiStream(int columnIndex,
 ## Remarks  
  This updateAsciiStream method is specified by the updateAsciiStream method in the java.sql.ResultSet interface.  
   
- This method passes ASCII characters (bytes) from an InputStream object to convertible character columns, which are the ASCII range [0x00 – 0x7F] of Unicode, and 874, 932, 936, 949, 950, and 1250 through 1258 code pages. This method performs a conversion to the destination collation page. Trying to update an unconvertible destination column will cause an exception to be thrown. For binary columns, raw bytes are passed.  
+ This method passes ASCII characters (bytes) from an InputStream object to convertible character columns, which are the ASCII range [0x00 - 0x7F] of Unicode, and 874, 932, 936, 949, 950, and 1250 through 1258 code pages. This method performs a conversion to the destination collation page. Trying to update an unconvertible destination column will cause an exception to be thrown. For binary columns, raw bytes are passed.  
   
- Using this method for the **image**, **text**, and **ntext**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] data types might impact performance.  
+ Using this method for the **image**, **text**, and **ntext**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data types might impact performance.  
   
 ## See Also  
  [updateAsciiStream Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Point"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "Point method"
   - "Point (geography Data Type)"
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

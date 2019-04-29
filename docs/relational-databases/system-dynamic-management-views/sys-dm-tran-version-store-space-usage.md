@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/24/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_tran_version_store_space_usage_TSQL"
@@ -18,11 +16,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_tran_version_store_space_usage dynamic management view"
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: 10
 author: "savjani"
 ms.author: "pariks"
 manager: "ajayj"
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]

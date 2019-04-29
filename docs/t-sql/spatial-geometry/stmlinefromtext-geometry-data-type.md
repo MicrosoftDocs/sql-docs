@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STMLineFromText (geometry Data Type)"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STMLineFromText (geometry Data Type)"
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
-caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

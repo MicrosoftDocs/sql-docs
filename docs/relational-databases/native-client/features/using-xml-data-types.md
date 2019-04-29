@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Using XML Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IRowsetChange interface"
@@ -32,11 +27,10 @@ helpviewer_keywords:
   - "XML [SQL Server], SQL Server Native Client"
   - "COLUMNS rowset"
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using XML Data Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +88,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass through<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Pass through<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>If a server type other than DBTYPE_XML is specified with **ICommandWithParameters::SetParameterInfo** and the accessor type is DBTYPE_XML, an error occurs when the statement is executed (DB_E_ERRORSOCCURRED, the parameter status is DBSTATUS_E_BADACCESSOR); otherwise the data is sent to the server, but the server returns an error indicating that there is no implicit conversion from XML to the parameter’s data type.  
+ <sup>1</sup>If a server type other than DBTYPE_XML is specified with **ICommandWithParameters::SetParameterInfo** and the accessor type is DBTYPE_XML, an error occurs when the statement is executed (DB_E_ERRORSOCCURRED, the parameter status is DBSTATUS_E_BADACCESSOR); otherwise the data is sent to the server, but the server returns an error indicating that there is no implicit conversion from XML to the parameter's data type.  
   
  <sup>2</sup>Beyond the scope of this topic.  
   
@@ -216,7 +210,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 #### The IRowsetChange Interface  
  There are two ways a consumer can update an XML instance in a column. The first one is through the storage object **ISequentialStream** created by the provider. The consumer can call the **ISequentialStream::Write** method to directly update the XML instance returned by the provider.  
   
- The second approach is through **IRowsetChange::SetData** or **IRowsetChange::InsertRow** methods. In this approach, an XML instance in the consumer’s buffer can be specified in a binding of type DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML or DBTYPE_IUNKNOWN.  
+ The second approach is through **IRowsetChange::SetData** or **IRowsetChange::InsertRow** methods. In this approach, an XML instance in the consumer's buffer can be specified in a binding of type DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML or DBTYPE_IUNKNOWN.  
   
  In case of DBTYPE_BSTR, DBTYPE_WSTR, or DBTYPE_VARIANT, the provider stores the XML instance residing in the consumer buffer into the proper column.  
   

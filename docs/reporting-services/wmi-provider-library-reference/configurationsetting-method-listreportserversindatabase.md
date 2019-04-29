@@ -1,29 +1,22 @@
 ---
 title: "ListReportServersInDatabase Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "wmi-provider-library-reference"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: wmi-provider-library-reference
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)"
 apilocation: 
   - "reportingservices.mof"
-apitype: "MOFDef"
+apitype: MOFDef
 helpviewer_keywords: 
   - "ListReportServersInDatabase method"
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
-caps.latest.revision: 18
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - ListReportServersInDatabase
   Returns the list of report server installations that are present in the report server database, regardless of whether they have access to secure information.  

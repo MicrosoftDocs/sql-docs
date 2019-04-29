@@ -1,25 +1,20 @@
-﻿---
+---
 title: "Additional Table-Valued Parameter Metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-table-valued-parameters"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), catalog functions to retrieve metadata"
   - "table-valued parameters (ODBC), metadata"
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Additional Table-Valued Parameter Metadata
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,12 +1,12 @@
 ---
-title: Performance for SQL Server R Services - data optimization | Microsoft Docs
+title: Performance tuning for data optimization - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 04/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Performance for R Services - data optimization
@@ -26,7 +26,7 @@ When working with large data sets, you should always use the SQL compute context
 
 ## Factors
 
-The R language has the concept of “factors”, which are special variable for categorical data. Data scientists often use factor variables in their formula, because handling categorical variables as factors ensures that the data is processed properly by machine learning functions. For more information, see [R for Dummies: Factor Variables](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+The R language has the concept of *factors*, which are special variable for categorical data. Data scientists often use factor variables in their formula, because handling categorical variables as factors ensures that the data is processed properly by machine learning functions. For more information, see [R for Dummies: Factor Variables](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 By design, factor variables can be converted from strings to integers and back again for storage or processing. The R `data.frame` function handles all strings as factor variables, unless the argument *stringsAsFactors* is set to **False**. What this means is that strings are automatically converted to an integer for processing, and then mapped back to the original string.
 
@@ -118,7 +118,7 @@ Another common mistake that can affect performance is that a query retrieves mor
 This section provides miscellaneous tips and resources that are specific to RevoScaleR and other options in Microsoft R.
 
 > [!TIP]
-> A general discussion of R optimization is out of the scope of this article. However, if you need to make your code faster, we recommend the popular article, [The R Inferno](http://www.burns-stat.com/pages/Tutor/R_inferno.pdf). It covers programming constructs in R and common pitfalls in vivid language and detail, and provides many  specific examples of R programming techniques.
+> A general discussion of R optimization is out of the scope of this article. However, if you need to make your code faster, we recommend the popular article, [The R Inferno](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf). It covers programming constructs in R and common pitfalls in vivid language and detail, and provides many  specific examples of R programming techniques.
 
 ### Optimizations for RevoScaleR
 
@@ -177,7 +177,7 @@ code with other computers, and integrate R analytics inside web, desktop, mobile
 
 ## Articles in this series
 
-[Performance tuning for R – introduction](sql-server-r-services-performance-tuning.md)
+[Performance tuning for R - introduction](sql-server-r-services-performance-tuning.md)
 
 [Performance tuning for R - SQL Server configuration](sql-server-configuration-r-services.md)
 

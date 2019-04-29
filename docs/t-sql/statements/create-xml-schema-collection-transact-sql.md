@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "11/25/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE XML SCHEMA COLLECTION"
@@ -26,10 +23,9 @@ helpviewer_keywords:
   - "multiple schema namespaces"
   - "XML schema collections [SQL Server], creating"
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+manager: "craigg"
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,8 +84,8 @@ USE SampleDB;
 GO  
 CREATE XML SCHEMA COLLECTION ManuInstructionsSchemaCollection AS  
 N'<?xml version="1.0" encoding="UTF-16"?>  
-<xsd:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
-   xmlns          ="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
+<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
+   xmlns          ="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"   
    elementFormDefault="qualified"   
    attributeFormDefault="unqualified"  
    xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
@@ -186,8 +182,8 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
   
 ```  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
-'<xsd:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
+'<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
     elementFormDefault="qualified"   
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" >  
     <xsd:element name="Warranty"  >  
@@ -199,14 +195,14 @@ CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS
         </xsd:complexType>  
     </xsd:element>  
 </xsd:schema>  
- <xs:schema targetNamespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+ <xs:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription"   
     elementFormDefault="qualified"   
-    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"   
+    xmlns:mstns="https://tempuri.org/XMLSchema.xsd"   
     xmlns:xs="http://www.w3.org/2001/XMLSchema"  
-    xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" >  
+    xmlns:wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" >  
     <xs:import   
-namespace="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" />  
+namespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain" />  
     <xs:element name="ProductDescription" type="ProductDescription" />  
         <xs:complexType name="ProductDescription">  
             <xs:sequence>  

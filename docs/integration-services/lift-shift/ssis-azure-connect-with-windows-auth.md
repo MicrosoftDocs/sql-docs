@@ -1,49 +1,55 @@
 ---
-title: "Connect to data and file shares with Windows Authentication | Microsoft Docs"
-description: Learn how to configure the SSIS Catalog on Azure SQL Database to run packages that use Windows Authentication to connect to data sources and file shares.
-ms.date: "02/05/2018"
+title: "Access data stores and file shares with Windows authentication | Microsoft Docs"
+description: Learn how to configure SSIS catalog in Azure SQL Database and Azure-SSIS Integration Runtime in Azure Data Factory to run packages that access data stores and file shares with Windows authentication.
+ms.date: "3/22/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
 ---
-# Connect to data sources and file shares with Windows Authentication in SSIS packages in Azure
+# Access data stores and file shares with Windows authentication from SSIS packages in Azure
+You can use Windows authentication to access data stores, such as SQL Servers, file shares, Azure Files, etc. from SSIS packages running on your Azure-SSIS Integration Runtime (IR) in Azure Data Factory (ADF). Your data stores can be on premises, hosted on Azure Virtual Machines (VMs), or running in Azure as managed services. If they are on premises, you need to join your Azure-SSIS IR to a Virtual Network (VNet) connected to your on-premises network, see [Join Azure-SSIS IR to a VNet](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). There are four methods to access data stores with Windows authentication from SSIS packages running on your Azure-SSIS IR:
 
-This article describes how to configure the SSIS Catalog on Azure SQL Database to run packages that use Windows Authentication to connect to data sources and file shares. You can use Windows authentication to connect to data sources in the same virtual network as the Azure SSIS Integration Runtime, both on premises, on Azure virtual machines, and in Azure Files.
+| Connection method | Effective scope | Setup step | Access method in packages | Number of credential sets and connected resources | Type of connected resources | 
+|---|---|---|---|---|---|
+| Setting up an activity-level execution context | Per Execute SSIS Package activity | Configure the **Windows authentication** property to set up an "Execution/Run as" context when running SSIS packages as Execute SSIS Package activities in ADF pipelines.<br/><br/> For more info, see [Configure Execute SSIS Package activity](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity). | Access resources directly in packages via UNC path, e.g. if you use file shares or Azure Files: `\\YourFileShareServerName\YourFolderName` or `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName` | Support only one credential set for all connected resources | - File shares on premises/Azure VMs<br/><br/> - Azure Files, see [Use an Azure file share](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Servers on premises/Azure VMs with Windows authentication<br/><br/> - Other resources with Windows authentication |
+| Setting up a catalog-level execution context | Per Azure-SSIS IR, but will be overriden when also setting up an activity-level execution context (see above) | Execute SSISDB `catalog.set_execution_credential` stored procedure to set up an "Execution/Run as" context.<br/><br/> For more info, see the rest of this article below. | Access resources directly in packages via UNC path, e.g. if you use file shares or Azure Files: `\\YourFileShareServerName\YourFolderName` or `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName` | Support only one credential set for all connected resources | - File shares on premises/Azure VMs<br/><br/> - Azure Files, see [Use an Azure file share](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Servers on premises/Azure VMs with Windows authentication<br/><br/> - Other resources with Windows authentication |
+| Persisting credentials via `cmdkey` command | Per Azure-SSIS IR, but will be overriden when also setting up an activity/catalog -level execution context (see above) | Execute `cmdkey` command in a custom setup script (`main.cmd`) when provisioning/reconfiguring your Azure-SSIS IR e.g. if you use file shares or Azure Files: `cmdkey /add:YourFileShareServerName /user:YourDomainName\YourUsername /pass:YourPassword` or `cmdkey /add:YourAzureStorageAccountName.file.core.windows.net /user:azure\YourAzureStorageAccountName /pass:YourAccessKey`.<br/><br/> For more info, see [Customize setup for Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup). | Access resources directly in packages via UNC path, e.g. if you use file shares or Azure Files: `\\YourFileShareServerName\YourFolderName` or `\\YourAzureStorageAccountName.file.core.windows.net\YourFolderName` | Support multiple credential sets for different connected resources | - File shares on premises/Azure VMs<br/><br/> - Azure Files, see [Use an Azure file share](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) <br/><br/> - SQL Servers on premises/Azure VMs with Windows authentication<br/><br/> - Other resources with Windows authentication |
+| Mounting drives at package execution time (non-persistent) | Per package | Execute `net use` command in Execute Process Task that is added at the beginning of control flow in your packages, for example, `net use D: \\YourFileShareServerName\YourFolderName` | Access file shares via mapped drives | Support multiple drives for different file shares | - File shares on premises/Azure VMs<br/><br/> - Azure Files, see [Use an Azure file share](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows) |
+|||||||
 
 > [!WARNING]
-> If you don't provide valid domain credentials for Windows Authentication by running `catalog`.`set_execution_credential` as described in this article, packages that depend on Windows Authentication can't connect to data sources and fail at run time.
+> If you do not use any of the above methods to access data stores with Windows authentication, your packages that depend on Windows authentication will not be able to access them and will fail at run time. 
+
+The rest of this article describes how to configure SSIS catalog (SSISDB) hosted in Azure SQL Database server/Managed Instance to run packages on Azure-SSIS IR that use Windows authentication to access data stores. 
 
 ## You can only use one set of credentials
+When you use Windows authentication in an SSIS package, you can only use one set of credentials. The domain credentials that you provide when you follow the steps in this article apply to all package executions - interactive or scheduled - on your Azure-SSIS IR until you change or remove them. If your package has to connect to multiple data stores with different sets of credentials, you should consider the above alternative methods.
 
-At this time, you can only use one set of credentials in a package. The domain credentials that you provide when you follow the steps in this article apply to all package executions - interactive or scheduled - on the SQL Database instance until you change or remove the credentials. If your package has to connect to multiple data sources with different sets of credentials, you may have to separate the package into multiple packages.
+## Provide domain credentials for Windows authentication
+To provide domain credentials that let packages use Windows authentication to access data stores on premises, do the following things:
 
-If one of your data sources is Azure Files, you can work around this limitation by mounting the Azure file share at package run time with `net use` or the equivalent in an Execute Process Task. For more info, see [Mount an Azure File share and access the share in Windows](https://docs.microsoft.com/azure/storage/files/storage-how-to-use-files-windows).
-
-## Provide domain credentials for Windows Authentication
-To provide domain credentials that let packages use Windows Authentication to connect to on-premises data sources, do the following things:
-
-1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB). For more info, see [Connect to the SSIS Catalog  (SSISDB) in Azure](ssis-azure-connect-to-catalog-database.md).
+1.  With SQL Server Management Studio (SSMS) or another tool, connect to Azure SQL Database server/Managed Instance that hosts SSISDB. For more info, see [Connect to SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  With SSISDB as the current database, open a query window.
 
-3.  Run the following stored procedure and provide appropriate domain credentials:
+3.  Run the following stored procedure and provide the appropriate domain credentials:
 
     ```sql
     catalog.set_execution_credential @user='<your user name>', @domain='<your domain name>', @password='<your password>'
     ```
 
-4.  Run your SSIS packages. The packages use the credentials that you provided to connect to on-premises data sources with Windows Authentication.
+4.  Run your SSIS packages. The packages will use the credentials that you provided to access data stores on premises with Windows authentication.
 
 ### View domain credentials
 To view the active domain credentials, do the following things:
 
-1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB).
+1.  With SSMS or another tool, connect to Azure SQL Database server/Managed Instance that hosts SSISDB. For more info, see [Connect to SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  With SSISDB as the current database, open a query window.
 
@@ -58,7 +64,7 @@ To view the active domain credentials, do the following things:
 ### Clear domain credentials
 To clear and remove the credentials that you provided as described in this article, do the following things:
 
-1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB).
+1.  With SSMS or another tool, connect to Azure SQL Database server/Managed Instance that hosts SSISDB. For more info, see [Connect to SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  With SSISDB as the current database, open a query window.
 
@@ -68,48 +74,56 @@ To clear and remove the credentials that you provided as described in this artic
     catalog.set_execution_credential @user='', @domain='', @password=''
     ```
 
-## Connect to an on-premises SQL Server
-To check whether you can connect to an on-premises SQL Server, do the following things:
+## Connect to a SQL Server on premises 
+To check whether you can connect to a SQL Server on premises, do the following things:
 
 1.  To run this test, find a non-domain-joined computer.
 
-2.  On the non-domain-joined computer, run the following command to start SQL Server Management Studio (SSMS) with the domain credentials that you want to use:
+2.  On the non-domain-joined computer, run the following command to start SSMS with the domain credentials that you want to use:
 
     ```cmd
     runas.exe /netonly /user:<domain>\<username> SSMS.exe
     ```
 
-3.  From SSMS, check whether you can connect to the on-premises SQL Server that you want to use.
+3.  From SSMS, check whether you can connect to the SQL Server on premises.
 
 ### Prerequisites
-To connect to an on-premises SQL Server from a package running on Azure, you have to enable the following prerequisites:
+To access a SQL Server on premises from packages running in Azure, do the following things:
 
-1.  In SQL Server Configuration Manager, enable the TCP/IP protocol.
-2.  Allow access through the Windows firewall. For more info, see [Configure the Windows Firewall to Allow SQL Server Access](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
-3.  To connect with Windows Authentication, make sure that the Azure-SSIS Integration Runtime belongs to a virtual network that also includes the on-premises SQL Server.  For more info, see [Join an Azure-SSIS integration runtime to a virtual network](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Then use `catalog.set_execution_credential` to provide credentials as described in this article.
+1.  In SQL Server Configuration Manager, enable TCP/IP protocol.
+2.  Allow access through Windows firewall. For more info, see [Configure Windows firewall to access SQL Server](https://docs.microsoft.com/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access).
+3.  Join your Azure-SSIS IR to a VNet that is connected to the SQL Server on premises.  For more info, see [Join Azure-SSIS IR to a VNet](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+4.  Use SSISDB `catalog.set_execution_credential` stored procedure to provide credentials as described in this article.
 
-## Connect to an on-premises file share
-To check whether you can connect to an on-premises file share, do the following things:
+## Connect to a file share on premises 
+To check whether you can connect to a file share on premises, do the following things:
 
 1.  To run this test, find a non-domain-joined computer.
 
-2.  On the non-domain-joined computer, run the following command. This command opens a command prompt window with the domain credentials that you want to use, and then tests connectivity to the file share by getting a directory listing.
+2.  On the non-domain-joined computer, run the following commands. These commands open a command prompt window with the domain credentials that you want to use and then test connectivity to the file share on premises by getting a directory listing.
 
     ```cmd
     runas.exe /netonly /user:<domain>\<username> cmd.exe
     dir \\fileshare
     ```
 
-3.  Check whether the directory listing is returned for the on-premises file share that you want to use.
+3.  Check whether the directory listing is returned for the file share on premises.
 
-## Connect to a file share on an Azure VM
-To connect to a file share on an Azure virtual machine, do the following things:
+### Prerequisites
+To access a file share on premises from packages running in Azure, do the following things:
 
-1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB).
+1.  Allow access through Windows firewall.
+2.  Join your Azure-SSIS IR to a VNet that is connected to the file share on premises.  For more info, see [Join Azure-SSIS IR to a VNet](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network).
+3.  Use SSISDB `catalog.set_execution_credential` stored procedure to provide credentials as described in this article.
+
+## Connect to a file share on Azure VM
+To access a file share on Azure VM from packages running in Azure, do the following things:
+
+1.  With SSMS or another tool, connect to Azure SQL Database server/Managed Instance that hosts SSISDB. For more info, see [Connect to SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  With SSISDB as the current database, open a query window.
 
-3.  Run the `catalog.set_execution_credential` stored procedure as described in the following options:
+3.  Run the following stored procedure and provide the appropriate domain credentials:
 
     ```sql
     catalog.set_execution_credential @domain = N'.', @user = N'username of local account on Azure virtual machine', @password = N'password'
@@ -118,19 +132,19 @@ To connect to a file share on an Azure virtual machine, do the following things:
 ## Connect to a file share in Azure Files
 For more info about Azure Files, see [Azure Files](https://azure.microsoft.com/services/storage/files/).
 
-To connect to a file share on an Azure file share, do the following things:
+To access a file share in Azure Files from packages running in Azure, do the following things:
 
-1.  With SQL Server Management Studio (SSMS) or another tool, connect to the SQL Database that hosts the SSIS Catalog database (SSISDB).
+1.  With SSMS or another tool, connect to Azure SQL Database server/Managed Instance that hosts SSISDB. For more info, see [Connect to SSISDB in Azure](ssis-azure-connect-to-catalog-database.md).
 
 2.  With SSISDB as the current database, open a query window.
 
-3.  Run the `catalog.set_execution_credential` stored procedure as described in the following options:
+3.  Run the following stored procedure and provide the appropriate domain credentials:
 
     ```sql
     catalog.set_execution_credential @domain = N'Azure', @user = N'<storage-account-name>', @password = N'<storage-account-key>'
     ```
 
 ## Next steps
-- Deploy a package. For more info, see [Deploy an SSIS project with SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
-- Run a package. For more info, see [Run an SSIS package with SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Schedule a package. For more info, see [Schedule SSIS packages in Azure](ssis-azure-schedule-packages.md).
+- Deploy your packages. For more info, see [Deploy an SSIS project to Azure with SSMS](../ssis-quickstart-deploy-ssms.md).
+- Run your packages. For more info, see [Run SSIS packages in Azure with SSMS](../ssis-quickstart-run-ssms.md).
+- Schedule your packages. For more info, see [Schedule SSIS packages in Azure](ssis-azure-schedule-packages.md).

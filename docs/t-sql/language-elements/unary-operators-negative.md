@@ -1,14 +1,11 @@
-﻿---
+---
 title: "- (Negative) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "negative"
@@ -19,11 +16,10 @@ helpviewer_keywords:
   - "negative operator (-)"
   - "negative values"
 ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
-caps.latest.revision: 30
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Unary Operators - Negative
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,7 +121,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 ```  
 USE ssawPDW;  
   
-SELECT TOP (1) – ( - 17) FROM DimEmployee;  
+SELECT TOP (1) - ( - 17) FROM DimEmployee;  
 ```  
   
  Returns  

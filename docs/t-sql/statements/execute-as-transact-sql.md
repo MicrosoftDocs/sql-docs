@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "EXECUTE AS"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "execution context [SQL Server]"
   - "switching execution context"
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # EXECUTE AS (Transact-SQL)
@@ -66,7 +62,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  While the context switch to the database user is active, any attempt to access resources outside of the database will cause the statement to fail. This includes USE *database* statements, distributed queries, and queries that reference another database that uses three- or four-part identifiers.  
   
- **'** *name* **'**  
+ **'** _name_ **'**  
  Is a valid user or login name. *name* must be a member of the **sysadmin** fixed server role, or exist as a principal in [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) or [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md), respectively.  
   
  *name* can be specified as a local variable.  
@@ -80,10 +76,10 @@ manager: craigg
   
  For more information about reverting to the previous context, see [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@***varbinary_variable*  
- Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@***varbinary_variable* value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **@***varbinary_variable*. The **COOKIE INTO** option can only be used at the adhoc level.  
+ COOKIE INTO **@**_varbinary_variable_  
+ Specifies the execution context can only be reverted back to the previous context if the calling REVERT WITH COOKIE statement contains the correct **@**_varbinary_variable_ value. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] passes the cookie to **@**_varbinary_variable_. The **COOKIE INTO** option can only be used at the adhoc level.  
   
- **@** *varbinary_variable* is **varbinary(8000)**.  
+ **@** _varbinary_variable_ is **varbinary(8000)**.  
   
 > [!NOTE]  
 >  The cookie **OUTPUT** parameter for is currently documented as **varbinary(8000)** which is the correct maximum length. However the current implementation returns **varbinary(100)**. Applications should reserve **varbinary(8000)** so that the application continues to operate correctly if the cookie return size increases in a future release.  
@@ -126,7 +122,7 @@ If the user is orphaned (the associated login no longer exists), and the user wa
 ## Using WITH NO REVERT  
  When the EXECUTE AS statement includes the optional WITH NO REVERT clause, the execution context of a session cannot be reset using REVERT or by executing another EXECUTE AS statement. The context set by the statement remains in affect until the session is dropped.  
   
- When the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variabl*e. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *@varbinary_variable* value.  
+ When the WITH NO REVERT COOKIE = @*varbinary_variable* clause is specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] passes the cookie value to @*varbinary_variable*. The execution context set by that statement can only be reverted to the previous context if the calling REVERT WITH COOKIE = @*varbinary_variable* statement contains the same *@varbinary_variable* value.  
   
  This option is useful in an environment in which connection pooling is used. Connection pooling is the maintenance of a group of database connections for reuse by applications on an application server. Because the value passed to *@varbinary_variable* is known only to the caller of the EXECUTE AS statement, the caller can guarantee that the execution context they establish cannot be changed by anyone else.  
   
@@ -183,7 +179,7 @@ GO
 ```  
   
 ### B. Using the WITH COOKIE clause  
- The following example sets the execution context of a session to a specified user and specifies the WITH NO REVERT COOKIE = @*varbinary_variabl*e clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
+ The following example sets the execution context of a session to a specified user and specifies the WITH NO REVERT COOKIE = @*varbinary_variable* clause. The `REVERT` statement must specify the value passed to the `@cookie` variable in the `EXECUTE AS` statement to successfully revert the context back to the caller. To run this example, the `login1` login and `user1` user created in example A must exist.  
   
 ```  
 DECLARE @cookie varbinary(8000);  

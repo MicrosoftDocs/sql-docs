@@ -1,29 +1,22 @@
 ---
 title: "ConfigurationSetting Method - GenerateDatabaseCreationScript | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "wmi-provider-library-reference"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: wmi-provider-library-reference
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)"
 apilocation: 
   - "reportingservices.mof"
-apitype: "MOFDef"
+apitype: MOFDef
 helpviewer_keywords: 
   - "GenerateDatabaseCreationScript method"
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
-caps.latest.revision: 25
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - GenerateDatabaseCreationScript
   Generates a SQL Script that can be used to create a report server database.  

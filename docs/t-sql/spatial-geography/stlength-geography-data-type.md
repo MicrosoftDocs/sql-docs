@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STLength (geography Data Type)"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STLength method"
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
-caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

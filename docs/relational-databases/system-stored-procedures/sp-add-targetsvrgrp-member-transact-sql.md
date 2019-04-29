@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_targetsvrgrp_member"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_targetsvrgrp_member"
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -38,10 +34,10 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## Arguments  
- [ **@group_name=** ] **'***group_name***'**  
+`[ @group_name = ] 'group_name'`
  The name of the group. *group_name* is **sysname**, with no default.  
   
- [ **@server_name=** ] **'***server_name***'**  
+`[ @server_name = ] 'server_name'`
  The name of the server that should be added to the specified group. *server_name* is **nvarchar(30)**, with no default.  
   
 ## Return Code Values  

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Create a Schedule | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scheduling jobs [SQL Server]"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], scheduling"
   - "schedules [SQL Server], jobs"
 ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -28,7 +24,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-You can create a schedule for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent jobs in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)], or SQL Server Management Objects.  
+You can create a schedule for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
   
 -   **Before you begin:**  
   
@@ -93,10 +89,10 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
     GO  
     ```  
   
-For more information, see [sp_add_schedule (Transact-SQL)](http://msdn.microsoft.com/en-us/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7).  
+For more information, see [sp_add_schedule (Transact-SQL)](https://msdn.microsoft.com/9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7).  
   
 ## <a name="SMO"></a>Using SQL Server Management Objects  
 **To create a schedule**  
   
-Use the **JobSchedule** class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
+Use the **JobSchedule** class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

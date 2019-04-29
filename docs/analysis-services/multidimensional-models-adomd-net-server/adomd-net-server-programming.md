@@ -17,12 +17,12 @@ manager: kfile
   
 |Topic|Description|  
 |-----------|-----------------|  
-|[ADOMD.NET Server Functionality](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md)|Describes the uses for ADOMD.NET server objects.|  
-|[ADOMD.NET Server Object Architecture](../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md)|Describes the object architecture for ADOMD.NET server objects.|  
-|[User Defined Functions and Stored Procedures](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)|Walks you through the process of creating a user defined function or stored Procedure.|  
+|[ADOMD.NET Server Functionality](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality)|Describes the uses for ADOMD.NET server objects.|  
+|[ADOMD.NET Server Object Architecture](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture)|Describes the object architecture for ADOMD.NET server objects.|  
+|[User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)|Walks you through the process of creating a user defined function or stored Procedure.|  
   
 ## See Also  
- [ADOMD.NET Client Programming](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)   
- [Developing with ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ [ADOMD.NET Client Programming](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)   
+ [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
   

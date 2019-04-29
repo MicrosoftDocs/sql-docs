@@ -5,17 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "administrators [Master Data Services], about administrators"
   - "administrators [Master Data Services]"
   - "models [Master Data Services], administrators"
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -27,7 +23,7 @@ manager: craigg
   This article describes the types of administrators in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: model administrators, entity administrators, and super user.  
   
 ## Model Administrators  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a model administrator is a user who has **Admin** permission assigned to the top-level model object on the **Model Objects** tab. When a user has Admin permission on a particular model, any other permissions on the model’s child objects (both model object and member permissions) are trumped by the model **Admin** permission and effectively ignored.  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], a model administrator is a user who has **Admin** permission assigned to the top-level model object on the **Model Objects** tab. When a user has Admin permission on a particular model, any other permissions on the model's child objects (both model object and member permissions) are trumped by the model **Admin** permission and effectively ignored.  
   
 -   If the user has access to the **Explorer** functional area, the user can add, delete, and update all master data in this area.  
   
@@ -38,7 +34,7 @@ manager: craigg
  A user can be configured as a model administrator either in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] or programmatically. For more information, see [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## Entity Administrators  
- In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], an entity administrator is a user who has administrator permissions assigned to the entity object on the Model Objects tab. When a user has administrator permissions for an entity, any other permissions on the entity’s child objects (both model object and member permissions) are superseded by the administrator permissions and are ignored.  
+ In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], an entity administrator is a user who has administrator permissions assigned to the entity object on the Model Objects tab. When a user has administrator permissions for an entity, any other permissions on the entity's child objects (both model object and member permissions) are superseded by the administrator permissions and are ignored.  
   
 -   If the user has access to the **Explorer** functional area, the user can add, delete, and update all master data in this area.  
   
@@ -65,12 +61,12 @@ manager: craigg
   
 |Administrator Type|Description|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Super User|Permissions assigned in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] have no effect on the administrator’s access.<br /><br /> Can be a super user based on functional area permissions assigned explicitly or permissions inherited from a group.<br /><br /> Automatically has all permissions to all models.<br /><br /> Automatically has access to all functional areas.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Super User|Permissions assigned in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] have no effect on the administrator's access.<br /><br /> Can be a super user based on functional area permissions assigned explicitly or permissions inherited from a group.<br /><br /> Automatically has all permissions to all models.<br /><br /> Automatically has access to all functional areas.|  
 |Model administrator|Can be a model administrator based on admin permissions assigned explicitly or permissions inherited from a group.<br /><br /> Has access only to functional areas that access is granted to.<br /><br /> Automatically has all permissions to all objects and members in the specific model.|  
 |Entity administrator|Can be an entity administrator based on administrator permissions assigned explicitly or permissions inherited from a group.<br /><br /> Has access only to functional areas that access is granted to.<br /><br /> Automatically has all permissions to all objects and members in the specific entity.<br /><br /> Can approve the pending change sets if the entity changes require approval.|  
   
 ## External Resources  
- Blog post, [Security Improvements](http://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
+ Blog post, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376), on msdn.com.  
   
 ## See Also  
  [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   

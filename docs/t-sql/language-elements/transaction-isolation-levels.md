@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "isolation levels [SQL Server], metadata access"
   - "hints [SQL Server], locking"
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
-caps.latest.revision: 23
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

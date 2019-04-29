@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FoxPro ODBC driver [ODBC], Microsoft Office"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], C or C++ applications"
   - "Visual FoxPro data [ODBC], accessing"
 ms.assetid: 116efee6-2cd1-4d54-a6e4-1ee7b2fe82e2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

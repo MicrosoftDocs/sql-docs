@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML RAW mode"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "RAW mode"
   - "XMLDATA option"
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use RAW Mode with FOR XML

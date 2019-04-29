@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PATH FOR XML mode, namespace support"
   - "namespaces [XML in SQL Server]"
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
-caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Namespace Support in PATH Mode

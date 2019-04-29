@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Service Broker, AlwaysOn Availability Groups"
   - "Availability Groups [SQL Server], interoperability"
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -22,11 +19,6 @@ manager: craigg
 
   This topic contains information about configuring Service Broker to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **In This Topic:**  
-  
--   [Requirements for a Service in an Availability Group to Receive Remote Messages](#ReceiveRemoteMessages)  
-  
--   [Requirements for Sending Messages to a Remote Service in an Availability Group](#SendRemoteMessages)  
   
 ##  <a name="ReceiveRemoteMessages"></a> Requirements for a Service in an Availability Group to Receive Remote Messages  
   
@@ -57,7 +49,7 @@ manager: craigg
      For more information, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    SQL Server Broker is not Multisubnet aware. Be sure to use "registerallprovidersip" set to 0, and check if you are not using static IPs on DNS giving the required permission to cluster on DNS as defined on https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. Broker may delay message with status "CONVERSING" trying to use disabled IP.
+    SQL Server Broker is not Multisubnet aware. Be sure to use "registerallprovidersip" set to 0, and check if you are not using static IPs on DNS giving the required permission to cluster on DNS as defined on https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. Broker may delay message with status "CONVERSING" trying to use disabled IP.
 
 3.  **Grant CONNECT permission on the endpoint.**  
   
@@ -76,7 +68,7 @@ manager: craigg
     > [!NOTE]  
     >  By default, each user database, including **msdb**, contains the route **AutoCreatedLocal**. This route matches any service name and broker instance and specifies that the message should be delivered within the current instance. **AutoCreatedLocal** has lower priority than routes that explicitly specify a specific service that communicates with a remote instance.  
   
-     For information about creating routes, see [Service Broker Routing Examples](http://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (in the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] version of Books Online) and [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
+     For information about creating routes, see [Service Broker Routing Examples](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (in the [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] version of Books Online) and [CREATE ROUTE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-route-transact-sql.md).  
   
 ##  <a name="SendRemoteMessages"></a> Requirements for Sending Messages to a Remote Service in an Availability Group  
   

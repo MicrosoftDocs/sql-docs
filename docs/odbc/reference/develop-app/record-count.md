@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "record count [ODBC]"
   - "descriptors [ODBC], record count"
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

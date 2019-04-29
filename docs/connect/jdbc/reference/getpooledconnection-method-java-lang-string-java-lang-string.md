@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerConnectionPoolDataSource.getPooledConnection (java.lang.String, java.lang.String)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SERVER_ROLE_TSQL"
@@ -25,9 +22,8 @@ helpviewer_keywords:
   - "user-defined server roles [SQL Server]"
   - "roles, server"
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE SERVER ROLE (Transact-SQL)

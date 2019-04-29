@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "delimited text lines"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "text format [ODBC]"
   - "text file driver [ODBC], text format"
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -1,14 +1,10 @@
-﻿---
+---
 title: "ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/05/2018"
+ms.date: 03/27/2019
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER EXTERNAL LIBRARY"
@@ -17,10 +13,10 @@ dev_langs:
   - "TSQL"
 helpviewer_keywords: 
   - "ALTER EXTERNAL LIBRARY"
-author: "jeannt"
-ms.author: "jeannt"
-manager: craigg
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+author: dphansen
+ms.author: davidph
+manager: cgronlund
+monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -28,7 +24,54 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 
 Modifies the content of an existing external package library.
 
-## Syntax
+> [!NOTE]
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4. 
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## Syntax for SQL Server 2019
+
+```text
+ALTER EXTERNAL LIBRARY library_name
+[ AUTHORIZATION owner_name ]
+SET <file_spec>
+WITH ( LANGUAGE = <language> )
+[ ; ]
+
+<file_spec> ::=
+{
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = <platform> )
+}
+
+<client_library_specifier> :: =
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
+
+<library_bits> :: =
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## Syntax for SQL Server 2017
 
 ```text
 ALTER EXTERNAL LIBRARY library_name
@@ -39,18 +82,24 @@ WITH ( LANGUAGE = 'R' )
 
 <file_spec> ::=
 {
-(CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-[, PLATFORM = WINDOWS )
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = WINDOWS )
 }
 
 <client_library_specifier> :: =
-  '[\\computer_name\]share_name\[path\]manifest_file_name'
-| '[local_path\]manifest_file_name'
-| '<relative_path_in_external_data_source>'
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
 
 <library_bits> :: =
-{ varbinary_literal | varbinary_expression }
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### Arguments
 
@@ -80,13 +129,33 @@ This option is useful if you have the required permission to alter a library, bu
 
 Instead, you can pass the package contents as a variable in binary format.
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. Windows is the only supported platform.
+Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. In SQL Server 2017, Windows is the only supported platform.
+
+::: moniker-end
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATFORM**
+
+Specifies the platform for the content of the library. This value is required when modifying an existing library to add a different platform. In SQL Server 2019, Windows and Linux are the supported platforms.
+
+**language**
+
+Specifies the language of the package. The value can be **R**, **Python**, or **Java**.
+::: moniker-end
 
 ## Remarks
 
-For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. Currently, only the Windows platform is supported.  
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+For the R language, packages must be prepared in the form of zipped archive files with the .ZIP extension for Windows. In SQL Server 2017, only the Windows platform is supported.  
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+For the R language, when using a file, packages must be prepared in the form of zipped archive files with the .ZIP extension. 
+
+For the Python language, the package in a .whl or .zip file must be prepared in the form of a zipped archive file. If the package already is a .zip file, it must be included in a new .zip file. Uploading a package as .whl or .zip file directly is currently not supported.
+::: moniker-end
 
 The `ALTER EXTERNAL LIBRARY` statement only uploads the library bits to the database. The modified library is installed when a user runs code in  [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) that calls the library.
 
@@ -118,6 +187,9 @@ EXEC sp_execute_external_script
 ;
 ```
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+For the Python language in SQL Server 2019, the example also works by replacing `'R'` with `'Python'`.
+::: moniker-end
 ### B. Alter an existing library using a byte stream
 
 The following example alters the existing library by passing the new bits as a hexidecimal literal.
@@ -126,6 +198,10 @@ The following example alters the existing library by passing the new bits as a h
 ALTER EXTERNAL LIBRARY customLibrary 
 SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+For the Python language in SQL Server 2019, the example also works by replacing `'R'` with `'Python'`.
+::: moniker-end
 
 > [!NOTE]
 > This code sample only demonstrates the syntax; the binary value in `CONTENT =` has been truncated for readability and does not create a working library. The actual contents of the binary variable would be much longer.

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_delete_mailitems_sp_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_mailitems_sp"
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -39,10 +35,10 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## Arguments  
- [ **@sent_before=** ] **'***sent_before***'**  
+`[ @sent_before = ] 'sent_before'`
  Deletes e-mails up to the date and time provided as the *sent_before* argument. *sent_before* is **datetime** with NULL as default. NULL indicates all dates.  
   
- [ **@sent_status=** ] **'***sent_status***'**  
+`[ @sent_status = ] 'sent_status'`
  Deletes e-mails of the type specified by *sent_status*. *sent_status* is **varchar(8)** with no default. Valid entries are **sent**, **unsent**, **retrying**, and **failed**. NULL indicates all statuses.  
   
 ## Return Code Values  

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Status property [ADO Recordset]"
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

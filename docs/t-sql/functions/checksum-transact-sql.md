@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHECKSUM_TSQL"
@@ -20,11 +17,10 @@ helpviewer_keywords:
   - "CHECKSUM function"
   - "checksum values"
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
-caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 
 ---
 # CHECKSUM (Transact-SQL)
@@ -36,7 +32,7 @@ The `CHECKSUM` function returns the checksum value computed over a table row, or
   
 ## Syntax  
   
-```sql
+```
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
@@ -59,13 +55,14 @@ An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of an
  **int**  
   
 ## Remarks  
-CHECKSUM computes a hash value, called the checksum, over its argument list. Use this hash value to build hash indexes. A hash index will result if the `CHECKSUM` function has column arguments, and an index is built over the computed CHECKSUM value. This can be used for equality searches over the columns.
+`CHECKSUM` computes a hash value, called the checksum, over its argument list. Use this hash value to build hash indexes. A hash index will result if the `CHECKSUM` function has column arguments, and an index is built over the computed `CHECKSUM` value. This can be used for equality searches over the columns.
   
-The `CHECKSUM` function satisfies hash function properties: `CHECKSUM` applied over any two lists of expressions will return the same value, if the corresponding elements of the two lists have the same data type, and if those corresponding elements have equality when compared using the equals (=) operator. Null values of a specified type are defined to compare as equal for `CHECKSUM` function purposes. If at least one of the values in the expression list changes, the list checksum will probably change. However, this is not guaranteed. Therefore, to detect whether values have changed, we recommend use of `CHECKSUM` only if your application can tolerate an occasional missed change. Otherwise, consider using [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md) instead. With a specified MD5 hash algorithm, the probability that HashBytes will return the same result, for two different inputs, is much lower compared to CHECKSUM.
+The `CHECKSUM` function satisfies hash function properties: `CHECKSUM` applied over any two lists of expressions will return the same value, if the corresponding elements of the two lists have the same data type, and if those corresponding elements have equality when compared using the equals (=) operator. Null values of a specified type are defined to compare as equal for `CHECKSUM` function purposes. If at least one of the values in the expression list changes, the list checksum will probably change. However, this is not guaranteed. 
+Therefore, to detect whether values have changed, we recommend use of `CHECKSUM` only if your application can tolerate an occasional missed change. Otherwise, consider using `HASHBYTES` instead. With a specified MD5 hash algorithm, the probability that `HASHBYTES` will return the same result, for two different inputs, is much lower compared to `CHECKSUM`.
   
-The expression order affects the computed `CHECKSUM` value. The order of columns used for CHECKSUM(\*) is the order of columns specified in the table or view definition. This includes computed columns.
+The expression order affects the computed `CHECKSUM` value. The order of columns used for `CHECKSUM(*)` is the order of columns specified in the table or view definition. This includes computed columns.
   
-The CHECKSUM value depends on the collation. The same value stored with a different collation will return a different CHECKSUM value.
+The `CHECKSUM` value depends on the collation. The same value stored with a different collation will return a different `CHECKSUM` value.
   
 ## Examples  
 These examples show the use of `CHECKSUM` to build hash indexes.
@@ -74,6 +71,7 @@ To build the hash index, the first example adds a computed checksum column to th
   
 ```sql
 -- Create a checksum index.  
+
 SET ARITHABORT ON;  
 USE AdventureWorks2012;   
 GO  
@@ -90,6 +88,7 @@ This example shows the use of a checksum index as a hash index. This can help im
 /*Use the index in a SELECT query. Add a second search   
 condition to catch stray cases where checksums match,   
 but the values are not the same.*/  
+
 SELECT *   
 FROM Production.Product  
 WHERE CHECKSUM(N'Bearing Ball') = cs_Pname  

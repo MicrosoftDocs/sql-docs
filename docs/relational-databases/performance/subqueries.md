@@ -1,11 +1,10 @@
-﻿---
+---
 title: "Subqueries (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/18/2018"
 ms.prod: sql
+ms.technology: performance
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Subquery"
@@ -14,11 +13,10 @@ helpviewer_keywords:
   - "subqueries [SQL Server], correlated"
   - "subqueries [SQL Server], types"
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 52
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # Subqueries (SQL Server)
@@ -487,7 +485,7 @@ GO
 This statement cannot be converted to a join. The analogous not-equal join has a different meaning: It finds the names of products that are in some subcategory that is not a finished bicycle.      
 
 ### <a name="upsert"></a> Subqueries in UPDATE, DELETE, and INSERT Statements
-Subqueries can be nested in the `UPDATE`, `DELETE`, `INSERT` and `SELECT `data manipulation (DML) statements.    
+Subqueries can be nested in the `UPDATE`, `DELETE`, `INSERT` and `SELECT` data manipulation (DML) statements.    
 
 The following example doubles the value in the *ListPrice* column in the *Production.Product* table. The subquery in the `WHERE` clause references the *Purchasing.ProductVendor* table to restrict the rows updated in the *Product* table to just those supplied by *BusinessEntity* 1540.
 

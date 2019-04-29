@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Configure Always Encrypted using SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/30/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.reviewer: vanto
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SWB.COLUMNMASTERKEY.PAGE.F1"
@@ -18,11 +13,10 @@ f1_keywords:
 helpviewer_keywords: 
   - "Always Encrypted, configure with SSMS"
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: 15
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure Always Encrypted using SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,8 +71,8 @@ To execute a query that sends a value that targets an encrypted column, for exam
 1.	Make sure Always Encrypted is enabled for the database connection for the Query Editor window, from which you are running your `SELECT` query. This will instruct the .NET Framework Data Provider for SQL Server (used by SSMS) to encrypt parameterized Transact-SQL variables (see below) targeting encrypted columns. See [Enabling and disabling Always Encrypted for a database](#en-dis) below.   
 2.	Make sure you can access all column master keys configured for encrypted columns. For example, if your column master key is a certificate, you need to make sure the certificate is deployed on the machine, SSMS is running on. Or, if your column master key is a key stored in Azure Key Vault, you need to make sure you have permissions to access the key (Also, you might be prompted to sign in to Azure.)   
 3.	Ensure Parameterization for Always Encrypted is enabled for the Query Editor window. (Requires at least SSMS version 17.0.) Declare a Transact-SQL variable and initialize it with a value, you want to send (insert, update or filter by) to the database. See [Parameterization for Always Encrypted](#param) below for details.   
-    >   [!NOTE]
-    >   As Always Encrypted support a limited subset of type conversions, in many cases it is required that data type of a Transact-SQL variable is the same as the type of the target database column, it targets.   
+    > [!NOTE]
+    > As Always Encrypted support a limited subset of type conversions, in many cases it is required that data type of a Transact-SQL variable is the same as the type of the target database column, it targets.   
 4.	Run your query sending the value of the Transact-SQL variable to the database. SSMS will convert the variable to a query parameter and it will encrypt its value before sending it to the database.   
 
 *Example*   
@@ -94,13 +88,13 @@ Enabling Always Encrypted for a database connection instructs the .NET Framework
 To enable Always Encrypted for a database connection, specify `Column Encryption Setting=Enabled` in the **Additional Properties** tab of the **Connect to Server** dialog.    
 To disable Always Encrypted for a database connection, specify `Column Encryption Setting=Disabled` or simply remove the setting of **Column Encryption Setting** from the **Additional Properties** tab of the **Connect to Server** dialog (its default value is **Disabled**).   
 
->  [!TIP] 
->  To toggle between Always Encrypted being enabled and disabled for an existing Query Editor window:   
->  1.	Right-click anywhere in the Query Editor window.
->  2.	Select **Connection** > **Change Connection …**, 
->  3.	Click **Options** >>,
->  4.	Select the **Additional Properties** tab and type `Column Encryption Setting=Enabled` (to enable the Always Encrypted behavior) or remove the setting (to disable the Always Encrypted behavior).   
->  5.	Click **Connect**.   
+> [!TIP]
+> To toggle between Always Encrypted being enabled and disabled for an existing Query Editor window:   
+> 1.	Right-click anywhere in the Query Editor window.
+> 2.	Select **Connection** > **Change Connection ...**, 
+> 3.	Click **Options** >>,
+> 4.	Select the **Additional Properties** tab and type `Column Encryption Setting=Enabled` (to enable the Always Encrypted behavior) or remove the setting (to disable the Always Encrypted behavior).   
+> 5.	Click **Connect**.   
    
 ### <a name="param"></a>Parameterization for Always Encrypted   
  
@@ -121,21 +115,21 @@ Parameterization for Always Encrypted is disabled by default.
 
 To enable/disable Parameterization for Always Encrypted for the current Query Editor window:   
 1.	Select **Query** from the main menu.   
-2.	Select **Query Options…**.   
+2.	Select **Query Options...**.   
 3.	Navigate to **Execution** > **Advanced**.   
 4.	Select or unselect **Enable Parameterization for Always Encrypted**.   
 5.	Click **OK**.   
 
 To enable/disable Parameterization for Always Encrypted for future Query Editor windows:   
 1.	Select **Tools** from the main menu.   
-2.	Select **Options…**.   
+2.	Select **Options...**.   
 3.	Navigate to **Query Execution** > **SQL Server** > **Advanced**.   
 4.	Select or unselect **Enable Parameterization for Always Encrypted**.   
 5.	Click **OK**.   
 
 If you execute a query in a Query Editor window that uses a database connection with Always Encrypted enabled, but parameterization is not enabled for the Query Editor window, you will be prompted to enable it.   
->   [!NOTE]   
->   Parameterization for Always Encrypted works only in Query Editor windows that use database connections with Always Encrypted enabled (see [Enabling and disabling Always Encrypted for a database](#en-dis)). No Transact-SQL variables will be parameterized if the Query Editor window uses a database connection without Always Encrypted enabled.   
+> [!NOTE]
+> Parameterization for Always Encrypted works only in Query Editor windows that use database connections with Always Encrypted enabled (see [Enabling and disabling Always Encrypted for a database](#en-dis)). No Transact-SQL variables will be parameterized if the Query Editor window uses a database connection without Always Encrypted enabled.   
 
 #### How Parameterization for Always Encrypted works   
 
@@ -185,8 +179,8 @@ Another example below, shows two variables that meet pre-requisite conditions fo
  
 ![always-encrypted-error](../../../relational-databases/security/encryption/media/always-encrypted-error.png)
  
->   [!NOTE]
->   As Always Encrypted supports a limited subset of type conversions, in many cases it is required that the data type of a Transact-SQL variable is the same as the type of the target database column, it targets. For example, assuming type of the `SSN` column in the `Patients` table is `char(11)`, the below query will fail, as the type of the `@SSN` variable, which is `nchar(11)`, does not match the type of the column.   
+> [!NOTE]
+> As Always Encrypted supports a limited subset of type conversions, in many cases it is required that the data type of a Transact-SQL variable is the same as the type of the target database column, it targets. For example, assuming type of the `SSN` column in the `Patients` table is `char(11)`, the below query will fail, as the type of the `@SSN` variable, which is `nchar(11)`, does not match the type of the column.   
 
 ```sql
 DECLARE @SSN nchar(11) = '795-73-9838'
@@ -202,14 +196,14 @@ WHERE [SSN] = @SSN;
     encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_Auto1', 
     column_encryption_key_database_name = 'Clinic') are incompatible in the equal to operator.
 
->   [!NOTE]
->   Without parameterization, the entire query, including type conversions, is processed inside SQL Server/Azure SQL Database. With parameterization enabled, some type conversions are performed by .NET Framework inside SQL Server Management Studio. Due to differences between the .NET Framework type system and the SQL Server type system (e.g. different precision of some types, such as float), a query executed with parameterization enabled can produce different results than the query executed without parameterization enabled. 
+> [!NOTE]
+> Without parameterization, the entire query, including type conversions, is processed inside SQL Server/Azure SQL Database. With parameterization enabled, some type conversions are performed by .NET Framework inside SQL Server Management Studio. Due to differences between the .NET Framework type system and the SQL Server type system (e.g. different precision of some types, such as float), a query executed with parameterization enabled can produce different results than the query executed without parameterization enabled. 
 
 #### Permissions      
 
 To run any queries against encrypted columns, including queries that retrieve data in ciphertext,  you need the `VIEW ANY COLUMN MASTER KEY DEFINITION` and `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` permissions in the database.   
 In addition to the above permissions, to decrypt any query results or to encrypt any query parameters (produced by parameterizing Transact-SQL variables), you also need access to the column master key protecting the target columns:   
-- **Certificate Store – Local computer** You must have `Read` access to the certificate that is used a column master key, or be the administrator on the computer.   
+- **Certificate Store - Local computer** You must have `Read` access to the certificate that is used a column master key, or be the administrator on the computer.   
 - **Azure Key Vault** You need the `get`, `unwrapKey`, and verify permissions on the vault containing the column master key.   
 - **Key Store Provider (CNG)** The required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the KSP configuration.   
 - **Cryptographic Service Provider (CAPI)** The required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the CSP configuration.   
@@ -223,17 +217,17 @@ For more information, see [Create and Store Column Master Keys (Always Encrypted
 The **New Column Master Key** dialog allows you to generate a column master key or pick an existing key in a key store, and create column master key metadata for the created or selected key in the database.
 
 1.	Using **Object Explorer**, navigate to the **Security>Always Encrypted Keys** folder under your database.
-2.	Right click on the **Column Master Keys** folder and select **New Column Master Key…**. 
+2.	Right click on the **Column Master Keys** folder and select **New Column Master Key...**. 
 3.	In the **New Column Master Key** dialog, enter the name of the column master key metadata object.
 4.	Select a key store:
-    - **Certificate Store – Current User** – indicates the Current User certificate store location in the Windows Certificate Store, which is your personal store. 
-    - **Certificate Store – Local computer** – indicates the Local computer certificate store location in the Windows Certificate Store. 
-    - **Azure Key Vault** –  you will need to sign in to Azure (click **Sign in**). Once you sign in, you will be able to pick one of your Azure subscriptions and a key vault.
-    - **Key Store Provider (CNG)** – indicates a key store that is accessible via a key store provider (KSP) that implements the Cryptography Next Generation (CNG) API. Typically, this type of a store is a hardware security module (HSM). After you select this option, you will need to pick a KSP. **Microsoft Software Key Store Provider** is selected by default. If you want to use a column master key stored in an HSM, select a KSP for your device (it must be installed and configured on the computer before you open the dialog).
+    - **Certificate Store - Current User** - indicates the Current User certificate store location in the Windows Certificate Store, which is your personal store. 
+    - **Certificate Store - Local computer** - indicates the Local computer certificate store location in the Windows Certificate Store. 
+    - **Azure Key Vault** -  you will need to sign in to Azure (click **Sign in**). Once you sign in, you will be able to pick one of your Azure subscriptions and a key vault.
+    - **Key Store Provider (CNG)** - indicates a key store that is accessible via a key store provider (KSP) that implements the Cryptography Next Generation (CNG) API. Typically, this type of a store is a hardware security module (HSM). After you select this option, you will need to pick a KSP. **Microsoft Software Key Store Provider** is selected by default. If you want to use a column master key stored in an HSM, select a KSP for your device (it must be installed and configured on the computer before you open the dialog).
     -	**Cryptographic Service Provider (CAPI)** - a key store that is accessible via a cryptographic service provider (CSP) that implements the Cryptography API (CAPI). Typically, such a store is a hardware security module (HSM). After you select this option, you will need to pick a CSP.  If you want to use a column master key stored in an HSM, select a CSP for your device (it must be installed and configured on the computer before you open the dialog).
     
-    >   [!NOTE]
-    >   Since CAPI is a deprecated API, the Cryptographic Service Provider (CAPI) option is disabled by default. You can enable by creating the CAPI Provider Enabled DWORD value under the **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** key in Windows Registry, and setting it to 1. You should use CNG instead of CAPI, unless your key store does not support CNG.
+    > [!NOTE]
+    > Since CAPI is a deprecated API, the Cryptographic Service Provider (CAPI) option is disabled by default. You can enable by creating the CAPI Provider Enabled DWORD value under the **[HKEY_CURRENT_USER\Software\Microsoft\Microsoft SQL Server\sql13\Tools\Client\Always Encrypted]** key in Windows Registry, and setting it to 1. You should use CNG instead of CAPI, unless your key store does not support CNG.
    
     For more information about the above key stores, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -249,7 +243,7 @@ SQL Server Management Studio will create metadata for your column master key in 
 The **New Column Encryption Key** dialog allows you to generate a column encryption key, encrypt it with a column master key, and create the column encryption key metadata in the database.
 
 1.	Using **Object Explorer**, navigate to the **Security/Always Encrypted Keys** folder under your database.
-2.	Right click on the **Column Encryption Keys** folder and select **New Column Encryption Key…**. 
+2.	Right click on the **Column Encryption Keys** folder and select **New Column Encryption Key...**. 
 3.	In the **New Column Encryption Key** dialog, enter the name of the column encryption key metadata object.
 4.	Select a metadata object that represents your column master key in the database.
 5.	Click **OK**. 
@@ -261,17 +255,17 @@ SQL Server Management Studio will generate a new column encryption key and then 
 
 You need the *ALTER ANY ENCRYPTION MASTER KEY* and *VIEW ANY COLUMN MASTER KEY DEFINITION* database permissions in the database for the dialog to create the column encryption key metadata and to access column master key metadata.
 To access a key store and use the column master key, you might require permissions on the key store or/and the key:
-- **Certificate Store – Local computer** - you must have Read access to the certificate that is used as a column master key, or be the administrator on the computer.
-- **Azure Key Vault** – you need the *get*, *unwrapKey*, *wrapKey*, *sign*, and *verify*  permissions on the vault containing the column master key.
-- **Key Store Provider (CNG)** – you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
-- **Cryptographic Service Provider (CAPI)** – you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
+- **Certificate Store - Local computer** - you must have Read access to the certificate that is used as a column master key, or be the administrator on the computer.
+- **Azure Key Vault** - you need the *get*, *unwrapKey*, *wrapKey*, *sign*, and *verify*  permissions on the vault containing the column master key.
+- **Key Store Provider (CNG)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
+- **Cryptographic Service Provider (CAPI)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
 
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 <a name="rotatecmk"></a>
 ## Rotating Column Master Keys
 
-The rotation of a column master key is the process of replacing an existing column master key with a new column master key. You may need to rotate a key if it has been compromised, or in order to comply with your organization’s policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. A column master key rotation involves decrypting column encryption keys that are protected with the current column master key, re-encrypting them using the new column master key, and updating the key metadata. For more information, see [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
+The rotation of a column master key is the process of replacing an existing column master key with a new column master key. You may need to rotate a key if it has been compromised, or in order to comply with your organization's policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. A column master key rotation involves decrypting column encryption keys that are protected with the current column master key, re-encrypting them using the new column master key, and updating the key metadata. For more information, see [Overview of Key Management for Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
 **Step 1: Provision a new column master key**
 
@@ -297,8 +291,8 @@ SQL Server Management Studio will obtain the metadata of the column encryption k
 
 In this step you need to make sure that all your client applications that query database columns protected with the column master key that you are rotating can access the new column master key  (i.e. database columns encrypted with a column encryption key that is encrypted with the column master key, being rotated). This step depends on the type of key store your new column master key is in. For example:
 - If the new column master key is a certificate stored in Windows Certificate Store, you need to deploy the certificate to the same certificate store location (*Current User* or *Local computer*) as the location specified in the key path of your column master key in the database. The application needs to be able to access the certificate:
-    - If the certificate is stored in the *Current User* certificate store location, the certificate needs to be imported into the Current User store of the application’s Windows identity (user).
-    - If the certificate is stored in the *Local computer* certificate store location, the application’s Windows identity must have permission to access the certificate.
+    - If the certificate is stored in the *Current User* certificate store location, the certificate needs to be imported into the Current User store of the application's Windows identity (user).
+    - If the certificate is stored in the *Local computer* certificate store location, the application's Windows identity must have permission to access the certificate.
 - If the new column master key is stored in Microsoft Azure Key Vault, the application must be implemented so that it can authenticate to Azure and has permission to access the key.
 
 For details, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
@@ -310,7 +304,7 @@ For details, see [Create and Store Column Master Keys (Always Encrypted)](../../
 
 Once you have configured all your applications to use the new column master key, remove the values of column encryption keys that are encrypted with the *old* column master key from the database. Removing old values will ensure you are ready for the next rotation (remember, each column encryption key, protected with a column master key to be rotated, must have exactly one encrypted value).
 
-Another reason to clean up the old value before archiving or removing the old column master key, is performance-related: when querying an encrypted column, an Always Encrypted-enabled client driver might need to attempt to decrypt two values: the old value and the new one. The driver does not know which of the two column master keys is valid in the application’s environment so the driver will retrieve both encrypted values from the server. If decrypting one of the values fails, because it is protected with the column master key is that not available (e.g. it is the old column master key that has been removed from the store), the driver will attempt to decrypt another value using the new column master key.
+Another reason to clean up the old value before archiving or removing the old column master key, is performance-related: when querying an encrypted column, an Always Encrypted-enabled client driver might need to attempt to decrypt two values: the old value and the new one. The driver does not know which of the two column master keys is valid in the application's environment so the driver will retrieve both encrypted values from the server. If decrypting one of the values fails, because it is protected with the column master key is that not available (e.g. it is the old column master key that has been removed from the store), the driver will attempt to decrypt another value using the new column master key.
 
 > [!WARNING]
 > If you remove the value of a column encryption key before its corresponding column master key has been made available to an application, the application will no longer be able to decrypt the database column.
@@ -336,16 +330,16 @@ If you choose to remove the definition of the old column master key from the dat
 
 Rotating a column master key requires the following database permissions:
 
-- **ALTER ANY COLUMN MASTER KEY** – required to create metadata for the new column master key and deleting the metadata for the old column master key.
-- **ALTER ANY COLUMN ENCRYPTION KEY** – required to modify column encryption key metadata (add new encrypted values).
+- **ALTER ANY COLUMN MASTER KEY** - required to create metadata for the new column master key and deleting the metadata for the old column master key.
+- **ALTER ANY COLUMN ENCRYPTION KEY** - required to modify column encryption key metadata (add new encrypted values).
 - **VIEW ANY COLUMN MASTER KEY DEFINITION** - required to access and read the metadata of the column master keys.
 - **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** - required to access and read the metadata of the column encryption keys. 
 
 You also need to be able to access both the old column master key and the new column master key in their key stores. To access a key store and use a column master key, you might require permissions on the key store or/and the key:
-- **Certificate Store – Local computer** - you must have Read access to the certificate that is used a column master key, or be the administrator on the computer.
-- **Azure Key Vault** – you need the *create*, *get*, *unwrapKey*, *wrapKey*, *sign*, and *verify* permissions on the vault containing the column master key(s).
-- **Key Store Provider (CNG)** – you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
-- **Cryptographic Service Provider (CAPI)** – you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
+- **Certificate Store - Local computer** - you must have Read access to the certificate that is used a column master key, or be the administrator on the computer.
+- **Azure Key Vault** - you need the *create*, *get*, *unwrapKey*, *wrapKey*, *sign*, and *verify* permissions on the vault containing the column master key(s).
+- **Key Store Provider (CNG)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
+- **Cryptographic Service Provider (CAPI)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
 
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
@@ -361,7 +355,7 @@ To rotate a column encryption key, use the Always Encrypted Wizard.
 1.	Open the wizard for your database: right-click your database, point to **Tasks**, and then click **Encrypt Columns**.
 2.	Review the **Introduction** page, and then click **Next**.
 3.	On the **Column Selection** page, expand the tables and locate all columns you want to replace that are currently encrypted with the old column encryption key.
-4.	For each column encrypted with the old column encryption key, set **Encryption Key** to a new auto-generated key. **Note:** Alternatively, you can create a new column encryption key before running the wizard – see the *Provisioning Column Encryption Keys* section above.
+4.	For each column encrypted with the old column encryption key, set **Encryption Key** to a new auto-generated key. **Note:** Alternatively, you can create a new column encryption key before running the wizard - see the *Provisioning Column Encryption Keys* section above.
 5.	On the **Master Key Configuration** page, select a location to store the new key, and select a master key source, and then click **Next**. **Note:** If you are using an existing column encryption key (not an auto-generated one), there is no action to perform on this page.
 6.	On the **Validation page**, choose whether to run the script immediately or create a PowerShell script, and then click **Next**.
 7.	On the **Summary** page, review the options you have selected, and then click **Finish** and close the wizard when completed.
@@ -370,22 +364,22 @@ To rotate a column encryption key, use the Always Encrypted Wizard.
 ### Permissions
 
 Rotating a column encryption key requires the following database permissions:
-**ALTER ANY COLUMN MASTER KEY** – required if you use a new auto-generated column encryption key (a new column master key and its new metadata will also be generated).
-**ALTER ANY COLUMN ENCRYPTION KEY** –required to add metadata for the new column encryption key.
+**ALTER ANY COLUMN MASTER KEY** - required if you use a new auto-generated column encryption key (a new column master key and its new metadata will also be generated).
+**ALTER ANY COLUMN ENCRYPTION KEY** -required to add metadata for the new column encryption key.
 **VIEW ANY COLUMN MASTER KEY DEFINITION** - required to access and read the metadata of the column master keys.
 **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** - required to access and read the metadata of the column encryption keys.
 
 You also need to be able to access column master keys for both the new and the old column encryption key. To access a key store and use a column master key, you might require permissions on the key store or/and the key:
-- **Certificate Store – Local computer** - you must have the Read access to the certificate that is used a column master key, or be the administrator on the computer.
-- **Azure Key Vault** – you need the get, unwrapKey, and verify permissions on the vault containing the column master key.
-- **Key Store Provider (CNG)** – you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
-- **Cryptographic Service Provider (CAPI)** – you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
+- **Certificate Store - Local computer** - you must have the Read access to the certificate that is used a column master key, or be the administrator on the computer.
+- **Azure Key Vault** - you need the get, unwrapKey, and verify permissions on the vault containing the column master key.
+- **Key Store Provider (CNG)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
+- **Cryptographic Service Provider (CAPI)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
 
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## Performing DAC Upgrade Operations when Database or DACPAC uses Always Encrypted
 
-[DAC operations](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) are supported on DACPAC files and databases with schemas containing encrypted columns. Special considerations apply to the DAC upgrade operation – see [Upgrade a Data-tier Application](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) on how to perform a DAC upgrade operation in various tools, including SSMS. 
+[DAC operations](../../data-tier-applications/data-tier-applications.md) are supported on DACPAC files and databases with schemas containing encrypted columns. Special considerations apply to the DAC upgrade operation - see [Upgrade a Data-tier Application](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) on how to perform a DAC upgrade operation in various tools, including SSMS. 
 
 When you upgrade a database using a DACPAC and either the DACPAC or the target database has encrypted columns, the upgrade operation will trigger a data encryption operation if all of the following conditions are met:
 - The database contains a column with data.
@@ -408,16 +402,16 @@ To perform a DAC upgrade operation if Always Encrypted is setup in the DACPAC or
 *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*, *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION*
 
 If the upgrade operation triggers a data encryption operation, you also need to be able to access column master keys configured for the impacted columns:
-- **Certificate Store – Local computer** - you must have Read access to the certificate that is used a column master key, or be the administrator on the computer.
-- **Azure Key Vault** – you need the *create*, *get*, *unwrapKey*, *wrapKey*, *sign*, and *verify* permissions on the vault containing the column master key.
-- **Key Store Provider (CNG)** – you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
-- **Cryptographic Service Provider (CAPI)** – you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
+- **Certificate Store - Local computer** - you must have Read access to the certificate that is used a column master key, or be the administrator on the computer.
+- **Azure Key Vault** - you need the *create*, *get*, *unwrapKey*, *wrapKey*, *sign*, and *verify* permissions on the vault containing the column master key.
+- **Key Store Provider (CNG)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the KSP configuration.
+- **Cryptographic Service Provider (CAPI)** - you might be prompted for the required permission and credentials when using a key store or a key, depending on the store and the CSP configuration.
 
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## Migrating Databases with Encrypted Columns using BACPAC
 
-When you export a database, all data stored in encrypted columns are retrieved and put into the resulting [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) (in encrypted form). The resulting BACPAC also contains the metadata for Always Encrypted keys.
+When you export a database, all data stored in encrypted columns are retrieved and put into the resulting [BACPAC](../../data-tier-applications/data-tier-applications.md) (in encrypted form). The resulting BACPAC also contains the metadata for Always Encrypted keys.
 
 When you import the BACPAC into a database, the encrypted data from the BACPAC is loaded into the database and Always Encrypted key metadata is re-created.
 
@@ -452,10 +446,10 @@ The below table lists possible migration scenarios and how they relate to Always
 To **encrypt** or **decrypt** data stored in the data source, you need the *VIEW ANY COLUMN MASTER KEY DEFINITION* and *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* permissions in the source database.
 
 You also need access to column master keys, configured for the columns, storing data you are encrypted or decrypting:
-- **Certificate Store – Local computer** - you must have the Read access to the certificate that is used a column master key, or be the administrator on the computer.
-- **Azure Key Vault** – you need the get, unwrapKey, wrapKey, sign, and verify permissions on the vault containing the column master key.
-- **Key Store Provider (CNG)** – the required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the KSP configuration.
-- **Cryptographic Service Provider (CAPI)** – the required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the CSP configuration.
+- **Certificate Store - Local computer** - you must have the Read access to the certificate that is used a column master key, or be the administrator on the computer.
+- **Azure Key Vault** - you need the get, unwrapKey, wrapKey, sign, and verify permissions on the vault containing the column master key.
+- **Key Store Provider (CNG)** - the required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the KSP configuration.
+- **Cryptographic Service Provider (CAPI)** - the required permission and credentials, you might be prompted for when using a key store or a key, depend on the store and the CSP configuration.
 For more information, see [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## See Also

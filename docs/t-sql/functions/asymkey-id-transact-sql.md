@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "AsymKey_ID"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "IDs [SQL Server], asymmetric keys"
   - "cryptography [SQL Server], asymmetric keys"
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ASYMKEY_ID (Transact-SQL)

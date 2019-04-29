@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Applying an XSL Transformation (SQLXML Managed Classes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "applying XSL transformations [SQLXML]"
@@ -16,11 +13,10 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, applying XSL transformations"
   - "XSL Transformations [SQLXML]"
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Applying an XSL Transformation (SQLXML Managed Classes)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

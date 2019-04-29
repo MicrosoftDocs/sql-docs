@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STDifference_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STDifference (geometry Data Type)"
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
-caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

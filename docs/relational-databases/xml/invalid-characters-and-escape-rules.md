@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, invalid characters"
   - "FOR XML clause, escape rules"
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Invalid Characters and Escape Rules

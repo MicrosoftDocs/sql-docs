@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.sysjobsteps"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobsteps system table"
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-caps.latest.revision: 28
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -50,7 +46,7 @@ manager: craigg
 |**retry_attempts**|**int**|Number of retry attempts made if the step fails.|  
 |**retry_interval**|**int**|Amount of time to wait between retry attempts.|  
 |**os_run_priority**|**int**|Reserved.|  
-|**output_file_name**|**nvarchar(200)**|Name of the file in which the step's output is saved when **subsystem** is TSQL, PowerShell, or **CmdExec***.*|  
+|**output_file_name**|**nvarchar(200)**|Name of the file in which the step's output is saved when **subsystem** is TSQL, PowerShell, or **CmdExec**_._|  
 |**last_run_outcome**|**int**|Outcome of the previous execution of the job step.<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled<br /><br /> **5** = Unknown|  
 |**last_run_duration**|**int**|Duration (hhmmss) of the step the last time it ran.|  
 |**last_run_retries**|**int**|Number of retry attempts in the last execution of the job step.|  

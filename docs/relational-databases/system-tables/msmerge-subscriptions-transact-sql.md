@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSmerge_subscriptions"
   - "MSmerge_subscriptions_TSQL"
@@ -21,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_subscriptions system table"
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSmerge_subscriptions (Transact-SQL)

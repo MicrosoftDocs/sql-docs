@@ -1,23 +1,18 @@
-﻿---
+---
 title: "Azure SQL Database Catalog Views | Microsoft Docs"
 ms.custom: 
 ms.date: "08/20/2015"
-ms.prod: 
+ms.service: sql-database 
 ms.reviewer: ""
-ms.suite: sql
 ms.prod_service: sql-database
-ms.service: "sql-database"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "Azure SQL Database catalog views"
 ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
-caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

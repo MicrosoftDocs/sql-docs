@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.transferjobstask.f1"
@@ -16,9 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Jobs task [Integration Services]"
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Transfer Jobs Task
@@ -43,7 +40,7 @@ manager: craigg
  The Transfer Jobs task raises an information event that reports the number of jobs transferred and a warning event when a job is overwritten. The task does not report incremental progress of the job transfer; it reports only 0% and 100% completion.  
   
 ## Execution Value  
- The execution value, defined in the **ExecutionValue** property of the task, returns the number of jobs that are transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Jobs task, information about the job transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ The execution value, defined in the **ExecutionValue** property of the task, returns the number of jobs that are transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Jobs task, information about the job transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## Log Entries  
  The Transfer Jobs task includes the following custom log entries:  
@@ -71,13 +68,13 @@ manager: craigg
 ## Related Tasks  
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Transfer Jobs Task Editor (General Page)
   Use the **General** page of the **Transfer Jobs Task Editor** dialog box to name and describe the Transfer Jobs task.  
   
 > [!NOTE]  
->  Only members of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles on the destination server can successfully create jobs there. To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role there. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  Only members of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles on the destination server can successfully create jobs there. To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role there. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ### Options  
  **Name**  
@@ -93,7 +90,7 @@ manager: craigg
   Use the **Jobs** page of the **Transfer Jobs Task Editor** dialog box to specify properties for copying one or more [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another.  
   
 > [!NOTE]  
->  To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role on the server. To successfully create jobs on the destination server, the user must be a member of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  To access jobs on the source server, users must be a member of at least the **SQLAgentUserRole** fixed database role on the server. To successfully create jobs on the destination server, the user must be a member of the **sysadmin** fixed server role or one of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent fixed database roles and their permissions, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ### Options  
  **SourceConnection**  
@@ -113,7 +110,7 @@ manager: craigg
 |**False**|Copy only the specified jobs.|  
   
  **JobsList**  
- Click the browse button **(…)** to select the jobs to copy. At least one job must be selected.  
+ Click the browse button **(...)** to select the jobs to copy. At least one job must be selected.  
   
 > [!NOTE]  
 >  Specify the **SourceConnection** before selecting jobs to copy.  

@@ -5,14 +5,11 @@ ms.date: "03/09/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.deploy_project (SSISDB Database)

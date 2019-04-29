@@ -5,21 +5,16 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "logs [Integration Services], custom"
   - "custom log entries [Integration Services]"
   - "custom data flow components [Integration Services], logging"
   - "data flow components [Integration Services], logging"
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Logging and Defining Log Entries in a Data Flow Component

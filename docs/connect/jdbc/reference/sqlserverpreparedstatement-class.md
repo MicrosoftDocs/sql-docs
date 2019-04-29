@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -34,7 +31,7 @@ public class SQLServerPreparedStatement
 ```  
   
 ## Remarks  
- SQLServerPreparedStatement provides methods that let you supply parameters as any native Java type and many Java object types. SQLServerPreparedStatement prepares a statement by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **sp_prepare** stored procedure, and then reuses the returned statement handle for each subsequent running of the statement, typically using different parameters provided by the user.  
+ SQLServerPreparedStatement provides methods that let you supply parameters as any native Java type and many Java object types. SQLServerPreparedStatement prepares a statement by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sp_prepare** stored procedure, and then reuses the returned statement handle for each subsequent running of the statement, typically using different parameters provided by the user.  
   
  SQLServerPreparedStatement supports batching, where a set of prepared statements are run in a single database round trip, to improve runtime performance.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_trace_setevent_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_setevent"
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: 49
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -44,10 +40,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## Arguments  
- [ **@traceid=** ] *trace_id*  
+`[ @traceid = ] trace_id`
  Is the ID of the trace to be modified. *trace_id* is **int**, with no default. The user employs this *trace_id* value to identify, modify, and control the trace.  
   
- [ **@eventid=** ] *event_id*  
+`[ @eventid = ] event_id`
  Is the ID of the event to turn on. *event_id* is **int**, with no default.  
   
  This table lists the events that can be added to or removed from a trace.  
@@ -231,13 +227,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |212|Bitmap Warning|Indicates when bitmap filters have been disabled in a query.|  
 |213|Database Suspect Data Page|Indicates when a page is added to the **suspect_pages** table in **msdb**.|  
 |214|CPU threshold exceeded|Indicates when the Resource Governor detects a query has exceeded the CPU threshold value (REQUEST_MAX_CPU_TIME_SEC).|  
-|215|Indicates when a LOGON trigger or Resource Governor classifier function starts execution.|Indicates when a LOGON trigger or Resource Governor classifier function starts execution.|  
+|215|PreConnect:Starting|Indicates when a LOGON trigger or Resource Governor classifier function starts execution.|  
 |216|PreConnect:Completed|Indicates when a LOGON trigger or Resource Governor classifier function completes execution.|  
 |217|Plan Guide Successful|Indicates that SQL Server successfully produced an execution plan for a query or batch that contained a plan guide.|  
 |218|Plan Guide Unsuccessful|Indicates that SQL Server could not produce an execution plan for a query or batch that contained a plan guide. SQL Server attempted to generate an execution plan for this query or batch without applying the plan guide. An invalid plan guide may be the cause of this problem. You can validate the plan guide by using the sys.fn_validate_plan_guide system function.|  
 |235|Audit Fulltext||  
   
- [ **@columnid=** ] *column_id*  
+`[ @columnid = ] column_id`
  Is the ID of the column to be added for the event. *column_id* is **int**, with no default.  
   
  The following table lists the columns that can be added for an event.  

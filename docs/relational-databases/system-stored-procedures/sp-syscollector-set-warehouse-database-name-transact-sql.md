@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_set_warehouse_database_name"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sp_syscollector_set_warehouse_database_name"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
-caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

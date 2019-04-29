@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_db_vardecimal_storage_format"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "database compression [SQL Server]"
   - "table compression [SQL Server]"
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_db_vardecimal_storage_format (Transact-SQL)

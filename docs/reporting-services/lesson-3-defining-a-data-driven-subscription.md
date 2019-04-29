@@ -1,29 +1,20 @@
 ---
 title: "Lesson 3: Defining a Data-Driven Subscription | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
+ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: 50
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 3: Defining a Data-Driven Subscription
 In this [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] tutorial lesson, you use the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] web portals data-driven subscription pages to connect to a subscription data source, build a query that retrieves subscription data, and map the result set to report and delivery options.  
   
 > [!NOTE]  
-> Before you start, verify that **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** service is running. If it is not running, you cannot save the subscription.  One method for verification is to open the [SQL Server Configuraton Manger](../relational-databases/sql-server-configuration-manager.md).
+> Before you start, verify that **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent** service is running. If it is not running, you cannot save the subscription.  One method for verification is to open the [SQL Server Configuration Manger](../relational-databases/sql-server-configuration-manager.md).
 This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data source uses stored credentials.  For more information, see [Lesson 2: Modifying the Report Data Source Properties](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="bkmk_startwizard"></a>Start the Data-Driven Subscription Wizard  
@@ -36,14 +27,17 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
   
 ## Define a description  
 1.  Type **Sales Order delivery** in description.
+
 ## Type
 1.  click **Data-driven subscription**..  
+
 ## Schedule
 1. In the schedule section click **Report-specific schedule**.
 2. Click **Edit schedule**.
 3.  In **Schedule Details**, click **Once**.  
 4.  Specify a start time that is a few minutes ahead of the current time.  
 5.  Click **Apply**.
+
 ## Destination  
 1.  In the Destination section, Select **Windows File Share** for the method of delivery.  
 
@@ -57,22 +51,25 @@ This lesson assumes you completed Lesson 1 and Lesson 2 and that the report data
     data source=localhost; initial catalog=Subscribers
     ```
     
- ## Credentials
- 1. Select **Using the following credentials**.
- 2. Select **Windows user name and password**.
- 3.  In **User Name** and **Password**, type your domain user name and password. Include both the domain and user account when specifying **User Name**.
-     > [!NOTE]  
-    > Credentials used to connect to a subscriber data source are not passed back to [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. If you modify the subscription later, you must retype the password used to connect to the data source.
+## Credentials
+1. Select **Using the following credentials**.
+2. Select **Windows user name and password**.
+3.  In **User Name** and **Password**, type your domain user name and password. Include both the domain and user account when specifying **User Name**.
+
+> [!NOTE]  
+> Credentials used to connect to a subscriber data source are not passed back to [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. If you modify the subscription later, you must retype the password used to connect to the data source.
+
 ## Query      
 1.  In the query box, type the following query:  
   
-    ```  
+    ```sql
     Select * from OrderInfo  
     ```  
   
 2.  Specify a time-out of 30 seconds.  
   
 3.  Click **Validate query**, and then click **Apply**.
+
 ## Delivery Options
 Fill in the following values:
 

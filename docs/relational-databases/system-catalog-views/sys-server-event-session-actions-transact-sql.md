@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.server_event_session_actions"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "sys.server_event_session_actions catalog view"
   - "xe"
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.server_event_session_actions (Transact-SQL)

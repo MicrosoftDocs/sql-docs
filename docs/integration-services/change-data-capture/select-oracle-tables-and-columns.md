@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "selTabCol"
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select Oracle Tables and Columns

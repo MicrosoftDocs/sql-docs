@@ -1,30 +1,21 @@
 ---
 title: "Custom Report Item Class Libraries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "custom-report-items"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: custom-report-items
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "custom report items, RDL"
   - "RDL [Reporting Services], custom report items"
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-caps.latest.revision: 27
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Custom Report Item Class Libraries
-  Custom report items use classes from the **Microsoft.ReportDesigner** namespace. The classes used to implement a custom report item can be grouped into two main categories: unique classes designed to support custom report item infrastructure, and managed wrapper classes that encapsulate the functionality of relevant Report Definition Language (RDL) elements. For a code sample on how to use these classes, see [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+  Custom report items use classes from the **Microsoft.ReportDesigner** namespace. The classes used to implement a custom report item can be grouped into two main categories: unique classes designed to support custom report item infrastructure, and managed wrapper classes that encapsulate the functionality of relevant Report Definition Language (RDL) elements. For a code sample on how to use these classes, see [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## Custom Report Item Infrastructure Classes  
  The following classes are used to implement a custom report item.  
@@ -50,7 +41,7 @@ manager: "kfile"
 |**Style**|The style properties for the custom report item.|  
 |**Adornment**|An adornment window used for interactive editing of the control.|  
 |**Site**|The **ISite** of the component.|  
-|**DesignerVerbCollection**|An array of custom verbs for the control’s shortcut menu.|  
+|**DesignerVerbCollection**|An array of custom verbs for the control's shortcut menu.|  
   
 #### Public Methods  
   

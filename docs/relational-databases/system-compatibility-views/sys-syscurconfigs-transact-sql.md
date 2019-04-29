@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.syscurconfigs"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.syscurconfigs compatibility view"
   - "syscurconfigs system table"
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
-caps.latest.revision: 34
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

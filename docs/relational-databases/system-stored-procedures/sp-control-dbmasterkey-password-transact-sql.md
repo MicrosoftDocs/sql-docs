@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "02/25/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_control_dbmasterkey_password"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_control_dbmasterkey_password"
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)

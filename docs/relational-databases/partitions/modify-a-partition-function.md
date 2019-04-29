@@ -1,29 +1,23 @@
-﻿---
+---
 title: "Modify a Partition Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "partitions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-caps.latest.revision: 11
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify a Partition Function
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   You can change the way a table or index is partitioned in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by adding or subtracting the number of partitions specified, in increments of 1, in the partition function of the partitioned table or index by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. When you add a partition, you do so by "splitting" an existing partition into two partitions and redefining the boundaries of the new partitions. When you drop a partition, you do so by "merging" the boundaries of two partitions into one. This last action repopulates one partition and leaves the other partition unassigned.  
   
 > [!CAUTION]  
->  More than one table or index can use the same partition function. When you modify a partition function, you affect all of them in a single transaction. Check the partition function’s dependencies before modifying it.  
+>  More than one table or index can use the same partition function. When you modify a partition function, you affect all of them in a single transaction. Check the partition function's dependencies before modifying it.  
   
  **In This Topic**  
   
@@ -58,7 +52,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not provide replication support for modifying a partition function. If you want to make changes to a partition function in the publication database, you must do this manually in the subscription database.  
   
--   All filegroups that are affected by ALTER PARITITION FUNCTION must be online.  
+-   All filegroups that are affected by ALTER PARTITION FUNCTION must be online.  
   
 ###  <a name="Security"></a> Security  
   
@@ -97,12 +91,12 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  
@@ -122,12 +116,12 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
     ```  
-    -- Look for a previous version of the partition function “myRangePF1” and deletes it if it is found.  
+    -- Look for a previous version of the partition function "myRangePF1" and deletes it if it is found.  
     IF EXISTS (SELECT * FROM sys.partition_functions  
         WHERE name = 'myRangePF1')  
         DROP PARTITION FUNCTION myRangePF1;  
     GO  
-    -- Create a new partition function called “myRangePF1” that partitions a table into four partitions.  
+    -- Create a new partition function called "myRangePF1" that partitions a table into four partitions.  
     CREATE PARTITION FUNCTION myRangePF1 (int)  
     AS RANGE LEFT FOR VALUES ( 1, 100, 1000 );  
     GO  

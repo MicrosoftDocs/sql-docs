@@ -5,20 +5,17 @@ ms.date: "09/28/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
-caps.latest.revision: 4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # What&#39;s New in Integration Services in SQL Server 2017
 This topic describes the features that have been added or updated in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
->   [!NOTE]
+> [!NOTE]
 > SQL Server 2017 also includes the features of SQL Server 2016 and the features added in SQL Server 2016 updates. For info about the new SSIS features in SQL Server 2016, see [What's New in Integration Services in SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).
 
 ## Highlights of this release
@@ -69,7 +66,7 @@ You can now develop SSIS projects and packages that target SQL Server versions 2
 
 -   You can now use the **Use32BitRuntime** parameter when you trigger execution in Scale Out.
 -   The performance of logging to SSISDB for package executions in Scale Out has been improved. The Event Message and Message Context logs are now written to SSISDB in batch mode instead of one by one. Here are some additional notes about this improvement:        
-    - Some reports in the current version of SQL Server Management Studio (SSMS) don’t currently display these logs for executions in Scale Out. We anticipate that they will be supported in the next release of SSMS. The affected reports include the *All Connections* report, the *Error Context* report, and the *Connection Information* section in the Integration Service Dashboard.
+    - Some reports in the current version of SQL Server Management Studio (SSMS) don't currently display these logs for executions in Scale Out. We anticipate that they will be supported in the next release of SSMS. The affected reports include the *All Connections* report, the *Error Context* report, and the *Connection Information* section in the Integration Service Dashboard.
     - A new column **event_message_guid** has been added. Use this column to join the [catalog].[event_message_context] view and the [catalog].[event_messages] view instead of using **event_message_id** when you query these logs of executions in Scale Out.
 -   To get the management application for SSIS Scale Out, [download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.1 or later.
 

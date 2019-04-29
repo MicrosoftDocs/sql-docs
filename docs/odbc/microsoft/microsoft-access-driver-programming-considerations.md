@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC], Access driver"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Access driver [ODBC]"
   - "desktop database drivers [ODBC], Access driver"
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

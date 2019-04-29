@@ -1,13 +1,11 @@
-﻿---
+---
 title: "sys.dm_exec_cached_plan_dependent_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_exec_cached_plan_dependent_objects"
@@ -19,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_cached_plan_dependent_objects dynamic management function"
 ms.assetid: 9b6cf5f7-b267-44fb-aac8-f49c9aa10cc1
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,19 +30,24 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ## Syntax  
   
 ```  
-  
-dm_exec_cached_plan_dependent_objects(plan_handle)  
+sys.dm_exec_cached_plan_dependent_objects(plan_handle)  
 ```  
   
 ## Arguments  
- *plan_handle*  
- Uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache. *plan_handle* is **varbinary(64)**. The *plan_handle* can be obtained from the following dynamic management objects:  
+*plan_handle*  
+Is a token that uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache. *plan_handle* is **varbinary(64)**.   
+
+The *plan_handle* can be obtained from the following dynamic management objects:  
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
 -   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## Table Returned  
   
@@ -56,7 +58,7 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
 |**cacheobjtype**|**nvarchar(50)**|The Plan cache object type. Column is not nullable. Possible values are<br /><br /> Executable plan<br /><br /> CLR compiled function<br /><br /> CLR compiled procedure<br /><br /> Cursor|  
   
 ## Permissions  
- Requires VIEW SERVER STATE permission on the server.  
+ Requires `VIEW SERVER STATE` permission on the server.  
   
 ## Physical Joins  
  ![Relationship diagram](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "Relationship diagram")  

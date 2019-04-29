@@ -1,14 +1,9 @@
 ---
 title: "Initialize a Report Server (SSRS Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
+ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], initializing"
@@ -18,17 +13,15 @@ helpviewer_keywords:
   - "initializing report servers [Reporting Services]"
   - "verifying report server initializations"
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-caps.latest.revision: 10
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # SSRS Encryption Keys - Initialize a Report Server
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], an initialized server is one that can encrypt and decrypt data in a report server database. Initialization is a requirement for report server operation. Initialization occurs when the Report Server service is started for the first time. It also occurs when you join the report server to the existing deployment, or when you manually recreate the keys as part of the recovery process. For more information about how and why encryption keys are used, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) and [Store Encrypted Report Server Data &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
  Encryption keys are based partly on the profile information of the Report Server service. If you change the user identity used to run the Report Server service, you must update the keys accordingly. If you are using the Reporting Services Configuration tool to change the identity, this step is handled for you automatically.  
   
- If initialization fails for some reason, the report server returns an **RSReportServerNotActivated** error in response to user and service requests. In this case, you may need to troubleshoot the system or server configuration. For more information, see [SSRS: Troubleshoot Issues and Errors with Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) in Technet Wiki.  
+ If initialization fails for some reason, the report server returns an **RSReportServerNotActivated** error in response to user and service requests. In this case, you may need to troubleshoot the system or server configuration. For more information, see [SSRS: Troubleshoot Issues and Errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/1633.aspx) in Technet Wiki.  
   
 ## Overview of the Initialization Process  
  The initialization process creates and stores a symmetric key used for encryption. The symmetric key is created by the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Cryptographic Services and subsequently used by the Report Server service to encrypt and decrypt data. The symmetric key is itself encrypted with an asymmetric key.  
@@ -67,7 +60,7 @@ manager: "kfile"
 >  You can also use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) provider to initialize a report server programmatically. For more information, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## How to Confirm a Report Server Initialization  
- To confirm report server initialization, ping the Report Server Web service by typing **http://\<servername>/reportserver** in the command window. If the **RSReportServerNotActivated** error occurs, the initialization failed.  
+ To confirm report server initialization, ping the Report Server Web service by typing **https://\<servername>/reportserver** in the command window. If the **RSReportServerNotActivated** error occurs, the initialization failed.  
   
 ## See Also
 [Configure and Manage Encryption Keys (SSRS Configuration Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)

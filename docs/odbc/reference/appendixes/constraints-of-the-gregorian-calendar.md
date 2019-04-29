@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data types [ODBC], Gregorian calendar"
   - "Gregorian calendar [ODBC]"
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

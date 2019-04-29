@@ -1,75 +1,92 @@
 ---
-title: Get started with SQL Server 2017 on Red Hat Enterprise Linux | Microsoft Docs
-description:  This quickstart shows how to install SQL Server 2017 on Red Hat Enterprise Linux and then create and query a database with sqlcmd.
+title: Get started with SQL Server on Red Hat Enterprise Linux
+titleSuffix: SQL Server
+description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Red Hat Enterprise Linux and then create and query a database with sqlcmd.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 07/16/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.component: ""
-ms.suite: "sql"
-ms.custom: "sql-linux"
+ms.custom: "sql-linux, seodec18"
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ---
 # Quickstart: Install SQL Server and create a database on Red Hat
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In this quickstart, you first install SQL Server 2017 on Red Hat Enterprise Linux (RHEL) 7.3+. Then connect with **sqlcmd** to create your first database and run queries.
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+In this quickstart, you install SQL Server 2017 or SQL Server 2019 on Red Hat Enterprise Linux (RHEL). You then connect with **sqlcmd** to create your first database and run queries.
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+In this quickstart, you install SQL Server 2019 preview on Red Hat Enterprise Linux (RHEL) 7.3+. You then connect with **sqlcmd** to create your first database and run queries.
+
+::: moniker-end
 
 > [!TIP]
 > This tutorial requires user input and an internet connection. If you are interested in the [unattended](sql-server-linux-setup.md#unattended) or [offline](sql-server-linux-setup.md#offline) installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
 
 ## Prerequisites
 
-You must have a RHEL 7.3 or 7.4 machine with **at least 2 GB** of memory.
+You must have a RHEL 7.3, 7.4, 7.5, or 7.6 machine with **at least 2 GB** of memory.
 
-To install Red Hat Enterprise Linux on your own machine, go to [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
+To install Red Hat Enterprise Linux on your own machine, go to [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). You can also create RHEL virtual machines in Azure. See [Create and Manage Linux VMs with the Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), and use `--image RHEL` in the call to `az vm create`.
+
+If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before following these steps. For more information, see [Configure Linux repositories for SQL Server 2017 and 2019](sql-server-linux-change-repo.md).
 
 For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ## <a id="install"></a>Install SQL Server
 
 To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
 
-> [!IMPORTANT]
-> If you have previously installed a CTP or RC release of SQL Server 2017, you must first remove the old repository before registering one of the GA repositories. For more information, see [Change repositories from the preview repository to the GA repository](sql-server-linux-change-repo.md).
-
-1. Download the Microsoft SQL Server Red Hat repository configuration file:
+1. Download the Microsoft SQL Server 2017 Red Hat repository configuration file:
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
 
-   > [!NOTE]
-   > This is the Cumulative Update (CU) repository. For more information about your repository options and their differences, see [Configure repositories for SQL Server on Linux](sql-server-linux-change-repo.md).
+   > [!TIP]
+   > If you want to try SQL Server 2019 , you must instead register the **Preview (2019)** repository. Use the following command for SQL Server 2019 installations:
+   >
+   > ```bash
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   > ```
 
-1. Run the following commands to install SQL Server:
+2. Run the following commands to install SQL Server:
 
    ```bash
    sudo yum install -y mssql-server
    ```
 
-1. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and choose your edition.
+3. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and choose your edition.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
+
    > [!TIP]
-   > If you are trying SQL Server 2017 in this tutorial, the following editions are freely licensed: Evaluation, Developer, and Express.
+   > The following SQL Server 2017 editions are freely licensed: Evaluation, Developer, and Express.
 
    > [!NOTE]
    > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
-1. Once the configuration is done, verify that the service is running:
+4. Once the configuration is done, verify that the service is running:
 
    ```bash
    systemctl status mssql-server
    ```
-   
-1. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you are using **FirewallD** for your firewall, you can use the following commands:
+
+5. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you are using **FirewallD** for your firewall, you can use the following commands:
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
@@ -77,6 +94,52 @@ To configure SQL Server on RHEL, run the following commands in a terminal to ins
    ```
 
 At this point, SQL Server is running on your RHEL machine and is ready to use!
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="install"></a>Install SQL Server
+
+To configure SQL Server on RHEL, run the following commands in a terminal to install the **mssql-server** package:
+
+1. Download the Microsoft SQL Server 2019 preview Red Hat repository configuration file:
+
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   ```
+
+2. Run the following commands to install SQL Server:
+
+   ```bash
+   sudo yum install -y mssql-server
+   ```
+
+3. After the package installation finishes, run **mssql-conf setup** and follow the prompts to set the SA password and choose your edition.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
+
+   > [!NOTE]
+   > Make sure to specify a strong password for the SA account (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+
+4. Once the configuration is done, verify that the service is running:
+
+   ```bash
+   systemctl status mssql-server
+   ```
+
+5. To allow remote connections, open the SQL Server port on the firewall on RHEL. The default SQL Server port is TCP 1433. If you are using **FirewallD** for your firewall, you can use the following commands:
+
+   ```bash
+   sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
+   sudo firewall-cmd --reload
+   ```
+
+At this point, SQL Server 2019 preview is running on your RHEL machine and is ready to use!
+
+::: moniker-end
 
 ## <a id="tools"></a>Install the SQL Server command-line tools
 
@@ -107,13 +170,5 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-> [!TIP]
-> **Sqlcmd** is just one tool for connecting to SQL Server to run queries and perform management and development tasks. Other tools include:
->
-> * [SQL Server Operations Studio (Preview)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
-> * [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

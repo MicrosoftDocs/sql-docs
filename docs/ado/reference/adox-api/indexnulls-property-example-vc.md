@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "IndexNulls property [ADOX], VC++ example"
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

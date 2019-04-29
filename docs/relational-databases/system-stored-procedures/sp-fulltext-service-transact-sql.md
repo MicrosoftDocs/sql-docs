@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_fulltext_service"
@@ -20,7 +17,6 @@ helpviewer_keywords:
   - "sp_fulltext_service"
   - "Full-Text Search Upgrade Option"
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-caps.latest.revision: 79
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -41,10 +37,10 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## Arguments  
- [ **@action=**] **'***action***'**  
+`[ @action = ] 'action'`
  Is the property to be changed or reset. *action* is **nvarchar(100),** with no default. For a list of a*c*tion properties, their descriptions, and the values that can be set, see the table under the *value* argument. This argument returns the following properties: data type, current running value, minimum or maximum value, and deprecation status, if applicable.  
   
- [ **@value=**] *value*  
+`[ @value = ] value`
  Is the value of the specified property. *value* is **sql_variant**, with a default value of NULL. If @value is null, **sp_fulltext_service** returns the current setting. This table lists action properties, their descriptions, and the values that can be set.  
   
 > [!NOTE]  

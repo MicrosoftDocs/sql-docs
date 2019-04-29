@@ -5,21 +5,19 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLBrowseConnect"
 apilocation: 
   - "sqlsrv32.dll"
+  - "odbc32.dll" 
 apitype: "dllExport"
 f1_keywords: 
   - "SQLBrowseConnect"
 helpviewer_keywords: 
   - "SQLBrowseConnect function [ODBC]"
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,12 +34,12 @@ manager: craigg
 ```  
   
 SQLRETURN SQLBrowseConnect(  
-     SQLHDBC         ConnectionHandle,  
-     SQLCHAR *       InConnectionString,  
-     SQLSMALLINT     StringLength1,  
-     SQLCHAR *       OutConnectionString,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   StringLength2Ptr);  
+     SQLHDBC         ConnectionHandle,  
+     SQLCHAR *       InConnectionString,  
+     SQLSMALLINT     StringLength1,  
+     SQLCHAR *       OutConnectionString,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   StringLength2Ptr);  
 ```  
   
 ## Arguments  

@@ -4,23 +4,16 @@ ms.custom: ""
 ms.date: "02/05/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "tutorial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 26
-author: "rothja"
-ms.author: "jroth"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Lesson 1: Connecting to the Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
- > For content related to previous versions of SQL Server, see [Lesson 1: Connecting to the Database Engine](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx).
 
 When you install the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], the tools that are installed depend upon the edition and your setup choices. This lesson reviews the principal tools, and shows you how to connect and perform a basic function (authorizing more users).  
 
@@ -30,7 +23,7 @@ This lesson contains the following tasks:
 - [Authorizing Additional Connections](#additional) 
 
 ## <a name="tools">Tools For Getting Started</a> 
- -The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ships with a variety of tools. This topic describes the first tools you will need, and helps you select the right tool for the job. All tools can be accessed from the **Start** menu. Some tools, such as [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], are not installed by default. You must select the tools as part of the client components during setup. For a complete description of the tools described below, search for them in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contains only a subset of the tools.  
+- The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ships with a variety of tools. This topic describes the first tools you will need, and helps you select the right tool for the job. All tools can be accessed from the **Start** menu. Some tools, such as [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], are not installed by default. You must select the tools as part of the client components during setup. For a complete description of the tools described below, search for them in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contains only a subset of the tools.  
 
 ### Basic Tools
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) is the principal tool for administering the [!INCLUDE[ssDE](../includes/ssde-md.md)] and writing [!INCLUDE[tsql](../includes/tsql-md.md)] code. It is hosted in the [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] shell. SSMS is available as a free download from [Microsoft Download Center](https://msdn.microsoft.com/library/mt238290.aspx). The latest version can be used with older versions of the [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
@@ -46,10 +39,10 @@ The sample databases and samples are not included with [!INCLUDE[ssNoVersion](..
 
 ##### To start SQL Server Configuration Manager  
 - On current versions of Windows, on the **Start** page, type **Configuration Manager**, and then click **SQL Server *version* Configuration Manager**.   
- --   When using older versions of Windows, on the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
- -  
+- When using older versions of Windows, on the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], point to **Configuration Tools**, and then click **SQL Server Configuration Manager**.  
+
 ## <a name="connect"></a>Connecting with Management Studio  
- -It is easy to connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] from tools that are running on the same computer if you know the name of the instance, and if you are connecting as a member of the local Administrators group on the computer. The following procedures must be performed on the same computer that hosts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+- It is easy to connect to the [!INCLUDE[ssDE](../includes/ssde-md.md)] from tools that are running on the same computer if you know the name of the instance, and if you are connecting as a member of the local Administrators group on the computer. The following procedures must be performed on the same computer that hosts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
 > This topic discusses connecting to an on-premises SQL Server. To connect to Azure SQL Database, see [Connect to SQL Database with SQL Server Management Studio and execute a sample T-SQL query](https://azure.microsoft.com/documentation/articles/sql-database-connect-query-ssms/).  
@@ -78,7 +71,7 @@ At least one administrator account was selected when [!INCLUDE[ssNoVersion_md](.
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  In the **Server name** box, type the name of the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the *<computer_name>***\\***<instance_name>,* such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name. 
+3.  In the **Server name** box, type the name of the instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. For the default instance of SQL Server, the server name is the computer name. For a named instance of SQL Server, the server name is the _\<computer_name\>_**\\**_\<instance_name\>_, such as **ACCTG_SRVR\SQLEXPRESS**. The following screenshot shows connecting to the default (un-named) instance of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] on a computer named 'PracticeComputer'. The user logged into Windows is Mary from the Contoso domain. When using Windows Authentication you cannot change the user name. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_job_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_job"
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -51,16 +47,16 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## Arguments  
- [ **@job_id =**] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  To view a specific job, either *job_id* or *job_name* must be specified.  Omit both *job_id* and *job_name* to return information about all jobs.
   
- [ **@job_aspect =**] **'***job_aspect***'**  
+`[ @job_aspect = ] 'job_aspect'`
  The job attribute to display. *job_aspect* is **varchar(9)**, with a default of NULL, and can be one of these values.  
   
 |Value|Description|  
@@ -71,22 +67,22 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|Job step information|  
 |**TARGETS**|Target information|  
   
- [ **@job_type =**] **'***job_type***'**  
+`[ @job_type = ] 'job_type'`
  The type of jobs to include in the report. *job_type* is **varchar(12)**, with a default of NULL. *job_type* can be **LOCAL** or **MULTI-SERVER**.  
   
- [ **@owner_login_name =**] **'***login_name***'**  
+`[ @owner_login_name = ] 'login_name'`
  The login name of the owner of the job. *login_name* is **sysname**, with a default of NULL.  
   
- [ **@subsystem =**] **'***subsystem***'**  
+`[ @subsystem = ] 'subsystem'`
  The name of the subsystem. *subsystem* is **nvarchar(40)**, with a default of NULL.  
   
- [ **@category_name =**] **'***category***'**  
+`[ @category_name = ] 'category'`
  The name of the category. *category* is **sysname**, with a default of NULL.  
   
- [ **@enabled =**] *enabled*  
+`[ @enabled = ] enabled`
  A number indicating whether information is shown for enabled jobs or disabled jobs. *enabled* is **tinyint**, with a default of NULL. **1** indicates enabled jobs, and **0** indicates disabled jobs.  
   
- [ **@execution_status =**] *status*  
+`[ @execution_status = ] status`
  The execution status for the jobs. *status* is **int**, with a default of NULL, and can be one of these values.  
   
 |Value|Description|  
@@ -99,16 +95,16 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspended.|  
 |**7**|Performing completion actions.|  
   
- [ **@date_comparator =**] **'***date_comparison***'**  
+`[ @date_comparator = ] 'date_comparison'`
  The comparison operator to use in comparisons of *date_created* and *date_modified*. *date_comparison* is **char(1)**,and can be =, \<, or >.  
   
- [ **@date_created =**] *date_created*  
+`[ @date_created = ] date_created`
  The date the job was created. *date_created*is **datetime**, with a default of NULL.  
   
- [ **@date_last_modified =**] *date_modified*  
+`[ @date_last_modified = ] date_modified`
  The date the job was last modified. *date_modified* is **datetime**, with a default of NULL.  
   
- [ **@description =**] **'***description_pattern***'**  
+`[ @description = ] 'description_pattern'`
  The description of the job. *description_pattern* is **nvarchar(512)**, with a default of NULL. *description_pattern* can include the SQL Server wildcard characters for pattern matching.  
   
 ## Return Code Values  
@@ -229,7 +225,7 @@ sp_help_job { [ @job_id = ] job_id
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Members of **SQLAgentUserRole** can only view jobs that they own. Members of **sysadmin**, **SQLAgentReaderRole**, and **SQLAgentOperatorRole** can view all local and multiserver jobs.  
   

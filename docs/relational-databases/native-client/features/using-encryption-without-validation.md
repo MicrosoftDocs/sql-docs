@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Using Encryption Without Validation | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], encryption"
@@ -18,11 +13,10 @@ helpviewer_keywords:
   - "encryption [SQL Server Native Client]"
   - "SQL Server Native Client, encryption"
 ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Encryption Without Validation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

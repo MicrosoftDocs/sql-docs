@@ -1,18 +1,14 @@
 ---
 title: Disaster recovery for SQL Server | Microsoft Docs
 description: 
-author: "allanhirt"
-ms.author: mihaelab 
-ms.reviewer: "mikeray"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
+ms.reviewer: mikeray
 ms.date: 09/14/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: high-availability
-ms.component: "database-engine"
-ms.suite: "sql"
-ms.custom: ""
-ms.technology: database-engine
+ms.technology: high-availability
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 ---
 # Business continuity and database recovery - SQL Server

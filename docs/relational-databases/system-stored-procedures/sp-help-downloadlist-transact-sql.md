@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_downloadlist_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_downloadlist"
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -45,16 +41,16 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number for which to return information. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@operation=** ] **'***operation***'**  
+`[ @operation = ] 'operation'`
  The valid operation for the specified job. *operation* is **varchar(64)**, with a default of NULL, and can be one of these values.  
   
 |Value|Description|  
@@ -69,22 +65,22 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|Server operation that causes the target server to synchronize its system clock with the multiserver domain. Because this is a costly operation, perform this operation on a limited, infrequent basis.|  
 |**UPDATE**|Job operation that updates only the **sysjobs** information for a job, not the job steps or schedules. Is automatically called by **sp_update_job**.|  
   
- [ **@object_type=** ] **'***object_type***'**  
+`[ @object_type = ] 'object_type'`
  The type of object for the specified job. *object_type* is **varchar(64)**, with a default of NULL. *object_type* can be either JOB or SERVER. For more information about valid *object_type*values, see [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
- [ **@object_name=** ] **'***object_name***'**  
+`[ @object_name = ] 'object_name'`
  The name of the object. *object_name* is **sysname**, with a default of NULL. If *object_type* is JOB, *object_name*is the job name. If *object_type*is SERVER, *object_name*is the server name.  
   
- [ **@target_server=** ] **'***target_server***'**  
+`[ @target_server = ] 'target_server'`
  The name of the target server. *target_server* is **nvarchar(128)**, with a default of NULL.  
   
- [ **@has_error=** ] *has_error*  
+`[ @has_error = ] has_error`
  Is whether the job should acknowledge errors. *has_error* is **tinyint**, with a default of NULL, which indicates no errors should be acknowledged. **1** indicates that all errors should be acknowledged.  
   
- [ **@status=** ] *status*  
+`[ @status = ] status`
  The status for the job. *status* is **tinyint**, with a default value of NULL.  
   
- [ **@date_posted=** ] *date_posted*  
+`[ @date_posted = ] date_posted`
  The date and time for which all entries made on or after the specified date and time should be included in the result set. *date_posted* is **datetime**, with a default of NULL.  
   
 ## Return Code Values  

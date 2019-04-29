@@ -1,24 +1,17 @@
 ---
 title: "Chart Types (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Chart Types (Report Builder and SSRS)
@@ -33,7 +26,7 @@ It is important to choose an appropriate chart type for the type of data that yo
   
  You can change the chart type after you have created it. For more information, see [Change a Chart Type &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md).  
   
- Examples of many of these types of charts are available as sample reports. For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Examples of many of these types of charts are available as sample reports. For more information about downloading sample reports, see [Report Builder and Report Designer sample reports](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Chart type|Display ratio data|Display stock data|Display linear data|Display multi-value data|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -56,4 +49,4 @@ It is important to choose an appropriate chart type for the type of data that yo
 [Empty and Null Data Points in Charts](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
 [Add a Chart to a Report](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-registration"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing server groups"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "deleting server groups"
   - "groups [SQL Server], server"
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

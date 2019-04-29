@@ -1,21 +1,18 @@
 ---
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: "07/09/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.SSIS.AZURE.F1"
   - "SQL14.SSIS.AZURE.F1"
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Feature Pack for Integration Services (SSIS)
@@ -33,33 +30,37 @@ The download pages also include information about prerequisites. Make sure you i
 ## Components in the Feature Pack
 -   Connection Managers
 
+    -   [Azure Data Lake Analytics Connection Manager](connection-manager/azure-data-lake-analytics-connection-manager.md)
+
+    -   [Azure Data Lake Store Connection Manager](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+    
+    -   [Azure HDInsight Connection Manager](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
+
+    -   [Azure Resource Manager Connection Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    
     -   [Azure Storage Connection Manager](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
     -   [Azure Subscription Connection Manager](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
-    -   [Azure Data Lake Store Connection Manager](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
-    
-    -   [Azure Resource Manager Connection Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
-    
-    -   [Azure HDInsight Connection Manager](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
-
 -   Tasks
-
-    -   [Azure Blob Upload Task](../integration-services/control-flow/azure-blob-upload-task.md)
 
     -   [Azure Blob Download Task](../integration-services/control-flow/azure-blob-download-task.md)
 
-    -   [Azure HDInsight Hive Task](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Azure Blob Upload Task](../integration-services/control-flow/azure-blob-upload-task.md)
 
-    -   [Azure HDInsight Pig Task](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+    -   [Azure Data Lake Analytics Task](control-flow/azure-data-lake-analytics-task.md)
+
+    -   [Azure Data Lake Store File System Task](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 
     -   [Azure HDInsight Create Cluster Task](../integration-services/control-flow/azure-hdinsight-create-cluster-task.md)
 
     -   [Azure HDInsight Delete Cluster Task](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Azure SQL DW Upload Task](../integration-services/control-flow/azure-sql-dw-upload-task.md)
+    -   [Azure HDInsight Hive Task](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
-    -   [Azure Data Lake Store File System Task](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+    -   [Azure HDInsight Pig Task](../integration-services/control-flow/azure-hdinsight-pig-task.md)
+
+    -   [Azure SQL DW Upload Task](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
 -   Data Flow Components
 
@@ -71,7 +72,7 @@ The download pages also include information about prerequisites. Make sure you i
     
     -   [Azure Data Lake Store Destination](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob & ADLS File Enumerator. See [Foreach Loop Container](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
+-   Azure Blob & Azure Data Lake Store File Enumerator. See [Foreach Loop Container](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
 ## Scenario: Processing big data
  Use Azure Connector to complete following big data processing work:

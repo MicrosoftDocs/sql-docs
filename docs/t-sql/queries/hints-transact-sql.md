@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], hints"
   - "DELETE statement [SQL Server], hints"
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Hints (Transact-SQL)

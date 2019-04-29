@@ -1,18 +1,15 @@
-﻿---
+---
 title: "sys.dm_pdw_os_performance_counters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg

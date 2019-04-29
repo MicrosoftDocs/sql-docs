@@ -1,26 +1,17 @@
 ---
 title: "Data Processing Extensions Overview | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "extensions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: extensions
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "data processing extensions [Reporting Services], about extensions"
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
-caps.latest.revision: 39
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Data Processing Extensions Overview
   Data processing extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider interfaces.  
@@ -34,7 +25,7 @@ manager: "kfile"
 |Data processing extension for Oracle|Uses the .NET Framework Data Provider for Oracle. With this extension, the report server can access Oracle data sources through Oracle client connectivity software.|  
 |Data processing extension for ODBC|Uses the .NET Framework Data Provider for ODBC. With this extension, the report server can access data in any database for which there is an ODBC driver.|  
   
- You can use the [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] data processing API to add custom data processing to your report server.  
+ You can use the [!INCLUDE[ssRS](../../../includes/ssrs.md)] data processing API to add custom data processing to your report server.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] has built-in support for data providers in the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. If you have already implemented a full data provider, you do not need to implement a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension. However, you should consider extending your data provider to include functionality specific to [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, which includes secure connection credentials and server-side aggregates.  

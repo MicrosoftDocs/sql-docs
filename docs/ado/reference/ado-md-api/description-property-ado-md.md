@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -20,7 +18,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Description property [ADO MD]"
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

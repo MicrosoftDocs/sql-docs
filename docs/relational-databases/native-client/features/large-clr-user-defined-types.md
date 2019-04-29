@@ -1,24 +1,18 @@
-﻿---
+---
 title: "Large CLR User-Defined Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.prod: sql
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "large CLR user-defined types"
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Large CLR User-Defined Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

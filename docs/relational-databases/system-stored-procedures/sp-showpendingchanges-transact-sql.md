@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_showpendingchanges"
   - "sp_showpendingchanges_TSQL"
 helpviewer_keywords: 
   - "sp_showpendingchanges"
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_showpendingchanges (Transact-SQL)

@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -45,7 +42,7 @@ This **OpenConnection** function is called near the top in all of the functions 
   
 ## Step 2:  Execute query  
   
-The [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set which can be iterated over with the use of [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+The [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) function can be used to retrieve a result set from a query against SQL Database. This function essentially accepts any query and the connection object and returns a result set which can be iterated over with the use of [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  

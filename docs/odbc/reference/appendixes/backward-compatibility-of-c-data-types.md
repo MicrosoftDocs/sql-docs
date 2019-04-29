@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backward compatibility [ODBC], C data types"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data types [ODBC], backward compatibility"
   - "C data types [ODBC], backward compatibility"
 ms.assetid: b1453a65-ae03-4061-b0cf-a8434d8bc40b
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

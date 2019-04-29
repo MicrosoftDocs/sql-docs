@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STIsSimple_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsSimple (geometry Data Type)"
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
-caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

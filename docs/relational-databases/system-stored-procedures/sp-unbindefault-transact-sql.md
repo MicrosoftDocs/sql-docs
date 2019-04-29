@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_unbindefault_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_unbindefault"
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_unbindefault (Transact-SQL)
@@ -42,7 +38,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## Arguments  
- [ **@objname=** ] **'***object_name***'**  
+`[ @objname = ] 'object_name'`
  Is the name of the table and column or the alias data type from which the default is to be unbound. *object_name* is **nvarchar(776)**, with no default. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to resolve two-part identifiers to column names first, then to alias data types.  
   
  When unbinding a default from an alias data type, any columns of that data type that have the same default are also unbound. Columns of that data type with defaults bound directly to them are unaffected.  
@@ -50,7 +46,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 > [!NOTE]  
 >  *object_name* can contain brackets **[]** as delimited identifier characters. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+`[ @futureonly = ] 'futureonly_flag'`
  Is used only when unbinding a default from an alias data type. *futureonly_flag* is **varchar(15)**, with a default of NULL. When *futureonly_flag* is **futureonly**, existing columns of the data type do not lose the specified default.  
   
 ## Return Code Values  

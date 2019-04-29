@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_adddistributor"
   - "sp_adddistributor_TSQL"
@@ -21,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_adddistributor"
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # sp_adddistributor (Transact-SQL)
@@ -44,19 +37,19 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## Arguments  
- [ **@distributor=**] **'***distributor***'**  
+`[ @distributor = ] 'distributor'`
  Is the distribution server name. *distributor* is **sysname**, with no default. This parameter is only used if setting up a remote Distributor. It adds entries for the Distributor properties in the **msdb..MSdistributor** table.  
   
- [ **@heartbeat_interval=**] *heartbeat_interval*  
+`[ @heartbeat_interval = ] heartbeat_interval`
  Is the maximum number of minutes that an agent can go without logging a progress message. *heartbeat_interval* is **int**, with a default of 10 minutes. A SQL Server Agent job is created that runs on this interval to check the status of the replication agents that are running.  
   
- [ **@password=**]  **'***password***'**]  
+`[ @password = ] 'password']`
  Is the password of the **distributor_admin** login. *password* is **sysname**, with a default of NULL. If NULL or an empty string, password is reset to a random value. The password must be configured when the first remote distributor is added. **distributor_admin** login and *password* are stored for linked server entry used for a *distributor* RPC connection, including local connections. If *distributor* is local, the password for **distributor_admin** is set to a new value. For Publishers with a remote Distributor, the same value for *password* must be specified when executing **sp_adddistributor** at both the Publisher and Distributor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) can be used to change the Distributor password.  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
- [ **@from_scripting=** ] *from_scripting*  
+`[ @from_scripting = ] from_scripting`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_grant_login_to_subsystem_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_grant_proxy_to_subsystem"
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
-caps.latest.revision: 37
-author: "stevestein"
-ms.author: "sstein"
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -40,13 +36,13 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## Arguments  
- [ **@proxy_id =** ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to grant access for. The *proxy_id* is **int**, with a default of NULL. Either *proxy_id* or *proxy_name* must be specified, but both cannot be specified.  
   
- [ **@proxy_name =** ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to grant access for. The *proxy_name* is **sysname**, with a default of NULL. Either *proxy_id* or *proxy_name* must be specified, but both cannot be specified.  
   
- [ **@subsystem_id =** ] *id*  
+`[ @subsystem_id = ] id`
  The id number of the subsystem to grant access to. The *subsystem_id* is **int**, with a default of NULL. Either *subsystem_id* or *subsystem_name* must be specified, but both cannot be specified. The following table lists the values for each subsystem.  
   
 |Value|Description|  
@@ -63,7 +59,7 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution|  
 |**12**|PowerShell Script|  
   
- [ **@subsystem_name =** ] **'***subsystem_name***'**  
+`[ @subsystem_name = ] 'subsystem_name'`
  The name of the subsystem to grant access to. The **subsystem_name** is **sysname**, with a default of NULL. Either *subsystem_id* or *subsystem_name* must be specified, but both cannot be specified. The following table lists the values for each subsystem.  
   
 |Value|Description|  
@@ -115,7 +111,7 @@ GO
 ```  
   
 ## See Also  
- [Implement SQL Server Agent Security](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   

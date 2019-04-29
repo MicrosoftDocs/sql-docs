@@ -5,16 +5,13 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "createSrv"
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create and Edit an Oracle CDC Service

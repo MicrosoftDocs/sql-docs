@@ -5,14 +5,11 @@ ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dbmmonitor.databasemirroringhistory.f1"
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

@@ -1,0 +1,25 @@
+### YamlMime:XRefMap
+sorted: true
+hrefUpdated: true
+references:
+- uid: Microsoft.SqlServer.Management.Smo.Database.HasMemoryOptimizedObjects*
+  commentId: P:Microsoft.SqlServer.Management.Smo.Database.HasMemoryOptimizedObjects
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.hasmemoryoptimizedobjects(v=sql.120).aspx
+  name: HasMemoryOptimizedObjects
+  name.vb: HasMemoryOptimizedObjects
+  fullName: Microsoft.SqlServer.Management.Smo.Database.HasMemoryOptimizedObjects
+  fullName.vb: Microsoft.SqlServer.Management.Smo.Database.HasMemoryOptimizedObjects
+- uid: Microsoft.SqlServer.Management.Smo.Database.MemoryAllocatedToMemoryOptimizedObjectsInKB*
+  commentId: P:Microsoft.SqlServer.Management.Smo.Database.MemoryAllocatedToMemoryOptimizedObjectsInKB
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.memoryallocatedtomemoryoptimizedobjectsinkb(v=sql.120).aspx
+  name: MemoryAllocatedToMemoryOptimizedObjectsInKB
+  name.vb: MemoryAllocatedToMemoryOptimizedObjectsInKB
+  fullName: Microsoft.SqlServer.Management.Smo.Database.MemoryAllocatedToMemoryOptimizedObjectsInKB
+  fullName.vb: Microsoft.SqlServer.Management.Smo.Database.MemoryAllocatedToMemoryOptimizedObjectsInKB
+- uid: Microsoft.SqlServer.Management.Smo.Database.MemoryUsedByMemoryOptimizedObjectsInKB*
+  commentId: P:Microsoft.SqlServer.Management.Smo.Database.MemoryUsedByMemoryOptimizedObjectsInKB
+  href: https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.memoryusedbymemoryoptimizedobjectsinkb(v=sql.120).aspx
+  name: MemoryUsedByMemoryOptimizedObjectsInKB
+  name.vb: MemoryUsedByMemoryOptimizedObjectsInKB
+  fullName: Microsoft.SqlServer.Management.Smo.Database.MemoryUsedByMemoryOptimizedObjectsInKB
+  fullName.vb: Microsoft.SqlServer.Management.Smo.Database.MemoryUsedByMemoryOptimizedObjectsInKB

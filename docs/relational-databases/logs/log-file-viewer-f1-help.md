@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.swb.configurelogs.errorlog.f1"
 helpviewer_keywords: 
   - "Log File Viewer"
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
-caps.latest.revision: 38
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

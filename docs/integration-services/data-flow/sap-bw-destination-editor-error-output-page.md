@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sapbwdestination.erroroutput.f1"
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SAP BW Destination Editor (Error Output Page)

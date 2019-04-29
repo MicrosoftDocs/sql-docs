@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "04/23/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DATABASEPROPERTYEX"
@@ -20,11 +17,10 @@ helpviewer_keywords:
   - "displaying database properties"
   - "database properties [SQL Server]"
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 84
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +62,7 @@ An expression specifying the name of the database property to return. *property*
 |IsAutoCreateStatisticsIncremental|Auto-created single column statistics are incremental when possible.|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**|  
 |IsAutoShrink|Database files are candidates for automatic periodic shrinking.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid  input<br /><br /> Base data type: **int**|  
 |IsAutoUpdateStatistics|When a query uses potentially out-of-date existing statistics, the query optimizer updates those statistics.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Input not valid<br /><br /> Base data type: **int**|
-|IsClone|Database is a schema- and statistics-only copy of a user database created with DBCC CLONEDATABASE. See [Microsoft Support Article](http://support.microsoft.com/help/3177838) for more information.|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**| 
+|IsClone|Database is a schema- and statistics-only copy of a user database created with DBCC CLONEDATABASE. See [Microsoft Support Article](https://support.microsoft.com/help/3177838) for more information.|**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**| 
 |IsCloseCursorsOnCommitEnabled|When a transaction commits, all open cursors will close.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**|  
 |IsFulltextEnabled|Database is enabled for full-text and semantic indexing.|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Input not valid<br /><br /> Base data type: **int**<br /><br /> **Note:** The value of this property now has no effect. User databases are always enabled for full-text search. A future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will remove this property. Do not use this property in new development work, and modify applications that currently use this property as soon as possible.|  
 |IsInStandBy|Database is online as read-only, with restore log allowed.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**|  
@@ -82,7 +78,7 @@ An expression specifying the name of the database property to return. *property*
 |IsSubscribed|Database is subscribed to a publication.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**|  
 |IsSyncWithBackup|The database is either a published database or a distribution database, and it supports a restore that will not disrupt transactional replication.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**|  
 |IsTornPageDetectionEnabled|The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detects incomplete I/O operations caused by power failures or other system outages.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**| 
-|IsVerifiedClone|Database is a schema- and statistics- only copy of a user database, created using the WITH VERIFY_CLONEDB option of DBCC CLONEDATABASE. See this [Microsoft Support Article](http://support.microsoft.com/help/3177838) for more information.|**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**| 
+|IsVerifiedClone|Database is a schema- and statistics- only copy of a user database, created using the WITH VERIFY_CLONEDB option of DBCC CLONEDATABASE. See this [Microsoft Support Article](https://support.microsoft.com/help/3177838) for more information.|**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input<br /><br /> Base data type: **int**| 
 |IsXTPSupported|Indicates whether the database supports In-Memory OLTP, i.e., creation and use of memory-optimized tables and natively compiled modules.<br /><br /> Specific to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported is independent of the existence of any MEMORY_OPTIMIZED_DATA filegroup, which is required for creating In-Memory OLTP objects.|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Invalid input, an error, or not applicable<br /><br /> Base data type: **int**|  
 |LastGoodCheckDbTime|The date and time of the last successful DBCC CHECKDB that ran on the specified database.<sup>1</sup> If DBCC CHECKDB has not been run on a database, 1900-01-01 00:00:00.000 is returned.|**Applies to**: Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2.<br /><br /> A datetime value<br /><br /> NULL: Invalid input<br /><br /> Base data type: **datetime**| 
 |LCID|The collation Windows locale identifier (LCID).|LCID value (in decimal format).<br /><br /> Base data type: **int**|  
@@ -95,6 +91,7 @@ An expression specifying the name of the database property to return. *property*
 |Updateability|Indicates whether data can be modified.|READ_ONLY: Database supports data reads but not data modifications.<br /><br /> READ_WRITE: Database supports data reads and modifications.<br /><br /> Base data type: **nvarchar(128)**|  
 |UserAccess|Indicates which users can access the database.|SINGLE_USER: Only one db_owner, dbcreator, or sysadmin user at a time<br /><br /> RESTRICTED_USER: Only members of db_owner, dbcreator, or sysadmin roles<br /><br /> MULTI_USER: All users<br /><br /> Base data type: **nvarchar(128)**|  
 |Version|Internal version number of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] code with which the database was created. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Version number: Database is open.<br /><br /> NULL: Database has not started.<br /><br /> Base data type: **int**| 
+
 <br/>   
 
 > [!NOTE]  

@@ -5,14 +5,11 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
-caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.delete_folder (SSISDB Database)

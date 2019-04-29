@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "41301 (Database Engine error)"
 ms.assetid: c6127e1e-2846-4ee9-bc42-2d896ea9730e
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

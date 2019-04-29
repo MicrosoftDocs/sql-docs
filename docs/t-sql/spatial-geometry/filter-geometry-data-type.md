@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Filter"
@@ -19,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "Filter method"
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

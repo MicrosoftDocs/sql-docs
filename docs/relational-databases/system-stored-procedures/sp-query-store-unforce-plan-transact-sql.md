@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_query_store_unforce_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SP_QUERY_STORE_UNFORCE_PLAN_TSQL"
@@ -21,11 +18,10 @@ helpviewer_keywords:
   - "sys.sp_query_store_unforce_plan"
   - "sp_query_store_unforce_plan"
 ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
-caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,10 +38,10 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## Arguments  
- [ **@query_id =** ] *query_id*  
+`[ @query_id = ] query_id`
  Is the id of the query. *query_id* is a **bigint**, with no default.  
   
- [ **@plan_id =** ] *plan_id*  
+`[ @plan_id = ] plan_id`
  Is the id of the query plan that will no longer be enforced. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  

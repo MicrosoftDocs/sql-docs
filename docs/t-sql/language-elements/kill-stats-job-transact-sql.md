@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/27/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "KILL STATS JOB"
@@ -23,7 +20,6 @@ helpviewer_keywords:
   - "KILL STATS JOB statement"
   - "statistics update jobs [SQL Server]"
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
-caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

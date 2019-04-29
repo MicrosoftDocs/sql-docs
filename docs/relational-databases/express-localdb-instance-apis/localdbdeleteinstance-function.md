@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "LocalDBDeleteInstance"
@@ -17,7 +13,6 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
-caps.latest.revision: 18
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

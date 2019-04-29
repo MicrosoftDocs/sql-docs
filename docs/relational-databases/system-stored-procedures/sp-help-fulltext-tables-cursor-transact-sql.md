@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_help_fulltext_tables_cursor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_fulltext_tables_cursor"
@@ -18,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_tables_cursor"
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
-caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,13 +40,13 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## Arguments  
- [ **@cursor_return=** ] *@cursor_variable* OUTPUT  
+`[ @cursor_return = ] @cursor_variable OUTPUT`
  Is the output variable of type **cursor**. The cursor is a read-only, scrollable, dynamic cursor.  
   
- [ **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`
  Is the name of the full-text catalog. *fulltext_catalog_name* is **sysname**, with a default of NULL. If *fulltext_catalog_name* is omitted or is NULL, all full-text indexed tables associated with the database are returned. If *fulltext_catalog_name* is specified, but *table_name* is omitted or is NULL, the full-text index information is retrieved for every full-text indexed table associated with this catalog. If both *fulltext_catalog_name* and *table_name* are specified, a row is returned if *table_name* is associated with *fulltext_catalog_name*; otherwise, an error is raised.  
   
- [ **@table_name=**] **'***table_name***'**  
+`[ @table_name = ] 'table_name'`
  Is the one- or two-part table name for which the full-text metadata is requested. *table_name* is **nvarchar(517)**, with a default value of NULL. If only *table_name* is specified, only the row relevant to *table_name* is returned.  
   
 ## Return Code Values  

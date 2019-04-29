@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetDriverConnectInfo function [ODBC]"
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -22,15 +19,15 @@ manager: craigg
  Version Introduced: ODBC 3.81 Standards Compliance: ODBC  
   
  **Summary**  
- **SQLSetDriverConnectInfo** is used to set the connection string into the connection info token for an application’s **SQLDriverConnect** call.  
+ **SQLSetDriverConnectInfo** is used to set the connection string into the connection info token for an application's **SQLDriverConnect** call.  
   
 ## Syntax  
   
 ```  
 SQLRETURN SQLSetDriverConnectInfo(  
-                SQLHDBC_INFO_TOKEN   hDbcInfoToken,  
-                WCHAR *              InConnectionString,  
-                SQLSMALLINT          StringLength1 );  
+                SQLHDBC_INFO_TOKEN   hDbcInfoToken,  
+                WCHAR *              InConnectionString,  
+                SQLSMALLINT          StringLength1 );  
 ```  
   
 ## Arguments  

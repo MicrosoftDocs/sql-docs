@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "unequal operator (!=)"
   - "!= (not equal to)"
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # != (Unequal) (SSIS Expression)

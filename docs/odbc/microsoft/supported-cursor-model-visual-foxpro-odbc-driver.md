@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual FoxPro ODBC driver [ODBC], cursors"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "block cursors [ODBC]"
   - "rowset cursors [ODBC]"
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

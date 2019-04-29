@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replqueuemonitor"
   - "sp_replqueuemonitor_TSQL"
 helpviewer_keywords: 
   - "sp_replqueuemonitor"
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_replqueuemonitor (Transact-SQL)
@@ -43,16 +36,16 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with a default of NULL. The server must be configured for publishing. NULL for all Publishers.  
   
- [ **@publisherdb** = ] **'***publisher_db***'** ]  
+`[ @publisherdb = ] 'publisher_db' ]`
  Is the name of the publication database. *publisher_db* is **sysname**, with a default of NULL. NULL for all publication databases.  
   
- [ **@publication** = ] **'***publication***'** ]  
+`[ @publication = ] 'publication' ]`
  Is the name of the publication. *publication*is **sysname**, with a default of NULL. NULL for all publications.  
   
- [ **@tranid** = ] **'***tranid***'** ]  
+`[ @tranid = ] 'tranid' ]`
  Is the transaction ID. *tranid*is **sysname**, with a default of NULL. NULL for all transactions.  
   
  [**@queuetype=** ] **'***queuetype***'** ]  

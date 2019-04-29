@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "application upgrades [ODBC], about upgrading"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "upgrading applications [ODBC], about upgrading"
   - "backward compatibility [ODBC], upgrading applications"
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

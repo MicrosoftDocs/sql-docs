@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "greater than operator (>)"
   - "> (greater than operator)"
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # &gt; (Greater Than) (SSIS Expression)

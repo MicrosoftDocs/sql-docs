@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, programming"
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

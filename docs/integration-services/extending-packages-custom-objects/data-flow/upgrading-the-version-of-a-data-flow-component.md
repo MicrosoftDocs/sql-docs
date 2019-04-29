@@ -5,21 +5,16 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "PerformUpgrade method"
   - "custom data flow components [Integration Services], upgrading version"
   - "data flow components [Integration Services], upgrading version"
   - "upgrading data flow components [Integration Services]"
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Upgrading the Version of a Data Flow Component

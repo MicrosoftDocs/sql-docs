@@ -5,12 +5,8 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -25,9 +21,8 @@ helpviewer_keywords:
   - "PrimeOutput method"
   - "data flow components [Integration Services], transformation components"
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing a Custom Transformation Component with Asynchronous Outputs

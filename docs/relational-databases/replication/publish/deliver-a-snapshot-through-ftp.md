@@ -1,22 +1,17 @@
 ---
 title: "Deliver a Snapshot Through FTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/17/2017"
+ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snapshots [SQL Server replication], FTP snapshots"
   - "FTP snapshots [SQL Server replication]"
   - "snapshot replication [SQL Server], FTP"
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
-caps.latest.revision: 47
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -24,30 +19,18 @@ manager: craigg
 # Deliver a Snapshot Through FTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to deliver a snapshot through FTP in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+
+By default, snapshots are stored in folders defined as Universal Naming Convention (UNC) shares. Replication also allows you to specify a File Transfer Protocol (FTP) share instead of a UNC share. To use FTP, you must configure an FTP server and then configure a publication and one or more subscriptions to use FTP. For information about how to configure an FTP server, see the Internet Information Services (IIS) documentation. If you specify FTP information for a publication, subscriptions to that publication use FTP by default. FTP is only used with Web synchronization when the computer that is running IIS is separated from the Distributor by a firewall. In this case, FTP can be used to transfer the snapshot from the Distributor and the computer that is running IIS. (The snapshot is always transferred to the Subscriber by using HTTPS.)  
   
- **In This Topic**  
+> [!IMPORTANT]  
+>  We recommend that you use Microsoft Windows Authentication and a UNC share rather than an FTP share because FTP passwords must be stored, and the password is sent from the Subscriber or the computer that is running IIS when it uses Web synchronization to the FTP server in plain text. Additionally, because a single account controls access to the snapshot share, it is not possible to ensure that a Subscriber to a filtered merge publication only has access to the snapshot files from their data partition.  
   
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To deliver a snapshot through FTP, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
+
+## Limitations and Restrictions  
   
 -   The Snapshot Agent must have write permissions for the directory you specify, and the Distribution Agent or Merge Agent must have read permissions. If pull subscriptions are used, you must specify a shared directory as a universal naming convention (UNC) path, such as \\\ftpserver\home\snapshots. For more information, see [Secure the Snapshot Folder](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+## Prerequisites  
   
 -   To transfer snapshot files using File Transfer Protocol (FTP), you must first configure an FTP server. For more information, see the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) documentation.  
   
@@ -75,14 +58,12 @@ manager: craigg
   
 3.  Specify that the Snapshot Agent should write the snapshot files to the directory specified in step 2. For example, to have the Snapshot Agent write the snapshot files to \\\ftpserver\home\snapshots\ftp, you must specify the path \\\ftpserver\home\snapshots in one of two places:  
   
-    -   The default snapshot location for the Distributor associated with this publication.  
-  
-         For more information about specifying the default snapshot location, see [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md).  
-  
+    -   The default snapshot location for the Distributor associated with this publication.    
     -   An alternate snapshot folder location for this publication. An alternate location is required if the snapshot is compressed.  
+
+For more information about modifying the snapshot folder location properties, see [Snapshot options](../snapshot-options.md).
   
-         Enter the path in the **Put files in the following folder** textbox on the Snapshot page of the **Publication Properties - \<Publication>** dialog box. For more information about alternate snapshot folder locations, see [Alternate Snapshot Folder Locations](../../../relational-databases/replication/alternate-snapshot-folder-locations.md).  
-  
+
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
@@ -185,7 +166,6 @@ manager: craigg
   
 ## See Also  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
- [Transfer Snapshots Through FTP](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)   
  [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Initialize a Subscription with a Snapshot](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
   

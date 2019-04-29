@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.getDate (int)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: e6b6cfe2-b7c4-4d41-8e09-c68b5086a503
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -46,7 +43,7 @@ public java.sql.Date getDate(int columnIndex)
 ## Remarks  
  This getDate method is specified by the getDate method in the java.sql.ResultSet interface.  
   
- This method returns a valid date part of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime or smalldatetime data type, with the time part set to the Java time baseline of 00:00 (midnight).  
+ This method returns a valid date part of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime or smalldatetime data type, with the time part set to the Java time baseline of 00:00 (midnight).  
   
 ## See Also  
  [getDate Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   

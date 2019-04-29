@@ -5,13 +5,10 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
-ms.assetid: 
 ---
 
 # Failover Cluster Instances - SQL Server on Linux
@@ -33,7 +30,7 @@ To create a SQL Server FCI on Linux, see [Configure SQL Server FCI on Linux](sql
 
     For more information on cluster configuration, resource agent options, management, best practices, and recommendations, see [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-Both the RHEL HA add-on and the SUSE HAE are built on [Pacemaker](http://clusterlabs.org/).
+Both the RHEL HA add-on and the SUSE HAE are built on [Pacemaker](https://clusterlabs.org/).
 
 As the following diagram shows, storage is presented to two servers. Clustering components - Corosync and Pacemaker - coordinate communications and resource management. One of the servers has the active connection to the storage resources and the SQL Server. When Pacemaker detects a failure the clustering components manage moving the resources to the other node.  
 
@@ -63,12 +60,12 @@ All FCIs, whether they are on Linux or Windows Server, require some form of shar
 - iSCSI
 - Network File System (NFS)
 - Server Message Block (SMB)
-Under Windows Server, there are slightly different options. One option not currently supported for Linux-based FCIs is the ability to use a disk that is local to the node for TempDB, which is SQL Server’s temporary workspace.
+Under Windows Server, there are slightly different options. One option not currently supported for Linux-based FCIs is the ability to use a disk that is local to the node for TempDB, which is SQL Server's temporary workspace.
 
 In a configuration that spans multiple locations, what is stored at one data center must be synchronized with the other. In the event of a failover, the FCI will be able to come online and the storage is seen to be the same. Achieving this will require some external method for storage replication, whether it is done via the underlying storage hardware or some software-based utility. 
 
 >[!NOTE]
->For SQL Server 2017, Linux-based deployments using disks presented directly to a server such must be formatted with XFS or EXT4. Other file systems are currently not supported. Any changes will be reflected here.
+>For SQL Server, Linux-based deployments using disks presented directly to a server such must be formatted with XFS or EXT4. Other file systems are currently not supported. Any changes will be reflected here.
 
 The process for presenting shared storage is the same for the different supported methods:
 

@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Best Practices [Database Engine]"
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
-caps.latest.revision: 8
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Check Disk Input-Output Subsystem for Read Retry Problems
@@ -35,8 +30,8 @@ manager: craigg
 -   Contact the disk manufacturer for the latest driver updates.  
   
 ## For More Information  
- [MSSQLSERVER_825](http://msdn.microsoft.com/library/f69f8214-5af1-4769-878b-117ad6eaff52)  
+ [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)  
   
- [SQL Server I/O Basics, Chapter 2](http://go.microsoft.com/fwlink/?linkid=69370)  
+ [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

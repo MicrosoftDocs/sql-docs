@@ -5,14 +5,11 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.set_environment_variable_value (SSISDB Database)

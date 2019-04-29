@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Agent [WMI]"
   - "WMI Provider for Server Events, samples"
   - "sample applications [WMI]"
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-caps.latest.revision: 16
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

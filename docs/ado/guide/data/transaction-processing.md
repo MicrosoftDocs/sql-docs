@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [ADO]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "updating data [ADO], transaction processing"
   - "nested transactions [ADO]"
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

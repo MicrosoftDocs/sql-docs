@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_can_tlog_be_applied_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_can_tlog_be_applied"
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
-caps.latest.revision: 26
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -40,13 +36,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## Arguments  
- [ **@backup_file_name=** ] **'***backup_file_name***'**  
+`[ @backup_file_name = ] 'backup_file_name'`
  Is the name of a backup file. *backup_file_name* is **nvarchar(128)**.  
   
- [ **@database_name=** ] **'***database_name***'**  
+`[ @database_name = ] 'database_name'`
  Is the name of the database. *database_name* is **sysname**.  
   
- [ **@result=** ] *result* **OUTPUT**  
+`[ @result = ] _result_ OUTPUT`
  Indicates whether the transaction log can be applied to the database. *result* is **bit**.  
   
  1 = The log can be applies  

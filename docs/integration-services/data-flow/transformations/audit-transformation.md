@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.audittrans.f1"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "environment data in packages [Integration Services]"
   - "Audit transformation"
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Audit Transformation
@@ -48,7 +45,7 @@ manager: craigg
   
  The **Advanced Editor** dialog box reflects the properties that can be set programmatically. For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

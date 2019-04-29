@@ -1,14 +1,11 @@
-﻿---
+---
 title: "SET IMPLICIT_TRANSACTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "IMPLICIT_TRANSACTIONS"
@@ -24,11 +21,10 @@ helpviewer_keywords:
   - "SET IMPLICIT_TRANSACTIONS statement"
   - "IMPLICIT_TRANSACTIONS option"
 ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
-caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +52,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  When OFF, each of the preceding T-SQL statements is bounded by an unseen BEGIN TRANSACTION and an unseen COMMIT TRANSACTION statement. When OFF, we say the transaction mode is *autocommit*. If your T-SQL code visibly issues a BEGIN TRANSACTION, we say the transaction mode is *explicit*.  
   
- There are several clarifying point to understand:  
+ There are several clarifying points to understand:  
   
 -   When the transaction mode is implicit, no unseen BEGIN TRANSACTION is issued if @@trancount > 0 already. However, any explicit BEGIN TRANSACTION statements still increment @@TRANCOUNT.  
   

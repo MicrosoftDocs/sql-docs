@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetFlag Method (ClientNetworkProtocolProperty Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetFlag method"
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
-caps.latest.revision: 29
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

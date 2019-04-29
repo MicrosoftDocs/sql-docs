@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding components"
   - "components [Integration Services], data flow"
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
-caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add or Delete a Component in a Data Flow

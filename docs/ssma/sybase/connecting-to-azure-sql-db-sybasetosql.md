@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -27,7 +21,7 @@ Metadata about the instance of Azure SQL DB is not automatically synchronized. I
 ## Required Azure SQL DB Permissions  
 The account that is used to connect to Azure SQL DB requires different permissions depending on the actions that the account performs:  
   
-1.  To convert Sybase objects to [!INCLUDE[tsql](../../includes/tsql_md.md)] syntax, to update metadata from Azure SQL DB, or to save converted syntax to scripts, the account must have permission to log on to the instance of Azure SQL DB.  
+1.  To convert Sybase objects to [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax, to update metadata from Azure SQL DB, or to save converted syntax to scripts, the account must have permission to log on to the instance of Azure SQL DB.  
   
 2.  To load database objects into Azure SQL DB, the minimum permission requirement is membership in the  **db_owner** database role in the target database.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONTEXT_INFO_TSQL"
@@ -22,9 +19,8 @@ helpviewer_keywords:
   - "MARS [SQL Server]"
   - "session context information [SQL Server]"
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
-caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # CONTEXT_INFO  (Transact-SQL)

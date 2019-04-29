@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLRemoveDriver"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveDriver function [ODBC]"
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,9 +33,9 @@ manager: craigg
 ```  
   
 BOOL SQLRemoveDriver(  
-     LPCSTR   lpszDriver,  
-     BOOL     fRemoveDSN,  
-     LPDWORD  lpdwUsageCount);  
+     LPCSTR   lpszDriver,  
+     BOOL     fRemoveDSN,  
+     LPDWORD  lpdwUsageCount);  
 ```  
   
 ## Arguments  

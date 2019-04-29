@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
-caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -25,7 +20,7 @@ manager: craigg
 >  The functionality described in this topic used to be provided by the Publish Database Wizard. The publishing functionality has been added to the Generate and Publish Scripts Wizard, and the Publish Database Wizard has been discontinued.  
   
 ## Generate and Publish Scripts Wizard  
- The Generate and Publish Scripts Wizard can be used to publish a database or selected database objects to a Web hosting provider. A SQL Server Web hosting provider is a connectivity interface to a Web service. The Web service is created by using the Database Publishing Services project from the SQL Server Hosting Toolkit on CodePlex. The Web service makes it easy for the Web hoster customers to publish their databases to the service by using the Generate and Publish Scripts Wizard. For more information about downloading the SQL Server Hosting Toolkit, see [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025).  
+ The Generate and Publish Scripts Wizard can be used to publish a database or selected database objects to a Web hosting provider. A SQL Server Web hosting provider is a connectivity interface to a Web service. The Web service is created by using the Database Publishing Services project from the SQL Server Hosting Toolkit on CodePlex. The Web service makes it easy for the Web hoster customers to publish their databases to the service by using the Generate and Publish Scripts Wizard. For more information about downloading the SQL Server Hosting Toolkit, see [SQL Server Database Publishing Services](https://go.microsoft.com/fwlink/?LinkId=142025).  
   
  The Generate and Publish Scripts Wizard can also be used to create a script for transferring a database.  
   

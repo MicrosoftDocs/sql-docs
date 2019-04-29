@@ -5,15 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "version flags [Master Data Services], changing name"
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg

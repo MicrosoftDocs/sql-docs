@@ -4,20 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLServer:CLR"
   - "CLR object [SQL Server]"
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
-caps.latest.revision: 12
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, CLR Object

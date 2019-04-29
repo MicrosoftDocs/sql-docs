@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "containers [Integration Services], adding"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "adding containers"
   - "tasks [Integration Services], adding"
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add or Delete a Task or a Container in a Control Flow
@@ -77,7 +74,7 @@ You can set most properties of tasks and containers by using the **Properties** 
 5.  In the **Properties** window, update the property value.  
   
     > [!NOTE]  
-    >  Most properties can be set by typing a value directly in the text box, or by selecting a value from a list. However, some properties are more complex and have a custom property editor. To set the property, click in the text box, and then click the build **(…)** button to open the custom editor.  
+    >  Most properties can be set by typing a value directly in the text box, or by selecting a value from a list. However, some properties are more complex and have a custom property editor. To set the property, click in the text box, and then click the build **(...)** button to open the custom editor.  
   
 6.  Optionally, create property expressions to dynamically update the properties of the task or container. For more information, see [Add or Change a Property Expression](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
@@ -93,9 +90,9 @@ You can set most properties of tasks and containers by using the **Properties** 
   
 4.  On the design surface of the **Control Flow** tab, right-click the task or container, and then click **Edit** to open the corresponding task or container editor.  
   
-     For information about how to configure the For Loop container, see [Configure a For Loop Container](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     For information about how to configure the For Loop container, see [Configure a For Loop Container](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
   
-     For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     For information about how to configure the Foreach Loop container, see [Configure a Foreach Loop Container](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
     > [!NOTE]  
     >  The Sequence container has no custom editor.  

@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
   - "relational data [XQuery]"
   - "XQuery, relational data"
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
-caps.latest.revision: 23
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.patheditor.general.f1"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], paths"
   - "sources [Integration Services], paths"
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Paths

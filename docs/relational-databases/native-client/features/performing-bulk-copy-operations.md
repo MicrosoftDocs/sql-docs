@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Performing Bulk Copy Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "bulk copy [SQL Server Native Client]"
@@ -17,11 +12,10 @@ helpviewer_keywords:
   - "SQL Server Native Client, bulk copy operations"
   - "SQLNCLI, bulk copy operations"
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Performing Bulk Copy Operations
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +93,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   **ISupportErrorInfo**  
   
- The provider-specific properties SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS, and SSPROP_FASTLOADKEEPIDENTITY control behaviors of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider bulk-copy rowset. The properties are specified in the *rgProperties* member of an *rgPropertySets***IOpenRowset**parameter member.  
+ The provider-specific properties SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS, and SSPROP_FASTLOADKEEPIDENTITY control behaviors of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider bulk-copy rowset. The properties are specified in the *rgProperties* member of an _rgPropertySets_**IOpenRowset**parameter member.  
   
 |Property ID|Description|  
 |-----------------|-----------------|  
@@ -119,6 +113,6 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
- [Optimizing Bulk Import Performance](http://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
+ [Optimizing Bulk Import Performance](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
   
   

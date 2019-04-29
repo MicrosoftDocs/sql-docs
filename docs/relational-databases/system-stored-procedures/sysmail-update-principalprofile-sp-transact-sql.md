@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_update_principalprofile_sp"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_update_principalprofile_sp"
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
-caps.latest.revision: 46
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sysmail_update_principalprofile_sp (Transact-SQL)
@@ -40,19 +36,19 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## Arguments  
- [ **@principal_id** = ] *principal_id*  
+`[ @principal_id = ] principal_id`
  The ID of the database user or role in the **msdb** database for the association to change. *principal_id* is **int**, with a default of NULL. Either *principal_id* or *principal_name* must be specified.  
   
- [ **@principal_name** = ] **'***principal_name***'**  
+`[ @principal_name = ] 'principal_name'`
  The name of the database user or role in the **msdb** database for the association to update. *principal_name* is **sysname**, with a default of NULL. Either *principal_id* or *principal_name* may be specified.  
   
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  The id of the profile for the association to change. *profile_id* is **int**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  The name of the profile for the association to change. *profile_name* is **sysname**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
- [ **@is_default** = ] **'***is_default***'**  
+`[ @is_default = ] 'is_default'`
  Is whether this profile is the default profile for the database user. A database user may only have one default profile. *is_default* is **bit**, with no default.  
   
 ## Return Code Values  

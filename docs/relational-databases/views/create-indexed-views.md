@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Create Indexed Views | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/22/2018"
+ms.date: "11/19/2018"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexed views [SQL Server], creating"
@@ -17,11 +15,10 @@ helpviewer_keywords:
   - "indexed views [SQL Server]"
   - "views [SQL Server], indexed views"
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Indexed Views
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 > <sup>1</sup> Such as UPDATE, DELETE or INSERT operations.   
   
 ###  <a name="Restrictions"></a> Required SET Options for Indexed Views  
-Evaluating the same expression can produce different results in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option `CONCAT_NULL_YIELDS_NULL` is set to ON, the expression `'abc' + NULL` returns the value `NULL`. However, after `CONCAT_NULL_YIEDS_NULL` is set to OFF, the same expression produces `'abc'`.  
+Evaluating the same expression can produce different results in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] when different SET options are active when the query is executed. For example, after the SET option `CONCAT_NULL_YIELDS_NULL` is set to ON, the expression `'abc' + NULL` returns the value `NULL`. However, after `CONCAT_NULL_YIELDS_NULL` is set to OFF, the same expression produces `'abc'`.  
   
 To make sure that the views can be maintained correctly and return consistent results, indexed views require fixed values for several SET options. The SET options in the following table must be set to the values shown in the **Required Value** column whenever the following conditions occur:  
   
@@ -63,7 +60,8 @@ To make sure that the views can be maintained correctly and return consistent re
 |ARITHABORT|ON|ON|OFF|OFF|  
 |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
 |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+|QUOTED_IDENTIFIER|ON|ON|ON|OFF| 
+|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
   
 <sup>1</sup> Setting `ANSI_WARNINGS` to ON implicitly sets `ARITHABORT` to ON.  
   
@@ -86,11 +84,11 @@ In addition to the SET options and deterministic function requirements, the foll
   
 -   When you create the index, the `IGNORE_DUP_KEY` option must be set to OFF (the default setting).    
   
--   Tables must be referenced by two-part names, *schema***.***tablename* in the view definition.    
+-   Tables must be referenced by two-part names, _schema_**.**_tablename_ in the view definition.    
   
 -   User-defined functions referenced in the view must be created by using the `WITH SCHEMABINDING` option.    
   
--   Any user-defined functions referenced in the view must be referenced by two-part names, *\<schema>***.***\<function>*.   
+-   Any user-defined functions referenced in the view must be referenced by two-part names, _\<schema\>_**.**_\<function\>_.   
   
 -   The data access property of a user-defined function must be `NO SQL`, and external access property must be `NO`.   
   
@@ -104,6 +102,7 @@ In addition to the SET options and deterministic function requirements, the foll
     |PRECISE = TRUE|Must be declared explicitly as an attribute of the .NET Framework method.|  
     |DATA ACCESS = NO SQL|Determined by setting DataAccess attribute to DataAccessKind.None and SystemDataAccess attribute to SystemDataAccessKind.None.|  
     |EXTERNAL ACCESS = NO|This property defaults to NO for CLR routines.|  
+    |&nbsp;|&nbsp;|
   
 -   The view must be created by using the `WITH SCHEMABINDING` option.  
   
@@ -123,6 +122,7 @@ In addition to the SET options and deterministic function requirements, the foll
     |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|  
     |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|  
     |`CHECKSUM_AGG`|||  
+    |&nbsp;|&nbsp;|&nbsp;|
   
      <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.  
   
@@ -149,8 +149,9 @@ When you execute DML (such as `UPDATE`, `DELETE` or `INSERT`) on a table referen
   
  Indexes on tables and views can be disabled. When a clustered index on a table is disabled, indexes on views associated with the table are also disabled.  
  
-<a name="nondeterministic"></a> Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. This is because the results depend on the LANGUAGE and DATEFORMAT settings of the server session. For example, the results of the expression `CONVERT (datetime, '30 listopad 1996', 113)` depend on the LANGUAGE setting because the string '`listopad`' means different months in different languages. Similarly, in the expression `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets the string `'2000-12-01'` based on the DATEFORMAT setting. Implicit conversion of non-Unicode character data between collations is also considered nondeterministic.  
-  
+<a name="nondeterministic"></a> Expressions that involve implicit conversion of character strings to **datetime** or **smalldatetime** are considered nondeterministic. For more information, see [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
+
+
 ###  <a name="Security"></a> Security  
   
 ####  <a name="Permissions"></a> Permissions  

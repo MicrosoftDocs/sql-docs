@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerCallableStatement.getCharacterStream(String paramName)"
@@ -15,7 +13,6 @@ apilocation:
   - "SQLServerCallableStatement.getCharacterStream(String paramName)"
 apitype: "Assembly"
 ms.assetid: 5281e1b8-19b8-4fe5-83be-929d1987e25d
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_jobstep_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobstep"
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,22 +37,22 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## Arguments  
- [ **@job_id =**] **'***job_id***'**  
+`[ @job_id = ] 'job_id'`
  The job identification number for which to return job information. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job. *job_name* is **sysname**, with a default NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@step_id =**] *step_id*  
+`[ @step_id = ] step_id`
  The identification number of the step in the job. If not included, all steps in the job are included. *step_id* is **int**, with a default of NULL.  
   
- [ **@step_name =**] **'***step_name***'**  
+`[ @step_name = ] 'step_name'`
  The name of the step in the job. *step_name* is **sysname**, with a default of NULL.  
   
- [ **@suffix =**] *suffix*  
+`[ @suffix = ] suffix`
  A flag indicating whether a text description is appended to the **flags** column in the output. *suffix*is **bit**, with the default of **0**. If *suffix* is **1**, a description is appended.  
   
 ## Return Code Values  
@@ -102,7 +98,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Members of **SQLAgentUserRole** can only view job steps for jobs that they own.  
   

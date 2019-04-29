@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STInteriorRingN_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STInteriorRingN (geometry Data Type)"
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

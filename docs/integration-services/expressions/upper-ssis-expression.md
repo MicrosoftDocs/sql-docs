@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "UPPER function"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "uppercase characters [Integration Services]"
   - "lowercase characters"
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # UPPER (SSIS Expression)

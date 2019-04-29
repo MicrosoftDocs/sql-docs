@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "escape sequences [ODBC], procedure call"
   - "procedure call escape sequence [ODBC]"
   - "ODBC escape sequences [ODBC], procedure call"
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

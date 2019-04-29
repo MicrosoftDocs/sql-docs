@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_grantlogin_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_grantlogin"
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_grantlogin (Transact-SQL)
@@ -41,7 +37,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of a Windows user or group. The Windows user or group must be qualified with a Windows domain name in the form *Domain*\\*User*; for example, **London\Joeb**. *login* is **sysname**, with no default.  
   
 ## Return Code Values  

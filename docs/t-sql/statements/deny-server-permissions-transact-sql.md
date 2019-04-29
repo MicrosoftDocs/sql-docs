@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
   - "DENY statement, servers"
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Server Permissions (Transact-SQL)
@@ -94,7 +90,7 @@ DENY permission [ ,...n ]
 |Server permission|Implied by server permission|  
 |-----------------------|----------------------------------|  
 |ADMINISTER BULK OPERATIONS|CONTROL SERVER|  
-|ALTER ANY AVAILABILITY GROUP<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|ALTER ANY AVAILABILITY GROUP<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
 |ALTER ANY CONNECTION|CONTROL SERVER|  
 |ALTER ANY CREDENTIAL|CONTROL SERVER|  
 |ALTER ANY DATABASE|CONTROL SERVER|  
@@ -104,24 +100,24 @@ DENY permission [ ,...n ]
 |ALTER ANY LINKED SERVER|CONTROL SERVER|  
 |ALTER ANY LOGIN|CONTROL SERVER|  
 |ALTER ANY SERVER AUDIT|CONTROL SERVER|  
-|ALTER ANY SERVER ROLE<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|ALTER ANY SERVER ROLE<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
 |ALTER RESOURCES|CONTROL SERVER|  
 |ALTER SERVER STATE|CONTROL SERVER|  
 |ALTER SETTINGS|CONTROL SERVER|  
 |ALTER TRACE|CONTROL SERVER|  
 |AUTHENTICATE SERVER|CONTROL SERVER|  
-|CONNECT ANY DATABASE<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|CONNECT ANY DATABASE<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
 |CONNECT SQL|CONTROL SERVER|  
 |CONTROL SERVER|CONTROL SERVER|  
 |CREATE ANY DATABASE|ALTER ANY DATABASE|  
-|CREATE AVAILABILITY GROUP<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
+|CREATE AVAILABILITY GROUP<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
 |CREATE DDL EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |CREATE ENDPOINT|ALTER ANY ENDPOINT|  
-|CREATE SERVER ROLE<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY SERVER ROLE|  
+|CREATE SERVER ROLE<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY SERVER ROLE|  
 |CREATE TRACE EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |EXTERNAL ACCESS ASSEMBLY|CONTROL SERVER|  
-|IMPERSONATE ANY LOGIN<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
-|SELECT ALL USER SECURABLES<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|IMPERSONATE ANY LOGIN<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|SELECT ALL USER SECURABLES<br /><br /> **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
 |SHUTDOWN|CONTROL SERVER|  
 |UNSAFE ASSEMBLY|CONTROL SERVER|  
 |VIEW ANY DATABASE|VIEW ANY DEFINITION|  

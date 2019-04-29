@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpmergepartition"
   - "sp_helpmergepartition_TSQL"
 helpviewer_keywords: 
   - "sp_helpmergepartition"
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpmergepartition (Transact-SQL)
@@ -41,16 +34,16 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@suser_sname=** ] **'***suser_sname***'**  
+`[ @suser_sname = ] 'suser_sname'`
  Is the SUSER_SNAME value used to define a partition. *suser_sname* is **sysname**, with a default value of NULL. Supply this parameter to limit the result set to only partitions where SUSER_SNAME resolves to the supplied value.  
   
 > [!NOTE]  
 >  When *suser_sname* is supplied, *host_name* must be NULL  
   
- [ **@host_name=** ] **'***host_name***'**  
+`[ @host_name = ] 'host_name'`
  Is the HOST_NAME value used to define a partition. *host_name* is **sysname**, with a default value of NULL. Supply this parameter to limit the result set to only partitions where HOST_NAME resolves to the supplied value.  
   
 > [!NOTE]  

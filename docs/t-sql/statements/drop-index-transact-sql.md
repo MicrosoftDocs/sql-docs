@@ -1,14 +1,11 @@
-﻿---
+---
 title: "DROP INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP_INDEX_TSQL"
@@ -32,11 +29,10 @@ helpviewer_keywords:
   - "XML indexes [SQL Server], dropping"
   - "DROP INDEX statement"
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 99
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +41,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  The DROP INDEX statement does not apply to indexes created by defining PRIMARY KEY or UNIQUE constraints. To remove the constraint and corresponding index, use [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) with the DROP CONSTRAINT clause.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  The syntax defined in `<drop_backward_compatible_index>` will be removed in a future version of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this syntax in new development work, and plan to modify applications that currently use the feature. Use the syntax specified under `<drop_relational_or_xml_index>` instead. XML indexes cannot be dropped using backward compatible syntax.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -113,7 +109,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 ## Arguments  
  *IF EXISTS*  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  Conditionally drops the index only if it already exists.  
   
@@ -178,14 +174,14 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  Online index operations are not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name***(***column_name***)** | *filegroup_name* | **"**default**"**  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"**default**"**  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] supports "default" as the filegroup name.  
   
  Specifies a location to move the data rows that currently are in the leaf level of the clustered index. The data is moved to the new location in the form of a heap. You can specify either a partition scheme or filegroup as the new location, but the partition scheme or filegroup must already exist. MOVE TO is not valid for indexed views or nonclustered indexes. If a partition scheme or filegroup is not specified, the resulting table will be located in the same partition scheme or filegroup as was defined for the clustered index.  
   
  If a clustered index is dropped by using MOVE TO, any nonclustered indexes on the base table are rebuilt, but they remain in their original filegroups or partition schemes. If the base table is moved to a different filegroup or partition scheme, the nonclustered indexes are not moved to coincide with the new location of the base table (heap). Therefore, even if the nonclustered indexes were previously aligned with the clustered index, they might no longer be aligned with the heap. For more information about partitioned index alignment, see [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
- *partition_scheme_name* **(** *column_name* **)**  
+ _partition_scheme_name_ **(** _column_name_ **)**  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifies a partition scheme as the location for the resulting table. The partition scheme must have already been created by executing either [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) or [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). If no location is specified and the table is partitioned, the table is included in the same partition scheme as the existing clustered index.  
@@ -200,7 +196,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"**default**"**  
  Specifies the default location for the resulting table.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in MOVE TO **"**default**"** or MOVE TO **[**default**]**. If **"**default**"** is specified, the QUOTED_IDENTIFIER option must be set ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"**default**"** }  
@@ -219,7 +215,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  **"**default**"**  
  Specifies the default location for the FILESTREAM data.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In this context, default is not a keyword. It is an identifier for the default filegroup and must be delimited, as in MOVE TO **"**default**"** or MOVE TO **[**default**]**. If "default" is specified, the QUOTED_IDENTIFIER option must be ON for the current session. This is the default setting. For more information, see [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ## Remarks  
@@ -229,7 +225,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  When the clustered index of an indexed view is dropped, all nonclustered indexes and auto-created statistics on the same view are automatically dropped. Manually created statistics are not dropped.  
   
- The syntax*table_or_view_name***.***index_name* is maintained for backward compatibility. An XML index or spatial index cannot be dropped by using the backward compatible syntax.  
+ The syntax _table\_or\_view\_name_**.**_index\_name_ is maintained for backward compatibility. An XML index or spatial index cannot be dropped by using the backward compatible syntax.  
   
  When indexes with 128 extents or more are dropped, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] defers the actual page deallocations, and their associated locks, until after the transaction commits.  
   
@@ -259,10 +255,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 When a clustered index is dropped OFFLINE, only the upper levels of clustered indexes are removed; therefore, the operation is quite fast. When a clustered index is dropped ONLINE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rebuilds the heap two times, once for step 1 and once for step 2. For more information about data compression, see [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 ## XML Indexes  
- Options cannot be specified when you drop anXML index. Also, you cannot use the *table_or_view_name***.***index_name* syntax. When a primary XML index is dropped, all associated secondary XML indexes are automatically dropped. For more information, see [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Options cannot be specified when you drop anXML index. Also, you cannot use the _table\_or\_view\_name_**.**_index\_name_ syntax. When a primary XML index is dropped, all associated secondary XML indexes are automatically dropped. For more information, see [XML Indexes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## Spatial Indexes  
- Spatial indexes are supported only on tables. When you drop a spatial index, you cannot specify any options or use **.***index_name*. The correct syntax is as follows:  
+ Spatial indexes are supported only on tables. When you drop a spatial index, you cannot specify any options or use **.**_index\_name_. The correct syntax is as follows:  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   

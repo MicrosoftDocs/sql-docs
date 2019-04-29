@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database diagrams [SQL Server], tables"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "tables [SQL Server], database diagrams"
   - "database diagrams [SQL Server], Table Designer"
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -27,7 +23,7 @@ manager: craigg
 You can modify and create database tables in either Table Designer or Database Diagram Designer.  
   
 > [!NOTE]  
-> If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
+> If the table is published for replication, you must make schema changes using the Transact-SQL statement [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) or SQL Server Management Objects (SMO). When schema changes are made using the Table Designer or the Database Diagram Designer, it attempts to drop and recreate the table. You cannot drop published objects, therefore the schema change will fail.  
   
 ## In This Section  
 [Add Tables to Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  

@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.suggestdatatypes.f1"
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
-caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Suggest Column Types Dialog Box UI Reference

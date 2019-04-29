@@ -1,18 +1,15 @@
 ---
 title: "Backup Stretch-enabled databases (Stretch Database) | Microsoft Docs"
-ms.custom: ""
 ms.date: "06/14/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Stretch Database, backing up"
-  - "backups (Stretch Database)"
+  - "Stretch Database, disabling"
+  - "disabling Stretch Database"
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
-author: MikeRayMSFT
-ms.author: mikeray
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # Backup Stretch-enabled databases (Stretch Database)
@@ -26,7 +23,7 @@ manager: craigg
  -   Microsoft Azure automatically backs up the remote data that Stretch Database has migrated from SQL Server to Azure.  
 
 > [!TIP]
-> Backup is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).
+> Backup is only one part of a complete high availability and business continuity solution. For more info about high availability, see [High Availability Solutions](../../database-engine/sql-server-business-continuity-dr.md).
    
 ## Back up your SQL Server data  
   

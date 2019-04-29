@@ -3,13 +3,8 @@ title: "Working with User-Defined Types in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "user-defined types [CLR integration], queries"
@@ -18,7 +13,6 @@ helpviewer_keywords:
   - "UDTs [CLR integration], Transact-SQL"
   - "queries [CLR integration]"
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
-caps.latest.revision: 12
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "services [SQL Server], security"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Browser Service"
   - "SQL Server Browser service"
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -128,5 +125,5 @@ manager: craigg
   
 ## See Also  
  [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)  
-  
+ [Hide an Instance of SQL Server Database Engine](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
   

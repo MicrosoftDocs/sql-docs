@@ -3,18 +3,14 @@ title: "Column Conversion Details Dialog Box (SQL Server Import and Export Wizar
 ms.custom: ""
 ms.date: "02/16/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.issuedetails.f1"
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
@@ -28,7 +24,7 @@ manager: craigg
  
 In this example, you see the following things.
 -   The `PersonID` column in the source SQL Server table is of type `int`. The wizard maps this type to the SQL Server Integration Services (SSIS) `DT_I4` data type, which is a four-byte signed integer, by referring to the data type mapping file MSSQLToSSIS10.xml.
--   The `PersonID` column in the destination SQL Server table is also of type `int`. The wizard maps this type to the the same SSIS data type.
+-   The `PersonID` column in the destination SQL Server table is also of type `int`. The wizard maps this type to the same SSIS data type.
 -   The wizard concludes, *This column does not need conversion*.
  
   

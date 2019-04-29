@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "publishing [SQL Server replication], stored procedure execution"
   - "stored procedures [SQL Server replication], publishing"
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
-caps.latest.revision: 16
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

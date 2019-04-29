@@ -4,11 +4,10 @@ ms.date: "05/21/2018"
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Run an SSIS package from the command prompt with DTExec.exe

@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic trace start"
   - "traces [SQL Server], starting"
   - "starting trace automatically"
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
-caps.latest.revision: 21
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

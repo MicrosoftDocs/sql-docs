@@ -46,7 +46,7 @@ manager: kfile
   
      Updating a database login or file permissions will be necessary if you used a virtual account to provision the service. Virtual accounts are based on the instance name, so if you rename the instance, the virtual account is also updated at the same time. This means that any previous logins or permissions that you created for the previous instance are no longer valid.  
   
-     The following example provides an illustration. Suppose you installed a tabular mode server as an instance named “Tabular” using the default virtual account, resulting in the following configuration:  
+     The following example provides an illustration. Suppose you installed a tabular mode server as an instance named "Tabular" using the default virtual account, resulting in the following configuration:  
   
     1.  Instance name = \<server>\TABULAR  
   
@@ -54,7 +54,7 @@ manager: kfile
   
     3.  Virtual account = NT Service\ MSOLAP$TABULAR  
   
-     Now suppose you rename the instance to “TAB2”. As a result of the name change, your configuration would now look like the following:  
+     Now suppose you rename the instance to "TAB2". As a result of the name change, your configuration would now look like the following:  
   
     1.  Instance name = \<server>\TAB2  
   
@@ -62,6 +62,6 @@ manager: kfile
   
     3.  Virtual account = NT Service\ MSOLAP$TAB2  
   
-     As you can see, database and file permissions that were previously granted to “NT Service\ MSOLAP$TABULAR” are no longer valid. To ensure that tasks and operations performed by the service run as before, you would now need to grant new database and file permissions to “NT Service\ MSOLAP$TAB2”.  
+     As you can see, database and file permissions that were previously granted to "NT Service\ MSOLAP$TABULAR" are no longer valid. To ensure that tasks and operations performed by the service run as before, you would now need to grant new database and file permissions to "NT Service\ MSOLAP$TAB2".  
   
   

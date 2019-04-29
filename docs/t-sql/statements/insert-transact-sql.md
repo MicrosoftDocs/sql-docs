@@ -1,14 +1,11 @@
-﻿---
+---
 title: "INSERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "INSERT_TSQL"
@@ -32,16 +29,16 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], INSERT statement"
   - "inserting data"
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
-caps.latest.revision: 136
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
+
+Adds one or more rows to a table or a view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For examples, see [Examples](#InsertExamples).  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -221,7 +218,7 @@ OUTPUT Clause
  *execute_statement*  
  Is any valid EXECUTE statement that returns data with SELECT or READTEXT statements. For more information, see [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- The RESULT SETS options of the EXECUTE statement cannot be specified in an INSERT…EXEC statement.  
+ The RESULT SETS options of the EXECUTE statement cannot be specified in an INSERT...EXEC statement.  
   
  If *execute_statement* is used with INSERT, each result set must be compatible with the columns in the table or in *column_list*.  
   
@@ -291,7 +288,7 @@ OUTPUT Clause
   
  Indicates the approximate number of rows of data in the binary data stream. For more information, see [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
->  [!NOTE]
+> [!NOTE]
 >  A syntax error is raised if a column list is not provided.  
 
 ## Remarks  
@@ -302,7 +299,7 @@ For information specific to inserting data into SQL graph tables, see [INSERT (S
   
 ### Best Practices for Bulk Importing Data  
   
-#### Using INSERT INTO…SELECT to Bulk Import Data with Minimal Logging  
+#### Using INSERT INTO...SELECT to Bulk Import Data with Minimal Logging  
  You can use `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` to efficiently transfer a large number of rows from one table, such as a staging table, to another table with minimal logging. Minimal logging can improve the performance of the statement and reduce the possibility of the operation filling the available transaction log space during the transaction.  
   
  Minimal logging for this statement has the following requirements:  
@@ -317,7 +314,7 @@ For information specific to inserting data into SQL graph tables, see [INSERT (S
   
 Rows that are inserted into a heap as the result of an insert action in a MERGE statement may also be minimally logged.  
   
- Unlike the BULK INSERT statement, which holds a less restrictive Bulk Update lock, INSERT INTO…SELECT with the TABLOCK hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using parallel insert operations.  
+ Unlike the BULK INSERT statement, which holds a less restrictive Bulk Update lock, INSERT INTO...SELECT with the TABLOCK hint holds an exclusive (X) lock on the table. This means that you cannot insert rows using parallel insert operations.  
   
 #### Using OPENROWSET and BULK to Bulk Import Data  
  The OPENROWSET function can accept the following table hints, which provide bulk-load optimizations with the INSERT statement:  
@@ -360,7 +357,7 @@ These optimizations are similar to those available with the BULK INSERT command.
   
 -   Supplying a value in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system data type, as long as the user-defined type supports implicit or explicit conversion from that type. The following example shows how to insert a value in a column of user-defined type `Point`, by explicitly converting from a string.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( CONVERT(Point, '12.3:46.2') );  
     ```  
@@ -369,13 +366,13 @@ These optimizations are similar to those available with the BULK INSERT command.
   
 -   Calling a user-defined function that returns a value of the user-defined type. The following example uses a user-defined function `CreateNewPoint()` to create a new value of user-defined type `Point` and insert the value into the `Cities` table.  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( dbo.CreateNewPoint(x, y) );  
     ```  
   
 ## Error Handling  
- You can implement error handling for the INSERT statement by specifying the statement in a TRY…CATCH construct.  
+ You can implement error handling for the INSERT statement by specifying the statement in a TRY...CATCH construct.  
   
  If an INSERT statement violates a constraint or rule, or if it has a value incompatible with the data type of the column, the statement fails and an error message is returned.  
   
@@ -401,7 +398,7 @@ In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABL
 ## Security  
  During a linked server connection, the sending server provides a login name and password to connect to the receiving server on its behalf. For this connection to work, you must create a login mapping between the linked servers by using [sp_addlinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md).  
   
- When you use OPENROWSET(BULK…), it is important to understand how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handles impersonation. For more information, see "Security Considerations" in [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ When you use OPENROWSET(BULK...), it is important to understand how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handles impersonation. For more information, see "Security Considerations" in [Import Bulk Data by Using BULK INSERT or OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### Permissions  
  INSERT permission is required on the target table.  
@@ -416,10 +413,10 @@ In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABL
 |--------------|------------------------------|  
 |[Basic syntax](#BasicSyntax)|INSERT • table value constructor|  
 |[Handling column values](#ColumnValues)|IDENTITY • NEWID • default values • user-defined types|  
-|[Inserting data from other tables](#OtherTables)|INSERT…SELECT • INSERT…EXECUTE • WITH common table expression • TOP • OFFSET FETCH|  
+|[Inserting data from other tables](#OtherTables)|INSERT...SELECT • INSERT...EXECUTE • WITH common table expression • TOP • OFFSET FETCH|  
 |[Specifying target objects other than standard tables](#TargetObjects)|Views • table variables|  
 |[Inserting rows into a remote table](#RemoteTables)|Linked server • OPENQUERY rowset function • OPENDATASOURCE rowset function|  
-|[Bulk loading data from tables or data files](#BulkLoad)|INSERT…SELECT • OPENROWSET function|  
+|[Bulk loading data from tables or data files](#BulkLoad)|INSERT...SELECT • OPENROWSET function|  
 |[Overriding the default behavior of the query optimizer by using hints](#TableHints)|Table hints|  
 |[Capturing the results of the INSERT statement](#CaptureResults)|OUTPUT clause|  
   
@@ -429,7 +426,7 @@ In Parallel Data Warehouse, the ORDER BY clause is invalid in VIEWS, CREATE TABL
 #### A. Inserting a single row of data  
  The following example inserts one row into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The columns in this table are `UnitMeasureCode`, `Name`, and `ModifiedDate`. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list*.*  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
@@ -437,7 +434,7 @@ VALUES (N'FT', N'Feet', '20080414');
 #### B. Inserting multiple rows of data  
  The following example uses the [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to insert three rows into the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in a single INSERT statement. Because values for all columns are supplied and are listed in the same order as the columns in the table, the column names do not have to be specified in the column list.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
     , (N'Y3', N'Cubic Yards', '20080923');  
@@ -446,7 +443,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 #### C. Inserting data that is not in the same order as the table columns  
  The following example uses a column list to explicitly specify the values that are inserted into each column. The column order in the `Production.UnitMeasure` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database is `UnitMeasureCode`, `Name`, `ModifiedDate`; however, the columns are not listed in that order in *column_list*.  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
     ModifiedDate)  
 VALUES (N'Square Yards', N'Y2', GETDATE());  
@@ -458,7 +455,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 #### D. Inserting data into a table with columns that have default values  
  The following example shows inserting rows into a table with columns that automatically generate a value or have a default value. `Column_1` is a computed column that automatically generates a value by concatenating a string with the value inserted into `column_2`. `Column_2` is defined with a default constraint. If a value is not specified for this column, the default value is used. `Column_3` is defined with the **rowversion** data type, which automatically generates a unique, incrementing binary number. `Column_4` does not automatically generate a value. When a value for this column is not specified, NULL is inserted. The INSERT statements insert rows that contain values for some of the columns but not all. In the last INSERT statement, no columns are specified and only the default values are inserted by using the DEFAULT VALUES clause.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 AS 'Computed column ' + column_2,   
@@ -484,7 +481,7 @@ GO
 #### E. Inserting data into a table with an identity column  
  The following example shows different methods of inserting data into an identity column. The first two INSERT statements allow identity values to be generated for the new rows. The third INSERT statement overrides the IDENTITY property for the column with the SET IDENTITY_INSERT statement and inserts an explicit value into the identity column.  
   
-```  
+```sql
 CREATE TABLE dbo.T1 ( column_1 int IDENTITY, column_2 VARCHAR(30));  
 GO  
 INSERT T1 VALUES ('Row #1');  
@@ -503,7 +500,7 @@ GO
 #### F. Inserting data into a uniqueidentifier column by using NEWID()  
  The following example uses the [NEWID](../../t-sql/functions/newid-transact-sql.md)() function to obtain a GUID for `column_2`. Unlike for identity columns, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] does not automatically generate values for columns with the [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) data type, as shown by the second `INSERT` statement.  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 int IDENTITY,   
@@ -522,7 +519,7 @@ FROM dbo.T1;
 #### G. Inserting data into user-defined type columns  
  The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements insert three rows into the `PointValue` column of the `Points` table. This column uses a [CLR user-defined type](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT). The `Point` data type consists of X and Y integer values that are exposed as properties of the UDT. You must use either the CAST or CONVERT function to cast the comma-delimited X and Y values to the `Point` type. The first two statements use the CONVERT function to convert a string value to the `Point` type, and the third statement uses the CAST function. For more information, see [Manipulating UDT Data](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md).  
   
-```  
+```sql
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
@@ -532,11 +529,11 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
  Examples in this section demonstrate methods of inserting rows from one table into another table.  
   
 #### H. Using the SELECT and EXECUTE options to insert data from other tables  
- The following example shows how to insert data from one table into another table by using INSERT…SELECT or INSERT…EXECUTE. Each is based on a multi-table SELECT statement that includes an expression and a literal value in the column list.  
+ The following example shows how to insert data from one table into another table by using INSERT...SELECT or INSERT...EXECUTE. Each is based on a multi-table SELECT statement that includes an expression and a literal value in the column list.  
   
  The first INSERT statement uses a SELECT statement to derive the data from the source tables (`Employee`, `SalesPerson`, and `Person`) in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database and store the result set in the `EmployeeSales` table. The second INSERT statement uses the EXECUTE clause to call a stored procedure that contains the SELECT statement, and the third INSERT uses the EXECUTE clause to reference the SELECT statement as a literal string.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( DataSource   varchar(20) NOT NULL,  
   BusinessEntityID   varchar(11) NOT NULL,  
@@ -589,7 +586,7 @@ FROM dbo.EmployeeSales;
 #### I. Using WITH common table expression to define the data inserted  
  The following example creates the `NewEmployee` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. A common table expression (`EmployeeTemp`) defines the rows from one or more tables to be inserted into the `NewEmployee` table. The INSERT statement references the columns in the common table expression.  
   
-```  
+```sql
 CREATE TABLE HumanResources.NewEmployee  
 (  
     EmployeeID int NOT NULL,  
@@ -632,7 +629,7 @@ GO
 #### J. Using TOP to limit the data inserted from the source table  
  The following example creates the table `EmployeeSales` and inserts the name and year-to-date sales data for the top 5 random employees from the table `HumanResources.Employee` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. The INSERT statement chooses any 5 rows returned by the `SELECT` statement. The OUTPUT clause displays the rows that are inserted into the `EmployeeSales` table. Notice that the ORDER BY clause in the SELECT statement is not used to determine the top 5 employees.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   nvarchar(11) NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -653,7 +650,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
   
  If you have to use TOP to insert rows in a meaningful chronological order, you must use TOP together with ORDER BY in a subselect statement as shown in the following example. The OUTPUT clause displays the rows that are inserted into the `EmployeeSales` table. Notice that the top 5 employees are now inserted based on the results of the ORDER BY clause instead of random rows.  
   
-```  
+```sql
 INSERT INTO dbo.EmployeeSales  
     OUTPUT inserted.EmployeeID, inserted.FirstName, 
         inserted.LastName, inserted.YearlySales  
@@ -671,7 +668,7 @@ INSERT INTO dbo.EmployeeSales
 #### K. Inserting data by specifying a view  
  The following example specifies a view name as the target object; however, the new row is inserted in the underlying base table. The order of the values in the `INSERT` statement must match the column order of the view. For more information, see [Modify Data Through a View](../../relational-databases/views/modify-data-through-a-view.md).  
   
-```  
+```sql
 CREATE TABLE T1 ( column_1 int, column_2 varchar(30));  
 GO  
 CREATE VIEW V1 AS   
@@ -692,7 +689,7 @@ GO
 #### L. Inserting data into a table variable  
  The following example specifies a table variable as the target object in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql
 -- Create the table variable.  
 DECLARE @MyTableVar table(  
     LocationID int NOT NULL,  
@@ -719,7 +716,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -734,7 +731,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -748,7 +745,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
      FROM AdventureWorks2012.HumanResources.Department')  
@@ -761,7 +758,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
 -- Specify a valid server name for Data Source using the format 
 -- server_name or server_nameinstance_name.  
@@ -778,7 +775,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 -- Create an external table.   
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
         [FirstName] char(25) NOT NULL,   
@@ -807,9 +804,9 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
  Examples in this section demonstrate two methods to bulk load data into a table by using the INSERT statement.  
   
 #### Q. Inserting data into a heap with minimal logging  
- The following example creates a a new table (a heap) and inserts data from another table into it using minimal logging. The example assumes that the recovery model of the `AdventureWorks2012` database is set to FULL. To ensure minimal logging is used, the recovery model of the `AdventureWorks2012` database is set to BULK_LOGGED before rows are inserted and reset to FULL after the INSERT INTO…SELECT statement. In addition, the TABLOCK hint is specified for the target table `Sales.SalesHistory`. This ensures that the statement uses minimal space in the transaction log and performs efficiently.  
+ The following example creates a new table (a heap) and inserts data from another table into it using minimal logging. The example assumes that the recovery model of the `AdventureWorks2012` database is set to FULL. To ensure minimal logging is used, the recovery model of the `AdventureWorks2012` database is set to BULK_LOGGED before rows are inserted and reset to FULL after the INSERT INTO...SELECT statement. In addition, the TABLOCK hint is specified for the target table `Sales.SalesHistory`. This ensures that the statement uses minimal space in the transaction log and performs efficiently.  
   
-```  
+```sql
 -- Create the target heap.  
 CREATE TABLE Sales.SalesHistory(  
     SalesOrderID int NOT NULL,  
@@ -854,7 +851,7 @@ GO
   
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
 SELECT b.Name, b.GroupName   
 FROM OPENROWSET (  
@@ -874,7 +871,7 @@ FROM OPENROWSET (
   
 **Applies to**: [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].  
   
-```  
+```sql
 INSERT INTO Production.Location WITH (XLOCK)  
 (Name, CostRate, Availability)  
 VALUES ( N'Final Inventory', 15.00, 80.00);  
@@ -886,7 +883,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 #### T. Using OUTPUT with an INSERT statement  
  The following example inserts a row into the `ScrapReason` table and uses the `OUTPUT` clause to return the results of the statement to the `@MyTableVar` table variable. Because the `ScrapReasonID` column is defined with an `IDENTITY` property, a value is not specified in the `INSERT` statement for that column. However, note that the value generated by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for that column is returned in the `OUTPUT` clause in the `INSERTED.ScrapReasonID` column.  
   
-```  
+```sql
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -905,7 +902,7 @@ FROM Production.ScrapReason;
 #### U. Using OUTPUT with identity and computed columns  
  The following example creates the `EmployeeSales` table and then inserts several rows into it using an INSERT statement with a SELECT statement to retrieve data from source tables. The `EmployeeSales` table contains an identity column (`EmployeeID`) and a computed column (`ProjectedSales`). Because these values are generated by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] during the insert operation, neither of these columns can be defined in `@MyTableVar`.  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   int IDENTITY (1,5)NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -942,7 +939,7 @@ FROM dbo.EmployeeSales;
 #### V. Inserting data returned from an OUTPUT clause  
  The following example captures data returned from the OUTPUT clause of a MERGE statement, and inserts that data into another table. The MERGE statement updates the `Quantity` column of the `ProductInventory` table daily, based on orders that are processed in the `SalesOrderDetail` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database. It also deletes rows for products whose inventories drop to 0. The example captures the rows that are deleted and inserts them into another table, `ZeroInventory`, which tracks products with no inventory.  
   
-```  
+```sql
 --Create ZeroInventory table.  
 CREATE TABLE Production.ZeroInventory (DeletedProductID int, RemovedOnDate DateTime);  
 GO  
@@ -972,7 +969,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
 #### W. Inserting data using the SELECT option  
  The following example shows how to insert multiple rows of data using an INSERT statement with a SELECT option. The first `INSERT` statement uses a `SELECT` statement directly to retrieve data from the source table, and then to store the result set in the `EmployeeTitles` table.  
   
-```  
+```sql
 CREATE TABLE EmployeeTitles  
 ( EmployeeKey   INT NOT NULL,  
   LastName     varchar(40) NOT NULL,  
@@ -987,7 +984,7 @@ INSERT INTO EmployeeTitles
 #### X. Specifying a label with the INSERT statement  
  The following example shows the use of a label with an INSERT statement.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCurrency   
@@ -996,9 +993,9 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### Y. Using a label and a query hint with the INSERT statement  
- This query shows the basic syntax for using a label and a query join hint with the INSERT statement. After the query is submitted to the Control node, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], running on the Compute nodes, will apply the hash join strategy when it generates the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query plan. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ This query shows the basic syntax for using a label and a query join hint with the INSERT statement. After the query is submitted to the Control node, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], running on the Compute nodes, will apply the hash join strategy when it generates the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query plan. For more information on join hints and how to use the OPTION clause, see [OPTION (SQL Server PDW)](../../t-sql/queries/option-clause-transact-sql.md).  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCustomer (CustomerKey, CustomerAlternateKey, 

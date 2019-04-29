@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 110">
+  <title>6 - resource-gov</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <g id="Names">
+      <circle cx="148.068" cy="56.848" r="13.065" fill="#59b4d9"/>
+      <circle cx="169.145" cy="44.988" r="6.532" fill="#59b4d9"/>
+      <circle cx="169.145" cy="68.707" r="6.532" fill="#59b4d9"/>
+      <circle cx="183.531" cy="77.156" r="5.081" fill="#59b4d9"/>
+      <circle cx="183.531" cy="36.612" r="5.081" fill="#59b4d9"/>
+      <circle cx="183.531" cy="56.848" r="5.081" fill="#59b4d9"/>
+      <path d="M166.75,82.788a3.612,3.612,0,0,0-1.945.566h0L148.17,92.586l-33.533-18.58V36.888L148.17,18.235l16.635,9.319h0a3.63,3.63,0,1,0,3.658-6.271h0L148.17,9.844,107.524,32.649v45.6l40.6,21.6,20.366-10.161h0a3.644,3.644,0,0,0-1.727-6.852Z" fill="#3999c6"/>
+    </g>
+  </g>
+</svg>

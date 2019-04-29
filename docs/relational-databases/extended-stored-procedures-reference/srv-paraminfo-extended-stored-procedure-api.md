@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "extended-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "reference"
 apiname: 
   - "srv_paraminfo"
@@ -21,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "srv_paraminfo"
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -88,7 +83,7 @@ pfNull
  If the parameter information was successfully obtained, SUCCEED is returned; otherwise, FAIL. FAIL is returned when there is no current remote stored procedure and when there is no *n*th remote stored procedure parameter.  
   
 ## Remarks  
- **Security Note** You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/).  
+ **Security Note** You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## See Also  
  [Extended Stored Procedures Programmer's Reference](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  

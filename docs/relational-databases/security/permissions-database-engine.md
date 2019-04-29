@@ -1,15 +1,11 @@
-﻿---
+---
 title: "Permissions (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.databaseuser.permissions.database.f1--May use common.permissions"
@@ -20,11 +16,10 @@ helpviewer_keywords:
   - "security [SQL Server], permissions"
   - "naming conventions [SQL Server]"
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: 76
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Permissions (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -168,13 +163,14 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through current).|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY MASK|AAMK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through current), SQL Database.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2019 (15.x) through current), SQL Database.|DATABASE|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -220,7 +216,7 @@ For tips on planning a permissions system, see [Getting Started with Database En
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UNMASK|UMSK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through current).|SERVER|CONTROL SERVER|  
+|DATABASE|UNMASK|UMSK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through current), SQL Database.|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
 |DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> Applies to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through current), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  

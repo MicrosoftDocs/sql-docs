@@ -1,14 +1,11 @@
-﻿---
+---
 title: "PATINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PATINDEX"
@@ -22,11 +19,10 @@ helpviewer_keywords:
   - "pattern searching [SQL Server]"
   - "PATINDEX function"
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-caps.latest.revision: 53
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -142,6 +138,7 @@ WHERE DocumentNode = 0x7B40;
 
   
 ## See Also  
+ [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

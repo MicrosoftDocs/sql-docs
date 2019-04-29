@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual FoxPro ODBC driver [ODBC], concurrency"
   - "concurrency models [ODBC]"
   - "FoxPro ODBC driver [ODBC], concurrency"
 ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

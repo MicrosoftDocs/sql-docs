@@ -5,17 +5,13 @@ ms.date: "11/22/2011"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.cdvaluerelations.f1"
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Use Value Relations in a Composite Domain

@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_removedistpublisherdbreplication_TSQL"
   - "sp_removedistpublisherdbreplication"
 helpviewer_keywords: 
   - "sp_removedistpublisherdbreplication"
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_removedistpublisherdbreplication (Transact-SQL)
@@ -40,10 +33,10 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher server. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=** ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname** with no default.  
   
 ## Return Code Values  

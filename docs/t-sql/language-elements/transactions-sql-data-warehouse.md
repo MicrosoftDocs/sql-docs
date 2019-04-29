@@ -1,21 +1,16 @@
-﻿---
+---
 title: "Transactions (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
-caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -78,7 +73,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  If an error other than a run-time statement error prevents the successful completion of an explicit transaction, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automatically rolls back the transaction and frees all resources held by the transaction. For example, if the client's network connection to an instance of [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] is broken or the client logs off the application, any uncommitted transactions for the connection are rolled back when the network notifies the instance of the break.  
   
- If a run-time statement error occurs in a batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] behaves consistent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** set to **ON** and the entire transaction is rolled back. For more information about the **XACT_ABORT** setting, see [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
+ If a run-time statement error occurs in a batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] behaves consistent with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** set to **ON** and the entire transaction is rolled back. For more information about the **XACT_ABORT** setting, see [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## General Remarks  
  A session can only run one transaction at a given time; save points and nested transactions are not supported.  

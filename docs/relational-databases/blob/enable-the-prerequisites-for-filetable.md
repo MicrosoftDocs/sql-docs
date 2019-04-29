@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
+ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], prerequisites"
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

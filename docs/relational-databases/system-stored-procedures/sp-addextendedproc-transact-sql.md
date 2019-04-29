@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_addextendedproc_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addextendedproc"
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # sp_addextendedproc (Transact-SQL)
@@ -42,10 +38,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## Arguments  
- [ **@functname =** ] **'***procedure***'**  
+`[ @functname = ] 'procedure'`
  Is the name of the function to call within the dynamic-link library (DLL). *procedure* is **nvarchar(517)**, with no default. *procedure* optionally can include the owner name in the form *owner.function*.  
   
- [ **@dllname =** ] **'***dll***'**  
+`[ @dllname = ] 'dll'`
  Is the name of the DLL that contains the function. *dll* is **varchar(255)**, with no default. It is recommended that you specify the complete path of the DLL.  
   
 ## Return Code Values  

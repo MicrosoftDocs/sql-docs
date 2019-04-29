@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_getqueuedrows_TSQL"
   - "sp_getqueuedrows"
 helpviewer_keywords: 
   - "sp_getqueuedrows"
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_getqueuedrows (Transact-SQL)
@@ -41,13 +34,13 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## Arguments  
- [ **@tablename =**] **'***tablename***'**  
+`[ @tablename = ] 'tablename'`
  Is the name of the table. *tablename* is **sysname**, with no default. The table must be a part of a queued subscription.  
   
- [ **@owner =**] **'***owner***'**  
+`[ @owner = ] 'owner'`
  Is the subscription owner. *owner* is **sysname**, with a default of NULL.  
   
- [ **@tranid =** ] **'***transaction_id***'**  
+`[ @tranid = ] 'transaction_id'`
  Allows the output to be filtered by the transaction ID. *transaction_id* is **nvarchar(70)**, with a default of NULL. If specified, the transaction ID associated with the queued command is displayed. If NULL, all the commands in the queue are displayed.  
   
 ## Return Code Values  

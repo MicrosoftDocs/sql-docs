@@ -1,11 +1,10 @@
-﻿---
+---
 title: How Online Index Operations Work | Microsoft Docs
 ms.custom: ""
 ms.date: 02/17/2017
 ms.prod: sql  
 ms.reviewer: ""
 ms.technology:  table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "online index operations"
@@ -15,14 +14,11 @@ helpviewer_keywords:
   - "temporary mapping index [SQL Server]"
   - "index temporary mappings [SQL Server]"
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.suite: sql
 ms.prod_service: database-engine, sql-database
-ms.component: indexes
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How Online Index Operations Work
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

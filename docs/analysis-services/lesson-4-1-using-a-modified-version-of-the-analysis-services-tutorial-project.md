@@ -35,7 +35,7 @@ Before you can continue with the tutorial, you must download, extract, load and 
   
 ## Loading and Processing the Enhanced Project  
   
-1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **File** menu, click **Close Solution** to close files you won’t be using.  
+1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **File** menu, click **Close Solution** to close files you won't be using.  
   
 2.  On the **File** menu, point to **Open**, and then click **Project/Solution**.  
   

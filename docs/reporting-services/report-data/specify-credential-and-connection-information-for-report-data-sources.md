@@ -1,16 +1,11 @@
 ---
 title: "Specify Credential and Connection Information for Report Data Sources | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/28/2018"
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "no credentials option [Reporting Services]"
@@ -31,10 +26,8 @@ helpviewer_keywords:
   - "security [Reporting Services], data sources"
   - "Windows integrated security [Reporting Services]"
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 61
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Specify Credential and Connection Information for Report Data Sources
   A report server uses credentials to connect to external data sources that provide content to reports or recipient information to a data-driven subscription. You can specify credentials that use Windows Authentication, database authentication, no authentication, or custom authentication. When sending a connection request over the network, the report server will either impersonate a user account or the unattended execution account. For more information about the security context under which a connection request is made, see [Data Source Configuration and Network Connections](#DataSourceConfigurationConnections) further on in this topic.  
@@ -47,21 +40,21 @@ manager: "kfile"
 ## When Credentials are Used in Report Builder  
  In Report Builder, credentials are often used when you connect to a report server or for data-related tasks, such as creating an embedded data source, running a dataset query, or previewing a report. Credentials are not stored in the report. They are managed separately on the report server or on the local client. The following list describes the types of credentials that you might need to provide, where they are stored, and how they are used:  
   
--   Report server credentials that you enter in the [Reporting Services Login Dialog Box &#40;Report Builder&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
+-   Report server credentials that you enter in the Reporting Services Login Dialog Box.  
   
      When you first save to, publish to, or browse to a report server or SharePoint site, you might need to enter your credentials. The credentials that you enter are used until the Report Builder session ends. If you choose to save the credentials, they are stored securely with your user settings on your computer. In subsequent Report Builder sessions, saved credentials are used to connect to the same report server or SharePoint site. The report server administrator or SharePoint administrator specifies which type of credentials to use.  
   
--   Data source credentials that you enter in the [Data Source Properties Dialog Box, Credentials &#40;Report Builder&#41;](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) page for an embedded data source.  
+-   Data source credentials that you enter in the [Data Source Properties Dialog Box, Credentials &#40;Report Builder&#41;](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99) page for an embedded data source.  
   
      These credentials are used by the report server to make a data connection to the external data source. For some types of data sources, credentials can be stored securely on the report server. These credentials enable other users to run the report without providing credentials for the underlying data connection.  
   
--   Data source credentials that you enter in the [Enter Data Source Credentials Dialog Box &#40;Report Builder&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) when you run a dataset query, refresh dataset fields, or preview the report.  
+-   Data source credentials that you enter in the **Enter Data Source Credentials** Dialog Box when you run a dataset query, refresh dataset fields, or preview the report.  
   
      These credentials are used to make a data connection from Report Builder to the external data source, or to preview a report that is configured to prompt for credentials. Credentials that you enter in this dialog box are not stored on the report server and are not available for use by other users. Report Builder caches the credentials during the report editing session so that you do not need to enter them every time you run the query or preview the report.  
   
      For shared data sources, use the **Save my password** option to save the credentials locally with your user settings on your computer. Report Builder uses the saved credentials every time a connection is made to the corresponding external data source.  
   
- For more information, see [Data Source Properties Dialog Box, General &#40;Report Builder&#41;](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) and [Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
+ For more information, see [Data Source Properties Dialog Box, General &#40;Report Builder&#41;](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b) and [Previewing Reports in Report Builder](../../reporting-services/report-builder/previewing-reports-in-report-builder.md).  
   
 ## Using Remote Data Sources  
  If the report retrieves data from a remote database server, verify the following:  

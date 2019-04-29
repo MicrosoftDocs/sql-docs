@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ROLLBACK WORK"
@@ -23,7 +20,6 @@ helpviewer_keywords:
   - "rolling back transactions, ROLLBACK WORK"
   - "savepoints [SQL Server]"
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

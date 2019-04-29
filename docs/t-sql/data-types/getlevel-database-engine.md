@@ -1,14 +1,11 @@
 ---
 title: "GetLevel (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GetLevel"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GetLevel [Database Engine]"
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # GetLevel (Database Engine)
@@ -48,7 +44,7 @@ SqlInt16 GetLevel ( )
 ## Remarks  
 Used to determine the level of one or more nodes or to filter the nodes to members of a specified level. The root of the hierarchy is level 0.
   
-GetLevel is very useful for breadth-first search indexes. For more information, see [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
+GetLevel is useful for breadth-first search indexes. For more information, see [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## Examples  
   
@@ -89,8 +85,7 @@ this.GetLevel()
 ```  
   
 ## See also
-[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

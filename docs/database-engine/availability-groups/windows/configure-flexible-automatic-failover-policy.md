@@ -1,50 +1,33 @@
 ---
-title: "Configure Flexible Automatic Failover Policy | Microsoft Docs"
-ms.custom: ""
+title: "Configure a flexible automatic failover policy for an availability group"
+description: "Describes how to configure a flexible failover policy for an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], flexible failover policy"
   - "Availability Groups [SQL Server], failover"
   - "failover [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Configure Flexible Automatic Failover Policy
+# Configure a flexible automatic failover policy for an Always On availability group
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   This topic describes how to configure the flexible failover policy for an Always On availability group by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A flexible failover policy provides granular control over the conditions that cause automatic failover for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
-  
--   **Before you begin:**  
-  
-     [Limitations on Automatic Failovers](#Limitations)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To configure the flexible failover policy, using:**  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
+ 
     > [!NOTE]  
     >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Limitations"></a> Limitations on Automatic Failovers  
+ 
+## <a name="Limitations"></a> Limitations on Automatic Failovers  
   
 -   For an automatic failover to occur, the current primary replica and one secondary replica must be configured for synchronous-commit availability mode with automatic failover and the secondary replica must be synchronized with the primary replica.  
   
@@ -52,13 +35,11 @@ monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
   
 -   If an availability group exceeds its WSFC failure threshold, the WSFC cluster will not attempt an automatic failover for the availability group. Furthermore, the WSFC resource group of the availability group remains in a failed state until either the cluster administrator manually brings the failed resource group online or the database administrator performs a manual failover of the availability group. The *WSFC failure threshold* is defined as the maximum number of failures supported for the availability group during a given time period. The default time period is six hours, and the default value for the maximum number of failures during this period is *n*-1, where *n* is the number of WSFC nodes. To change the failure-threshold values for a given availability group, use the WSFC Failover Manager Console.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   You must be connected to the server instance that hosts the primary replica.  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+   
+##  <a name="Permissions"></a> Permissions  
   
 |Task|Permissions|  
 |----------|-----------------|  
@@ -83,7 +64,7 @@ monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
   
          The relationship of these integer values to the failure condition levels is as follows:  
   
-        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When…|  
+        |[!INCLUDE[tsql](../../../includes/tsql-md.md)] Value|Level|Automatic Is Failover Initiated When...|  
         |------------------------------|-----------|-------------------------------------------|  
         |1|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |2|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  
@@ -109,9 +90,9 @@ monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
   
 2.  When adding an availability replica to an availability group, use the **New-SqlAvailabilityGroup** cmdlet. When modifying an existing availability replica, use the **Set-SqlAvailabilityGroup** cmdlet.  
   
-    -   To set the failover condition level, use the **FailureConditionLevel***level* parameter, where, *level* is one of the following values:  
+    -   To set the failover condition level, use the **FailureConditionLevel**_level_ parameter, where, *level* is one of the following values:  
   
-        |Value|Level|Automatic Is Failover Initiated When…|  
+        |Value|Level|Automatic Is Failover Initiated When...|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|One|On server down. The SQL Server service stops because of a failover or restart.|  
         |**OnServerUnresponsive**|Two|On server unresponsive. Any condition of lower value is satisfied, the SQL Server service is connected to the cluster and the health check timeout threshold is exceeded, or the current primary replica is in a failed state.|  
@@ -129,7 +110,7 @@ monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   To set the health check timeout threshold, use the **HealthCheckTimeout***n* parameter, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds).  
+    -   To set the health check timeout threshold, use the **HealthCheckTimeout**_n_ parameter, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds).  
   
          For example, the following command changes the health-check timeout threshold of an existing availability group, `AG1`, to 120,000 milliseconds (two minutes).  
   

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerResultSetMetaData.isCurrency"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -46,7 +43,7 @@ public boolean isCurrency(int column)
 ## Remarks  
  This isCurrency method is specified by the isCurrency method in the java.sql.ResultSetMetaData interface.  
   
- This method will return **true** only with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] money and smallmoney data types.  
+ This method will return **true** only with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] money and smallmoney data types.  
   
 ## See Also  
  [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

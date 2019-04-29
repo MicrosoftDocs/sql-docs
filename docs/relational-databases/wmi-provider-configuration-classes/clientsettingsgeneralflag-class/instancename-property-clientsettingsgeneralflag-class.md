@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "InstanceName Property (ClientSettingsGeneralFlag Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
-caps.latest.revision: 14
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -45,6 +40,6 @@ object.InstanceName [= value]
 ## Remarks  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

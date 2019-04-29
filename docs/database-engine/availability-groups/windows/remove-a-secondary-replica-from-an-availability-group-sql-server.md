@@ -1,12 +1,11 @@
 ---
-title: "Remove a Secondary Replica from an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Remove a secondary replica from an availability group"
+description: "Steps to remove a secondary replica from an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio. "
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.removesecondaryar.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], availability replicas"
   - "Availability Groups [SQL Server], configuring"
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -22,40 +20,18 @@ manager: craigg
 # Remove a Secondary Replica from an Availability Group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to remove a secondary replica from an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ 
+   
+##  <a name="Restrictions"></a> Limitations and Restrictions  
   
--   **Before you begin:**  
-  
-     [Limitations and Restrictions](#Restrictions)  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To remove a secondary replica, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:**  [After Removing a Secondary Replica](#PostBestPractices)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a> Limitations and Restrictions  
-  
--   This task is supported only on the primary replica.  
-  
+-   This task is supported only on the primary replica.    
 -   Only a secondary replica can be removed from an availability group.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+## <a name="Prerequisites"></a> Prerequisites  
   
 -   You must be connected to the server instance that hosts the primary replica of the availability group.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  

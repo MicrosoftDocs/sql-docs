@@ -5,17 +5,14 @@ ms.date: "02/28/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afphivetask.f1"
   - "sql14.dts.designer.afphivetask.f1"
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
-caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure HDInsight Hive Task

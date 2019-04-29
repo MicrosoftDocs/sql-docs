@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Get Information About DML Triggers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "triggers"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 helpviewer_keywords: 
   - "metadata [SQL Server], triggers"
@@ -19,11 +14,10 @@ helpviewer_keywords:
   - "status information [SQL Server], triggers"
   - "DML triggers, viewing"
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
-caps.latest.revision: 31
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Information About DML Triggers
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

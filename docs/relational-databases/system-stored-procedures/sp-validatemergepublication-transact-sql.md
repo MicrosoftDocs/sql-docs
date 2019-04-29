@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_validatemergepublication"
   - "sp_validatemergepublication_TSQL"
 helpviewer_keywords: 
   - "sp_validatemergepublication"
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_validatemergepublication (Transact-SQL)
@@ -43,7 +36,7 @@ sp_validatemergepublication [@publication=] 'publication'
  [**@publication=**] **'***publication***'**  
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@level=** ] *level*  
+`[ @level = ] level`
  Is the type of validation to perform. *level* is **tinyint**, with no default. Level can be one of these values.  
   
 |Level value|Description|  
@@ -63,7 +56,7 @@ sp_validatemergepublication [@publication=] 'publication'
   
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)   
+ [Validate Replicated Data](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

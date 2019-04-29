@@ -5,9 +5,7 @@ ms.date: "05/17/2016"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic page repair"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "database mirroring [SQL Server], automatic page repair"
   - "suspect pages [SQL Server]"
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -82,7 +79,7 @@ manager: craigg
   
 1.  With database mirroring, if the mirror encounters one or more page I/O errors when it redoes a log record, the mirroring session enters the SUSPENDED state. With [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], if a secondary replica encounters one or more page I/O errors when it redoes a log record, the secondary database enters the SUSPENDED state. At that point, the mirror/secondary inserts a row in the **suspect_pages** table with the appropriate error status. The mirror/secondary then requests a copy of the page from the principal/primary.  
   
-2.  The principal/primary tries to access the page in its copy of the database. If the page can be accessed, the principal/primary sends the copy of page to the mirror/secondary.  
+2.  The principal/primary tries to access the page in its copy of the database. If the page can be accessed, the principal/primary sends the copy of the page to the mirror/secondary.  
   
 3.  If the mirror/secondary receives copies of every page it has requested, the mirror/secondary tries to resume the mirroring session. If an automatic page-repair attempt fixes a suspect page, the page is marked in the **suspect_pages** table as restored (**event_type** = 4).  
   

@@ -1,24 +1,17 @@
 ---
 title: "rsServerConfigurationError - Reporting Services Error | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "rsServerConfigurationError"
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
-caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # rsServerConfigurationError - Reporting Services Error
     

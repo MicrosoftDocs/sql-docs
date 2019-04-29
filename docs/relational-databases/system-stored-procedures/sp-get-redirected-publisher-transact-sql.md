@@ -4,22 +4,15 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_get_redirected_publisher_TSQL"
   - "sp_get_redirected_publisher"
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
-caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_get_redirected_publisher (Transact-SQL)
@@ -40,13 +33,13 @@ sp_get_redirected_publisher
 ```  
   
 ## Arguments  
- [ **@original_publisher** = ] **'***original_publisher***'**  
+`[ @original_publisher = ] 'original_publisher'`
  The name of the database being published. *publisher_db* is **sysname**, with no default.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  The name of the database being published. *publisher_db* is **sysname**, with no default.  
   
- [ **@bypass_publisher_validation** = ] [0 | 1 ]  
+`[ @bypass_publisher_validation = ] [0 | 1 ]`
  Used to bypass validation of the redirected publisher. If 0, validation is performed . If 1, validation is not performed. *bypass_publisher_validation* is **bit**, with a default of 0.  
   
 ## Return Code Values  

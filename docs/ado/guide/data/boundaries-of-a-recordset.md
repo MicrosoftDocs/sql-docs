@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "EOF property [ADO], boundaries of a Recordset"
   - "Recordset object [ADO], boundaries of a Recordset"
   - "BOF property [ADO], boundaries of a Recordset"
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

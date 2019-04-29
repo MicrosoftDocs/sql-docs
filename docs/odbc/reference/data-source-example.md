@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [ODBC], examples"
 ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -25,28 +22,28 @@ On computers running Microsoft® Windows NT® Server/Windows 2000 Server, Micros
 ```  
 HKEY_CURRENT_USER  
 SOFTWARE  
-          ODBC  
-               Odbc.ini  
-                    ODBC Data Sources  
-                    Personnel : REG_SZ : Oracle  
-                    Inventory : REG_SZ : Oracle  
-                    Payroll : REG_SZ : SQL Server  
+          ODBC  
+               Odbc.ini  
+                    ODBC Data Sources  
+                    Personnel : REG_SZ : Oracle  
+                    Inventory : REG_SZ : Oracle  
+                    Payroll : REG_SZ : SQL Server  
 ```  
   
  and the registry values for the Payroll data source might be:  
   
 ```  
 HKEY_CURRENT_USER  
-     SOFTWARE  
-          ODBC  
-               Odbc.ini  
-                    Payroll  
-                         Driver : REG_SZ : C:\WINDOWS\SYSTEM\Sqlsrvr.dll  
-                         Description : REG_SZ : Payroll database  
-                         Server : REG_SZ : PYRLL1  
-                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
-                         OEMTOANSI : REG_SZ : No  
-                         LastUser : REG_SZ : smithjo  
-                         Database : REG_SZ : Payroll  
-                         Language : REG_SZ :  
+     SOFTWARE  
+          ODBC  
+               Odbc.ini  
+                    Payroll  
+                         Driver : REG_SZ : C:\WINDOWS\SYSTEM\Sqlsrvr.dll  
+                         Description : REG_SZ : Payroll database  
+                         Server : REG_SZ : PYRLL1  
+                         FastConnectOption : REG_SZ : No                          UseProcForPrepare : REG_SZ : Yes  
+                         OEMTOANSI : REG_SZ : No  
+                         LastUser : REG_SZ : smithjo  
+                         Database : REG_SZ : Payroll  
+                         Language : REG_SZ :  
 ```

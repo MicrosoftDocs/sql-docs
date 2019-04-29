@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_update_category"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_category"
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,7 +37,7 @@ sp_update_category
 ```  
   
 ## Arguments  
- [ **@class =**] **'***class***'**  
+`[ @class = ] 'class'`
  The class of the category to update. *class*is **varchar(8)**, with no default, and can be one of these values.  
   
 |Value|Description|  
@@ -50,10 +46,10 @@ sp_update_category
 |**JOB**|Updates a job category.|  
 |**OPERATOR**|Updates an operator category.|  
   
- [ **@name =**] **'***old_name***'**  
+`[ @name = ] 'old_name'`
  The current name of the category. *old_name*is **sysname**, with no default.  
   
- [ **@new_name =**] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  The new name for the category. *new_name*is **sysname**, with no default.  
   
 ## Return Code Values  

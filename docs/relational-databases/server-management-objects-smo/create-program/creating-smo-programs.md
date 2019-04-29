@@ -1,15 +1,12 @@
-﻿---
+---
 title: "Creating SMO Programs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Visual Basic [SMO]"
@@ -18,11 +15,10 @@ helpviewer_keywords:
   - "SQL Server Management Objects, programming"
   - "SMO [SQL Server], programming"
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
-caps.latest.revision: 34
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating SMO Programs
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

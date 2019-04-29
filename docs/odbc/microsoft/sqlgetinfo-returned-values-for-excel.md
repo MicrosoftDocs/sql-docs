@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Excel driver [ODBC], SQLGetInfo"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Excel driver"
   - "ODBC desktop database drivers [ODBC], Excel driver"
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "system tables [SQL Server], replication"
   - "replication [SQL Server], system tables"
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # Replication Tables (Transact-SQL)
@@ -69,7 +62,7 @@ manager: craigg
 |[MSpublication_access](../../relational-databases/system-tables/mspublication-access-transact-sql.md)|[MStracer_history](../../relational-databases/system-tables/mstracer-history-transact-sql.md)|  
 |[MSpublications](../../relational-databases/system-tables/mspublications-transact-sql.md)|[MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)|  
   
- These tables in the distribution database are used for replicating data from non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. For more information, see [Non-SQL Server Publishers](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
+ These tables in the distribution database are used for replicating data from non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. For more information, see [Non-SQL Server Publishers](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
 |||  
 |-|-|  

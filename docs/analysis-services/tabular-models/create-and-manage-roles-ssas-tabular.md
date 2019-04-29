@@ -1,6 +1,6 @@
 ---
-title: "Create and Manage Roles | Microsoft Docs"
-ms.date: 05/07/2018
+title: "Create and manage roles in Analysis Services tabular models | Microsoft Docs"
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -12,7 +12,10 @@ manager: kfile
 ---
 # Create and manage roles 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Roles, in tabular models, define member permissions for a model. Roles are defined for a model project by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. When a model is deployed, database administrators can manage roles by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Roles, in tabular models, define member permissions for a model. Roles are defined for a model project by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. 
+
+> [!IMPORTANT]
+> If you're deploying your project to Azure Analysis Services, use **Integrated Workspace** as your workspace database. To learn more, see [Workspace database](workspace-database-ssas-tabular.md).
   
  The tasks in this article describe how to create and manage roles during model authoring by using the Role Manager dialog box in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. For information about managing roles in a deployed model database, see [Tabular Model Roles](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
@@ -58,7 +61,7 @@ manager: kfile
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Analyze in Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME Function (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [CUSTOMDATA Function (DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME Function (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [CUSTOMDATA Function (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

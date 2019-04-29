@@ -5,12 +5,9 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg

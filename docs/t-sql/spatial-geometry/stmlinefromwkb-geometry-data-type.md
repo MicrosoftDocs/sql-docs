@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STMLineFromWKB (geometry Data Type)"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STMLineFromWKB (geometry Data Type)"
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
-caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerCallableStatement.getBoolean (java.lang.String)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: c9ee851f-1827-42f5-a50a-bdef3e323a5e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

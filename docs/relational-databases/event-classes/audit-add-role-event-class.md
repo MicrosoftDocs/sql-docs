@@ -1,21 +1,18 @@
-﻿---
+---
 title: "Audit Add Role Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Audit Add Role event class"
 ms.assetid: 4ea55922-608c-4db2-8b3f-873862755bba
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Add Role Event Class
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 |**ClientProcessID**|**int**|ID assigned by the host computer to the process where the client application is running. This data column is populated if the client process ID is provided by the client.|9|Yes|  
 |**DatabaseID**|**int**|ID of the database specified by the USE *database* statement or the default database if no USE *database* statement has been issued for a given instance. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays the name of the database if the **ServerName** data column is captured in the trace and the server is available. Determine the value for a database by using the DB_ID function.|3|Yes|  
 |**DatabaseName**|**nvarchar**|Name of the database in which the user statement is running.|35|Yes|  
-|**DBUserName**|**nvarchar**|Issuer’s username in the database.|40|Yes|  
+|**DBUserName**|**nvarchar**|Issuer's username in the database.|40|Yes|  
 |**EventClass**|**int**|Type of event = 111.|27|No|  
 |**EventSequence**|**int**|Sequence of a given event within the request.|51|No|  
 |**EventSubClass**|**int**|Type of event subclass.<br /><br /> 1=Add<br /><br /> 2=Drop|21|Yes|  

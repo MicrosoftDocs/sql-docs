@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1"
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
-caps.latest.revision: 29
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -70,8 +65,7 @@ manager: craigg
   
 ## See Also  
  [Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)   
- [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)   
- [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
+ [View information and perform tasks using Replication Monitor](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SETUSER_TSQL"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "SETUSER statement"
   - "user impersonation [SQL Server]"
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SETUSER (Transact-SQL)

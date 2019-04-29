@@ -1,38 +1,31 @@
 ---
 title: "Tutorial: Create a Quick Chart Report Offline (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/30/2017"
+ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-builder"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-builder
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports, creating"
   - "tutorials, getting started"
   - "creating reports"
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-caps.latest.revision: 31
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Tutorial: Create a Quick Chart Report Offline (Report Builder)
 
-  In this tutorial, you use a wizard to create a pie chart in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Then you add percentages and modify the pie chart a little. 
+  In this tutorial, you use a wizard to create a pie chart in a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] paginated report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Then you add percentages and modify the pie chart a little. 
   
-You can do this tutorial two different ways. Both methods have the same outcomeâ€”a pie chart like the one in this illustration:  
+You can do this tutorial two different ways. Both methods have the same outcome-a pie chart like the one in this illustration:  
   
  ![Report Builder quick pie chart](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Report Builder quick pie chart")  
   
 ## Prerequisites  
- Whether you use XML data or a [!INCLUDE[tsql](../../includes/tsql-md.md)] query, you need to have access to Report Builder. You can start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] from  a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or in SharePoint integrated mode, or you can download [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] from the Microsoft Download Center. For more information, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
+ Whether you use XML data or a [!INCLUDE[tsql](../../includes/tsql-md.md)] query, you need to have access to Report Builder. You can start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from  a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server in native mode or in SharePoint integrated mode, or you can download [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the Microsoft Download Center. For more information, see [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Two Ways To Do This Tutorial  
   
@@ -48,7 +41,7 @@ You can do this tutorial two different ways. Both methods have the same outcomeâ
 ### Using a [!INCLUDE[tsql](../../includes/tsql-md.md)] query that contains data for this tutorial  
  You can copy a query with data included in it from this topic and paste it into the wizard. You will need the name of an instance of SQL Server and credentials sufficient for read-only access to any database. The dataset query in the tutorial uses literal data, but the query must be processed by an instance of SQL Server to return the metadata that is required for a report dataset.  
   
- The advantage of using the [!INCLUDE[tsql](../../includes/tsql-md.md)] query is that all the other [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] tutorials use the same method, so when you do the other tutorials, you will already know what to do.  
+ The advantage of using the [!INCLUDE[tsql](../../includes/tsql-md.md)] query is that all the other [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] tutorials use the same method, so when you do the other tutorials, you will already know what to do.  
   
  The [!INCLUDE[tsql](../../includes/tsql-md.md)] query does require a few other prerequisites. For more information, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
@@ -224,7 +217,7 @@ Notice the design surface gets larger as you drag.
  For more information about customizing chart labels and legends, see [Display Percentage Values on a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) and [Change the Text of a Legend Item &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ##  <a name="WhatsNext"></a> What's Next?  
- Now that you have created your first report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], you are ready to try the other tutorials and to start creating reports from your own data. To run [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], you need permission to access your data sources, such as databases, with a *connection string*, which actually connects you to the data source. Your system administrator will have this information and can set you up.  
+ Now that you have created your first report in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], you are ready to try the other tutorials and to start creating reports from your own data. To run [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], you need permission to access your data sources, such as databases, with a *connection string*, which actually connects you to the data source. Your system administrator will have this information and can set you up.  
   
  To work through the other tutorials, you need the name of an instance of SQL Server and credentials sufficient for read-only access to any database. Your system administrator can also set that up for you.  
   
@@ -235,6 +228,6 @@ Notice the design surface gets larger as you drag.
 ## Next steps
 
 [Report Builder Tutorials](../../reporting-services/report-builder-tutorials.md)   
-[Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+[Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

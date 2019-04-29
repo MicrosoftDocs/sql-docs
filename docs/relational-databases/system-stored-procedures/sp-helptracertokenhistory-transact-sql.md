@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helptracertokenhistory_TSQL"
   - "sp_helptracertokenhistory"
 helpviewer_keywords: 
   - "sp_helptracertokenhistory"
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helptracertokenhistory (Transact-SQL)
@@ -42,19 +35,19 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication in which the tracer token was inserted. *publication* is **sysname**, with no default.  
   
- [ **@tracer_id=** ] *tracer_id*  
+`[ @tracer_id = ] tracer_id`
  Is the ID of the tracer token in the [MStracer_tokens &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) table for which history information is returned. *tracer_id* is **int**, with no default.  
   
- [ **@publisher=** ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  The name of the Publisher. *publisher* is **sysname**, with a default of NULL.  
   
-> [!NOTE]  
->  This parameter should only be specified for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+> [!NOTE]
+>  This parameter should only be specified for non- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
- [ **@publisher_db=** ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  The name of the publication database. *publisher_db* is **sysname**, with a default value of NULL. This parameter is ignored if the stored procedure is executed at the Publisher.  
   
 ## Result Set  

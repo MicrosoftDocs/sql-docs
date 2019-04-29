@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_alert"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_alert"
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -42,19 +38,19 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## Arguments  
- [ **@alert_name =**] **'***alert_name***'**  
+`[ @alert_name = ] 'alert_name'`
  The alert name. *alert_name* is **nvarchar(128)**. If *alert_name* is not specified, information about all alerts is returned.  
   
- [ **@order_by =**] **'***order_by***'**  
+`[ @order_by = ] 'order_by'`
  The sorting order to use for producing the results. *order_by*is **sysname**, with a default of N '*name*'.  
   
- [ **@alert_id =**] *alert_id*  
+`[ @alert_id = ] alert_id`
  The identification number of the alert to report information about. *alert_id*is **int**, with a default of NULL.  
   
- [ **@category_name =**]  **'***category***'**  
+`[ @category_name = ] 'category'`
  The category for the alert. *category* is **sysname**, with a default of NULL.  
   
- [ **@legacy_format**=] *legacy_format*  
+`[ @legacy_format = ] legacy_format`
  Is whether to produce a legacy result set. *legacy_format* is **bit**, with a default of **0**. When *legacy_format* is **1**, **sp_help_alert** returns the result set returned by **sp_help_alert** in Microsoft SQL Server 2000.  
   
 ## Return Code Values  
@@ -133,7 +129,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## Permissions  
  By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted the **SQLAgentOperatorRole** fixed database role in the **msdb** database.  
   
- For details about **SQLAgentOperatorRole**, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about **SQLAgentOperatorRole**, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## Examples  
  The following example reports information about the `Demo: Sev. 25 Errors` alert.  

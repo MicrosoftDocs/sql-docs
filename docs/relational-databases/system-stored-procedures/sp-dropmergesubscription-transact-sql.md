@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_dropmergesubscription_TSQL"
   - "sp_dropmergesubscription"
 helpviewer_keywords: 
   - "sp_dropmergesubscription"
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_dropmergesubscription (Transact-SQL)
@@ -44,16 +37,16 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the publication name. *publication* is **sysname**, with a default of NULL. The publication must already exist and conform to the rules for identifiers.  
   
- [ **@subscriber=**] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
   
- [ **@subscriber_db=** ] **'***subscriber_db***'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscription_database*is **sysname**, with a default of NULL.  
   
- [ **@subscription_type=** ] **'***subscription_type***'**  
+`[ @subscription_type = ] 'subscription_type'`
  Is the type of subscription. *subscription_type*is **nvarchar(15)**, and can be one of these values.  
   
 |Value|Description|  
@@ -64,10 +57,10 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |**pull**|Pull subscription.|  
 |**both** (default)|Both push and pull subscriptions.|  
   
- [ **@ignore_distributor =** ] *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  Indicates whether this stored procedure is executed without connecting to the Distributor. *ignore_distributor* is **bit**, with a default of **0**. This parameter can be used to drop a subscription without doing cleanup tasks at the Distributor. It is also useful if you had to reinstall the Distributor.  
   
- [ **@reserved=** ] *reserved*  
+`[ @reserved = ] reserved`
  Is reserved for future use. *reserved* is **bit**, with a default of **0**.  
   
 ## Return Code Values  

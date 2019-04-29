@@ -1,25 +1,21 @@
-﻿---
+---
 title: "Introduction to Using XPath Queries (SQLXML 4.0) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XPath queries [SQLXML], about XPath queries"
   - "W3C XPath specification"
   - "XPath queries [SQLXML], functionality"
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Using XPath Queries (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

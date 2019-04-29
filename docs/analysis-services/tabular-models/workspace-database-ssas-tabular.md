@@ -1,6 +1,6 @@
 ---
-title: "Workspace database in SQL Server Data Tools| Microsoft Docs"
-ms.date: 05/07/2018
+title: "Analysis Services workspace database in SQL Server Data Tools| Microsoft Docs"
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,19 +10,22 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ---
-# Workspace database 
+# Workspace database
+
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   The tabular model workspace database, used during model authoring, is created when you create a new tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## Specifying a workspace instance  
+
   When you create a new tabular model project in SSDT, you can specify an Analysis Services instance to use while authoring your project. Beginning  with the September 2016 release (14.0.60918.0) of [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)],  introduces two modes for specifying a workspace instance when you create a new tabular model project. 
 
-**Integrated workspace** - Utilizes SSDT's own internal Analysis Services instance.
+**Integrated workspace** - Recommended. Utilizes SSDT's own internal Analysis Services instance. Use this setting when creating a project that will be deployed to Azure Analysis Services.
 
-**Workspace server** - A workspace database is created on an explicit Analysis Services instance,  often on the same computer as SSDT or another computer in the same network.
+**Workspace server** - A workspace database is created on an explicit Analysis Services instance,  often on the same computer as SSDT or another computer in the same network. While you can specify an Azure Analysis Services server, it's not recommended. 
   
 ### Integrated workspace
-With Integrated workspace, a working database is created in-memory using SSDTs own implicit Analysis Services instance. Integrated workspace mode significantly reduces the complexity of authoring tabular projects in SSDT because a separate explicit installation of SQL Server Analysis Services is not required.
+
+With Integrated workspace, a working database is created in-memory using SSDTs own implicit Analysis Services instance. Integrated workspace mode significantly reduces the complexity of authoring tabular projects in SSDT because a separate explicit Analysis Services server is not required.
 
 By using Integrated workspace mode, SSDT Tabular dynamically starts its own internal SSAS instance in the background and loads the database. You can add and view tables, columns, and data in the model designer. If you add additional tables, columns, relationships, etc., you're modifying the workspace database. Integrated workspace mode does not change how SSDT Tabular works with a workspace server and database. What changes is where SSDT Tabular hosts the workspace database.
 
@@ -30,12 +33,14 @@ You can select Integrated workspace mode when creating a new tabular model proje
 
 ![SSAS Integrated Workspace Mode](../../analysis-services/tabular-models/media/ssas-integrated-workspace-mode.png)
 
-By using the Workspace Database and Workspace Server properties for model.bim, you can discover the name of the temporary database and the TCP port of the internal SSAS instance where SSDT Tabular hosts the database. You can connect to the workspace database with SSMS as long as SSDT Tabular has the database loaded. The Workspace Retention setting specifies that SSDT Tabular keeps the workspace database on disk, but no longer in memory after a model project is closed. This ensures less memory is consumed than if the model was kept in memory at all times. If you want to control these settings, set the Integrated Workspace Mode property to False and then provide an explicit workspace server. An explicit workspace server also make sense if the data you are importing into a model exceeds the memory capacity of your SSDT workstation.
+By using the Workspace Database and Workspace Server properties for model.bim, you can discover the name of the temporary database and the TCP port of the internal SSAS instance where SSDT Tabular hosts the database. You can connect to the workspace database with SSMS as long as SSDT Tabular has the database loaded. The Workspace Retention setting specifies that SSDT Tabular keeps the workspace database on disk, but no longer in memory after a model project is closed. This ensures less memory is consumed than if the model was kept in memory at all times. If you want to control these settings, set the Integrated Workspace Mode property to False and then provide an explicit workspace server. An explicit workspace server also make senses if the data you are importing into a model exceeds the memory capacity of your SSDT workstation.
 
 > [!NOTE]  
 >  When using Integrated workspace mode, the local Analysis Services instance is 64-bit, while SSDT runs in the 32-bit environment of Visual Studio. If you're connecting to special data sources, make sure you install both the 32-bit and 64-bit versions of the corresponding data providers on your workstation. The 64-bit provider is required for the 64-bit Analysis Services instance and the 32-bit version is required for the Table Import Wizard in SSDT.
 
-###  <a name="bkmk_overview"></a> Workspace server  
+###  <a name="bkmk_overview"></a> Workspace server
+
+
  A workspace database is created on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance, specified in the Workspace Server property, when you create a new Business Intelligence project by using one of the tabular model project templates in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Each tabular model project will have its own workspace database. You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to view the workspace database on the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. The workspace database name includes the project name, followed by an underscore, followed by the username, followed by an underscore, followed by a GUID.  
   
  The workspace database resides in-memory while the tabular model project is open in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. When you close the project, the workspace database is either kept in-memory, stored to disk and removed from memory (default), or removed from memory and not stored on disk, as determined by the Workspace Retention property. For more information about the Workspace Retention property, see [Workspace Database Properties](#bkmk_ws_prop) later in this topic.  

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2017"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_AUTHORIZATION_TSQL"
@@ -26,13 +23,13 @@ helpviewer_keywords:
   - "search property lists [SQL Server], permissions"
   - "TAKE OWNERSHIP"
 ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
-caps.latest.revision: 84
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER AUTHORIZATION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Changes the ownership of a securable.    
@@ -195,6 +192,7 @@ ALTER AUTHORIZATION ON
 ### For SQL Server:  
 **Requirements for the new owner:**   
 The new owner principal must be one of the following:  
+
 -   A SQL Server authentication login.  
 -   A Windows authentication login representing a Windows user (not a group).  
 -   A Windows user that authenticates through a Windows authentication login representing a Windows group.  
@@ -205,6 +203,7 @@ If you are not a member of the **sysadmin** fixed server role, you must have at 
 ### For Azure SQL Database:  
 **Requirements for the new owner:**   
 The new owner principal must be one of the following:  
+
 -   A SQL Server authentication login.  
 -   A federated user (not a group) present in Azure AD.  
 -   A managed user (not a group) or an application present in Azure AD.    
@@ -216,7 +215,8 @@ The new owner principal must be one of the following:
 You must connect to the target database to change the owner of that database.  
 
 The following types of accounts can change the owner of a database. 
-* The service-level principal login. (The SQL Azure administrator provisioned when the logical server was created.)  
+
+* The service-level principal login. (The SQL Azure administrator provisioned when the SQL Database server was created.)  
 * The Azure Active Directory administrator for the Azure SQL Server.   
 * The current owner of the database.   
  

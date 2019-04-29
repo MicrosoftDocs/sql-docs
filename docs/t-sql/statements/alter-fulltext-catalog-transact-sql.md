@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_FULLEXT_CATALOG_TSQL"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], modifying"
   - "full-text catalogs [SQL Server], reorganizing"
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER FULLTEXT CATALOG (Transact-SQL)

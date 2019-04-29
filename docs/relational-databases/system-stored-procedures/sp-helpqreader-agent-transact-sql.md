@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpqreader_agent_TSQL"
   - "sp_helpqreader_agent"
 helpviewer_keywords: 
   - "sp_helpqreader_agent"
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpqreader_agent (Transact-SQL)
@@ -39,7 +32,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## Arguments  
- [ **@frompublisher=** ] *frompublisher*  
+`[ @frompublisher = ] frompublisher`
  Specifies whether the stored procedure is called at the Publisher or at the Distributor. *frompublisher* is bit, with a default value of 0. **1** means that the stored procedure is called from the Publisher, and **0** means that the stored procedure is called from the Distributor.  
   
 ## Result Sets  

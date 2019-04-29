@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -20,9 +17,9 @@ manager: craigg
 
   The internationalization features of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] include the following:  
   
--   Support for a fully localized experience in the same languages as [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   Support for a fully localized experience in the same languages as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Support for the Java language conversions for locale sensitive [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] data  
+-   Support for the Java language conversions for locale sensitive [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data  
   
 -   Support for international languages, regardless of operating system  
   
@@ -50,12 +47,12 @@ manager: craigg
  For date, time, and currencies, all formatting with localized data is performed at the Java language level using the Locale object; and the various formatting methods for **Date**, **Calendar**, and **Number** data types. In the rare case where the JDBC driver must pass along locale sensitive data in a localized format, the proper formatter is used with the default JVM locale.  
   
 ## Collation Support  
- The JDBC Driver 3.0 supports all the collations supported by [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)], and the new collations or new versions of Windows collation names introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
+ The JDBC Driver 3.0 supports all the collations supported by [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and the new collations or new versions of Windows collation names introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- For more information on the collations, see [Collation and Unicode Support](http://go.microsoft.com/fwlink/?LinkId=131366) and [Windows Collation Name (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online.  
+ For more information on the collations, see [Collation and Unicode Support](https://go.microsoft.com/fwlink/?LinkId=131366) and [Windows Collation Name (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Using International Domain Names (IDN)  
- The JDBC Driver 6.0 for SQL Server supports the use of Internationalized Domain Names (IDNs) and can convert a Unicode serverName to ASCII compatible encoding (Punycode) when required during a connection.  If the IDNs are stored in the Domain Name System (DNS) as ASCII strings in the Punycode format (specified by RFC 3490), enable the conversion of the Unicode server name by setting the serverNameAsACE property to true.  Otherwise, if the DNS service is configured to allow the use of Unicode characters, set the serverNameAsACE property as false (the default).  For older versions of the JDBC driver, it is also possible to convert the serverName to Punycode using [Java’s IDN.toASCII](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) methods before setting that property for a connection.  
+ The JDBC Driver 6.0 for SQL Server supports the use of Internationalized Domain Names (IDNs) and can convert a Unicode serverName to ASCII compatible encoding (Punycode) when required during a connection.  If the IDNs are stored in the Domain Name System (DNS) as ASCII strings in the Punycode format (specified by RFC 3490), enable the conversion of the Unicode server name by setting the serverNameAsACE property to true.  Otherwise, if the DNS service is configured to allow the use of Unicode characters, set the serverNameAsACE property as false (the default).  For older versions of the JDBC driver, it is also possible to convert the serverName to Punycode using [Java's IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) methods before setting that property for a connection.  
   
 > [!NOTE]  
 >  Most resolver software written for non-Windows platforms is based on the Internet DSN standards and is therefore most likely to use the Punycode format for IDNs, while a Windows-based DNS Server on a private network can be configured to allow the use of UTF-8 characters on a per-server basis.  For more details, see [Unicode character support](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  

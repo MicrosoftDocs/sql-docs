@@ -1,25 +1,19 @@
-﻿---
+---
 title: "Use OPENJSON with an Explicit Schema (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.component: "json"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OPENJSON, with explicit schema"
 ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
-caps.latest.revision: 13
-author: "jovanpop-msft"
-ms.author: "jovanpop"
-ms.reviewer: douglasl
+author: jovanpop-msft
+ms.author: jovanpop
+ms.reviewer: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use OPENJSON with an Explicit Schema (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -89,10 +83,6 @@ DECLARE @json NVARCHAR(MAX) = '{
 
 ## Learn more about JSON in SQL Server and Azure SQL Database  
   
-### Microsoft blog posts  
-  
-For specific solutions, use cases, and recommendations, see these [blog posts](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) about the built-in JSON support in SQL Server and Azure SQL Database.  
-
 ### Microsoft videos
 
 For a visual introduction to the built-in JSON support in SQL Server and Azure SQL Database, see the following videos:

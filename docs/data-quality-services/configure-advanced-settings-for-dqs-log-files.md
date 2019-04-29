@@ -5,18 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log files,advanced settings"
   - "dqs log files,advanced settings"
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
-caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # Configure Advanced Settings for DQS Log Files

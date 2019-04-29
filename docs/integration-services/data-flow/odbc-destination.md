@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.odbcdest.f1"
@@ -15,9 +13,8 @@ f1_keywords:
   - "sql13.ssis.designer.odbcdest.columns.f1"
   - "sql13.ssis.designer.odbcdest.errorhandling.f1"
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ODBC Destination

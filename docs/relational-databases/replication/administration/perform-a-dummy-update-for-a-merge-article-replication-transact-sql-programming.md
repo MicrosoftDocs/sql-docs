@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "sp_mergedummyupdate"
   - "dummy updates [SQL Server replication]"
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
-caps.latest.revision: 31
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.webservicetask.f1"
@@ -17,9 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Web Service task [Integration Services]"
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Web Service Task
@@ -35,7 +32,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  The HTTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
   
- The HTTP connection manager can point to a Web site or to a Web Service Description Language (WSDL) file. The URL of the HTTP connection manager that points to a WSDL file includes the `?WSDL` parameter: for example, `http://MyServer/MyWebService/MyPage.asmx?WSDL`.  
+ The HTTP connection manager can point to a Web site or to a Web Service Description Language (WSDL) file. The URL of the HTTP connection manager that points to a WSDL file includes the `?WSDL` parameter: for example, `https://MyServer/MyWebService/MyPage.asmx?WSDL`.  
   
  The WSDL file must be available locally to configure the Web Service task using the **Web Service Task Editor** dialog box that [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer provides.  
   
@@ -69,7 +66,7 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Programmatic Configuration of the Web Service Task  
  For more information about programmatically setting these properties, click one of the following topics:  
@@ -81,7 +78,7 @@ manager: craigg
   
 ### Options  
  **HTTPConnection**  
- Select a connection manager in the list, or click \<**New connection…**> to create a new connection manager.  
+ Select a connection manager in the list, or click \<**New connection...**> to create a new connection manager.  
   
 > [!IMPORTANT]  
 >  The HTTP connection manager supports only anonymous authentication and basic authentication. It does not support Windows Authentication.  
@@ -89,7 +86,7 @@ manager: craigg
  **Related Topics:**  [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md), [HTTP Connection Manager Editor &#40;Server Page&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
- Type the fully qualified path of a WSDL file that is local to the computer, or click the browse button **(…)** and locate this file.  
+ Type the fully qualified path of a WSDL file that is local to the computer, or click the browse button **(...)** and locate this file.  
   
  If you have already manually downloaded the WSDL file to the computer, select this file. However, if the WSDL file has not yet been downloaded, follow these steps:  
   
@@ -134,7 +131,7 @@ manager: craigg
  Select a Web method from the list for the task to execute.  
   
  **WebMethodDocumentation**  
- Type a description of Web method, or the click the browse button **(…)** and then type the description in the **Web Method Documentation** dialog box.  
+ Type a description of Web method, or the click the browse button **(...)** and then type the description in the **Web Method Documentation** dialog box.  
   
  **Name**  
  Lists the names of the inputs to the Web method.  
@@ -167,15 +164,15 @@ manager: craigg
   
 #### OutputType = File Connection  
  **File**  
- Select a File connection manager in the list or click \<**New Connection…**> to create a new connection manager.  
+ Select a File connection manager in the list or click \<**New Connection...**> to create a new connection manager.  
   
  **Related Topics:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### OutputType = Variable  
  **Variable**  
- Select a variable in the list or click \<**New Variable…**> to create a new variable.  
+ Select a variable in the list or click \<**New Variable...**> to create a new variable.  
   
- **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Related Topics:**  [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md), [Add Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## Related Content  
- Video, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642), on technet.microsoft.com.  
+ Video, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642), on technet.microsoft.com.  

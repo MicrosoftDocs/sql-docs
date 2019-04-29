@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "NOEXEC_TSQL"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "compiling queries [SQL Server]"
   - "NOEXEC option"
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET NOEXEC (Transact-SQL)

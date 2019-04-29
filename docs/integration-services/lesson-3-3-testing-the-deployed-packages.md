@@ -5,15 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Lesson 3-3 - Testing the Deployed Packages

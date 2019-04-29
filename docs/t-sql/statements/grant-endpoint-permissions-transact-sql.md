@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/17/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "GRANT statement, endpoints"
   - "permissions [SQL Server], endpoints"
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Endpoint Permissions (Transact-SQL)
@@ -50,7 +46,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  Specifies a permission that can be granted on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::**_endpoint_name_  
  Specifies the endpoint on which the permission is being granted. The scope qualifier (**::**) is required.  
   
  TO \<server_principal>  

@@ -1,0 +1,311 @@
+- name: Reporting Services
+  href: create-deploy-and-manage-mobile-and-paginated-reports.md
+  items:
+  - name: What's New (Reporting Services)
+    href: what-s-new-reporting-services.md
+  - name: Reporting Services Backward Compatibility
+    href: reporting-services-backward-compatibility.md
+    items:
+    - name: Deprecated Features in SQL Server Reporting Services in SQL Server 2014
+      href: deprecated-features-in-sql-server-reporting-services-ssrs.md
+    - name: Discontinued Functionality to SQL Server Reporting Services in SQL Server 2014
+      href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
+    - name: Breaking Changes in SQL Server Reporting Services in SQL Server 2014
+      href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
+    - name: Behavior Changes to SQL Server Reporting Services  in SQL Server 2014
+      href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
+- name: Reporting Services Concepts (SSRS)
+  href: reporting-services-concepts-ssrs.md
+- name: Choosing Microsoft Reporting and Analysis Tools
+  href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
+- name: Planning
+  href: planning-for-reporting-services.md
+  items:
+  - name: Planning for Reporting Services and Power View Browser Support (Reporting Services 2014)
+    href: browser-support-for-reporting-services-and-power-view.md
+  - name: Plan for Report Design and Report Deployment (Reporting Services 2014)
+    href: plan-for-report-design-and-report-deployment-reporting-services.md
+  - name: View Reporting Services Reports on Microsoft Surface Devices and  Apple iOS Devices
+    href: view-reporting-services-reports-surface-ios-devices.md
+  - name: Compare Business Intelligence Capabilities In Different Microsoft Environments
+    href: compare-business-intelligence-capabilities-in-different-microsoft-environments.md
+- name: Reporting Services Features and Tasks
+  href: reporting-services-features-and-tasks-ssrs.md
+- name: Reporting Services Report Server
+  href: reporting-services-report-server.md
+  items:
+  - name: Report Server (SharePoint Mode) +
+    href: report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md
+  - name: Report Server (Native Mode) +
+    href: report-server/reporting-services-report-server-native-mode.md
+  - name: Configuration Files
+    href: report-server/reporting-services-configuration-files.md
+    items:
+    - name: RSReportServer Configuration File
+      href: report-server/rsreportserver-config-configuration-file.md
+    - name: ReportingServicesService Configuration File
+      href: report-server/reportingservicesservice-configuration-file.md
+    - name: RSReportDesigner Configuration File
+      href: report-server/rsreportdesigner-configuration-file.md
+    - name: Modify a Reporting Services Configuration File (RSreportserver.config)
+      href: report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md
+  - name: Reporting Services Log Files and Sources
+    href: report-server/reporting-services-log-files-and-sources.md
+    items:
+    - name: Report Server Execution Log and the ExecutionLog3 View
+      href: report-server/report-server-executionlog-and-the-executionlog3-view.md
+    - name: SharePoint ULS Logs
+      href: report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md
+    - name: Report Server Service Trace Log
+      href: report-server/report-server-service-trace-log.md
+    - name: Report Server HTTP Log
+      href: report-server/report-server-http-log.md
+    - name: Windows Application Log
+      href: report-server/windows-application-log.md
+    - name: Verifying a Report Run
+      href: report-server/verifying-a-report-run.md
+  - name: Performance, Snapshots, Caching (Reporting Services) +
+    href: report-server/performance-snapshots-caching-reporting-services.md
+  - name: High Availability
+    href: high-availability-reporting-services.md
+  - name: Enable and Disable RDL Sandboxing
+    href: enable-and-disable-rdl-sandboxing.md
+  - name: Configure Reporting Services to Use a Subject Alternative Name
+    href: configure-reporting-services-to-use-a-subject-alternative-name.md
+- name: Report Builder in SQL Server 2014
+  href: report-builder/report-builder-in-sql-server-2016.md
+  items:
+  - name: What's New in Report Builder for SQL Server 2014
+    href: what-s-new-in-report-builder-for-sql-server-2014.md
+  - name: Start Report Builder
+    href: report-builder/start-report-builder.md
+  - name: "Tutorial: Create a Quick Chart Report Offline"
+    href: report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
+  - name: Planning a Report
+    href: report-design/planning-a-report-report-builder.md
+    items:
+    - name: Report Design Tips
+      href: report-design/report-design-tips-report-builder-and-ssrs.md
+  - name: Report Design View
+    href: report-builder/report-design-view-report-builder.md
+  - name: Shared Dataset Design View
+    href: report-builder/shared-dataset-design-view-report-builder.md
+  - name: Keyboard Shortcuts
+    href: report-builder/keyboard-shortcuts-report-builder.md
+  - name: Report Authoring Concepts
+    href: report-design/report-authoring-concepts-report-builder-and-ssrs.md
+    items:
+    - name: Reports, Report Parts, and Report Definitions
+      href: report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
+    - name: Embedded and Shared Data Connections or Data Sources
+      href: embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md
+    - name: Embedded and Shared Datasets
+      href: report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md
+    - name: Data Regions and Maps
+      href: report-design/data-regions-and-maps-report-builder-and-ssrs.md
+    - name: Report Parameters
+      href: report-design/report-parameters-concepts-report-builder-and-ssrs.md
+  - name: Finding, Viewing, and Managing Reports +
+    href: report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+  - name: Add Data to a Report +
+    href: report-data/report-datasets-ssrs.md
+  - name: Tables, Matrices, and Lists +
+    href: report-design/tables-matrices-and-lists-report-builder-and-ssrs.md
+  - name: Report Parts +
+    href: report-design/report-parts-in-report-designer-ssrs.md
+  - name: Charts +
+    href: report-design/charts-report-builder-and-ssrs.md
+  - name: Sparklines and Data Bars +
+    href: report-design/sparklines-and-data-bars-report-builder-and-ssrs.md
+  - name: Gauges +
+    href: report-design/gauges-report-builder-and-ssrs.md
+  - name: Indicators +
+    href: report-design/indicators-report-builder-and-ssrs.md
+  - name: Maps +
+    href: report-design/maps-report-builder-and-ssrs.md
+  - name: Images, Text Boxes, Rectangles, and Lines +
+    href: report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
+  - name: Formatting Report Items +
+    href: report-design/formatting-report-items-report-builder-and-ssrs.md
+  - name: Report Parameters +
+    href: report-design/report-parameters-report-builder-and-report-designer.md
+  - name: Filter, Group, and Sort Data +
+    href: report-design/filter-group-and-sort-data-report-builder-and-ssrs.md
+  - name: Hide an Item (Report Builder and SSRS)
+    href: report-builder/hide-an-item-report-builder-and-ssrs.md
+  - name: Drillthrough, Drilldown, Subreports, and Nested Data Regions +
+    href: report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md
+  - name: Expressions +
+    href: report-design/expressions-report-builder-and-ssrs.md
+  - name: Interactive Sort, Document Maps, and Links
+    href: report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
+    items:
+    - name: Interactive Sort (Report Builder and SSRS)
+      href: report-design/interactive-sort-report-builder-and-ssrs.md
+  - name: Add Interactive Sort to a Table or Matrix (Report Builder and SSRS)
+    href: report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
+    items:
+    - name: Add a Hyperlink to a URL (Report Builder and SSRS)
+      href: report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
+    - name: Add a Bookmark to a Report (Report Builder and SSRS)
+      href: report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md
+    - name: Create a Document Map (Report Builder and SSRS)
+      href: report-design/create-a-document-map-report-builder-and-ssrs.md
+  - name: Page Layout and Rendering
+    href: report-design/page-layout-and-rendering-report-builder-and-ssrs.md
+    items:
+    - name: Rendering Behaviors
+      href: report-design/rendering-behaviors-report-builder-and-ssrs.md
+    - name: Rendering Data Regions
+      href: report-design/rendering-data-regions-report-builder-and-ssrs.md
+    - name: Rendering Report Items
+      href: report-design/rendering-report-items-report-builder-and-ssrs.md
+    - name: Rendering Data
+      href: report-design/rendering-data-report-builder-and-ssrs.md
+    - name: Pagination in Reporting Services
+      href: report-design/pagination-in-reporting-services-report-builder-and-ssrs.md
+    - name: Page Headers and Footers
+      href: report-design/page-headers-and-footers-report-builder-and-ssrs.md
+    - name: Controlling Page Breaks, Headings, Columns, and Rows
+      href: report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
+    - name: Add a Page Break
+      href: report-design/add-a-page-break-report-builder-and-ssrs.md
+    - name: Display Row and Column Headers on Multiple Pages
+      href: report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
+    - name: Add or Remove a Page Header or Footer
+      href: report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
+    - name: Keep Headers Visible When Scrolling Through a Repor
+      href: report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
+    - name: Display Page Numbers or Other Report Properties
+      href: report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
+    - name: Hide a Page Header or Footer on the First or Last Page
+      href: report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
+  - name: Exporting Reports +
+    href: report-builder/export-reports-report-builder-and-ssrs.md
+  - name: Printing Reports +
+    href: report-builder/print-reports-report-builder-and-ssrs.md
+  - name: Saving Reports +
+    href: report-builder/saving-reports-report-builder.md
+  - name: Security
+    href: report-builder/security-report-builder.md
+  - name: Install, Uninstall, and Report Builder Support
+    href: install-uninstall-and-report-builder-support.md
+    items:
+    - name: Install the Stand-Alone Version of Report Builder
+      href: install-windows/install-report-builder.md
+    - name: Uninstall the Stand-Alone Version of Report Builder
+      href: install-windows/uninstall-report-builder.md
+    - name: Troubleshoot Report Builder
+      href: troubleshoot-report-builder.md
+  - name: Report Builder F1 Help +
+    href: report-builder/report-builder-f1-help.md
+  - name: Glossary (Report Builder)
+    href: report-builder/glossary-report-builder.md
+- name: Reporting Services Reports +
+  href: reports/reporting-services-reports-ssrs.md
+- name: Report Data +
+  href: report-data/report-data-ssrs.md
+- name: Schedules +
+  href: subscriptions/schedules.md
+- name: Subscriptions and Delivery +
+  href: subscriptions/subscriptions-and-delivery-reporting-services.md
+- name: Data Alerts
+  href: reporting-services-data-alerts.md
+  items:
+  - name: Data Alert Designer
+    href: data-alert-designer.md
+  - name: Data Alert Manager for SharePoint Users
+    href: data-alert-manager-for-sharepoint-users.md
+  - name: Data Alert Manager for Alerting Administrators
+    href: data-alert-manager-for-alerting-administrators.md
+  - name: Data Alert Messages
+    href: data-alert-messages.md
+  - name: Create a Data Alert in Data Alert Designer
+    href: create-a-data-alert-in-data-alert-designer.md
+  - name: Edit a Data Alert in Alert Designer
+    href: edit-a-data-alert-in-alert-designer.md
+  - name: Manage All Data Alerts on a SharePoint Site in Data Alert Manager
+    href: manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
+  - name: Manage My Data Alerts in Data Alert Manager
+    href: manage-my-data-alerts-in-data-alert-manager.md
+  - name: Grant Permissions to Users and Alerting Administrators
+    href: grant-permissions-to-users-and-alerting-administrators.md
+- name: Security and Protection +
+  href: security/reporting-services-security-and-protection.md
+- name: URL Access
+  href: url-access-ssrs.md
+  items:
+  - name: Access Report Server Items Using URL Access
+    href: access-report-server-items-using-url-access.md
+  - name: Pass a Report Parameter Within a URL
+    href: pass-a-report-parameter-within-a-url.md
+  - name: URL Access Parameter Reference
+    href: url-access-parameter-reference.md
+  - name: Set the Language for Report Parameters in a URL
+    href: set-the-language-for-report-parameters-in-a-url.md
+  - name: Specify Device Information Settings in a URL
+    href: specify-device-information-settings-in-a-url.md
+  - name: Export a Report Using URL Access
+    href: export-a-report-using-url-access.md
+  - name: Search a Report Using URL Access
+    href: search-a-report-using-url-access.md
+  - name: Render a Report History Snapshot Using URL Access
+    href: render-a-report-history-snapshot-using-url-access.md
+- name: Extensions
+  href: extensions-ssrs.md
+  items:
+  - name: Customize Rendering Extension Parameters in RSReportServer.Config
+    href: customize-rendering-extension-parameters-in-rsreportserver-config.md
+- name: Tools +
+  href: tools/reporting-services-tools.md
+- name: Reporting Services WMI Provider Library Reference +
+  href: wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
+- name: Technical Reference
+  href: technical-reference-ssrs.md
+- name: Errors and Events Reference +
+  href: troubleshooting/errors-and-events-reference-reporting-services.md
+- name: Feature Reference
+  href: feature-reference-reporting-services.md
+  items:
+  - name: Device Information Settings for Rendering Extensions
+    href: device-information-settings-for-rendering-extensions-reporting-services.md
+    items:
+    - name: ATOM Device Information Settings
+      href: atom-device-information-settings.md
+    - name: CSV Device Information Settings
+      href: csv-device-information-settings.md
+    - name: Excel Device Information Settings
+      href: excel-device-information-settings.md
+    - name: HTML Device Information Settings
+      href: html-device-information-settings.md
+    - name: Image Device Information Settings
+      href: image-device-information-settings.md
+    - name: MHTML Device Information Settings
+      href: mhtml-device-information-settings.md
+    - name: PDF Device Information Settings
+      href: pdf-device-information-settings.md
+    - name: XML Device Information Settings
+      href: xml-device-information-settings.md
+    - name: Word Device Information Settings
+      href: word-device-information-settings.md
+    - name: RGDI Device Information Settings
+      href: rgdi-device-information-settings.md
+  - name: HTML Viewer and the Report Toolbar
+    href: html-viewer-and-the-report-toolbar.md
+- name: Developer's Guide (Reporting Services)
+  href: reporting-services-developer-documentation.md
+  items:
+  - name: Integrating Reporting Services into Applications +
+    href: application-integration/integrating-reporting-services-into-applications.md
+  - name: Report Server Web Service +
+    href: report-server-web-service/report-server-web-service.md
+  - name: Reporting Services Extensions +
+    href: extensions/reporting-services-extensions.md
+  - name: Custom Report Items +
+    href: custom-report-items/custom-report-items.md
+  - name: Using Custom Assemblies with Reports +
+    href: custom-assemblies/using-custom-assemblies-with-reports.md
+  - name: Report Viewer Web Part Programmability in SharePoint Integration
+    href: report-viewer-web-part-programmability-in-sharepoint-integration.md
+  - name: Accessing the WMI Provider Programmatically
+    href: accessing-the-wmi-provider-programmatically.md

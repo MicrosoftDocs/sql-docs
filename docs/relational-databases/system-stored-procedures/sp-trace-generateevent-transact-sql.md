@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_trace_generateevent_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_generateevent"
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -43,13 +39,13 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## Arguments  
- [ **@eventid=**] *event_id*  
+`[ @eventid = ] event_id`
  Is the ID of the event to turn on. *event_id* is **int**, with no default. The ID must be one of the event numbers from 82 through 91, which represent user-defined events as set with [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- [ **@userinfo**= ] **'***user_info***'**  
+`[ @userinfo = ] 'user_info'`
  Is the optional user-defined string identifying the reason for the event. *user_info* is **nvarchar(128)**, with a default of NULL.  
   
- [ **@userdata**= ] *user_data*  
+`[ @userdata = ] user_data`
  Is the optional user-specified data for the event. *user_data* is **varbinary(8000)**, with a default of NULL.  
   
 ## Return Code Values  

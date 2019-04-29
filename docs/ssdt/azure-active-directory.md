@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "05/31/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssdt
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
@@ -82,8 +80,7 @@ The MFA enforcement is provided by Azure AD through this additional MFA pop-up w
 
 [Multi-factor authentication](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [Azure Active Directory authentication with SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
-[SQL Server Data Tools in Visual Studio](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[SSDT Team Blog](http://blogs.msdn.com/b/ssdt/)  
+[SSDT Team Blog](https://blogs.msdn.com/b/ssdt/)  
 [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Download SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

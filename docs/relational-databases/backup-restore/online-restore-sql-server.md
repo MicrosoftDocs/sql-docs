@@ -5,17 +5,14 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "online restores [SQL Server]"
   - "online restores [SQL Server], about online restores"
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-caps.latest.revision: 45
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Online Restore (SQL Server)

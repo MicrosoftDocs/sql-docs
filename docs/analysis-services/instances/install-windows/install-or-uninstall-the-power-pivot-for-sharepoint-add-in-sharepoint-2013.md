@@ -89,14 +89,14 @@ manager: kfile
   
  `Msiexec.exe /i SpPowerPivot.msi`.  
   
- To create an installation log, use the standard MsiExec logging switches. The following example creates the log file “Install_Log.txt” using the “v” verbose logging switch.  
+ To create an installation log, use the standard MsiExec logging switches. The following example creates the log file "Install_Log.txt" using the "v" verbose logging switch.  
   
 ```  
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt  
 ```  
   
 ### Quiet Command Line Installation for scripting  
- You can use the **/q** or **/quiet** switches for a “quiet” installation that will not display any dialogs or warnings. The quiet installation is useful if you want to script the installation of the add-in.  
+ You can use the **/q** or **/quiet** switches for a "quiet" installation that will not display any dialogs or warnings. The quiet installation is useful if you want to script the installation of the add-in.  
   
 > [!IMPORTANT]  
 >  If you use the **/q** switch for a silent command line installation, the end-user license agreement will not be displayed. Regardless of the installation method, the use of this software is governed by a license agreement and you are responsible for complying with the license agreement.  
@@ -117,7 +117,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
  When you install the spPowerPivot.msi, you can use the command line options to install specific items, such as the data providers and not the [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] Configuration tool. The following command line is an example of installing all components except the configuration tool:  
   
 ```  
-Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
+Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common"  
 ```  
   
 |Option|Description|  
@@ -145,7 +145,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADO
   
  **To start the configuration tool:**  
   
- From the Windows Start screen type “power” and in the Apps search results, click **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration**. Note that the search results may include two links because [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs separate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] configuration tools for SharePoint 2010 and SharePoint 2013. Make sure you start the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool.  
+ From the Windows Start screen type "power" and in the Apps search results, click **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration**. Note that the search results may include two links because [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup installs separate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] configuration tools for SharePoint 2010 and SharePoint 2013. Make sure you start the [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2013 Configuration tool.  
   
  ![two powerpivot configuratoin tools](../../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuratoin tools")  
   

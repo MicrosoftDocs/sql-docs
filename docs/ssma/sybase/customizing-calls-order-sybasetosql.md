@@ -4,17 +4,11 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Tester Component,Customizing Calls Order"
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
-caps.latest.revision: 5
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

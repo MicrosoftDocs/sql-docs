@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helplinkedsrvlogin_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helplinkedsrvlogin"
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helplinkedsrvlogin (Transact-SQL)
@@ -39,10 +35,10 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## Arguments  
- [ **@rmtsrvname=**] **'***rmtsrvname***'**  
+`[ @rmtsrvname = ] 'rmtsrvname'`
  Is the name of the linked server that the login mapping applies to. *rmtsrvname* is **sysname**, with a default of NULL. If NULL, all login mappings defined against all the linked servers defined in the local computer running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are returned.  
   
- [ **@locallogin=**] **'***locallogin***'**  
+`[ @locallogin = ] 'locallogin'`
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login on the local server that has a mapping to the linked server *rmtsrvname*. *locallogin* is **sysname**, with a default of NULL. NULL specifies that all login mappings defined on *rmtsrvname* are returned. If not NULL, a mapping for *locallogin* to *rmtsrvname* must already exist. *locallogin* can be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows user. The Windows user must have been granted access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] either directly or through its membership in a Windows group that has been granted access.  
   
 ## Return Code Values  

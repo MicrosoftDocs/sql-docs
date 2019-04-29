@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "ADOX code examples, Visual Basic"
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

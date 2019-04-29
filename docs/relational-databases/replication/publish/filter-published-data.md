@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "filters [SQL Server replication]"
@@ -22,7 +18,6 @@ helpviewer_keywords:
   - "snapshot replication [SQL Server], filtering published data"
   - "column filters [SQL Server replication]"
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
-caps.latest.revision: 50
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

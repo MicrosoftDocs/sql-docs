@@ -5,18 +5,13 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom objects [Integration Services], persisting"
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Persisting Custom Objects

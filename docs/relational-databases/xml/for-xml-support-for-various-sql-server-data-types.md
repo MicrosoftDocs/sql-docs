@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FOR XML clause, data type support"
   - "data types [SQL Server], FOR XML clause"
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # FOR XML Support for Various SQL Server Data Types

@@ -32,7 +32,7 @@ manager: kfile
   
 -   Monitor processing with SQL Server Profiler  
   
--   Program a custom solution using AMO. For more information, see [Programming AMO OLAP Basic Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md).  
+-   Program a custom solution using AMO. For more information, see [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects).  
   
  Processing is a highly configurable operation, controlled by a set of processing options that determine whether full or incremental processing occurs at the object level. For more information about processing options and objects, see [Processing Options and Settings &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) and [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
   

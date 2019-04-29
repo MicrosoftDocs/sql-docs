@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/09/2015"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DECRYPTBYKEYAUTOCERT"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DECRYPTBYKEYAUTOCERT function"
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # DECRYPTBYKEYAUTOCERT (Transact-SQL)
@@ -45,7 +41,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 The ID of the certificate used to protect the symmetric key. *cert_ID* has an **int** data type.  
   
 *cert_password*  
-The password used to encrypt the private key of the certificate. Can have a `NULL` value if the the database master key protects the private key. *cert_password* has an **nvarchar** data type.  
+The password used to encrypt the private key of the certificate. Can have a `NULL` value if the database master key protects the private key. *cert_password* has an **nvarchar** data type.  
 
 '*ciphertext*'  
 The string of data encrypted with the key. *ciphertext* has a **varbinary** data type.  

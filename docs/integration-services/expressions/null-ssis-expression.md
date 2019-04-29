@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "NULL function"
   - "null values [Integration Services]"
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # NULL (SSIS Expression)

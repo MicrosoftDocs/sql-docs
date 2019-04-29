@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Spatial Data Types Overview | Microsoft Docs"
-ms.custom: ""
 ms.date: "11/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "spatial"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry data type [SQL Server], understanding"
@@ -17,11 +12,10 @@ helpviewer_keywords:
   - "planar spatial data [SQL Server], geometry data type"
   - "spatial data types [SQL Server]"
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Data Types Overview
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +78,8 @@ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** is a spe
 The OGC Simple Features for SQL Specification discusses outer rings and inner rings, but this distinction makes little sense for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type; any ring of a polygon can be taken to be the outer ring.  
 
 For more information on OGC specifications, see the following:  
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Circular Arc Segments  
 Three instantiable types can take circular arc segments: **CircularString**, **CompoundCurve**, and **CurvePolygon**.  A circular arc segment is defined by three points in a two dimensional plane and the third point cannot be the same as the first point.  
@@ -96,10 +90,11 @@ Figures C and D show how a line segment can be defined as a circular arc segment
 Methods operating on circular arc segment types use straight line segments to approximate the circular arc. The number of line segments used to approximate the arc will depend on the length and curvature of the arc. Z values can be stored for each of the circular arc segment types; however, methods will not use the Z values in their calculations.  
 
 > [!NOTE]  
->  If Z values are given for circular arc segments then they must be the same for all points in the circular arc segment for it to be accepted for input. For example: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` is accepted, but `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` is not accepted.  
+> If Z values are given for circular arc segments then they must be the same for all points in the circular arc segment for it to be accepted for input. For example: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` is accepted, but `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` is not accepted.  
 
 ### LineString and CircularString comparison  
 This example shows how to store identical isosceles triangles using both a **LineString** instance and **CircularString** instance:  
+
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -114,32 +109,34 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 Notice that a **CircularString** instance requires seven points to define the triangle, but a **LineString** instance requires only four points to define the triangle. The reason for this is that a **CircularString** instance stores circular arc segments and not line segments. So the sides of the triangle stored in the **CircularString** instance are ABC, CDE, and EFA whereas the sides of the triangle stored in the **LineString** instance are AC, CE, and EA.  
 
-Consider the following code snippet:  
+Consider the following example:  
+
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-This snippet producse the following results:  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
 ```
 LS LengthCS Length
-5.65685…6.28318…
+5.65685...6.28318...
 ```
 
 **CircularString** instances use fewer points to store curve boundaries with greater precision than **LineString** instances. **CircularString** instances are useful for storing circular boundaries like a twenty-mile search radius from a specific point. **LineString** instances are good for storing boundaries that are linear like a square city block.  
 
 ### LineString and CompoundCurve comparison  
 The following code examples show how to store the same figure using **LineString** and **CompoundCurve** instances:
+
 ```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
-or  
-
 In the examples above, either a **LineString** instance or a **CompoundCurve** instance could store the figure.  This next example uses a **CompoundCurve** to store a pie slice:  
+
 ```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
@@ -148,6 +145,7 @@ A **CompoundCurve** instance can store the circular arc segment (2 2, 1 3, 0 2) 
 
 ### CircularString and CompoundCurve comparison  
 The following code example shows how the pie slice can be stored in a **CircularString** instance:  
+
 ```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
@@ -173,7 +171,7 @@ SELECT @g.ToString(), @g.STLength();
 ## See Also  
 - [Spatial Data (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [geometry Data Type Method Reference](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [geography Data Type Method Reference](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

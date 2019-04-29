@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
-caps.latest.revision: 10
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Memory Node

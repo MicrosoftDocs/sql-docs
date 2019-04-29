@@ -1,25 +1,22 @@
-﻿---
+---
 title: "Create Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], creating"
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Views
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   You can create views in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. A view can be used for the following purposes:  
   
 -   To focus, simplify, and customize the perception each user has of the database.  
@@ -60,7 +57,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 1.  In **Object Explorer**, expand the database where you want to create your new view.  
   
-2.  Right-click the **Views** folder, then click **New View…**.  
+2.  Right-click the **Views** folder, then click **New View...**.  
   
 3.  In the **Add Table** dialog box, select the element or elements that you want to include in your new view from one of the following tabs: Tables, Views, Functions, and Synonyms.  
   
@@ -70,11 +67,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 6.  In the **Criteria Pane**, select additional sort or filter criteria for the columns.  
   
-7.  On the **File** menu, click **Save***view name*.  
+7.  On the **File** menu, click **Save**_view name_.  
   
 8.  In the **Choose Name** dialog box, enter a name for the new view and click **OK**.  
   
-     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
+     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

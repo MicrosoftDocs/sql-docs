@@ -1,16 +1,12 @@
 ---
 title: "SSIS How to Create an ETL Package | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/17/2018"
+ms.date: "08/20/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: quickstart
 helpviewer_keywords: 
   - "SSIS, tutorials"
   - "packages [Integration Services], tutorials"
@@ -19,14 +15,11 @@ helpviewer_keywords:
   - "logs [Integration Services], tutorials"
   - "walkthroughs [Integration Services]"
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SSIS How to Create an ETL Package
-
- > For content related to previous versions of SQL Server, see [SSIS Tutorial: Creating a Simple ETL Package](https://msdn.microsoft.com/library/ms169917(SQL.120).aspx).
 
 In this tutorial, you learn how to use [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to create a simple [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package. The package that you create takes data from a flat file, reformats the data, and then inserts the reformatted data into a fact table. In following lessons, the package is expanded to demonstrate looping, package configurations, logging, and error flow.  
   
@@ -34,22 +27,24 @@ When you install the sample data that the tutorial uses, you also install the co
 
 ## What is SQL Server Integration Services (SSIS)?
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) is a platform for building high-performance data integration solutions, including extraction, transformation, and load (ETL) packages for data warehousing. SSIS includes graphical tools and wizards for building and debugging packages; tasks for performing workflow functions such as FTP operations, executing SQL statements, and sending e-mail messages; data sources and destinations for extracting and loading data; transformations for cleaning, aggregating, merging, and copying data; a management service, the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service for administering package execution and storage; and application programming interfaces (APIs) for programming the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model.  
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) is a platform for building high-performance data integration solutions, including extraction, transformation, and load (ETL) packages for data warehousing. SSIS includes graphical tools and wizards for building and debugging packages; tasks for performing workflow functions such as FTP operations, executing SQL statements, and sending e-mail messages; data sources and destinations for extracting and loading data; transformations for cleaning, aggregating, merging, and copying data; a management database, `SSISDB`, for administering package execution and storage; and application programming interfaces (APIs) for programming the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model.  
 
 ## What You Learn  
 The best way to become acquainted with the new tools, controls, and features available in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is to use them. This tutorial walks you through [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to create a simple ETL package that includes looping, configurations, error flow logic, and logging.  
   
-## Requirements  
+## Prerequisites  
 This tutorial is intended for users familiar with fundamental database operations, but who have limited exposure to the new features available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
-> [!IMPORTANT]
-> Recently the sample files required to run this tutorial were no longer available online at their previous location. We apologize for the inconvenience. We have made the files available at a new location, and we have updated the download links in this article.
-
-To use this tutorial, your system must have the following components installed:  
+To run this tutorial, you have to have the following components installed:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] with the **AdventureWorksDW2012** database. To download the **AdventureWorksDW2012** database, download `AdventureWorksDW2012.bak` from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. To install SQL Server and SSIS, see [Install Integration Services](install-windows/install-integration-services.md).
 
--   Sample data. The sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages as a Zip file, see [SQL Server Integration Services Tutorial - Create a Simple ETL Package](https://www.microsoft.com/download/details.aspx?id=56827).  
+-   The **AdventureWorksDW2012** sample database. To download the **AdventureWorksDW2012** database, download `AdventureWorksDW2012.bak` from [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) and restore the backup.  
+
+-   The **sample data** files. The sample data is included with the [!INCLUDE[ssIS](../includes/ssis-md.md)] lesson packages. To download the sample data and the lesson packages as a Zip file, see [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827).
+
+    - Most of the files in the Zip file are read-only to prevent unintended changes. To write output to a file or to change it, you may have to turn off the read-only attribute in the file properties.
+    - The sample packages assume that the data files are located in the folder `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. If you unzip the download to another location, you may have to update the file path in multiple places in the sample packages.
 
 ## Lessons in This Tutorial  
 [Lesson 1: Create a Project and Basic Package with SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

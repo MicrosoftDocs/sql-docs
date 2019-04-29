@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic database diagram table sizing"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], autosizing objects"
   - "autosizing objects in database diagrams"
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -1,24 +1,17 @@
 ---
 title: "Configure Data Source Properties for a Paginated Report - SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], embedded"
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
-caps.latest.revision: 44
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure Data Source Properties for a Paginated Report
   When you run a paginated report, the report server retrieves property information to determine how to connect to a data source. The data source type, connection string, and credential information are specified in the Data Source property pages of the published report. You can set the properties to vary the data source connection information from the original values that were specified when the report was created.  

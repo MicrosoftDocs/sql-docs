@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -24,7 +21,6 @@ helpviewer_keywords:
   - "compatibility [SQL Server], system tables"
   - "user IDs [SQL Server]"
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-caps.latest.revision: 39
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

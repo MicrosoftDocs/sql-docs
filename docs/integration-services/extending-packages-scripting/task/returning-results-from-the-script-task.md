@@ -5,12 +5,8 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -20,9 +16,8 @@ helpviewer_keywords:
   - "TaskResult property"
   - "SSIS Script task, status information"
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
-caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Returning Results from the Script Task

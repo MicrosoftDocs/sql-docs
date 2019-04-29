@@ -2,14 +2,10 @@
 title: "CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
-ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "t-sql|statements"
-ms.suite: "sql"
-ms.technology: t-sql
-ms.tgt_pltfrm: ""
+ms.service: sql-data-warehouse
+ms.subservice: design
 ms.topic: conceptual
 f1_keywords: 
   - "CREATE EXTERNAL TABLE AS SELECT"
@@ -21,9 +17,8 @@ helpviewer_keywords:
   - "External, table create as select"
   - "PolyBase, create table as select"
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -168,7 +163,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   External partition move  
   
- **APPLIES TO:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]As a prerequisite for creating an external table, the appliance administrator needs to configure hadoop connectivity. For more information, see Configure Connectivity to External Data (Analytics Platform System) in the APS documentation which you can download from [here](http://www.microsoft.com/download/details.aspx?id=48241).  
+ **APPLIES TO:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]As a prerequisite for creating an external table, the appliance administrator needs to configure hadoop connectivity. For more information, see Configure Connectivity to External Data (Analytics Platform System) in the APS documentation which you can download from [here](https://www.microsoft.com/download/details.aspx?id=48241).  
   
 ## Limitations and Restrictions  
  Since external table data resides outside of the database, backup and restore operations will only operate on data stored in the database. This means only the metadata will be backed up and restored.  

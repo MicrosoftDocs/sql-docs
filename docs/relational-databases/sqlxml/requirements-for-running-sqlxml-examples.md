@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "examples [SQLXML]"
@@ -16,11 +13,10 @@ helpviewer_keywords:
   - "SQLXML, samples"
   - "examples [SQLXML], requirements"
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Requirements for Running SQLXML Examples
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +24,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
  To create working samples using the SQLXML 4.0 examples, you need to have the following installed.  
   
--   The AdventureWorks sample database. For more information, see [AdventureWorks Sample Databases](http://msftdbprodsamples.codeplex.com/).  
+-   The AdventureWorks sample database. For more information, see [AdventureWorks Sample Databases](https://msftdbprodsamples.codeplex.com/).  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. For more information, see [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   

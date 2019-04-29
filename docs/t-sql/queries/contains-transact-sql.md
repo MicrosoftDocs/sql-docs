@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CONTAINS_TSQL"
@@ -35,13 +32,13 @@ helpviewer_keywords:
   - "inflectional forms [full-text search]"
   - "prefix searches [full-text search]"
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
 
   Searches for precise or fuzzy (less precise) matches to single words and phrases, words within a certain distance of one another, or weighted matches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS is a predicate used in the [WHERE clause](../../t-sql/queries/where-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types.  
   
@@ -104,9 +101,9 @@ CONTAINS (
 <custom_proximity_term> ::=   
   NEAR (   
      {  
-        { <simple_term> | <prefix_term> } [ ,…n ]  
+        { <simple_term> | <prefix_term> } [ ,...n ]  
      |  
-        ( { <simple_term> | <prefix_term> } [ ,…n ] )   
+        ( { <simple_term> | <prefix_term> } [ ,...n ] )   
       [, <maximum_distance> [, <match_order> ] ]  
      }  
        )   
@@ -291,10 +288,10 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  \<match_order> takes one of the following values:  
   
  **TRUE**  
- Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A … B`.  
+ Enforces the specified order within terms. For example, `NEAR(A,B)` would match only `A ... B`.  
   
  **FALSE**  
- Ignores the specified order. For example,  `NEAR(A,B)` would match both `A … B` and `B … A`.  
+ Ignores the specified order. For example,  `NEAR(A,B)` would match both `A ... B` and `B ... A`.  
   
  This is the default.  
   
@@ -545,7 +542,7 @@ GO
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [Query with Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
  [Full-Text Search](../../relational-databases/search/full-text-search.md)   
- [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Create Full-Text Search Queries &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_msx_defect"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_msx_defect"
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,7 +37,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## Arguments  
- [ **@forced_defection =**] *forced_defection*  
+`[ @forced_defection = ] forced_defection`
  Specifies whether or not to force the defection to occur if the Master SQLServerAgent has been permanently lost due to an irreversibly corrupt **msdb** database, or no **msdb** database backup. *forced_defection*is **bit**, with a default of **0**, which indicates that no forced defection should occur. A value of **1** forces defection.  
   
  After forcing a defection by executing **sp_msx_defect**, a member of the **sysadmin** fixed server role at the Master SQLServerAgent must run the following command to complete the defection:  

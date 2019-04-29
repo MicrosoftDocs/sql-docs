@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "monitoring performance [SQL Server replication], Replication Monitor"
@@ -21,7 +17,6 @@ helpviewer_keywords:
   - "Distribution Agent, monitoring"
   - "monitoring performance [SQL Server replication]"
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
-caps.latest.revision: 36
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -86,19 +81,19 @@ manager: craigg
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
- For more information about viewing subscription information, see [View Information and Perform Tasks for a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md).  
+ For more information about viewing subscription information, see [View Information and Perform Tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## Determine Latency with Tracer Tokens  
  Transactional replication allows you to measure the latency in a system by inserting a token (a small amount of data) in the transaction log of the publication database and recording how long it takes to arrive at the Distributor and Subscribers. The token also allows you to identify if data is not reaching the Distributor or Subscriber. For more information, see [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## View Detailed Synchronization Performance for Merge Replication  
- For merge replication, Replication Monitor displays detailed statistics for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ For merge replication, Replication Monitor displays detailed statistics for each article processed during synchronization, including the amount of time spent in each processing phase (uploading changes, downloading changes, and so on). It can help pinpoint specific tables that are causing slow downs and is the best place to troubleshoot performance issues with merge subscriptions. For more information on viewing detailed statistics, see [View Information and Perform Tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## View Transactions and Delivery Time for Transactional Replication  
- For transactional replication, Replication Monitor displays information about the number of transactions in the distribution database that have not yet been distributed to a Subscriber and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks for the Agents Associated With a Subscription &#40;Replication Monitor&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+ For transactional replication, Replication Monitor displays information about the number of transactions in the distribution database that have not yet been distributed to a Subscriber and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks using Replication Monitor](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## See Also  
- [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)   
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

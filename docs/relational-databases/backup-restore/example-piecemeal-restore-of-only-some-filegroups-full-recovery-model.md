@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full recovery model [SQL Server], RESTORE example"
   - "piecemeal restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], piecemeal"
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -48,9 +45,9 @@ manager: craigg
     ```  
     RESTORE DATABASE adb FILEGROUP='Primary' FROM backup   
     WITH PARTIAL, NORECOVERY  
-    RESTORE LOG adb FROM backup1 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup2 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup1 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup2 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   

@@ -4,18 +4,16 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ""
-ms.date: "04/04/2018"
+ms.date: "08/04/2018"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 ---
 # WideWorldImportersDW database catalog
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 Explanations for the schemas, tables, and stored procedures in the WideWorldImportersDW database. 
 
 The WideWorldImportersDW database is used for data warehousing and analytical processing. The transactional data about sales and purchases is generated in the WideWorldImporters database, and loaded into the WideWorldImportersDW database using a **daily ETL process**.
@@ -79,7 +77,7 @@ These procedures are used to configure the sample. They are used to apply enterp
 |Configuration_ApplyPartitionedColumnstoreIndexing|Applies both partitioning and columnstore indexes for fact tables.|
 |Configuration_ConfigureForEnterpriseEdition|Applies partitioning, columnstore indexing and in-memory.|
 |Configuration_EnableInMemory|Replaces the integration staging tables with SCHEMA_ONLY memory-optimized tables to improve ETL performance.|
-|Configuration_ApplyPolybase|Configures an external data source, file format, and table.|
+|Configuration_ApplyPolyBase|Configures an external data source, file format, and table.|
 |Configuration_PopulateLargeSaleTable|Applies enterprise edition changes, then populates a larger amount of data for the 2012 calendar year as additional history.|
 |Configuration_ReseedETL|Removes existing data and restarts the ETL seeds. This allows for repopulating the OLAP database to match updated rows in the OLTP database.|
 

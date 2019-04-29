@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "localdb"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 apiname: 
   - "LocalDBStartTracing"
@@ -17,7 +13,6 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
-caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

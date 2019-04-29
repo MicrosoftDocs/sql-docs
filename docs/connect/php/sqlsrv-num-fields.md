@@ -5,9 +5,7 @@ ms.date: "03/23/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "sqlsrv_num_fields"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "sqlsrv_num_fields"
   - "API Reference, sqlsrv_num_fields"
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg

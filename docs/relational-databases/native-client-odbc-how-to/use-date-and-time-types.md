@@ -1,22 +1,17 @@
-﻿---
+---
 title: "Use Date and Time Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Date and Time Types
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,13 +26,13 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installs to a named instance.  
   
- The first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by this sample.  
+ The first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing creates a table used by this sample.  
   
  Compile the second (C++) code listing with odbc32.lib and user32.lib. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
- The third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
+ The third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing deletes the table used by this sample.  
   
-```  
+```sql
 use tempdb  
 GO  
   
@@ -49,7 +44,7 @@ CREATE TABLE DateTimeTypes (datecol date, time2col time(7), datetime2col datetim
 GO  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  
 #include <Sqlext.h>  
@@ -67,7 +62,7 @@ class direxec {
    HSTMT hstmt;   // Statement Handle  
    SQLHDESC hdesc;   // Descriptor handle  
    unsigned char szData[MAX_DATA];   // Returned Data Storage  
-   SDWORD cbData;   // Output Lenght of data  
+   SDWORD cbData;   // Output Length of data  
    unsigned char char_ds_name[SQL_MAX_DSN_LENGTH];   // Data Source Name  
   
    SQL_DATE_STRUCT date;   // date structure  
@@ -137,7 +132,7 @@ direxec::direxec() {
   
 // Allocate environment handles, connection handle, connect to data source, and allocate statement handle  
 void direxec::sqlconn() {  
-   // Allocate the enviroment handle  
+   // Allocate the environment handle  
    rc = SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &henv);  
    check_rc(rc);  
   
@@ -236,7 +231,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 USE tempdb  
 GO  
   

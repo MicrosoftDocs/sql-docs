@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-registration"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.exportregisteredservers.f1"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "exporting registered server information"
   - "transferring registered server information"
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

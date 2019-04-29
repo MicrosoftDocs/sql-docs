@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "SetPermissions method [ADOX], VC++ example"
   - "GetPermissions method [ADOX], VC++ example"
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

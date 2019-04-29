@@ -3,12 +3,8 @@ title: "CHECKPOINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHECKPOINT_TSQL"
@@ -28,13 +24,12 @@ helpviewer_keywords:
   - "manual checkpoints [SQL Server]"
   - "pages [SQL Server], checkpoints"
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-caps.latest.revision: 59
-author: edmacauley
-ms.author: edmaca
+author: juliemsft
+ms.author: jrasnick
 manager: craigg
 ---
 # CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Generates a manual checkpoint in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to which you are currently connected.  
   

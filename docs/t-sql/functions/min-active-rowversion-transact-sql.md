@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "MIN_ACTIVE_ROWVERSION"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MIN_ACTIVE_ROWVERSION function [Transact-SQL]"
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # MIN_ACTIVE_ROWVERSION (Transact-SQL)

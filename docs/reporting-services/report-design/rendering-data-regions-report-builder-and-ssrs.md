@@ -1,22 +1,15 @@
 ---
 title: "Rendering Data Regions (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Rendering Data Regions (Report Builder and SSRS)
   In addition to the general rendering behaviors that apply to all report items, data regions have additional pagination and rendering behaviors that they follow. Data region-specific rendering rules include how a data region grows, how special cells such as the corner cell or header cells are rendered, and how a data region for right-to-left reading is rendered. This topic discusses how the various parts of a data region are rendered.  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_delete_account_sp"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_account_sp"
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
-caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -38,10 +34,10 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## Arguments  
- [ **@account_id** = ] *account_id*  
+`[ @account_id = ] account_id`
  The ID number of the account to delete. *account_id* is **int**, with no default. Either *account_id* or *account_name* must be specified.  
   
- [ **@account_name** = ] **'***account_name***'**  
+`[ @account_name = ] 'account_name'`
  The name of the account to delete. *account_name* is **sysname**, with no default. Either *account_id* or *account_name* must be specified.  
   
 ## Return Code Values  

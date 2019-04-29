@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mapping deprecated functions [ODBC], SQLSetStmtOption"
   - "SQLSetStmtOption function [ODBC], mapping"
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

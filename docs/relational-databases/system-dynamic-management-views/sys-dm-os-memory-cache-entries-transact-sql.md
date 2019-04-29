@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "08/18/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_os_memory_cache_entries"
@@ -18,7 +16,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_memory_cache_entries dynamic management view"
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg

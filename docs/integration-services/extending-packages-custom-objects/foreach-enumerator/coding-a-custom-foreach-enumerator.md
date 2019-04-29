@@ -5,18 +5,13 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom foreach enumerators [Integration Services], coding"
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Coding a Custom Foreach Enumerator

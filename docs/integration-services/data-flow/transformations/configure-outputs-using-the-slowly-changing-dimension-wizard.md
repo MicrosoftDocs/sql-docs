@@ -5,18 +5,15 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Slowly Changing Dimension transformation"
   - "slowly changing dimensions"
   - "Slowly Changing Dimension Wizard"
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure Outputs Using the Slowly Changing Dimension Wizard

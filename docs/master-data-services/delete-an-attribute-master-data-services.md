@@ -5,16 +5,12 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Master Data Services], deleting"
   - "deleting attributes [Master Data Services]"
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg

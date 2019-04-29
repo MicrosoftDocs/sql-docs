@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changepublication_snapshot_TSQL"
   - "sp_changepublication_snapshot"
 helpviewer_keywords: 
   - "sp_changepublication_snapshot"
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_changepublication_snapshot (Transact-SQL)
@@ -59,10 +52,10 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication =**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@frequency_type =**] *frequency_type*  
+`[ @frequency_type = ] frequency_type`
  Is the frequency with which to schedule the agent. *frequency_type* is **int**, and can be one of the following values.  
   
 |Value|Description|  
@@ -77,7 +70,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**128**|Recurring|  
 |NULL (default)||  
   
- [ **@frequency_interval =**] *frequency_interval*  
+`[ @frequency_interval = ] frequency_interval`
  Specifies the days that the agent runs. *frequency_interval* is **int**, and can be one of the following values.  
   
 |Value|Description|  
@@ -94,7 +87,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**10**|Weekend days|  
 |NULL (default)||  
   
- [ **@frequency_subday =**] *frequency_subday*  
+`[ @frequency_subday = ] frequency_subday`
  Is the units for *freq_subday_interval*. *frequency_subday* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -105,56 +98,56 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**8**|Hour|  
 |NULL (default)||  
   
- [ **@frequency_subday_interval =**] *frequency_subday_interval*  
+`[ @frequency_subday_interval = ] frequency_subday_interval`
  Is the interval for *frequency_subday*. *frequency_subday_interval* is **int**, with a default of NULL.  
   
- [ **@frequency_relative_interval =**] *frequency_relative_interval*  
+`[ @frequency_relative_interval = ] frequency_relative_interval`
  Is the date the Snapshot Agent runs. *frequency_relative_interval* is **int**, with a default of NULL.  
   
- [ **@frequency_recurrence_factor =**] *frequency_recurrence_factor*  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`
  Is the recurrence factor used by *frequency_type*. *frequency_recurrence_factor* is **int**, with a default of NULL.  
   
- [ **@active_start_date =**] *active_start_date*  
+`[ @active_start_date = ] active_start_date`
  Is the date when the Snapshot Agent is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with a default of NULL.  
   
- [ **@active_end_date =**] *active_end_date*  
+`[ @active_end_date = ] active_end_date`
  Is the date when the Snapshot Agent stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with a default of NULL.  
   
- [ **@active_start_time_of_day =**] *active_start_time_of_day*  
+`[ @active_start_time_of_day = ] active_start_time_of_day`
  Is the time of day when the Snapshot Agent is first scheduled, formatted as HHMMSS. *active_start_time_of_day* is **int**, with a default of NULL.  
   
- [ **@active_end_time_of_day =**] *active_end_time_of_day*  
+`[ @active_end_time_of_day = ] active_end_time_of_day`
  Is the time of day when the Snapshot Agent stops being scheduled, formatted as HHMMSS. *active_end_time_of_day* is **int**, with a default of NULL.  
   
- [ **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'`
  Is the name of an existing Snapshot Agent job name if an existing job is being used. *snapshot_agent_name* is **nvarchar(100)** with a default value of NULL.  
   
- [ **@publisher_security_mode =** ] *publisher_security_mode*  
- Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
+`[ @publisher_security_mode = ] publisher_security_mode`
+ Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of NULL. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login =** ] **'***publisher_login***'**  
+`[ @publisher_login = ] 'publisher_login'`
  Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with a default of NULL. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the Windows account specified in *job_login* is used when connecting to the Publisher.  
   
- [ **@publisher_password =** ] **'***publisher_password***'**  
+`[ @publisher_password = ] 'publisher_password'`
  Is the password used when connecting to the Publisher. *publisher_password* is **sysname**, with a default of NULL.  
   
 > [!IMPORTANT]  
 >  Do not use a blank password. Use a strong password. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
- [ **@job_login** = ] **'***job_login***'**  
- Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. This Windows account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job. This cannot be changed for a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher.  
+`[ @job_login = ] 'job_login'`
+ Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. This Windows account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job. This cannot be changed for a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher.  
   
- [ **@job_password =** ] **'***job_password***'**  
+`[ @job_password = ] 'job_password'`
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with a default of NULL. You must supply this parameter when creating a new Snapshot Agent job.  
   
 > [!IMPORTANT]  
 >  When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
- [ **@publisher =** ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when creating a Snapshot Agent at a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

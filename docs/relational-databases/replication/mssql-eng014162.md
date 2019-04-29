@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG014162 error"
 ms.assetid: a15eef3f-219f-45d3-8286-6a864c85a723
-caps.latest.revision: 12
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.trace_subclass_values"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.trace_subclass_values catalog view"
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
-caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sys.trace_subclass_values (Transact-SQL)

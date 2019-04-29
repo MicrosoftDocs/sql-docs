@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "revoking permissions [SQL Server]"
   - "REVOKE statement, search property list permissions"
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Search Property List Permissions (Transact-SQL)
@@ -51,7 +47,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   
- ON SEARCH PROPERTY LIST **::***search_property_list_name*  
+ ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
  Specifies the search property list on which the permission is being revoked. The scope qualifier **::** is required.  
   
  *database_principal*  

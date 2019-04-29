@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "09/06/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.portal.Installation.f1"
@@ -15,9 +13,9 @@ helpviewer_keywords:
   - "installation [SQL Server]"
   - "initial installation [SQL Server]"
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # SQL Server Installation
@@ -40,7 +38,7 @@ You can install each component individually or select a combination of the compo
 
 - [Editions and supported features of [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md).  
 - [Editions and supported features of [!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
-- [Features supported by the editions of [!INCLUDE[ss2014](../../includes/sssql14-md.md)]](http://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
+- [Features supported by the editions of [!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
   
 ## In This Section  
 Regardless of whether you use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard or the command prompt to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Setup involves the following steps:  
@@ -55,7 +53,7 @@ Describes how to prepare your computer for [!INCLUDE[ssNoVersion](../../includes
 [Install SQL Server](../../database-engine/install-windows/install-sql-server.md)  
  Describes installation options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-[SQL Server Setup User Interface Reference](http://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
+[SQL Server Setup User Interface Reference](https://msdn.microsoft.com/library/183b5cdd-962e-41ca-8064-ea44f622c77d)  
  Describes the installation options presented by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.  
   
 [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
@@ -71,12 +69,12 @@ Describes how to prepare your computer for [!INCLUDE[ssNoVersion](../../includes
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are part of the Microsoft BI platform include [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and several client applications used for creating or working with analytical data. This section of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup documentation explains how to install [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## More Information
-[Install SQL Server BI Features with SharePoint &#40;Power Pivot and Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
+[Install SQL Server BI Features with SharePoint &#40;Power Pivot and Reporting Services&#41;](https://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  This section explains how to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features in a SharePoint environment. It identifies which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features are available given a specific version and edition of SharePoint. It also includes installation procedures for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint and Reporting Services in SharePoint mode.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Install the new sample database, [Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx). 
+![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Install the new sample database, [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md). 
   
-[Additional SQL Server Samples and Sample Databases](http://sqlserversamples.codeplex.com/)  
+[Additional SQL Server Samples and Sample Databases](https://sqlserversamples.codeplex.com/)  
  Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples and sample databases.  
   
 See the [SQL Server Update Center](https://msdn.microsoft.com/library/ff803383.aspx) for links and information for all supported versions of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  

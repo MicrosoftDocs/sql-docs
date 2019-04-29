@@ -1,22 +1,15 @@
 ---
 title: "Cache a Shared Dataset | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
-caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Cache a Shared Dataset
   One way to improve performance is to configure caching properties for a shared dataset. When a shared dataset is cached, a copy of the query results is saved for a specified period of time. The first user who requests a report that uses the shared dataset must wait for the query results and all processing to complete before viewing the report. Subsequent users who request the report within the caching period will experience improved performance because the query and processing has already occurred. You can also specify a cache refresh plan to run the query and cache the results until the specified cache expiration.  
@@ -27,7 +20,7 @@ manager: "kfile"
   
 ### To schedule the expiration of a cached report  
   
-1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Start [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  In Report Manager, navigate to the shared dataset for which you want to set caching properties, hover over the item, and click the drop-down arrow.  
   

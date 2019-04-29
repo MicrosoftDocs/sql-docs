@@ -5,14 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ee30d5f5-7f6a-4101-849e-73dfcc1b2528
-caps.latest.revision: 10
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Protocols for &lt;server&gt; (SQL Server Configuration Manager)

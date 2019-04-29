@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_fulltext_columns"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_columns"
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
-caps.latest.revision: 25
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -42,10 +38,10 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## Arguments  
- [ **@table_name=**] **'***table_name***'**  
+`[ @table_name = ] 'table\_name'`
  Is the one- or two-part table name for which full-text index information is requested. *table_name* is **nvarchar(517)**, with a default value of NULL. If *table_name* is omitted, full-text index column information is retrieved for every full-text indexed table.  
   
- [ **@column_name=**] **'***column_name***'**  
+`[ @column_name = ] 'column\_name'`
  Is the name of the column for which full-text index metadata is requested. *column_name* is **sysname**, with a default value of NULL. If *column_name* is omitted or is NULL, full-text column information is returned for every full-text indexed column for *table_name*. If *table_name* is also omitted or is NULL, full-text index column information is returned for every full-text indexed column for all tables in the database.  
   
 ## Return Code Values  

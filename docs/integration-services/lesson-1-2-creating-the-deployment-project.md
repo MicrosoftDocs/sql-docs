@@ -5,16 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
-caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Lesson 1-2 - Creating the Deployment Project

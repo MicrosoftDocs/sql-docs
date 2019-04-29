@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "converting data types"
   - "streaming data"
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,7 +33,7 @@ The following steps summarize how to specify the SQL Server data type when sendi
   
 3.  Construct the *$params* array to be used when preparing or executing the query. Note that each element of the *$params* array must also be an array when you specify the SQL Server data type.  
   
-4.  Specify the desired SQL Server data type by using the appropriate **SQLSRV_SQLTYPE_\*** constant as the fourth parameter in each subarray of the *$params* array. For a complete list of the **SQLSRV_SQLTYPE_\*** constants, see the SQLTYPEs section of [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). For example, in the code below, *$changeDate*, *$rate*, and *$payFrequency* are specified respectively as the SQL Server types **datetime**, **money**, and **tinyint** in the *$params* array. Because no SQL Server type is specified for *$employeeId* and it is initialized to an integer, the default SQL Server type **integer** is used.  
+4.  Specify the desired SQL Server data type by using the appropriate **SQLSRV_SQLTYPE_&#42;** constant as the fourth parameter in each subarray of the *$params* array. For a complete list of the **SQLSRV_SQLTYPE_&#42;** constants, see the SQLTYPEs section of [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). For example, in the code below, *$changeDate*, *$rate*, and *$payFrequency* are specified respectively as the SQL Server types **datetime**, **money**, and **tinyint** in the *$params* array. Because no SQL Server type is specified for *$employeeId* and it is initialized to an integer, the default SQL Server type **integer** is used.  
   
     ```  
     $employeeId = 5;  

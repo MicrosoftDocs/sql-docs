@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Clear method [ADO], VC++ example"
   - "Execute method [ADO], VC++ example"
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

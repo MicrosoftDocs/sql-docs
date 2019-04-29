@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_cycle_errorlog_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cycle_errorlog"
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

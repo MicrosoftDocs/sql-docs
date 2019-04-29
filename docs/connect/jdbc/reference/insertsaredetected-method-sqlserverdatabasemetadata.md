@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.insertsAreDetected"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -65,7 +62,7 @@ public boolean insertsAreDetected(int type)
  This insertsAreDetected method is specified by the insertsAreDetected method in the java.sql.DatabaseMetaData interface.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] does not detect inserted rows for any cursor type.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] does not detect inserted rows for any cursor type.  
   
 ## See Also  
  [SQLServerDatabaseMetaData Methods](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

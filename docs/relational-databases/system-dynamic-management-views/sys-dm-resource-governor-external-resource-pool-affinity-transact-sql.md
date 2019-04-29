@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "11/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.dm_resource_governor_external_resource_pool_affinity"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_external_resource_pool_affinity"
   - "dm_resource_governor_external_resource_pool_affinity"
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-caps.latest.revision: 8
-author: "jeannt"
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)

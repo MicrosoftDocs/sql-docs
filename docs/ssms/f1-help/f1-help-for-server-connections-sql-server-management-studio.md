@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-f1"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], Help"
@@ -17,14 +14,13 @@ helpviewer_keywords:
   - "connections [SQL Server Management Studio]"
   - "Connect to Server dialog box"
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
 ---
 # F1 Help for Server Connections (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Browse for Servers &#40;Local Servers&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

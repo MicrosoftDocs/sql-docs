@@ -3,20 +3,14 @@ title: "SQL Server and Database Encryption Keys (Database Engine) | Microsoft Do
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.reviewer: vanto
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "keys [SQL Server], database encryption"
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
 ---
 # SQL Server and Database Encryption Keys (Database Engine)
@@ -32,7 +26,7 @@ manager: craigg
   
  The database master key is a symmetric key that is used to protect the private keys of certificates and asymmetric keys that are present in the database. It can also be used to encrypt data, but it has length limitations that make it less practical for data than using a symmetric key.  
   
- When it is created, the master key is encrypted by using the Triple DES algorithm and a user-supplied password. To enable the automatic decryption of the master key, a copy of the key is encrypted by using the SMK. It is stored in both the database where it is used and in the **master** system database.  
+ When it is created, the master key is encrypted by using the AES algorithm (for SQL Server 2017 and later) or the Triple DES algorithm (for earlier versions) and a user-supplied password. To enable the automatic decryption of the master key, a copy of the key is encrypted by using the SMK. It is stored in both the database where it is used and in the **master** system database.  
   
  The copy of the DMK stored in the **master** system database is silently updated whenever the DMK is changed. However, this default can be changed by using the **DROP ENCRYPTION BY SERVICE MASTER KEY** option of the **ALTER MASTER KEY** statement. A DMK that is not encrypted by the service master key must be opened by using the **OPEN MASTER KEY** statement and a password.  
   

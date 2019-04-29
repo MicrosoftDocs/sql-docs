@@ -5,9 +5,7 @@ ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.importprojectwizard.f1"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "folders [Integration Services]"
   - "projects [Integration Services], about projects"
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Projects and Solutions

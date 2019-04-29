@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "STConvexHull method (geography)"
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
-caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

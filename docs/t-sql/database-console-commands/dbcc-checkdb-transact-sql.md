@@ -5,9 +5,7 @@ ms.date: "12/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHECKDB_TSQL"
@@ -34,8 +32,7 @@ helpviewer_keywords:
   - "checking database objects"
   - "page count accuracy [SQL Server]"
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: 144
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---
@@ -94,11 +91,11 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  Tries to repair all reported errors. These repairs can cause some data loss.  
-    
+    
 > [!WARNING]
 > The REPAIR_ALLOW_DATA_LOSS option is a supported feature but it may not always be the best option for bringing a database to a physically consistent state. If successful, the REPAIR_ALLOW_DATA_LOSS option may result in some data loss. In fact, it may result in more data lost than if a user were to restore the database from the last known good backup. 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. The REPAIR_ALLOW_DATA_LOSS option is not an alternative for restoring from a known good backup. It is an emergency “last resort” option recommended for use only if restoring from a backup is not possible.    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. The REPAIR_ALLOW_DATA_LOSS option is not an alternative for restoring from a known good backup. It is an emergency "last resort" option recommended for use only if restoring from a backup is not possible.    
 >     
 > Certain errors, that can only be repaired using the REPAIR_ALLOW_DATA_LOSS option, may involve deallocating a row, page, or series of pages to clear the errors. Any deallocated data is no longer accessible or recoverable for the user, and the exact contents of the deallocated data cannot be determined. Therefore, referential integrity may not be accurate after any rows or pages are deallocated because foreign key constraints are not checked or maintained as part of this repair operation. The user must inspect the referential integrity of their database (using DBCC CHECKCONSTRAINTS) after using the REPAIR_ALLOW_DATA_LOSS option.    
 >     
@@ -122,7 +119,7 @@ ALL_ERRORMSGS
  Displays all reported errors per object. All error messages are displayed by default. Specifying or omitting this option has no effect. Error messages are sorted by object ID, except for those messages generated from [tempdb database](../../relational-databases/databases/tempdb-database.md).     
 
 EXTENDED_LOGICAL_CHECKS  
- If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
+ If the compatibility level is 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher, performs logical consistency checks on an indexed view, XML indexes, and spatial indexes, where present.  
  For more information, see *Performing Logical Consistency Checks on Indexes*, in the [Remarks](#remarks) section later in this topic.  
     
 NO_INFOMSGS  
@@ -130,7 +127,7 @@ NO_INFOMSGS
     
 TABLOCK  
  Causes DBCC CHECKDB to obtain locks instead of using an internal database snapshot. This includes a short-term exclusive (X) lock on the database. TABLOCK will cause DBCC CHECKDB to run faster on a database under heavy load, but decreases the concurrency available on the database while DBCC CHECKDB is running.  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK limits the checks that are performed; DBCC CHECKCATALOG is not run on the database, and [!INCLUDE[ssSB](../../includes/sssb-md.md)] data is not validated.
     
@@ -152,14 +149,14 @@ This argment always implies NO_INFOMSGS and is not allowed with any one of the r
 DATA_PURITY  
  Causes DBCC CHECKDB to check the database for column values that are not valid or out-of-range. For example, DBCC CHECKDB detects columns with date and time values that are larger than or less than the acceptable range for the **datetime** data type; or **decimal** or approximate-numeric data type columns with scale or precision values that are not valid.  
  Column-value integrity checks are enabled by default and do not require the DATA_PURITY option. For databases upgraded from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], column-value checks are not enabled by default until DBCC CHECKDB WITH DATA_PURITY has been run error free on the database. After this, DBCC CHECKDB checks column-value integrity by default. For more information about how CHECKDB might be affected by upgrading database from earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see the Remarks section later in this topic.  
-    
+    
 > [!WARNING]
 > If PHYSICAL_ONLY is specified, column-integrity checks are not performed.
     
- Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](http://support.microsoft.com/kb/923247).  
+ Validation errors reported by this option cannot be fixed by using DBCC repair options. For information about manually correcting these errors, see Knowledge Base article 923247: [Troubleshooting DBCC error 2570 in SQL Server 2005 and later versions](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
     
  Overrides the **max degree of parallelism** configuration option of **sp_configure** for the statement. The MAXDOP can exceed the value configured with sp_configure. If MAXDOP exceeds the value configured with Resource Governor, the [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] uses the Resource Governor MAXDOP value, described in [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). All semantic rules used with the max degree of parallelism configuration option are applicable when you use the MAXDOP query hint. For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
@@ -171,20 +168,20 @@ DBCC CHECKDB does not examine disabled indexes. For more information about disab
 
 If a user-defined type is marked as being byte ordered, there must only be one serialization of the user-defined type. Not having a consistent serialization of byte-ordered user-defined types causes error 2537 when DBCC CHECKDB is run. For more information, see [User-Defined Type Requirements](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
 
-Because the [Resource database](../../relational-databases/databases/resource-database.md) is modifiable only in single-user mode, the DBCC CHECKDB command cannot be run on it directly. However, when DBCC CHECKDB is executed against the [master database](../../relational-databases/databases/master-database.md), a second CHECKDB is also run internally on the Resource database. This means that DBCC CHECKDB can return extra results. The command returns extra result sets when no options are set, or when either the PHYSICAL_ONLY or ESTIMATEONLY option is set.    
+Because the [Resource database](../../relational-databases/databases/resource-database.md) is modifiable only in single-user mode, the DBCC CHECKDB command cannot be run on it directly. However, when DBCC CHECKDB is executed against the [master database](../../relational-databases/databases/master-database.md), a second CHECKDB is also run internally on the Resource database. This means that DBCC CHECKDB can return extra results. The command returns extra result sets when no options are set, or when either the `PHYSICAL_ONLY` or `ESTIMATEONLY` option is set.    
 
 Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2, executing DBCC CHECKDB **no longer** clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Before [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2, executing DBCC CHECKDB clears the plan cache. Clearing the plan cache causes recompilation of all later execution plans and may cause a sudden, temporary decrease in query performance. 
     
 ## Performing Logical Consistency Checks on Indexes    
 Logical consistency checking on indexes varies according to the compatibility level of the database, as follows:
 -   If the compatibility level is 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) or higher:    
--   Unless NOINDEX is specified, DBCC CHECKDB performs both physical and logical consistency checks on a single table and on all its nonclustered indexes. However, on XML indexes, spatial indexes, and indexed views only physical consistency checks are performed by default.
--   If WITH EXTENDED_LOGICAL_CHECKS is specified, logical checks are performed on an indexed view, XML indexes, and spatial indexes, where present. By default, physical consistency checks are performed before the logical consistency checks. If NOINDEX is also specified, only the logical checks are performed.
+-   Unless `NOINDEX` is specified, DBCC CHECKDB performs both physical and logical consistency checks on a single table and on all its nonclustered indexes. However, on XML indexes, spatial indexes, and indexed views only physical consistency checks are performed by default.
+-   If `WITH EXTENDED_LOGICAL_CHECKS` is specified, logical checks are performed on an indexed view, XML indexes, and spatial indexes, where present. By default, physical consistency checks are performed before the logical consistency checks. If `NOINDEX` is also specified, only the logical checks are performed.
     
-These logical consistency checks cross check the internal index table of the index object with the user table that it is referencing. To find outlying rows, an internal query is constructed to perform a full intersection of the internal and user tables. Running this query can have a very high effect on performance, and its progress cannot be tracked. Therefore, we recommend that you specify WITH EXTENDED_LOGICAL_CHECKS only if you suspect index issues that are unrelated to physical corruption, or if page-level checksums have been turned off and you suspect column-level hardware corruption.
+These logical consistency checks cross check the internal index table of the index object with the user table that it is referencing. To find outlying rows, an internal query is constructed to perform a full intersection of the internal and user tables. Running this query can have a very high effect on performance, and its progress cannot be tracked. Therefore, we recommend that you specify `WITH EXTENDED_LOGICAL_CHECKS` only if you suspect index issues that are unrelated to physical corruption, or if page-level checksums have been turned off and you suspect column-level hardware corruption.
 -   If the index is a filtered index, DBCC CHECKDB performs consistency checks to verify that the index entries satisfy the filter predicate.
--   If the compatibility level is 90 or less, unless NOINDEX is specified, DBCC CHECKDB performs both physical and logical consistency checks on a single table or indexed view and on all its nonclustered and XML indexes. Spatial indexes are not supported.  
-- Starting with SQL Server 2016, additional checks on persisted computed columns, UDT columns, and filtered indexes will not run by default to avoid the expensive expression evaluations. This change greatly reduces the duration of CHECKDB against databases containing these objects. However, the physical consistency checks of  these objects is always completed. Only when EXTENDED_LOGICAL_CHECKS option is specified will the expression evaluations be performed in addition to already present logical checks (indexed view, XML indexes, and spatial indexes) as part of the EXTENDED_LOGICAL_CHECKS option.   
+-   If the compatibility level is 90 or less, unless `NOINDEX` is specified, DBCC CHECKDB performs both physical and logical consistency checks on a single table or indexed view and on all its nonclustered and XML indexes. Spatial indexes are not supported.  
+- Starting with SQL Server 2016, additional checks on persisted computed columns, UDT columns, and filtered indexes will not run by default to avoid the expensive expression evaluations. This change greatly reduces the duration of CHECKDB against databases containing these objects. However, the physical consistency checks of  these objects is always completed. Only when `EXTENDED_LOGICAL_CHECKS` option is specified will the expression evaluations be performed in addition to already present logical checks (indexed view, XML indexes, and spatial indexes) as part of the `EXTENDED_LOGICAL_CHECKS` option.   
     
 **To learn the compatibility level of a database**
 -   [View or Change the Compatibility Level of a Database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
@@ -200,7 +197,7 @@ When FILESTREAM is enabled for a database and table, you can optionally store **
 For example, if a table contains a **varbinary(max)** column that uses the FILESTREAM attribute, DBCC CHECKDB will check that there is a one-to-one mapping between file system directories and files and table rows, columns, and column values. DBCC CHECKDB can repair corruption if you specify the REPAIR_ALLOW_DATA_LOSS option. To repair FILESTREAM corruption, DBCC will delete any table rows that are missing file system data.
     
 ## Best Practices    
-We recommend that you use the PHYSICAL_ONLY option for frequent use on production systems. Using PHYSICAL_ONLY can greatly shorten run-time for DBCC CHECKDB on large databases. We also recommend that you periodically run DBCC CHECKDB with no options. How frequently you should perform these runs depends on individual businesses and their production environments.
+We recommend that you use the `PHYSICAL_ONLY` option for frequent use on production systems. Using PHYSICAL_ONLY can greatly shorten run-time for DBCC CHECKDB on large databases. We also recommend that you periodically run DBCC CHECKDB with no options. How frequently you should perform these runs depends on individual businesses and their production environments.
     
 ## Checking Objects in Parallel    
 By default, DBCC CHECKDB performs parallel checking of objects. The degree of parallelism is automatically determined by the query processor. The maximum degree of parallelism is configured just like parallel queries. To restrict the maximum number of processors available for DBCC checking, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Parallel checking can be disabled by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
@@ -245,7 +242,7 @@ When the database is in emergency mode and DBCC CHECKDB with the REPAIR_ALLOW_DA
 > [!WARNING]
 > The REPAIR_ALLOW_DATA_LOSS option is a supported feature of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, it may not always be the best option for bringing a database to a physically consistent state. If successful, the REPAIR_ALLOW_DATA_LOSS option may result in some data loss. 
 > In fact, it may result in more data lost than if a user were to restore the database from the last known good backup. [!INCLUDE[msCoName](../../includes/msconame-md.md)] always recommends a user restore from the last known good backup as the primary method to recover from errors reported by DBCC CHECKDB. 
-> The REPAIR_ALLOW_DATA_LOSS option is **not** an alternative for restoring from a known good backup. It is an emergency “last resort” option recommended for use only if restoring from a backup is not possible.    
+> The REPAIR_ALLOW_DATA_LOSS option is **not** an alternative for restoring from a known good backup. It is an emergency "last resort" option recommended for use only if restoring from a backup is not possible.    
 >     
 >  After rebuilding the log, there is no full ACID guarantee.    
 >     

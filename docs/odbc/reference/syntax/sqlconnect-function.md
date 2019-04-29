@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLConnect"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLConnect function [ODBC]"
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,13 +33,13 @@ manager: craigg
 ```  
   
 SQLRETURN SQLConnect(  
-     SQLHDBC        ConnectionHandle,  
-     SQLCHAR *      ServerName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      UserName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      Authentication,  
-     SQLSMALLINT    NameLength3);  
+     SQLHDBC        ConnectionHandle,  
+     SQLCHAR *      ServerName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      UserName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      Authentication,  
+     SQLSMALLINT    NameLength3);  
 ```  
   
 ## Arguments  

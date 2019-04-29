@@ -1,12 +1,12 @@
 ---
-title: Monitor R Services using custom reports in Management Studio | Microsoft Docs
+title: Monitor R Services using custom reports in Management Studio - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 04/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Monitor Machine Learning Services using custom reports in Management Studio

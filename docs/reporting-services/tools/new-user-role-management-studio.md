@@ -1,24 +1,17 @@
 ---
 title: "New User Role (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.newrole.f1"
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
-caps.latest.revision: 26
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # New User Role (Management Studio)
   Use this page to create an item-level role definition. An item-level role definition is a named collection of tasks that enumerate the tasks a user can perform in relation to folders, reports, models, resources, and shared data sources. An example of an item-level role definition is the predefined Browser role that identifies the kinds of actions a report end user might require for navigating folders and viewing reports.  
@@ -32,7 +25,7 @@ manager: "kfile"
  **Name**  
  Type the name of the role definition. A role definition name must be unique within the report server namespace. A name must contain at least one alphanumeric character. It can also include spaces and some symbols. Do not use the following characters when specifying a name:  
   
- ; ? : @ & = + , $ / * < >  
+ ; ? : \@ & = + , $ / * < >  
   
  " /  
   

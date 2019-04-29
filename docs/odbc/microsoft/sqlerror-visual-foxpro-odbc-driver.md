@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLError function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8315ec16-1c22-447a-a577-39bd94f61070
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

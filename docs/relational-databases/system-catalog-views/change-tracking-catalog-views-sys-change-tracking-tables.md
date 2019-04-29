@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.change_tracking_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "change_tracking_tables_TSQL"
@@ -21,11 +18,10 @@ helpviewer_keywords:
   - "change tracking [SQL Server], sys.change_tracking_tables"
   - "sys.change_tracking_tables"
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Change Tracking Catalog Views - sys.change_tracking_tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 ## See Also  
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [Change Tracking Catalog Views &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Change Tracking Catalog Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [Track Data Changes &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

@@ -5,12 +5,9 @@ ms.date: "08/08/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -33,8 +30,8 @@ ADO.NET is the core data access technology for .NET languages. Use the System.Da
 * [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## Community  
-* [ADO.NET Managed Providers Forum](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
-* [ADO.NET DataSet Forum](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
+* [ADO.NET Managed Providers Forum](https://social.msdn.microsoft.com/Forums/adodotnetdataproviders/threads/)  
+* [ADO.NET DataSet Forum](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
   
 ## More Samples  
 * [ADO.NET Code Examples](https://msdn.microsoft.com/library/dw70f090.aspx)  

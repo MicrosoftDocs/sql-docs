@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "conditional operator (?:)"
   - "?: (conditional operator)"
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ? : (Conditional) (SSIS Expression)

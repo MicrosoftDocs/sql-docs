@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpsrvrolemember"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpsrvrolemember"
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpsrvrolemember (Transact-SQL)
@@ -38,7 +34,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## Arguments  
- [ **@srvrolename =** ] **'***role***'**  
+`[ @srvrolename = ] 'role'`
  Is the name of a fixed server role. *role* is **sysname**, with a default of NULL. If *role*is not specified, the result set includes information about all fixed server roles.  
   
  *role* can be any of the following values.  

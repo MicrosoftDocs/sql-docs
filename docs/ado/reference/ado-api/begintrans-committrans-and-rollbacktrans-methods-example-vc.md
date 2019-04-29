@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "RollbackTrans method [ADO], VC++ example"
   - "CommitTrans method [ADO], VC++ example"
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg

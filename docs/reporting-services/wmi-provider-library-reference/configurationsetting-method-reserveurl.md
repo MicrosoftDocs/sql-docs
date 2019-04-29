@@ -1,24 +1,17 @@
 ---
 title: "ReserveURL Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "wmi-provider-library-reference"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: wmi-provider-library-reference
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ReservedURL method"
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
-caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - ReserveURL
   Adds a URL reservation for a given application.  

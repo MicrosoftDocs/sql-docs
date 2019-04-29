@@ -1,27 +1,20 @@
 ---
 title: "Deprecated features in SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/02/2017"
+ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Reporting Services, backward compatibility"
   - "deprecated features [Reporting Services]"
   - "HTML OWC rendering extension [Reporting Services]"
   - "Report Server Web service, endpoints"
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: 56
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Deprecated features in SQL Server Reporting Services in SQL Server 2016
@@ -42,9 +35,9 @@ The following SQL Server Reporting Services features won't be supported in the n
 
 ## Features Not Supported in Previous Versions of SQL Server Reporting Services
 
-- [SQL Server 2014 Reporting Services Deprecated Features](https://msdn.microsoft.com/library/ms143509\(v=sql.120\).aspx)
+- [SQL Server 2014 Reporting Services Deprecated Features](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
-- [SQL Server 2012 Reporting Services Deprecated Features](https://msdn.microsoft.com/library/ms143509\(v=sql.110\).aspx)
+- [SQL Server 2012 Reporting Services Deprecated Features](deprecated-features-in-sql-server-reporting-services-ssrs.md)
 
 ## Next steps
 
@@ -53,4 +46,4 @@ The following SQL Server Reporting Services features won't be supported in the n
  [Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
  [Discontinued Functionality to SQL Server Reporting Services in SQL Server 2016](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md) 
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

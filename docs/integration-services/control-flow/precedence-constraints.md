@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.precedenceconstraint.f1"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "sequence execution options [Integration Services]"
   - "containers [Integration Services], precedence constraints"
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Precedence Constraints

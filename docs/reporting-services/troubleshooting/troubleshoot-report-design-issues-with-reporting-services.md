@@ -1,22 +1,15 @@
 ---
 title: "Troubleshoot Report Design Issues with Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/27/2016"
+ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-caps.latest.revision: 5
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Report Design Issues with Reporting Services
 Report design issues may occur when you are creating the report layout in Design view in an report authoring application. Use this topic to help troubleshoot these issues.   
@@ -62,5 +55,5 @@ To group multiple data regions or report items together, place them in the same 
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

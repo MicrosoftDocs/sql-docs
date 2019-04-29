@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "maintenance-plans"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.maint.maintplanproperties.integrity.f1"
@@ -17,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Check Database Integrity Task dialog box"
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

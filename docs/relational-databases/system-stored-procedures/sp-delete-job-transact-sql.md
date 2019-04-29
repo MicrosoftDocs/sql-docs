@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_job"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_job"
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: 43
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,24 +37,24 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  Is the identification number of the job to be deleted. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  Is the name of the job to be deleted. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name*must be specified; both cannot be specified.  
   
- [ **@originating_server=** ] **'***server***'**  
+`[ @originating_server = ] 'server'`
  For internal use.  
   
- [ **@delete_history=** ] *delete_history*  
+`[ @delete_history = ] delete_history`
  Specifies whether to delete the history for the job. *delete_history* is **bit**, with a default of **1**. When *delete_history* is **1**, the job history for the job is deleted. When *delete_history* is **0**, the job history is not deleted.  
   
  Note that when a job is deleted and the history is not deleted, historical information for the job will not display in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent graphical user interface job history, but the information will still reside in the **sysjobhistory** table in the **msdb** database.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
+`[ @delete_unused_schedule = ] delete_unused_schedule`
  Specifies whether to delete the schedules attached to this job if they are not attached to any other job. *delete_unused_schedule* is **bit**, with a default of **1**. When *delete_unused_schedule* is **1**, schedules attached to this job are deleted if no other jobs reference the schedule. When *delete_unused_schedule* is **0**, the schedules are not deleted.  
   
 ## Return Code Values  
@@ -85,7 +81,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Members of the **sysadmin** fixed server role can execute **sp_delete_job** to delete any job. A user that is not a member of the **sysadmin** fixed server role can only delete jobs owned by that user.  
   

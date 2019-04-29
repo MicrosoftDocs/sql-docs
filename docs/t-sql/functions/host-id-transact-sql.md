@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "HOST_ID"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "workstation IDs [SQL Server]"
   - "identification numbers [SQL Server], workstations"
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # HOST_ID (Transact-SQL)

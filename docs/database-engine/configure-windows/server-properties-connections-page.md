@@ -5,14 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.serverproperties.connections.f1"
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -70,7 +67,7 @@ manager: craigg
  View the currently running values for the options on this pane. These values are read-only.  
   
 ## See Also  
- [Options &#40;Query Execution: SQL Server: Advanced Page&#41;](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [Options &#40;Query Execution: SQL Server: Advanced Page&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [Server Configuration Options &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

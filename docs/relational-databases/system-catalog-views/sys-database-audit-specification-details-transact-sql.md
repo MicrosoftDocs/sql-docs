@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "04/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "database_audit_specification_details"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_audit_specification_details catalog view"
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.database_audit_specification_details (Transact-SQL)

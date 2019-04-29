@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STGeometryType (geography Data Type)"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryType method"
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
-caps.latest.revision: 17
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -41,7 +37,7 @@ manager: craigg
  CLR return type: **SqlString**  
   
 ## Remarks  
- The OGC type names that can be returned by `STGeometryType()` are **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, and **MultiPolygon**.  
+ The OGC type names that can be returned by `STGeometryType()` are **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, **MultiPolygon**, and **FullGlobe**.  
   
 ## Examples  
  The following example creates a `Polygon` instance and uses `STGeometryType()` to confirm that it is a polygon.  

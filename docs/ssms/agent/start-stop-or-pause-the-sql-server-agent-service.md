@@ -1,21 +1,17 @@
-﻿---
+---
 title: "Start, Stop, or Pause the SQL Server Agent Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Agent, starting"
   - "SQL Server Agent, pausing"
   - "SQL Server Agent, stopping"
 ms.assetid: c95a9759-dd30-4ab6-9ab0-087bb3bfb97c
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -27,9 +23,9 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to start, stop, or restart the SQL Server Agent Service in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+This topic describes how to start, stop, or restart the SQL Server Agent Service in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-You can configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service to start automatically when the operating system starts, or you can start it manually when you need to complete jobs. You can stop or pause the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service to suspend jobs, operator notifications, and alerts.  
+You can configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to start automatically when the operating system starts, or you can start it manually when you need to complete jobs. You can stop or pause the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to suspend jobs, operator notifications, and alerts.  
   
 **In This Topic**  
   
@@ -45,14 +41,14 @@ You can configure the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
   
 ### <a name="Restrictions"></a>Limitations and Restrictions  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent must be running as a service in order to automate administrative tasks. For more information, see [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must be running as a service in order to automate administrative tasks. For more information, see [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md).  
   
--   Object Explorer only displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent node if you have permission to use it.  
+-   Object Explorer only displays the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent node if you have permission to use it.  
   
 ### <a name="Security"></a>Security  
   
 #### <a name="Permissions"></a>Permissions  
-To perform its functions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent must be configured to use the credentials of an account that is a member of the **sysadmin** fixed server role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. The account must have the following Windows permissions:  
+To perform its functions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent must be configured to use the credentials of an account that is a member of the **sysadmin** fixed server role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The account must have the following Windows permissions:  
   
 -   Log on as a service (SeServiceLogonRight)  
   
@@ -62,7 +58,7 @@ To perform its functions, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.m
   
 -   Adjust memory quotas for a process (SeIncreaseQuotaPrivilege)  
   
-For more information about the Windows permissions required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent service account, see [Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) and [Setting Up Windows Service Accounts](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014).  
+For more information about the Windows permissions required for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service account, see [Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) and [Setting Up Windows Service Accounts](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## <a name="SSMSProcedure"></a>Using SQL Server Management Studio  
   
@@ -78,7 +74,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 For more information, see:  
   
--   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6)  
+-   [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)  
   
 -   [Autostart SQL Server Agent &#40;SQL Server Management Studio&#41;](../../ssms/agent/autostart-sql-server-agent-sql-server-management-studio.md)  
   

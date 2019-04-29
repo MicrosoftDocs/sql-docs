@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STNumGeometries (geometry Data Type)"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumGeometries (geometry Data Type)"
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
-caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

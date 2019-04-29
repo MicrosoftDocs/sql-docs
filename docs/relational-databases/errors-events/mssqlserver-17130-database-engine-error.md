@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "17130 (Database Engine error)"
 ms.assetid: 7ce6afca-221d-402f-89df-da7e74a339a8
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

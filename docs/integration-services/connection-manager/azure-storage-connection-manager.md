@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.afpstorageconn.f1"
   - "sql14.dts.designer.afpstorageconn.f1"
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Storage Connection Manager

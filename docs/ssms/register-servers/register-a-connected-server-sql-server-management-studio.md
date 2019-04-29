@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "07/28/2016"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-registration"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.registerserver.f1"
@@ -17,7 +13,6 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], register connected servers"
   - "connected server registrations [SQL Server]"
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

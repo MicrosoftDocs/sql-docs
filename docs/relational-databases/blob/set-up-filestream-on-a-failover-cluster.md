@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "08/26/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
+ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], setting up on a failover cluster"
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
-caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

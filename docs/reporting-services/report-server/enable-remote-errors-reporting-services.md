@@ -1,25 +1,18 @@
 ---
 title: "Enable Remote Errors (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "remote data source [Reporting Services]"
   - "EnableRemoteError server property"
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
-caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Enable Remote Errors (Reporting Services)
   You can set server properties on a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to return additional information about error conditions that occur on remote servers. If an error message contains the text "For more information about this error, navigate to the report server on the local server machine, or enable remote errors", you can set the **EnableRemoteErrors** property to access additional information that can help you troubleshoot the problem. For more information, see [Report Server System Properties](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
@@ -104,14 +97,14 @@ manager: "kfile"
 5.  Type the following command line, replacing *servername* with the actual name of your server:  
   
     ```  
-    rs -i EnableRemoteErrors.rss -s http://servername/ReportServer  
+    rs -i EnableRemoteErrors.rss -s https://servername/ReportServer  
     ```  
   
 6.  For more information, see [RS.exe Utility &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
 ##  <a name="bkmk_ConfigurationInfo"></a> Modifying the ConfigurationInfo table (Native Mode)  
   
-1.  > [!NOTE]  
-    >  You can edit the **ConfigurationInfo** table in the report server database to set **EnableRemoteErrors** to **True**, but if the report server is actively used, you should use SQL Server Management Studio or script to modify the settings. If you modify the setting in the database, you need to restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service before the changes take effect.  
+> [!NOTE]  
+>  You can edit the **ConfigurationInfo** table in the report server database to set **EnableRemoteErrors** to **True**, but if the report server is actively used, you should use SQL Server Management Studio or script to modify the settings. If you modify the setting in the database, you need to restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service before the changes take effect.  
   
   

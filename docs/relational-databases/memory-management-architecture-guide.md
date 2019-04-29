@@ -1,37 +1,33 @@
 ---
 title: "Memory Management Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/08/2018"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "guide, memory management architecture"
   - "memory management architecture guide"
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Management Architecture Guide
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## Windows Virtual Memory Manager  
 The committed regions of address space are mapped to the available physical memory by the Windows Virtual Memory Manager (VMM).  
   
-For more information on the amount of physical memory supported by different operating systems, see the Windows documentation on [Memory Limits for Windows Releases](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx).  
+For more information on the amount of physical memory supported by different operating systems, see the Windows documentation on [Memory Limits for Windows Releases](/windows/desktop/Memory/memory-limits-for-windows-releases).  
   
 Virtual memory systems allow the over-commitment of physical memory, so that the ratio of virtual-to-physical memory can exceed 1:1. As a result, larger programs can run on computers with a variety of physical memory configurations. However, using significantly more virtual memory than the combined average working sets of all the processes can cause poor performance. 
 
-## [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Memory Architecture
+## SQL Server Memory Architecture
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dynamically acquires and frees memory as required. Typically, an administrator does not have to specify how much memory should be allocated to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], although the option still exists and is required in some environments.
 
@@ -67,10 +63,13 @@ By using AWE and the Locked Pages in Memory privilege, you can provide the follo
 <sup>6</sup> If lock pages in memory privilege (LPIM) is granted (either on 32-bit for AWE support or on 64-bit by itself), we recommend also setting max server memory. For more information on LPIM, refer to [Server Memory Server Configuration Options](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
-> Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes (GB) of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](http://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](http://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
+> Older versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] could run on a 32-bit operating system. Accessing more than 4 gigabytes (GB) of memory on a 32-bit operating system required Address Windowing Extensions (AWE) to manage the memory. This is not necessary when [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is running on 64-bit operation systems. For more information about AWE, see [Process Address Space](https://msdn.microsoft.com/library/ms189334.aspx) and [Managing Memory for Large Databases](https://msdn.microsoft.com/library/ms191481.aspx) in the [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] documentation.   
+
+<a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
 ## Changes to Memory Management starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
+
+In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ( [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), memory allocation was done using five different mechanisms:
 -  **Single-page Allocator (SPA)**, including only memory allocations that were less than, or equal to 8-KB in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process. The *max server memory (MB)* and *min server memory (MB)* configuration options determined the limits of physical memory that the SPA consumed. THe buffer pool was simultaneously the mechanism for SPA, and the largest consumer of single-page allocations.
 -  **Multi-Page Allocator (MPA)**, for memory allocations that request more than 8-KB.
 -  **CLR Allocator**, including the SQL CLR heaps and its global allocations that are created during CLR initialization.
@@ -93,7 +92,7 @@ The following table indicates whether a specific type of memory allocation is co
 |Thread stacks memory|No|No|
 |Direct allocations from Windows|No|No|
 
-Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might allocate more memory than the value specified in the max server memory setting. This behavior may occur when the ***Total Server Memory (KB)*** value has already reached the ***Target Server Memory (KB)*** setting (as specified by max server memory). If there is insufficient contiguous free memory to meet the demand of multi-page memory requests (more than 8 KB) because of memory fragmentation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform over-commitment instead of rejecting the memory request. 
+Starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] might allocate more memory than the value specified in the max server memory setting. This behavior may occur when the **_Total Server Memory (KB)_** value has already reached the **_Target Server Memory (KB)_** setting (as specified by max server memory). If there is insufficient contiguous free memory to meet the demand of multi-page memory requests (more than 8 KB) because of memory fragmentation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] can perform over-commitment instead of rejecting the memory request. 
 
 As soon as this allocation is performed, the *Resource Monitor* background task starts to signal all memory consumers to release the allocated memory, and tries to bring the *Total Server Memory (KB)* value below the *Target Server Memory (KB)* specification. Therefore, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory usage could briefly exceed the max server memory setting. In this situation, the *Total Server Memory (KB)* performance counter reading will exceed the max server memory and *Target Server Memory (KB)* settings.
 
@@ -103,10 +102,11 @@ This behavior is typically observed during the following operations:
 -  Backup operations that require large memory buffers.
 -  Tracing operations that have to store large input parameters.
 
+<a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## Changes to "memory_to_reserve" starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-In earlier versions of SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager set aside a part of the process virtual address space (VAS) for use by the **Multi-Page Allocator (MPA)**, **CLR Allocator**, memory allocations for **thread stacks** in the SQL Server process, and **Direct Windows allocations (DWA)**. This part of the virtual address space is also known as "Mem-To-Leave" or "non-Buffer Pool" region.
+In earlier versions of SQL Server ( [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory manager set aside a part of the process virtual address space (VAS) for use by the **Multi-Page Allocator (MPA)**, **CLR Allocator**, memory allocations for **thread stacks** in the SQL Server process, and **Direct Windows allocations (DWA)**. This part of the virtual address space is also known as "Mem-To-Leave" or "non-Buffer Pool" region.
 
-The virtual address space that is reserved for these allocations is determined by the ***memory_to_reserve*** configuration option. The default value that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses is 256 MB. To override the default value, use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* startup parameter. Refer to the documentation page on [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
+The virtual address space that is reserved for these allocations is determined by the _**memory\_to\_reserve**_ configuration option. The default value that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses is 256 MB. To override the default value, use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* startup parameter. Refer to the documentation page on [Database Engine Service Startup Options](../database-engine/configure-windows/database-engine-service-startup-options.md) for information on the *-g* startup parameter.
 
 Because starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the new "any size" page allocator also handles allocations greater than 8 KB, the *memory_to_reserve* value does not include the multi-page allocations. Except for this change, everything else remains the same with this configuration option.
 

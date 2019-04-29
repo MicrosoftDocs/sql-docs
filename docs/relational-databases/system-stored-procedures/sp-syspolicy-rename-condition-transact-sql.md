@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syspolicy_rename_condition"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_rename_condition"
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: 7
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_rename_condition (Transact-SQL)
@@ -39,13 +35,13 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the condition that you want to rename. *name* is **sysname**, and must be specified if *condition_id* is NULL.  
   
- [ **@condition_id=** ] *condition_id*  
+`[ @condition_id = ] condition_id`
  Is the identifier for the condition that you want to rename. *condition_id* is **int**, and must be specified if *name* is NULL.  
   
- [ **@new_name=** ] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  Is the new name of the condition. *new_name* is **sysname**, and is required. Cannot be NULL or an empty string.  
   
 ## Return Code Values  

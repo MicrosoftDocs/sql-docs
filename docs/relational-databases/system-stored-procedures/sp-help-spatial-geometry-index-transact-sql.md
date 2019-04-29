@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_spatial_geometry_index"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geometry_index procedure"
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # sp_help_spatial_geometry_index (Transact-SQL)
@@ -62,7 +58,7 @@ exec sp_help_spatial_geometry_index 'geometry_col', 'SIndx_SpatialTable_geometry
 ```  
   
 ## See Also  
- [Spatial Index Stored Procedures](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [Spatial Index Stored Procedures](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)   
  [Spatial Indexes Overview](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Spatial Data &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  

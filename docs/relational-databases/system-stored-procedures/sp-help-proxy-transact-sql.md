@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_proxy"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_proxy"
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -42,13 +38,13 @@ sp_help_proxy
 ```  
   
 ## Arguments  
- [ **@proxy_id** = ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to list information for. The *proxy_id* is **int**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to list information for. The *proxy_name* is **sysname**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
- [ **@subsystem_name** = ] '*subsystem_name*'  
+`[ @subsystem_name = ] 'subsystem_name'`
  The name of the subsystem to list proxies for. The *subsystem_name* is **sysname**, with a default of NULL. When *subsystem_name* is specified, *name* must also be specified.  
   
  The following table lists the values for each subsystem.  
@@ -67,7 +63,7 @@ sp_help_proxy
 |Dts|SSIS package execution|  
 |PowerShell|PowerShell Script|  
   
- [ **@name** = ] '*name*'  
+`[ @name = ] 'name'`
  The name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to list proxies for. The name is **nvarchar(256)**, with a default of NULL. When *name* is specified, *subsystem_name* must also be specified.  
   
 ## Return Code Values  
@@ -94,7 +90,7 @@ sp_help_proxy
 ## Permissions  
  By default, members of the **sysadmin** fixed server role can execute this stored procedure. Other users must be granted the **SQLAgentOperatorRole** fixed database role in the **msdb** database.  
   
- For details about **SQLAgentOperatorRole**, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about **SQLAgentOperatorRole**, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 > [!NOTE]  
 >  The **credential_identity** and **user_sid** columns are only returned in the result set when members of **sysadmin** execute this stored procedure.  

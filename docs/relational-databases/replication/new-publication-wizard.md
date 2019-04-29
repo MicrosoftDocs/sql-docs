@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.dbpublishin"
@@ -42,7 +38,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "New Publication Wizard"
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
-caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -80,6 +75,6 @@ manager: craigg
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Publish Data and Database Objects](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Properties Reference &#40;Replication&#41;](../../relational-databases/replication/properties-reference-replication.md)  
+
   
   

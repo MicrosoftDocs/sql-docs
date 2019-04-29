@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "COLUMNS_UPDATED_TSQL"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "column testing [SQL Server]"
   - "updated columns"
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-caps.latest.revision: 53
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # COLUMNS_UPDATED (Transact-SQL)
@@ -47,7 +43,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` returns one or more bytes that are ordered from left to right. The rightmost bit of each byte is the least significant bit. The rightmost bit of the leftmost byte represents the first table column in the table, the next bit to the left represents the second column, and so on. `COLUMNS_UPDATED` returns multiple bytes if the table on which the trigger is created contains more than eight columns, with the least significant byte being the leftmost. `COLUMNS_UPDATED` returns TRUE for all columns in INSERT actions because the columns have either explicit values or implicit (NULL) values inserted.
   
-To test for updates or inserts to specific columns, follow the syntax with a bitwise operator and an integer bitmask of the tested columns. For example, say that table **t1** contains columns **C1**, **C2**, **C3**, **C4**, and **C5**. To verify that columns **C2**, **C3**, and **C4** all successfully updated (with table **t1** having an UPDATE trigger), follow the syntax with **& 14**. To test whether only column **C2** is updated, specify **& 2**. See [Example A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) and [Example B](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns) for actual examples.
+To test for updates or inserts to specific columns, follow the syntax with a bitwise operator and an integer bitmask of the tested columns. For example, say that table **t1** contains columns **C1**, **C2**, **C3**, **C4**, and **C5**. To verify that columns **C2**, **C3**, and **C4** all successfully updated (with table **t1** having an UPDATE trigger), follow the syntax with **& 14**. To test whether only column **C2** is updated, specify **& 2**. See [Example A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) and [Example B](#b-using-columns_updated-to-test-more-than-eight-columns) for actual examples.
   
 Use `COLUMNS_UPDATED` anywhere inside a [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT or UPDATE trigger.
   
@@ -60,6 +56,8 @@ SELECT TABLE_NAME, COLUMN_NAME,
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 ```  
+
+If a trigger applies to a column, the `COLUMNS_UPDATED` returns as `true` or `1`, even if the column value remains unchanged. This is by-design, and the trigger should implement business logic that determines if the insert/update/delete operation is permissible or not. 
   
 ## Column sets
 When a column set is defined on a table, the `COLUMNS_UPDATED` function behaves in the following ways:

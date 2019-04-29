@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "sa account"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "server authentication mode [SQL Server]"
   - "modifying server authentication mode"
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -70,15 +67,27 @@ manager: craigg
   
 2.  On the Standard bar, click **New Query**.  
   
-3.  Copy and paste the following example into the query window and click **Execute**. The following example enables the sa login and sets a new password.  
+3.  Copy and paste one of the following examples into the query window and click **Execute**. 
+
+
+    -  The following example enables the sa login and sets a new password.  
   
-    ```  
-    ALTER LOGIN sa ENABLE ;  
-    GO  
-    ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
-    GO  
-  
-    ```  
+       ```sql  
+       ALTER LOGIN sa ENABLE ;  
+       GO  
+       ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
+       GO  
+       ```  
+    -  The following example changes Server Authentication from mixed mode (Windows + SQL) to Windows only.
+
+       ```sql
+       USE [master]
+       GO
+       EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', 
+                                 N'Software\Microsoft\MSSQLServer\MSSQLServer',      
+                                 N'LoginMode', REG_DWORD, 1
+       GO
+       ```
   
 ## See Also  
  [Strong Passwords](../../relational-databases/security/strong-passwords.md)   

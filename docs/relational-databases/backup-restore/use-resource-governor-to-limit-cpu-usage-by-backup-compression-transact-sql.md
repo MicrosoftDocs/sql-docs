@@ -5,9 +5,7 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backup compression [SQL Server], Resource Governor"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "backups [SQL Server], compression"
   - "Resource Governor, backup compression"
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -259,7 +256,7 @@ GO
  [&#91;Top&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> Compressing Backups Using a Session with Limited CPU  
- To create a compressed backup in a session with a limited maximum CPU, log in as the user specified in your classifier function. In your backup command, either specify WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) or select **Compress backup** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). To create a compressed database backup, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+ To create a compressed backup in a session with a limited maximum CPU, log in as the user specified in your classifier function. In your backup command, either specify WITH COMPRESSION ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) or select **Compress backup** ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). To create a compressed database backup, see [Create a Full Database Backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ### Example C: Creating a Compressed Backup (Transact-SQL)  
  The following [BACKUP](../../t-sql/statements/backup-transact-sql.md) example creates a compressed full backup of the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in a newly formatted backup file, `Z:\SQLServerBackups\AdvWorksData.bak`.  

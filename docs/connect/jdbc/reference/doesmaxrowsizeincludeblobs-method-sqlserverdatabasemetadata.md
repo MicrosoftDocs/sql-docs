@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.doesMaxRowSizeIncludeBlobs"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 0c90a7a7-5a59-4858-bb26-3e725d8611d7
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

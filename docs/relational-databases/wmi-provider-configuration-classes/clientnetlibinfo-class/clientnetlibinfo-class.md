@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "ClientNetLibInfo Class"
@@ -18,7 +14,6 @@ apilocation:
 helpviewer_keywords: 
   - "ClientNetLibInfo class"
 ms.assetid: 29f7c88d-31a4-49fe-ba21-2642bd9f4d04
-caps.latest.revision: 33
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -30,6 +25,6 @@ manager: craigg
  The client network library file lets the client instance communicate over a network with an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using a specific network protocol.  
   
 ## See Also  
- [Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)  
+ [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

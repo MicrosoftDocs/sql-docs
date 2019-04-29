@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Modify Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "views [SQL Server], renaming"
@@ -15,14 +13,13 @@ helpviewer_keywords:
   - "modifying views"
   - "renaming views"
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Views
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   After you define a view, you can modify its definition in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] without dropping and re-creating the view by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
@@ -66,11 +63,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
     1.  Select or clear the check boxes of any elements you wish to add or remove.  
   
-    2.  Right-click within the diagram pane, select **Add Table…**, and then select the additional columns you want to add to the view from the **Add Table** dialog box.  
+    2.  Right-click within the diagram pane, select **Add Table...**, and then select the additional columns you want to add to the view from the **Add Table** dialog box.  
   
     3.  Right-click the title bar of the table you wish to remove and select **Remove**.  
   
-4.  On the **File** menu, click **Save***view name*.  
+4.  On the **File** menu, click **Save**_view name_.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   

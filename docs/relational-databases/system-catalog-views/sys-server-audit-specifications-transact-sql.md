@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "04/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "server_audit_specifications_TSQL"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_audit_specifications catalog view"
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sys.server_audit_specifications (Transact-SQL)
@@ -36,7 +32,7 @@ manager: craigg
 |**server_specification_id**|**Int**|ID of the **server_specification**.|  
 |**create_date**|**Datetime**|Date the audit server specification was created.|  
 |**modified_date**|**Datetime**|Date the audit server specification was last modified.|  
-|**is_state_enabled**|**tinyint**|Audit specification state:<br /><br /> 0 – DISABLED<br /><br /> 1 –ENABLED|  
+|**is_state_enabled**|**tinyint**|Audit specification state:<br /><br /> 0 - DISABLED<br /><br /> 1 -ENABLED|  
 |**audit_GUID**|**uniqueidentifier**|GUID for the audit that contains this specification. Used during enumeration of member server audit specifications during server startup.|  
   
 ## Permissions  

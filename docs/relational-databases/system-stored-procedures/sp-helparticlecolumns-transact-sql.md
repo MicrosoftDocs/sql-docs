@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helparticlecolumns"
   - "sp_helparticlecolumns_TSQL"
 helpviewer_keywords: 
   - "sp_helparticlecolumns"
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helparticlecolumns (Transact-SQL)
@@ -41,14 +34,14 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication =**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article that has its columns returned. *article* is **sysname**, with no default.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be specified when the requested article is published by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

@@ -5,18 +5,13 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom tasks [Integration Services], creating"
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Creating a Custom Task

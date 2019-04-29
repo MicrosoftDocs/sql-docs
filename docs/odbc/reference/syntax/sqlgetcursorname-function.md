@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLGetCursorName"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetCursorName function [ODBC]"
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,10 +33,10 @@ manager: craigg
 ```  
   
 SQLRETURN SQLGetCursorName(  
-     SQLHSTMT        StatementHandle,  
-     SQLCHAR *       CursorName,  
-     SQLSMALLINT     BufferLength,  
-     SQLSMALLINT *   NameLengthPtr);  
+     SQLHSTMT        StatementHandle,  
+     SQLCHAR *       CursorName,  
+     SQLSMALLINT     BufferLength,  
+     SQLSMALLINT *   NameLengthPtr);  
 ```  
   
 ## Arguments  
@@ -78,9 +75,9 @@ SQLRETURN SQLGetCursorName(
 |IM001|Driver does not support this function|(DM) The driver associated with the *StatementHandle* does not support the function.|  
   
 ## Comments  
- Cursor names are used only in positioned update and delete statements (for example, **UPDATE** *table-name* ...**WHERE CURRENT OF** *cursor-name*). For more information, see [Positioned Update and Delete Statements](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). If the application does not call **SQLSetCursorName** to define a cursor name, the driver generates a name. This name begins with the letters SQL_CUR.  
+ Cursor names are used only in positioned update and delete statements (for example, **UPDATE** _table-name_ ...**WHERE CURRENT OF** _cursor-name_). For more information, see [Positioned Update and Delete Statements](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md). If the application does not call **SQLSetCursorName** to define a cursor name, the driver generates a name. This name begins with the letters SQL_CUR.  
   
-> [!NOTE]  
+> [!NOTE]
 >  In ODBC 2*.x*, when there was no open cursor and no name had been set by a call to **SQLSetCursorName**, a call to **SQLGetCursorName** returned SQLSTATE HY015 (No cursor name available). In ODBC 3*.x*, this is no longer true; regardless of when **SQLGetCursorName** is called, the driver returns the cursor name.  
   
  **SQLGetCursorName** returns the name of a cursor whether or not the name was created explicitly or implicitly. A cursor name is implicitly generated if **SQLSetCursorName** is not called. **SQLSetCursorName** can be called to rename a cursor on a statement as long as the cursor is in an allocated or prepared state.  

@@ -5,18 +5,15 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.addcopyexistingpackage.f1"
 helpviewer_keywords: 
   - "Add Copy of Existing Package dialog box"
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add Copy of Existing Package
@@ -39,10 +36,10 @@ manager: craigg
  If using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, provide a password.  
   
  **Package path**  
- Type the package path, or click the browse button **(…)** and locate the package to copy.  
+ Type the package path, or click the browse button **(...)** and locate the package to copy.  
   
 ## See Also  
- [Save Copy of Package](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
+ [Save Copy of Package](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Save Packages](../integration-services/save-packages.md)   
  [Integration Services Service &#40;SSIS Service&#41;](../integration-services/service/integration-services-service-ssis-service.md)
   

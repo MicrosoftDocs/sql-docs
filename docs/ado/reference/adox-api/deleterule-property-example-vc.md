@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "DeleteRule property [ADOX], VC++ example"
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

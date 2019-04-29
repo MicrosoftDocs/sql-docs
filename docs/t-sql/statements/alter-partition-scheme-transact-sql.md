@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER PARTITION SCHEME"
@@ -22,9 +19,8 @@ helpviewer_keywords:
   - "adding filegroups"
   - "NEXT USED filegroups"
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)

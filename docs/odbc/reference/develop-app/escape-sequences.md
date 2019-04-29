@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL statements [ODBC], interoperability"
   - "escape sequences [ODBC], determining if supported"
   - "interoperability of SQL statements [ODBC], escape sequences"
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

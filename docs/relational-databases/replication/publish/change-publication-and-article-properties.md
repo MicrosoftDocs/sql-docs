@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying article properties"
@@ -18,7 +14,6 @@ helpviewer_keywords:
   - "publications [SQL Server replication], changing properties"
   - "articles [SQL Server replication], properties"
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
-caps.latest.revision: 20
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -94,8 +89,8 @@ manager: craigg
 |Change destination table owner.|**sp_changemergearticle**|**destination_owner**|New snapshot.<br /><br /> Reinitialize subscriptions.|  
   
 ## See Also  
- [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)   
- [Create and Apply the Snapshot](../../../relational-databases/replication/create-and-apply-the-snapshot.md)   
+ [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Create and Apply the Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Reinitialize Subscriptions](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

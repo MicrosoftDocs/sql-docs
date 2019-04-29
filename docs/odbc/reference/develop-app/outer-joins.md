@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "outer join escape sequences [ODBC]"
   - "escape sequences [ODBC], outer join"
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -21,11 +18,11 @@ manager: craigg
 # Outer Joins
 ODBC supports the SQL-92 left, right, and full outer join syntax. The escape sequence for outer joins is  
   
- **{oj** *outer-join***}**  
+ **{oj** _outer-join_**}**  
   
  where *outer-join* is  
   
- *table-reference* {**LEFT &#124; RIGHT &#124; FULL} OUTER JOIN** {*table-reference* &#124; *outer-join*} **ON** *search-condition*  
+ *table-reference* {**LEFT &#124; RIGHT &#124; FULL} OUTER JOIN** {*table-reference* &#124; *outer-join*} **ON** _search-condition_  
   
  *table-reference* specifies a table name, and *search-condition* specifies the join condition between the *table-references*.  
   

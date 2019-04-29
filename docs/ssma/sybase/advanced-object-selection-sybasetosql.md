@@ -3,16 +3,10 @@ title: "Advanced Object Selection (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.prod: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
-caps.latest.revision: 4
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg

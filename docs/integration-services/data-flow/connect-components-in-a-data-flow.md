@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "components [Integration Services], connections"
   - "connections [Integration Services], data flow components"
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect Components in a Data Flow

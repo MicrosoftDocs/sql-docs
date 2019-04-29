@@ -5,12 +5,8 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -25,9 +21,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services packages, connections"
   - "SSIS Script task, connections"
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connecting to Data Sources in the Script Task
@@ -88,6 +83,6 @@ manager: craigg
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Connections](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [Create Connection Managers](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
+ [Create Connection Managers](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   
   

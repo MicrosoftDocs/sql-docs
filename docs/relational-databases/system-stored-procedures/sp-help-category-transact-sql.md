@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_category"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_category"
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,7 +37,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## Arguments  
- [ **@class=**] **'***class***'**  
+`[ @class = ] 'class'`
  The class about which information is requested. *class* is **varchar(8)**, with a default value of **JOB**. *class* can be one of these values.  
   
 |Value|Description|  
@@ -50,7 +46,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERT**|Provides information about an alert category.|  
 |**OPERATOR**|Provides information about an operator category.|  
   
- [ **@type=** ] **'***type***'**  
+`[ @type = ] 'type'`
  The type of category for which information is requested. *type* is **varchar(12)**, with a default of NULL, and can be one of these values.  
   
 |Value|Description|  
@@ -59,10 +55,10 @@ sp_help_category [ [ @class = ] 'class' ]
 |**MULTI -SERVER**|Multiserver job category.|  
 |**NONE**|Category for a class other than **JOB**.|  
   
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the category for which information is requested. *name* is **sysname**, with a default of NULL.  
   
- [ **@suffix=** ] *suffix*  
+`[ @suffix = ] suffix`
  Specifies whether the **category_type** column in the result set is an ID or a name. *suffix* is **bit**, with a default of **0**. **1** shows the **category_type** as a name, and **0** shows it as an ID.  
   
 ## Return Code Values  
@@ -99,7 +95,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## Examples  
   

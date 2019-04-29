@@ -1,14 +1,11 @@
-﻿---
+---
 title: "+ (String Concatenation) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "concatenation"
@@ -21,11 +18,10 @@ helpviewer_keywords:
   - "string concatenation operators"
   - "+ (string concatenation)"
 ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
-caps.latest.revision: 51
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # + (String Concatenation) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +42,7 @@ expression + expression
   
  An explicit conversion to character data must be used when concatenating binary strings and any characters between the binary strings. The following example shows when `CONVERT`, or `CAST`, must be used with binary concatenation and when `CONVERT`, or `CAST`, does not have to be used.  
   
-```  
+```sql
 DECLARE @mybin1 varbinary(5), @mybin2 varbinary(5)  
 SET @mybin1 = 0xFF  
 SET @mybin2 = 0xA5  
@@ -76,7 +72,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ### A. Using string concatenation  
  The following example creates a single column under the column heading `Name` from multiple character columns, with the last name of the person followed by a comma, a single space, and then the first name of the person. The result set is in ascending, alphabetical order by the last name, and then by the first name.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + FirstName) AS Name  
@@ -87,7 +83,7 @@ ORDER BY LastName ASC, FirstName ASC;
 ### B. Combining numeric and date data types  
  The following example uses the `CONVERT` function to concatenate **numeric** and **date** data types.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT 'The order is due on ' + CONVERT(varchar(12), DueDate, 101)  
@@ -107,7 +103,7 @@ GO
 ### C. Using multiple string concatenation  
  The following example concatenates multiple strings to form one long string to display the last name and the first initial of the vice presidents at [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. A comma is added after the last name and a period after the first initial.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ',' + SPACE(1) + SUBSTRING(FirstName, 1, 1) + '.') AS Name, e.JobTitle  
@@ -134,7 +130,7 @@ GO
 ### D. Using large strings in concatenation
 The following example concatenates multiple strings to form one long string and then tries to compute the length of the final string. The final length of resultset is 16000, because expression evaluation starts from left that is, @x + @z + @y => (@x + @z) + @y. In this case the result of (@x + @z) is truncated at 8000 bytes and then @y is added to the resultset, which makes the final string length 16000. Since @y is a large value type string, truncation does not occur.
 
-```
+```sql
 DECLARE @x varchar(8000) = replicate('x', 8000)
 DECLARE @y varchar(max) = replicate('y', 8000)
 DECLARE @z varchar(8000) = replicate('z',8000)
@@ -157,7 +153,7 @@ GO
 ### E. Using multiple string concatenation  
  The following example concatenates multiple strings to form one long string to display the last name and the first initial of the vice presidents within a sample database. A comma is added after the last name and a period after the first initial.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT (LastName + ', ' + SUBSTRING(FirstName, 1, 1) + '.') AS Name, Title  

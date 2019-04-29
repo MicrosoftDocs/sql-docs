@@ -3,13 +3,8 @@ title: "Managing CLR Integration Assemblies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -18,7 +13,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], assemblies"
   - "assemblies [CLR integration], managing"
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
-caps.latest.revision: 56
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

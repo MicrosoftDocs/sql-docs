@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "granting permissions [SQL Server], XML schema collections"
   - "ALTER permission"
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Grant Permissions on an XML Schema Collection
@@ -93,15 +89,15 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="AdditionalContactInfo" >  
   <xsd:complexType mixed="true" >  
     <xsd:sequence>  
       <xsd:any processContents="strict"    
-               namespace="http://schemas.adventure-works.com/Contact/Record   
-                          http://schemas.adventure-works.com/AdditionalContactTypes"  
+               namespace="https://schemas.adventure-works.com/Contact/Record   
+                          https://schemas.adventure-works.com/AdditionalContactTypes"  
                minOccurs="0" maxOccurs="unbounded" />  
     </xsd:sequence>  
   </xsd:complexType>  
@@ -152,7 +148,7 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
@@ -160,8 +156,8 @@ elementFormDefault="qualified">
   <xsd:complexType mixed="true" >  
     <xsd:sequence>  
       <xsd:any processContents="strict"    
-               namespace="http://schemas.adventure-works.com/Contact/Record   
-                          http://schemas.adventure-works.com/AdditionalContactTypes"  
+               namespace="https://schemas.adventure-works.com/Contact/Record   
+                          https://schemas.adventure-works.com/AdditionalContactTypes"  
                minOccurs="0" maxOccurs="unbounded" />  
     </xsd:sequence>  
   </xsd:complexType>  
@@ -202,7 +198,7 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 INSERT INTO MyTestTable VALUES('  
-<telephone xmlns="http://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>  
+<telephone xmlns="https://schemas.adventure-works.com/Additional/ContactInfo">111-1111</telephone>  
 ')  
 GO  
 -- To query the table, TestLogin1 must have permissions: SELECT on the table and EXECUTE on the XML schema collection.  
@@ -211,7 +207,7 @@ GO
 GRANT SELECT TO TestLogin1  
 GO  
 -- TestLogin1 already has EXECUTE permission on the schema (granted before inserting a record in the table).  
-SELECT xmlCol.query('declare default element namespace "http://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')  
+SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')  
 FROM MyTestTable  
 GO  
 -- To show that the user must have EXECUTE permission to query, revoke the  
@@ -223,7 +219,7 @@ Go
 -- Now TestLogin1 cannot execute the query.  
 SETUSER 'TestLogin1'  
 GO  
-SELECT xmlCol.query('declare default element namespace "http://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')  
+SELECT xmlCol.query('declare default element namespace "https://schemas.adventure-works.com/Additional/ContactInfo" /telephone[1]')  
 FROM MyTestTable  
 GO  
 -- Final cleanup   
@@ -267,7 +263,7 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
@@ -275,8 +271,8 @@ elementFormDefault="qualified">
   <xsd:complexType mixed="true" >  
     <xsd:sequence>  
       <xsd:any processContents="strict"    
-               namespace="http://schemas.adventure-works.com/Contact/Record   
-                          http://schemas.adventure-works.com/AdditionalContactTypes"  
+               namespace="https://schemas.adventure-works.com/Contact/Record   
+                          https://schemas.adventure-works.com/AdditionalContactTypes"  
                minOccurs="0" maxOccurs="unbounded" />  
     </xsd:sequence>  
   </xsd:complexType>  
@@ -293,9 +289,9 @@ GO
 SETUSER 'TestLogin1'  
 GO  
 ALTER XML SCHEMA COLLECTION myTestSchemaCollection ADD '  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-            xmlns="http://schemas.adventure-works.com/Additional/ContactInfo"   
+            xmlns="https://schemas.adventure-works.com/Additional/ContactInfo"   
 elementFormDefault="qualified">  
  <xsd:element name="pager" type="xsd:string"/>  
 </xsd:schema>  
@@ -360,7 +356,7 @@ GO
 setuser 'TestLogin1'  
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
-<xsd:schema targetNamespace="http://schemas.adventure-works.com/Additional/ContactInfo"   
+<xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
@@ -368,8 +364,8 @@ elementFormDefault="qualified">
  <xsd:complexType mixed="true" >  
     <xsd:sequence>  
       <xsd:any processContents="strict"   
-               namespace="http://schemas.adventure-works.com/Contact/Record   
-                          http://schemas.adventure-works.com/AdditionalContactTypes"  
+               namespace="https://schemas.adventure-works.com/Contact/Record   
+                          https://schemas.adventure-works.com/AdditionalContactTypes"  
                minOccurs="0" maxOccurs="unbounded" />  
     </xsd:sequence>  
  </xsd:complexType>  

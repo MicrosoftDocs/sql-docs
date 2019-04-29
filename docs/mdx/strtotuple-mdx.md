@@ -13,7 +13,7 @@ manager: kfile
 # StrToTuple (MDX)
 
 
-  Returns the tuple specified by a Multidimensional Expressions (MDX)–formatted string.  
+  Returns the tuple specified by a Multidimensional Expressions (MDX)-formatted string.  
   
 ## Syntax  
   

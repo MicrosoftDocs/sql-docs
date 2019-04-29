@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysprotects"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sys.sysprotects compatibility view"
   - "sysprotects system table"
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
-caps.latest.revision: 29
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

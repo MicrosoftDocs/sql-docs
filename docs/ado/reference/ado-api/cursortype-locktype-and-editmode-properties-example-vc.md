@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "EditMode property [ADO], VC++ example"
   - "CursorType property [ADO], VC++ example"
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

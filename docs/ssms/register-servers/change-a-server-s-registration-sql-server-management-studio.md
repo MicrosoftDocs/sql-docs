@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-registration"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying registered server connection information"
   - "Registered Servers [SQL Server], connection information changes"
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
-caps.latest.revision: 20
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

@@ -4,17 +4,11 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "mds"
-ms.component: "develop"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg

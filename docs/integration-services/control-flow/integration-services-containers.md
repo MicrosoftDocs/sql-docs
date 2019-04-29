@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS containers"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "control flow [Integration Services], containers"
   - "SQL Server Integration Services containers"
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Containers

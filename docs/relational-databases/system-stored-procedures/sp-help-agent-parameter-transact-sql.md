@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_help_agent_parameter"
   - "sp_help_agent_parameter_TSQL"
 helpviewer_keywords: 
   - "sp_help_agent_parameter"
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_help_agent_parameter (Transact-SQL)
@@ -39,7 +32,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## Arguments  
- [ **@profile_id=**] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the ID of the profile from the [MSagent_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) table. *profile_id* is **int**, with a default of **-1**, which returns all parameters.  
   
 ## Result Sets  

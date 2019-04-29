@@ -5,15 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Lesson 1: Preparing to Create the Deployment Bundle

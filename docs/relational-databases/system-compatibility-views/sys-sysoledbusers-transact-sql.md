@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-compatibility-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sysoledbusers"
@@ -21,7 +18,6 @@ helpviewer_keywords:
   - "sysoledbusers system table"
   - "sys.sysoledbusers compatibility view"
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
-caps.latest.revision: 34
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

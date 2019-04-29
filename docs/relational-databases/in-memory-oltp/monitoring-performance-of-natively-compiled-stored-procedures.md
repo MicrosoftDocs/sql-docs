@@ -1,21 +1,17 @@
-﻿---
+---
 title: "Monitoring Performance of Natively Compiled Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "in-memory-oltp"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
-caps.latest.revision: 11
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitoring Performance of Natively Compiled Stored Procedures
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +26,6 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- For more information about the **sp_statement_completed** extended event, see [How to retrieve the statement that caused an event](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx).  
   
 ## Using Data Management Views and Query Store
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] support collecting execution statistics for natively compiled stored procedures, both on the procedure level and the query level. Collecting execution statistics is not enabled by default due to performance impact.  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_upload_collection_set"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sp_syscollector_upload_collection_set"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-caps.latest.revision: 19
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -43,10 +39,10 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## Arguments  
- [ **@collection_set_id =** ] *collection_set_id*  
+`[ @collection_set_id = ] collection_set_id`
  Is the unique local identifier for the collection set. *collection_set_id* is **int** and must have a value if *name* is NULL.  
   
- [ **@name =** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the collection set. *name* is **sysname** and must have a value if *collection_set_id* is NULL.  
   
 ## Return Code Values  

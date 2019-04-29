@@ -1,21 +1,14 @@
 ---
 title: "Lay out a Reporting Services mobile report for phone or tablet | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "mobile-reports"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: mobile-reports
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
-caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lay out a Reporting Services mobile report for phone or tablet
 Now that you've [created your Reporting Services mobile report](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)], you can lay out a phone and tablet version of it.  

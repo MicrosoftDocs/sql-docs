@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_getbindtoken"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_getbindtoken"
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_getbindtoken (Transact-SQL)

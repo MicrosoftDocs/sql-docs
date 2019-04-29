@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "10/23/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "TEXTPTR_TSQL"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "text-pointer values"
   - "displaying text pointer values"
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Text and Image Functions - TEXTPTR (Transact-SQL)
@@ -61,10 +57,10 @@ TEXTPTR ( column )
   
 |Function or statement|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**('***%pattern%***' ,** *expression***)**|Returns the character position of a specified character string in **text** or **ntext** columns.|  
-|DATALENGTH**(***expression***)**|Returns the length of data in **text**, **ntext**, and **image** columns.|  
+|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Returns the character position of a specified character string in **text** or **ntext** columns.|  
+|DATALENGTH<b>(</b>_expression_**)**|Returns the length of data in **text**, **ntext**, and **image** columns.|  
 |SET TEXTSIZE|Returns the limit, in bytes, of the **text**, **ntext**, or **image** data to be returned with a SELECT statement.|  
-|SUBSTRING**(***text_column*, *start*, *length***)**|Returns a **varchar** string specified by the specified *start* offset and *length*. The length should be less than 8 KB.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Returns a **varchar** string specified by the specified *start* offset and *length*. The length should be less than 8 KB.|  
   
 ## Examples  
   
@@ -189,7 +185,7 @@ pr_info
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text and Image Functions &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text and Image Functions &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   

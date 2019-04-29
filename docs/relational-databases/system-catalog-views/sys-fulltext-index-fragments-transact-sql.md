@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.fulltext_index_fragments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "fulltext_index_fragments"
@@ -23,11 +20,10 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
   - "sys.fulltext_index_fragments catalog view"
 ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
-caps.latest.revision: 18
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

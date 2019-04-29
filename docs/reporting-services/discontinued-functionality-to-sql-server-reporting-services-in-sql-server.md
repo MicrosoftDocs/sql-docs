@@ -1,30 +1,18 @@
 ---
-title: "Discontinued functionality to SQL Server Reporting Services in SQL Server 2016 | Microsoft Docs"
-ms.date: "07/02/2017"
+title: Discontinued functionality
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
+ms.technology: reporting-services
+ms.topic: conceptual
+author: maggiesMSFT 
+ms.author: maggies
+manager: kfile
 ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.custom: ""
-ms.technology: 
-
-
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "discontinued functionality [Reporting Services]"
-  - "Reporting Services, backward compatibility"
-  - "Rsactivate.exe"
-  - "unsupported features [Reporting Services]"
-ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
-caps.latest.revision: 54
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+ms.custom: seodec18
+ms.date: 04/26/2019
 ---
 
-# Discontinued functionality to SQL Server Reporting Services in SQL Server 2016
+# Discontinued Functionality in SQL Server Reporting Services (SSRS)
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -36,14 +24,12 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 
 |Feature|Replacment or workaround|
 |-|-|
-|Upload report models through the web portal|This can still be done through the SOAP API.|
-|Manage report models through the web portal|This can still be done through the SOAP API.|
 |Customize style sheets for HTML Viewer and Report Manager|You can still [brand the web portal](branding-the-web-portal.md).|
 
 ## Next steps
 
-[What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

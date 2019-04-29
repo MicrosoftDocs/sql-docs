@@ -1,14 +1,11 @@
-﻿---
+---
 title: "XACT_STATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "XACT_STATE"
@@ -23,11 +20,10 @@ helpviewer_keywords:
   - "transactions [SQL Server], state"
   - "active transactions"
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +53,7 @@ XACT_STATE()
  Both the XACT_STATE and @@TRANCOUNT functions can be used to detect whether the current request has an active user transaction. @@TRANCOUNT cannot be used to determine whether that transaction has been classified as an uncommittable transaction. XACT_STATE cannot be used to determine whether there are nested transactions.  
   
 ## Examples  
- The following example uses `XACT_STATE` in the `CATCH` block of a `TRY…CATCH` construct to determine whether to commit or roll back a transaction. Because `SET XACT_ABORT` is `ON`, the constraint violation error causes the transaction to enter an uncommittable state.  
+ The following example uses `XACT_STATE` in the `CATCH` block of a `TRY...CATCH` construct to determine whether to commit or roll back a transaction. Because `SET XACT_ABORT` is `ON`, the constraint violation error causes the transaction to enter an uncommittable state.  
   
 ```  
 USE AdventureWorks2012;  

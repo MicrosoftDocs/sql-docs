@@ -5,18 +5,13 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "custom log providers [Integration Services], coding"
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Coding a Custom Log Provider

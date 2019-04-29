@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CHOOSE"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CHOOSE function"
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Logical Functions - CHOOSE (Transact-SQL)
@@ -43,7 +39,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
   
  If the provided index value has a numeric data type other than **int**, then the value is implicitly converted to an integer. If the index value exceeds the bounds of the array of values, then CHOOSE returns null.  
   
- *val_1 … val_n*  
+ *val_1 ... val_n*  
  List of comma separated values of any data type.  
   
 ## Return Types  
@@ -53,8 +49,11 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  CHOOSE acts like an index into an array, where the array is composed of the arguments that follow the index argument. The index argument determines which of the following values will be returned.  
   
 ## Examples  
+
+### A. Simple CHOOSE example
+
  The following example returns the third item from the list of values that is provided.  
-  
+ 
 ```  
 SELECT CHOOSE ( 3, 'Manager', 'Director', 'Developer', 'Tester' ) AS Result;  
 ```  
@@ -68,7 +67,9 @@ Developer
   
 (1 row(s) affected)  
 ```  
-  
+
+### B. Simple CHOOSE example based on column
+
  The following example returns a simple character string based on the value in the `ProductCategoryID` column.  
   
 ```  
@@ -92,8 +93,10 @@ ProductCategoryID Expression1
 (4 row(s) affected)  
   
 ```  
+
+### C. CHOOSE in combination with MONTH
   
- The following example returns the quarter in which an employee was hired. The MONTH function is used to return the month value from the column `HireDate`.  
+ The following example returns the season in which an employee was hired. The MONTH function is used to return the month value from the column `HireDate`.  
   
 ```  
 USE AdventureWorks2012;  

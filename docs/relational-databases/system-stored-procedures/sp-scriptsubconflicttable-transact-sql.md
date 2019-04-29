@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_scriptsubconflicttable"
   - "sp_scriptsubconflicttable_TSQL"
 helpviewer_keywords: 
   - "sp_scriptsubconflicttable"
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_scriptsubconflicttable (Transact-SQL)
@@ -39,10 +32,10 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains the article. The name must be unique in the database. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the subscription article. *article* is **sysname**, with no default.  
   
 ## Return Code Values  

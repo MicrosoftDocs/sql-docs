@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ISJSON"
@@ -18,10 +14,9 @@ helpviewer_keywords:
   - "ISJSON function"
   - "JSON, validating"
 ms.assetid: c836f3d3-3e17-44ae-92bf-f341918896c3
-caps.latest.revision: 12
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: douglasl
+ms.reviewer: genemi
 manager: craigg
 ---
 # ISJSON (Transact-SQL)

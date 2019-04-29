@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_defaultdb_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_defaultdb"
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_defaultdb (Transact-SQL)
@@ -41,10 +37,10 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## Arguments  
- [ **@loginame=**] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the login name. *login* is **sysname**, with no default. *login* can be an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows user or group. If a login for the Windows user or group does not exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it is automatically added.  
   
- [ **@defdb=**] **'***database***'**  
+`[ @defdb = ] 'database'`
  Is the name of the new default database. *database* is **sysname**, with no default. *database* must already exist.  
   
 ## Return Code Values  

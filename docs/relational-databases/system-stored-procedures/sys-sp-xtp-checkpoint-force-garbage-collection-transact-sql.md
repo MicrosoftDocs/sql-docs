@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_xtp_checkpoint_force_garbage_collection_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_xtp_checkpoint_force_garbage_collection"
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
-caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

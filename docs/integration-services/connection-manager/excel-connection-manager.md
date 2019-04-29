@@ -4,10 +4,8 @@ ms.date: "04/02/2018"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.excelconnection.f1"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
   - "connection managers [Integration Services], Excel"
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
-caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Excel Connection Manager

@@ -5,17 +5,15 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TCP/IP [SQL Server], client protocols"
   - "client protocols [SQL Server]"
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Client Protocols - TCP IP Properties (Protocol Tab)
@@ -40,7 +38,7 @@ manager: craigg
  This parameter (in milliseconds) determines the interval separating **KEEPALIVE** retransmissions until a response is received. The default is 1000 milliseconds.  
   
 ## See Also  
- [Choosing a Network Protocol](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
+ [Choosing a Network Protocol](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
  [New Alias &#40;Alias Tab&#41;](../../tools/configuration-manager/new-alias-alias-tab.md)   
  [&#60;Alias&#62; Properties &#40;Alias Tab&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)  
   

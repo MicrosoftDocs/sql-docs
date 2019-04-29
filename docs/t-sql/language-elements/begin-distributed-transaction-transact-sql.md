@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "11/29/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DISTRIBUTED"
@@ -27,7 +24,6 @@ helpviewer_keywords:
   - "remote servers [SQL Server], distributed transactions"
   - "starting transactions"
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

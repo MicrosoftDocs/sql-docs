@@ -36,7 +36,7 @@ The following ports are opened for client connections coming from outside of PDW
 |Remote desktop access|3389|CTL, CMP|  
 |SSIS BinaryLoaderDataChannel|16551|CTL|  
 |dwloader BinaryLoaderDataChannel|16551|CMP|  
-|SSL encrypted connections (For internal communications, to access the Admin Console, and to access HDInsight cluster services)|443|All nodes|  
+|SSL encrypted connections (For internal communications, to access the Admin Console)|443|All nodes|  
 |SQL Server PDW Load Control Flow - Windows Credentials|8002|CTL|  
 |_Kerberos|88|AD01 and AD02,|  
 |_ldap|389|AD01 and AD02|  

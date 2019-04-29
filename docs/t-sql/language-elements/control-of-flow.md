@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,7 +13,6 @@ helpviewer_keywords:
   - "keywords [SQL Server], control-of-flow language"
   - "control-of-flow language [SQL Server], keywords listed"
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
-caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

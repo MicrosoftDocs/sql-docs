@@ -1,0 +1,152 @@
+- name: Reporting Services WMI Provider Library Reference
+  href: reporting-services-wmi-provider-library-reference-ssrs.md
+- name: MSReportServer_Instance Class
+  href: msreportserver-instance-class.md
+  items:
+  - name: MSReportServer_Instance Members
+    href: msreportserver-instance-members.md
+  - name: MSReportServer_Instance Properties
+    href: msreportserver-instance-properties.md
+  - name: EditionID
+    href: msreportserver-instance-properties-editionid.md
+  - name: EditionName
+    href: msreportserver-instance-properties-editionname.md
+  - name: InstanceID
+    href: msreportserver-instance-properties-instanceid.md
+  - name: InstanceName
+    href: msreportserver-instance-properties-instancename.md
+  - name: IsSharePointIntegrated
+    href: msreportserver-instance-properties-issharepointintegrated.md
+  - name: Version
+    href: msreportserver-instance-properties-version.md
+  - name: MSReportServer_Instance Methods
+    href: msreportserver-instance-methods.md
+  - name: GetReportServerUrls
+    href: msreportserver-instance-methods-getreportserverurls.md
+- name: MSReportServer_ConfigurationSetting Class
+  href: msreportserver-configurationsetting-class.md
+  items:
+  - name: MSReportServer_ConfigurationSetting Members
+    href: msreportserver-configurationsetting-members.md
+  - name: MSReportServer_ConfigurationSetting Properties
+    href: msreportserver-configurationsetting-properties.md
+  - name: ConnectionPoolSize
+    href: configurationsetting-property-connectionpoolsize.md
+  - name: DatabaseLogonAccount
+    href: configurationsetting-property-databaselogonaccount.md
+  - name: DatabaseLogonTimeout
+    href: configurationsetting-property-databaselogontimeout.md
+  - name: DatabaseLogonType
+    href: configurationsetting-property-databaselogontype.md
+  - name: DatabaseName
+    href: configurationsetting-property-databasename.md
+  - name: DatabaseQueryTimeout
+    href: configurationsetting-property-databasequerytimeout.md
+  - name: DatabaseServerName
+    href: configurationsetting-property-databaseservername.md
+  - name: InstallationID
+    href: configurationsetting-property-installationid.md
+  - name: InstanceName
+    href: configurationsetting-property-instancename.md
+  - name: IsInitialized
+    href: configurationsetting-property-isinitialized.md
+  - name: IsSharePointIntegrated
+    href: configurationsetting-property-issharepointintegrated.md
+  - name: IsWebServiceEnabled
+    href: configurationsetting-property-iswebserviceenabled.md
+  - name: IsWindowsServiceEnabled
+    href: configurationsetting-property-iswindowsserviceenabled.md
+  - name: MachineAccountIdentity
+    href: configurationsetting-property-machineaccountidentity.md
+  - name: PathName
+    href: configurationsetting-property-pathname.md
+  - name: SecureConnectionLevel
+    href: configurationsetting-property-secureconnectionlevel.md
+  - name: SenderEmailAddress
+    href: configurationsetting-property-senderemailaddress.md
+  - name: SendUsingSMTPServer
+    href: configurationsetting-property-sendusingsmtpserver.md
+  - name: SMTPServer
+    href: configurationsetting-property-smtpserver.md
+  - name: UnattendedExecutionAccount
+    href: configurationsetting-property-unattendedexecutionaccount.md
+  - name: Version
+    href: configurationsetting-property-version.md
+  - name: VirtualDirectoryReportManager
+    href: configurationsetting-property-virtualdirectoryreportmanager.md
+  - name: VirtualDirectoryReportServer
+    href: configurationsetting-property-virtualdirectoryreportserver.md
+  - name: WindowsServiceIdentityActual
+    href: configurationsetting-property-windowsserviceidentityactual.md
+  - name: WindowsServiceIdentityConfigured
+    href: windowsserviceidentityconfigured-property.md
+  - name: RSWindowsExtendedProtectionLevel Property (WMI MSReportServer_ConfigurationSetting)
+    href: rswindowsextendedprotectionlevel-property.md
+  - name: RSWindowsExtendedProtectionScenario Property (WMI MSReportServer_ConfigurationSetting)
+    href: rswindowsextendedprotectionscenario-property.md
+  - name: MSReportServer_ConfigurationSetting Methods
+    href: msreportserver-configurationsetting-methods.md
+  - name: BackupEncryptionKey
+    href: configurationsetting-method-backupencryptionkey.md
+  - name: CreateSSLCertificateBinding
+    href: configurationsetting-method-createsslcertificatebinding.md
+  - name: DeleteEncryptedInformation
+    href: configurationsetting-method-deleteencryptedinformation.md
+  - name: DeleteEncryptionKey
+    href: configurationsetting-method-deleteencryptionkey.md
+  - name: GenerateDatabaseCreationScript
+    href: configurationsetting-method-generatedatabasecreationscript.md
+  - name: GenerateDatabaseRightsScript
+    href: configurationsetting-method-generatedatabaserightsscript.md
+  - name: GenerateDatabaseUpgradeScript
+    href: configurationsetting-method-generatedatabaseupgradescript.md
+  - name: GetAdminSiteUrl
+    href: configurationsetting-method-getadminsiteurl.md
+  - name: GetDatabaseVersionDisplayName
+    href: configurationsetting-method-getdatabaseversiondisplayname.md
+  - name: InitializeReportServer
+    href: configurationsetting-method-initializereportserver.md
+  - name: ListInstalledSharePointVersions
+    href: configurationsetting-method-listinstalledsharepointversions.md
+  - name: ListIPAddresses
+    href: configurationsetting-method-listipaddresses.md
+  - name: ListReportServersInDatabase
+    href: configurationsetting-method-listreportserversindatabase.md
+  - name: ListReservedURLs
+    href: configurationsetting-method-listreservedurls.md
+  - name: ListSSLCertificateBindings
+    href: configurationsetting-method-listsslcertificatebindings.md
+  - name: ListSSLCertificates
+    href: configurationsetting-method-listsslcertificates.md
+  - name: ReencryptSecureInformation
+    href: configurationsetting-method-reencryptsecureinformation.md
+  - name: RemoveSSLCertificateBindings
+    href: configurationsetting-method-removesslcertificatebinding.md
+  - name: RemoveUnattendedExecutionAccount
+    href: configurationsetting-method-removeunattendedexecutionaccount.md
+  - name: RemoveURL
+    href: configurationsetting-method-removeurl.md
+  - name: ReserveURL
+    href: configurationsetting-method-reserveurl.md
+  - name: RestoreEncryptionKey
+    href: configurationsetting-method-restoreencryptionkey.md
+  - name: SetDatabaseConnection
+    href: configurationsetting-method-setdatabaseconnection.md
+  - name: SetDatabaseLogonTimeout
+    href: configurationsetting-method-setdatabaselogontimeout.md
+  - name: SetDatabaseQueryTimeout
+    href: configurationsetting-method-setdatabasequerytimeout.md
+  - name: SetEmailConfiguration
+    href: configurationsetting-method-setemailconfiguration.md
+  - name: SetSecureConnectionLevel
+    href: configurationsetting-method-setsecureconnectionlevel.md
+  - name: SetServiceState
+    href: configurationsetting-method-setservicestate.md
+  - name: SetUnattendedExecutionAccount
+    href: configurationsetting-method-setunattendedexecutionaccount.md
+  - name: SetVirtualDirectory
+    href: configurationsetting-method-setvirtualdirectory.md
+  - name: SetWindowsServiceIdentity
+    href: configurationsetting-method-setwindowsserviceidentity.md
+  - name: SetExtendedProtectionSettings Method (WMI MSReportServer_ConfigurationSetting)
+    href: configurationsetting-method-setextendedprotectionsettings.md

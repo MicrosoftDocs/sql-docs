@@ -1,14 +1,11 @@
-﻿---
+---
 title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2017"
+ms.date: "06/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "CONCAT_WS"
@@ -18,25 +15,24 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT_WS function"
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT_WS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 This function returns a string resulting from the concatenation, or joining, of two or more string values in an end-to-end manner. It separates those concatenated string values with the delimiter specified in the first function argument. (`CONCAT_WS` indicates *concatenate with separator*.)
 
 ##  Syntax   
 ```sql
-CONCAT_WS ( separator, argument1, argument1 [, argumentN]… ) 
+CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 ```
 
 ## Arguments   
 separator  
-An expression of any character type (`char`', `nchar`', `nvarchar`, or `varchar`).
+An expression of any character type (`char`, `nchar`, `nvarchar`, or `varchar`).
 
 argument1, argument2, argument*N*  
 An expression of any type.
@@ -62,7 +58,7 @@ If a scenario involves null values separated by a delimiter, consider the `ISNUL
 ## Examples   
 
 ### A.  Concatenating values with separator
-This example concatenates three columns from the sys.databases table, separating the values with a  `- `.   
+This example concatenates three columns from the sys.databases table, separating the values with a  `-`.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo

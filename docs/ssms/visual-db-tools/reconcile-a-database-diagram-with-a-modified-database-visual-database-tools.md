@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updating diagram to match database"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "updating database to match diagram"
   - "database diagrams [SQL Server], reconciling changes"
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

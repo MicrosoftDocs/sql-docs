@@ -1,14 +1,11 @@
-﻿---
+---
 title: "ERROR_STATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ERROR_STATE_TSQL"
@@ -23,16 +20,15 @@ helpviewer_keywords:
   - "CATCH block"
   - "states [SQL Server], error numbers"
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Returns the state number of the error that caused the CATCH block of a TRY…CATCH construct to be run.  
+  Returns the state number of the error that caused the CATCH block of a TRY...CATCH construct to be run.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +64,7 @@ ERROR_STATE ( )
 ### A. Using ERROR_STATE in a CATCH block  
  The following example shows a `SELECT` statement that generates a divide-by-zero error. The state of the error is returned.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide by zero error  
     SELECT 1/0;  
@@ -82,7 +78,7 @@ GO
 ### B. Using ERROR_STATE in a CATCH block with other error-handling tools  
  The following example shows a `SELECT` statement that generates a divide-by-zero error. Along with the error state, information that relates to the error is returned.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -104,7 +100,7 @@ GO
 ### C. Using ERROR_STATE in a CATCH block with other error-handling tools  
  The following example shows a `SELECT` statement that generates a divide-by-zero error. Along with the error state, information that relates to the error is returned.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -129,7 +125,8 @@ GO
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)    
+ [Errors and Events Reference &#40;Database Engine&#41;](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
-  
+    
 

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "07/25/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_refreshsqlmodule_TSQL"
@@ -26,16 +23,15 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], refreshing metadata"
   - "user-defined functions [SQL Server], refreshing metadata"
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. Persistent metadata for these objects, such as data types of parameters, can become outdated because of changes to their underlying objects.  
+  Updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. Persistent metadata for these objects, such as data types of parameters, can become outdated because of changes to their underlying objects.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,10 +51,10 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***module_name***'**  
+`[ @name = ] 'module\_name'`
  Is the name of the stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger. *module_name* cannot be a common language runtime (CLR) stored procedure or a CLR function. *module_name* cannot be schema-bound. *module_name* is **nvarchar**, with no default. *module_name* can be a multi-part identifier, but can only refer to objects in the current database.  
   
- [ **,** @**namespace** = ] **'** \<class> **'**  
+`[ , @namespace = ] ' \<class> '`
  Is the class of the specified module. When *module_name* is a DDL trigger, \<class> is required. *\<class>* is **nvarchar**(20). Valid inputs are:  
   
 |||  

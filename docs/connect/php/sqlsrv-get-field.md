@@ -1,13 +1,11 @@
 ---
 title: "sqlsrv_get_field | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "06/26/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "sqlsrv_get_field"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_get_field"
   - "retrieving data, as a single field"
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -30,7 +27,6 @@ Retrieves data from the specified field of the current row. Field data must be a
 ## Syntax  
   
 ```  
-  
 sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])  
 ```  
   
@@ -39,7 +35,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*: The index of the field to be retrieved. Indexes begin at zero.  
   
-*$getAsType* [OPTIONAL]: A **SQLSRV** constant (**SQLSRV_PHPTYPE_\***) that determines the PHP data type for the returned data. For information about supported data types, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). If no return type is specified, a default PHP type will be returned. For information about default PHP types, see [Default PHP Data Types](../../connect/php/default-php-data-types.md). For information about specifying PHP data types, see [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+*$getAsType* [OPTIONAL]: A **SQLSRV** constant (**SQLSRV_PHPTYPE_&#x2a;**) that determines the PHP data type for the returned data. For information about supported data types, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). If no return type is specified, a default PHP type will be returned. For information about default PHP types, see [Default PHP Data Types](../../connect/php/default-php-data-types.md). For information about specifying PHP data types, see [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 ## Return Value  
 The field data. You can specify the PHP data type of the returned data by using the *$getAsType* parameter. If no return data type is specified, the default PHP data type will be returned. For information about default PHP types, see [Default PHP Data Types](../../connect/php/default-php-data-types.md). For information about specifying PHP data types, see [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  

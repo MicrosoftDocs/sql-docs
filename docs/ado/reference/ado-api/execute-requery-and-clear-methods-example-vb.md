@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "Clear method [ADO], Visual Basic example"
   - "Execute method [ADO], Visual Basic example"
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -5,10 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ---
@@ -17,7 +15,7 @@ ms.technology: linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-This tutorial documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux can be done before or after installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
+This tutorial documents the tasks required to deploy a Linux Pacemaker cluster for a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Always On availability group (AG) or failover cluster instance (FCI). Unlike the tightly coupled Windows Server/ [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] stack, Pacemaker cluster creation as well as availability group (AG) configuration on Linux can be done before or after installation of [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. The integration and configuration of resources for the Pacemaker portion of an AG or FCI deployment is done after the cluster is configured.
 > [!IMPORTANT]
 > An AG with a cluster type of None does *not* require a Pacemaker cluster, nor can it be managed by Pacemaker. 
 
@@ -123,7 +121,7 @@ This section documents how to create and configure the cluster for each distribu
 1. Authorize the nodes
    
    ```bash
-   sudo pcs cluster auth <Node1 Node2 … NodeN> -u hacluster
+   sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
    where *NodeX* is the name of the node.
@@ -154,7 +152,7 @@ The process for creating a Pacemaker cluster is completely different on SLES tha
    sudo ha-cluster-init
    ``` 
    
-   on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SLES’s built-in fencing that is storage-based. NTP and watchdog can be configured later.
+   on one of the nodes. You may be prompted that NTP is not configured and that no watchdog device is found. That is fine for getting things up and running. Watchdog is related to STONITH if you use SLES's built-in fencing that is storage-based. NTP and watchdog can be configured later.
    
 2. You are prompted to configure Corosync. You are asked for the network address to bind to, as well as the multicast address and port. The network address is the subnet that you are using; for example, 192.191.190.0. You can accept the defaults at every prompt, or change if necessary.
    

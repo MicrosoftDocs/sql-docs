@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.syscategories_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "syscategories system table"
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
-caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

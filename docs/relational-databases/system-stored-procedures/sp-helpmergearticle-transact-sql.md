@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpmergearticle"
   - "sp_helpmergearticle_TSQL"
 helpviewer_keywords: 
   - "sp_helpmergearticle"
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpmergearticle (Transact-SQL)
@@ -40,10 +33,10 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication about which to retrieve information. *publication*is **sysname**, with a default of **%**, which returns information about all merge articles contained in all publications in the current database.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article for which to return information. *article*is **sysname**, with a default of **%**, which returns information about all merge articles in the given publication.  
   
 ## Result Set  

@@ -5,12 +5,8 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -20,9 +16,8 @@ helpviewer_keywords:
   - "validation [Integration Services], design-time tasks"
   - "SSIS custom tasks, validating"
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Coding a Custom Task

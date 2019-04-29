@@ -5,12 +5,8 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -26,9 +22,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], events"
   - "IDTSEvents interface"
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Handling Events Programmatically
@@ -249,6 +244,6 @@ End Module
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Event Handlers](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Add an Event Handler to a Package](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

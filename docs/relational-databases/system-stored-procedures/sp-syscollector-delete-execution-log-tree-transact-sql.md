@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_delete_execution_log_tree_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "sp_syscollector_delete_execution_log_tree"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
-caps.latest.revision: 13
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -40,10 +36,10 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## Arguments  
- [ **@log_id =** ] *log_id*  
+`[ @log_id = ] log_id`
  Is the unique identifier for the collection set log. *log_id* is **int**.  
   
- [ **@from_collection_set =** ] *from_collection_set*  
+`[ @from_collection_set = ] from_collection_set`
  Is the identifier for the collection set. *from_collection_set* is **bit=1**.  
   
 ## Return Code Values  

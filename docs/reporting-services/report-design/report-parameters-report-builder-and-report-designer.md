@@ -1,94 +1,94 @@
 ---
 title: "Report Parameters (Report Builder and Report Designer) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/17/2016"
+description: This topic describes the common uses for Reporting Services report parameters, the properties you can set, and much more.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-
-
-ms.tgt_pltfrm: ""
+ms.technology: report-design
+ms.custom: seodec18
 ms.topic: conceptual
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.reportparameters.general.f1"
-  - "sql13.rtp.rptdesigner.subreportproperties.parameters.f1"
-  - "10091"
-  - "sql13.rtp.rptdesigner.reportparameters.advanced.f1"
-  - "10073"
-  - "10070"
-ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 41
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 12/06/2018
 ---
+
 # Report Parameters (Report Builder and Report Designer)
-  This topic describes the common uses for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report parameters, the properties you can set, and much more. Report parameters enable you to control report data, connect related reports together, and vary report presentation. You can use report parameters in paginated reports you create in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] and Report Designer,  and also in mobile reports you create in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Read more about [Report Parameters Concepts](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
-  
-||  
-|-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode and Native mode|  
-  
- To try adding a parameter to a report yourself, see [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
-    
-##  <a name="bkmk_Common_Uses_for_Parameters"></a> Common Uses for Parameters  
+
+::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]
+
+::: moniker-end
+
+This topic describes the common uses for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report parameters, the properties you can set, and much more. Report parameters enable you to control report data, connect related reports together, and vary report presentation. You can use report parameters in paginated reports you create in [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] and Report Designer,  and also in mobile reports you create in [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Read more about [Report Parameters Concepts](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+
+To try adding a parameter to a report yourself, see [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+
+## <a name="bkmk_Common_Uses_for_Parameters"></a> Common Uses for Parameters
+
  Here are some of the most common ways to use parameters.  
   
- **Control Paginated and Mobile Report Data**  
+**Control Paginated and Mobile Report Data**
   
--   Filter paginated report data at the data source by writing dataset queries that contain variables.  
+- Filter paginated report data at the data source by writing dataset queries that contain variables.  
   
--   Filter data from a shared dataset. When you add a shared dataset to a paginated report, you cannot change the query. In the report, you can add a dataset filter that includes a reference to a report parameter that you create.  
+- Filter data from a shared dataset. When you add a shared dataset to a paginated report, you cannot change the query. In the report, you can add a dataset filter that includes a reference to a report parameter that you create.  
   
--   Filter data from a shared dataset in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mobile report. See [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) for more information.  
+- Filter data from a shared dataset in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mobile report. See [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) for more information.  
   
--   Enable users to specify values to customize the data in a paginated report. For example, provide two parameters for the start date and end date for sales data.  
+- Enable users to specify values to customize the data in a paginated report. For example, provide two parameters for the start date and end date for sales data.  
   
- **Connect Related Reports**  
+**Connect Related Reports**
   
--   Use parameters to relate main reports to drillthrough reports, to subreports, and to linked reports. When you design a set of reports, you can design each report to answer certain questions. Each report can provide a different view or a different level of detail for related information. To provide a set of interrelated reports, create parameters for the related data on target reports.  
+- Use parameters to relate main reports to drillthrough reports, to subreports, and to linked reports. When you design a set of reports, you can design each report to answer certain questions. Each report can provide a different view or a different level of detail for related information. To provide a set of interrelated reports, create parameters for the related data on target reports.  
   
-     For more information, see [Drillthrough Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Subreports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md), and [Create a Linked Report](../../reporting-services/reports/create-a-linked-report.md).  
+    For more information, see [Drillthrough Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Subreports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md), and [Create a Linked Report](../../reporting-services/reports/create-a-linked-report.md).  
+
+- Customize sets of parameters for multiple users. Create two linked reports based on a sales report on the report server. One linked report uses predefined parameter values for sales persons and the second linked report uses predefined parameter values for sales managers. Both reports use the same report definition.  
   
--   Customize sets of parameters for multiple users. Create two linked reports based on a sales report on the report server. One linked report uses predefined parameter values for sales persons and the second linked report uses predefined parameter values for sales managers. Both reports use the same report definition.  
+**Vary Report Presentation**
   
- **Vary Report Presentation**  
+- Send commands to a report server through a URL request, to customize the rendering of a report. For more information, see [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) and [Pass a Report Parameter Within a URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
--   Send commands to a report server through a URL request, to customize the rendering of a report. For more information, see [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) and [Pass a Report Parameter Within a URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
+- Enable users to specify values to help customize the appearance of a report. For example, provide a Boolean parameter to indicate whether to expand or collapse all nested row groups in a table.  
   
--   Enable users to specify values to help customize the appearance of a report. For example, provide a Boolean parameter to indicate whether to expand or collapse all nested row groups in a table.  
+- Enable users to customize report data and appearance by including parameters in an expression.  
   
--   Enable users to customize report data and appearance by including parameters in an expression.  
+    For more information, see [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
-     For more information, see [Parameters Collection References &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
+## <a name="UserInterface"></a> Viewing a Report with Parameters
+
+When you view a report that has parameters, the report viewer toolbar displays each parameter so you can interactively specify values. The following illustration shows the parameter area for a report with parameters @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota, and @SalesDate.  
+
+![View report with parameters](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "View report with parameters")  
   
-##  <a name="UserInterface"></a> Viewing a Report with Parameters  
- When you view a report that has parameters, the report viewer toolbar displays each parameter so you can interactively specify values. The following illustration shows the parameter area for a report withparameters @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota, and @SalesDate.  
+1. **Parameters pane** The report viewer toolbar displays a prompt and default value for each parameter. You can customize the layout of parameters in the parameters pane. For more information, see [Customize the Parameters Pane in a Report &#40;Report Builder&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
- ![View report with parameters](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "View report with parameters")  
+2. **@SalesDate parameter** The parameter @SalesDate is data type **DateTime**. The prompt Select the Date appears next to the text box. To modify the date, type a new date in the text box or use the calendar control.  
   
-1.  **Parameters pane** The report viewer toolbar displays a prompt and default value for each parameter. You can customize the layout of parameters in the parameters pane. For more information, see [Customize the Parameters Pane in a Report &#40;Report Builder&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+3. **@ShowAll parameter** The parameter @ShowAll is data type **Boolean**. Use the radio buttons to specify **True** or **False**.  
   
-2.  **@SalesDate parameter** The parameter @SalesDate is data type **DateTime**. The prompt Select the Date appears next to the text box. To modify the date, type a new date in the text box or use the calendar control.  
+4. **Show or Hide Parameter Area handle** On the report viewer toolbar, click this arrow to show or hide the parameters pane.  
   
-3.  **@ShowAll parameter** The parameter @ShowAll is data type **Boolean**. Use the radio buttons to specify **True** or **False**.  
+5. **@CategoryQuota parameter** The parameter @CategoryQuota is data type **Float**, so it takes a numeric value.  @CategoryQuota is set to allow multiple values.  
   
-4.  **Show or Hide Parameter Area handle** On the report viewer toolbar, click this arrow to show or hide the parameters pane.  
+6. **View Report**  After you enter parameter values, click **View Report** to run the report. If all parameters have default values, the report runs automatically on first view.  
   
-5.  **@CategoryQuota parameter** The parameter @CategoryQuota is data type **Float**, so it takes a numeric value.  @CategoryQuota is set to allow multiple values.  
+## <a name="bkmk_Create_Parameters"></a> Creating Parameters
+
+You can create report parameters in a few different ways.
   
-6.  **View Report**  After you enter parameter values, click **View Report** to run the report. If all parameters have default values, the report runs automatically on first view.  
+> [!NOTE]
+>  Not all data sources support parameters.
   
-##  <a name="bkmk_Create_Parameters"></a> Creating Parameters  
- You can create report parameters in a few different ways.  
-  
-> [!NOTE]  
->  Not all data sources support parameters.  
-  
- **Dataset query or stored procedure with parameters**  
+**Dataset query or stored procedure with parameters**
   
  Add a dataset query that contains variables or a dataset stored procedure that contains input parameters. A dataset parameter is created for each variable or input parameter, and a report parameter is created for each dataset parameter.  
   
@@ -108,14 +108,14 @@ manager: "kfile"
   
  For more information, see [Dataset Query](#bkmk_Dataset_Parameters) in this topic.  
   
- **Create a parameter manually**  
+**Create a parameter manually**
   
- Create a parameter manually from the Report Data pane. You can configure report parameters so that a user can interactively enter values to help customize the contents or appearance of a report. You can also configure report parameters so that a user cannot change preconfigured values.  
+Create a parameter manually from the Report Data pane. You can configure report parameters so that a user can interactively enter values to help customize the contents or appearance of a report. You can also configure report parameters so that a user cannot change preconfigured values.  
   
 > [!NOTE]  
 >  Because parameters are managed independently on the server, republishing a main report with new parameter settings does not overwrite the existing parameters settings on the report.  
   
- **Report part with a parameter**  
+ **Report part with a parameter**
   
  Add a report part that contains references to a parameter or to a shared dataset that contains variables.  
   
@@ -124,27 +124,29 @@ manager: "kfile"
 > [!NOTE]  
 >  Parameters can be published as a separate report part for data regions that have dependent datasets with parameters. Although parameters are listed as a report part, you cannot add a report part parameter directly to a report. Instead, add the report part, and any necessary report parameters are automatically generated from dataset queries that are contained or referenced by the report part. For more information about report parts, see [Report Parts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) and [Report Parts in Report Designer &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
-### Parameter Values  
+### Parameter Values
+
  The following are options for selecting parameter values in the report.  
   
--   Select a single parameter value from a drop-down list.  
+- Select a single parameter value from a drop-down list.  
   
--   Select multiple parameter values from a drop-down list.  
+- Select multiple parameter values from a drop-down list.  
   
--   Select a value from a drop-down list for one parameter, which determines the values that are available in the drop-down list for another parameter. These are cascading parameters. Cascading parameters enables you to successively filter parameter values from thousands of values to a manageable number.  
+- Select a value from a drop-down list for one parameter, which determines the values that are available in the drop-down list for another parameter. These are cascading parameters. Cascading parameters enables you to successively filter parameter values from thousands of values to a manageable number.  
   
      For more information, see [Add Cascading Parameters to a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
--   Run the report without having to first select a parameter value because a default value has been created for the parameter.  
+- Run the report without having to first select a parameter value because a default value has been created for the parameter.  
   
-##  <a name="bkmk_Report_Parameters"></a> Report Parameter Properties  
+## <a name="bkmk_Report_Parameters"></a> Report Parameter Properties
+
  You can change the report parameter properties by using the Report Properties dialog box. The following table summarizes the properties that you can set for each parameter:  
   
 |Property|Description|  
 |--------------|-----------------|  
-|Name|Type a case-sensitive name for the parameter. The name must begin with a letter and can have letters, numbers, an underscore (_). The name cannot have spaces. For automatically-generated parameters, the name matches the parameter in the dataset query. By default, manually-created parameters are similar to ReportParameter1.|  
+|Name|Type a case-sensitive name for the parameter. The name must begin with a letter and can have letters, numbers, an underscore (_). The name cannot have spaces. For automatically generated parameters, the name matches the parameter in the dataset query. By default, manually created parameters are similar to ReportParameter1.|  
 |Prompt|The text that appears next to the parameter on the report viewer toolbar.|  
-|Data type|A report parameter must be one of the following data types:<br /><br /> **Boolean**. The user selects True or False from a radio button.<br /><br /> **DateTime**. The user selects a date from a calendar control.<br /><br /> **Integer**. The user types values in a text box.<br /><br /> **Float**. The user types values in a text box.<br /><br /> **Text**. The user types values in a text box.<br /><br /> Note that when available values are defined for a parameter, the user chooses values from a drop-down list, even when the data type is **DateTime**.<br /><br /> For more information about report data types, see [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
+|Data type|A report parameter must be one of the following data types:<br /><br /> **Boolean**. The user selects True or False from a radio button.<br /><br /> **DateTime**. The user selects a date from a calendar control.<br /><br /> **Integer**. The user types values in a text box.<br /><br /> **Float**. The user types values in a text box.<br /><br /> **Text**. The user types values in a text box.<br /><br /> When available values are defined for a parameter, the user chooses values from a drop-down list, even when the data type is **DateTime**.<br /><br /> For more information about report data types, see [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Allow blank value|Select this option if the value of the parameter can be an empty string or a blank.<br /><br /> If you specify valid values for a parameter, and you want a blank value to be one of the valid values, you must include it as one of the values that you specify. Selecting this option does not automatically include a blank for available values.|  
 |Allow null value|Select this option if the value of the parameter can be a null.<br /><br /> If you specify valid values for a parameter, and you want null to be one of the valid values, you must include null as one of the values that you specify. Selecting this option does not automatically include a null for available values.|  
 |Allow multiple values|Provide available values to create a drop-down list that your users can choose from. This is a good way to ensure that only valid values are submitted in the dataset query.<br /><br /> Select this option if the value for the parameter can be multiple values that are displayed in a drop-down list. Null values are not allowed. When this option is selected, check boxes are added to the list of available values in a parameter drop-down list. The top of the list includes a check box for **Select All**. Users can check the values that they want.<br /><br /> If the data that provides values changes rapidly, the list the user sees might not be the most current.|  
@@ -162,7 +164,7 @@ manager: "kfile"
   
 -   For [!INCLUDE[tsql](../../includes/tsql-md.md)] queries, different data sources support different syntax for parameters. Support ranges from parameters that are identified in the query by position or by name. For more information, see topics for specific external data source types in [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). In the relational query designer, you must select the parameter option for a filter to create a parameterized query. For more information, see [Relational Query Designer User Interface &#40;Report Builder&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   For queries that are based on a multidimensional data source such as Microsoft SQL Server Analysis Services, SAP NetWeaver BI, or Hyperion Essbase, you can specify whether to create a parameter based on a filter that you specify in the query designer. For more information, see the query designer topic in [Query Designers &#40;Report Builder&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) that corresponds to the data extension.  
+-   For queries that are based on a multidimensional data source such as Microsoft SQL Server Analysis Services, SAP NetWeaver BI, or Hyperion Essbase, you can specify whether to create a parameter based on a filter that you specify in the query designer. For more information, see the query designer topic in [Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) that corresponds to the data extension.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Parameter Management for a Published Report  
  When you design a report, report parameters are saved in the report definition. When you publish a report, report parameters are saved and managed separately from the report definition.  
@@ -181,7 +183,7 @@ manager: "kfile"
   
 -   **URL access.** You can specify parameter values in a URL to a report. You can also run reports and specify parameter values using URL access. For more information, see [URL Access &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
   
- Parameter properties for a published report are generally preserved if you republish the report definition. If the report definition is republished as the same report, and parameter names and data types remain the same, your property settings are retained. If you add or delete parameters in the report definition, or change the data type or name of an existing parameter, you may need to change the parameter properties in the published report.  
+ Parameter properties for a published report are preserved if you republish the report definition. If the report definition is republished as the same report, and parameter names and data types remain the same, your property settings are retained. If you add or delete parameters in the report definition, or change the data type or name of an existing parameter, you may need to change the parameter properties in the published report.  
   
  Not all parameters can be modified in all cases. If a report parameter gets a default value from a dataset query, that value cannot be modified for a published report and cannot be modified on the report server. The value that is used at run time is determined when the query runs, or in the case of expression-based parameters, when the expression is evaluated.  
   
@@ -190,7 +192,7 @@ manager: "kfile"
 ##  <a name="bkmk_Parameters_Subscription"></a> Parameters for a Subscription  
  You can define a subscription for an on demand or for a snapshot and specify parameter values to use during subscription processing.  
   
--   **On demand report.**  For an on demand report, you can specify a different parameter value than the published value for each parameter listed for the report. For example, suppose you have a Call Service report that uses a *Time Period* parameter to return customer service requests for the current day, week, or month. If the default parameter value for the report is set to **today**, your subscription can use a different parameter value (such as **week** or **month**) to produce a report that contains weekly or monthly figures.  
+-   **On-demand report.**  For an on-demand report, you can specify a different parameter value than the published value for each parameter listed for the report. For example, suppose you have a Call Service report that uses a *Time Period* parameter to return customer service requests for the current day, week, or month. If the default parameter value for the report is set to **today**, your subscription can use a different parameter value (such as **week** or **month**) to produce a report that contains weekly or monthly figures.  
   
 -   **Snapshot.**  For a snapshot, your subscription must use the parameter values defined for the snapshot. Your subscription cannot override a parameter value that is defined for a snapshot. For example, suppose you are subscribing to a Western regional sales report that runs as a report snapshot, and the snapshot specifies **Western** as a regional parameter value. In this case, if you create a subscription to this report, you must use the parameter value **Western** in your subscription. To provide a visual indication that the parameter is ignored, the parameter fields on the subscription page are set to read-only fields.  
   
@@ -214,35 +216,14 @@ manager: "kfile"
 >  If a report parameter is not tied to a dataset parameter and the parameter values are included in the report, it is possible for a report user to type expression syntax or a URL into the parameter value, and render the report to Excel or HTML. If another user then views the report and clicks the rendered parameter contents, the user may inadvertently execute the malicious script or link.  
 >   
 >  To mitigate the risk of inadvertently running malicious scripts, open rendered reports only from trusted sources. For more information about securing reports, see [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md).  
-  
-##  <a name="bkmk_How_To_Topics"></a> How-To Topics  
- This section lists procedures that show you, step by step, how to work with parameters and filters.  
-  
--   [Add, Change, or Delete a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Add, Change, or Delete Available Values for a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)  
-  
--   [Add, Change, or Delete Default Values for a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md)  
-  
--   [Change the Order of a Report Parameter &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
-  
--   [Add Cascading Parameters to a Report &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
-  
--   [Add a Filter to a Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
--   [Add a Subreport and Parameters &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
-  
--   [Customize the Parameters Pane in a Report &#40;Report Builder&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)  
-  
 
 ##  <a name="bkmk_Related_Topics"></a> Related Sections  
- [Configuring SSRS Report Parameters (quiz)](http://go.microsoft.com/fwlink/p/?LinkID=306443)  
-  
+
  [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [Report Parameters Concepts](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
- [Report Samples (Report Builder and SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Report Samples (Report Builder and SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [Expression Uses in Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   

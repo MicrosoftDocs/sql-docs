@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "7905 (Database Engine error)"
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

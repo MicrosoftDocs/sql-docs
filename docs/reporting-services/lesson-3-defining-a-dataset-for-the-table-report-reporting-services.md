@@ -1,23 +1,14 @@
 ---
 title: "Lesson 3: Defining a Dataset for the Table Report (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
+ms.date: 04/15/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-caps.latest.revision: 53
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 3: Defining a Dataset for the Table Report (Reporting Services)
 After you define the data source, you need to define a dataset. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, as well as calculated fields and variables.  
@@ -26,13 +17,13 @@ Use the query designer in Report Designer to design the dataset. For this tutori
   
 ### To define a Transact-SQL query for report data  
   
-1.  In the **Report Data** pane, click **New**, and then click **Dataset…**. The **Dataset Properties** dialog box opens.  
+1.  In the **Report Data** pane, click **New**, and then click **Dataset...**. The **Dataset Properties** dialog box opens.  
   
 2.  In the **Name** box, type **AdventureWorksDataset**.  
   
 3.  Click **Use a dataset embedded in my report**.  
   
-4.  Select the data souce you created in the previous lesson, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
+4.  Select the data source you created in the previous lesson, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
 5. Select **Text** for the **Query type**.  
   
 6.  Type, or copy and paste, the following Transact-SQL query into the **Query** box.  

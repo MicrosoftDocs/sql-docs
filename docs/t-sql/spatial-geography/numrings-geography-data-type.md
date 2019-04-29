@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "NumRings_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "NumRings method"
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
-caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

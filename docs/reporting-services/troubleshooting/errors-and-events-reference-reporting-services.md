@@ -1,37 +1,28 @@
 ---
 title: "Errors and Events Reference (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/18/2017"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-
-
-ms.tgt_pltfrm: ""
+ms.technology: troubleshooting
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "messages [Reporting Services]"
-  - "errors [Reporting Services]"
-  - "Reporting Services, errors and events"
-  - "troubleshooting [Reporting Services], errors"
-  - "events [Reporting Services]"
-ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-caps.latest.revision: 42
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT 
+ms.author: maggies
+manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 04/26/2019
 ---
+
 # Errors and Events Reference (Reporting Services)
-  This topic provides information about errors and events for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
-  
+
+This topic provides information about errors and events for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] log files also contain error information. For more information about the types of log files that are available and how to view the logs, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+
 ## Cause and Resolution for Reporting Services Error Messages  
- Cause and resolution information is available for the errors most frequently searched for on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web sites. For more information, see [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
+
+Cause and resolution information is available for the errors most frequently searched for on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Web sites. For more information, see [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
   
-## Report Server Events  
- The following report server events are recorded in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log.  
+## Report Server Events
+
+The following report server events are recorded in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application log.  
   
 |Event ID|Type|Category|Source|Description|  
 |--------------|----------|--------------|------------|-----------------|  
@@ -51,7 +42,7 @@ manager: "kfile"
 |119|Error|Activation|Report Server<br /><br /> Scheduling and Delivery Processor|*\<Source>* has not been granted access to the contents of the report server database.|  
 |120|Error|Activation|Report Server|The symmetric key cannot be decrypted. Most likely, the there has been a change to the account that the service runs as. For more information, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Error|Startup/Shutdown|Report Server|Remote Procedure Call (RPC) Service failed to start.|  
-|122|Warning|Delivery|Scheduling and Delivery Processor|Scheduling and Delivery Processor cannot connect to the SMTP server that is used for e-mail delivery. For more information about SMTP server connections, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).|  
+|122|Warning|Delivery|Scheduling and Delivery Processor|Scheduling and Delivery Processor cannot connect to the SMTP server that is used for e-mail delivery. For more information about SMTP server connections, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
 |123|Warning|Logging|Report Server<br /><br /> Report Manager|The report server failed to write to the trace log. For more information about trace logs, see [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |124|Information|Activation|Report Server|The Report Server service has been initialized. For more information, see [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
 |125|Information|Activation|Report Server|The key used for encrypting data was successfully extracted. For more information about keys, see [Configure and Manage Encryption Keys &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
@@ -65,9 +56,7 @@ manager: "kfile"
 |133|Error|Management|Report Server<br /><br /> Report Manager<br /><br /> Scheduling and Delivery Processor|A configuration file failed to load. This error may occur if the XML is not valid.|  
 |134|Error|Management|Report Server|The report server failed to encrypt values for a setting in a configuration file.|  
   
-## See Also  
- [Monitor Reporting Services Subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+## See also
+
+- [Monitor Reporting Services Subscriptions](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+- [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

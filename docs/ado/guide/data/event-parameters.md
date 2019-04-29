@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Error parameter [ADO]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "Reason parameter [ADO]"
   - "event parameters [ADO]"
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

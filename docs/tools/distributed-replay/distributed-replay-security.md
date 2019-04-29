@@ -4,15 +4,10 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "distributed-replay"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -79,9 +74,9 @@ manager: craigg
   
     3.  Press ENTER.  
   
-2.  **Configure computer-wide DCOM permissions**: Grant the corresponding computer-wide DCOM permissions for each account listed in the following table. For more information about how to set computer-wide permissions, see [Checklist: Manage DCOM Applications](http://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Configure computer-wide DCOM permissions**: Grant the corresponding computer-wide DCOM permissions for each account listed in the following table. For more information about how to set computer-wide permissions, see [Checklist: Manage DCOM Applications](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Configure application-specific DCOM permissions**: Grant the corresponding application-specific DCOM permissions for each account listed in the following table. The DCOM application name for the controller service is **DReplayController**. For more information about how to set application-specific permissions, see [Checklist: Manage DCOM Applications](http://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Configure application-specific DCOM permissions**: Grant the corresponding application-specific DCOM permissions for each account listed in the following table. The DCOM application name for the controller service is **DReplayController**. For more information about how to set application-specific permissions, see [Checklist: Manage DCOM Applications](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  The following table describes which DCOM permissions are required for the administration tool interactive user account and the client service accounts:  
   

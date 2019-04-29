@@ -5,21 +5,16 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Script component [Integration Services], error output"
   - "error outputs [Integration Services], Script component"
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
-caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Simulating an Error Output for the Script Component

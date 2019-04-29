@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_BROKER_TSQL"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "ALTER BROKER PRIORITY statement"
   - "ssbdiagnose"
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER BROKER PRIORITY (Transact-SQL)

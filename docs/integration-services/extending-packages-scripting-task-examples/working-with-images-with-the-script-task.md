@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -26,9 +21,8 @@ helpviewer_keywords:
   - "JPEG format [Integration Services]"
   - ".jpeg files"
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Working with Images with the Script Task

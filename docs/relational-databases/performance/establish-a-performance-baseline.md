@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Establish a Performance Baseline | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database performance [SQL Server], baselines"
@@ -20,11 +18,10 @@ helpviewer_keywords:
   - "monitoring server performance [SQL Server], establishing baseline"
   - "database monitoring [SQL Server], baselines"
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
-caps.latest.revision: 22
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Establish a Performance Baseline
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

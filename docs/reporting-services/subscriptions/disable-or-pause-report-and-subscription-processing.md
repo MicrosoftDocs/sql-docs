@@ -1,16 +1,11 @@
 ---
 title: "Disable or Pause Report and Subscription Processing | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2015"
+ms.date: 09/29/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "subscriptions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: subscriptions
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "pausing schedules"
@@ -24,10 +19,8 @@ helpviewer_keywords:
   - "roles [Reporting Services], modifying"
   - "shared schedules [Reporting Services], pausing"
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-caps.latest.revision: 47
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Disable or Pause Report and Subscription Processing
   There are several approaches you can use to disable or pause [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report and subscription processing. The approaches in this topic range from disabling a subscription to interrupting the data source connection. Not all approaches are possible with both [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes.The following tables summaries the methods and supported [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server modes:  
@@ -66,8 +59,8 @@ manager: "kfile"
   
 ```  
 #disable specific subscription  
-$rs2010 = New-WebServiceProxy -Uri "http://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
-$subscriptionID = "subscription guid”;  
+$rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$subscriptionID = "subscription guid";  
 $rs2010.DisableSubscription($subscriptionID);  
   
 ```  
@@ -76,7 +69,7 @@ $rs2010.DisableSubscription($subscriptionID);
   
 ```  
 #list all subscriptions  
-$rs2010 = New-WebServiceProxy -Uri "http://SERVERNAME /ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME /ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
 $subscriptions | select subscriptionid, report, status, path  
   
@@ -86,7 +79,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
 #list all disabled subscriptions  
-$rs2010 = New-WebServiceProxy -Uri "http://uetestb03/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://uetestb03/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
 Write-Host "--- Disabled Subscriptions ---";  
 Write-Host "----------------------------------- ";  
@@ -97,7 +90,7 @@ $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.
   
 ```  
 #enable all subscriptions  
-$rs2010 = New-WebServiceProxy -Uri "http://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/") | Where-Object {$_.status -eq "disabled" } ;  
 ForEach ($subscription in $subscriptions)  
 {  
@@ -111,7 +104,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
 #DISABLE all subscriptions  
-$rs2010 = New-WebServiceProxy -Uri "http://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/") ;  
 ForEach ($subscription in $subscriptions)  
 {  
@@ -159,9 +152,9 @@ ForEach ($subscription in $subscriptions)
   
 -   SharePoint Library (available only from a SharePoint site that is integrated with a SharePoint integrated mode report server)  
   
- E-mail delivery must be configured before it can be used. If you do not configure it, it is not available. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+ E-mail delivery must be configured before it can be used. If you do not configure it, it is not available. For more information, see [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
- If you want to turn off specific extensions, you can remove extension entries in the **RSReportServer.config** file. For more information, see [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md) and [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+ If you want to turn off specific extensions, you can remove extension entries in the **RSReportServer.config** file. For more information, see [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md) and [Configure a Report Server for E-Mail Delivery (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  After you remove a delivery extension, it is no longer available in Report Manager or a SharePoint site. Removing a delivery extension can result in inactive subscriptions. Be sure to delete the subscriptions or configure them to use a different delivery extension before removing an extension.  
   
@@ -170,7 +163,7 @@ ForEach ($subscription in $subscriptions)
  [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Configure Report Manager &#40;Native Mode&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Security Properties Page, Items &#40;Report Manager&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Security Properties Page, Items &#40;Report Manager&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   

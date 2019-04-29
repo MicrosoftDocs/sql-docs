@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "geometry"
@@ -18,7 +15,6 @@ helpviewer_keywords:
   - "spatial data types [SQL Server]"
   - "geometry data type [SQL Server], Transact-SQL"
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
-caps.latest.revision: 20
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

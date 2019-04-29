@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 helpviewer_keywords: 
   - "Handler property [ADO]"
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -24,7 +21,7 @@ Indicates the name of a server-side customization program (handler) that extends
  **Applies To:** [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/en-us/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## Syntax  
   
@@ -47,7 +44,7 @@ DataControl.Handler = String
   
  The name of the default handler is **MSDFMAP.Handler**, and its default parameter is a customization file named **MSDFMAP.INI**. Use this property to invoke alternate customization files created by your server administrator.  
   
- The alternative to setting the **Handler** property is to specify a handler and parameters in the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property; that is, "**Handler=***handlerName,parameter1,parameter2,...;*".  
+ The alternative to setting the **Handler** property is to specify a handler and parameters in the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property; that is, "**Handler=**_handlerName,parameter1,parameter2,...;_".  
   
 ## Applies To  
  [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

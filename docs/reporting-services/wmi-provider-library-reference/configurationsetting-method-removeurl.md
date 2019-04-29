@@ -1,24 +1,17 @@
 ---
 title: "RemoveURL Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "wmi-provider-library-reference"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: wmi-provider-library-reference
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "RemoveURL method"
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
-caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - RemoveURL
   Removes a URL reserved for the report server. If there are multiple URLs that need to be removed, this must be done one by one calling this API.  
@@ -56,7 +49,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  Returns an *HRESULT* indicating success or failure of the method call. A value of 0 indicates that the method call was successful; an error code indicates the call was not successful.  
   
 ## Remarks  
- *UrlString* does not include the Virtual Directory name – the [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method is provided for that purpose.  
+ *UrlString* does not include the Virtual Directory name - the [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method is provided for that purpose.  
   
  Before calling the [ReserveURL](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md) method, you must supply a value for the VirtualDirectory configuration property for the *Application* parameter. Use the [SetVirtualDirectory Method &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) method to set the VirtualDirectory property.  
   

@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_deletepeerrequesthistory"
   - "sp_deletepeerrequesthistory_TSQL"
 helpviewer_keywords: 
   - "sp_deletepeerrequesthistory"
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_deletepeerrequesthistory (Transact-SQL)
@@ -41,13 +34,13 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Name of the publication for which the status request was made. *publication* is **sysname**, with no default.  
   
- [ **@request_id=** ] *request_id*  
+`[ @request_id = ] request_id`
  Specifies an individual status request so that all responses to this request will be deleted. *request_id* is **int**, with a default value of NULL.  
   
- [ **@cutoff_date=** ] *cutoff_date*  
+`[ @cutoff_date = ] cutoff_date`
  Specifies a cutoff date, before which all earlier response records are deleted. *cutoff_date* is **datetime**, with a default value of NULL.  
   
 ## Return Code Values  

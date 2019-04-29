@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.resolvereferences.preview.F1"
   - "sql13.dts.designer.resolvereferences.mapper.F1"
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Resolve Column Reference Editor

@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Refresh method [ADO], Visual Basic example"
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -22,7 +19,7 @@ manager: craigg
 # Refresh Method Example (VB)
 This example demonstrates using the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method to refresh the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection for a stored procedure [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  
   
-```  
+```vb
 'BeginRefreshVB  
 Public Sub Main()  
     On Error GoTo ErrorHandler  
@@ -57,7 +54,7 @@ Public Sub Main()
     cmdByRoyalty.CommandType = adCmdStoredProc  
     cmdByRoyalty.Parameters.Refresh  
   
-    ' Get paramater value, execute the command  
+    ' Get parameter value, execute the command  
     ' and store the results in a recordset  
     strRoyalty = InputBox("Enter royalty:")  
     If strRoyalty = "" Then  

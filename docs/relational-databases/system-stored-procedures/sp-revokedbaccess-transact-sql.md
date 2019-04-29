@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_revokedbaccess_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_revokedbaccess"
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_revokedbaccess (Transact-SQL)
@@ -41,7 +37,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name_in_db =** ] **'***name***'**  
+`[ @name_in_db = ] 'name'`
  Is the name of the database user to be removed. *name* is a **sysname** with no default. *name* can be the name of a server login, a Windows login, or a Windows group, and must exist in the current database. When you specify a Windows login or Windows group, specify the name by which it is known in the database.  
   
 ## Return Code Values  

@@ -1,24 +1,18 @@
 ---
 title: "Supported combinations of SharePoint and Reporting Services server | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2017"
+ms.date: 07/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SharePoint mode"
   - "add-in for sharepoint"
   - "rsSharePoint"
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-caps.latest.revision: 39
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # Supported combinations of SharePoint and Reporting Services server
@@ -77,7 +71,7 @@ A SQL Server Reporting Services report server installed in SharePoint mode requi
 ## Next steps
 
  [Where to find the Reporting Services add-in for SharePoint Products](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
- [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
+ [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "quorum [SQL Server], database mirroring"
@@ -21,7 +19,6 @@ helpviewer_keywords:
   - "full quorum [SQL Server]"
   - "high-availability mode [SQL Server]"
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -72,7 +69,7 @@ manager: craigg
   
     -   All the server instances lose quorum, but subsequently the mirror and witness reconnect. The database will not be served in this case.  
   
-     Rarely, the network connection between failover partners is lost while both partners remain connected to the witness. In this event, two, separate witness-to–partner quorums exist, with the witness as a liaison. The witness informs the mirror server that the principal server is still connected. Therefore, automatic failover does not occur. Instead, the mirror server retains the mirror role and waits to reconnect to the principal. If the redo queue contains log records at this point, the mirror server continues to roll forward the mirror database. On reconnecting, the mirror server will resynchronize the mirror database.  
+     Rarely, the network connection between failover partners is lost while both partners remain connected to the witness. In this event, two, separate witness-to-partner quorums exist, with the witness as a liaison. The witness informs the mirror server that the principal server is still connected. Therefore, automatic failover does not occur. Instead, the mirror server retains the mirror role and waits to reconnect to the principal. If the redo queue contains log records at this point, the mirror server continues to roll forward the mirror database. On reconnecting, the mirror server will resynchronize the mirror database.  
   
 -   A *partner-to-partner quorum* that consists of the two partners.  
   

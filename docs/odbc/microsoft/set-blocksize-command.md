@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "set blocksize command [ODBC]"
 ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

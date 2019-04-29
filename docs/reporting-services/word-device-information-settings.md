@@ -1,25 +1,18 @@
 ---
 title: "Word Device Information Settings | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "Word [Reporting Services]"
   - "device information settings [Reporting Services], Word"
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
-caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Word Device Information Settings
   The following table lists the device information settings for rendering in [!INCLUDE[ofprword](../includes/ofprword-md.md)] format.  

@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sysmergepublications"
   - "sysmergepublications_TSQL"
@@ -21,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergepublications system table"
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sysmergepublications (Transact-SQL)

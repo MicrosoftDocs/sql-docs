@@ -5,9 +5,7 @@ ms.date: "07/15/2016"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [SQL Server], backing up data"
@@ -22,7 +20,6 @@ helpviewer_keywords:
   - "backups [SQL Server], about"
   - "backups [SQL Server], table-level backups unsupported"
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

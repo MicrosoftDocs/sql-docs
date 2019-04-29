@@ -1,21 +1,17 @@
-﻿---
+---
 title: "Set the Polling Interval for Target Servers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-agent"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "interval for polling [SQL Server]"
   - "target servers [SQL Server], polling interval"
   - "polling interval [SQL Server]"
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -27,7 +23,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
 
-This topic describes how to set the frequency that [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent refreshes information from the master to the target servers. A job is a specified series of actions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent performs. A multiserver job is a job that a master server runs on one or more target servers.  
+This topic describes how to set the frequency that [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent refreshes information from the master to the target servers. A job is a specified series of actions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent performs. A multiserver job is a job that a master server runs on one or more target servers.  
   
 -   **Before you begin:**  [Security](#Security)  
   
@@ -68,8 +64,8 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
   
 2.  On the toolbar, click **New Query**.  
   
-3.  In the query window, use the [sp_post_msx_operation (Transact-SQL)](http://msdn.microsoft.com/en-us/085deef8-2709-4da9-bb97-9ab32effdacf) system stored procedure to set the polling interval for target servers.  
+3.  In the query window, use the [sp_post_msx_operation (Transact-SQL)](https://msdn.microsoft.com/085deef8-2709-4da9-bb97-9ab32effdacf) system stored procedure to set the polling interval for target servers.  
   
 ## See Also  
-[sysdownloadlist](http://msdn.microsoft.com/en-us/71087a4c-e829-488e-aa7d-a9476e2b4779)  
+[sysdownloadlist](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  
   

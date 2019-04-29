@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.query_store_query_text (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "01/23/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SYS.QUERY_STORE_QUERY_TEXT"
@@ -21,14 +18,13 @@ helpviewer_keywords:
   - "sys.query_store_query_text catalog view"
   - "query_store_query_text catalog view"
 ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_query_text (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contains  the [!INCLUDE[tsql](../../includes/tsql-md.md)] text and the SQL handle of the query.  
   
@@ -37,8 +33,8 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 |**query_text_id**|**bigint**|Primary key.|  
 |**query_sql_text**|**nvarchar(max)**|SQL text of the query, as provided by the user. Includes whitespaces, hints and comments.|  
 |**statement_sql_handle**|**vabinary(64)**|SQL handle of the individual query.|  
-|**is_part_of_encrypted_module**|**bit**|Query text is a part of an encrypted module.|  
-|**has_restricted_text**|**bit**|Query text contains a password or other unmentionable words.|  
+|**is_part_of_encrypted_module**|**bit**|Query text is a part of an encrypted module.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**has_restricted_text**|**bit**|Query text contains a password or other unmentionable words.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
   
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  

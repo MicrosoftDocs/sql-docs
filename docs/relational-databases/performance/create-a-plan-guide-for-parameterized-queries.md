@@ -4,21 +4,18 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameterized queries, plan guides for"
   - "plan guides [SQL Server], parameterized queries"
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
-caps.latest.revision: 6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Create a Plan Guide for Parameterized Queries
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A TEMPLATE plan guide matches stand-alone queries that parameterize to a specified form.  
   
  The following example creates a plan guide that matches any query that parameterizes to a specified form, and directs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to force parameterization of the query. The following two queries are syntactically equivalent, but differ only in their constant literal values.  

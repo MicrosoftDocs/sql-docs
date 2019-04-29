@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -16,9 +13,8 @@ helpviewer_keywords:
   - "system functions [SQL Server]"
   - "functions [SQL Server], system"
 ms.assetid: 9cd7618d-6bd5-4f26-9351-87219b44775f
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # System Functions (Transact-SQL)

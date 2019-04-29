@@ -5,12 +5,8 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -24,9 +20,8 @@ helpviewer_keywords:
   - "custom user interface [Integration Services], custom data flow component"
   - "editors [Integration Services]"
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing a User Interface for a Data Flow Component

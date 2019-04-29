@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_OFFSETS_TSQL"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "offsets [SQL Server]"
   - "SET OFFSETS statement"
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # SET OFFSETS (Transact-SQL)

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_stop_job_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_stop_job"
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-caps.latest.revision: 38
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -43,19 +39,19 @@ sp_stop_job
 ```  
   
 ## Arguments  
- [ **@job_name =**] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job to stop. *job_name* is **sysname**, with a default of NULL.  
   
- [ **@job_id =**] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job to stop. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@originating_server =**] **'***master_server***'**  
+`[ @originating_server = ] 'master_server'`
  The name of the master server. If specified, all multiserver jobs are stopped. *master_server* is **nvarchar(128)**, with a default of NULL. Specify this parameter only when calling **sp_stop_job** at a target server.  
   
 > [!NOTE]  
 >  Only one of the first three parameters can be specified.  
   
- [ **@server_name =**] **'***target_server***'**  
+`[ @server_name = ] 'target_server'`
  The name of the specific target server on which to stop a multiserver job. *target_server* is **nvarchar(128)**, with a default of NULL. Specify this parameter only when calling **sp_stop_job** at a master server for a multiserver job.  
   
 ## Return Code Values  
@@ -78,7 +74,7 @@ sp_stop_job
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Members of **SQLAgentUserRole** and **SQLAgentReaderRole** can only stop jobs that they own. Members of **SQLAgentOperatorRole** can stop all local jobs including those that are owned by other users. Members of **sysadmin** can stop all local and multiserver jobs.  
   

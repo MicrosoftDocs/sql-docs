@@ -5,18 +5,15 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.olapconnection.f1"
 helpviewer_keywords: 
   - "Add Analysis Services Connection Manager"
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add Analysis Services Connection Manager Dialog Box UI Reference

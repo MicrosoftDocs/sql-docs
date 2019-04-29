@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STNumCurves"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumCurves method (geography)"
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
-caps.latest.revision: 10
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

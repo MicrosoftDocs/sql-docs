@@ -1,22 +1,15 @@
 ---
 title: "Manage Shared Datasets | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
-caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Manage Shared Datasets
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], shared datasets retrieve data from shared data sources that connect to external data sources. A shared dataset provides a way to share a query to help provide a consistent set of data for multiple reports. The dataset query can include dataset parameters. You can configure a shared dataset to cache query results for specific parameter combinations on first use or by specifying a schedule. You can use shared dataset caching in combination with report caching and report data feeds to help manage access to a data source.  
@@ -34,7 +27,7 @@ manager: "kfile"
   
  The shared dataset definition includes a query, dataset parameters including default values, data options such as case sensitivity, and dataset filters. Values that you set in the definition are used whenever the shared dataset is included in a report.  
   
- To use a shared dataset in a report, you open an application such as Report Builder, browse to the report server or SharePoint site, and select the shared dataset. This adds an instance of the shared dataset to the report. In the report, you cannot view or change the query or the shared data source for the shared dataset. You can specify an additional set of dataset property values that apply to the instance in the report. For example, you can add a filter or change data options such as case sensitivity. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
+ To use a shared dataset in a report, you open an application such as Report Builder, browse to the report server or SharePoint site, and select the shared dataset. This adds an instance of the shared dataset to the report. In the report, you cannot view or change the query or the shared data source for the shared dataset. You can specify an additional set of dataset property values that apply to the instance in the report. For example, you can add a filter or change data options such as case sensitivity. For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com.  
   
 ## Managing Shared Datasets  
  To manage the properties of a published shared dataset, you can use Report Manager for a native mode report server, or application pages on a SharePoint site if you deployed the report server in SharePoint integrated mode. The tasks that you can perform on a shared dataset depend on your role assignments and on site level and item level permissions, including permissions on the folder if permission inheritance is in effect. Item level security for shared datasets follow the same model as item level security for reports. For more information, see [Secure Shared Dataset Items](../../reporting-services/security/secure-shared-dataset-items.md).  
@@ -66,7 +59,7 @@ manager: "kfile"
  Another way to view the shared dataset definition in XML is to use URL access syntax in Report Manager. For example, to view the default values for each dataset parameter, you can use the following URL access command to display a shared dataset definition named DataSet1 from the report server:  
   
 ```  
-http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
 ```  
   
 ## Controlling Access to the Shared Dataset Definition  
@@ -89,14 +82,14 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 |Task|Tool|Link|  
 |----------|----------|----------|  
-|Add a shared dataset or change shared dataset definition properties.|Save in Report Builder.<br /><br /> Deploy in Report Designer.<br /><br /> Upload an .rsd file in Report Manager|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in the [Report Builder documentation](http://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com<br /><br /> [Upload File Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)<br /><br /> If you upload a shared dataset before the shared data source that it depends is published, you must manually bind the shared dataset to the shared data source. For more information, see [General Properties Page, Shared Datasets &#40;Report Manager&#41;](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958).|  
-|Change shared dataset item properties.|Report Manager|[General Properties Page, Shared Datasets &#40;Report Manager&#41;](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
-|Specify additional shared dataset properties for a shared dataset instance in a report.|Report Builder Report Designer|[Dataset Properties Dialog Box, Query](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
-|Bind to a different shared data source for a shared dataset.|Report Manager|[Data Source Selection Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|Verify default values for dataset parameters.|Open in Report Builder or use URL access syntax.|For example:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|Enable caching|Report Manager|[Cache Shared Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Caching Page, Shared Datasets &#40;Report Manager&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
-|Create or edit a cache refresh plan|Report Manager|[Cache Refresh Options &#40;Report Manager&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
-|View the shared dataset definition schema.|Report Manager|`http://<reportserver>/shareddatasetdefinition.xsd`|  
+|Add a shared dataset or change shared dataset definition properties.|Save in Report Builder.<br /><br /> Deploy in Report Designer.<br /><br /> Upload an .rsd file in Report Manager|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) in the [Report Builder documentation](https://go.microsoft.com/fwlink/?LinkId=154494) on msdn.microsoft.com<br /><br /> [Upload File Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)<br /><br /> If you upload a shared dataset before the shared data source that it depends is published, you must manually bind the shared dataset to the shared data source. For more information, see [General Properties Page, Shared Datasets &#40;Report Manager&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958).|  
+|Change shared dataset item properties.|Report Manager|[General Properties Page, Shared Datasets &#40;Report Manager&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
+|Specify additional shared dataset properties for a shared dataset instance in a report.|Report Builder Report Designer|[Dataset Properties Dialog Box, Query](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
+|Bind to a different shared data source for a shared dataset.|Report Manager|[Data Source Selection Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
+|Verify default values for dataset parameters.|Open in Report Builder or use URL access syntax.|For example:<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|Enable caching|Report Manager|[Cache Shared Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Caching Page, Shared Datasets &#40;Report Manager&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
+|Create or edit a cache refresh plan|Report Manager|[Cache Refresh Options &#40;Report Manager&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
+|View the shared dataset definition schema.|Report Manager|`https://<reportserver>/shareddatasetdefinition.xsd`|  
 |In SharePoint integrated mode, synchronize the shared dataset definition between the report server and the SharePoint site|SharePoint application pages|Change shared dataset item properties<br /><br /> Change cache options<br /><br /> Change the shared data source|  
   
 ## Comparing Shared Datasets with Other Report Server Items  

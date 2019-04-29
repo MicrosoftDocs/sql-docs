@@ -5,16 +5,13 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "backup checksums [SQL Server]"
   - "disabling checksums"
   - "checksums [SQL Server]"
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

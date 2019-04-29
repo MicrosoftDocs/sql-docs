@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "02/01/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg

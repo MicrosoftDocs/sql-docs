@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET HADR"
@@ -24,9 +21,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Transact-SQL statements"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
@@ -56,7 +52,7 @@ ALTER DATABASE database_name
  SET HADR  
  Executes the specified [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] command on the specified database.  
   
- { AVAILABILITY GROUP **=***group_name* | OFF }  
+ { AVAILABILITY GROUP **=**_group_name_ | OFF }  
  Joins or removes the availability database from the specified availability group, as follows:  
   
  *group_name*  
@@ -66,7 +62,7 @@ ALTER DATABASE database_name
   
 -   The database must already have been added to the availability group on the primary replica.  
   
--   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](http://go.microsoft.com/fwlink/?LinkId=225834).  
+-   The primary replica must be active. For information about how troubleshoot an inactive primary replica, see [Troubleshooting Always On Availability Groups Configuration (SQL Server)](https://go.microsoft.com/fwlink/?LinkId=225834).  
   
 -   The primary replica must be online, and the secondary replica must be connected to the primary replica.  
   
@@ -80,7 +76,7 @@ ALTER DATABASE database_name
  OFF  
  Removes the specified secondary database from the availability group.  
   
- Removing a secondary database can be useful if it has fallen far behind the primary database, and you do not want to wait for the secondary database to catch up. After removing the secondary database, you can update it by restoring a sequence of backups ending with a recent log backup (using RESTORE … WITH NORECOVERY).  
+ Removing a secondary database can be useful if it has fallen far behind the primary database, and you do not want to wait for the secondary database to catch up. After removing the secondary database, you can update it by restoring a sequence of backups ending with a recent log backup (using RESTORE ... WITH NORECOVERY).  
   
 > [!IMPORTANT]  
 >  To completely remove an availability database from an availability group, connect to the server instance that hosts the primary replica, and use the [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name* statement. For more information, see [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).  

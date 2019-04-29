@@ -5,12 +5,8 @@ ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -20,9 +16,8 @@ helpviewer_keywords:
   - "packages [Integration Services], creating"
   - "SQL Server Integration Services packages, creating"
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Creating a Package Programmatically
@@ -150,9 +145,9 @@ End Module
   
 ## External Resources  
   
--   Blog entry, [API Sample - OleDB source and OleDB destination](http://go.microsoft.com/fwlink/?LinkId=220824), on blogs.msdn.com.  
+-   Blog entry, [API Sample - OleDB source and OleDB destination](https://go.microsoft.com/fwlink/?LinkId=220824), on blogs.msdn.com.  
   
--   Blog entry, [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
+-   Blog entry, [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), on blogs.msdn.com.  
   
 ## See Also  
  [Adding Tasks Programmatically](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

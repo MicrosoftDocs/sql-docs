@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "EOF property [ADO], VC++ example"
   - "BOF property [ADO], VC++ example"
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg

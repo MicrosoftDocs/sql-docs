@@ -1,6 +1,6 @@
-﻿---
+---
 title: "Analysis Services tutorial lesson 7: Create Key Performance Indicators | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Create Key Performance Indicators
 
@@ -33,7 +34,7 @@ This article is part of a tabular modeling tutorial, which should be completed i
 3.  In the formula bar, above the table, type the following formula: 
  
     ```  
-    InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
+    InternetCurrentQuarterSalesPerformance :=IF([InternetPreviousQuarterSalesProportionToQTD]<>0,([InternetCurrentQuarterSales]-[InternetPreviousQuarterSalesProportionToQTD])/[InternetPreviousQuarterSalesProportionToQTD],BLANK()) 
     ```
 
     This measure serves as the Base measure for the KPI.  

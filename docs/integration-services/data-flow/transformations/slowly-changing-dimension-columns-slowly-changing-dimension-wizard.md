@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.scdsupport.f1"
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)

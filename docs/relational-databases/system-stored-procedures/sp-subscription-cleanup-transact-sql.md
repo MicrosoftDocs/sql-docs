@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_subscription_cleanup_TSQL"
   - "sp_subscription_cleanup"
 helpviewer_keywords: 
   - "sp_subscription_cleanup"
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_subscription_cleanup (Transact-SQL)
@@ -42,16 +35,16 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of NULL. If NULL, subscriptions using a shared agent publication in the publishing database will be deleted.  
   
- [ **@reserved=**] **'***reserved***'**  
+`[ @reserved = ] 'reserved'`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

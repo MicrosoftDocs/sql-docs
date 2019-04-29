@@ -1,21 +1,17 @@
-﻿---
+---
 title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -191,8 +187,8 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
 ```  
   
 ## See Also  
- [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
+ [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
 

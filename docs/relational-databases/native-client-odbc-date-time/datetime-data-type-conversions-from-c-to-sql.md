@@ -1,24 +1,19 @@
-﻿---
+---
 title: "Conversions from C to SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-date-time"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [ODBC], C to SQL"
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # datetime Data Type Conversions from C to SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +59,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   **7**: The date is set to the current date.  
   
--   **8**: The time is converted from the client’s timezone to UTC. If an error occurs during this conversion, a diagnostic record is generated with SQLSTATE 22008 and the message "Datetime field overflow".  
+-   **8**: The time is converted from the client's timezone to UTC. If an error occurs during this conversion, a diagnostic record is generated with SQLSTATE 22008 and the message "Datetime field overflow".  
   
 -   **9**: The string is parsed and converted to a date, datetime, datetimeoffset, or time value, depending on the first punctuation character encountered and the presence of remaining components. The string is then converted to the target type, following the rules in the preceding table for the source type discovered by this process. If an error is detected while parsing the data, a diagnostic record is generated with SQLSTATE 22018 and the message "Invalid character value for cast specification". For datetime and smalldatetime parameters, if the year is outside the range supported by these types, a diagnostic record is generated with SQLSTATE 22007 and the message "Invalid datetime format".  
   
@@ -78,7 +73,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   **13**: If truncation with data loss occurs, a diagnostic record is generated with SQLSTATE 22001 and the message "String data, right truncated".  
   
-     The number of fractional seconds digits (the scale) is determined from the destination column’s size according to the following table:  
+     The number of fractional seconds digits (the scale) is determined from the destination column's size according to the following table:  
   
     ||||  
     |-|-|-|  

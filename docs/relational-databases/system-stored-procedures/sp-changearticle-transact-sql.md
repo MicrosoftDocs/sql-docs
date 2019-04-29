@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changearticle"
   - "sp_changearticle_TSQL"
 helpviewer_keywords: 
   - "sp_changearticle"
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-caps.latest.revision: 77
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_changearticle (Transact-SQL)
@@ -45,16 +38,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains the article. *publication* is **sysname**, with a default of NULL.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article whose property is to be changed. *article* is **sysname**, with a default of NULL.  
   
- [ **@property=**] **'***property***'**  
+`[ @property = ] 'property'`
  Is an article property to change. *property* is **nvarchar(100)**.  
   
- [ **@value=**] **'***value***'**  
+`[ @value = ] 'value'`
  Is the new value of the article property. *value* is **nvarchar(255)**.  
   
  This table describes the properties of articles and the values for those properties.  
@@ -115,7 +108,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x100000000**|Use this option to replicate the FILESTREAM attribute if it is specified on **varbinary(max)** columns. Do not specify this option if you are replicating tables to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Subscribers. Replicating tables that have FILESTREAM columns to [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Subscribers is not supported, regardless of how this schema option is set.<br /><br /> See related option **0x800000000**.|  
 ||**0x200000000**|Converts date and time data types (**date**, **time**, **datetimeoffset**, and **datetime2**) that were introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] to data types that are supported on earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0x400000000**|Replicates the compression option for data and indexes. For more information, see [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
-||**0x800000000**|Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option is not set, FILESTREAM data is stored on the default filegroup. Replication does not create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md).<br /><br /> See related option **0x100000000**.|  
+||**0x800000000**|Set this option to store FILESTREAM data on its own filegroup at the Subscriber. If this option is not set, FILESTREAM data is stored on the default filegroup. Replication does not create filegroups; therefore, if you set this option, you must create the filegroup before you apply the snapshot at the Subscriber. For more information about how to create objects before you apply the snapshot, see [Execute Scripts Before and After the Snapshot Is Applied](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> See related option **0x100000000**.|  
 ||**0x1000000000**|Converts common language runtime (CLR) user-defined types (UDTs) larger than 8000 bytes to **varbinary(max)** so that columns of type UDT can be replicated to Subscribers that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x2000000000**|Converts the **hierarchyid** data type to **varbinary(max)** so that columns of type **hierarchyid** can be replicated to Subscribers that are running [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information about how to use **hierarchyid** columns in replicated tables, see [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Replicates any filtered indexes on the table. For more information about filtered indexes, see [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).|  
@@ -147,7 +140,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||UPDATE statement to execute; otherwise, it is constructed from the log.|  
 |NULL|NULL|Returns a list of article properties that can be changed.|  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
@@ -156,7 +149,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  See the Remarks section for the properties that, when changed, require the generation of a new snapshot.  
   
- [ **@force_reinit_subscription=]***force_reinit_subscription*  
+`[ @force_reinit_subscription = ]force_reinit_subscription_`
  Acknowledges that the action taken by this stored procedure may require existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit** with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  
@@ -165,8 +158,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  See the Remarks section for the properties that, when changed, require that all existing subscriptions be reinitialized.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -236,8 +229,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**func schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|  
 |**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**, and **0x80000000**|  
   
-> [!NOTE]  
->  For queued updating publications, the *schema_option* value of **0x80** must be enabled. The supported *schema_option* values for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications are: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** and **0x4000**.  
+> [!NOTE]
+>  For queued updating publications, the *schema_option* value of **0x80** must be enabled. The supported *schema_option* values for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications are: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** and **0x4000**.  
   
 ## Example  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

@@ -1,28 +1,19 @@
 ---
 title: "Using Custom Assemblies with Reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "custom-assemblies"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: custom-assemblies
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "custom assemblies [Reporting Services]"
   - "assemblies [Reporting Services], custom"
   - "custom assemblies [Reporting Services], about custom assemblies"
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
-caps.latest.revision: 32
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Using Custom Assemblies with Reports
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], you can write custom code for report item values, styles, and formatting. For example, you can use custom code to format currencies based on locale, flag certain values with special formatting, or apply other business rules that are in practice for your company. One way to include this code in your reports is to create a custom code assembly using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] that you can reference from within your report definition files. The server calls the functions in your custom assemblies when a report is run. Custom assemblies can be used to retrieve specialized functions that you plan to use in your reports.  

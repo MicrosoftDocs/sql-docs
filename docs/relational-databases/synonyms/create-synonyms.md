@@ -1,13 +1,9 @@
-﻿---
+---
 title: "Create Synonyms | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.synonym.general.f1"
@@ -15,11 +11,10 @@ helpviewer_keywords:
   - "creating synonyms"
   - "synonyms [SQL Server], creating"
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
-caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Synonyms
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +45,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 1.  In **Object Explorer**, expand the database where you want to create your new view.  
   
-2.  Right-click the **Synonyms** folder, then click **New Synonym…**.  
+2.  Right-click the **Synonyms** folder, then click **New Synonym...**.  
   
 3.  In the **Add Synonym** dialog box, enter the following information.  
   

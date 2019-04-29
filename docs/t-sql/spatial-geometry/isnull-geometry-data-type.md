@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "IsNull (geometry Data Type)"
@@ -17,7 +14,6 @@ dev_langs:
 helpviewer_keywords: 
   - "IsNull (geometry Data Type)"
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
-caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -25,7 +21,7 @@ manager: craigg
 # IsNull (geometry Data Type)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-The type of a **geometry** instance is null. Returns 0 if the instance is not null.
+The type of a **geometry** instance is null. Returns 0 if the instance isn't null.
   
 ## Syntax  
   
@@ -39,9 +35,9 @@ The type of a **geometry** instance is null. Returns 0 if the instance is not nu
  CLR type: **SqlBoolean**  
   
 ## Remarks  
- `IsNull` can be used to test whether a **geometry** instance is null. This can produce somewhat confusing results, returning 0 if the instance is not null, but null if the instance is null.  
+ `IsNull` can be used to test whether a **geometry** instance is null. `IsNull` returns 0 if the instance isn't null, but null if the instance is null.  
   
- This method is primarily used by the SQL Server infrastructure; it is not recommended that you use `IsNull` to test whether an instance is null.  
+ This method is primarily used by the SQL Server infrastructure; it isn't recommended that you use `IsNull` to test whether an instance is null.  
   
 
 ## See Also  

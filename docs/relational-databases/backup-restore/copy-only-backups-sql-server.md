@@ -1,30 +1,25 @@
-﻿---
+---
 title: "Copy-Only Backups (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/30/2016"
+ms.date: "09/08/2018"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "copy-only backups [SQL Server]"
   - "COPY_ONLY option [BACKUP statement]"
   - "backups [SQL Server], copy-only backups"
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
-caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Copy-Only Backups (SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   A *copy-only backup* is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup that is independent of the sequence of conventional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. Usually, taking a backup changes the database and affects how later backups are restored. However, occasionally, it is useful to take a backup for a special purpose without affecting the overall backup and restore procedures for the database. Copy-only backups serve this purpose.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  The types of copy-only backups are as follows:  
   
@@ -48,6 +43,8 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 ### Examples  
 ###  <a name="SSMSProcedure"></a> A.  Using SQL Server Management Studio  
 In this example, a copy-only backup of the `Sales` database will be backed up to disk at the default backup location.
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  In **Object Explorer**, connect to an instance of the SQL Server Database Engine and then expand that instance.
 
@@ -103,6 +100,6 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
  [Copy Databases with Backup and Restore](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Restore and Recovery Overview &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[Backup-SqlDatabase](https://technet.microsoft.com/library/mt683378.aspx)
+[Backup-SqlDatabase](/powershell/module/sqlserver/backup-sqldatabase)
 
   

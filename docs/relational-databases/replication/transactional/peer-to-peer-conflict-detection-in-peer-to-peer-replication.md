@@ -4,18 +4,13 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactional replication, peer-to-peer replication"
   - "peer-to-peer transactional replication, conflict detection"
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
-caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -27,7 +22,7 @@ manager: craigg
  Peer-to-peer replication in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and later versions provides the option to enable conflict detection across a peer-to-peer topology. This option would help prevent the issues that are caused by undetected conflicts, including inconsistent application behavior and lost updates. With this option enabled, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved and the data is made consistent across the topology.  
   
 > [!NOTE]  
->  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row that is originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md).  
+>  To avoid potential data inconsistency, make sure that you avoid conflicts in a peer-to-peer topology, even with conflict detection enabled. To ensure that write operations for a particular row are performed at only one node, applications that access and change data must partition insert, update, and delete operations. This partitioning ensures that modifications to a given row that is originating at one node are synchronized with all other nodes in the topology before the row is modified by a different node. If an application requires sophisticated conflict detection and resolution capabilities, use merge replication. For more information, see [Merge Replication](../../../relational-databases/replication/merge/merge-replication.md) and [Detect and Resolve Merge Replication Conflicts](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## Understanding Conflicts and Conflict Detection  
  In a single database, changes that are made to the same row by different applications do not cause a conflict. This is because transactions are serialized, and locks are used to handle concurrent changes. In an asynchronous distributed system such as peer-to-peer replication, transactions act independently on each node; and there is no mechanism to serialize transactions across multiple nodes. A protocol like two-phase commit could be used, but this affects performance significantly.  
@@ -93,7 +88,7 @@ manager: craigg
   
     3.  Verify the conflicts that were detected by using the conflict viewer and determine the rows that were involved, the type of conflict, and the winner. The conflict is resolved based on the originator ID value that you specified during configuration: the row that originated at the node with the highest ID wins the conflict. For more information, see [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
-    4.  Run validation to ensure that the conflicting rows converged correctly. For more information, see [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md).  
+    4.  Run validation to ensure that the conflicting rows converged correctly. For more information, see [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
         > [!NOTE]  
         >  If data is inconsistent after this step, you must manually update rows on the node that has the highest priority, and then let the changes propagate from this node. If there are no further conflicting changes in the topology, all nodes will be brought to a consistent state.  

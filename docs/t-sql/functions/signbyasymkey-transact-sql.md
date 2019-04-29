@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SIGNBYASYMKEY_TSQL"
@@ -24,9 +21,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
   - "clear text signing"
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # SIGNBYASYMKEY (Transact-SQL)

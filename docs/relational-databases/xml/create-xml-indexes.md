@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "indexes [XML in SQL Server]"
   - "XML indexes [SQL Server], creating"
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Create XML Indexes

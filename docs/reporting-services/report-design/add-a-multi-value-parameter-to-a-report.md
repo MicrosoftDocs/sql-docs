@@ -1,29 +1,22 @@
 ---
 title: "Add a multi-value parameter to a Report | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add a multi-value parameter to a Report
   You can add a parameter to a report that allows the user to select more than one value for the parameter.  
   
  You can pass multiple parameter values to the report within the report URL. For a URL example includes a multi-value parameter, see [Pass a Report Parameter Within a URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
- For information on how to pass multiple parameter values to a stored procedure, see [Working With Multi-Select Parameters for SSRS Reports](http://go.microsoft.com/fwlink/?LinkId=321529) on mssqltips.com.  
+ For information on how to pass multiple parameter values to a stored procedure, see [Working With Multi-Select Parameters for SSRS Reports](https://go.microsoft.com/fwlink/?LinkId=321529) on mssqltips.com.  
   
 ## To add a multi-value parameter  
   
@@ -41,7 +34,7 @@ manager: "kfile"
     > [!IMPORTANT]  
     > *  The query text must not include the DECLARE statement for the query variable.  
     > *  The text for the query variable must include the **IN** operator, as shown in the example above.  
-    > *  Be sure to include the parentheses around the variable as shown above. Otherwise, the report fails to render and the “must declare the scalar variable” error is displayed.  
+    > *  Be sure to include the parentheses around the variable as shown above. Otherwise, the report fails to render and the "must declare the scalar variable" error is displayed.  
   
     A dataset parameter for an embedded dataset or a shared dataset is created automatically for the query variable. A report parameter is created automatically for the dataset parameter.  
   

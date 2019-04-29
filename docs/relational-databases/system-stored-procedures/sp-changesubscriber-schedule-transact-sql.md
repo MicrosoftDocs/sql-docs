@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_changesubscriber_schedule"
@@ -17,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changesubscriber_schedule"
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_changesubscriber_schedule (Transact-SQL)
@@ -48,44 +43,44 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## Arguments  
- [ **@subscriber=**] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**. The name of the Subscriber must be unique in the database, must not already exist, and cannot be NULL.  
   
- [ **@agent_type=**] *type*  
+`[ @agent_type = ] type`
  Is the type of agent. *type* is **smallint**, with a default of **0**. **0** indicates a Distribution Agent. **1** indicates a Merge Agent.  
   
- [ **@frequency_type=**] *frequency_type*  
+`[ @frequency_type = ] frequency_type`
  Is the frequency with which to schedule the distribution task. *frequency_type* is **int**, with a default of **64**. There are 10 schedule columns.  
   
- [ **@frequency_interval=**] *frequency_interval*  
+`[ @frequency_interval = ] frequency_interval`
  Is the value applied to the frequency set by *frequency_type*. *frequency_interval* is **int**, with a default of **1**.  
   
- [ **@frequency_relative_interval=**] *frequency_relative_interval*  
+`[ @frequency_relative_interval = ] frequency_relative_interval`
  Is the date of the distribution task. *frequency_relative_interval* is **int**, with a default of **1**.  
   
- [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`
  Is the recurrence factor used by *frequency_type*. *frequency_recurrence_factor* is **int**, with a default of **0**.  
   
- [ **@frequency_subday=**] *frequency_subday*  
+`[ @frequency_subday = ] frequency_subday`
  Is how often, in minutes, to reschedule during the defined period. *frequency_subday* is **int**, with a default of **4**.  
   
- [ **@frequency_subday_interval=**] *frequency_subday_interval*  
+`[ @frequency_subday_interval = ] frequency_subday_interval`
  Is the interval for *frequency_subday*. *frequency_subday_interval* is **int**, with a default of **5**.  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
+`[ @active_start_time_of_day = ] active_start_time_of_day`
  Is the time of day when the distribution task is first scheduled. *active_start_time_of_day* is **int**, with a default of **0**.  
   
- [ **@active_end_time_of_day=**] *active_end_time_of_day*  
+`[ @active_end_time_of_day = ] active_end_time_of_day`
  Is the time of day when the distribution task stops being scheduled. *active_end_time_of_day* is **int**, with a default of **235959**, which means 11:59:59 P.M. on a 24-hour clock.  
   
- [ **@active_start_date=**] *active_start_date*  
+`[ @active_start_date = ] active_start_date`
  Is the date when the distribution task is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with a default of **0**.  
   
- [ **@active_end_date=**] *active_end_date*  
+`[ @active_end_date = ] active_end_date`
  Is the date when the distribution task stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with a default of **99991231**, which means December 31, 9999.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

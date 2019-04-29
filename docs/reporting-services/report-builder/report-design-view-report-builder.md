@@ -1,16 +1,11 @@
 ---
 title: "Report Design View (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-builder"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-builder
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "10440"
@@ -24,10 +19,8 @@ helpviewer_keywords:
   - "user interface"
   - "overview of Report Builder"
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 23
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Design View (Report Builder)
   The Report Builder window is designed to help you easily organize your report resources and quickly build the paginated reports you need. The design surface is at the center of the window, with the ribbon and the panes around it. The design surface is where you add and organize your report items. This article explains the panes you use to add, select, and organize your report resources, and change report item properties.  
@@ -111,7 +104,7 @@ manager: "kfile"
 ##  <a name="ReptPartGallery"></a> The Report Part Gallery  
  The easiest way to create a report is to find an existing report part, like a table or chart, on the report server or a report server integrated into a SharePoint site.  
   
- Click **Report Parts** on the Insert tab to open the Report Part Gallery. There you can search for report parts to add to your report. You can filter the report parts by all or part of the name of the report part, who created it, who last modified it, when it was last modified, where it’s stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
+ Click **Report Parts** on the Insert tab to open the Report Part Gallery. There you can search for report parts to add to your report. You can filter the report parts by all or part of the name of the report part, who created it, who last modified it, when it was last modified, where it's stored, or what type of report part it is. For example, you could search for all charts created last week by one of your coworkers.  
   
 > [!NOTE]  
 >  To view the Report Part Gallery, you need to be connected to a server.  
@@ -173,6 +166,6 @@ manager: "kfile"
   
 ## See Also  
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+ [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -1,14 +1,10 @@
-﻿---
+---
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "MATCH"
@@ -18,12 +14,10 @@ dev_langs:
 helpviewer_keywords: 
   - "MATCH statement [SQL Server], SQL graph"
   - "SQL graph, MATCH statement"
-ms.assetid: 
-caps.latest.revision: 1
-author: "shkale-msft"
-ms.author: "shkale"
+author: shkale-msft
+ms.author: shkale
 manager: craigg
-monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

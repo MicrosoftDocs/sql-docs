@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STIsEmpty_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsEmpty (geometry Data Type)"
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
-caps.latest.revision: 21
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

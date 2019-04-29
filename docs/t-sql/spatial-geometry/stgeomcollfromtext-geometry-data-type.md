@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STGeomCollFromText_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomCollFromText (geometry Data Type)"
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
-caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

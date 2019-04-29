@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "shape commands [ADO]"
   - "data shaping [ADO], APPEND clause"
   - "append clause [ADO]"
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -56,10 +53,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 ```  
 SHAPE [parent-command [[AS] parent-alias]]  
-   APPEND (child-recordset [ [[AS] child-alias]   
-      RELATE parent-column TO child-column | PARAMETER param-number, ... ])  
-   [[AS] chapter-alias]   
-   [, ... ]  
+   APPEND (child-recordset [ [[AS] child-alias]   
+      RELATE parent-column TO child-column | PARAMETER param-number, ... ])  
+   [[AS] chapter-alias]   
+   [, ... ]  
 ```  
   
 ## Remarks  

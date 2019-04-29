@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syspolicy_set_config_history_retention_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_set_config_history_retention"
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
-caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_set_config_history_retention (Transact-SQL)
@@ -38,7 +34,7 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ```  
   
 ## Arguments  
- [ **@value=** ] *value*  
+`[ @value = ] value`
  Is the number of days to retain Policy-Based Management history. *value* is **sqlvariant**.  
   
 ## Return Code Values  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_maintenance_plan_job"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_maintenance_plan_job"
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
-caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -44,10 +40,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'***plan_id***'**  
+`[ @plan_id = ] 'plan\_id'`
  Specifies the ID of the maintenance plan. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
- [ **@job_id =**] **'***job_id***'**  
+`[ @job_id = ] 'job\_id'`
  Specifies the ID of the job with which the maintenance plan is associated. *job_id* is **uniqueidentifier**, and must be a valid ID.  
   
 ## Return Code Values  

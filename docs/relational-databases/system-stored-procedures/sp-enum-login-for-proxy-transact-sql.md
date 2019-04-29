@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_enum_login_for_proxy_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_enum_login_for_proxy"
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 18
-author: "stevestein"
-ms.author: "sstein"
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_enum_login_for_proxy (Transact-SQL)
@@ -41,13 +37,13 @@ sp_enum_login_for_proxy
 ```  
   
 ## Arguments  
- [ **@name**= ] '*name*'  
+`[ @name = ] 'name'`
  The name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principal, login, server role, or **msdb** database role to list proxies for. The name is **nvarchar(256)**, with a default of NULL.  
   
- [ **@proxy_id**= ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to list information for. The *proxy_id* is **int**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to list information for. The *proxy_name* is **sysname**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
 ## Return Code Values  

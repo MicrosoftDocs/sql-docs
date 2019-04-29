@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "END DIALOG"
@@ -25,9 +22,8 @@ helpviewer_keywords:
   - "conversations [Service Broker], ending"
   - "ending conversations [SQL Server]"
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # END CONVERSATION (Transact-SQL)
@@ -68,9 +64,9 @@ END CONVERSATION conversation_handle
   
  If [!INCLUDE[ssSB](../../includes/sssb-md.md)] has not already processed an end dialog or error message for the conversation, [!INCLUDE[ssSB](../../includes/sssb-md.md)] notifies the remote side of the conversation that the conversation has ended. The messages that [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends to the remote service depend on the options specified:  
   
--   If the conversation ends without errors, and the conversation to the remote service is still active, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends a message of type `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` to the remote service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] adds this message to the transmission queue in conversation order. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends all messages for this conversation that are currently in the transmission queue before sending this message.  
+-   If the conversation ends without errors, and the conversation to the remote service is still active, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends a message of type `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` to the remote service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] adds this message to the transmission queue in conversation order. [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends all messages for this conversation that are currently in the transmission queue before sending this message.  
   
--   If the conversation ends with an error and the conversation to the remote service is still active, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends a message of type `http://schemas.microsoft.com/SQL/ServiceBroker/Error` to the remote service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] drops any other messages for this conversation currently in the transmission queue.  
+-   If the conversation ends with an error and the conversation to the remote service is still active, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends a message of type `https://schemas.microsoft.com/SQL/ServiceBroker/Error` to the remote service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] drops any other messages for this conversation currently in the transmission queue.  
   
 -   The WITH CLEANUP clause allows a database administrator to remove conversations that cannot complete normally. This option removes all messages and catalog view entries for the conversation. Notice that, in this case, the remote side of the conversation receives no indication that the conversation has ended, and may not receive messages that have been sent by an application but not yet transmitted over the network. Avoid this option unless the conversation cannot complete normally.  
   

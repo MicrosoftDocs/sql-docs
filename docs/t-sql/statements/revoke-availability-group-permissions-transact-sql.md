@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -18,9 +15,8 @@ helpviewer_keywords:
   - "revoking permissions, [SQL Server], availability groups"
   - "permissions [SQL Server], availability group"
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # REVOKE Availability Group Permissions (Transact-SQL)
@@ -51,7 +47,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Specifies a permission that can be revoked on an availability group. For a list of the permissions, see the Remarks section later in this topic.  
   
- ON AVAILABILITY GROUP **::***availability_group_name*  
+ ON AVAILABILITY GROUP **::**_availability_group_name_  
  Specifies the availability group on which the permission is being revoked. The scope qualifier (**::**) is required.  
   
  { FROM | TO } \<server_principal> 
@@ -100,7 +96,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
 ## Permissions  
- Requires CONTROL permission on the availability group or ALTER ANY AVAILABILTIY GROUP permission on the server.  
+ Requires CONTROL permission on the availability group or ALTER ANY AVAILABILITY GROUP permission on the server.  
   
 ## Examples  
   
@@ -124,7 +120,7 @@ GO
 ```  
   
 ### C. Revoking a previously granted WITH GRANT OPTION clause  
- If a permission was granted using the WITH GRANT OPTION, use REVOKE GRANT OPTION FOR … to remove the WITH GRANT OPTION. The following example grants the permission and then removes the WITH GRANT portion of the permission.  
+ If a permission was granted using the WITH GRANT OPTION, use REVOKE GRANT OPTION FOR ... to remove the WITH GRANT OPTION. The following example grants the permission and then removes the WITH GRANT portion of the permission.  
   
 ```  
 USE master;  

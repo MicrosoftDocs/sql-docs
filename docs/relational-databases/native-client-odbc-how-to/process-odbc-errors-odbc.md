@@ -1,52 +1,47 @@
-﻿---
+---
 title: "Process ODBC Errors (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-how-to"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "errors [ODBC]"
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Process ODBC Errors (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Two ODBC function calls can be used to retrieve ODBC messages: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) and [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). To obtain primary ODBC-related information in the **SQLState**, **pfNative**, and **ErrorMessage** diagnostic fields, call [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) until it returns SQL_NO_DATA. For each diagnostic record, [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) can be called to retrieve individual fields. All driver-specific fields must be retrieved using **SQLGetDiagField**.  
+  Two ODBC function calls can be used to retrieve ODBC messages: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) and [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md). To obtain primary ODBC-related information in the **SQLState**, **pfNative**, and **ErrorMessage** diagnostic fields, call [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) until it returns SQL_NO_DATA. For each diagnostic record, [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) can be called to retrieve individual fields. All driver-specific fields must be retrieved using **SQLGetDiagField**.  
   
- [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) and [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) are processed by ODBC Driver Manager, not an individual driver. ODBC Driver Manager does not cache driver-specific diagnostic fields until a successful connection has been made. Calling [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) for driver-specific diagnostic fields is not possible before a successful connection. This includes the ODBC connection commands, even if they return SQL_SUCCESS_WITH_INFO. Driver-specific diagnostic fields will not be available until the next ODBC function call.  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) and [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) are processed by ODBC Driver Manager, not an individual driver. ODBC Driver Manager does not cache driver-specific diagnostic fields until a successful connection has been made. Calling [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) for driver-specific diagnostic fields is not possible before a successful connection. This includes the ODBC connection commands, even if they return SQL_SUCCESS_WITH_INFO. Driver-specific diagnostic fields will not be available until the next ODBC function call.  
   
 ## Example  
   
 ### Description  
- This sample shows a simple error handler that calls [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) for the standard ODBC information. It then tests for a valid connection, and if one exists, it calls **SQLGetDiagField** for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver-specific diagnostic fields. This sample is not supported on IA64.  
+ This sample shows a simple error handler that calls [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) for the standard ODBC information. It then tests for a valid connection, and if one exists, it calls **SQLGetDiagField** for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver-specific diagnostic fields. This sample is not supported on IA64.  
   
  This sample was developed for ODBC version 3.0 or later.  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
- You will need an ODBC data source called AdventureWorks, whose default database is the AdventureWorks sample database. (You can download the AdventureWorks sample database from the [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page.) This data source must be based on the ODBC driver that is supplied by the operating system (the driver name is "SQL Server"). If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  
+ You will need an ODBC data source called AdventureWorks, whose default database is the AdventureWorks sample database. (You can download the AdventureWorks sample database from the [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) home page.) This data source must be based on the ODBC driver that is supplied by the operating system (the driver name is "SQL Server"). If you will build and run this sample as a 32-bit application on a 64-bit operating system, you must create the ODBC data source with the ODBC Administrator in %windir%\SysWOW64\odbcad32.exe.  
   
  This sample connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the definition of the ODBC data source to specify the instance using the following format: server\namedinstance. By default, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] installs to a named instance.  
   
- Execute the first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to create the stored procedure used by this sample.  
+ Execute the first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to create the stored procedure used by this sample.  
   
  Compile the second (C++) code listing with odbc32.lib. Then, execute the program.  
   
- Execute the third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the stored procedure used by this sample.  
+ Execute the third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the stored procedure used by this sample.  
   
 ### Code  
   

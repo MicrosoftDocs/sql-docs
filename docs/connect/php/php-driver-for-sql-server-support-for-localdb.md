@@ -4,12 +4,9 @@ ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -18,11 +15,11 @@ manager: craigg
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-LocalDB is a lightweight version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] which has been available since [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. This topic discusses how to connect to a database in a LocalDB instance.
+LocalDB is a lightweight version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which has been available since [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. This topic discusses how to connect to a database in a LocalDB instance.
 
 ## Remarks
 
-For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Books Online topic on [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
+For more information about LocalDB, including how to install LocalDB and configure your LocalDB instance, see the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online topic on [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express LocalDB.
 
 In brief, LocalDB allows you to:
 
@@ -57,7 +54,7 @@ In brief, LocalDB allows you to:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-If necessary, you can create a LocalDB instance with sqllocaldb.exe. You can also use sqlcmd.exe to add and modify databases in a LocalDB instance. For example, `sqlcmd -S (localdb)\v11.0`. (When running in IIS, you need to run under the correct account to get the same results as when you run at the command line; see [Using LocalDB with Full IIS, Part 2: Instance Ownership](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) for more information.)
+If necessary, you can create a LocalDB instance with sqllocaldb.exe. You can also use sqlcmd.exe to add and modify databases in a LocalDB instance. For example, `sqlcmd -S (localdb)\v11.0`. (When running in IIS, you need to run under the correct account to get the same results as when you run at the command line; see [Using LocalDB with Full IIS, Part 2: Instance Ownership](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) for more information.)
 
 The following are example connection strings using the SQLSRV driver that connect to a database in a LocalDB named instance called myInstance:
 

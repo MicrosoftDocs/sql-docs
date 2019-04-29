@@ -5,9 +5,7 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services packages, troubleshooting"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "errors [Integration Services], troubleshooting"
   - "packages [Integration Services], troubleshooting"
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-caps.latest.revision: 65
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Troubleshooting Tools for Package Development

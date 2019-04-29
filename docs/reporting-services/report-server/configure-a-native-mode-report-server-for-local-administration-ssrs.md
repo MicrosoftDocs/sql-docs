@@ -1,16 +1,11 @@
 ---
 title: "Configure a Native Mode Report Server for Local Administration (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "UAC"
@@ -20,13 +15,11 @@ helpviewer_keywords:
   - "windows server 2008"
   - "Vista"
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-caps.latest.revision: 20
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure a Native Mode Report Server for Local Administration (SSRS)
-  Deploying a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server 2016 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) and [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
+  Deploying a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server on one of the following operating systems requires more configuration steps if you want to administer the report server instance locally. This topic explains how to configure the report server for local administration. If you have not yet installed or configured the report server, see [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) and [Manage a Reporting Services Native Mode Report Server](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -78,7 +71,7 @@ manager: "kfile"
   
 2.  Click **Allow** to continue.  
   
-3.  In the URL address, enter the Report Manager URL. For instructions, see [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  In the URL address, enter the Report Manager URL. For instructions, see [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
 4.  Click **Tools**.  
   
@@ -90,7 +83,7 @@ manager: "kfile"
   
 8.  Click **Sites**.  
   
-9. Add `http://<your-server-name>`.  
+9. Add `https://<your-server-name>`.  
   
 10. Clear the check box **Require server certification (https:) for all sites in this zone** if you are not using HTTPS for the default site.  
   
@@ -114,7 +107,7 @@ manager: "kfile"
   
 ###  <a name="bkmk_configure_site_settings"></a> Report Manager Site Settings  
   
-1.  Open your browser with administrative privileges and browse to report manager, `http://<server name>/reports`.  
+1.  Open your browser with administrative privileges and browse to report manager, `https://<server name>/reports`.  
   
 2.  Click **Site Settings** in the upper corner of the Home page.  
   
@@ -163,7 +156,7 @@ manager: "kfile"
   
 -   When you attempt to deploy report items to the local report server, you see an error message similar to the following in the **Error List** window:  
   
-    -   The permissions granted to user ‘Domain\\<user name\>’ are insufficient for performing this operation.  
+    -   The permissions granted to user 'Domain\\<user name\>' are insufficient for performing this operation.  
   
  **To run with elevated permissions each time you open SSDT:**  
   

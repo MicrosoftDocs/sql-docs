@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|queries"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SELECT Clause"
@@ -27,9 +24,8 @@ helpviewer_keywords:
   - "$ROWGUID keyword"
   - "queries [SQL Server], results"
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SELECT Clause (Transact-SQL)

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "BufferWithCurves"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "BufferWithCurves method (geography)"
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

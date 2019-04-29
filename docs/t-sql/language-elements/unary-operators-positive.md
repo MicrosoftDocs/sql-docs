@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "+ (positive)"
   - "+"
@@ -24,7 +18,6 @@ helpviewer_keywords:
   - "positive operator (+)"
   - "positive values [SQL Server]"
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
-caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

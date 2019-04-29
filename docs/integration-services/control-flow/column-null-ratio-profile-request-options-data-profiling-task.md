@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Column Null Ratio Profile Request Options (Data Profiling Task)

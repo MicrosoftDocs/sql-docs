@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpreplicationdboption_TSQL"
   - "sp_helpreplicationdboption"
 helpviewer_keywords: 
   - "sp_helpreplicationdboption"
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpreplicationdboption (Transact-SQL)
@@ -41,10 +34,10 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## Arguments  
- [ **@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the name of the database. *dbname* is **sysname**, with a default of **%**. If **%**, then the result set contains all databases at the Publisher, otherwise only information on the specified database is returned. Information is not returned for any databases on which the user does not have the appropriate permissions, as described below.  
   
- [ **@type=**]  **'***type***'**  
+`[ @type = ] 'type'`
  Restricts the result set to contain only databases on which the specified replication option *type* value has been enabled. *type* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  
@@ -53,7 +46,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |**merge publish**|Merge replication allowed.|  
 |**replication allowed** (default)|Either transactional or merge replication allowed.|  
   
- [ **@reserved=** ] *reserved*  
+`[ @reserved = ] reserved`
  Specifies whether information on existing publications and subscriptions is returned. *reserved* is **bit**, with a default value of 0. If **1**, the result set includes information on whether the database specified has any existing publications or subscriptions.  
   
 ## Result Sets  

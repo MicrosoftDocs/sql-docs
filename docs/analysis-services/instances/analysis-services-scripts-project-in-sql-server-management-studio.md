@@ -30,7 +30,7 @@ manager: kfile
 4.  Right-click on the project, point to **Add**, and then select **Existing Item** to add miscellaneous files, such as text files that contain notes on the project, in the **Miscellaneous** folder of the Analysis Server Scripts project in Solution Explorer. These files are ignored by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## File Types  
- A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution can contain several file types, depending on what projects you included in the solution and what items you included in each project for that solution. For more information about file types for solutions in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Files That Manage Solutions and Projects](http://msdn.microsoft.com/library/e19d2859-0b97-4727-ac27-c4c226d86b2f). Typically, the files for each project in a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution are stored in the solution folder, in a separate folder for each project.  
+ A [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution can contain several file types, depending on what projects you included in the solution and what items you included in each project for that solution. For more information about file types for solutions in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Files That Manage Solutions and Projects](../../ssms/solution/files-that-manage-solutions-and-projects.md). Typically, the files for each project in a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solution are stored in the solution folder, in a separate folder for each project.  
   
  The project folder for an Analysis Server Scripts project can contain the file types listed in the following table.  
   
@@ -48,7 +48,7 @@ manager: kfile
  [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Multidimensional Expressions &#40;MDX&#41; Reference](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; Reference](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

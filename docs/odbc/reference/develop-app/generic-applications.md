@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "interoperability [ODBC], generic applications"
   - "interoperability [ODBC], levels"
   - "generic applications [ODBC]"
 ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

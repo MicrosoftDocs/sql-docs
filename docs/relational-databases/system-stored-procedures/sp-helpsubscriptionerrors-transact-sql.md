@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpsubscriptionerrors_TSQL"
   - "sp_helpsubscriptionerrors"
 helpviewer_keywords: 
   - "sp_helpsubscriptionerrors"
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpsubscriptionerrors (Transact-SQL)
@@ -43,19 +36,19 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=** ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@subscriber=** ] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with no default.  
   
- [ **@subscriber_db=** ] **'***subscriber_db***'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with no default.  
   
 ## Result Set  

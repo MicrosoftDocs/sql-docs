@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "xml columns [full-text search]"
   - "indexes [full-text search]"
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Use Full-Text Search with XML Columns

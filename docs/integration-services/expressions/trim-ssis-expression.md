@@ -5,18 +5,15 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "leading blanks"
   - "TRIM function"
   - "trailing blanks"
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # TRIM (SSIS Expression)

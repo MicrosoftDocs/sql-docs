@@ -32,7 +32,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
  The value that is supplied by the \<rank expression> argument determines the increasing order of rank for the rows that are supplied in the \<table expression> argument, and the number of bottom-most rows that is specified in the \<count> argument is returned.  
   
 ## Examples  
- The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ The following example creates a prediction query against the Association model that you build by using the [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
  To understand how BottomCount works, it might be helpful to first execute a prediction query that returns only the nested table.  
   

@@ -1,15 +1,12 @@
-﻿---
+---
 title: "Working with Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DataType object"
@@ -17,11 +14,10 @@ helpviewer_keywords:
   - "data types [SMO]"
   - "SMO [SQL Server], data types"
 ms.assetid: 1e0e736a-c709-4d89-aeb2-b32dcfd641fa
-caps.latest.revision: 45
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Working with Data Types
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -73,7 +69,7 @@ To use any code example that is provided, you will have to choose the programmin
 ```VBNET
 'Declare a DataType object variable and define the data type in the constructor.
 Dim dt As DataType
-'For the decimal data type the following two arguements specify precision, and scale.
+'For the decimal data type the following two arguments specify precision, and scale.
 dt = New DataType(SqlDataType.Decimal, 10, 2)
 ``` 
   
@@ -87,7 +83,7 @@ dt = New DataType(SqlDataType.Decimal, 10, 2)
 {   
 //Declare a DataType object variable and define the data type in the constructor.   
 DataType dt;   
-//For the decimal data type the following two arguements specify precision, and scale.   
+//For the decimal data type the following two arguments specify precision, and scale.   
 dt = new DataType(SqlDataType.Decimal, 10, 2);   
 }  
 ```  

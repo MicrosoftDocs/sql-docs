@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_help_profileaccount_sp_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_profileaccount_sp"
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: 43
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -42,16 +38,16 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## Arguments  
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the profile ID of the profile to list. *profile_id* is **int**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  Is the profile name of the profile to list. *profile_name* is **sysname**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
- [ **@account_id** = ] *account_id*  
+`[ @account_id = ] account_id`
  Is the account ID to list. *account_id* is **int**, with a default of NULL. When *account_id* and *account_name* are both NULL, lists all the accounts in the profile.  
   
- [ **@account_name** = ] **'***account_name***'**  
+`[ @account_name = ] 'account_name'`
  Is the name of the account to list. *account_name* is **sysname**, with a default of NULL. When *account_id* and *account_name* are both NULL, lists all the accounts in the profile.  
   
 ## Return Code Values  

@@ -5,15 +5,11 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: tutorial
-applies_to: 
-  - "SQL Server 2016"
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Lesson 3-2 - Running the Package Installation Wizard
@@ -27,7 +23,7 @@ In an earlier lesson, you modified the packages in the tutorial to use configura
   
 1.  On the destination computer, locate the deployment bundle.  
   
-    If you used the default value—bin\Deployment—as the location of the deployment utility, the deployment bundle is the Deployment folder in the Deployment Tutorial project.  
+    If you used the default value-bin\Deployment-as the location of the deployment utility, the deployment bundle is the Deployment folder in the Deployment Tutorial project.  
   
 2.  In the Deployment folder, double-click the manifest file, Deployment Tutorial.SSISDeploymentManifest.  
   

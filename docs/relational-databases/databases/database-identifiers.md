@@ -1,15 +1,11 @@
-﻿---
+---
 title: "Database Identifiers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: configuration
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -22,11 +18,10 @@ helpviewer_keywords:
   - "Transact-SQL identifiers"
   - "database objects [SQL Server], names"
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
-caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Identifiers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

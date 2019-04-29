@@ -5,11 +5,8 @@ ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|features"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "DBPROPSET_DATASOURCEINFO property set"
@@ -22,12 +19,12 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, user-defined types"
   - "data access [OLE DB Driver for SQL Server], user-defined types"
   - "ISSCommandWithParameters interface"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Using User-Defined Types
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -55,7 +52,7 @@ manager: craigg
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supported<sup>6</sup>|N/A<sup>2</sup>|Supported<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Supported<sup>3,6</sup>|N/A<sup>2</sup>|N/A|N/A<sup>2</sup>|  
   
- <sup>1</sup>If a server type other than DBTYPE_UDT is specified with **ICommandWithParameters::SetParameterInfo** and the accessor type is DBTYPE_UDT, an error occurs when the statement is executed (DB_E_ERRORSOCCURRED; the parameter status is DBSTATUS_E_BADACCESSOR). Otherwise the data is sent to the server, but the server returns an error indicating that there is no implicit conversion from UDT to the parameter’s data type.  
+ <sup>1</sup>If a server type other than DBTYPE_UDT is specified with **ICommandWithParameters::SetParameterInfo** and the accessor type is DBTYPE_UDT, an error occurs when the statement is executed (DB_E_ERRORSOCCURRED; the parameter status is DBSTATUS_E_BADACCESSOR). Otherwise the data is sent to the server, but the server returns an error indicating that there is no implicit conversion from UDT to the parameter's data type.  
   
  <sup>2</sup>Beyond the scope of this article.  
   

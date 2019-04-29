@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "08/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-objects"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.ObjectExplorerScripting"
   - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting"
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
-caps.latest.revision: 5
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -39,7 +35,7 @@ Specify scripting options by selecting from the available settings in the list t
   
 ### General scripting options  
 **Delimit individual statements**  
-Separates individual [!INCLUDE[tsql](../../includes/tsql_md.md)] statements by using a batch separator. To change the default batch separator for **Query Editor**, select **Tools**/**Options**/**Query Execution**/**SQL Server**/**General**/**Batch separator**. Default is False. For more information, see [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
+Separates individual [!INCLUDE[tsql](../../includes/tsql-md.md)] statements by using a batch separator. To change the default batch separator for **Query Editor**, select **Tools**/**Options**/**Query Execution**/**SQL Server**/**General**/**Batch separator**. Default is False. For more information, see [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Include descriptive headers**  
 Adds descriptive comments to the script by separating the script into sections for each object. Default is True. For more information, see [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
@@ -65,7 +61,7 @@ Check that an object with the given name exists before dropping or altering or t
 Generates a script for additional objects that are required when the script for the selected object is executed. Default is False.  
   
 **Schema qualify object names**  
-Qualifies object names with the object schema. Default is False. For more information, see [Create a Database Schema](https://msdn.microsoft.com/ed2a5522-f4d2-4111-95a4-d3e1e5081739).  
+Qualifies object names with the object schema. Default is False. For more information, see [Create a Database Schema](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
 
 **Script data compression options**
 Includes data compression options in the script. Default is False.
@@ -77,7 +73,7 @@ Includes extended properties in the script if the object has extended properties
 Includes the owner in the generated script. Default is False.  
   
 **Script permissions**  
-Includes permissions on database objects in the script. Default is True. For more information, see [Permissions](https://msdn.microsoft.com/f28e3dea-24e6-4a81-877b-02ec4c7e36b9).  
+Includes permissions on database objects in the script. Default is True. For more information, see [Permissions](../../relational-databases/security/permissions-database-engine.md).  
   
 ### Table/View options  
 The following options apply only to scripts for tables or views.  
@@ -89,7 +85,7 @@ Converts user-defined data types to the base types from which they were created.
 Adds the SET ANSI_PADDING statement before and after each CREATE TABLE statement. Default is True. For more information, see [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0).  
   
 **Include collation**  
-Includes collation in column definition. Default is True. For more information, see [Collation and Unicode Support](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb).  
+Includes collation in column definition. Default is True. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 **Include IDENTITY property**  
 Includes definitions for IDENTITY seed and IDENTITY increment. Default is True. For more information, see [IDENTITY (Property) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c).  
@@ -101,7 +97,7 @@ Adds the schema name to table references for FOREIGN KEY constraints. Default is
 Includes the **sp_bindefault** and **sp_bindrule** binding stored procedure calls. Default is True. For more information, see [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) and [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67).  
   
 **Script CHECK constraints**  
-Adds [CHECK constraints](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) to the script. Default is True.  
+Adds [CHECK constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md) to the script. Default is True.  
   
 **Script defaults**  
 Includes column default values in the script. Default is False. For more information, see [CREATE DEFAULT (Transact-SQL)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41).  
@@ -110,7 +106,7 @@ Includes column default values in the script. Default is False. For more informa
 Specifies the filegroup in the ON clause for table definitions. Default is False. For more information, see [CREATE TABLE (Transact-SQL)](https://msdn.microsoft.com/1e068443-b9ea-486a-804f-ce7b6e048e8b).  
   
 **Script foreign keys**  
-Includes [FOREIGN KEY constraints](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) in the script. Default is False.  
+Includes [FOREIGN KEY constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md) in the script. Default is False.  
   
 **Script full-text indexes**  
 Includes full-text indexes in the script. Default is False. For more information, see [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd).  
@@ -122,7 +118,7 @@ Includes clustered, nonclustered, and XML indexes in the script. Default is True
 Includes table partitioning schemes in the script. Default is False. For more information, see [CREATE PARTITION SCHEME (Transact-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4).  
   
 **Script primary keys**  
-Includes [Primary and Foreign Key Constraints](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) in the script. Default is True.  
+Includes [Primary and Foreign Key Constraints](../../relational-databases/tables/primary-and-foreign-key-constraints.md) in the script. Default is True.  
   
 **Script statistics**  
 Includes user-defined statistics in the script. Default is False. For more information, see [CREATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2).  
@@ -131,7 +127,7 @@ Includes user-defined statistics in the script. Default is False. For more infor
 Include triggers in the script. Default is False. For more information, see [CREATE TRIGGER (Transact-SQL)](https://msdn.microsoft.com/edeced03-decd-44c3-8c74-2c02f801d3e7).  
   
 **Script unique keys**  
-Includes [Unique Constraints and Check Constraints](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) in the script. Default is False.  
+Includes [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md) in the script. Default is False.  
   
 **Script view columns**  
 Declares view columns in view headers. Default is False. For more information, see [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9).  
@@ -151,7 +147,7 @@ Scripts generated will be targeted for the specified [Engine Edition](https://ms
 Scripts generated will be targeted for the specified [Database Engine Type](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.databaseenginetype.aspx).
 
 **Script for server version**  
-Scripts generated will be targeted for the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Features that are new in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] cannot be scripted for earlier versions. Some scripts that are created for [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] cannot be executed on servers that are running on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], or on a database that has an earlier [database compatibility level setting](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6).  
+Scripts generated will be targeted for the specified version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Features that are new in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cannot be scripted for earlier versions. Some scripts that are created for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] cannot be executed on servers that are running on an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or on a database that has an earlier [database compatibility level setting](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ## See also  
 [Generate Scripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  

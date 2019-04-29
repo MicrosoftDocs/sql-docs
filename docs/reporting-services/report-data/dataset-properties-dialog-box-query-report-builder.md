@@ -1,41 +1,23 @@
 ---
 title: "Dataset Properties Dialog Box, Query (Report Builder) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 f1_keywords: 
   - "10024"
   - "sql13.rtp.rptdesigner.datasetproperties.query.f1"
   - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
-caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Dataset Properties Dialog Box, Query (Report Builder)
-  Select **Query** on the **Dataset Properties** dialog box to choose a shared dataset from a report server or to create an embedded dataset. For an embedded dataset, you must choose a data source and build a query.  
-  
- The **Dataset Properties** dialog box includes the following:  
-  
--   [Dataset Properties Dialog Box, Parameters &#40;Report Builder&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
-  
--   [Dataset Properties Dialog Box, Fields &#40;Report Builder&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
-  
--   [Dataset Properties Dialog Box, Options &#40;Report Builder&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
-  
--   [Dataset Properties Dialog Box, Filters &#40;Report Builder&#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
-  
- For more information, see [Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ 
+Select **Query** on the **Dataset Properties** dialog box to choose a shared dataset from a report server or to create an embedded dataset. For an embedded dataset, you must choose a data source and build a query.  
   
 ## Options  
  **Name**  
@@ -63,23 +45,23 @@ manager: "kfile"
  This option appears when you choose the **Text** command type option. Type a query or import a pre-existing query by clicking **Import**. Click the **Expression** (*fx*) button to edit the expression.  
   
 > [!NOTE]  
->  If you used a query designer to build a query, the text of the query appears in this box.  
+>  If you use a query designer to build a query, the text of the query appears in this box.  
   
- **Table name**  
- Enter the name of the table that you want to use as a dataset. This option appears when you select **Table**.  
+**Table name**  
+This option appears when you select **Table**. Enter the name of the table that you want to use as a dataset.   
   
- **Select or enter stored procedure name**  
- Type or choose the name of the stored procedure that you want to use. Click the **Expression** (*fx*) button to edit the expression. This option appears when you choose the Stored Procedure command type option.  
+**Select or enter stored procedure name**  
+This option appears when you choose the Stored Procedure command type option. Type or choose the name of the stored procedure that you want to use. Click the **Expression** (*fx*) button to edit the expression.   
   
  **Time out (in seconds)**  
  Type the number of seconds until the query times out. The default is 30 seconds. The value for **Time out** must be empty or greater than zero. If it is empty, the query does not time out.  
   
  **Refresh Fields**  
- Run the query command to update the list of fields in the [Dataset Properties Dialog Box, Fields](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) page.  
+ Run the query command to update the list of fields in the **Dataset Properties Dialog Box, Fields**page.  
   
 ## See Also  
- [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Report Builder Help for Dialog Boxes, Panes, and Wizards](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [Query Designers &#40;Report Builder&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+[Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
+[Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

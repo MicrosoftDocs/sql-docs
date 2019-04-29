@@ -5,12 +5,8 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -25,9 +21,8 @@ helpviewer_keywords:
   - "error outputs [Integration Services]"
   - "asynchronous error outputs [Integration Services]"
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Using Error Outputs in a Data Flow Component

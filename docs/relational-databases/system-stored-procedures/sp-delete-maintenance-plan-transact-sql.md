@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_maintenance_plan"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_maintenance_plan"
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
-caps.latest.revision: 30
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -43,7 +39,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'***plan_id***'**  
+`[ @plan_id = ] 'plan\_id'`
  Specifies the ID of the maintenance plan to be deleted. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
 ## Return Code Values  

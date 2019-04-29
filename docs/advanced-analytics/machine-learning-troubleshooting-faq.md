@@ -1,12 +1,12 @@
 ---
-title: Troubleshooting and FAQ for machine learning in SQL Server | Microsoft Docs
+title: Troubleshooting and FAQ for machine learning - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 05/31/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 
@@ -46,7 +46,7 @@ Start here if you have not set up machine learning with SQL Server, or if you wa
 
 The following articles contain information about defaults, and how to customize the configuration for machine learning on an instance:
 
-+ [Modify the user account pool for SQL Server R Services](r/modify-the-user-account-pool-for-sql-server-r-services.md)  
++ [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](administration/modify-user-account-pool.md)   
 + [Configure and manage advanced analytics extensions](r/configure-and-manage-advanced-analytics-extensions.md)  
 + [How to create a resource pool](r/how-to-create-a-resource-pool-for-r.md)
 + [Optimization for R workloads](r/operationalizing-your-r-code.md)

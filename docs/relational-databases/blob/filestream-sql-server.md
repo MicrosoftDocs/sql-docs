@@ -4,21 +4,17 @@ ms.custom: ""
 ms.date: "01/11/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
+ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server]"
   - "FILESTREAM [SQL Server], about"
   - "FILESTREAM [SQL Server], overview"
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 manager: craigg
 ---
 # FILESTREAM (SQL Server)

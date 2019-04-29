@@ -1,20 +1,13 @@
-﻿---
+---
 title: "sp_datatype_info_90 (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-stored-procedures"
+ms.service: sql-data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg
@@ -37,10 +30,10 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## Arguments  
- [ **@data_type=** ] *data_type*  
+`[ @data_type = ] data_type`
  Is the code number for the specified data type. To obtain a list of all data types, omit this parameter. *data_type* is **int**, with a default of 0.  
   
- [ **@ODBCVer=** ] *odbc_version*  
+`[ @ODBCVer = ] odbc_version`
  Is the version of ODBC that is used. *odbc_version* is **tinyint**, with a default of 2.  
   
 ## Return Code Values  

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerCallableStatement.setNull (java.lang.String, int)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: e1d7e267-d9de-407a-b1a9-abdc2623478d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

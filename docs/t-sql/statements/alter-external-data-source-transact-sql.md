@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/09/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER EXTERNAL DATA SOURCE"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "polybase, alter external data source statement"
   - "ALTER EXTERNAL DATA SOURCE statement"
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
@@ -45,22 +41,20 @@ ALTER EXTERNAL DATA SOURCE data_source_name SET
 -- Modify an external data source pointing to Azure Blob storage
 -- Applies to: SQL Server (starting with 2017)
 ALTER EXTERNAL DATA SOURCE data_source_name
-    WITH (
-        TYPE = BLOB_STORAGE,
+    SET
         LOCATION = 'https://storage_account_name.blob.core.windows.net'
-        [, CREDENTIAL = credential_name ]
-    )  
+        [, CREDENTIAL = credential_name ] 
 ```  
   
 ## Arguments  
  data_source_name
  Specifies the user-defined name for the data source. The name must be unique.
   
- LOCATION = ‘server_name_or_IP’
+ LOCATION = 'server_name_or_IP'
  Specifies the name of the server or an IP address.
   
- RESOURCE_MANAGER_LOCATION = ‘\<IP address;Port>’
- Specifies the Hadoop Resource Manager location. When specified, the query optimizer might choose to pre-process data for a PolyBase query by using Hadoop’s computation capabilities. This is a cost-based decision. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>'
+ Specifies the Hadoop Resource Manager location. When specified, the query optimizer might choose to pre-process data for a PolyBase query by using Hadoop's computation capabilities. This is a cost-based decision. Called predicate pushdown, this can significantly reduce the volume of data transferred between Hadoop and SQL, and therefore improve query performance.
   
  CREDENTIAL = Credential_Name
  Specifies the named credential. See  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).

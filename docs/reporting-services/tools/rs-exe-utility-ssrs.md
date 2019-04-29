@@ -1,16 +1,11 @@
 ---
 title: "RS.exe Utility (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "automatic report server tasks"
@@ -21,10 +16,8 @@ helpviewer_keywords:
   - "scripts [Reporting Services], command prompt"
   - "deploying reports [Reporting Services]"
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-caps.latest.revision: 56
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # RS.exe Utility (SSRS)
   The rs.exe utility processes script that you provide in an input file. Use this utility to automate report server deployment and administration tasks.  
@@ -59,7 +52,7 @@ rs {-?}
  (Required) Specifies the .rss file to execute. This value can be a relative or fully qualified path to the .rss file.  
   
  **-s** *serverURL*  
- (Required) Specifies the Web server name and report server virtual directory name to execute the file against. An example of a report server URL is `http://examplewebserver/reportserver`. The prefix http:// or https:// at the beginning of the server name is optional. If you omit the prefix, the report server script host tries to use https first, and then uses http if https does not work.  
+ (Required) Specifies the Web server name and report server virtual directory name to execute the file against. An example of a report server URL is `https://examplewebserver/reportserver`. The prefix http:// or https:// at the beginning of the server name is optional. If you omit the prefix, the report server script host tries to use https first, and then uses http if https does not work.  
   
  **-u** [*domain*\\]*username*  
  (Optional) Specifies a user account used to connect to the report server. If **-u** and **-p** are omitted, the current Windows user account is used.  
@@ -87,11 +80,11 @@ rs {-?}
  (Optional) Specifies that the commands in the script file run in a batch. If any commands fail, the batch is rolled back. Some commands cannot be batched, and those run as usual. Only exceptions that are thrown and are not handled within the script result in a rollback. If the script handles an exception and returns normally from **Main**, the batch is committed. If you omit this parameter, the commands run without creating a batch. For more information, see [Batching Methods](../../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  **-v** *globalvar*  
- (Optional) Specifies global variables that are used in the script. If the script uses global variables, you must specify this argument. The value that you specify must be valid for global variable defined in the .rss file. You must specify one global variable for each **–v** argument.  
+ (Optional) Specifies global variables that are used in the script. If the script uses global variables, you must specify this argument. The value that you specify must be valid for global variable defined in the .rss file. You must specify one global variable for each **-v** argument.  
   
  The **-v** argument is specified on the command line and is used to set the value for a global variable that is defined in your script at run time. For example, if your script contains a variable named *parentFolder*, you can specify a name for that folder on the command line:  
   
- `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
+ `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
  Global variables are created with the names given and set to the values supplied. For example, **-v a=**"**1**" **-v b=**"**2**" results in a variable named **a** with a value of"**1**" and a variable **b** with a value of "**2**".  
   
@@ -107,7 +100,7 @@ rs {-?}
  The following example illustrates how to specify the script file that contains [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET script and Web service methods that you want to execute.  
   
 ```  
-rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver  
+rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver  
 ```  
   
  For a detailed example, see [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  

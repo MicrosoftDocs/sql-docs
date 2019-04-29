@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "UPDATE()_TSQL"
@@ -26,9 +23,8 @@ helpviewer_keywords:
   - "verifying column updates"
   - "checking column updates"
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # UPDATE - Trigger Functions (Transact-SQL)
@@ -40,7 +36,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```sql  
   
 UPDATE ( column )   
 ```  
@@ -60,14 +56,16 @@ UPDATE ( column )
  IF UPDATE returns the TRUE value in INSERT actions because the columns have either explicit values or implicit (NULL) values inserted.  
   
 > [!NOTE]  
->  The IF UPDATE(*colum*n) clause functions the same as an IF, IF...ELSE, or WHILE clause and can use the BEGIN...END block. For more information, see [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
+>  The IF UPDATE(*column*) clause functions the same as an IF, IF...ELSE, or WHILE clause and can use the BEGIN...END block. For more information, see [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) can be used anywhere inside the body of a [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger.  
+ 
+If a trigger applies to a column, the `UPDATED` value will return as `true` or `1`, even if the column value remains unchanged. This is by-design, and the trigger should implement business logic that determines if the insert/update/delete operation is permissible or not. 
   
 ## Examples  
  The following example creates a trigger that prints a message to the client when anyone tries to update the `StateProvinceID` or `PostalCode` columns of the `Address` table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  

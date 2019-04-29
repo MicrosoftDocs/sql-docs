@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_column_privileges_ex"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_column_privileges_ex"
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_column_privileges_ex (Transact-SQL)
@@ -42,19 +38,19 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'***table_server***'**  
+`[ @table_server = ] 'table_server'`
  Is the name of the linked server for which to return information. *table_server* is **sysname**, with no default.  
   
- [ **@table_name =** ] **'***table_name***'**  
+`[ @table_name = ] 'table_name'`
  Is the name of the table that contains the specified column. *table_name* is **sysname**, with a default of NULL.  
   
- [ **@table_schema =** ] **'***table_schema***'**  
+`[ @table_schema = ] 'table_schema'`
  Is the table schema. *table_schema* is **sysname**, with a default of NULL.  
   
- [ **@table_catalog =** ] **'***table_catalog***'**  
+`[ @table_catalog = ] 'table_catalog'`
  Is the name of the database in which the specified *table_name* resides. *table_catalog* is **sysname**, with a default of NULL.  
   
- [ **@column_name =** ] **'***column_name***'**  
+`[ @column_name = ] 'column_name'`
  Is the name of the column for which to provide privilege information. *column_name* is **sysname**, with a default of NULL (all common).  
   
 ## Result Sets  
@@ -62,7 +58,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Table qualifier name. Various DBMS products support three-part naming for tables (*qualifier***.***owner***.***name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment. This field can be NULL.|  
+|**TABLE_CAT**|**sysname**|Table qualifier name. Various DBMS products support three-part naming for tables (_qualifier_**.**_owner_**.**_name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the database name. In some products, it represents the server name of the table's database environment. This field can be NULL.|  
 |**TABLE_SCHEM**|**sysname**|Table owner name. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this column represents the name of the database user who created the table. This field always returns a value.|  
 |**TABLE_NAME**|**sysname**|Table name. This field always returns a value.|  
 |**COLUMN_NAME**|**sysname**|Column name, for each column of the **TABLE_NAME** returned. This field always returns a value.|  

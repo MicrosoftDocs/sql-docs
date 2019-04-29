@@ -1,21 +1,16 @@
-﻿---
+---
 title: "sys.dm_pdw_waits (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---

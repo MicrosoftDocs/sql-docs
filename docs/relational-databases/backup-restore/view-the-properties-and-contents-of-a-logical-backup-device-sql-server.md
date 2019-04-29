@@ -5,9 +5,7 @@ ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying backup content"
@@ -20,7 +18,6 @@ helpviewer_keywords:
   - "viewing backup properties"
   - "database backups [SQL Server], properties"
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

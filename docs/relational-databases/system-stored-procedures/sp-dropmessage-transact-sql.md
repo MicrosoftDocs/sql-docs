@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropmessage_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropmessage"
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_dropmessage (Transact-SQL)
@@ -39,10 +35,10 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## Arguments  
- [ **@msgnum =** ] *message_number*  
+`[ @msgnum = ] message_number`
  Is the message number to drop. *message_number* must be a user-defined message that has a message number greater than 50000. *message_number* is **int**, with a default of NULL.  
   
- [ **@lang =** ] **'***language***'**  
+`[ @lang = ] 'language'`
  Is the language of the message to drop. If **all** is specified, all language versions of *message_number* are dropped. *language* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

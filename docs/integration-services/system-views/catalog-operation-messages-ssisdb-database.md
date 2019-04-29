@@ -5,17 +5,14 @@ ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "catalog.operation_messages view [Integration Services]"
   - "operation_messages view [Integration Services]"
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.operation_messages (SSISDB Database)

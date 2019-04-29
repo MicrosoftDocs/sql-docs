@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_ivindexhasnullcols"
   - "sp_ivindexhasnullcols_TSQL"
 helpviewer_keywords: 
   - "sp_ivindexhasnullcols"
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_ivindexhasnullcols (Transact-SQL)
@@ -40,10 +33,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## Arguments  
- [ **@viewname**= ] **'***view_name***'**  
+`[ @viewname = ] 'view_name'`
  Is the name of the view to verify. *view_name* is **sysname**, with no default.  
   
- [ **@fhasnullcols**= ] *field_has_null_columns* OUTPUT  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT`
  Is the flag indicating whether the view index has columns that allow NULL. *view_name* is **sysname**, with no default. Returns a value of **1** if the view index has columns that allow NULL. Returns a value of **0** if the view does not contain columns that allow NULLS.  
   
 > [!NOTE]  

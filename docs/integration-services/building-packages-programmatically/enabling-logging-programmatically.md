@@ -5,12 +5,8 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -25,9 +21,8 @@ helpviewer_keywords:
   - "LogProvider object"
   - "packages [Integration Services], logs"
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-caps.latest.revision: 50
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Enabling Logging Programmatically

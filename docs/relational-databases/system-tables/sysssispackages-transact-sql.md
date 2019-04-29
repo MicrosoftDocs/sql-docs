@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysdtspackages90_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssispackages system table"
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-caps.latest.revision: 43
-author: "douglasl"
-ms.author: "douglasl"
+author: leolimsft
+ms.author: lle
 manager: craigg
 ---
 # sysssispackages (Transact-SQL)

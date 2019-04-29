@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Move method, VBScript example"
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

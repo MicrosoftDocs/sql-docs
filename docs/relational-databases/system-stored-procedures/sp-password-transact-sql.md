@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_password"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_password"
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_password (Transact-SQL)
@@ -43,16 +39,16 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## Arguments  
- [ **@old=** ] **'***old_password***'**  
+`[ @old = ] 'old_password'`
  Is the old password. *old_password* is **sysname**, with a default of NULL.  
   
- [ **@new=** ] **'***new_password***'**  
+`[ @new = ] 'new_password'`
  Is the new password. *new_password* is **sysname**, with no default. *old_password* must be specified if named parameters are not used.  
   
 > [!IMPORTANT]  
 >  Do not use a NULL password. Use a strong password. For more information, see [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
- [ **@loginame=** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the login affected by the password change. *login* is **sysname**, with a default of NULL. *login* must already exist and can be specified only by members of the **sysadmin** or **securityadmin** fixed server roles.  
   
 ## Return Code Values  

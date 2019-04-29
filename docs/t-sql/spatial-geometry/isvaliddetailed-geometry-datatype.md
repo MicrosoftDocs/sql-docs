@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "IsValidDetailed geometry"
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-caps.latest.revision: 7
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

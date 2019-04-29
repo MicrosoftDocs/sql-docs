@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_setsubscriptionxactseqno"
   - "sp_setsubscriptionxactseqno_TSQL"
 helpviewer_keywords: 
   - "sp_setsubscriptionxactseqno"
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_setsubscriptionxactseqno (Transact-SQL)
@@ -45,16 +38,16 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=** ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with no default. For a non-SQL Server Publisher, *publisher_db* is the name of the distribution database.  
   
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default. When the Distribution Agent is shared by more than one publication, you must specify a value of ALL for *publication*.  
   
- [ **@xact_seqno=** ] *xact_seqno*  
+`[ @xact_seqno = ] xact_seqno`
  Is the LSN of the next transaction at the Distributor to be applied at the Subscriber. *xact_seqno* is **varbinary(16)**, with no default.  
   
 ## Result Set  

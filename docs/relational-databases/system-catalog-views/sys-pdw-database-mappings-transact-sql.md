@@ -1,19 +1,15 @@
-﻿---
+---
 title: "sys.pdw_database_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
-ms.component: "system-catalog-views"
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg

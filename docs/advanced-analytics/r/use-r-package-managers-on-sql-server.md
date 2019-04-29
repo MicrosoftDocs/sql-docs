@@ -1,13 +1,13 @@
 ---
-title: Install new R packages on SQL Server Machine Learning Services| Microsoft Docs
-description: Add new R packages to SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database)
+title: Use R package managers - SQL Server Machine Learning Services
+description: Use standard R commands like install.packages to add new R packages to SQL Server 2016 R Services or SQL Server 2017 Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 05/29/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 
@@ -23,7 +23,7 @@ This procedure uses RGui but you can use RTerm or any other R command-line tool 
 
 ## Install a package using RGui
 
-1. [Determine the location of the instance library](installing-and-managing-r-packages.md). Navigate to the folder where the R tools are installed. For example, the default path for a SQL Server 2017 default instance is as follows: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determine the location of the instance library](installing-and-managing-r-packages.md). Navigate to the folder where the R tools are installed. For example, the default path for a SQL Server 2017 default instance is as follows: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Right-click RGui.exe, and select **Run as administrator**. If you do not have the required permissions, contact the database administrator and provide a list of the packages you need.
 

@@ -1,5 +1,5 @@
 ---
-title: "Thread Pool Properties | Microsoft Docs"
+title: "Analysis Services Thread Pool Properties | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -16,22 +16,6 @@ manager: kfile
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses multi-threading for many operations, improving overall server performance by running multiple jobs in parallel. To manage threads more efficiently, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses thread pools to preallocate threads and facilitate thread availability for the next job.  
   
  Each instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] maintains its own set of thread pools. There are differences in how tabular and multidimensional instances use thread pools. For example, only multidimensional instances use the **IOProcess** thread pool. As such, the **PerNumaNode** property, described in this article, is not meaningful for Tabular instances. In the [Property Reference](#bkmk_propref) section below, mode requirements are called out for each property.
-  
- This article contains the following sections:  
-  
--   [Thread Management in Analysis Services](#bkmk_threadarch)  
-  
--   [Thread Pool Property Reference](#bkmk_propref)  
-  
--   [Set GroupAffinity to affinitize threads to processors in a processor group](#bkmk_groupaffinity)  
-  
--   [Set PerNumaNode to affinitize IO threads to processors in a NUMA node](#bkmk_pernumanode)  
-  
--   [Determine current thread pool settings](#bkmk_currentsettings)  
-  
--   [Dependent or Related Properties](#bkmk_related)  
-  
--   [About MSMDSRV.INI](#bkmk_msmdrsrvini)  
   
 > [!NOTE]  
 >  Tabular deployment on NUMA systems is out of scope for this topic. Although tabular solutions can be successfully deployed on NUMA systems, the performance characteristics of the in-memory database technology used by tabular models may show limited benefits on a highly scaled up architectures. For more information, see [Analysis Services Case Study: Using Tabular Models in Large-scale Commercial Solutions](http://msdn.microsoft.com/library/dn751533.aspx) and [Hardware Sizing a Tabular Solution](http://go.microsoft.com/fwlink/?LinkId=330359).  
@@ -169,7 +153,7 @@ We recommend SQL Server 2016 Cumulative Update 1 (CU1) or later for setting **Gr
  For multidimensional Analysis Services instances, you can set **PerNumaNode** on the **IOProcess** thread pool to further optimize thread scheduling and execution. Whereas **GroupAffinity** identifies which set of logical processors to use for a given thread pool, **PerNumaNode** goes one step further by specifying whether to create multiple thread pools, further affinitized to some subset of the allowed logical processors.  
   
 > [!NOTE]  
->  On Windows Server 2012, use Task Manager to view the number of NUMA nodes on the computer. In Task Manager, on the Performance tab, select **CPU** and then right-click the graph area to view NUMA nodes. Alternatively, [download](http://technet.microsoft.com/sysinternals/cc835722.aspx) the Coreinfo utility from Windows Sysinternals and run `coreinfo –n` to return NUMA nodes and logical processors in each node.  
+>  On Windows Server 2012, use Task Manager to view the number of NUMA nodes on the computer. In Task Manager, on the Performance tab, select **CPU** and then right-click the graph area to view NUMA nodes. Alternatively, [download](http://technet.microsoft.com/sysinternals/cc835722.aspx) the Coreinfo utility from Windows Sysinternals and run `coreinfo -n` to return NUMA nodes and logical processors in each node.  
   
  Valid values for **PerNumaNode** are -1, 0, 1, 2, as described in the [Thread Pool Property Reference](#bkmk_propref) section in this topic.  
   
@@ -183,13 +167,13 @@ We recommend SQL Server 2016 Cumulative Update 1 (CU1) or later for setting **Gr
   
  NUMA nodes are ignored. There will be just one IOProcess thread pool, and all threads in that thread pool will be affinitized to all logical processors. By default (where PerNumaNode=-1), this is the operative setting if the computer has fewer than 4 NUMA nodes.  
   
- ![Numa, processor and thread pool correspondance](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, processor and thread pool correspondance")  
+ ![Numa, processor and thread pool correspondence](../../analysis-services/server-properties/media/ssas-threadpool-numaex0.PNG "Numa, processor and thread pool correspondence")  
   
  **Setting PerNumaNode=1**  
   
  IOProcess thread pools are created for each NUMA node. Having separate thread pools improves coordinated access to local resources, such as local cache on a NUMA node.  
   
- ![Numa, processor and thread pool correspondance](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, processor and thread pool correspondance")  
+ ![Numa, processor and thread pool correspondence](../../analysis-services/server-properties/media/ssas-threadpool-numaex1.PNG "Numa, processor and thread pool correspondence")  
   
  **Setting PerNumaNode=2**  
   
@@ -197,7 +181,7 @@ We recommend SQL Server 2016 Cumulative Update 1 (CU1) or later for setting **Gr
   
  In the following example, on a system having 4 NUMA nodes and 32 logical processors, setting **PerNumaNode** to 2 would result in 32 IOProcess thread pools. The threads in the first 8 thread pools would be affinitized to all the logical processors in the NUMA node 0, but with the ideal processor set to 0, 1, 2, up to 7. The next 8 thread pools would be affinitized to all the logical processors in NUMA node 1, with the ideal processor set to 8, 9, 10, up to 15, and so on.  
   
- ![Numa, processor and thread pool correspondance](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, processor and thread pool correspondance")  
+ ![Numa, processor and thread pool correspondence](../../analysis-services/server-properties/media/ssas-threadpool-numaex2.PNG "Numa, processor and thread pool correspondence")  
   
  At this level of affinity, the scheduler always attempts to use the ideal logical processor first, within the preferred NUMA node. If the logical processor is unavailable, the scheduler chooses another processor within the same node, or within the same processor group if no other threads are available. For more information and examples, see [Analysis Services 2012 Configuration settings (Wordpress Blog)](http://go.microsoft.com/fwlink/?LinkId=330387).  
   
@@ -266,9 +250,9 @@ We recommend SQL Server 2016 Cumulative Update 1 (CU1) or later for setting **Gr
 >  For instructions on how to set properties, see [Server Properties in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
 ## See Also  
- [About Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Multiple Processors](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Processor Groups](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [About Processes and Threads](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Multiple Processors](/windows/desktop/ProcThread/multiple-processors)   
+ [Processor Groups](/windows/desktop/ProcThread/processor-groups)   
  [Analysis Services Thread Pool Changes in SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 Configuration settings (Wordpress Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Supporting Systems That Have More Than 64 Processors](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

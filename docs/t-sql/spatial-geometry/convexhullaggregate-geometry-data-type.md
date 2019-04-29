@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "ConvexHullAggregate method (geometry)"
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
-caps.latest.revision: 13
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

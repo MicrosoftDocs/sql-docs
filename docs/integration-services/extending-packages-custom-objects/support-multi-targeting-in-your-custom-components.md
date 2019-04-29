@@ -5,16 +5,11 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "SQL Server (starting with 2016)"
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Support multi-targeting in your custom components

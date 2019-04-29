@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords:
   - "samples [ADO]"
   - "ADO, samples"
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

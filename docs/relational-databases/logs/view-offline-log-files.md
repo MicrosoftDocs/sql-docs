@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "logs"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Log File Viewer, viewing offline logs"
   - "offline log files"
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
-caps.latest.revision: 18
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg

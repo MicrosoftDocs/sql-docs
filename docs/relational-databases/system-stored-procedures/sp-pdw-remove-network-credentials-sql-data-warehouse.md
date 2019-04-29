@@ -1,20 +1,15 @@
-﻿---
+---
 title: "sp_pdw_remove_network_credentials (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: ""
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.component: "system-stored-procedures"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
+ms.service: sql-data-warehouse
+ms.subservice: design
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg

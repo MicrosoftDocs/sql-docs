@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQUARE"
   - "square values"
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SQUARE (SSIS Expression)
@@ -60,7 +57,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  In expressions, variable names always include the @ prefix.  
+>  In expressions, variable names always include the \@ prefix.  
   
 ## See Also  
  [Functions &#40;SSIS Expression&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

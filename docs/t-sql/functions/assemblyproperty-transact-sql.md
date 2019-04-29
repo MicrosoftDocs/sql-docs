@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ASSEMBLYPROPERTY_TSQL"
@@ -19,9 +16,8 @@ helpviewer_keywords:
   - "ASSEMBLYPROPERTY statement"
   - "assemblies [CLR integration], properties"
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # ASSEMBLYPROPERTY (Transact-SQL)
@@ -61,7 +57,7 @@ The name of a property about which to retrieve information. *property_name* can 
 **sql_variant**
   
 ## Examples  
-This example assumes a `HelloWorld` assembly that is registered in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. For more information, see [Hello World Sample](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
+This example assumes a `HelloWorld` assembly that is registered in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. For more information, see [Hello World Sample](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
   
 ```sql
 USE AdventureWorks2012;  

@@ -1,15 +1,11 @@
-﻿---
+---
 title: "osql Utility | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "osql"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [SQL Server], command prompt"
@@ -25,11 +21,10 @@ helpviewer_keywords:
   - "command prompt utilities [SQL Server], osql"
   - "CTRL+C command"
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # osql Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +42,7 @@ osql
 [-L] |  
 [  
   {  
-     {-Ulogin_id [-Ppassword]} | –E }  
+     {-Ulogin_id [-Ppassword]} | -E }  
      [-Sserver_name[\instance_name]] [-Hwksta_name] [-ddb_name]  
      [-ltime_out] [-ttime_out] [-hheaders]  
      [-scol_separator] [-wcolumn_width] [-apacket_size]  
@@ -69,10 +64,10 @@ osql
 > [!NOTE]  
 >  Due to the nature of broadcasting on networks, **osql** may not receive a timely response from all servers. Therefore the list of servers returned may vary for each invocation of this option.  
   
- **-U** *login_id*  
+ **-U** _login_id_  
  Is the user login ID. Login IDs are case-sensitive.  
   
- **-P** *password*  
+ **-P** _password_  
  Is a user-specified password. If the **-P** option is not used, **osql** prompts for a password. If the **-P** option is used at the end of the command prompt without any password, **osql** uses the default password (NULL).  
   
 > [!IMPORTANT]  
@@ -95,31 +90,31 @@ C:\>osql
  **-E**  
  Uses a trusted connection instead of requesting a password.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to. Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. Specify *server_name***\\***instance_name* to connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. If no server is specified, **osql** connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when executing **osql** from a remote computer on the network.  
+ **-S** _server\_name_[ **\\**_instance\_name_]  
+ Specifies the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to connect to. Specify *server_name* to connect to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. Specify _server\_name_**\\**_instance\_name_ to connect to a named instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on that server. If no server is specified, **osql** connects to the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on the local computer. This option is required when executing **osql** from a remote computer on the network.  
   
- **-H** *wksta_name*  
+ **-H** _wksta_name_  
  Is a workstation name. The workstation name is stored in **sysprocesses.hostname** and is displayed by **sp_who**. If this option is not specified, the current computer name is assumed.  
   
- **-d** *db_name*  
+ **-d** _db_name_  
  Issues a USE *db_name* statement when **osql**is started.  
   
- **-l** *time_out*  
+ **-l** _time_out_  
  Specifies the number of seconds before an **osql** login times out. The default time-out for login to **osql** is eight seconds.  
   
- **-t** *time_out*  
+ **-t** _time_out_  
  Specifies the number of seconds before a command times out. If a *time_out* value is not specified, commands do not time out.  
   
- **-h** *headers*  
- Specifies the number of rows to print between column headings. The default is to print headings one time for each set of query results. Use -1 to specify that no headers will be printed. If –1 is used, there must be no space between the parameter and the setting (**-h-1**, not **-h -1**).  
+ **-h** _headers_  
+ Specifies the number of rows to print between column headings. The default is to print headings one time for each set of query results. Use -1 to specify that no headers will be printed. If -1 is used, there must be no space between the parameter and the setting (**-h-1**, not **-h -1**).  
   
- **-s** *col_separator*  
+ **-s** _col_separator_  
  Specifies the column-separator character, which is a blank space by default. To use characters that have special meaning to the operating system (for example, | ; & < >), enclose the character in double quotation marks (").  
   
- **-w** *column_width*  
+ **-w** _column_width_  
  Allows the user to set the screen width for output. The default is 80 characters. When an output line has reached its maximum screen width, it is broken into multiple lines.  
   
- **-a** *packet_size*  
+ **-a** _packet_size_  
  Allows you to request a different-sized packet. The valid values for *packet_size* are 512 through 65535. The default value **osql** is the server default. Increased packet size can enhance performance on larger script execution where the amount of SQL statements between GO commands is substantial. [!INCLUDE[msCoName](../includes/msconame-md.md)] testing indicates that 8192 is typically the fastest setting for bulk copy operations. A larger packet size can be requested, but **osql** defaults to the server default if the request cannot be granted.  
   
  **-e**  
@@ -128,16 +123,16 @@ C:\>osql
  **-I**  
  Sets the QUOTED_IDENTIFIER connection option on.  
   
- **-D** *data_source_name*  
+ **-D** _data_source_name_  
  Connects to an ODBC data source that is defined using the ODBC driver for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. The **osql** connection uses the options specified in the data source.  
   
 > [!NOTE]  
 >  This option does not work with data sources defined for other drivers.  
   
- **-c** *cmd_end*  
+ **-c** _cmd_end_  
  Specifies the command terminator. By default, commands are terminated and sent to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by entering GO on a line by itself. When you reset the command terminator, do not use [!INCLUDE[tsql](../includes/tsql-md.md)] reserved words or characters that have special meaning to the operating system, whether preceded by a backslash or not.  
   
- **-q "** *query* **"**  
+ **-q "** _query_ **"**  
  Executes a query when **osql** starts, but does not exit **osql** when the query completes. (Note that the query statement should not include GO). If you issue a query from a batch file, use %variables, or environment %variables%. For example:  
   
 ```  
@@ -147,22 +142,22 @@ osql -E -q "select name, object_id from %table%"
   
  Use double quotation marks around the query and single quotation marks around anything embedded in the query.  
   
- **-Q"** *query* **"**  
+ **-Q"** _query_ **"**  
  Executes a query and immediately exits **osql**. Use double quotation marks around the query and single quotation marks around anything embedded in the query.  
   
  **-n**  
  Removes numbering and the prompt symbol (>) from input lines.  
   
- **-m** *error_level*  
+ **-m** _error_level_  
  Customizes the display of error messages. The message number, state, and error level are displayed for errors of the specified severity level or higher. Nothing is displayed for errors of levels lower than the specified level. Use **-1** to specify that all headers are returned with messages, even informational messages. If using **-1**, there must be no space between the parameter and the setting (**-m-1**, not **-m -1**).  
   
  **-r** { **0**| **1**}  
  Redirects message output to the screen (**stderr**). If you do not specify a parameter, or if you specify **0**, only error messages with a severity level 11 or higher are redirected. If you specify **1**, all message output (including "print") is redirected.  
   
- **-i** *input_file*  
+ **-i** _input_file_  
  Identifies the file that contains a batch of SQL statements or stored procedures. The less than (**\<**) comparison operator can be used in place of **-i**.  
   
- **-o** *output_file*  
+ **-o** _output_file_  
  Identifies the file that receives output from **osql**. The greater than (**>**) comparison operator can be used in place of **-o**.  
   
  If *input_file* is not Unicode and **-u** is not specified, *output_file* is stored in OEM format. If *input_file* is Unicode or **-u** is specified, *output_file* is stored in Unicode format.  
@@ -196,7 +191,7 @@ osql -E -q "select name, object_id from %table%"
 ## Remarks  
  The **osql** utility is started directly from the operating system with the case-sensitive options listed here. After **osql**starts, it accepts SQL statements and sends them to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] interactively. The results are formatted and displayed on the screen (**stdout**). Use QUIT or EXIT to exit from **osql**.  
   
- If you do not specify a user name when you start **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] checks for the environment variables and uses those, for example, **osqluser=(***user***)** or **osqlserver=(***server***)**. If no environment variables are set, the workstation user name is used. If you do not specify a server, the name of the workstation is used.  
+ If you do not specify a user name when you start **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] checks for the environment variables and uses those, for example, **osqluser=(**_user_**)** or **osqlserver=(**_server_**)**. If no environment variables are set, the workstation user name is used. If you do not specify a server, the name of the workstation is used.  
   
  If neither the **-U** or **-P** options are used, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] attempts to connect using [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Authentication Mode. Authentication is based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows account of the user running **osql**.  
   
@@ -255,13 +250,13 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  When possible, use the **-E**option (trusted connection).  
   
- When using **osql** interactively, you can read an operating-system file into the command buffer with **:r***file_name*. This sends the SQL script in *file_name* directly to the server as a single batch.  
+ When using **osql** interactively, you can read an operating-system file into the command buffer with **:r**_file\_name_. This sends the SQL script in *file_name* directly to the server as a single batch.  
   
 > [!NOTE]  
 >  When using **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] treats the batch separator GO, if it appears in a SQL script file, as a syntax error.  
   
 ## Inserting Comments  
- You can include comments in a Transact-SQL statement submitted to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by **osql**. Two types of commenting styles are allowed: -- and /*...\*/.  
+ You can include comments in a Transact-SQL statement submitted to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by **osql**. Two types of commenting styles are allowed: `--` and `/*...*/`.  
   
 ## Using EXIT to Return Results in osql  
  You can use the result of a SELECT statement as the return value from **osql**. If it is numeric, the last column of the last result row is converted to a 4-byte integer (long). MS-DOS passes the low byte to the parent process or operating system error level. Windows passes the entire 4-byte integer. The syntax is:  
@@ -296,7 +291,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Executes the batch, and then quits and returns no value.  
   
--   EXIT**(***query***)**  
+-   EXIT**(**_query_**)**  
   
 > [!NOTE]  
 >  Executes the batch, including the query, and then quits after returning the results of the query.  

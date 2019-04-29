@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STGeometryN (geography Data Type)"
@@ -17,7 +14,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryN method"
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
-caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

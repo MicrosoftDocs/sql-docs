@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "blob"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
+ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts"
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -47,13 +42,13 @@ dstHandle =  OpenSqlFilestream(dstFilePath, Write, 0,
     transactionToken, cbTransactionToken, 0);  
   
 //Write some date to the FILESTREAM BLOB.  
-WriteFile(dstHandle, updateData, …);  
+WriteFile(dstHandle, updateData, ...);  
   
 //DDL statements will be denied.  
 //DML statements will be denied.  
 //SELECT statements will be allowed. The FILESTREAM BLOB is  
 //returned without the modifications that are made by  
-//WriteFile(dstHandle, updateData, …).  
+//WriteFile(dstHandle, updateData, ...).  
 CloseHandle(dstHandle);  
   
 //DDL statements will be allowed.  

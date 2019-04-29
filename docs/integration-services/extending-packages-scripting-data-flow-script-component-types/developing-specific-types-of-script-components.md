@@ -4,20 +4,14 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "extending-packages-scripting-data-flow-script-component-types"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "Script component [Integration Services], examples"
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
-caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing Specific Types of Script Components

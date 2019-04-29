@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC], Paradox driver"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "data types [ODBC], Paradox driver"
   - "Paradox driver [ODBC], data types"
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "EnvelopeAggregate_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "EnvelopeAggregate method (geography)"
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -1,13 +1,11 @@
 ---
 title: "sqlsrv_query | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/22/2018"
+ms.date: "04/11/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "sqlsrv_query"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "executing queries"
   - "API Reference, sqlsrv_query"
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -60,13 +57,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |*$phpType*[OPTIONAL]|A **SQLSRV_PHPTYPE_\*** constant that specifies PHP data type of the returned value.<br /><br />For more information about PHP constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$sqlType*[OPTIONAL]|A **SQLSRV_SQLTYPE_\*** constant that specifies the SQL Server data type of the input value.<br /><br />For more information about PHP constants, see [Constants &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
-*$options* [OPTIONAL]: An associative array that sets query properties. The supported keys are as follows:  
-  
-|Key|Supported Values|Description|  
-|-------|--------------------|---------------|  
-|QueryTimeout|A positive integer value.|Sets the query timeout in seconds. By default, the driver waits indefinitely for results.|  
-|SendStreamParamsAtExec|**true** or **false**<br /><br />The default value is **true**.|Configures the driver to send all stream data at execution (**true**), or to send stream data in chunks (**false**). By default, the value is set to **true**. For more information, see [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
-|Scrollable|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|For more information about these values, see [Specifying a Cursor Type and Selecting Rows](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
+*$options* [OPTIONAL]: An associative array that sets query properties. It is the same list of keys also supported by [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
   
 ## Return Value  
 A statement resource. If the statement cannot be created and/or executed, **false** is returned.  
@@ -160,7 +151,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](http://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> It is recommended to use strings as inputs when binding values to a [decimal or numeric column](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) to ensure precision and accuracy as PHP has limited precision for [floating point numbers](https://php.net/manual/en/language.types.float.php). The same applies to bigint columns, especially when the values are outside the range of an [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## Example  
 This code sample shows how to bind a decimal value as an input parameter.  
@@ -186,6 +177,63 @@ sqlsrv_close($conn);
 ?>
 ```
 
+## Example
+This code sample shows how to create a table of [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types and fetch the inserted data.
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$options = array("Database"=>$dbName, "UID"=>$uid, "PWD"=>$pwd);
+$conn = sqlsrv_connect($server, $options);
+if($conn === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$tableName = 'testTable';
+$query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "SELECT * FROM $tableName";
+$stmt = sqlsrv_query($conn, $query);
+
+if(sqlsrv_fetch($stmt) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$col1 = sqlsrv_get_field($stmt, 0);
+echo "First field:  $col1 \n";
+
+$col2 = sqlsrv_get_field($stmt, 1);
+echo "Second field:  $col2 \n";
+
+sqlsrv_free_stmt($stmt);
+sqlsrv_close($conn);
+
+?>
+```
+
+The expected output would be:
+
+```
+First field:  1
+Second field:  test_data
+```
 
 ## See Also  
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  

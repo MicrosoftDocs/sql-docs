@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "minimum SQL syntax supported [ODBC]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data types [ODBC], ODBC drivers"
   - "ODBC drivers [ODBC], data types"
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STEndpoint (geography Data Type)"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STEndpoint method"
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
-caps.latest.revision: 15
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

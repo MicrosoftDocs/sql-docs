@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-menu"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vs.chooseitems.maintenance_tasks"
@@ -16,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "Customize Toolbox dialog box"
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -29,7 +25,7 @@ This tab of the **Customize Toolbox** dialog box displays a list of all maintena
 The **Maintenance Tasks** tab includes the following columns of information.  
   
 **Name**  
-Displays the names of available components. Preceding each name is a check box. If selected, a check box indicates that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] has found an entry for the component in your computer's registry. The component is either already displayed on the active **Toolbox** tab, or it will be added to it when you click **OK**. If cleared, a check box indicates that the component is not currently displayed in the **Toolbox**, or that it will be removed from the **Toolbox** when you click **OK**.  
+Displays the names of available components. Preceding each name is a check box. If selected, a check box indicates that [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has found an entry for the component in your computer's registry. The component is either already displayed on the active **Toolbox** tab, or it will be added to it when you click **OK**. If cleared, a check box indicates that the component is not currently displayed in the **Toolbox**, or that it will be removed from the **Toolbox** when you click **OK**.  
   
 **Path**  
 Displays the full path to the component. To identify the default components that shipped with the product, sort on this column and then locate those stored on the [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio installation path.  

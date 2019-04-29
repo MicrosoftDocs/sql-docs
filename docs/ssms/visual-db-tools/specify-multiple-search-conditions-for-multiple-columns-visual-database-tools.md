@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "search criteria [SQL Server], multiple conditions"
@@ -17,7 +14,6 @@ helpviewer_keywords:
   - "OR operator"
   - "AND, Criteria pane"
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

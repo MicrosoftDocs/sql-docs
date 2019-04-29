@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC], performance"
   - "desktop database drivers [ODBC], performance"
   - "Jet-based ODBC drivers [ODBC], performance"
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

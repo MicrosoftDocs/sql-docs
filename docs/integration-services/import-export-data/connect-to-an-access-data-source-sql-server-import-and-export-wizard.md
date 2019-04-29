@@ -3,16 +3,12 @@ title: "Connect to an Access Data Source (SQL Server Import and Export Wizard) |
 ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect to an Access Data Source (SQL Server Import and Export Wizard)
@@ -43,8 +39,8 @@ The list of data providers may contain several entries for Microsoft Access. Sel
  **File name**  
 Specify the path and file name for the Access file. For example, **C:\\MyData.mdb** for a file on the local computer, or **\\\\Sales\\Database\\Northwind.mdb** for a file on a network share. Or, click **Browse**. 
 
- >   [!NOTE] 
- > If you click **Browse** to locate the Access file, the **Open** dialog box filters for files with the older .MDB format and file extension by default. However the data provider can also open files with the newer .ACCDB format and file extension.
+> [!NOTE]
+> If you click **Browse** to locate the Access file, the **Open** dialog box filters for files with the older .MDB format and file extension by default. However the data provider can also open files with the newer .ACCDB format and file extension.
   
  **Browse**  
  Locate the database file by using the **Open** dialog box.  

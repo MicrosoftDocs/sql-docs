@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "backupfile"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "file backups [SQL Server], backupfile system table"
   - "backupfile system table"
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: 36
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

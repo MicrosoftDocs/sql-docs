@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "XML indexes [SQL Server], modifying"
   - "modifying indexes"
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Modify XML Indexes

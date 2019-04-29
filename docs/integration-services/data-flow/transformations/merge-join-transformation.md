@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.mergejointrans.f1"
@@ -19,9 +17,8 @@ helpviewer_keywords:
   - "joining datasets [Integration Services]"
   - "joins [SQL Server], SSIS"
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Merge Join Transformation

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "xp_revokelogin"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "xp_revokelogin"
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # xp_revokelogin (Transact-SQL)
@@ -41,7 +37,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the Windows user or group from which to revoke access. *login* must include the domain name, for example **[ADVWKS\sylvester1]**. *login* is **sysname**, with no default.  
   
 ## Return Code Values  

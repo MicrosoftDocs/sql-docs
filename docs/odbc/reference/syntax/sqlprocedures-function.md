@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLProcedures"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLProcedures function [ODBC]"
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,13 +33,13 @@ manager: craigg
 ```  
   
 SQLRETURN SQLProcedures(  
-     SQLHSTMT       StatementHandle,  
-     SQLCHAR *      CatalogName,  
-     SQLSMALLINT    NameLength1,  
-     SQLCHAR *      SchemaName,  
-     SQLSMALLINT    NameLength2,  
-     SQLCHAR *      ProcName,  
-     SQLSMALLINT    NameLength3);  
+     SQLHSTMT       StatementHandle,  
+     SQLCHAR *      CatalogName,  
+     SQLSMALLINT    NameLength1,  
+     SQLCHAR *      SchemaName,  
+     SQLSMALLINT    NameLength2,  
+     SQLCHAR *      ProcName,  
+     SQLSMALLINT    NameLength3);  
 ```  
   
 ## Arguments  
@@ -90,7 +87,7 @@ SQLRETURN SQLProcedures(
 |HY001|Memory allocation  error|The driver was unable to allocate memory required to support execution or completion of the function.|  
 |HY008|Operation canceled|Asynchronous processing was enabled for the *StatementHandle*. The function was called, and before it completed execution, **SQLCancel** or **SQLCancelHandle** was called on the *StatementHandle*. Then the function was called again on the *StatementHandle*.<br /><br /> The function was called, and before it completed execution, **SQLCancel** or **SQLCancelHandle** was called on the *StatementHandle* from a different thread in a multithread application.|  
 |HY009|Invalid use of null pointer|The SQL_ATTR_METADATA_ID statement attribute was set to SQL_TRUE, the *CatalogName* argument was a null pointer, and the SQL_CATALOG_NAME *InfoType* returns that catalog names are supported.<br /><br /> (DM) The SQL_ATTR_METADATA_ID statement attribute was set to SQL_TRUE, and the *SchemaName* or *ProcName* argument was a null pointer.|  
-|HY010|Function sequence error|(DM) An asynchronously executing function was called for the connection handle that is associated with the *StatementHandle*. This asynchronous function was was still executing when this function was called.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, or **SQLMoreResults** was called for the *StatementHandle* and returned SQL_PARAM_DATA_AVAILABLE. This function was called before data was retrieved for all streamed parameters.<br /><br /> (DM) An asynchronously executing function (not this one) was called for the *StatementHandle* and was still executing when this function was called.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, or **SQLSetPos** was called for the *StatementHandle* and returned SQL_NEED_DATA. This function was called before data was sent for all data-at-execution parameters or columns.|  
+|HY010|Function sequence error|(DM) An asynchronously executing function was called for the connection handle that is associated with the *StatementHandle*. This asynchronous function was still executing when this function was called.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, or **SQLMoreResults** was called for the *StatementHandle* and returned SQL_PARAM_DATA_AVAILABLE. This function was called before data was retrieved for all streamed parameters.<br /><br /> (DM) An asynchronously executing function (not this one) was called for the *StatementHandle* and was still executing when this function was called.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, or **SQLSetPos** was called for the *StatementHandle* and returned SQL_NEED_DATA. This function was called before data was sent for all data-at-execution parameters or columns.|  
 |HY013|Memory management error|The function call could not be processed because the underlying memory objects could not be accessed, possibly because of low memory conditions.|  
 |HY090|Invalid string or buffer length|(DM) The value of one of the name length arguments was less than 0 but not equal to SQL_NTS.<br /><br /> The value of one of the name length arguments exceeded the maximum length value for the corresponding name.|  
 |HY117|Connection is suspended due to unknown transaction state. Only disconnect and read-only functions are allowed.|(DM) For more information about suspended state, see [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  

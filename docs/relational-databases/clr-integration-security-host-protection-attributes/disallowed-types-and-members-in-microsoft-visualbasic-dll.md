@@ -3,19 +3,13 @@ title: "Disallowed Types and Members in Microsoft.VisualBasic.dll | Microsoft Do
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "host protection attributes [CLR integration]"
   - "common language runtime [SQL Server], host protection attributes"
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
-caps.latest.revision: 23
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

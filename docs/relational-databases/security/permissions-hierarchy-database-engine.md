@@ -1,15 +1,11 @@
-﻿---
+---
 title: "Permissions Hierarchy (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/23/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.server.permissions.f1--May use common.permissions"
@@ -21,11 +17,10 @@ helpviewer_keywords:
   - "permissions [SQL Server], hierarchy"
   - "security [SQL Server], granting access"
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Permissions Hierarchy (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

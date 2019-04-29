@@ -1,13 +1,11 @@
-﻿---
+---
 title: "DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SHOW_STATISTICS_TSQL"
@@ -32,11 +30,10 @@ helpviewer_keywords:
   - "densities [SQL Server]"
   - "displaying distribution statistics"
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-caps.latest.revision: 75
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +81,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Suppresses all informational messages that have severity levels from 0 through 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,***n* ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
  Specifying one or more of these options limits the result sets returned by the statement to the specified option or options. If no options are specified, all statistics information is returned.  
   
  STATS_STREAM is [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -122,7 +119,7 @@ The following table describes the columns returned in the result set when the HI
 |RANGE_ROWS|Estimated number of rows whose column value falls within a histogram step, excluding the upper bound.|  
 |EQ_ROWS|Estimated number of rows whose column value equals the upper bound of the histogram step.|  
 |DISTINCT_RANGE_ROWS|Estimated number of rows with a distinct column value within a histogram step, excluding the upper bound.|  
-|AVG_RANGE_ROWS|Average number of rows with duplicate column values within a histogram step, excluding the upper bound (RANGE_ROWS / DISTINCT_RANGE_ROWS for DISTINCT_RANGE_ROWS > 0).| 
+|AVG_RANGE_ROWS|Average number of rows with duplicate column values within a histogram step, excluding the upper bound. When DISTINCT_RANGE_ROWS is greater than 0, AVG_RANGE_ROWS is calculated by dividing RANGE_ROWS by DISTINCT_RANGE_ROWS. When DISTINCT_RANGE_ROWS is 0, AVG_RANGE_ROWS returns 1 for the histogram step.| 
   
 ## <a name="Remarks"></a> Remarks 
 

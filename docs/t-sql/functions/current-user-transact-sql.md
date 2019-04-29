@@ -1,14 +1,11 @@
-﻿---
+---
 title: "CURRENT_USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CURRENT_USER"
@@ -22,11 +19,10 @@ helpviewer_keywords:
   - "CURRENT_USER"
   - "users [SQL Server], names"
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -109,12 +105,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### C. Using CURRENT_USER from an impersonated context  
-In this example, user `Wanida` executes the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code.
+In this example, user `Wanida` executes the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code to impersonate user 'Arnalfo'.
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Wanida';  
+EXECUTE AS USER = 'Arnalfo';  
 GO  
 SELECT CURRENT_USER;  
 GO  

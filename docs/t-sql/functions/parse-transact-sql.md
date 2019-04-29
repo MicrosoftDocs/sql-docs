@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PARSE"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "PARSE function"
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # PARSE (Transact-SQL)

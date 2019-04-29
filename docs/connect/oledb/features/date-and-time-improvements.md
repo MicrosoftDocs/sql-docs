@@ -5,18 +5,15 @@ ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|features"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Date and Time Improvements
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -24,7 +21,7 @@ manager: craigg
   
  For more information about date/time improvements, see [Date and Time Improvements &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md).  
   
- For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](http://msftdpprodsamples.codeplex.com/).  
+ For information about sample applications that demonstrate this feature, see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
   
 ## Usage  
  The following sections describe various ways of using the new date and time types.  

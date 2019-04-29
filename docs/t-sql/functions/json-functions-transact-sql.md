@@ -4,20 +4,15 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-json"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "JSON functions"
 ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
-caps.latest.revision: 8
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: douglasl
+ms.reviewer: genemi
 manager: craigg
 ---
 # JSON Functions (Transact-SQL)

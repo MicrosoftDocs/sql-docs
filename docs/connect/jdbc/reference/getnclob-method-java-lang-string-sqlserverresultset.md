@@ -5,12 +5,9 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -28,7 +25,7 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
 ```  
   
 #### Parameters  
- *columnLable*  
+ *columnLabel*  
   
  A **String** that contains the column label.  
   

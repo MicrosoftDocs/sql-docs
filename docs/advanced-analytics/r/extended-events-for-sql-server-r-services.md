@@ -1,12 +1,12 @@
 ---
-title: Extended events for SQL Server Machine Learning Services | Microsoft Docs
+title: Extended events for monitoring R and Python processes - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
 ms.date: 04/15/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Extended events for SQL Server Machine Learning Services
@@ -20,7 +20,7 @@ SQL Server provides a set of extended events to use in troubleshooting operation
 
 To view a list of events related to SQL Server, run the following query from [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-```SQL
+```sql
 SELECT o.name AS event_name, o.description
 FROM sys.dm_xe_objects o
 JOIN sys.dm_xe_packages p
@@ -93,7 +93,7 @@ SQL Server Machine Learning Services starts some services that run outside of th
 
     **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
 
-The configuration file must be named the same as the executable, using the format “[name].xevents.xml”. In other words, the files must be named as follows:
+The configuration file must be named the same as the executable, using the format "[name].xevents.xml". In other words, the files must be named as follows:
 
 + `Launchpad.xevents.xml`
 + `bxlserver.xevents.xml`

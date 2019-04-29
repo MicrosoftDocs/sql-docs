@@ -1,12 +1,12 @@
 ---
-title: SQL Server Configuration (R Services) | Microsoft Docs
+title: SQL Server Configuration (R Services) - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 04/15/2018  
+ms.date: 03/29/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # SQL Server configuration for use with R
@@ -136,7 +136,7 @@ Systems with _hardware NUMA_ have more than one system bus, each serving a small
 
 You can run the following query to find the number of memory nodes available to SQL Server:
 
-```SQL
+```sql
 SELECT DISTINCT memory_node_id
 FROM sys.dm_os_memory_clerks
 ```
@@ -161,10 +161,6 @@ For details, including sample code, see this tutorial: [SQL Optimization Tips an
 + [Soft-NUMA in SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     How to map soft-NUMA nodes to CPUs
-
-+ [Automatic soft-NUMA: It just runs faster (Bob Ward)](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
-
-   Describes history as well as implementation details, with performance on newer multi-core servers.
 
 ## Task-specific optimizations
 
@@ -225,7 +221,7 @@ However, depending on the algorithm you use, some models can be quite large, esp
 
 ## Articles in this series
 
-[Performance tuning for R – introduction](../r/sql-server-r-services-performance-tuning.md)
+[Performance tuning for R - introduction](../r/sql-server-r-services-performance-tuning.md)
 
 [Performance tuning for R - SQL Server configuration](../r/sql-server-configuration-r-services.md)
 

@@ -1,49 +1,31 @@
 ---
-title: "Configure Replication for Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
+title: "Configure replication with availability groups"
+description: "Configure replication with your Always On availability group." 
+ms.custom: "seodec18"
+ms.date: "01/25/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
-# Configure Replication for Always On Availability Groups (SQL Server)
+# Configure replication with Always On availability groups
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication and Always On availability groups involves seven steps. Each step is described in more detail in the following sections.  
   
-1.  [Configure the database publications and subscriptions.](#step1)  
-  
-2.  [Configure the Always On availability group.](#step2)  
-  
-3.  [Insure that all secondary replica hosts are configured for replication.](#step3)  
-  
-4.  [Configure the secondary replica hosts as replication publishers.](#step4)  
-  
-5.  [Redirect the original publisher to the Availability Group Listener Name.](#step5)  
-  
-6.  [Run the validation stored procedure to verify the configuration.](#step6)  
-  
-7.  [Add the original publisher to Replication Monitor.](#step7)  
-  
- Steps 1 and 2 can be performed in either order.  
-  
 ##  <a name="step1"></a> 1. Configure the Database Publications and Subscriptions  
  **Configure the distributor**  
   
- The distribution database cannot be placed in an availability group.  
+ The distribution database cannot be placed in an availability group with SQL Server 2012 and SQL Server 2014. Placing the distribution database into an availability group is supported with SQL 2016 and greater. For more information, see [Configure distribution database in an availability group](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Configure distribution at the distributor. If stored procedures are being used for configuration, run **sp_adddistributor**. Use the *@password* parameter to identify the password that will be used when a remote publisher connects to the distributor. The password will also be needed at each remote publisher when the remote distributor is set up.  
   
@@ -122,8 +104,9 @@ ALTER AVAILABILITY GROUP 'MyAG'
 ```  
   
  For more information, see [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
+
   
-##  <a name="step3"></a> 3. Insure that all of the Secondary Replica Hosts are Configured for Replication  
+##  <a name="step3"></a> 3. Ensure that all of the Secondary Replica Hosts are Configured for Replication  
  At each secondary replica host, verify that [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] has been configured to support replication. The following query can be run at each secondary replica host to determine whether replication is installed:  
   
 ```  
@@ -211,7 +194,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Replication, Change Tracking, Change Data Capture, and Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **To create and configure an availability group**  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_set_cache_directory_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_set_cache_directory stored procedure"
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-caps.latest.revision: 18
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -39,7 +35,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## Arguments  
- [ **@cache_directory =** ] **'***cache_directory***'**  
+`[ @cache_directory = ] 'cache_directory'`
  The directory in the file system where collected data is stored temporarily. *cache_directory* is **nvarchar(255)**, with a default value of NULL. If no value is specified, the default temporary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory is used.  
   
 ## Return Code Values  

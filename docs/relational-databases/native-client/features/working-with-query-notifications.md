@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Working with Query Notifications | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "data access [SQL Server Native Client], query notifications"
@@ -23,11 +18,10 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, query notifications"
   - "consumer notification for rowset changes [SQL Server Native Client]"
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Working with Query Notifications
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,11 +56,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 CREATE QUEUE myQueue  
 CREATE SERVICE myService ON QUEUE myQueue   
   
-([http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
+([https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification])  
 ```  
   
 > [!NOTE]  
->  The service must use the predefined contract `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` as shown above.  
+>  The service must use the predefined contract `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification` as shown above.  
   
 ## SQL Server Native Client OLE DB Provider  
  The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports consumer notification on rowset modification. The consumer receives notification at every phase of rowset modification and on any attempted change.  
@@ -117,7 +111,7 @@ RECEIVE * FROM MyQueue
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
   
- If SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT and SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS are not NULL, the query notifications TDS header containing the three attributes defined above will be sent to the server each time the command is executed. If either of them is null, the header is not sent, and SQL_SUCCESS_WITH_INFO is returned. The validation occurs on [SQLPrepare Function](http://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, and **SqlExecute**, all of which fail if the attributes are not valid. Similarly, when these query notification attributes are set for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the execution fails with SQL_SUCCESS_WITH_INFO.  
+ If SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT and SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS are not NULL, the query notifications TDS header containing the three attributes defined above will be sent to the server each time the command is executed. If either of them is null, the header is not sent, and SQL_SUCCESS_WITH_INFO is returned. The validation occurs on [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360), **SqlExecDirect**, and **SqlExecute**, all of which fail if the attributes are not valid. Similarly, when these query notification attributes are set for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions before [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], the execution fails with SQL_SUCCESS_WITH_INFO.  
   
 > [!NOTE]  
 >  Prepare statements will never cause the subscription to be initiated; subscription can be initiated by statement execution.  

@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_grant_publication_access_TSQL"
   - "sp_grant_publication_access"
 helpviewer_keywords: 
   - "sp_grant_publication_access"
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
+manager: craigg
 manager: craigg
 ---
 # sp_grant_publication_access (Transact-SQL)
@@ -40,13 +33,13 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to access. **'***publication***'** is **sysname**, with no default.  
   
- [ **@login**= ] **'***login***'**  
+`[ @login = ] 'login'`
  Is the login ID. **'***login***'** is **sysname**, with no default.  
   
- [ **@reserved =**] **'***reserved***'**  
+`[ @reserved = ] 'reserved'`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

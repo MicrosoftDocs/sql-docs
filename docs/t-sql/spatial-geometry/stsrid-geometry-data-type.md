@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STSrid (geometry Data Type)"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STSrid (geometry Data Type)"
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
-caps.latest.revision: 24
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

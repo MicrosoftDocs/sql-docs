@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_droparticle_TSQL"
   - "sp_droparticle"
 helpviewer_keywords: 
   - "sp_droparticle"
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_droparticle (Transact-SQL)
@@ -44,29 +37,29 @@ sp_droparticle [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains the article to be dropped. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article to be dropped. *article* is **sysname**, with no default.  
   
- [ **@ignore_distributor =**] *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
   
  **1** specifies that changes to the article may cause the snapshot to be invalid, and if there are existing subscriptions that would require a new snapshot, gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [ **@from_drop_publication**= ] *from_drop_publication*  
+`[ @from_drop_publication = ] from_drop_publication`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

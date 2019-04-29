@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_change_log_shipping_secondary_primary"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_change_log_shipping_secondary_primary"
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
-caps.latest.revision: 17
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_change_log_shipping_secondary_primary (Transact-SQL)
@@ -46,32 +42,32 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## Arguments  
- [ **@primary_server** = ] '*primary_server*'  
+`[ @primary_server = ] 'primary_server'`
  The name of the primary instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *primary_server* is **sysname** and cannot be NULL.  
   
- [ **@primary_database** = ] '*primary_database*'  
+`[ @primary_database = ] 'primary_database'`
  Is the name of the database on the primary server. *primary_database* is **sysname**, with no default.  
   
- [ **@backup_source_directory** = ] '*backup_source_directory*'  
+`[ @backup_source_directory = ] 'backup_source_directory'`
  The directory where transaction log backup files from the primary server are stored. *backup_source_directory* is **nvarchar(500)** and cannot be NULL.  
   
- [ **@backup_destination_directory** = ] '*backup_destination_directory*'  
+`[ @backup_destination_directory = ] 'backup_destination_directory'`
  The directory on the secondary server where backup files are copied to. *backup_destination_directory* is **nvarchar(500)** and cannot be NULL.  
   
- [ **@file_retention_period** = ] '*file_retention_period*'  
+`[ @file_retention_period = ] 'file_retention_period'`
  Is the length of time in minutes in which the history will be retained. *history_retention_period* is **int**, with a default of NULL. A value of 14420 will be used if none is specified.  
   
- [ **@monitor_server_security_mode** = ] '*monitor_server_security_mode*'  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`
  The security mode used to connect to the monitor server.  
   
  1 = Windows Authentication;  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. *monitor_server_security_mode* is **bit** and cannot be NULL.  
   
- [ **@monitor_server_login** = ] '*monitor_server_login*'  
+`[ @monitor_server_login = ] 'monitor_server_login'`
  Is the username of the account used to access the monitor server.  
   
- [ **@monitor_server_password** = ] '*monitor_server_password*'  
+`[ @monitor_server_password = ] 'monitor_server_password'`
  Is the password of the account used to access the monitor server.  
   
 ## Return Code Values  

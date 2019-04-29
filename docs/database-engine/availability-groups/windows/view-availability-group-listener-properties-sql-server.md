@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "07/11/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygrouplistenerproperties.general.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -21,12 +18,6 @@ manager: craigg
 # View Availability Group Listener Properties (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to view the properties of an Always On *availability group listener* by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
--   **To view listener properties, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
  **To view listener properties**  

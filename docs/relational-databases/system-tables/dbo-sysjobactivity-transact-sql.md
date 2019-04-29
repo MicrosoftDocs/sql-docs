@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dbo.sysjobactivity_TSQL"
@@ -20,7 +17,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobactivity system table"
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

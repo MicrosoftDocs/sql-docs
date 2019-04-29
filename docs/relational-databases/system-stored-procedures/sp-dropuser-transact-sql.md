@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dropuser"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropuser"
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_dropuser (Transact-SQL)
@@ -41,7 +37,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## Arguments  
- [ **@name_in_db =**] **'***user***'**  
+`[ @name_in_db = ] 'user'`
  Is the name of the user to remove. *user* is a **sysname**, with no default. *user* must exist in the current database. When specifying a Windows login, use the name by which the database knows that login.  
   
 ## Return Code Values  

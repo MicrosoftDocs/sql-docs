@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
   - "Getrows method [ADO], Visual Basic example"
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

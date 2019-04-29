@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1"
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Streaming Destination
@@ -45,18 +42,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 > [!IMPORTANT]  
 >  For detailed steps, see [Walkthrough: Publish an SSIS Package as a SQL View](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
-  
-## Expose output data from an SSIS package as an OData feed by using the Power BI Admin Center  
- By using the Power BI Admin Center, IT Administrators can expose data from on-premises data sources as OData feeds to users. The Power BI Admin Center, by default, allows you to register only SQL Server data sources. However, you can register SSIS packages as data sources with the portal by using the **Data Streaming Destination** and the **Microsoft OLE DB Provider for SQL Server Integration Services (SSISOLEDB)** and expose the result data from SSIS package as an OData feed to the user.  
-  
- The Admin Center lets you publish views in a SQL Server database. As a result, you can use the SSIS Package Publish Wizard to publish an SSIS package as a SQL view. Then you can select the view to be included in the OData feed in the Power BI Admin Center. A data steward can consume the feed from the SSIS package by using the Power Query Add-in for Excel.  
-  
- For a detailed walkthrough, see [Publish SSIS Packages as OData Feed Sources](http://go.microsoft.com/fwlink/?LinkID=317367).  
-  
-## In This Section  
-  
--   [Walkthrough: Publish an SSIS Package as a SQL View](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
-  
+
 ## Configure Data Streaming Destination
   Configure the Data Streaming Destination by using the **Advanced Editor for Data Streaming Destination** dialog box. Open this dialog box by double clicking the component or by right-clicking the component in the data flow designer and then clicking **Edit**.  
   
@@ -75,9 +61,4 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  In the top pane of this tab, you see all the available input columns. Select the columns that you want to include in the output of this component. The selected columns are displayed in a list in the bottom pane. You can change the name of the output column by entering the new name for the **Output Alias** field in the list.  
   
 ## Input Output Properties tab  
- Similar to the Input Columns tab, you can change names of output columns in this tab. In the tree view to the left, expand **Data Streaming Destination Input** and then expand **Input Columns**. Click the input column name and change the name of the output column name in the right pane.  
-  
-## See Also  
- [Publish SSIS Packages as OData Feed Sources](http://go.microsoft.com/fwlink/?LinkID=317367)  
-  
-  
+ Similar to the Input Columns tab, you can change names of output columns in this tab. In the tree view to the left, expand **Data Streaming Destination Input** and then expand **Input Columns**. Click the input column name and change the name of the output column name in the right pane.

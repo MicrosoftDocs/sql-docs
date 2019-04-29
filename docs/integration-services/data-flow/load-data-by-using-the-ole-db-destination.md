@@ -5,18 +5,15 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "loading data"
   - "OLE DB destination [Integration Services]"
   - "destinations [Integration Services], OLE DB"
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Load Data by Using the OLE DB Destination

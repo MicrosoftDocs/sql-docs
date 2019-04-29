@@ -6,15 +6,12 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
   - "ActiveConnection property [ADOX], VC++ example"
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

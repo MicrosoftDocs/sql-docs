@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data shaping [ADO]"
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -1,31 +1,24 @@
 ---
 title: "sp_addpublication_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "06/15/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addpublication_snapshot_TSQL"
   - "sp_addpublication_snapshot"
 helpviewer_keywords: 
   - "sp_addpublication_snapshot"
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Creates the Snapshot Agent for the specified publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -59,10 +52,10 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@frequency_type=**] *frequency_type*  
+`[ @frequency_type = ] frequency_type`
  Is the frequency with which the Snapshot Agent is executed. *frequency_type* is **int**, and can be one of the following values.  
   
 |Value|Description|  
@@ -75,7 +68,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent starts.|  
 |**128**|Run when the computer is idle|  
   
- [ **@frequency_interval=**] *frequency_interval*  
+`[ @frequency_interval = ] frequency_interval`
  Is the value to apply to the frequency set by *frequency_type*. *frequency_interval* is **int**, and can be one of the following values.  
   
 |Value of frequency_type|Effect on frequency_interval|  
@@ -88,7 +81,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|*frequency_interval* is unused.|  
 |**128**|*frequency_interval* is unused.|  
   
- [ **@frequency_subday=**] *frequency_subday*  
+`[ @frequency_subday = ] frequency_subday`
  Is the unit for *freq_subday_interval*. *frequency_subday* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -98,56 +91,56 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**4** (default)|Minute|  
 |**8**|Hour|  
   
- [ **@frequency_subday_interval=**] *frequency_subday_interval*  
+`[ @frequency_subday_interval = ] frequency_subday_interval`
  Is the interval for *frequency_subday*. *frequency_subday_interval* is **int**, with a default of 5, which means every 5 minutes.  
   
- [ **@frequency_relative_interval=**] *frequency_relative_interval*  
+`[ @frequency_relative_interval = ] frequency_relative_interval`
  Is the date the Snapshot Agent runs. *frequency_relative_interval* is **int**, with a default of 1.  
   
- [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`
  Is the recurrence factor used by *frequency_type*. *frequency_recurrence_factor* is **int**, with a default of 0.  
   
- [ **@active_start_date=**] *active_start_date*  
+`[ @active_start_date = ] active_start_date`
  Is the date when the Snapshot Agent is first scheduled, formatted as YYYYMMDD. *active_start_date* is **int**, with a default of 0.  
   
- [ **@active_end_date=**] *active_end_date*  
+`[ @active_end_date = ] active_end_date`
  Is the date when the Snapshot Agent stops being scheduled, formatted as YYYYMMDD. *active_end_date* is **int**, with a default of 99991231, which means December 31, 9999.  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
+`[ @active_start_time_of_day = ] active_start_time_of_day`
  Is the time of day when the Snapshot Agent is first scheduled, formatted as HHMMSS. *active_start_time_of_day* is **int**, with a default of 0.  
   
- [ **@active_end_time_of_day=**] *active_end_time_of_day*  
+`[ @active_end_time_of_day = ] active_end_time_of_day`
  Is the time of day when the Snapshot Agent stops being scheduled, formatted as HHMMSS. *active_end_time_of_day* is **int**, with a default of 235959, which means 11:59:59 P.M. as measured on a 24-hour clock.  
   
- [ **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'`
  Is the name of an existing Snapshot Agent job name if an existing job is being used. *snapshot_agent_name* is **nvarchar(100)** with a default value of NULL. This parameter is for internal use and should not be specified when creating a new publication. If *snapshot_agent_name* is specified, then *job_login* and *job_password* must be NULL.  
   
- [ **@publisher_security_mode**= ] *publisher_security_mode*  
- Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of 1. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`
+ Is the security mode used by the agent when connecting to the Publisher. *publisher_security_mode* is **smallint**, with a default of 1. **0** specifies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication, and **1** specifies Windows Authentication. A value of **0** must be specified for non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**= ] **'***publisher_login***'**  
- Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with a default of NULL. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the Windows account specified in *job_login* will be used when connecting to the Publisher.  
+`[ @publisher_login = ] 'publisher_login'`
+ Is the login used when connecting to the Publisher. *publisher_login* is **sysname**, with a default of NULL. *publisher_login* must be specified when *publisher_security_mode* is **0**. If *publisher_login* is NULL and *publisher_security_mode* is **1**, then the account specified in *job_login* will be used when connecting to the Publisher.  
   
- [ **@publisher_password**= ] **'***publisher_password***'**  
+`[ @publisher_password = ] 'publisher_password'`
  Is the password used when connecting to the Publisher. *publisher_password* is **sysname**, with a default of NULL.  
   
 > [!IMPORTANT]  
 >  Do not store authentication information in script files. To help improve security, we recommend that you provide login names and passwords at run time.  
   
- [ **@job_login**= ] **'***job_login***'**  
- Is the login for the Windows account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. This Windows account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job.  
+`[ @job_login = ] 'job_login'`
+ Is the login for the account under which the agent runs. On Azure SQL Database Managed Instance, use a SQL Server account. *job_login* is **nvarchar(257)**, with a default of NULL. This account is always used for agent connections to the Distributor. You must supply this parameter when creating a new Snapshot Agent job.  
   
-> [!NOTE]  
->  For non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+> [!NOTE]
+>  For non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers, this must be the same login specified in [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
- [ **@job_password**= ] **'***job_password***'**  
+`[ @job_password = ] 'job_password'`
  Is the password for the Windows account under which the agent runs. *job_password* is **sysname**, with no default. You must supply this parameter when creating a new Snapshot Agent job.  
   
 > [!IMPORTANT]  
 >  Do not store authentication information in script files. To help improve security, we recommend that you provide login names and passwords at run time.  
   
- [ **@publisher**= ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used when creating a Snapshot Agent at a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -166,7 +159,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 ## See Also  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-snapshot.md)   
+ [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
  [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   

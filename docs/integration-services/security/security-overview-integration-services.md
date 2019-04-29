@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS packages, security"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "Integration Services packages, security"
   - "SQL Server Integration Services packages, security"
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 73
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Security Overview (Integration Services)

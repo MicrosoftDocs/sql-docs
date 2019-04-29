@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, getting data"
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.transferloginstask.f1"
@@ -16,9 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transfer Logins task [Integration Services]"
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-caps.latest.revision: 25
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Transfer Logins Task
@@ -33,7 +30,7 @@ manager: craigg
  The Transfer Logins task does not report incremental progress of the login transfer; it reports only 0% and 100 % completion.  
   
 ## Execution Value  
- The execution value, defined in the **ExecutionValue** property of the task, returns the number of logins transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Logins task, information about the login transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ The execution value, defined in the **ExecutionValue** property of the task, returns the number of logins transferred. By assigning a user-defined variable to the **ExecValueVariable** property of the Transfer Logins task, information about the login transfer can be made available to other objects in the package. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) and [Use Variables in Packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
   
 ## Log Entries  
  The Transfer Logins task includes the following custom log entries:  
@@ -72,7 +69,7 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Programmatic Configuration of the Transfer Logins Task  
  For more information about programmatically setting these properties, click the following topic:  

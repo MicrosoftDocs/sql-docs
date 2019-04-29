@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "system stored procedures [SQL Server], XML"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "sp_xml_preparedocument"
   - "XML [SQL Server], system stored procedures"
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # XML System Stored Procedures

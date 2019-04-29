@@ -1,26 +1,19 @@
 ---
 title: "Use an Office Data Connection (.odc) with Reports | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Office Data Connection (.odc) files"
   - "SharePoint integration [Reporting Services], shared data sources"
   - ".odc files"
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Use an Office Data Connection (.odc) with Reports
   For limited scenarios, you can use an existing Office Data Connection (.odc) file to provide connection information to a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report. An .odc file can be used in place of an .rsds file when you create a shared data source. The report server uses an .odc file in the same way it uses an .rsds file; it reads the file for the data source type, a connection string, and credential information.  
@@ -47,7 +40,7 @@ manager: "kfile"
   
  If you are not familiar with .odc files, you can use the following instructions to create and export one. One easy way to create an .odc file for an OLE DB data source is to use Excel 2007 and the Data Connection Wizard. Note that the wizard does not create a data source; you must have an external data source that is already defined.  
   
- An existing .odc file should only be used if it is fully compatible with the report and queries. If you run into errors that require significant modifications to either the report or to the .odc file, you should create a new .rsds file for the report. For more information about how to create a shared data source that uses an .rsds file, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ An existing .odc file should only be used if it is fully compatible with the report and queries. If you run into errors that require significant modifications to either the report or to the .odc file, you should create a new .rsds file for the report. For more information about how to create a shared data source that uses an .rsds file, see [Create and Manage Shared Data Sources &#40;Reporting Services in SharePoint Integrated Mode&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
   
 ### To create and export an .odc file  
   

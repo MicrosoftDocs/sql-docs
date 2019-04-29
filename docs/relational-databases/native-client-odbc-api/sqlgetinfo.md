@@ -1,25 +1,20 @@
-﻿---
+---
 title: "SQLGetInfo | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-api"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLGetInfo function"
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -211,7 +206,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |SQL_USER_NAME|The current username.|  
   
 ## See Also  
- [SQLGetInfo Function](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo Function](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

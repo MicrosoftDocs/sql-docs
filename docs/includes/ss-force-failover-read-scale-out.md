@@ -25,6 +25,12 @@ To force failover with data loss, connect to the SQL Server instance that hosts 
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 ```
 
+When the previous primary replica recovers, it will also assume the primary role. To ensure that the previous primary replica transitions into a secondary role run the following command on the previous primary replica.
+
+```SQL
+ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
+```
+
 ### Manual failover without data loss
 
 Use this method when the primary replica is available, but you need to temporarily or permanently change the configuration and change the SQL Server instance that hosts the primary replica. 
@@ -80,4 +86,4 @@ To manually fail over without data loss:
    ```  
 
    > [!NOTE] 
-   > To delete an availability group, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group that's created with cluster type NONE or EXTERNAL, execute the command on all replicas that are part of the availability group.
+   > To delete an availability group, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group that's created with cluster type NONE or EXTERNAL, execute the command on all replicas that are part of the availability group.

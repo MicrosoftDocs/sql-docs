@@ -1,20 +1,17 @@
-﻿---
+---
 title: "Changing the Schema of a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
-caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Changing the Schema of a System-Versioned Temporal Table
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ALTER TABLE dbo.Department
   
 -   During an **ALTER TABLE** operation, the system holds a schema lock on both tables.  
   
--   Specified schema change is propagated to history table in appropriate way (depending on type of change)  
+-   Specified schema change is propagated to history table appropriately (depending on type of change).  
   
 -   If you add a non-nullable column or alter existing column to become non-nullable, you must specify the default value for existing rows. The system will generate an additional default with the same value and apply it to the history table. Adding **DEFAULT** to a non-empty table is a size of data operation on all editions other than [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition (on which it is a metadata operation).  
   

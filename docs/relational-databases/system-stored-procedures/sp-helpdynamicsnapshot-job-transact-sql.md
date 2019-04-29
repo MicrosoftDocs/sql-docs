@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpdynamicsnapshot_TSQL"
   - "sp_helpdynamicsnapshot_job_TSQL"
@@ -25,9 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpdynamicsnapshot_job"
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpdynamicsnapshot_job (Transact-SQL)
@@ -47,17 +40,17 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **%**, which returns information on all filtered data snapshot jobs that match the specified *dynamic_snapshot_jobid*and *dynamic_snapshot_jobname*for all publications.  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`
  Is the name of a filtered data snapshot job. *dynamic_snapshot_jobname*is **sysname**, with default of **%**', which returns all dynamic jobs for a publication with the specified *dynamic_snapshot_jobid*. If a job name was not explicitly specified when the job was created, the job name is in the following format:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`
  Is an identifier for a filtered data snapshot job. *dynamic_snapshot_jobid*is **uniqueidentifier**, with default of NULL, which returns all snapshot jobs that match the specified *dynamic_snapshot_jobname*.  
   
 ## Result Sets  

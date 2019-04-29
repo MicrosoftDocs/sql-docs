@@ -1,20 +1,17 @@
-﻿---
+---
 title: "Temporal Table Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-caps.latest.revision: 9
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Table Security
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,15 +36,15 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 |Operation|Current Table|History Table|  
 |---------------|-------------------|-------------------|  
 |**DROP TABLE**|Disallowed|Disallowed|  
-|**ALTER TABLE…SWITCH PARTITION**|SWITCH IN only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|SWITCH OUT only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
-|**ALTER TABLE…DROP PERIOD**|Disallowed|-|  
-|**ALTER TABLE…ADD PERIOD**|-|Disallowed|  
+|**ALTER TABLE...SWITCH PARTITION**|SWITCH IN only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|SWITCH OUT only (see [Partitioning with Temporal Tables](../../relational-databases/tables/partitioning-with-temporal-tables.md))|  
+|**ALTER TABLE...DROP PERIOD**|Disallowed|-|  
+|**ALTER TABLE...ADD PERIOD**|-|Disallowed|  
   
 ## Allowed ALTER TABLE operations  
   
 |Operation|Current|History|  
 |---------------|-------------|-------------|  
-|**ALTER TABLE…REBUILD**|Allowed (independently)|Allowed (independently)|  
+|**ALTER TABLE...REBUILD**|Allowed (independently)|Allowed (independently)|  
 |**CREATE INDEX**|Allowed (independently)|Allowed (independently)|  
 |**CREATE STATISTICS**|Allowed (independently)|Allowed (independently)|  
   

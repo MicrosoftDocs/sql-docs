@@ -5,12 +5,8 @@ ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
   - "CSharp"
@@ -23,8 +19,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], column mapping"
   - "data flow [Integration Services], components"
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Selecting Input Columns Programmatically

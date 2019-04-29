@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.sqlmobileconnection.connection.f1"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "connections [Integration Services], SQL Server Compact"
   - "connection managers [Integration Services], SQL Server Compact"
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SQL Server Compact Edition Connection Manager

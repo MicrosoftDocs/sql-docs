@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.removeaglistener.default.f1"
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], listeners"
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -22,34 +19,16 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to remove an availability group listener from an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Before you begin:**  
   
-     [Prerequisites](#Prerequisites)  
-  
-     [Recommendations](#Recommendations)  
-  
-     [Security](#Security)  
-  
--   **To remove a listener, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   You must be connected to the server instance that hosts the primary replica.  
   
-###  <a name="Recommendations"></a> Recommendations  
+##  <a name="Recommendations"></a> Recommendations  
  Before you delete an availability group listener, we recommend that you ensure that no applications are using it.  
+ 
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
@@ -79,14 +58,14 @@ manager: craigg
   
 2.  Use the [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) statement, as follows:  
   
-     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **‘***dns_name***’**  
+     ALTER AVAILABILITY GROUP *group_name* REMOVE LISTENER **'**_dns_name_**'**  
   
      where *group_name* is the name of the availability group and *dns_name* is the DNS name of the availability group listener.  
   
      The following example deletes the listener of the `AccountsAG` availability group. The DNS name is AccountsAG_Listener.  
   
     ```  
-    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER ‘AccountsAG_Listener’;  
+    ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  

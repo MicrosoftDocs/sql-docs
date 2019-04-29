@@ -1,0 +1,447 @@
+- name: Tables, Matrices, and Lists
+  href: tables-matrices-and-lists-report-builder-and-ssrs.md
+  items:
+  - name: Tables
+    href: tables-report-builder-and-ssrs.md
+  - name: Matrices
+    href: create-a-matrix-report-builder-and-ssrs.md
+  - name: Lists
+    href: create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
+  - name: Tablix Data Region
+    href: ../tablix-data-region-report-builder-and-ssrs.md
+    items:
+    - name: Tablix Data Region Areas
+      href: tablix-data-region-areas-report-builder-and-ssrs.md
+    - name: Tablix Data Region Cells, Rows, and Columns
+      href: tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md
+    - name: Preparing Data for Display in a Tablix Data Region
+      href: preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: Adding Data to a Tablix Data Region
+      href: adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: Exploring the Flexibility of a Tablix Data Region
+      href: exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: Controlling the Tablix Data Region Display on a Report Page
+      href: controlling-the-tablix-data-region-display-on-a-report-page.md
+  - name: Controlling Row and Column Headings
+    href: controlling-row-and-column-headings-report-builder-and-ssrs.md
+  - name: Understanding Groups
+    href: understanding-groups-report-builder-and-ssrs.md
+  - name: Creating Recursive Hierarchy Groups
+    href: creating-recursive-hierarchy-groups-report-builder-and-ssrs.md
+  - name: Add a Details Group
+    href: add-a-details-group-report-builder-and-ssrs.md
+  - name: Add a Total to a Group or Tablix Data Region
+    href: add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md
+  - name: Change an Item Within a Cel
+    href: change-an-item-within-a-cell-report-builder-and-ssrs.md
+  - name: Change Row Height or Column Width
+    href: change-row-height-or-column-width-report-builder-and-ssrs.md
+  - name: Insert or Delete a Column
+    href: insert-or-delete-a-column-report-builder-and-ssrs.md
+  - name: Insert or Delete a Row
+    href: insert-or-delete-a-row-report-builder-and-ssrs.md
+  - name: Merge Cells in a Data Region
+    href: merge-cells-in-a-data-region-report-builder-and-ssrs.md
+  - name: Create a Recursive Hierarchy Group
+    href: create-a-recursive-hierarchy-group-report-builder-and-ssrs.md
+  - name: Add or Delete a Group in a Data Region
+    href: add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md
+  - name: Display Headers and Footers with a Group
+    href: display-headers-and-footers-with-a-group-report-builder-and-ssrs.md
+  - name: Create a Stepped Report
+    href: create-a-stepped-report-report-builder-and-ssrs.md
+  - name: Add, Move, or Delete a Table, Matrix, or List
+    href: add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
+- name: Report Parts
+  href: ../report-parts-report-builder-and-ssrs.md
+  items:
+  - name: Publish and Republish Report Parts (Report Builder and SSRS)
+    href: publish-and-republish-report-parts-report-builder-and-ssrs.md
+  - name: Check for Updates or Turn Updates Off (Report Builder and SSRS)
+    href: ../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md
+  - name: Browse for Report Parts and Set a Default Folder (Report Builder and SSRS)
+    href: browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md
+  - name: Troubleshoot Report Parts (Report Builder and SSRS)
+    href: ../troubleshoot-report-parts-report-builder-and-ssrs.md
+- name: Report Parts in Report Designer
+  href: report-parts-in-report-designer-ssrs.md
+  items:
+  - name: Managing Report Parts
+    href: managing-report-parts.md
+- name: Charts
+  href: charts-report-builder-and-ssrs.md
+  items:
+  - name: Add a Chart to a Report (Report Builder and SSRS)
+    href: add-a-chart-to-a-report-report-builder-and-ssrs.md
+  - name: Chart Types (Report Builder and SSRS)
+    href: chart-types-report-builder-and-ssrs.md
+    items:
+    - name: Change a Chart Type (Report Builder and SSRS)
+      href: change-a-chart-type-report-builder-and-ssrs.md
+    - name: Area Charts (Report Builder and SSRS)
+      href: area-charts-report-builder-and-ssrs.md
+    - name: Bar Charts (Report Builder and SSRS)
+      href: bar-charts-report-builder-and-ssrs.md
+    - name: Column Charts (Report Builder and SSRS)
+      href: column-charts-report-builder-and-ssrs.md
+    - name: Line Charts (Report Builder and SSRS)
+      href: line-charts-report-builder-and-ssrs.md
+    - name: Pie Charts (Report Builder and SSRS)
+      href: pie-charts-report-builder-and-ssrs.md
+    - name: Polar Charts (Report Builder and SSRS)
+      href: polar-charts-report-builder-and-ssrs.md
+    - name: Range Charts (Report Builder and SSRS)
+      href: range-charts-report-builder-and-ssrs.md
+    - name: Scatter Charts (Report Builder and SSRS)
+      href: scatter-charts-report-builder-and-ssrs.md
+    - name: Shape Charts (Report Builder and SSRS)
+      href: shape-charts-report-builder-and-ssrs.md
+    - name: Stock Charts (Report Builder and SSRS)
+      href: stock-charts-report-builder-and-ssrs.md
+  - name: Formatting a Chart (Report Builder and SSRS)
+    href: formatting-a-chart-report-builder-and-ssrs.md
+  - name: Formatting Series Colors on a Chart (Report Builder and SSRS)
+    href: formatting-series-colors-on-a-chart-report-builder-and-ssrs.md
+    items:
+    - name: Specify Consistent Colors across Multiple Shape Charts (Report Builder and SSRS)
+      href: specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md
+    - name: Define Colors on a Chart Using a Palette (Report Builder and SSRS)
+      href: define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md
+    - name: Highlight Chart Data by Adding Strip Lines (Report Builder and SSRS)
+      href: highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md
+  - name: Formatting Axis Labels on a Chart (Report Builder and SSRS)
+    href: formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md
+    items:
+    - name: Format Axis Labels as Dates or Currencies (Report Builder and SSRS)
+      href: format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md
+    - name: Position Labels in a Chart (Report Builder and SSRS)
+      href: position-labels-in-a-chart-report-builder-and-ssrs.md
+    - name: Specify an Axis Interval (Report Builder and SSRS)
+      href: specify-an-axis-interval-report-builder-and-ssrs.md
+    - name: Add or Remove Margins from a Chart (Report Builder and SSRS)
+      href: add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md
+    - name: Specify a Logarithmic Scale (Report Builder and SSRS)
+      href: specify-a-logarithmic-scale-report-builder-and-ssrs.md
+  - name: Formatting the Legend on a Chart (Report Builder and SSRS)
+    href: chart-legend-formatting-report-builder.md
+    items:
+    - name: Hide Legend Items on the Chart (Report Builder and SSRS)
+      href: chart-legend-hide-items-report-builder.md
+    - name: Change the Text of a Legend Item (Report Builder and SSRS)
+      href: chart-legend-change-item-text-report-builder.md
+  - name: Formatting Data Points on a Chart (Report Builder and SSRS)
+    href: formatting-data-points-on-a-chart-report-builder-and-ssrs.md
+    items:
+    - name: Show ToolTips on a Series (Report Builder and SSRS)
+      href: show-tooltips-on-a-series-report-builder-and-ssrs.md
+    - name: Display Data Point Labels Outside a Pie Chart (Report Builder and SSRS)
+      href: display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md
+    - name: Display Percentage Values on a Pie Chart (Report Builder and SSRS)
+      href: display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md
+  - name: 3D, Bevel, and Other Effects in a Chart (Report Builder and SSRS)
+    href: chart-effects-3d-bevel-and-other-report-builder.md
+    items:
+    - name: Add 3D Effects to a Chart (Report Builder and SSRS)
+      href: chart-effects-add-3d-effects-report-builder.md
+    - name: Add Bevel, Emboss, and Texture Styles to a Chart (Report Builder and SSRS)
+      href: chart-effects-add-bevel-emboss-or-texture-report-builder.md
+  - name: Add a Border Frame to a Chart (Report Builder and SSRS)
+    href: add-a-border-frame-to-a-chart-report-builder-and-ssrs.md
+  - name: Start Pie Chart Values at the Top of the Pie (Report Builder and SSRS)
+    href: start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs.md
+  - name: Empty and Null Data Points in Charts (Report Builder and SSRS)
+    href: empty-and-null-data-points-in-charts-report-builder-and-ssrs.md
+  - name: Add Empty Points to the Chart (Report Builder and SSRS)
+    href: add-empty-points-to-a-chart-report-builder-and-ssrs.md
+  - name: Displaying a Series with Multiple Data Ranges on a Chart (Report Builder and SSRS)
+    href: displaying-a-series-with-multiple-data-ranges-on-a-chart.md
+  - name: Add Scale Breaks to a Chart (Report Builder and SSRS)
+    href: add-scale-breaks-to-a-chart-report-builder-and-ssrs.md
+  - name: Multiple Series on a Chart (Report Builder and SSRS)
+    href: multiple-series-on-a-chart-report-builder-and-ssrs.md
+  - name: Specify a Chart Area for a Series (Report Builder and SSRS)
+    href: specify-a-chart-area-for-a-series-report-builder-and-ssrs.md
+  - name: Plot Data on a Secondary Axis (Report Builder and SSRS)
+    href: plot-data-on-a-secondary-axis-report-builder-and-ssrs.md
+  - name: Linking Multiple Data Regions to the Same Dataset (Report Builder and SSRS)
+    href: linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md
+  - name: Display the Same Data on a Matrix and a Chart
+    href: display-the-same-data-on-a-matrix-and-a-chart-report-builder.md
+  - name: Add or Delete a Group in a Chart (Report Builder and SSRS)
+    href: add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md
+  - name: Add a Moving Average to a Chart (Report Builder and SSRS)
+    href: add-a-moving-average-to-a-chart-report-builder-and-ssrs.md
+  - name: Collect Small Slices on a Pie Chart (Report Builder and SSRS)
+    href: collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md
+  - name: Troubleshoot Charts (Report Builder and SSRS)
+    href: troubleshoot-charts-report-builder-and-ssrs.md
+- name: Sparklines and Data Bars
+  href: sparklines-and-data-bars-report-builder-and-ssrs.md
+  items:
+  - name: Add Sparklines and Data Bars (Report Builder and SSRS)
+    href: add-sparklines-and-data-bars-report-builder-and-ssrs.md
+  - name: Align the Data in a Chart in a Table or Matrix (Report Builder and SSRS)
+    href: align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md
+- name: Gauges
+  href: gauges-report-builder-and-ssrs.md
+  items:
+  - name: Formatting Scales on a Gauge
+    href: formatting-scales-on-a-gauge-report-builder-and-ssrs.md
+  - name: Formatting Pointers on a Gauge
+    href: formatting-pointers-on-a-gauge-report-builder-and-ssrs.md
+  - name: Formatting Ranges on a Gauge
+    href: formatting-ranges-on-a-gauge-report-builder-and-ssrs.md
+  - name: Add a Gauge to a Report
+    href: add-a-gauge-to-a-report-report-builder-and-ssrs.md
+  - name: Set a Minimum or Maximum on a Gauge
+    href: set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md
+  - name: Set a Snapping Interval on a Gauge
+    href: ../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md
+  - name: Specify an Image as a Pointer on a Gauge
+    href: ../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md
+- name: Indicators
+  href: indicators-report-builder-and-ssrs.md
+  items:
+  - name: Add or Delete an Indicator
+    href: add-or-delete-an-indicator-report-builder-and-ssrs.md
+  - name: Change Indicator Icons and Indicator Sets
+    href: change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md
+  - name: Set and Configure Measurement Units
+    href: set-and-configure-measurement-units-report-builder-and-ssrs.md
+  - name: Set Synchronization Scope
+    href: set-synchronization-scope-report-builder-and-ssrs.md
+  - name: Specify the Size of an Indicator Using an Expression
+    href: specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
+  - name: Include Indicators and Gauges in a Gauge Pane
+    href: include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
+- name: Maps
+  href: maps-report-builder-and-ssrs.md
+  items:
+  - name: Plan a Map Report
+    href: plan-a-map-report-report-builder-and-ssrs.md
+  - name: Plan for Map Report Support
+    href: ../plan-for-map-report-support.md
+  - name: Map Wizard and Map Layer Wizard
+    href: map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md
+  - name: Customize the Data and Display of a Map or Map Layer
+    href: customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md
+  - name: Vary Polygon, Line, and Point Display by Rules and Analytical Data
+    href: vary-polygon-line-and-point-display-by-rules-and-analytical-data.md
+  - name: Add, Change, or Delete a Map or Map Layer
+    href: add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md
+  - name: Change Map Legends, Color Scale, and Associated Rules
+    href: change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
+  - name: Add Custom Locations to a Map
+    href: add-custom-locations-to-a-map-report-builder-and-ssrs.md
+  - name: "Troubleshoot Reports: Map Reports"
+    href: troubleshoot-reports-map-reports-report-builder-and-ssrs.md
+  - name: Map F1 Help
+    href: ../map-f1-help.md
+    items:
+    - name: Map Color Rules Dialog Box, General
+      href: ../map-color-rules-dialog-box-general.md
+    - name: Map Embedded Point Properties Dialog Box, Marker
+      href: ../map-embedded-point-properties-dialog-box-marker.md
+    - name: Map Meridian Properties Dialog Box, Labels
+      href: ../map-meridian-properties-dialog-box-labels.md
+    - name: Map Parallel Properties Dialog Box, Labels
+      href: ../map-parallel-properties-dialog-box-labels.md
+    - name: Map Viewport Properties Dialog Box, General
+      href: ../map-viewport-properties-dialog-box-general.md
+    - name: Map Viewport Properties Dialog Box, Center and Zoom
+      href: ../map-viewport-properties-dialog-box-center-and-zoom.md
+    - name: Map Viewport Properties Dialog Box, Optimization
+      href: ../map-viewport-properties-dialog-box-optimization.md
+- name: Images, Text Boxes, Rectangles, and Lines
+  href: images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
+  items:
+  - name: Image, Text Box, Rectangle, Line F1 Help
+    href: ../image-text-box-rectangle-line-f1-help.md
+    items:
+    - name: Text Boxes (Report Builder and SSRS)
+      href: text-boxes-report-builder-and-ssrs.md
+    - name: Add, Move, or Delete a Text Box (Report Builder and SSRS)
+      href: add-move-or-delete-a-text-box-report-builder-and-ssrs.md
+    - name: Set Text Box Orientation (Report Builder and SSRS)
+      href: set-text-box-orientation-report-builder-and-ssrs.md
+    - name: Allow a Text Box to Grow or Shrink (Report Builder and SSRS)
+      href: allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
+  - name: Rectangles and Lines (Report Builder and SSRS)
+    href: rectangles-and-lines-report-builder-and-ssrs.md
+    items:
+    - name: Add a Rectangle or Container (Report Builder and SSRS)
+      href: add-a-rectangle-or-container-report-builder-and-ssrs.md
+    - name: Add and Modify a Line (Report Builder and SSRS)
+      href: add-and-modify-a-line-report-builder-and-ssrs.md
+    - name: Add a Border to a Report (Report Builder and SSRS)
+      href: add-a-border-to-a-report-report-builder-and-ssrs.md
+  - name: Images (Report Builder and SSRS)
+    href: images-report-builder-and-ssrs.md
+    items:
+    - name: Add an External Image (Report Builder and SSRS)
+      href: add-an-external-image-report-builder-and-ssrs.md
+    - name: Embed an Image in a Report (Report Builder and SSRS)
+      href: embed-an-image-in-a-report-report-builder-and-ssrs.md
+    - name: Add a Background Image (Report Builder and SSRS)
+      href: add-a-background-image-report-builder-and-ssrs.md
+    - name: Add a Data-Bound Image (Report Builder and SSRS)
+      href: add-a-data-bound-image-report-builder-and-ssrs.md
+- name: Formatting Report Items
+  href: formatting-report-items-report-builder-and-ssrs.md
+  items:
+  - name: Formatting Text and Placeholders (Report Builder and SSRS)
+    href: formatting-text-and-placeholders-report-builder-and-ssrs.md
+  - name: Format Text in a Text Box (Report Builder and SSRS)
+    href: format-text-in-a-text-box-report-builder-and-ssrs.md
+  - name: Importing HTML into a Report (Report Builder and SSRS)
+    href: importing-html-into-a-report-report-builder-and-ssrs.md
+  - name: Add HTML into a Report (Report Builder and SSRS)
+    href: add-html-into-a-report-report-builder-and-ssrs.md
+  - name: Formatting Numbers and Dates (Report Builder and SSRS)
+    href: formatting-numbers-and-dates-report-builder-and-ssrs.md
+  - name: Formatting Lines, Colors, and Images (Report Builder and SSRS)
+    href: formatting-lines-colors-and-images-report-builder-and-ssrs.md
+  - name: Set the Locale for a Report or Text Box
+    href: set-the-locale-for-a-report-or-text-box-reporting-services.md
+- name: Report Parameters
+  href: report-parameters-report-builder-and-report-designer.md
+  items:
+  - name: Add, Change, or Delete a Report Parameter
+    href: add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md
+  - name: Add, Change, or Delete Available Values for a Report Parameter
+    href: add-change-or-delete-available-values-for-a-report-parameter.md
+  - name: Add, Change, or Delete Default Values for a Report Parameter
+    href: add-change-or-delete-default-values-for-a-report-parameter.md
+  - name: Change the Order of a Report Parameter
+    href: change-the-order-of-a-report-parameter-report-builder-and-ssrs.md
+  - name: Add Cascading Parameters to a Report
+    href: add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
+  - name: Add a multi-value parameter to a Report
+    href: add-a-multi-value-parameter-to-a-report.md
+  - name: Set Parameters on a Published Report
+    href: set-parameters-on-a-published-report-sharepoint-integrated-mode.md
+- name: Filter, Group, and Sort Data
+  href: filter-group-and-sort-data-report-builder-and-ssrs.md
+  items:
+  - name: Group Expression Examples
+    href: group-expression-examples-report-builder-and-ssrs.md
+  - name: Filter Equation Examples
+    href: filter-equation-examples-report-builder-and-ssrs.md
+  - name: Add Dataset Filters, Data Region Filters, and Group Filters
+    href: add-dataset-filters-data-region-filters-and-group-filters.md
+  - name: Add a Filter
+    href: add-a-filter-report-builder-and-ssrs.md
+  - name: Sort Data in a Data Region
+    href: sort-data-in-a-data-region-report-builder-and-ssrs.md
+  - name: Commonly Used Filters
+    href: commonly-used-filters-report-builder-and-ssrs.md
+- name: Drillthrough, Drilldown, Subreports, and Nested Data Regions
+  href: drillthrough-drilldown-subreports-and-nested-data-regions.md
+  items:
+  - name: Drillthrough Reports (Report Builder and SSRS)
+    href: drillthrough-reports-report-builder-and-ssrs.md
+  - name: Add a Drillthrough Action on a Report (Report Builder and SSRS)
+    href: add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md
+  - name: Subreports (Report Builder and SSRS)
+    href: subreports-report-builder-and-ssrs.md
+  - name: Add a Subreport and Parameters (Report Builder and SSRS)
+    href: add-a-subreport-and-parameters-report-builder-and-ssrs.md
+  - name: Drilldown Action (Report Builder and SSRS)
+    href: drilldown-action-report-builder-and-ssrs.md
+  - name: Add an Expand or Collapse Action to an Item (Report Builder and SSRS)
+    href: add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md
+  - name: Nested Data Regions (Report Builder and SSRS)
+    href: nested-data-regions-report-builder-and-ssrs.md
+  - name: Specifying Paths to External Items (Report Builder and SSRS)
+    href: specifying-paths-to-external-items-report-builder-and-ssrs.md
+- name: Expressions
+  href: expressions-report-builder-and-ssrs.md
+  items:
+  - name: Add an Expression
+    href: add-an-expression-report-builder-and-ssrs.md
+  - name: Expression Examples
+    href: expression-examples-report-builder-and-ssrs.md
+  - name: Expression Uses in Reports
+    href: expression-uses-in-reports-report-builder-and-ssrs.md
+  - name: Expression Scope for Totals, Aggregates, and Built-in Collections
+    href: expression-scope-for-totals-aggregates-and-built-in-collections.md
+  - name: Custom Code and Assembly References in Expressions in Report Designer
+    href: custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md
+  - name: Add an Assembly Reference to a Report
+    href: add-an-assembly-reference-to-a-report-ssrs.md
+  - name: Add Code to a Report
+    href: add-code-to-a-report-ssrs.md
+  - name: Expression Dialog Box
+    href: ../expression-dialog-box.md
+  - name: Expression Reference
+    href: expression-reference-report-builder-and-ssrs.md
+  - name: Aggregate Functions Reference
+    href: report-builder-functions-aggregate-functions-reference.md
+    items:
+    - name: Aggregate Function
+      href: report-builder-functions-aggregate-function.md
+    - name: Avg Function
+      href: report-builder-functions-avg-function.md
+    - name: Count Function
+      href: report-builder-functions-count-function.md
+    - name: CountDistinct Function
+      href: report-builder-functions-countdistinct-function.md
+    - name: CountRows Function
+      href: report-builder-functions-countrows-function.md
+    - name: First Function
+      href: report-builder-functions-first-function.md
+    - name: InScope Function
+      href: report-builder-functions-inscope-function.md
+    - name: Last Function
+      href: report-builder-functions-last-function.md
+    - name: Level Function
+      href: report-builder-functions-level-function.md
+    - name: Lookup Function
+      href: report-builder-functions-lookup-function.md
+    - name: LookupSet Function
+      href: report-builder-functions-lookupset-function.md
+    - name: Max Function
+      href: report-builder-functions-max-function.md
+    - name: Min Function
+      href: report-builder-functions-min-function.md
+    - name: Multilookup Function
+      href: report-builder-functions-multilookup-function.md
+    - name: Previous Function
+      href: report-builder-functions-previous-function.md
+    - name: RowNumber Function
+      href: report-builder-functions-rownumber-function.md
+    - name: RunningValue Function
+      href: report-builder-functions-runningvalue-function.md
+    - name: StDev Function
+      href: report-builder-functions-stdev-function.md
+    - name: StDevP Function
+      href: report-builder-functions-stdevp-function.md
+    - name: Sum Function
+      href: report-builder-functions-sum-function.md
+    - name: Union Function
+      href: report-builder-functions-union-function.md
+    - name: Var Function
+      href: report-builder-functions-var-function.md
+    - name: VarP Function
+      href: report-builder-functions-varp-function.md
+  - name: Data Types in Expressions
+    href: data-types-in-expressions-report-builder-and-ssrs.md
+  - name: Constants in Expressions
+    href: constants-in-expressions-report-builder-and-ssrs.md
+  - name: Operators in Expressions
+    href: operators-in-expressions-report-builder-and-ssrs.md
+  - name: Built-in Collections in Expressions
+    href: built-in-collections-in-expressions-report-builder.md
+    items:
+    - name: Built-in Globals and Users References
+      href: built-in-collections-built-in-globals-and-users-references-report-builder.md
+    - name: Parameters Collection References
+      href: built-in-collections-parameters-collection-references-report-builder.md
+    - name: Dataset Fields Collection References
+      href: built-in-collections-dataset-fields-collection-references-report-builder.md
+    - name: DataSources and DataSets Collection References
+      href: built-in-collections-datasources-and-datasets-references-report-builder.md
+    - name: Report and Group Variables Collections References
+      href: built-in-collections-report-and-group-variables-references-report-builder.md
+    - name: ReportItems Collection References
+      href: built-in-collections-reportitems-collection-references-report-builder.md

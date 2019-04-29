@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "Reduce_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "Reduce method"
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-caps.latest.revision: 14
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

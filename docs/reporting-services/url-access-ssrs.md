@@ -1,17 +1,12 @@
 ---
 title: "URL Access (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "URL access [Reporting Services]"
   - "links [Reporting Services], URL access"
@@ -20,10 +15,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], URL access"
   - "hyperlinks [Reporting Services]"
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-caps.latest.revision: 43
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # URL Access (SSRS)
   URL access of the report server in SQL Server Reporting Services (SSRS) enables you to send commands to a report server through a URL request. For example, you can customize the rendering of a report on a native mode report server or in a SharePoint library. You may have viewed the report using a specific set of report parameter values, or you may have been viewing a particular page of interest in the report. You can encapsulate this information in the URL using predefined URL access parameters. You can further customize how the report server processes the report by embedding parameters for rendering formats or for the look and feel of the report viewer. You can then paste this URL directly into an email or Web page to let others to access your report in the same manner in the browser.  
@@ -62,14 +55,14 @@ reportpath
  The Web service URL of the report server. For native mode, it is the Web service URL of the report server instance configured in Reporting Services Configuration Manager (see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)). For example:  
   
 ```  
-http://myrshost/reportserver  
+https://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
  For SharePoint integrated mode, it is the URL of the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proxy at a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. For example:  
   
 ```  
-http://myspsite/subsite/_vti_bin/reportserver  
+https://myspsite/subsite/_vti_bin/reportserver  
 ```  
   
 > [!TIP]  
@@ -87,7 +80,7 @@ http://myspsite/subsite/_vti_bin/reportserver
  For SharePoint integrated mode, it is the fully qualified URL of the item in the SharePoint library, including the item extension. For example:  
   
 ```  
-http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
+https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
 ```  
   
  **&**  

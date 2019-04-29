@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerResultSet.moveToInsertRow"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

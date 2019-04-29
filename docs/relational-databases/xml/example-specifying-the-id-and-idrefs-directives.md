@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IDREFS directive"
   - "ID directive"
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Example: Specifying the ID and IDREFS Directives

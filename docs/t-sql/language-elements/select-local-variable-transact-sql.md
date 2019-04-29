@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "variable_TSQL"
@@ -25,13 +22,13 @@ helpviewer_keywords:
   - "@local_variable"
   - "local variables [SQL Server]"
 ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
-caps.latest.revision: 32
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
+monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # SELECT @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Sets a local variable to the value of an expression.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_start_job"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_start_job"
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: 36
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -44,22 +40,22 @@ sp_start_job
 ```  
   
 ## Arguments  
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The name of the job to start. Either *job_id* or *job_name* must be specified, but both cannot be specified. *job_name* is **sysname**, with a default of NULL.  
   
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The identification number of the job to start. Either *job_id* or *job_name* must be specified, but both cannot be specified. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@error_flag=** ] *error_flag*  
+`[ @error_flag = ] error_flag`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
+`[ @server_name = ] 'server_name'`
  The target server on which to start the job. *server_name* is **nvarchar(128)**, with a default of NULL. *server_name* must be one of the target servers to which the job is currently targeted.  
   
- [ **@step_name=** ] **'***step_name***'**  
+`[ @step_name = ] 'step_name'`
  The name of the step at which to begin execution of the job. Applies only to local jobs. *step_name* is **sysname**, with a default of NULL  
   
- [ **@output_flag=** ] *output_flag*  
+`[ @output_flag = ] output_flag`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  
@@ -80,7 +76,7 @@ sp_start_job
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Members of **SQLAgentUserRole** and **SQLAgentReaderRole** can only start jobs that they own. Members of **SQLAgentOperatorRole** can start all local jobs including those that are owned by other users. Members of **sysadmin** can start all local and multiserver jobs.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syspolicy_add_policy_category_subscription"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_add_policy_category_subscription"
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_add_policy_category_subscription (Transact-SQL)
@@ -41,18 +37,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## Arguments  
- [ **@target_type=** ] **'***target_type***'**  
+`[ @target_type = ] 'target_type'`
  Is the target type of the category subscription. *target_type* is **sysname**, is required, and must be set to 'DATABASE'.  
   
- [ **@target_object=** ] **'***target_object***'**  
+`[ @target_object = ] 'target_object'`
  Is the name of the database that will subscribe to the category. *target_object* is **sysname**, and is required.  
   
- [ **@policy_category=** ] **'***policy_category***'**  
+`[ @policy_category = ] 'policy_category'`
  Is the name of the policy category to subscribe to. *policy_category* is **sysname**, and is required.  
   
  To obtain values for *policy_category*, query the msdb.dbo.syspolicy_policy_categories system view.  
   
- [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`
  Is the identifier for the category subscription. *policy_category_subscription_id* is **int**, and is returned as OUTPUT.  
   
 ## Return Code Values  

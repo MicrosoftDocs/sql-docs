@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_delete_profile_sp"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_profile_sp"
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
-caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -38,10 +34,10 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## Arguments  
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  Is the profile id of the profile to be deleted. *profile_id* is **int**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  Is the name of the profile to be deleted. *profile_name* is **sysname**, with a default of NULL. Either *profile_id* or *profile_name* must be specified.  
   
 ## Return Code Values  

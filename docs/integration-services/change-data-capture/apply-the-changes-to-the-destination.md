@@ -5,16 +5,13 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],applying changes"
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Apply the Changes to the Destination

@@ -1,32 +1,25 @@
-﻿---
+---
 title: "Tutorial: Configure replication between a server and mobile clients (merge) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/03/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.technology: replication
+ms.topic: quickstart
 helpviewer_keywords: 
   - "replication [SQL Server], tutorials"
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
-caps.latest.revision: 24
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Tutorial: Configure replication between a server and mobile clients (merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Merge replication is a good solution to the problem of moving data between a central server and mobile clients that are only occasionally connected. By using the replication wizards, you can easily configure and administer a merge replication topology. 
 
-This tutorial shows you how to configure a replication topology for mobile clients. For more information about merge replication, see the [overview of merge replication](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication).
+This tutorial shows you how to configure a replication topology for mobile clients. For more information about merge replication, see the [overview of merge replication](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
   
 ## What you will learn  
 This tutorial teaches you to use merge replication to publish data from a central database to one or more mobile users so that each user gets a uniquely filtered subset of the data. 
@@ -49,14 +42,14 @@ To complete this tutorial, you need SQL Server, SQL Server Management Studio (SS
   
 - At the subscriber server (destination), install any edition of SQL Server, except for [!INCLUDE[ssEW](../../includes/ssew-md.md)]. The publication that's created in this tutorial does not support [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
 
-- Install [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Install [SQL Server 2017 Developer edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Download the [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Install [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Install [SQL Server 2017 Developer edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Download the [AdventureWorks sample database](https://github.com/Microsoft/sql-server-samples/releases). For instructions on restoring a database in SSMS, see [Restoring a database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
  
   
 >[!NOTE]
 > - Replication is not supported on SQL Server instances that are more than two versions apart. For more information, see [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/).
-> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the publisher and subscriber by using a login that is a member of the **sysadmin** fixed server role. For more information on this role, see [Server-level roles](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], you must connect to the publisher and subscriber by using a login that is a member of the **sysadmin** fixed server role. For more information on this role, see [Server-level roles](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
 **Estimated time to complete this tutorial: 60 minutes**  
@@ -92,7 +85,7 @@ In this section, you create a merge publication by using [!INCLUDE[ssManStudioFu
    >
    > If you're using a build earlier than SQL Server 2017, a message appears at the bottom of the screen to notify you of potential data loss for using this column in bidirectional replication. For the purpose of this tutorial, you can ignore this message. However, this data type should not be replicated in a production environment unless you're using the supported build.
    > 
-   > For more information about replicating the **hierarchyid** data type, see [Using hierarchyid columns in replication](https://docs.microsoft.com/en-us/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
+   > For more information about replicating the **hierarchyid** data type, see [Using hierarchyid columns in replication](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
     
   
 7. On the **Filter Table Rows** page, select **Add** and then select **Add Filter**.  
@@ -252,7 +245,7 @@ In this section, you add a subscription to the merge publication that you create
 For more information, see:  
 - [Subscribe to publications](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Create a pull subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [Snapshots for merge publications with parameterized filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+- [Snapshots for merge publications with parameterized filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## Synchronize the subscription to the merge publication
 

@@ -6,13 +6,10 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Users collection [ADOX], members"
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

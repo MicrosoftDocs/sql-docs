@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.smtpconnection.f1"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "SMTP connection manager [Integration Services]"
   - "connection managers [Integration Services], SMTP"
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SMTP Connection Manager

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.database_permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "database_permissions"
@@ -20,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_permissions catalog view"
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +35,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |**class**|**tinyint**|Identifies class on which permission exists.<br /><br /> 0 = Database<br />1 = Object or Column<br />3 = Schema<br />4 = Database Principal<br />5 = Assembly - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Type<br />10 = XML Schema Collection - <br />                      **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = Message Type - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = Service Contract - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = Remote Service Binding - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = Route - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 =Full-Text Catalog - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = Symmetric Key - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = Certificate - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = Asymmetric Key - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**class_desc**|**nvarchar(60)**|Description of class on which permission exists.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|ID of thing on which permission exists, interpreted according to class. Usually, the **major_id** is simply the kind of ID that applies to what the class represents. <br /><br /> 0 = The database itself <br /><br /> >0 = Object-IDs for user objects <br /><br /> \<0 = Object-IDs for system objects |  
-|**minor_id**|**int**|Secondary-ID of thing on which permission exists, interpreted according to class. Often, the **major_id** is zero, because there is no subcategory available for the class of object. Otherwise, it is the Column-ID of a table.|  
+|**minor_id**|**int**|Secondary-ID of thing on which permission exists, interpreted according to class. Often, the **minor_id** is zero, because there is no subcategory available for the class of object. Otherwise, it is the Column-ID of a table.|  
 |**grantee_principal_id**|**int**|Database principal ID to which the permissions are granted.|  
 |**grantor_principal_id**|**int**|Database principal ID of the grantor of these permissions.|  
 |**type**|**char(4)**|Database permission type. For a list of permission types, see the next table.|  

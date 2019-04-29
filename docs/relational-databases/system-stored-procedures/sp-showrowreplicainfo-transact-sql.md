@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_showrowreplicainfo_TSQL"
   - "sp_showrowreplicainfo"
 helpviewer_keywords: 
   - "sp_showrowreplicainfo"
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_showrowreplicainfo (Transact-SQL)
@@ -42,16 +35,16 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## Arguments  
- [ **@ownername**= ] **'***ownername***'**  
+`[ @ownername = ] 'ownername'`
  Is the name of the table owner. *ownername* is **sysname**, with a default of NULL. This parameter is useful to differentiate tables if a database contains multiple tables with the same name, but each table has a different owner.  
   
- [ **@tablename =**] **'***tablename***'**  
+`[ @tablename = ] 'tablename'`
  Is the name of the table that contains the row for which the information is returned. *tablename* is **sysname**, with a default of NULL.  
   
- [ **@rowguid =**] *rowguid*  
+`[ @rowguid = ] rowguid`
  Is the unique identifier of the row. *rowguid* is **uniqueidentifier**, with no default.  
   
- [ **@show**= ] **'***show***'**  
+`[ @show = ] 'show'`
  Determines the amount of information to return in the result set. *show* is **nvarchar(20)** with a default of BOTH. If **row**, only row version information is returned. If **columns**, only column version information is returned. If **both**, both row and column information is returned.  
   
 ## Result Sets for Row Information  
@@ -87,7 +80,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
  **sp_showrowreplicainfo** can only be executed by members of the **db_owner** fixed database role on the publication database or by members of the publication access list (PAL) on the publication database.  
   
 ## See Also  
- [Detect and Resolve Merge Replication Conflicts](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   
+ [Detect and Resolve Merge Replication Conflicts](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

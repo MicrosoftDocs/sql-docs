@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services tutorial lesson 9: Create hierarchies | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Create hierarchies
 

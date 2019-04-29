@@ -3,16 +3,10 @@ title: "Install Distributed Replay - Overview | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.component: "distributed-replay"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
-caps.latest.revision: 12
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: craigg

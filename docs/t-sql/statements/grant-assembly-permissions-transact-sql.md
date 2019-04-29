@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,9 +14,8 @@ helpviewer_keywords:
   - "assemblies [CLR integration], permissions"
   - "GRANT statement, assemblies"
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # GRANT Assembly Permissions (Transact-SQL)
@@ -42,7 +38,7 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  *permission*  
  Specifies a permission that can be granted on an assembly. Listed below.  
   
- ON ASSEMBLY **::***assembly_name*  
+ ON ASSEMBLY **::**_assembly_name_  
  Specifies the assembly on which the permission is being granted. The scope qualifier "::" is required.  
   
  *database_principal*  

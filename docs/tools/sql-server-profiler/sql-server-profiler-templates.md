@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "default SQL Server Profiler templates"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "predefined templates [SQL Server Profiler]"
   - "SQL Server Profiler, templates"
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

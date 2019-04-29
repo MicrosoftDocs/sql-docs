@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_category"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_category"
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: 29
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_add_category (Transact-SQL)
@@ -41,7 +37,7 @@ sp_add_category
 ```  
   
 ## Arguments  
- [ **@class =** ] **'***class***'**  
+`[ @class = ] 'class'`
  The class of the category to be added. *class* is **varchar(8)** with a default value of JOB, and can be one of these values.  
   
 |Value|Description|  
@@ -50,7 +46,7 @@ sp_add_category
 |ALERT|Adds an alert category.|  
 |OPERATOR|Adds an operator category.|  
   
- [ **@type =** ] **'***type***'**  
+`[ @type = ] 'type'`
  The type of category to be added. *type* is **varchar(12)**, with a default value of **LOCAL**, and can be one of these values.  
   
 |Value|Description|  
@@ -59,7 +55,7 @@ sp_add_category
 |MULTI-SERVER|A multiserver job category.|  
 |NONE|A category for a class other than JOB**.**|  
   
- [ **@name =** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the category to be added. The name must be unique within the specified class. *name* is **sysname**, with no default.  
   
 ## Return Code Values  

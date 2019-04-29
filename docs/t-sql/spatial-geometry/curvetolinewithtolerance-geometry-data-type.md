@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "CurveToLineWithTolerance method (geometry)"
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-caps.latest.revision: 16
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

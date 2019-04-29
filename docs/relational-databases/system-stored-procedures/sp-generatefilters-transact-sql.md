@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_generatefilters"
   - "sp_generatefilters_TSQL"
 helpviewer_keywords: 
   - "sp_generatefilters"
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_generatefilters (Transact-SQL)
@@ -39,7 +32,7 @@ sp_generatefilters [ @publication =] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to be filtered. *publication* is **sysname**, with no default.  
   
 ## Return Code Values  

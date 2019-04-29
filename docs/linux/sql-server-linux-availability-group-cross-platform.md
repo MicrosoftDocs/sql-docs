@@ -1,14 +1,12 @@
-﻿---
+---
 title: Configure SQL Server Always On Availability Group on Windows and Linux | Microsoft Docs
 description: Configure SQL Server Availability Group with replicas on Windows and Linux.
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
 ms.date: 01/31/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 
@@ -54,7 +52,7 @@ The steps to create the AG are the same as the steps to create an AG for read-sc
 
    For instructions, see [Change server authentication mode](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure).
 
-1. Install SQL Server 2017 on Linux. For instructions, see [Install SQL Sever](sql-server-linux-setup.md). Enable `hadr` via mssql-conf.
+1. Install SQL Server 2017 on Linux. For instructions, see [Install SQL Server](sql-server-linux-setup.md). Enable `hadr` via mssql-conf.
 
    To enable `hadr` via mssql-conf from a shell prompt, issue the following command:
 

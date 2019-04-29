@@ -1,24 +1,20 @@
-﻿---
+---
 title: "Use Character Format to Import or Export Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data formats [SQL Server], character"
   - "character formats [SQL Server]"
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-caps.latest.revision: 42
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Character Format to Import or Export Data (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +60,7 @@ Character format is supported by the following command options:
   
 |Command|Option|Description|  
 |-------------|------------|-----------------|  
-|bcp|**-c**|Causes the bcp utility to use character data.*|  
+|bcp|**-c**|Causes the bcp utility to use character data.\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Use character format when bulk importing data.|  
 |OPENROWSET|N/A|Must use a format file|
   

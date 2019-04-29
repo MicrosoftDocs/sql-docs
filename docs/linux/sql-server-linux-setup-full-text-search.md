@@ -5,10 +5,8 @@ author: rothja
 ms.author: jroth 
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
@@ -17,7 +15,7 @@ ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-The following steps install [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) on Linux. Full-Text Search enables you to run full-text queries against character-based data in SQL Server tables. For known issues for this release, see the [Release Notes](sql-server-linux-release-notes.md).
+The following steps install [SQL Server Full-Text Search](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) on Linux. Full-Text Search enables you to run full-text queries against character-based data in SQL Server tables. For known issues for this release, see the [Release Notes](sql-server-linux-release-notes.md).
 
 > [!NOTE]
 > Before installing SQL Server Full-Text Search, first [install SQL Server](sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the **mssql-server-fts** package.
@@ -82,7 +80,7 @@ If you need an offline installation, locate the Full-text Search package downloa
 
 ## Supported languages
 
-Full-Text Search uses [word breakers](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server 2017:
+Full-Text Search uses [word breakers](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) that determine how to identify individual words based on language. You can get a list of registered word breakers by querying the **sys.fulltext_languages** catalog view. Word breakers for the following languages are installed with SQL Server:
 
 | Language | Language ID |
 |---|---|
@@ -144,7 +142,7 @@ Full-Text Search uses [word breakers](../relational-databases/search/configure-a
 
 Full-Text Search also works with text stored in binary files. But in this case, an installed filter is required to process the file. For more information about filters, see [Configure and Manage Filters for Search](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server 2017, the following filters are installed:
+You can see a list of installed filters by calling **sp_help_fulltext_system_components 'filter'**. For SQL Server, the following filters are installed:
 
 | Component Name | Class ID | Version |
 |---|---|---|

@@ -62,7 +62,7 @@ manager: kfile
  Singleton prediction queries do not require a separate table that contains input. Instead, you provide one or multiple rows of values as input to the model, and the prediction or predictions are returned in real time.  
   
 > [!WARNING]  
->  Despite the name, singleton prediction queries do not just make single predictions—you can generate multiple predictions for each set of inputs. You provide multiple input cases by creating a SELECT statement for each input case and combining them with the UNION operator.  
+>  Despite the name, singleton prediction queries do not just make single predictions-you can generate multiple predictions for each set of inputs. You provide multiple input cases by creating a SELECT statement for each input case and combining them with the UNION operator.  
   
  When you create a singleton prediction query, you must provide the new data to the model in the form of a PREDICTION JOIN. This means that even though you are not mapping to an actual table, you must make sure that the new data matches the existing columns in the mining model. If the new data columns and the new data match exactly, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] will map the columns for you. This is called a *NATURAL PREDICTION JOIN*. However, if the columns do not match, or if the new data does not contain the same kind and amount of data that is in the model, you must specify which columns in the model map to the new data, or specify the missing values.  
   

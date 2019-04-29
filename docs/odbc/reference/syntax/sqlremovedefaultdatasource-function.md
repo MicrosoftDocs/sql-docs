@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLRemoveDefaultDataSource"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLRemoveDefaultDataSource function [ODBC]"
 ms.assetid: db803266-57df-4864-a41b-901247549c1f
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg

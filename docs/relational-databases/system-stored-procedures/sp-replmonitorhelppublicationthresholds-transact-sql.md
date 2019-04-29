@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replmonitorhelppublicationthresholds"
   - "sp_replmonitorhelppublicationthresholds_TSQL"
 helpviewer_keywords: 
   - "sp_replmonitorhelppublicationthresholds"
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_replmonitorhelppublicationthresholds (Transact-SQL)
@@ -43,16 +36,16 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher**= ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db**= ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the published database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@publication_type**= ] *publication_type*  
+`[ @publication_type = ] publication_type`
  If the type of publication. *publication_type* is **int**, and can be one of these values.  
   
 |Value|Description|  

@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Bulk Import and Export of Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "exporting data"
@@ -24,11 +22,10 @@ helpviewer_keywords:
   - "bulk importing [SQL Server]"
   - "importing data"
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-caps.latest.revision: 61
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Import and Export of Data (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +43,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |------------|-----------------|------------------|------------------|  
 |[bcp utility](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|A command-line utility (Bcp.exe) that bulk exports and bulk imports data and generates format files.|Yes|Yes|  
 |[BULK INSERT statement](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|A [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that imports data directly from a data file into a database table or nonpartitioned view.|Yes|No|  
-|[INSERT ... SELECT * FROM OPENROWSET(BULK...) statement](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|A [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that uses the OPENROWSET bulk rowset provider to bulk import data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table by specifying the OPENROWSET(BULK…) function to select data in an INSERT statement.|Yes|No| 
+|[INSERT ... SELECT * FROM OPENROWSET(BULK...) statement](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|A [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that uses the OPENROWSET bulk rowset provider to bulk import data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table by specifying the OPENROWSET(BULK...) function to select data in an INSERT statement.|Yes|No| 
 |[SQL Server Import and Export Wizard](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)|The wizard creates simple packages that import and export data between many popular data formats including databases, spreadsheets, and text files.|Yes|Yes|  
   
 > [!IMPORTANT]

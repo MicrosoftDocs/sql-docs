@@ -1,12 +1,11 @@
 ---
-title: "Enable and Disable Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Enable or Disable availability group feature"
+description: "Steps to either enable or disable the Always On availability group feature using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
@@ -14,12 +13,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], disabling"
   - "Availability Groups [SQL Server], enabling"
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Enable and Disable Always On Availability Groups (SQL Server)
+# Enable or Disable Always On availability group feature
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Enabling [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is a prerequisite for a server instance to use availability groups. Before you can create and configure any availability group, the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must have been enabled on the each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host an availability replica for one or more availability groups.  
@@ -27,23 +25,8 @@ manager: craigg
 > [!IMPORTANT]  
 >  If you delete and re-create a WSFC cluster, you must disable and re-enable the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature on each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that hosted an availability replica on the original WSFC cluster.  
   
--   **Before you begin:**  
   
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **How To:**  
-  
-    -   [Determine Whether Always On Availability Groups is Enabled](#IsEnabled)  
-  
-    -   [Enable Always On Availability Groups](#EnableAOAG)  
-  
-    -   [Disable Always On Availability Groups](#DisableAOAG)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites for Enabling Always On Availability Groups  
+##  <a name="Prerequisites"></a> Prerequisites for Enabling Always On Availability Groups  
   
 -   The server instance must reside on a Windows Server Failover Clustering (WSFC) node.  
   
@@ -53,10 +36,9 @@ manager: craigg
   
  For information about additional prerequisites for creating and configuring availability groups, see [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Security  
+## <a name="Permissions"></a> Permissions  
  While Always On Availability Groups is enabled on an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], the server instance has full control on the WSFC cluster.  
-  
-####  <a name="Permissions"></a> Permissions  
+
  Requires membership in the **Administrator** group on the local computer and full control on the WSFC cluster. When enabling Always On by using PowerShell, open the Command Prompt window using the **Run as administrator** option.  
   
  Requires Active Directory Create Objects and Manage Objects permissions.  
@@ -126,11 +108,11 @@ manager: craigg
 ###  <a name="SQLCM2Procedure"></a> Using SQL Server Configuration Manager  
  **To enable Always On Availability Groups**  
   
-1.  Connect to the Windows Server Failover Clustering (WSFC) node that hosts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance where you want to enable Always On Availability Groups.  
+1.  Connect to the Windows Server Failover Cluster (WSFC) node that hosts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance where you want to enable Always On Availability Groups.  
   
 2.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and  click **SQL Server Configuration Manager**.  
   
-3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<***instance name***>)**, where **\<***instance name***>** is the name of a local server instance for which you want to enable Always On Availability Groups, and click **Properties.**  
+3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<**_instance name_**>)**, where **\<**_instance name_**>** is the name of a local server instance for which you want to enable Always On Availability Groups, and click **Properties.**  
   
 4.  Select the **Always On High Availability** tab.  
   
@@ -190,13 +172,13 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="SQLCM3Procedure"></a> Using SQL Server Configuration Manager  
  **To disable Always On**  
   
-1.  Connect to the Windows Server Failover Clustering (WSFC) node that hosts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance where you want to disable Always On Availability Groups.  
+1.  Connect to the Windows Server Failover Cluster (WSFC) node that hosts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance where you want to disable Always On Availability Groups.  
   
 2.  On the **Start** menu, point to **All Programs**, point to [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], point to **Configuration Tools**, and click **SQL Server Configuration Manager**.  
   
-3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<***instance name***>)**, where **\<***instance name***>** is the name of a local server instance for which you want to disable Always On Availability Groups, and click **Properties**.  
+3.  In **SQL Server Configuration Manager**, click **SQL Server Services**, right-click SQL Server (**\<**_instance name_**>)**, where **\<**_instance name_**>** is the name of a local server instance for which you want to disable Always On Availability Groups, and click **Properties**.  
   
-4.  On the**Always On High Availability**tab, deselect the **Enable Always On Availability Groups** check box, and click **OK**.  
+4.  On the **Always On High Availability** tab, deselect the **Enable Always On Availability Groups** check box, and click **OK**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager saves your change and restarts the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service. When the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service restarts, Always On will be disabled, and the **IsHadrEnabled** server property will be set to 0, to indicate that Always On Availability Groups is disabled.  
   
@@ -205,7 +187,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> Using SQL Server PowerShell  
  **To disable Always On**  
   
-1.  Change directory (**cd**) to a currently-enabled server instance that that you want to disenable for Always On Availability Groups.  
+1.  Change directory (**cd**) to a currently-enabled server instance that you want to disenable for Always On Availability Groups.  
   
 2.  Use the **Disable-SqlAlwaysOn** cmdlet to enable Always On Availability Groups.  
   
@@ -239,7 +221,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  If you did not remove the local availability replicas before disabling Always On, delete (drop) each availability group for which the server instance is hosting an availability replica. For information about deleting an availability group, see [Remove an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
   
-2.  To remove the metadata left behind, delete (drop) each affected availability group on a server instance that is part of the original WSFC cluster.  
+2.  To remove the metadata left behind, delete (drop) each affected availability group on a server instance that is part of the original WSFC.  
   
 3.  Any primary databases continue to be accessible to all connections but the data synchronization between the primary and secondary databases stops.  
   

@@ -5,12 +5,9 @@ ms.date: "08/08/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -28,7 +25,7 @@ This C# code example should be considered a proof of concept only. The sample co
 The method **SqlConnection.Open** is used to connect to your SQL database.  
 
 
-```CSharp  
+```csharp
     // C# , ADO.NET  
     using System;
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -71,7 +68,7 @@ The method SqlCommand.ExecuteReader:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -159,7 +156,7 @@ This example demonstrates how to:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  

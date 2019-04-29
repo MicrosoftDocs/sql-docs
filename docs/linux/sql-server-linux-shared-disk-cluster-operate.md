@@ -5,10 +5,8 @@ author: MikeRayMSFT
 ms.author: mikeray 
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid:
@@ -27,8 +25,8 @@ There are times you may want to manually fail the FCI to another node. The proce
 
 The way to failover depends on the Linux distribution. Follow the instructions for your linux distribution.
 
-- [RHEL or Ubuntu](#rhelFailover)
-- [SLES](#slesFailover)
+- [RHEL or Ubuntu](#-manual-failover-rhel-or-ubuntu)
+- [SLES](#-manual-failover-sles)
 
 ## <a name = "#rhelFailover"></a> Manual Failover (RHEL or Ubuntu)
 
@@ -66,10 +64,12 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 
 <!---
+
 |Distribution |Topic 
 |----- |-----
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
+
 --->
 
 ## Next Steps

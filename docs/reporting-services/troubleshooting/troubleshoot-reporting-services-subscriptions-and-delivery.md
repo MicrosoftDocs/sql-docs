@@ -1,22 +1,15 @@
 ---
 title: "Troubleshoot Reporting Services Subscriptions and Delivery | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
+ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Reporting Services Subscriptions and Delivery
   
@@ -72,7 +65,7 @@ Subscriptions can fail under these conditions.
 * The credential settings changed from stored to integrated or prompted values.  
 * The parameter name or data type was changed in the report definition, and the report was republished. If a subscription includes a parameter that is no longer valid, the subscription becomes inactive.  
   
-For more information, see the TechNet Wiki [Troubleshoot issues and errors with Reporting Services](http://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx).  
+For more information, see the TechNet Wiki [Troubleshoot issues and errors with Reporting Services](https://social.technet.microsoft.com/wiki/contents/articles/1633.ssrs-troubleshoot-issues-and-errors-with-reporting-services.aspx).  
   
   
     
@@ -80,5 +73,5 @@ For more information, see the TechNet Wiki [Troubleshoot issues and errors with 
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

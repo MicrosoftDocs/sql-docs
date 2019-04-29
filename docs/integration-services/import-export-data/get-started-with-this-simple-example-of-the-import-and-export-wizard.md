@@ -3,16 +3,12 @@ title: "Get started with this simple example of the Import and Export Wizard | M
 ms.custom: ""
 ms.date: "02/15/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Get started with this simple example of the Import and Export Wizard

@@ -1,14 +1,9 @@
-﻿---
+---
 title: "Get Started with Full-Text Search | Microsoft Docs"
 ms.date: "08/22/2016"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.custom: ""
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text catalogs [SQL Server], creating"
@@ -16,11 +11,11 @@ helpviewer_keywords:
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], setting up"
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 76
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Started with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "RESTORE SERVICE MASTER KEY"
@@ -24,9 +21,8 @@ helpviewer_keywords:
   - "RESTORE SERVICE MASTER KEY statement"
   - "transferring Service Master Keys"
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # RESTORE SERVICE MASTER KEY (Transact-SQL)
@@ -45,10 +41,10 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## Arguments  
- FILE **='***path_to_file***'**  
+ FILE **='**_path\_to\_file_**'**  
  Specifies the complete path, including file name, to the stored service master key. *path_to_file* can be a local path or a UNC path to a network location.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Specifies the password required to decrypt the service master key that is being imported from a file.  
   
  FORCE  
@@ -81,6 +77,4 @@ GO
  [Service Master Key](../../relational-databases/security/encryption/service-master-key.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+ [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

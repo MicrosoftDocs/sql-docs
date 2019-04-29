@@ -12,7 +12,7 @@ manager: kfile
 ---
 # High availability and Scalability in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  This article describes the most commonly used techniques for making Analysis Services databases  high available and scalable. While each objective could be addressed separately, in reality they often go hand in hand: a scalable deployment for large query or processing workloads typically comes with expectations of high availability.  
+  This article describes the most commonly used techniques for making Analysis Services databases highly available and scalable. While each objective could be addressed separately, in reality they often go hand in hand: a scalable deployment for large query or processing workloads typically comes with expectations of high availability.  
   
  The reverse case is not always true, however. High availability, without scale, can be the sole objective when stringent service level agreements exist for mission-critical, but moderate, query workloads.  
   
@@ -79,7 +79,7 @@ manager: kfile
 |Multidimensional models using MOLAP storage|Choose a balanced configuration that accommodates disk IO for loading data quickly and sufficient RAM for cached data.|  
 |Multidimensional models using ROLAP storage.|Maximize disk IO and minimize network latency.|  
   
-## Highly availability and redundancy through WSFC  
+## High availability and redundancy through WSFC  
  Analysis Services can be installed into an existing Windows Server Failover Cluster (WSFC) to achieve high availability that restores service within the shortest time possible.  
   
  Failover clusters provide full access (read and writeback) to the database, but only one node at a time. Secondary databases run on additional nodes in the cluster, as replacement servers if the first node goes down.  
@@ -90,7 +90,7 @@ manager: kfile
 
 - Active/Active is not currently supported. Active/Passive (failover) is the only supported WSFC configuration for Analysis Services.
 - When clustering Analysis Services, make sure that any nodes participating in the cluster run on identical or highly similar hardware, and that the operational context of each node is the same in terms of operating system version and service packs, Analysis Services version and service packs (or cumulative updates), and server mode.
-- Avoid repurposing a Passive node as another workload’s Active node. Any short-term gains in computer utilization will be lost in the event of an actual failover situation if the node is unable to handle both workloads.
+- Avoid repurposing a Passive node as another workload's Active node. Any short-term gains in computer utilization will be lost in the event of an actual failover situation if the node is unable to handle both workloads.
  
  In-depth instructions and background information for deploying Analysis Services in a failover cluster are provided in this whitepaper: [How to Cluster SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Although written for SQL Server 2012, this guidance still applies to newer versions of Analysis Services.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "APPLOCK_TEST_TSQL"
@@ -22,9 +19,8 @@ helpviewer_keywords:
   - "sessions [SQL Server], application locks"
   - "testing application locks"
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # APPLOCK_TEST (Transact-SQL)
@@ -48,7 +44,7 @@ The user, role, or application role that can be granted permissions to objects i
 A lock resource name specified by the client application. The application must ensure a unique resource name. The specified name is hashed internally into a value that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lock manager can internally store.  *resource_name*is **nvarchar(255)**, with no default. *resource_name* is binary compared, and is case-sensitive regardless of the collation settings of the current database.
   
 **'** *lock_mode* **'**  
-The lock mode to obtaine for a specific resource. *lock_mode* is **nvarchar(32)**, with no default value. *lock_mode* can have any of these values: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
+The lock mode to obtain for a specific resource. *lock_mode* is **nvarchar(32)**, with no default value. *lock_mode* can have any of these values: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
 The owner of the lock, which is the *lock_owner* value when the lock was requested. *lock_owner* is **nvarchar(32)**, and the value can be either **Transaction** (the default) or **Session**. If default or **Transaction** is explicitly specified, APPLOCK_TEST must be executed from within a transaction.

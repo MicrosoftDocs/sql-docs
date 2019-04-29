@@ -5,15 +5,11 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [Master Data Services], reversing"
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg

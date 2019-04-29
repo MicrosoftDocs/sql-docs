@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_update_agent_profile_TSQL"
   - "sp_update_agent_profile"
 helpviewer_keywords: 
   - "sp_update_agent_profile"
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_update_agent_profile (Transact-SQL)

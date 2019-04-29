@@ -4,18 +4,15 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Showplan XML events"
   - "saving Showplan XML events"
   - "events [SQL Server], Showplan XML"
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
-caps.latest.revision: 25
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # Save Showplan XML events separately (SQL Server Profiler)

@@ -4,20 +4,17 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Configuration Options and Modes"
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
-caps.latest.revision: 8
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
 ---
 # Setting Project Options (OracleToSQL)
-For each SSMA project you can set project level options. These options specify object conversion, object loading, user interface and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], verify that the configuration options are appropriate for the project.  
+For each SSMA project you can set project level options. These options specify object conversion, object loading, user interface and data migration settings. Before you convert objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or migrate data into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verify that the configuration options are appropriate for the project.  
   
 SSMA lets you configure default options for all projects. These options are applied to any new project that you create. You can then customize the options for each project.  
   
@@ -44,7 +41,7 @@ It also has four modes for configuring these settings:
   
 -   Custom  
   
-The Default mode is recommended for most users. The Optimistic mode keeps more of the current Oracle syntax, and is easier to read. However, keeping current syntax might not be accurate. If the Oracle syntax must be converted to equivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax, the Full mode performs the most complete conversion, but the resulting code might be more difficult to read. In the Custom mode, you set the options.  
+The Default mode is recommended for most users. The Optimistic mode keeps more of the current Oracle syntax, and is easier to read. However, keeping current syntax might not be accurate. If the Oracle syntax must be converted to equivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax, the Full mode performs the most complete conversion, but the resulting code might be more difficult to read. In the Custom mode, you set the options.  
   
 For more information about the settings and how the settings are applied in each mode, see the following topics:  
   
@@ -94,7 +91,7 @@ The next step in the migration depends on your project needs:
   
 -   To customize the mapping of source and target data types, see [Mapping Oracle and SQL Server Data Types &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
--   Otherwise, you can convert the Oracle database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] object definitions. For more information, see [Converting Oracle Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   Otherwise, you can convert the Oracle database object definitions into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] object definitions. For more information, see [Converting Oracle Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
 ## See Also  
 [Mapping Oracle and SQL Server Data Types &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  

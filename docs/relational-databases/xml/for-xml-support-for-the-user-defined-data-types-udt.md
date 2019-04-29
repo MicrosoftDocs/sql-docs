@@ -4,19 +4,15 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "UDTs [SQL Server], XML"
   - "user-defined types [SQL Server], XML"
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
-caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # FOR XML Support for the User-Defined Data Types (UDT)

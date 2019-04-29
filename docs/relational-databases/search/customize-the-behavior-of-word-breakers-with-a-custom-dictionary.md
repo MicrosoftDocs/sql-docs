@@ -1,29 +1,25 @@
-﻿---
+---
 title: "Customize the Behavior of Word Breakers with a Custom Dictionary | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.component: "search"
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: search
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a8e278d1-aeaa-48f1-a0c6-5de232c983e4
-caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Customize the Behavior of Word Breakers with a Custom Dictionary
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   You can customize the behavior of the word breaker for a particular language by creating a language-specific custom dictionary file. For example, you can prevent the word breaker from breaking certain terms or patterns.  
   
  For more information, see the following SharePoint article:  
   
- [Create a custom dictionary (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=215011)  
+ [Create a custom dictionary (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=215011)  
   
  For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], place custom dictionary files in the following folder:  
   

@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Policy-Based Management, delete policy conditions"
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
-caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Delete a Policy-Based Management Condition

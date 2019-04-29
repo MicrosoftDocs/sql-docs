@@ -55,7 +55,7 @@ manager: kfile
 > [!NOTE]  
 >  You can run these MDX queries against the Adventure Works sample multidimensional database. You can download the [AdventureWorks Multidimensional Models SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) sample from the codeplex site.  
   
-### Query 1—Differences in Income and Expenses  
+### Query 1-Differences in Income and Expenses  
  For the first MDX query, calculate the difference in sales and costs for each year by constructing a simple MDX query similar to the following example:  
   
 ```  
@@ -80,7 +80,7 @@ FROM [Adventure Works]
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
 |**Year Difference**|($20,160.56)|$2,878.06|  
   
-### Query 2—Percentage of Income after Expenses  
+### Query 2-Percentage of Income after Expenses  
  For the second query, calculate the percentage of income after expenses for each year using the following MDX query:  
   
 ```  
@@ -108,7 +108,7 @@ FROM [Adventure Works]
   
  The difference in result sets between the first query and the second query comes from the difference in placement of the calculated member. In the first query, the calculated member is part of the ROWS axis, not the COLUMNS axis shown in the second query. This difference in placement becomes important in the next query, which combines the two calculated members in a single MDX query.  
   
-### Query 3—Combined Year Difference and Net Income Calculations  
+### Query 3-Combined Year Difference and Net Income Calculations  
  In this final query combining both of the previous examples into a single MDX query, solve order becomes important because of the calculations on both columns and rows. To make sure that the calculations occur in the correct sequence, define the sequence in which the calculations occur by using the **SOLVE_ORDER** keyword.  
   
  The **SOLVE_ORDER** keyword specifies the solve order of calculated members in an MDX query or a **CREATE MEMBER** command. The integer values used with the **SOLVE_ORDER** keyword are relative, do not need to start at zero, and do not need to be consecutive. The value simply tells MDX to calculate a member based on values derived from calculating members with a higher value. If a calculated member is defined without the **SOLVE_ORDER** keyword, the default value of that calculated member is zero.  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_cdc_disable_table"
@@ -22,9 +19,8 @@ helpviewer_keywords:
   - "sys.sp_cdc_disable_table"
   - "change data capture [SQL Server], disabling tables"
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
 ---
 # sys.sp_cdc_disable_table (Transact-SQL)
@@ -45,17 +41,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## Arguments  
- [ **@source_schema=** ] **'***source_schema***'**  
+`[ @source_schema = ] 'source\_schema'`
  Is the name of the schema in which the source table is contained. *source_schema* is **sysname**, with no default, and cannot be NULL.  
   
  *source_schema* must exist in the current database.  
   
- [ **@source_name=** ] **'***source_name***'**  
+`[ @source_name = ] 'source\_name'`
  Is the name of the source table from which change data capture is to be disabled. *source_name* is **sysname**, with no default, and cannot be NULL.  
   
  *source_name* must exist in the current database.  
   
- [ **@capture_instance=** ] **'***capture_instance***'** | **'**all**'**  
+`[ @capture_instance = ] 'capture\_instance' | 'all'`
  Is the name of the capture instance to disable for the specified source table. *capture_instance* is **sysname** and cannot be NULL.  
   
  When 'all' is specified, all capture instances defined for *source_name* are disabled.  

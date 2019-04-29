@@ -1,24 +1,17 @@
 ---
 title: "Expression Uses in Reports (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "expressions [Reporting Services], about expressions"
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: 59
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Expression Uses in Reports (Report Builder and SSRS)
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, expressions are used throughout the report definition to specify or calculate values for parameters, queries, filters, report item properties, group and sort definitions, text box properties, bookmarks, document maps, dynamic page header and footer content, images, and dynamic data source definitions. This topic provides examples of the many places you can use expressions to vary the content or appearance of a report. This list is not comprehensive. You can set an expression for any property in a dialog box that displays the expression (**fx**) button or in a drop-down list that displays **\<Expression...>**.  
@@ -56,7 +49,7 @@ In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated re
 |-------------------|---------------------------------------|--------------------|  
 |Calculate aggregate values for a dataset.|Value property for a placeholder inside of a text box. Use **Placeholder Properties Dialog Box, General**.|`=First(Fields!Sales.Value,"DataSet1")`|  
 |Concatenate text and expressions in the same text box.|Value for a placeholder inside of a text box that is placed in a page header or page footer. Use **Placeholder Properties Dialog Box, General**.|`="This report began processing at " & Globals!ExecutionTime`|  
-|Calculate an aggregate value for a dataset in a different scope.|Value for a placeholder inside of a text box that is placed in a tablix group. Use **Placeholder Properties Dialog Box, General**.|`=Max(Fields!Total.Value,"DataSet2)`|  
+|Calculate an aggregate value for a dataset in a different scope.|Value for a placeholder inside of a text box that is placed in a tablix group. Use **Placeholder Properties Dialog Box, General**.|`=Max(Fields!Total.Value,"DataSet2")`|  
 |Format data in a text box depending on value.|Color for a placeholder inside of a text box in the details row for a tablix. Use **Text Box Properties Dialog Box, Font**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Calculate a value once to refer to throughout the report.|Value for a report variable. Use **Report Properties Dialog Box, Variables**.|`=Variables!MyCalculation.Value`|  
 |Include specific values for more than one field from a dataset.|Filter equation for a group in a tablix. Use **Tablix Properties Dialog Box, Filters**.|For data type, select **Boolean**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  

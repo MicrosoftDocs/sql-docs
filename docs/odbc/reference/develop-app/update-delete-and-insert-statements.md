@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "updating data [ODBC], about updating data"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "INSERT [ODBC]"
   - "data updates [ODBC], about data updates"
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -26,19 +23,19 @@ SQL-based applications make changes to tables by executing the **UPDATE**, **DEL
   
  The syntax of these statements is:  
   
- **UPDATE**  *table-name*  
+ **UPDATE** _table-name_  
   
- **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+ **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
+ [**,** _column-identifier_ **=** {*expression* &#124; **NULL**}]...  
   
- [**WHERE** *search-condition*]  
+ [**WHERE** _search-condition_]  
   
- **DELETE FROM** *table-name*[**WHERE** *search-condition*]  
+ **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
   
- **INSERT INTO** *table-name*[**(***column-identifier* [**,** *column-identifier*]...**)**]  
+ **INSERT INTO** _table-name_[**(** _column-identifier_ [**,** _column-identifier_]...**)**]  
   
- {*query-specification* &#124; **VALUES (***insert-value* [**,** *insert-value*]...**)**}  
+ {*query-specification* &#124; **VALUES (** _insert-value_ [**,** _insert-value_]...**)**}  
   
  Note that the *query-specification* element is valid only in the Core and Extended SQL grammars, and that the *expression* and *search-condition* elements become more complex in the Core and Extended SQL grammars.  
   

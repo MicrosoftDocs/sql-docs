@@ -5,16 +5,13 @@ ms.date: "12/16/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "views [Integration Services]"
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
-caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Views (Integration Services Catalog)

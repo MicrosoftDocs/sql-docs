@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PERMISSIONS_TSQL"
@@ -25,9 +22,8 @@ helpviewer_keywords:
   - "testing permissions"
   - "PERMISSIONS function"
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # PERMISSIONS (Transact-SQL)

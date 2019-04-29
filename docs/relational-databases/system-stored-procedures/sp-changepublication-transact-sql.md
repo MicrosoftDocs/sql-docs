@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "08/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_changepublication"
   - "sp_changepublication_TSQL"
 helpviewer_keywords: 
   - "sp_changepublication"
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_changepublication (Transact-SQL)
@@ -43,13 +36,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of NULL.  
   
- [ **@property =** ] **'***property***'**  
+`[ @property = ] 'property'`
  Is the publication property to change. *property* is **nvarchar(255)**.  
   
- [ **@value =** ] **'***value***'**  
+`[ @value = ] 'value'`
  Is the new property value. *value* is **nvarchar(255)**, with a default of NULL.  
   
  This table describes the properties of the publication that can be changed and restrictions on the values for those properties.  
@@ -60,8 +53,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Anonymous subscriptions cannot be created for the given publication. Cannot be changed for peer-to-peer publications.|  
 |**allow_initialize_from_backup**|**true**|Subscribers can initialize a subscription to this publication from a backup rather than an initial snapshot. This property cannot be changed for non-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**false**|Subscribers must use the initial snapshot. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
-|**allow_partition_switch**|**true**|ALTER TABLE…SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|ALTER TABLE…SWITCH statements cannot be executed against the published database.|  
+|**allow_partition_switch**|**true**|ALTER TABLE...SWITCH statements can be executed against the published database. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE...SWITCH statements cannot be executed against the published database.|  
 |**allow_pull**|**true**|Pull subscriptions are allowed for the given publication. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**false**|Pull subscriptions are not allowed for the given publication. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 |**allow_push**|**true**|Push subscriptions are allowed for the given publication.|  
@@ -104,8 +97,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**snapshot**|Publishes only scheduled synchronization events.|  
 |**replicate_ddl**|**1**|Data definition language (DDL) statements executed at the publisher are replicated. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications.|  
 ||**0**|DDL statements are not replicated. This property cannot be changed for non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publications. Replication of schema changes cannot be disabled when using peer-to-peer replication.|  
-|**replicate_partition_switch**|**true**|ALTER TABLE…SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to TRUE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-||**false**|ALTER TABLE…SWITCH statements should not be replicated to Subscribers.|  
+|**replicate_partition_switch**|**true**|ALTER TABLE...SWITCH statements that are executed against the published database should be replicated to Subscribers. This option is valid only if *allow_partition_switch* is set to TRUE. For more information, see [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
+||**false**|ALTER TABLE...SWITCH statements should not be replicated to Subscribers.|  
 |**retention**||**int** representing the retention period, in hours, for subscription activity. If a subscription is not active within the retention period, it is removed.|  
 |**snapshot_in_defaultfolder**|**true**|Snapshot files are stored in the default snapshot folder. If *alt_snapshot_folder*is also specified, snapshot files are stored in both the default and alternate locations.|  
 ||**false**|Snapshot files are stored in the alternate location specified by *alt_snapshot_folder*.|  
@@ -116,11 +109,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**concurrent**|Uses native-mode bulk-copy program output of all tables, but does not lock tables during the snapshot generation process. Not valid for snapshot replication.|  
 ||**concurrent_c**|Uses character-mode bulk copy program output of all tables, but does not lock tables during the snapshot generation process. Not valid for snapshot replication.|  
 |**taskid**||This property has been deprecated and is no longer supported.|  
-|**allow_drop**|**true**|Enables `DROP TABLE` DLL support for articles which are part of transactional replication. Minimum supported version: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 or above and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 or above. Additional reference: [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Enables `DROP TABLE` DLL support for articles which are part of transactional replication. Minimum supported version: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 or above and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 or above. Additional reference: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Disables `DROP TABLE` DLL support for articles that are part of transactional replication. This is the **default** value for this property.|
 |**NULL** (default)||Returns the list of supported values for *property*.|  
   
-[ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
   - **0** specifies that changes to the article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
   - **1** specifies that changes to the article may cause the snapshot to be invalid. If there are existing subscriptions that would require a new snapshot, this value gives permission for the existing snapshot to be marked as obsolete and a new snapshot generated.   
@@ -131,8 +124,8 @@ See the Remarks section for the properties that, when changed, require the gener
   - **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require existing subscriptions to be reinitialized, an error occurs and no changes are made.  
   - **1** specifies that changes to the article cause the existing subscription to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
-[ **@publisher** = ] **'***publisher***'**  
- Specifies a non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
+`[ @publisher = ] 'publisher'`
+ Specifies a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
   > [!NOTE]  
   >  *publisher* should not be used when changing article properties on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  

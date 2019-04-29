@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLStatistics"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLStatistics function [ODBC]"
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -36,15 +33,15 @@ manager: craigg
 ```  
   
 SQLRETURN SQLStatistics(  
-     SQLHSTMT        StatementHandle,  
-     SQLCHAR *       CatalogName,  
-     SQLSMALLINT     NameLength1,  
-     SQLCHAR *       SchemaName,  
-     SQLSMALLINT     NameLength2,  
-     SQLCHAR *       TableName,  
-     SQLSMALLINT     NameLength3,  
-     SQLUSMALLINT    Unique,  
-     SQLUSMALLINT    Reserved);  
+     SQLHSTMT        StatementHandle,  
+     SQLCHAR *       CatalogName,  
+     SQLSMALLINT     NameLength1,  
+     SQLCHAR *       SchemaName,  
+     SQLSMALLINT     NameLength2,  
+     SQLCHAR *       TableName,  
+     SQLSMALLINT     NameLength3,  
+     SQLUSMALLINT    Unique,  
+     SQLUSMALLINT    Reserved);  
 ```  
   
 ## Arguments  

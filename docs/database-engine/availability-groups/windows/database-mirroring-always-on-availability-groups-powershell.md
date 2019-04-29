@@ -1,43 +1,33 @@
 ---
-title: "Database Mirroring - Always On Availability Groups- PowerShell | Microsoft Docs"
-ms.custom: ""
+title: "Create a database mirroring endpoint for an availability group using PowerShell"
+description: "Describes how to create a database mirroring endpoint for an Always On availability group using PowerShell."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], server instance"
   - "Availability Groups [SQL Server], deploying"
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Database Mirroring - Always On Availability Groups- PowerShell
+# Create a database mirroring endpoint for an availability group using PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   This topic describes how to create a database mirroring endpoint for use by [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using PowerShell.  
   
- **In This Topic**  
+
   
--   **Before you begin:**  [Security](#Security)  
-  
--   **To create a database mirroring endpoint, using:**  [PowerShell](#PowerShellProcedure)  
-  
-## Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
+##  <a name="Permissions"></a> Permissions  
+ Requires CREATE ENDPOINT permission, or membership in the sysadmin fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+
 > [!IMPORTANT]  
 >  The RC4 algorithm is deprecated. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] We recommend that you use AES.  
-  
-####  <a name="Permissions"></a> Permissions  
- Requires CREATE ENDPOINT permission, or membership in the sysadmin fixed server role. For more information, see [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
  **To create a database mirroring endpoint**  

@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -19,9 +14,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], examples"
   - "Script task [Integration Services], HTML mail message"
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Sending an HTML Mail Message with the Script Task

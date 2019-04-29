@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC], data types"
   - "data types [ODBC], desktop database drivers"
   - "desktop database drivers [ODBC], data types"
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

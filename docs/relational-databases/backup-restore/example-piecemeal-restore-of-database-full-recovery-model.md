@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full recovery model [SQL Server], RESTORE example"
   - "piecemeal restores [SQL Server], full recovery model"
   - "restore sequences [SQL Server], piecemeal"
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -47,9 +44,9 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
        WITH PARTIAL, NORECOVERY  
     RESTORE DATABASE adb FILEGROUP='A' FROM backup2   
        WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup4 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup5 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup4 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup5 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   
@@ -63,9 +60,9 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
     ```  
     RESTORE DATABASE adb FILEGROUP='C' FROM backup2a WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup4 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup5 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup4 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup5 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   

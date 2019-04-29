@@ -1,6 +1,6 @@
-﻿---
+---
 title: "Analysis Services tutorial lesson 5: Create calculated columns | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Create calculated columns
 
@@ -40,7 +41,7 @@ This article is part of a tabular modeling tutorial, which should be completed i
   
     A new column named **Calculated Column 1** is inserted to the left of the **Calendar Quarter** column.  
   
-4.  In the formula bar above the table, type the following DAX formula: AutoComplete helps you type the fully qualified names of columns and tables, and lists the functions that are available.  
+4.  In the formula bar above the table, type the following DAX formula: Auto-Complete helps you type the fully qualified names of columns and tables, and lists the functions that are available.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -78,7 +79,7 @@ The DayOfWeek calculated column provides a sortable name for the day of week.
 #### Create a ProductSubcategoryName calculated column in the DimProduct table  
   
   
-1.  In the **DimProduct** table, scroll to the far right of the table. Notice the right-most column is named **Add Column** (italicized), click the column heading.  
+1.  In the **DimProduct** table, scroll to the far right of the table. Notice the right-most column is named ***Add Column***, click the column heading.  
   
 2.  In the formula bar, type the following formula:  
     

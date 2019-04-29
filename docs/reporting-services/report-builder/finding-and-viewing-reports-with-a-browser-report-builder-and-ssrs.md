@@ -1,22 +1,15 @@
 ---
 title: "Finding and Viewing Reports with a Browser (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-builder"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-builder
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
-caps.latest.revision: 8
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Finding and Viewing Reports with a Browser (Report Builder and SSRS)
   You can use any supported Web browser to view a report through a direct connection to a report server. Every report has a URL address on a report server. You can enter the Web address of a report to open it in a browser window independently of a Web application. The report opens in HTML format and includes the report toolbar so that you can navigate pages or search on data values within the report. You can set parameters on the URL to hide the toolbar or select the output format of the report.  
@@ -31,7 +24,7 @@ Folders in a browser
 > [!NOTE]  
 >  If you are accessing a report from a handheld device, you must use a browser to open a report. Report Manager is not scaled for handheld devices.  
   
- For more information about types of browsers that you can use, see "Browser Types Supported by Reporting Services" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+ For more information about types of browsers that you can use, see "Browser Types Supported by Reporting Services" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -52,10 +45,10 @@ Folders in a browser
 ## Typing the URL Address of a Report  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supports URL access to specific items on a report server. The URL must include a fully qualified path to the report and commands to render the report. If the report includes parameters, you must also specify any values that are required to open the report. If you are typing a URL for a report that includes spaces in the path, parameter values, or a rendering extension, you must incorporate URL encoded characters into the URL to get the results you expect. The following example illustrates a report URL that includes encoding for spaces in the path name, parameters, and a rendering extension:  
   
- `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
+ `https://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
- The maximum limit for a URL in Internet Explorer is 2,083 characters. For more information, see [Maximum URL length in Internet Explorer](http://support.microsoft.com/kb/208427).  
+ The maximum limit for a URL in Internet Explorer is 2,083 characters. For more information, see [Maximum URL length in Internet Explorer](https://support.microsoft.com/kb/208427).  
   
- For more information about how to access a report through a URL, including information on how a URL is constructed, see "URL Access" in the [Reporting Services documentation](http://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
+ For more information about how to access a report through a URL, including information on how a URL is constructed, see "URL Access" in the [Reporting Services documentation](https://go.microsoft.com/fwlink/?linkid=121312) in SQL Server Books Online.  
   
   

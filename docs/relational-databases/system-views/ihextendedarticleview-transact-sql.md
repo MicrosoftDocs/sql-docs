@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-views"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "IHextendedArticleView_TSQL"
   - "IHextendedArticleView"
@@ -21,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "IHextendedArticleView view"
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
-caps.latest.revision: 11
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

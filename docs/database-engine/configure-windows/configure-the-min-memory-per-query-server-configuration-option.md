@@ -5,9 +5,7 @@ ms.date: "11/24/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "memory [SQL Server], queries"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "min memory per query option"
   - "min memory grant"
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

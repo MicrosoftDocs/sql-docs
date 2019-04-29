@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.msmqconnectionmanager.f1"
@@ -17,9 +15,8 @@ helpviewer_keywords:
   - "MSMQ connection manager"
   - "message queue connections [Integration Services]"
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # MSMQ Connection Manager

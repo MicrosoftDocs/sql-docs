@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ENDPOINT"
@@ -32,9 +29,8 @@ helpviewer_keywords:
   - "SERVICE_BROKER option"
   - "Availability Groups [SQL Server], endpoint"
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
-caps.latest.revision: 135
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # CREATE ENDPOINT (Transact-SQL)
@@ -143,10 +139,10 @@ FOR DATABASE_MIRRORING (
   
  The following arguments apply only to the TCP protocol option.  
   
- LISTENER_PORT **=***listenerPort*  
+ LISTENER_PORT **=**_listenerPort_  
  Specifies the port number listened to for connections by the service broker TCP/IP protocol. By convention, 4022 is used but any number between 1024 and 32767 is valid.  
   
- LISTENER_IP **=** ALL | **(***4-part-ip* **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
  Specifies the IP address that the endpoint will listen on. The default is ALL. This means that the listener will accept a connection on any valid IP address.  
   
  If you configure database mirroring with an IP address instead of a fully-qualified domain name (`ALTER DATABASE SET PARTNER = partner_IP_address` or `ALTER DATABASE SET WITNESS = witness_IP_address`), you have to specify `LISTENER_IP =IP_address` instead of `LISTENER_IP=ALL` when you create mirroring endpoints.  
@@ -229,7 +225,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Discards messages for services located elsewhere. This is the default.  
   
- MESSAGE_FORWARD_SIZE **=***forward_size*  
+ MESSAGE_FORWARD_SIZE **=**_forward_size_  
  Specifies the maximum amount of storage in megabytes to allocate for the endpoint to use when storing messages that are to be forwarded.  
   
  **DATABASE_MIRRORING Options**  

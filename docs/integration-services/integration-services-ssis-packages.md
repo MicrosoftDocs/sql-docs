@@ -5,9 +5,7 @@ ms.date: "08/31/2016"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Integration Services packages, about packages"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "Integration Services packages, about packages"
   - "Integration Services packages"
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 72
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Packages

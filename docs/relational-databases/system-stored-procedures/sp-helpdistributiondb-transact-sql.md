@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpdistributiondb_TSQL"
   - "sp_helpdistributiondb"
 helpviewer_keywords: 
   - "sp_helpdistributiondb"
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpdistributiondb (Transact-SQL)
@@ -39,7 +32,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## Arguments  
- [ **@database=**]  **'***database_name***'**  
+`[ @database = ] 'database_name'`
  Is the database name for which properties are returned. *database_name* is **sysname**, with a default of **%** for all databases associated with the Distributor and on which the user has permissions.  
   
 ## Result Sets  

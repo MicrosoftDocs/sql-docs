@@ -1,13 +1,11 @@
-﻿---
+---
 title: "sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sys.dm_db_log_space_usage"
@@ -19,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_log_space_usage dynamic management view"
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

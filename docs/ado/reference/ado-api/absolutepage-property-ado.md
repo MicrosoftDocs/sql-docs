@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "AbsolutePage property [ADO]"
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

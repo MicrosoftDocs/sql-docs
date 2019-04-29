@@ -5,15 +5,11 @@ ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.createapp.f1"
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg

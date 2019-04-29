@@ -1,22 +1,20 @@
-﻿---
+---
 title: "Manage Event Sessions in the Object Explorer | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xevents
-ms.tgt_pltfrm: ""
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Event Sessions in the Object Explorer
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   This topic discusses the actions you can take in **Object Explorer** that affect Extended Events:  
@@ -34,7 +32,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 -   Delete an Extended Events Session  
   
 ## Create an Extended Events Session  
- For more information about creating an Extended Events session, see [Create an Extended Events Session](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
+ For more information about creating an Extended Events session, see [Create an Extended Events Session](https://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74).  
   
 ## Starting or Stopping an Extended Events Session  
  You can start or stop an Extended Events session through the **Query Editor** using the **ALTER EVENT SESSION** statement, or by using the **Extended Events** node of **Object Explorer**.  
@@ -97,7 +95,7 @@ STATE = STOP
   
 4.  Expand the **Template** drop down box.  
   
-5.  Click **\<File From …>Open** and browse for the session (XML file) you want to import.  
+5.  Click **\<File From ...>Open** and browse for the session (XML file) you want to import.  
   
  The session appears under the **Sessions** node. By default, the session is not started.  
   

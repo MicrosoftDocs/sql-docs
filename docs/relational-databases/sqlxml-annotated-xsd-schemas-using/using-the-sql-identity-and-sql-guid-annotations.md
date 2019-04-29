@@ -1,14 +1,11 @@
-﻿---
+---
 title: "Using the sql:identity and sql:guid Annotations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "sqlxml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sql:guid"
@@ -24,11 +21,10 @@ helpviewer_keywords:
   - "XSD schemas [SQLXML], IDENTITY-type columns"
   - "updategrams [SQLXML], GUID values"
 ms.assetid: 7661dfd0-6573-4692-a8f1-3597adcd33c4
-caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: douglasl
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using the sql:identity and sql:guid Annotations
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  The **sql:identity** and **sql:guid** annotations can be defined on a complex content element.  
   
 ## sql:identity Annotation  
- You can specify the **sql:identity** annotation in the XSD schema on any node that maps to an IDENTITY-type database column. The value specified for this annotation defines how the IDENTITY-type column is updated (either by using the value provided in the updategram to modify the column or by ignoring the value, in which case a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]–generated value is used for this column).  
+ You can specify the **sql:identity** annotation in the XSD schema on any node that maps to an IDENTITY-type database column. The value specified for this annotation defines how the IDENTITY-type column is updated (either by using the value provided in the updategram to modify the column or by ignoring the value, in which case a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-generated value is used for this column).  
   
  The **sql:identity** annotation can be assigned two values:  
   

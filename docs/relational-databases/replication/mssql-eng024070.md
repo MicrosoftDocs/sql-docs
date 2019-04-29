@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MSSQL_ENG024070 error"
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
-caps.latest.revision: 14
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -51,7 +46,7 @@ manager: craigg
   
 ## See Also  
  [Errors and Events Reference &#40;Replication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
+ [Manage Logins and Passwords in Replication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)  
   
   

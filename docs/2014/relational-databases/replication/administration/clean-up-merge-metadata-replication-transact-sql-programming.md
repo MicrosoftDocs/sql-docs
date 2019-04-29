@@ -1,0 +1,33 @@
+---
+title: "Clean Up Merge Metadata (Replication Transact-SQL Programming) | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/13/2017"
+ms.prod: "sql-server-2014"
+ms.reviewer: ""
+ms.technology: replication
+ms.topic: conceptual
+dev_langs: 
+  - "TSQL"
+helpviewer_keywords: 
+  - "metadata [SQL Server replication]"
+  - "sp_mergemetadataretentioncleanup"
+ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+---
+# Clean Up Merge Metadata (Replication Transact-SQL Programming)
+  Merge replication metadata is cleaned up periodically by the Merge Agent based on the retention setting for the publication. This occurs at the Publisher and Subscriber in the [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql), [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql), [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql), and [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) system tables. You can also programmatically clean up the data in these tables using replication stored procedures.  
+  
+### To manually clean up merge metadata  
+  
+1.  At the Publisher on the publication database, execute [sp_mergemetadataretentioncleanup](/sql/relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql).  
+  
+2.  (Optional) Note the number of rows removed in step 1 from the [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql), and [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) system tables, returned respectively in the **@num_genhistory_rows**, **@num_contents_rows**, and **@num_tombstone_rows** output parameters.  
+  
+3.  Repeat steps 1 and 2 at the Subscriber to clean up metadata on the subscription database.  
+  
+## See Also  
+ [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
+  
+  

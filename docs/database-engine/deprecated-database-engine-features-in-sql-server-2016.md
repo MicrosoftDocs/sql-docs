@@ -4,19 +4,14 @@ ms.custom: ""
 ms.date: "05/09/2018"
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: "database-engine"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords: 
   - "deprecated features [SQL Server]"
   - "Database Engine [SQL Server], backward compatibility"
   - "deprecation [SQL Server], feature list"
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -48,7 +43,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup and Restore|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continues to be deprecated. BACKUP { DATABASE &#124; LOG } WITH PASSWORD and BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD are discontinued.|None.|BACKUP DATABASE or LOG WITH PASSWORD<br /><br /> BACKUP DATABASE or LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Compatibility levels|Upgrade from version 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](http://aka.ms/sqllifecycle), the associated database compatibility level will be marked deprecated. However, we will continue to support applications certified on any supported Database Compatibility Level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|  
+|Compatibility levels|Upgrade from version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|When a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] version goes out of [support](https://aka.ms/sqllifecycle), the associated database compatibility level will be marked deprecated. However, we will continue to support applications certified on any supported Database Compatibility Level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 100|108|  
 |Database objects|Ability to return result sets from triggers|None|Returning results from trigger|12|  
 |Encryption|Encryption using RC4 or RC4_128 is deprecated and is scheduled to be removed in the next version. Decrypting RC4 and RC4_128 is not deprecated.|Use another encryption algorithm such as AES.|Deprecated encryption algorithm|253|  
 |Remote servers|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Replace remote servers by using linked servers. sp_addserver can only be used with the local option.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -61,8 +56,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Category|Deprecated feature|Replacement|Feature name|Feature ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Compatibility levels|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
-|Compatibility levels|Database compatibility level 110 and 120.|Plan to upgrade the database and application for a future release.|Database compatibility level 110<br /><br /> Database compatibility level 120||  
+|Compatibility levels|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
+|Compatibility levels|Database compatibility level 110 and 120.|Plan to upgrade the database and application for a future release. However, we will continue to support applications certified on any supported database compatibility level as long as possible, to make the upgrades easier. For more information about compatibility levels, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Database compatibility level 110<br /><br /> Database compatibility level 120||  
 |XML|Inline XDR Schema Generation|The XMLDATA directive to the FOR XML option is deprecated. Use XSD generation in the case of RAW and AUTO modes. There is no replacement for the XMLDATA directive in EXPLICT mode.|XMLDATA|181|  
 |Backup and restore|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
 |Backup and restore|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
@@ -95,13 +90,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Extended stored procedure programming|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|Use CLR Integration instead.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |Extended stored procedures|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Use CREATE LOGIN<br /><br /> Use DROP LOGIN IsIntegratedSecurityOnly argument of SERVERPROPERTY|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig|44<br /><br /> 45<br /><br /> 59|  
 |Functions|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|Hash algorithms|The  MD2, MD4, MD5, SHA, and SHA1 algorithms. These are not available under compatibility level 130.|Use SHA2_256 or SHA2_512.|Deprecated hash algorithm||  
+|Hash algorithms|The MD2, MD4, MD5, SHA, and SHA1 algorithms are not available under compatibility level 130.|Use SHA2_256 or SHA2_512.|Deprecated hash algorithm||  
 |High availability|database mirroring|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> If your edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not support [!INCLUDE[ssHADR](../includes/sshadr-md.md)], use log shipping.|DATABASE_MIRRORING|267|  
 |Index options|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |Index options|CREATE TABLE, ALTER TABLE, or CREATE INDEX syntax without parentheses around the options.|Rewrite the statement to use the current syntax.|INDEX_OPTION|33|  
 |Instance options|sp_configure option 'allow updates'|System tables are no longer updatable. Setting has no effect.|sp_configure 'allow updates'|173|  
 |Instance options|sp_configure options:<br /><br /> 'locks'<br /><br /> 'open objects'<br /><br /> 'set working set size'|Now automatically configured. Setting has no effect.|sp_configure 'locks'<br /><br /> sp_configure 'open objects'<br /><br /> sp_configure 'set working set size'|174<br /><br /> 175<br /><br /> 176|  
-|Instance options|sp_configure option 'priority boost'|System tables are no longer updatable. Setting has no effect. Use the Windows start /high … program.exe option instead.|sp_configure 'priority boost'|199|  
+|Instance options|sp_configure option 'priority boost'|System tables are no longer updatable. Setting has no effect. Use the Windows start /high ... program.exe option instead.|sp_configure 'priority boost'|199|  
 |Instance options|sp_configure option 'remote proc trans'|System tables are no longer updatable. Setting has no effect.|sp_configure 'remote proc trans'|37|  
 |Linked servers|Specifying the SQLOLEDB provider for linked servers.|SQL Server Native Client (SQLNCLI)|SQLOLEDDB for linked servers|19|  
 |Locking|sp_lock|sys.dm_tran_locks|sp_lock|99|  
@@ -121,7 +116,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
 |Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
 |Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|These stored procedures return information that was correct in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. The output does not reflect changes to the permissions hierarchy implemented in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. For more information, see [Permissions of Fixed Server Roles](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|These stored procedures return information that was correct in [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]. The output does not reflect changes to the permissions hierarchy implemented in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. For more information, see [Permissions of Fixed Server Roles](https://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx).|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
 |Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT, DENY, and REVOKE specific permissions.|ALL Permission|35|  
 |Security|PERMISSIONS intrinsic function|Query sys.fn_my_permissions instead.|PERMISSIONS|170|  
 |Security|SETUSER|EXECUTE AS|SETUSER|165|  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_configure_sp_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_configure_sp"
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
-caps.latest.revision: 46
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -40,13 +36,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## Arguments  
- [**@parameter_name** = ] **'***parameter_name***'**  
+ [**@parameter_name** = ] **'**_parameter_name_**'**  
  The name of the parameter to change.  
   
- [**@parameter_value** = ] **'***parameter_value***'**  
+ [**@parameter_value** = ] **'**_parameter_value_**'**  
  The new value of the parameter.  
   
- [**@description** = ] **'***description***'**  
+ [**@description** = ] **'**_description_**'**  
  A description of the parameter.  
   
 ## Return Code Values  

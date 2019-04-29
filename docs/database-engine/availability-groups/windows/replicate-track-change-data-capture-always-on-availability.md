@@ -1,12 +1,10 @@
 ---
 title: "Replication, Change Tracking, & Change Data Capture - Availability Groups | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/25/2018"
+ms.date: "08/21/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "change tracking [SQL Server], AlwaysOn Availability Groups"
@@ -14,7 +12,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], interoperability"
   - "replication [SQL Server], AlwaysOn Availability Groups"
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -39,7 +36,7 @@ manager: craigg
 ###  <a name="Changes"></a> General changes to replication agents to support availability groups  
  Three replication agents were modified to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. The Log Reader, Snapshot, and Merge agents were modified to query the distribution database for the redirected publisher and to use the returned availability group listener name, if a redirected publisher was declared, to connect to the database publisher.  
   
- By default, when the agents query the distributor to determine whether the original publisher has been redirected, the suitability of the current target or redirection will be verified prior to returning the redirected host to the agent. This is recommended behavior. However, if agent start up occurs very frequently the overhead associated with the validation stored procedure may be deemed too costly. A new command line switch, *BypassPublisherValidation*, has been added to the Logreader, Snapshot, and Merge agents. When the switch is used, the redirected publisher is returned immediately to the agent and execution of the validation stored procedure is bypassed.  
+ By default, when the agents query the distributor to determine whether the original publisher has been redirected, the suitability of the current target or redirection will be verified prior to returning the redirected host to the agent. This is recommended behavior. However, if agent startup occurs very frequently the overhead associated with the validation stored procedure may be deemed too costly. A new command-line switch, *BypassPublisherValidation*, has been added to the Logreader, Snapshot, and Merge agents. When the switch is used, the redirected publisher is returned immediately to the agent and execution of the validation stored procedure is bypassed.  
   
  Failures returned from the validation stored procedure are logged in the agent history logs. Those errors with severity greater than or equal to 16 will cause the agents to terminate. Some retry capabilities have been built in to the agents to handle the expected disconnect from a published database when it fails over to a new primary.  
   
@@ -54,7 +51,7 @@ manager: craigg
   
 -   **Trace flag 1448**  
   
-     Trace flag 1448 enables the replication log reader to move forward even if the asynchronous secondary replicas have not acknowledged the reception of a change. Even with this trace flag enabled,, the log reader always waits for the synchronous secondary replicas. The log reader will not go beyond the min ack of the synchronous secondary replicas. This trace flag applies to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], not just to an availability group, an availability database, or a log reader instance. This trace flag takes effect immediately without a restart. It can be activated ahead of time or when an asynchronous secondary replica fails.  
+     Trace flag 1448 enables the replication log reader to move forward even if the asynchronous secondary replicas have not acknowledged the reception of a change. Even with this trace flag enabled, the log reader always waits for the synchronous secondary replicas. The log reader will not go beyond the min ack of the synchronous secondary replicas. This trace flag applies to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], not just to an availability group, an availability database, or a log reader instance. This trace flag takes effect immediately without a restart. It can be activated ahead of time or when an asynchronous secondary replica fails.  
   
 ###  <a name="StoredProcs"></a> Stored procedures supporting availability groups  
   
@@ -137,9 +134,9 @@ manager: craigg
   
 -   **Redirecting the Query Load to a Readable Secondary Replica**  
   
-     While in many cases a client application will always want to connect to the current primary replica that is not the only way to leverage [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. If an availability group is configured to support readable secondary replicas, change data can also be gathered from secondary nodes.  
+     While in many cases a client application will always want to connect to the current primary replica, that is not the only way to leverage [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. If an availability group is configured to support readable secondary replicas, change data can also be gathered from secondary nodes.  
   
-     When an availability group is configured, the ALLOW_CONNECTIONS attribute associated with the SECONDARY_ROLE is used to specify the type of secondary access supported. If configured as ALL, all connections to the secondary will be allowed, but only those requiring read only access will succeed. If configured as READ_ONLY, it is necessary to specify read only intent when making the connection to the secondary database in order for the connection to succeed. For more information, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+     When an availability group is configured, the ALLOW_CONNECTIONS attribute associated with the SECONDARY_ROLE is used to specify the type of secondary access supported. If configured as ALL, all connections to the secondary will be allowed, but only those requiring read-only access will succeed. If configured as READ_ONLY, it is necessary to specify read only intent when making the connection to the secondary database in order for the connection to succeed. For more information, see [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
      The following query can be used to determine whether read-only intent is needed to connect to a readable secondary replica.  
   
@@ -204,13 +201,11 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
   
 |||||  
 |-|-|-|-|  
-||**Publisher**|**Distributor***\*|**Subscriber**|  
-|**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|No|Yes|  
+||**Publisher**|**Distributor**|**Subscriber**|  
+|**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|Yes|Yes| 
 |**P2P**|No|No|No|  
-|**Merge**|Yes|No|Yes*|  
-|**Snapshot**|Yes|No|Yes*|  
-  
- *Failover to the replica database is a manual procedure. Automatic failover is not provided.  
+|**Merge**|Yes|No|No|  
+|**Snapshot**|Yes|No|Yes|
   
  **The Distributor database is not supported for use with database mirroring.  
   
@@ -229,7 +224,7 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
   
 -   [Maintaining an Always On Publication Database &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Administration &#40;Replication&#41;](../../../relational-databases/replication/administration/administration-replication.md)  
+-   [Replication Administration FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   

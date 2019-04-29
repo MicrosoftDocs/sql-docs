@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 110">
+  <title>2 - indexes</title>
+  <g id="background_blue" data-name="background blue">
+    <rect width="298" height="110" fill="#e4edf1"/>
+  </g>
+  <g id="Shapes">
+    <g>
+      <rect x="109.999" y="15.86" width="80" height="80" fill-opacity="0"/>
+      <path d="M110,95.86h80V23.36H110Zm11.25-51.25h7.5v-7.5h-7.5Zm32.5,12.5h-7.5v-7.5h7.5Zm-20,12.5h7.5v-7.5h-7.5Zm32.5,12.5h-7.5v-7.5h7.5Z" fill="#303030"/>
+      <path d="M110,23.36h80V17.527a1.667,1.667,0,0,0-1.667-1.667H111.665A1.666,1.666,0,0,0,110,17.527Z" fill="#0078d4"/>
+      <path d="M133.749,44.61h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M146.249,44.61h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M158.749,44.61h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M121.249,57.11h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M133.749,57.11h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M158.749,57.11h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M121.249,69.61h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M146.249,69.61h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M158.749,69.61h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M121.249,82.11h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M133.749,82.11h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M146.249,82.11h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M171.249,44.61h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M171.249,57.11h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M171.249,69.61h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+      <path d="M171.249,82.11h7.5v-7.5h-7.5Z" fill="#0078d4"/>
+    </g>
+  </g>
+</svg>

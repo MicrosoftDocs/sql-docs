@@ -1,15 +1,10 @@
-﻿---
+---
 title: "sp_set_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2017"
-ms.prod: ""
+ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.service: "sql-database"
-ms.component: "system-stored-procedures"
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_set_database_firewall_rule"
@@ -22,9 +17,8 @@ helpviewer_keywords:
   - "sp_set_database_firewall_rule"
   - "firewall_rules, setting database rules"
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---

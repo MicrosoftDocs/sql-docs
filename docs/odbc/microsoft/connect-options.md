@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connection options [ODBC]"
   - "ODBC driver for Oracle [ODBC], connection options"
   - "custom connection options [ODBC]"
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE_SERVER_AUDIT_SPECIFICATION_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE SERVER AUDIT SPECIFICATION statement"
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
@@ -66,11 +62,11 @@ FOR SERVER AUDIT audit_name
  After a server audit specification is created, it can be viewed by principals with the, CONTROL SERVER, or ALTER ANY SERVER AUDIT permissions, the sysadmin account, or principals having explicit access to the audit.  
   
 ## Examples  
- The following example creates a server audit specification called `HIPPA_Audit_Specification` that audits failed logins, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit called `HIPPA_Audit`.  
+ The following example creates a server audit specification called `HIPAA_Audit_Specification` that audits failed logins, for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit called `HIPAA_Audit`.  
   
 ```  
-CREATE SERVER AUDIT SPECIFICATION HIPPA_Audit_Specification  
-FOR SERVER AUDIT HIPPA_Audit  
+CREATE SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
+FOR SERVER AUDIT HIPAA_Audit  
     ADD (FAILED_LOGIN_GROUP);  
 GO  
 ```  

@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "11/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "\\_TSQL"
   - "\\"
@@ -20,7 +15,7 @@ dev_langs:
 helpviewer_keywords: 
   - "backwhack"
   - "backslash"
-  - "excape character"
+  - "escape character"
   - "hack character"
   - "\\ (backslash)"
   - "backslant"
@@ -31,7 +26,6 @@ helpviewer_keywords:
   - "line continuation character"
   - "reverse solidus"
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

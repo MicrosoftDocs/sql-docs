@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_fulltext_catalogs_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_catalogs"
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
-caps.latest.revision: 36
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -41,7 +37,7 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ```  
   
 ## Arguments  
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`
  Is the name of the full-text catalog. *fulltext_catalog_name* is **sysname**. If this parameter is omitted or has the value NULL, information about all full-text catalogs associated with the current database is returned.  
   
 ## Return Code Values  

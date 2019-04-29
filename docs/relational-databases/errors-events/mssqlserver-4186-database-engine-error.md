@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "4186 (Database Engine error)"
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

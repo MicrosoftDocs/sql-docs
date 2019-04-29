@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [ADOX]"
   - "ADOX, objects"
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

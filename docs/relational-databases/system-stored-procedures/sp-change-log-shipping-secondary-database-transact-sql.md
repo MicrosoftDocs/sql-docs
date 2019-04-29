@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_change_log_shipping_secondary_database"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_change_log_shipping_secondary_database"
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 23
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_change_log_shipping_secondary_database (Transact-SQL)
@@ -50,13 +46,13 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## Arguments  
- [ **@restore_delay =** ] '*restore_delay*'  
+`[ @restore_delay = ] 'restore_delay'`
  The amount of time, in minutes, that the secondary server waits before restoring a given backup file. *restore_delay* is **int** and cannot be NULL. The default value is 0.  
   
- [ **@restore_all =** ] '*restore_all*'  
+`[ @restore_all = ] 'restore_all'`
  If set to 1, the secondary server restores all available transaction log backups when the restore job runs. Otherwise, it stops after one file has been restored. *restore_all* is **bit** and cannot be NULL.  
   
- [ **@restore_mode =** ] '*restore_mode*'  
+`[ @restore_mode = ] 'restore_mode'`
  The restore mode for the secondary database.  
   
  0 = restore log with NORECOVERY.  
@@ -65,28 +61,28 @@ sp_change_log_shipping_secondary_database
   
  *restore* is **bit** and cannot be NULL.  
   
- [ **@disconnect_users =** ] '*disconnect_users*'  
+`[ @disconnect_users = ] 'disconnect_users'`
  If set to 1, users is disconnected from the secondary database when a restore operation is performed. Default = 0. *disconnect_users* is **bit** and cannot be NULL.  
   
- [ **@block_size =** ] '*block_size*'  
+`[ @block_size = ] 'block_size'`
  The size, in bytes, that is used as the block size for the backup device. *block_size* is **int** with a default value of -1.  
   
- [ **@buffer_count =** ] '*buffer_count*'  
+`[ @buffer_count = ] 'buffer_count'`
  The total number of buffers used by the backup or restore operation. *buffer_count* is **int** with a default value of -1.  
   
- [ **@max_transfer_size =** ] '*max_transfer_size*'  
+`[ @max_transfer_size = ] 'max_transfer_size'`
  The size, in bytes, of the maximum input or output request which is issued by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the backup device. *max_transfersize* is **int** and can be NULL.  
   
- [ **@restore_threshold =** ] '*restore_threshold*'  
+`[ @restore_threshold = ] 'restore_threshold'`
  The number of minutes allowed to elapse between restore operations before an alert is generated. *restore_threshold* is **int** and cannot be NULL.  
   
- [ **@threshold_alert =** ] '*threshold_alert*'  
+`[ @threshold_alert = ] 'threshold_alert'`
  Is the alert to be raised when the restore threshold is exceeded. *threshold_alert* is **int**, with a default of 14420.  
   
- [ **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`
  Specifies whether an alert will be raised when *restore_threshold*is exceeded. 1 = enabled; 0 = disabled. *threshold_alert_enabled* is **bit** and cannot be NULL.  
   
- [ **@history_retention_period =** ] '*history_retention_period*'  
+`[ @history_retention_period = ] 'history_retention_period'`
  Is the length of time in minutes in which the history will be retained. *history_retention_period* is **int**. A value of 1440 will be used if none is specified.  
   
 ## Return Code Values  

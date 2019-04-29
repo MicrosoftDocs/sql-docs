@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_trace_setfilter"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_setfilter"
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 35
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -45,16 +41,16 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## Arguments  
- [ **@traceid=** ] *trace_id*  
+`[ @traceid = ] trace_id`
  Is the ID of the trace to which the filter is set. *trace_id* is **int**, with no default. The user employs this *trace_id* value to identify, modify, and control the trace.  
   
- [ **@columnid=** ] *column_id*  
+`[ @columnid = ] column_id`
  Is the ID of the column on which the filter is applied. *column_id* is **int**, with no default. If *column_id* is NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clears all filters for the specified trace.  
   
- [ **@logical_operator** = ] *logical_operator*  
+`[ @logical_operator = ] logical_operator`
  Specifies whether the AND (**0**) or OR (**1**) operator is applied. *logical_operator* is **int**, with no default.  
   
- [ **@comparison_operator=** ] *comparison_operator*  
+`[ @comparison_operator = ] comparison_operator`
  Specifies the type of comparison to be made. *comparison_operator* is **int**, with no default. The table contains the comparison operators and their representative values.  
   
 |Value|Comparison operator|  
@@ -68,7 +64,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|NOT LIKE|  
   
- [ **@value=** ] *value*  
+`[ @value = ] value`
  Specifies the value on which to filter. The data type of *value* must match the data type of the column to be filtered. For example, if the filter is set on an Object ID column that is an **int** data type, *value* must be **int**. If *value* is **nvarchar** or **varbinary**, it can have a maximum length of 8000.  
   
  When the comparison operator is LIKE or NOT LIKE, the logical operator can include "%" or other filter appropriate for the LIKE operation.  

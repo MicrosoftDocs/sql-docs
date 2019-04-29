@@ -1,30 +1,28 @@
 ---
-title: "Report on your consolidated assessments by using Power BI (SQL Server Data Migration Assistant) | Microsoft Docs"
+title: "Analyze consolidated Data Migration Assistant assessment reports with Power BI (SQL Server) | Microsoft Docs"
+description: Learn how to use Power BI to analyze Data Migration Assessment reports that you've imported and consolidated in SQL Server
 ms.custom: ""
-ms.date: "09/07/2017"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: dma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-caps.latest.revision: ""
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
 
 ---
 
-# Report on your consolidated assessments by using Power BI (Data Migration Assistant)
+# Analyze consolidated assessment reports created by Data Migration Assistant with Power BI
 
-This article describes how to create a Power BI report for consolidated migration assessments.
+This article describes how to create a Power BI report to analyze consolidated migration assessments.
 
-For information on consolidating migration assessments by using the Data Migration Assistant, see [Consolidate Assessment Reports](../dma/dma-consolidatereports.md).
+For information about consolidating migration assessments created by the Data Migration Assistant, see [Consolidate Assessment Reports](../dma/dma-consolidatereports.md).
 
 ## Sample Power BI reports
 
@@ -32,25 +30,25 @@ You can download examples of Power BI reports for consolidated migration assessm
 
 The following reports are included: 
 
-- [Dashboard](#dashboard--details)
+- [Dashboard](#dashboard-report)
 
   Includes snapshot stats and a drill-down report.
 
-- [On-premises upgrade readiness](#on-premises-upgrade-readiness--details)
+- [On-premises upgrade readiness](#on-premises-upgrade-readiness-report)
 
   The data source is the UpgradeSuccessRanking view in the DMAReporting database.  This report shows the percentage upgrade success for your assessed databases.
 
-- [On-premises feature parity](#on-premise-feature-parity--details)
+- [On-premises feature parity](#on-premises-feature-parity-report)
 
   Shows the feature recommendations for the target SQL Server version.
 
-- [Azure SQL DB upgrade readiness](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL DB upgrade readiness](#azure-sql-db-upgrade-readiness-report)
 
   The data source is the UpgradeSuccessRanking view in the DMAReporting database.  This report shows the percentage upgrade success for databases assessed for Azure SQL DB migrations.
 
-- [Azure SQL DB unsupported features](#azure-sql-db-unsupported-features--details)
+- [Azure SQL DB unsupported features](#azure-sql-db-unsupported-features-report)
 
-  Shows features in your existing databases that are not supported in Azure SQL DB (V12).
+  Shows features in your existing databases that aren't supported in Azure SQL DB (V12).
 
 You can modify these reports to work with your environment by changing the data source in Power BI. 
 
@@ -59,7 +57,7 @@ You can modify these reports to work with your environment by changing the data 
 
    ![Edit Queries menu, Data source settings](../dma/media/DataSourceSettings.png)
 
-1. Select **Change Source…**, and enter the server and database values.
+1. Select **Change Source...**, and enter the server and database values.
 
    ![Change source, server and database](../dma/media/ChangeSource.png)
 
@@ -119,16 +117,16 @@ This report shows the database readiness to migrate to Azure SQL Database V12. 
 
 Use this report to highlight the *instance level features* that are not supported by Azure SQL Database V12.
 
-When you select a feature in the funnel chart, the data at the bottom lists the instances and database features that are not supported. In the following example, this feature is selected: **Always on Availability group configuration is not supported in Azure SQL Database**.  
+When you select a feature in the funnel chart, the data at the bottom lists the instances and database features that aren't supported. In the following example, this feature is selected: **Always on Availability group configuration is not supported in Azure SQL Database**.  
 
 ![Always on Availability Group feature](../dma/media/Feature_AlwaysOnAvailability.png)
 
- 
+ 
 ### Azure SQL DB unsupported features report
 
 ![Azure SQL DB unsupported features report](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
-This report highlights which features are not supported for a given **database** when the target is Azure SQL Database (V12).
+This report highlights which features aren't supported for a given **database** when the target is Azure SQL Database (V12).
 
 By filtering by the database name and feature value in the funnel chart, you can see details on the unsupported feature. Details include which object is affected and recommendations for addressing the problem.
 

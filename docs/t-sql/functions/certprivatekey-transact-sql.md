@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "CERTPRIVATEKEY"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CERTPRIVATEKEY"
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # CERTPRIVATEKEY (Transact-SQL)
@@ -28,7 +24,7 @@ manager: craigg
 
 This function returns the private key of a certificate in binary format. This function takes three arguments.
 -   A certificate ID.  
--   An encryption password, used to encrypt the private key bits returned by the function. This approach does not expose the keys as clear text text to users.  
+-   An encryption password, used to encrypt the private key bits returned by the function. This approach does not expose the keys as clear text to users.  
 -   An optional decryption password. A specified decryption password is used to decrypt the private key of the certificate. Otherwise, the database master key is used.  
   
 Only users with access to the certificate private key can use this function. This function returns the private key in PVK format.

@@ -1,22 +1,15 @@
 ---
 title: "Troubleshoot  Reporting Services Report Issues | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/27/2016"
+ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "troubleshooting"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: troubleshooting
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
-caps.latest.revision: 9
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot  Reporting Services Report Issues
 This topic helps you troubleshoot problems with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] report design, previewing a report, publishing a report to a report server in native mode or SharePoint mode, viewing a report on the report server, or exporting a report to a different file format.  
@@ -61,6 +54,6 @@ As long as the value is set to 1, only cached report data is used. Be sure to re
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 

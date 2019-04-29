@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connecting to driver [ODBC], file data sources"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "connecting to data source [ODBC], file data sources"
   - "file data sources [ODBC]"
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -52,4 +49,4 @@ DSN = MyDataSource
  The connection string used for a file data source is the union of the keywords specified in the .dsn file and the keywords specified in the connection string in the call to **SQLDriverConnect**. If any of the keywords in the .dsn file conflict with keywords in the connection string, the Driver Manager decides which keyword value should be used. For more information, see [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## See Also  
- [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)
+ [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

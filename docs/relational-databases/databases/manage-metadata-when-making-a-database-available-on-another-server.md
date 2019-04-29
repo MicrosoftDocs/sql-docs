@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cross-database queries [SQL Server]"
@@ -36,7 +32,6 @@ helpviewer_keywords:
   - "credentials [SQL Server], metadata"
   - "copying databases"
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -111,7 +106,7 @@ manager: craigg
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
- The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these are set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+ The DB_CHAINING and TRUSTWORTHY database options are OFF by default. If either of these are set to ON for the original database, you may have to enable them on the database on the destination server instance. For more information, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Attach-and-detach operations disable cross-database ownership chaining for the database. For information about how to enable chaining, see [cross db ownership chaining Server Configuration Option](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
@@ -130,7 +125,7 @@ manager: craigg
   
  To enable the automatic decryption of the database master key on a server instance, a copy of this key is encrypted by using the service master key. This encrypted copy is stored in both the database and in **master**. Typically, the copy stored in **master** is silently updated whenever the master key is changed. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first tries to decrypt the database master key with the service master key of the instance. If that decryption fails, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] searches the credential store for master key credentials that have the same family GUID as the database for which it requires the master key. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] then tries to decrypt the database master key with each matching credential until the decryption succeeds or there are no more credentials. A master key that is not encrypted by the service master key must be opened by using the OPEN MASTER KEY statement and a password.  
   
- When an encrypted database is copied, restored, or attached to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key encrypted by the service master key is not stored in **master** on the destination server instance. On the destination server instance, you must open the master key of the database. To open the master key, execute the following statement: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. We recommend that you then enable automatic decryption of the database master key by executing the following statement: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. This ALTER MASTER KEY statement provisions the server instance with a copy of the database master key that is encrypted with the service master key. For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ When an encrypted database is copied, restored, or attached to a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a copy of the database master key encrypted by the service master key is not stored in **master** on the destination server instance. On the destination server instance, you must open the master key of the database. To open the master key, execute the following statement: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**. We recommend that you then enable automatic decryption of the database master key by executing the following statement: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. This ALTER MASTER KEY statement provisions the server instance with a copy of the database master key that is encrypted with the service master key. For more information, see [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) and [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  For information about how to enable automatic decryption of the database master key of a mirror database, see [Set Up an Encrypted Mirror Database](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -161,7 +156,7 @@ manager: craigg
   
  **To create a WMI alert using SQL Server Management Studio**  
   
--   [Create a WMI Event Alert](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Create a WMI Event Alert](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### How Event Notifications Work for a Mirrored Database  
  Cross-database delivery of event notifications that involves a mirrored database is remote, by definition, because the mirrored database can fail over. [!INCLUDE[ssSB](../../includes/sssb-md.md)] provides special support for mirrored databases, in the form of *mirrored routes*. A mirrored route has two addresses: one for the principal server instance and one for the mirror server instance.  
@@ -208,11 +203,11 @@ manager: craigg
   
 -   The login used by the job  
   
-     To create or execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef).  
+     To create or execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you must first add any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins required by the job to the destination server instance. For more information, see [Configure a User to Create and Manage SQL Server Agent Jobs](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service startup account  
   
-     The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7).  
+     The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs as a specified user account. The context of the Agent service affects the settings for the job and its run environment. The account must have access to the resources, such as network shares, required by the job. For information about how to select and modify the service startup account, see [Select an Account for the SQL Server Agent Service](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      To operate correctly, the service startup account must be configured to have the correct domain, file system, and registry permissions. Also, a job might require a shared network resource that must be configured for the service account. For information, see [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -223,35 +218,35 @@ manager: craigg
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxies  
   
-     A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) and [Troubleshoot Multiserver Jobs That Use Proxies](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280).  
+     A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent proxy defines the security context for a specified job step. For a job to run on the destination server instance, all the proxies it requires must be manually re-created on that instance. For more information, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md) and [Troubleshoot Multiserver Jobs That Use Proxies](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
  For more information, see also:  
   
--   [Implement Jobs](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [Implement Jobs](../../ssms/agent/implement-jobs.md)  
   
 -   [Management of Logins and Jobs After Role Switching &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (for database mirroring)  
   
 -   [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md) (when you install an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Implement SQL Server Agent Security](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **To view existing jobs and their properties**  
   
--   [Monitor Job Activity](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [Monitor Job Activity](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [View Job Step Information](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **To create a job**  
   
--   [Create a Job](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Create a Job](../../ssms/agent/create-a-job.md)  
   
--   [Create a Job](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Create a Job](../../ssms/agent/create-a-job.md)  
   
 #### Best Practices for Using a Script to Re-create a Job  
  We recommend that you start by scripting a simple job, re-creating the job on the other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service, and running the job to see whether it works as intended. This will let you identify incompatibilities and try to resolve them. If a scripted job does not work as intended in its new environment, we recommend that you create an equivalent job that works correctly in that environment.  

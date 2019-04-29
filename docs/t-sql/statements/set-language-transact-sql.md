@@ -1,14 +1,11 @@
-﻿---
+---
 title: "SET LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SET_LANGUAGE_TSQL"
@@ -22,11 +19,10 @@ helpviewer_keywords:
   - "options [SQL Server], date"
   - "default languages"
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -44,8 +40,8 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## Arguments  
- [**N**]**'***language***'** | **@***language_var*  
- Is the name of the language as stored in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). This argument can be either Unicode or DBCS converted to Unicode. To specify a language in Unicode, use **N'***language***'**. If specified as a variable, the variable must be **sysname**.  
+ [**N**]**'**_language_**'** | **@**_language\_var_  
+ Is the name of the language as stored in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). This argument can be either Unicode or DBCS converted to Unicode. To specify a language in Unicode, use **N'**_language_**'**. If specified as a variable, the variable must be **sysname**.  
   
 ## Remarks  
  The setting of SET LANGUAGE is set at execute or run time and not at parse time.  

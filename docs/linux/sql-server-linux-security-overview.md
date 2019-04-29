@@ -5,10 +5,8 @@ author: "rothja"
 ms.author: "jroth"
 manager: craigg
 ms.date: 01/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.component: ""
-ms.suite: "sql"
 ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff

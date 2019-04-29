@@ -3,13 +3,8 @@ title: "sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
+ms.technology: stored-procedures
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.sp_rda_reconcile_batch"
@@ -19,7 +14,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_batch stored procedure"
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-caps.latest.revision: 12
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
@@ -44,7 +38,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## Arguments  
- @objname = '*@objname*'  
+ \@objname = '*\@objname*'  
  The name of the Stretch-enabled SQL Server table.  
   
 ## Permissions  

@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.termlookuptrans.f1"
@@ -23,9 +21,8 @@ helpviewer_keywords:
   - "counting extracted items"
   - "Term Lookup transformation"
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Term Lookup Transformation
@@ -55,7 +52,7 @@ manager: craigg
   
 -   If the text in the input column is a lemmatized noun phrase, only the last word in the noun phrase is affected by normalization. For example, the lemmatized version of *doctors appointments* is *doctors appointment*.  
   
- When a lookup item contains terms that overlap in the reference set—that is, a sub-term is found in more than one reference record—the Term Lookup transformation returns only one lookup result. The following example shows the result when a lookup item contains an overlapping sub-term. The overlapping sub-term in this case is *Windows*, which is found within two reference terms. However, the transformation does not return two results, but returns only a single reference term, *Windows*. The second reference term, *Windows 7 Professional*, is not returned.  
+ When a lookup item contains terms that overlap in the reference set-that is, a sub-term is found in more than one reference record-the Term Lookup transformation returns only one lookup result. The following example shows the result when a lookup item contains an overlapping sub-term. The overlapping sub-term in this case is *Windows*, which is found within two reference terms. However, the transformation does not return two results, but returns only a single reference term, *Windows*. The second reference term, *Windows 7 Professional*, is not returned.  
   
 |Item|Value|  
 |----------|-----------|  
@@ -63,7 +60,7 @@ manager: craigg
 |Reference terms|Windows, Windows 7 Professional|  
 |Output|Windows|  
   
- The Term Lookup transformation can match nouns and noun phrases that contain special characters, and the data in the reference table may include these characters. The special characters are as follows: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+ The Term Lookup transformation can match nouns and noun phrases that contain special characters, and the data in the reference table may include these characters. The special characters are as follows: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, ", and '.  
   
 ## Data Types  
  The Term Lookup transformation can only use a column that has either the DT_WSTR or the DT_NTEXT data type. If a column contains text, but does not have one of these data types, the Data Conversion transformation can add a column with the DT_WSTR or DT_NTEXT data type to the data flow and copy the column values to the new column. The output from the Data Conversion transformation can then be used as the input to the Term Lookup transformation. For more information, see [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
@@ -95,7 +92,7 @@ manager: craigg
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -118,7 +115,7 @@ manager: craigg
  Type an alias for each output column. The default is the name of the column; however, you can choose any unique, descriptive name.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
   
 ## Term Lookup Transformation Editor (Reference Table Tab)
   Use the **Reference Table** tab of the **Term Lookup Transformation Editor** dialog box to specify the connection to the reference (lookup) table.  
@@ -134,7 +131,7 @@ manager: craigg
  Select a lookup table or view from the database by selecting an item from the list. The table or view should contain a column with an existing list of terms that the text in the source column can be compared to.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
   
 ## Term Lookup Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Term Lookup Transformation Editor** dialog box to specify whether lookup should be case-sensitive.  
@@ -144,7 +141,7 @@ manager: craigg
  Indicate whether the lookup is case-sensitive. The default is **False**.  
   
  **Configure Error Output**  
- Use the [Configure Error Output](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
+ Use the [Configure Error Output](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) dialog box to specify error handling options for rows that cause errors.  
   
 ## See Also  
  [Integration Services Error and Message Reference](../../../integration-services/integration-services-error-and-message-reference.md)   

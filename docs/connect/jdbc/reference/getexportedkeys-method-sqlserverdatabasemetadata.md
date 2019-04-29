@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerDatabaseMetaData.getExportedKeys"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -76,7 +73,7 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 |DEFERRABILITY|**short**|Indicates if the evaluation of the foreign key constraint can be deferred until a commit. It can be one of the following values:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  For more information about the data returned by the getExportedKeys method, see "sp_fkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Books Online.  
+>  For more information about the data returned by the getExportedKeys method, see "sp_fkeys (Transact-SQL)" in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Books Online.  
   
 ## Example  
  The following example demonstrates how to use the getExportedKeys method to return information about all the foreign keys that reference the primary keys of the Person.Contact table in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] sample database.  

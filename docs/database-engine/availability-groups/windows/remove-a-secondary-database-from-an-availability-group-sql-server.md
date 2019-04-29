@@ -1,12 +1,11 @@
 ---
-title: "Remove a Secondary Database from an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Remove a secondary database from an availability group"
+description: "Steps to remove a secondary database from an Always On availability group using either Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.unjoindb.f1"
@@ -15,7 +14,6 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], removing"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -23,33 +21,14 @@ manager: craigg
 # Remove a Secondary Database from an Availability Group (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   This topic describes how to remove a secondary database from an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   
   
--   **Before you begin:**  
-  
-     [Prerequisites](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To remove a secondary database, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:**  [After Removing a Secondary Database from an Availability Group](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> Prerequisites and Restrictions  
+##  <a name="Prerequisites"></a> Prerequisites and Restrictions  
   
 -   This task is supported only on secondary replicas. You must be connected to the server instance that hosts the secondary replica from which the database is to be removed.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER permission on the database.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  

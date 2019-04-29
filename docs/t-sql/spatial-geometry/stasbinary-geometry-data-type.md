@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STAsBinary_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STAsBinary (geometry Data Type)"
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
-caps.latest.revision: 31
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

@@ -1,19 +1,12 @@
 ---
 title: "Accessing Custom Assemblies Through Expressions | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
+ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "custom-assemblies"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: custom-assemblies
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "expressions [Reporting Services], custom assemblies"
   - "static member calls"
@@ -21,10 +14,8 @@ helpviewer_keywords:
   - "calling class members"
   - "custom assemblies [Reporting Services], expressions"
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-caps.latest.revision: 32
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Accessing Custom Assemblies Through Expressions
   Once you have created a custom assembly, made it available to Report Designer or the report server, added the appropriate security policy, and added a reference to your custom assembly in your report definition, you can access the members of the classes in your assembly using report expressions. To refer to custom code in an expression, you must call the member of a class within the assembly. How you do this depends on whether the method is static or instance-based.  

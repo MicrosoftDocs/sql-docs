@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "wmi"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: wmi
 ms.topic: "reference"
 apiname: 
   - "SetNumValue Method (ClientNetworkProtocolProperty Class)"
@@ -19,7 +15,6 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetNumValue method"
 ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
-caps.latest.revision: 29
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg

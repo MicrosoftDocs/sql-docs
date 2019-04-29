@@ -1,14 +1,9 @@
 ---
 title: "Verify a Reporting Services Installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/03/2016"
+ms.date: 06/03/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "checking report server installations"
@@ -18,10 +13,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], verifying installations"
   - "Setup [Reporting Services], verifying installations"
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-caps.latest.revision: 45
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report servers can be installed in one of two modes, Native or SharePoint. The steps you should follow for verifying the installation depend on the report server mode.  
@@ -34,7 +27,7 @@ manager: "kfile"
   
 2.  Verify the **SQL Server Reporting Services Service** is installed and in the **Running** state.  
   
-     If you do not see the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service in the list, verify the service is installed. For more information, see [Install The First Report Server in SharePoint Mode](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+     If you do not see the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service in the list, verify the service is installed. For more information, see [Install the first Report Server in SharePoint mode](install-the-first-report-server-in-sharepoint-mode.md).  
   
 ### To verify the Service Application  
   
@@ -66,7 +59,7 @@ manager: "kfile"
   
 1.  In a SharePoint document library, create a basic [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report that only contains a text box, for example a title. The report does not contain any data sources or datasets. The goal is to verify you can open Report Builder and a basic report will preview.  
   
-2.  Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder](http://msdn.microsoft.com/en-us/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
+2.  Save the report to the document library and the run the report from the library. For more information on creating reports with Report Builder, see [Start Report Builder](../report-builder/start-report-builder.md).  
   
 ### Reporting Services samples  
   
@@ -83,7 +76,7 @@ manager: "kfile"
   
 2.  Open the Services console applications and verify that the Report Server service is running. To view the status of the Report Server service, click **Start**, point to **Control Panel**, double-click **Administrative Tools**, and then double-click **Services**. When the list of services appears, scroll to **Report Server (MSSQLSERVER)**. The status should be **Started**.  
   
-3.  Open a browser and type the report server URL in the address bar. The address consists of the server name and the virtual directory name that you specified for the report server during setup. By default, the report server virtual directory is named **ReportServer**. You can use the following URL to verify report server installation: http://*\<computer name>*/ReportServer*\<_instance name>*. The URL will be different if you installed the report server as a named instance. For more information about the URL format, see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). If you are a local administrator on Windows Vista or Windows Server 2008, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Open a browser and type the report server URL in the address bar. The address consists of the server name and the virtual directory name that you specified for the report server during setup. By default, the report server virtual directory is named **ReportServer**. You can use the following URL to verify report server installation: https://*\<computer name>*/ReportServer*\<_instance name>*. The URL will be different if you installed the report server as a named instance. For more information about the URL format, see [Configure Report Server URLs  &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). If you are a local administrator on Windows Vista or Windows Server 2008, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 4.  Run reports to test report server operations. For this step, you can create a sample report from a tutorial. For more information, see [Create a Basic Table Report &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
@@ -91,11 +84,11 @@ manager: "kfile"
   
 1.  Open a browser and type the Web Portal URL in the address bar. The address consists of the server name and the virtual directory name that you specified for the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] during setup or in the Web Portal URL page in the Reporting Services Configuration tool. By default, the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] virtual directory is **Reports**. You can use the following URL to verify the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] installation:  
   
-     http://*\<computer name>*/Reports*\<_instance name>*.  
+     https://*\<computer name>*/Reports*\<_instance name>*.  
   
 2.  Use the [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] to create a new folder or upload a file to test whether definitions are passed back to the report server database. If these operations are successful, the connection is functional.  
   
-     For more information, see [Web Portal &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     For more information, see [Web Portal &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### To verify that Report Designer is installed and running  
   

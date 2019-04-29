@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "binding parameter arrays [ODBC]"
   - "arrays of parameter values [ODBC]"
   - "parameter arrays [ODBC]"
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

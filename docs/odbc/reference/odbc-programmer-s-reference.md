@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC [ODBC], reference"
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -63,9 +60,9 @@ The *ODBC Programmer's Reference* contains the following sections.
 ## Recommended Reading  
  For more information about SQL, the following standards are available:  
   
--   Database Language — SQL with Integrity Enhancement, ANSI, 1989 ANSI X3.135-1989.  
+-   Database Language - SQL with Integrity Enhancement, ANSI, 1989 ANSI X3.135-1989.  
   
--   Database Language — SQL: ANSI X3H2 and ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
+-   Database Language - SQL: ANSI X3H2 and ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
 -   Open Group, Data Management: Structured Query Language (SQL), Version 2 (The Open Group, 1996).  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_post_msx_operation"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_post_msx_operation"
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-caps.latest.revision: 29
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -44,7 +40,7 @@ sp_post_msx_operation
 ```  
   
 ## Arguments  
- [ **@operation =**] **'***operation***'**  
+`[ @operation = ] 'operation'`
  The type of operation for the posted operation. *operation*is **varchar(64)**, with no default. Valid operations depend upon *object_type*.  
   
 |Object type|Operation|  
@@ -53,19 +49,19 @@ sp_post_msx_operation
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
- [ **@object_type =**] **'***object***'**  
+`[ @object_type = ] 'object'`
  The type of object for which to post an operation. Valid types are **JOB**, **SERVER**, and **SCHEDULE**. *object* is **varchar(64)**, with a default of **JOB**.  
   
- [ **@job_id =**] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number of the job to which the operation applies. *job_id* is **uniqueidentifier**, with no default. **0x00** indicates ALL jobs. If *object* is **SERVER**, then *job_id*is not required.  
   
- [ **@specific_target_server =**] **'***target_server***'**  
+`[ @specific_target_server = ] 'target_server'`
  The name of the target server for which the specified operation applies. If *job_id* is specified, but *target_server* is not specified, the operations are posted for all job servers of the job. *target_server* is **nvarchar(30)**, with a default of NULL.  
   
- [ **@value =**] *value*  
+`[ @value = ] value`
  The polling interval, in seconds. *value* is **int**, with a default of NULL. Specify this parameter only if *operation* is **SET-POLL**.  
   
- [ **@schedule_uid=** ] *schedule_uid*  
+`[ @schedule_uid = ] schedule_uid`
  The unique identifier for the schedule to which the operation applies. *schedule_uid* is **uniqueidentifier**, with no default.  
   
 ## Return Code Values  
@@ -81,7 +77,7 @@ sp_post_msx_operation
   
  After an operation has been posted, it appears in the **sysdownloadlist** table. After a job has been created and posted, subsequent changes to that job must also be communicated to the target servers (TSX). This is also accomplished using the download list.  
   
- We highly recommend that the download list be managed by using the SQL Server Management Studio. For more information, see [View or Modify Jobs](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7).  
+ We highly recommend that the download list be managed by using the SQL Server Management Studio. For more information, see [View or Modify Jobs](../../ssms/agent/view-or-modify-jobs.md).  
   
 ## Permissions  
  To run this stored procedure, users must be granted the **sysadmin** fixed server role.  

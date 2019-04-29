@@ -5,18 +5,15 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataprofilingtask.profilerequests.f1"
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Profiling Task Editor (Profile Requests Page)

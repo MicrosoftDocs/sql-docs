@@ -4,15 +4,12 @@ ms.custom: ""
 ms.date: "04/12/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: performance
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
-author: stevestein
-ms.author: sstein
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server, Columnstore Object

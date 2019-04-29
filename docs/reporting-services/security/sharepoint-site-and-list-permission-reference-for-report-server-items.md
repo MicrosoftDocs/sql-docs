@@ -1,16 +1,11 @@
 ---
 title: "SharePoint Site and List Permission Reference for Report Server Items | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], SharePoint integrated mode"
@@ -18,10 +13,8 @@ helpviewer_keywords:
   - "security [Reporting Services], SharePoint integrated mode"
   - "permission sets [Reporting Services]"
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: 14
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # SharePoint Site and List Permission Reference for Report Server Items
   This topic provides a reference of the permissions in SharePoint that can be used to grant access to report server operations for a report server that runs in SharePoint integrated mode. If you are creating custom permission levels, this topic can help you choose which permissions to use.  
@@ -40,7 +33,7 @@ manager: "kfile"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2010 and SharePoint 2013.|  
+| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode &#124; SharePoint 2010 and SharePoint 2013.|  
   
 ## List Permissions  
  Permissions that you set on the library that contains report server items determine how users access those items.  

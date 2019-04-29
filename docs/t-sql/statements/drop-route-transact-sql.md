@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP ROUTE"
@@ -22,9 +19,8 @@ helpviewer_keywords:
   - "routes [Service Broker], removing"
   - "removing routes"
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP ROUTE (Transact-SQL)

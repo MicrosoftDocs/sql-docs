@@ -1,16 +1,11 @@
 ---
 title: "Grant user access to a report server | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/15/2017"
+ms.date: 05/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "security"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: security
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing role assignments"
@@ -19,10 +14,8 @@ helpviewer_keywords:
   - "modifying role assignments"
   - "deleting role assignments"
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-caps.latest.revision: 54
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Grant user access to a report server
 
@@ -99,9 +92,9 @@ Review the following list before adding users to a native mode report server.
 ## Next steps
 
 [Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Security Properties Page, Items &#40;Report Manager&#41;](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[Security Properties Page, Items &#40;Report Manager&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [Role Assignments](../../reporting-services/security/role-assignments.md)   
 [Role Definitions](../../reporting-services/security/role-definitions.md)  
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

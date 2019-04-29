@@ -5,17 +5,14 @@ ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "null values [Integration Services]"
   - "ISNULL function"
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
-caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ISNULL (SSIS Expression)

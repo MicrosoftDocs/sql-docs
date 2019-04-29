@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "database backups [SQL Server], deleting devices"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "removing backup devices"
   - "backing up databases [SQL Server], backup devices"
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

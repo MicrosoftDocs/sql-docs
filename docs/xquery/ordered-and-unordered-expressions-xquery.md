@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: sql
-ms.component: "xquery"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: xml
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 dev_langs: 
   - "XML"
 helpviewer_keywords: 
@@ -21,7 +15,6 @@ helpviewer_keywords:
   - "expressions [XQuery], ordered"
   - "expressions [XQuery], unordered"
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
-caps.latest.revision: 13
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], policies"
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -24,19 +21,9 @@ manager: craigg
 > [!IMPORTANT]  
 >  For Always On policies, the category names are used as IDs. Changing the name of an Always On category would break its health-evaluation functionality. Therefore, the names of Always On category should never be modified.  
   
--   **Before you begin:** [Security](#Security)  
   
--   **Use Always On policies to view the health of an availability group, using:**  
   
-     [Always On Dashboard](#SSMSProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
   
 ##  <a name="SSMSProcedure"></a> Using the Always On Dashboard  
@@ -120,7 +107,7 @@ manager: craigg
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ##  <a name="RelatedContent"></a> Related Content  
- **SQL Server Always On Team Blogs—Monitoring Always On Health with PowerShell:**  
+ **SQL Server Always On Team Blogs-Monitoring Always On Health with PowerShell:**  
   
 -   [Part 1: Basic Cmdlet Overview](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
   

@@ -1,6 +1,6 @@
-﻿---
+---
 title: "Analysis Services tutorial lesson 2: Get data | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 04/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 
 # Get data
@@ -17,7 +18,7 @@ manager: kfile
 
 In this lesson, you use **Get Data** to connect to the AdventureWorksDW sample database, select data, preview and filter, and then import into your model workspace.  
   
-By using Get Data, you can import data from a wide variety of sources. Data can also be queried using a Power Query M formula expression or a [native SQL query expression](../tabular-models/ssas-import-query.md).
+Under the hood, Get Data is Power Query, which provides a vast array of tools for connecting to and reshaping data for modeling and analysis. To learn more, see [Power Query Documentation](https://docs.microsoft.com/power-query/). 
 
 > [!NOTE]
 > Tasks and images in this tutorial show connecting to an AdventureWorksDW2014 database on an on-premises server. In some cases, an AdventureWorksDW database on Azure SQL Data Warehouse may show different objects; however, they are fundamentally the same.
@@ -49,13 +50,13 @@ This article is part of a tabular modeling tutorial, which should be completed i
     > [!NOTE]  
     > Using a Windows user account and password provides the most secure method of connecting to a data source.
   
-5.  In Navigator, select the **AdventureWorksDW** database, and then click **OK**.This creates the connection to the database. 
+5.  In Navigator, select the **AdventureWorksDW** database, and then click **OK**. This creates the connection to the database. 
   
-6.  In Navigator, select the check box for the following tables: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, and **FactInternetSales**.  
+6.  In Navigator, select the check box for the following tables: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, and **FactInternetSales**. After selecting the tables, click **Edit**. 
 
     ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
-After you click OK, Query Editor opens. In the next section, you select only the data you want to import.
+After you click Edit, Query Editor opens. In the next section, you select only the data you want to import.
 
   
 ## Filter the table data  

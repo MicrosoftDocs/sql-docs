@@ -5,9 +5,7 @@ ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.executetsqlstatementtask.f1"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "Execute T-SQL Statement task [Integration Services]"
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Execute T-SQL Statement Task
@@ -35,7 +32,7 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

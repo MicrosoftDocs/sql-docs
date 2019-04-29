@@ -1,25 +1,18 @@
 ---
 title: "Reports, Report Parts, and Report Definitions (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/24/2018"
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report definitions"
   - "reports"
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-caps.latest.revision: 26
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Reports, Report Parts, and Report Definitions (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a variety of terms to describe a paginated report in different states, including the initial definition, the published report, and the viewed report as it appears to the user.  
@@ -67,7 +60,7 @@ manager: "kfile"
   
 ## See Also  
  [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Report Builder in SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Finding, Viewing, and Managing Reports &#40;Report Builder and SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

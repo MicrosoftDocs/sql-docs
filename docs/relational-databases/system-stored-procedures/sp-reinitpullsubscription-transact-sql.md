@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_reinitpullsubscription_TSQL"
   - "sp_reinitpullsubscription"
 helpviewer_keywords: 
   - "sp_reinitpullsubscription"
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_reinitpullsubscription (Transact-SQL)
@@ -41,13 +34,13 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of all, which marks all subscriptions for reinitialization.  
   
 ## Return Code Values  

@@ -4,28 +4,25 @@ ms.custom: ""
 ms.date: "05/17/2017"
 ms.prod: sql
 ms.prod_service: security, sql-database"
-ms.reviewer: ""
-ms.suite: "sql"
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Rotate Always Encrypted Keys using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 This article provides the steps to rotate keys for Always Encrypted using the SqlServer PowerShell module. For information about how to start using the SqlServer PowerShell module for Always Encrypted, see [Configure Always Encrypted using PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-Rotating Always Encrypted Keys is the process of replacing an existing key with a new one. You may need to rotate a key if it has been compromised, or in order to comply with your organization’s policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. 
+Rotating Always Encrypted Keys is the process of replacing an existing key with a new one. You may need to rotate a key if it has been compromised, or in order to comply with your organization's policies or compliance regulations that mandate cryptographic keys must be rotated on a regular basis. 
 
 Always Encrypted uses two types of keys, so there are two high-level key rotation workflows; rotating column master keys, and rotating column encryption keys.
 
-* **Column encryption key rotation** - involves decrypting data that is encrypted with the current key, and re-encrypting the data using the new column encryption key. Because rotating a column encryption key requires access to both the keys and the database, column encryption key rotation con only be performed without role separation.
+* **Column encryption key rotation** - involves decrypting data that is encrypted with the current key, and re-encrypting the data using the new column encryption key. Because rotating a column encryption key requires access to both the keys and the database, column encryption key rotation can only be performed without role separation.
 * **Column master key rotation** - involves decrypting column encryption keys that are protected with the current column master key, re-encrypting them using the new column master key, and updating the metadata for both types of keys. Column master key rotation can be completed with or without role separation (when using the SqlServer PowerShell module).
 
 
@@ -35,7 +32,7 @@ The method of rotating a column master key described in this section does not su
 
 | Task | Article | Accesses plaintext keys/keystore| Accesses database
 |:---|:---|:---|:---
-|Step 1. Create a new column master key in a key store.<br><br>**Note:** The SqlServer PowerShell module does not support this step. To accomplish this task from the command-line, you need to use tools that are specific for your key store. | Create and Store Column Master Keys (Always Encrypted)| Yes | No
+|Step 1. Create a new column master key in a key store.<br><br>**Note:** The SqlServer PowerShell module does not support this step. To accomplish this task from the command-line, you need to use tools that are specific for your key store. | [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Yes | No
 |Step 2. Start a PowerShell environment and import the SqlServer module | [Import the SqlServer module](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
 |Step 3. Connect to your server and database. | [Connecting to a Database](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Yes
 |Step 4. Create a SqlColumnMasterKeySettings object that contains information about the location of your new column master key. SqlColumnMasterKeySettings is an object that exists in memory (in PowerShell). To create it, you need to use the cmdlet that is specific to your key store. |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | No | No
@@ -299,7 +296,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 Rotating a column encryption key involves decrypting the data in all columns, encrypted with the key to be rotated, and re-encrypting the data using the new column encryption key. This rotation workflow requires access to both the keys and the database, and therefore cannot be performed with role separation. 
 Note that, rotating a column encryption key can take a very long time, if the tables containing columns encrypted with the key, being rotated, are large. Therefore, your organization needs to plan a column encryption key rotation very carefully.
 
-You can rotate a column encryption key using an offline or an online approach. The former method is likely to be faster, but your applications cannot write to the impacted tables. The latter approach will likely to take longer, but you can limit the time interval, during which the impacted tables are not available to applications. Please, see [Configure Column Encryption using PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) and [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) for more details.
+You can rotate a column encryption key using an offline or an online approach. The former method is likely to be faster, but your applications cannot write to the impacted tables. The latter approach will likely to take longer, but you can limit the time interval, during which the impacted tables are not available to applications. Please, see [Configure Column Encryption using PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) and [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) for more details.
 
 | Task | Article | Accesses plaintext keys/keystore| Accesses database
 |:---|:---|:---|:---

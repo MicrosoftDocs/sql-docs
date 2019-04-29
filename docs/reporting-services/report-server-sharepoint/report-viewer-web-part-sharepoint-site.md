@@ -1,24 +1,18 @@
 ---
 title: "Report Viewer web part on a SharePoint site - SSRS | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/25/2017"
+ms.date: 11/15/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server-sharepoint"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server-sharepoint
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Viewer web part on a SharePoint site - Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]  [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 The Report Viewer web part is a custom web part. You can use the web part to view, navigate, print, and export reports on a report server within a SharePoint site. The Report Viewer web part is associated with report definition (.rdl) files that are processed by a Microsoft SQL Server Reporting Services report server. 
 
@@ -28,7 +22,7 @@ The latest Report Viewer web part can also service paginated reports deployed to
 
 The Report Viewer web part was available as part of the Reporting Services Add-in for SharePoint products. The web part was specific for report servers in SharePoint integrated mode. SharePoint integrated mode was deprecated after SQL Server 2016.
 
-Starting with SQL Server 2017, there’s only one installation mode for Reporting Services: **Native mode**. You could embed all reports types using a Page Viewer web part using the *rs:Embed=true* URL parameter. Embedding reports into SharePoint pages is an integration story requested by customers and the updated Report Viewer web part enables this scenario for paginated reports.
+Starting with SQL Server 2017, there's only one installation mode for Reporting Services: **Native mode**. You could embed all reports types using a Page Viewer web part using the *rs:Embed=true* URL parameter. Embedding reports into SharePoint pages is an integration story requested by customers and the updated Report Viewer web part enables this scenario for paginated reports.
 
 While the Page Viewer web part suffices to embed a paginated report into a SharePoint page, the updated Report Viewer web part offers additional features.
 

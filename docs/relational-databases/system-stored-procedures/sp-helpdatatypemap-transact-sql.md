@@ -4,30 +4,23 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_helpdatatypemap"
   - "sp_helpdatatypemap_TSQL"
 helpviewer_keywords: 
   - "sp_helpdatatypemap"
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Returns information on the defined data type mappings between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management systems (DBMS). This stored procedure is executed at the Distributor on any database.  
+  Returns information on the defined data type mappings between [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database management systems (DBMS). This stored procedure is executed at the Distributor on any database.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +38,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## Arguments  
- [ **@source_dbms**= ] **'***source_dbms***'**  
+`[ @source_dbms = ] 'source_dbms'`
  Is the name of the DBMS from which the data types are mapped. *source_dbms* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  
@@ -53,13 +46,13 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**MSSQLSERVER**|The source is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.|  
 |**ORACLE**|The source is an Oracle database.|  
   
- [ **@source_version**= ] **'***source_version***'**  
+`[ @source_version = ] 'source_version'`
  Is the product version of the source DBMS. *source_version*is **varchar(10)**, and if not specified, the data type mappings for all versions of the source DBMS are returned. Enables the result set to be filtered by the source version of the DBMS.  
   
- [ **@source_type**= ] **'***source_type***'**  
+`[ @source_type = ] 'source_type'`
  Is the data type listed in the source DBMS. *source_type* is **sysname**, and if not specified, mappings for all data types in the source DBMS are returned. Enables the result set to be filtered by data type in the source DBMS.  
   
- [ **@destination_dbms** = ] **'***destination_dbms***'**  
+`[ @destination_dbms = ] 'destination_dbms'`
  Is the name of the destination DBMS. *destination_dbms* is **sysname**, and can be one of the following values.  
   
 |Value|Description|  
@@ -69,13 +62,13 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|The destination is an IBM DB2 database.|  
 |**SYBASE**|The destination is a Sybase database.|  
   
- [ **@destination_version**= ] **'***destination_version***'**  
+`[ @destination_version = ] 'destination_version'`
  Is the product version of the destination DBMS. *destination_version*is **varchar(10)**, and if not specified, mappings for all versions of the destination DBMS are returned. Enables the result set to be filtered by the destination version of the DBMS.  
   
- [ **@destination_type**= ] **'***destination_type***'**  
+`[ @destination_type = ] 'destination_type'`
  Is the data type listed in the destination DBMS. *destination_type*is **sysname**, and if not specified, mappings for all data types in the destination DBMS are returned. Enables the result set to be filtered by data type in the destination DBMS.  
   
- [ **@defaults_only**= ] *defaults_only*  
+`[ @defaults_only = ] defaults_only`
  Is if only the default data type mappings are returned. *defaults_only* is **bit**, with a default of **0**. **1** means that only the default data type mappings are returned. **0** means that the default and any user-defined data type mappings are returned.  
   
 ## Result Sets  
@@ -93,7 +86,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (success) or **1** (failure)  
   
 ## Remarks  
- **sp_helpdatatypemap** defines data type mappings both from non-SQL Server Publishers and from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers to non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
+ **sp_helpdatatypemap** defines data type mappings both from non-SQL Server Publishers and from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publishers to non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Subscribers.  
   
  When the specified combination of source and destination DBMS is not supported, **sp_helpdatatypemap** returns an empty result set.  
   

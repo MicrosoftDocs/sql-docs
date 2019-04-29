@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server], removing"
   - "removing log shipping"
   - "deleting log shipping"
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -70,7 +67,7 @@ manager: craigg
   
 3.  On the log shipping primary server, execute **sp_delete_log_shipping_primary_database** to delete information about the log shipping configuration from the primary server. This also deletes the backup job.  
   
-4.  On the log shipping primary server, disable the backup job. For more information, see [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  
+4.  On the log shipping primary server, disable the backup job. For more information, see [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
 5.  On the log shipping secondary server, disable the copy and restore jobs.  
   
@@ -90,7 +87,7 @@ manager: craigg
   
 -   [Fail Over to a Log Shipping Secondary &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
--   [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ## See Also  
  [About Log Shipping &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

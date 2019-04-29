@@ -1,33 +1,25 @@
 ---
-title: "Policy Evaluation Result (Always On) | Microsoft Docs"
-ms.custom: ""
+title: "Policy Evaluation Result Page (Always On Dashboard) | Microsoft Docs"
+description: "A description of the 'Policy Evaluation Result Page' found within the 'Always On Dashboard' in SQL Server Management Studio."
+ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "swb.agdashboard.policyeval.f1"
   - "sql13.swb.agdashboard.policyeval.f1"
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Policy Evaluation Result (Always On)
+# Policy Evaluation Result Page (Always On Dashboard)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use the **Policy Evaluation Result** page of the Always On Dashboard to view any current policy issues.  
-  
- **In This Topic:**  
-  
--   [Dialog-Box Options](#Options)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
+    
 ##  <a name="Options"></a> Dialog-Box Options  
  **Detected Issue**  
  Displays a row for each detected issue. The icon associated with an issue provides a visual indicator to indicate the severity of the issue, as follows:  

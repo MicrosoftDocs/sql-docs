@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSlogreader_agents_TSQL"
   - "MSlogreader_agents"
@@ -21,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSlogreader_agents system table"
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSlogreader_agents (Transact-SQL)
@@ -45,6 +38,8 @@ manager: craigg
 |**publisher_login**|**sysname**|The login used when connecting to the Publisher.|  
 |**publisher_password**|**nvarchar(524)**|The encrypted value of the password that is used when connecting to the Publisher.|  
 |**job_step_uid**|**uniqueidentifier**|The unique ID of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job step in which the agent is started.|  
+|**job_login**|**sysname**||  
+|**job_password**|**nvarchar(524)**||  
   
 ## See Also  
  [Replication Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

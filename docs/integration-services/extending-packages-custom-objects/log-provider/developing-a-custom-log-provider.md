@@ -5,12 +5,8 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "SSIS packages, log providers"
   - "custom log providers [Integration Services]"
@@ -19,9 +15,8 @@ helpviewer_keywords:
   - "packages [Integration Services], logs"
   - "Integration Services packages, log providers"
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing a Custom Log Provider

@@ -3,13 +3,8 @@ title: "Host Protection Attributes and CLR Integration Programming | Microsoft D
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "host protection attributes [CLR integration]"
@@ -19,7 +14,6 @@ helpviewer_keywords:
   - "common language runtime [SQL Server], disallowed types and members"
   - "HPAs [CLR integration]"
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
-caps.latest.revision: 28
 author: "rothja"
 ms.author: "jroth"
 manager: craigg

@@ -1,20 +1,15 @@
-﻿---
+---
 title: "DBCC PDW_SHOWSPACEUSED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.service: "sql-data-warehouse"
-ms.suite: "sql"
-ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-caps.latest.revision: 10
-author: edmacauley
+author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
@@ -39,7 +34,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ```  
   
 ## Arguments  
- [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  The one, two, or three-part name of the table to be displayed. For two or three-part table names, the name must be enclosed with double quotes (""). Using quotes around a one-part table name is optional. When no table name is specified, the information is displayed for the current database.  
   
 ## Permissions  

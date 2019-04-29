@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "xml"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: xml
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tables [XML]"
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Change Existing Columns to XML Columns
@@ -40,7 +36,7 @@ CREATE TABLE T (Col1 int primary key, Col2 xml)
 GO  
 INSERT INTO T   
 values (1, '<p1:ProductDescription ProductModelID="1"   
-xmlns:p1="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
+xmlns:p1="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
             </p1:ProductDescription>')  
 GO   
 -- Make it a typed xml column by specifying a schema collection.  

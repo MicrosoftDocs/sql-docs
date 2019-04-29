@@ -1,25 +1,21 @@
-﻿---
+---
 title: "XML Format Files (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "import-export"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: data-movement
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "format files [SQL Server], XML format files"
   - "bulk importing [SQL Server], format files"
   - "XML format files [SQL Server]"
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 45
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Format Files (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -180,19 +176,19 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  <FIELD  
   
- ID **="***fieldID***"**  
+ ID **="**_fieldID_**"**  
   
- xsi**:**type **="***fieldType***"**  
+ xsi**:**type **="**_fieldType_**"**  
   
- [ LENGTH **="***n***"** ]  
+ [ LENGTH **="**_n_**"** ]  
   
- [ PREFIX_LENGTH **="***p***"** ]  
+ [ PREFIX_LENGTH **="**_p_**"** ]  
   
- [ MAX_LENGTH **="***m***"** ]  
+ [ MAX_LENGTH **="**_m_**"** ]  
   
- [ COLLATION **="***collationName***"** ]  
+ [ COLLATION **="**_collationName_**"** ]  
   
- [ TERMINATOR **="***terminator***"** ]  
+ [ TERMINATOR **="**_terminator_**"** ]  
   
  />  
   
@@ -200,13 +196,13 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 |FIELD Attribute|Description|Optional /<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|Specifies the logical name of the field in the data file. The ID of a field is the key used to refer to the field.<br /><br /> \<FIELD ID**="***fieldID***"**/> maps to \<COLUMN SOURCE**="***fieldID***"**/>|Required|  
-|xsi:type **="***fieldType***"**|This is an XML construct (used like an attribute) that identifies the type of the instance of the element. The value of *fieldType* determines which of the optional attributes (below) you need in a given instance.|Required (depending on the data type)|  
-|LENGTH **="***n***"**|This attribute defines the length for an instance of a fixed-length data type.<br /><br /> The value of *n* must be a positive integer.|Optional unless required by the xsi:type value|  
-|PREFIX_LENGTH **="***p***"**|This attribute defines the prefix length for a binary data representation. The PREFIX_LENGTH value, *p*, must be one of the following: 1, 2, 4, or 8.|Optional unless required by the xsi:type value|  
-|MAX_LENGTH **="***m***"**|This attribute is the maximum number of bytes that can be stored in a given field. Without a target table, the column max-length is not known. The MAX_LENGTH attribute restricts the maximum length of an output character column, limiting the storage allocated for the column value. This is especially convenient when using the OPENROWSET function's BULK option in a SELECT FROM clause.<br /><br /> The value of *m* must be a positive integer. By default, the maximum length is 8000 characters for a **char** column and 4000 characters for an **nchar** column.|Optional|  
-|COLLATION **="***collationName***"**|COLLATION is only allowed for character fields. For a list of the SQL collation names, see [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
-|TERMINATOR **= "***terminator***"**|This attribute specifies the terminator of a data field. The terminator can be any character. The terminator must be a unique character that is not part of the data.<br /><br /> By default, the field terminator is the tab character (represented as \t). To represent a paragraph mark, use \r\n.|Used only with an xsi:type of character data, which requires this attribute|  
+|ID **="**_fieldID_**"**|Specifies the logical name of the field in the data file. The ID of a field is the key used to refer to the field.<br /><br /> \<FIELD ID**="**_fieldID_**"**/> maps to \<COLUMN SOURCE**="**_fieldID_**"**/>|Required|  
+|xsi:type **="**_fieldType_**"**|This is an XML construct (used like an attribute) that identifies the type of the instance of the element. The value of *fieldType* determines which of the optional attributes (below) you need in a given instance.|Required (depending on the data type)|  
+|LENGTH **="**_n_**"**|This attribute defines the length for an instance of a fixed-length data type.<br /><br /> The value of *n* must be a positive integer.|Optional unless required by the xsi:type value|  
+|PREFIX_LENGTH **="**_p_**"**|This attribute defines the prefix length for a binary data representation. The PREFIX_LENGTH value, *p*, must be one of the following: 1, 2, 4, or 8.|Optional unless required by the xsi:type value|  
+|MAX_LENGTH **="**_m_**"**|This attribute is the maximum number of bytes that can be stored in a given field. Without a target table, the column max-length is not known. The MAX_LENGTH attribute restricts the maximum length of an output character column, limiting the storage allocated for the column value. This is especially convenient when using the OPENROWSET function's BULK option in a SELECT FROM clause.<br /><br /> The value of *m* must be a positive integer. By default, the maximum length is 8000 characters for a **char** column and 4000 characters for an **nchar** column.|Optional|  
+|COLLATION **="**_collationName_**"**|COLLATION is only allowed for character fields. For a list of the SQL collation names, see [SQL Server Collation Name &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).|Optional|  
+|TERMINATOR **= "**_terminator_**"**|This attribute specifies the terminator of a data field. The terminator can be any character. The terminator must be a unique character that is not part of the data.<br /><br /> By default, the field terminator is the tab character (represented as \t). To represent a paragraph mark, use \r\n.|Used only with an xsi:type of character data, which requires this attribute|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Xsi:type values of the \<FIELD> Element  
  The xsi:type value is an XML construct (used like an attribute) that identifies the data type of an instance of an element. For information on using the "Putting the xsi:type Value into a Data Set," later in this section.  
@@ -253,12 +249,12 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 |COLUMN Attribute|Description|Optional /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|Specifies the ID of the field being mapped to the column.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> maps to \<FIELD ID**="***fieldID***"**/>|Required|  
+|SOURCE **="**_fieldID_**"**|Specifies the ID of the field being mapped to the column.<br /><br /> \<COLUMN SOURCE**="**_fieldID_**"**/> maps to \<FIELD ID**="**_fieldID_**"**/>|Required|  
 |NAME = "*columnName*"|Specifies the name of the column in the row set represented by the format file. This column name is used to identify the column in the result set, and it need not correspond to the column name used in the target table.|Required|  
-|xsi**:**type **="***ColumnType***"**|This is an XML construct (used like an attribute) that identifies the data type of the instance of the element. The value of *ColumnType* determines which of the optional attributes (below) you need in a given instance.<br /><br /> Note: The possible values of *ColumnType* and their associated attributes are listed in the \<COLUMN> element table in the [Xsi:type values of the &lt;COLUMN&gt; Element](#XsiTypeValuesOfCOLUMN) section.|Optional|  
-|LENGTH **="***n***"**|Defines the length for an instance of a fixed-length data type. LENGTH is used only when the xsi:type is a string data type.<br /><br /> The value of *n* must be a positive integer.|Optional (available only if the xsi:type is a string data type)|  
-|PRECISION **="***n***"**|Indicates the number of digits in a number. For example, the number 123.45 has a precision of 5.<br /><br /> The value must be a positive integer.|Optional (available only if the xsi:type is a variable-number data type)|  
-|SCALE **="***int***"**|Indicates the number of digits to the right of the decimal point in a number. For example, the number 123.45 has a scale of 2.<br /><br /> The value must be an integer.|Optional (available only if the xsi:type is a variable-number data type)|  
+|xsi**:**type **="**_ColumnType_**"**|This is an XML construct (used like an attribute) that identifies the data type of the instance of the element. The value of *ColumnType* determines which of the optional attributes (below) you need in a given instance.<br /><br /> Note: The possible values of *ColumnType* and their associated attributes are listed in the \<COLUMN> element table in the [Xsi:type values of the &lt;COLUMN&gt; Element](#XsiTypeValuesOfCOLUMN) section.|Optional|  
+|LENGTH **="**_n_**"**|Defines the length for an instance of a fixed-length data type. LENGTH is used only when the xsi:type is a string data type.<br /><br /> The value of *n* must be a positive integer.|Optional (available only if the xsi:type is a string data type)|  
+|PRECISION **="**_n_**"**|Indicates the number of digits in a number. For example, the number 123.45 has a precision of 5.<br /><br /> The value must be a positive integer.|Optional (available only if the xsi:type is a variable-number data type)|  
+|SCALE **="**_int_**"**|Indicates the number of digits to the right of the decimal point in a number. For example, the number 123.45 has a scale of 2.<br /><br /> The value must be an integer.|Optional (available only if the xsi:type is a variable-number data type)|  
 |NULLABLE **=** { **"**YES**"**<br /><br /> **"**NO**"** }|Indicates whether a column can assume NULL values. This attribute is completely independent of FIELDS. However, if a column is not NULLABLE and field specifies NULL (by not specifying any value), a run-time error results.<br /><br /> The NULLABLE attribute is used only if you do a plain SELECT FROM OPENROWSET(BULK...) statement.|Optional (available for any data type)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> Xsi:type values of the \<COLUMN> Element  
@@ -362,7 +358,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -398,7 +394,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -433,7 +429,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT   
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
@@ -465,7 +461,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
-xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
@@ -507,7 +503,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
   
 ```xml
 <?xml version="1.0"?>  
-<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
@@ -526,12 +522,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
-       xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
+       xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  
-    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"  
+    <FIELD ID="3" xsi:type="CharTerm" TERMINATOR="\r\n"/>  
   </RECORD>  
   <ROW>  
     <COLUMN SOURCE="1" NAME="C1" xsi:type="SQLINT" />  

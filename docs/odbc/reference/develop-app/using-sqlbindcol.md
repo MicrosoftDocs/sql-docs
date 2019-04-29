@@ -5,16 +5,13 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "result sets [ODBC], binding columns"
   - "binding columns [ODBC]"
   - "SQLBindCol function [ODBC], using"
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

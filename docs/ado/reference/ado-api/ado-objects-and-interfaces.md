@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, objects and interfaces"
   - "objects [ADO]"
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg

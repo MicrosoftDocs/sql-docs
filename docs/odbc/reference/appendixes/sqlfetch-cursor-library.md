@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFetch function [ODBC], Cursor Library"
 ms.assetid: 35a0d493-778b-4fb1-84ee-a13540e2fe0e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg

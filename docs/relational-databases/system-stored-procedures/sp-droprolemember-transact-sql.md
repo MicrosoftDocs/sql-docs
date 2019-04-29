@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_droprolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_droprolemember_TSQL"
@@ -18,11 +15,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droprolemember"
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+manager: craigg
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,10 +47,10 @@ sp_droprolemember 'role' ,
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of the role from which the member is being removed. *role* is **sysname**, with no default. *role* must exist in the current database.  
   
- [ **@membername =** ] **'***security_account***'**  
+`[ @membername = ] 'security_account'`
  Is the name of the security account being removed from the role. *security_account* is **sysname**, with no default. *security_account* can be a database user, another database role, a Windows login, or a Windows group. *security_account* must exist in the current database.  
   
 ## Return Code Values  

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/07/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER EVENT SESSION"
@@ -20,9 +17,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], Transact-SQL"
   - "ALTER EVENT SESSION statement"
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER EVENT SESSION (Transact-SQL)
@@ -35,7 +31,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 ALTER EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -132,7 +127,7 @@ ON SERVER
 |DROP EVENT \<event_specifier>|Drops the event identified by *\<event_specifier>*. \<event_specifier> must be valid in the event session.|  
 |ADD TARGET \<event_target_specifier>|Associates the target identified by \<event_target_specifier>with the event session.|
 |[*event_module_guid*].*event_package_name*.*target_name*|Is the name of a target in the event session, where:<br /><br /> -   *event_module_guid* is the GUID for the module that contains the event.<br />-   *event_package_name* is the package that contains the action object.<br />-   *target_name* is the action. Actions appear in sys.dm_xe_objects view as object_type 'target'.|  
-|SET { *target_parameter_name*= \<value> [, ...*n*] }|Sets a target parameter. Target parameters appear in the sys.dm_xe_object_columns view as column_type 'customizable' and object_name = *target_name*.<br /><br /> **NOTE!!** If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
+|SET { *target_parameter_name*= \<value> [, ...*n*] }|Sets a target parameter. Target parameters appear in the sys.dm_xe_object_columns view as column_type 'customizable' and object_name = *target_name*.<br /><br /> **NOTE!!** If you are using the ring buffer target, we recommend that you set the max_memory target parameter to 2048 kilobytes (KB) to help avoid possible data truncation of the XML output. For more information about when to use the different target types, see [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
 |DROP TARGET \<event_target_specifier>|Drops the target identified by \<event_target_specifier>. \<event_target_specifier> must be valid in the event session.|  
 |EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** &#124; ALLOW_MULTIPLE_EVENT_LOSS &#124; NO_EVENT_LOSS }|Specifies the event retention mode to use for handling event loss.<br /><br /> **ALLOW_SINGLE_EVENT_LOSS**<br /> An event can be lost from the session. A single event is only dropped when all the event buffers are full. Losing a single event when event buffers are full allows for acceptable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance characteristics, while minimizing the loss of data in the processed event stream.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> Full event buffers containing multiple events can be lost from the session. The number of events lost is dependent upon the memory size allocated to the session, the partitioning of the memory, and the size of the events in the buffer. This option minimizes performance impact on the server when event buffers are quickly filled, but large numbers of events can be lost from the session.<br /><br /> NO_EVENT_LOSS<br /> No event loss is allowed. This option ensures that all events raised will be retained. Using this option forces all tasks that fire events to wait until space is available in an event buffer. This may cause detectable performance issues while the event session is active. User connections may stall while waiting for events to be flushed from the buffer.|  
 |MAX_DISPATCH_LATENCY = { *seconds* SECONDS &#124; **INFINITE** }|Specifies the amount of time that events are buffered in memory before being dispatched to event session targets. The minimum latency value is 1 second. However, 0 can be used to specify INFINITE latency. By default, this value is set to 30 seconds.<br /><br /> *seconds* SECONDS<br /> The time, in seconds, to wait before starting to flush buffers to targets. *seconds* is a whole number.<br /><br /> **INFINITE**<br /> Flush buffers to targets only when the buffers are full, or when the event session closes.<br /><br /> **NOTE!!** MAX_DISPATCH_LATENCY = 0 SECONDS is equivalent to MAX_DISPATCH_LATENCY = INFINITE.|  
@@ -142,20 +137,20 @@ ON SERVER
 |STARTUP_STATE = { ON &#124; **OFF** }|Specifies whether or not to start this event session automatically when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts.<br /><br /> If STARTUP_STATE=ON the event session will only start if  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is stopped and then restarted.<br /><br /> ON= Event session is started at startup.<br /><br /> **OFF** = Event session is NOT started at startup.|  
   
 ## Remarks  
- The ADD and DROP arguments cannot be used in the same statement.  
+ The `ADD` and `DROP` arguments cannot be used in the same statement.  
   
 ## Permissions  
- Requires the ALTER ANY EVENT SESSION permission.  
+ Requires the `ALTER ANY EVENT SESSION` permission.  
   
 ## Examples  
  The following example starts an event session, obtains some live session statistics, and then adds two events to the existing session.  
   
-```  
+```sql  
 -- Start the event session  
-ALTER EVENT SESSION test_session  
-ON SERVER  
+ALTER EVENT SESSION test_session ON SERVER  
 STATE = start;  
 GO  
+
 -- Obtain live session statistics   
 SELECT * FROM sys.dm_xe_sessions;  
 SELECT * FROM sys.dm_xe_session_events;  
@@ -171,7 +166,7 @@ GO
 ## See Also  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_query_store_remove_plan (Transct-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SYS.SP_QUERY_STORE_REMOVE_PLAN_TSQL"
@@ -21,11 +18,10 @@ helpviewer_keywords:
   - "sys.sp_query_store_remove_plan"
   - "sp_query_store_remove_plan"
 ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
-caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_remove_plan (Transct-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## Arguments  
- [ **@plan_id =** ] *plan_id*  
+`[ @plan_id = ] plan_id`
  Is the id of the query plan to be removed. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  

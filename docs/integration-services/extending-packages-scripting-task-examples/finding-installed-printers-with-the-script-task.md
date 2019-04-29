@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -24,9 +19,8 @@ helpviewer_keywords:
   - "finding printers [SQL Server]"
   - "Script task [Integration Services], printers"
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
-caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Finding Installed Printers with the Script Task

@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC desktop database drivers [ODBC], Paradox driver"
@@ -15,12 +13,12 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], Paradox driver"
   - "Jet-based ODBC drivers [ODBC], Paradox driver"
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ---
 # Setting Options Programmatically for the Paradox Driver
+
 |Option|Description|Method|  
 |------------|-----------------|------------|  
 |Directory|Sets the targeted directory.|To set this option dynamically, use the **DEFAULTDIR** keyword in a call to [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  

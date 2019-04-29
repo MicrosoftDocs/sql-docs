@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_replmonitorchangepublicationthreshold_TSQL"
   - "sp_replmonitorchangepublicationthreshold"
 helpviewer_keywords: 
   - "sp_replmonitorchangepublicationthreshold"
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -47,16 +40,16 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the published database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication for which the monitoring threshold attributes are being changed. *publication* is **sysname**, with no default.  
   
- [ **@publication_type** = ] *publication_type*  
+`[ @publication_type = ] publication_type`
  If the type of publication. *publication_type* is **int**, and can be one of these values.  
   
 |Value|Description|  
@@ -66,7 +59,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Merge publication.|  
 |NULL (default)|Replication attempts to determine the publication type.|  
   
- [ **@metric_id** = ] *metric_id*  
+`[ @metric_id = ] metric_id`
  Is the ID of the publication threshold metric being changed. *metric_id* is **int**, with a default value of NULL and can be one of these values.  
   
 |Value|Metric Name|  
@@ -81,16 +74,16 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  You must specify either *metric_id* or *thresholdmetricname*. If *thresholdmetricname* is specified, then *metric_id* should be NULL.  
   
- [ **@thresholdmetricname** = ] **'***thresholdmetricname***'**  
+`[ @thresholdmetricname = ] 'thresholdmetricname'`
  Is the name of the publication threshold metric being changed. *thresholdmetricname* is **sysname**, with a default value of NULL. You must specify either *thresholdmetricname* or *metric_id*. If *metric_id* is specified, then *thresholdmetricname* should be NULL.  
   
- [ **@value** = ] *value*  
+`[ @value = ] value`
  Is the new value of the publication threshold metric. *value* is **int**, with a default value of NULL. If **null**, then the metric value is not updated.  
   
- [ **@shouldalert** = ] *shouldalert*  
+`[ @shouldalert = ] shouldalert`
  Is if an alert is generated when a publication threshold metric is reached. *shouldalert* is **bit**, with a default of NULL. A value of **1** means that an alert is generated, and a value of **0** means that an alert is not generated.  
   
- [ **@mode** = ] *mode*  
+`[ @mode = ] mode`
  Is if the publication threshold metric is enabled. *mode* is **tinyint**, with a default of **1**. A value of **1** means that monitoring of this metric is enabled, and a value of **2** means that monitoring of this metric is disabled.  
   
 ## Return Code Values  

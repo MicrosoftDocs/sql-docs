@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_droplinkedsrvlogin_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droplinkedsrvlogin"
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_droplinkedsrvlogin (Transact-SQL)
@@ -39,10 +35,10 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## Arguments  
- [ **@rmtsrvname =** ] **'***rmtsrvname***'**  
+`[ @rmtsrvname = ] 'rmtsrvname'`
  Is the name of a linked server that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login mapping applies to. *rmtsrvname* is **sysname**, with no default. *rmtsrvname* must already exist.  
   
- [ **@locallogin =** ] **'***locallogin***'**  
+`[ @locallogin = ] 'locallogin'`
  Is the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login on the local server that has a mapping to the linked server *rmtsrvname*. *locallogin* is **sysname**, with no default. A mapping for *locallogin* to *rmtsrvname* must already exist. If NULL, the default mapping created by **sp_addlinkedserver**, which maps all logins on the local server to logins on the linked server, is deleted.  
   
 ## Return Code Values  

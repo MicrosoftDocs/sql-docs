@@ -1,40 +1,22 @@
 ---
-title: "Monitor performance for Always On Availability Groups (SQL Server) | Microsoft Docs"
-ms.custom: "ag-guide"
+title: "Monitor performance for availability groups"
+description: "This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios."
+ms.custom: "ag-guide, seodec18"
 ms.date: "06/13/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: ""
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
 ---
-# Monitor performance for Always On Availability Groups
+# Monitor performance for Always On availability groups
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   The performance aspect of Always On Availability Groups is crucial to maintaining the service-level agreement (SLA) for your mission-critical databases. Understanding how availability groups ship logs to secondary replicas can help you estimate the recovery time objective (RTO) and recovery point objective (RPO) of your availability implementation and identify bottlenecks in poorly performing availability groups or replicas. This article describes the synchronization process, shows you how to calculate some of the key metrics, and gives you the links to some of the common performance troubleshooting scenarios.  
-  
- The following topics are covered:  
-  
--   [Data synchronization process](#BKMK_DATA_SYNC_PROCESS)  
-  
--   [Flow control gates](#BKMK_FLOW_CONTROL_GATES)  
-  
--   [Estimating failover time (RTO)](#BKMK_RTO)  
-  
--   [Estimating potential data loss (RPO)](#BKMK_RPO)  
-  
--   [Monitoring for RTO and RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
-  
--   [Performance troubleshooting scenarios](#BKMK_SCENARIOS)  
-  
--   [Useful extended events](#BKMK_XEVENTS)  
-  
-##  <a name="BKMK_DATA_SYNC_PROCESS"></a> Data synchronization process  
+   
+##  Data synchronization process  
  To estimate the time to full synchronization and to identify the bottleneck, you need to understand the synchronization process. Performance bottleneck can be anywhere in the process, and locating the bottleneck can help you dig deeper into the underlying issues. The following figure and table illustrate the data synchronization process:  
   
  ![Availability group data synchronization](media/always-onag-datasynchronization.gif "Availability group data synchronization")  
@@ -49,7 +31,7 @@ manager: craigg
 |5|Harden|Log is flushed on the secondary replica for hardening. After the log flush, an acknowledgement is sent back to the primary replica.<br /><br /> Once the log is hardened, data loss is avoided.|Performance counter [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Wait type [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Redo|Redo the flushed pages on the secondary replica. Pages are kept in the redo queue as they wait to be redone.|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) and [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Wait type [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
-##  <a name="BKMK_FLOW_CONTROL_GATES"></a> Flow control gates  
+##  Flow control gates  
  Availability groups are designed with flow control gates on the primary replica to avoid excessive resource consumption, such as network and memory resources, on all availability replicas. These flow control gates do not affect the synchronization health state of the availability replicas, but they can affect the overall performance of your availability databases, including RPO.  
   
  After the logs have been captured on the primary replica, they are subject to two levels of flow controls, as shown in the following table.  
@@ -66,7 +48,7 @@ manager: craigg
   
  Two useful performance counters, [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md), show you, within the last second, how many times flow control was activated and how much time was spent waiting on flow control. Higher wait time on the flow control translate to higher RPO. For more information on the types of issues that can cause a high wait time on the flow control, see [Troubleshoot: Availability group exceeded RPO](troubleshoot-availability-group-exceeded-rpo.md).  
   
-##  <a name="BKMK_RTO"></a> Estimating failover time (RTO)  
+##  Estimating failover time (RTO)  
  The RTO in your SLA depends on the failover time of your Always On implementation at any given time, which can be expressed in the following formula:  
   
  ![Availability groups RTO calculation](media/always-on-rto.gif "Availability groups RTO calculation")  
@@ -84,7 +66,7 @@ manager: craigg
   
  The failover overhead time, Toverhead, includes the time it takes to fail over the WSFC cluster and to bring the databases online. This time is usually short and constant.  
   
-##  <a name="BKMK_RPO"></a> Estimating potential data loss (RPO)  
+## Estimating potential data loss (RPO)  
  The RPO in your SLA depends on the possible data loss of your Always On implementation at any given time. This possible data loss can be expressed in the following formula:  
   
  ![Availability groups RPO calculation](media/always-on-rpo.gif "Availability groups RPO calculation")  
@@ -97,11 +79,237 @@ manager: craigg
  The log send queue represents all the data that can be lost from a catastrophic failure. At first glance, it is curious that the log generation rate is used instead of the log send rate (see [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)). However, remember that using the log send rate only gives you the time to synchronize, while RPO measures data loss based on how fast it is generated, not on how fast it is synchronized.  
   
  A simpler way to estimate Tdata_loss is to use [last_commit_time](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md). The DMV on the primary replica reports this value for all replicas. You can calculate the difference between the value for the primary replica and the value for the secondary replica to estimate how fast the log on the secondary replica is catching up to the primary replica. As stated previously, this calculation does not tell you the potential data loss based on how fast the log is generated, but it should be a close approximation.  
+
+## Estimate RTO & RPO with the SSMS dashboard
+In Always On Availability Groups, the RTO and RPO is calculated and displayed for the databases hosted on the secondary replicas. On the dashboard of the primary replica, the RTO and RPO is grouped by the secondary replica. 
+
+To view the RTO and RPO within the dashboard, do the following:
+1. In SQL Server Management Studio, expand the **Always On High Availability** node, right-click the name of your availability group, and select **Show Dashboard**. 
+1. Select **Add/Remove Columns** under the **Group by** tab. Check both **Estimated Recovery Time(seconds)** [RTO] and **Estimated Data Loss (time)** [RPO]. 
+
+   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+
+### Calculation of secondary database RTO 
+The recovery time calculation determines how much time is needed to recover the *secondary database* after a failover happens.  The failover time is usually short and constant. The detection time depends on cluster-level settings and not on the individual availability replicas. 
+
+
+For a secondary database (DB_sec), calculation and display of its RTO is based on its **redo_queue_size** and **redo_rate**:
+
+![Calculation of RTO](media/calculate-rto.png)
+
+Except corner cases, the formula to calculate a secondary database's RTO is:
+
+![Formula to calculate RTO](media/formula-calc-second-dba-rto.png)
+
+
+
+### Calculation of secondary database RPO
+
+For a secondary database (DB_sec), calculation and display of its RPO is based on its is_failover_ready, last_commit_time and its correlated primary database (DB_pri)'s last_commit_time. When secondary database.is_failover_ready = 1, then daa is synchronized, and no data loss will occur upon failover. However, if this value is 0, then there is a gap between the **last_commit_time** on the primary database and the **last_commit_time** on the secondary database. 
+
+For the primary database, the **last_commit_time** is the time when the latest transaction has been committed. For the secondary database, the **last_commit_time** is the latest commit time for the transaction on the primary database that has been successfully hardened on the secondary database as well. This number should be the same for both the primary and secondary database. A gap between these two values is the duration in which pending transactions have not been hardened on the secondary database, and will be lost in the event of a failover. 
+
+![Calculation of RPO](media/calculate-rpo.png)
+
+### Performance Counters used in RTO/RPO formulas
+
+- **redo_queue_size** (KB) [*used in RTO*]: The redo queue size is the size of transaction logs between its **last_received_lsn** and **last_redone_lsn**. **last_received_lsn** is the log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database. **Last_redone_lsn** is the log sequence number of the last log record that was redone on the secondary database. Based on these two values, we can find IDs of the starting log block (**last_received_lsn**) and the end log block (**last_redone_lsn**). The space between these two log blocks then can represent how may transaction log blocks have not yet been redone. This is measured in Kilobytes(KB).
+-  **redo_rate** (KB/sec) [*used in RTO*]: An accumulative value which represent at a period of elapsed time, how much of the transaction log (KB) has been redone on the secondary database in Kilobytes(KB)/escond. 
+- **last_commit_time** (Datetime) [*used in RPO*]: For the primary database, **last_commit_time** is the time when the latest transaction has been committed. For the secondary database, the **last_commit_time** is the latest commit time for the transaction on the primary database that has been successfully hardened on the secondary database as well. Since this value on the secondary should be synchronized with the same value on the primary, any gap between these two values is the estimate of data loss (RPO).  
+ 
+## Estimate RTO and RPO using DMVs
+
+It is possible to query the DMVs [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) and [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) to estimate the RPO and RTO of a database. The below queries create stored procedures that accomplish both things. 
+
+  >[!NOTE]
+  > Be sure to create and run the stored procedure to estimate the RTO first, as the values it produces are necessary to run the stored procedure for estimating the RPO. 
+
+### Create a stored procedure to estimate RTO 
+
+1. On the target secondary replica, create stored procedure **proc_calculate_RTO**. If this stored procedure already exists, drop it first, and then recreate it. 
+
+ ```sql
+    if object_id(N'proc_calculate_RTO', 'p') is not null
+        drop procedure proc_calculate_RTO
+    go
+    
+    raiserror('creating procedure proc_calculate_RTO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RTO
+    --
+    -- description: Calculate RTO of a secondary database.
+    -- 
+    -- parameters:	@secondary_database_name nvarchar(max): name of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RTO
+    (
+    @secondary_database_name nvarchar(max)
+    )
+    as
+    begin
+  	  declare @db sysname
+  	  declare @is_primary_replica bit 
+  	  declare @is_failover_ready bit 
+  	  declare @redo_queue_size bigint 
+  	  declare @redo_rate bigint
+  	  declare @replica_id uniqueidentifier
+  	  declare @group_database_id uniqueidentifier
+  	  declare @group_id uniqueidentifier
+  	  declare @RTO float 
+
+  	  select 
+  	  @is_primary_replica = dbr.is_primary_replica, 
+  	  @is_failover_ready = dbcs.is_failover_ready, 
+  	  @redo_queue_size = dbr.redo_queue_size, 
+  	  @redo_rate = dbr.redo_rate, 
+  	  @replica_id = dbr.replica_id,
+  	  @group_database_id = dbr.group_database_id,
+  	  @group_id = dbr.group_id 
+  	  from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs 	on dbr.replica_id = dbcs.replica_id and 
+  	  dbr.group_database_id = dbcs.group_database_id  where dbcs.database_name = @secondary_database_name
+
+  	  if  @is_primary_replica is null or @is_failover_ready is null or @redo_queue_size is null or @replica_id is null or @group_database_id is null or @group_id is null
+  	  begin
+  	  	print 'RTO of Database '+ @secondary_database_name +' is not available'
+  	  	return
+  	  end
+  	  else if @is_primary_replica = 1
+  	  begin
+  	  	print 'You are visiting wrong replica';
+  	  	return
+  	  end
+
+  	  if @redo_queue_size = 0 
+  	  	set @RTO = 0 
+  	  else if @redo_rate is null or @redo_rate = 0 
+  	  begin
+  	  	print 'RTO of Database '+ @secondary_database_name +' is not available'
+  	  	return
+  	  end
+  	  else 
+  	  	set @RTO = CAST(@redo_queue_size AS float) / @redo_rate
+    
+  	  print 'RTO of Database '+ @secondary_database_name +' is ' + convert(varchar, ceiling(@RTO))
+  	  print 'group_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_id)
+  	  print 'replica_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @replica_id)
+  	  print 'group_database_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_database_id)
+    end
+ ```
+
+2. Execute **proc_calculate_RTO** with the target secondary database name:
+  ```sql
+   exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
+  ```
+3. The output displays the RTO value of the target secondary replica database. Save the *group_id*, *replica_id*, and *group_database_id* to use with the RPO-estimation stored procedure. 
+   
+   Sample Output:
+<br>RTO of Database DB_sec' is 0 
+<br>group_id of Database DB4 is F176DD65-C3EE-4240-BA23-EA615F965C9B
+<br>replica_id of Database DB4 is 405554F6-3FDC-4593-A650-2067F5FABFFD
+<br>group_database_id of Database DB4 is 39F7942F-7B5E-42C5-977D-02E7FFA6C392
+
+### Create a stored procedure to estimate RPO 
+1. On the primary replica, create stored procedure **proc_calculate_RPO**. If it already exists, drop it first, and then recreate it. 
+
+ ```sql
+    if object_id(N'proc_calculate_RPO', 'p') is not null
+    				drop procedure proc_calculate_RPO
+    go
+    
+    raiserror('creating procedure proc_calculate_RPO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RPO
+    --
+    -- description: Calculate RPO of a secondary database.
+    -- 
+    -- parameters:	@group_id uniqueidentifier: group_id of the secondary database.
+    --				@replica_id uniqueidentifier: replica_id of the secondary database.
+    --				@group_database_id uniqueidentifier: group_database_id of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RPO
+    (
+     @group_id uniqueidentifier,
+     @replica_id uniqueidentifier,
+     @group_database_id uniqueidentifier
+    )
+    as
+    begin
+    	  declare @db_name sysname
+    	  declare @is_primary_replica bit
+    	  declare @is_failover_ready bit
+    	  declare @is_local bit
+    	  declare @last_commit_time_sec datetime 
+    	  declare @last_commit_time_pri datetime      
+    	  declare @RPO nvarchar(max) 
+
+    	  -- secondary database's last_commit_time 
+    	  select 
+    	  @db_name = dbcs.database_name,
+    	  @is_failover_ready = dbcs.is_failover_ready, 
+    	  @last_commit_time_sec = dbr.last_commit_time 
+    	  from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+    	  dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.replica_id = @replica_id and dbr.group_database_id = @group_database_id
+
+    	  -- correlated primary database's last_commit_time 
+    	  select
+    	  @last_commit_time_pri = dbr.last_commit_time,
+    	  @is_local = dbr.is_local
+    	  from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+    	  dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.is_primary_replica = 1 and dbr.group_database_id = @group_database_id
+
+    	  if @is_local is null or @is_failover_ready is null
+    	  begin
+    	  	print 'RPO of database '+ @db_name +' is not available'
+    	  	return
+    	  end
+
+    	  if @is_local = 0
+    	  begin
+    	  	print 'You are visiting wrong replica'
+    	  	return
+    	  end  
+
+    	  if @is_failover_ready = 1
+    	  	set @RPO = '00:00:00'
+    	  else if @last_commit_time_sec is null or  @last_commit_time_pri is null 
+    	  begin
+    	  	print 'RPO of database '+ @db_name +' is not available'
+    	  	return
+    	  end
+    	  else
+    	  begin
+    	  	if DATEDIFF(ss, @last_commit_time_sec, @last_commit_time_pri) < 0
+    	  	begin
+    	  		print 'RPO of database '+ @db_name +' is not available'
+    	  		return
+    	  	end
+    	  	else
+    	  		set @RPO =  CONVERT(varchar, DATEADD(ms, datediff(ss ,@last_commit_time_sec, @last_commit_time_pri) * 1000, 0), 114)
+    	  end
+    	  print 'RPO of database '+ @db_name +' is ' + @RPO
+      end
+ ```
+
+2. Execute **proc_calculate_RPO** with the target secondary database's *group_id*, *replica_id*, and *group_database_id*. 
+
+ ```sql
+   exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
+        @replica_id =  '405554F6-3FDC-4593-A650-2067F5FABFFD',
+        @group_database_id  = '39F7942F-7B5E-42C5-977D-02E7FFA6C392'
+ ```
+3. The output displays the RPO value of the target secondary replica database. 
+
   
-##  <a name="BKMK_Monitoring_for_RTO_and_RPO"></a> Monitoring for RTO and RPO  
- This section demonstrates how to monitor your availability groups for RTO and RPO metrics. This demonstration is similar to the GUI tutorial given in [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
+##  Monitoring for RTO and RPO  
+ This section demonstrates how to monitor your availability groups for RTO and RPO metrics. This demonstration is similar to the GUI tutorial given in [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx).  
   
- Elements of the failover time and potential data loss calculations in [Estimating failover time (RTO)](#BKMK_RTO) and [Estimating potential data loss (RPO)](#BKMK_RPO) are conveniently provided as performance metrics in the policy management facet **Database Replica State** (see [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). You can monitor these two metrics on a schedule and be alerted when the metrics exceed your RTO and RPO, respectively.  
+ Elements of the failover time and potential data loss calculations in [Estimating failover time (RTO)](#estimating-failover-time-rto) and [Estimating potential data loss (RPO)](#estimating-potential-data-loss-rpo) are conveniently provided as performance metrics in the policy management facet **Database Replica State** (see [View the policy-based management facets on a SQL Server object](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). You can monitor these two metrics on a schedule and be alerted when the metrics exceed your RTO and RPO, respectively.  
   
  The demonstrated scripts create two system policies that are run on their respective schedules, with the following characteristics:  
   
@@ -244,5 +452,3 @@ To create the policies, follow the instructions below on all server instances th
 |hadr_dump_primary_progress|`alwayson`|Debug|Primary|  
 |hadr_dump_log_progress|`alwayson`|Debug|Primary|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analytic|Secondary|  
-  
-  

@@ -1,15 +1,9 @@
-﻿---
+---
 title: "sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
-ms.component: "system-stored-procedures"
+ms.service: sql-data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: data-warehouse
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -40,7 +34,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### Parameters  
- [ **@masking_mode=** ] *masking_mode*  
+`[ @masking_mode = ] masking_mode`
  Determines whether transparent data encryption log user data masking is enabled. *masking_mode* is **int**, and can be one of the following values:  
   
 -   0 = Disabled, user data appears in the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] activity logs.  

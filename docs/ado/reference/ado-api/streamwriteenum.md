@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "StreamWriteEnum enumeration [ADO]"
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "09/18/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "@@MAX_CONNECTIONS"
@@ -22,9 +19,8 @@ helpviewer_keywords:
   - "connections [SQL Server], simultaneous"
   - "number of simultaneous user connections"
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # &#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)

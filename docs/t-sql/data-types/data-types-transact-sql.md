@@ -1,14 +1,11 @@
 ---
 title: "Data types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "9/13/2017"
+ms.date: "09/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: t-sql
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,11 +14,10 @@ helpviewer_keywords:
  - "data types [SQL Server]"
  - "data types [SQL Server], about data types"
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
-caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Data types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

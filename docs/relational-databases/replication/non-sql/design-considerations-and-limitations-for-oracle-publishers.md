@@ -4,17 +4,12 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "replication"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Oracle publishing [SQL Server replication], design considerations and limitations"
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
-caps.latest.revision: 48
 author: "MashaMSFT"
 ms.author: "mathoma"
 manager: craigg
@@ -136,7 +131,7 @@ manager: craigg
   
 -   Subscribers to Oracle publications cannot be automatically initialized from a backup.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports two types of validation: binary and rowcount. Oracle Publishers support rowcount validation. For more information, see [Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] offers two snapshot formats: native bcp-mode and character-mode. Oracle Publishers support character mode snapshots.  
   
@@ -164,7 +159,7 @@ manager: craigg
   
     -   You cannot change the **@job_login** parameter through [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) or [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), but the password can be changed.  
   
- For more information about replication security, see [Security and Protection &#40;Replication&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md).  
+ For more information about replication security, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## See Also  
  [Administrative Considerations for Oracle Publishers](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   

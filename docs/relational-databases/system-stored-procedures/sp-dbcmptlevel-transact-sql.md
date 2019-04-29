@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_dbcmptlevel"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dbcmptlevel"
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_dbcmptlevel (Transact-SQL)
@@ -42,10 +38,10 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## Arguments  
- [ **@dbname=** ] *name*  
+`[ @dbname = ] name`
  Is the name of the database for which the compatibility level is to be changed. Database names must conform to the rules for identifiers. *name* is **sysname**, with a default of NULL.  
   
- [ **@new_cmptlevel=** ] *version*  
+`[ @new_cmptlevel = ] version`
  Is the version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with which the database is to be made compatible. *version* is **tinyint**, with a default of NULL. The value must be one of the following:  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  

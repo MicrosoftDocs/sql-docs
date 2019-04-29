@@ -1,15 +1,11 @@
-﻿---
+---
 title: "System Databases | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "databases"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "system databases [SQL Server]"
@@ -17,13 +13,13 @@ helpviewer_keywords:
   - "modifying system data"
   - "viewing system database data"
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Databases
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] includes the following system databases.  
   
@@ -36,7 +32,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 |[tempdb Database](../../relational-databases/databases/tempdb-database.md)|Is a workspace for holding temporary objects or intermediate result sets.|  
 
 > [!IMPORTANT]
-> For Azure SQL Database, only master Database and tempdb Database apply. For the concept of a logical server and logical master database, see [What is an Azure SQL logical server?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb Database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database).
+> For Azure SQL Database single databases and elastic pools, only master Database and tempdb Database apply. For more information, see [What is an Azure SQL Database server](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). For a discussion of tempdb in the context of Azure SQL Database, see [tempdb Database in Azure SQL Database](tempdb-database.md#tempdb-database-in-sql-database). For Azure SQL Database Managed Instance, all system databases apply. For more information on Managed Instances in Azure SQL Database, see [What is a Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)
   
 ## Modifying System Data  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support users directly updating the information in system objects such as system tables, system stored procedures, and catalog views. Instead, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a complete set of administrative tools that let users fully administer their system and manage all users and objects in a database. These include the following:  
@@ -70,7 +66,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ## Related Tasks  
  [Back Up and Restore of System Databases &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [Hide System Objects in Object Explorer](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  
+ [Hide System Objects in Object Explorer](../../ssms/object/hide-system-objects-in-object-explorer.md)  
   
 ## Related Content  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

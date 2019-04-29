@@ -1,15 +1,11 @@
-﻿---
+---
 title: "Create a Database User | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "security"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: security
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.user.securables.f1"
@@ -25,11 +21,10 @@ helpviewer_keywords:
   - "users [SQL Server], adding"
   - "mapping database users"
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---   
 # Create a Database User
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,9 +68,9 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 2.  Expand the database in which to create the new database user.  
   
-3.  Right-click the **Security** folder, point to **New**, and select **User…**.  
+3.  Right-click the **Security** folder, point to **New**, and select **User...**.  
   
-4.  In the **Database User – New** dialog box, on the **General** page, select one of the following user types from the **User type** list:  
+4.  In the **Database User - New** dialog box, on the **General** page, select one of the following user types from the **User type** list:  
   
     -   **SQL user with login**  
   
@@ -92,10 +87,10 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 5.  When you select an option, the remaining options in the dialog may change. Some options only apply to specific types of database users. Some options can be left blank and will use a default value.  
   
      **User name**  
-     Enter a name for the new user. If you have chosen **Windows user** from the **User type** list, you can also click the ellipsis **(…)** to open the **Select User or Group** dialog box.  
+     Enter a name for the new user. If you have chosen **Windows user** from the **User type** list, you can also click the ellipsis **(...)** to open the **Select User or Group** dialog box.  
   
      **Login name**  
-     Enter the login for the user. Alternately, click the ellipsis **(…)** to open the **Select Login** dialog box. **Login name** is available if you select either **SQL user with login** or **Windows user** from the **User type** list.  
+     Enter the login for the user. Alternately, click the ellipsis **(...)** to open the **Select Login** dialog box. **Login name** is available if you select either **SQL user with login** or **Windows user** from the **User type** list.  
   
      **Password** and **Confirm password**  
      Enter a  password for users who authenticate at the database.  
@@ -104,18 +99,18 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
      Enter the default language of the user.  
   
      **Default schema**  
-     Enter the schema that will own objects created by this user. Alternately, click the ellipsis **(…)** to open the **Select Schema** dialog box. **Default schema** is available if you select either **SQL user with login**, **SQL user without login**, or **Windows user** from the **User type** list.  
+     Enter the schema that will own objects created by this user. Alternately, click the ellipsis **(...)** to open the **Select Schema** dialog box. **Default schema** is available if you select either **SQL user with login**, **SQL user without login**, or **Windows user** from the **User type** list.  
   
      **Certificate name**  
-     Enter the certificate to be used for the database user. Alternately, click the ellipsis **(…)** to open the **Select Certificate** dialog box. **Certificate name** is available if you select **User mapped to a certificate** from the **User type** list.  
+     Enter the certificate to be used for the database user. Alternately, click the ellipsis **(...)** to open the **Select Certificate** dialog box. **Certificate name** is available if you select **User mapped to a certificate** from the **User type** list.  
   
      **Asymmetric key name**  
-     Enter the key to be used for the database user. Alternately, click the ellipsis **(…)** to open the **Select Asymmetric Key** dialog box. **Asymmetric key name** is available if you select **User mapped to an asymmetric key** from the **User type** list.  
+     Enter the key to be used for the database user. Alternately, click the ellipsis **(...)** to open the **Select Asymmetric Key** dialog box. **Asymmetric key name** is available if you select **User mapped to an asymmetric key** from the **User type** list.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### Additional Options  
- The **Database User – New** dialog box also offers options on four additional pages: **Owned Schemas**, **Membership**, **Securables**, and **Extended Properties**.  
+ The **Database User - New** dialog box also offers options on four additional pages: **Owned Schemas**, **Membership**, **Securables**, and **Extended Properties**.  
   
 -   The **Owned Schemas** page lists all possible schemas that can be owned by the new database user. To add schemas to or remove them from a database user, under **Schemas owned by this user**, select or clear the check boxes next to the schemas.  
   
@@ -134,8 +129,8 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
      **Properties**  
      View or specify the extended properties for the object. Each extended property consists of a name/value pair of metadata associated with the object.  
   
-     **Ellipsis (…)**  
-     Click the ellipsis **(…)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](http://msdn.microsoft.com/library/ms189353.aspx).  
+     **Ellipsis (...)**  
+     Click the ellipsis **(...)** after **Value** to open the **Value for Extended Property** dialog box. Type or view the value of the extended property in this larger location. For more information, see [Value for Extended Property Dialog Box](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete**  
      Removes the selected extended property.  

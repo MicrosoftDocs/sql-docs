@@ -1,25 +1,18 @@
 ---
 title: "Configure a Report Server (Reporting Services Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-server"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-server
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report server configuration"
   - "report servers [Reporting Services], configuring"
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-caps.latest.revision: 17
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure a Report Server (Reporting Services Native Mode)
   Depending on options you selected during installation, the Report Server might require additional configuration before you can use it. At a minimum, a report server configuration consists of the following:  

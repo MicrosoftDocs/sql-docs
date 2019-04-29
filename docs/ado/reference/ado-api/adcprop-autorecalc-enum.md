@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -15,7 +13,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "ADCPROP_AUTORECALC_ENUM [ADO]"
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

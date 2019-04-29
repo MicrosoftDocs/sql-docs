@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerCallableStatement.getTimestamp (int)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: a9fd6496-c72e-4cc6-b46a-4aa9f13f90ff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -46,7 +43,7 @@ public java.sql.Timestamp getTimestamp(int index)
 ## Remarks  
  This getTimestamp method is specified by the getTimestamp method in the java.sql.CallableStatement interface.  
   
- This method returns values only from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** and **smalldatetime** columns.  
+ This method returns values only from [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** and **smalldatetime** columns.  
   
 ## See Also  
  [getTimestamp Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

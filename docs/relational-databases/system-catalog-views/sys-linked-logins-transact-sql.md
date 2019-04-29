@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sys.linked_logins"
@@ -20,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.linked_logins catalog view"
 ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sys.linked_logins (Transact-SQL)

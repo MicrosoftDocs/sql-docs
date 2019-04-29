@@ -1,14 +1,11 @@
-﻿---
+---
 title: "float and real (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "float"
@@ -23,11 +20,10 @@ helpviewer_keywords:
   - "floating point data [SQL Server]"
   - "real data type"
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # float and real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +33,7 @@ Approximate-number data types for use with floating point numeric data. Floating
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-**float** [ **(***n***)** ]
+**float** [ **(**_n_**)** ]
 Where *n* is the number of bits that are used to store the mantissa of the **float** number in scientific notation and, therefore, dictates the precision and storage size. If *n* is specified, it must be a value between **1** and **53**. The default value of *n* is **53**.
   
 |*n* value|Precision|Storage size|  

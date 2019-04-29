@@ -1,31 +1,26 @@
 ---
-title: "Build a Query in the Relational Query Designer (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: "Build a Query in the Relational Query Designer (Report Builder and SSRS"
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
-
-
-ms.tgt_pltfrm: ""
+ms.technology: report-data
 ms.topic: conceptual
-ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
-caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 04/25/2019
 ---
+
 # Build a Query in the Relational Query Designer (Report Builder and SSRS)
-  A query designer helps you specify which data to retrieve from an external data source for a report dataset. You use a query designer when you build a query in a wizard or create a dataset query.  
+
+A query designer helps you specify which data to retrieve from an external data source for a report dataset. You use a query designer when you build a query in a wizard or create a dataset query.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- A dataset is based on a data source. The type of data source and the authoring environment determines which query designer opens when you define the dataset query. Query designer features vary based on the underlying data source. For more information about data layers, see [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) or [Data Connections, Data Sources, and Connection Strings &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
-  
+ A dataset is based on a data source. The type of data source and the authoring environment determines which query designer opens when you define the dataset query. Query designer features vary based on the underlying data source. For more information about data layers, see [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).
+
  You can use a query designer for the following tasks:  
   
 -   Explore the metadata for multiple schemas on the external data source  
@@ -87,17 +82,17 @@ manager: "kfile"
 1.  On the query designer toolbar, click **Run Query (!)**.  
   
     > [!NOTE]  
-    >  The query designer uses design time credentials to run the query and retrieve the result set. For more information, see [Specify Credentials in Report Builder](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+    >  The query designer uses design time credentials to run the query and retrieve the result set. For more information, see [Specify Credentials in Report Builder](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   
  The query runs on the data source and returns example data in the Query results pane.  
   
 ## See Also  
  [Report Datasets &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Add Data from External Data Sources &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [Query Designers &#40;Report Builder&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+ [Query Designers &#40;Report Builder&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
  [Create a Shared Dataset or Embedded Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Report Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Shared Dataset Design View &#40;Report Builder&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
- [Reporting Services Query Designers](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
+ [Reporting Services Query Designers](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
   
   

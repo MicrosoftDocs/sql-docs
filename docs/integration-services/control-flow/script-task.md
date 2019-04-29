@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.scripttask.f1"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "Script task [Integration Services], about Script task"
   - "Script task [Integration Services]"
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Script Task
@@ -80,7 +77,7 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### Configuring the Script Task Programmatically  
  For more information about programmatically setting these properties, see the following topic:  
@@ -124,13 +121,13 @@ manager: craigg
  If you change the name of the method in the VSTA project, you must change the value of the **EntryPoint** property.  
   
  **ReadOnlyVariables**  
- Type a comma-separated list of read-only variables that are available to the script, or click the ellipsis (**…**) button and select the variables in the **Select variables** dialog box.  
+ Type a comma-separated list of read-only variables that are available to the script, or click the ellipsis (**...**) button and select the variables in the **Select variables** dialog box.  
   
 > [!NOTE]  
 >  Variable names are case sensitive.  
   
  **ReadWriteVariables**  
- Type a comma-separated list of read/write variables that are available to the script, or click the ellipsis (**…**) button and select the variables in the **Select variables** dialog box.  
+ Type a comma-separated list of read/write variables that are available to the script, or click the ellipsis (**...**) button and select the variables in the **Select variables** dialog box.  
   
 > [!NOTE]  
 >  Variable names are case sensitive.  
@@ -140,6 +137,6 @@ manager: craigg
   
 ## Related Content  
   
--   Technical article, [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
+-   Technical article, [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625), on shareourideas.com  
   
   

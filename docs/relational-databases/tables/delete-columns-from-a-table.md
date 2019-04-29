@@ -1,13 +1,11 @@
-﻿---
+---
 title: "Delete Columns from a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [SQL Server], deleting"
@@ -15,11 +13,10 @@ helpviewer_keywords:
   - "deleting columns"
   - "dropping columns"
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Columns from a Table
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

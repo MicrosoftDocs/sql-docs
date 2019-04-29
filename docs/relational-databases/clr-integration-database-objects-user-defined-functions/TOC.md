@@ -1,6 +1,0 @@
-# [CLR User-Defined Functions](clr-user-defined-functions.md)
-# [CLR Scalar-Valued Functions](clr-scalar-valued-functions.md)
-# [CLR Table-Valued Functions](clr-table-valued-functions.md)
-# [CLR User-Defined Aggregate - Invoking Functions](clr-user-defined-aggregate-invoking-functions.md)
-# [CLR User-Defined Aggregates - Requirements](clr-user-defined-aggregates-requirements.md)
-# [CLR User-Defined Aggregates](clr-user-defined-aggregates.md)

@@ -4,21 +4,15 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "extending-packages-scripting"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 helpviewer_keywords: 
   - "breakpoints [Integration Services]"
   - "scripts [Integration Services], breakpoints"
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
-caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component

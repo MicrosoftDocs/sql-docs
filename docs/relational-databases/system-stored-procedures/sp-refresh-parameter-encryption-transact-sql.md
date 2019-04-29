@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sp_refresh_parameter_encryption"
@@ -19,11 +16,10 @@ helpviewer_keywords:
   - "sp_refresh_parameter_encryption"
   - "Always Encrypted, sp_refresh_parameter_encryption"
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-caps.latest.revision: 3
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,10 +41,10 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## Arguments
 
-[ **@name =** ] **'***module_name***'**   
+`[ @name = ] 'module_name'`
 Is the name of the stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger. *module_name* cannot be a common language runtime (CLR) stored procedure or a CLR function. *module_name* cannot be schema-bound. *module_name* is `nvarchar`, with no default. *module_name* can be a multi-part identifier, but can only refer to objects in the current database.
 
-[ **@namespace =** ] **'** < class > **'**   
+`[ @namespace = ] ' < class > '`
 Is the class of the specified module. When *module_name* is a DDL trigger, `<class>` is required. `<class>` is `nvarchar(20)`. Valid inputs are `DATABASE_DDL_TRIGGER` and `SERVER_DDL_TRIGGER`.  	
 
 ## Return Code Values  
@@ -68,7 +64,7 @@ When encryption properties of a table are modified, `sp_refresh_parameter_encryp
 
 To refresh a server-level DDL trigger, execute this stored procedure from the context of any database.
 
->  [!NOTE]   
+> [!NOTE]
 >  Any signatures that are associated with the object are dropped when you run `sp_refresh_parameter_encryption`.
 
 ## Permissions

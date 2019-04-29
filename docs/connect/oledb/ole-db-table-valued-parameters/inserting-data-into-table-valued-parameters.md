@@ -5,24 +5,21 @@ ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|ole-db-table-valued-parameters"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, inserting data into"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Inserting Data into Table-Valued Parameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  The OLE DB Driver for SQL Server supports two models for the consumer to specify data for table valued parameter rows: a push model and a pull model. A sample that demonstrates the pull model is available; see [SQL Server Data Programming Samples](http://msftdpprodsamples.codeplex.com/).  
+  The OLE DB Driver for SQL Server supports two models for the consumer to specify data for table valued parameter rows: a push model and a pull model. A sample that demonstrates the pull model is available; see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
   
 > [!NOTE]  
 >  A table-valued parameter column must have either non-default values in all rows or default values in all rows. It is not possible to have default values in some rows but not others. Therefore, in table-valued parameter bindings, the only status values allowed for table-valued parameter rowset column data are DBSTATUS_S_ISNULL and DBSTATUS_S_OK. DBSTATUS_S_DEFAULT will result in a failure and the bound status value will be set to DBSTATUS_E_BADSTATUS.  

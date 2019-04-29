@@ -3,13 +3,8 @@ title: "CLR User-Defined Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "clr"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: clr
 ms.topic: "reference"
 helpviewer_keywords: 
   - "validation [CLR integration]"
@@ -34,14 +29,13 @@ helpviewer_keywords:
   - "invoking UDT methods"
   - "indexes [CLR integration]"
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
-caps.latest.revision: 67
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
 ---
 # CLR User-Defined Types
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gives you the ability to create database objects that are programmed against an assembly created in the.NET Framework common language runtime (CLR). Database objects that can take advantage of the rich programming model provided by the CLR include triggers, stored procedures, functions, aggregate functions, and types.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gives you the ability to create database objects that are programmed against an assembly created in the .NET Framework common language runtime (CLR). Database objects that can take advantage of the rich programming model provided by the CLR include triggers, stored procedures, functions, aggregate functions, and types.  
   
 > [!NOTE]  
 >  The ability to execute CLR code is set to OFF by default in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The CLR can be enabled by using the **sp_configure** system stored procedure.  

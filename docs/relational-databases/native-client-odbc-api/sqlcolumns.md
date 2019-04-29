@@ -1,25 +1,20 @@
-﻿---
+---
 title: "SQLColumns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-api"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLColumns function"
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +36,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 |Column name|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Returns SQL_VARCHAR, SQL_VARBINARY, or SQL_WVARCHAR for the **varchar(max)** data types.|  
-|TYPE_NAME|Returns “varchar”, “varbinary”, or “nvarchar” for the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** data types.|  
+|TYPE_NAME|Returns "varchar", "varbinary", or "nvarchar" for the **varchar(max)**, **varbinary(max)**, and **nvarchar(max)** data types.|  
 |COLUMN_SIZE|Returns SQL_SS_LENGTH_UNLIMITED for **varchar(max)** data types indicating that the size of the column is unlimited.|  
 |BUFFER_LENGTH|Returns SQL_SS_LENGTH_UNLIMITED for **varchar(max)** data types indicating that the size of the buffer is unlimited.|  
 |SQL_DATA_TYPE|Returns SQL_VARCHAR, SQL_VARBINARY, or SQL_WVARCHAR for the **varchar(max)** data types.|  
@@ -92,7 +87,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  For more information about sparse columns in ODBC, see [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## See Also  
- [SQLColumns Function](http://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns Function](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

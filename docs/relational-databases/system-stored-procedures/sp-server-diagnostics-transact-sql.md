@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "11/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_server_diagnostics"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_server_diagnostics"
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_server_diagnostics (Transact-SQL)
@@ -28,7 +24,7 @@ manager: craigg
 
 Captures diagnostic data and health information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to detect potential failures. The procedure runs in repeat mode and sends results periodically. It can be invoked from either a regular or a DAC connection.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +35,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## Arguments  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'`
  Indicates the time interval at which the stored procedure will run repeatedly to send health information.  
   
  *repeat_interval_in_seconds* is **int** with the default of 0. The valid parameter values are 0, or any value equal to or more than 5. The stored procedure has to run at least 5 seconds to return complete data. The minimum value for the stored procedure to run in the repeat mode is 5 seconds.  

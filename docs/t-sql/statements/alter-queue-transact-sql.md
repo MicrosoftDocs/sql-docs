@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "05/01/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_QUEUE_TSQL"
@@ -24,9 +21,8 @@ helpviewer_keywords:
   - "unavailable queues [SQL Server]"
   - "activation stored procedures [Service Broker]"
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER QUEUE (Transact-SQL)

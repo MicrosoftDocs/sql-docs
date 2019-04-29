@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server (starting with 2008)"
 f1_keywords: 
   - "sys.fn_net_changes_TSQL"
   - "fn_net_changes_TSQL"
@@ -23,7 +18,6 @@ helpviewer_keywords:
   - "fn_net_changes_<capture_instance>"
   - "sys.fn_net_changes_<capture_instance>"
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: 16
 author: "rothja"
 ms.author: "jroth"
 manager: craigg
@@ -117,7 +111,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Bit flags are then appended to the result set for each column that is identified in the parameter @update_flag_list. For the **net changes** wrapper, the bit flags will always be NULL if the @row_filter_option that is used in the call to the wrapper function is 'all' or 'all with merge'. If the @row_filter_option is set to 'all with mask', and __CDC_OPERATION is 'D' or 'I',  the value of the flag will also be NULL. If \__CDC_OPERATION is 'UN', the flag will be set to 1 or 0, depending on whether the **net** update operation caused a change to the column.  
   
- The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the sp_cdc_generate_wrapper_function stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema’s defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+ The change data capture configuration template 'Instantiate CDC Wrapper TVFs for Schema' shows how to use the sp_cdc_generate_wrapper_function stored procedure to obtain CREATE scripts for all of the wrapper functions for a schema's defined query functions. The template then creates those scripts. For more information about templates, see [Template Explorer](../../ssms/template/template-explorer.md).  
   
 ## See Also  
  [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   

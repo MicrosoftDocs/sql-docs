@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
-caps.latest.revision: 7
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -51,9 +45,9 @@ If you want to use SSMA Tester, install SSMA Sybase Extension Pack with the **In
   
 In addition, verify the following:  
   
--   Sybase OLE DB provider is installed on the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] runs.  
+-   Sybase OLE DB provider is installed on the computer where [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs.  
   
--   Common Language Runtime (CLR) integration has been enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Database Engine.  
+-   Common Language Runtime (CLR) integration has been enabled on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine.  
   
 Note that the current version of SSMA Tester does not support parallel execution by different users on the same source or target server.  
   

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "!<"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "!< (not less than)"
   - "not less than operator (!<)"
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
-caps.latest.revision: 35
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

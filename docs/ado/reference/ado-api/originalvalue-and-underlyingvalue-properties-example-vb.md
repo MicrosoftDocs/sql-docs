@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "UnderlyingValue property [ADO], Visual Basic example"
   - "OriginalValue property [ADO]"
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

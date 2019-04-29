@@ -1,16 +1,11 @@
 ---
 title: "Formatting Text and Placeholders (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql11.rtp.rptdesigner.placeholderproperties.font.f1"
@@ -20,10 +15,8 @@ f1_keywords:
   - "10132"
   - "sql11.rtp.rptdesigner.textproperties.font.f1"
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Formatting Text and Placeholders (Report Builder and SSRS)
   A text box can be a report item or an individual cell within a data region that contains text, a calculated field, a pointer to a field in a database, or a combination of all three items. You can mix fonts and colors, add bold and italic styles, and use paragraph styles such as alignment and hanging indents. You can format an entire text box or you can format specific text, numbers, expressions, or fields within the text box.  
@@ -46,7 +39,7 @@ manager: "kfile"
   
 -   Drag a field from the **Report Data** pane and drop it into the text box. If you drag the expression anywhere else on the report body, a new text box will be created that contains the placeholder. The value of this placeholder will be the field expression that corresponds to the field that was dropped.  
   
--   Right-click anywhere in the text box and select **Insert Placeholder**. In the **Placeholder Properties** dialog box, you can specify an expression as the value of your placeholder. For more information, see [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8).  
+-   Right-click anywhere in the text box and select **Insert Placeholder**. In the **Placeholder Properties** dialog box, you can specify an expression as the value of your placeholder. For more information, see [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8).  
   
 -   Type any simple or complex expression into the text box. For example, if you type **Name: [Name]** into the text box, the **[Name]** text will be displayed as a placeholder that represents the expression `=Fields!Name.Value`.  
   
@@ -76,7 +69,7 @@ manager: "kfile"
  [Formatting Axis Labels on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatting Scales on a Gauge &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Tables, Matrices, and Lists &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Placeholder Properties Dialog Box, General &#40;Report Builder and SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
  [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [Text Boxes &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   

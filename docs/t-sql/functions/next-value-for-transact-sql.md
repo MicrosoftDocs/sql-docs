@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "07/19/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "NEXT_VALUE_TSQL"
@@ -23,9 +20,8 @@ helpviewer_keywords:
   - "NEXT VALUE FOR function"
   - "sequence number object, NEXT VALUE FOR function"
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # NEXT VALUE FOR (Transact-SQL)
@@ -70,7 +66,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **SELECT** - For each referenced sequence object, a new value is generated once per row in the result of the statement.  
   
--   **INSERT** … **VALUES** - For each referenced sequence object, a new value is generated once for each inserted row in the statement.  
+-   **INSERT** ... **VALUES** - For each referenced sequence object, a new value is generated once for each inserted row in the statement.  
   
 -   **UPDATE** - For each referenced sequence object, a new value is generated for each row being updated by the statement.  
   
@@ -91,7 +87,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   In a statement using the **DISTINCT**, **UNION**, **UNION ALL**, **EXCEPT** or **INTERSECT** operator.  
   
--   In a statement using the **ORDER BY** clause unless **NEXT VALUE FOR** … **OVER** (**ORDER BY** …) is used.  
+-   In a statement using the **ORDER BY** clause unless **NEXT VALUE FOR** ... **OVER** (**ORDER BY** ...) is used.  
   
 -   In the following clauses: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY**, or **FOR XML**.  
   
@@ -128,7 +124,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   A sequence object that is referenced in a default constraint can be altered.  
   
--   In the case of an `INSERT … SELECT` or `INSERT … EXEC` statement where the data being inserted comes from a query using an **ORDER BY** clause, the values being returned by the **NEXT VALUE FOR** function will be generated in the order specified by the **ORDER BY** clause.  
+-   In the case of an `INSERT ... SELECT` or `INSERT ... EXEC` statement where the data being inserted comes from a query using an **ORDER BY** clause, the values being returned by the **NEXT VALUE FOR** function will be generated in the order specified by the **ORDER BY** clause.  
   
 ## Using a Sequence Object with an OVER ORDER BY Clause  
  The **NEXT VALUE FOR** function supports generating sorted sequence values by applying the **OVER** clause to the **NEXT VALUE FOR** call. By using the **OVER** clause, a user is guaranteed that the values being returned are generated in the order of the **OVER** clause's **ORDER B**Y subclause. The following additional rules apply when using the **NEXT VALUE FOR** function with the **OVER** clause:  
@@ -141,7 +137,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   If all calls to the **NEXT VALUE FOR** function in a **SELECT** statement specifies the **OVER** clause, an **ORDER BY** clause may be used in the **SELECT** statement.  
   
--   The **OVER** clause is allowed with the **NEXT VALUE FOR** function when used in a **SELECT** statement or `INSERT … SELECT …` statement. Use of the **OVER** clause with the **NEXT VALUE FOR** function is not allowed in **UPDATE** or **MERGE** statements.  
+-   The **OVER** clause is allowed with the **NEXT VALUE FOR** function when used in a **SELECT** statement or `INSERT ... SELECT ...` statement. Use of the **OVER** clause with the **NEXT VALUE FOR** function is not allowed in **UPDATE** or **MERGE** statements.  
   
 -   If another process is accessing the sequence object at the same time, the numbers returned could have gaps.  
   
@@ -276,8 +272,8 @@ GO
   
 ```  
   
-### E. Using the NEXT VALUE FOR function with SELECT … INTO  
- The following example uses the `SELECT … INTO` statement to create a table named `Production.NewLocation` and uses the `NEXT VALUE FOR` function to number each row.  
+### E. Using the NEXT VALUE FOR function with SELECT ... INTO  
+ The following example uses the `SELECT ... INTO` statement to create a table named `Production.NewLocation` and uses the `NEXT VALUE FOR` function to number each row.  
   
 ```  
 USE AdventureWorks2012 ;   

@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Column Value Distribution Profile Request Options (Data Profiling Task)

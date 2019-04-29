@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], copying"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "regenerating package GUID"
   - "updating package properties"
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
-caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Copy a Package in SQL Server Data Tools
@@ -51,7 +48,7 @@ manager: craigg
 11. On the **File** menu, click **Save Selected Items** to save the new package.  
   
 ## See Also  
- [Save a Copy of a Package](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
+ [Save a Copy of a Package](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
  [Create Packages in SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS&#41; Packages](../integration-services/integration-services-ssis-packages.md)  
   

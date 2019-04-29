@@ -1,14 +1,11 @@
 ---
 title: "ToString (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/23/2017"
+ms.date: "07/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|data-types"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ToString"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ToString [Database Engine]"
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # ToString (Database Engine)
@@ -49,7 +45,7 @@ string ToString  ( )
 **CLR return type:String**
   
 ## Remarks  
-Returns the logical location in the hierarchy. For example, `/2/1/` represents the fourth row ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) in the following hierarchical structure of a file system:
+Returns the logical location in the hierarchy. For example, `/2/1/` represents the fourth row ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) in the following hierarchical structure of a file system:
   
 ```sql
 /        C:\  
@@ -115,7 +111,7 @@ this.ToString()
 ```  
   
 ## See also
-[hierarchyid Data Type Method Reference](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
+[hierarchyid Data Type Method Reference](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Hierarchical Data &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
   

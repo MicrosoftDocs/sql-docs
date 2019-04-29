@@ -5,9 +5,7 @@ ms.date: "03/02/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "default packet size"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "packets [SQL Server], size"
   - "network packet size option"
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

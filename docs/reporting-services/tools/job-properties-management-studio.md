@@ -1,24 +1,17 @@
 ---
 title: "Job Properties (Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "tools"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: tools
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.jobproperties.f1"
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
-caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Job Properties (Management Studio)
   Use the **Job Properties** page to view information about an in-progress report or subscription before you cancel it.  

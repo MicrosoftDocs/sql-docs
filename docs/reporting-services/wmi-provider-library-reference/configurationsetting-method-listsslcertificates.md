@@ -1,24 +1,17 @@
 ---
 title: "ListSSLCertificates Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "wmi-provider-library-reference"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: wmi-provider-library-reference
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ListSSLCertificates method"
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
-caps.latest.revision: 12
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - ListSSLCertificates
   Returns a list of certificates on the report server computer.  

@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_getmergedeletetype"
   - "sp_getmergedeletetype_TSQL"
 helpviewer_keywords: 
   - "sp_getmergedeletetype"
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_getmergedeletetype (Transact-SQL)
@@ -39,13 +32,13 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## Arguments  
- [ **@source_object =**] **'***source_object***'**  
+`[ @source_object = ] 'source_object'`
  Is the name of the source object. *source_object* is **nvarchar(386)**, with no default.  
   
- [ **@rowguid=**] **'***rowguid***'**  
+`[ @rowguid = ] 'rowguid'`
  Is the row identifier for the delete type. *rowguid* is **uniqueidentifier**, with no default.  
   
- [ **@delete_type=**] *delete_type* **OUTPUT**  
+`[ @delete_type = ] delete_type OUTPUT`
  Is the code indicating the type of delete. *delete_type* is **int**, with no default. *delete_type* is also an OUTPUT parameter, and can be one of these values.  
   
 |Value|Description|  

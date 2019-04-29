@@ -4,14 +4,9 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.component: "extending-packages-scripting-task-examples"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
 dev_langs: 
   - "VB"
 helpviewer_keywords: 
@@ -19,9 +14,8 @@ helpviewer_keywords:
   - "Message Queue task [Integration Services]"
   - "Script task [Integration Services], examples"
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
-caps.latest.revision: 31
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Sending to a Remote Private Message Queue with the Script Task

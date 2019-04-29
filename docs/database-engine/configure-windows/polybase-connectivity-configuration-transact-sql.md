@@ -5,18 +5,15 @@ ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "PolyBase"
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # PolyBase Connectivity Configuration (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -43,10 +40,10 @@ RECONFIGURE
 ```  
   
 ## Arguments  
- [ **@configname=** ] **'***option_name***'**  
+ [ **@configname=** ] **'**_option\_name_**'**  
  Is the name of a configuration option. *option_name* is **varchar(35)**, with a default of NULL. If not specified, the complete list of options is returned.  
   
- [ **@configvalue=** ] **'***value***'**  
+ [ **@configvalue=** ] **'**_value_**'**  
  Is the new configuration setting. *value* is **int**, with a default of NULL. The maximum value depends on the individual option.  
   
  **'hadoop connectivity'**  
@@ -72,7 +69,7 @@ RECONFIGURE
   
 -   Option 6: Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12, and 5.13 on Linux  
   
--   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, and 2.6 on Linux  
+-   Option 7: Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 on Linux  
   
 -   Option 7: Hortonworks 2.1, 2.2, and 2.3 on Windows Server  
   
@@ -81,7 +78,7 @@ RECONFIGURE
  **RECONFIGURE**  
  Updates the run value (run_value) to match the configuration value (config_value). See [Result Sets](#ResultSets) for definitions of run_value and config_value. The new configuration value that is set by sp_configure does not become effective until the run value is set by the RECONFIGURE statement.  
   
- After running RECONFIGURE, you must stop and restart the SQL Server service. Note that when stopping the SQL Server service, the two additional PolyBase Engine and Data Movement Service will automatically stop. After restarting the SQL Server engine service, re-start these two services again (they won’t start automatically).  
+ After running RECONFIGURE, you must stop and restart the SQL Server service. Note that when stopping the SQL Server service, the two additional PolyBase Engine and Data Movement Service will automatically stop. After restarting the SQL Server engine service, re-start these two services again (they won't start automatically).  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

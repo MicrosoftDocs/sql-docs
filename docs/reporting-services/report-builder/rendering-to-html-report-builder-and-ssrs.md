@@ -1,28 +1,19 @@
 ---
 title: "Rendering to HTML (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
+ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-builder"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-builder
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Rendering to HTML (Report Builder and SSRS)
   The HTML rendering extension renders a paginated report in HTML format. The rendering extension can also produce fully formed HTML pages or fragments of HTML to embed in other HTML pages. All HTML is generated with UTF-8 encoding.  
-  
- The HTML rendering extension is the default rendering extension for reports that are viewed in a browser, including when run in the [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] web portal.  
-  
+
  The HTML rendering extension is the default rendering extension for reports that are viewed in a browser, including when run in the [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] web portal. The HTML rendering extension can render HTML as a fragment or as a full HTML document. If the HTML is a fragment, the **HEAD**, **HTML**, and **BODY** tags of the HTML document are removed. Only the contents of the **BODY** tag are rendered. This is useful for embedding the HTML in the HTML produced by another application.  
   
  In some scenarios, report parameters can be used to launch script injection attacks when rendering reports to HTML. For more information about securing reports, see [Secure Reports and Resources](../../reporting-services/security/secure-reports-and-resources.md).  

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "COALESCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "COALESCE"
@@ -21,18 +18,17 @@ helpviewer_keywords:
   - "first nonnull expressions [SQL Server]"
   - "nonnull expressions"
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-caps.latest.revision: 52
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Evaluates the arguments in order and returns the current value of the first expression that initially does not evaluate to `NULL`. For example, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` returns the third value because the third value is the first value that is not null. 
+Evaluates the arguments in order and returns the current value of the first expression that initially doesn't evaluate to `NULL`. For example, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` returns the third value because the third value is the first value that isn't null. 
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
@@ -41,30 +37,30 @@ COALESCE ( expression [ ,...n ] )
 ```  
   
 ## Arguments  
- *expression*  
- Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type.  
+_expression_  
+Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type.  
   
 ## Return Types  
- Returns the data type of *expression* with the highest data type precedence. If all expressions are nonnullable, the result is typed as nonnullable.  
+Returns the data type of _expression_ with the highest data type precedence. If all expressions are nonnullable, the result is typed as nonnullable.  
   
 ## Remarks  
- If all arguments are `NULL`, `COALESCE` returns `NULL`. At least one of the null values must be a typed `NULL`.  
+If all arguments are `NULL`, `COALESCE` returns `NULL`. At least one of the null values must be a typed `NULL`.  
   
 ## Comparing COALESCE and CASE  
- The `COALESCE` expression is a syntactic shortcut for the `CASE` expression.  That is, the code `COALESCE`(*expression1*,*...n*) is rewritten by the query optimizer as  the following `CASE` expression:  
+The `COALESCE` expression is a syntactic shortcut for the `CASE` expression.  That is, the code `COALESCE`(_expression1_,_...n_) is rewritten by the query optimizer as  the following `CASE` expression:  
   
- ```sql  
- CASE  
- WHEN (expression1 IS NOT NULL) THEN expression1  
- WHEN (expression2 IS NOT NULL) THEN expression2  
- ...  
- ELSE expressionN  
- END  
- ```  
+```sql  
+CASE  
+WHEN (expression1 IS NOT NULL) THEN expression1  
+WHEN (expression2 IS NOT NULL) THEN expression2  
+...  
+ELSE expressionN  
+END  
+```  
   
- This means that the input values (*expression1*, *expression2*, *expressionN*, etc.) are evaluated multiple times. Also, in compliance with the SQL standard, a value expression that contains a subquery is considered non-deterministic and the subquery is evaluated twice. In either case, different results can be returned between the first evaluation and subsequent evaluations.  
+As such, the input values (_expression1_, _expression2_, _expressionN_, and so on) are evaluated multiple times. A value expression that contains a subquery is considered non-deterministic and the subquery is evaluated twice. This result is in compliance with the SQL standard. In either case, different results can be returned between the first evaluation and upcoming evaluations.  
   
- For example, when the code `COALESCE((subquery), 1)` is executed, the subquery is evaluated twice. As a result, you can get different results depending on the isolation level of the query. For example, the code can return `NULL` under the `READ COMMITTED` isolation level in a multi-user environment. To ensure stable results are returned, use the `SNAPSHOT ISOLATION` isolation level, or replace `COALESCE` with the `ISNULL` function. Alternatively, you can rewrite the query to push the subquery into a subselect as shown in the following example:  
+For example, when the code `COALESCE((subquery), 1)` is executed, the subquery is evaluated twice. As a result, you can get different results depending on the isolation level of the query. For example, the code can return `NULL` under the `READ COMMITTED` isolation level in a multi-user environment. To ensure stable results are returned, use the `SNAPSHOT ISOLATION` isolation level, or replace `COALESCE` with the `ISNULL` function. As an alternative, you can rewrite the query to push the subquery into a subselect as shown in the following example:  
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
@@ -76,13 +72,13 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
 ```  
   
 ## Comparing COALESCE and ISNULL  
- The `ISNULL` function and the `COALESCE` expression have a similar purpose but can behave differently.  
+The `ISNULL` function and the `COALESCE` expression have a similar purpose but can behave differently.  
   
-1.  Because `ISNULL` is a function, it is evaluated only once.  As described above, the input values for the `COALESCE` expression can be evaluated multiple times.  
+1.  Because `ISNULL` is a function, it's evaluated only once.  As described above, the input values for the `COALESCE` expression can be evaluated multiple times.  
   
 2.  Data type determination of the resulting expression is different. `ISNULL` uses the data type of the first parameter, `COALESCE` follows the `CASE` expression rules and returns the data type of value with the highest precedence.  
   
-3.  The NULLability of the result expression is different for `ISNULL` and `COALESCE`. The `ISNULL` return value is always considered NOT NULLable (assuming the return value is a non-nullable one) whereas `COALESCE` with non-null parameters is considered to be `NULL`. So the expressions `ISNULL(NULL, 1)` and `COALESCE(NULL, 1)`, although equivalent, have different nullability values. This makes a difference if you are using these expressions in computed columns, creating key constraints or making the return value of a scalar UDF deterministic so that it can be indexed as shown in the following example:  
+3.  The NULLability of the result expression is different for `ISNULL` and `COALESCE`. The `ISNULL` return value is always considered NOT NULLable (assuming the return value is a non-nullable one). By contrast,`COALESCE` with non-null parameters is considered to be `NULL`. So the expressions `ISNULL(NULL, 1)` and `COALESCE(NULL, 1)`, although equal, have different nullability values. These values make a difference if you're using these expressions in computed columns, creating key constraints or making the return value of a scalar UDF deterministic so that it can be indexed as shown in the following example:  
   
     ```sql  
     USE tempdb;  
@@ -108,14 +104,14 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
     );  
     ```  
   
-4.  Validations for `ISNULL` and `COALESCE` are also different. For example, a `NULL` value for `ISNULL` is converted to **int** whereas for `COALESCE`, you must provide a data type.  
+4.  Validations for `ISNULL` and `COALESCE` are also different. For example, a `NULL` value for `ISNULL` is converted to **int** though for `COALESCE`, you must provide a data type.  
   
-5.  `ISNULL` takes only two parameters whereas `COALESCE` takes a variable number of parameters.  
+5.  `ISNULL` takes only two parameters. By contrast `COALESCE` takes a variable number of parameters.  
   
 ## Examples  
   
 ### A. Running a simple example  
- The following example shows how `COALESCE` selects the data from the first column that has a nonnull value. This example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+The following example shows how `COALESCE` selects the data from the first column that has a nonnull value. This example uses the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
 ```sql  
 SELECT Name, Class, Color, ProductNumber,  
@@ -124,7 +120,7 @@ FROM Production.Product;
 ```  
   
 ### B. Running a complex example  
- In the following example, the `wages` table includes three columns that contain information about the yearly wages of the employees: the hourly wage, salary, and commission. However, an employee receives only one type of pay. To determine the total amount paid to all employees, use `COALESCE` to receive only the nonnull value found in `hourly_wage`, `salary`, and `commission`.  
+In the following example, the `wages` table includes three columns that contain information about the yearly wages of the employees: the hourly wage, salary, and commission. However, an employee receives only one type of pay. To determine the total amount paid to all employees, use `COALESCE` to receive only the nonnull value found in `hourly_wage`, `salary`, and `commission`.  
   
 ```sql  
 SET NOCOUNT ON;  
@@ -167,59 +163,59 @@ ORDER BY 'Total Salary';
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```   
- Total Salary  
- ------------  
- 10000.00  
- 20000.00  
- 20800.00  
- 30000.00  
- 40000.00  
- 41600.00  
- 45000.00  
- 50000.00  
- 56000.00  
- 62400.00  
- 83200.00  
- 120000.00  
+```   
+Total Salary  
+------------  
+10000.00  
+20000.00  
+20800.00  
+30000.00  
+40000.00  
+41600.00  
+45000.00  
+50000.00  
+56000.00  
+62400.00  
+83200.00  
+120000.00  
   
- (12 row(s) affected)
- ```  
+(12 row(s) affected)
+```  
   
 ### C: Simple Example  
- The following example demonstrates how `COALESCE` selects the data from the first column that has a non-null value. Assume for this example that the `Products` table contains this data:  
+The following example demonstrates how `COALESCE` selects the data from the first column that has a non-null value. Assume for this example that the `Products` table contains this data:  
   
- ```  
- Name         Color      ProductNumber  
- ------------ ---------- -------------  
- Socks, Mens  NULL       PN1278  
- Socks, Mens  Blue       PN1965  
- NULL         White      PN9876
- ```  
-  
- We then run the following COALESCE query:  
+```  
+Name         Color      ProductNumber  
+------------ ---------- -------------  
+Socks, Mens  NULL       PN1278  
+Socks, Mens  Blue       PN1965  
+NULL         White      PN9876
+```  
+ 
+We then run the following COALESCE query:  
   
 ```sql  
 SELECT Name, Color, ProductNumber, COALESCE(Color, ProductNumber) AS FirstNotNull   
 FROM Products ;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
- Name         Color      ProductNumber  FirstNotNull  
- ------------ ---------- -------------  ------------  
- Socks, Mens  NULL       PN1278         PN1278  
- Socks, Mens  Blue       PN1965         Blue  
- NULL         White      PN9876         White
- ```  
+```  
+Name         Color      ProductNumber  FirstNotNull  
+------------ ---------- -------------  ------------  
+Socks, Mens  NULL       PN1278         PN1278  
+Socks, Mens  Blue       PN1965         Blue  
+NULL         White      PN9876         White
+```  
   
- Notice that in the first row, the `FirstNotNull` value is `PN1278`, not `Socks, Mens`. This is because the `Name` column was not specified as a parameter for `COALESCE` in the example.  
+Notice that in the first row, the `FirstNotNull` value is `PN1278`, not `Socks, Mens`. This value is this way because the `Name` column wasn't specified as a parameter for `COALESCE` in the example.  
   
 ### D: Complex Example  
- The following example uses `COALESCE` to compare the values in three columns  and return only the non-null value found in the columns.  
+The following example uses `COALESCE` to compare the values in three columns  and return only the non-null value found in the columns.  
   
 ```sql  
 CREATE TABLE dbo.wages  
@@ -273,27 +269,27 @@ FROM dbo.wages
 ORDER BY TotalSalary;  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- Total Salary  
- ------------  
- 10000.00  
- 20000.00  
- 20800.00  
- 30000.00  
- 40000.00  
- 41600.00  
- 45000.00  
- 50000.00  
- 56000.00  
- 62400.00  
- 83200.00  
- 120000.00
- ```  
+```
+Total Salary  
+------------  
+10000.00  
+20000.00  
+20800.00  
+30000.00  
+40000.00  
+41600.00  
+45000.00  
+50000.00  
+56000.00  
+62400.00  
+83200.00  
+120000.00
+```  
   
 ## See Also  
- [ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
- [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
+[ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
+[CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   
   

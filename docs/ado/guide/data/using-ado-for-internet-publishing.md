@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, Internet publishing"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "Internet publishing [ADO]"
   - "urls [ADO]"
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

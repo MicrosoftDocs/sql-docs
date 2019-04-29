@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.rebuildindextask.f1"
@@ -16,9 +14,8 @@ helpviewer_keywords:
   - "indexes [Integration Services]"
   - "Rebuild Index task"
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
-caps.latest.revision: 50
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Rebuild Index Task
@@ -58,7 +55,7 @@ manager: craigg
  [Rebuild Index Task &#40;Maintenance Plan&#41;](../../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
   
 ## Related Tasks  
- For more about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ For more about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, see [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## See Also  
  [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md)   

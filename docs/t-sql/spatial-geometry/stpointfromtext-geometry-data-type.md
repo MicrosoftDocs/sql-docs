@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "08/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STPointFromText_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointFromText (geometry Data Type)"
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
-caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

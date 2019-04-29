@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_register_custom_scripting"
   - "sp_register_custom_scripting_TSQL"
 helpviewer_keywords: 
   - "sp_register_custom_scripting"
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_register_custom_scripting (Transact-SQL)
@@ -42,7 +35,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## Arguments  
- [ **@type** = ] **'***type***'**  
+`[ @type = ] 'type'`
  Is the type of custom stored procedure or script being registered. *type* is **varchar(16)**, with no default, and can be one of the following values.  
   
 |Value|Description|  
@@ -52,7 +45,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|Registered custom stored procedure is executed when a DELETE statement is replicated.|  
 |**custom_script**|Script is executed at the end of the data definition language (DDL) trigger.|  
   
- [ **@value**= ] **'***value***'**  
+`[ @value = ] 'value'`
  Name of a stored procedure or name and fully-qualified path to the [!INCLUDE[tsql](../../includes/tsql-md.md)] script file that is being registered. *value* is **nvarchar(1024)**, with no default.  
   
 > [!NOTE]  
@@ -60,10 +53,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  When the value of *type* is **custom_script**, the name and full path of a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file is expected. Otherwise, *value* must be the name of a registered stored procedure.  
   
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Name of the publication for which the custom stored procedure or script is being registered. *publication* is **sysname**, with a default of **NULL**.  
   
- [ **@article**= ] **'***article***'**  
+`[ @article = ] 'article'`
  Name of the article for which the custom stored procedure or script is being registered. *article* is **sysname**, with a default of **NULL**.  
   
 ## Return Code Values  

@@ -20,7 +20,7 @@ manager: kfile
   
 -   Standard actions, which return the action element (URL, HTML, DataSet, RowSet, and other elements) that is associated with the selected section of the cube where the action occurs.  
   
- A query interface, such as ADOMD.NET, is used by the client application to retrieve and expose the actions to the end user. For more information see [Developing with ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
+ A query interface, such as ADOMD.NET, is used by the client application to retrieve and expose the actions to the end user. For more information see [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  A simple <xref:Microsoft.AnalysisServices.Action> object is composed of: basic information, the target where the action is to occur, a condition to limit the action scope, and the type. Basic information includes the name of the action, the description of the action, the caption suggested for the action, and others.  
   

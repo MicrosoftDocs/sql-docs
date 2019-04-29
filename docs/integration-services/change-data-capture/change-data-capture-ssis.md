@@ -5,17 +5,14 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental loads [SQL Server change data capture]"
   - "change data capture [SQL Server], Integration Services and"
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Change Data Capture (SSIS)
@@ -26,7 +23,7 @@ manager: craigg
   
  The change data capture feature of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] captures insert, update, and delete activity applied to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, and makes the details of the changes available in an easily-consumed, relational format. The change tables used by change data capture contain columns that mirror the column structure of the tracked source tables, along with the metadata needed to understand the changes that have occurred on a row by row basis.  
   
-> [!NOTE]  
+> [!NOTE]
 >  Change data capture is not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## How Change Data Capture Works in Integration Services  
@@ -93,9 +90,9 @@ manager: craigg
 ## Samples of Change Data Capture Packages  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides two samples that demonstrate how to use change data capture in packages. For more information, see the following topics:  
   
--   [Readme_Change Data Capture for Specified Interval Package Sample](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Readme_Change Data Capture for Specified Interval Package Sample](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [Readme_Change Data Capture since Last Request Package Sample](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [Readme_Change Data Capture since Last Request Package Sample](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## Related Tasks  
   
@@ -116,6 +113,6 @@ manager: craigg
 -   [Perform an Incremental Load of Multiple Tables](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## Related Content  
- Blog entry, [SSIS Design Pattern – Incremental Load](http://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
+ Blog entry, [SSIS Design Pattern - Incremental Load](https://go.microsoft.com/fwlink/?LinkId=217679), on sqlblog.com  
   
   

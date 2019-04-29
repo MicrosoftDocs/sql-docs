@@ -1,13 +1,10 @@
-﻿---
+---
 title: "Joins (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/18/2018"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "joins"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "HASH join"
@@ -16,10 +13,10 @@ helpviewer_keywords:
   - "joins [SQL Server], about joins"
   - "join hints [SQL Server]"
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Joins (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -233,7 +230,7 @@ The results do not make it easy to distinguish a NULL in the data from a NULL th
 [Comparison Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)    
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)      
-[Adaptive Joins](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)    
+[Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
 
 
   

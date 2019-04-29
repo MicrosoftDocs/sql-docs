@@ -5,17 +5,14 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SUBSTRING function"
   - "part of expression returned [Integration Services]"
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SUBSTRING (SSIS Expression)

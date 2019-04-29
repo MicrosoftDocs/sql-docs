@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSmerge_contents"
   - "MSmerge_contents_TSQL"
@@ -21,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_contents system table"
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
-caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSmerge_contents (Transact-SQL)

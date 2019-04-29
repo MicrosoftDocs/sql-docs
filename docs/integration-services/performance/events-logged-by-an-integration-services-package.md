@@ -5,17 +5,14 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "package [Integration Services], events"
   - "events [Integration Services], package"
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Events Logged by an Integration Services Package

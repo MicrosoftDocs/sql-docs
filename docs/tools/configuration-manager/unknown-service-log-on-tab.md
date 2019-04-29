@@ -5,14 +5,12 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
-caps.latest.revision: 16
 author: "stevestein"
 ms.author: "sstein"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 manager: craigg
 ---
 # Unknown Service (Log On Tab)

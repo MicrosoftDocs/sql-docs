@@ -5,16 +5,13 @@ ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation [Integration Services]"
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Lookup Transformation Full Cache Mode - OLE DB Connection Manager
@@ -49,11 +46,11 @@ manager: craigg
   
     -   Click **Use a table or a view**, and then either select a table or view, or click **New** to create a table or view.  
   
-         —or—  
+         -or-  
   
     -   Click **Use results of an SQL query**, and then build a query in the **SQL Command** window, or click **Build Query** to build a query by using the graphical tools that the **Query Builder** provides.  
   
-         —or—  
+         -or-  
   
     -   Alternatively, click **Browse** to import an SQL statement from a file.  
   

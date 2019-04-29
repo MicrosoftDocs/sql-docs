@@ -1,24 +1,19 @@
-﻿---
+---
 title: "Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-odbc-table-valued-parameters"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), sending data to a stored procedure with all values in memory"
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -130,6 +125,6 @@ from @Items
     ```  
   
 ## See Also  
- [ODBC Table-Valued Parameter Programming Examples](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
+ [ODBC Table-Valued Parameter Programming Examples](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

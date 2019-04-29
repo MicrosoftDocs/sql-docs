@@ -5,9 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataminingquerytask.f1"
@@ -18,9 +16,8 @@ helpviewer_keywords:
   - "prediction queries [Integration Services]"
   - "Data Mining Query task [Integration Services]"
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Mining Query Task
@@ -55,7 +52,7 @@ manager: craigg
   
  For more information about how to set these properties in [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, click the following topic:  
   
--   [Set the Properties of a Task or Container](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Set the Properties of a Task or Container](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## Programmatic Configuration of Data Mining Query Task  
  For more information about programmatically setting these properties, click one of the following topics:  

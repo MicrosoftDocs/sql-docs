@@ -5,15 +5,12 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "states [SQL Server], database mirroring"
   - "database mirroring [SQL Server], states"
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg

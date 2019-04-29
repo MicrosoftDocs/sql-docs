@@ -1,22 +1,20 @@
-﻿---
+---
 title: "Columnstore indexes - Data loading guidance | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/01/2017"
+ms.date: "12/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data loading guidance
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Options and recommendations for loading data into a columnstore index by using the standard SQL bulk loading and trickle insert methods. Loading data into a columnstore index is an essential part of any data warehousing process because it moves data into the index in preparation for analytics.
@@ -30,11 +28,11 @@ To perform a bulk load, you can use [bcp Utility](../../tools/bcp-utility.md), [
 
 ![Loading into a clustered columnstore index](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
   
- As the diagram suggests, a bulk load::  
+As the diagram suggests, a bulk load:
   
-* Does not pre-sort the data. Data is inserted into rowgroups in the order it is received.
-* If the batch size is >= 102400, the rows are directly into the compressed rowgroups. It is recommended that you choose a batch size >=102400 for efficient bulk import because you can avoid moving data rows to a delta rowgroups  before the rows are  eventually moved  to compressed rowgroups by a background thread, Tuple mover (TM).
-* If the batch size < 102,400 or if the remaining rows are < 102,400, the rows are loaded into delta rowgroups.
+- Does not pre-sort the data. Data is inserted into rowgroups in the order it is received.
+- If the batch size is >= 102400, the rows are directly into the compressed rowgroups. It is recommended that you choose a batch size >=102400 for efficient bulk import because you can avoid moving data rows to a delta rowgroups before the rows are  eventually moved  to compressed rowgroups by a background thread, Tuple mover (TM).
+- If the batch size < 102,400 or if the remaining rows are < 102,400, the rows are loaded into delta rowgroups.
 
 > [!NOTE]
 > On a rowstore table with a nonclustered columnstore index data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] always inserts data into the base table. The data is never inserted directly into the columnstore index.  
@@ -57,12 +55,13 @@ These scenarios describe when loaded rows go directly to the columnstore or when
 |145,000|145,000<br /><br /> Rowgroup size: 145,000|0|  
 |1,048,577|1,048,576<br /><br /> Rowgroup size: 1,048,576.|1|  
 |2,252,152|2,252,152<br /><br /> Rowgroup sizes: 1,048,576, 1,048,576, 155,000.|0|  
+| &nbsp; | &nbsp; | &nbsp; |
   
  The following example shows the results of loading 1,048,577 rows into a table. The results show that one COMPRESSED rowgroup in the columnstore (as compressed column segments), and 1 row in the deltastore.  
   
 ```sql  
 SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id, 
-  state state_desc, total_rows, deleted_rows, size_in_bytes   
+  state, state_desc, total_rows, deleted_rows, size_in_bytes   
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
@@ -117,5 +116,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## How loading into a partitioned table works  
  For partitioned data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] first assigns each row to a partition, and then performs columnstore operations on the data within the partition. Each partition has its own rowgroups and at least one delta rowgroup.  
   
- ## Next steps
- For further discussion on loading, see this [blog post](http://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx).  
+## Next steps
+
+Blog post now hosted on _techcommunity_, written 2015-03-11: [Data Loading performance considerations with Clustered Columnstore indexes](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223).

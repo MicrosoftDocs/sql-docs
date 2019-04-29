@@ -5,17 +5,14 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services packages, upgrading"
   - "upgrading Integration Services packages"
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Upgrade Integration Services Packages Using the SSIS Package Upgrade Wizard

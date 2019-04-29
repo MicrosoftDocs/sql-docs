@@ -5,18 +5,15 @@ ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "oledb|ole-db-how-to"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
-author: "pmasl"
-ms.author: "Pedro.Lopes"
+author: pmasl
+ms.author: pelopes
 manager: craigg
 ---
 # Use Large CLR UDTs (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -27,11 +24,11 @@ manager: craigg
   
  Compile the first (C#) code listing to a DLL.  Then, copy the DLL to the root directory of the C drive.  
   
- Execute the second ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to add the assembly to the master database.  
+ Execute the second ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to add the assembly to the master database.  
   
  Compile with ole32.lib oleaut32.lib and execute the third (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
   
- Execute the fourth ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the assembly to the master database.  
+ Execute the fourth ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the assembly to the master database.  
   
 ```  
 // compile with: /target: library  

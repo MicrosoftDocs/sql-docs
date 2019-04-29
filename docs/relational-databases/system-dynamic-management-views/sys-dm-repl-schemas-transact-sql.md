@@ -3,10 +3,7 @@ title: "sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "dm_repl_schemas_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_repl_schemas dynamic management function"
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg

@@ -5,16 +5,13 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadoopconn.f1"
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Hadoop Connection Manager
@@ -67,7 +64,7 @@ There are two options to set up the on-premises environment so you can use Kerbe
 
 #### Requirements:
 
--   The gateway computer needs to join the Kerberos realm, and can’t join any Windows domain.
+-   The gateway computer needs to join the Kerberos realm, and can't join any Windows domain.
 
 #### How to configure:
 

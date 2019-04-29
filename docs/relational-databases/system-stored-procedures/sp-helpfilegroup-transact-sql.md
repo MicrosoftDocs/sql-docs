@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_helpfilegroup_TSQL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpfilegroup"
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_helpfilegroup (Transact-SQL)
@@ -38,7 +34,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@filegroupname =** ] **'***name***'**  
+`[ @filegroupname = ] 'name'`
  Is the logical name of any filegroup in the current database. *name* is **sysname**, with a default of NULL. If *name* is not specified, all filegroups in the current database are listed and only the first result set shown in the Result Sets section is displayed.  
   
 ## Return Code Values  

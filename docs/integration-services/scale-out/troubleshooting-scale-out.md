@@ -2,15 +2,12 @@
 title: "Troubleshoot SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
 description: "This article describes how to troubleshoot common issues with SSIS Scale Out"
 ms.custom: performance
-ms.date: "05/09/2018"
+ms.date: 01/09/2019
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-caps.latest.revision: 1
 author: "haoqian"
 ms.author: "haoqian"
 manager: craigg
@@ -35,7 +32,7 @@ To investigate the symptoms you encounter, follow the steps below one by one unt
 
     In SSMS, in Object Explorer, right-click **SSISDB** and check **Scale Out feature is enabled**.
 
-    ![Is Scale Out enabled](media\isenabled.PNG)
+    ![Is Scale Out enabled](media/isenabled.PNG)
 
     If the property value is False, enable Scale Out by calling the stored procedure `[catalog].[enable_scaleout]`.
 
@@ -143,6 +140,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     Value type: **REG_DWORD** 
 
     Value data: **2**
+
+    > [!NOTE]
+    > If you have non-self-signed certificates in the Root certificate store, client certificate authentication fails. For more info, see [Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ).
 
 ## HTTP request error
 

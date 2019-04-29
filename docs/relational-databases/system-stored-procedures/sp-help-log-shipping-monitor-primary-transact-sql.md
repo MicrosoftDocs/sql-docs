@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_log_shipping_monitor_primary"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_log_shipping_monitor_primary"
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
-caps.latest.revision: 21
-author: "stevestein"
-ms.author: "sstein"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # sp_help_log_shipping_monitor_primary (Transact-SQL)
@@ -40,10 +36,10 @@ sp_help_log_shipping_monitor_primary
 ```  
   
 ## Arguments  
- [ **@primary_server =** ] '*primary_server*'  
+`[ @primary_server = ] 'primary_server'`
  The name of the primary instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in the log shipping configuration. *primary_server* is **sysname** and cannot be NULL.  
   
- [ **@primary_database =** ] '*primary_database*'  
+`[ @primary_database = ] 'primary_database'`
  Is the name of the database on the primary server. *primary_database* is **sysname**, with no default.  
   
 ## Return Code Values  

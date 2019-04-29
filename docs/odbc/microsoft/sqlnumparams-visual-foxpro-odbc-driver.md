@@ -5,14 +5,11 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLNumParams function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg

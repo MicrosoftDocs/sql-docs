@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/15/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "GOTO"
@@ -22,7 +19,6 @@ helpviewer_keywords:
   - "statements [SQL Server], skipping"
   - "GOTO statement"
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
-caps.latest.revision: 33
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

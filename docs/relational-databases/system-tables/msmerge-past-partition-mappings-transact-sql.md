@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSmerge_past_partition_mappings"
   - "MSmerge_past_partition_mappings_TSQL"
@@ -21,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_past_partition_mappings system table"
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSmerge_past_partition_mappings (Transact-SQL)
@@ -36,7 +29,7 @@ manager: craigg
 |**publication_number**|**smallint**|The publication number, which is stored in **sysmergepublications**.|  
 |**tablenick**|**int**|The nickname of the published table.|  
 |**rowguid**|**uniqueidentifier**|The row identifier for the given row.|  
-|**partition_id**|**int**|The ID of the partition the row belongs to. The value is –1 if the row change is relevant to all Subscribers.|  
+|**partition_id**|**int**|The ID of the partition the row belongs to. The value is -1 if the row change is relevant to all Subscribers.|  
 |**generation**|**bigint**|The value of the generation in which the partition change occurred.|  
 |**reason**|**tinyint**|Internal-use only.|  
   

@@ -1,22 +1,17 @@
-﻿---
+---
 title: "Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client-ole-db-how-to"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +23,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
  In the source code, when you uncomment #define USE_ISEQSTREAM , the sample will use ISequentialStream. The stream implementation is defined in the sample, and can send any size BLOB data simply by changing MAX_BLOB . Stream data does not have to fit in memory or be available in one block. You call this provider by using IRowsetFastLoad::InsertRow. Pass a pointer using IRowsetFastLoad::InsertRow to the stream implementation in the data buffer (rgBinding.obValue offset) along with the amount of data available to read from the stream. Some providers might not have to know the length of the data when binding occurs. In this case, the length can be omitted from the binding.  
   
- The sample does not use the provider’s stream interface to write data to the provider. Instead, the sample passes a pointer to the stream object that the provider will consume to read the data. Typically, Microsoft providers (SQLOLEDB and SQLNCLI) will read data in 1024-byte chunks from the object until all data has been processed. Neither SQLOLEDB nor SQLNCLI have full implementations for allowing the consumer to write data to the provider's stream object. Only zero length data can be sent through the provider's stream object.  
+ The sample does not use the provider's stream interface to write data to the provider. Instead, the sample passes a pointer to the stream object that the provider will consume to read the data. Typically, Microsoft providers (SQLOLEDB and SQLNCLI) will read data in 1024-byte chunks from the object until all data has been processed. Neither SQLOLEDB nor SQLNCLI have full implementations for allowing the consumer to write data to the provider's stream object. Only zero length data can be sent through the provider's stream object.  
   
  The consumer-implemented ISequentialStream object can be used with rowset data (IRowsetChange::InsertRow, IRowsetChange::SetData) and with parameters by binding a parameter as DBTYPE_IUNKNOWN.  
   
@@ -37,14 +32,14 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
  For more information, see [BLOBs and OLE Objects](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
->  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## Example  
- Execute the first ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to create the table used by the application.  
+ Execute the first ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to create the table used by the application.  
   
  Compile with ole32.lib oleaut32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains sqlncli.h.  
   
- Execute the third ([!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
+ Execute the third ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
   
 ```  
 use master  

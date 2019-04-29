@@ -1,15 +1,9 @@
-﻿---
+---
 title: "Export a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
-ms.component: "data-tier-applications"
-ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
+ms.technology:
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.exportdac.progress.f1"
@@ -26,11 +20,10 @@ helpviewer_keywords:
   - "export DAC"
   - "data-tier application [SQL Server], export"
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
-caps.latest.revision: 20
-author: "stevestein"
-ms.author: "sstein"
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Export a Data-tier Application
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +32,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ## Before You Begin  
  The export process builds a DAC export file in two stages.  
   
-1.  The export builds a DAC definition in the export file – BACPAC file - in the same way a DAC extract builds a DAC definition in a DAC package file. The exported DAC definition includes all of the objects in the current database. If the export process is run against a database that was originally deployed from a DAC, and changes were made directly to the database after deployment, the exported definition matches the object set in the database, not what was defined in the original DAC.  
+1.  The export builds a DAC definition in the export file - BACPAC file - in the same way a DAC extract builds a DAC definition in a DAC package file. The exported DAC definition includes all of the objects in the current database. If the export process is run against a database that was originally deployed from a DAC, and changes were made directly to the database after deployment, the exported definition matches the object set in the database, not what was defined in the original DAC.  
   
 2.  The export bulk copies out the data from all of the tables in the database and incorporates the data into the export file.  
   
@@ -52,7 +45,10 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
  You cannot export a database that has objects that are not supported in a DAC, or contained users. For more information about the types of objects supported in a DAC, see [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
 ###  <a name="Permissions"></a> Permissions  
- Exporting a DAC requires at least ALTER ANY LOGIN and database scope VIEW DEFINITION permissions, as well as SELECT permissions on **sys.sql_expression_dependencies**. Exporting a DAC can be done by members of the securityadmin fixed server role who are also members of the database_owner fixed database role in the database from which the DAC is exported. Members of the sysadmin fixed server role or the built-in SQL Server system administrator account named **sa** can also export a DAC.  
+ Exporting a DAC requires at least ALTER ANY LOGIN and database scope VIEW DEFINITION permissions, as well as SELECT permissions on **sys.sql_expression_dependencies**. Exporting a DAC can be done by members of the securityadmin fixed server role who are also members of the database_owner fixed database role in the database from which the DAC is exported. Members of the sysadmin fixed server role or the built-in SQL Server system administrator account named **sa** can also export a DAC.
+ 
+On Azure SQL DB you need to grant **for each database** VIEW DEFINITION and SELECT permission on all tables or on specific tables
+
   
 ##  <a name="UsingDeployDACWizard"></a> Using the Export Data-tier Application Wizard  
  **To Export a DAC Using a Wizard**  
@@ -63,7 +59,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 3.  Right-click the database name.  
   
-4.  Click **Tasks** and then select **Export Data-tier Application…**  
+4.  Click **Tasks** and then select **Export Data-tier Application...**  
   
 5.  Complete the wizard dialogs:  
   
@@ -88,12 +84,12 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
  **Next** - Proceeds to the **Select DAC Package** page.  
   
- **Cancel** – Cancels the operation and closes the Wizard.  
+ **Cancel** - Cancels the operation and closes the Wizard.  
   
 ##  <a name="Export_settings"></a> Export Settings Page  
  Use this page to specify the location where you want the BACPAC file to be created.  
   
--   **Save to local disk** - Creates a BACPAC file in a directory on the local computer. Click **Browse…** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
+-   **Save to local disk** - Creates a BACPAC file in a directory on the local computer. Click **Browse...** to navigate the local computer, or specify the path in the space provided. The path name must include a file name and the .bacpac extension.  
   
 -   **Save to Windows Azure** - Creates a BACPAC file in a Windows Azure container. You must connect to a Windows Azure container in order to validate this option. Note that this option also requires that you specify a local directory for the temporary file. Note that the temporary file will be created at the specified location and will remain there after the operation completes.  
   
@@ -118,7 +114,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ##  <a name="NetApp"></a> Using a .Net Framework Application  
  **To export a DAC using the Export() method in a .Net Framework application.**  
   
- To view a code example, download the DAC sample application on [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)  
+ To view a code example, download the DAC sample application on [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)  
   
 1.  Create a SMO Server object and set it to the instance that contains the DAC to be exported.  
   

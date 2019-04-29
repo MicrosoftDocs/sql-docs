@@ -5,9 +5,7 @@ ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.datareaderdest.f1"
@@ -15,9 +13,8 @@ helpviewer_keywords:
   - "DataReader destination"
   - "destinations [Integration Services], DataReader"
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
-caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # DataReader Destination
@@ -34,7 +31,7 @@ manager: craigg
   
  For more information about the properties that you can set in the **Advanced Editor** dialog box or programmatically, click one of the following topics:  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [DataReader Destination Custom Properties](../../integration-services/data-flow/datareader-destination-custom-properties.md)  
   

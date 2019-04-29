@@ -4,11 +4,10 @@ ms.date: "05/21/2018"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.suite: "sql"
 ms.custom: ""
 ms.technology: integration-services
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Deploy an SSIS project from the command prompt with ISDeploymentWizard.exe
@@ -41,7 +40,7 @@ To deploy the project to Azure SQL Database, get the connection information you 
 3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 
-## Authentication methods in the Deployment Wizard
+## <a name="wizard_auth"></a> Authentication methods in the Deployment Wizard
 
 If you're deploying to a SQL Server with the Deployment Wizard, you have to use Windows authentication; you can't use SQL Server authentication.
 

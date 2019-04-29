@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syspolicy_delete_policy_execution_history"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_delete_policy_execution_history"
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
-caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_delete_policy_execution_history (Transact-SQL)
@@ -39,10 +35,10 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## Arguments  
- [ **@policy_id=** ] *policy_id*  
+`[ @policy_id = ] policy_id`
  Is the identifier of the policy for which you want to delete the execution history. *policy_id* is **int**, and is required. Can be NULL.  
   
- [ **@oldest_date=** ] **'***oldest_date***'**  
+`[ @oldest_date = ] 'oldest_date'`
  Is the oldest date for which you want to keep policy execution history. Any execution history earlier than this date is deleted. *oldest_date* is **datetime**, and is required. Can be NULL.  
   
 ## Return Code Values  

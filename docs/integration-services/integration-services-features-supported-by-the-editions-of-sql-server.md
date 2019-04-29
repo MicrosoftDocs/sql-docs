@@ -5,14 +5,11 @@ ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
-caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services features supported by the editions of SQL Server

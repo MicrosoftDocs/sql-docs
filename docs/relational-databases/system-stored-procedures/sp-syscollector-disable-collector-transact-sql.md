@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syscollector_disable_collector_TSQL"
@@ -19,7 +16,6 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_disable_collector"
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
-caps.latest.revision: 17
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

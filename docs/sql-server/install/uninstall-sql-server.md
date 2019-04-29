@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: install
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT

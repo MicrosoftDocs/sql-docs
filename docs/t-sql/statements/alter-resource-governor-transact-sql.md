@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "05/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER RESOURCE GOVERNOR"
@@ -21,9 +18,8 @@ helpviewer_keywords:
   - "ALTER RESOURCE GOVERNOR"
   - "RECONFIGURE, ALTER RESOURCE GOVERNOR"
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-caps.latest.revision: 49
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # ALTER RESOURCE GOVERNOR (Transact-SQL)
@@ -86,7 +82,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  ALTER RESOURCE GOVERNOR RECONFIGURE must be issued in order for any configuration changes to take effect.  
   
- CLASSIFIER_FUNCTION = { *schema_name***.***function_name* | NULL }  
+ CLASSIFIER_FUNCTION = { _schema_name_**.**_function_name_ | NULL }  
  Registers the classification function specified by *schema_name.function_name*. This function classifies every new session and assigns the session requests and queries to a workload group. When NULL is used, new sessions are automatically assigned to the default workload group.  
   
  RESET STATISTICS  

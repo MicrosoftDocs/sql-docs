@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_link_publication_TSQL"
   - "sp_link_publication"
 helpviewer_keywords: 
   - "sp_link_publication"
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_link_publication (Transact-SQL)
@@ -29,10 +22,10 @@ manager: craigg
 
   Sets the configuration and security information used by synchronization triggers of immediate updating subscriptions when connecting to the Publisher. This stored procedure is executed at the Subscriber on the subscription database.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  When configuring a Publisher with a remote Distributor, the values supplied for all parameters, including *job_login* and *job_password*, are sent to the Distributor as plain text. You should encrypt the connection between the Publisher and its remote Distributor before executing this stored procedure. For more information, see [Enable Encrypted Connections to the Database Engine &#40;SQL Server Configuration Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
-  
-> [!IMPORTANT]  
+> 
+> [!IMPORTANT]
 >  Under certain conditions, this stored procedure can fail if the Subscriber is running [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 or later, and the Publisher is running an earlier version. If the stored procedure fails in this scenario, upgrade the Publisher to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 or later.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -51,16 +44,16 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher**= ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher to link to. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db**= ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database to link to. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to link to. *publication* is **sysname**, with no default.  
   
- [ **@security_mode**= ] *security_mode*  
+`[ @security_mode = ] security_mode`
  Is the security mode used by the Subscriber to connect to a remote Publisher for immediate updating. *security_mode* is **int**, and can be one of these values. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Value|Description|  
@@ -69,13 +62,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Uses the security context ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication or Windows Authentication) of the user making the change at the Subscriber.<br /><br /> Note: This account must also exist at the Publisher with sufficient privileges. When using Windows Authentication, security account delegation must be supported.|  
 |**2**|Uses an existing, user-defined linked server login created using **sp_link_publication**.|  
   
- [ **@login**= ] **'***login***'**  
+`[ @login = ] 'login'`
  Is the login. *login* is **sysname**, with a default of NULL. This parameter must be specified when *security_mode* is **0**.  
   
- [ **@password**= ] **'***password***'**  
+`[ @password = ] 'password'`
  Is the password. *password* is **sysname**, with a default of NULL. This parameter must be specified when *security_mode* is **0**.  
   
- [ **@distributor=** ] **'***distributor***'**  
+`[ @distributor = ] 'distributor'`
  Is the name of the Distributor. *distributor* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

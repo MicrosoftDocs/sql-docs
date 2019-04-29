@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLServerClob.setString (long, java.lang.String, int, int)"
@@ -15,7 +13,6 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

@@ -1,14 +1,11 @@
-﻿---
+---
 title: "SWITCHOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/02/2015"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "SWITCHTZ"
@@ -24,11 +21,10 @@ helpviewer_keywords:
   - "date and time [SQL Server], SWITCHOFFSET"
   - "time zones [SQL Server]"
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

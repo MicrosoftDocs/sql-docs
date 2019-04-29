@@ -1,13 +1,11 @@
 ---
 title: "Restore and Recovery Overview (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: backup-restore
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "restoring tables [SQL Server]"
@@ -20,9 +18,8 @@ helpviewer_keywords:
   - "restoring databases [SQL Server], about restoring databases"
   - "database restores [SQL Server], scenarios"
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-caps.latest.revision: 46
-author: MikeRayMSFT
-ms.author: mikeray
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 ---
 # Restore and Recovery Overview (SQL Server)
@@ -149,10 +146,25 @@ manager: craigg
   
  For more information, see about the Database Recovery Advisor, see the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability blogs:  
   
--   [Recovery Advisor: An Introduction](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Recovery Advisor: Using SSMS to create/restore split backups](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+-   [Recovery Advisor: Using SSMS to create/restore split backups](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+
+## <a name="adr"></a> Accelerated database recovery
+
+C introduces [Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) for SQL Server on premises. Accelerated database recovery greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process. [Database recovery](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) is the process SQL Server uses for each database to start at a transactionally consistent - or clean - state. A database, with accelerated database recovery enabled, completes recovery significantly faster after a fail over or other non-clean shutdown. 
+
+You can enable accelerated database recovery per-database on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 or later using the following syntax:
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> This syntax is not required to take advantage of this feature in Azure SQL DB, where it is on by default.
+
+If you have critical databases that are prone to large transactions, experiment with this feature during the preview. Provide feedback to [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] team](<https://aka.ms/sqlfeedback>).
+
 ##  <a name="RelatedContent"></a> Related Content  
  None.  
   

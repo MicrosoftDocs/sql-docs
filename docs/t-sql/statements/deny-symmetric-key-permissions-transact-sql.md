@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -20,9 +17,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], symmetric keys"
   - "cryptography [SQL Server], symmetric keys"
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DENY Symmetric Key Permissions (Transact-SQL)

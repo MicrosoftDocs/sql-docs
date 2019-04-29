@@ -1,13 +1,11 @@
-﻿---
+---
 title: "View the Dependencies of a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "table-view-index, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "table dependencies [SQL Server]"
@@ -15,16 +13,15 @@ helpviewer_keywords:
   - "displaying dependences"
   - "viewing dependencies"
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Dependencies of a Table
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  You can view a table’s dependencies in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  You can view a table's dependencies in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  
   
@@ -32,7 +29,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
      [Security](#Security)  
   
--   **To view a table’s dependencies, using:**  
+-   **To view a table's dependencies, using:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -53,7 +50,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 2.  Right-click a table, and then click **View Dependencies**.  
   
-3.  In the **Object Dependencies***\<object name>* dialog box, select either **Objects that depend on** *\<object name>*, or **Objects on which***\<object name>***depends**.  
+3.  In the **Object Dependencies**_\<object name\>_ dialog box, select either **Objects that depend on** _\<object name\>_, or **Objects on which**_\<object name\>_**depends**.  
   
 4.  Select an object in the **Dependencies** grid. The type of object (such as "Trigger" or "Stored Procedure"), appears in the **Type** box.  
   

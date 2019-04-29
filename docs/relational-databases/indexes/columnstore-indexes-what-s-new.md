@@ -5,14 +5,12 @@ ms.date: "03/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: table-view-index
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - what&#39;s new
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +72,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 -   Columnstore indexes support read committed snapshot isolation level (RCSI) and snapshot isolation (SI). This enables transactional consistent analytics queries with no locks.  
   
--   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The `ALTER INDEX … REORGANIZE` statement removes deleted rows, based on an internally defined policy, from the columnstore as an online operation  
+-   Columnstore supports index defragmentation by removing deleted rows without the need to explicitly rebuild the index. The `ALTER INDEX ... REORGANIZE` statement removes deleted rows, based on an internally defined policy, from the columnstore as an online operation  
   
 -   Columnstore indexes can be access on an AlwaysOn readable secondary replica. You can improve performance for operational analytics by offloading analytics queries to an AlwaysOn secondary replica.  
   
@@ -95,6 +93,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
 ### Supportability  
 These system views are new for columnstore:  
+
 ||| 
 |-|-|
 |[sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_column_store_object_pool &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
@@ -103,6 +102,7 @@ These system views are new for columnstore:
 |[sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)||  
   
 These in-memory OLTP-based DMVs contain updates for columnstore:  
+
 ||| 
 |-|-|
 |[sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql.md)|[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)|  

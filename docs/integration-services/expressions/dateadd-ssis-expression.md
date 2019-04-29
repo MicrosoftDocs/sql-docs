@@ -5,18 +5,15 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dates [Integration Services], DATEADD"
   - "dates [Integration Services]"
   - "DATEADD function"
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # DATEADD (SSIS Expression)

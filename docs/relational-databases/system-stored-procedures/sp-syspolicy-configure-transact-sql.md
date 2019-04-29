@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_syspolicy_configure"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_syspolicy_configure"
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
-caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # sp_syspolicy_configure (Transact-SQL)
@@ -39,7 +35,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name =** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the setting that you want to configure. *name* is **sysname**, is required, and cannot be NULL or an empty string.  
   
  *name* can be any of the following values:  
@@ -50,7 +46,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Specifies whether Policy-Based Management logs successful policy evaluations.  
   
- [ **@value =** ] *value*  
+`[ @value = ] value`
  Is the value that is associated with the specified value for *name*. *value* is **sql_variant**, and is required.  
   
 -   If you specify 'Enabled' for *name*, you can use either of the following values:  

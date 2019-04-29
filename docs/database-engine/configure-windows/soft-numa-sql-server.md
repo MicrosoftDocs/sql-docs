@@ -5,9 +5,7 @@ ms.date: "02/13/2018"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: configuration
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "NUMA"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "non-uniform memory access"
   - "soft-NUMA"
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
-caps.latest.revision: 53
 author: "CarlRabeler"
 ms.author: "carlrab"
 manager: craigg
@@ -31,11 +28,11 @@ Modern processors have multiple cores per socket. Each socket is represented, us
 > Hot-add processors are not supported by soft-NUMA.  
   
 ## Automatic Soft-NUMA  
- With [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], whenever the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  detects more than eight physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. Hyper-threaded processor cores are not differentiated when counting physical cores in a node.  When the detected number of physical cores is more than eight per socket, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] creates soft-NUMA nodes that ideally contain eight cores, but can go down to five or up to nine logical cores per node. The size of the hardware node can be limited by a CPU affinity mask. The number of NUMA nodes never exceeds the maximum number of supported NUMA nodes.  
+With [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], whenever the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  detects more than eight physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. Hyper-threaded processor cores are not differentiated when counting physical cores in a node.  When the detected number of physical cores is more than eight per socket, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] creates soft-NUMA nodes that ideally contain eight cores, but can go down to five or up to nine logical cores per node. The size of the hardware node can be limited by a CPU affinity mask. The number of NUMA nodes never exceeds the maximum number of supported NUMA nodes.  
   
- You can disable or re-enable soft-NUMA using the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the `SET SOFTNUMA` argument. Changing the value of this setting requires a restart of the database engine to take effect.  
+You can disable or re-enable soft-NUMA using the [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) statement with the `SET SOFTNUMA` argument. Changing the value of this setting requires a restart of the database engine to take effect.  
   
- The figure below shows the type of information regarding soft-NUMA that you see in the SQL Server error log, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detects hardware NUMA nodes with greater than eight physical cores per each node or socket.  
+The figure below shows the type of information regarding soft-NUMA that you see in the SQL Server error log, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detects hardware NUMA nodes with greater than eight physical cores per each node or socket.  
 
 
 ```
@@ -46,6 +43,9 @@ Modern processors have multiple cores per socket. Each socket is represented, us
 2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
 ```   
+
+> [!NOTE]
+> Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use trace flag 8079 to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use Automatic Soft-NUMA. Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] this behavior is controlled by the engine and trace flag 8079 has no effect. For more information, see [DBCC TRACEON - Trace Flags](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ## Manual Soft-NUMA  
 To manually configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to use soft-NUMA, disable automatic soft-NUMA, and edit the registry to add a node configuration affinity mask. When using this method, the soft-NUMA mask can be stated as a binary, DWORD (hexadecimal or decimal), or QWORD (hexadecimal or decimal) registry entry. To configure more than the first 32 CPUs use QWORD or BINARY registry values (QWORD values cannot be used prior to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). After modifying the registry, you must restart the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for the soft-NUMA configuration to take effect.  
@@ -67,7 +67,7 @@ Consider the example of a computer with eight CPUs, that does not have hardware 
   
  Instance A, which experiences significant I/O, now has two I/O threads and one lazy writer thread. Instance B, which performs processor-intensive operations, has only one I/O thread and one lazy writer thread. Differing amounts of memory can be assigned to the instances, but unlike hardware NUMA, they both receive memory from the same operating system memory block, and there is no memory-to-processor affinity.  
   
- The lazy writer thread is tied to the SQLOS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as the number of physical NUMA nodes, this will be the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](http://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ The lazy writer thread is tied to the SQLOS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as the number of physical NUMA nodes, this will be the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]
 > The **Soft-NUMA** registry keys are not copied when you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

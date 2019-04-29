@@ -1,21 +1,16 @@
-﻿---
+---
 title: "CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
-ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
@@ -33,18 +28,18 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
   
 ```  
 Creating a new diagnostics session:  
-CREATE DIAGNOSTICS SESSION diagnostics_name AS N’{<session_xml>}’;  
+CREATE DIAGNOSTICS SESSION diagnostics_name AS N'{<session_xml>}';  
   
 <session_xml>::  
 <Session>  
    [ <MaxItemCount>max_item_count_num</MaxItemCount> ]  
    <Filter>  
-      { \<Event Name=”event_name”/>  
-         [ <Where>\<filter_property_name Name=”value” ComparisonType="comp_type"/></Where> ] [ ,...n ]  
+      { \<Event Name="event_name"/>  
+         [ <Where>\<filter_property_name Name="value" ComparisonType="comp_type"/></Where> ] [ ,...n ]  
       } [ ,...n ]  
    </Filter> ]   
    <Capture>  
-      \<Property Name=”property_name”/> [ ,...n ]  
+      \<Property Name="property_name"/> [ ,...n ]  
    </Capture>  
 <Session>  
   
@@ -63,7 +58,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  The number of events to be persisted in a view. For example, if 100 is specified, the 100 most recent events matching the filter criteria will be persisted to the diagnostics session. If fewer than 100 matching events are found, the diagnostics session will contain less than 100 events. *max_item_count_num* must be at least 100 and less than or equal to 100,000.  
   
  *event_name*  
- Defines the actual events to be collected in the diagnostics session.  *event_name* is one of the events listed in [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) where `sys.pdw_diag_events.is_enabled='True'`.  
+ Defines the actual events to be collected in the diagnostics session.  *event_name* is one of the events listed in [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md) where `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
  The name of the property on which to restrict results. For example, if you want to limit based on session id, *filter_property_name* should be *SessionId*. See *property_name* below for a list of potential values for *filter_property_name*.  
@@ -89,7 +84,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |SPID|The Service Process ID.|  
   
 ## Remarks  
- Each user is allowed a maximum of 10 concurrent diagnostics sessions. See [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) for a list of your current sessions, and drop any unneeded sessions using `DROP DIAGNOSTICS SESSION`.  
+ Each user is allowed a maximum of 10 concurrent diagnostics sessions. See [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) for a list of your current sessions, and drop any unneeded sessions using `DROP DIAGNOSTICS SESSION`.  
   
  Diagnostics sessions will continue to collect metadata until dropped.  
   

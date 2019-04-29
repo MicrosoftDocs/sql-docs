@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apitype: "COM"
 f1_keywords: 
@@ -16,7 +14,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "FetchProgress event [ADO]"
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg

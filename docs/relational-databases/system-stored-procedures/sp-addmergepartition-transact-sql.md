@@ -4,24 +4,17 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "sp_addmergepartition"
   - "sp_addmergepartition_TSQL"
 helpviewer_keywords: 
   - "sp_addmergepartition"
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # sp_addmergepartition (Transact-SQL)
@@ -41,13 +34,13 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the merge publication on which the partition is being created. *publication* is **sysname**, with no default. If *suser_sname* is specified, the value of *hostname* must be NULL.  
   
- [ **@suser_sname**= ] **'***suser_sname***'**  
+`[ @suser_sname = ] 'suser_sname'`
  Is the value used when creating the partition for a subscription that is filtered by the value of the [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) function at the Subscriber. *suser_sname* is **sysname**, with no default.  
   
- [ **@host_name**= ] **'***host_name***'**  
+`[ @host_name = ] 'host_name'`
  Is the value used when creating the partition for a subscription that is filtered by the value of the [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) function at the Subscriber. *host_name* is **sysname**, with no default.  
   
 ## Return Code Values  

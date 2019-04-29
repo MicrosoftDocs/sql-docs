@@ -6,14 +6,11 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "editing data [ADO], edit mode"
   - "ADO, editing data"
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg

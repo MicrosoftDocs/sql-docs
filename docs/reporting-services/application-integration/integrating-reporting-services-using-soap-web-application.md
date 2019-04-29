@@ -1,19 +1,12 @@
 ---
 title: "Using the SOAP API in a Web Application | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "application-integration"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: application-integration
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-applies_to: 
-  - "SQL Server 2016 Preview"
+ms.topic: reference
 helpviewer_keywords: 
   - "SOAP [Reporting Services], Web applications"
   - "impersonation [Reporting Services]"
@@ -21,10 +14,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], SOAP"
   - "Web applications [Reporting Services]"
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
-caps.latest.revision: 34
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Integrating Reporting Services Using SOAP - Web Application
   You can access the full functionality of the report server through the Reporting Services SOAP API. Because it's a Web service, the SOAP API can be easily accessed to provide enterprise reporting features to your custom business applications. You access the Report Server Web service from a Web application in much the same way that you access the SOAP API from a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows application. Using the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], you can generate a proxy class that exposes the properties and methods of the Report Server Web service and enables you to use a familiar infrastructure and tools to build business applications on [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] technology.  
@@ -88,7 +79,7 @@ private void Page_Load(object sender, System.EventArgs e)
 ## See Also  
  [Building Applications Using the Web Service and the .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Report Manager  &#40;SSRS Native Mode&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Report Manager  &#40;SSRS Native Mode&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Using the SOAP API in a Windows Application](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  
   
   

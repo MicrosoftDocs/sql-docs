@@ -5,17 +5,13 @@ ms.date: "04/01/2016"
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "explicit hierarchies, about explicit hierarchies"
   - "hierarchies [Master Data Services], explicit hierarchies"
   - "explicit hierarchies"
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg

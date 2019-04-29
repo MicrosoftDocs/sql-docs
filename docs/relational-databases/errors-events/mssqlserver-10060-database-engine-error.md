@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "10060"
 helpviewer_keywords: 
   - "10060 (Database Engine error)"
 ms.assetid: 28c21277-cad8-406c-a955-07933a56982a
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg

@@ -1,21 +1,16 @@
-﻿---
+---
 title: "sys.dm_pdw_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
-ms.service: "sql-data-warehouse"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
@@ -30,7 +25,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |type|**nvarchar(32)**|Type of the node.|'COMPUTE', 'CONTROL',  'MANAGEMENT'|  
 |name|**nvarchar(32)**|Logical name of the node.|Any string of appropriate length.|  
 |address|**nvarchar(32)**|IP address of this node.|In the format of [0-255].[0-255].[0-255].[0-255].|  
-|is_passive|**int**|Indicates whether the virtual machine running the node is running on the assigned server or has failed over to the spare server.|0 – node VM is running on the original server.<br /><br /> 1 – node VM is running on the spare server.|  
+|is_passive|**int**|Indicates whether the virtual machine running the node is running on the assigned server or has failed over to the spare server.|0 - node VM is running on the original server.<br /><br /> 1 - node VM is running on the spare server.|  
 |region|**nvarchar(32)**|The region where the node is running.|'PDW', 'HDINSIGHT'|  
   
 ## See Also  

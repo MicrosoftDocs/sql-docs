@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_audit_write"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_audit_write"
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: "stevestein"
+ms.author: "sstein"
 manager: craigg
 ---
 # sp_audit_write (Transact-SQL)
@@ -33,22 +29,21 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
-sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,   
-        [ @succeeded =  succeeded   
-    [ , [ @user_defined_information =  ] 'user_defined_information' ]   
-    [ ; ]  
+sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
+    [ , [ @succeeded = ] succeeded ]
+    [ , [ @user_defined_information = ] 'user_defined_information' ]
+    [ ; ]
 ```  
   
 ## Arguments  
- **@user_defined_event_id**  
+ `[ @user_defined_event_id = ] user_defined_event_id`  
  A parameter defined by the user and recorded in the **user_defined_event_id** column of the audit log. *@user_defined_event_id* is type **smallint**.  
   
- **@succeeded**  
- A parameter passed by user to indicate whether the event was successful or not. This appears in the succeeded column of the audit log. *@succeeded* is **bit**.  
+ `[ @succeeded = ] succeeded`  
+ A parameter passed by user to indicate whether the event was successful or not. This appears in the succeeded column of the audit log. `@succeeded` is **bit**.  
   
- **@user_defined_information**  
- Is the text defined by the user and recorded in the new user_defined_event_id column of the audit log. *@user_defined_information* is **nvarchar(4000)**.  
+ `[ @user_defined_information = ] 'user_defined_information'`  
+ Is the text defined by the user and recorded in the new user_defined_event_id column of the audit log. `@user_defined_information` is **nvarchar(4000)**.  
   
 ## Return Code Values  
  0 (success) or 1 (failure)  

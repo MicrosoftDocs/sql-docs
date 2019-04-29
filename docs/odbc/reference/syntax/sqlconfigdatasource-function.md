@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 apiname: 
   - "SQLConfigDataSource"
@@ -19,7 +17,6 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLConfigDataSource function [ODBC]"
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -38,10 +35,10 @@ manager: craigg
 ```  
   
 BOOL SQLConfigDataSource(  
-     HWND     hwndParent,  
-     WORD     fRequest,  
-     LPCSTR   lpszDriver,  
-     LPCSTR   lpszAttributes);  
+     HWND     hwndParent,  
+     WORD     fRequest,  
+     LPCSTR   lpszDriver,  
+     LPCSTR   lpszAttributes);  
 ```  
   
 ## Arguments  

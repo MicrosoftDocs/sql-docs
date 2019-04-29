@@ -1,12 +1,11 @@
 ---
-title: "Manually Prepare a Secondary Database for an Availability Group (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Prepare a secondary database for an availability group"
+description: "A description for how to manually prepare a secondary database to join an Always On availability group."
+ms.custom: "seodec18"
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: high-availability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.availabilitygroup.preparedbs.f1"
@@ -17,12 +16,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], configuring"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ---
-# Manually prepare a database for an Availability Group (SQL Server)
+# Prepare a secondary database for an Always On availability group
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 This topic describes how to prepare a database for an Always On availability group in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell. Preparing a database requires two steps: 
 
@@ -190,36 +188,36 @@ This topic describes how to prepare a database for an Always On availability gro
         GO  
         ```  
   
-5.  After you restore the full backup, you must create a log backup on the primary database. For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement backs up the log to the a backup file named *E:\MyDB1_log.bak*:  
+5.  After you restore the full backup, you must create a log backup on the primary database. For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement backs up the log to the a backup file named *E:\MyDB1_log.trn*:  
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
 6.  Before you can join the database to the secondary replica, you must apply the required log backup (and any subsequent log backups).  
   
-     For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores the first log from *C:\MyDB1.bak*:  
+     For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores the first log from *C:\MyDB1.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  
   
 7.  If any additional log backups occur before the database joins the secondary replica, you must also restore all of those log backups, in sequence, to the server instance that hosts the secondary replica using RESTORE WITH NORECOVERY.  
   
-     For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores two additional logs from *E:\MyDB1_log.bak*:  
+     For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement restores two additional logs from *E:\MyDB1_log.trn*:  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  
@@ -255,7 +253,7 @@ Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\ba
 # Restore database backup   
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
 # Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery –ServerInstance "DestinationMachine\Instance"  
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
   
 ```  
   

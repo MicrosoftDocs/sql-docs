@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -17,7 +15,6 @@ helpviewer_keywords:
   - "MoveFirst method [ADO], Visual Basic example"
   - "MoveNext method [ADO], Visual Basic example"
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

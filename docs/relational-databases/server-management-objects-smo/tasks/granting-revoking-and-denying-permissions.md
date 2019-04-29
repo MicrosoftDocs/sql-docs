@@ -1,15 +1,12 @@
-﻿---
+---
 title: "Granting, Revoking, and Denying Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "smo"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 helpviewer_keywords: 
   - "granting permissions [SMO]"
@@ -17,11 +14,10 @@ helpviewer_keywords:
   - "permissions [SMO]"
   - "revoking permissions [SMO]"
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-caps.latest.revision: 24
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
-monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Granting, Revoking, and Denying Permissions
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +32,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || >= sql-server-201
 ## Granting Server Permissions in Visual Basic  
  This code example grants the Create Endpoint and Alter Any Endpoint permissions to the specified login, and then enumerates and displays the permissions. One of the permissions is revoked, and then the permissions are enumerated again. This example assumes that the specified login has the specified permissions to start with.  
   
-```  
+```VBNET  
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -115,7 +111,7 @@ End Class
 ## Granting Server Permissions in Visual C#  
  This code example grants the Create Endpoint and Alter Any Endpoint permissions to the specified login, and then enumerates and displays the permissions. One of the permissions is revoked, and then the permissions are enumerated again. This example assumes that the specified login has the specified permissions to start with.  
   
-```  
+```csharp  
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -195,7 +191,7 @@ public class A {
 ## Granting Server Permissions in PowerShell  
  This code example grants the Create Endpoint and Alter Any Endpoint permissions to the specified login, and then enumerates and displays the permissions. One of the permissions is revoked, and then the permissions are enumerated again. This example assumes that the specified login has the specified permissions to start with.  
   
-```  
+```powershell  
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  

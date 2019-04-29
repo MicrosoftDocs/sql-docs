@@ -1,22 +1,15 @@
 ---
 title: "Subscription Settings and a File Share Account (Configuration Manager) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
+ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "SQL13.rsconfigtool.subscriptionsettings.F1"
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
-caps.latest.revision: 13
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Subscription Settings and a File Share Account (Configuration Manager)
   Use the **Subscription Settings** page of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to configure a file share account for Native mode report servers and file share subscriptions. The file share account allows you to use a single set of credentials in multiple subscriptions that deliver reports to a file share. When it is time to change the credentials, you configure the change for the file share account and you do not need to update each individual subscription.  
@@ -45,7 +38,7 @@ manager: "kfile"
 > [!IMPORTANT]
 > The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account controls subscription delivery and interacts with the account used for file share subscriptions. Windows security features restrict combinations of 1) the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account and 2) the account used for file share accounts. For example, if a built-in operating system account is used for the file share account, then the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account must be another service account with impersonation permissions. If an explicit file share account and password is configured, then the file share account requires the right to logon on to the computer running the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service. If the file share account does not have the required permissions, subscriptions using the file share account will fail with an error message similar to the following:  
 >   
->  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
+>  `"Failure writing file {file} : An impersonation error occurred using the security context of the current user."`  
   
 ## PowerShell sample to audit use of the file share account  
  Run the following Windows PowerShell script to list all [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscriptions that are configured to use the **File share account**. Update `SERVERNAME` to an appropriate value for your report server.  
@@ -75,7 +68,7 @@ filter script:extensionSettingFilter
     }  
 }  
   
-$rs2010 = New-WebServiceProxy -Uri "http:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
   
 Write-Host "----- File share subscriptions using the default file share account ----";  

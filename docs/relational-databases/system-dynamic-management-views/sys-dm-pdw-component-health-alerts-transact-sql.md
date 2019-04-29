@@ -1,16 +1,12 @@
-﻿---
+---
 title: "sys.dm_pdw_component_health_alerts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
+ms.technology: data-warehouse
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg

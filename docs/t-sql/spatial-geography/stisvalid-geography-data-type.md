@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
   - "STIsValid method (geography)"
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
-caps.latest.revision: 11
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

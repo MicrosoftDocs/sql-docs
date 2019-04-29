@@ -4,18 +4,14 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "self-joins"
   - "manual joins [SQL Server]"
   - "joins [SQL Server], self"
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
-caps.latest.revision: 4
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -117,7 +113,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Right-click the join line and choose **Properties** from the shortcut menu.  
   
-4.  In the Properties window click **Join Condition and Type** and click the **ellipses (…)** to the right of the property.  
+4.  In the Properties window click **Join Condition and Type** and click the **ellipses (...)** to the right of the property.  
   
 5.  In the [Join Dialog Box](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) change the comparison operator between the primary keys as required. For example, you might change the operator to less than (<).  
   

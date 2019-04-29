@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: supportability
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 keywords: 
   - "Data Collection"
@@ -15,7 +13,6 @@ helpviewer_keywords:
   - "data collector [SQL Server], Transact-SQL"
   - "data collector [SQL Server], SQL Server Management Studio"
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
@@ -62,7 +59,7 @@ manager: craigg
   
 >**IMPORTANT!!** Unlike regular stored procedures, the data collector stored procedures use strictly typed parameters and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
   
- Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create and execute the provided code samples. For more information, see [Object Explorer](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2). As an alternative you can create the query in any editor and save it in a text file that has a .sql file name extension. You can execute the query from the Windows command prompt using the **sqlcmd** utility. For more information, see [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
+ Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to create and execute the provided code samples. For more information, see [Object Explorer](../../ssms/object/object-explorer.md). As an alternative you can create the query in any editor and save it in a text file that has a .sql file name extension. You can execute the query from the Windows command prompt using the **sqlcmd** utility. For more information, see [Use the sqlcmd Utility](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
 ### Stored Procedures and Views  
  **Working with the data collector**  
@@ -171,7 +168,7 @@ manager: craigg
   
 ## See also  
  [Execute a Stored Procedure](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)   
- [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
+ [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)   
  [Data Collection](../../relational-databases/data-collection/data-collection.md)  
   
   

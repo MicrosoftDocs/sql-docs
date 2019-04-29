@@ -4,17 +4,11 @@ ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssma
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
-applies_to: 
-  - "Azure SQL Database"
-  - "SQL Server"
 helpviewer_keywords: 
   - "Find Databases Wizard"
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-caps.latest.revision: 13
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: craigg
@@ -22,7 +16,7 @@ manager: craigg
 # Find Databases Wizard (Select Locations) (AccessToSQL)
 On the Select Locations page of the Find Databases Wizard, you enter the search parameters for finding Access databases.  
   
-To open the Find Databases Wizard, on the **File** menu, click **Find Databases**. For more information about how to use this dialog box, see [Adding and Removing Access Database Files](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+To open the Find Databases Wizard, on the **File** menu, click **Find Databases**. For more information about how to use this dialog box, see [Adding and Removing Access Database Files](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## Options  
 **Browse**  
@@ -59,6 +53,6 @@ To find databases that match a size criteria, select a comparison character in t
 Enter the full Windows user name of the owner. This might be formatted as *domain*\\*user*.  
   
 ## See Also  
-[Adding and Removing Access Database Files](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
-[User Interface Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Adding and Removing Access Database Files](adding-and-removing-access-database-files-accesstosql.md)  
+[User Interface Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

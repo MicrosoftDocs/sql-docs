@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "t-sql|spatial-geography"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "STDisjoint_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "STDisjoint (geometry Data Type)"
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
-caps.latest.revision: 19
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: craigg

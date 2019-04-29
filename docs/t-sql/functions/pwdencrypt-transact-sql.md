@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|functions"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "PWDENCRYPT"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "PWDENCRYPT function [Transact-SQL]"
 ms.assetid: 333e9a43-1099-4b9b-b941-4b0b016f47f3
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # PWDENCRYPT (Transact-SQL)

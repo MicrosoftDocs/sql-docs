@@ -5,9 +5,7 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "application upgrades [ODBC], SQLCloseCursor"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "upgrading applications [ODBC], SQLCloseCursor"
   - "compatibility [ODBC], SQLCloseCursor"
 ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg

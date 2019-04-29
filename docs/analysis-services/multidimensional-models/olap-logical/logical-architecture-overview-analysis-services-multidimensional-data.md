@@ -14,7 +14,7 @@ manager: kfile
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services operates in a server deployment mode that determines the memory architecture and runtime environment used by different types of Analysis Services models. Server mode is determined during installation. **Multidimensional and Data Mining mode** supports traditional OLAP and data mining. **Tabular mode** supports tabular models. **SharePoint integrated mode** refers to an instance of Analysis Services that was installed as [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint, used for loading and querying Excel or [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] data models inside a workbook.  
   
- This topic explains the basic architecture of Analysis Services when operating in Multidimensional and Data Mining mode. For more information about other modes, see [Tabular Modeling ](../../../analysis-services/tabular-models/tabular-models-ssas.md) and [Comparing Tabular and Multidimensional Solutions ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ This topic explains the basic architecture of Analysis Services when operating in Multidimensional and Data Mining mode. For more information about other modes, see [Tabular Modeling](../../../analysis-services/tabular-models/tabular-models-ssas.md) and [Comparing Tabular and Multidimensional Solutions](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## Basic Architecture  
  An instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] can contain multiple databases, and a database can have OLAP objects and data mining objects at the same time. Applications connect to a specified instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] and a specified database. A server computer can host multiple instances of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Instances of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] are named as "\<ServerName>\\<InstanceName\>". The following illustration shows all mentioned relationships between [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects.  
@@ -37,7 +37,7 @@ manager: kfile
  Each database object contains one or more cube objects. A cube is defined by its measures and dimensions. The measures and dimensions in a cube are derived from the tables and views in the data source view on which the cube is based, or which is generated from the measure and dimension definitions.  
   
 ## Object Inheritance  
- The ASSL object model contains many repeated element groups. For example, the element group, “**Dimensions** contain **Hierarchies**,” defines the dimension hierarchy of an element. Both **Cubes** and **MeasureGroups** contain the element group, "**Dimensions** contain **Hierarchies**."  
+ The ASSL object model contains many repeated element groups. For example, the element group, "**Dimensions** contain **Hierarchies**," defines the dimension hierarchy of an element. Both **Cubes** and **MeasureGroups** contain the element group, "**Dimensions** contain **Hierarchies**."  
   
  Unless explicitly overridden, an element inherits the details of these repeated element groups from the higher level. For example, the **Translations** for a **CubeDimension** are the same as the **Translations** for its ancestor element, **Cube**.  
   
@@ -63,7 +63,7 @@ manager: kfile
  The Route dimension represents the means by which the imports reach their destination. Members of this dimension include ground, nonground, air, sea, road, or rail. The Source dimension represents the locations where the imports are produced, such as Africa or Asia. The Time dimension represents the quarters and halves of a single year.  
   
 ### Aggregates  
- Business users of a cube can determine the value of any measure for each member of every dimension, regardless of the level of the member within the dimension, because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggregates values at upper levels as needed. For example, the measure values in the preceding illustration can be aggregated according to a standard calendar hierarchy by using the Calendar Time hierachy in the Time dimension as illustrated in the following diagram.  
+ Business users of a cube can determine the value of any measure for each member of every dimension, regardless of the level of the member within the dimension, because [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aggregates values at upper levels as needed. For example, the measure values in the preceding illustration can be aggregated according to a standard calendar hierarchy by using the Calendar Time hierarchy in the Time dimension as illustrated in the following diagram.  
   
  ![Diagram of measures organized along time dimension](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro2.gif "Diagram of measures organized along time dimension")  
   
@@ -115,6 +115,6 @@ manager: kfile
  The example shown here contains only a single fact table. When a cube has multiple fact tables, the measures from each fact table are organized into measure groups, and a measure group is related to a specific set of dimensions by defined dimension relationships. These relationships are defined by specifying the participating tables in the data source view and the granularity of the relationship. **Related topic:**[Dimension Relationships](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## See Also  
- [Multidimensional Model Databases ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Multidimensional Model Databases](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

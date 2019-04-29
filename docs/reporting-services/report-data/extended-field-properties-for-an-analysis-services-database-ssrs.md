@@ -1,29 +1,22 @@
 ---
 title: "Extended Field Properties for an Analysis Services Database (SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-data"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-data
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-caps.latest.revision: 7
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Extended Field Properties for an Analysis Services Database (SSRS)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data processing extension supports extended field properties. Extended field properties are properties in addition to the field properties **Value** and **IsMissing** that are available on the data source and supported by the data processing extension. Extended properties do not appear in the Report Data pane as part of the field collection for a report dataset. You can include extended field property values in your report by writing expressions that specify them by name using the built-in **Fields** collection.  
   
  Extended properties include predefined properties and custom properties. Predefined properties are properties common to multiple data sources that are mapped to specific field property names and can be accessed through the built-in **Fields** collection by name. Custom properties are specific to each data provider and can be accessed through the built-in **Fields** collection only through syntax using the extended property name as a string.  
   
- When you use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX query designer in graphical mode to define your query, a predefined set of cell properties and dimension properties are automatically added to the MDX query. You can only use extended properties that are specifically listed in the MDX query in your report. Depending on your report, you may want to modify the default MDX command text to include other dimension or custom properties defined in the cube. For more information about extended fields available in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data sources, see [Creating and Using Property Values &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
+ When you use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX query designer in graphical mode to define your query, a predefined set of cell properties and dimension properties are automatically added to the MDX query. You can only use extended properties that are specifically listed in the MDX query in your report. Depending on your report, you may want to modify the default MDX command text to include other dimension or custom properties defined in the cube. For more information about extended fields available in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data sources, see [Creating and Using Property Values &#40;MDX&#41;](https://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
   
 ## Working with Field Properties in a Report  
  Extended field properties include predefined properties and data provider-specific properties. Field properties do not appear with the field list in the **Report Data** pane, even though they are in the query built for a dataset; therefore, you cannot drag field properties onto your report design surface. Instead, you must drag the field onto the report and then change the **Value** property of the field to the property that you want to use. For example, if the cell data from a cube has already been formatted, you can use the FormattedValue field property by using the following expression: `=Fields!FieldName.FormattedValue`.  

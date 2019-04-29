@@ -4,12 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], shortcuts"
@@ -22,7 +18,6 @@ helpviewer_keywords:
   - "shortcuts [SQL Server Management Studio]"
   - "accelerator keys"
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-caps.latest.revision: 82
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -461,6 +456,6 @@ manager: craigg
 |Display the grid on the design surface|ENTER|No equivalent|  
   
 ## See Also  
- [Customize Menus and Shortcut Keys](http://msdn.microsoft.com/library/fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b)  
+ [Customize Menus and Shortcut Keys](customize-menus-and-shortcut-keys.md)  
   
   

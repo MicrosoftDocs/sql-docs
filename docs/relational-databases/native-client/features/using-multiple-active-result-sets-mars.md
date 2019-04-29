@@ -1,15 +1,10 @@
-﻿---
+---
 title: "Using Multiple Active Result Sets (MARS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.component: "native-client|features"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-
-ms.tgt_pltfrm: ""
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "SQL Server Native Client OLE DB provider, MARS"
@@ -20,11 +15,10 @@ helpviewer_keywords:
   - "MARS [SQL Server]"
   - "SQL Server Native Client ODBC driver, MARS"
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
-caps.latest.revision: 56
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using Multiple Active Result Sets (MARS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,7 +101,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  Changes made by statements and atomic blocks that are interleaved are isolated from each other. For example, if one statement or atomic block makes some changes, and then yields execution to another statement, the new statement will not see changes made by the first statement. In addition, when first statement resumes execution, it will not see any changes made by any other statements. Statements will only see changes that are finished and committed before the statement starts.  
   
- A new user transaction can be started within the current user transaction using the BEGIN TRANSACTION statement – this is supported only in interop mode so the BEGIN TRANSACTION can only be called from a T-SQL statement, and not from within a natively compiled stored procedure.You can create a save point in a transaction using SAVE TRANSACTION or an API call to transaction.Save(save_point_name) to rollback to the savepoint. This feature is also enabled only from T-SQL statements, and not from within natively compiled stored procedures.  
+ A new user transaction can be started within the current user transaction using the BEGIN TRANSACTION statement - this is supported only in interop mode so the BEGIN TRANSACTION can only be called from a T-SQL statement, and not from within a natively compiled stored procedure.You can create a save point in a transaction using SAVE TRANSACTION or an API call to transaction.Save(save_point_name) to rollback to the savepoint. This feature is also enabled only from T-SQL statements, and not from within natively compiled stored procedures.  
   
  **MARS and columnstore indexes**  
   
@@ -226,8 +220,8 @@ SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt2);
   
 // The 2nd execute would have failed with connection busy error if  
 // MARS were not enabled.  
-SQLExecDirect(hstmt1, L”SELECT * FROM Authors”, SQL_NTS);  
-SQLExecDirect(hstmt2, L”SELECT * FROM Titles”, SQL_NTS);  
+SQLExecDirect(hstmt1, L"SELECT * FROM Authors", SQL_NTS);  
+SQLExecDirect(hstmt2, L"SELECT * FROM Titles", SQL_NTS);  
   
 // Result set processing can interleave.  
 SQLFetch(hstmt1);  

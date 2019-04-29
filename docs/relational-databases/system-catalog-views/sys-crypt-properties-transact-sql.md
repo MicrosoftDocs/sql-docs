@@ -1,14 +1,11 @@
-﻿---
+---
 title: "sys.crypt_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.component: "system-catalog-views"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "crypt_properties"
@@ -20,11 +17,10 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.crypt_properties catalog view"
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,8 +29,8 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|Identifies class of thing on which property exists.<br /><br /> 1 = Object or column|  
-|**class_desc**|**nvarchar(60)**|Description of the class of thing on which property exists.<br /><br /> OBJECT_OR_COLUMN|  
+|**class**|**tinyint**|Identifies class of thing on which property exists.<br /><br /> 1 = Object or column<br /> 5 = Assembly|  
+|**class_desc**|**nvarchar(60)**|Description of the class of thing on which property exists.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|ID of thing on which property exists, interpreted according to class|  
 |**thumbprint**|**varbinary(32)**|SHA-1 hash of the certificate or asymmetric key used.|  
 |**crypt_type**|**char(4)**|Encryption type.<br /><br /> SPVC = Encrypted by certificate private key<br /><br /> SPVA = Encrypted by asymmetric private key<br /><br /> CPVC = Counter signature by certificate private key<br /><br /> CPVA = Counter signature by asymmetric  key|  

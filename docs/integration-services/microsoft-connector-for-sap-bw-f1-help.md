@@ -5,16 +5,13 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: integration-services
-ms.tgt_pltfrm: ""
 ms.topic: "reference"
 f1_keywords: 
   - "sql13.dts.designer.sapbw.f1"
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Microsoft Connector for SAP BW F1 Help

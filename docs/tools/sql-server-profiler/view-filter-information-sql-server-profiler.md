@@ -5,9 +5,7 @@ ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: profiler
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying filter information"
@@ -16,7 +14,6 @@ helpviewer_keywords:
   - "traces [SQL Server], filters"
   - "viewing filter information"
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
-caps.latest.revision: 23
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

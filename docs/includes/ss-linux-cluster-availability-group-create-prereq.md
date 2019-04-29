@@ -1,4 +1,4 @@
-## Prerequisites
+﻿## Prerequisites
 
 Before you create the availability group, you need to:
 
@@ -77,16 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-For more information about this XE session, see [AlwaysOn extended events](http://msdn.microsoft.com/library/dn135324.aspx).
-
-## Create a database mirroring endpoint user
-
-The following Transact-SQL script creates a login named `dbm_login` and a user named `dbm_user`. Update the script with a strong password. To create the database mirroring endpoint user, run the following command on all SQL Server instances:
-
-```SQL
-CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
-CREATE USER dbm_user FOR LOGIN dbm_login;
-```
+For more information about this XE session, see [AlwaysOn extended events](https://msdn.microsoft.com/library/dn135324.aspx).
 
 ## Create a certificate
 
@@ -123,12 +114,11 @@ chown mssql:mssql dbm_certificate.*
 
 ## Create the certificate on secondary servers
 
-The following Transact-SQL script creates a master key and a certificate from the backup that you created on the primary SQL Server replica. The command also authorizes the user to access the certificate. Update the script with strong passwords. The decryption password is the same password that you used to create the .pvk file in a previous step. To create the certificate, run the following script on all secondary servers:
+The following Transact-SQL script creates a master key and a certificate from the backup that you created on the primary SQL Server replica. Update the script with strong passwords. The decryption password is the same password that you used to create the .pvk file in a previous step. To create the certificate, run the following script on all secondary servers:
 
 ```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
-CREATE CERTIFICATE dbm_certificate   
-    AUTHORIZATION dbm_user
+CREATE CERTIFICATE dbm_certificate
     FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
     WITH PRIVATE KEY (
     FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
@@ -140,20 +130,19 @@ CREATE CERTIFICATE dbm_certificate
 
 Database mirroring endpoints use the Transmission Control Protocol (TCP) to send and receive messages between the server instances that participate in database mirroring sessions or host availability replicas. The database mirroring endpoint listens on a unique TCP port number. 
 
-The following Transact-SQL script creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint and gives connection permission to the user that you created. Before you run the script, replace the values between `**< ... >**`. Optionally you can include an IP address `LISTENER_IP = (0.0.0.0)`. The listener IP address must be an IPv4 address. You can also use `0.0.0.0`. 
+The following Transact-SQL script creates a listening endpoint named `Hadr_endpoint` for the availability group. It starts the endpoint and gives connection permission to the certificate that you created. Before you run the script, replace the values between `**< ... >**`. Optionally you can include an IP address `LISTENER_IP = (0.0.0.0)`. The listener IP address must be an IPv4 address. You can also use `0.0.0.0`. 
 
 Update the following Transact-SQL script for your environment on all SQL Server instances: 
 
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_PORT = **<5022>**)
-    FOR DATA_MIRRORING (
+    FOR DATABASE_MIRRORING (
 	    ROLE = ALL,
 	    AUTHENTICATION = CERTIFICATE dbm_certificate,
 		ENCRYPTION = REQUIRED ALGORITHM AES
 		);
 ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
-GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
 >[!NOTE]
@@ -162,13 +151,12 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_PORT = **<5022>**)
-    FOR DATA_MIRRORING (
+    FOR DATABASE_MIRRORING (
 	    ROLE = WITNESS,
 	    AUTHENTICATION = CERTIFICATE dbm_certificate,
 		ENCRYPTION = REQUIRED ALGORITHM AES
 		);
 ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
-GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
 The TCP port on the firewall must be open for the listener port.
@@ -178,6 +166,6 @@ The TCP port on the firewall must be open for the listener port.
 >[!IMPORTANT]
 >For the SQL Server 2017 release, the only authentication method supported for the database mirroring endpoint is `CERTIFICATE`. The `WINDOWS` option will be enabled in a future release.
 
-For more information, see [The database mirroring endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+For more information, see [The database mirroring endpoint (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
 
 

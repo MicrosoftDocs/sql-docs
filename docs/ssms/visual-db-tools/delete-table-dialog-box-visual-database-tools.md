@@ -4,17 +4,13 @@ ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
-ms.component: "ssms-visual-db"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: ssms
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.deletetable"
   - "vdtsql.chm:69644"
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
-caps.latest.revision: 3
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg

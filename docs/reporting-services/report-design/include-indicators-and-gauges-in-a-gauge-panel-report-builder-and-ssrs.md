@@ -1,22 +1,15 @@
 ---
 title: "Include Indicators and Gauges in a Gauge Panel (Report Builder and SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "report-design"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: report-design
 
 
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Include Indicators and Gauges in a Gauge Panel (Report Builder and SSRS)
   The gauge panel is the top-level container that holds one or more gauges and indicators. Indicators can be embedded in gauges or placed next to them in the gauge panel.  

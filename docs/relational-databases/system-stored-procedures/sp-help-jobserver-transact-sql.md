@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_jobserver"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobserver"
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
-caps.latest.revision: 27
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -41,16 +37,16 @@ sp_help_jobserver
 ```  
   
 ## Arguments  
- [ **@job_id=** ] *job_id*  
+`[ @job_id = ] job_id`
  The job identification number for which to return information. *job_id* is **uniqueidentifier**, with a default of NULL.  
   
- [ **@job_name=** ] **'***job_name***'**  
+`[ @job_name = ] 'job_name'`
  The job name for which to return information. *job_name* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  Either *job_id* or *job_name* must be specified, but both cannot be specified.  
   
- [ **@show_last_run_details=** ] *show_last_run_details*  
+`[ @show_last_run_details = ] show_last_run_details`
  Is whether the last-run execution information is part of the result set. *show_last_run_details* is **tinyint**, with a default of **0**. **0** does not include last-run information, and **1** does.  
   
 ## Return Code Values  
@@ -84,7 +80,7 @@ sp_help_jobserver
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Members of **SQLAgentUserRole** can only view information for jobs that they own.  
   

@@ -4,15 +4,9 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-tables"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
+ms.technology: replication
 ms.topic: "language-reference"
-applies_to: 
-  - "SQL Server"
 f1_keywords: 
   - "MSsub_identity_range_TSQL"
   - "MSsub_identity_range"
@@ -21,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsub_identity_range system table"
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
 ---
 # MSsub_identity_range (Transact-SQL)

@@ -1,25 +1,18 @@
 ---
 title: "URL Access Parameter Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/09/2015"
+ms.date: 09/09/2015
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
-ms.component: "reporting-services"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: reporting-services
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], display options"
   - "URL access [Reporting Services], report display parameters"
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 48
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 # URL Access Parameter Reference
   You can use the following parameters as part of a URL to configure the look and feel of your [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]reports. The most common parameters are listed in this section. Parameters are case-insensitive and begin with the parameter prefix *rs:* if directed to the report server and *rc:* if directed to an HTML Viewer. You can also specify parameters that are specific to devices or rendering extensions. For more information about device-specific parameters, see [Specify Device Information Settings in a URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -51,13 +44,13 @@ manager: "kfile"
      For an example in **Native** mode:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
+    https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
     ```  
   
      For an example in **SharePoint** mode:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
 -   *Zoom* : Sets the report zoom value as an integer percentage or a string constant. Standard string values include **Page Width** and **Whole Page**. This parameter is ignored by versions of Internet Explorer earlier than Internet Explorer 5.0 and all non-[!INCLUDE[msCoName](../includes/msconame-md.md)] browsers. The default value of this parameter is **100**.  
@@ -65,13 +58,13 @@ manager: "kfile"
      For example in **Native** mode:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
+    https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
     ```  
   
      For example in **SharePoint** mode.  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
 -   *Section* : Sets which page in the report to display. Any value that is greater than the number of pages in the report displays the last page. Any value that is less than **0** displays page 1 of the report. The default value of this parameter is **1**.  
@@ -79,13 +72,13 @@ manager: "kfile"
      For example in **Native** mode, to display page 2 of the report:  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Section=2  
+    https://myrshost/reportserver?/Sales&rc:Section=2  
     ```  
   
      For example in **SharePoint** mode, to display page 2 of the report:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Section=2  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
 -   *FindString*: Search a report for a specific set of text.  
@@ -93,13 +86,13 @@ manager: "kfile"
      For an example in **Native** mode.  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
     ```  
   
      For an example in **SharePoint** mode.  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
 -   *StartFind* : Specifies the last section to search. The default value of this parameter is the last page of the report.  
@@ -107,7 +100,7 @@ manager: "kfile"
      For an example in **Native** mode that searches for the first occurrence of the text "Mountain-400" in the Product Catalog sample report starting with page one and ending with page five.  
   
     ```  
-    http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
+    https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
 -   *EndFind* : Sets the number of the last page to use in the search. For example, a value of **5** indicates that the last page to be searched is page 5 of the report. The default value is the number of the current page. Use this parameter in conjunction with the *StartFind* parameter. See the above example.  
@@ -120,7 +113,7 @@ manager: "kfile"
   
 -   *Stylesheet*: Specifies a style sheet to be applied to the HTML Viewer.  
   
--   Device Information Setting: Specifies a device information setting in the form of `rc:tag=value`, where *tag* is the name of a device information setting specific to the rendering extension that is currently used (see the description for the *Format* parameter). For example, you can use the *OutputFormat* device information setting for the IMAGE rendering extension to render the report to a JPEG image using the following parameters in the URL access string: `…&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
+-   Device Information Setting: Specifies a device information setting in the form of `rc:tag=value`, where *tag* is the name of a device information setting specific to the rendering extension that is currently used (see the description for the *Format* parameter). For example, you can use the *OutputFormat* device information setting for the IMAGE rendering extension to render the report to a JPEG image using the following parameters in the URL access string: `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`. For more information on all extension-specific device information settings, see [Device Information Settings for Rendering Extensions &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ##  <a name="bkmk_reportserver"></a> Report Server Commands (rs:)  
  Report server commands are prefixed with *rs:* and are used to target the report server:  
@@ -133,19 +126,19 @@ manager: "kfile"
          For example in **Native** mode.  
   
         ```  
-        http://myrshost/reportserver?/Sales&rs:Command=GetChildren  
+        https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
         ```  
   
          For example, a named instance in **Native** mode.  
   
         ```  
-        http://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
+        https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
         ```  
   
          For example in **SharePoint** mode.  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren  
         ```  
   
     -   **Render** The report is rendered in the browser so you can view it.  
@@ -153,13 +146,13 @@ manager: "kfile"
          For example in **Native** mode:  
   
         ```  
-        http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
          For example in **SharePoint** mode.  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
     -   **GetSharedDatasetDefinition** Displays the XML definition associated with a shared dataset. Shared dataset properties, including the query, dataset parameters, default values, dataset filters, and data options such as collation and case sensitivity, are saved in the definition. You must have **Read Report Definition** permission on a shared dataset to use this value.  
@@ -167,7 +160,7 @@ manager: "kfile"
          For example in **Native** mode.  
   
         ```  
-        http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+        https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
         ```  
   
     -   **GetDataSourceContents** Displays the properties of a given shared data source as XML. If your browser supports XML and if you are an authenticated user with **Read Contents** permission on the data source, the data source definition is displayed.  
@@ -175,13 +168,13 @@ manager: "kfile"
          For example in **Native** mode.  
   
         ```  
-        http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
          For example in **SharePoint** mode.  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
     -   **GetResourceContents** Renders a resource and displays it in an HTML page if the resource is compatible with the browser. Otherwise, you are prompted to open or save the file or resource to disk.  
@@ -189,13 +182,13 @@ manager: "kfile"
          For example in **Native** mode.  
   
         ```  
-        http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
+        https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
         ```  
   
          For example in **SharePoint** mode.  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
         ```  
   
     -   **GetComponentDefinition** Displays the XML definition associated with a published report item. You must have **Read Contents** permission on a published report item to use this value.  
@@ -232,13 +225,13 @@ manager: "kfile"
      For example, to get a PDF copy of a report directly from a **Native** mode report server:  
   
     ```  
-    http://myrshost/ReportServer?/myreport&rs:Format=PDF  
+    https://myrshost/ReportServer?/myreport&rs:Format=PDF  
     ```  
   
      For example, to get a PDF copy of a report directly from a **SharePoint** mode report server:  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
 -   *ParameterLanguage*:  
@@ -247,7 +240,7 @@ manager: "kfile"
      For example in **Native** mode, to override the browser language and specify a culture value of de-DE:  
   
     ```  
-    http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
+    https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
 -   *Snapshot* : Renders a report based on a report history snapshot. For more information, see [Render a Report History Snapshot Using URL Access](../reporting-services/render-a-report-history-snapshot-using-url-access.md).  
@@ -255,7 +248,7 @@ manager: "kfile"
      For example in **Native** mode, retrieve a report history snapshot dated 2003-04-07 with a timestamp of 13:40:02:  
   
     ```  
-    http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+    https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
 -   *PersistStreams*:  
@@ -292,7 +285,7 @@ manager: "kfile"
      For example in **SharePoint** mode, to display only pagination in the toolbar.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
 -   *HeaderArea*: Controls the header display for the Report Viewer Web Part. The default value is **Full**. Values can be:  
@@ -306,14 +299,14 @@ manager: "kfile"
      For example in **SharePoint** mode, to display only the bread-crumb navigation in the header.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
     ```  
   
 -   *DocMapAreaWidth*: Controls the display width, in pixels, of the parameter area in the Report Viewer Web Part. The default value is the same as the Report Viewer Web Part default. The value must be a non-negative integer.  
   
 -   *AsyncRender*: Controls whether a report is rendered asynchronously. The default value is **true**, which specifies that a report be rendered asynchronously. The value must be a Boolean value of **true** or **false**.  
   
--   *ParamMode*: Controls how the Report Viewer Web Part’s parameter prompt area is displayed in full-page view. The default value is **Full**. Valid values are:  
+-   *ParamMode*: Controls how the Report Viewer Web Part's parameter prompt area is displayed in full-page view. The default value is **Full**. Valid values are:  
   
     -   **Full**: display the parameter prompt area.  
   
@@ -324,10 +317,10 @@ manager: "kfile"
      For example in **SharePoint** mode, to collapse the parameter prompt area.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: Controls how the Report Viewer Web Part’s document map area is displayed in full-page view. The default value is **Full**. Valid values are:  
+-   *DocMapMode*: Controls how the Report Viewer Web Part's document map area is displayed in full-page view. The default value is **Full**. Valid values are:  
   
     -   **Full**: display the document map area.  
   
@@ -335,15 +328,15 @@ manager: "kfile"
   
     -   **Hidden**: hide the document map area.  
   
--   *DockToolBar*: Controls whether the Report Viewer Web Part’s toolbar is docked to the top or bottom. Valid values are **Top** and **Bottom**. The default value is **Top**.  
+-   *DockToolBar*: Controls whether the Report Viewer Web Part's toolbar is docked to the top or bottom. Valid values are **Top** and **Bottom**. The default value is **Top**.  
   
      For example in **SharePoint** mode, to dock the toolbar to the bottom.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: Controls which toolbar items are displayed. This is a bitwise enumeration value. To include a toolbar item, add the item’s value to the total value. For example: for no Actions menu, use rv:ToolBarItemsDisplayMode=63 (or 0x3F), which is 1+2+4+8+16+32; for Actions menu items only, use rv:ToolBarItemsDisplayMode=960 (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:  
+-   *ToolBarItemsDisplayMode*: Controls which toolbar items are displayed. This is a bitwise enumeration value. To include a toolbar item, add the item's value to the total value. For example: for no Actions menu, use rv:ToolBarItemsDisplayMode=63 (or 0x3F), which is 1+2+4+8+16+32; for Actions menu items only, use rv:ToolBarItemsDisplayMode=960 (or 0x3C0). The default value is **-1**, which includes all toolbar items. Valid values are:  
   
     -   1 (0x1): the **Back** button  
   
@@ -370,7 +363,7 @@ manager: "kfile"
      For example, in **SharePoint** mode to display only the **Back** button, text search controls, page navigation controls, and the **Refresh** button.  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
 ## See Also  

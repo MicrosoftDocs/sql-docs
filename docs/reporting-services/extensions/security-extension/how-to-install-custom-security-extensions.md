@@ -1,22 +1,15 @@
 ---
 title: "How to install custom security extensions | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/10/2017"
+ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
-ms.component: "extensions"
-ms.reviewer: ""
-ms.suite: "pro-bi"
-ms.technology: 
+ms.technology: extensions
 
 
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
-caps.latest.revision: 3
-author: "markingmyname"
-ms.author: "maghan"
-manager: "kfile"
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # How to install custom security extensions
@@ -124,6 +117,6 @@ The new portal and the reportserver communicate using internal soap APIs for som
 ## Next steps
 
 [Configure Custom or Forms Authentication on the Report Server](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
-[Configure Report Manager to Pass Custom Authentication Cookies](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
+[Configure Report Manager to Pass Custom Authentication Cookies](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
-More questions? [Try asking the Reporting Services forum](http://go.microsoft.com/fwlink/?LinkId=620231)
+More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

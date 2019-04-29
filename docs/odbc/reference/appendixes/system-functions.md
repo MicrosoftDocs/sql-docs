@@ -5,15 +5,12 @@ ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: connectivity
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "system functions [ODBC]"
   - "functions [ODBC], system functions"
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -30,5 +27,5 @@ The following table lists system functions that are included in the ODBC scalar 
 |Function|Description|  
 |--------------|-----------------|  
 |**DATABASE( )**  (ODBC 1.0)|Returns the name of the database corresponding to the connection handle. (The name of the database is also available by calling **SQLGetConnectOption** with the SQL_CURRENT_QUALIFIER connection option.)|  
-|**IFNULL(** *exp*,*value***)**  (ODBC 1.0)|If *exp* is null, *value* is returned. If *exp* is not null, *exp* is returned. The possible data type or types of *value* must be compatible with the data type of *exp*.|  
+|**IFNULL(** _exp_,_value_**)**  (ODBC 1.0)|If *exp* is null, *value* is returned. If *exp* is not null, *exp* is returned. The possible data type or types of *value* must be compatible with the data type of *exp*.|  
 |**USER( )**  (ODBC 1.0)|Returns the user name in the DBMS. (The user name is also available by way of **SQLGetInfo** by specifying the information type: SQL_USER_NAME.) This can be different than the login name.|

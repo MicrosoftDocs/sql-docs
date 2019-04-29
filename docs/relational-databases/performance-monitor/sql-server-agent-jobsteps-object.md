@@ -4,20 +4,15 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "performance-monitor"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords: 
   - "JobSteps object"
   - "SQLAgent:JobSteps"
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
-caps.latest.revision: 23
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ---
 # SQL Server Agent, JobSteps Object
@@ -51,8 +46,8 @@ manager: craigg
 |**TSQL**|Information for job steps that execute [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## See Also  
- [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [Use Performance Objects](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Manage Job Steps](../../ssms/agent/manage-job-steps.md)   
+ [Use Performance Objects](../../ssms/agent/use-performance-objects.md)   
  [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

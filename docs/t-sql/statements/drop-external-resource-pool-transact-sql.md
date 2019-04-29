@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
-ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP EXTERNAL RESOURCE POOL"
@@ -18,9 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP EXTERNAL RESOURCE POOL statement"
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
-caps.latest.revision: 6
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ---
 # DROP EXTERNAL RESOURCE POOL (Transact-SQL)

@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_help_jobcount"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobcount"
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
-caps.latest.revision: 25
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -40,10 +36,10 @@ sp_help_jobcount
 ```  
   
 ## Arguments  
- [ **@schedule_id=** ] *schedule_id*  
+`[ @schedule_id = ] schedule_id`
  The identifier of the schedule to list. *schedule_id* is **int**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
- [ **@schedule_name=** ]  **'***schedule_name***'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to list. *schedule_name* is **sysname**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
 ## Return Code Values  
@@ -68,7 +64,7 @@ sp_help_jobcount
   
 -   **SQLAgentOperatorRole**  
   
- For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ For details about the permissions of these roles, see [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Only members of **sysadmin** can view counts for jobs that are owned by others.  
   

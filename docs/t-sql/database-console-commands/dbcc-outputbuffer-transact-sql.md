@@ -5,9 +5,7 @@ ms.date: "07/16/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: t-sql
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "DBCC OUTPUTBUFFER"
@@ -21,8 +19,7 @@ helpviewer_keywords:
   - "output buffers"
   - "current output buffer"
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
-caps.latest.revision: 37
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

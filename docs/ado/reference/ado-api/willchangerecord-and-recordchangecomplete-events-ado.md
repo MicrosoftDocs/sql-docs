@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: "sql"
-ms.tgt_pltfrm: ""
 ms.topic: conceptual
 f1_keywords: 
   - "RecordChangeComplete"
@@ -18,7 +16,6 @@ helpviewer_keywords:
   - "WillChangeRecord event [ADO]"
   - "recordchangecomplete event [ADO]"
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg

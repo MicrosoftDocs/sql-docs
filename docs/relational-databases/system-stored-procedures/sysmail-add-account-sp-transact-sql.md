@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_add_account_sp"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_add_account_sp"
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-caps.latest.revision: 40
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -50,43 +46,43 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## Arguments  
- [ **@account_name** = ] **'***account_name***'**  
+`[ @account_name = ] 'account_name'`
  The name of the account to add. *account_name* is **sysname**, with no default.  
   
- [ **@email_address** = ] **'***email_address***'**  
+`[ @email_address = ] 'email_address'`
  The e-mail address to send the message from. This address must be an internet e-mail address. *email_address* is **nvarchar(128)**, with no default. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may send e-mail from the address **SqlAgent@Adventure-Works.com**.  
   
- [ **@display_name** = ] **'***display_name***'**  
+`[ @display_name = ] 'display_name'`
  The display name to use on e-mail messages from this account. *display_name* is **nvarchar(128)**, with a default of NULL. For example, an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may display the name **SQL Server Agent Automated Mailer** on e-mail messages.  
   
- [ **@replyto_address** = ] **'***replyto_address***'**  
+`[ @replyto_address = ] 'replyto_address'`
  The address that responses to messages from this account are sent to. *replyto_address* is **nvarchar(128)**, with a default of NULL. For example, replies to an account for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent may go to the database administrator, **danw@Adventure-Works.com**.  
   
- [ **@description** = ] **'***description***'**  
+`[ @description = ] 'description'`
  Is a description for the account. *description* is **nvarchar(256)**, with a default of NULL.  
   
- [ **@mailserver_name** = ] **'***server_name***'**  
+`[ @mailserver_name = ] 'server_name'`
  The name or IP address of the SMTP mail server to use for this account. The computer that runs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must be able to resolve the *server_name* to an IP address. *server_name* is **sysname**, with no default.  
   
- [ **@mailserver_type** = ] '*server_type*'  
+`[ @mailserver_type = ] 'server_type'`
  The type of e-mail server. *server_type* is **sysname**, with a default of **'SMTP'**..  
   
- [ **@port** = ] *port_number*  
+`[ @port = ] port_number`
  The port number for the e-mail server. *port_number* is **int**, with a default of 25.  
   
- [ **@username** = ] **'***username***'**  
+`[ @username = ] 'username'`
  The user name to use to log on to the e-mail server. *username* is **nvarchar(128)**, with a default of NULL. When this parameter is NULL, Database Mail does not use authentication for this account. If the mail server does not require authentication, use NULL for the username.  
   
- [ **@password** = ] **'***password***'**  
+`[ @password = ] 'password'`
  The password to use to log on to the e-mail server. *password* is **nvarchar(128)**, with a default of NULL. There is no need to provide a password unless a username is specified.  
   
- [ **@use_default_credentials** = ] use_default_credentials  
+`[ @use_default_credentials = ] use_default_credentials`
  Specifies whether to send the mail to the SMTP server using the credentials of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** is bit, with a default of 0. When this parameter is 1, Database Mail uses the credentials of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. When this parameter is 0, Database Mail sends the **@username** and **@password** parameters if present, otherwise sends mail without **@username** and **@password** parameters.  
   
- [ **@enable_ssl** = ] enable_ssl  
+`[ @enable_ssl = ] enable_ssl`
  Specifies whether Database Mail encrypts communication using Secure Sockets Layer. **Enable_ssl** is bit, with a default of 0.  
   
- [ **@account_id** = ] *account_id* OUTPUT  
+`[ @account_id = ] account_id OUTPUT`
  Returns the account id for the new account. *account_id* is **int**, with a default of NULL.  
   
 ## Return Code Values  

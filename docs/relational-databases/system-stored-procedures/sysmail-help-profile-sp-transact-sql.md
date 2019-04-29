@@ -4,11 +4,8 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.component: "system-stored-procedures"
 ms.reviewer: ""
-ms.suite: "sql"
 ms.technology: system-objects
-ms.tgt_pltfrm: ""
 ms.topic: "language-reference"
 f1_keywords: 
   - "sysmail_help_profile_sp_TSQL"
@@ -18,7 +15,6 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_profile_sp"
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-caps.latest.revision: 41
 author: "stevestein"
 ms.author: "sstein"
 manager: craigg
@@ -38,10 +34,10 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## Arguments  
- [ **@profile_id** = ] *profile_id*  
+`[ @profile_id = ] profile_id`
  The profile id to return information for. *profile_id* is **int**, with a default of NULL.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
+`[ @profile_name = ] 'profile_name'`
  The profile name to return information for. *profile_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

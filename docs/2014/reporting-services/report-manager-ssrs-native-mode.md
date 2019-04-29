@@ -1,27 +1,16 @@
 ---
 title: "Report Manager  (SSRS Native Mode) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
-ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "reports [Reporting Services], managing"
-  - "Report Manager [Reporting Services], about Report Manager"
-  - "customizing Report Manager"
-  - "Report Manager [Reporting Services], customizing"
-  - "report servers [Reporting Services], administering"
-  - "browsing reports [Reporting Services]"
-  - "administering reports"
-  - "Report Manager [Reporting Services]"
-  - "components [Reporting Services], Report Manager"
-ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "04/26/2019"
 ---
+
 # Report Manager  (SSRS Native Mode)
   Report Manager is a Web-based report access and management tool that you use to administer a single report server instance from a remote location over an HTTP connection. You can also use Report Manager for its report viewer and navigation features. In this topic:  
   
@@ -107,13 +96,11 @@ manager: kfile
 |![Shared data source icon](media/hlp-16datasource.png "Shared data source icon")|Shared data source item|Click a shared data source icon to open the property pages, report list, and subscription list of the data source.|  
 |![Property Page icon](media/hlp-16prop.gif "Property Page icon")|Property page|Click the property icon to access additional pages to set properties and security.|  
   
-## See Also  
- [Configure a URL  &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Report Builder &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
- [Reporting Services Tools](tools/reporting-services-tools.md)   
- [Report Server Content Management &#40;SSRS Native Mode&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [View and Explore Native Mode Reports Using SharePoint Web Parts &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)  
-  
-  
+## See also
+
+- [Configure a URL  &#40;SSRS Configuration Manager&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Report Builder &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)
+- - [Reporting Services Tools](tools/reporting-services-tools.md)
+- [Report Server Content Management &#40;SSRS Native Mode&#41;](report-server/report-server-content-management-ssrs-native-mode.md)  
+[Report Manager F1 Help](../../2014/reporting-services/report-manager-f1-help.md)

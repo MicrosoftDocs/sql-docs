@@ -5,7 +5,7 @@ description: Reference article for mssqlctl app template commands.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -17,81 +17,79 @@ ms.technology: big-data-cluster
 
 The following article provides reference for the **app template** commands in the **mssqlctl** tool. For more information about other **mssqlctl** commands, see [mssqlctl reference](reference-mssqlctl.md).
 
-## <a id="commands"></a> Commands
-
-|||
-|---|---|
-| [list](#list) | Fetch supported templates. |
-| [pull](#pull) | Download supported templates. |
-
-## <a id="list"></a> mssqlctl app template list
-
-Fetch supported templates.
-
+## Commands
+|     |     |
+| --- | --- |
+[mssqlctl app template list](#mssqlctl-app-template-list) | Fetch supported templates.
+[mssqlctl app template pull](#mssqlctl-app-template-pull) | Download supported templates.
+## mssqlctl app template list
+Fetch supported templates under the specified [URL] github repository.
+```bash
+mssqlctl app template list [--url -u] 
+                           
 ```
-mssqlctl app template list
-   --url
-```
-
-### Parameters
-
-| Parameters | Description |
-|---|---|
-| **--url -u** | Specify a different template repository location. Default: https://github.com/Microsoft/sql-server-samples.git. |
-
 ### Examples
-
 Fetch all templates under the default template repository location.
-
-```
+```bash
 mssqlctl app template list
 ```
-
 Fetch all templates under a different repository location.
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
-## <a id="pull"></a> mssqlctl app template pull
-
-Download supported templates.
-
+### Optional Parameters
+#### `--url -u`
+Specify a different template repository location. Default: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
+## mssqlctl app template pull
+Download supported templates under the specified [URL] github repository.
+```bash
+mssqlctl app template pull [--name -n] 
+                           [--url -u]  
+                           [--destination -d]
 ```
-mssqlctl app template pull
-   --destination
-   --name
-   --url
-```
-
-### Parameters
-
-| Parameters | Description |
-|---|---|
-| **--destination -d** | Where to place the application skeleton template.  Default: ./templates. |
-| **--name -n** | Template name. For a full list off supported template names run `mssqlctl app template list`. |
-| **--url -u** | Specify a different template repository location. Default:
-https://github.com/Microsoft/sql-server-samples.git. |
-
 ### Examples
-
 Download all templates under the default template repository location.
-
-```
+```bash
 mssqlctl app template pull
 ```
-
 Download all templates under a different repository location.
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
 Download individual template by name.
-
+```bash
+mssqlctl app template pull --name ssis            
 ```
-mssqlctl app template pull --name ssis
-```
+### Optional Parameters
+#### `--name -n`
+Template name. For a full list off supported template namesrun `mssqlctl app template list`
+#### `--url -u`
+Specify a different template repository location. Default: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+#### `--destination -d`
+Where to place the application skeleton template.
+`./templates`
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 

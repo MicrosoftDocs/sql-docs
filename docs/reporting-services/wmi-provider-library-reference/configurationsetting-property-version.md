@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Version property"
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - Version
   Returns the version of the report server in the format Major.Minor.Build.Revision. Read-only.  

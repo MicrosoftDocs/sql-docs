@@ -1,16 +1,18 @@
 ---
 title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
-ms.date: 05/23/2016
+ms.date: 04/18/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
+
 # Lesson 6: Adding Grouping and Totals (Reporting Services)
+
 In this tutorial lesson, you will add grouping and totals to your [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report to organize and summarize your data.  
   
   

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Edit References dialog box"
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Add Reference Dialog Box

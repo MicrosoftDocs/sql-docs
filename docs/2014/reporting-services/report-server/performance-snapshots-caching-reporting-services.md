@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "performance [Reporting Services]"
   - "Reporting Services, performance"
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Performance, Snapshots, Caching (Reporting Services)

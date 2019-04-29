@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "schedules [Reporting Services], methods"
@@ -14,8 +12,8 @@ helpviewer_keywords:
   - "shared schedules [Reporting Services], methods"
   - "methods [Reporting Services], scheduling"
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Scheduling Methods

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.reportserver.serverproperties.execution.f1"
 ms.assetid: 53b77db1-b013-4dac-82dd-30c0de276639
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Server Properties (Execution Page)

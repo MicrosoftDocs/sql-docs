@@ -1,14 +1,14 @@
 ---
 title: "Lesson 3: Defining a Dataset for the Table Report (Reporting Services) | Microsoft Docs"
-ms.date: 05/23/2016
+ms.date: 04/15/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 3: Defining a Dataset for the Table Report (Reporting Services)
 After you define the data source, you need to define a dataset. In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, as well as calculated fields and variables.  

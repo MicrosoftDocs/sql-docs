@@ -1,7 +1,7 @@
 ---
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/21/2019"
+ms.date: "04/15/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -172,6 +172,14 @@ When a stored procedure executes, it uses the current compatibility level of the
 This section describes new behaviors introduced with compatibility level 150.
 
 Database compatibility level 150 is currently in Public Preview for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. This database compatibility level will be associated with the next generation of query processing improvements beyond what was introduced in database compatibility level 140.
+
+|Compatibility-level setting of 140 or lower|Compatibility-level setting of 150|
+|--------------------------------------------------|-----------------------------------------|
+|Relational data warehouse and analytic workloads may not be able to leverage columnstore indexes due to OLTP-overhead, lack of vendor support or other limitations.  Without columnstore indexes, these workloads cannot benefit from batch execution mode.|Batch execution mode is now available for analytic workloads without requiring columnstore indexes. For more information, see [batch mode on rowstore.](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore)|
+|Row-mode queries that request insufficient memory grant sizes that result in spills to disk may continue to have issues on consecutive executions.|Row-mode queries that request insufficient memory grant sizes that result in spills to disk may have improved performance on consecutive executions. For more information, see [row mode memory grant feedback.](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)|
+|Row-mode queries that request an excessive memory grant size that results in concurrency issues may continue to have issues on consecutive executions.|Row-mode queries that request an excessive memory grant size that results in concurrency issues may have improved concurrency on consecutive executions. For more information, see [row mode memory grant feedback.](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)|
+|Queries referencing T-SQL scalar UDFs will use iterative invocation, lack costing and force serial execution. |T-SQL scalar UDFs are transformed into equivalent relational expressions that are “inlined” into the calling query, often resulting in significant performance gains. For more information, see [T-SQL scalar UDF inlining.](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining)|
+|Table variables use a fixed guess for the cardinality estimate.  If the actual number of rows is much higher than the guessed value, performance of downstream operations can suffer. |New plans will use the actual cardinality of the table variable encountered on first compilation instead of a fixed guess. For more information, see [table variable deferred compilation.](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation)|
 
 For more information on query processing features enabled in database compatibility level 150, refer to [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) and [Intelligent query processing in SQL databases](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "WMI provider [Reporting Services]"
   - "programming [Reporting Services]"
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Access the Reporting Services WMI Provider

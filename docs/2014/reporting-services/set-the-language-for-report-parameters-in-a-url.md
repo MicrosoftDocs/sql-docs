@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "international considerations [Reporting Services]"
   - "global considerations [Reporting Services]"
 ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Set the Language for Report Parameters in a URL

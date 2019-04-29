@@ -1,10 +1,10 @@
 ---
-title: Java language extension in SQL Server 2019 - SQL Server Machine Learning Services
+title: Java language extension in SQL Server 2019 - SQL Server Language Extensions
 description: Install, configure, and validate the Java language extension on SQL Server 2019 for both Linux and Windows systems.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 03/27/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -14,9 +14,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # Java language extension in SQL Server 2019 
 
-Starting in SQL Server 2019 preview on both Windows and Linux, you can run custom Java code in the [extensibility framework](../concepts/extensibility-framework.md) as an add-on to the database engine instance. 
+Starting in SQL Server 2019 preview on both Windows and Linux, you can run custom Java code using the [extensibility framework](../concepts/extensibility-framework.md) as an add-on to the database engine instance.
 
-The extensibility framework is an architecture for executing external code: Java (starting in SQL Server 2019), [Python (starting in SQL Server 2017)](../concepts/extension-python.md), and [R (starting in SQL Server 2016)](../concepts/extension-r.md). Code execution is isolated from core engine processes, but fully integrated with SQL Server query execution. This means that you can push data from any SQL Server query to the external runtime, and consume or persist results back in SQL Server.
+The extensibility framework is an architecture for executing external code: Java (starting in SQL Server 2019), [Python (starting in SQL Server 2017)](../concepts/extension-python.md), and [R (starting in SQL Server 2016)](../concepts/extension-r.md). Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution. This means that you can push data from any SQL Server query to the external runtime (Java), and consume or persist results back in SQL Server.
 
 As with any programming language extension, the system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) is the interface for executing pre-compiled Java code.
 
@@ -24,9 +24,9 @@ As with any programming language extension, the system stored procedure [sp_exec
 
 ## Prerequisites
 
-A SQL Server 2019 preview instance is required. Earlier versions do not have Java integration.
+A SQL Server 2019 preview instance is required. Earlier versions do not have the Java integration.
 
-Java 8 is supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDKs are useful if you need the Java compiler or development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
+Java 8 is currently the supported version. Newer versions, like Java 11, should with the language extension but is currently not supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
 
 You can use your preferred Java 8 distribution. Below are two suggested distributions:
 
@@ -35,7 +35,7 @@ You can use your preferred Java 8 distribution. Below are two suggested distribu
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows and Linux | Yes | Yes |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows and Linux | Yes | No |
 
-On Linux, the **mssql-server-extensibility-java** package automatically installs JRE 8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JRE_HOME.
+On Linux, currently the **mssql-server-extensibility-java** package automatically installs JRE 8 if it is not already installed. Installation scripts also add the JVM path to an environment variable called JRE_HOME.
 
 On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
 
@@ -59,7 +59,7 @@ sudo apt-get install mssql-server-extensibility-java
 sudo zypper install mssql-server-extensibility-java
 ```
 
-When you install **mssql-server-extensibility-java**, the package automatically installs JRE 8 if it is not already installed. It will also add the JVM path to an environment variable called JAVA_HOME.
+When you install **mssql-server-extensibility-java**, the package automatically installs JRE 8 if it is not already installed. It will also add the JVM path to an environment variable called JRE_HOME.
 
 After completing installation, your next step is [Configure external script execution](#configure-script-execution).
 
@@ -72,14 +72,13 @@ You don't need to perform this step if you are using external libraries. The rec
 
 If you are not using external libraries, you need to provide SQL Server with permissions to execute the Java classes in your jar.
 
-To grant read and execute access to jar file, run the following **chmod** command on the jar file. We recommend always putting your class files in a jar when you work with SQL Server. For help creating a jar, see [How to create a jar file](#create-jar).
+To grant read and execute access to a jar file, run the following **chmod** command on the jar file. We recommend always putting your class files in a jar when you work with SQL Server. For help creating a jar, see [How to create a jar file](#create-jar).
 
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
+
 You also need to give mssql_satellite permissions the jar file to read/execute.
-
-
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -101,12 +100,12 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ### Add the JRE_HOME variable
 
-JRE_HOME is an environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
+JRE_HOME is a system environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
 
 1. Find and copy the JRE home path (for example, `C:\Program Files\Zulu\zulu-8\jre\`).
 
-    Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above. 
-    Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation. 
+    Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above.
+    Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the jre folder in that case.
     The Java extension will attempt to load the jvm.dll from the path %JRE_HOME%\bin\server.
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
@@ -125,7 +124,7 @@ JRE_HOME is an environment variable that specifies the location of the Java inte
 
 ### Grant access to non-default JRE folder (Windows only)
 
-Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
+If you did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 
 #### SQLRUserGroup permissions
 
@@ -147,7 +146,7 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## Configure script execution
 
-At this point, you are almost ready to run Java code on Linux or Windows. As a last step, switch to SQL Server Management Studio or another tool that runs Transact-SQL script to enable external script execution.
+At this point, you are almost ready to run Java code on Linux or Windows. As a last step, switch to SQL Server Management Studio, Azure data studio, SQL CMD or another tool that lets you run Transact-SQL script to enable external script execution.
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1
@@ -157,13 +156,13 @@ At this point, you are almost ready to run Java code on Linux or Windows. As a l
 
 ## Verify installation
 
-To confirm the installation is operational, create and run a [sample application](java-first-sample.md) using the JDK you just installed, placing the files in the classpath you configured earlier.
+To confirm the installation is operational, create and run a [sample application](java-first-sample.md) using the Java Runtime you just installed and added to JRE_HOME.
 
-## Differences in CTP 2.4
+## Differences in CTP 2.5
 
 If you are already familiar with Machine Learning Services, the authorization and isolation model for extensions has changed in this release. For more information, see [Differences in a SQL Server Machine 2019 Learning Services installation](../install/sql-machine-learning-services-ver15.md).
 
-## Limitations in CTP 2.4
+## Limitations in CTP 2.5
 
 * The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 
@@ -190,4 +189,5 @@ Make sure the path to **jar.exe** is part of the system path variable. Alternati
 
 + [How to call Java in SQL Server](howto-call-java-from-sql.md)
 + [Java sample in SQL Server](java-first-sample.md)
++ [Microsoft Extensibility SDK for Java for Microsoft SQL Server](java-sdk.md)
 + [Java and SQL Server data types](java-sql-datatypes.md)

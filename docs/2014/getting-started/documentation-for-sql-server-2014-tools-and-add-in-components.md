@@ -4,11 +4,7 @@ ms.custom: ""
 ms.date: "05/25/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "database-engine"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
 author: mightypen
@@ -26,7 +22,7 @@ manager: craigg
 |[Report Builder Help for SQL Server 2014](https://go.microsoft.com/fwlink/?LinkId=299171)|Report Builder is a report authoring environment for business users.|  
 |[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|Configuration Manager is a tool to manage the services associated with SQL Server, to configure the network protocols used by SQL Server, and to manage the network connectivity configuration from SQL Server client computers.|  
 |[SQL Server 2014 Setup](https://go.microsoft.com/fwlink/?LinkId=299175)|SQL Server 2014 Installation documentation to assist with Setup.|  
-|[SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Upgrade Advisor analyzes the configuration of installed [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components, and then generates a report of issues that you must address to assure a successful upgrade.|  
+|[SQL Server 2014 Upgrade Advisor &#91;new&#93;](../sql-server/install/sql-server-2014-upgrade-advisor.md)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Upgrade Advisor analyzes the configuration of installed [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components, and then generates a report of issues that you must address to assure a successful upgrade.|  
 |[SQL Server Servicing Installation](https://go.microsoft.com/fwlink/?LinkId=299176)|Documentation to assist with applying updates to SQL Server components.|  
 |[SQL Server Data Mining Add-ins for Office 2013](https://go.microsoft.com/fwlink/?LinkId=299178)|Data Mining Add-ins for Office is a lightweight set of tools for predictive analytics that lets you use data in Excel to build analytical models for prediction, recommendation, or exploration.|  
 |[Change Data Capture Designer for Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|Change Data Capture Designer for Oracle is used to develop and maintain Oracle CDC Instances.|  

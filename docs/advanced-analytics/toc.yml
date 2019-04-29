@@ -1,5 +1,5 @@
 - name: SQL Server ++
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 
 - name: SQL Server ML and Programming Extensions Documentation
   href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
@@ -21,6 +21,8 @@
     href: ../advanced-analytics/java/howto-call-java-from-sql.md
   - name: Java sample
     href: ../advanced-analytics/java/java-first-sample.md
+  - name: SDK for Java
+    href: ../advanced-analytics/java/java-sdk.md
   - name: Java and SQL data types
     href: ../advanced-analytics/java/java-sql-datatypes.md
 - name: Install
@@ -305,7 +307,7 @@
 - name: Resources
   items:
   - name: Release notes +
-    href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
+    href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
   - name: Troubleshooting
     href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
     items:

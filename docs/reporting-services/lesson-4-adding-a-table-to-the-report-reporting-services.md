@@ -1,14 +1,14 @@
 ---
 title: "Lesson 4: Adding a Table to the Report (Reporting Services) | Microsoft Docs"
-ms.date: 05/23/2016
+ms.date: 04/15/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 4: Adding a Table to the Report (Reporting Services)
 After the dataset is defined, you can start designing the report. You create a report layout by dragging and dropping data regions, text boxes, images, and other items that you want to include in your report to the design surface.  

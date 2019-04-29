@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "WMI provider [Reporting Services], MSReportServer_Instance class"
   - "MSReportServer_Instance class"
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # MSReportServer_Instance Class

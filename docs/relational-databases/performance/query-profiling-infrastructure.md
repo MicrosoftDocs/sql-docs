@@ -1,7 +1,7 @@
 ---
 title: "Query Profling Infrastruture | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/26/2018"
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
@@ -34,8 +34,8 @@ The *query execution statistics profile infrastructure*, or standard profiling, 
 - [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> Using live query statistics with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] leverages the standard profiling infrastructure.    
-> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if [lightweight profiling infrastructure](#lwp) is enabled, then it is leveraged by Live Query Statistics instead of standard profiling.
+> Clicking the button *Include Live Query Statistics* in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] leverages the standard profiling infrastructure.    
+> In higher versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], if the [lightweight profiling infrastructure](#lwp) is enabled, then it is leveraged by live query statistics instead of standard profiling when viewed through [Activity Monitor](../../relational-databases/performance-monitor/activity-monitor.md) or directly querying the [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV. 
 
 The following methods of collecting execution plan information globally for **all sessions** leverage the standard profiling infrastructure:
 
@@ -115,11 +115,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] includes a newly revised version of lightweight profiling collecting row count information for all executions. Lightweight profiling is enabled by default on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and trace flag 7412 has no effect.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] includes a newly revised version of lightweight profiling collecting row count information for all executions. Lightweight profiling is enabled by default on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and trace flag 7412 has no effect. Lightweight profiling can be disabled at the database level using the LIGHTWEIGHT_QUERY_PROFILING [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
-A new DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) is introduced to return the equivalent of the last known actual execution plan for most queries. A new *query_post_execution_plan_profile* extended event collects the equivalent of an actual execution plan based on lightweight profiling, unlike *query_post_execution_showplan* which uses standard profiling. 
+A new DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) is introduced to return the equivalent of the last known actual execution plan for most queries, and is called *last query plan statistics*. The last query plan statistics can be enabled at the database level using the LAST_QUERY_PLAN_STATS [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
-A sample session using the *query_post_execution_plan_profile* extended event can be configured like the example below:
+A new *query_post_execution_plan_profile* extended event collects the equivalent of an actual execution plan based on lightweight profiling, unlike *query_post_execution_showplan* which uses standard profiling. A sample session using the *query_post_execution_plan_profile* extended event can be configured like the example below:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -136,6 +136,34 @@ WITH (MAX_MEMORY=4096 KB,
   MEMORY_PARTITION_MODE=NONE,
   TRACK_CAUSALITY=OFF,
   STARTUP_STATE=OFF);
+```
+
+#### Example 1 - Extended Event session using standard profiling
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### Example 2 - Extended Event session using lightweight profiling
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
 ## Remarks

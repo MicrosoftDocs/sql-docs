@@ -3,7 +3,7 @@ title: SQL Server 2019 extension (preview)
 titleSuffix: Azure Data Studio
 description: SQL Server 2019 Preview extension for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "03/18/2019"
+ms.date: "04/19/2019"
 ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -14,7 +14,7 @@ manager: craigg
 ---
 # SQL Server 2019 extension (preview)
 
-The SQL Server 2019 extension (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), and a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+The SQL Server 2019 extension (preview) provides preview support for new features and tools shipping in support of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This includes preview support for [SQL Server 2019 big data clusters](../big-data-cluster/big-data-cluster-overview.md), an integrated [notebook experience](../big-data-cluster/notebooks-guidance.md), and a PolyBase [Create External Table wizard](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
 ## Install the SQL Server 2019 extension (preview)
 
@@ -24,9 +24,9 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
    |Platform|Download|Release date|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|March 18, 2019 |0.11.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|March 18, 2019 |0.11.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|March 18, 2019 |0.11.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|April 18, 2019 |0.12.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|April 18, 2019 |0.12.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|April 18, 2019 |0.12.1
 
 1. In Azure Data Studio choose **Install Extension from VSIX Package** from the **File** menu and select the downloaded .vsix file.
 
@@ -38,12 +38,27 @@ To install the SQL Server 2019 extension (preview), download and install the ass
 
 1. After the dependencies finish installing, close and reopen Azure Data Studio. The **SQL Server big data cluster** connection type is not available until you restart Azure Data Studio.
 
+## Changes in release 0.12.1
+
+* The **SQL Server big data cluster** connection type has been removed in this release. All functionality previously available from the SQL Server big data cluster connection is now available in the SQL Server connection.
+* HDFS browsing can be found under the **Data Services** folder
+* For notebooks the the PySpark and other big data kernels work when connected to the SQL Server master instance in your SQL Server big data cluster.
+* Create External Table wizard:
+  * Support for creating External Table using existing External Data Source.
+  * Performance improvements across the wizard.
+  * Improved handling of object names with special characters. In some cases these caused the wizard to fail
+  * Reliability improvements for the Object Mapping page.
+  * Removed system databases - 'DWConfiguration', 'DWDiagnostics', 'DWQueue' - from the databases dropdown.
+  * Support for setting the External File Format object's name in the **Create External Table from CSV Files** wizard.
+  * Added a refresh button to the first page of the **Create External Table from CSV Files** wizard.
+
 ## Release Notes (v0.11.0)
-  * Jupyter Notebook support, specifically support for the Python3 and Spark kernels, has been moved into Azure Data Studio. This extension is no longer required in order to use Notebooks.
-  * Multiple bug fixes in the External Data wizards:
-    * Oracle type mappings have been updated to match changes shipped in SQL Server 2019 CTP 2.3.
-    * Fixed an issue where new schemas typed into the table mapping controls were being lost.
-    * Fixed an issue where checking a Database node in the table mappings did not result in all tables and views being checked.
+
+* Jupyter Notebook support, specifically support for the Python3 and Spark kernels, has been moved into Azure Data Studio. This extension is no longer required in order to use Notebooks.
+* Multiple bug fixes in the External Data wizards:
+  * Oracle type mappings have been updated to match changes shipped in SQL Server 2019 CTP 2.3.
+  * Fixed an issue where new schemas typed into the table mapping controls were being lost.
+  * Fixed an issue where checking a Database node in the table mappings did not result in all tables and views being checked.
 
 
 ## Release Notes (v0.10.2)

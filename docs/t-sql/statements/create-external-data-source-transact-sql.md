@@ -207,7 +207,14 @@ Takes a shared lock on the EXTERNAL DATA SOURCE object.
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
 When you connect to the storage or data pool in a SQL 2019 Big Data Cluster the users credentials are passed through to the back-end system. The data pool requires that you must also create logins in the data pool itself for pass through authentication to be successful.
+ 
+Currently an SAS token with type `hadoop` is unsupported, and it is only supported with a Storage account access key. Attempting to create an external data source with type `hadoop` and using a SAS credential might fail with the error:
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
+## Locking  
+ Takes a shared lock on the EXTERNAL DATA SOURCE object.
+ 
 ## Examples: SQL Server (2016+) and Parallel Data Warehouse
 
 ### A. Create external data source in SQL 2019 to reference Oracle

@@ -401,6 +401,26 @@ The `rxDTree` function does not currently support in-formula transformations. In
 
 Ordered factors are treated the same as factors in all RevoScaleR analysis functions except `rxDTree`.
 
+### 20. Data.table as an OutputDataSet in R
+
+Using `data.table` as an `OutputDataSet` in R is not supported in SQL Server 2017 Cumulative Update 13 (CU13) and earlier. The following message might appear:
+
+> *Msg 39004, Level 16, State 20, Line 2*
+> *A 'R' script error occurred during execution of 'sp_execute_external_script' with HRESULT 0x80004004.*
+> *Msg 39019, Level 16, State 2, Line 2*
+> *An external script error occurred:*
+> *Error in alloc.col(newx) :*
+>   *Internal error: length of names (0) is not length of dt (11)*
+*Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col*
+> 
+> *Error in execution.  Check the output for more information.*
+> *Error in eval(expr, envir, enclos) :* 
+>   *Error in execution.  Check the output for more information.*
+> *Calls: source -> withVisible -> eval -> eval -> .Call*
+> *Execution halted*
+
+`data.table` as an `OutputDataSet` in R is supported in SQL Server 2017 Cumulative Update 14 (CU14) and later.
+
 ## Python script execution issues
 
 This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -460,8 +480,18 @@ Beginning with SQL Server 2017 CU2, the following message might appear even if P
 > *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state is used prior to global declaration*
 
-
 This issue has been fixed in SQL Server 2017 Cumulative Update 3 (CU3). 
+
+### 5. Numeric, decimal and money data types not supported
+
+Beginning with SQL Server 2017 Cumulative Update 12 (CU12), numeric, decimal and money data types in WITH RESULT SETS are unsupported when using Python with `sp_execute_external_script`. The following message might appear:
+
+> *[Code: 39004, SQL State: S1000]  A 'Python' script error occurred during execution of'sp_execute_external_script' with HRESULT 0x80004004.*
+
+> *[Code: 39019, SQL State: S1000]  An external script error occurred:*
+> *SqlSatelliteCall error: Unsupported type in output schema. Supported types: bit, smallint, int, datetime, smallmoney, real and float. char, varchar are partially supported.*
+
+This has been fixed in SQL Server 2017 Cumulative Update 14 (CU14).
 
 ## Revolution R Enterprise and Microsoft R Open
 

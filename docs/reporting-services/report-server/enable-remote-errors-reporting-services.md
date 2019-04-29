@@ -64,7 +64,7 @@ ms.author: maggies
   
 3.  Click **Advanced** to open the properties page. For more information, see [Server Properties &#40;Advanced Page&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
   
-4.  In **EnableRemoteErrors**, select **True**.  
+4.  In the **Security** section, in **EnableRemoteErrors**, select **True**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

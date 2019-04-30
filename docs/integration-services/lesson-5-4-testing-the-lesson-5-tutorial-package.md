@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 5-4: Test the Lesson 5 package
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 At run time, your package obtains the value for the **Directory** property from a configuration variable, rather than from the directory name specified when you created the package. The value of the variable comes from the **SSISTutorial.dtsConfig** XML file.  
   
 To verify that the package updates the **Directory** property with the new value during run time, run the package. Because only three sample data files are in the new directory, the data flow runs only three times.  

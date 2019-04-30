@@ -11,6 +11,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Run an SSIS package with PowerShell
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This quickstart demonstrates how to use a PowerShell script to connect to a database server and run an SSIS package.
 
 ## Prerequisites

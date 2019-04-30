@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Lesson 1-3 - Adding Packages and Other Files
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In this task, you will add existing packages, ancillary files that support individual packages, and a Readme to the Deployment Tutorial project that you created in the previous task. For example, you will add an XML data file that contains the data for a package and a text file that provides Readme information about all the packages in the project.  
   
 When you deploy packages to a test or production environment, you typically do not include the data files in the deployment, but instead use configurations to update the paths of the data sources to access test or production versions of the data files or databases. For instructional purposes, this tutorial includes data files in the package deployment.  

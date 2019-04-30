@@ -21,6 +21,10 @@ ms.author: janinez
 manager: craigg
 ---
 # SSIS Package Upgrade Wizard F1 Help
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the SSIS Package Upgrade Wizard to upgrade packages created by earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to the package format for the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **To run the SSIS Package Upgrade Wizard**  

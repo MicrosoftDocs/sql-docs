@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 6-2: Convert the project to the Project Deployment Model
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 In this task, you use the Integration Services Project Conversion Wizard to convert the project to the Project Deployment Model.  
   
 1.  On the **Project** menu, select **Convert to Project Deployment Model**.  

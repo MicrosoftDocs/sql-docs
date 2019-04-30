@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 5: Add SSIS package configurations for the Package Deployment Model
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 Package configurations let you set run-time properties and variables from outside the development environment. Configurations allow you to develop packages that are flexible and easy to both deploy and distribute. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offers the following configuration types:  
   
 -   XML configuration file  

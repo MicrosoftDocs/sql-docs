@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 1-1: Create a new Integration Services project
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 The first step in creating a package in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] is to create an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project. This example project includes templates for the data sources, data source views, and packages that make up a data transformation solution.  
   
 The packages that you create in this [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutorial interpret the values of locale-sensitive data. If your computer isn't configured to use the regional option **English (United States)**, you need to set additional properties in the package. 

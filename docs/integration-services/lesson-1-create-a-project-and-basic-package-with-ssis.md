@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 1: Create a project and basic package with SSIS
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 In this lesson, you create a simple ETL package that extracts data from a single flat file source, transforms the data using two lookup transformations, and writes the transformed data to a copy of the **FactCurrencyRate** fact table in the **AdventureWorksDW2012** sample database. As part of this lesson, you learn how to create new packages, add and configure data source and destination connections, and work with new control flow and data flow components.  
   
 Before creating a package, you need to understand the formatting used in both the source data and the destination. Then, you be ready to define the transformations necessary to map the source data to the destination.  

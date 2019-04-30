@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 1-9: Test the Lesson 1 package
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 In this tutorial, you've done the following tasks:  
   
 -   Created a new [!INCLUDE[ssIS](../includes/ssis-md.md)] project.  

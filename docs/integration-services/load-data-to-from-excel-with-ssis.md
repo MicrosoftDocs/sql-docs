@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Import data from Excel or export data to Excel with SQL Server Integration Services (SSIS)
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 This article describes the connection information that you have to provide, and the settings that you have to configure, to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS).
 
 The following sections contain the information you need to use Excel successfully with SSIS, and to understand and troubleshoot common problems:

@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 2: Add looping with SSIS
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 In [Lesson 1: Create a project and basic package with SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), you created a package that extracts data from a single flat file source. The data is then transformed using Lookup transformations. Finally, the package loads the data into a copy of the **FactCurrencyRate** fact table in the **AdventureWorksDW2012** sample database.  
   
 An extract, transform, and load (ETL) process typically extracts data from multiple flat file sources. Extracting data from multiple sources requires an iterative control flow. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] can easily add iteration or looping to packages.  

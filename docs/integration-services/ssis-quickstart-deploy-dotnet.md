@@ -11,6 +11,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Deploy an SSIS project with C# code in a .NET app
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This quickstart demonstrates how to write C# code to connect to a database server and deploy an SSIS project.
 
 To create a C# app, you can use Visual Studio, Visual Studio Code, or another tool of your choice.

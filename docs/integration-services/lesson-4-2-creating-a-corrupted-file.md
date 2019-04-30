@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 4-2: Create a corrupted file
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 To demonstrate the configuration and handling of transformation errors, you need a sample flat file that, when processed, causes a component to fail.  
   
 In this task, you create a copy of an existing sample flat file. You then open the file in Notepad and edit the **CurrencyID** column to contain an erroneous value, which fails the lookup. When the corrupted file is processed, the lookup failure causes the Currency Key Lookup transformation to fail and therefore fail the rest of the package. After you've created the corrupted sample file, you run the package to view the package failure.  

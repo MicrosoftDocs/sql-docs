@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Lesson 2: Create the Deployment Bundle in SSIS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 In [Lesson 1: Preparing to Create the Deployment Bundle](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), you created the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project named Deployment Tutorial, added the packages and supporting files to the project, and implemented configurations in packages.  
   
 In this lesson, you will create the deployment bundle, which is a folder that contains the items that you need to install packages on another computer. The deployment bundle will include a deployment manifest, copies of the packages, and copies of the supporting files from the Deployment Tutorial project. The deployment manifest lists the packages, miscellaneous files, and configurations in the deployment bundle.  

@@ -28,6 +28,10 @@ ms.author: janinez
 manager: craigg
 ---
 # dtutil Utility
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **dtutil** command prompt utility is used to manage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. The utility can copy, move, delete, or verify the existence of a package. These actions can be performed on any [!INCLUDE[ssIS](../includes/ssis-md.md)] package that is stored in one of three locations: a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, and the file system. If the utility accesses a package that is stored in **msdb**, the command prompt may require a user name and a password. If the instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentication, the command prompt requires both a user name and a password. If the user name is missing, **dtutil** tries to log on to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] using Windows Authentication. The storage type of the package is identified by the **/SQL**, **/FILE**, and **/DTS** options.  
   
  The **dtutil** command prompt utility does not support the use of command files or redirection.  

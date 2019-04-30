@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 2-1: Copy the Lesson 1 package
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 In this task, you create a copy of the **Lesson 1.dtsx** package. If you didn't complete Lesson 1, you can use the completed lesson 1 package that is included with this tutorial. You use the new copy throughout the rest of Lesson 2.  
   
 ## Create the Lesson 2 package  

@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 4-5: Test the Lesson 4 package
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 At run time, the corrupted file **Currency_BAD.txt** fails to generate a match within the Currency Key Lookup transformation. Because you configured the error output of Currency Key Lookup to redirect failed rows to the new Failed Rows destination, the component doesn't fail, and the package runs successfully. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] writes all failed error rows to **ErrorOutput.txt**.  
   
 In this task, you test the revised error output configuration by running the package. After successful package execution, you view the contents of the **ErrorOutput.txt** file.  

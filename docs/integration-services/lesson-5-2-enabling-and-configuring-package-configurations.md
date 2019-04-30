@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 5-2: Enable and configure package configurations
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 In this task, you convert the project to the Package Deployment Model and enable package configurations using the Package Configuration Wizard. You use this wizard to generate an XML configuration file that contains configuration settings for the **Directory** property of the Foreach Loop container. The value of the **Directory** property is supplied by a new package-level variable that you can update at run time. You also populate a new sample data folder to use for testing.  
   
 ## Create a package-level variable mapped to the Directory property  

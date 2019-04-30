@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 6: Use parameters with the Project Deployment Model in SSIS
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 SQL Server 2012 introduced a new deployment model where you can deploy your projects to the Integration Services server. The Integration Services server enables you to manage and run packages, and to configure runtime values for packages.  
   
 In this lesson, you modify the package that you created in [Lesson 5: Add SSIS package configurations for the Package Deployment Model](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) to use the Project Deployment Model. You replace the configuration value with a parameter to specify the sample data location. You can also copy the completed Lesson 5 package that is included with the tutorial.  

@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Add Copy of Existing Package
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Add Copy of Existing Package** dialog box to add a copy of a package stored in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the file system, or the SSIS Package Store to an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project.  
   
 ## Options  

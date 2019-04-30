@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 4-3: Add error flow redirection
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 In the previous task, the Lookup Currency Key transformation cannot generate a match when the transformation tries to process the corrupted sample flat file, which produces an error. Because the transformation uses the default settings for error output, any error causes the transformation to fail. When the transformation fails, the rest of the package also fails.  
   
 Rather than permitting the transformation to fail, you can configure the component to redirect the failed row to another processing path, by using the error output. Using a separate error processing path provides more options. For instance, you could clean the data and then reprocess the failed row. Or, you could save the failed row along with its error information for later verification and reprocessing.  

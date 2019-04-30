@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 1-8: Annotate and format the Lesson 1 package 
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 Now that you've completed the configuration of the Lesson 1 package, it's probably time to tidy up the package layout. If the shapes in the control and data flow layouts are different sizes, or not laid out evenly, the package may be more difficult to understand.  
   
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools provides tools to easily format the package layout. The formatting features include the ability to make shapes the same size, align shapes, and change the horizontal and vertical spacing between shapes.  

@@ -13,6 +13,10 @@ ms.reviewer: ""
 ---
 # Lesson 1-6: Add and configure the Lookup transformations
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 After you have configured the Flat File source to extract data from the source file, you define the Lookup transformations needed to obtain the values for **CurrencyKey** and **DateKey**. A Lookup transformation performs a lookup by joining data in the specified input column to a column in a reference dataset. The reference dataset can be an existing table or view, a new table, or the result of an SQL statement. In this tutorial, the Lookup transformation uses an OLE DB connection manager to connect to the database that contains the source data of the reference dataset.  
   
 > [!NOTE]  

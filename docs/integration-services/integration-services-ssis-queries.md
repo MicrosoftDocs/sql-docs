@@ -20,6 +20,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Queries
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Execute SQL task, the OLE DB source, the OLE DB destination, and the Lookup transformation can use SQL queries. In the Execute SQL task, the SQL statements can create, update, and delete database objects and data; run stored procedures; and perform SELECT statements. In the OLE DB source and the Lookup transformation, the SQL statements are typically SELECT statements or EXEC statements. The latter most frequently run stored procedures that return result sets.  
   
  A query can be parsed to establish whether it is valid. When parsing a query that uses a connection to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the query is parsed, executed, and the execution outcome (success or failure) is assigned to the parsing outcome. If the query uses a connection to a data other than [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the statement is parsed only.  

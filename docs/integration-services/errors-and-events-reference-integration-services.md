@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Errors and Events Reference (Integration Services)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This section of the documentation contains information about several errors and events related to [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Cause and resolution information is included for error messages.  
   
  For more information about [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] error messages, including a list of most [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] errors and their descriptions, see [Integration Services Error and Message Reference](../integration-services/integration-services-error-and-message-reference.md). However, the list currently does not include troubleshooting information.  

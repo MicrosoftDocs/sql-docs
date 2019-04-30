@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Lesson 2-4: Test the Lesson 2 tutorial package
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 With the Foreach Loop container and the Flat File connection manager now configured, the Lesson 2 package can iterate through the 14 flat files in the Sample Data folder. Each time a file name matches the specified criterion, the Foreach Loop container populates the user-defined variable with the file name. This variable, in turn, updates the ConnectionString property of the Flat File connection manager, which connects to that flat file. The Foreach Loop container then runs the unmodified data flow task against the data in that flat file.  
   
 > [!NOTE]  

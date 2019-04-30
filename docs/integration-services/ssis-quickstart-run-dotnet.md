@@ -11,6 +11,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Run an SSIS package with C# code in a .NET app
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This quickstart demonstrates how to write C# code to connect to a database server and run an SSIS package.
 
 You can use Visual Studio, Visual Studio Code, or another tool of your choice to create a C# app.

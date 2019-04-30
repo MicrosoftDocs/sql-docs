@@ -23,6 +23,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Deploy Packages with SSIS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides tools that make it easy to deploy packages to another computer. The deployment tools also manage any dependencies, such as configurations and files that the package needs. In this tutorial, you will learn how to use these tools to install packages and their dependencies on a target computer.    
     
 First, you will perform tasks to prepare for deployment. You will create a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and add existing packages and data files to the project. You will not create any new packages from scratch; instead, you will work only with completed packages that were created just for this tutorial. You will not modify the functionality of the packages in this tutorial; however, after you have added the packages to the project, you might find it useful to open the packages in [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer and review the contents of each package. By examining the packages, you will learn about package dependencies such as log files and about other interesting features of the packages.    

@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # SSIS Toolbox
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   All components installed on the local machine automatically appear in the **SSIS Toolbox**. When you install additional components, right-click inside the toolbox and then click **Refresh Toolbox** to add the components.  
  
  When you create a new SSIS project or open an existing project, the **SSIS Toolbox** displays automatically. You can also open the toolbox by clicking the toolbox button that is located in the top-right corner of the package design surface, or by clicking VIEW -> Other Windows -> SSIS Toolbox.

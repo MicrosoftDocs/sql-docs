@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Certification by SAP
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Microsoft Connector 1.1 for SAP BW has received certification from SAP for integration with SAP NetWeaver.  
   
  ![SAP certified - Integration with SAP NetWeaver](../integration-services/media/sapcertifiedforssis11.gif "SAP certified - Integration with SAP NetWeaver")  

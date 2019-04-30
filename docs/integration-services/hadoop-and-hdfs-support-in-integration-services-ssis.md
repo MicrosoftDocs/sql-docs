@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Hadoop and HDFS Support in Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SQL Server 2016 Integration Services (SSIS) includes the following components that provide support for Hadoop and HDFS on premises.  
   
  For info about the Integration  Services components that support HDInsight and other features of Microsoft Azure, see [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

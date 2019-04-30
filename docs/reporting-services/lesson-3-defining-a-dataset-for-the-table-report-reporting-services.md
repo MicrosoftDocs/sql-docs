@@ -14,7 +14,7 @@ ms.author: maggies
 
 After you define the data source, you need to define a dataset. In [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], data that you use in reports is contained in a *dataset*. A dataset includes a pointer to a data source and a query to be used by the report, as well as calculated fields and variables.  
   
-Use the query designer in **Report Designer** to define the dataset. For this tutorial, you will create a query that retrieves sales order information from the [!INCLUDE [sssampledbadventureworks2016-md](../includes/sssampledbadventureworks2016-md.md)] database.  
+Use the query designer in **Report Designer** to define the dataset. For this tutorial, you will create a query that retrieves sales order information from the **AdventureWorks2016** database.  
   
 ## Define a Transact-SQL query for report data  
   
@@ -26,7 +26,7 @@ Use the query designer in **Report Designer** to define the dataset. For this tu
   
 3. Below that, select the **Use a dataset embedded in my report** radio button.
   
-4. Fromm the **Data source:** dropdown, select [!INCLUDE [ssSampleDBAdventureworks2016_md](../includes/sssampledbadventureworks2016-md.md)].
+4. Fromm the **Data source:** dropdown, select **AdventureWorks2016**.
 
 5. For the **Query type**, select the **Text** radio button.  
   
@@ -59,7 +59,7 @@ Use the query designer in **Report Designer** to define the dataset. For this tu
     ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png)
      button on the *Query Designer* toolbar.
 
-    You see the data from six fields from four different tables in the [!INCLUDE [ssSampleDBAdventureworks2016_md](../includes/sssampledbadventureworks2016-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
+    You see the data from six fields from four different tables in the **AdventureWorks2016** database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
 
 8. Select the **OK** button to exit the *Query Designer*.
 
@@ -67,7 +67,7 @@ Use the query designer in **Report Designer** to define the dataset. For this tu
 
 The **AdventureWorksDataset** dataset and fields now appear in the Report Data pane.
 
-    ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)
+![ssrs_adventureworksdataset](media/ssrs-adventureworksdataset.png)
 
 ## Next task
 

@@ -39,10 +39,9 @@ The **LineTotal** field displays a general number. Format it to display the numb
 2. Select **Number**, and in the **Category** field, select **Currency**.
 
 3. If your regional setting is English (United States), the defaults should be:
-
-- **Decimal places: 2**
-- **Negative numbers: ($12345.00)**
-- **Symbol: $ English (United States)**
+    - **Decimal places: 2**
+    - **Negative numbers: ($12345.00)**
+    - **Symbol: $ English (United States)**
 
 4. Select **Use 1000 separator (,)**. If the sample text displays **$12,345.00**, then your settings are correct.
 
@@ -61,7 +60,7 @@ You can also change the formatting of the header row to differentiate it from th
 2. Point to the line between column handles so that the cursor changes into a double arrow. Drag the columns to the size you want.
     ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
 
-3. Select the row containing column header labels and from the **Format** menu, point to **Font** and then click **Bold**.
+3. Select the row containing column header labels and from the **Format** menu, select **Font** > **Bold**.
 
 4. To preview your report, select the **Preview** tab. It should look something like this:
 
@@ -71,7 +70,7 @@ You can also change the formatting of the header row to differentiate it from th
 
 ## Next steps
 
-You have successfully formatted column headers and date and currency values. Next, you will add grouping and totals to your report. See [Lesson 6: Adding Grouping and Totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
+You have successfully formatted column headers and date and currency values. Next, you will add grouping and totals to your report. Continue with [Lesson 6: Adding Grouping and Totals &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 
 ## See also
 

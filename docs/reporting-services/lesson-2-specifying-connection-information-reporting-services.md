@@ -14,7 +14,7 @@ ms.author: maggies
 
 In lesson 1, you added a [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] paginated report to your tutorial project.
   
-In this lesson, you will define a *data source*, which is the connection information the report uses to access data from a relational database, multidimensional database, or another source. For this report, you will add the [!INCLUDE[sssampledbadventureworks2016-md](../includes/sssampledbadventureworks2016-md.md)] sample database as your data source. For simplicity, this tutorial assumes that this database is located in a default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] installed on your local computer.  
+In this lesson, you will define a *data source*, which is the connection information the report uses to access data from a relational database, multidimensional database, or another source. For this report, you will add the **AdventureWorks2016** sample database as your data source. For simplicity, this tutorial assumes that this database is located in a default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] installed on your local computer.  
 
 ## To set up a connection  
 
@@ -36,11 +36,10 @@ In this lesson, you will define a *data source*, which is the connection informa
   
     `Data source=localhost; initial catalog=AdventureWorks2016`
 
-    >[!NOTE]
-
-     This connection string assumes that [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the report server, and the [!INCLUDE[sssampledbadventureworks2016-md](../includes/sssampledbadventureworks2016-md.md)] database are all installed on the local computer and that you have permission to access the [!INCLUDE[sssampledbadventureworks2016-md](../includes/sssampledbadventureworks2016-md.md)] database. If your *AdventureWorks2016* database is not on the local computer, change the connection string and replace **localhost** with the name of your database server instance. If you are using [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services or a named instance, the connection string must include instance information:
+    > [!NOTE]
+    > This connection string assumes that [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], the report server, and the  **AdventureWorks2016** database are all installed on the local computer and that you have permission to access the **AdventureWorks2016**  database. If your **AdventureWorks2016** database is not on the local computer, change the connection string and replace **localhost** with the name of your database server instance. If you are using [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services or a named instance, the connection string must include instance information:
     >
-    `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2016`
+        `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2016`
     >
     For more information about connection strings, see below under the **See also** section.
 
@@ -54,7 +53,7 @@ The data source **AdventureWorks2016** is added to the **Report Data** pane.
 
 ## Next lesson
 
-In this lesson, we have successfully defined a connection to the [!INCLUDE[sssampledbadventureworks2016-md](../includes/sssampledbadventureworks2016-md.md)] sample database. Next, you will create the report. Continue with [Lesson 3: Defining a Dataset for the Table Report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+In this lesson, we have successfully defined a connection to the **AdventureWorks2016** sample database. Next, you will create the report. Continue with [Lesson 3: Defining a Dataset for the Table Report &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## See also
 

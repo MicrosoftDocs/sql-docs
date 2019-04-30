@@ -42,8 +42,7 @@ Items that contain repeated rows of data from underlying datasets are called *da
 7. Add the *LineTotal* field in the same way, creating a fifth column. The column header is added as "Line Total". *Report Designer* automatically creates a friendly name for the column by      splitting LineTotal into two words.
 
 The following diagram shows a table data region that has been populated with these fields: Date, Order, Product, Qty, and Line Total.
-
-    ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
+![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
 
 ## Preview your report
 

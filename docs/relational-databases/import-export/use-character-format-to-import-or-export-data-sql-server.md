@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], character"
   - "character formats [SQL Server]"
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

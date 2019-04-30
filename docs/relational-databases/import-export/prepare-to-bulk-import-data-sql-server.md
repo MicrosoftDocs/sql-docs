@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "hidden characters"
   - "OPENROWSET function, BCP guidelines"
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ---
 # Prepare to Bulk Import Data (SQL Server)

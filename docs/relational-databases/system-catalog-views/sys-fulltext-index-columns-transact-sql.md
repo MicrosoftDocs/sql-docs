@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -19,8 +18,9 @@ helpviewer_keywords:
   - "sys.fulltext_index_columns catalog view"
   - "full-text indexes [SQL Server], properties"
 ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
-author: "douglaslMS"
-ms.author: "douglasl"
+aauthor: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -7,8 +7,8 @@ ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: data-movement
 ms.topic: conceptual
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

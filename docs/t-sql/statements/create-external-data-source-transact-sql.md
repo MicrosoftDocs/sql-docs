@@ -82,7 +82,7 @@ Provides the connectivity protocol and path to the external data source.
 
 Location path:
 
-- `<Namenode>` = the machine name, name service URI, or IP address of the Namenode in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
+- `<`Namenode`>` = the machine name, name service URI, or IP address of the `Namenode` in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = The port that the external data source is listening on. In Hadoop, the port can be found using the `fs.default.name` configuration parameter. The default is 8020.
 - `<container>` = the container of the storage account holding the data. Root containers are read-only, data can't be written back to the container.
 - `<storage_account>` = the storage account name of the azure resource.
@@ -95,10 +95,10 @@ Additional notes and guidance when setting the location:
 
 - The SQL engine doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
-- You can use the `sqlserver` location prefix to connect SQL Server 2019 to SQL Server, SQL Database or SQL Data Warehouse.
+- You can use the `sqlserver` location prefix to connect SQL Server 2019 to SQL Server, SQL Database, or SQL Data Warehouse.
 - Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`
 - `wasb` is the default protocol for Azure blob storage. `wasbs` is optional but recommended as data will be sent using a secure SSL connection.
-- To ensure successful PolyBase queries during a Hadoop Namenode fail-over, consider using a virtual IP address for the Namenode of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
+- To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
 
 ### CONNECTION_OPTIONS = *key_value_pair*
 
@@ -240,7 +240,7 @@ WITH
 
 ### B. Create external data source to reference Hadoop
 
-To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop Namenode and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
+To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop `Namenode` and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster

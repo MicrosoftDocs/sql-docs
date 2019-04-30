@@ -27,7 +27,7 @@ This topic provides information about the following issues:
 To troubleshoot the [TDE with customer-managed TDE Protector in AKV configuration](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault), let's get started with confirming the following requirements:
 - The logical SQL server and the key vault need to be located in the same region.
 - The logical SQL server identity provided by Azure Active Directory (APPID in Azure Key Vault) is limited to a tenant in the original subscription.  If the server was moved to another subscription, the server identity (APPID) has to be recreated.
-- The key vault needs to be up and running, learn about [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview) to check on the key vault status and [Action Groups](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/action-groups) to sign up for notifications.
+- The key vault needs to be up and running, learn about [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview) to check on the key vault status and [Action Groups](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) to sign up for notifications.
 - In the Geo-DR scenario, both key vaults have to contain the same key material for a failover to work.
 - The logical server needs to have an Azure Active Directory (AAD) identity (APPID) in order to authenticate to the key vault.
 - The APPID needs to have access to the key vault and wrap, unwrap, and get permissions to the keys selected as TDE Protectors.
@@ -102,7 +102,7 @@ Mitigation: Confirm the key vault is available
 Error message: "404 ServerKeyNotFound - The requested server key was not found on the current subscription."
 "409 ServerKeyDoesNotExists - The server key does not exist."
 
-Detection: How to identify they key uri and key vault
+Detection: How to identify the key uri and key vault
 - Identify the key uri added to the logical SQL server using the cmdlets from the Missing key vault section above to return the list of keys.
 
 Mitigation: Confirm the TDE protector is present in AKV

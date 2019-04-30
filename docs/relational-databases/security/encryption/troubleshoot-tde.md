@@ -37,13 +37,14 @@ Most issues encountered when using TDE with AKV are due to one of the following 
 ### Key vault unavailable or doesn't exist?
 - Key vault accidentally deleted
 - Firewall configured for Azure Key Vault without allowing access to Microsoft services
-- Permissions for SQL APPID revoked
+
+### No permissions to access the key vault or key doesn't exist?
+- Key accidentally deleted
 - SQL APPID accidentally deleted
 - SQL was moved to a different subscription, which requires a new APPID
-
-### No permissions to access the key or key doesn't exist?
-- Key accidentally deleted
 - Permissions granted to APPID for keys not sufficient (wrap, unwrap, get)
+- Permissions for SQL APPID revoked
+
 
 In the next section, we are going to list the troubleshooting steps for the most common errors.
 

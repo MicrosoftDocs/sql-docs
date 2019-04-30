@@ -24,8 +24,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Some [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client APIs use connection strings to specify connection attributes. Connection strings are lists of keyword and associated values; each keyword identifies a particular connection attribute.  
-  
-> **NOTE:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client allows ambiguity in connection strings to maintain backward compatibility (for example, some keywords may be specified more than once, and conflicting keywords may be allowed with resolution based on position or precedence). Future releases of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client might not allow ambiguity in connection strings. It is good practice when modifying applications to use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to eliminate any dependency on connection string ambiguity.  
+
+> [!IMPORTANT]
+> The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB (SQLNCLI) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.    
+> For information, see [Using Connection String Keywords with OLE DB Driver for SQL Server](../../../sql/connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client allows ambiguity in connection strings to maintain backward compatibility (for example, some keywords may be specified more than once, and conflicting keywords may be allowed with resolution based on position or precedence). It is good practice when modifying applications to use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client to eliminate any dependency on connection string ambiguity.  
   
  The following sections describe the keywords that can be used with the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC driver, and ActiveX Data Objects (ADO) when using [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client as the data provider.  
   

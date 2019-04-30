@@ -129,7 +129,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - the expiration period should be valid (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE` refer to [J. Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j.-create-an-external-data-source-for-bulk-operations-retrieving-data-from-Azure-Blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE` refer to ["Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database"](#J.-Create-an-external-data-source-for-bulk-operations-retrieving-data-from-Azure-Blob-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][CREATE_DATABASE_SCOPED_CREDENTIAL].
 
@@ -145,7 +145,7 @@ Specifies the type of the external data source being configured. This parameter 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.
 
-For an example of using `TYPE` = `HADOOP` to load data from Azure Blob Storage refer to ["Create external data source to reference Azure blob storage"](#d.-create-external-data-source-to-reference-azure-blob-storage).
+For an example of using `TYPE` = `HADOOP` to load data from Azure Blob Storage refer to ["Create external data source to reference Azure blob storage"](#E.-create-external-data-source-to-reference-azure-blob-storage).
 
 ### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 

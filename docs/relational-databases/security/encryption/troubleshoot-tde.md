@@ -77,12 +77,16 @@ In the Azure portal, browse to the key vault and go to Access policies:
 Error message: "503 AzureKeyVaultConnectionFailed - The operation could not be completed on the server because attempts to connect to Azure Key Vault have failed"
 
 Detection: How to identify the key uri and key vault 
+
 Step 1: Use the following command to get the key uri of a given logical SQL server: 
 [Azure PowerShell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0) 
 [Azure CLI](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+
 Step 2: Use the key uri to identify the key vault
+
 PowerShell: You can inspect the properties of $MyServerKeyVaultKey to get details about the key vault
 CLI: Inspect the returned server encryption protector for details about the key vault
+
 Step 3: Go to the Azure portal and ensure that the key vault identified in the previous step is present.
 
 Mitigation: Confirm the key vault is available

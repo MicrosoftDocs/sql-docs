@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ranked results [full-text search]"
   - "column searches [full-text search]"
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

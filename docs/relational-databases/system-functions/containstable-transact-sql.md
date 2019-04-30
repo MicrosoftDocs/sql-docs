@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "rankings [full-text search]"
   - "less precise (fuzzy) searches [full-text search]"
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

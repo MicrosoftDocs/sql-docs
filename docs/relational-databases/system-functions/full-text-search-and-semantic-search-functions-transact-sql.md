@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "semantic search [SQL Server], system functions"
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Full-Text Search and Semantic Search Functions (Transact-SQL)

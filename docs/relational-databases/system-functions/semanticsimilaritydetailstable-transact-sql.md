@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "semanticsimilaritydetailstable function"
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # semanticsimilaritydetailstable (Transact-SQL)

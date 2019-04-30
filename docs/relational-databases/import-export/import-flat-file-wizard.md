@@ -9,8 +9,8 @@ ms.technology: data-movement
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.importflatfile.f1"
-author: "yualan"
-ms.author: "alayu"
+author: yualan
+ms.author: alayu
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

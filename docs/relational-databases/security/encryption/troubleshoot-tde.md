@@ -79,8 +79,9 @@ Error message: "503 AzureKeyVaultConnectionFailed - The operation could not be c
 Detection: How to identify the key uri and key vault 
 
 Step 1: Use the following command to get the key uri of a given logical SQL server: 
-[Azure PowerShell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0) 
-[Azure CLI](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+-[Azure PowerShell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+
+-[Azure CLI](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 Step 2: Use the key uri to identify the key vault
 

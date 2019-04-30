@@ -53,7 +53,8 @@ In the next section, we are going to list the troubleshooting steps for the most
 ## Missing server identity
 Error Message: "401 AzureKeyVaultNoServerIdentity - The server identity is not correctly configured on server. Please contact support."
 
-Detection: Use the following command to ensure that an identity has been assigned to the logical SQL server: 
+Detection: Use the following command to ensure that an identity has been assigned to the logical SQL server:
+
 - [Azure PowerShell](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 - [Azure CLI](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 

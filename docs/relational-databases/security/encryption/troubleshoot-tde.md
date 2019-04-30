@@ -55,8 +55,8 @@ Error Message: "401 AzureKeyVaultNoServerIdentity - The server identity is not c
 
 Detection: Use the following command to ensure that an identity has been assigned to the logical SQL server:
 
-- [Azure PowerShell](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
-- [Azure CLI](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- [Azure PowerShell Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- [Azure CLI az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
 Mitigation: Configure an Azure Active Directory (Azure AD) identity (APPID) for the logical SQL server
 
@@ -80,16 +80,15 @@ Error message: "503 AzureKeyVaultConnectionFailed - The operation could not be c
 Detection: How to identify the key uri and key vault 
 
 Step 1: Use the following command to get the key uri of a given logical SQL server: 
--[Azure PowerShell](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+-[Azure PowerShell get-azurermsqlserverkeyvaultkey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
--[Azure CLI](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+-[Azure CLI az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 Step 2: Use the key uri to identify the key vault
 
 PowerShell: You can inspect the properties of $MyServerKeyVaultKey to get details about the key vault
-CLI: Inspect the returned server encryption protector for details about the key vault
 
-Step 3: Go to the Azure portal and ensure that the key vault identified in the previous step is present.
+CLI: Inspect the returned server encryption protector for details about the key vault
 
 Mitigation: Confirm the key vault is available
 - Ensure the key vault is available and the logical SQL Server has access
@@ -112,7 +111,7 @@ Mitigation: Confirm the TDE protector is present in AKV
 Error message: "401 AzureKeyVaultMissingPermissions - The server is missing required permissions on the Azure Key Vault."
 
 Detection: How to identify the key uri and key vault
-- Identify the key vault used by the logical SQL server using the cmdlets from the Missing key vault section above.
+- Identify the key vault used by the logical SQL server using the cmdlets from the missing key vault section above.
 
 Mitigation: Confirm the logical sql server has permissions to the key vault and the correct permissions to access the key
 - In the Azure portal, browse to the key vault, go to Access policies, and locate the Sql Server APPID:  

@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 1-5: Add and configure the Flat File source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 In this task, you add and configure a Flat File source to your package. A Flat File source is a data flow component that uses metadata defined by a Flat File connection manager. This metadata specifies the format and structure of the data to be extracted from the flat file by a transform process. The Flat File source extracts data from a single flat file, using the format definitions in the Flat File connection manager.  

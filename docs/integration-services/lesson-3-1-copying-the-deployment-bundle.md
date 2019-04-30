@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 3-1 - Copying the Deployment Bundle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 In this task, you will copy the deployment bundle to the destination computer.  

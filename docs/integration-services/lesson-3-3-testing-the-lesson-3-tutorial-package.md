@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 3-3: Test the Lesson 3 tutorial package
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 

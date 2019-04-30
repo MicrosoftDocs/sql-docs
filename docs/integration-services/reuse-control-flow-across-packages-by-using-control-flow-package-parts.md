@@ -19,7 +19,7 @@ manager: craigg
 ---
 # Reuse Control Flow across Packages by Using Control Flow Package Parts
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
   Save a commonly used control flow task or container to a standalone part file - a ".dtsxp" file - and reuse it multiple times in one or more packages by using control flow package parts. This reusability makes SSIS packages easier to design and maintain.  

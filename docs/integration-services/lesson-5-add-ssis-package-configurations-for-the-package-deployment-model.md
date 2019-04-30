@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 5: Add SSIS package configurations for the Package Deployment Model
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 

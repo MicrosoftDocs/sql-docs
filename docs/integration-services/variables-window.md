@@ -19,7 +19,7 @@ manager: craigg
 ---
 # Variables Window
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
   Use the **Variables** window to create and modify user-defined variables and view system variables.  

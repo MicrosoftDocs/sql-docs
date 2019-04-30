@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 6-2: Convert the project to the Project Deployment Model
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 

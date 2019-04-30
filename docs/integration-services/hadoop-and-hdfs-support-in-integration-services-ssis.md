@@ -16,7 +16,7 @@ manager: craigg
 ---
 # Hadoop and HDFS Support in Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
   SQL Server 2016 Integration Services (SSIS) includes the following components that provide support for Hadoop and HDFS on premises.  

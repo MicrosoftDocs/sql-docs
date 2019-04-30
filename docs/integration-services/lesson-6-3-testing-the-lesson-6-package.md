@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 6-3: Test the Lesson 6 package
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 At run time, your package gets the value for the **Directory** property from the **VarFolderName** parameter.  

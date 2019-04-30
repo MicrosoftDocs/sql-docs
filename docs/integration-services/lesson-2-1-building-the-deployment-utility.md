@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 2-1 - Building the Deployment Utility
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 In this task, you will configure and build a deployment utility for the Deployment Tutorial project.  

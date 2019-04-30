@@ -14,7 +14,7 @@ manager: craigg
 ---
 # Lesson 1-4 - Adding Package Configurations
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 In this task, you will add a configuration to each package. Configurations update the values of package properties and package objects at run time.  

@@ -12,7 +12,7 @@ manager: craigg
 ---
 # Run an SSIS package with C# code in a .NET app
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
 This quickstart demonstrates how to write C# code to connect to a database server and run an SSIS package.

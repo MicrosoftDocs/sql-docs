@@ -19,7 +19,7 @@ manager: craigg
 ---
 # Copy Package Objects
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
   This topic describes how to copy control flow items, data flow items, and connection managers within a package or between packages.  

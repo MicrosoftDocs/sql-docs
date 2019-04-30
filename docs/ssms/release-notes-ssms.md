@@ -75,8 +75,8 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |General SSMS|Added support in SSMS UI for UTF-8 on collation dialog.|
 |General SSMS|Switched to "Windows Credential Manager" for connection dialog MRU passwords. This addresses a long outstanding issue where persistence of passwords was not always reliable.|
 |General SSMS|Improved support for multi-monitor systems by making sure that more and more dialogs and windows pop up on the expected monitor.|
-|General SSMS|Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. For details, see https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974.|
-|General SSMS|Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". For details, see  https://feedback.azure.com/forums/908035/suggestions/33624115 |
+|General SSMS|Exposed the 'backup checksum default' server configuration in the new Database Settings page of the Server Properties Dialog. For details, see https://feedback.azure.com/forums/08035-sql-server/suggestions/34634974. |
+|General SSMS|Exposed "maximum size for error log files" under "Configure SQL Server Error Logs". For details, see  https://feedback.azure.com/forums/908035/suggestions/33624115. |
 |General SSMS|Added "Migrate to Azure" under Tools menu – We have integrated Database Migration Assistant and Azure Database Migration Service to provide quick and easy access to help accelerate your migrations to Azure. |
 |General SSMS|Added logic to prompt the user to commit open transactions when "Change connection" is used.|
 |Azure Data Studio integration|Added menu item to start/download Azure Data Studio.|
@@ -217,8 +217,8 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |Object Explorer|Fixed a long outstanding issue where the DELETE key was not working in OE while trying to rename an object. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510, https://feedback.azure.com/forums/908035/suggestions/32910247 and other duplicates. |
 |Object Explorer|When displaying the properties of existing database files, the size appears under a column "Size (MB)" instead of "Initial Size (MB)" which is what is displayed when creating a new database. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/32629024. |
 |Object Explorer|Disabled the "Design" context-menu item on "Graph Tables" since there is no support for those kind of tables in the current version of SSMS.|
-|Object Explorer|Fixed an issue where the "New Job Schedule" dialog was not rendering properly on High DPI monitors. For details, see https://feedback.azure.com/admin/v3/suggestions/35541262.|
-|Object Explorer|Fixed/improved the way an issue where a database size ("Size (MB)") is displayed in Object Explorer details: only 2 decimal digits and formatted using the thousands separator. For details, see https://feedback.azure.com/forums/908035/suggestions/34379308.|
+|Object Explorer|Fixed an issue where the "New Job Schedule" dialog was not rendering properly on High DPI monitors. For details, see https://feedback.azure.com/admin/v3/suggestions/35541262. |
+|Object Explorer|Fixed/improved the way an issue where a database size ("Size (MB)") is displayed in Object Explorer details: only 2 decimal digits and formatted using the thousands separator. For details, see https://feedback.azure.com/forums/908035/suggestions/34379308. |
 |Object Explorer|Fixed an issue that was causing the creation of a "Spatial Index" to fail with an error like "To accomplish this action, set property PartitionScheme".|
 |Object Explorer|Minor performance improvements in Object Explorer to avoid issuing extra queries, when possible.|
 |Object Explorer|Extended logic to request confirmation when renaming a database to all the schema objects (the setting can be configured).|
@@ -248,7 +248,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |ShowPlan|New mem grant operator properties display incorrectly when there is more than one thread.|
 |ShowPlan|Add the following 4 attributes in RunTimeCountersPerThread of actual execution xml plan: HpcRowCount (Number of rows processed by hpc device), HpcKernelElapsedUs (elapsed time wait for kernel execution in use), HpcHostToDeviceBytes (bytes transferred from host to device), and HpcDeviceToHostBytes (bytes transferred from device to host).|
 |ShowPlan|Fixed an issue where the similar plan nodes are highlighted in the wrong position.|
-|SMO|Fixed an issue where SMO/ServerConnection did not SqlCredential-based connections correctly. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941.|
+|SMO|Fixed an issue where SMO/ServerConnection did not SqlCredential-based connections correctly. For details, see https://feedback.azure.com/forums/908035-sql-server/suggestions/33698941. |
 |SMO|Fixed an issue where an application written using SMO would encounter an error if it tried to enumerate databases from the same server on multiple threads even though it uses separate SqlConnection instances on each thread.|
 |SMO|Fixed performance regression in Transfer from External Tables.|
 |SMO|Fixed issue in ServerConnection thread-safety which was causing SMO to leak SqlConnection instances when targeting Azure.|
@@ -266,7 +266,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |SSMS Editor|Fixed an issue where clicking on editor tabs could cause the tab to be closed instead of getting the focus. For details, see https://feedback.azure.com/forums/908035/suggestions/37291114. |
 |SSMS Options|Fixed an issue where **Tools** > **Options** > **SQL Server Object Explorer** > **Commands** page was not resizing properly.|
 |SSMS Options|SSMS will now by default disable automatic download of DTD in XMLA editor -- XMLA script editor (which uses the xml language service) will by default now prevent automatically downloading the DTD for potentially malicious xmla files. This is controlled by turning off the “Automatically download DTDs and Schemas” setting in **Tools** > **Options** > **Environment** > **Text Editor** > **XML** > **Miscellaneous**. |
-|SSMS Options|Restored **CTRL+D** to be the shortcut as it used to be in older version of SSMS. For details, see https://feedback.azure.com/forums/908035/suggestions/35544754.|
+|SSMS Options|Restored **CTRL+D** to be the shortcut as it used to be in older version of SSMS. For details, see https://feedback.azure.com/forums/908035/suggestions/35544754. |
 |Table Designer|Fixed a crash in "Edit 200 rows".|
 |Table Designer|Fixed an issue where the designer was allowing to add a table when connected to an Azure SQL database.|
 |Vulnerability Assessment|Fixed an issue where the scan results are not being loaded properly.|

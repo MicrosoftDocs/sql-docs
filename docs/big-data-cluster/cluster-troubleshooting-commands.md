@@ -239,7 +239,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 > [!Note]
 > If you get the following error: *Unable to listen on port 8001: All listeners failed to create with the following errors: Unable to create listener: Error listen tcp4 127.0.0.1:8001: >bind: Only one usage of each socket address (protocol/network address/port) is normally permitted. Unable to create listener: Error listen tcp6: address [[::1]]:8001: missing port in >address error: Unable to listen on any of the requested ports: [{8001 9090}]*, make sure you did not start the dashboard already from another window.
 
-When you launch the dashboard on your browser, you might get permission warnings due to RBAC being enabled by default in AKS clusters, and the service account used by the dashboard does not have enough permissions to access all resources (for example, *pods is forbidden: User "system:serviceaccount:kube-system:kubernetes-dasboard" cannot list pods in the namespace "default"*). Run the following command to give the necessary permissions to `kubernetes-dashboard`, and then restart the dashboard:
+When you launch the dashboard on your browser, you might get permission warnings due to RBAC being enabled by default in AKS clusters, and the service account used by the dashboard does not have enough permissions to access all resources (for example, *pods is forbidden: User "system:serviceaccount:kube-system:kubernetes-dashboard" cannot list pods in the namespace "default"*). Run the following command to give the necessary permissions to `kubernetes-dashboard`, and then restart the dashboard:
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

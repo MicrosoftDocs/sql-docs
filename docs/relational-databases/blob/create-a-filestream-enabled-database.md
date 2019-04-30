@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], FILESTREAM-enabled databases"
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Create a FILESTREAM-Enabled Database

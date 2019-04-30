@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], directories"
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Work with Directories and Paths in FileTables

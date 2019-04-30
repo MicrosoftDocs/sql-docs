@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: filestream
 ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # FILESTREAM DDL, Functions, Stored Procedures, and Views

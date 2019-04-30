@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: filestream
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Compare Options for Storing Blobs (SQL Server)

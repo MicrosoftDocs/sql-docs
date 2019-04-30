@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Windows Firewall [Database Engine], FILESTREAM"
   - "FILESTREAM [SQL Server], Windows Firewall"
 ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configure a Firewall for FILESTREAM Access

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], about"
   - "FILESTREAM [SQL Server], overview"
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current"
 manager: craigg
 ---

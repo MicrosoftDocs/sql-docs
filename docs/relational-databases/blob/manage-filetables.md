@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "FileTables [SQL Server], security"
   - "FileTables [SQL Server], managing access"
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Manage FileTables

@@ -21,6 +21,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Raw File Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Raw File source reads raw data from a file. Because the representation of the data is native to the source, the data requires no translation and almost no parsing. This means that the Raw File source can read data more quickly than other sources such as the Flat File and the OLE DB sources.  
   
  The Raw File source is used to retrieve raw data that was previously written by the Raw File destination. You can also point the Raw File source to an empty raw file that contains only the columns (metadata-only file). You use the Raw File destination to generate the metadata-only file without having to run the package. For more information, see [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  

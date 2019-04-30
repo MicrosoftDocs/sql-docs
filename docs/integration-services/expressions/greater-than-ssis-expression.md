@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # &gt; (Greater Than) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Performs a comparison to determine if the first expression is greater than the second one. The expression evaluator automatically converts many data types before it performs the comparison.  
   
 > [!NOTE]  

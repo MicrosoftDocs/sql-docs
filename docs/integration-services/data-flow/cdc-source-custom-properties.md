@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # CDC Source Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The following table describes the custom properties of the CDC source. All properties are read/write.  
   
 |Property name|Data Type|Description|  

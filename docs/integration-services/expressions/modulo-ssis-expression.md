@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # (Modulo) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Provides the integer remainder after dividing the first numeric expression by the second one.  
   
 ## Syntax  

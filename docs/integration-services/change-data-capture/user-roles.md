@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # User Roles
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This section describes the user roles for the Change Data Capture Service for Oracle by Attunity. The roles described are [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database roles, Windows roles, or Oracle database roles.  
   
 ## Windows User Roles  

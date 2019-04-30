@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Expressions
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   An expression is a combination of symbols-identifiers, literals, functions, and operators-that yields a single data value. Simple expressions can be a single constant, variable, or function. More frequently, expressions are complex, using multiple operators and functions and referencing multiple columns and variables. In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], expressions can be used to define conditions for CASE statements, create and update values in data columns, assign values to variables, update or populate properties at run time, define constraints in precedence constraints, and provide the expressions used by the For Loop container.  
   
  Expressions are based on an expression language, and the expression evaluator. The expression evaluator parses the expression and determines whether the expression follows the rules of the expression language. For more information about the expression syntax and supported literals and identifiers, see the following topics.  

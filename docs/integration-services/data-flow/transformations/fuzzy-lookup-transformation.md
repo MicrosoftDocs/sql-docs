@@ -36,6 +36,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Fuzzy Lookup Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Fuzzy Lookup transformation performs data cleaning tasks such as standardizing data, correcting data, and providing missing values.  
   
 > [!NOTE]  

@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # NULL (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a null value of a requested data type.  
   
 ## Syntax  

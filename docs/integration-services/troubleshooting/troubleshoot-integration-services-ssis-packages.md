@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Troubleshoot Integration Services (SSIS) Packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 ## In this section
 -   [Troubleshooting Tools for Package Development](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)
 -   [Troubleshooting Tools for Package Connectivity](../../integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity.md)

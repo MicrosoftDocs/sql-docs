@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Load Data by Using the ODBC Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This procedure shows how to load data by using the ODBC destination. To add and configure an ODBC destination, the package must already include at least one Data Flow task and source.  
   
 ### To load data using an ODBC destination  

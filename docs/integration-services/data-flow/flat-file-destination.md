@@ -22,6 +22,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Flat File Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Flat File destination writes data to a text file. The text file can be in delimited, fixed width, fixed width with row delimiter, or ragged right format.  
   
  You can configure the Flat File destination in the following ways:  

@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # SUBSTRING (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the part of a character expression that starts at the specified position and has the specified length. The *position* parameter and the *length* parameter must evaluate to integers.  
   
 ## Syntax  

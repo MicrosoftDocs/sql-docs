@@ -23,6 +23,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Execute SQL Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Execute SQL task runs SQL statements or stored procedures from a package. The task can contain either a single SQL statement or multiple SQL statements that run sequentially. You can use the Execute SQL task for the following purposes:  
   
 -   Truncate a table or view in preparation for inserting data.  

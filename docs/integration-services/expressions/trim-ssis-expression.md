@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # TRIM (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression after removing leading and trailing spaces.  
   
 > [!NOTE]  

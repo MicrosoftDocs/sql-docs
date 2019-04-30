@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Functions (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The expression language includes a set of functions for use in expressions. An expression can use a single function, but typically an expression combines functions with operators and uses multiple functions.  
   
  The functions can be categorized into the following groups:  

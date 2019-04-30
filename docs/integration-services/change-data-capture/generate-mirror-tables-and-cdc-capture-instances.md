@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Generate Mirror Tables and CDC Capture Instances
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Generate Mirror Tables page to generate the mirror tables for the tables you included in the CDC instance  
   
  Click **Run** to create the mirror tables. The progress for the creation of each table is displayed and a message is displayed to let you know whether each mirror table is completed successfully or with errors. If any errors occur, click **Details** to see a dialog box with an explanation of the error.  

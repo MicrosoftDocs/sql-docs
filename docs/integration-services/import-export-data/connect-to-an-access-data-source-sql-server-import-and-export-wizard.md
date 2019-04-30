@@ -12,6 +12,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Connect to an Access Data Source (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This topic shows you how to connect to a **Microsoft Access** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
 
 The following screen shot shows a sample connection to a Microsoft Access database. In this example, you don't have to enter a user name and password, because the target database doesn't use a workgroup information file.

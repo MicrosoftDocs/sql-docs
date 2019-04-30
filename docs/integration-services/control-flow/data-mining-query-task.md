@@ -21,6 +21,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Data Mining Query Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Data Mining Query task runs prediction queries based on data mining models built in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. The prediction query creates a prediction for new data by using mining models. For example, a prediction query can predict how many sailboats are likely to sell during the summer months or generate a list of prospective customers who are likely to buy a sailboat.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] provides tasks that perform other business intelligence operations, such as running Data Definition Language (DDL) statements and processing analytic objects.  

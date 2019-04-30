@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # GETDATE (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the current date of the system in a DT_DBTIMESTAMP format. The GETDATE function takes no arguments.  
   
 > [!NOTE]  

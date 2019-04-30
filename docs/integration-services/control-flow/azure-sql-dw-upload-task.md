@@ -17,6 +17,10 @@ manager: craigg
 ---
 # Azure SQL DW Upload Task
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 The **Azure SQL DW Upload Task** enables an SSIS package to copy tabular data to Azure SQL Data Warehouse (DW) from file system or Azure Blob Storage.
 The task leverages PolyBase to improve performance, as described in the article [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).
 The currently supported source data file format is delimited text in UTF8 encoding.

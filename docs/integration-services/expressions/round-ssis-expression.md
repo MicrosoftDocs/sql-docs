@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # ROUND (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a numeric expression that is rounded to the specified length or precision. The length parameter must evaluate to an integer.  
   
 ## Syntax  

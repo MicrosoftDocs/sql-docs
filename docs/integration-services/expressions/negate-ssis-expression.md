@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # - (Negate) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Negates a numeric expression.  
   
 ## Syntax  

@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # SAP BW Destination Editor (Mappings Page)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Mappings** page of the **SAP BW Destination Editor** to map input columns to destination columns.  
   
  To learn more about the SAP BW destination of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, see [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

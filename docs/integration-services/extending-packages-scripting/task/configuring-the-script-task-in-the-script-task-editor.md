@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Configuring the Script Task in the Script Task Editor
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Before you write custom code in the Script task, you configure its principal properties in the three pages of the **Script Task Editor**. You can configure additional task properties that are not unique to the Script task by using the Properties window.  
   
 > [!NOTE]  

@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Update Statistics Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Update Statistics task updates information about the distribution of key values for one or more statistics groups (collections) in the specified table or indexed view. For more information, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
  By using the Update Statistics task, a package can update statistics for a single database or multiple databases. If the task updates only the statistics in a single database, you can choose the views or the tables whose statistics the task updates. You can configure the update to update all statistics, column statistics only, or index statistics only.  

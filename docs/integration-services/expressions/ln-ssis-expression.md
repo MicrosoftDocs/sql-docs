@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # LN (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the natural logarithm of a numeric expression.  
   
 ## Syntax  

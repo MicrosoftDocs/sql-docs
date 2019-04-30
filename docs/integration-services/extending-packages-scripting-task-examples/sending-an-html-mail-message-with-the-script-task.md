@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Sending an HTML Mail Message with the Script Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] SendMail task only supports mail messages in plain text format. However you can easily send HTML mail messages by using the Script task and the mail capabilities of the .NET Framework.  
   
 > [!NOTE]  

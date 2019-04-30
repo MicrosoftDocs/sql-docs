@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # SQUARE (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the square of a numeric expression.  
   
 ## Syntax  

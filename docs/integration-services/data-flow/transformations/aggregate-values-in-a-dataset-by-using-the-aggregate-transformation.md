@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Aggregate Values in a Dataset by Using the Aggregate Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To add and configure an Aggregate transformation, the package must already include at least one Data Flow task and one source.  
   
 ### To aggregate values in a dataset  

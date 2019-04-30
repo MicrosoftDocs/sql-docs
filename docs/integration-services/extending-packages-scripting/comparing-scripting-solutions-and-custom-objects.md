@@ -20,6 +20,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Comparing Scripting Solutions and Custom Objects
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Script task or Script component can implement much of the same functionality that is possible in a custom managed task or data flow component. Here are some considerations to help you choose the appropriate type of task for your needs:  
   
 -   If the configuration or functionality is specific to an individual package, you should use the Script task or the Script component instead of a developing a custom object.  

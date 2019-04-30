@@ -21,6 +21,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Adding the Data Flow Task Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] includes a task called the Data Flow task, which is represented by the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> namespace in the object model. The Data Flow task is a specialized, high-performance task, dedicated to transforming and moving data during package execution. Like other tasks, the Data Flow task is wrapped by the <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> object, and from the perspective of the run-time engine, this task is just another task in the package. However, the data flow contains additional objects called data flow components. These components are the components that make data move from a source to a destination, sometimes through a transformation. The components define both the direction of movement and how data is transformed. Configuring the Data Flow task involves adding components to the task, and then connecting them to establish the flow of data and achieve the intended transformation.  
   
  There are three types of components within a Data Flow task: **Data Flow Sources**, **Data Flow Transformations**, and **Data Flow Destinations**, shown in that order within the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer toolbox. These types are also referred to more simply as sources, transformations, or destinations. As implied by the names, data flows from a source to a transformation, and then to a destination. This is a simplistic description of the data flow to illustrate the concept, but the Data Flow task is flexible and powerful enough to handle multiple sources, and to connect together many transformations that send output to multiple destinations.  

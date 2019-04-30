@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # UPPER (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a character expression after converting lowercase characters to uppercase characters.  
   
 ## Syntax  

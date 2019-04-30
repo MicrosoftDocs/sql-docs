@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # catalog.set_object_parameter_value (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Sets the value of a parameter in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog. Associates the value to an environment variable or assigns a literal value that is used by default when no other values are assigned.  

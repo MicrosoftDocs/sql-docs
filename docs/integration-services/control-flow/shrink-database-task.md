@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Shrink Database Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Shrink Database task reduces the size of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database data and log files.  
   
  By using the Shrink Database task, a package can shrink files for a single database or multiple databases.  

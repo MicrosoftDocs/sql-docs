@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Integration Services (SSIS) Scale Out Master
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 The Scale Out Master manages the Scale Out system through the SSISDB Catalog and the Scale Out Master service. 
 
 The SSISDB Catalog stores all the information for Scale Out Workers, packages, and executions. It provides the interface to enable a Scale Out Worker and execute packages in Scale Out. For more information, see [Walkthrough: Set up Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md) and [Run Packages in Integration Services](run-packages-in-integration-services-ssis-scale-out.md).

@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Folder Properties Dialog Box
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A folder contains projects and environments in the **SSISDB** catalog. Each folder defines permissions that apply to the contents of the folder. For more information about [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permissions, see [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  
   
 ## To Set Folder Description and Permissions  

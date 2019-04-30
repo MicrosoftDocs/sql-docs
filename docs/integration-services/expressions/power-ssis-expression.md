@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # POWER (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the result of raising a numeric expression to a power. The power parameter must evaluate to an integer.  
   
 ## Syntax  

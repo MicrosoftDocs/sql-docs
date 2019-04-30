@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # History Cleanup Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The History Cleanup task deletes entries in the following history tables in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb database.  
   
 -   backupfile  

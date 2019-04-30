@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # HEX (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a string representing the hexadecimal value of an integer.  
   
 ## Syntax  

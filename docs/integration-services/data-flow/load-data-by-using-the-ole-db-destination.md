@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Load Data by Using the OLE DB Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To add and configure an OLE DB destination, the package must already include at least one Data Flow task and a source.  
   
 ### To load data using an OLE DB destination  

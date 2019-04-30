@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Manage a CDC Service
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can use the CDC Designer Console to view the services you created with the CDC Service Configuration Console and manage all of the instances in the Oracle CDC Service.  
   
  Click the name of the service in the left pane to display information about the service and to manage it.  

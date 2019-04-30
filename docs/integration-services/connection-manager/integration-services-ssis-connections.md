@@ -26,6 +26,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Connections
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages use connections to perform different tasks and to implement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] features:  
   
 -   Connecting to source and destination data stores such as text, XML, Excel workbooks, and relational databases to extract and load data.  

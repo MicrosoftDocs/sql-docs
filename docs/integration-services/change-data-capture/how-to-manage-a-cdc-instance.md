@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # How to Manage a CDC Instance
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This procedure describes how to use the CDC Designer Console to manage CDC instance operations at runtime.  
   
 ### To manage CDC instance operations  

@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Configure Dialog Box
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Configure** dialog box to configure parameters, connection managers, and references to environments, for packages and projects.  
   
  **What do you want to do?**  

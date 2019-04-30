@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # CDC Control Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The CDC Control task is used to control the life cycle of change data capture (CDC) packages. It handles CDC package synchronization with the initial load package, the management of Log Sequence Number (LSN) ranges that are processed in a run of a CDC package. In addition, the CDC Control task deals with error scenarios and recovery.  
   
  The CDC Control task maintains the state of the CDC package in an SSIS package variable and it can also persist it in a database table so that the state is maintained across package activations and between multiple packages that together perform a common CDC process (for example, one task may be responsible for the initial loading and the other for the trickle-feed updates).  

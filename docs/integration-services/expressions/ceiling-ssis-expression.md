@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # CEILING (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the smallest integer that is greater than or equal to a numeric expression.  
   
 ## Syntax  

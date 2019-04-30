@@ -12,6 +12,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Data Type Mapping in the SQL Server Import and Export Wizard
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  In the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, you can set the name, the data type, and the data type properties of columns in new destination tables and files, but you can't specify custom conversions for column values. As a result, the built-in mapping of data types from source to destination is important.  
   
 ##  <a name="wizardMapping"></a> How does the wizard map data types between source and destination?

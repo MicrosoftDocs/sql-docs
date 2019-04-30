@@ -23,6 +23,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Identifiers (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In expressions, identifiers are columns and variables that are available to the operation. Expressions can use regular and qualified identifiers.  
   
 ## Regular Identifiers  

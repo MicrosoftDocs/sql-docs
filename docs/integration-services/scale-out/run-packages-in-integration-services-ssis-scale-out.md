@@ -16,6 +16,10 @@ f1_keywords:
   - "sql13.ssis.ssms.ispackageexecuteinscaleout.f1"
 ---
 # Run packages in Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 After you deploy packages to the Integration Services server, you can run them in Scale Out by using one of the following methods:
 
 -   [Execute Package in Scale Out dialog box](#scale_out_dialog)

@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Managing Running Packages Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   As you work programmatically with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages, you may want to determine which packages are currently running. The <xref:Microsoft.SqlServer.Dts.Runtime.Application> class of the <xref:Microsoft.SqlServer.Dts.Runtime> namespace provides methods and classes to satisfy these requirements.  
   
  For more information about monitoring packages, see [Package Management &#40;SSIS Service&#41;](../../integration-services/service/package-management-ssis-service.md).  

@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Scale Out support for high availability via SQL Server failover cluster instance
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 To set up high availability on the Scale Out Master side with SQL Server failover cluster instance, do the following things:
 
 ## 1. Prerequisites

@@ -12,6 +12,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Steps in the SQL Server Import and Export Wizard
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This topic describes the sequence of steps for importing and exporting data with the SQL Server Import and Export Wizard. It also contains links to the individual pages of documentation that describe each page or dialog box you see in the wizard.
 
 This topic describes only the **steps** in the wizard. If you're looking for something else, see [Related tasks and content](#related).

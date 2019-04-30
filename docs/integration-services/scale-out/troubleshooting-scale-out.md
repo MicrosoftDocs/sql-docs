@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Troubleshoot Scale Out
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 SSIS Scale Out involves communication among the SSIS Catalog database `SSISDB`, the Scale Out Master service, and the Scale Out Worker service. Sometimes this communication breaks due to configuration mistakes, lack of access permissions, and other reasons. This article helps you to troubleshoot issues with your Scale Out configuration.
 
 To investigate the symptoms you encounter, follow the steps below one by one until your problem is resolved.

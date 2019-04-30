@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # MONTH (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns an integer that represents the month datepart of a date.  
   
 ## Syntax  

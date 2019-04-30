@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # * (Multiply) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Multiplies two numeric expressions.  
   
 ## Syntax  

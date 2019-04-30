@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Browse All Principals Dialog Box
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Browse All Principals** dialog box to select a database principal to change the principal's permissions on the selected project or on all projects contained in a selected folder.  
   
  **What do you want to do?**  

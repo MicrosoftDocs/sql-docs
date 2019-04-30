@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Connect to Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When you add or edit the tables used in the CDC instance for the first time, you may be asked to connect to the Oracle database. You should enter the credentials of an Oracle user who can access the schema of the tables to be captured. Enter the following in this dialog box:  
   
  **Authentication**  

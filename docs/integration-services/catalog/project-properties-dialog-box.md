@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Project Properties Dialog Box
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   An [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project is a unit of deployment. Each project can contain packages, parameters, and environment references. A project is a securable object and can define permissions for database principals. When a project is re-deployed, the previous version of the project can be stored in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
  Project parameters and package parameters can be used to assign values to properties within packages at the time of execution. Some parameters require values before the package can be executed. Parameter values that reference environment variables require that the project has the corresponding environment reference prior to execution.  

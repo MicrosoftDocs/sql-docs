@@ -14,6 +14,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After the Welcome page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard displays **Choose a Data Source**. On this page, you provide information about the source of your data and about how to connect to it.
   
 For info about the data sources that you can use, see [What data sources and destinations can I use?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)

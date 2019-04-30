@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Data Streaming Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **Data Streaming Destination** is a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) destination component that lets the **OLE DB Provider for SSIS** consume output of an SSIS package as a tabular result set. You can create a linked server that uses the OLE DB Provider for SSIS and then run a SQL query on the linked server to display data returned by the SSIS package.  
   
  In the following example example, the following query returns output from the Package.dtsx package in the SSISPackagePublishing project in the Power BI folder of the SSIS Catalog. This query uses the linked server named  [Default Linked Server for Integration Services] that in turn uses the new OLE DB Provider for SSIS. The query includes folder name, project name, and package name in the SSIS catalog. The OLE DB Provider for SSIS runs the package you specified in the query and returns the tabular result set.  

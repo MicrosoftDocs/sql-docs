@@ -20,6 +20,10 @@ ms.author: janinez
 manager: craigg
 ---
 # WMI Event Watcher Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The WMI Event Watcher task watches for a Windows Management Instrumentation (WMI) event using a Management Instrumentation Query Language (WQL) event query to specify events of interest. You can use the WMI Event Watcher task for the following purposes:  
   
 -   Wait for notification that files have been added to a folder and then initiate the processing of the file.  

@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # ABS (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the absolute, positive value of a numeric expression.  
   
 ## Syntax  

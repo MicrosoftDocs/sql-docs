@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Extract Data by Using the ODBC Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This procedure describes how to extract data by using an ODBC source. To add and configure an ODBC source, the package must already include at least one Data Flow task.  
   
 ### To extract data using an ODBC source  

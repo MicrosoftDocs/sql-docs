@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Configure Outputs Using the Slowly Changing Dimension Wizard
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Slowly Changing Dimension Wizard functions as the editor for the Slowly Changing Dimension transformation. Building and configuring the data flow for slowly changing dimension data can be a complex task. The Slowly Changing Dimension Wizard offers the simplest method of building the data flow for the Slowly Changing Dimension transformation outputs by guiding you through the steps of mapping columns, selecting business key columns, setting column change attributes, and configuring support for inferred dimension members.  
   
  You must choose at least one business key column in the dimension table and map it to an input column. The value of the business key links a record in the source to a record in the dimension table. The transformation uses this mapping to locate the record in the dimension table and to determine whether a record is new or changing. The business key is typically the primary key in the source, but it can be an alternate key as long as it uniquely identifies a record and its value does not change. The business key can also be a composite key, consisting of multiple columns. The primary key in the dimension table is usually a surrogate key, which means a numeric value generated automatically by an identity column or by a custom solution such as a script.  

@@ -18,6 +18,10 @@ ms.author: "mikeray"
 manager: "erikre"
 ---
 # Upgrade Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   If [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] or later is currently installed on your computer, you can upgrade to [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
  When you upgrade to [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] on a machine that has one of these earlier versions of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installed, [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] is installed side-by-side with the earlier version.  

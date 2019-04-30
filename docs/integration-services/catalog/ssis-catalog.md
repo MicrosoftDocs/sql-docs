@@ -18,6 +18,10 @@ manager: craigg
 ---
 
 # SSIS Catalog
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **SSISDB** catalog is the central point for working with [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) projects that you've deployed to the [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server. For example, you set project and package parameters, configure environments to specify runtime values for packages, execute and troubleshoot packages, and manage [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] server operations.  
  
 > [!NOTE]
@@ -167,7 +171,7 @@ To run the **SSIS Server Maintenance Job**, SSIS creates the SQL Server login **
 |Property Name (**Catalog Properties** dialog box)|Property Name (database view)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Encryption Algorithm Name|ENCRYPTION_ALGORITHM|  
-|Clean Logs Periodically|OPERATION_CLEANUP_ENABLED​|  
+|Clean Logs Periodically|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |Retention Period (days)|RETENTION_WINDOW|  
 |Periodically Remove Old Versions|VERSION_CLEANUP_ENABLED|  
 |Maximum Number of Versions per Project|MAX_PROJECT_VERSIONS|  

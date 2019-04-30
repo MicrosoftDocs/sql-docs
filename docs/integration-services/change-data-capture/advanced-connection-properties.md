@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Advanced Connection Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Advanced Connection Properties** dialog box to add more connection parameters to the connection string.  
   
  The additional connection parameters can be any ODBC connection parameter that is supported by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database instance you are using.  

@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Transfer Logins Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Transfer Logins task transfers one or more logins between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Transfer Logins Between Instances of SQL Server  

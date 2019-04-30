@@ -14,6 +14,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   If you double-click the row for an individual column on the **Review Data Type Mapping** page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows the **Column Conversion Details** dialog box. On this page you can review detailed conversion information for an individual column. This information includes the following items.
 -   The data type of the column at the source and the destination.
 -   The data type conversion that the wizard will perform, if a conversion is required.

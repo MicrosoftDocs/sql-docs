@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Recordset Destination Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Recordset destination has both custom properties and the properties common to all data flow components.  
   
  The following table describes the custom properties of the Recordset destination. All properties are read/write.  

@@ -22,6 +22,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Execute Package Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Execute Package task extends the enterprise capabilities of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] by letting packages run other packages as part of a workflow.  
   
  You can use the Execute Package task for the following purposes:  

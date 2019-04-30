@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Connect to the SSIS Catalog (SSISDB) in Azure
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 Find the connection information you need to connect to the SSIS Catalog (SSISDB) hosted on an Azure SQL Database server. You need the following items to connect:
 - fully qualified server name
 - database name

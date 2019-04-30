@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Data Viewer
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   If a path is configured to use a data viewer, the Data Viewer displays the data buffer by buffer as data moves between two data flow components.  
   
 ## Options  

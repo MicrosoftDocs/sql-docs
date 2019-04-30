@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # TOKENCOUNT (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the number of tokens in a string that contains tokens separated by the specified delimiters.  
   
 ## Syntax  

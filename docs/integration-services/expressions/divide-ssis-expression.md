@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Divide (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Divides the first numeric expression by the second one.  
   
 ## Syntax  

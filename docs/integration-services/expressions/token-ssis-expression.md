@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # TOKEN  (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a token (substring) from a string based on the specified delimiters that separate tokens in the string and the number of the token that denotes which token to be returned.  
   
 ## Syntax  

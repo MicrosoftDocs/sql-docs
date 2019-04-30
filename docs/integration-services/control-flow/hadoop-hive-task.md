@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Hadoop Hive Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Hadoop Hive Task to run Hive script on a Hadoop cluster.  
   
  To add a Hadoop Hive Task, drag and drop it to the designer. Then double-click on the task, or right-click and click **Edit**, to open the **Hadoop Hive Task Editor** dialog box.  

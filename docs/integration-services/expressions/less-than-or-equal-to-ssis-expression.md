@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # &lt;= (Less Than or Equal To) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Performs a comparison to determine if the first expression is less than or equal to the second one. The expression evaluator automatically converts many data types before it performs the comparison.  
   
 > [!NOTE]  

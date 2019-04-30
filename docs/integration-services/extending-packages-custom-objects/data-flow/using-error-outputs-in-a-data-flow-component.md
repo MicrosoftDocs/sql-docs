@@ -26,6 +26,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Using Error Outputs in a Data Flow Component
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Special <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> objects called error outputs can be added to components to let the component redirect rows that it cannot process during execution. The problems a component may encounter are generally categorized as errors or truncations, and are specific to each component. Components that provide error outputs give users of the component the flexibility to handle error conditions by filtering error rows out of the result set, by failing the component when a problem occurs, or by ignoring errors and continuing.  
   
  To implement and support error outputs in a component, you must first set the <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> property of the component to **true**. Then you must add an output to the component that has its <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> property set to **true**. Finally, the component must contain code that redirects rows to the error output when errors or truncations occur. This topic covers these three steps and explains the differences between synchronous and asynchronous error outputs.  

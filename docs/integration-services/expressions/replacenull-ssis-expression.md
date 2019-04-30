@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # REPLACENULL (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the value of second expression parameter if the value of first expression parameter is NULL; otherwise, returns the value of first expression.  
   
 ## Syntax  

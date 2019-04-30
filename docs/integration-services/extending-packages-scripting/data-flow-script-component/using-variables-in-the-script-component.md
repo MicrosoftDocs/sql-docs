@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Using Variables in the Script Component
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Variables store values that a package and its containers, tasks, and event handlers can use at run time. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md).  
   
  You can make existing variables available for read-only or read/write access by your custom script by entering comma-delimited lists of variables in the **ReadOnlyVariables** and **ReadWriteVariables** fields on the **Script** page of the **Script Transformation Editor**. Keep in mind that variable names are case-sensitive. Use the **Value** property to read from and write to individual variables. The Script component handles any required locking behind the scenes as your script manipulates the variables at run time.  

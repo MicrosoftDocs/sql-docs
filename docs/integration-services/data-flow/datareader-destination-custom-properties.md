@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # DataReader Destination Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The DataReader destination has both custom properties and the properties common to all data flow components.  
   
  The following table describes the custom properties of the DataReader destination. All properties except for **DataReader** are read/write.  

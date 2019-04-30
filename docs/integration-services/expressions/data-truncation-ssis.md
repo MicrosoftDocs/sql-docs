@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Data Truncation (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Converting values from one data type to another may cause values to be truncated.  
   
  Truncation can occur when:  

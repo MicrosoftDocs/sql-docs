@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # - (Subtract) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Subtracts the second numeric expression from the first one.  
   
 ## Syntax  

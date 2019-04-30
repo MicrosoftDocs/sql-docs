@@ -22,6 +22,10 @@ ms.author: janinez
 manager: craigg
 ---
 # XML Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The XML source reads an XML data file and populates the columns in the source output with the data.  
   
  The data in XML files frequently includes hierarchical relationships. For example, an XML data file can represent catalogs and items in catalogs. Before the data can enter the data flow, the relationship of the elements in XML data file must be determined, and an output must be generated for each element in the file.  

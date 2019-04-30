@@ -12,6 +12,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Get started with this simple example of the Import and Export Wizard
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Learn what to expect in the SQL Server Import and Export Wizard by walking through a common scenario - importing data from an Excel spreadsheet to a SQL Server database. Even if you plan to use a different source and a different destination, this topic shows you most of what you need to know about running the wizard.
 
 ## Prerequisite - Is the wizard installed on your computer?

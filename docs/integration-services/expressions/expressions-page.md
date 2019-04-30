@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Expressions Page
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Expressions** page to edit property expressions and to access the **Property Expressions Editor** and **Property Expression Builder** dialog boxes.  
   
  Property expressions update the values of properties when the package is run. Property expressions can be used with the properties of packages, tasks, containers, connection managers, as well as some data flow components. The expressions are evaluated and their results are used instead of the values to which you set the properties when you configured the package and package objects. The expressions can include variables and the functions and operators that the expression language provides. For example, you can generate the subject line for the Send Mail task by concatenating the value of a variable that contains the string "Weather forecast for " and the return results of the GETDATE() function to make the string "Weather forecast for 4/5/2006".  

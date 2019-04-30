@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Tutorial: Using the OData Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This tutorial walks you through the process to extract the **Employees** collection from the sample **Northwind** OData service (https://services.odata.org/V3/Northwind/Northwind.svc/), and then load it into a flat file.  
   
 ## 1. Create an Integration Services project  

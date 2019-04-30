@@ -32,6 +32,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Logging
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes log providers that you can use to implement logging in packages, containers, and tasks. With logging, you can capture run-time information about a package, helping you audit and troubleshoot a package every time it is run. For example, a log can capture the name of the operator who ran the package and the time the package began and finished.  
   
  You can configure the scope of logging that occurs during a package execution on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. For more information, see [Enable Logging for Package Execution on the SSIS Server](#server_logging).  

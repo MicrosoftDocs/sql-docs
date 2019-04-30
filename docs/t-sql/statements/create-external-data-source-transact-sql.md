@@ -82,7 +82,7 @@ Provides the connectivity protocol and path to the external data source.
 
 Location path:
 
-- `<Namenode>` = the machine name, name service URI, or IP address of the Namenode in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`.
+- `<Namenode>` = the machine name, name service URI, or IP address of the Namenode in the Hadoop cluster. PolyBase must resolve any DNS names used by the Hadoop cluster. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
 - `port` = The port that the external data source is listening on. In Hadoop, the port can be found using the `fs.default.name` configuration parameter. The default is 8020.
 - `<container>` = the container of the storage account holding the data. Root containers are read-only, data can't be written back to the container.
 - `<storage_account>` = the storage account name of the azure resource.
@@ -240,7 +240,7 @@ WITH
 
 ### B. Create external data source to reference Hadoop
 
-To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop Namenode and port. Provide the Nameservice ID as the `LOCATION` for highly available configurations.
+To create an external data source to reference your Hortonworks or Cloudera Hadoop cluster, specify the machine name, or IP address of the Hadoop Namenode and port. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster

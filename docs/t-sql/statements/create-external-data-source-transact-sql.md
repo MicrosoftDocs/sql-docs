@@ -172,7 +172,7 @@ For a complete list of supported Hadoop versions, see [PolyBase Connectivity Con
 > [!IMPORTANT]  
 > The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
 
-["Create external data source to reference Hadoop with push-down enabled"](C.-create-external-data-source-to-reference-Hadoop-with-push-down-enabled) provides a concrete example and further guidance.
+["Create external data source to reference Hadoop with push-down enabled"](#C.-Create-external-data-source-to-reference-Hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
 ### DATABASE_NAME = *database_name*
 
@@ -183,13 +183,13 @@ Configure this argument when the `TYPE` is set to `RDBMS` or `SHARD_MAP_MANAGER`
 | RDBMS             | The name of the remote database on the server provided using `LOCATION` |
 | SHARD_MAP_MANAGER | Name of the database operating as the shard map manager                 |
 
-For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to ["Create an RDBMS external data source"](G.-create-an-rdbms-external-data-source)
+For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to ["Create an RDBMS external data source"](#G.-create-an-rdbms-external-data-source)
 
 ### SHARD_MAP_NAME = *shard_map_name*
 
 Used when the `TYPE` argument is set to `SHARD_MAP_MANAGER` only to set the name of the shard map.
 
-For an example showing how to create an external data source where `TYPE` = `SHARD_MAP_MANAGER` refer to ["Create a shard map manager external data source"](F.-create-a-shard-map-manager-external-data-source)
+For an example showing how to create an external data source where `TYPE` = `SHARD_MAP_MANAGER` refer to ["Create a shard map manager external data source"](#F.-create-a-shard-map-manager-external-data-source)
 
 ## Permissions
 
@@ -211,10 +211,7 @@ When you connect to the storage or data pool in a Big Data Cluster, the user's c
 Currently a SAS token with type `hadoop` is unsupported. It's only supported with a storage account access key. Attempting to create an external data source with type `hadoop` and using a SAS credential might fail with the error:
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
-  
-## Locking  
- Takes a shared lock on the EXTERNAL DATA SOURCE object.
- 
+
 ## Examples: SQL Server (2016+) and Parallel Data Warehouse
 
 ### A. Create external data source in SQL 2019 to reference Oracle
@@ -478,24 +475,24 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 
 <!-- links to external pages -->
 <!-- SQL Docs -->
-[bulk_insert]: https://docs.microsoft.com/en-us/sql/t-sql/statements/bulk-insert-transact-sql
-[bulk_insert_example]: https://docs.microsoft.com/en-us/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
-[openrowset]: https://docs.microsoft.com/en-us/sql/t-sql/functions/openrowset-transact-sql
+[bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
 
-[create_dsc]: https://docs.microsoft.com/en-us/sql/t-sql/statements/create-database-scoped-credential-transact-sql
-[create_eff]: https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-file-format-transact-sql
-[create_etb]: https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-table-transact-sql
-[create_etb_as_sel]: https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
-[create_tbl_as_sel]: https://docs.microsoft.com/en-us/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
+[create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
+[create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
+[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
+[create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
+[create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
 
-[alter_eds]: https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-external-data-source-transact-sql
+[alter_eds]: https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql
 
-[cat_eds]: https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql
+[cat_eds]: https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql
 <!-- PolyBase docs -->
-[intro_pb]: https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide
-[connectivity_pb]:https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
-[CONNECTION_OPTIONS]: https://docs.microsoft.com/en-us/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
-[hint_pb]: https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-pushdown-computation#force-pushdown
+[intro_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide
+[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[CONNECTION_OPTIONS]: https://docs.microsoft.com/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
+[hint_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-pushdown-computation#force-pushdown
 <!-- Elastic Query Docs -->
 [intro_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/
 [remote_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/

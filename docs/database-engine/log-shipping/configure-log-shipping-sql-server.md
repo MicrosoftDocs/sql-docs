@@ -64,7 +64,7 @@ manager: craigg
   
 5.  In the **Network path to the backup folder** box, type the network path to the share you created for the transaction log backup folder.  
   
-6.  If the backup folder is located on the primary server, type the local path to the backup folder in the **If the backup folder is located on the primary server, type a local path to the folder** box. (If the backup folder is not on the primary server, you can leave this box empty.)  
+6.  **If the backup folder is located on the primary server, type a local path in the backup folder** box. (If the backup folder is not on the primary server, you can leave this box empty.)  
   
     > [!IMPORTANT]  
     >  If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account on your primary server runs under the local system account, you must create your backup folder on the primary server and specify a local path to that folder.  

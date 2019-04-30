@@ -31,7 +31,7 @@ The OLE DB Driver for SQL Server is a stand-alone data access application progra
 > For a list of the differences between OLE DB Driver for SQL Server and Windows DAC, plus information about issues to consider before updating a Windows DAC application to OLE DB Driver for SQL Server, see [Updating an Application to OLE DB Driver for SQL Server from MDAC](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md).  
 
 > [!IMPORTANT]
-> The previous [Microsoft OLE DB Provider for SQL Server](../../sql/ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) and [SQL Server Native Client OLE DB](../../sql/relational-databases/native-client/sql-server-native-client.md) provider (SQLNCLI) remains deprecated and it is not recommended to use either for new development work.
+> The previous [Microsoft OLE DB Provider for SQL Server](../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) and [SQL Server Native Client OLE DB](../relational-databases/native-client/sql-server-native-client.md) provider (SQLNCLI) remains deprecated and it is not recommended to use either for new development work.
   
  The OLE DB Driver for SQL Server can be used in conjunction with OLE DB Core Services supplied with Windows DAC, but this is not a requirement; the choice to use Core Services or not depends on the requirements of the individual application (for example, if connection pooling is required).  
   

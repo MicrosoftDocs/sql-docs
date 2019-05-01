@@ -23,7 +23,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 ---
 # JSON_QUERY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdb-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdb-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
  Extracts an object or an array from a JSON string.  
   

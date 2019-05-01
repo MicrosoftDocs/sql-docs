@@ -73,7 +73,7 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 ## Connect to SQL Server and get server information
 
-Let's use PowerShell Core to connect to your SQL Server instance on Linux and display a couple of server properties.
+The following steps use PowerShell Core to connect to your SQL Server instance on Linux and display a couple of server properties.
 
 Copy and paste the following commands at the PowerShell prompt. When you run these commands, PowerShell will:
 - Display a dialog that prompts you for the hostname or IP address of your instance

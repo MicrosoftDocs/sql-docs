@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_sql_referenced_entities (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/09/2017"
+ms.date: "05/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -23,9 +23,10 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_sql_referenced_entities (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Returns one row for each user-defined entity referenced by name in the definition of the specified referencing entity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A dependency between two entities is created when one user-defined entity, called the *referenced entity*, appears by name in a persisted SQL expression of another user-defined entity, called the *referencing entity*. For example, if a stored procedure is the specified referencing entity, this function returns all user-defined entities that are referenced in the stored procedure such as tables, views, user-defined types (UDTs), or other stored procedures.  
+Returns one row for each user-defined entity that is referenced by name in the definition of the specified referencing entity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A dependency between two entities is created when one user-defined entity, called the *referenced entity*, appears by name in a persisted SQL expression of another user-defined entity, called the *referencing entity*. For example, if a stored procedure is the specified referencing entity, this function returns all user-defined entities that are referenced in the stored procedure such as tables, views, user-defined types (UDTs), or other stored procedures.  
   
  You can use this dynamic management function to report on the following types of entities referenced by the specified referencing entity:  
   
@@ -92,7 +93,8 @@ sys.dm_sql_referenced_entities (
 |is_all_columns_found|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = All column dependencies for the object could be found.<br /><br /> 0 = Column dependencies for the object could not be found.|
 |is_insert_all|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object is used in an INSERT statement without a column list (object-level only).|  
 |is_incomplete|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column has a binding error and is incomplete.|
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## Exceptions  
  Returns an empty result set under any of the following conditions:  
   
@@ -131,7 +133,8 @@ sys.dm_sql_referenced_entities (
 |Type (alias and CLR user-defined type)|No|Yes|  
 |XML schema collection|No|Yes|  
 |Partition function|No|Yes|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  \* A table is tracked as a referencing entity only when it references a [!INCLUDE[tsql](../../includes/tsql-md.md)] module, user-defined type, or XML schema collection in the definition of a computed column, CHECK constraint, or DEFAULT constraint.  
   
  ** Numbered stored procedures with an integer value greater than 1 are not tracked as either a referencing or referenced entity.  
@@ -141,7 +144,7 @@ sys.dm_sql_referenced_entities (
   
 ## Examples  
   
-### A. Returning entities that are referenced by a database-level DDL trigger  
+### A. Return entities that are referenced by a database-level DDL trigger  
  The following example returns the entities (tables and columns) that are referenced by the database-level DDL trigger `ddlDatabaseTriggerLog`.  
   
 ```sql  
@@ -153,7 +156,7 @@ FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIG
 GO  
 ```  
   
-### B. Returning entities that are referenced by an object  
+### B. Return entities that are referenced by an object  
  The following example returns the entities that are referenced by the user-defined function `dbo.ufnGetContactInformation`.  
   
 ```sql  
@@ -165,19 +168,23 @@ FROM sys.dm_sql_referenced_entities ('dbo.ufnGetContactInformation', 'OBJECT');
 GO  
 ```  
   
-### C. Returning column dependencies  
+### C. Return column dependencies  
  The following example creates the table `Table1` with the computed column `c` defined as the sum of columns `a` and `b`. The `sys.dm_sql_referenced_entities` view is then called. The view returns two rows, one for each column defined in the computed column.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
 GO  
-SELECT referenced_schema_name AS schema_name,  
-    referenced_entity_name AS table_name,  
-    referenced_minor_name AS referenced_column,  
-    COALESCE(COL_NAME(OBJECT_ID(N'dbo.Table1'),referencing_minor_id), 'N/A') AS referencing_column_name  
-FROM sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT');  
+SELECT
+        referenced_schema_name AS schema_name,  
+        referenced_entity_name AS table_name,  
+        referenced_minor_name  AS referenced_column,  
+        COALESCE(
+            COL_NAME(OBJECT_ID(N'dbo.Table1'),
+            referencing_minor_id),
+            'N/A') AS referencing_column_name  
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT')
+;
 GO
 
 -- Remove the table.  
@@ -187,7 +194,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  schema_name table_name referenced_column referencing_column  
  ----------- ---------- ----------------- ------------------  
  dbo         Table1     a                 c  
@@ -198,10 +205,7 @@ GO
  The following example drops `Table1` and creates `Table2` and stored procedure `Proc1`. The procedure references `Table2` and the nonexistent table `Table1`. The view `sys.dm_sql_referenced_entities` is run with the stored procedure specified as the referencing entity. The result set shows one row for `Table1` and 3 rows for `Table2`. Because `Table1` does not exist, the column dependencies cannot be resolved and error 2020 is returned. The `is_all_columns_found` column returns 0 for `Table1` indicating that there were columns that could not be discovered.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
-    DROP TABLE dbo.Table1;  
+DROP TABLE IF EXISTS dbo.Table1;
 GO  
 CREATE TABLE dbo.Table2 (c1 int, c2 int);  
 GO  
@@ -212,12 +216,11 @@ GO
 SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name AS referenced_column_name, is_all_columns_found  
 FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1  
@@ -225,29 +228,38 @@ GO
  935674381     Table2       C2                      1  
  NULL          Table1       NULL                    0  
 
- Msg 2020, Level 16, State 1, Line 1The dependencies reported for entity "dbo.Proc1" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.
+Msg 2020, Level 16, State 1, Line 1
+The dependencies reported for entity "dbo.Proc1" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.
  ```
   
 ### E. Demonstrating dynamic dependency maintenance  
- The following example extends Example D to show that dependencies are maintained dynamically. The example first re-creates `Table1`, which was dropped in Example D. Then `sys.dm_sql_referenced_entities` is run again with the stored procedure specified as the referencing entity. The result set shows that both tables and their respective columns defined in the stored procedure are returned. In addition, the `is_all_columns_found` column returns a 1 for all objects and columns.  
-  
+
+This Example E assumes that Example D has been run. Example E shows that dependencies are maintained dynamically. The example does the following things:
+
+1. Re-creates `Table1`, which was dropped in Example D.
+2. Run Then `sys.dm_sql_referenced_entities` is run again with the stored procedure specified as the referencing entity.
+
+The result set shows that both tables, and their respective columns defined in the stored procedure, are returned. In addition, the `is_all_columns_found` column returns a 1 for all objects and columns.
+
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
 GO   
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name as column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
 DROP TABLE Table1, Table2;  
 DROP PROC Proc1;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1 
@@ -265,14 +277,22 @@ GO
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql  
-SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
-FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
-  
+USE AdventureWorks2012;
+GO
+SELECT
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_selected,  is_updated,  is_select_all
+    FROM
+        sys.dm_sql_referenced_entities(
+            'HumanResources.uspUpdateEmployeePersonalInfo',
+            'OBJECT')
+;
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  table_name    column_name         is_selected is_updated is_select_all  
  ------------- ------------------- ----------- ---------- -------------  
  uspLogError   NULL                0           0          0  

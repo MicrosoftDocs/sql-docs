@@ -2,15 +2,15 @@
 title: Backup and restore a database
 titleSuffix: Azure Data Studio
 description: Learn how to backup and restore a database using Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
 ms.topic: "tutorial"
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18"
+ms.date: "09/24/2018"
 ---
 
 # Backup and Restore databases using [!INCLUDE[name-sos](../includes/name-sos-short.md)]

@@ -2,16 +2,17 @@
 title: Enable or disable usage data collection, and crash reporting
 titleSuffix: Azure Data Studio
 description: This article explains how to control if usage and crash reporting data is collected and sent to Microsoft.
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18"
+ms.date: "09/24/2018"
 ---
+
 # Enable or disable usage data collection for [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 ## How to disable telemetry reporting

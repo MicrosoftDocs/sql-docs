@@ -9,7 +9,7 @@ ms.technology: linux
 ms.topic: conceptual
 author: "SQLvariant"
 ms.author: "aanelson"
-manager: matthend
+manager: craigg
 ---
 # Manage SQL Server on Linux with PowerShell Core
 

@@ -43,14 +43,13 @@ Returns one row for each user-defined entity that is referenced by name in the d
 -   XML schema collections  
   
 -   Partition functions  
-  
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
-  
+
 ## Syntax  
   
 ```  
 sys.dm_sql_referenced_entities (  
-    ' [ schema_name. ] referencing_entity_name ' , ' <referencing_class> ' )  
+    ' [ schema_name. ] referencing_entity_name ' ,
+    ' <referencing_class> ' )  
   
 <referencing_class> ::=  
 {  
@@ -87,12 +86,12 @@ sys.dm_sql_referenced_entities (
 |referenced_class_desc|**nvarchar(60)**|Description of class of referenced entity.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indicates schema binding for the referenced entity occurs at run time; therefore, resolution of the entity ID depends on the schema of the caller. This occurs when the referenced entity is a stored procedure, extended stored procedure, or user-defined function called within an EXECUTE statement.<br /><br /> 1 = The referenced entity is caller dependent and is resolved at run time. In this case, referenced_id is NULL.<br /><br /> 0 = The referenced entity ID is not caller dependent. Always 0 for schema-bound references and for cross-database and cross-server references that explicitly specify a schema name. For example, a reference to an entity in the format `EXEC MyDatabase.MySchema.MyProc` is not caller dependent. However, a reference in the format `EXEC MyDatabase..MyProc` is caller dependent.|  
 |is_ambiguous|**bit**|Indicates the reference is ambiguous and can resolve at run time to a user-defined function, a user-defined type (UDT), or an xquery reference to a column of type **xml**. For example, assume the statement `SELECT Sales.GetOrder() FROM Sales.MySales` is defined in a stored procedure. Until the stored procedure is executed, it is not known whether `Sales.GetOrder()` is a user-defined function in the `Sales` schema or column named `Sales` of type UDT with a method named `GetOrder()`.<br /><br /> 1 = Reference to a user-defined function or column user-defined type (UDT) method is ambiguous.<br /><br /> 0 = Reference is unambiguous or the entity can be successfully bound when the function is called.<br /><br /> Always 0 for schema-bound references.|  
-|is_selected|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column is selected.|  
-|is_updated|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column is modified.|  
-|is_select_all|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object is used in a SELECT * clause (object-level only).|  
-|is_all_columns_found|**bit**|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = All column dependencies for the object could be found.<br /><br /> 0 = Column dependencies for the object could not be found.|
-|is_insert_all|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object is used in an INSERT statement without a column list (object-level only).|  
-|is_incomplete|**bit**|**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = The object or column has a binding error and is incomplete.|
+|is_selected|**bit**|1 = The object or column is selected.|  
+|is_updated|**bit**|1 = The object or column is modified.|  
+|is_select_all|**bit**|1 = The object is used in a SELECT * clause (object-level only).|  
+|is_all_columns_found|**bit**|1 = All column dependencies for the object could be found.<br /><br /> 0 = Column dependencies for the object could not be found.|
+|is_insert_all|**bit**|1 = The object is used in an INSERT statement without a column list (object-level only).<br /><br />This column was added in SQL Server 2016.|  
+|is_incomplete|**bit**|1 = The object or column has a binding error and is incomplete.<br /><br />This column was added in SQL Server 2016 SP2.|
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## Exceptions  
@@ -150,9 +149,17 @@ sys.dm_sql_referenced_entities (
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc  
-FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIGGER');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc
+    FROM
+        sys.dm_sql_referenced_entities (
+            'ddlDatabaseTriggerLog',
+            'DATABASE_DDL_TRIGGER')
+;
 GO  
 ```  
   
@@ -162,9 +169,19 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc, is_caller_dependent, is_ambiguous  
-FROM sys.dm_sql_referenced_entities ('dbo.ufnGetContactInformation', 'OBJECT');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc,
+        is_caller_dependent,
+        is_ambiguous
+    FROM
+        sys.dm_sql_referenced_entities (
+            'dbo.ufnGetContactInformation',
+            'OBJECT')
+;
 GO  
 ```  
   
@@ -213,8 +230,13 @@ CREATE PROCEDURE dbo.Proc1 AS
     SELECT a, b, c FROM Table1;  
     SELECT c1, c2 FROM Table2;  
 GO  
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name AS referenced_column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS referenced_column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
 ```  
   
@@ -273,9 +295,7 @@ GO
  
 ### F. Returning object or column usage  
  The following example returns the objects and column dependencies of the stored procedure `HumanResources.uspUpdateEmployeePersonalInfo`. This procedure updates the columns `NationalIDNumber`, `BirthDate,``MaritalStatus`, and `Gender` of the `Employee` table based on a specified `BusinessEntityID` value. Another stored procedure, `upsLogError` is defined in a TRY...CATCH block to capture any execution errors. The `is_selected`, `is_updated`, and `is_select_all` columns return information about how these objects and columns are used within the referencing object. The table and columns that are modified are indicated by a 1 in the is_updated column. The `BusinessEntityID` column is only selected and the stored procedure `uspLogError` is neither selected nor modified.  
-  
-**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
+
 ```sql  
 USE AdventureWorks2012;
 GO

@@ -12,8 +12,8 @@ f1_keywords:
   - "sql.data.tools.dropdatabaseconfirmation.dialog"
   - "sql.data.tools.dropmultipledatabasesconfirmation.dialog"
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Delete Objects and Resolve Dependencies

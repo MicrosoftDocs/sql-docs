@@ -11,8 +11,8 @@ f1_keywords:
   - "sql.data.tools.unittesting.DatabaseMethodNameDialog"
   - "sql.data.tools.unittesting.designer"
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # Creating and Defining SQL Server Unit Tests

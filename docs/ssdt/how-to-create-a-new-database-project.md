@@ -15,8 +15,8 @@ f1_keywords:
   - "sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog"
   - "sql.data.tools.importscriptwizard.fileselection"
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Create a New Database Project

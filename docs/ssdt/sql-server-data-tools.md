@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.errortask.generichelp"
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # SQL Server Data Tools

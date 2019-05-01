@@ -11,8 +11,8 @@ f1_keywords:
   - "sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog"
   - "sql.data.tools.SqlProjectImportSnapshotDialog.dialog"
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Create a Snapshot of a Project

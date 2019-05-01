@@ -14,8 +14,8 @@ f1_keywords:
   - "sql.data.tools.schemacompare.connectiondialog.f1"
   - "sql.data.tools.schemacompare.connectiondialog.error.f1"
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Use Schema Compare to Compare Different Database Definitions

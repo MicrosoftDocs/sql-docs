@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.checkforupdates.dialog"
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # Check for Updates Dialog Box

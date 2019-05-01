@@ -11,8 +11,8 @@ f1_keywords:
   - "SQL.DATA.TOOLS.QUERYRESULTS.F1"
   - "sql.data.tools.queryresults.executequerydeletingrow"
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: View and Edit Data in a Table

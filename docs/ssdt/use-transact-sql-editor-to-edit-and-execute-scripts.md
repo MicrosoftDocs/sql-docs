@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.SQLEDITOR"
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # Use Transact-SQL Editor to Edit and Execute Scripts

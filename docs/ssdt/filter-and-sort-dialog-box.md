@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datafilterdialog.dialog"
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # Filter and Sort Dialog Box

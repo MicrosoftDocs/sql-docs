@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER"
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # Connected Database Development

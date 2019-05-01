@@ -11,8 +11,8 @@ f1_keywords:
   - "sql.data.tools.projectconversion.dialog"
   - "sql.data.tools.ImportDAC"
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Convert a Visual Studio 2010 Database Projects to SQL Server Database Projects and Retarget to a Different Platform

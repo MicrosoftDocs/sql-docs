@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG"
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Debug Stored Procedures

@@ -11,8 +11,8 @@ f1_keywords:
   - "sql.data.tools.publish.dialog"
   - "sql.data.tools.publishdacproject"
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Change Target Platform and Publish a Database Project

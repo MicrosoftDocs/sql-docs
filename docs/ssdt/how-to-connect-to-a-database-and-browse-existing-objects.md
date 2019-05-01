@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.connectionpicker.f1"
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Connect to a Database and Browse Existing Objects

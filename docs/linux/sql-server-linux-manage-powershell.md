@@ -128,7 +128,7 @@ If you need to see all databases on your instance, one option is to use the [Get
 
 ## Examine SQL Server error logs
 
-Let's use PowerShell on Windows to examine error logs connect on your SQL Server instance on Linux. We will also use the **Out-GridView** cmdlet to show information from the error logs in a grid view display.
+The following steps use PowerShell on Windows to examine error logs connect on your SQL Server instance on Linux. We will also use the **Out-GridView** cmdlet to show information from the error logs in a grid view display.
 
 Copy and paste the following commands at the PowerShell prompt. They might take a few minutes to run. These commands do the following:
 - Display a dialog that prompts you for the hostname or IP address of your instance

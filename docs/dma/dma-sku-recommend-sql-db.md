@@ -186,7 +186,7 @@ The HTML file contains this information in a graphical format. It provides a use
 
 With just a few clicks, you can use the recommendations identified to provision target SKUs in Azure to which you can migrate your databases. You can use the HTML file to input Azure subscription; pick the pricing tier, compute level, and Max data size for your databases; and generate a script to provision your databases. You can execute this script using PowerShell.
 
-You can perform this process on a single computer, or you can perform it on multiple computers to determine SKU recommendations at scale. DMA makes currently it a simple and scalable experience by supporting the entire process via the Command Line Interface.
+You can perform this process on a single computer, or you can perform it on multiple computers to determine SKU recommendations at scale. DMA currently makes it a simple and scalable experience by supporting the entire process via the Command Line Interface.
 
 To input provisioning information and make changes to the recommendations, update the HTML file as follows.
 

@@ -17,7 +17,7 @@ This article introduces [SQL Server PowerShell](../powershell/sql-server-powersh
 
 ## Cross-platform editor options
 
-All of the steps PowerShell Core below will work in a regular terminal, or can run from a terminal within VS Code or Azure Data Studio.  Both VS Code and Azure Data Studio are available on macOS & Linux.  For more information on Azure Data Studio, see [this quickstart](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server).  You may also want to consider using the [PowerShell extension](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension) for it.
+All of the steps PowerShell Core below will work in a regular terminal, or you can run them from a terminal within VS Code or Azure Data Studio.  Both VS Code and Azure Data Studio are available on macOS and Linux.  For more information on Azure Data Studio, see [this quickstart](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server).  You may also want to consider using the [PowerShell extension](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension) for it.
 
 ## Installing PowerShell Core
 

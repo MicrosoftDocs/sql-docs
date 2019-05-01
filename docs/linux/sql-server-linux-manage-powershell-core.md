@@ -146,7 +146,7 @@ If you need to see all databases on your instance, one option is to use the `Get
 
 ## Get Databases
 
-An important cmdlet to know is the Get-SqlDatabase.  For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used.  If you supply values for both the `-ServerInstance` and `-Database` parameters, only that one database object will be retrieved.  However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance will be returned.
+An important cmdlet to know is the `Get-SqlDatabase`.  For many operations that involve a database, or objects within a database, the `Get-SqlDatabase` cmdlet can be used.  If you supply values for both the `-ServerInstance` and `-Database` parameters, only that one database object will be retrieved.  However, if you specify only the `-ServerInstance` parameter, a full list of all databases on that instance will be returned.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.

@@ -2,7 +2,7 @@
 title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database SKU for your on-premises database
 ms.custom: ""
-ms.date: "04/30/2019"
+ms.date: "05/02/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -29,7 +29,7 @@ This article focuses on DMA's Azure SQL Database SKU recommendations feature. Az
 
 The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or managed instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances in Azure for all recommended databases.
 
-> [!NOTE] 
+> [!NOTE]
 > This functionality is currently available only via the Command Line Interface (CLI). Support for this feature via the DMA user interface will be added in an upcoming release.
 
 The following are instructions to help you determine the Azure SQL Database SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
@@ -55,7 +55,7 @@ You don't need to perform this task for each database individually. The performa
     - **OutputFilePath**: The output file path to save the collected counters.
     - **CollectionTimeInSeconds**: The amount of time during which you wish to collect performance counter data. Capture performance counters for at least 40 minutes to get a meaningful recommendation. The longer the duration of the capture, the more accurate the recommendation will be. Also ensure the workloads are running for the desired databases to enable more accurate recommendations.
     - **DbConnectionString**: The Connection string pointing to the master database hosted on the computer from which you're collecting performance counter data.
-     
+
     Here's a sample invocation:
 
     ```
@@ -85,25 +85,26 @@ To use the DMA CLI to get SKU recommendations, at the command prompt, run dmacmd
 - **/SkuRecommendationHtmlResultsFilePath**: Path to write the output results in HTML format.
 
 In addition, select one of the following arguments:
+
 - Prevent price refresh
-    - **/SkuRecommendationPreventPriceRefresh**: If set to True, prevents the price refresh from occurring and assumes default prices. Use if running in offline mode. If you do not use this parameter, you must specify the parameters below to get the latest prices based on a specified region.
-- Get the latest prices 
-    - **/SkuRecommendationCurrencyCode**: The currency in which to display prices (e.g. "USD").
-    - **/SkuRecommendationOfferName**: The offer name (e.g. "MS-AZR-0003P"). For more information, see the [Microsoft Azure Offer Details](https://azure.microsoft.com/support/legal/offer-details/) page.
+  - **/SkuRecommendationPreventPriceRefresh**: If set to True, prevents the price refresh from occurring and assumes default prices. Use if running in offline mode. If you do not use this parameter, you must specify the parameters below to get the latest prices based on a specified region.
+- Get the latest prices
+  - **/SkuRecommendationCurrencyCode**: The currency in which to display prices (e.g. "USD").
+  - **/SkuRecommendationOfferName**: The offer name (e.g. "MS-AZR-0003P"). For more information, see the [Microsoft Azure Offer Details](https://azure.microsoft.com/support/legal/offer-details/) page.
     - **/SkuRecommendationRegionName**: The region name (e.g., "WestUS").
     - **/SkuRecommendationSubscriptionId**: The subscription ID.
     - **/AzureAuthenticationTenantId**: The authentication tenant.
     - **/AzureAuthenticationClientId**: The client ID of the AAD app used for authentication.
     - One of the following authentication options:
-        - Interactive
-            - **AzureAuthenticationInteractiveAuthentication**: Set to true for an authentication pop-up window.
-        - Cert based
-            - **AzureAuthenticationCertificateStoreLocation**: Set to the certificate store location (e.g., "CurrentUser").
-            - **AzureAuthenticationCertificateThumbprint**: Set to the certificate thumbprint.
-        - Token based
-            - **AzureAuthenticationToken**: Set to the certificate token.
+      - Interactive
+        - **AzureAuthenticationInteractiveAuthentication**: Set to true for an authentication pop-up window.
+      - Cert based
+        - **AzureAuthenticationCertificateStoreLocation**: Set to the certificate store location (e.g., "CurrentUser").
+        - **AzureAuthenticationCertificateThumbprint**: Set to the certificate thumbprint.
+      - Token based
+        - **AzureAuthenticationToken**: Set to the certificate token.
 
-> [!NOTE] 
+> [!NOTE]
 > To get the ClientId and TenantId for interactive authentication, you need to configure a new AAD application. For more information on authentication and getting these credentials, in the article [Microsoft Azure Billing API Code Samples: RateCard API](https://azure.microsoft.com/resources/samples/billing-python-ratecard-api/), follow the instructions under **Step 1: Configure a Native Client application in your AAD tenant**.
 
 Lastly, there is an optional argument you can use to specify the databases for which you want recommendations: 
@@ -229,4 +230,5 @@ To input provisioning information and make changes to the recommendations, updat
     > Creating managed instances on a subnet (especially for the first time) may take several hours to complete. After you run the provisioning script via PowerShell, you can check the status of your deployment on Azure Portal.
 
 ## Next step
+
 - For a complete listing of commands for running DMA from the CLI, see the article [Run Data Migration Assistant from the command line](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017).

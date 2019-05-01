@@ -172,7 +172,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data collector let
   
 ## <a name="ScriptUpgrade"></a> Script upgrade mode
 
-When your apply cumulatives updates or service packs to a instance, at restart, the instance can enter in Script Upgrade mode. In this mode, the process wil run a step to analyze and upgrade CDC internals tables. This upgrade can cause recreating of objects like indexes on capture tables. If you have data on these tables, depending on amount of data, it can spend lot of minutes in script ugprade mode. Note that, due to modifications, you can note high transaction log usage for enabled CDC databases!
+When you apply cumulatives updates or service packs to an instance, at restart, the instance can enter in Script Upgrade mode. In this mode, SQL Server may run a step to analyze and upgrade internal CDC tables, which could result in recreating objects like indexes on capture tables. Depending on the amount of data involved, this step might take some time or cause high transaction log usage for enabled CDC databases.
 
 
 ## See Also

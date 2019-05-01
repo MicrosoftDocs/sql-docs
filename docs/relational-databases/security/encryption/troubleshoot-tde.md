@@ -17,8 +17,8 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 ---
 # Transparent Data Encryption (TDE) with customer-managed keys in Azure Key Vault (AKV) Troubleshooting
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic provides information about the following issues:  
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+This topic provides information about the following issues:  
   
 - Troubleshooting overview  
 - How to identify and resolve the most common errors

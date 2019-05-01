@@ -3,7 +3,6 @@ title: "sys.remote_data_archive_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: stored-procedures
 ms.topic: "language-reference"
 f1_keywords: 
@@ -16,8 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.remote_data_archive_databases catalog view"
 ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # Stretch Database Catalog Views - sys.remote_data_archive_databases

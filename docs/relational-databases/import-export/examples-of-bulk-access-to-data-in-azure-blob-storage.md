@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "BULK INSERT, Azure blob storage"
   - "OPENROWSET, Azure blob storage"
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

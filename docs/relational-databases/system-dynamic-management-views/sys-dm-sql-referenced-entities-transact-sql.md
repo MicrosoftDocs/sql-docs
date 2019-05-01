@@ -251,7 +251,12 @@ GO
  NULL          Table1       NULL                    0  
 
 Msg 2020, Level 16, State 1, Line 1
-The dependencies reported for entity "dbo.Proc1" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.
+The dependencies reported for entity "dbo.Proc1" might not include
+  references to all columns. This is either because the entity
+  references an object that does not exist or because of an error
+  in one or more statements in the entity.  Before rerunning the
+  query, ensure that there are no errors in the entity and that
+  all objects referenced by the entity exist.
  ```
   
 ### E. Demonstrating dynamic dependency maintenance  

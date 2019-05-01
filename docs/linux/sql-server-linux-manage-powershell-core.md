@@ -21,8 +21,7 @@ All of the steps PowerShell Core below will work in a regular terminal, or you c
 
 ## Installing PowerShell Core
 
-For more information on installing PowerShell Core on various supported
-and experimental platforms, see the following articles.
+For more information on installing PowerShell Core on various supported and experimental platforms, see the following articles:
 
 - [Installing PowerShell Core on Windows](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
 - [Installing PowerShell Core on Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
@@ -196,6 +195,8 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 
 ## Explore cmdlets currently available in PS Core
 While the SqlServer module currently has 106 cmdlets available in Windows PowerShell, only 59 of the 106 are available in PSCore. A full list of 59 cmdlets currently available is included below.  For in-depth documentation of all cmdlets in the SqlServer module, see the SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/).
+
+The following command will show you all of the cmdlets available on the version of PowerShell you are using.
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |

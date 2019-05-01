@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Replace (Query) Template Parameters dialog box"
   - "replacing template parameters"
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Replace Template Parameters

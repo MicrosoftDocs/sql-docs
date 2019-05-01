@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], saving"
   - "diagrams [SQL Server], saving"
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

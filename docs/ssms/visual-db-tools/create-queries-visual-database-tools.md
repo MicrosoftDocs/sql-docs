@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "queries [SQL Server], creating"
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

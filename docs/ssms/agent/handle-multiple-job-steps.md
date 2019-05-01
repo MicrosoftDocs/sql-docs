@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, job steps"
   - "control of flow for jobs [SQL Server]"
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

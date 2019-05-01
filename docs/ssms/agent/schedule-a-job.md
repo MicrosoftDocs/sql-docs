@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, scheduling"
   - "jobs [SQL Server Agent], scheduling"
 ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "renaming registered server or server group"
   - "names [SQL Server], registered server or server group"
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Change the Name of Registered Server or Registered Server Group

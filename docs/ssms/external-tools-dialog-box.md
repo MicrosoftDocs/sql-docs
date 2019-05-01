@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "external tools [SQL Server Management Studio]"
   - "SQL Server Management Studio [SQL Server], external tools"
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # External Tools Dialog Box

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "dropping tables"
   - "queries [SQL Server], tables"
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

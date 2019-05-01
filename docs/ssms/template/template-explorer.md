@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "templates [Transact-SQL]"
   - "templates [SQL Server], Template Explorer"
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Template Explorer

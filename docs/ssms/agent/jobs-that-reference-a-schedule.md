@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Jobs Referencing a Schedule dialog box"
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

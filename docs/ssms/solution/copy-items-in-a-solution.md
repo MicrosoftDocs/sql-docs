@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], copying"
   - "solutions [SQL Server Management Studio], item copying"
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Copy Items in a Solution

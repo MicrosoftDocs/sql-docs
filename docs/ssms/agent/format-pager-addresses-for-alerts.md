@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "addresses [SQL Server]"
   - "alerts [SQL Server], pager addresses"
 ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

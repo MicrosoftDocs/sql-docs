@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, history"
   - "historical information [SQL Server], jobs"
 ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

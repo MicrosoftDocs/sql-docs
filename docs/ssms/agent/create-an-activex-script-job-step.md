@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ActiveX scripting jobs [SQL Server]"
   - "job steps [Analysis Services]"
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

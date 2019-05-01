@@ -11,8 +11,8 @@ f1_keywords:
   - "vdtsql.chm:65555"
   - "vdt.dlgbox.schema.addtable"
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

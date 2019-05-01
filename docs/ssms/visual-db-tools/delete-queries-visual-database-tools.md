@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "removing queries"
   - "queries [SQL Server], deleting"
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

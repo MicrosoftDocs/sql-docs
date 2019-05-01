@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Update query"
   - "updating tables"
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

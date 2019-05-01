@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Help [SQL Server Management Studio]"
   - "SQL Server Management Studio [SQL Server], user assistance"
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # User Assistance in SQL Server Management Studio

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "notifications [SQL Server], job status"
 ms.assetid: 1359d790-5905-4927-a208-e7155e7768a2
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

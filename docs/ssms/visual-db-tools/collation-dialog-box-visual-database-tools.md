@@ -11,8 +11,8 @@ f1_keywords:
   - "vdt.dlgbox.definecolumncollation"
   - "vdtsql.chm:65561"
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "CmdExec jobs"
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

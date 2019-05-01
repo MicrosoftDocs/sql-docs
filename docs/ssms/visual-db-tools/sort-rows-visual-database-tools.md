@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "sorting rows [SQL Server]"
   - "sorting query results [SQL Server]"
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

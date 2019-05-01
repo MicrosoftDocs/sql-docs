@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "View Designer, query creation"
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

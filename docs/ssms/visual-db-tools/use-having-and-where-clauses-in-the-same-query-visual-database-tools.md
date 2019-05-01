@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "WHERE clause, search criteria"
   - "excluding rows"
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)

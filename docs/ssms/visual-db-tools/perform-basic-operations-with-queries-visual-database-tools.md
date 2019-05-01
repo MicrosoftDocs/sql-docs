@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "queries [Visual Database Tools]"
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

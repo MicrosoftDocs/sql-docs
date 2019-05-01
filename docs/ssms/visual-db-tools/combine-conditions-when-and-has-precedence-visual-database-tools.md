@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "combining search conditions"
   - "AND, Criteria pane"
 ms.assetid: 450eb2eb-6ea3-405b-8dd2-1ff926c016e7
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "alerts [SQL Server], operators"
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

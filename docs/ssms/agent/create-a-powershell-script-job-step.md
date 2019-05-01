@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "job steps [PowerShell]"
   - "SQL Server Agent jobs, PowerShell steps"
 ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

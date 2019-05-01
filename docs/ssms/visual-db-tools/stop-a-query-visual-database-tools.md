@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "stopping queries"
   - "queries [SQL Server], stopping"
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

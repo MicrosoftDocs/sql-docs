@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "table aliases [SQL Server]"
   - "aliases [SQL Server], tables"
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

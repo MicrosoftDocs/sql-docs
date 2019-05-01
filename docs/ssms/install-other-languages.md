@@ -7,8 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Install non-English language versions of SQL Server Management Studio (SSMS) 

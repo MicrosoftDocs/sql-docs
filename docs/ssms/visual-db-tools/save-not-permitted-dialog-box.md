@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.table.tablerecreatenosave.f1"
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

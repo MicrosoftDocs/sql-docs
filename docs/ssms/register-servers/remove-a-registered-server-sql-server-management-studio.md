@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "deleting registered servers"
   - "Registered Servers [SQL Server], removing servers"
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Remove a Registered Server (SQL Server Management Studio)

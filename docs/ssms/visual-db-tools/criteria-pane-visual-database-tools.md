@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "grid showing query options [SQL Server]"
   - "adding query options into grid"
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

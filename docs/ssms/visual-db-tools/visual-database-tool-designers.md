@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], designers"
   - "Properties window [Visual Database Tools]"
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Visual Database Tool Designers

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "stopping jobs"
   - "SQL Server Agent jobs, execution shutdowns"
 ms.assetid: ac23e88f-53fc-41de-bb16-0c27c002d5a5
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

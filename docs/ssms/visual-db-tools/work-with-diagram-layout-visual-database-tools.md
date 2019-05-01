@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "layouts [SQL Server]"
   - "appearance of database diagrams"
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

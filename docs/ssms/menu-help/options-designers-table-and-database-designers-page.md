@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Designers.Table_Designer"
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Options (Designers - Table and Database Designers Page)

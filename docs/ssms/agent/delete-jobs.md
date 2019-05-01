@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "delete jobs"
 ms.assetid: bffb915e-bc84-4417-aa35-183243ca3312
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

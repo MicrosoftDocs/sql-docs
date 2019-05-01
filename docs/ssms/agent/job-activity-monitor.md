@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.ag.jobactivitymonitor.alljobs.f1"
   - "SQL13.SWB.ACTIVITYMON.F1"
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

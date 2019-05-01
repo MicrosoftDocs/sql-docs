@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "failed jobs [SQL Server]"
   - "jobs [SQL Server Agent], action flow logic"
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

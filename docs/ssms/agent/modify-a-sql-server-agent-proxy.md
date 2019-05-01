@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "proxies [SQL Server Agent], modifying"
   - "modifying SQL Server Agent proxy"
 ms.assetid: 6e1dfbaa-8089-4813-940c-d5a2e13d8552
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

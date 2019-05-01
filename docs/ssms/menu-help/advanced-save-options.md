@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Advanced Save Options dialog box"
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Advanced Save Options

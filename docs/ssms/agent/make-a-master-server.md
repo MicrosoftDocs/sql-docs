@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, master servers"
   - "Master Server Wizard"
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

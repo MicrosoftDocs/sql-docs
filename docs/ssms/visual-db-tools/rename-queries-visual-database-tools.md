@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "renaming queries"
   - "queries [SQL Server], names"
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

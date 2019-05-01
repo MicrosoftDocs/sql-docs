@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, disabling"
   - "jobs [SQL Server Agent], disabling"
 ms.assetid: 5041261f-0c32-4d4a-8bee-59a6c16200dd
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

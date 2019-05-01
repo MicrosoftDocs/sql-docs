@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands"
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Options (SQL Server Object Explorer - Commands)

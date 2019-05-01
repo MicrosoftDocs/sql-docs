@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vs.getdirectoryname"
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

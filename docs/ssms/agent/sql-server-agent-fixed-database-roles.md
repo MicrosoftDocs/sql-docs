@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "fixed database roles [SQL Server]"
   - "SQLAgentOperatorRole database role"
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

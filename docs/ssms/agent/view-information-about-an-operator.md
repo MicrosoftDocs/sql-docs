@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "notifications [SQL Server], job status"
   - "displaying operators"
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

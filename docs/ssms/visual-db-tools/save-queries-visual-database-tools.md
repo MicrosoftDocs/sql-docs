@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "queries [SQL Server], saving"
   - "saving queries"
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

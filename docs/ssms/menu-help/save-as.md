@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Save As dialog box"
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Save As

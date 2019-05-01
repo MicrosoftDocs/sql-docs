@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "saving tables"
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

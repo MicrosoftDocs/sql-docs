@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "adding tables"
   - "related tables [SQL Server]"
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

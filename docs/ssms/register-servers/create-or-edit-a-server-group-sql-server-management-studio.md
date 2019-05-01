@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "server groups [SQL Server]"
   - "groups [SQL Server], server"
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Create or Edit a Server Group (SQL Server Management Studio)

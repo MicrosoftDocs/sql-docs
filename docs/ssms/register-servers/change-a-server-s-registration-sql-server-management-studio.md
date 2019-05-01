@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "modifying registered server connection information"
   - "Registered Servers [SQL Server], connection information changes"
 ms.assetid: ce6d9d88-3ac8-4f5d-8ea9-e9b55ceca0f4
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Change a Server&#39;s Registration (SQL Server Management Studio)

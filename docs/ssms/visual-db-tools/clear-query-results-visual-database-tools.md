@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Results pane"
   - "clearing query results"
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

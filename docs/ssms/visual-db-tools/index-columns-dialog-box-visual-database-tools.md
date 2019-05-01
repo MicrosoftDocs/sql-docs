@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.indexcolumns"
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

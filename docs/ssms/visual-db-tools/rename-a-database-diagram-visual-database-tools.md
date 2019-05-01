@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "renaming database diagrams"
   - "database diagrams [SQL Server], renaming"
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

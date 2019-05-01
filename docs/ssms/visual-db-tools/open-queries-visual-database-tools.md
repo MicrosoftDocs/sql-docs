@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "opening queries"
   - "queries [SQL Server], opening"
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

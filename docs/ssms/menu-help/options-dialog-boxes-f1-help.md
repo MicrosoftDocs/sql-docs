@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Options [SQL Server Management Studio], dialog boxes"
   - "Options [SQL Server Management Studio]"
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Options Dialog Boxes F1 Help

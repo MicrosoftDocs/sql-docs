@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows dialog box"
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Windows Dialog Box (Microsoft Document Explorer Help)

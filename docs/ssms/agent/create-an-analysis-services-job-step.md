@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [Analysis Services]"
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

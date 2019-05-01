@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Diagram pane [Visual Database Tools]"
   - "View Designer, query types"
 ms.assetid: 72b9116c-c128-4078-a78d-257a2955a3f6
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

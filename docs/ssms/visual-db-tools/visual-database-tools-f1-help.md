@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Visual Database Tools [SQL Server], help"
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete Objects dialog box"
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Delete Objects

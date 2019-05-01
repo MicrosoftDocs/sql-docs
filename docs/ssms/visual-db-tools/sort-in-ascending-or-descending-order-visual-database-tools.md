@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "descending sorts"
   - "ascending sorts"
 ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

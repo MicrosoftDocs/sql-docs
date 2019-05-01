@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Properties window [SQL Server Management Studio]"
   - "modifying properties"
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Properties Window (Management Studio)

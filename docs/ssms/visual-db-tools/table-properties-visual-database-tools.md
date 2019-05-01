@@ -11,8 +11,8 @@ f1_keywords:
   - "vdt.tabledesigner"
   - "vdt.designers.properties.Table"
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

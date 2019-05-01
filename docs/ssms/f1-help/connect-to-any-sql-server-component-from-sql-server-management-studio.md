@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "components [SQL Server], connections"
   - "SQL Server Management Studio [SQL Server], connections"
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Connect to Any SQL Server Component from SQL Server Management Studio

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "View Designer, SQL pane"
   - "SQL pane [Visual Database Tools]"
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

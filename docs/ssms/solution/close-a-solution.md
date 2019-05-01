@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], closing"
   - "closing solutions"
 ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Close a Solution

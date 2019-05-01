@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], joins"
   - "joins [SQL Server], queries"
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

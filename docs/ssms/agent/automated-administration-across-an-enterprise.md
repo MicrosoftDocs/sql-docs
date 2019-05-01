@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "multiple instances of SQL Server"
   - "target servers [SQL Server]"
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], SQL Editor"
   - "View Designer, SQL Editor"
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # SQL Editor (Visual Database Tools)

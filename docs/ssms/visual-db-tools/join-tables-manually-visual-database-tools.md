@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "joins [SQL Server], manual"
   - "joins [SQL Server], creating"
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

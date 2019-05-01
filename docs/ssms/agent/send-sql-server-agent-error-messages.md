@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Agent, errors"
   - "errors [SQL Server Agent]"
 ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

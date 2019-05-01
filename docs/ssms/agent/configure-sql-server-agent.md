@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Agent, permissions"
   - "security [SQL Server], SQL Server Agent"
 ms.assetid: 2e361a62-9e92-4fcd-80d7-d6960f127900
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

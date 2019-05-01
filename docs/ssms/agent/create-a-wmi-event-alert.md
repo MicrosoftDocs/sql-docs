@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "WMI event alerts [SQL Server Management Studio]"
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

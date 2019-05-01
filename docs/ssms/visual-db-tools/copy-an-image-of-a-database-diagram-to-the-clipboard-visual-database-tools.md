@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Visual Database Tools [SQL Server], how-to topics"
   - "Visual Database Tools [SQL Server], database diagrams"
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "NOT operator [Visual Database Tools]"
   - "search criteria [SQL Server], rows not matching value"
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

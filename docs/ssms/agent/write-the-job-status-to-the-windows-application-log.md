@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], status"
   - "logs [SQL Server], jobs"
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

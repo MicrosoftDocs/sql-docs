@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "row included in search [SQL Server]"
   - "excluding rows"
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

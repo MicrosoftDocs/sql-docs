@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.swb.windowsazurestorage.connect.f1"
   - "SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1"
 ms.assetid:
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Connect to Microsoft Azure Storage

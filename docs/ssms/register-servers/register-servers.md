@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "server management [SQL Server], registering servers"
   - "server registration [SQL Server]"
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Register Servers

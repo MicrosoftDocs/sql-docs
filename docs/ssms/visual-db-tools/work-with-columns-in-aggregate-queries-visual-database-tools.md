@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "aggregate queries [SQL Server]"
   - "WHERE clause, query summary results"
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

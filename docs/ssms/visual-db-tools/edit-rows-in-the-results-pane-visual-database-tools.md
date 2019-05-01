@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], Results pane"
   - "Results pane"
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "queries [SQL Server], verifying"
   - "checking queries"
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

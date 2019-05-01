@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "result sets [SQL Server], duplicate values"
   - "excluding rows"
 ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

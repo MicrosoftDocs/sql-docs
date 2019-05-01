@@ -175,7 +175,7 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 
 ## Examine SQL Server error logs
 
-Let's use PowerShell Core to examine error logs connect on your SQL Server instance on Linux.
+The following steps use PowerShell Core to examine error logs connect on your SQL Server instance on Linux.
 
 Copy and paste the following commands at the PowerShell prompt. They might take a few minutes to run. These commands do the following steps:
 - Display a dialog that prompts you for the hostname or IP address of your instance

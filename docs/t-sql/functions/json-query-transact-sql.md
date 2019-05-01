@@ -19,9 +19,11 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: genemi
 manager: craigg
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # JSON_QUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdb-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdb-xxx-md.md)]
 
  Extracts an object or an array from a JSON string.  
   
@@ -35,7 +37,8 @@ manager: craigg
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
-## Arguments  
+## Arguments
+
  *expression*  
  An expression. Typically the name of a variable or a column that contains JSON text.  
   
@@ -52,14 +55,15 @@ The default value for *path* is '$'. As a result, if you don't provide a value f
 
 If the format of *path* isn't valid, **JSON_QUERY** returns an error.  
   
-## Return Value  
+## Return Value
+
  Returns a JSON fragment of type nvarchar(max). The collation of the returned value is the same as the collation of the input expression.  
   
  If the value is not an object or an array:  
   
--   In lax mode, **JSON_QUERY** returns null.  
+- In lax mode, **JSON_QUERY** returns null.  
   
--   In strict mode, **JSON_QUERY** returns an error.  
+- In strict mode, **JSON_QUERY** returns an error.  
   
 ## Remarks  
 
@@ -102,7 +106,8 @@ If you're returning results with FOR JSON, and you're including data that's alre
 
 ## Examples  
   
-### Example 1  
+### Example 1
+
  The following example shows how to return a JSON fragment from a `CustomFields` column in query results.  
   
 ```sql  
@@ -111,7 +116,8 @@ SELECT PersonID,FullName,
 FROM Application.People
 ```  
   
-### Example 2  
+### Example 2
+
 The following example shows how to include JSON fragments in the output of the FOR JSON clause.  
   
 ```sql  
@@ -122,6 +128,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## See Also  
+## See Also
+
  [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

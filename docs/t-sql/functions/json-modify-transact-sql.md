@@ -12,9 +12,11 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: genemi
 manager: craigg
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # JSON_MODIFY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Updates the value of a property in a JSON string and returns the updated JSON string.  
   
@@ -26,7 +28,8 @@ manager: craigg
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
-## Arguments  
+## Arguments
+
  *expression*  
  An expression. Typically the name of a variable or a column that contains JSON text.  
   
@@ -39,16 +42,16 @@ JSON_MODIFY ( expression , path , newValue )
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *append*  
+- *append*  
     Optional modifier that specifies that the new value should be appended to the array referenced by *\<json path>*.  
   
--   *lax*  
+- *lax*  
     Specifies that the property referenced by *\<json path>* does not have to exist. If the property is not present, JSON_MODIFY tries to insert the new value on the specified path. Insertion may fail if the property can't be inserted on the path. If you don't specify *lax* or *strict*,  *lax* is the default mode.  
   
--   *strict*  
+- *strict*  
     Specifies that the property referenced by *\<json path>* must be in the JSON expression. If the property is not present, JSON_MODIFY returns an error.  
   
--   *\<json path>*  
+- *\<json path>*  
     Specifies the path for the property to update. For more info, see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], you can provide a variable as the value of *path*.
@@ -62,10 +65,12 @@ In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDS
   
 JSON_MODIFY escapes all special characters in the new value if the type of the value is NVARCHAR or VARCHAR. A text value is not escaped if it is properly formatted JSON produced by FOR JSON, JSON_QUERY, or JSON_MODIFY.  
   
-## Return Value  
+## Return Value
+
  Returns the updated value of *expression* as properly formatted JSON text.  
   
-## Remarks  
+## Remarks
+
  The JSON_MODIFY function lets you  either update the value of an existing property, insert a new key:value pair, or delete a key based on a combination of modes and provided values.  
   
  The following table compares the behavior of **JSON_MODIFY** in lax mode and in strict mode. For more info about the optional path mode specification (lax or strict), see [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
@@ -81,10 +86,11 @@ JSON_MODIFY escapes all special characters in the new value if the type of the v
   
 ## Examples  
   
-### Example - Basic operations  
+### Example - Basic operations
+
  The following example shows basic operations that can be done with JSON text.  
   
- **Query**  
+ **Query**
   
 ```sql  
 
@@ -117,7 +123,7 @@ SET @info=JSON_MODIFY(@info,'append $.skills','Azure')
 PRINT @info
 ```  
   
- **Results**  
+ **Results**
   
 ```json  
 {
@@ -139,10 +145,11 @@ PRINT @info
 }
 ```  
   
-### Example - Multiple updates  
+### Example - Multiple updates
+
  With JSON_MODIFY you can update only one property. If you have to do multiple updates, you can use multiple JSON_MODIFY calls.  
   
- **Query**  
+ **Query**
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -156,7 +163,7 @@ SET @info=JSON_MODIFY(JSON_MODIFY(JSON_MODIFY(@info,'$.name','Mike'),'$.surname'
 PRINT @info
 ```  
   
- **Results**  
+ **Results**
   
 ```json  
 {
@@ -172,7 +179,7 @@ PRINT @info
 ### Example - Rename a key  
  The following example shows how to rename a property in JSON text with the JSON_MODIFY function. First you can take the value of an existing property and insert it as a new key:value pair. Then you can delete the old key by setting the value of the old property to NULL.  
   
- **Query**  
+ **Query**
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -191,7 +198,7 @@ SET @product=
 PRINT @product
 ```  
   
- **Results**  
+ **Results**
   
 ```json  
 {
@@ -203,10 +210,11 @@ PRINT @product
   
  If you don't cast the new value to a numeric type, JSON_MODIFY treats it as text and surrounds it with double quotes.  
   
-### Example - Increment a value  
+### Example - Increment a value
+
  The following example shows how to increment the value of a property in JSON text with the JSON_MODIFY function. First you can take the value of the existing property and insert it as a new key:value pair. Then you can delete the old key by setting the value of the old property to NULL.  
   
- **Query**  
+ **Query**
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -221,7 +229,7 @@ SET @stats=JSON_MODIFY(@stats,'$.click_count',
 PRINT @stats
 ```  
   
- **Results**  
+ **Results**
   
 ```json  
 {
@@ -231,7 +239,8 @@ PRINT @stats
 }
 ```  
   
-### Example - Modify a JSON object  
+### Example - Modify a JSON object
+
  JSON_MODIFY treats the *newValue* argument as plain text even if it contains properly formatted JSON text. As a result, the JSON output of the function is surrounded with double quotes and all special characters are escaped, as shown in the following example.  
   
  **Query**  
@@ -248,7 +257,7 @@ SET @info=JSON_MODIFY(@info,'$.skills','["C#","T-SQL","Azure"]')
 PRINT @info
 ```  
   
- **Results**  
+ **Results**
   
 ```json  
 {
@@ -276,7 +285,7 @@ SET @info=JSON_MODIFY(@info,'$.skills',JSON_QUERY('["C#","T-SQL","Azure"]'))
 PRINT @info
 ```  
   
- **Results**  
+ **Results**
   
 ```json  
 {
@@ -288,7 +297,8 @@ PRINT @info
 }
 ```  
   
-### Example - Update a JSON column  
+### Example - Update a JSON column
+
  The following example updates the value of a property in a table column that contains JSON.  
   
 ```sql  
@@ -298,8 +308,8 @@ WHERE EmployeeID=17
  
 ```  
   
-## See Also  
+## See Also
+
  [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
   

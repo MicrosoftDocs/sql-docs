@@ -14,11 +14,11 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: genemi
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
 # JSON data in SQL Server
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 JSON is a popular textual data format that's used for exchanging data in modern web and mobile applications. JSON is also used for storing unstructured data in log files or NoSQL databases such as Microsoft Azure Cosmos DB. Many REST web services return results that are formatted as JSON text or accept data that's formatted as JSON. For example, most Azure services, such as Azure Search, Azure Storage, and Azure Cosmos DB, have REST endpoints that return or consume JSON. JSON is also the main format for exchanging data between webpages and web servers by using AJAX calls. 
 
@@ -26,10 +26,10 @@ JSON functions in SQL Server enable you to combine NoSQL and relational concepts
 
 *JSON as a bridge between NoSQL and relational worlds*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
- 
-Here's an example of JSON text: 
- 
-```json 
+
+Here's an example of JSON text:
+
+```json
 [{
 	"name": "John",
 	"skills": ["SQL", "C#", "Azure"]
@@ -37,7 +37,7 @@ Here's an example of JSON text:
 	"name": "Jane",
 	"surname": "Doe"
 }]
-``` 
+```
  
 By using SQL Server built-in functions and operators, you can do the following things with JSON text: 
  
@@ -172,6 +172,10 @@ The result of this query is shown in the following table:
 `OUTER APPLY OPENJSON` will join first level entity with sub-array and return flatten resultset. Due to JOIN, the second row will be repeated for every skill.
 
 ### Convert SQL Server data to JSON or export JSON
+
+>[!NOTE]
+>Converting Azure SQL Data Warehouse data to JSON or exporting JSON is not supported.
+
 Format SQL Server data or the results of SQL queries as JSON by adding the **FOR JSON** clause to a **SELECT** statement. Use **FOR JSON** to delegate the formatting of JSON output from your client applications to SQL Server. For more information, see [Format Query Results as JSON with FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
 The following example uses PATH mode with the **FOR JSON** clause:  

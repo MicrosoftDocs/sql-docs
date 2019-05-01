@@ -14,9 +14,11 @@ author: "jovanpop-msft"
 ms.author: "jovanpop"
 ms.reviewer: genemi
 manager: craigg
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # JSON Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Use the functions described on the pages in this section to validate or change JSON text or to extract simple or complex values.  
   
@@ -28,10 +30,9 @@ Use the functions described on the pages in this section to validate or change J
 |[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|Updates the value of a property in a JSON string and returns the updated JSON string.|
 
  For more info about the built-in support for JSON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
-    
-## See Also  
- [Validate, Query, and Change JSON Data with Built-in Functions &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+
+## See Also
+
+ [Validate, Query, and Change JSON Data with Built-in Functions &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)</br>
+ [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)</br>
  [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
-  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "format files [SQL Server], non-XML format files"
   - "bulk importing [SQL Server], format files"
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

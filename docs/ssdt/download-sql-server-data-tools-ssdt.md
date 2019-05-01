@@ -31,7 +31,7 @@ If you already have a license to Visual Studio 2019:
 - For Analysis Services, Integration Services or Reporting Services projects, install the appropriate extension(s) from the marketplace
 
 If you don’t already have a license to Visual Studio 2019:
-- Install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_campaign=tailored+install&utm_source=docs.microsoft.com&utm_medium=microsoft&utm_content=sqlssdt&rid=35007) 
+- Install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_content=sqlssdt) 
 - Install the Analysis Services, Integration Services or Reporting Services as appropriate
 
 ## Changes in SSDT for Visual Studio 2017 ##
@@ -61,18 +61,18 @@ The installer lists available Visual Studio instances to add the SSDT tools to. 
 
 ## SSDT for VS 2017 (standalone installer)
 
-[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![download](../ssdt/media/download.png) Download SSDT for Visual Studio 2017 (15.9.1)](https://go.microsoft.com/fwlink/?linkid=2086373) 
 
 > [!IMPORTANT]
-> - Before installing SSDT for Visual Studio 2017 (15.9.0), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
+> - Before installing SSDT for Visual Studio 2017 (15.9.1), uninstall *Analysis Services Projects* and *Reporting Services Projects* extensions if they are already installed, and close all VS instances.
 > - Please use SSDT for Visual Studio 2017 (15.8.0) or the previous versions for designing SSIS packages that contain Teradata Source/Destination. SSDT for Visual Studio 2017 after 15.8.0 can’t design SSIS packages that contain Teradata Source/Destination by Attunity.
 
 
 **Version Information**  
   
-Release number: 15.9.0  
-Build Number: 14.0.16186.0  
-Release date: January 28, 2019  
+Release number: 15.9.1  
+Build Number: 14.0.16191.0  
+Release date: April 27, 2019  
 
 For a complete list of changes, see the [Release notes for SQL Server Data Tools (SSDT)](release-notes-ssdt.md).
 
@@ -82,17 +82,17 @@ SSDT for Visual Studio 2017 has the same [system requirements](https://docs.micr
 
 This release of **SSDT for VS 2017** can be installed in the following languages:
 
-- [Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
-- [Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
-- [English (United States)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x409)
-- [French]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40c)
-- [German]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x407)
-- [Italian]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x410)
-- [Japanese]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x411)
-- [Korean]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x412)
-- [Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x416)
-- [Russian]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x419)
-- [Spanish]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40a)
+- [Chinese (Simplified)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x804)
+- [Chinese (Traditional)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x404)
+- [English (United States)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x409)
+- [French]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40c)
+- [German]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x407)
+- [Italian]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x410)
+- [Japanese]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x411)
+- [Korean]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x412)
+- [Portuguese (Brazil)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x416)
+- [Russian]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x419)
+- [Spanish]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40a)
 
 ## Offline install
 

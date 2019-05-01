@@ -10108,8 +10108,10 @@
         href: ../linux/sql-server-linux-manage-ssms.md
       - name: Use Azure Data Studio to manage
         href: ../azure-data-studio/quickstart-sql-server.md
-      - name: Use PowerShell to manage
+      - name: Use Windows PowerShell
         href: ../linux/sql-server-linux-manage-powershell.md
+      - name: Use PowerShell Core
+        href: ../linux/sql-server-linux-manage-powershell-core.md
       - name: Use log shipping
         href: ../linux/sql-server-linux-use-log-shipping.md
       - name: Use DB Mail & email alerts

@@ -129,7 +129,7 @@ Additional notes and guidance when creating a credential:
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
   - Use a valid expiration period (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j.-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][CREATE_DATABASE_SCOPED_CREDENTIAL].
 
@@ -183,13 +183,13 @@ Configure this argument when the `TYPE` is set to `RDBMS` or `SHARD_MAP_MANAGER`
 | RDBMS             | The name of the remote database on the server provided using `LOCATION` |
 | SHARD_MAP_MANAGER | Name of the database operating as the shard map manager                 |
 
-For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to [Create an RDBMS external data source](#e-create-an-rdbms-external-data-source)
+For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to [Create an RDBMS external data source](#g-create-an-rdbms-external-data-source)
 
 ### SHARD_MAP_NAME = *shard_map_name*
 
 Used when the `TYPE` argument is set to `SHARD_MAP_MANAGER` only to set the name of the shard map.
 
-For an example showing how to create an external data source where `TYPE` = `SHARD_MAP_MANAGER` refer to [Create a shard map manager external data source](#f.-create-a-shard-map-manager-external-data-source)
+For an example showing how to create an external data source where `TYPE` = `SHARD_MAP_MANAGER` refer to [Create a shard map manager external data source](#f-create-a-shard-map-manager-external-data-source)
 
 ## Permissions
 
@@ -324,7 +324,7 @@ WITH
 
 ## Examples: SQL Database
 
-### F. Create a Shard map manager external data source
+### F. Create a shard map manager external data source
 
 To create an external data source to reference a SHARD_MAP_MANAGER, specify the SQL Database server name that hosts the shard map manager in SQL Database or a SQL Server database on a virtual machine.
 

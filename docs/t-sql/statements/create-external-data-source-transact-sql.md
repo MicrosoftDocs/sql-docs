@@ -96,7 +96,7 @@ Additional notes and guidance when setting the location:
 - The SQL engine doesn't verify the existence of the external data source when the object is created. To validate, create an external table using the external data source.
 - Use the same external data source for all tables when querying Hadoop to ensure consistent querying semantics.
 - You can use the `sqlserver` location prefix to connect SQL Server 2019 to SQL Server, SQL Database, or SQL Data Warehouse.
-- Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`
+- Specify the `Driver={<Name of Driver>}` when connecting via `ODBC`.
 - `wasb` is the default protocol for Azure blob storage. `wasbs` is optional but recommended as data will be sent using a secure SSL connection.
 - To ensure successful PolyBase queries during a Hadoop `Namenode` fail-over, consider using a virtual IP address for the `Namenode` of the Hadoop cluster. If you don't, execute an [ALTER EXTERNAL DATA SOURCE][alter_eds] command to point to the new location.
 
@@ -127,9 +127,9 @@ Additional notes and guidance when creating a credential:
 - When the `TYPE` = `BLOB_STORAGE` the credential must be created using `SHARED ACCESS SIGNATURE` as the identity. Furthermore, the SAS token should be configured as follows:
   - Exclude the leading `?` when configured as the secret
   - Have at least read permission on the file that should be loaded (for example `srt=o&sp=r`)
-  - the expiration period should be valid (all dates are in UTC time).
+  - Use a valid expiration period (all dates are in UTC time).
 
-For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE` refer to [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j.-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j.-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
 To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][CREATE_DATABASE_SCOPED_CREDENTIAL].
 
@@ -145,7 +145,7 @@ Specifies the type of the external data source being configured. This parameter 
 > [!IMPORTANT]
 > Do not set `TYPE` if using any other external data source.
 
-For an example of using `TYPE` = `HADOOP` to load data from Azure Blob Storage, see [Create external data source to reference Azure blob storage](#e.-create-external-data-source-to-reference-azure-blob-storage).
+For an example of using `TYPE` = `HADOOP` to load data from Azure Blob Storage, see [Create external data source to reference Azure blob storage](#e-create-external-data-source-to-reference-azure-blob-storage).
 
 ### RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -172,7 +172,7 @@ For a complete list of supported Hadoop versions, see [PolyBase Connectivity Con
 > [!IMPORTANT]  
 > The RESOURCE_MANAGER_LOCATION value is not validated when you create the external data source. Entering an incorrect value may cause query failure at execution time whenever push-down is attempted as the provided value would not be able to resolve.
 
-[Create external data source to reference Hadoop with push-down enabled](#c.-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
+[Create external data source to reference Hadoop with push-down enabled](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) provides a concrete example and further guidance.
 
 ### DATABASE_NAME = *database_name*
 
@@ -183,7 +183,7 @@ Configure this argument when the `TYPE` is set to `RDBMS` or `SHARD_MAP_MANAGER`
 | RDBMS             | The name of the remote database on the server provided using `LOCATION` |
 | SHARD_MAP_MANAGER | Name of the database operating as the shard map manager                 |
 
-For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to [Create an RDBMS external data source](#e.-create-an-rdbms-external-data-source)
+For an example showing how to create an external data source where `TYPE` = `RDBMS` refer to [Create an RDBMS external data source](#e-create-an-rdbms-external-data-source)
 
 ### SHARD_MAP_NAME = *shard_map_name*
 
@@ -206,7 +206,7 @@ Takes a shared lock on the EXTERNAL DATA SOURCE object.
 
 PolyBase supports proxy based authentication for most external data sources. Create a database scoped credential to create the proxy account.
 
-When you connect to the storage or data pool in a Big Data Cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
+When you connect to the storage or data pool in a SQL Server big data cluster, the user's credentials are passed through to the back-end system. Create logins in the data pool itself to enable pass through authentication.
 
 Currently a SAS token with type `HADOOP` is unsupported. It's only supported with a storage account access key. Attempting to create an external data source with type `HADOOP` and a SAS credential fails with the following error:
 

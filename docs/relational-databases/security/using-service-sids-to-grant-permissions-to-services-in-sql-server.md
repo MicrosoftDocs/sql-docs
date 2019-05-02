@@ -100,8 +100,8 @@ GO
 
 For more information about the service sid structure, read [SERVICE_SID_INFO structure](https://docs.microsoft.com/windows/desktop/api/winsvc/ns-winsvc-_service_sid_info).
 
-Read about additional options which are available when [creating a login](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql).
+Read about additional options that are available when [creating a login](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql).
 
-To use Role Based Security with Service SIDs, read about [creating roles](https://docs.microsoft.com/sql/t-sql/statements/create-role-transact-sql) in SQL Server.
+To use Role-Based Security with Service SIDs, read about [creating roles](https://docs.microsoft.com/sql/t-sql/statements/create-role-transact-sql) in SQL Server.
 
 Read about different ways to [grant permissions](https://docs.microsoft.com/sql/t-sql/statements/grant-transact-sql) to Service SIDs in SQL Server.

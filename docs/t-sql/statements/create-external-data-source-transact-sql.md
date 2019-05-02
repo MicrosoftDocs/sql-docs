@@ -106,7 +106,7 @@ Specifies additional options when connecting over `ODBC` to an external data sou
 
 The name of the driver is required as a minimum but there are other options such as `APP='<your_application_name>'` or `ApplicationIntent= ReadOnly|ReadWrite` which are also useful to set and can assist with troubleshooting.
 
-Refer to the `ODBC` product documentation for a list of permitted [CONNECTION_OPTIONS][]
+Refer to the `ODBC` product documentation for a list of permitted [CONNECTION_OPTIONS][connection_options]
 
 ### PUSHDOWN = *ON | OFF*
 
@@ -237,6 +237,8 @@ WITH
 ,    PUSHDOWN   = ON
 ;
 ```
+
+For additional examples to other data sources such as MongoDB, see [configure PolyBase to access external data in MongoDB][mongodb_pb]
 
 ### B. Create external data source to reference Hadoop
 
@@ -490,8 +492,9 @@ To see this example in use, see [BULK INSERT][bulk_insert_example].
 [cat_eds]: https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql
 <!-- PolyBase docs -->
 [intro_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide
+[mongodb_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-configure-mongodb
 [connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
-[CONNECTION_OPTIONS]: https://docs.microsoft.com/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
+[connection_options]: https://docs.microsoft.com/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
 [hint_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-pushdown-computation#force-pushdown
 <!-- Elastic Query Docs -->
 [intro_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/

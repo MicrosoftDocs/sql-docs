@@ -6,7 +6,7 @@ ms.date: "05/02/2019"
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-monikerRange: ">=sql-server-2008||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # Using Service SIDs to grant permissions to services in SQL Server

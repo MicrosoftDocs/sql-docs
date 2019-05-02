@@ -1,6 +1,6 @@
 ---
 title: "Lesson 3: Defining a Dataset for the Table Report (Reporting Services) | Microsoft Docs"
-ms.date: 04/29/2019
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -18,19 +18,19 @@ Use the query designer in Report Designer to define the dataset. For this tutori
 
 ## Define a Transact-SQL query for report data  
 
-1. In the **Report Data pane**, select **New** > **Dataset...**. The **Dataset Properties dialog box** opens with the **Query section** displayed.
+1. In the **Report Data** pane, select **New** > **Dataset...**. The **Dataset Properties** dialog box opens with the **Query** section displayed.
 
     ![vs-data_set_properties_dialog](media/lesson-3-defining-a-dataset-for-the-table-report-reporting-services/vs-dataset-properties-dialog.png)
 
-2. In the **Name: text box**, type "AdventureWorksDataset".
+2. In the **Name** text box, type "AdventureWorksDataset".
 
-3. Below that, select the **Use a dataset embedded in my report radio button**.
+3. Below that, select the **Use a dataset embedded in my report** radio button.
 
-4. From the **Data source: dropdown box**, select AdventureWorks2016.
+4. From the **Data source** dropdown box, select AdventureWorks2016.
 
-5. For the **Query type**, select the **Text radio button**.
+5. For the **Query type**, select the **Text** radio button.
 
-6. Type, or copy and paste, the following Transact-SQL query into the **Query text box**.
+6. Type, or copy and paste, the following Transact-SQL query into the **Query** text box.
 
     ```T-SQL
     SELECT
@@ -55,13 +55,13 @@ Use the query designer in Report Designer to define the dataset. For this tutori
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (Optional) Select the **Query Designer button**. The query is displayed in the text-based *Query Designer*. View the results of the query by selecting the ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **run button** on the **Query Designer toolbar**. The dataset displayed contains six fields from four tables in the AdventureWorks2016 database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
+7. (Optional) Select the **Query Designer** button. The query is displayed in the text-based *Query Designer*. View the results of the query by selecting the ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **run** button on the **Query Designer** toolbar. The dataset displayed contains six fields from four tables in the AdventureWorks2016 database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.
 
-8. Select the **OK button** to exit the **Query Designer**.
+8. Select the **OK** button to exit the **Query Designer**.
 
-9. Select the **OK button** to exit the **Dataset Properties dialog box**.
+9. Select the **OK** button to exit the **Dataset Properties** dialog box.
 
-The **Report Data pane** displays the AdventureWorksDataset dataset and fields.
+The **Report Data** pane displays the AdventureWorksDataset dataset and fields.
 
    ![ssrs_adventureworksdataset](media/ssrs-adventureworksdataset.png)
 

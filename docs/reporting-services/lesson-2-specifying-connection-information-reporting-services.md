@@ -16,25 +16,25 @@ In lesson 1, you added a [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-m
   
 In this lesson, you're going to define a *data source*, connection information the report uses to access data from a relational database or other sources.
 
-For this report, you're going to add the **AdventureWorks2016** sample database as your data source. This tutorial assumes that the database is located in the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and installed on your local computer.  
+For this report, you're going to add the AdventureWorks2016 sample database as your data source. This tutorial assumes that the database is located in the default instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and installed on your local computer.  
 
 ## To set up a connection  
 
-1. In the **Report Data pane**, click **New** > **Data Source**. If the **Report Data pane** isn't visible, on the **main menu** select **View** > **Report Data** or type `<Ctrl>-<Alt>-<D>`.
+1. In the **Report Data** pane, select **New** > **Data Source**. If the **Report Data** pane isn't visible, then select **View** menu > **Report Data**.
 
     ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
 
-    The **Data Source Properties dialog box** opens with the **General section** displayed.
+    The **Data Source Properties** dialog box opens with the **General** section displayed.
 
     ![The Data Source Properties Dialog Box](media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png)
 
-2. In the **Name: text box**, type "AdventureWorks2016".
+2. In the **Name** text box, type "AdventureWorks2016".
 
-3. Select the **Embedded connection: radio button**.
+3. Select the **Embedded connection** radio button.
 
-4. In the **Type: dropdown selection box**, select "Microsoft SQL Server".
+4. In the **Type** dropdown selection box, select "Microsoft SQL Server".
   
-5. In the **Connection string: text box**, type the following string:
+5. In the **Connection string** text box, type the following string:
 
     `Data source=localhost; initial catalog=AdventureWorks2016`
 
@@ -47,11 +47,11 @@ For this report, you're going to add the **AdventureWorks2016** sample database 
     >
     > For more information about connection strings, you can refer to the `See also` section below.
 
-6. Select the **Credentials tab**, and under the section **Change the credentials used to connect to the data source**, select the **Use Windows Authentication (integrated security)** radio button.
+6. Select the **Credentials** tab, and under the section **Change the credentials used to connect to the data source**, select the **Use Windows Authentication (integrated security)** radio button.
 
-7. Select the **OK button** to complete the process.
+7. Select the **OK** button to complete the process.
 
-Report Designer adds the data source AdventureWorks2016 to the **Report Data pane**.
+Report Designer adds the data source AdventureWorks2016 to the **Report Data** pane.
 
    ![ssrs-adventureworks-datasource](media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png)
 

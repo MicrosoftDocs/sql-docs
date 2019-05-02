@@ -21,7 +21,7 @@ When you create reports with Report Designer, it creates a report server project
 
 ## To create a report server project
   
-1. From the **File menu**, select **New** > **Project**.  
+1. From the **File** menu, select **New** > **Project**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -30,32 +30,27 @@ When you create reports with Report Designer, it creates a report server project
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > For VS, if you don't see Reporting Services in the left column, add the Report Designer by installing the SSDT workload. From the **Tools menu**, select **Get Tools and Features...** and select the **SQL Server Data Tools** from the workloads displayed. If you don't see the Report Services objects in the center column, add the Reporting Services extensions. From the **Tools menu**, select **Extensions and Updates** > **Online**. In the center column, select **Microsoft Reporting Services Projects** > **Download** from the displayed extensions. For SSDT, See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
+    > For VS, if you don't see Reporting Services in the left column, add the Report Designer by installing the SSDT workload. From the **Tools** menu, select **Get Tools and Features...** and select the **SQL Server Data Tools** from the workloads displayed. If you don't see the Report Services objects in the center column, add the Reporting Services extensions. From the **Tools** menu, select **Extensions and Updates** > **Online**. In the center column, select **Microsoft Reporting Services Projects** > **Download** from the displayed extensions. For SSDT, See [Download SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-3. Select the **Report Server Project icon** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;in the center column of the **New Project dialog box**.
+3. Select the **Report Server Project** icon &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;in the center column of the **New Project** dialog box.
 
-4. In the **Name: text box**, type "Tutorial" for the project name. By default, the **Location: text box** displays the path to your "Documents\Visual Studio 20xx\Projects\" folder. Report Designer creates a folder named Tutorial below this path, and creates the Tutorial project in this folder. If the project doesn't belong to a VS solution, then VS also creates a solution file (.sln).
+4. In the **Name** text box, type "Tutorial" for the project name. By default, the **Location** text box displays the path to your "Documents\Visual Studio 20xx\Projects\" folder. Report Designer creates a folder named Tutorial below this path, and creates the Tutorial project in this folder. If the project doesn't belong to a VS solution, then VS also creates a solution file (.sln).
 
-5. Select the **OK button** to create the project. The Tutorial project is displayed in the **Solution Explorer pane** on the right.
+5. Select the **OK** button to create the project. The Tutorial project is displayed in the **Solution Explorer** pane on the right.
   
 ## Creating a report definition file (RDL)  
   
-1. In the **Solution Explorer pane**, right-click on the **Reports folder**.
+1. In the **Solution Explorer** pane, right-click on the **Reports** folder. If you don't see the **Solution Explorer** pane, select **View** menu > **Solution Explorer**.
 
 2. Select **Add** > **New Item**.
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
 
-    > [!TIP]  
-    > If you don't see the **Solution Explorer pane**, from the **View menu**, select **Solution Explorer**, or select the **Solution Explorer tab** if visible on the far right (outlined with a red rectangle) as displayed below.
-    >
-    > ![Position of the Solution Explorer pane in Visual Studio](media/lesson-1-creating-a-report-server-project-reporting-services/position-of-solution-explorer-in-vs-layout.png)
+3. In the **Add New Item** window, select the **Report** icon.
 
-3. In the **Add New Item window**, select the **Report icon**.
+4. Type "Sales Orders.rdl" into the **Name** text box.
 
-4. Type "Sales Orders.rdl" into the **Name: text box**.
-
-5. Select the **Add button** on the lower right side of the **Add New Item dialog box** to complete the process. Report Designer opens and displays the Sales Orders report file in Design view.
+5. Select the **Add button** on the lower right side of the **Add New Item** dialog box to complete the process. Report Designer opens and displays the Sales Orders report file in Design view.
 
     ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
 

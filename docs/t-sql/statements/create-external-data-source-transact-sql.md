@@ -131,7 +131,7 @@ Additional notes and guidance when creating a credential:
 
 For an example of using a `CREDENTIAL` with `SHARED ACCESS SIGNATURE` and `TYPE` = `BLOB_STORAGE`, see [Create an external data source to execute bulk operations and retrieve data from Azure Blob Storage into SQL Database](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
 
-To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][CREATE_DATABASE_SCOPED_CREDENTIAL].
+To create a database scoped credential, see [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
 ### TYPE = *[ HADOOP | BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
 

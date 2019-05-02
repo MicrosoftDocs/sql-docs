@@ -46,6 +46,7 @@ The following table lists [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
 The following features interoperate with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] with specific restrictions. See the linked topics for details.
 
 - Cross-database transactions/distributed transactions ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and Windows Server 2016). For more information, see [Cross-Database Transactions and Distributed Transactions for Always On Availability Groups and Database Mirroring &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
+- [Query statistics system data collector](../../../relational-databases/data-collection/system-data-collection-set-reports.mdQuery) cannot reliably run in an environment with non-readable secondaries. To use query statistics system data collector, set all secondary availability group replicas to allow [read-access](configure-read-only-access-on-an-availability-replica-sql-server.md). 
 
 ## <a name="NoInterop"></a> Features that Do Not Interoperate with Always On Availability Groups
 

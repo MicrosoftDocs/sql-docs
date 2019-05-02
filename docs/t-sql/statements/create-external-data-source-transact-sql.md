@@ -238,7 +238,7 @@ WITH
 ;
 ```
 
-For additional examples to other data sources such as MongoDB, see [configure PolyBase to access external data in MongoDB][mongodb_pb]
+For additional examples to other data sources such as MongoDB, see [Configure PolyBase to access external data in MongoDB][mongodb_pb]
 
 ### B. Create external data source to reference Hadoop
 

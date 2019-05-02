@@ -1,3 +1,14 @@
+---
+title: Using Service SIDs to grant permissions to services in SQL Server | Microsoft Docs
+author: randomnote1
+ms.author: dareist
+ms.date: "05/02/2019"
+ms.topic: conceptual
+ms.prod: sql
+ms.prod_service: "database-engine, sql-database"
+monikerRange: ">=sql-server-2008||=sqlallproducts-allversions"
+---
+
 # Using Service SIDs to grant permissions to services in SQL Server
 
 SQL Server uses [per-service Security Identifiers (SID)](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation) to allow permissions to be granted directly to a specific service. This method is used by SQL Server to grant permissions to the engine and agent services (NT SERVICE\MSSQL$<InstanceName> and NT SERVICE\SQLAGENT$<InstanceName> respectively). Using this method, those services can access the database engine only when the services are running.
@@ -6,10 +17,10 @@ This same method can be used when granting permissions to other services. Using 
 
 Examples of services where a Service SID can be used are:
 
-- System Center Operations Manager (SCOM) Health Service (NT SERVICE\HealthService)
+- System Center Operations Manager Health Service (NT SERVICE\HealthService)
 - Windows Server Failover Clustering (WSFC) service (NT SERVICE\ClusSvc)
 
-Some services don't have a Service SID by default. The service SID must be created using [SC.exe](https://docs.microsoft.com/windows/desktop/services/configuring-a-service-using-sc). [This method](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) has been adopted by Microsoft System Center Operations Manager (SCOM) administrators to grant permission to the HealthService within SQL server.
+Some services don't have a Service SID by default. The service SID must be created using [SC.exe](https://docs.microsoft.com/windows/desktop/services/configuring-a-service-using-sc). [This method](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/) has been adopted by Microsoft System Center Operations Manager administrators to grant permission to the HealthService within SQL server.
 
 Once the service SID has been created and confirmed, it must be granted permission within SQL Server. Granting permissions is accomplished by creating a Windows login using either [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) or a query. Once the login is created, it can be granted permissions, added to roles, and mapped to databases just like any other login.
 
@@ -32,7 +43,7 @@ Using a Service SID allows permissions to be granted to a specific service. The 
 
 ### A. Create a Service SID
 
-The following PowerShell command will create a service SID on the SCOM health service.
+The following PowerShell command will create a service SID on the System Center Operations Manager health service.
 
 ```PowerShell
 sc.exe --% sidtype "HealthService" unrestricted
@@ -54,7 +65,7 @@ sc.exe --% qsidtype "HealthService"
 
 ### C. Add a newly created Service SID as a Login
 
-The following example creates a login for the SCOM health service using T-SQL.
+The following example creates a login for the System Center Operations Manager health service using T-SQL.
 
 ```SQL
 CREATE LOGIN [NT SERVICE\HealthService] FROM WINDOWS
@@ -85,12 +96,12 @@ GRANT VIEW SERVER STATE TO 'NT SERVICE\ClusSvc'
 GO
 ```
 
-## See Also
+## Next Steps
 
- [SERVICE_SID_INFO structure](https://docs.microsoft.com/windows/desktop/api/winsvc/ns-winsvc-_service_sid_info)
+For more information about the service sid structure, read [SERVICE_SID_INFO structure](https://docs.microsoft.com/windows/desktop/api/winsvc/ns-winsvc-_service_sid_info).
 
- [CREATE LOGIN (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql)
+Read about additional options which are available when [creating a login](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql).
 
- [ALTER ROLE (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql)
+To use Role Based Security with Service SIDs, read about [creating roles](https://docs.microsoft.com/sql/t-sql/statements/create-role-transact-sql) in SQL Server.
 
-[GRANT (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/grant-transact-sql)
+Read about different ways to [grant permissions](https://docs.microsoft.com/sql/t-sql/statements/grant-transact-sql) to Service SIDs in SQL Server.

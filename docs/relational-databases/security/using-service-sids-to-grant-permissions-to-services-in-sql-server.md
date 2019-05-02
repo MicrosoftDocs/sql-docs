@@ -95,7 +95,7 @@ GRANT VIEW SERVER STATE TO 'NT SERVICE\ClusSvc'
 GO
 ```
 
-## Next Steps
+## Next steps
 
 For more information about the service sid structure, read [SERVICE_SID_INFO structure](https://docs.microsoft.com/windows/desktop/api/winsvc/ns-winsvc-_service_sid_info).
 

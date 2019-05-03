@@ -58,7 +58,7 @@ Learn more:
   
 ## Syntax  
   
-```  
+```console
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
@@ -74,7 +74,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
         ( column  [ ,...n ] )  
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]   
+    [ ON <on_option> ]
 [ ; ]  
   
 <with_option> ::=  
@@ -96,11 +96,12 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```  
+```sql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-CREATE CLUSTERED COLUMNSTORE INDEX index_name   
-    ON [ database_name . [ schema_name ] . | schema_name . ] table_name  
+CREATE CLUSTERED COLUMNSTORE INDEX index_name
+    ON [ database_name . [ schema_name ] . | schema_name . ] table_name 
+    [ORDER (column [,…n])]
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
 ```  
@@ -118,7 +119,8 @@ Some of the options are not available in all database engine versions. The follo
 
 All options are available in Azure SQL Database.
 
-### CREATE CLUSTERED COLUMNSTORE INDEX  
+### CREATE CLUSTERED COLUMNSTORE INDEX
+
 Create a clustered columnstore index in which all of the data is compressed and stored by column. The index includes all of the columns in the table, and stores the entire table. If the existing table is a heap or clustered index, the table is converted to a clustered columnstore index. If the table is already stored as a clustered columnstore index, the existing index is dropped and rebuilt.  
   
 *index_name*  
@@ -126,11 +128,14 @@ Specifies the name for the new index.
   
 If the table already has a clustered columnstore index, you can specify the same name as the existing index, or you can use the DROP EXISTING option to specify a new name.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table is converted from rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index.  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+
+Specifies the one-, two-, or three-part name of the table to be stored as a clustered columnstore index. If the table is a heap or clustered index the table is converted from rowstore to a columnstore. If the table is already a columnstore, this statement rebuilds the clustered columnstore index. To convert to an ordered clustered column store index the existing index must be a clustered columnstore index.
   
-#### WITH options  
-##### DROP_EXISTING = [OFF] | ON  
+#### WITH options
+
+##### DROP_EXISTING = [OFF] | ON
+
    `DROP_EXISTING = ON` specifies to drop the existing index, and create a new columnstore index.  
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -737,3 +742,11 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
+### F. Create an ordered clustered columnstore index
+
+Create an ordered clustered columnstore index ordered on SHIPDATE.
+
+```sql 
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+```

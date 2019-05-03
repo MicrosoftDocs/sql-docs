@@ -1,7 +1,7 @@
 ---
 title: "Cursor Types (PDO_SQLSRV Driver) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/22/2019"
+ms.date: "05/03/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

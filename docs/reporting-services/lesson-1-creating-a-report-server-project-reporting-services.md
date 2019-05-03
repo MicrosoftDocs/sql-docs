@@ -36,7 +36,7 @@ When you create reports with Report Designer, it creates a report server project
 
 4. In the **Name** text box, type "Tutorial" for the project name. By default, the **Location** text box displays the path to your "Documents\Visual Studio 20xx\Projects\" folder. Report Designer creates a folder named Tutorial below this path, and creates the Tutorial project in this folder. If the project doesn't belong to a VS solution, then VS also creates a solution file (.sln).
 
-5. Select the **OK** button to create the project. The Tutorial project is displayed in the **Solution Explorer** pane on the right.
+5. Select **OK** to create the project. The Tutorial project is displayed in the **Solution Explorer** pane on the right.
   
 ## Creating a report definition file (RDL)  
   

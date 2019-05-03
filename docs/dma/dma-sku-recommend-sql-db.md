@@ -2,7 +2,7 @@
 title: "Identify the right Azure SQL Database SKU for your on-premises database (Data Migration Assistant) | Microsoft Docs"
 description: Learn how to use Data Migration Assistant to identify the right Azure SQL Database SKU for your on-premises database
 ms.custom: ""
-ms.date: "05/02/2019"
+ms.date: "05/06/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""
@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
 author: HJToland3
-ms.author: rajpo
+ms.author: jtoland
 manager: craigg
 ---
 
@@ -36,8 +36,10 @@ The following are instructions to help you determine the Azure SQL Database SKU 
 
 ## Prerequisites
 
-- Download the latest version of DMA, and then install it. If you already have an earlier version of the  tool installed, open it and you'll be prompted to upgrade DMA.
-- Verify that the PowerShell file SkuRecommendationDataCollectionScript.ps1, which is required to collect the performance counters, is installed in the DMA folder.
+- Download and install the latest version of [DMA](https://aka.sm/get-dma). If you have already an earlier version of the tool, open it, and you'll be prompted to upgrade DMA.
+- Ensure that your computer has [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) or later, which is required to run all scripts. For information about findoug out which version of PowerShell is installed on your computer, see the article [Download and install Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+- Ensure that your computer has the Azure Powershell Module installed. For more information, see the article [Install the Azure PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
+- Verify that the PowerShell file **SkuRecommendationDataCollectionScript.ps1**, which is required to collect the performance counters, is installed in the DMA folder.
 - Ensure that the computer on which you'll perform this process has Administrator permissions to the computer that is hosting your databases.
 
 ## Collect performance counters

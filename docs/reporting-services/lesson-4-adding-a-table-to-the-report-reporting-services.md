@@ -42,7 +42,7 @@ The following diagram shows a table data region that has been populated with the
 ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)  
   
 ## Preview Your Report  
-Previewing a report enables you to view the rendered report without having to first publish it to a report server. You will probably want to preview your report frequently during design time. Previewing the report will also run validation on the design and data connections so you can correct errors and issues before publishing the report to a report server.  
+Previewing a report enables you to view the rendered report without having to first publish it to a report server. You are going to probably want to preview your report frequently during design time. Previewing the report will also run validation on the design and data connections so you can correct errors and issues before publishing the report to a report server.  
   
 #### To preview a report  
   
@@ -53,13 +53,13 @@ Previewing a report enables you to view the rendered report without having to fi
   
     ![Preview, Detail rows of table with 5 columns](../reporting-services/media/rs-basictabledetailspreview.png "Preview, Detail rows of table with 5 columns")  
   
-    Notice that the currency (in the Line Total column) has six places after the decimal, and the date has includes a time stamp. You're going to fix that formatting in the next lesson.  
+    Notice that the currency (in the Line Total column) has six places after the decimal, and the date includes a time stamp. You're going to fix that formatting in the next lesson.  
   
 > [!NOTE]  
 > On the **File** menu, click **Save All** to save the report.  
   
 ## Next Steps  
-You have successfully added a Table data region to your report, added fields to the data region, and previewed your report. Next, you will format column headers and date and currency values. See [Lesson 5: Formatting a Report &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+You have successfully added a Table data region to your report, added fields to the data region, and previewed your report. In the next lesson, you are going to format column headers, and date and currency values. See [Lesson 5: Formatting a Report &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## See Also  
 [Tables &#40;Report Builder  and SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

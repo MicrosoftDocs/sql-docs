@@ -2,7 +2,7 @@
 title: "Run Data Migration Assistant from the command line (SQL Server) | Microsoft Docs"
 description: Learn how to run Data Migration Assistant from the command line to assess SQL Server databases for migration
 ms.custom: ""
-ms.date: "05/02/2019"
+ms.date: "05/06/2019"
 ms.prod: sql
 ms.prod_service: "dma"
 ms.reviewer: ""

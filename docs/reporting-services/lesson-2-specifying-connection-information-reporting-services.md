@@ -49,7 +49,7 @@ For this report, you're going to add the AdventureWorks2016 sample database as y
 
 6. Select the **Credentials** tab, and under the section **Change the credentials used to connect to the data source**, select the **Use Windows Authentication (integrated security)** radio button.
 
-7. Select the **OK** button to complete the process.
+7. Select **OK** to complete the process.
 
 Report Designer adds the data source AdventureWorks2016 to the **Report Data** pane.
 

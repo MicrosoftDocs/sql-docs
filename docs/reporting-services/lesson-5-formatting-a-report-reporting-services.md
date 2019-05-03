@@ -22,7 +22,7 @@ The Date field expression displays date and time information by default. You can
 2. Right-click the cell with the `[Date]` field expression and then select **Text Box Properties**.
 3. Select **Number**, and then in the **Category** field, select **Date**.
 4. In the **Type** box, select **January 31, 2000**.
-5. Select the **OK** button to apply the format.
+5. Select **OK** to apply the format.
 6. Preview the report to see the change to the `[Date]` field formatting, and then change back to design view.
 
 ## <a name="bkmk_format_currency"></a>Format the Currency
@@ -36,7 +36,7 @@ The LineTotal field expression displays a general number. You can format it to d
     - **Negative numbers: ($12345.00)**
     - **Symbol: $ English (United States)**
 4. Select **Use 1000 separator (,)**. If the sample text displays **$12,345.00**, then your settings are correct.
-5. Select the **OK** button to apply the format.
+5. Select **OK** to apply the format.
 6. Preview the report to see the change to the `[LineTotal]` expression column and then change back to design view.  
 
 ## <a name="bkmk_change_textstyle"></a>Change Text Style and Column Widths

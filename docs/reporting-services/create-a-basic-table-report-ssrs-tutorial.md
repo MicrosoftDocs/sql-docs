@@ -16,9 +16,9 @@ ms.author: maggies
 ---
 # Create a Basic Table Report (SSRS Tutorial)
 
-In this tutorial, you use *Report Designer* in Visual Studio / SQL Server Data Tools (SSDT) to create a basic SQL Server Reporting Services (SSRS) paginated report with a table, based on the **AdventureWorks2016** database. You can also create [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] paginated reports with Report Builder.
+In this tutorial, you use the *Report Designer* tool in Visual Studio / SQL Server Data Tools (SSDT). You create a SQL Server Reporting Services (SSRS) paginated report. The report contains a query table, created from data in the AdventureWorks2016 database.
 
-As you progress in this tutorial, you are going to learn how to:
+As you progress in this tutorial, you're going to learn how to:
   
 - create a report project.
 - set up a data connection.
@@ -35,10 +35,10 @@ Your system must have the following components installed to take this tutorial:
 
 - [!INCLUDE[msconame-md](../includes/msconame-md.md)] SQL Server database engine.  
 - SQL Server 2016 Reporting Services or later (SSRS).
-- The **AdventureWorks2016** database.  For more information, see [Adventure Works Sample Databases](https://github.com/Microsoft/sql-server-samples/releases).
+- The AdventureWorks2016 database.  For more information, see [Adventure Works Sample Databases](https://github.com/Microsoft/sql-server-samples/releases).
 - [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) for Visual Studio along with the Reporting Services extension installed to enable access to the *Report Designer*.
   
-You must also have read-only permissions to retrieve data from the **AdventureWorks2016** database.
+You must also have read-only permissions to retrieve data from the AdventureWorks2016 database.
 
 **Estimated time to complete the tutorial:** 30 minutes.
 

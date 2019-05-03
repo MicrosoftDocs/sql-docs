@@ -30,16 +30,16 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
     ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
 
     > [!NOTE]
-    > Note that the row handle now has two brackets in it, ![ssrs_ssdt_rowgroupdoublehandles](media/ssrs-ssdt-rowgroupdoublehandles.png) to show two groups. The table now also has two `[Order]` expression columns.
+    > Note that now the row handle has two brackets in it, ![ssrs_ssdt_rowgroupdoublehandles](media/ssrs-ssdt-rowgroupdoublehandles.png) to indicate two groups. The table now also has two `[Order]` expression columns.
 
-5. Delete the original `[Date]` and `[Order]` expression columns to the right of the double line. Select the column handles for the two columns, right-click and select **Delete Columns**. Report Designer removes the individual row expressions so that only the group expressions are displayed.
+5. Delete the original `[Date]` and `[Order]` expression columns to the right of the double line. Select the column handles for the two columns, right-click and select **Delete Columns**. Report Designer removes the individual row expressions, so that only the group expressions are displayed.
 
     ![Select columns to delete](media/rs-basictablegroupsdeletecols.gif "Select columns to delete")
 
 6. To format the new `[Date]` column, right-click the data region cell that contains the `[Date]` expression, and select **Text Box Properties**.
 7. Select **Number** in the left-most column list box, and **Date** from the **Category** list box.
 8. In the **Type** list box, select **January 31, 2000**.
-9. Select the **OK** button to apply the format.
+9. Select **OK** to apply the format.
 10. Again, preview the report. It should look as below:
 
     ![rs_BasicTableGroupsPreview](media/rs-basictablegroupspreview.png)
@@ -52,7 +52,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 4. In the empty cell to the left of the `Sum[Qty]` cell, type the string "Order Total".
 5. You can add a background color to the totals row. Select the two sum cells and the label cell.  
 6. From the **Format** menu, select **Background Color** > **Light Gray** square.
-7. Select the **OK** button to apply the format.
+7. Select **OK** to apply the format.
 
    ![Design view: Basic table with order total](media/rs-basictablesumlinetotaldesign.gif "Design view: Basic table with order total")
 
@@ -62,7 +62,7 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 2. Type the word "Daily" before the word "Total" in the same cell, so it reads "Daily Total".
 3. Select that cell and the two adjacent total cells to the right and the empty cell in between them.
 4. From the **Format** menu, select **Background Color** > **Orange** square.
-5. Select the **OK** button to apply the format.
+5. Select **OK** to apply the format.
 
    ![Set background color to Orange](media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")
 
@@ -72,13 +72,13 @@ In the final tutorial lesson, you're going to add grouping and totals to your [!
 2. Type the string "Grand" before the word "Total" in the same cell, so it reads "Grand Total".
 3. Select the cell with "Grand Total", the two `Sum()` expression cells and the empty cells between them.
 4. From the **Format** menu, select **Background Color** > **Light Blue** square.
-5. Select the **OK** button to apply the format.
+5. Select **OK** to apply the format.
 
     ![Design view: Grand total in basic table](media/rs-basictablesumgrandtotaldesign.gif "Design view: Grand total in basic table")
 
 ## Preview the report
 
-To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, select ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png) the **Last Page** button. The results should display as below:
+To preview the format changes, select the **Preview** tab. In the **Preview** toolbar, select the **Last Page** button, which looks like ![ssrs_ssdt_viewertoolbar_lastpage](media/ssrs-ssdt-viewertoolbar-lastpage.png). The results should display as below:
 
    ![Preview: Basic table with grand total](media/rs-basictablesumgrandtotalpreview.gif "Preview: Basic table with grand total")
 
@@ -92,7 +92,7 @@ An optional step is to publish the completed report to the Report Server so you 
     - `https://localhost/reportserver` works if you're designing the report on the report server.
 
 3. The **TargetReportFolder** is named Tutorial from the name of the project. Report Designer deploys the report to this folder.
-4. Select the **OK** button.
+4. Select **OK**.
 5. Select **Build** menu > **Deploy Tutorial**.
 
     If you see a message like below in the **Output** window, it indicates a successful deployment.

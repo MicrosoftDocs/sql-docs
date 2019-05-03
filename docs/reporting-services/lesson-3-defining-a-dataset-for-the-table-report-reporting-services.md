@@ -55,9 +55,9 @@ Use the query designer in Report Designer to design the dataset. For this tutori
   
     You see the data from six fields from four different tables in the [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] database. The query makes use of Transact-SQL functionality such as aliases. For example, the SalesOrderHeader table is called *soh*.  
   
-8.  Click **OK** to exit the query designer.  
+8.  Select **OK** to exit the *Query designer*.  
   
-9.  Click **OK** to exit the **Dataset Properties** dialog box.  
+9.  Select **OK** to exit the **Dataset Properties** dialog box.  
   
     Your **AdventureWorksDataset** dataset and fields appear in the Report Data pane.  
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  

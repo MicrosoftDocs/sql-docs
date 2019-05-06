@@ -12,8 +12,8 @@ f1_keywords:
   - "vdt.dlgbox.newdatabaseview"
   - "vdt.dlgbox.newtablename"
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.allowsqlclrdebugging"
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Work with CLR Database Objects

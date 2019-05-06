@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [SQL Server Management Studio], creating"
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Create a Project

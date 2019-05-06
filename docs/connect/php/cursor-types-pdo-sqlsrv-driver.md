@@ -1,7 +1,7 @@
 ---
 title: "Cursor Types (PDO_SQLSRV Driver) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/22/2019"
+ms.date: "05/03/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -34,7 +34,7 @@ You can request a dynamic, static, or keyset cursor by specifying `PDO::ATTR_CUR
 
 -   `PDO::SQLSRV_CURSOR_STATIC`
 
--   `PDO::SQLSRV_CURSOR_KEYSET_DRIVEN`
+-   `PDO::SQLSRV_CURSOR_KEYSET`
 
 ## PDO_SQLSRV and Client-Side Cursors
 Client-side cursors were added in version 3.0 of the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] and allow you to cache an entire result set in memory. One advantage is that the row count is available after a query is executed.

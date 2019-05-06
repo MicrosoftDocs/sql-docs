@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "object search [SQL Server]"
   - "searching objects [SQL Server]"
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Object Explorer Details Pane

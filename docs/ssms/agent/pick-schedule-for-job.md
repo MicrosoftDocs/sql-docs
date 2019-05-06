@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Pick Schedule for Job dialog box"
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

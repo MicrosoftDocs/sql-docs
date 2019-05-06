@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "modifying queries"
   - "queries [SQL Server], modifying"
 ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

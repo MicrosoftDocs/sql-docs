@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "mapping many-to-many relationships [SQL Server]"
   - "database diagrams [SQL Server], relationships"
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

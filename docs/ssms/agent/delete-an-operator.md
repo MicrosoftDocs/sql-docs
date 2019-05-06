@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "operators (users) [Database Engine], deleting with Management Studio"
 ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

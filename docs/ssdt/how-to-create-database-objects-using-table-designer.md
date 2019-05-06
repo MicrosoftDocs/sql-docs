@@ -11,8 +11,8 @@ f1_keywords:
   - "sql.data.tools.design.table.scriptpanel"
   - "sql.data.tools.design.table.context.view"
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Create Database Objects Using Table Designer

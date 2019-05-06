@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "reconciling changes made by multiple users"
   - "modifications made by multiple users"
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

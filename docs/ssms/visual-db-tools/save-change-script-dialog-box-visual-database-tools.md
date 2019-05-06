@@ -11,8 +11,8 @@ f1_keywords:
   - "vdt.dlgbox.generatechangescript"
   - "vdtsql.chm:65544"
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

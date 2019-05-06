@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "queries [SQL Server], discarding changes"
   - "discarding query changes"
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

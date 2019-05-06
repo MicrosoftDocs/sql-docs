@@ -128,12 +128,12 @@ It is also possible to customize your own deployment configuration file. You can
 
 ## <a id="env"></a> Environment variables
 
-The following environment variables are used for security settings that are not stored in a deployment configuration file.
+The following environment variables are used for security settings that are not stored in a deployment configuration file. Note that Docker settings except credentials can be set in the configuration file.
 
 | Environment variable | Description |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | The private registry where the images used to deploy the cluster are stored. |
-| **DOCKER_REPOSITORY** | The private repository within the above registry where images are stored. |
+| **DOCKER_REGISTRY** | The private registry where the images used to deploy the cluster are stored. Use *private-repo.microsoft.com* for the ducration of gated public preview.|
+| **DOCKER_REPOSITORY** | The private repository within the above registry where images are stored. Use *mssql-private-preview* for the duration of the gated public preview.|
 | **DOCKER_USERNAME** | The username to access the container images in case they are stored in a private repository. |
 | **DOCKER_PASSWORD** | The password to access the above private repository. |
 | **DOCKER_IMAGE_TAG** | The label used to tag the images. Defaults to **latest**, but we recommend using the tag corresponding to the release to avoid version incompatibility issues. |
@@ -147,12 +147,12 @@ These environment variables must be set prior to calling **mssqlctl cluster crea
 The following example shows how to set the environment variables for Linux (bash) and Windows (PowerShell):
 
 ```bash
-export CONTROLLER_USERNAME=<controller_user>
+export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
-export DOCKER_REGISTRY=<docker-registry>
-export DOCKER_REPOSITORY=<docker-repository>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export DOCKER_REGISTRY=private-repo.microsoft.com
+export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
 export DOCKER_IMAGE_TAG=ctp2.5
@@ -161,10 +161,10 @@ export DOCKER_IMAGE_TAG=ctp2.5
 ```PowerShell
 SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
-SET DOCKER_REGISTRY=<docker-registry>
-SET DOCKER_REPOSITORY=<docker-repository>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
+SET DOCKER_REGISTRY=private-repo.microsoft.com
+SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 SET DOCKER_IMAGE_TAG=ctp2.5

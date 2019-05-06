@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], importing"
   - "importing registered server information"
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Import Registered Server Information (SQL Server Management Studio)

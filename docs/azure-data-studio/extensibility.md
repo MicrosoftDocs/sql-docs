@@ -2,16 +2,17 @@
 title: Adding additional functionality thru extensibility
 titleSuffix: Azure Data Studio
 description: Learn about the extensibility model and key extensibility areas for extending the functionality of Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
-ms.reviewer: "alayu; sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18"
+ms.date: "09/24/2018"
 ---
+
 # Getting started with [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibility
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] has several extensibility mechanisms to customize the user experience and make those customizations available to the entire user community. The core [!INCLUDE[name-sos](../includes/name-sos.md)] platform is built upon Visual Studio Code, so most of the Visual Studio Code extensibility APIs are available. Additionally, we've provided additional extensibility points for data management-specific activities.

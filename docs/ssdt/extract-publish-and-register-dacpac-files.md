@@ -14,8 +14,8 @@ f1_keywords:
   - "sql.data.tools.publishdacproject"
   - "sql.data.tools.DacExtractDialog"
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # Extract, Publish, and Register .dacpac Files

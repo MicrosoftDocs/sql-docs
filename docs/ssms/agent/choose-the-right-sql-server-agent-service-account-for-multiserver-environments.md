@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQL Server Agent, service accounts"
   - "multiserver environments [SQL Server], SQL Server Agent service account behavior"
 ms.assetid: a07e2f38-281c-495b-965b-13fad03ba548
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

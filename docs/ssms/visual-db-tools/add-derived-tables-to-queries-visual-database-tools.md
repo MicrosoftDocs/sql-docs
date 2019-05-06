@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "table joins [SQL Server]"
   - "derived tables"
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

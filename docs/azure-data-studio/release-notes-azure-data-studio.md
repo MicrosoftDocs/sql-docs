@@ -2,16 +2,17 @@
 title: Release notes
 titleSuffix: Azure Data Studio
 description: 'Azure Data Studio release notes'
-ms.custom: "seodec18"
-ms.date: "04/19/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
+ms.reviewer: "alayu; sstein"
+ms.custom: "seodec18"
+ms.date: "04/19/2019"
 ---
+
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**

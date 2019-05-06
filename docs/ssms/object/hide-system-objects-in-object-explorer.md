@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "objects [SQL Server], hiding"
   - "Object Explorer, hiding objects"
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Hide System Objects in Object Explorer

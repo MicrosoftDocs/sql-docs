@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], about Query Designer"
   - "Visual Database Tools [SQL Server], queries"
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.commitpreview.dialog"
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Update a Connected Database with Power Buffer

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.unittesting.testconditions"
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # Using Test Conditions in SQL Server Unit Tests

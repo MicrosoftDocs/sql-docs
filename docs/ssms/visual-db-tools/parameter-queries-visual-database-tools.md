@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "parameter queries [SQL Server]"
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

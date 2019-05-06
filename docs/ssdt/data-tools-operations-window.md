@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql.data.tools.datatoolsoperations"
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # Data Tools Operations Window

@@ -6983,7 +6983,7 @@
       - name: Samples
         items:
         - name: In-Memory OLTP Code Samples
-          href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
+# OLD     href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
           items:
           - name: "Demonstration: Performance Improvement of In-Memory OLTP"
             href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
@@ -7005,8 +7005,8 @@
           href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
         - name: Indexes
           href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
-        - name: Memory-Optimized Tables
-          href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
+# OLD   - name: Memory-Optimized Tables
+#         href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
           items:
           - name: Overview
             href: ../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
@@ -7024,8 +7024,8 @@
             href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
           - name: A Guide to Query Processing
             href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
-          - name: Natively Compiled Stored Procedures
-            href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
+# OLD     - name: Natively Compiled Stored Procedures
+#           href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
             items:
             - name: Creating Natively Compiled Stored Procedures
               href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
@@ -7079,7 +7079,7 @@
             - name: Restore & Recovery
               href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
           - name: SQL Server Support
-            href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
+# OLD       href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
             items:
             - name: Unsupported Features
               href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
@@ -7105,7 +7105,7 @@
               - name: T-SQL Constructs Not Supported by In-Memory OLTP
                 href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
           - name: Migrating to In-Memory OLTP
-            href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
+# OLD       href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
             items:
             - name: Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP
               href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
@@ -7126,7 +7126,7 @@
             - name: Implementing IDENTITY in a Memory-Optimized Table
               href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
             - name: Migration Issues for Natively Compiled Stored Procedures
-              href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
+# OLD         href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
               items:
               - name: Creating & Accessing Tables in TempDB from Natively Compiled Stored Procedures
                 href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
@@ -8022,6 +8022,8 @@
         href: ../relational-databases/security/permissions-database-engine.md
       - name: Permissions hierarchy
         href: ../relational-databases/security/permissions-hierarchy-database-engine.md
+      - name: Using Service SIDs to grant permissions to services in SQL Server
+        href: ../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
     - name: Encryption
       href: ../relational-databases/security/encryption/sql-server-encryption.md
       items:
@@ -10130,8 +10132,10 @@
         href: ../linux/sql-server-linux-manage-ssms.md
       - name: Use Azure Data Studio to manage
         href: ../azure-data-studio/quickstart-sql-server.md
-      - name: Use PowerShell to manage
+      - name: Use Windows PowerShell
         href: ../linux/sql-server-linux-manage-powershell.md
+      - name: Use PowerShell Core
+        href: ../linux/sql-server-linux-manage-powershell-core.md
       - name: Use log shipping
         href: ../linux/sql-server-linux-use-log-shipping.md
       - name: Use DB Mail & email alerts

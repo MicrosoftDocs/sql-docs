@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], default locations"
   - "default project locations"
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Change the Default Location for Projects

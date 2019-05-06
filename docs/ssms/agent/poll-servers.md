@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "master servers [SQL Server], polling"
   - "polling interval [SQL Server]"
 ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -53,7 +53,7 @@ If you have comments or suggestions, or you want to report issues, the best way 
 
 The SSMS 18.x installation does not upgrade or replace SSMS versions 17.x or earlier. SSMS 18.x installs side by side with previous versions so both versions are available for use.
 
-If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**:
+If a computer contains side by side installations of SSMS, verify you start the correct version for your specific needs. The latest version is labeled **Microsoft SQL Server Management Studio 18**
  
 ## Available Languages (SSMS 18.0 GA)
 
@@ -85,12 +85,13 @@ For details about what's new in this release, see [the SSMS release notes](relea
 This release of SSMS supports the following 64-bit platforms when used with the latest available service pack:
 
 - Windows 10 (64-bit) <sup>*</sup>
+- Windows 8.1 (64-bit)
 - Windows Server 2016 <sup>*</sup>
 - Windows Server 2012 R2 (64-bit)
 - Windows Server 2012 (64-bit)
 - Windows Server 2008 R2 (64-bit)
 
-<sup>*</sup> Requires version 1607 (10.0.14939) or later
+<sup>*</sup> Requires version 1607 (10.0.14393) or later
 
 > [!NOTE]
 > SSMS runs on Windows only. If you need a tool that runs on platforms other than Windows, take a look at Azure Data Studio. Azure Data Studio is a new cross-platform tool that runs on macOS, Linux, as well as Windows. For details, see [Azure Data Studio](../azure-data-studio/what-is.md).

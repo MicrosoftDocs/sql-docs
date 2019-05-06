@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "FileTable [SQL Server], see FileTables [SQL Server]"
   - "FileTable [SQL Server]"
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray"
 manager: craigg
 ---
 # FileTables (SQL Server)

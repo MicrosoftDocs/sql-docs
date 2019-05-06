@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Agent jobs, master servers"
   - "target servers [SQL Server], enlisting"
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.ag.job.scheduleproperties.f1"
   - "sql13.swb.maint.editrecurringjobsched.f1"
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

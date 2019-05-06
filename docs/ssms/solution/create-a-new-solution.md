@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "solutions [SQL Server Management Studio], creating"
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Create a New Solution

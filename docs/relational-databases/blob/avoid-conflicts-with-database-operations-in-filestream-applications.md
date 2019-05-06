@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts"
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Avoid Conflicts with Database Operations in FILESTREAM Applications

@@ -59,7 +59,7 @@ The following table shows the possible values for `PDO::SQLSRV_ATTR_CURSOR_SCROL
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|Creates a client-side (buffered) static cursor, which buffers the result set in memory on the client machine.|
 |PDO::SQLSRV_CURSOR_DYNAMIC|Creates a server-side (unbuffered) dynamic cursor, which lets you access rows in any order and will reflect changes in the database.|
-|PDO::SQLSRV_CURSOR_KEYSET_DRIVEN|Creates a server-side keyset cursor. A keyset cursor does not update the row count if a row is deleted from the table (a deleted row is returned with no values).|
+|PDO::SQLSRV_CURSOR_KEYSET|Creates a server-side keyset cursor. A keyset cursor does not update the row count if a row is deleted from the table (a deleted row is returned with no values).|
 |PDO::SQLSRV_CURSOR_STATIC|Creates a server-side static cursor, which lets you access rows in any order but will not reflect changes in the database.<br /><br />`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` implies `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_STATIC`.|
 
 You can close a PDOStatement object by calling `unset`:

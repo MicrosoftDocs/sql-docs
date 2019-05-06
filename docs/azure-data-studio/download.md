@@ -2,16 +2,17 @@
 title: Download and install
 titleSuffix: Azure Data Studio
 description: Download and Install Azure Data Studio for Windows, macOS, or Linux
-ms.custom: "seodec18"
-ms.date: "04/19/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
 ms.topic: conceptual
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
+ms.custom: "seodec18"
+ms.date: "04/19/2019"
+ms.reviewer: "alayu; sstein"
 ---
+
 # Download and install Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] runs on Windows, macOS, and Linux.
@@ -154,9 +155,9 @@ If you installed [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] with 
 For an optimal experience, please use the recommended system requirements.
 
 |             | CPU Cores | Memory/RAM |
-|:-----------:|:---------:|:----------:|
-| Recommended |     4     |      8     |
-|   Minimum   |     2     |      4     |
+|:-----------|:---------|:----------|
+| Recommended |     4     |      8 GB    |
+|   Minimum   |     2     |      4 GB     |
 |             |           |            |
 
 ## Check for updates

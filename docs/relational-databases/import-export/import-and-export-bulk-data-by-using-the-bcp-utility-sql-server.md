@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], bcp utility"
   - "bcp utility [SQL Server], about bcp utility"
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

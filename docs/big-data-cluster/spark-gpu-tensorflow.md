@@ -48,11 +48,11 @@ The following steps use the Azure CLI to create an AKS cluster that supports GPU
 1. Create a Kubernetes cluster in AKS with the [az aks create](https://docs.microsoft.com/cli/azure/aks) command. The following example creates a Kubernetes cluster named `gpucluster` in the `sqlbigdatagroupgpu` resource group.
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6s_v3 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
    ```
 
    > [!NOTE]
-   > This cluster uses the  **Standard_NC6** [GPU-optimized virtual machine size](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), which is one of the specialized virtual machines available with single or multiple NVIDIA GPUs. For more information, see [Use GPUs for compute-intensive workloads on Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
+   > This cluster uses the  **Standard_NC6s_v3** [GPU-optimized virtual machine size](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), which is one of the specialized virtual machines available with single or multiple NVIDIA GPUs. For more information, see [Use GPUs for compute-intensive workloads on Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
 
 1. To configure kubectl to connect to your Kubernetes cluster, run the [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) command.
 

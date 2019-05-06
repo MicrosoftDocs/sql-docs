@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -20,8 +19,9 @@ helpviewer_keywords:
   - "troubleshooting [SQL Server], full-text search"
   - "sys.fulltext_index_fragments catalog view"
 ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

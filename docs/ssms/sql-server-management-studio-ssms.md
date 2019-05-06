@@ -10,8 +10,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQL Server Management Studio"
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # SQL Server Management Studio (SSMS)

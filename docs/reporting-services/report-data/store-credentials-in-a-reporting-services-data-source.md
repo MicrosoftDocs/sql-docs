@@ -1,27 +1,32 @@
 ---
 title: "Store Credentials in a Reporting Services Data Source | Microsoft Docs"
-ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-data
-
-
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "credentials [Reporting Services]"
-  - "security [Analysis Services], data sources"
-  - "stored credentials [Reporting Services]"
-  - "data sources [Reporting Services], stored credentials"
-ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: maggiesMSFT
 ms.author: maggies
+manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 05/24/2018
 ---
+
 # Store Credentials in a Reporting Services Data Source
-  You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server uses to access external data for a report. Stored credentials are used if the report runs unattended, for example a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription that publishes a report as an e-mail. The report server retrieves and uses the credentials when report processing is scheduled or triggered. This topic walks you through configuring stored credentials for both Native mode and SharePoint mode report servers.  
-  
-|| |
-|-|-|
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+
+::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]
+
+::: moniker-end
+
+You can configure stored credentials that a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server uses to access external data for a report. Stored credentials are used if the report runs unattended, for example a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription that publishes a report as an e-mail. The report server retrieves and uses the credentials when report processing is scheduled or triggered. This topic walks you through configuring stored credentials for both Native mode and SharePoint mode report servers.  
   
 ##  <a name="bkmk_top"></a> Security policy requirements for stored credentials  
  ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") It is required that the account you use for stored credentials, is configured for one of the following security policies on the report server. It is recommended you select the policy with the minimum level of permissions you require for your environment.  

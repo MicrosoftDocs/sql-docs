@@ -17,7 +17,6 @@ ms.author: janinez
 manager: craigg
 ---
 # What&#39;s New in Integration Services in SQL Server 2016
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 This topic describes the features that have been added or updated in SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. It also includes features added or updated in the [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) during the SQL Server 2016 time frame.  
 
@@ -361,10 +360,10 @@ The latest version of the Azure Feature Pack includes the Azure SQL DW Upload ta
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] introduced the **ValidationDetails** property in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 2. This new property was not announced or documented at that time. The **ValidationDetails** property is also available in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] and in [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ## See Also  
  [What's New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Editions and Supported Features for SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

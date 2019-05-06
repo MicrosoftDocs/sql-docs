@@ -12,8 +12,8 @@ f1_keywords:
   - "vdtsql.chm:69640"
   - "vdt.dlgbox.querydefinitionsdiffer"
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

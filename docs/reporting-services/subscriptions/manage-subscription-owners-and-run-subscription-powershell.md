@@ -1,13 +1,15 @@
 ---
 title: "Manage Subscription Owners and Run Subscription - PowerShell | Microsoft Docs"
-author: maggiesMSFT
-ms.author: maggies
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: subscriptions
 ms.topic: conceptual
-ms.date: 04/17/2019
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 04/26/2019
 ---
 
 # Manage Subscription Owners and Run Subscription - PowerShell
@@ -16,8 +18,9 @@ ms.date: 04/17/2019
 
 Starting with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you can programmatically transfer the ownership of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] subscription from one user to another. This topic provides several Windows PowerShell scripts you can use to change or simply list subscription ownership. Each sample includes sample syntax for both Native mode and SharePoint mode. After you change the subscription owner, the subscription will then execute in the security context of the new owner, and the User!UserID field in the report will display the value of new owner. For more information on the object model the PowerShell samples call, see <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
-##  <a name="bkmk_top"></a> In this topic:  
+![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")
+
+##  <a name="bkmk_top"></a> In this topic:
   
 - [How to use the scripts](#bkmk_how_to)  
   
@@ -189,7 +192,7 @@ powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\{current ow
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    newOwner      - DOMAIN\USER that will own the subscriptions you wish to change  
-#    server        - server and instance name (e.g. myserver/reportserver, myserver/reportserver_db2, myserver/_vti_bin/reportserver)  
+#    server        - server and instance name (e.g. myserver/reportserver, myserver/reportserver_db2, myserver/_vti_bin/reportserver)
   
 Param(  
     [string]$currentOwner,  
@@ -377,12 +380,12 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
   
 ```  
 
-## See Also  
+## See also  
 
-[ReportingService2010.ListSubscriptions Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.ListSubscriptions Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
 
-[ReportingService2010.ChangeSubscriptionOwner Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [ReportingService2010.ChangeSubscriptionOwner Method](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
 
-[ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
 
-[ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)

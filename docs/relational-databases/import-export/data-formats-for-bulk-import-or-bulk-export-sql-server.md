@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], choosing"
   - "bulk importing [SQL Server], data formats"
 ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

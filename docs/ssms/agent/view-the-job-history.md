@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "historical information [SQL Server], jobs"
   - "displaying job history"
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -153,8 +153,6 @@
     href: ../report-data/dataset-properties-dialog-box-parameters.md
   - name: Dataset Properties Dialog Box, Query
     href: ../dataset-properties-dialog-box-query.md
-  - name: Define Query Parameters Dialog Box
-    href: define-query-parameters-dialog-box.md
   - name: Enter Data Source Credentials Dialog Box
     href: ../enter-data-source-credentials-dialog-box.md
   - name: Shared Data Source Properties Dialog Box, Credentials

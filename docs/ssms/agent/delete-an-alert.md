@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "disabling alerts"
   - "removing alerts"
 ms.assetid: c982b208-e2d1-4d34-8cee-940b9baf6586
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -3,18 +3,12 @@ title: "Add a Snapshot to Report History (Report Manager) | Microsoft Docs"
 ms.prod: "reporting-services-2014"
 ms.technology: "reporting-services-native"
 ms.topic: conceptual
-author: maggiesMSFT
+author: maggiesMSFT 
 ms.author: maggies
 manager: kfile
 ms.reviewer: ""
-helpviewer_keywords: 
-  - "report history [Reporting Services], adding snapshots"
-  - "historical data [Reporting Services]"
-  - "snapshots [Reporting Services], adding report snapshots"
-  - "adding snapshots to report history"
-  - "report snapshots [Reporting Services], adding"
 ms.custom: ""
-ms.date: 04/19/2019
+ms.date: 04/26/2019
 ---
 
 # Add a Snapshot to Report History (Report Manager)
@@ -85,7 +79,7 @@ Report snapshots are not saved in a particular rendering format. Instead, report
 
 5. Click **Apply**.  
   
-## See Also
+## See also
 
 - [Configure Execution Properties for a Report  &#40;Report Manager&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Open and Close a Report &#40;Report Manager&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)- [Limit Report History &#40;Report Manager&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)

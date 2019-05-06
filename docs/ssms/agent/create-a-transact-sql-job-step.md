@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "job steps [Transact-SQL]"
   - "SQL Server Agent jobs, Transact-SQL step"
 ms.assetid: 69c571a7-debe-4063-9d38-e4b6a1e8e84c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

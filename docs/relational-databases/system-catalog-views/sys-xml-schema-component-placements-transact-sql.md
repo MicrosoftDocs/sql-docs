@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,8 +16,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_component_placements catalog view"
 ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # sys.xml_schema_component_placements (Transact-SQL)

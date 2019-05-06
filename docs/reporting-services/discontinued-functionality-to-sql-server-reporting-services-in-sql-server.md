@@ -1,15 +1,15 @@
 ---
 title: Discontinued functionality
-author: maggiesMSFT
-ms.author: maggies
-manager: kfile
-ms.reviewer: ""
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: reporting-services
 ms.topic: conceptual
+author: maggiesMSFT 
+ms.author: maggies
+manager: kfile
+ms.reviewer: ""
 ms.custom: seodec18
-ms.date: 12/14/2018
+ms.date: 04/26/2019
 ---
 
 # Discontinued Functionality in SQL Server Reporting Services (SSRS)
@@ -28,8 +28,8 @@ A *discontinued feature* is one that is no longer supported. It might also be ph
 
 ## Next steps
 
-[What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [What's New in Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [Behavior Changes to SQL Server Reporting Services in SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [Deprecated features in SQL Server Reporting Services in SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,8 +11,8 @@ f1_keywords:
   - "VS.ToolsOptionsPages.ObjectExplorerScripting"
   - "VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting"
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Options (SQL Server Object Explorer - Scripting Page)

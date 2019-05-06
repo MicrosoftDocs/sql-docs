@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "tokens [SQL Server]"
   - "escape macros [SQL Server Agent]"
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

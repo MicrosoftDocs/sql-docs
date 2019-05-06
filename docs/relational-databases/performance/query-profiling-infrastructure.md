@@ -115,11 +115,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] includes a newly revised version of lightweight profiling collecting row count information for all executions. Lightweight profiling is enabled by default on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and trace flag 7412 has no effect.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] includes a newly revised version of lightweight profiling collecting row count information for all executions. Lightweight profiling is enabled by default on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and trace flag 7412 has no effect. Lightweight profiling can be disabled at the database level using the LIGHTWEIGHT_QUERY_PROFILING [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
-A new DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) is introduced to return the equivalent of the last known actual execution plan for most queries. A new *query_post_execution_plan_profile* extended event collects the equivalent of an actual execution plan based on lightweight profiling, unlike *query_post_execution_showplan* which uses standard profiling. 
+A new DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) is introduced to return the equivalent of the last known actual execution plan for most queries, and is called *last query plan statistics*. The last query plan statistics can be enabled at the database level using the LAST_QUERY_PLAN_STATS [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
-A sample session using the *query_post_execution_plan_profile* extended event can be configured like the example below:
+A new *query_post_execution_plan_profile* extended event collects the equivalent of an actual execution plan based on lightweight profiling, unlike *query_post_execution_showplan* which uses standard profiling. A sample session using the *query_post_execution_plan_profile* extended event can be configured like the example below:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER

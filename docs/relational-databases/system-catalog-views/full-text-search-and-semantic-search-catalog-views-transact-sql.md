@@ -4,7 +4,6 @@ ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
@@ -14,8 +13,9 @@ helpviewer_keywords:
   - "full-text search [SQL Server], catalog views"
   - "full-text indexes [SQL Server], catalog views"
 ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # Full-Text Search and Semantic Search Catalog Views (Transact-SQL)

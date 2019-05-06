@@ -11,8 +11,8 @@ f1_keywords:
   - "vdt.dlgbox.columnselection"
   - "vdtsql.chm:65548"
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

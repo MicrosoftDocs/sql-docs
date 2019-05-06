@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "actions [SQL Server Agent jobs]"
   - "responding to jobs"
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -70,7 +70,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  If *account_name* and **members** are specified, a list of the next-level members of the group is returned. If *account_name* is a local group, the listing can include local users, domain users, and groups. If *account_name* is a domain account, the list is made up of domain users. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must connect to the domain controller to retrieve group membership information. If the server cannot contact the domain controller, no information will be returned.  
   
- **xp_logininfo** only returns information from Active Director global groups, not universal groups.  
+ **xp_logininfo** only returns information from Active Directory global groups, not universal groups.  
   
 ## Permissions  
  Requires membership in the **sysadmin** fixed server role or membership in the **public** fixed database role in the **master** database with EXECUTE permission granted.  

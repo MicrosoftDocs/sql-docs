@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], components"
   - "View Designer, components"
 ms.assetid: 12e4b5a5-b793-4b6c-a0e5-c450c49bf26f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

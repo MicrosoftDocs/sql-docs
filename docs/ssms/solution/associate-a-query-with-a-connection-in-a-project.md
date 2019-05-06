@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], query connections"
   - "query associations [SQL Server Management Studio]"
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Associate a Query with a Connection in a Project

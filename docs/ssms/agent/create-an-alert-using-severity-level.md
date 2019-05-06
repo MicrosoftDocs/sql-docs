@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "severity levels [SQL Server]"
   - "alerts [SQL Server], severity levels"
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

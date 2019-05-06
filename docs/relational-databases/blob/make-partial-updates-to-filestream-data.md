@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT"
   - "FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT"
 ms.assetid: d6f7661e-6c14-4d31-9541-4520ca0f82b2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Make Partial Updates to FILESTREAM Data

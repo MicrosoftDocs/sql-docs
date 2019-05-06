@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |-----------------|---------------|-----------------|  
 |thread_address|**varbinary(8)**|Memory address (Primary Key) of the thread.|  
 |started_by_sqlservr|**bit**|Indicates the thread initiator.<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] started the thread.<br /><br /> 0 = Another component started the thread, such as an extended stored procedure from within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|os_thread_id|**int**|ID of the thread that is assigned by the operating system.|  
+|os_thread_id|**int**|ID of the thread that is assigned by the operating system|  
 |status|**int**|Internal status flag.|  
 |instruction_address|**varbinary(8)**|Address of the instruction that is currently being executed.|  
 |creation_time|**datetime**|Time when this thread was created.|  
@@ -64,6 +64,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requires the `VIEW DATABASE STATE` permission in the database.   
+
+## Notes on Linux version
+
+Due to way SQL engine works in Linux, some of these informations cannot match Linux diagnostics data. For example, `os_thread_id` not match the result of tools like `ps`,`top` or the procfs (/proc/`pid`).  This is due the SQLPAL, a layer between SQL Server components and the operating system.
 
 ## Examples  
  Upon startup, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts threads and then associates workers with those threads. However, external components, such as an extended stored procedure, can start threads under the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has no control of these threads. sys.dm_os_threads can provide information about rogue threads that consume resources in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process.  

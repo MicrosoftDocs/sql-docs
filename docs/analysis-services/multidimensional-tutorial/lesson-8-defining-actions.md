@@ -35,7 +35,7 @@ In this lesson, you will learn to define actions in your [!INCLUDE[ssASnoversion
 Actions let users start an application or perform other steps within the context of a selected item. For more information, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md), [Actions in Multidimensional Models](../multidimensional-models/actions-in-multidimensional-models.md)  
   
 > [!NOTE]  
-> For examples of actions, see the action examples on the Templates tab in the Calculation Tools pane or in the examples in the [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW sample data warehouse. For more information about installing this database, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../install-sample-data-and-projects.md).  
+> For examples of actions, see the action examples on the Templates tab in the Calculation Tools pane or in the examples in the [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW sample data warehouse. For more information about installing this database, see [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](install-sample-data-and-projects.md).  
   
 This lesson includes the following task:  
   

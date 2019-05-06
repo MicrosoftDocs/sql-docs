@@ -31,7 +31,7 @@ In this task, you learn to define a dimension based on data in the fact table, a
 [Defining a Many-to-Many Relationship](lesson-5-3-defining-a-many-to-many-relationship.md)  
 In this task, you learn to relate a fact to multiple dimension members through the definition of a many-to-many relationship between dimension tables and fact tables.  
   
-[Defining Dimension Granularity within a Measure Group](multidimensional-tutorial/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+[Defining Dimension Granularity within a Measure Group](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
 In this task, you learn to modify the granularity of a dimension for a specific measure group.  
   
 ## Next Lesson  

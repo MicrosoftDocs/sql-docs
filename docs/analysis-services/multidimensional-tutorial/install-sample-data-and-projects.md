@@ -33,7 +33,7 @@ SQL Server Data Tools (SSDT) for Visual Studio is downloaded and installed separ
 
 SQL Server Management Studio (SSMS) is downloaded and installed separately from other SQL Server features.  
 
-[Download SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)  
+[Download SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md)  
 
 Optionally, consider installing Excel to browse your multidimensional data as you proceed through the tutorial. Installing Excel enables the **Analyze in Excel** feature that starts Excel using a PivotTable field list that is connected to the cube you are building. Using Excel to browse data is recommended because you can quickly build a pivot report that lets you interact with the data.  
   

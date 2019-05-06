@@ -45,7 +45,7 @@ In this task, you browse the cube and dimension data by using Excel or the MDX q
   
 ## See Also  
 [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)  
-[Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
+[Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimensions in Multidimensional Models](../multidimensional-models/dimensions-in-multidimensional-models.md)  
 [Cubes in Multidimensional Models](../multidimensional-models/cubes-in-multidimensional-models.md)  
 [Configure Analysis Services Project Properties &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  

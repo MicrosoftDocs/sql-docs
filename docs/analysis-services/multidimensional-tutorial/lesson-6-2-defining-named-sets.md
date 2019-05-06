@@ -54,7 +54,7 @@ In the tasks in this topic, you will define two named sets: a Core Products name
   
 5.  Drag the **Reseller Name** level into the parenthesis for the Exists set expression.  
   
-    You will use the Members function to return all members of this set. For more information, see [Members &#40;Set&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md).  
+    You will use the Members function to return all members of this set. For more information, see [Members &#40;Set&#41; &#40;MDX&#41;](../../mdx/members-set-mdx.md).  
   
 6.  After the partial set expression, type a period, and then add the Members function. Your expression should look like the following:  
   

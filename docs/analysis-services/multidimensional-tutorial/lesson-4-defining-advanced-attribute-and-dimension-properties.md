@@ -46,7 +46,7 @@ In this task, you configure the UnknownMember and UnknownMemberName properties t
   
 ## See Also  
 [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)  
-[Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
+
 [Dimensions in Multidimensional Models](../multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

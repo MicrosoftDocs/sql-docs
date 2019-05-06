@@ -114,6 +114,7 @@ The general availability (GA) release of SSMS 18.0 is available. If you need a p
 |ShowPlan |Added logic to display the "Materializer Operator (External Select)".|
 |ShowPlan |Add new showplan attribute BatchModeOnRowStoreUsed to easily identify queries that are using the " batch-mode scan on rowstores" feature. Anytime a query performs batch-mode scan on rowstores, a new attribute (BatchModeOnRowStoreUsed="true") gets added to StmtSimple element.|
 |ShowPlan |Added Showplan Support to LocalCube RelOp for DW ROLLUP and CUBE.|
+|ShowPlan|New LocalCube operator for the new ROLLUP and CUBE aggregation feature in Azure SQL Data Warehouse.|
 |SMO| Extend SMO Support for Resumable Index Creation.|
 |SMO| Added new event on SMO objects ("PropertyMissing") to help application authors to detect SMO performance issues sooner.|
 |SMO| Exposed new DefaultBackupChecksum property on the Configuration object which maps to the "backup checksum default" server configuration.|

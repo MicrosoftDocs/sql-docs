@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Query Designer [SQL Server], navigating"
   - "keyboard shortcuts [Visual Database Tools]"
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

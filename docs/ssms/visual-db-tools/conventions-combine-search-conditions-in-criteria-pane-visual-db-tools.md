@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "AND, Criteria pane"
   - "multiple AND clauses"
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

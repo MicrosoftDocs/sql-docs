@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "queries [SQL Server], results"
   - "aggregate queries [SQL Server]"
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], item additions"
   - "adding project items"
 ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Add New Items to a Project

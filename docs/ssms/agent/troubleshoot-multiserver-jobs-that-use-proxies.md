@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "proxies [SQL Server Agent], multiserver jobs"
   - "jobs [SQL Server Agent], multiserver jobs using proxies"
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

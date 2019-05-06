@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "queries [full-text search], creating"
   - "full-text queries [SQL Server], creating"
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

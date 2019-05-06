@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

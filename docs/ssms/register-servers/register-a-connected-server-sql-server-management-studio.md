@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], register connected servers"
   - "connected server registrations [SQL Server]"
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Register a Connected Server (SQL Server Management Studio)

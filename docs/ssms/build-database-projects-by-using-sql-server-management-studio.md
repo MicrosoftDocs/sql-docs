@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], about projects"
   - "projects [SQL Server Management Studio]"
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Build Database Projects by Using SQL Server Management Studio

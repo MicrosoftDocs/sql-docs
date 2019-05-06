@@ -8,8 +8,8 @@ ms.technology: ssdt
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Clone an Existing Database

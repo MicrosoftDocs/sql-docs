@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.swb.common.matchingobjects.f1"
   - "sql13.swb.common.browseobjects.f1"
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Browse for Objects (Object Explorer)

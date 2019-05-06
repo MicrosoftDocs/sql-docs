@@ -12,8 +12,8 @@ f1_keywords:
   - "sql.data.tools.design.table.columnsgrid.view"
   - "sql.data.tools.design.table.scriptpanel"
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Use the Table Designer to Manage Tables and Relationships

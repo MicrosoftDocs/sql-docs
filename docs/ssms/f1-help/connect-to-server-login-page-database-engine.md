@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.connecttosqlserver.login.f1"
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Connect to Server (Login Page) Database Engine

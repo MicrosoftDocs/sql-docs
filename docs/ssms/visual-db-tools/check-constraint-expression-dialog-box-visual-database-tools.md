@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "vdt.dlgbox.checkconstraintexpression"
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

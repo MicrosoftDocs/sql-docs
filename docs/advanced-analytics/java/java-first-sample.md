@@ -15,6 +15,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 # SQL Server Regex Java Sample
 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
 This example demonstrates a Java class that receives two columns (ID and text) from SQL Server, and also takes a regular expression as an input parameter. The class returns two columns back to SQL Server (ID and text).
 
 For a given text in the text column sent to the Java class, the code checks if the given regular expression is fulfilled, and returns that text together with the original ID. 

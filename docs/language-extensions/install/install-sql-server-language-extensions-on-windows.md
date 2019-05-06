@@ -1,44 +1,35 @@
 ---
-title: Install SQL Server Machine Learning Services (In-Database) on Windows - SQL Server Machine Learning
-description: R in SQL Server or Python on SQL Server installation steps for SQL Server 2017 Machine Learning Services on Windows.
-ms.prod: sql
-ms.technology: machine-learning
-
-ms.date: 02/28/2019
-ms.topic: conceptual
+title: Install SQL Server Language Extensions on Windows
+titleSuffix: SQL Server Language Extensions
+description: Language extensions installation steps for SQL Server 2019 in Windows.
 author: dphansen
-ms.author: davidph
+ms.author: davidph 
 manager: cgronlun
+ms.date: 05/06/2019
+ms.topic: conceptual
+ms.prod: sql
+ms.technology: language-extensions
+monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server Machine Learning Services on Windows
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-
-Starting in SQL Server 2017, R and Python support for in-database analytics is provided in **SQL Server Machine Learning Services**, the successor to [SQL Server R Services](../r/sql-server-r-services.md) introduced in SQL Server 2016. Function libraries are available in R and Python and run as external script on a database engine instance. 
-
-This article explains how to install the machine learning component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard, and following the on-screen prompts.
+Starting in SQL Server 2019, Language Extensions and Java support is provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ SQL Server 2017 (or greater) Setup is required if you want to install Machine Learning Services with R, Python, or Java language support. If instead you have SQL Server 2016 installation media, you can  install [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) to get R language support.
++ SQL Server 2019 Setup is required if you want to install support for Language Extensions.
 
-+ A database engine instance is required. You cannot install just R or Python features, although you can add them incrementally to an existing instance.
++ A database engine instance is required. You cannot install just the Language Extensions features, although you can add them incrementally to an existing instance.
 
-+ For business continuity, [Always On Availabilty Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Machine Learning Services. You have to install Machine Learning Services, and configure packages, on each node.
++ For business continuity, [Always On Availabilty Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Language Extensions. You have to install language extensions, and configure packages, on each node.
 
-+ Installing Machine Learning Services is *not supported* on a failover cluster in SQL Server 2017. However, it *is supported* with SQL Server 2019. 
- 
-+ Do not install Machine Learning Services on a domain controller. The Machine Learning Services portion of setup will fail.
++ Installing Language Extensions is supported on a failover cluster in SQL Server 2019.
 
-+ Do not install **Shared Features** > **Machine Learning Server (Standalone)** on the same computer running an in-database instance. A standalone server will compete for the same resources, undermining the performance of both installations.
++ Do not install SQL Server Language Extensions on a domain controller. The Language Extensions portion of setup will fail.
 
-+ Side-by-side installation with other versions of R and Python is supported but not recommended. It's supported because SQL Server instance uses its own copies of the open-source R and Anaconda distributions. But it's not recommended because running code that uses R and Python on the SQL Server computer outside SQL Server can lead to various problems:
-    
-  + You use a different library and different executable, and get different results, than you do when you are running in SQL Server.
-  + R and Python scripts running in external libraries cannot be managed by SQL Server, leading to resource contention.
-  
 > [!IMPORTANT]
-> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external scripts, and adding accounts required for SQL Server to run R and Python jobs on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
+> After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external code, and adding accounts required for SQL Server to run Java code on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
 
 ## Get the installation media
 
@@ -48,23 +39,23 @@ This article explains how to install the machine learning component by running t
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-1. Start the setup wizard for SQL Server 2017. 
+1. Start the setup wizard for SQL Server 2019. 
   
 2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
 
-   ![New SQL Server stand-alone installation](media/2017setup-installation-page-mlsvcs.PNG)
+<!--   ![New SQL Server stand-alone installation](media/2019setup-installation-page-mlsvcs.PNG) -->
    
 3. On the **Feature Selection** page, select these options:
   
     -   **Database Engine Services**
   
-         To use R and Python with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+         To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
   
-    -   **Machine Learning Services (In-Database)**
+    -   **Machine Learning Services and Language Extensions**
   
-         This option installs the database services that support R and Python script execution.
+         This option installs the Language Extensions component that support Java code execution.
 
-    -   **R**
+    -   **Java**
 
         Check this option to add the Microsoft R packages, interpreter, and open-source R. 
 
@@ -72,11 +63,9 @@ For local installations, you must run Setup as an administrator. If you install 
 
         Check this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
         
-        ![Feature options for R and Python](media/2017setup-features-page-mls-rpy.png "Setup options for Python")
+<!--        ![Feature options for Language Extensions](media/2019setup-features-page-language-extensions.png "Setup options for Python") -->
 
-        > [!NOTE]
-        > 
-        > Do not select the option for **Machine Learning Server (Standalone)**. The option to install Machine Learning Server under **Shared Features** is intended for use on a separate computer.
+<!-- Not sure if we have a concent page yet...
 
 4. On the **Consent to Install R** page, select **Accept**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
 
@@ -88,31 +77,59 @@ For local installations, you must run Setup as an administrator. If you install 
     >  If the computer you are using does not have internet access, you can pause setup at this point to download the installers separately. For more information, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md).
   
      Select **Accept**, wait until the **Next** button becomes active, and then select **Next**.
+-->
   
 6. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
     + Database Engine Services
-    + Machine Learning Services (In-Database)
-    + R or Python, or both
+    + Machine Learning Services and Language Extensions
+    + Java
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
 7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## Set environment variables
+## Add the JRE_HOME variable
 
-For R feature integration only, you should set the **MKL_CBWR** environment variable to [ensure consistent output](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) from Intel Math Kernel Library (MKL) calculations.
+JRE_HOME is a system environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
 
-1. In Control Panel, click **System and Security** > **System** > **Advanced System Settings** > **Environment Variables**.
+1. Find and copy the JRE home path (for example, `C:\Program Files\Zulu\zulu-8\jre\`).
 
-2. Create a new User or System variable. 
+    Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the jre folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
-  + Set variable name to `MKL_CBWR`
-  + Set the variable value to `AUTO`
+2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 
-This step requires a server restart. If you are about to enable script execution, you can hold off on the restart until all of the configuration work is done.
+3. Click **Environment Variables**.
 
-<a name="bkmk_enableFeature"></a>
+4. Create a new system variable for `JRE_HOME` with the value of the JDK/JRE path (found in step 1).
+
+5. Restart [Launchpad](../concepts/extensibility-framework.md#launchpad).
+
+    1. Open [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
+
+    2. Under SQL Server Services, right-click SQL Server Launchpad and select **Restart**.
+
+<a name="perms-nonwindows"></a>
+
+## Grant access to non-default JRE folder (Windows only)
+
+If you did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
+
+### SQLRUserGroup permissions
+
+For a named instance,  append the instance name to SQLRUsergroup (for example, `SQLRUsergroupINSTANCENAME`).
+
+```cmd
+icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+```
+
+You can skip this step if you installed the JDK/JRE in the default folder under program files on Windows.
+
+### AppContainer permissions
+
+```cmd
+icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+```
 
 ## Enable script execution
 
@@ -123,13 +140,13 @@ This step requires a server restart. If you are about to enable script execution
     > 
     > You can also use [Azure Data Studio](../../azure-data-studio/what-is.md), which supports administrative tasks and queries against SQL Server.
   
-2. Connect to the instance where you installed Machine Learning Services, click **New Query** to open a query window, and run the following command:
+2. Connect to the instance where you installed Language Extensions, click **New Query** to open a query window, and run the following command:
 
     ```sql
     sp_configure
     ```
 
-    The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default. The feature must be explicitly enabled by an administrator before you can run R or Python scripts.
+    The value for the property, `external scripts enabled`, should be **0** at this point. That is because the feature is turned off by default. The feature must be explicitly enabled by an administrator before you can run Java code.
     
 3.  To enable the external scripting feature, run the following statement:
     
@@ -138,19 +155,19 @@ This step requires a server restart. If you are about to enable script execution
     RECONFIGURE WITH OVERRIDE
     ```
     
-    If you have already enabled the feature for the R language, don't run reconfigure a second time for Python. The underlying extensibility platform supports both languages.
+    If you have already enabled the feature for Machine Learning Services, don't run reconfigure a second time for Language Extensions. The underlying extensibility platform supports both.
 
 ## Restart the service
 
 When the installation is complete, restart the database engine before continuing to the next, enabling script execution.
 
-Restarting the service also automatically restarts the related [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+Restarting the service also automatically restarts the related SQL Server Launchpad service.
 
 You can restart the service using the right-click **Restart** command for the instance in SSMS, or by using the **Services** panel in Control Panel, or by using [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
 ## Verify installation
 
-Check the installation status of the instance in [custom reports](../r/monitor-r-services-using-custom-reports-in-management-studio.md) or setup logs.
+Check the installation status of the instance in the setup logs.
 
 Use the following steps to verify that all components used to launch external script are running.
 

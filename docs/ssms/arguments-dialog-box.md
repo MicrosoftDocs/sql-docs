@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Arguments dialog box"
   - "arguments [SQL Server Management Studio]"
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Arguments Dialog Box

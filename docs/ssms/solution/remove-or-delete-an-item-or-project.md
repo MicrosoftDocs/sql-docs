@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], item removal"
   - "removing project items"
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Remove or Delete an Item or Project

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio for Reporting Services"
   - "SQL Server Management Studio for Analysis Services"
 ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Introduction to SQL Server Management Studio for Business Intelligence

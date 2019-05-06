@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "tables [SQL Server], opening"
   - "Table Designer, opening"
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

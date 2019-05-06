@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "aliases [SQL Server], creating"
   - "SQL Server Agent, aliases"
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

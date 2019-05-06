@@ -11,8 +11,8 @@ f1_keywords:
   - "vdtsql.chm:98827"
   - "vdtsql.chm:98845"
 ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

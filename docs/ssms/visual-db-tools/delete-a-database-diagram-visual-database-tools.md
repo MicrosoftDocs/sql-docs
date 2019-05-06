@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], deleting"
   - "removing database diagrams"
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

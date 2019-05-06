@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "owners [SQL Server], jobs"
   - "SQL Server Agent jobs, owners"
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -14,6 +14,8 @@ manager: kfile
  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
+Calculation groups address a common issue in complex models where there can be a proliferation of measures using the same calculations, such as time-intelligence. Calculation groups are shown in reporting clients as a table with a single column. Each value in the column represents a reusable calculation, or calculation item, that can be applied to any of the measures.
+
 Calculation groups are supported for tabular models at the 1470 and higher compatibility level. Models at the 1470 compatibility level cannot be deployed to SQL Server 2017 or earlier, or downgraded to a lower compatibility level. 1470 tabular models are supported on SQL Server Analysis Services 2019 and later only.
 
 Calculation groups appear to users as a table with a single column.

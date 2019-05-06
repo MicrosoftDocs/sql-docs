@@ -8022,6 +8022,8 @@
         href: ../relational-databases/security/permissions-database-engine.md
       - name: Permissions hierarchy
         href: ../relational-databases/security/permissions-hierarchy-database-engine.md
+      - name: Using Service SIDs to grant permissions to services in SQL Server
+        href: ../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
     - name: Encryption
       href: ../relational-databases/security/encryption/sql-server-encryption.md
       items:

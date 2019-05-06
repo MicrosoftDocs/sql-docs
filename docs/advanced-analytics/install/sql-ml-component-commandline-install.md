@@ -4,10 +4,10 @@ description: Run SQL Server command line setup to add R language and Python inte
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 08/21/2018  
+ms.date: 03/13/2019  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Install SQL Server machine learning R and Python components from the command line
@@ -52,7 +52,7 @@ When installing through the command prompt, [!INCLUDE[ssNoVersion](../../include
 | /IACCEPTPYTHONLICENSETERMS | Indicates you have accepted the license terms for using the Python components. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indicates you have accepted the license terms for using SQL Server.|
 | /MRCACHEDIRECTORY | For offline setup, sets the folder containing the R component CAB files. |
-| /MPYCACHEDIRECTORY | For offline setup, sets the folder containing the Python component CAB files. |
+| /MPYCACHEDIRECTORY | Reserved for future use. Use %TEMP% to store Python component CAB files for installation on computers that do not have an internet connection. |
 
 
 ## <a name="indb"></a> In-database instance installations
@@ -127,13 +127,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> Silent install
 
-A silent installation suppresses the check for .cab file locations. For this reason, you must specify the location where .cab files are to be unpacked. You can the temp directory for this.
+A silent installation suppresses the check for .cab file locations. For this reason, you must specify the location where .cab files are to be unpacked. For Python, CAB files must be located in %TEMP*. For R, you can set the folder path using You can the temp directory for this.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> Standalone server installations

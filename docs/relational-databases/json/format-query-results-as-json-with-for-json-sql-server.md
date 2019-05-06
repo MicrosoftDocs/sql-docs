@@ -33,7 +33,7 @@ Here's an example of a **SELECT** statement with the **FOR JSON** clause and its
  ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## Option 1 - You control output with FOR JSON PATH
-In **PATH** mode, you can use the dot syntax - for example, `'Item.Price'` - to format nested output.  
+In **PATH** mode, you can use the dot syntax - for example, `'Item.UnitPrice'` - to format nested output.  
 
 Here's a sample query that uses **PATH** mode with the **FOR JSON** clause. The following example also uses the **ROOT** option to specify a named root element. 
   

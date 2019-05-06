@@ -34,7 +34,7 @@ sp_testlinkedserver [ @servername ] = servername
 ```  
   
 ## Arguments  
- [ **@servername =** ]*servername*  
+`[ @servername = ]servername`
  Is the name of the linked server. *servername* is **sysname**, with no default value.  
   
 ## Result Sets  

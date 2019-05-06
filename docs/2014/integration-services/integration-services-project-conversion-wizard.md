@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.migrationwizard.f1"
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services Project Conversion Wizard

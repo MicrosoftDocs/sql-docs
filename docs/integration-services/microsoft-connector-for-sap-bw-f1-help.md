@@ -10,8 +10,8 @@ ms.topic: "reference"
 f1_keywords: 
   - "sql13.dts.designer.sapbw.f1"
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Microsoft Connector for SAP BW F1 Help

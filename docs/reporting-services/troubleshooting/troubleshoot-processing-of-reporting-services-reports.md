@@ -8,8 +8,8 @@ ms.technology: troubleshooting
 
 ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Processing of Reporting Services Reports
 After the report data is retrieved, the report processor combines the data and layout information. Each report item property that has an expression is evaluated in the context of the combined data and layout. Use this topic to help troubleshoot these issues.   

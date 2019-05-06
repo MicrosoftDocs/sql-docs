@@ -124,7 +124,7 @@ manager: craigg
   
     5.  Take care that the transaction log of the secondary database does not fill while the database is online. To prevent the transaction log from filling, you might need to back it up. If so, we recommend that you back it up to a shared location, a *backup share*, to make the backups available for restoring on the other server instance.  
   
-#####  <a name="Procedure2 "></a> Procedure 2: Upgrade the Original Primary Server Instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> Procedure 2: Upgrade the Original Primary Server Instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  After you upgrade the original primary server instance to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database will still be offline and in the format.  
   
 #####  <a name="Procedure3"></a> Procedure 3: Set Up Log Shipping on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -219,5 +219,3 @@ manager: craigg
  [Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Apply Transaction Log Backups &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
-  
-  

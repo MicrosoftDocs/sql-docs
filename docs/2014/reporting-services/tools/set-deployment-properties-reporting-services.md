@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "properties [Reporting Services], deployment"
   - "deploying reports [Reporting Services]"
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Set Deployment Properties (Reporting Services)

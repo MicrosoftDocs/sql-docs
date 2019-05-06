@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "logical Not (!)"
   - "! (logical Not)"
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ! (Logical Not) (SSIS Expression)

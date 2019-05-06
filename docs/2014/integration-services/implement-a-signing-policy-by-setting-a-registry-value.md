@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "signing policies [Integration Services]"
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Implement a Signing Policy by Setting a Registry Value

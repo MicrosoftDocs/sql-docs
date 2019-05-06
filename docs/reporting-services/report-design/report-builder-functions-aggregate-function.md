@@ -1,6 +1,6 @@
 ---
 title: "Aggregate Function (Report Builder and SSRS) | Microsoft Docs"
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-design
@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Report Builder Functions - Aggregate Function
   Returns a custom aggregate of the specified expression, as defined by the data provider.  

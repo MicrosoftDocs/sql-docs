@@ -8,8 +8,8 @@ ms.technology: report-server
 
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Turn on Reporting Services events for the SharePoint trace log (ULS)

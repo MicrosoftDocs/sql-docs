@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Expression Builder dialog box"
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Expression Builder

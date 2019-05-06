@@ -38,13 +38,13 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## Arguments  
- [ **@filename =**] **'**_file_name_**'**  
+`[ @filename = ] 'file_name'`
  Is the string that specifies the complete path, including file name, to which a copy of the data file (.mdf) is saved. *file name* is **nvarchar(260)**, with no default.  
   
- [ **@temp_dir=**] **'**_temp_dir_**'**  
+`[ @temp_dir = ] 'temp_dir'`
  Is the name of the directory that contains the temp files. *temp_dir* is **nvarchar(260)**, with a default of NULL. If NULL, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] default data directory will be used. The directory should have enough space to hold a file the size of all the subscriber database files combined.  
   
- [ **@overwrite_existing_file=**] **'**_overwrite_existing_file_**'**  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`
  Is an optional Boolean flag that specifies whether or not to overwrite an existing file of the same name specified in **@filename**. *overwrite_existing_file*is **bit**, with a default of **0**. If **1**, it overwrites the file specified by **@filename**, if it exists. If **0**, the stored procedure fails if the file exists, and the file is not overwritten.  
   
 ## Return Code Values  

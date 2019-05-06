@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 01/19/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Default R and Python packages in SQL Server

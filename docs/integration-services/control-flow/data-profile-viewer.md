@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Data Profile Viewer [Integration Services]"
   - "Data Profiling task [Integration Services], output viewer"
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Profile Viewer

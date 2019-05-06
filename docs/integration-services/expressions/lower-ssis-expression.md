@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "uppercase characters [Integration Services]"
   - "lowercase characters"
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # LOWER (SSIS Expression)

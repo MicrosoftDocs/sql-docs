@@ -3,15 +3,14 @@ title: "Choose a Destination (SQL Server Import and Export Wizard) | Microsoft D
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.chooseadestination.f1"
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Choose a Destination (SQL Server Import and Export Wizard)

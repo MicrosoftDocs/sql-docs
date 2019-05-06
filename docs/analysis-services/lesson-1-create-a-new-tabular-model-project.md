@@ -77,7 +77,7 @@ Explore some of the dialogs and locations for various features specific to autho
 
 
 ## Additional resources
-To learn more about the different types of tabular model projects, see [Tabular Model Projects](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). To learn more about the tabular model authoring environment, see [Tabular Model Designer ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+To learn more about the different types of tabular model projects, see [Tabular Model Projects](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). To learn more about the tabular model authoring environment, see [Tabular Model Designer](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## What's next?

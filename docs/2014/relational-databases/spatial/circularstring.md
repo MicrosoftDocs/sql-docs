@@ -84,7 +84,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ### A. Instantiating a Geometry Instance with an Empty CircularString  
  This example shows how to create an empty `CircularString` instance:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
@@ -92,7 +92,7 @@ SET @g = geometry::Parse('CIRCULARSTRING EMPTY');
 ### B. Instantiating a Geometry Instance Using a CircularString with One Circular Arc Segment  
  The following example shows how to create a `CircularString` instance with a single circular arc segment (half-circle):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry:: STGeomFromText('CIRCULARSTRING(2 0, 1 1, 0 0)', 0);  
 SELECT @g.ToString();  
@@ -101,7 +101,7 @@ SELECT @g.ToString();
 ### C. Instantiating a Geometry Instance Using a CircularString with Multiple Circular Arc Segments  
  The following example shows how to create a `CircularString` instance with more than one circular arc segment (full circle):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');  
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));    
@@ -115,7 +115,7 @@ Circumference = 6.28319
   
  Compare the output when `LineString` is used instead of `CircularString`:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);  
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));  
@@ -132,21 +132,21 @@ Perimeter = 5.65685
 ### D. Declaring and Instantiating a Geometry Instance with a CircularString in the Same Statement  
  This snippet shows how to declare and instantiate a `geometry` instance with a `CircularString` in the same statement:  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
 ```  
   
 ### E. Instantiating a Geography Instance with a CircularString  
  The following example shows how to declare and instantiate a `geography` instance with a `CircularString`:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
 ```  
   
 ### F. Instantiating a Geometry Instance with a CircularString that is a Straight Line  
  The following example shows how to create a `CircularString` instance that is a straight line:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  

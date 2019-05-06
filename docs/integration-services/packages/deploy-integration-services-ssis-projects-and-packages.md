@@ -16,8 +16,8 @@ f1_keywords:
   - "sql13.ssis.ssms.isenvprop.variables.f1"
   - "sql13.ssis.migrationwizard.f1"
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Deploy Integration Services (SSIS) Projects and Packages

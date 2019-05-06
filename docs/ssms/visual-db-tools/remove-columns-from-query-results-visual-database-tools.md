@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "deleting columns"
   - "queries [SQL Server], results"
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

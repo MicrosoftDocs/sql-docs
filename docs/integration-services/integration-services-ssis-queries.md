@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "statements [Integration Services]"
   - "queries [Integration Services], about queries in packages"
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Queries

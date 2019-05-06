@@ -13,8 +13,8 @@ f1_keywords:
   - "sql13.ssis.designer.odbcsource.columns.f1"
   - "sql13.ssis.designer.odbcsource.errorhandling.f1"
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ODBC Source

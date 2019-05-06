@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Report Definition Language, XML schema"
   - "schemas [Reporting Services]"
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Find the Report Definition Schema Version (SSRS)

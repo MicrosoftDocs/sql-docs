@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "memory [Reporting Services]"
   - "memory thresholds [Reporting Services]"
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure Available Memory for Report Server Applications

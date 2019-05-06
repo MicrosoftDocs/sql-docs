@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "deploying [Reporting Services], scale-out deployment model"
   - "scale-out deployments [Reporting Services]"
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Configure a Native Mode Report Server Scale-Out Deployment

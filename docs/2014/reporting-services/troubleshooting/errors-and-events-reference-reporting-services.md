@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], errors"
   - "events [Reporting Services]"
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Errors and Events Reference (Reporting Services)

@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseLogonType property"
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # DatabaseLogonType Property (WMI MSReportServer_ConfigurationSetting)

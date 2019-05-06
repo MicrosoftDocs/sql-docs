@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "reusing packages"
   - "templates [Integration Services]"
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Save a Package as a Package Template

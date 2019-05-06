@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1"
   - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Map Viewport Properties Dialog Box, Center and Zoom

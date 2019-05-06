@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "FTP Connection Manager Editor"
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # FTP Connection Manager Editor

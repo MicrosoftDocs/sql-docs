@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "normalized data [Integration Services]"
   - "datasets [Integration Services], normalized data"
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Unpivot Transformation

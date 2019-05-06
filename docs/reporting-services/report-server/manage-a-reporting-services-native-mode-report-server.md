@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "configuration options [Reporting Services]"
   - "report servers [Reporting Services], configuring"
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Manage a Reporting Services Native Mode Report Server
   This section contains procedures for configuring a native mode report server instance using the Reporting Services Configuration Manager.  

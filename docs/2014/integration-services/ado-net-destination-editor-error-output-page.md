@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetdest.erroroutput.f1"
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ADO NET Destination Editor (Error Output Page)

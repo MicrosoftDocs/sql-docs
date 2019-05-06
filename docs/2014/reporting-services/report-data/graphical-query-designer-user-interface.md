@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "query designers [Reporting Services]"
   - "Reporting Services, query designers"
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Graphical Query Designer User Interface

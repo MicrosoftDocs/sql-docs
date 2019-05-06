@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "filtering data [Reporting Services], filter equation examples"
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Filter Equation Examples (Report Builder and SSRS)
   To create a filter, you must specify one or more filter equations. A filter equation includes an expression, a data type, an operator, and a value. This topic provides examples of commonly used filters.  

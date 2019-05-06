@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 11/09/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Install SQL Server Machine Learning Services with R and Python on an Azure virtual machine

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "subscriptions [Reporting Services], managing"
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create and Manage Subscriptions for Native Mode Report Servers

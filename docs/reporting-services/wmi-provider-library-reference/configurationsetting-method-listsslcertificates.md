@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ListSSLCertificates method"
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - ListSSLCertificates
   Returns a list of certificates on the report server computer.  

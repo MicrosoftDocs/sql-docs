@@ -38,7 +38,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## Arguments  
- [ **@plan_id =** ] *plan_id*  
+`[ @plan_id = ] plan_id`
  Is the id of the query plan to be removed. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  

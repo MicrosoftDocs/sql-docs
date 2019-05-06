@@ -35,13 +35,13 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**] = **'**_publication_**'**  
+`[ @publication] = 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@suser_sname**= ] **'**_suser_sname_**'**  
+`[ @suser_sname = ] 'suser_sname'`
  Is the value of the [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) function at the Subscriber used to define the partition. *suser_sname* is **sysname**, with no default.  
   
- [ **@host_name** = ] **'**_host_name_**'**  
+`[ @host_name = ] 'host_name'`
  Is the value of the [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) function at the Subscriber used to define the partition. *host_name* is **sysname**, with no default.  
   
 ## Return Code Values  

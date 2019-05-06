@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Reporting Services Service Application"
   - "SSRS service application"
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Provision Subscriptions and Alerts for SSRS Service Applications

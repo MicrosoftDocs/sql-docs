@@ -1,6 +1,6 @@
 ---
 title: Train/Create ML models with Spark 
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Use PySpark to train and create machine learning models with Spark on SQL Server big data clusters (preview).
 author: lgongmsft
 ms.author: shivprashant
@@ -14,6 +14,8 @@ ms.custom: seodec18
 ---
 
 # Train and Create machine learning models with Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Spark in SQL Server big data cluster enables AI and machine learning. The example demonstrates how to training a machine learning model using Python in Spark (PySpark) using data stored in HDFS. 
 
@@ -84,7 +86,7 @@ data = data_all.select(select_cols)
 
 ## Step 4 - Split as training and test set
 
-Use 75% of rows to train the model and rest of the 25% to evaluate the model. Additionally, persist the train and test data sets to HDFS storage. The step is not necessary,but shown to demonstrate saving and loading with ORC format. Other formats, for example, `Parquet `may also be used.
+Use 75% of rows to train the model and rest of the 25% to evaluate the model. Additionally, persist the train and test data sets to HDFS storage. The step is not necessary,but shown to demonstrate saving and loading with ORC format. Other formats, for example, `Parquet` may also be used.
 
 Post this step you should see two directories created with the name AdultCensusIncomeTrain and AdultCensusIncomeTest
 

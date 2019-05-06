@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Reporting Services, configuration"
   - "security [Reporting Services], strategies"
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Turn Reporting Services Features On or Off

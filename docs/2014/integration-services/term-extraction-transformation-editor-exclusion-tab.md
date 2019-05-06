@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Term Extraction Transformation Editor"
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Term Extraction Transformation Editor (Exclusion Tab)

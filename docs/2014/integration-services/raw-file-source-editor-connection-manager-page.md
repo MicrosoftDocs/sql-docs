@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.rawfilesourceconnectionmanager.f1"
 ms.assetid: ea79c73d-37fc-44fd-bc6e-bcefc23235c9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Raw File Source Editor (Connection Manager Page)

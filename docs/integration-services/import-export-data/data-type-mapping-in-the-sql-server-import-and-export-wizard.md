@@ -3,13 +3,12 @@ title: "Data Type Mapping in the SQL Server Import and Export Wizard | Microsoft
 ms.custom: ""
 ms.date: "01/11/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Type Mapping in the SQL Server Import and Export Wizard

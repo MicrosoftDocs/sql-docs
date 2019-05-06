@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.ssis.ssms.ispackageexecute.f1"
   - "sql12.ssis.ssms.executepackage.f1"
 ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Execute Package Dialog Box

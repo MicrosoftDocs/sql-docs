@@ -1,17 +1,16 @@
 ---
 title: "Find Similar and Related Documents with Semantic Search | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], document similarity queries"
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # Find Similar and Related Documents with Semantic Search

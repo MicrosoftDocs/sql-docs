@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], operators"
   - "operators (users) [Database Engine], modifying with Management Studio"
 ms.assetid: b2ba2168-ca0b-4b59-9007-4e1e4c30679e
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

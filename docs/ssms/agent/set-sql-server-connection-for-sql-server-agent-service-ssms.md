@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQL Server Agent, connections"
   - "connections [SQL Server], SQL Server Agent service"
 ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

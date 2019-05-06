@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "errors [Reporting Services]"
   - "troubleshooting [Reporting Services], errors"
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Cause and Resolution of Reporting Services Errors

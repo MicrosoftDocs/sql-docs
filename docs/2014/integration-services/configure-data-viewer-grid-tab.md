@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure Data Viewer (Grid Tab)

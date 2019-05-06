@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Always On availability group deployment patterns | Microsoft Docs"
 ms.custom: "sql-linux"
-ms.date: "10/16/2017"
+ms.date: "04/17/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: linux
@@ -56,7 +56,7 @@ An availability group with three synchronous replicas can provide read-scale, hi
 | |read-scale|High availability & </br> data protection | Data protection|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Primary outage | Manual failover. Might have data loss. New primary is R/W. |Automatic failover. New primary is R/W. |Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. |
+|Primary outage |Automatic failover. New primary is R/W. |Automatic failover. New primary is R/W. |Automatic failover. New primary is not available for user transactions until former primary recovers and joins availability group as secondary. |
 |One secondary replica outage  | Primary is R/W. No automatic failover if primary fails. |Primary is R/W. No automatic failover if primary fails as well. | Primary is not available for user transactions. |
 
 <sup>\*</sup> Default
@@ -65,7 +65,7 @@ An availability group with three synchronous replicas can provide read-scale, hi
 
 ## Two synchronous replicas
 
-This configuration enables data protection. Like the other availability group configurations, it can enable read-scale. The two synchronous replicas configuration does not provide automatic high availability. 
+This configuration enables data protection. Like the other availability group configurations, it can enable read-scale. The two synchronous replicas configuration does not provide automatic high availability. A two replica configuration is only applicable to SQL Server 2017 RTM and is no longer supported with higher (CU1 and beyond) versions of SQL Server 2017..
 
 ![Two synchronous replicas][1]
 
@@ -78,9 +78,6 @@ An availability group with two synchronous replicas provides read-scale and data
 |One secondary replica outage  |Primary is R/W, running exposed to data loss. |Primary is not available for user transactions until secondary recovers.|
 
 <sup>\*</sup> Default
-
-> [!NOTE]
-> The preceding scenario is the behavior prior to SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 

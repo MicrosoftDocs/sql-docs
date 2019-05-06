@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], configuring"
   - "remote server administration [Reporting Services]"
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure a Report Server for Remote Administration

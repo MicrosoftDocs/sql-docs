@@ -13,7 +13,7 @@ manager: "v-hakaka"
 # Idle Connection Resiliency
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Connection resiliency](https://msdn.microsoft.com/library/dn632678.aspx) is the principle that a broken idle connection can be reestablished, within certain constraints. If a connection to Microsoft SQL Server fails, connection resiliency allows the client to automatically attempt to reestablish the connection. Connection resiliency is a property of the data source; only SQL Server 2014 and later and Azure SQL Database support connection resiliency.
+[Connection resiliency](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) is the principle that a broken idle connection can be reestablished, within certain constraints. If a connection to Microsoft SQL Server fails, connection resiliency allows the client to automatically attempt to reestablish the connection. Connection resiliency is a property of the data source; only SQL Server 2014 and later and Azure SQL Database support connection resiliency.
 
 Connection resiliency is implemented with two connection keywords that can be added to connection strings: **ConnectRetryCount** and **ConnectRetryInterval**.
 
@@ -125,4 +125,4 @@ Statement 2 successful.
 ```
 
 ## See Also
-[Connection Resiliency in the Windows ODBC Driver](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Connection Resiliency in the Windows ODBC Driver](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

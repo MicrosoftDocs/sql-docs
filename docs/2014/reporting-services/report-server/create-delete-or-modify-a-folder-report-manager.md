@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "folders [Reporting Services], deleting"
   - "folders [Reporting Services], modifying"
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create, Delete, or Modify a Folder (Report Manager)

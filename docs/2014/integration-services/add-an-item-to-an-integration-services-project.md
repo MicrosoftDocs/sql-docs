@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "items [Integration Services]"
   - "SSIS projects, items"
 ms.assetid: ba0bf4d1-c974-4c64-b916-3db2be854cde
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add an Item to an Integration Services Project

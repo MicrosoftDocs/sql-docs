@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], MHTML rendering"
   - "MHTML [Reporting Services]"
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # MHTML Device Information Settings

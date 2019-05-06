@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "removing packages"
   - "relocating packages"
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # dtutil Utility

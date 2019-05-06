@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.legendproperties.general.f1"
   - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Legend Properties Dialog Box, General (Report Builder and SSRS)

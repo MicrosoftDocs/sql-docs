@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "reports [Reporting Services], publishing"
   - "publishing reports [Reporting Services]"
 ms.assetid: ef5a514e-e818-4041-a8b0-15835f9a046b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Publish Reports

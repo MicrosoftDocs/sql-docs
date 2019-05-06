@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "containers [Integration Services], grouping"
   - "grouping tasks"
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Group or Ungroup Components

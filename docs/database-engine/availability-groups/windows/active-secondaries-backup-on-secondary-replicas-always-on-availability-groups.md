@@ -28,12 +28,7 @@ manager: craigg
 > [!NOTE]  
 >  RESTORE statements are not allowed on either the primary or secondary databases of an availability group.  
   
--   [Supported Backup Types](#SupportedBuTypes)  
-  
--   [Configuring Where Backup Jobs Run](#WhereBuJobsRun)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
+ 
 ##  <a name="SupportedBuTypes"></a> Backup Types Supported on Secondary Replicas  
   
 -   **BACKUP DATABASE** supports only copy-only full backups of databases, files, or filegroups when it is executed on secondary replicas. Note that copy-only backups do not impact the log chain or clear the differential bitmap.  

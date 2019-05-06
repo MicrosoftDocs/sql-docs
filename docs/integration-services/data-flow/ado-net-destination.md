@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], ADO.NET"
   - "ADO.NET destination"
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ADO NET Destination

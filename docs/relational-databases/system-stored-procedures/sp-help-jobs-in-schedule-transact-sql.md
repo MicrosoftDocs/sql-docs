@@ -36,10 +36,10 @@ sp_help_jobs_in_schedule
 ```  
   
 ## Arguments  
- [ **@schedule_id =** ] *schedule_id*  
+`[ @schedule_id = ] schedule_id`
  The identifier of the schedule to list information for. *schedule_id* is **int**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to list information for. *schedule_name* is **sysname**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
 ## Return Code Values  

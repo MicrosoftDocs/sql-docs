@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "security [Reporting Services], SharePoint integrated mode"
   - "permission sets [Reporting Services]"
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SharePoint Site and List Permission Reference for Report Server Items

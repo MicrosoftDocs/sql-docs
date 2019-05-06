@@ -11,8 +11,8 @@ f1_keywords:
   - "10157"
   - "sql12.rtp.rptdesigner.chartareaproperties.alignment.f1"
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Specify a Chart Area for a Series (Report Builder and SSRS)

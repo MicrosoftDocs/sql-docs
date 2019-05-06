@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "GetReportServerUrls method"
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # GetReportServerUrls Method (WMI MSReportServer_Instance)

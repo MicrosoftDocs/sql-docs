@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "datasets [Integration Services], sample"
   - "training mining models"
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Percentage Sampling Transformation

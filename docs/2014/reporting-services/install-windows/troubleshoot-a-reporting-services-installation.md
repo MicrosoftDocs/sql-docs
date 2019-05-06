@@ -8,8 +8,8 @@ ms.technology:
   - "database-engine"
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Troubleshoot a Reporting Services Installation

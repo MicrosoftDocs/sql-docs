@@ -29,7 +29,7 @@ manager: craigg
 ###  <a name="find1"></a> Find the Key Phrases in a Document  
  The following query gets the key phrases that were identified in the sample document. It presents the results in descending order by the score that ranks the statistical significance of each key phrase. This query calls the [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) function.  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -67,7 +67,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
 ###  <a name="find3"></a> Find the Key Phrases That Make Documents Similar or Related  
  The following query gets the key phrases that make the 2 sample documents similar or related to one another. It presents the results in descending order by the score that ranks the weight of each key phrase. This query calls the [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) function.  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   

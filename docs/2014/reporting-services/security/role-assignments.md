@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "groups [Reporting Services]"
   - "security [Reporting Services], role assignments"
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Role Assignments

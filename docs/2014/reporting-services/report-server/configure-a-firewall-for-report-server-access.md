@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "firewall systems [Reporting Services]"
   - "configuring servers [Reporting Services]"
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure a Firewall for Report Server Access

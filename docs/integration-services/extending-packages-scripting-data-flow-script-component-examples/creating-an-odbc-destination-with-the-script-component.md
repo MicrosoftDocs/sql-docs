@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "destinations [Integration Services], components"
   - "Script component [Integration Services], examples"
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Creating an ODBC Destination with the Script Component

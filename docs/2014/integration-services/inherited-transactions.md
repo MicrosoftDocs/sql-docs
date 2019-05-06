@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "child packages"
   - "inherited transactions [Integration Services]"
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Inherited Transactions

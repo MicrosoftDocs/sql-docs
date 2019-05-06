@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "data sources [Reporting Services], embedded"
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure Data Source Properties for a Report  (Report Manager)

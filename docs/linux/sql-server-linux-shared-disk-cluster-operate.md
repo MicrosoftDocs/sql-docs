@@ -25,8 +25,8 @@ There are times you may want to manually fail the FCI to another node. The proce
 
 The way to failover depends on the Linux distribution. Follow the instructions for your linux distribution.
 
-- [RHEL or Ubuntu](#rhelFailover)
-- [SLES](#slesFailover)
+- [RHEL or Ubuntu](#-manual-failover-rhel-or-ubuntu)
+- [SLES](#-manual-failover-sles)
 
 ## <a name = "#rhelFailover"></a> Manual Failover (RHEL or Ubuntu)
 

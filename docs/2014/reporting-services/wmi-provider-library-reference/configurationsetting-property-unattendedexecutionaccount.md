@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "UnattendedExecutionAccount property"
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # UnattendedExecutionAccount Property (WMI MSReportServer_ConfigurationSetting)

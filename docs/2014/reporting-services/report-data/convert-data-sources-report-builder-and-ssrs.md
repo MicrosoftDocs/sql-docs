@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data sources [Reporting Services], embedded"
   - "data sources [Reporting Services], shared"
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Convert a Data Source from Embedded to Shared (Report Builder and SSRS)

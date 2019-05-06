@@ -54,7 +54,7 @@ manager: craigg
   
  The following example creates a default full-text catalog, **ft**. The example then creates a unique index on the **JobCandidateID** column of the **HumanResources.JobCandidate** table of the AdventureWorks2012 sample database. This unique index is required as the key column for a full-text index. The example then creates a full-text index and a semantic index on the **Resume** column.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -78,7 +78,7 @@ GO
   
  This example also specifies that change tracking is off with no population. Later, during off-peak hours, the example uses an **ALTER FULLTEXT INDEX** statement to start a full population on the new index and enable automatic change tracking.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
  Later, at an off-peak time, the index is populated:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -127,7 +127,7 @@ GO
   
  The following example alters an existing full-text index on **Production.Document** table in AdventureWorks2012 sample database. The example adds a semantic index on the **Document** column of the **Production.Document** table, which already has a full-text index. The example specifies that the index will not be repopulated automatically.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -152,7 +152,7 @@ GO
  **Drop a semantic index by using Transact-SQL**  
  -   To drop semantic indexing only from a column or columns, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** option. You can drop the indexing from multiple columns in a single **ALTER** statement.  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -164,7 +164,7 @@ GO
   
 -   To drop both full-text and semantic indexing from a column, call the **ALTER FULLTEXT INDEX** statement with the **ALTER COLUMN***column_name***DROP** option.  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -191,7 +191,7 @@ GO
   
  A return value of 1 indicates that full-text search and semantic search are enabled for the database; a return value of 0 indicates that they are not enabled.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -213,7 +213,7 @@ GO
   
      A return value of 1 indicates that semantic search is enabled for the column; a return value of 0 indicates that it is not enabled.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -222,7 +222,7 @@ GO
   
      A value of 1 in the **statistical_semantics** column indicates that the specified column is enabled for semantic indexing in addition to full-text indexing.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -240,7 +240,7 @@ GO
   
  Query the catalog view [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  

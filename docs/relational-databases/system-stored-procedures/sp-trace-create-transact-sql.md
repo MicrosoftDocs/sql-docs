@@ -42,10 +42,10 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## Arguments  
- [ **@traceid=** ] *trace_id*  
+`[ @traceid = ] trace_id`
  Is the number assigned by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the new trace. Any user-provided input will be ignored. *trace_id* is **int**, with a default of NULL. The user employs the *trace_id* value to identify, modify, and control the trace defined by this stored procedure.  
   
- [ **@options=** ] *option_value*  
+`[ @options = ] option_value`
  Specifies the options set for the trace. *option_value* is **int**, with no default. Users may choose a combination of these options by specifying the sum value of options picked. For example, to turn on both the options TRACE_FILE_ROLLOVER and SHUTDOWN_ON_ERROR, specify **6** for *option_value*.  
   
  The following table lists the options, descriptions, and their values.  
@@ -56,7 +56,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|Specifies that if the trace cannot be written to the file for whatever reason, SQL Server shuts down. This option is useful when performing security audit traces.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Specifies that a record of the last 5 MB of trace information produced by the server will be saved by the server. TRACE_PRODUCE_BLACKBOX is incompatible with all other options.|  
   
- [ **@tracefile=** ] *'**trace_file**'*  
+`[ @tracefile = ] 'trace_file'`
  Specifies the location and file name to which the trace will be written. *trace_file* is **nvarchar(245)** with no default. *trace_file* can be either a local directory (such as N 'C:\MSSQL\Trace\trace.trc') or a UNC to a share or path (N'\\\\*Servername*\\*Sharename*\\*Directory*\trace.trc').  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will append a **.trc** extension to all trace file names. If the TRACE_FILE_ROLLOVER option and a *max_file_size* are specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates a new trace file when the original trace file grows to its maximum size. The new file has the same name as the original file, but _*n* is appended to indicate its sequence, starting with **1**. For example, if the first trace file is named **filename.trc**, the second trace file is named **filename_1.trc**.  
@@ -72,17 +72,17 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *trace_file* cannot be specified when the TRACE_PRODUCE_BLACKBOX option is used.  
   
- [ **@maxfilesize=** ] *max_file_size*  
+`[ @maxfilesize = ] max_file_size`
  Specifies the maximum size in megabytes (MB) a trace file can grow. *max_file_size* is **bigint**, with a default value of **5**.  
   
  If this parameter is specified without the TRACE_FILE_ROLLOVER option, the trace stops recording to the file when the disk space used exceeds the amount specified by *max_file_size*.  
   
- [ **@stoptime=** ] **'***stop_time***'**  
+`[ @stoptime = ] 'stop_time'`
  Specifies the date and time the trace will be stopped. *stop_time* is **datetime**, with a default of NULL. If NULL, the trace runs until it is manually stopped or until the server shuts down.  
   
  If both *stop_time* and *max_file_size* are specified, and TRACE_FILE_ROLLOVER is not specified, the trace tops when either the specified stop time or maximum file size is reached. If *stop_time*, *max_file_size*, and TRACE_FILE_ROLLOVER are specified, the trace stops at the specified stop time, assuming the trace does not fill up the drive.  
   
- [ **@filecount=** ] **'***max_rollover_files***'**  
+`[ @filecount = ] 'max_rollover_files'`
  Specifies the maximum number or trace files to be maintained with the same base filename. *max_rollover_files* is **int**, greater than one. This parameter is valid only if the TRACE_FILE_ROLLOVER option is specified. When *max_rollover_files* is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to maintain no more than *max_rollover_files* trace files by deleting the oldest trace file before opening a new trace file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracks the age of trace files by appending a number to the base file name.  
   
  For example, when the *trace_file* parameter is specified as "c:\mytrace", a file with the name "c:\mytrace_123.trc" is older than a file with the name "c:\mytrace_124.trc". If *max_rollover_files* is set to 2, then SQL Server deletes the file "c:\mytrace_123.trc" before creating the trace file "c:\mytrace_125.trc".  

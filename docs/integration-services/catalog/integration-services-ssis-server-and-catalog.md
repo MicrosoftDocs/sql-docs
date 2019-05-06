@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "packages [Integration Services], managing"
   - "managing packages [Integration Services]"
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Server and Catalog

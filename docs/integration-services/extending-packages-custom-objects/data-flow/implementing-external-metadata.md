@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "custom data flow components [Integration Services], external metadata"
   - "external metadata [Integration Services]"
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Implementing External Metadata

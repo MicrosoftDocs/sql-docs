@@ -114,7 +114,7 @@ APS AU7 creates and updates statistics automatically, by default. To update stat
 ### T-SQL
 Select @var is now supported. For more information, see [select local variable](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query ](/sql/t-sql/queries/hints-transact-sql-query)
+Query hints HASH and ORDER GROUP are now supported. For more information, see [Hints(Transact-SQL) - Query](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### Feature Switch
 APS AU7 introduces Feature Switch in [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled and DmsProcessStopMessageTimeoutInSeconds are now configurable options that can be changed by Administrators.

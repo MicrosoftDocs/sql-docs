@@ -3,15 +3,14 @@ title: "Create Database (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.createdatabase.f1"
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create Database (SQL Server Import and Export Wizard)

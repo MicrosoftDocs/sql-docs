@@ -3,7 +3,6 @@ title: "Start the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/20/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
@@ -13,8 +12,8 @@ helpviewer_keywords:
   - "Import and Export Wizard"
   - "starting Import and Export Wizard"
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Start the SQL Server Import and Export Wizard

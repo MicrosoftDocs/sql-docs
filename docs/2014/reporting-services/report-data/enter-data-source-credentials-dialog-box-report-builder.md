@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10128"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Enter Data Source Credentials Dialog Box (Report Builder)

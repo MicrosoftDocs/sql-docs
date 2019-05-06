@@ -76,7 +76,7 @@ To replay the trace file:
 
    - **Replay name**: The file name for the replay trace.
    - **Controller machine name**: The name of the Distributed Replay controller machine.
-   - **Path to source trace file on controller**: The file path for the source trace file from [Capture](#Capture).
+   - **Path to source trace file on controller**: The file path for the source trace file from [Capture](#capture).
    - **SQL Server instance name**: The name of the SQL Server instance on which to replay the source trace.
    - **Path to store target trace file on SQL Server machine**: The folder path for the resulting replay trace file.
 

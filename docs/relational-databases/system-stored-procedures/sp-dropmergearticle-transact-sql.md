@@ -38,33 +38,33 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication from which to drop an article. *publication*is **sysname**, with no default.  
   
- [ **@article=**] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article to drop from the given publication. *article*is **sysname**, with no default. If **all**, all existing articles in the specified merge publication are removed. Even if *article* is **all**, the publication still must be dropped separately from the article.  
   
- [ **@ignore_distributor=**] *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  Indicates whether this stored procedure is executed without connecting to the Distributor. *ignore_distributor* is **bit**, with a default of **0**.  
   
- [ **@reserved=**] *reserved*  
+`[ @reserved = ] reserved`
  Is reserved for future use. *reserved* is **nvarchar(20)**, with a default of NULL.  
   
- [ **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Enables or disables the ability to have a snapshot invalidated. *force_invalidate_snapshot* is a **bit**, with a default **0**.  
   
  **0** specifies that changes to the merge article do not cause the snapshot to be invalid.  
   
  **1** means that changes to the merge article may cause the snapshot to be invalid, and if that is the case, a value of **1** gives permission for the new snapshot to occur.  
   
- [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
+`[ @force_reinit_subscription = ] force_reinit_subscription`
  Acknowledges that dropping the article requires existing subscriptions to be reinitialized. *force_reinit_subscription* is a **bit**, with a default of **0**.  
   
  **0** specifies that dropping the article does not cause the subscription to be reinitialized.  
   
  **1** means that dropping the article causes existing subscriptions to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- [ **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata`
  Internal use only.  
   
 ## Return Code Values  

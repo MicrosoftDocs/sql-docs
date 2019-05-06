@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Multiple Flat Files Connection Manager Editor"
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Multiple Flat Files Connection Manager Editor (Preview Page)

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Excel Source Editor (Columns Page)

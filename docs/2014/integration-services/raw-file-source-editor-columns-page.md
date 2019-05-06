@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.rawfilesourcecolumns.f1"
 ms.assetid: 766d5ab5-fa33-4bd1-b8d2-30bd6855cbe0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Raw File Source Editor (Columns Page)

@@ -49,8 +49,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.charttitleproperties.font.f1"
   - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Formatting a Chart (Report Builder and SSRS)

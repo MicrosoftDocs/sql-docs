@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "executions view [Integration Services]"
   - "catalog.executions view [Integration Services]"
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.executions (SSISDB Database)

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data correction"
   - "correct data"
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # DQS Cleansing Transformation

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Package Roles dialog box"
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Package Roles Dialog Box UI Reference

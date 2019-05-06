@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "addTabs"
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add Tables to a CDC Instance

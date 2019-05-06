@@ -34,7 +34,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## Arguments  
- [ **@server_name =**] **'**_linked_svr_**'**  
+`[ @server_name = ] 'linked_svr'`
  Is the name of a linked server. *linked_svr* is **sysname**, with no default.  
   
 ## Result Sets  

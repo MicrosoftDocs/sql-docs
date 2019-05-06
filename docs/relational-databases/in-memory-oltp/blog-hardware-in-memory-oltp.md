@@ -1,7 +1,7 @@
 ---
 title: "Hardware for SQL In-Memory OLTP | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/30/2018"
+ms.date: "03/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -12,13 +12,13 @@ ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ---
-# Hardware considerations for In-Memory OLTP in SQL Server 2014
+# Hardware considerations for In-Memory OLTP in SQL Server
 
-In-Memory OLTP uses memory and disk in different ways than traditional disk-based tables. The  performance improvement you will see with In-Memory OLTP depends the hardware you use. In this blog post we discuss a number of general hardware considerations, and provide generic guidelines for hardware to use with In-Memory OLTP.
+In-Memory OLTP uses memory and disk in different ways than traditional disk-based tables. The performance improvement you will see with In-Memory OLTP depends the hardware you use. In this blog post we discuss a number of general hardware considerations, and provide generic guidelines for hardware to use with In-Memory OLTP.
 
 > [!NOTE]
-> This article was a blog published on August 1, 2013, by the Microsoft SQL Server 2014 team. The blog webpage is being retired, and this article is a rough capture of the blog text. Documentation articles that used to link to the blog now link this article. This article is not being maintained. This article may be excluded from the Table of Contents.
-> 
+> This article was a blog published on August 1, 2013, by the Microsoft SQL Server 2014 team. The blog webpage is being retired.
+>
 > [SQL Server In-Memory-OLTP](index.md)
 
 <!--
@@ -26,7 +26,7 @@ In-Memory OLTP uses memory and disk in different ways than traditional disk-base
     https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/
     At least one pre-existing article that contained the obsolete blog link was:
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
- -->
+-->
 
 ## CPU
 
@@ -41,7 +41,7 @@ All memory-optimized tables reside fully in memory. Therefore, you must have eno
 To determine how much memory a given memory-optimized table uses, run the following query:
 
 ```sql
-select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
+select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats;
 ```
 
 The results will show the memory used for memory-optimized tables and their indexes. The table data includes the user data, as well as all the older row versions that are still required by running transactions or have not yet been cleaned up by the system. The memory used by hash indexes is constant, and does not depend on the number of rows in the table.
@@ -68,3 +68,6 @@ To meet strict RTO requirements we recommend to spread the checkpoint files over
 
 In terms of disk capacity, we recommend to have 2-3X the size of the memory-optimized tables available.
 
+## See also
+
+[Sample Database for In-Memory OLTP](sample-database-for-in-memory-oltp.md)

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Excel Source Editor (Error Output Page)

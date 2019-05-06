@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "searching reports"
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Find Text, Numbers, or Dates in a Report (Reporting Services in SharePoint Integrated Mode)

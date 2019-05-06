@@ -40,31 +40,31 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db=**] **'**_publisher_db_**'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@alternate_publisher=**] **'**_alternate_synchronization_partner_**'**  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'`
  Is the name of the alternate Publisher. *alternate_synchronization_partner* is **sysname**, with no default.  
   
- [ **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'`
  Is the name of the publication database on the alternate publisher. *alternate_publisher_db* is **sysname**, with no default.  
   
- [ **@alternate_publication=**] **'**_alternate_synchronization_partner_**'**  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'`
  Is the name of the publication on the alternate synchronization partner. *alternate_synchronization_partner* is **sysname**, with no default.  
   
- [ **@alternate_distributor=**] **'**_alternate_distributor_**'**  
+`[ @alternate_distributor = ] 'alternate_distributor'`
  Is the name of the Distributor for the alternate synchronization partner. *alternate_distributor* is **sysname**, with no default.  
   
- [ **@friendly_name=**] **'**_friendly_name_**'**  
+`[ @friendly_name = ] 'friendly_name'`
  Is a display name by which the association of Publisher, publication, and Distributor that makes up an alternate synchronization partner can be identified. *friendly_name* is **nvarchar(255)**, with a default of NULL.  
   
- [ **@reserved=**] **'**_reserved_**'**  
+`[ @reserved = ] 'reserved'`
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## Return Code Values  

@@ -3,13 +3,12 @@ title: "Steps in the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/16/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Steps in the SQL Server Import and Export Wizard

@@ -24,7 +24,7 @@ helpviewer_keywords:
   - "freeing DLLs"
   - "unloading DLLs"
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
 ---

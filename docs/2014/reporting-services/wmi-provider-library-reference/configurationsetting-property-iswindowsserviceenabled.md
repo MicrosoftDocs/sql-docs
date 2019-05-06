@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "IsWindowsServiceEnabled property"
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # IsWindowsServiceEnabled Property (WMI MSReportServer_ConfigurationSetting)

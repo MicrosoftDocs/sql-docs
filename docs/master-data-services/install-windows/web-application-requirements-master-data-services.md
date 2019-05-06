@@ -63,7 +63,7 @@ Install-WindowsFeature Web-Mgmt-Console, AS-NET-Framework, Web-Asp-Net, Web-Asp-
 Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeature -Restart  
 ```  
   
- For more information about PowerShell command, see [Install-WindowsFeature](https://technet.microsoft.com/library/jj205467).  
+ For more information about PowerShell command, see [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature).  
   
 ### Accounts and Permissions  
   

@@ -38,16 +38,16 @@ sp_help_schedule
 ```  
   
 ## Arguments  
- [ **@schedule_id =** ] *id*  
+`[ @schedule_id = ] id`
  The identifier of the schedule to list. *schedule_name* is **int**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to list. *schedule_name* is **sysname**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
- [ **@attached_schedules_only** = ] *attached_schedules_only* ]  
+`[ @attached_schedules_only = ] attached_schedules_only ]`
  Specifies whether to show only schedules that a job is attached to. *attached_schedules_only* is **bit**, with a default of **0**. When *attached_schedules_only* is **0**, all schedules are shown. When *attached_schedules_only* is **1**, the result set contains only schedules that are attached to a job.  
   
- [ **@include_description** = ] *include_description*  
+`[ @include_description = ] include_description`
  Specifies whether to include descriptions in the result set. *include_description* is **bit**, with a default of **0**. When *include_description* is **0**, the *schedule_description* column of the result set contains a placeholder. When *include_description* is **1**, the description of the schedule is included in the result set.  
   
 ## Return Code Values  

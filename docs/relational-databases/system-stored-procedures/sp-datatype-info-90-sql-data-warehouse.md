@@ -30,10 +30,10 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## Arguments  
- [ **@data_type=** ] *data_type*  
+`[ @data_type = ] data_type`
  Is the code number for the specified data type. To obtain a list of all data types, omit this parameter. *data_type* is **int**, with a default of 0.  
   
- [ **@ODBCVer=** ] *odbc_version*  
+`[ @ODBCVer = ] odbc_version`
  Is the version of ODBC that is used. *odbc_version* is **tinyint**, with a default of 2.  
   
 ## Return Code Values  

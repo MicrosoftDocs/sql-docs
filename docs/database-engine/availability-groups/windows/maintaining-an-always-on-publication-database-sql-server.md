@@ -20,14 +20,6 @@ manager: craigg
 
   This topic discusses special considerations for maintaining a publication database when you use Always On availability groups.  
   
- **In This Topic:**  
-  
--   [Maintaining a Published Database in an Availability Group](#MaintainPublDb)  
-  
--   [Removing a Published Database from an Availability Group](#RemovePublDb)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
 ##  <a name="MaintainPublDb"></a> Maintaining a Published Database in an Availability Group  
  Maintaining an Always On publication database is basically the same as maintaining a standard publication database, with the following considerations:  
   

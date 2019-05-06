@@ -1,12 +1,12 @@
 ---
-title: "Extended Events - SQL Server | Microsoft Docs"
+title: "XEvents overview - SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2018"
+ms.date: "12/17/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords: 
   - "extended events [SQL Server]"
   - "xe"
@@ -16,7 +16,8 @@ ms.author: genemi
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Extended Events
+# Extended events overview
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events has a highly scalable and highly configurable architecture that allows users to collect as much or as little information as is necessary to troubleshoot or identify a performance problem.  

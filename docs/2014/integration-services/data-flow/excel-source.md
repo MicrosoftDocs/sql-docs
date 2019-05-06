@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Excel [Integration Services]"
   - "sources [Integration Services], Excel"
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Excel Source
@@ -112,6 +112,6 @@ manager: craigg
   
 -   Blog entry, [Excel in Integration Services, Part 3 of 3: Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676), on dougbert.com.  
   
--   Blog entry, [Using XLSX files in SSIS](https://go.microsoft.com/fwlink/?LinkId=233704), on sqlservergeeks.com.  
+-   Blog entry, [Connecting to Excel (XLSX) in SSIS ](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

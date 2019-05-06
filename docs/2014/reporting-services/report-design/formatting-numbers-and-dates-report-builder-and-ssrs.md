@@ -17,8 +17,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.textboxproperties.number.f1"
   - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Formatting Numbers and Dates (Report Builder and SSRS)

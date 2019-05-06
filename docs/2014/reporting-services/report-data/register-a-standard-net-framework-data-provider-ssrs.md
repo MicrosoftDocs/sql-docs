@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "data retrieval [Reporting Services]"
   - "Reporting Services, data sources"
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Register a Standard .NET Framework Data Provider (SSRS)

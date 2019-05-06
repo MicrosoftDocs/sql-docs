@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "pptx"
   - "export"
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # PPTX Device Information Settings
   The following table lists the device information settings for rendering [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports in the PPTX format.  

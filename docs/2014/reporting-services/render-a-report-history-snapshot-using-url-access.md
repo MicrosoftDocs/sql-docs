@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "snapshots [Reporting Services], URL access"
   - "snapshots [Reporting Services], rendering report history"
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Render a Report History Snapshot Using URL Access

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "confidential reports [Reporting Services]"
   - "resources [Reporting Services], security"
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Secure Reports and Resources

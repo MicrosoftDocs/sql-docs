@@ -485,7 +485,7 @@ GO
 This statement cannot be converted to a join. The analogous not-equal join has a different meaning: It finds the names of products that are in some subcategory that is not a finished bicycle.      
 
 ### <a name="upsert"></a> Subqueries in UPDATE, DELETE, and INSERT Statements
-Subqueries can be nested in the `UPDATE`, `DELETE`, `INSERT` and `SELECT `data manipulation (DML) statements.    
+Subqueries can be nested in the `UPDATE`, `DELETE`, `INSERT` and `SELECT` data manipulation (DML) statements.    
 
 The following example doubles the value in the *ListPrice* column in the *Production.Product* table. The subquery in the `WHERE` clause references the *Purchasing.ProductVendor* table to restrict the rows updated in the *Product* table to just those supplied by *BusinessEntity* 1540.
 

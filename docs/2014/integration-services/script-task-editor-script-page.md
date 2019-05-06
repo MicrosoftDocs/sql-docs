@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Script Task Editor"
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Script Task Editor (Script Page)

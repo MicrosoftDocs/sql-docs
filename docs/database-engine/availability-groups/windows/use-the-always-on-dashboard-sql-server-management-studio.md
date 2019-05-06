@@ -34,14 +34,12 @@ manager: craigg
 -   Synchronization mode and state    
 -   Time to restore log  
   
-##  Before You Begin  
   
-### Prerequisites  
+## Prerequisites  
  You must be connected to the instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (server instance) that hosts either the primary replica or a secondary replica of an availability group.  
   
-### Security  
-  
-#### Permissions  
+ 
+### Permissions  
  Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
   
 ##  To start the Always On dashboard  
@@ -50,7 +48,7 @@ manager: craigg
   
 2.  Expand the **Always On High Availability** node, right-click the **Availability Groups** node, and then click **Show Dashboard**.  
   
-###  Change Always On Dashboard Options  
+##  Change Always On Dashboard Options  
  You can use the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Options** dialog box to configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On Dashboard behavior for automatic refreshing and enabling an auto-defined Always On policy.  
   
 1.  From the **Tools** menu, click **Options**.  

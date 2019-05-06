@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SetUnattendedExecutionAccount method"
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - SetUnattendedExecutionAccount
   Specifies the account used to execute reports unattended.  

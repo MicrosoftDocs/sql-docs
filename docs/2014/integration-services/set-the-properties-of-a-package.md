@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SSIS packages, properties"
   - "SQL Server Integration Services packages, properties"
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Set the Properties of a Package

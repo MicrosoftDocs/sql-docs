@@ -24,22 +24,6 @@ manager: craigg
 > [!NOTE]  
 >  A PowerShell cmdlet can complete by successfully initiating an action. This does not indicate that the intended work, such as the fail over of an availability group, has completed. When scripting a sequence of actions, you might have to check the status of actions, and wait for them to complete.  
   
- This topic introduces the cmdlets for the following sets of tasks:  
-  
--   [Configuring a server instance for Always On Availability Groups](#ConfiguringServerInstance)  
-  
--   [Backing up and restoring databases and transaction logs](#BnRcmdlets)  
-  
--   [Creating and managing an availability group](#DeployManageAGs)  
-  
--   [Creating and managing an availability group listener](#AGlisteners)  
-  
--   [Creating and managing an availability replica](#DeployManageARs)  
-  
--   [Adding and managing an availability database](#DeployManageDbs)  
-  
--   [Monitoring availability group health](#MonitorTblshtAGs)  
-  
 > [!NOTE]  
 >  For a list of topics in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Books Online that describe how to use cmdlets to perform [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tasks, see the "Related Tasks" section of [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   

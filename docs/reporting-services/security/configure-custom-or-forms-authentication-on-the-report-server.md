@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Forms authentication, configuring"
   - "custom authentication [Reporting Services]"
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Configure Custom or Forms Authentication on the Report Server
 

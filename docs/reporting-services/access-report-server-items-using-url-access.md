@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "referencing URL items for report server access"
   - "URL access [Reporting Services], report servers"
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Access Report Server Items Using URL Access
   This topic describes how to access catalog items of different types in a report server data base or in a SharePoint site using *rs:Command*=*Value*. It is not necessary to actually add this parameter string. If you omit it, the report server evaluates the item type and selects the appropriate parameter value automatically. However, using the *rs:Command*=*Value* string in the URL improves the performance of the report server.  

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SSIS Script component, configuring"
   - "Script component [Integration Services], configuring"
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configuring the Script Component in the Script Component Editor

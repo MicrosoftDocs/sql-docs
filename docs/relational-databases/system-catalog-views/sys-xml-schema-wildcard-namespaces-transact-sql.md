@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_wildcard_namespaces catalog view"
 ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # sys.xml_schema_wildcard_namespaces (Transact-SQL)

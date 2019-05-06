@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "schedules [Reporting Services], modifying"
   - "shared schedules [Reporting Services], deleting"
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Create, Modify, and Delete Schedules
   Use this topic to learn about how to create, modify, and delete [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] shared schedules.  To manage shared schedules for native mode, use the Schedules page in the Web Portal or the Shared Schedules folder in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. For SharePoint mode use, the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.  
@@ -30,7 +30,7 @@ ms.author: maghan
   
 -   **Web portal:** On the Site Settings page Shared Schedules page, review the values in the Last Run date, Next Run date, and Status fields. If a schedule no longer runs because it has expired, the expiration date appears in the Status field. For more information, see [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
   
--   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** Viewing the Reports page of a given Shared Schedule. This page lists all reports and shared datasets that use the shared schedule. For more informaiton, see [Reporting Services in SQL Server Management Studio ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** Viewing the Reports page of a given Shared Schedule. This page lists all reports and shared datasets that use the shared schedule. For more informaiton, see [Reporting Services in SQL Server Management Studio](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
   
 -  **Logs:** Viewing the report execution log files or trace logs to determine whether reports have been run at the times specified by the schedule. For more information, see [Reporting Services Log Files and Sources](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   

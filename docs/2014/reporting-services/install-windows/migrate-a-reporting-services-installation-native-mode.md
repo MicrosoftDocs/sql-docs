@@ -1,7 +1,7 @@
 ---
 title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs"
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.custom: ""
 ms.prod: "sql-server-2014"

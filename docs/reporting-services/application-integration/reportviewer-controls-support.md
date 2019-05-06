@@ -1,7 +1,7 @@
 ---
 title: Support for Report Viewer current branch versions
 uthor: markingmyname
-ms.author: maghan
+ms.author: maggies
 manager: kfile
 ms.reviewer: jonhp
 ms.prod: reporting-services

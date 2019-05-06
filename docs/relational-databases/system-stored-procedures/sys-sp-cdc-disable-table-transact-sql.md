@@ -41,17 +41,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## Arguments  
- [ **@source_schema=** ] **'**_source\_schema_**'**  
+`[ @source_schema = ] 'source\_schema'`
  Is the name of the schema in which the source table is contained. *source_schema* is **sysname**, with no default, and cannot be NULL.  
   
  *source_schema* must exist in the current database.  
   
- [ **@source_name=** ] **'**_source\_name_**'**  
+`[ @source_name = ] 'source\_name'`
  Is the name of the source table from which change data capture is to be disabled. *source_name* is **sysname**, with no default, and cannot be NULL.  
   
  *source_name* must exist in the current database.  
   
- [ **@capture_instance=** ] **'**_capture\_instance_**'** | **'**all**'**  
+`[ @capture_instance = ] 'capture\_instance' | 'all'`
  Is the name of the capture instance to disable for the specified source table. *capture_instance* is **sysname** and cannot be NULL.  
   
  When 'all' is specified, all capture instances defined for *source_name* are disabled.  

@@ -57,7 +57,7 @@ manager: kfile
 ## See Also  
  [Translation support in Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Internationalization for Windows Applications](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Go Global Developer Center](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Globalization](/globalization/)   
  [Writing Windows Store apps with locale-based adaptive design](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Developing Universal Windows Apps with C# and XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

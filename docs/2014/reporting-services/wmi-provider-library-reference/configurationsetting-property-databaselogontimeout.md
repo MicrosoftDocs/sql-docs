@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseLogonTimeout property"
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # DatabaseLogonTimeout Property (WMI MSReportServer_ConfigurationSetting)

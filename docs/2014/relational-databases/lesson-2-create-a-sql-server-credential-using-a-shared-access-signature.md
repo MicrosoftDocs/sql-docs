@@ -32,7 +32,7 @@ manager: craigg
   
 4.  Copy and paste the following example into the query window, modify as needed. The following statement will create a SQL Server Credential to store your storage container's Shared Access Certificate.  
   
-    ```tsql  
+    ```sql  
   
     USE master  
     CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
@@ -46,7 +46,7 @@ manager: craigg
   
 5.  To see all available credentials, you can run the following statement in the query window:  
   
-    ```tsql  
+    ```sql  
     SELECT * from sys.credentials  
     ```  
   

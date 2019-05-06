@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "File Connection Manager Editor"
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # File Connection Manager Editor

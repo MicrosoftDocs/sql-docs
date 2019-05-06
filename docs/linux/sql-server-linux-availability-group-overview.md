@@ -4,7 +4,7 @@ description:
 author: MikeRayMSFT 
 ms.author: mikeray 
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sql-linux"
@@ -52,7 +52,7 @@ The combination of `required_synchronized_secondaries_to_commit` and the new seq
 
 There are three values that can be set for `required_synchronized_secondaries_to_commit`: 0, 1, or 2. They control the behavior of what happens when a replica becomes unavailable. The numbers correspond to the number of secondary replicas that must be synchronized with the primary. The behavior is as follows under Linux:
 
--   0 - No automatic failover is possible since no secondary replica is required to be synchronized. The primary database is available at all times.
+-   0 - Secondary replicas do not need to be in synchronized state with the primary. However if the secondaries are not synchronized, there will be no automatic failover. 
 -   1 - One secondary replica must be in a synchronized state with the primary; automatic failover is possible. The primary database is unavailable until a secondary synchronous replica is available.
 -   2 - Both secondary replicas in a three or more node AG configuration must be synchronized with the primary; automatic failover is possible.
 
@@ -90,7 +90,7 @@ If these conditions are met and the server hosting the primary replica fails, th
 
 Also new in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] as of CU1 is a configuration-only replica. Because Pacemaker is different than a WSFC, especially when it comes to quorum and requiring STONITH, having just a two-node configuration will not work when it comes to an AG. For an FCI, the quorum mechanisms provided by Pacemaker can be fine, because all FCI failover arbitration happens at the cluster layer. For an AG, arbitration under Linux happens in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], where all the metadata is stored. This is where the configuration-only replica comes into play.
 
-Without anything else, a third node and at least one synchronized replica would be required. This would not work for [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)], since it can only have two replicas participating in an AG. The configuration-only replica stores the AG configuration in the master database, same as the other replicas in the AG configuration. The configuration-only replica does not have the user databases participating in the AG. The configuration data is sent synchronously from the primary. This configuration data is then used during failovers, whether they are automatic or manual.
+Without anything else, a third node and at least one synchronized replica would be required. The configuration-only replica stores the AG configuration in the master database, same as the other replicas in the AG configuration. The configuration-only replica does not have the user databases participating in the AG. The configuration data is sent synchronously from the primary. This configuration data is then used during failovers, whether they are automatic or manual.
 
 For an AG to maintain quorum and enable automatic failovers with a cluster type of External, it either must:
 

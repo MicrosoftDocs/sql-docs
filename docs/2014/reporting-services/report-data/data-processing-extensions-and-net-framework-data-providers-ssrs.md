@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Reporting Services, data sources"
   - "report data [Report Builder], accessing"
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Data Processing Extensions and .NET Framework Data Providers (SSRS)

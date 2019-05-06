@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], deleting"
   - "subscriptions [Reporting Services], managing"
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create and Manage Subscriptions for SharePoint Mode Report Servers

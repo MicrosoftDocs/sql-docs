@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.selectpackagemgtoptions.f1"
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select Package Management Options (SSIS Package Upgrade Wizard)

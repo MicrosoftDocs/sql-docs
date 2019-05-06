@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "components [Integration Services], data flow"
   - "error outputs [Integration Services]"
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure an Error Output in a Data Flow Component

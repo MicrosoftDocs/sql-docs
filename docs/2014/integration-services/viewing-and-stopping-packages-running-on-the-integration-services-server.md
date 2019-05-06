@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "packages [Integration Services], running"
   - "running package [Integration Services], managing"
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Viewing and Stopping Packages Running on the Integration Services Server

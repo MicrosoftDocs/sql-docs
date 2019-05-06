@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "restarting packages"
   - "starting packages"
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure Checkpoints for Restarting a Failed Package

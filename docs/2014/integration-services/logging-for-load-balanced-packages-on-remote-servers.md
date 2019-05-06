@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], remote packages"
 ms.assetid: fd571567-b625-4f9a-8b7e-42c5c588b11b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Logging for Load Balanced Packages on Remote Servers

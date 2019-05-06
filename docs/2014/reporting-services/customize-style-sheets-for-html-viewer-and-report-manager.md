@@ -1,19 +1,16 @@
 ---
 title: "Customize Style Sheets for HTML Viewer and Report Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
-ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "style sheets [Reporting Services]"
-ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "04/26/2019"
 ---
+
 # Customize Style Sheets for HTML Viewer and Report Manager
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides default cascading style sheets (.css) files that define styles for the **report** toolbar in HTML Viewer and for Report Manager. If you are a Web developer or have expertise in creating cascading style sheets, you can modify the default styles at your own risk to change the colors, fonts, and layout of the toolbar or Report Manager. Neither the default style sheets nor instructions for modifying the style sheets are documented in this release.  
   
@@ -31,9 +28,6 @@ manager: kfile
 |-----------------|-----------------|  
 |Htmlviewer.css|Provides a sample style sheet that you can use as a template to create custom styles for the **report** toolbar in HTML Viewer.<br /><br /> The default styles used by HTML Viewer are compiled into the report server. The Htmlviewer.css file provides a sample of the styles that the viewer uses.|  
 |ReportingServices.css|Defines styles for Report Manager.|  
-  
-> [!NOTE]  
->  The following style sheets are used for Report Manager online documentation and should never be modified: Sql.css and Mailto.css. Other style sheets define styles for reports and Report Manager that open in SharePoint Web parts. These style sheets include Rswebparts.css, Sp_full.css, and Sp_small.css. Modifying the SharePoint style sheets is not recommended. For more information about how the Web parts are used, see [View and Explore Native Mode Reports Using SharePoint Web Parts &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## Configuring Reporting Services to Use a Custom Style Sheet  
  The style sheet must be a valid cascading style sheet (.css) file and it must be located in the Styles folder. By default, the Styles folder is located at \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL.*n*\Reporting Services\ReportServer\Styles.  

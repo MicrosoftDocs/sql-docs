@@ -5,8 +5,8 @@ ms.technology: machine-learning
 
 ms.date: 05/31/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # How to use RevoScaleR functions to find or install R packages on SQL Server

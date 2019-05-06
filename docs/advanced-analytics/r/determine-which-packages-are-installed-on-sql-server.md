@@ -7,8 +7,8 @@ ms.technology: machine-learning
 
 ms.date: 11/08/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 #  Get R and Python package information

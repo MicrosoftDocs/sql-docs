@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "folders [Reporting Services], security"
   - "security [Reporting Services], folders"
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Secure Folders

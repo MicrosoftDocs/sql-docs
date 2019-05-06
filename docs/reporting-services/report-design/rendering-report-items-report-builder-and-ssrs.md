@@ -8,8 +8,8 @@ ms.technology: report-design
 
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Rendering Report Items (Report Builder and SSRS)
   The number, size, and location of report items affect how the renderers paginate the report body. Below is a description of how various report items are rendered.  

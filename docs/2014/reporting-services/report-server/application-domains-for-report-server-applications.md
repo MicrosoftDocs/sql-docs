@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "application domains [Reporting Services]"
   - "recycling application domains"
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Application Domains for Report Server Applications

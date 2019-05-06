@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQL Server Compact Connection Manager Editor"
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SQL Server Compact Edition Connection Manager Editor (All Page)

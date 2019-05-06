@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "row constructor [SQL Server]"
   - "table value constructor [SQL Server]"
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Table Value Constructor (Transact-SQL)

@@ -76,5 +76,5 @@ TMSL is a JSON representation of Tabular models at compatibility level 1200 and 
 Documents the cmdlets used for administrative functions, plus the general-purpose **Invoke-ASCmd** cmdlet that accepts any script or query as input.
 
 ## See Also
-[Technical Reference ](../analysis-services/powershell/technical-reference-ssas.md)
+[Technical Reference](../analysis-services/powershell/technical-reference-ssas.md)
 [Query and Expression Language Reference &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

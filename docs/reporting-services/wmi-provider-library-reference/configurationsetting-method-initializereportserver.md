@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "InitializeReportServer method"
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - InitializeReportServer
   Initializes the specified report service instance.  

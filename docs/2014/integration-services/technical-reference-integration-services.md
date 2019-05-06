@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "technical reference [Integration Services]"
   - "Integration Services, technical reference"
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Technical Reference (Integration Services)

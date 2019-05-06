@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], content management"
   - "content management [Reporting Services]"
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Server Content Management (SSRS Native Mode)

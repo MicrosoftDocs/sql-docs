@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], URL access"
   - "hyperlinks [Reporting Services]"
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # URL Access (SSRS)

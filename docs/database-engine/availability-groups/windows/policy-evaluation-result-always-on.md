@@ -19,13 +19,7 @@ manager: craigg
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Use the **Policy Evaluation Result** page of the Always On Dashboard to view any current policy issues.  
-  
- **In This Topic:**  
-  
--   [Dialog-Box Options](#Options)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
+    
 ##  <a name="Options"></a> Dialog-Box Options  
  **Detected Issue**  
  Displays a row for each detected issue. The icon associated with an issue provides a visual indicator to indicate the severity of the issue, as follows:  

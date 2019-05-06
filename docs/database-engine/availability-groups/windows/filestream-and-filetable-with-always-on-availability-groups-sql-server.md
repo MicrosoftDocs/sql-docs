@@ -27,16 +27,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
   
  FileTable functionality is partially supported. After a failover, FileTable data is accessible on the primary replica, but FileTable data is not accessible on readable secondary replicas.  
   
- **In this Topic:**  
-  
--   [Prerequisites](#Prerequisites)  
-  
--   [Using Virtual Network Names (VNNs) for FILESTREAM and FileTable Access](#vnn)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
-  
 ##  <a name="Prerequisites"></a> Prerequisites  
   
 -   Before adding a database that uses FILESTREAM, with or without FileTable, to an availability group, ensure that FILESTREAM is enabled on every server instance that hosts an availability replica for the availability group. For more information, see [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md).  

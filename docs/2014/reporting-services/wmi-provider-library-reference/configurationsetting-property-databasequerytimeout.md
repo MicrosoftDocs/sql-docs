@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseQueryTimeout property"
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # DatabaseQueryTimeout Property (WMI MSReportServer_ConfigurationSetting)

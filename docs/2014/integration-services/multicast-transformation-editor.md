@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Multicast Transformation Editor"
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Multicast Transformation Editor

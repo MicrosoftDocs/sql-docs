@@ -36,10 +36,10 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## Arguments  
- [ **@agent_id =** ] '*agent_id*',  
+`[ @agent_id = ] 'agent_id',`
  The primary ID for backup or the secondary ID for copy or restore. *agent_id* is **uniqueidentifier** and cannot be NULL.  
   
- [ **@agent_type =** ] '*agent_type*'  
+`[ @agent_type = ] 'agent_type'`
  The type of log shipping job. 0 = Backup, 1 = Copy, 2 = Restore. *agent_type* is **tinyint** and cannot be NULL.  
   
 ## Return Code Values  

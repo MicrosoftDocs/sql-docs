@@ -34,7 +34,7 @@ manager: craigg
 ## Table Definition for the Workarounds  
  Before converting to a memory-optimized table, the definition for [Sales].[SalesOrderDetail] is as follows:  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -95,7 +95,7 @@ GO
   
  Note that rowguid is no longer a ROWGUIDCOL as it is not supported in [!INCLUDE[hek_2](../includes/hek-2-md.md)]. The column has been removed. In addition, LineTotal is a computed column and out of scope for this article, so it also has been removed.  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -121,7 +121,7 @@ GO
   
 ## Checking Constraints After an Insert, Update, or Delete Operation  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -179,7 +179,7 @@ END
   
 ## Enforcing Constraints Before an Insert, Update or Delete Operation  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

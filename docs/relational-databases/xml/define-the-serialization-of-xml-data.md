@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "xml data type [SQL Server], serialization"
   - "typed XML"
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # Define the Serialization of XML Data

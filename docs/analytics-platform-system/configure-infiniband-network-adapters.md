@@ -177,5 +177,5 @@ To meet your own business requirements, you can also join the client server to y
     -   MyPDW-SQLCTL01  
   
 ## See Also  
-[Acquire and Configure a Loading Server ](acquire-and-configure-loading-server.md)  
+[Acquire and Configure a Loading Server](acquire-and-configure-loading-server.md)  
   

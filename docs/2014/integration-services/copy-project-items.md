@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "copying packages"
   - "data source views [Integration Services], copying"
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Copy Project Items

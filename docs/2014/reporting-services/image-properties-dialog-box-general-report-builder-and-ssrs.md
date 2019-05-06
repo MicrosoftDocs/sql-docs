@@ -11,8 +11,8 @@ f1_keywords:
   - "10051"
   - "sql12.rtp.rptdesigner.pictureproperties.general.f1"
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Image Properties Dialog Box, General (Report Builder and SSRS)

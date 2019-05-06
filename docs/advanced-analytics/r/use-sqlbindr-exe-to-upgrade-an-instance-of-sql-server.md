@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 09/30/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Upgrade machine learning (R and Python) components in SQL Server instances

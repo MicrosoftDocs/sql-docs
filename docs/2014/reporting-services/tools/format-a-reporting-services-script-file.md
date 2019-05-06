@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "scripts [Reporting Services], formats"
   - "formats [Reporting Services], script files"
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Format a Reporting Services Script File

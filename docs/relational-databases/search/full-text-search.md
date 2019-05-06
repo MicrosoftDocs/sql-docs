@@ -1,17 +1,16 @@
 ---
 title: "Full-Text Search | Microsoft Docs"
-ms.custom: ""
 ms.date: "04/10/2018"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
-ms.technology:
+ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text search [SQL Server]"
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

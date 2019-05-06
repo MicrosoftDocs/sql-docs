@@ -8,8 +8,8 @@ ms.technology: troubleshooting
 
 ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Troubleshoot Report Design Issues with Reporting Services
 Report design issues may occur when you are creating the report layout in Design view in an report authoring application. Use this topic to help troubleshoot these issues.   

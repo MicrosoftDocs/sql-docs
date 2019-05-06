@@ -42,28 +42,28 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains this article. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'**_article_**'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with no default.  
   
- [ **@column=**] **'**_column_**'**  
+`[ @column = ] 'column'`
  Is the name of the column to be added or dropped. *column* is **sysname**, with a default of NULL. If NULL, all columns are published.  
   
- [ **@operation=**] **'**_operation_**'**  
+`[ @operation = ] 'operation'`
  Specifies whether to add or drop columns in an article. *operation* is **nvarchar(5)**, with a default of add. **add** marks the column for replication. **drop** unmarks the column.  
   
- [ **@refresh_synctran_procs=**] *refresh_synctran_procs*  
+`[ @refresh_synctran_procs = ] refresh_synctran_procs`
  Specifies whether the stored procedures supporting immediate updating subscriptions are regenerated to match the number of columns replicated. *refresh_synctran_procs* is **bit**, with a default of **1**. If **1**, the stored procedures are regenerated.  
   
- [ **@ignore_distributor =**] *ignore_distributor*  
+`[ @ignore_distributor = ] ignore_distributor`
  Indicates if this stored procedure executes without connecting to the Distributor. *ignore_distributor* is **bit**, with a default of **0**. If **0**, the database must be enabled for publishing, and the article cache should be refreshed to reflect the new columns replicated by the article. If **1**, allows article columns to be dropped for articles that reside in an unpublished database; should be used only in recovery situations.  
   
- [ **@change_active =** ] *change_active*  
+`[ @change_active = ] change_active`
  Allows modifying the columns in publications that have subscriptions. *change_active* is an **int** with a default of **0**. If **0**, columns are not modified. If **1**, columns can be added or dropped from active articles that have subscriptions.  
   
- [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`
  Acknowledges that the action taken by this stored procedure may invalidate an existing snapshot. *force_invalidate_snapshot* is a **bit**, with a default of **0**.  
   
  **0** specifies that changes to the article do not cause the snapshot to be invalid. If the stored procedure detects that the change does require a new snapshot, an error occurs and no changes are made.  
@@ -75,13 +75,13 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **0** specifies that changes to the article do not cause the subscription to be reinitialized. If the stored procedure detects that the change would require subscriptions to be reinitialized, an error occurs and no changes are made. **1** specifies that changes to the article cause existing subscriptions to be reinitialized, and gives permission for the subscription reinitialization to occur.  
   
- [ **@publisher=** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be used with a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [ **@internal=** ] **'**_internal_**'**  
+`[ @internal = ] 'internal'`
  Internal use only.  
   
 ## Return Code Values  

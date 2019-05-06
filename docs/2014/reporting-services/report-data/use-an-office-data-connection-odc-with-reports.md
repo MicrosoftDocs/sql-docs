@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], shared data sources"
   - ".odc files"
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Use an Office Data Connection (.odc) with Reports (Reporting Services in SharePoint Integrated Mode)

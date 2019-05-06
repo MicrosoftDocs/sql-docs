@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "SMTPServer property"
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SMTPServer Property (WMI MSReportServer_ConfigurationSetting)

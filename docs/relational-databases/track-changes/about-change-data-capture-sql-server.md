@@ -113,7 +113,7 @@ Please consider one of the following approaches to ensure change captured data i
 
 For example, if you have one database that uses a collation of  SQL_Latin1_General_CP1_CI_AS, consider the following table:
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
@@ -121,7 +121,7 @@ CREATE TABLE T1(
 
 CDC might fail to capture the binary data for column C2, because its collation is different (Chinese_PRC_CI_AI). Use NVARCHAR to avoid this problem:
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)

@@ -732,8 +732,7 @@ The following functionality is disabled for resumable index rebuild operations
    -	ALTER TABLE using index rebuild  
    -	DDL command with "RESUMEABLE = ON" cannot be executed inside an explicit transaction (cannot be part of begin tran ... commit  block)
    -	Rebuild an index that has computed or TIMESTAMP column(s) as key columns.
--	In case the base table contains LOB column(s) resumable clustered index rebuild requires a Sch-M lock in the Starting of this operation
-   -	The SORT_IN_TEMPDB=ON option is not supported for resumable index 
+-	In case the base table contains LOB column(s) resumable clustered index rebuild requires a Sch-M lock in the Starting of this operation 
 
 > [!NOTE]
 > The DDL command runs until it completes, pauses or fails. In case the command pauses, an error will be issued indicating that the operation was paused and that the index creation did not complete. More information about the current index status can be obtained from [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). As before in case of a failure an error will be issued as well. 

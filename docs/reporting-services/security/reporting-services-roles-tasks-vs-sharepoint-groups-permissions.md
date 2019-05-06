@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "security [Reporting Services], predefined roles"
   - "security [Reporting Services], SharePoint integrated mode"
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Reporting Services Roles-Tasks vs. SharePoint Groups-Permissions
   This topic compares role and task based authorization features in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode to the security features in SharePoint products. This topic compares terminology and characteristics of roles, tasks, SharePoint groups, permission levels, and permissions.  
@@ -47,7 +47,7 @@ ms.author: maghan
 |---|**Permission level group:** For example "View Only" for the "Viewers" group.|  
 |**Tasks:** for example "Manage Reports".|**Permissions:** For example, within the "View Only" group there are list related permissions of view items, view versions, and view application pages.|  
   
- For more information on SharePoint permissions, see [Permission levels and permissions](https://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) and [Determine permission levels and groups in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
+ For more information on SharePoint permissions, see [Permission levels and permissions](https://support.office.com/en-us/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) and [Determine permission levels and groups in SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Compare Native mode Roles and SharePoint Groups  
  The following table compares the predefined role definitions in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in native mode to standard SharePoint groups. If the SharePoint groups do not match the specific role that you want, you can create a custom group and assign permission levels in SharePoint.  

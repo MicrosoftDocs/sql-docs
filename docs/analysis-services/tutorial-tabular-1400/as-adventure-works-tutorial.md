@@ -1,6 +1,6 @@
 ﻿---
 title: "Analysis Services Adventure Works tutorial (1400) | Microsoft Docs"
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,6 +9,7 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
+monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Tabular modeling (1400 compatibility level)
 

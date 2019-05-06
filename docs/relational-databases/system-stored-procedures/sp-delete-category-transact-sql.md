@@ -35,7 +35,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@class =**] **'**_class_**'**  
+`[ @class = ] 'class'`
  The class of the category. *class* is **varchar(8)**, with no default, and must have one of these values.  
   
 |Value|Description|  
@@ -44,7 +44,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**ALERT**|Deletes an alert category.|  
 |**OPERATOR**|Deletes an operator category.|  
   
- [ **@name =**] **'**_name_**'**  
+`[ @name = ] 'name'`
  The name of the category to be removed. *name* is **sysname**, with no default.  
   
 ## Return Code Values  

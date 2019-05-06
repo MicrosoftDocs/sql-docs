@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "deleting shared data sources"
   - "modifying shared data sources"
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create, Delete, or Modify a Shared Data Source (Report Manager)

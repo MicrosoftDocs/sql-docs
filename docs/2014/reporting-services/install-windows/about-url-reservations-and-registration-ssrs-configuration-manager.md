@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "URL registration"
   - "Report Server service, URL reservations"
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # About URL Reservations and Registration  (SSRS Configuration Manager)

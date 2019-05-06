@@ -34,7 +34,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## Arguments  
- [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`
  Is the identifier for the policy category subscription. *policy_category_subscription_id* is **int**.  
   
 ## Return Code Values  

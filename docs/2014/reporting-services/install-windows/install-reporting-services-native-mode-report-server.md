@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], default configurations"
   - "installation options [Reporting Services]"
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Install Reporting Services Native Mode Report Server

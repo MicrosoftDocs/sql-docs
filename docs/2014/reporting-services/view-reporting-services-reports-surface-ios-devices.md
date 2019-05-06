@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Report Viewer [Reporting Services]"
   - "iOS"
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # View Reporting Services Reports on Microsoft Surface Devices and  Apple iOS Devices

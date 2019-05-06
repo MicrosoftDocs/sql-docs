@@ -33,7 +33,7 @@ manager: craigg
   
 2.  When connected to the newly created database, open the query window. Run the following statement:  
   
-    ```tsql  
+    ```sql  
   
     USE TestDB3Restore;   
     GO   
@@ -47,7 +47,7 @@ manager: craigg
   
 3.  Next, copy and run the following statements in the Query window.  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     GO   

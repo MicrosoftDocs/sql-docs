@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "removing delivery extensions"
   - "deleting delivery extensions"
   - "delivery extensions [Reporting Services], removing"
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Removing a Delivery Extension

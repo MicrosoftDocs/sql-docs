@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "semantickeyphrasetable function"
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # semantickeyphrasetable (Transact-SQL)

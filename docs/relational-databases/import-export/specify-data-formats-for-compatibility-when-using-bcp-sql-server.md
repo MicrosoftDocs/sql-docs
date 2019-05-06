@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], compatibility"
   - "bcp utility [SQL Server], compatibility"
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

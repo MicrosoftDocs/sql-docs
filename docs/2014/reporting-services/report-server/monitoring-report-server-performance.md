@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "performance [Reporting Services]"
   - "Reporting Services, performance"
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Monitoring Report Server Performance

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],determining readiness"
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Determine Whether the Change Data Is Ready

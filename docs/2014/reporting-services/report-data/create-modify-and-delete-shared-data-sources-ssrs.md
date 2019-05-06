@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "data sources [Reporting Services], modifying properties"
   - "deleting shared data sources"
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create, Modify, and Delete Shared Data Sources (SSRS)

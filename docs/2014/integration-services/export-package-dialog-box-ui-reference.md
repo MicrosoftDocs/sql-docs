@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Export Package dialog box"
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Export Package Dialog Box UI Reference

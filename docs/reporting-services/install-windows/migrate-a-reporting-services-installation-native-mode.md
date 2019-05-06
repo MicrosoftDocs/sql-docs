@@ -3,8 +3,8 @@ title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
 ---
@@ -84,7 +84,7 @@ For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
 * Write code that calls the WMI provider to copy data between databases. For more information about this approach, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-* If you have just a few items, you can republish reports, report models, and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. Re-create the role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. Be prepared to lose report history and report execution log data if you follow these actions.
+* If you have just a few items, you can republish reports and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. Re-create the role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. Be prepared to lose report history and report execution log data if you follow these actions.
   
 ## <a name="bkmk_before_you_start"></a> Before You Start
 

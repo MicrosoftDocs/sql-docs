@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "ListReportServersInDatabase method"
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # ListReportServersInDatabase Method (WMI MSReportServer_ConfigurationSetting)

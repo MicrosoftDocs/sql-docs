@@ -7,8 +7,8 @@ ms.technology: report-server-sharepoint
 
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Connect Filter or Documents web part with a Reporting Services Report Viewer web part
 

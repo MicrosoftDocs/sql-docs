@@ -45,7 +45,7 @@ manager: craigg
   
 11. In Query Editor, enter the following [!INCLUDE[tsql](../../includes/tsql-md.md)] code:  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  

@@ -23,7 +23,7 @@ manager: craigg
   
 -   [Authoring Models for Use with DirectQuery Mode](#bkmk_Design)  
   
-    -   [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [Validation and Design Restrictions for DirectQuery Mode](#bkmk_Validation)  
   
@@ -65,7 +65,7 @@ manager: craigg
   
  When you do this, the model designer automatically configures the workspace database to run in a hybrid mode that lets you continue to work with the cached data. The model designer will also notify you of any features in your model that are incompatible with DirectQuery mode. The following list summarizes the main requirements to keep in mind:  
   
--   **Data sources:** DirectQuery models can only use data from a single SQL Server data source. When DirectQuery mode has been turned on for a model, you can use no other types of data in the model designer, including tables added by copy-paste operations. All other import options are disabled. Any tables included in a query must be part of the SQL Server data source. See [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources)for more information.  
+-   **Data sources:** DirectQuery models can only use data from a single SQL Server data source. When DirectQuery mode has been turned on for a model, you can use no other types of data in the model designer, including tables added by copy-paste operations. All other import options are disabled. Any tables included in a query must be part of the SQL Server data source. See [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)for more information.  
   
 -   **Support for calculated columns:** Calculated columns are not supported for DirectQuery models. However, you can create measures and KPIs, which operate over sets of data. See the section on [validation](#bkmk_Validation) for more information.  
   
@@ -176,5 +176,3 @@ manager: craigg
  [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)   
  [Tabular Model Projects &#40;SSAS Tabular&#41;](tabular-model-projects-ssas-tabular.md)   
  [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "text searches [Reporting Services]"
   - "URL access [Reporting Services], report searches"
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Search a Report Using URL Access

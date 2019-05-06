@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "displaying report snapshots"
   - "report snapshots [Reporting Services], creating"
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # View or Delete Report History (Report Manager)

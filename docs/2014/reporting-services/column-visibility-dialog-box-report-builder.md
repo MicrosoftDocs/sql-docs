@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Column Visibility Dialog Box (Report Builder)

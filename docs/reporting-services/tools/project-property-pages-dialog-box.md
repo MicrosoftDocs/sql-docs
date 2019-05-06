@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Project Property Pages dialog box"
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Project Property Pages Dialog Box

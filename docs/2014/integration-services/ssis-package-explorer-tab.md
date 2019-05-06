@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.treeview.f1"
 ms.assetid: fdcd93fc-fe9a-40ec-bac3-5f303cd83eaf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SSIS Package Explorer Tab

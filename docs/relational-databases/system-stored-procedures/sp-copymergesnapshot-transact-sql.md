@@ -32,10 +32,10 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication whose snapshot contents are to be copied. *publication* is **sysname**, with no default.  
   
- [ **@destination_folder=**] **'**_destination_folder_**'**  
+`[ @destination_folder = ] 'destination_folder'`
  Is the name of the folder where the contents of the publication snapshot is to be copied. *destination_folder*is **nvarchar(255)**, with no default. The *destination_folder* can be an alternate location such as on another server, on a network drive, or on removable media (such as CD-ROMs or removable disks).  
   
 ## Return Code Values  

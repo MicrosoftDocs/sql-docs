@@ -11,8 +11,8 @@ ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 f1_keywords: 
   - "sql13.dts.designer.odatasource.connectionmanager.f1"
   - "sql13.dts.designer.odataconnectionmanager.f1"
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # OData Connection Manager

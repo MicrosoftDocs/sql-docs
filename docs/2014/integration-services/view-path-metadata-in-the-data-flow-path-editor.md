@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "metadata [Integration Services]"
   - "paths [Integration Services], metadata"
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # View Path Metadata in the Data Flow Path Editor

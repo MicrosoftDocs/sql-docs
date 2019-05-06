@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "tools [Reporting Services]"
   - "user interface reference [Reporting Services]"
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Technical Reference (SSRS)

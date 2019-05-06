@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure Data Viewer (Histogram Tab)

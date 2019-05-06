@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "combining constraints"
   - "expressions [Integration Services], constraints"
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add Expressions to Precedence Constraints

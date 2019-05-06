@@ -37,10 +37,10 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## Arguments  
- [ **@action=**] **'***action***'**  
+`[ @action = ] 'action'`
  Is the property to be changed or reset. *action* is **nvarchar(100),** with no default. For a list of a*c*tion properties, their descriptions, and the values that can be set, see the table under the *value* argument. This argument returns the following properties: data type, current running value, minimum or maximum value, and deprecation status, if applicable.  
   
- [ **@value=**] *value*  
+`[ @value = ] value`
  Is the value of the specified property. *value* is **sql_variant**, with a default value of NULL. If @value is null, **sp_fulltext_service** returns the current setting. This table lists action properties, their descriptions, and the values that can be set.  
   
 > [!NOTE]  

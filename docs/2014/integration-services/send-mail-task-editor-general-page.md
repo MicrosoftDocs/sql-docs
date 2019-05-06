@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Send Mail Task Editor"
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Send Mail Task Editor (General Page)

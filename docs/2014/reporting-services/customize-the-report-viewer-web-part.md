@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Web Parts [Reporting Services]"
   - "Report Viewer Web Part [Reporting Services]"
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Customize the Report Viewer Web Part

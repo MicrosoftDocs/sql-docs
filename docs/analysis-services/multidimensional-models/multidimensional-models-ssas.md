@@ -20,9 +20,9 @@ manager: kfile
  Another important benefit to using Analysis Services multidimensional databases is integration with commonly used BI reporting tools such as Excel, Reporting Services, and PerformancePoint, as well as custom applications and third-party solutions.  
   
 ## In This Section  
- [Multidimensional Model Solutions ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
+ [Multidimensional Model Solutions](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
   
- [Multidimensional Model Databases ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Multidimensional Model Databases](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
  [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   

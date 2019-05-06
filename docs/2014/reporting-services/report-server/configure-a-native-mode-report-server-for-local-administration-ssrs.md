@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "windows server 2008"
   - "Vista"
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure a Native Mode Report Server for Local Administration (SSRS)

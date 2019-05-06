@@ -38,16 +38,16 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## Arguments  
- [ **@proxy_id** = ] *proxy_id*  
+`[ @proxy_id = ] proxy_id`
  The identification number of the proxy to list information for. The *proxy_id* is **int**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to list information for. The *proxy_name* is **sysname**, with a default of NULL. Either the *id* or the *proxy_name* may be specified.  
   
- [ **@subsystem_id** = ] *subsystem_id*  
+`[ @subsystem_id = ] subsystem_id`
  The identification number of the subsystem to list information for. The *subsystem_id* is **int**, with a default of NULL. Either the *subsystem_id* or the *subsystem_name* may be specified.  
   
- [ **@subsystem_name** = ] **'***subsystem_name***'**  
+`[ @subsystem_name = ] 'subsystem_name'`
  The name of the subsystem to list information for. The *subsystem_name* is **sysname**, with a default of NULL. Either the *subsystem_id* or the *subsystem_name* may be specified.  
   
 ## Return Code Values  

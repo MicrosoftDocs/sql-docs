@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Scheduling and Delivery Processor performance object [Reporting Services]"
   - "performance [Reporting Services]"
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Performance Counters MSRS 2011 SharePoint Mode Performance Objects
   This topic describes performance counters for the **MSRS 2011 Web Service SharePoint Mode** and **MSRS 2011 Windows Service SharePoint Mode** performance objects that are part of a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint mode deployment.  

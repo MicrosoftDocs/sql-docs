@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "custom data flow components [Integration Services], destination components"
   - "data flow components [Integration Services], destination components"
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Developing a Custom Destination Component

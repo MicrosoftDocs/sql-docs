@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Mining Query Task Editor"
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Mining Query Task Editor (Mining Model Tab)

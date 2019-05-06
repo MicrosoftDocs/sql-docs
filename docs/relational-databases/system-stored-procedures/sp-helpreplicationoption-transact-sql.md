@@ -32,7 +32,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## Arguments  
- [ **@optname =**] **'***option_name***'**  
+`[ @optname = ] 'option_name'`
  Is the name of the replication option to query for. *option_name* is **sysname**, with a default of NULL.  
   
 |Value|Description|  

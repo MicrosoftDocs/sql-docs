@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "foreach enumerators [Integration Services]"
   - "containers [Integration Services], Foreach Loop"
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Foreach Loop Container

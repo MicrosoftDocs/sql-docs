@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "date data types"
   - "date and time formats for fast parse"
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Date and Time Formats

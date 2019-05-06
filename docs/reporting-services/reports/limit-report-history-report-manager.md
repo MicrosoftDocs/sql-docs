@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "historical data [Reporting Services]"
   - "displaying report history"
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Limit Report History (Report Manager)
   Report history is a collection of report snapshots that you create over time. You can create report history on demand, or schedule how often a snapshot is created and added to report history.  

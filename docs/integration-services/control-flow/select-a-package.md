@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Select a Package dialog box"
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select a Package

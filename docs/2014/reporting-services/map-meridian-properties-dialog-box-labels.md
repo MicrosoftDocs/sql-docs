@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1"
   - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Map Meridian Properties Dialog Box, Labels

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], content management"
   - "snapshots [Reporting Services], creating"
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Set Processing Options (Reporting Services in SharePoint Integrated Mode)

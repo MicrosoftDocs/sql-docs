@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "rrRenderingError"
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # rrRenderingError - Reporting Services Error

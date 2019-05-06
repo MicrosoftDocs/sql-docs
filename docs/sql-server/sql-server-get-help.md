@@ -65,6 +65,7 @@ There are a few SQL Server blogs that can bring you the latest information about
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
 - [SQL Repl Talk](https://blogs.msdn.microsoft.com/repltalk/)
 - [SQL Tiger Team](https://blogs.msdn.microsoft.com/sql_server_team/)
+- [SQL Support Team](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
 
 
 ### MSDN Forums

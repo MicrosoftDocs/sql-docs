@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Flat File Connection Manager Editor"
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Flat File Connection Manager Editor (Preview Page)

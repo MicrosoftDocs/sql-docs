@@ -144,6 +144,8 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
   
 > [!IMPORTANT]  
 >  THE **CREDENTIAL NAME** argument requires that the name match the container path, start with https and not contain a trailing forward slash. The **IDENTITY** argument requires the name, *SHARED ACCESS SIGNATURE*. The **SECRET** argument requires the shared access signature token.  
+>
+>  The **SHARED ACCESS SIGNATURE secret** should not have the leading **?**.
   
 ```  
 USE master  

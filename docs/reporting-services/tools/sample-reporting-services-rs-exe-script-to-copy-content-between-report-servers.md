@@ -8,8 +8,8 @@ ms.technology: tools
 
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Sample Reporting Services rs.exe Script to Copy Content between Report Servers
 

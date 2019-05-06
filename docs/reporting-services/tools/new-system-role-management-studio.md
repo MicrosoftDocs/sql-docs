@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.reportserver.newsystemrole.f1"
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # New System Role (Management Studio)
   Use this page to create a system-level role definition. A system role definition specifies a set of system-level tasks that apply to a report server as whole.  

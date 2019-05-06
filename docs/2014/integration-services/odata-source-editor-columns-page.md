@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "Sql12.dts.designer.odatasource.columns.f1"
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # OData Source Editor (Columns Page)

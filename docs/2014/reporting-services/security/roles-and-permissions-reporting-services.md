@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "security [Reporting Services], role-based"
   - "identity [Reporting Services]"
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Roles and Permissions (Reporting Services)

@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "GenerateDatabaseCreationScript method"
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - GenerateDatabaseCreationScript
   Generates a SQL Script that can be used to create a report server database.  

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "folders [Integration Services]"
   - "projects [Integration Services], about projects"
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Integration Services (SSIS) Projects and Solutions

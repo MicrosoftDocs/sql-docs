@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "system information [Reporting Services]"
   - "versions [Reporting Services]"
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Server Service Trace Log

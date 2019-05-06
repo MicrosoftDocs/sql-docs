@@ -36,13 +36,13 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## Arguments  
- [ **@proxy_id =** ] *id*  
+`[ @proxy_id = ] id`
  The proxy identification number of the proxy to grant access for. The *proxy_id* is **int**, with a default of NULL. Either *proxy_id* or *proxy_name* must be specified, but both cannot be specified.  
   
- [ **@proxy_name =** ] **'***proxy_name***'**  
+`[ @proxy_name = ] 'proxy_name'`
  The name of the proxy to grant access for. The *proxy_name* is **sysname**, with a default of NULL. Either *proxy_id* or *proxy_name* must be specified, but both cannot be specified.  
   
- [ **@subsystem_id =** ] *id*  
+`[ @subsystem_id = ] id`
  The id number of the subsystem to grant access to. The *subsystem_id* is **int**, with a default of NULL. Either *subsystem_id* or *subsystem_name* must be specified, but both cannot be specified. The following table lists the values for each subsystem.  
   
 |Value|Description|  
@@ -59,7 +59,7 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] package execution|  
 |**12**|PowerShell Script|  
   
- [ **@subsystem_name =** ] **'***subsystem_name***'**  
+`[ @subsystem_name = ] 'subsystem_name'`
  The name of the subsystem to grant access to. The **subsystem_name** is **sysname**, with a default of NULL. Either *subsystem_id* or *subsystem_name* must be specified, but both cannot be specified. The following table lists the values for each subsystem.  
   
 |Value|Description|  

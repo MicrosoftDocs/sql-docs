@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Layout View dialog box"
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Design View

@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "PathName property"
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - PathName
   Specifies the installation path of a report server instance. Read-only.  

@@ -48,7 +48,7 @@ manager: craigg
   
 3.  Fix the metadata in the `PhotoMetadata` table, by using code similar to the following:  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   

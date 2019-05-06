@@ -1,18 +1,20 @@
 ---
 title: Configure Kubernetes with kubeadm
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Learn how to configure Kubernetes on multiple Ubuntu 16.04 or 18.04 machines (physical or virtual) for SQL Server 2019 big data cluster (preview) deployments.
 author: rothja 
 ms.author: jroth 
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ---
 
-# Configure Kubernetes on multiple machines for SQL Server 2019 big data cluster (preview) deployments
+# Configure Kubernetes on multiple machines for SQL Server big data cluster deployments
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 This article provides an example of how to use **kubeadm** to configure Kubernetes on multiple machines for SQL Server 2019 big data cluster (preview) deployments. In this example, multiple Ubuntu 16.04 or 18.04 LTS machines (physical or virtual) are the target. If you are deploying to a different Linux platform, you must alter some of the commands to match your system.  
 
@@ -21,9 +23,11 @@ This article provides an example of how to use **kubeadm** to configure Kubernet
 
 ## Prerequisites
 
-- Multiple Linux physical machines or virtual machines to use for the cluster
-- Recommended configuration: 8 CPUs, 32 GB of memory, and at least 100 GB of storage for each machine
-- Minimum of three machines in the cluster
+- Minimum of 3 Linux physical machines or virtual machines
+- Recommended configuration per machine:
+   - 8 CPUs
+   - 32 GB of memory
+   - 100 GB of storage
 
 ## Prepare the machines
 
@@ -141,4 +145,4 @@ kubectl get nodes
 
 The steps in this article configured a Kubernetes cluster on multiple Ubuntu machines. The next step is to deploy SQL Server 2019 big data cluster. For instructions, see the following article:
 
-[Deploy SQL Server 2019 CTP 2.2 on Kubernetes](deployment-guidance.md#deploy)
+[Deploy SQL Server on Kubernetes](deployment-guidance.md#deploy)

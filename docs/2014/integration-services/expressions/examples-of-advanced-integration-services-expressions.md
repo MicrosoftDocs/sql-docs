@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], examples"
   - "examples [Integration Services]"
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Examples of Advanced Integration Services Expressions
@@ -97,6 +97,6 @@ manager: craigg
  [Use an Expression in a Data Flow Component](../use-an-expression-in-a-data-flow-component.md)  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](http://pragmaticworks.com/cheatsheet/), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), on pragmaticworks.com  
   
   

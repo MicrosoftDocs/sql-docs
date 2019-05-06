@@ -36,13 +36,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## Arguments  
- [ **@ProcName =** ] **'**_procedure_**'**  
+`[ @ProcName = ] 'procedure'`
  Is the name of the procedure for which to set an option. *procedure* is **nvarchar(776)**, with no default.  
   
- [ **@OptionName =** ] **'**_option_**'**  
+`[ @OptionName = ] 'option'`
  Is the name of the option to set. The only value for *option* is **startup**.  
   
- [ **@OptionValue =** ] **'**_value_**'**  
+`[ @OptionValue = ] 'value'`
  Is whether to set the option on (**true** or **on**) or off (**false** or **off**). *value* is **varchar(12)**, with no default.  
   
 ## Return Code Values  
@@ -58,15 +58,16 @@ sp_procoption [ @ProcName = ] 'procedure'
  The following example sets a procedure for automatic execution.  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+EXEC sp_procoption @ProcName = N'<procedure name>'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';   
 ```  
   
  The following example stops a procedure from executing automatically.  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
+EXEC sp_procoption @ProcName = N'<procedure name>'      
+    , @OptionName = 'startup'
     , @OptionValue = 'off';   
 ```  
   

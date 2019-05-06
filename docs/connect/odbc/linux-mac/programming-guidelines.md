@@ -1,7 +1,7 @@
 ---
 title: "Programming Guidelines (ODBC Driver for SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/11/2018"
+ms.date: "01/12/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -130,4 +130,4 @@ In ODBC Driver 13 and 13.1, when UTF-8 multibyte characters or UTF-16 surrogates
 
 [Known Issues in this Version of the Driver](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

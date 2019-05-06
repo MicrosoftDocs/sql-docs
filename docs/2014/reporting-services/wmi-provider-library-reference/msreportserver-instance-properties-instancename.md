@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "InstanceName property"
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # InstanceName Property (WMI MSReportServer_Instance)

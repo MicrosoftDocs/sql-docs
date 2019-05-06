@@ -3,15 +3,14 @@ title: "Create Table SQL Statement (SQL Server Import and Export Wizard) | Micro
 ms.custom: ""
 ms.date: "02/16/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.createtablesql.f1"
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create Table SQL Statement (SQL Server Import and Export Wizard)

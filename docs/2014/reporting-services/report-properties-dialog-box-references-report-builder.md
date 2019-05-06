@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10082"
 ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Properties Dialog Box, References (Report Builder)

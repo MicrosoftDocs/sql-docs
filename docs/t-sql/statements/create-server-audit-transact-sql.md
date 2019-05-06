@@ -65,7 +65,7 @@ CREATE SERVER AUDIT audit_name
 }  
   
 <predicate_factor>::=   
-    event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
+    event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
 ## Arguments  

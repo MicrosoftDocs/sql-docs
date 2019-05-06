@@ -31,7 +31,7 @@ manager: craigg
   
 1.  First, create a test database in the source machine and add some data to it.  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     CREATE DATABASE TestDB1Alter;   
@@ -47,7 +47,7 @@ manager: craigg
   
 2.  Run the following code:  
   
-    ```tsql  
+    ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
     -- the new location of the file in Windows Azure Storage container.   
@@ -62,7 +62,7 @@ manager: craigg
   
 4.  Then, set the database offline.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET OFFLINE;   
     GO  
@@ -75,7 +75,7 @@ manager: craigg
   
 6.  Then, set the database online.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET ONLINE;   
     GO  

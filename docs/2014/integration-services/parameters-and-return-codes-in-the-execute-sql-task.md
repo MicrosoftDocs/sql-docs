@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "parameterized SQL statements [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Parameters and Return Codes in the Execute SQL Task

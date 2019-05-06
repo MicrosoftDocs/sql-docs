@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "report snapshots [Reporting Services], running reports from"
   - "report execution snapshots [Reporting Services]"
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Set Report Processing Properties

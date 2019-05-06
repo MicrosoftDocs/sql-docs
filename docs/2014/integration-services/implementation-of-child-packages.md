@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "child packages"
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Implementation of Child Packages
@@ -62,8 +62,8 @@ manager: craigg
   
 ## Related Content  
   
--   Blog entry, [SSIS: Accessing variables in a parent package](https://go.microsoft.com/fwlink/?LinkId=257729), on consultingblogs.emc.com.  
+-   Blog entry, [SSIS: Accessing variables in a parent package](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), on andyleonard.blog.  
   
--   Blog entry, [SSIS: Should you execute child packages in-process or out-of-process?](https://go.microsoft.com/fwlink/?LinkId=220819), on consultingblogs.emc.com.  
+-   Article, [Execute Package Task](../integration-services/control-flow/execute-package-task.md).  
   
   

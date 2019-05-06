@@ -20,16 +20,15 @@ manager: craigg
 
 In SQL Server 2012 and 2014, the only way to initialize a secondary replica in a SQL Server Always On availability group is to use backup, copy, and restore. SQL Server 2016 introduces a new feature to initialize a secondary replica - *automatic seeding*. Automatic seeding uses the log stream transport to stream the backup using VDI to the secondary replica for each database of the availability group using the configured endpoints. This new feature can be used either during the initial creation of an availability group or when a database is added to one. Automatic seeding is in all editions of SQL Server that support Always On availability groups, and can be used with both traditional availability groups and [distributed availability groups](distributed-availability-groups.md).
 
-## Considerations
+## Security
 
-Considerations for using automatic seeding include:
+Security permissions vary depending on the type of replica being initialized:
 
-* [Performance and transaction log impact on the primary replica](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Disk layout](#disklayout)
-* [Security](#security)
+* For a traditional availability group, permissions must be granted to the availability group on the secondary replica as it is joined to the availability group. In Transact-SQL, use the command `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
+* For a distributed availability group where the replica's databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary.
+* For a secondary replica on the second availability group of a distributed availability group, you must use the command `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. This secondary replica is seeded from the primary of the second availability group.
 
-
-### Performance and transaction log impact on the primary replica
+## Performance and transaction log impact on the primary replica
 
 Automatic seeding may or may not be practical to initialize a secondary replica, depending on the size of the database, network speed, and distance between the primary and secondary replicas. For example, given:
 
@@ -43,7 +42,7 @@ Automatic seeding is a single-threaded process that can handle up to five databa
 
 Compression can be used for automatic seeding, but it is disabled by default. Turning on compression reduces network bandwidth and possibly speeds up the process, but the tradeoff is additional processor overhead. To use compression during automatic seeding, enable trace flag 9567 - see [Tune compression for availability group](tune-compression-for-availability-group.md).
 
-### <a name = "disklayout"></a> Disk layout
+## <a name = "disklayout"></a> Disk layout
 
 In SQL Server 2016 and before, the folder where the database is created by automatic seeding must already exist and be the same as the path on the primary replica. 
 
@@ -75,13 +74,6 @@ If you mix default and non default paths on the primary and secondary replicas, 
 
 To revert to the behavior for SQL Server 2016 and before, enable trace flag 9571. For information about how to enable trace flags see [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 
-### Security
-
-Security permissions vary depending on the type of replica being initialized:
-
-* For a traditional availability group, permissions must be granted to the availability group on the secondary replica as it is joined to the availability group. In Transact-SQL, use the command `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* For a distributed availability group where the replica's databases that are being created are on the primary replica of the second availability group, no extra permissions are required as it is already a primary.
-* For a secondary replica on the second availability group of a distributed availability group, you must use the command `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. This secondary replica is seeded from the primary of the second availability group.
 
 ## Create an availability group with automatic seeding
 

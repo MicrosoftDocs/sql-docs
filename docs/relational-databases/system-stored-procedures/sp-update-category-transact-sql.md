@@ -37,7 +37,7 @@ sp_update_category
 ```  
   
 ## Arguments  
- [ **@class =**] **'***class***'**  
+`[ @class = ] 'class'`
  The class of the category to update. *class*is **varchar(8)**, with no default, and can be one of these values.  
   
 |Value|Description|  
@@ -46,10 +46,10 @@ sp_update_category
 |**JOB**|Updates a job category.|  
 |**OPERATOR**|Updates an operator category.|  
   
- [ **@name =**] **'***old_name***'**  
+`[ @name = ] 'old_name'`
  The current name of the category. *old_name*is **sysname**, with no default.  
   
- [ **@new_name =**] **'***new_name***'**  
+`[ @new_name = ] 'new_name'`
  The new name for the category. *new_name*is **sysname**, with no default.  
   
 ## Return Code Values  

@@ -39,10 +39,10 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ```  
   
 ## Arguments  
- [ **@cursor_return=**] *@cursor_variable* **OUTPUT**  
+`[ @cursor_return = ] @cursor_variable OUTPUT`
  Is the output variable of type **cursor**. The cursor is a read-only, scrollable, dynamic cursor.  
   
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'`
  Is the name of the full-text catalog. *fulltext_catalog_name* is **sysname**. If this parameter is omitted or is NULL, information about all full-text catalogs associated with the current database is returned.  
   
 ## Return Code Values  

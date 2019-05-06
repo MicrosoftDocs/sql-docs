@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "operations view [Integration Services]"
   - "catalog.operations view [Integration Services]"
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.operations (SSISDB Database)

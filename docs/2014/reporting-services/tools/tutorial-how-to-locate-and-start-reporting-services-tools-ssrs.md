@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "tutorials [Reporting Services]"
   - "Report Manager [Reporting Services]"
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Tutorial: How to Locate and Start Reporting Services Tools (SSRS)

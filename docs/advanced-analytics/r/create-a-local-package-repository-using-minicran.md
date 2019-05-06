@@ -6,8 +6,8 @@ ms.technology: machine-learning
 
 ms.date: 05/29/2018  
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ---
 # Create a local R package repository using miniCRAN

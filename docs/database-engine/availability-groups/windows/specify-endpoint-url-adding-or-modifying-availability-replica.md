@@ -23,13 +23,6 @@ manager: craigg
 > [!NOTE]  
 >  The term "endpoint URL" is synonymous with the term "server network address" used by the database mirroring user interface and documentation.  
   
--   [Syntax for an Endpoint URL](#SyntaxOfURL)  
-  
--   [Finding the Fully Qualified Domain Name of A System](#Finding_FQDN)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
   
 ##  <a name="SyntaxOfURL"></a> Syntax for an Endpoint URL  
  The syntax for an endpoint URL is of the form:  

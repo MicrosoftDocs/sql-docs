@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "repeating workflows"
   - "enumerations [Integration Services]"
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add Enumeration to a Control Flow

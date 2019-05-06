@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],processing data"
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Process Inserts, Updates, and Deletes

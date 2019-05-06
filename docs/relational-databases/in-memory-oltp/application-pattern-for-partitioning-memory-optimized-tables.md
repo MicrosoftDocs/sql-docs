@@ -49,8 +49,15 @@ CREATE DATABASE partitionsample;
 GO  
   
 -- enable for In-Memory OLTP - change file path as needed  
-ALTER DATABASE partitionsample ADD FILEGROUP partitionsample_mod CONTAINS MEMORY_OPTIMIZED_DATA  
-ALTER DATABASE partitionsample ADD FILE( NAME = 'partitionsample_mod' , FILENAME = 'c:\data\partitionsample_mod') TO FILEGROUP partitionsample_mod;  
+ALTER DATABASE partitionsample
+    ADD FILEGROUP partitionsample_mod
+    CONTAINS MEMORY_OPTIMIZED_DATA;
+
+ALTER DATABASE partitionsample
+    ADD FILE(
+        NAME = 'partitionsample_mod',
+        FILENAME = 'c:\data\partitionsample_mod')
+    TO FILEGROUP partitionsample_mod;  
 GO  
   
 USE partitionsample;  
@@ -102,18 +109,18 @@ GO
 -- aggregate view of the hot and cold data  
 CREATE VIEW dbo.SalesOrders  
 AS SELECT so_id,  
-   cust_id,  
-   so_date,  
-   so_total,  
-   1 AS 'is_hot'  
-   FROM dbo.SalesOrders_hot  
+          cust_id,  
+          so_date,  
+          so_total,  
+          1 AS 'is_hot'  
+       FROM dbo.SalesOrders_hot  
    UNION ALL  
    SELECT so_id,  
           cust_id,  
           so_date,  
           so_total,  
           0 AS 'is_hot'  
-          FROM dbo.SalesOrders_cold;  
+       FROM dbo.SalesOrders_cold;  
 GO  
   
 -- move all sales orders up to the split date to cold storage  
@@ -134,9 +141,16 @@ CREATE PROCEDURE dbo.usp_SalesOrdersOffloadToCold @splitdate datetime2
       -- update partition function, and switch in new partition  
       ALTER PARTITION SCHEME [ByDateRange] NEXT USED [PRIMARY];  
   
-      DECLARE @p INT = ( SELECT MAX( partition_number) FROM sys.partitions WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold'));  
-      EXEC sp_executesql N'alter table dbo.SalesOrders_cold_staging  
-         SWITCH TO dbo.SalesOrders_cold partition @i' , N'@i int' , @i = @p;  
+      DECLARE @p INT = (
+        SELECT MAX(partition_number)
+            FROM sys.partitions
+            WHERE object_id = OBJECT_ID('dbo.SalesOrders_cold'));
+
+      EXEC sp_executesql
+        N'ALTER TABLE dbo.SalesOrders_cold_staging
+            SWITCH TO dbo.SalesOrders_cold partition @i',
+        N'@i int',
+        @i = @p;  
   
       ALTER PARTITION FUNCTION [ByDatePF]()  
       SPLIT RANGE( @splitdate);  

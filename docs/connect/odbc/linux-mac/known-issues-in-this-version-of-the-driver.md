@@ -1,7 +1,7 @@
 ---
 title: "Known Issues in this Version of the Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/14/2018"
+ms.date: "02/15/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -31,5 +31,5 @@ For example, if your encoding is UTF-8 and you specify 1 for both *BufferLength*
 
 ## See Also  
 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)  
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)  
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
 

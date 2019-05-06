@@ -1,7 +1,7 @@
 ---
 title: Data collection in ReportViewer Control 2016
 uthor: markingmyname
-ms.author: maghan
+ms.author: maggies
 manager: kfile
 ms.reviewer: ""
 ms.prod: reporting-services

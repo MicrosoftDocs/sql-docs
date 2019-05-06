@@ -47,7 +47,7 @@ The first step is to configure the operating system on the cluster nodes. For th
     ```
     Connect to the SQL Server master database with the 'sa' account and run the following:
 
-    ```tsql
+    ```sql
     USE [master]
     GO
     CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'

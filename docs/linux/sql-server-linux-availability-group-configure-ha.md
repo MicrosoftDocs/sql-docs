@@ -127,6 +127,7 @@ Run **only one** of the following scripts:
    >[!IMPORTANT]
    >After you run the preceding script to create an AG with three synchronous replicas, do not run the following script:
 
+<a name="configOnly"></a>
 - Create AG with two synchronous replicas and a configuration replica:
 
    >[!IMPORTANT]

@@ -39,22 +39,22 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'**_table_server_**'**  
+`[ @table_server = ] 'table_server'`
  Is the name of the linked server for which to return column information. *table_server* is **sysname**, with no default.  
   
- [ **@table_name =** ] **'**_table_name_**'**  
+`[ @table_name = ] 'table_name'`
  Is the name of the table for which to return column information. *table_name* is **sysname**, with a default of NULL.  
   
- [ **@table_schema =** ] **'**_table_schema_**'**  
+`[ @table_schema = ] 'table_schema'`
  Is the schema name of the table for which to return column information. *table_schema* is **sysname**, with a default of NULL.  
   
- [ **@table_catalog =** ] **'**_table_catalog_**'**  
+`[ @table_catalog = ] 'table_catalog'`
  Is the catalog name of the table for which to return column information. *table_catalog* is **sysname**, with a default of NULL.  
   
- [ **@column_name =** ] **'**_column_**'**  
+`[ @column_name = ] 'column'`
  Is the name of the database column for which to provide information. *column* is **sysname**, with a default of NULL.  
   
- [ **@ODBCVer =** ] **'**_ODBCVer_**'**  
+`[ @ODBCVer = ] 'ODBCVer'`
  Is the version of ODBC that is being used. *ODBCVer* is **int**, with a default of 2. This indicates ODBC Version 2. Valid values are 2 or 3. For information about the behavior differences between versions 2 and 3, see the ODBC SQLColumns specification.  
   
 ## Return Code Values  

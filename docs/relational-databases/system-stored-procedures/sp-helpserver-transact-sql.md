@@ -36,10 +36,10 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## Arguments  
- [ **@server =** ] **'***server***'**  
+`[ @server = ] 'server'`
  Is the server about which information is reported. When *server* is not specified, reports about all servers in **master.sys.servers**. *server* is **sysname**, with a default of NULL.  
   
- [ **@optname =** ] **'***option***'**  
+`[ @optname = ] 'option'`
  Is the option describing the server. *option* is **varchar(**35**)**, with a default of NULL, and must be one of these values.  
   
 |Value|Description|  
@@ -56,7 +56,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**use remote collation**|Uses the collation of a remote column instead of that of the local server.|  
   
- [ **@show_topology =** ] **'***show_topology***'**  
+`[ @show_topology = ] 'show_topology'`
  Is the relationship of the specified server to other servers. *show_topology* is **varchar(**1**)**, with a default of NULL. If *show_topology* is not equal to **t** or is NULL, **sp_helpserver** returns columns listed in the Result Sets section. If *show_topology* is equal to **t**, in addition to the columns listed in the Result Sets, **sp_helpserver** also returns **topx** and **topy** information.  
   
 ## Return Code Values  

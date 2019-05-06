@@ -1,13 +1,13 @@
 ---
-title: Java data types supported in SQL Server 2019 - SQL Server Machine Learning Services
+title: Java data types supported in SQL Server 2019 - SQL Server Language Extensions
 description: Map data types from Java to SQL Server for input and output data structures, and for input parameters on the sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 09/24/2018  
+ms.date: 04/23/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
@@ -20,7 +20,8 @@ This article maps SQL Server data types to Java data types for data structures a
 
 The following SQL and Java data types are currently supported for Input and Output data sets.
 
-| SQL Type        | Java Type | | |
+
+| SQL data type        | Java data type | Comment | |
 | ------------- |-------------|-|-|
 | Bit      | boolean | | |
 | Tinyint      | short      | | |
@@ -29,16 +30,22 @@ The following SQL and Java data types are currently supported for Input and Outp
 | Real | float      | | |
 | Bigint | long      | | |
 | float | double      | | |
-| nchar(n) | String (unicode)      | | |
-| nvarchar(n) | String (unicode)      | | |
+| nchar(n) | String      | | |
+| nvarchar(n) | String      | | |
 | binary(n) | byte[]      | | |
 | varbinary(n) | byte[]      | | |
+| nvarchar(max) | String      | | |
+| varbinary(max) | byte[]      | | |
+| uniqueidentifier | String | | |
+| char(n) | String | Only UTF8 Strings supported | |
+| varchar(n) | String | Only UTF8 Strings supported | |
+| varchar(max) | String | Only UTF8 Strings supported | |
 
 ## Data types for input parameters
 
 The following SQL and Java data types are currently supported for input parameters.
 
-| SQL Type        | Java Type | | |
+| SQL data type        | Java data type | Comment | |
 | ------------- |-------------|-|-|
 | Bit      | boolean | | |
 | Tinyint      | short      | | |
@@ -47,14 +54,18 @@ The following SQL and Java data types are currently supported for input paramete
 | Real | float      | | |
 | Bigint | long      | | |
 | float | double      | | |
-| nchar(n) | String (unicode)      | | |
-| nvarchar(n) | String (unicode)      | | |
+| nchar(n) | String      | | |
+| nvarchar(n) | String      | | |
 | binary(n) | byte[]      | | |
 | varbinary(n) | byte[]      | | |
-| nvarchar(max) | String (unicode)      | | |
+| nvarchar(max) | String      | | |
 | varbinary(max) | byte[]      | | |
+| uniqueidentifier | String | | |
+| char(n) | String | Only UTF8 Strings supported | |
+| varchar(n) | String | Only UTF8 Strings supported | |
+| varchar(max) | String | Only UTF8 Strings supported | |
 
-## See also
+## Next steps
 
 + [How to call Java in SQL Server](howto-call-java-from-sql.md)
 + [Java sample in SQL Server](java-first-sample.md)

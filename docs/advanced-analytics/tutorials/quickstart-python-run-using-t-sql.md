@@ -4,7 +4,7 @@ description: Quickstart for Python script in SQL Server. Learn the basics of cal
 ms.prod: sql
 ms.technology: machine-learning
 
-ms.date: 01/11/2019
+ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph

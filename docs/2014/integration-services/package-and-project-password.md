@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.dts.designer.packagepassword.f1"
   - "sql12.ssis.bids.projectpassword.f1"
 ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Package and Project Password

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "tutorials [Reporting Services]"
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Reporting Services Tutorials (SSRS)

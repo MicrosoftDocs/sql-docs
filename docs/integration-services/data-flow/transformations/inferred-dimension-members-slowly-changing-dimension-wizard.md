@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.inferrdim.f1"
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Inferred Dimension Members (Slowly Changing Dimension Wizard)

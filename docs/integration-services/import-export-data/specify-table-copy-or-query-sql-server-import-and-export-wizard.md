@@ -3,15 +3,14 @@ title: "Specify Table Copy or Query (SQL Server Import and Export Wizard) | Micr
 ms.custom: ""
 ms.date: "02/17/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.specifytablecopyorquery.f1"
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Specify Table Copy or Query (SQL Server Import and Export Wizard)

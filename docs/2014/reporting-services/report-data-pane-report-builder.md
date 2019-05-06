@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Report Data pane"
 ms.assetid: 1492aa39-aeb1-4509-ab97-b9edd0901b7e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Data Pane (Report Builder)

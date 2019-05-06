@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # catalog.validate_project (SSISDB Database)
@@ -25,7 +25,7 @@ catalog.validate_project [ @folder_name = ] folder_name
     , [ @validate_type = ] validate_type  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -37,7 +37,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  The name of the project. The *project_name* is **nvarchar(128)**.  
   
  [ @validate_type = ] *validate_type*  
- Indicates the type of validation to perform. Use the character `F` to perform a full validation. The *validate_type* is **char(1)**.  
+ Indicates the type of validation to perform. Use the character `F` to perform a full validation. This parameter is optional, the character `F` will be used by default. The *validate_type* is **char(1)**.  
   
  [ @validation_id = ] *validation_id*  
  Returns the unique identifier (ID) of the validation. The *validation_id* is **bigint**.  
@@ -46,7 +46,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Indicates if the 32-bit runtime should be used to run the package on a 64-bit operating system. Use the value of `1` to execute the package with the 32-bit runtime when running on a 64-bit operating system. Use the value of `0` to execute the package with the 64-bit runtime when running on a 64-bit operating system. This parameter is optional. The *use32bitruntime* is **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Indicates the environment references that are considered by the validation. When the value is `A`, all environment references associated with the project are included in the validation. When the value is `S`, only a single environment reference is included. When the value is `D`, no environment references are included and each parameter must have a literal default value in order to pass validation. This parameter is optional, the character `D` will be used by default. The *environment_scope* is **Char(1)**.  
+ Indicates the environment references that are considered by the validation. When the value is `A`, all environment references associated with the project are included in the validation. When the value is `S`, only a single environment reference is included. When the value is `D`, no environment references are included and each parameter must have a literal default value in order to pass validation. This parameter is optional, the character `D` will be used by default. The *environment_scope* is **char(1)**.  
   
  [ @reference_id = ] *reference_id*  
  The unique ID of the environment reference. This parameter is required only when a single environment reference is included in the validation, when *environment_scope* is `S`. The *reference_id* is **bigint**.  

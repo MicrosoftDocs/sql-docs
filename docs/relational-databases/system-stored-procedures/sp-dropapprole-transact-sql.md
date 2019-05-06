@@ -37,7 +37,7 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'**_role_**'**  
+`[ @rolename = ] 'role'`
  Is the application role to remove. *role* is a **sysname**, with no default. *role* must exist in the current database.  
   
 ## Return Code Values  

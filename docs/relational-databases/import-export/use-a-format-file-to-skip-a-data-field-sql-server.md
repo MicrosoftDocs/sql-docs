@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "format files [SQL Server], skipping data fields"
   - "skipping data fields when importing"
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
@@ -99,7 +99,7 @@ Compare the changes made:
 
 The modified format file now reflects:
 * 4 data fields
-* The first data field in `myTestSkipField.bcp` is mapped to the first column, ` myTestSkipField.. PersonID`
+* The first data field in `myTestSkipField.bcp` is mapped to the first column, `myTestSkipField.. PersonID`
 * The second data field in `myTestSkipField.bcp` is not mapped to any column.
 * The third data field in `myTestSkipField.bcp` is mapped to the second column, `myTestSkipField.. FirstName`
 * The fourth data field in `myTestSkipField.bcp` is mapped to the third column, `myTestSkipField.. LastName`

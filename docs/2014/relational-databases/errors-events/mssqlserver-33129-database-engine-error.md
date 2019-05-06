@@ -32,7 +32,7 @@ manager: craigg
 ## User Action  
  The login of a Windows Group cannot be disabled. To temporarily remove access permission granted to a Windows Group, REVOKE the CONNECT permission of the login for the Windows Group. Windows users might still have access through their individual login or through another Windows Group. The following example revokes the connect permission to the Accounting Group of the WESTCOAST domain.  
   
-```tsql  
+```sql  
 REVOKE CONNECT TO [WESTCOAST\Accounting];  
 ```  
   

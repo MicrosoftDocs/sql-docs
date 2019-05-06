@@ -3,15 +3,14 @@ title: "Performing Operation (SQL Server Import and Export Wizard) | Microsoft D
 ms.custom: ""
 ms.date: "01/11/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.performingoperation.f1"
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Performing Operation (SQL Server Import and Export Wizard)

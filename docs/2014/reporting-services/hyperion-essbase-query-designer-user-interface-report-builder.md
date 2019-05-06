@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Hyperion Essbase query designer"
   - "query designers, Hyperion"
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Hyperion Essbase Query Designer User Interface (Report Builder)

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Dataset Properties Dialog Box, Fields (Report Builder)

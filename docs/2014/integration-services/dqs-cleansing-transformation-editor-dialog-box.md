@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.ssdqs.designer.cleansing.f1"
   - "SQL12.SSDQS.DESIGNER.DQCONNECTION.F1"
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # DQS Cleansing Transformation Editor Dialog Box

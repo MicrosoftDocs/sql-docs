@@ -5,8 +5,8 @@ ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
 ms.topic: reference
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 
 ---

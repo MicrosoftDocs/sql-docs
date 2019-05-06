@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom connection managers [Integration Services], creating"
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Creating a Custom Connection Manager

@@ -9,8 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom log providers [Integration Services], coding"
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Coding a Custom Log Provider

@@ -1,21 +1,22 @@
 ---
 title: "Where to find the Reporting Services add-in for SharePoint Products | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2015"
 ms.prod: "sql-server-2014"
-ms.reviewer: ""
 ms.technology: 
   - "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "rsSharePoint"
-ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
+ms.reviewer: ""
+ms.custom: ""
+ms.date: "11/16/2015"
 ---
+
 # Where to find the Reporting Services add-in for SharePoint Products
-  The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) add-in for SharePoint Products and Technologies (rsSharePoint.msi) is a Web download that provides features to integrate a report server with a deployment of SharePoint.  
+
+The [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) add-in for SharePoint Products and Technologies (rsSharePoint.msi) is a Web download that provides features to integrate a report server with a deployment of SharePoint.  
   
 > [!IMPORTANT]  
 >  For a list of the supported combinations of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] add-in, report server, and SharePoint, see For more information, see [Supported Combinations of SharePoint and Reporting Services Server and Add-in &#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
@@ -57,7 +58,7 @@ manager: kfile
 ##  <a name="bkmk_sql2008"></a> SQL Server 2008 Reporting Services Add-in for SharePoint 2007 Products and Technologies  
  The Microsoft SQL Server 2008 Reporting Services Add-in for Microsoft SharePoint Technologies provides features for running a report server within a deployment of Windows SharePoint Services 3.0 or Microsoft Office SharePoint Server 2007.  
   
- The most up-to-date version of this file is available online at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center, [Microsoft SQL Server 2008 Reporting Services Add-in for Microsoft SharePoint Technologies](https://go.microsoft.com/fwlink/?LinkID=204813).  
+ The most up-to-date version of this file is available online at the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center, [Microsoft SQL Server 2008 Reporting Services Add-in for Microsoft SharePoint Technologies](https://www.microsoft.com/download/details.aspx?id=622).  
   
 ## See Also  
  [Install or Uninstall the Reporting Services Add-in for SharePoint &#40;SharePoint 2010 and SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   

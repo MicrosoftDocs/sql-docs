@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "default precedence constraints"
   - "containers [Integration Services], precedence constraints"
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Connect Tasks and Containers by Using a Default Precedence Constraint

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "high availability [Reporting Services]"
   - "Reporting Services, high availability"
 ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # High Availability (Reporting Services)

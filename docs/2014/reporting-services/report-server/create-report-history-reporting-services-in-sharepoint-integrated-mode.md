@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "report history [Reporting Services], SharePoint"
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create Report History (Reporting Services in SharePoint Integrated Mode)

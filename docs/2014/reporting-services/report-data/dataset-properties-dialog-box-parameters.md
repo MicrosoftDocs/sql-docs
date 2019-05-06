@@ -11,8 +11,8 @@ f1_keywords:
   - "10150"
   - "sql12.rtp.rptdesigner.datasetproperties.parameters.f1"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Dataset Properties Dialog Box, Parameters

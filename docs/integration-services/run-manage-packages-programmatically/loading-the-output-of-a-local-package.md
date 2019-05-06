@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], loading results"
   - "loading data flow results"
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Loading the Output of a Local Package

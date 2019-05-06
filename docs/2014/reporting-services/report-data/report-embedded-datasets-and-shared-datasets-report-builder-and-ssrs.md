@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Embedded Datasets and Shared Datasets (Report Builder and SSRS)

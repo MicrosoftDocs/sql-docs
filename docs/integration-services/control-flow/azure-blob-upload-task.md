@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.dts.designer.afpblobuptask.f1"
   - "sql14.dts.designer.afpblobuptask.f1"
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Azure Blob Upload Task

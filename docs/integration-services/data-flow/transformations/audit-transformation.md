@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "environment data in packages [Integration Services]"
   - "Audit transformation"
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Audit Transformation

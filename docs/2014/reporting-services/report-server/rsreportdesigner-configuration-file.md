@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Report Designer [Reporting Services], configuration file"
   - "RSReportDesigner configuration file"
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # RSReportDesigner Configuration File

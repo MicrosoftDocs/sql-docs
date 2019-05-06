@@ -10,8 +10,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "custom tasks [Integration Services], creating"
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Creating a Custom Task

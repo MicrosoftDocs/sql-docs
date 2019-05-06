@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Mining Model Training Editor"
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Data Mining Model Training Editor (Connection Tab)

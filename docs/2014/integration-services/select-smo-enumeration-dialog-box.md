@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Select SMO Enumeration dialog box"
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select SMO Enumeration Dialog Box

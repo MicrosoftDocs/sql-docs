@@ -11,8 +11,8 @@ f1_keywords:
   - "10170"
   - "sql12.rtp.rptdesigner.datasetproperties.filters.f1"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Dataset Properties Dialog Box, Filters

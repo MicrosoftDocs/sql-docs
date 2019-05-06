@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.ssis.ssms.isoperations.executions.f1"
   - "sql12.ssis.ssms.isoperations.general.f1"
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Active Operations Dialog Box

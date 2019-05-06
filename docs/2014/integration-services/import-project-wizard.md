@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.importprojectwizard.f1"
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Import Project Wizard

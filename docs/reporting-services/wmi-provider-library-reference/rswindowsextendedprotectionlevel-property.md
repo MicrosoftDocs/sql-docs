@@ -8,8 +8,8 @@ ms.technology: wmi-provider-library-reference
 
 ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # RSWindowsExtendedProtectionLevel Property
   Returns a string value that indicates the level of protection the report server is configured to support. This property is read-only.  

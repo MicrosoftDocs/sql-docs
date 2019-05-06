@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Aggregate Transformation Editor"
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Aggregate Transformation Editor (Aggregations Tab)

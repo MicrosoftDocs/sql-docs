@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.datasourceproperties.general.f1"
   - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Data Source Properties Dialog Box, General

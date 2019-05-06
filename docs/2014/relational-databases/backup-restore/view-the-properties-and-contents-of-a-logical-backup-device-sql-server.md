@@ -83,7 +83,7 @@ manager: craigg
   
 3.  Use the [RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql) statement. This example returns information about the `AdvWrks2008R2Backup` logical backup device.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE LABELONLY  
    FROM AdvWrks2008R2Backup ;  

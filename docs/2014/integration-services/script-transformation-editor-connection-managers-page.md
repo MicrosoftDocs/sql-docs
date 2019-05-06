@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Script Transformation Editor"
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Script Transformation Editor (Connection Managers Page)

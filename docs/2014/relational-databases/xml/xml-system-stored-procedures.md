@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "sp_xml_preparedocument"
   - "XML [SQL Server], system stored procedures"
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 ---
 # XML System Stored Procedures

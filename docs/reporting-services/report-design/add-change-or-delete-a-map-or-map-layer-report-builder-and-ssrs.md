@@ -25,8 +25,8 @@ f1_keywords:
   - "10527"
   - "sql13.rtp.rptdesigner.shared.layervisibility.f1"
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add, Change, or Delete a Map or Map Layer (Report Builder and SSRS)
   A map is a collection of layers. When you add a map to a [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated report, you define the first layer. You can create additional layers by using the map layer wizard.  

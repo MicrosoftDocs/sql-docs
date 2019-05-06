@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SharePoint integration [Reporting Services], content management"
   - "report parameters [Reporting Services]"
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Set Parameters on a Published Report - SharePoint Integrated Mode
   A parameterized report is a report that accepts input values that are used to filter data when you run the report. Parameters are defined when the report is created. Depending on how a report parameter is defined in the report definition, it can accept a single value, multiple values, or dynamic values, which change in response to a previous selection (for example, when you select product category, your next selection might be a specific product from that category). A parameter can have a default value, which can be used to run a filtered version of the report automatically or possibly be replaced with a different value.  

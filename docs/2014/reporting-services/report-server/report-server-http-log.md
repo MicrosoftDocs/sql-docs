@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "HTTP [Reporting Services]"
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Server HTTP Log

@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "finding printers [SQL Server]"
   - "Script task [Integration Services], printers"
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Finding Installed Printers with the Script Task

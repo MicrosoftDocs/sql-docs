@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "/ (divide)"
   - "divide operator (/)"
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Divide (SSIS Expression)

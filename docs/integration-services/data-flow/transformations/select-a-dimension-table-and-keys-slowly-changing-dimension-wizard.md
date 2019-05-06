@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.selecttableandkeys.f1"
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)

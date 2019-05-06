@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Configure ODBC Connection Manager dialog box"
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # ODBC Connection Manager UI Reference

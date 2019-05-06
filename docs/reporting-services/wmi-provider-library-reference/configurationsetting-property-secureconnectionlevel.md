@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SecureConnectionLevel property"
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - SecureConnectionLevel
   Returns the secure connection level specified in the RSReportServer.config file. Read-only.  

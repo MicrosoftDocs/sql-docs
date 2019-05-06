@@ -47,7 +47,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Del**|DELETE trigger|  
 |NULL (default)||  
   
- [ **@fonpublisher =** ] *fonpublisher*  
+`[ @fonpublisher = ] fonpublisher`
  Specifies the location where the stored procedure is executed. *fonpublisher* is **bit**, with a default value of 0. If 0, the execution is at the Subscriber, and if 1, the execution is at the Publisher.  
   
 ## Return Code Values  

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "Script Task Editor"
   - "SSIS Script task, configuring"
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configuring the Script Task in the Script Task Editor

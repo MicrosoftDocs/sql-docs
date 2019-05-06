@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "error outputs [Integration Services], enhancing"
   - "Script component [Integration Services], transformation components"
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Enhancing an Error Output with the Script Component

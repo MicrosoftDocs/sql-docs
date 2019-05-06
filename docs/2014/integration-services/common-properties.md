@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "input properties [Integration Services]"
   - "component properties [Integration Services]"
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Common Properties

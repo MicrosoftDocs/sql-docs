@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Foreach Loop containers"
   - "containers [Integration Services], Foreach Loop"
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure a Foreach Loop Container

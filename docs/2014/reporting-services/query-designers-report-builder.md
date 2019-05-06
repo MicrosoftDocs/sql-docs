@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "query designers"
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Query Designers (Report Builder)

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "VirtualDirectoryReportManager property"
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # VirtualDirectoryReportManager Property (WMI MSReportServer_ConfigurationSetting)

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], scheduling"
   - "automatic report processing"
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Schedules

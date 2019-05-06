@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "replacing string expression"
   - "REPLACE function"
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # REPLACE (SSIS Expression)

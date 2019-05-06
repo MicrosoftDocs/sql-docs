@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.ssis.ssms.ispackageprop.general.f1"
   - "sql13.ssis.ssms.packageproperties.f1"
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Package Properties Dialog Box

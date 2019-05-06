@@ -21,7 +21,7 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -83,11 +83,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**min_rowcount**|**bigint**|Minimum number of returned rows for the query plan within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
 |**max_rowcount**|**bigint**|Maximum number of returned rows for the query plan within the aggregation interval.|  
 |**stdev_rowcount**|**float**|Number of returned rows standard deviation for the query plan within the aggregation interval.|
-|**avg_log_bytes_used**|**float**|Average number of bytes in the database log used by the query plan, within the aggregation interval. Applies **only to Azure SQL Database**.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**last_log_bytes_used**|**bigint**|Number of bytes in the database log used by the last execution of the query plan, within the aggregation interval. Applies **only to Azure SQL Database**.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**min_log_bytes_used**|**bigint**|Minimum number of bytes in the database log used by the query plan, within the aggregation interval.  Applies **only to Azure SQL Database**.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**max_log_bytes_used**|**bigint**|Maximum number of bytes in the database log used by the query plan, within the aggregation interval.  Applies **only to Azure SQL Database**.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
-|**stdev_log_bytes_used**|**float**|Standard deviation of the number of bytes in the database log used by a query plan, within the aggregation interval.  Applies **only to Azure SQL Database**.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**avg_log_bytes_used**|**float**|Average number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**last_log_bytes_used**|**bigint**|Number of bytes in the database log used by the last execution of the query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**min_log_bytes_used**|**bigint**|Minimum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**max_log_bytes_used**|**bigint**|Maximum number of bytes in the database log used by the query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
+|**stdev_log_bytes_used**|**float**|Standard deviation of the number of bytes in the database log used by a query plan, within the aggregation interval.<br/>**Note:** Azure SQL Data Warehouse will always return zero (0).|
   
 ## Permissions  
  Requires the **VIEW DATABASE STATE** permission.  

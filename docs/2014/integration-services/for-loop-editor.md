@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.forloopcontainer.f1"
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # For Loop Editor

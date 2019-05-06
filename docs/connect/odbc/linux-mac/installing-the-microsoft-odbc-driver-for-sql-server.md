@@ -1,7 +1,7 @@
 ---
 title: "Installing the Microsoft ODBC Driver for SQL Server on Linux and macOS | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/04/2018"
+ms.date: "12/05/2018"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -537,6 +537,6 @@ MacOS: `/usr/local/share/msodbcsql17/resources/en_US/`
 
 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 
-[Release Notes](../../../connect/odbc/linux-mac/release-notes.md)
+[Release Notes](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 
 [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)

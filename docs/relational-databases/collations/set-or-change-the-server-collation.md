@@ -25,7 +25,7 @@ ms.reviewer: carlrab
   
 ## Setting the server collation in SQL Server
 
-  The server collation is specified during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Default server-level collation is **SQL_Latin1_General_CP1_CI_AS**. Unicode-only collations cannot be specified as the server-level collation. For more information, see [Server Configuration - Collation](/sql/sql-server/install/server-configuration-collation.md).
+  The server collation is specified during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Default server-level collation is **SQL_Latin1_General_CP1_CI_AS**. Unicode-only collations cannot be specified as the server-level collation. For more information, see [Collation and Unicode Support](collation-and-unicode-support.md).
   
 ## Changing the server collation in SQL Server
 

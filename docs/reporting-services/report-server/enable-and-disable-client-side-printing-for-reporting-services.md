@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "reportviewer"
   - "toolbar"
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Enable and Disable Client-Side Printing for Reporting Services

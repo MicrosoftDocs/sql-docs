@@ -11,8 +11,8 @@ f1_keywords:
   - "10500"
   - "sql12.rtp.rptdesigner.reportproperties.pagesetup.f1"
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Properties Dialog Box, Page Setup

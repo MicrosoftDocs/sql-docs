@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.packagepublishwizard.f1"
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View

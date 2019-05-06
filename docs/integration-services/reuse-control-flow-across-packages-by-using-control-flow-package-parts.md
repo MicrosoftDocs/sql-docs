@@ -13,8 +13,8 @@ f1_keywords:
   - "sql13.dts.designer.addcopyexistingpackagepart.f1"
   - "sql13.dts.designer.packagepart.general.f1"
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Reuse Control Flow across Packages by Using Control Flow Package Parts

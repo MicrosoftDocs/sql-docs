@@ -39,19 +39,19 @@ sp_addserver [ @server = ] 'server' ,
 ```  
   
 ## Arguments  
- [ **@server =** ] **'***server***'**  
+`[ @server = ] 'server'`
  Is the name of the server. Server names must be unique and follow the rules for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows computer names, although spaces are not allowed. *server* is **sysname**, with no default.  
   
  When multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are installed on a computer, an instance operates as if it is on a separate server. Specify a named instance by referring to *server* as *servername\instancename*.  
   
- [ **@local =** ] **'LOCAL'**  
+`[ @local = ] 'LOCAL'`
  Specifies that the server that is being added as a local server. **@local** is **varchar(10)**, with a default of NULL. Specifying **@local** as **LOCAL** defines **@server** as the name of the local server and causes the @@SERVERNAME function to return the value of *server*.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup sets this variable to the computer name during installation. By default, the computer name is the way users connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] without requiring additional configuration.  
   
  The local definition takes effect only after the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is restarted. Only one local server can be defined in each instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [ **@duplicate_ok =** ] **'duplicate_OK'**  
+`[ @duplicate_ok = ] 'duplicate_OK'`
  Specifies whether a duplicate server name is allowed. **@duplicate_OK** is **varchar(13)**, with a default of NULL. **@duplicate_OK** can only have the value **duplicate_OK** or NULL. If **duplicate_OK** is specified and the server name that is being added already exists, no error is raised. If named parameters are not used, **@local** must be specified.  
   
 ## Return Code Values  

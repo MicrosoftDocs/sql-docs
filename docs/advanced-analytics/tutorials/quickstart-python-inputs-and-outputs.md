@@ -83,8 +83,6 @@ Let's look at the default input and output variables of sp_execute_external_scri
 
     The case of the input and output variables in `@input_data_1_name` and `@output_data_1_name` have to match the case of the ones in the Python code in `@script`, as Python is case-sensitive.
 
-    Also, the order of the parameters is important. You must specify the required parameters *@input_data_1* and *@output_data_1* first, in order to use the optional parameters *@input_data_1_name* and *@output_data_1_name*.
-
     Only one input dataset can be passed as a parameter, and you can return only one dataset. However, you can call other datasets from inside your Python code and you can return outputs of other types in addition to the dataset. You can also add the OUTPUT keyword to any parameter to have it returned with the results. 
 
     The `WITH RESULT SETS` statement defines the schema for the data which is used in SQL Server. You need to provide SQL compatible data types for each column you return from Python. You can use the schema definition to provide new column names too as you do not need to use the column names from the Python data.frame.

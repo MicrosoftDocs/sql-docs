@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.documentoutline.f1"
 ms.assetid: 521f3772-043a-4bfa-a3d6-d5e3405ac09c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Document Outline

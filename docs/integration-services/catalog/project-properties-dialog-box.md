@@ -11,8 +11,8 @@ f1_keywords:
   - "sql13.ssis.ssms.isprojectprop.general.f1"
   - "sql13.ssis.ssms.isprojectprop.permissions.f1"
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Project Properties Dialog Box

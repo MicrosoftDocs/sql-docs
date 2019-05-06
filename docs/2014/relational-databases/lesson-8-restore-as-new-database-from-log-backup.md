@@ -39,7 +39,7 @@ manager: craigg
   
      **Note:** You run the `RESTORE` statement to restore the database backup (.bak) in Windows Azure Storage to a database instance in another machine.  
   
-    ```tsql  
+    ```sql  
   
     USE master   
     GO   

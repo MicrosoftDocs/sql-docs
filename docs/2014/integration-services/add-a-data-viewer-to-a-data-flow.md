@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data flow [Integration Services], data viewers"
   - "adding data viewers"
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Add a Data Viewer to a Data Flow

@@ -44,10 +44,10 @@ sp_fulltext_table
 ```  
   
 ## Arguments  
- [ **@tabname=**] **'***qualified_table_name***'**  
+`[ @tabname = ] 'qualified_table_name'`
  Is a one- or two-part table name. The table must exist in the current database. *qualified_table_name* is **nvarchar(517)**, with no default.  
   
- [ **@action=**] **'***action***'**  
+`[ @action = ] 'action'`
  Is the action to be performed. *action* is **nvarchar(50)**, with no default, and can be one of these values.  
   
 |Value|Description|  
@@ -65,10 +65,10 @@ sp_fulltext_table
 |**start_incremental**|Start an incremental population of the full-text index for the table.|  
 |**Stop**|Stop a full or incremental population.|  
   
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
+`[ @ftcat = ] 'fulltext_catalog_name'`
  Is a valid, existing full-text catalog name for a **create** action. For all other actions, this parameter must be NULL. *fulltext_catalog_name* is **sysname**, with a default of NULL.  
   
- [ **@keyname=**] **'***unique_index_name***'**  
+`[ @keyname = ] 'unique_index_name'`
  Is a valid single-key-column, unique nonnullable index on *qualified_table_name* for a **create** action. For all other actions, this parameter must be NULL. *unique_index_name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

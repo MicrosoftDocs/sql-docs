@@ -16,8 +16,8 @@ topic_type:
 helpviewer_keywords: 
   - "DatabaseServerName property"
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # DatabaseServerName Property (WMI MSReportServer_ConfigurationSetting)

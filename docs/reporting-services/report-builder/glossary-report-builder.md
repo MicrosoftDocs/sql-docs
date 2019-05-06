@@ -4,21 +4,19 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: report-builder
-
-
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
+
 # Glossary (Report Builder)
-  
   
 |Term|Definition|  
 |----------|----------------|  
 |.NET Framework|An integral Windows component that supports building, deploying, and running the next generation of applications and  Web services. It provides a highly productive, standards-based, multilanguage environment for integrating existing investments with next generation applications and services, as well as the agility to solve the challenges of deployment and operation of Internet-scale applications. The .NET Framework consists of three main parts: the common language runtime, a hierarchical set of unified class libraries, and a componentized version of ASP called ASP.NET. See also: ASP.NET, common language runtime, .NET Framework class library.|  
 |ActiveX Data Objects|Component Object Model objects that provide access to data sources. This API provides a layer between OLE DB and programming languages such as Visual Basic, Visual Basic for Applications, Active Server Pages, and Microsoft Internet Explorer Visual Basic Scripting.|  
-|ad hoc report|An .rdl report created with Report Builder 1.0 that accesses report models.|  
+|ad hoc report|  
 |adornment|A control or status area that is attached to the edge of a pane or window, such as a toolbar or ruler.|  
 |aggregate|A summary value comprised of multiple individual values.|  
 |aggregate function|A function that performs a calculation on multiple values and returns a single summary value.|  
@@ -56,7 +54,6 @@ ms.author: maghan
 |chart data region|A report item on a report layout that displays data in a graphical format.|  
 |child|A member in the next lower level in a hierarchy that is directly related to the current member.|  
 |clause|In Transact-SQL, a subunit of an SQL statement. A clause begins with a keyword.|  
-|clickthrough report|A report that displays related report model data when you click data within a rendered Report Builder report.|  
 |client application|An application that retrieves data from a server and performs local analysis and presentation of data from relational or multidimensional databases.|  
 |client cursor|A cursor that is implemented on the client. The entire result set is first transferred to the client, and the client API software implements the cursor functionality from this cached result set.|  
 |CLR|See Other Term: common language runtime|  
@@ -87,7 +84,7 @@ ms.author: maghan
 |data mining|The process of analyzing data to identify patterns or relationships.|  
 |data point|The smallest individual entity in a chart.|  
 |data processing extension|A component in Reporting Services that is used to retrieve report data from an external data source.|  
-|data provider|The layer of sofware that handles communication between data extensions and customized software specific to each type of external data source. Depending on the specific data source, multiple data providers are available from Microsoft and from third-party vendors.|  
+|data provider|The layer of software that handles communication between data extensions and customized software specific to each type of external data source. Depending on the specific data source, multiple data providers are available from Microsoft and from third-party vendors.|  
 |data region|A report item that displays repeated rows of data from an underlying dataset in a table, matrix, list, or chart.|  
 |data source|1. In ADO and OLE DB, the location of a source of data exposed by an OLE DB provider. 2. The source of data for an object such as a cube or dimension. It is also the specification of the information necessary to access source data. It sometimes refers to object of ClassType clsDataSource. <br />3. In Reporting Services, a specified data source type, connection string, and credentials, which can be saved separately to a report server and shared among report projects or embedded in a report definition (.rdl) file.|  
 |data source name|In a report, the name of the data source object.|  
@@ -144,7 +141,7 @@ ms.author: maghan
 |field|1. An area in a window or record that stores a single data value.  2. In Report Builder,  dataset fields represent either numeric or non-numeric data from a data connection. For example, sales amounts, total sales, customer names, database identifiers, URLs, images, and spatial data. A report can have three types of fields: dataset fields, dataset calculated fields, and built-in fields.|  
 |filter|1. A set of criteria that controls the set of records returned as a result set.  2. In Full-Text Search, given a specified file extension, filters extract text from a file stored in a varbinary(max) or image column.|  
 |filter expression|An expression used for filtering data in the Filter operator.|  
-|flat file|A file consisting of records of a single record type, in which there is no embedded structure information governing relationships between records.|  
+|flat file|A file consisting of records of a single record type, in which there are no embedded structure information governing relationships between records.|  
 |foreign key|The column or combination of columns whose values match the primary key (PK) or unique key in the same or another table. Also referred to as the referencing key.|  
 |foreign table|A table that contains a foreign key.|  
 |function|A piece of code that operates as a single logical unit. A function is called by name, accepts optional input parameters, and returns a status and optional output parameters.|  
@@ -200,7 +197,7 @@ ms.author: maghan
 |many-to-one relationship|A relationship between two tables in which one row in one table can relate to many rows in another table.|  
 |map|A report item that is a container for titles, various types of legends, and map layers.|  
 |map data|Map data consists of polygons, lines, points, and Bing map tiles.  Map data can be embedded in a report or imported from ESRI shapefiles (.shp), SQL Server spatial data queries, or a Web service that returns images as Microsoft Bing map tiles.|  
-|map viewport|The area of the map to display in the map report item. For example, a map for the entire United States might be embedded in a report, but only the area for the northwestern states are displayed.|  
+|map viewport|The area of the map to display in the map report item. For example, a map for the entire United States might be embedded in a report, but only the area for the northwestern states is displayed.|  
 |marker|The symbol that is displayed on a map point layer at each point location.|  
 |master database|The system database that records all the system-level information for an instance of SQL Server.|  
 |master file|The file installed with earlier versions of SQL Server used to store the master, model, and tempdb system databases and transaction logs and the pubs sample database and transaction log.|  
@@ -244,14 +241,14 @@ ms.author: maghan
 |parameterized row filter|A row filter available with merge replication that allows you to restrict the data replicated to a Subscriber based on a system function or user-defined function.|  
 |parent|A member in the next higher level in a hierarchy that is directly related to the current member.|  
 |permission|A rule associated with an object to regulate which users can gain access to the object and in what manner.|  
-|pivot|1. To rotate rows to columns, and columns to rows, in a crosstabular data browser. 2. To choose dimensions from the set of available dimensions in a multidimensional data structure for display in the rows and columns of a crosstabular structure.|  
+|pivot|1. To rotate rows to columns, and columns to rows, in a cross tabular data browser. 2. To choose dimensions from the set of available dimensions in a multidimensional data structure for display in the rows and columns of a cross tabular structure.|  
 |placeholder|A character or symbol that is used in place of an actual value, text, or object. The actual value that the placeholder represents is unknown or unavailable at the current time, or is not displayed for security reasons. When a simple or complex expression is defined inside a text box, the resulting representation of this expression in design view is known as a placeholder.|  
 |planar data|Data that specifies points, lines, or areas on a flat geometric plane.|  
 |polygon layer|In a map report item, a layer that displays spatial data as areas, for example, geographical regions such as counties.|  
 |precision|The maximum total number of decimal digits that can be stored, both to the left and right of the decimal point.|  
 |primary key|A column or set of columns that uniquely identify all the rows in a table.|  
 |primary table|The "one" side of two related tables in a one-to-many relationship.|  
-|projection|A mapping of data from an N-dimensional coordinate system to an (N-1)-dimensional coordinate system. For example, mapping three dimensional geographic data onto a two dimensional display surface.|  
+|projection|A mapping of data from an N-dimensional coordinate system to an (N-1)-dimensional coordinate system. For example, mapping three-dimensional geographic data onto a two-dimensional display surface.|  
 |properties page|A dialog box that displays information about an object in the interface.|  
 |property|A named attribute of a control, field, or database object that you set to define one of the object's characteristics, such as size, color, or screen location; or an aspect of its behavior, such as whether it is hidden.|  
 |protocol|A standard set of formats and procedures that enable computers to exchange information.|  
@@ -264,7 +261,7 @@ ms.author: maghan
 |relational database|A database or database management system that stores information in tables as rows and columns of data, and conducts searches by using the data in specified columns of one table to find additional data in another table.|  
 |relational database management system|A system that organizes data into related rows and columns.|  
 |relational OLAP|A storage mode that uses tables in a relational database to store multidimensional structures.|  
-|relationship|1. A link between tables that references the primary key in one table to a foreign key in another table. The relationship line is represented in a database diagram by a solid line if referential integrity between the tables is enforced, or a dashed line if referential integrity is not enforced for INSERT and UPDATE transactions. The endpoints of a relationship line show a primary key symbol to denote a primary key-to-foreign key relationship, or they show an infinity symbol to denote the foreign key side of a one-to-many relationship. <br />2. In Metadata Services, a relationship is an association between a pair of objects, where one object is an origin and the other object is a destination. The association repeats for each subsequent pair of objects, so that the destination of one relationship becomes the origin in the next relationship. In this way, all objects in an information model are associated through a chain of relationships that extend from one object to the next throughout the information model.|  
+|relationship|1. A link between tables that references the primary key-in one table to a foreign key in another table. The relationship line is represented in a database diagram by a solid line if referential integrity between the tables is enforced, or a dashed line if referential integrity is not enforced for INSERT and UPDATE transactions. The endpoints of a relationship line show a primary key symbol to denote a primary key-to-foreign key relationship, or they show an infinity symbol to denote the foreign key side of a one-to-many relationship. <br />2. In Metadata Services, a relationship is an association between a pair of objects, where one object is an origin and the other object is a destination. The association repeats for each subsequent pair of objects, so that the destination of one relationship becomes the origin in the next relationship. In this way, all objects in an information model are associated through a chain of relationships that extend from one object to the next throughout the information model.|  
 |rendered report|A fully processed report that contains both data and layout information, in a format suitable for viewing.|  
 |rendering extension|A component in Reporting Services that is used to process the output format of a report.|  
 |rendering extension(s)|A plug-in that renders reports to a specific format.|  
@@ -279,12 +276,10 @@ ms.author: maghan
 |report layout|The placement of data regions, report items, and text within a report and  the applied formatting.|  
 |report layout template|A pre-designed table, matrix, or chart report template in Report Builder.|  
 |report link|A URL to a hyperlinked report.|  
-|report model|A metadata description of business data used for creating ad hoc reports in Report Builder.|  
 |report parameter|A parameter that is defined within a report definition. All query parameters have report parameters, but report parameters can be created independent of a query.|  
 |report parts|Report items that have been published separately to a report server and that can be reused in other reports. Report items such as tables, matrices, charts, and images can be published as report parts. Report parts have an .rsc file extension and they conform to the schema componentdefinition.xsd.|  
 |report processing extension|A component in Reporting Services that is used to extend the report processing logic.|  
 |report rendering|The action of combining the report layout with the data from the data source for the purpose of viewing the report.|  
-|report server|A location on the network where the ClickOnce version of Report Builder is launched from and a report is saved, managed, and published.|  
 |report server administrator|A user with elevated privileges who can access all settings and content of a report server.|  
 |report server database|A database that provides internal storage for a report server.|  
 |report server execution account|The account under which the Report Server Web service and Report Server Windows service run.|  
@@ -332,7 +327,7 @@ ms.author: maghan
 |spatial data types|Specifies data that represents geometry (planar) or geography (geodesic) information.|  
 |SQL|See Other Term: Structured Query Language (SQL)|  
 |SQL query|An SQL statement, such as SELECT, INSERT, UPDATE, DELETE, or CREATE TABLE.|  
-|SQL Server Authentication|The mechanism to validate an attept to connect to an instance of SQL Server by specifying a SQL Server login ID and password.|  
+|SQL Server Authentication|The mechanism to validate an attempt to connect to an instance of SQL Server by specifying a SQL Server login ID and password.|  
 |SQL Server login|An account stored in SQL Server that allows users to connect to SQL Server.|  
 |SQL statement|An SQL or Transact-SQL command, such as SELECT or DELETE, that performs some action on data.|  
 |static connection string|A set of values that the report always uses to connect to the same data source each time the report runs.|  
@@ -347,7 +342,7 @@ ms.author: maghan
 |table|1. A two-dimensional object, which consists of rows and columns, that stores data about an entity modeled in a relational database. 2. A data region on a report layout that displays data in a columnar format.|  
 |table data region|A report item on a report layout that displays data in a columnar format.|  
 |tablix|A Reporting Services RDL data region that contains rows and columns resembling a table or matrix, possibly sharing characteristics of both.|  
-|task|A collection of permissions that constitute a task (manage reports, manage folders, etc)|  
+|task|A collection of permissions that constitute a task (manage reports, manage folders, etc.)|  
 |Transact-SQL|The language containing the commands used to administer instances of SQL Server, create and manage all objects in an instance of SQL Server, and to insert, retrieve, modify and delete all data in SQL Server tables. Transact-SQL is an extension of the language defined in the SQL standards published by the International Standards Organization (ISO) and the American National Standards Institute (ANSI).|  
 |user instance|An instance of SQL Server Express that is generated by the parent instance on behalf of a user.|  
 |value (y) axis|The axis for displaying numeric data values in a chart. Usually the vertical axis. Exception: in bar charts, the axes are reversed, and the y axis displays grouping data.|  
@@ -363,7 +358,6 @@ ms.author: maghan
 |x-axis|See Other Term: category (x) axis|  
 |y-axis|See Other Term: value (y) axis|  
   
-## See Also  
- [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  
+## See also
+
+ [Report Authoring Concepts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)

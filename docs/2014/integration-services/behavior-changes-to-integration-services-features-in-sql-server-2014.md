@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "behavior changes [Integration Services]"
   - "Integration Services, backward compatibility"
 ms.assetid: 611d22fa-5ac7-485e-9a40-7131e852f794
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Behavior Changes to Integration Services Features in SQL Server 2014

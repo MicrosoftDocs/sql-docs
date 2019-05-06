@@ -35,10 +35,10 @@ Returns information about each request that is executing within [!INCLUDE[ssNoVe
 |start_time|**datetime**|Timestamp when the request arrived. Is not nullable.|  
 |status|**nvarchar(30)**|Status of the request. This can be one of the following:<br /><br /> Background<br />Running<br />Runnable<br />Sleeping<br />Suspended<br /><br /> Is not nullable.|  
 |command|**nvarchar(32)**|Identifies the current type of command that is being processed. Common command types include the following:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> The text of the request can be retrieved by using sys.dm_exec_sql_text with the corresponding sql_handle for the request. Internal system processes set the command based on the type of task they perform. Tasks can include the following:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Is not nullable.|  
-|sql_handle|**varbinary(64)**|Hash map of the SQL text of the request. Is nullable.|  
+|sql_handle|**varbinary(64)**|Is a token that uniquely identifies the batch or stored procedure that the query is part of. Is nullable.|  
 |statement_start_offset|**int**|Number of characters into the currently executing batch or stored procedure at which the currently executing statement starts. Can be used together with the sql_handle, the statement_end_offset, and the sys.dm_exec_sql_text dynamic management function to retrieve the currently executing statement for the request. Is nullable.|  
 |statement_end_offset|**int**|Number of characters into the currently executing batch or stored procedure at which the currently executing statement ends. Can be used together with the sql_handle, the statement_end_offset, and the sys.dm_exec_sql_text dynamic management function to retrieve the currently executing statement for the request. Is nullable.|  
-|plan_handle|**varbinary(64)**|Hash map of the plan for SQL execution. Is nullable.|  
+|plan_handle|**varbinary(64)**|Is a token that uniquely identifies a query execution plan for a batch that is currently executing. Is nullable.|  
 |database_id|**smallint**|ID of the database the request is executing against. Is not nullable.|  
 |user_id|**int**|ID of the user who submitted the request. Is not nullable.|  
 |connection_id|**uniqueidentifier**|ID of the connection on which the request arrived. Is nullable.|  

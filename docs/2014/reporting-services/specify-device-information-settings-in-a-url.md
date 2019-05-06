@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "device information settings [Reporting Services], URLs"
   - "URL access [Reporting Services], device information settings"
 ms.assetid: cb7f7577-c6a8-4e6f-8e60-5ec0760f29c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Specify Device Information Settings in a URL

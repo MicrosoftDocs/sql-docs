@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], databases"
   - "databases [Reporting Services], creating"
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create a Native Mode Report Server Database  (SSRS Configuration Manager)

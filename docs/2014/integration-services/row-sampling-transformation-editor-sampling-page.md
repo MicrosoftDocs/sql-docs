@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Row Sampling Transformation Editor"
 ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Row Sampling Transformation Editor (Sampling Page)

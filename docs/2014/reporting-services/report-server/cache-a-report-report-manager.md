@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "schedules [Reporting Services], report expiration"
   - "expiration [Reporting Services]"
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Cache a Report (Report Manager)

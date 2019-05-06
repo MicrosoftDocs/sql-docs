@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "virtual directories [Reporting Services]"
   - "Report Manager [Reporting Services], virtual directories"
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure Report Server URLs  (SSRS Configuration Manager)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "locale-sensitive parsing [Integration Services]"
   - "fast parse [Integration Services]"
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Numeric Data Formats

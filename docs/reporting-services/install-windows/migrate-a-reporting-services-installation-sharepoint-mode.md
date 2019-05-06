@@ -7,8 +7,8 @@ ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)

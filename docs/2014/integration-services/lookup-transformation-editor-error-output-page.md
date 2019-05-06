@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.lookuptransformation.erroroutput.f1"
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Lookup Transformation Editor (Error Output Page)

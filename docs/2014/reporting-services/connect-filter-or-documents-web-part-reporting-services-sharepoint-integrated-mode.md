@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Report Viewer Web Part [Reporting Services]"
   - "Documents Web Part [Reporting Services]"
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Connect Filter or Documents Web Part (Reporting Services in SharePoint Integrated Mode)

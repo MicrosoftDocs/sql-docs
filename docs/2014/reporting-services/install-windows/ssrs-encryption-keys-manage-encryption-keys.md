@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "encryption [Reporting Services]"
   - "public keys [Reporting Services]"
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Configure and Manage Encryption Keys (SSRS Configuration Manager)

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Sort Transformation Editor"
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Sort Transformation Editor

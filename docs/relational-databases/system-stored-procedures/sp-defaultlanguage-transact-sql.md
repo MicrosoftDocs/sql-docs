@@ -38,10 +38,10 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'**_login_**'**  
+`[ @loginame = ] 'login'`
  Is the login name. *login* is **sysname**, with no default. *login* can be an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows user or group.  
   
- [ **@language =** ] **'**_language_**'**  
+`[ @language = ] 'language'`
  Is the default language of the login. *language* is **sysname**, with a default of NULL. *language* must be a valid language on the server. If *language* is not specified, *language* is set to the server default language; default language is defined by the **sp_configure** configuration variable **default language**. Changing the server default language does not change the default language for existing logins.  
   
 ## Return Code Values  

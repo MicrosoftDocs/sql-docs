@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.ssis.designer.hadoopfiletask.f1"
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Hadoop File System Task

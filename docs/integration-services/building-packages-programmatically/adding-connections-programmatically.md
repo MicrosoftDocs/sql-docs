@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "SSIS connection managers"
   - "adding package connections"
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Adding Connections Programmatically

@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQL Server Destination Editor"
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # SQL Destination Editor (Advanced Page)

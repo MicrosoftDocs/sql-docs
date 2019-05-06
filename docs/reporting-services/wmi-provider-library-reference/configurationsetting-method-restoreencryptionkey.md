@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "RestoreEncryptionKey method"
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - RestoreEncryptionKey
   Reapplies the specified encryption key to the report server database.  

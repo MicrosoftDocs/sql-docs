@@ -34,8 +34,8 @@ helpviewer_keywords:
   - "NOEXPAND table hint"
   - "PAGLOCK table hint"
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-author: "douglaslMS"
-ms.author: "douglasl"
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # Hints (Transact-SQL) - Table

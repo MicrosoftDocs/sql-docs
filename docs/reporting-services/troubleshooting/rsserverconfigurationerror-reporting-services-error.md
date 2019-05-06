@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "rsServerConfigurationError"
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # rsServerConfigurationError - Reporting Services Error
     

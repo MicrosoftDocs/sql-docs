@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Excel Source Editor (Connection Manager Page)

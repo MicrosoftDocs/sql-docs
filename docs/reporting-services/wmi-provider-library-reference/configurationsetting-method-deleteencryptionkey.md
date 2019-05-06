@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "DeleteEncryptionKey method"
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - DeleteEncryptionKey
   Deletes the encryption keys from the report server database.  

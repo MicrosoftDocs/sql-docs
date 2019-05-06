@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "xmldp [Reporting Services]"
   - "XML [Reporting Services], data retrieval"
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # XML Query Syntax for XML Report Data (SSRS)

@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.loaddimwizard.histattriboption.f1"
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Historical Attribute Options (Slowly Changing Dimension Wizard)

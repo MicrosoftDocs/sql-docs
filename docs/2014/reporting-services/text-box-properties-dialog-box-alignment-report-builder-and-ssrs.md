@@ -11,8 +11,8 @@ f1_keywords:
   - "sql12.rtp.rptdesigner.textboxproperties.alignment.f1"
   - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Text Box Properties Dialog Box, Alignment (Report Builder and SSRS)

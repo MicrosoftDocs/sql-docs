@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "adding assembly references"
   - "assemblies [Reporting Services], references"
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Add an Assembly Reference to a Report (SSRS)

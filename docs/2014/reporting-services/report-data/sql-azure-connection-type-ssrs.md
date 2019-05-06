@@ -8,8 +8,8 @@ ms.technology:
   - "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # SQL Azure Connection Type (SSRS)
@@ -22,7 +22,7 @@ manager: kfile
 > [!NOTE]  
 >  When opening a connection to a [!INCLUDE[ssSDS](../../includes/sssds-md.md)], set the connection timeout to 30 seconds.  
   
- For more information, see [Windows Azure SQL Database on MSDN](https://go.microsoft.com/fwlink/?LinkId=206770).  
+ For more information, see [Azure SQL Database Documentation](https://docs.microsoft.com/azure/sql-database/).  
   
  Use the information in this topic to build a data source. For step-by-step instructions, see [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   

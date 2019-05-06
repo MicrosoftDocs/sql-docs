@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Analysis Services Execute DDL Task Editor"
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Analysis Services Execute DDL Task Editor (DDL Page)

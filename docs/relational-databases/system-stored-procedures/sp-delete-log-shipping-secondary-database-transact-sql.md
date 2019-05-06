@@ -35,7 +35,7 @@ sp_delete_log_shipping_secondary_database
 ```  
   
 ## Arguments  
- [ **@secondary_database =** ] '*secondary_database*'  
+`[ @secondary_database = ] 'secondary_database'`
  Is the name of the secondary database. *secondary_database* is **sysname**, with no default.  
   
 ## Return Code Values  

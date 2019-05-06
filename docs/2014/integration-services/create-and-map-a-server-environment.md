@@ -13,8 +13,8 @@ f1_keywords:
   - "sql12.ssis.ssms.isenvprop.permissions.f1"
   - "sql12.ssis.ssms.isenvprop.general.f1"
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Create and Map a Server Environment

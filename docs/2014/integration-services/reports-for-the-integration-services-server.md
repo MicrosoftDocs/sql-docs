@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1"
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Reports for the Integration Services Server

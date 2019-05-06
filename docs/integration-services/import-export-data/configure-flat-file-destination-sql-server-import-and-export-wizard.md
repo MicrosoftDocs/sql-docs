@@ -3,15 +3,14 @@ title: "Configure Flat File Destination (SQL Server Import and Export Wizard) | 
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
 ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.impexpwizard.configureflatfiledest.f1"
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Configure Flat File Destination (SQL Server Import and Export Wizard)

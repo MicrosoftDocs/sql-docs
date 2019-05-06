@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "IsInitialized property"
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - IsInitialized
   Indicates whether the report server instance is initialized. Read-only.  

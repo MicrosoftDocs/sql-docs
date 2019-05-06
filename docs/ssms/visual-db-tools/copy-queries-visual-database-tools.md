@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "copying queries"
   - "queries [SQL Server], copying"
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

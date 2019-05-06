@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SQL Server Management Studio [SQL Server], items"
   - "items [SQL Server]"
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Solution Explorer

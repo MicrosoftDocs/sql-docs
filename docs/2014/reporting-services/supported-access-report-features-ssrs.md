@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "importing reports"
   - "modules [Reporting Services]"
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Supported Access Report Features (SSRS)

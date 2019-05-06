@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "customizing database diagram information [SQL Server]"
   - "custom table views [SQL Server]"
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

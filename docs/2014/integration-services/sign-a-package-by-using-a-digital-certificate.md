@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "signing packages [Integration Services]"
   - "signatures [Integration Services]"
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Sign a Package by Using a Digital Certificate

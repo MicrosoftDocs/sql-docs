@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "walkthroughs [Reporting Services]"
   - "data-driven subscriptions"
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Create a Data-Driven Subscription (SSRS Tutorial)

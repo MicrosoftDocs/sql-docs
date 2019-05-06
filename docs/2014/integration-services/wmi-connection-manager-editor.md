@@ -12,8 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "WMI Connection Manager Editor"
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # WMI Connection Manager Editor

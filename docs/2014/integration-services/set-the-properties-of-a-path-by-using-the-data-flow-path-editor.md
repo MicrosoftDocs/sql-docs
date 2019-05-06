@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "paths [Integration Services], properties"
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Set the Properties of a Path by Using the Data Flow Path Editor

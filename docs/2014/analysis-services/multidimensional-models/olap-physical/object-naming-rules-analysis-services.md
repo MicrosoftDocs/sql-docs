@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [Analysis Services], naming"
@@ -65,10 +63,10 @@ manager: craigg
 |Object|Invalid characters|  
 |------------|------------------------|  
 |`Server`|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](/windows/desktop/DNS/naming-conventions) for details.|  
-|`DataSource`|: / \ * &#124; ? " () [] {} <>|  
-|`Level` or `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` or `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|All other objects|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`DataSource`|`: / \ * | ? " () [] {} <>`|  
+|`Level` or `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
+|`Dimension` or `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
+|All other objects|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
   
  **Exceptions: When Reserved Characters are Allowed**  
   

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "SSIS Script task, vs. custom managed tasks"
   - "custom tasks [Integration Services], scripts"
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Comparing Scripting Solutions and Custom Objects

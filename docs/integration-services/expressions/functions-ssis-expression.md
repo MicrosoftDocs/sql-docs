@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services, functions"
   - "SSIS, functions"
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: "douglaslMS"
-ms.author: "douglasl"
+author: janinezhang
+ms.author: janinez
 manager: craigg
 ---
 # Functions (SSIS Expression)

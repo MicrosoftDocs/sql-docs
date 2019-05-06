@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ---
 # Report Sections Dialog Box (Report Builder)

@@ -34,7 +34,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## Arguments  
- [ **@viewname=** ] **'***viewname***'**  
+`[ @viewname = ] 'viewname'`
  Is the name of the view. *viewname* is **nvarchar**, with no default. *viewname* can be a multipart identifier, but can only refer to views in the current database.  
   
 ## Return Code Values  

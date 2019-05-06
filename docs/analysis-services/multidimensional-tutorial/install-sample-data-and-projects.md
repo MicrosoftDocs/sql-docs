@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ---
 # Install sample data and multidimensional projects 
-[!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
 Use the instructions and links provided in this article to install the data and project files used in the Analysis Services Tutorials. 
   
@@ -37,14 +37,14 @@ SQL Server Management Studio (SSMS) is downloaded and installed separately from 
 
 Optionally, consider installing Excel to browse your multidimensional data as you proceed through the tutorial. Installing Excel enables the **Analyze in Excel** feature that starts Excel using a PivotTable field list that is connected to the cube you are building. Using Excel to browse data is recommended because you can quickly build a pivot report that lets you interact with the data.  
   
-Alternatively, you can browse data using the built-in MDX query designer that is built into [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. The query designer returns the same data, except the data is presented as a flat rowset.  
+Alternatively, you can browse data using the built-in MDX query designer that is built into [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. The query designer returns the same data, except the data is presented as a flat rowset.  
   
 ## Step 3: Install databases  
 An Analysis Services multidimensional model uses transactional data that you import from a relational database management system. For the purposes of this tutorial, you use the following relational database as your data source.  
   
 -   **AdventureWorksDW2012 or later** - This is a relational data warehouse that runs on a Database Engine instance. It provides the original data  used by the Analysis Services databases and projects that you build and deploy throughout the tutorial. The tutorial assumes you are using AdventureWorksDW2012, however, later versions do work.
   
-    You can use this sample database with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and later. In-general, you should use the sample database version matching your database engine version.
+    You can use this sample database with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later. In-general, you should use the sample database version matching your database engine version.
   
 To install the database, do the following:  
   
@@ -80,7 +80,7 @@ The tutorial includes sample projects so that you can compare your results again
   
 1.  Download the [adventure-works-multidimensional-tutorial-projects.zip](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks-analysis-services) from the Adventure Works for Analysis Services samples page on GitHub.  
   
-    The tutorial projects work for [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and later.  
+    The tutorial projects work for [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.  
   
 2.  Move the .zip file to a folder just below the root drive (for example, C:\Tutorial). This step mitigates the "Path too long" error that sometimes occurs if you attempt to unzip the files in the Downloads folder.  
   

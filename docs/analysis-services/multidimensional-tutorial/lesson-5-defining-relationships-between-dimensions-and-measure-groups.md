@@ -39,7 +39,6 @@ In this task, you learn to modify the granularity of a dimension for a specific 
   
 ## See Also  
 [Analysis Services Tutorial Scenario](analysis-services-tutorial-scenario.md)  
-[Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
 [Dimension Relationships](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

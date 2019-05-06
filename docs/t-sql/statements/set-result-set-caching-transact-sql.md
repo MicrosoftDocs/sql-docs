@@ -19,7 +19,7 @@ monikerRange: "=azure-sqldw-latest"
 ---
 # SET RESULT SET CACHING (Transact-SQL)
 
-[!INCLUDE[appliesto-xx-xxxx-asdw-xxx-md.md](../includes/appliesto-xx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xx-xxxx-asdw-xxx-md.md](../includes/tsql-appliesto-xx-xxxx-asdw-xxx-md.md)]
 
   Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Data Warehouse to cache query result sets.
   
@@ -28,19 +28,19 @@ monikerRange: "=azure-sqldw-latest"
 ## Syntax  
   
 ```console
-SET RESULT_SET_CACHING { ON| OFF};
+SET RESULT_SET_CACHING { ON| OFF };
 ```  
   
 ## Remarks  
   
-This command must be run while connected to the master database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data warehouse storage. A new column called is_result_set_caching_on is introduced in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest
+This command must be run while connected to the master database.  Change to this database setting takes effect immediately.  Storage costs are incurred by caching query result sets. After disabling result caching for a database, previously persisted result cache will immediately be deleted from Azure SQL Data Warehouse storage. A new column called is_result_set_caching_on is introduced in [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest
 ) to show the result caching setting for a database.  
 
 **ON**
 Specifies that query result sets returned from this database will be cached in Azure SQL Data Warehouse storage.
 
 **OFF**
-Specifies that query result sets returned from this database will not be cached in Azure SQL Data warehouse storage.
+Specifies that query result sets returned from this database will not be cached in Azure SQL Data Warehouse storage.
 
 Users can tell if a query was executed with a result cache hit or miss by querying [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest) with a specific request_id. If there is a cache hit, the query result will have a single step with following details:
 

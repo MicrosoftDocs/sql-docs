@@ -21,8 +21,7 @@ monikerRange: "=azure-sqldw-latest"
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-
-  Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Data Warehouse to cache query result sets.
+  Causes Azure SQL Data Warehouse to cache query result sets.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -18,7 +18,7 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SET RESULT SET CACHING (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Causes Azure SQL Data Warehouse to cache query result sets.
   

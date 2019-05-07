@@ -29,7 +29,7 @@ NOTE: Discussions about SQL Data Warehouse in this article apply to both SQL Dat
 
 ## Syntax
   
-```console
+```
 -- Create a new table.
 CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     (
@@ -45,15 +45,15 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
   
 <table_option> ::=
     {
-        <clustered columnstore index option> - in preview
+        CLUSTRERED COLUMN STORE iNDEX (cci)> (Preview)
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
-    { 
+    {
         DISTRIBUTION = HASH ( distribution_column_name )
       | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
-    }   
+    }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
@@ -162,7 +162,7 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
  See [Create a partitioned table](#PartitionedTable) in the Examples section.
 
-### Clustered columnstore index option (Preview)
+### Ordered Clustered columnstore index option (Preview)
 
 Clustered columnstore index is the default for creating tables in Azure SQL Data Warehouse.  The ORDER specification defaults to COMPOUND keys.  Sorting will always be ascending order. If no ORDER clause is specified, columnstore will not be sorted.
 

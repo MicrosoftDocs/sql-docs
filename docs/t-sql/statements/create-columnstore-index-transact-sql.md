@@ -58,7 +58,7 @@ Learn more:
   
 ## Syntax  
   
-```console
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
@@ -86,9 +86,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
       [ ON PARTITIONS ( { partition_number_expression | range } [ ,...n ] ) ]  
   
 <on_option>::=  
-      partition_scheme_name ( column_name )   
-    | filegroup_name   
-    | "default"   
+      partition_scheme_name ( column_name )
+    | filegroup_name
+    | "default"
   
 <filter_expression> ::=  
       column_name IN ( constant [ ,...n ]  
@@ -96,15 +96,15 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```sql
+``
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name
-    ON [ database_name . [ schema_name ] . | schema_name . ] table_name 
-    [ORDER (column [,…n])]
+    ON [ database_name . [ schema_name ] . | schema_name . ] table_name
+    [ORDER (column [,…n])] (Preview)
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
-```  
+```
   
 ## Arguments  
 

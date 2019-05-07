@@ -13,8 +13,6 @@
     href: ../analysis-services/tools-and-applications-used-in-analysis-services.md
   - name: Comparing Tabular and Multidimensional solutions
     href: ../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md
-  - name: Analysis Services Features and Tasks
-    href: ../analysis-services/analysis-services-features-and-tasks.md
   - name: Analysis Services features supported by SQL Server editions
     href: ../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md
   - name: Backward compatibility (SQL Server 2016 Analysis Services)
@@ -208,7 +206,7 @@
       - name: Lesson 10 - Granting process database permissions
         href: ../analysis-services/multidimensional-tutorial/lesson-10-granting-process-database-permissions.md
   - name: Data Mining
-    href: ../analysis-services/data-mining-tutorials-analysis-services.md
+    href: ../analysis-services/data-mining/data-mining-tutorials-analysis-services.md
 - name: How-to
   items:
   - name: Install and configure
@@ -1740,7 +1738,7 @@
   - name: Data Mining
     items:
     - name: Data Mining programming
-      href: ../analysis-services/data-mining-programming.md
+      href: ../analysis-services/data-mining/data-mining-programming.md
     - name: Analysis Management Objects (AMO) +
       href: /bi-reference/amo/amo-classes-introduction
     - name: ADOMD.NET +
@@ -1748,7 +1746,7 @@
     - name: XML for Analysis (XMLA) +
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
     - name: OLE DB for Data Mining
-      href: ../analysis-services/data-mining-programming-ole-db.md
+      href: ../analysis-services/data-mining/data-mining-programming-ole-db.md
 - name: Samples
   items:
   - name: Analysis Services samples

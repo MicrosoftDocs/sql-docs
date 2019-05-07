@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "viewing Registered Servers"
   - "Registered Servers [SQL Server], viewing"
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # View Registered Servers in SQL Server Management Studio

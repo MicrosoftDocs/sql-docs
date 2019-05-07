@@ -10,8 +10,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.swb.common.selectobjecttypes.f1"
 ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Select Object Types (Object Explorer)

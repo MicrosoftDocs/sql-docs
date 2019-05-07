@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "queries [SQL Server], executing"
   - "executing queries [SQL Server]"
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

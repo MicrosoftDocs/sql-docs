@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "database diagrams [SQL Server], Database Diagram Designer"
   - "diagrams [SQL Server], Database Diagram Designer"
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

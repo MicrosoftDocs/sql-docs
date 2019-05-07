@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "Results pane"
   - "sorting query results [SQL Server]"
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

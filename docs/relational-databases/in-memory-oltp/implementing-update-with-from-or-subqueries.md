@@ -14,29 +14,38 @@ manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing UPDATE with FROM or Subqueries
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Natively compiled T-SQL modules do not support the FROM clause and do not support subqueries in UPDATE statements (they are supported in SELECT). UPDATE statements with FROM clause are typically used to update information in a table based on a table-valued parameter (TVP), or to update columns in a table in an AFTER trigger. 
+
+
+On the Transact-SQL UPDATE statement, in a natively compiled T-SQL module, the following syntax elements are *not* supported:
+
+- The FROM clause
+- Subqueries
+
+In contrast, the preceding elements *are* supported in natively compiled modules on the SELECT statement.
+
+UPDATE statements with a FROM clause are often used to update information in a table based on a table-valued parameter (TVP), or to update columns in a table in an AFTER trigger.
 
 For the scenario of update based on a TVP, see [Implementing MERGE Functionality in a Natively Compiled Stored Procedure](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md). 
 
-The below sample illustrates an update performed in a trigger - the LastUpdated column of the table is updated to the current date/time AFTER updates. The workaround uses a table variable with an identity column, and a WHILE loop to iterate of the rows in the table variable and perform individual updates.
-  
-Here is the original T-SQL UPDATE statement :  
-  
-  
-  
-   ```
+The following sample illustrates an update performed in a trigger. In the table, the column named LastUpdated is set to the current date-time AFTER updates. The workaround performs individual updates by using the following items:
+
+- A table variable that has an IDENTITY column.
+- A WHILE loop to iterate of the rows in the table variable.
+
+Here is the original T-SQL UPDATE statement:
+
+   ```sql
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
    ```
-  
-  
 
-The sample T-SQL code in this section demonstrates a workaround that provides good performance. The workaround is implemented in a natively compiled trigger. Crucial to notice in the code are:  
+The sample T-SQL code in the following block demonstrates a workaround that provides good performance. The workaround is implemented in a natively compiled trigger. Crucial to notice in the code are:  
   
 - The type named dbo.Type1, which is a memory-optimized table type.  
 - The WHILE loop in the trigger.  
@@ -44,13 +53,13 @@ The sample T-SQL code in this section demonstrates a workaround that provides go
   
   
   
- ```
+ ```sql
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
-    -----------------------------  
-    -- Table and table type
+    -----------------------------
+    -- Table and table type.
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -72,9 +81,10 @@ The sample T-SQL code in this section demonstrates a workaround that provides go
     )   
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
-    ----------------------------- 
-    -- trigger that contains the workaround for UPDATE with FROM 
-    -----------------------------  
+    ----------------------------------------
+    -- Trigger that contains the workaround
+    -- for UPDATE with FROM.
+    ----------------------------------------
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
@@ -114,9 +124,9 @@ The sample T-SQL code in this section demonstrates a workaround that provides go
       END  
     END  
     go  
-    -----------------------------  
-    -- Test to verify functionality
-    -----------------------------  
+    ---------------------------------
+    -- Test to verify functionality.
+    ---------------------------------
   
     SET NOCOUNT ON;  
   
@@ -151,6 +161,4 @@ The sample T-SQL code in this section demonstrates a workaround that provides go
     AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
     AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
     ****/  
-  
-  
  ```

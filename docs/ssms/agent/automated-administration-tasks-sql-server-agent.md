@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "SQL Server Agent"
   - "administering SQL Server, automatically"
 ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

@@ -8,7 +8,8 @@ ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
-dev_langs: "TSQL"
+dev_langs:
+  - "TSQL"
 helpviewer_keywords: 
 author: XiaoyuL-Preview
 ms.author: xiaoyul

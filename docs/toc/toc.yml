@@ -8676,23 +8676,20 @@
       - name: DAC Framework Compatibility
         href: ../ssdt/dac-framework-compatibility.md
   - name: SQL Server Management Studio (SSMS)
-    href: ../ssms/sql-server-management-studio-ssms.md
     items:
-    - name: Download SSMS
-      href: ../ssms/download-sql-server-management-studio-ssms.md
+    - name: Overview
       items:
-      - name: SSMS Release Notes and Previous Releases
-        href: ../ssms/release-notes-ssms.md
-      - name: Download related Release Notes
-        href: ../ssms/download-sql-server-management-studio-ssms.md#release-notes
-      - name: Install non-English SSMS
-        href: ../ssms/install-other-languages.md
-      - name: SSMS Support Policy
-        href: ../ssms/support-policy.md
-    - name: "Tutorials: SQL Server Management Studio"
-      href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+      - name: SQL Server Management Studio (SSMS)
+        href: ../ssms/sql-server-management-studio-ssms.md
+    - name: Quickstarts
       items:
-      - name: Connect & Query SQL Server using SSMS
+      - name: Connect & Query SQL Server
+        href: ../ssms/tutorials/connect-query-sql-server.md
+    - name: Tutorials
+      items: 
+      - name: "Tutorials: SQL Server Management Studio"
+        href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+      - name: Connect & Query SQL Server
         href: ../ssms/tutorials/connect-query-sql-server.md
       - name: Scripting Objects in SSMS
         href: ../ssms/tutorials/scripting-ssms.md
@@ -8702,6 +8699,36 @@
         href: ../ssms/tutorials/ssms-configuration.md
       - name: Tips & Tricks for using SSMS
         href: ../ssms/tutorials/ssms-tricks.md
+    - name: Concepts
+      items:
+      - name: Scripting Objects in SSMS
+        href: ../ssms/tutorials/scripting-ssms.md
+      - name: Using Templates in SSMS
+        href: ../ssms/tutorials/templates-ssms.md
+      - name: SSMS Configuration
+        href: ../ssms/tutorials/ssms-configuration.md
+      - name: Tips & Tricks for using SSMS
+        href: ../ssms/tutorials/ssms-tricks.md
+    - name: How to
+      items:
+      - name: Download
+        items: 
+        - name: Download SSMS
+          href: ../ssms/download-sql-server-management-studio-ssms.md
+        - name: SSMS Release Notes and Previous Releases
+          href: ../ssms/release-notes-ssms.md
+        - name: Download related Release Notes
+          href: ../ssms/download-sql-server-management-studio-ssms.md#release-notes
+        - name: Install non-English SSMS
+          href: ../ssms/install-other-languages.md
+        - name: SSMS Support Policy
+          href: ../ssms/support-policy.md
+      - name: Connect & Query SQL Server using SSMS
+        href: ../ssms/tutorials/connect-query-sql-server.md
+    - name: Reference
+      items:   
+    - name: Resources
+      items:
     - name: General management
       items:
       - name: Introduction to SSMS for BI

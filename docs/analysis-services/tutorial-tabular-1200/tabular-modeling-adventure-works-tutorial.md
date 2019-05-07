@@ -55,7 +55,7 @@ In order to complete this tutorial, you need the following prerequisites:
   
 -   The latest version of [SSDT](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
--   The latest version of SQL Server Management Studio. [Get the latest version](../../ssms/download-sql-server-management-studio-ssms). 
+-   The latest version of SQL Server Management Studio. [Get the latest version](../../ssms/download-sql-server-management-studio-ssms.md). 
   
 -   A client application such as [Power BI Desktop](https://powerbi.microsoft.com/desktop/) or Excel.    
   

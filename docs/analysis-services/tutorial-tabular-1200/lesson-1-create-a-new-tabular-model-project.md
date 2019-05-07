@@ -59,7 +59,7 @@ Click the **Solution Explorer** tab. Here, you'll see your **Model.bim** file. I
 
 ![as-tabular-lesson1-se](media/as-tabular-lesson1-se.png)
   
-Let's look at the model properties. Click **Model.bim**. In the **Properties** window, you'll see the [model properties](../analysis-services/tabular-models/model-properties-ssas-tabular.md), most important of which is the **DirectQuery Mode** property. This property specifies whether or not the model is deployed in In-Memory mode (Off) or DirectQuery mode (On). For this tutorial, you will author and deploy your model in In-Memory mode.
+Let's look at the model properties. Click **Model.bim**. In the **Properties** window, you'll see the [model properties](../tabular-models/model-properties-ssas-tabular.md), most important of which is the **DirectQuery Mode** property. This property specifies whether or not the model is deployed in In-Memory mode (Off) or DirectQuery mode (On). For this tutorial, you will author and deploy your model in In-Memory mode.
 
 ![as-tabular-lesson1-properties](media/as-tabular-lesson1-properties.png)
   

@@ -1,5 +1,5 @@
 ---
-title: "SET ROWCOUNT (Transact-SQL) | Microsoft Docs"
+title: "SET RESULT SET CACHING  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/03/2019"
 ms.prod: sql
@@ -8,27 +8,25 @@ ms.reviewer: "jrasnick"
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
-dev_langs: 
-  - "TSQL"
+dev_langs: "TSQL"
 helpviewer_keywords: 
-ms.assetid: 
 author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
-monikerRange: "=azure-sqldw-latest"
+monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SET RESULT SET CACHING (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md](../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  Causes Azure SQL Data Warehouse to cache query result sets.
+Causes Azure SQL Data Warehouse to cache query result sets.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
-  
-```console
-SET RESULT_SET_CACHING { ON| OFF };
+## Syntax
+
+```
+SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
 ## Remarks  
@@ -50,6 +48,7 @@ Users can tell if a query was executed with a result cache hit or miss by queryi
 |step_index|=|0|
 |location_type|=|Control|
 |command|Like|%DWResultCacheDb%|
+||||
   
 ## Permissions
 
@@ -101,7 +100,7 @@ CacheMisses=count(distinct case when r.resource_class IS NOT NULL then
 s.request_id else null end)
      FROM sys.dm_pdw_request_steps s  
      JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id)A
+     ON s.request_id = r.request_id) A
 ```
 
 ### Check for result set cache hit or cache miss for a query
@@ -110,13 +109,15 @@ s.request_id else null end)
 If
 (SELECT step_index  
 FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
+WHERE request_id = 'QID58286'
+      and operation_type = 'ReturnOperation'
+      and command like '%DWResultCacheDb%') = 0
 SELECT 1 as is_cache_hit  
 ELSE
 SELECT 0 as is_cache_hit
 ```
 
-## Check for all queries with result set cache hits
+### Check for all queries with result set cache hits
 
 ```sql
 SELECT *  

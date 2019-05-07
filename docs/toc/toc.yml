@@ -8687,8 +8687,6 @@
         href: ../ssms/tutorials/connect-query-sql-server.md
     - name: Tutorials
       items: 
-      - name: "Tutorials: SQL Server Management Studio"
-        href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
       - name: Scripting Objects in SSMS
         href: ../ssms/tutorials/scripting-ssms.md
       - name: Using Templates in SSMS
@@ -8710,7 +8708,9 @@
         - name: Install non-English SSMS
           href: ../ssms/install-other-languages.md
     - name: Reference
-      items:   
+      items:
+        - name: SQL Server Management Studio
+          href: ../ssms/tutorials/tutorial-sql-server-management-studio.md 
     - name: Resources
       items:
     - name: General management

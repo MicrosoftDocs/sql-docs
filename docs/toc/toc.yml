@@ -17119,7 +17119,7 @@
         - name: REMOTE_PROC_TRANSACTIONS
           href: ../t-sql/statements/set-remote-proc-transactions-transact-sql.md
         - name: RESULT SET CACHING
-          href: ../t-sql/statements/set-result-set-caching-transact-sql
+          href: ../t-sql/statements/set-result-set-caching-transact-sql.md
         - name: ROWCOUNT
           href: ../t-sql/statements/set-rowcount-transact-sql.md
         - name: SHOWPLAN_ALL

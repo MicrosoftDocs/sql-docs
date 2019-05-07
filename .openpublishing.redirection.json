@@ -14121,6 +14121,86 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "docs/analysis-services/tabular-modeling-adventure-works-tutorial.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-1-create-a-new-tabular-model-project.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-2-add-data.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-2-add-data",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-3-mark-as-date-table.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-4-create-relationships.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-4-create-relationships",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-5-create-calculated-columns.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-6-create-measures.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-6-create-measures",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-7-create-key-performance-indicators.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-8-create-perspectives.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-9-create-hierarchies.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-10-create-partitions.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-10-create-partitions",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-11-create-roles.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-11-create-roles",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-12-analyze-in-excel.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-13-deploy.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/lesson-13-deploy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md",
+            "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "docs/azure-data-studio/dashboards.md",
             "redirect_url": "/sql/azure-data-studio/insight-widgets",
             "redirect_document_id": true

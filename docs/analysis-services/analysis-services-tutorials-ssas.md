@@ -1,6 +1,6 @@
 ---
 title: "Analysis Services Tutorials | Microsoft Docs"
-ms.date: 05/08/2018
+ms.date: 05/07/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom:
@@ -16,7 +16,7 @@ manager: kfile
 [Tabular modeling (1400 compatibility level)](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
 Applies to Azure Analysis Services and SQL Server 2017 Analysis Services and later. This tutorial provides lessons on how to author a basic Analysis Services tabular model for the fictitious company, Adventure Works, by using SQL Server Data Tools (SSDT). 
 
-[Tabular modeling (1200 compatibility level)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+[Tabular modeling (1200 compatibility level)](tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md)  
 Applies to Azure Analysis Services and SQL Server 2016 Analysis Services and later. This tutorial provides lessons on how to author a basic Analysis Services tabular model for the fictitious company, Adventure Works, by using SQL Server Data Tools (SSDT).  
   
 [Multidimensional modeling](multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)  

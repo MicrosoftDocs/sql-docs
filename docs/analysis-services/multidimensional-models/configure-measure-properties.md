@@ -34,6 +34,6 @@ manager: kfile
   
 ## See Also  
  [Configure Measure Group Properties](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
- [Modifying Measures](../../analysis-services/lesson-3-1-modifying-measures.md)  
+ [Modifying Measures](../multidimensional-tutorial/lesson-3-1-modifying-measures.md)  
   
   

@@ -72,38 +72,38 @@
     - name: Supplemental lesson - Ragged hierarchies
       href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
   - name: Tabular modeling (1200 compatibility level)
-    href: ../analysis-services/tabular-modeling-adventure-works-tutorial.md
+    href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
     items:
     - name: 1 - Create a New Tabular Model Project
-      href: ../analysis-services/lesson-1-create-a-new-tabular-model-project.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
     - name: 2 - Add Data
-      href: ../analysis-services/lesson-2-add-data.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
     - name: 3 - Mark as Date Table
-      href: ../analysis-services/lesson-3-mark-as-date-table.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
     - name: 4 - Create relationships
-      href: ../analysis-services/lesson-4-create-relationships.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
     - name: 5 - Create calculated columns
-      href: ../analysis-services/lesson-5-create-calculated-columns.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
     - name: 6 - Create measures
-      href: ../analysis-services/lesson-6-create-measures.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
     - name: 7 - Create Key Performance Indicators
-      href: ../analysis-services/lesson-7-create-key-performance-indicators.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
     - name: 8 - Create perspectives
-      href: ../analysis-services/lesson-8-create-perspectives.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
     - name: 9 - Create hierarchies
-      href: ../analysis-services/lesson-9-create-hierarchies.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
     - name: 10 - Create partitions
-      href: ../analysis-services/lesson-10-create-partitions.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
     - name: 11 - Create roles
-      href: ../analysis-services/lesson-11-create-roles.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
     - name: 12 - Analyze in Excel
-      href: ../analysis-services/lesson-12-analyze-in-excel.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
     - name: 13 - Deploy
-      href: ../analysis-services/lesson-13-deploy.md
+      href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
     - name: Supplemental Lesson - Implement dynamic security by using row filters
-      href: ../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+      href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
     - name: Supplemental Lesson - Configure reporting properties for Power View reports
-      href: ../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+      href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
   - name: Multidimensional modeling
     href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
     items:

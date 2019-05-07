@@ -3153,6 +3153,36 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "docs/relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md",
+            "redirect_url": "/sql/relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/in-memory-oltp/memory-optimized-tables.md",
+            "redirect_url": "/sql/relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md",
+            "redirect_url": "/sql/relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md",
+            "redirect_url": "/sql/relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md",
+            "redirect_url": "/sql/relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "docs/relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md",
+            "redirect_url": "/sql/relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "docs/whitepapers/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md",
             "redirect_url": "/sql/master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment",
             "redirect_document_id": false
@@ -13858,6 +13888,236 @@
         {
             "source_path": "docs/analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md",
             "redirect_url": "/sql/analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/multidimensional-modeling-adventure-works-tutorial.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/analysis-services-tutorial-scenario.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/analysis-services-tutorial-scenario",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/install-sample-data-and-projects.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/install-sample-data-and-projects",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-1-defining-a-data-source-view-within-an-analysis-services-project",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-1-1-creating-an-analysis-services-project.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-1-1-creating-an-analysis-services-project",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-1-2-defining-a-data-source.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-1-2-defining-a-data-source",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-1-3-defining-a-data-source-view.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-1-3-defining-a-data-source-view",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-1-4-modifying-default-table-names.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-1-4-modifying-default-table-names",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-2-defining-and-deploying-a-cube.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-2-defining-and-deploying-a-cube",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-2-1-defining-a-dimension.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-2-1-defining-a-dimension",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-2-2-defining-a-cube.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-2-2-defining-a-cube",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-2-3-adding-attributes-to-dimensions.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-2-3-adding-attributes-to-dimensions",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-2-4-reviewing-cube-and-dimension-properties",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-2-5-deploying-an-analysis-services-project.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-2-5-deploying-an-analysis-services-project",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-2-6-browsing-the-cube.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-2-6-browsing-the-cube",
+            "redirect_document_id": true
+        },        
+        {
+            "source_path": "docs/analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-3-modifying-measures-attributes-and-hierarchies",
+            "redirect_document_id": true
+        },        
+        {
+            "source_path": "docs/analysis-services/lesson-3-1-modifying-measures.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-3-1-modifying-measures",
+            "redirect_document_id": true
+        },        
+        {
+            "source_path": "docs/analysis-services/lesson-3-2-modifying-the-customer-dimension.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-3-2-modifying-the-customer-dimension",
+            "redirect_document_id": true
+        },        
+        {
+            "source_path": "docs/analysis-services/lesson-3-3-modifying-the-product-dimension.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-3-3-modifying-the-product-dimension",
+            "redirect_document_id": true
+        },        
+        {
+            "source_path": "docs/analysis-services/lesson-3-4-modifying-the-date-dimension.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-3-4-modifying-the-date-dimension",
+            "redirect_document_id": true
+        },        
+        {
+            "source_path": "docs/analysis-services/lesson-3-5-browsing-the-deployed-cube.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-3-5-browsing-the-deployed-cube",
+            "redirect_document_id": true
+        },       
+        {
+            "source_path": "docs/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-4-defining-advanced-attribute-and-dimension-properties",
+            "redirect_document_id": true
+        },        
+        {
+            "source_path": "docs/analysis-services/lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project",
+            "redirect_document_id": true
+        },        
+        {
+            "source_path": "docs/analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy",
+            "redirect_document_id": true
+        },        
+        {
+            "source_path": "docs/analysis-services/lesson-4-3-automatically-grouping-attribute-members.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-4-3-automatically-grouping-attribute-members",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-4-4-hiding-and-disabling-attribute-hierarchies",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-5-defining-relationships-between-dimensions-and-measure-groups",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-5-1-defining-a-referenced-relationship.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-5-1-defining-a-referenced-relationship",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-5-2-defining-a-fact-relationship.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-5-2-defining-a-fact-relationship",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-5-3-defining-a-many-to-many-relationship",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-5-4-defining-dimension-granularity-within-a-measure-group",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-6-defining-calculations.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-6-defining-calculations",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-6-1-defining-calculated-members.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-6-1-defining-calculated-members",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-6-2-defining-named-sets.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-6-2-defining-named-sets",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-7-defining-key-performance-indicators-kpis.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-7-defining-key-performance-indicators-kpis",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-7-1-defining-and-browsing-kpis.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-7-1-defining-and-browsing-kpis",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-8-defining-actions.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-8-defining-actions",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-8-1-defining-and-using-a-drillthrough-action.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-8-1-defining-and-using-a-drillthrough-action",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-9-defining-perspectives-and-translations.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-9-defining-perspectives-and-translations",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-9-1-defining-and-browsing-perspectives.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-9-1-defining-and-browsing-perspectives",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-9-2-defining-and-browsing-translations.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-9-2-defining-and-browsing-translations",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-10-defining-administrative-roles.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-10-defining-administrative-roles",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/lesson-10-granting-process-database-permissions.md",
+            "redirect_url": "/sql/analysis-services/multidimensional-tutorial/lesson-10-granting-process-database-permissions",
             "redirect_document_id": true
         },
         {

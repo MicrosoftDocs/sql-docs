@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Registered Servers [SQL Server], disconnecting"
   - "disconnecting registered servers [SQL Server]"
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Disconnect from a Registered Server (SQL Server Management Studio)

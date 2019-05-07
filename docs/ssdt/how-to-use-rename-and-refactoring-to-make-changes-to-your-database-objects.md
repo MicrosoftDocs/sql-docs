@@ -14,8 +14,8 @@ f1_keywords:
   - "sql.data.tools.dbrefactoring.moveschemadialog"
   - "sql.data.tools.dbrefactoring.renameserverdatabasedialog"
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: "craigg"
 ---
 # How to: Use Rename and Refactoring to Make Changes to your Database Objects

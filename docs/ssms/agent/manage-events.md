@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "alerts [SQL Server], management servers"
   - "SQL Server Agent alerts, management servers"
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---

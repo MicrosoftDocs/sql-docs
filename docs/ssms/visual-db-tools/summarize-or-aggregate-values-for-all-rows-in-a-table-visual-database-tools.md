@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "summarizing query results"
   - "aggregate functions [SQL Server], summarizing query results"
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 
 ---

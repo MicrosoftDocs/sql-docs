@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "solutions [SQL Server Management Studio], item relocation"
   - "relocating items"
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
-author: "stevestein"
-ms.author: "sstein"
+author: "markingmyname"
+ms.author: "maghan"
 manager: craigg
 ---
 # Move Items in a Solution

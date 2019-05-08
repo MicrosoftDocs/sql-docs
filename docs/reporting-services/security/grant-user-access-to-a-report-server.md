@@ -1,6 +1,6 @@
 ---
 title: "Grant user access to a report server | Microsoft Docs"
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
 ms.technology: security
@@ -25,7 +25,7 @@ ms.author: maggies
 
  **SharePoint mode report servers:** For a report server that is configured for SharePoint integrated mode, you configure access from a SharePoint site using SharePoint permissions. Permission levels on the SharePoint site determine access to report server content and operations. You must be a site administrator to grant permissions on a SharePoint site. For more information, see [Granting Permissions on Report Server Items on a SharePoint Site](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md).
 
- **Native mode report servers:** This topic is focused on a report server that is configured for native mode and the use of the web portal to assign users to a role. There are two types of roles:
+ **Native mode report servers:** This article is focused on a report server that is configured for native mode and the use of the web portal to assign users to a role. There are two types of roles:
 
 - Item-level roles are used to view, add, and manage report server content, subscriptions, report processing, and report history. Item-level role assignments are defined on the root node (the Home folder) or on specific folders or items farther down the hierarchy.
 
@@ -57,7 +57,7 @@ Review the following list before adding users to a native mode report server.
 
 5. Select **Add group or user**.
 
-6. In **Group or user**, enter a Windows domain user or group account in this format: \<domain>\\<account\>. 
+6. In **Group or user**, enter a Windows domain user or group account in this format: \<domain>\\<account\>.
 
     > [!NOTE]
     > If you are using forms authentication or custom security, specify the user or group account in the format that is correct for your deployment.
@@ -91,10 +91,8 @@ Review the following list before adding users to a native mode report server.
 
 ## Next steps
 
-[Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[New Role Assignment: Edit Role Assignment Page &#40;Report Manager&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[Security Properties Page, Items &#40;Report Manager&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[Role Assignments](../../reporting-services/security/role-assignments.md)   
+[Create and Manage Role Assignments](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[Role Assignments](../../reporting-services/security/role-assignments.md)  
 [Role Definitions](../../reporting-services/security/role-definitions.md)  
 
 More questions? [Try asking the Reporting Services forum](https://go.microsoft.com/fwlink/?LinkId=620231)

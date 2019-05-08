@@ -90,7 +90,7 @@ sp_OAGetProperty objecttoken , propertyname
  You can also use **sp_OAMethod** to get a property value.  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
   

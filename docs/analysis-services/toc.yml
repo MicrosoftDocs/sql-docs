@@ -36,7 +36,7 @@
     href: ../analysis-services/analysis-services-tutorials-ssas.md
   - name: Tabular modeling
     items:
-    - name: Adventure Works Internet Sales tutorial (1400)
+    - name: Internet Sales tutorial (1400)
       items:
       - name: Internet Sales tutorial overview (1400)
         href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
@@ -72,7 +72,7 @@
         href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
       - name: Supplemental lesson - Ragged hierarchies
         href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
-    - name: Adventure Works Internet Sales tutorial (1200)
+    - name: Internet Sales tutorial (1200)
       items:
       - name: Internet Sales tutorial overview (1200)
         href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md

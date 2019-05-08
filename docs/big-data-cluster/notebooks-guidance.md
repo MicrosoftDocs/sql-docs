@@ -130,18 +130,24 @@ If you open a Notebook from some other source, it will be opened in **Non Truste
 ### Run Cells
 If you want to run all cells in the Notebook then click on the **Run Cells** button in the toolbar.
 
-![Markdown text](media/notebooks-guidance/Runcell.png)
+![Markdown text](media/notebooks-guidance/run-cell.png)
 
 
 ### Clear Results
 
 If you want to clear the results of all the executed cells in the Notebook,then you can click on the **Clear Results** button in the toolbar.
 
-![Markdown text](media/notebooks-guidance/ClearResults.png)
+![Markdown text](media/notebooks-guidance/clear-results.png)
 
 ### Save
 
-You can save the Notebook by **Ctrl+S** or clicking the **File Save**, **File Save As...** and **File Save All** commands from the File menu and **File: Save** commands entered in the command palette.
+To save the notebook do one of the following.
+
+- Select Ctrl+S
+- Click **File** > **Save**
+- Click **File** > **Save As...**
+- Click **File** > **Save All** 
+- In the command palete, enter **File: Save** 
 
 ### Pyspark3/PySpark kernel
 

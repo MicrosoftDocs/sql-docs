@@ -1,6 +1,6 @@
 ﻿---
-title: "Analysis Services Adventure Works tutorial (1400) | Microsoft Docs"
-ms.date: 03/08/2019
+title: "Analysis Services Adventure Works Internet Sales tutorial (1400) | Microsoft Docs"
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
-# Tabular modeling (1400 compatibility level)
+# Adventure Works Internet Sales tutorial (1400)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 

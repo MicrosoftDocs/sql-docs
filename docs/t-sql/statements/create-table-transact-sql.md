@@ -259,8 +259,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized
-LE Syntax
+--Memory optimized CREATE TABLE Syntax
 CREATE TABLE
     [database_name . [schema_name ] . | schema_name . ] table_name
     ( { <column_definition>

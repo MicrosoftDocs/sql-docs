@@ -57,7 +57,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  For more information about HRESULT Return Codes, see [OLE Automation Return Codes and Error Information](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
  The following example sets the `HostName` property (of the previously created **SQLServer** object) to a new value.  

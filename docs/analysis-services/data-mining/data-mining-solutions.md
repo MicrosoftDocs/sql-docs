@@ -76,6 +76,6 @@ manager: kfile
 |Update and manage data mining solutions.|Link TBD|  
   
 ## See Also  
- [Data Mining Tutorials &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [Data Mining Tutorials &#40;Analysis Services&#41;](../../analysis-services/data-mining/data-mining-tutorials-analysis-services.md)  
   
   

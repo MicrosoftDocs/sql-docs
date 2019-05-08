@@ -42,7 +42,7 @@ sp_OAStop
  A single execution environment is shared by all clients that are using the OLE Automation stored procedures. If one client calls **sp_OAStop** the shared execution environment will be stopped for all clients. After the execution environment has been stopped, any call to **sp_OACreate** restarts the execution environment.  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
  The following example stops the shared OLE Automation execution environment.  

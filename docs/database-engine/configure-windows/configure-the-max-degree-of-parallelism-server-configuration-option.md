@@ -42,13 +42,28 @@ manager: craigg
 -   In addition to queries and index operations, this option also controls the parallelism of DBCC CHECKTABLE, DBCC CHECKDB, and DBCC CHECKFILEGROUP. You can disable parallel execution plans for these statements by using trace flag 2528. For more information, see [Trace Flags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ###  <a name="Guidelines"></a> Guidelines  
-Use the following guidelines when you configure the **max degree of parallelism** server configuration value:
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], during service startup if the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detects more than eight physical cores per NUMA node or socket at startup, soft-NUMA nodes are created automatically by default. The [!INCLUDE[ssde_md](../../includes/ssde_md.md)] places logical processors from the same physical core into different soft-NUMA nodes. The recommendations in the table below are aimed at keeping all the worker threads of a parallel query within the same soft-NUMA node. This will improve the performance of the queries and distribution of worker threads across the NUMA nodes for the workload. For more information, see [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
+
+Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use the following guidelines when you configure the **max degree of parallelism** server configuration value:
+
+||||
+|----------------|-----------------|-----------------|
+|Server with single NUMA node|Less than 16 logical processors|Keep MAXDOP at or below # of logical processors|
+|Server with single NUMA node|Greater than 16 logical processors|Keep MAXDOP at half the number of logical processors with a MAX value of 16|
+|Server with multiple NUMA nodes|Less than 16 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
+|Server with multiple NUMA nodes|Greater than 16 logical processors per NUMA node|Keep MAXDOP at half the number of logical processors per NUMA node with a MAX value of 16|
+  
+> [!NOTE]
+> NUMA node in the above table refers to soft-NUMA nodes automatically created by [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and higher versions.   
+>  Use these same guidelines when you set the max degree of parallelism option for Resource Governor workload groups. For more information, see [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
+  
+From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the **max degree of parallelism** server configuration value:
 
 ||||
 |----------------|-----------------|-----------------|
 |Server with single NUMA node|Less than 8 logical processors|Keep MAXDOP at or below # of logical processors|
 |Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|
-|Server with multiple NUMA nodes|Less than 8 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
+|Server with multiple NUMA nodes|Greater than 8 logical processors per NUMA node|Keep MAXDOP at or below # of logical processors per NUMA node|
 |Server with multiple NUMA nodes|Greater than 8 logical processors per NUMA node|Keep MAXDOP at 8|
   
 ###  <a name="Security"></a> Security  
@@ -83,7 +98,7 @@ EXEC sp_configure 'show advanced options', 1;
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
-EXEC sp_configure 'max degree of parallelism', 8;  
+EXEC sp_configure 'max degree of parallelism', 16;  
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  

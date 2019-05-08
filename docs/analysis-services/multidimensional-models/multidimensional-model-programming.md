@@ -31,6 +31,6 @@ manager: kfile
   
 ## See Also  
  [Tabular Model Programming for Compatibility Levels 1050 through 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
- [Data Mining Programming](../../analysis-services/data-mining-programming.md)  
+ [Data Mining Programming](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

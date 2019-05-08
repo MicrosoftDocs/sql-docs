@@ -39,6 +39,6 @@ manager: kfile
   
 ## See Also  
  [Multidimensional Model Programming](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
- [Data Mining Programming](../../analysis-services/data-mining-programming.md)  
+ [Data Mining Programming](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

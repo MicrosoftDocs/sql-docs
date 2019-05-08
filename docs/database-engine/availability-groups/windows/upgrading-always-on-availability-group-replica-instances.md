@@ -33,7 +33,7 @@ Before you begin, review the following important information:
 - [Check if change data capture  or replication is used for any AG databases](#special-steps-for-change-data-capture-or-replication): If any databases in the AG are enabled for change data capture (CDC), complete these [instructions](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
->Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade and should not exist in that state for extended periods of time as the upgrade should take place quickly. The other option for upgrading SQL Server 2016 and later is through the use of a distributed availability groups.
+>Mixing versions of SQL Server instances in the same AG is not supported outside of a rolling upgrade and should not exist in that state for extended periods of time as the upgrade should take place quickly. The other option for upgrading SQL Server 2016 and later is through the use of a distributed availability group.
 
 ## Rolling Upgrade Basics for Always On AGs  
 Observe the following guidelines when performing server upgrades or updates in order to minimize downtime and data loss for your AGs:  

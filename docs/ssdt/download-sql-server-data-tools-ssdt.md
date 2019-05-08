@@ -32,7 +32,7 @@ If you already have a license to Visual Studio 2019:
 
 If you don’t already have a license to Visual Studio 2019:
 - Install [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_content=sqlssdt) 
-- Install the Analysis Services, Integration Services or Reporting Services as appropriate
+- Install the Analysis Services, Integration Services or Reporting Services extension as appropriate
 
 ## Changes in SSDT for Visual Studio 2017 ##
 

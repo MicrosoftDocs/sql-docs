@@ -109,8 +109,6 @@ Take advantage of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pro
 
 More [Reporting Services Developer Documentation](../reporting-services/reporting-services-developer-documentation.md).
 
-[//]: # (ccsmike: Are there any additional steps that replace install Report Builder?  replace or remove seconds step above?)
-
 ## Next steps
 
 * [Install Reporting Services](../reporting-services/install-windows/install-reporting-services.md)

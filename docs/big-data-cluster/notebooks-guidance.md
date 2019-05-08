@@ -147,7 +147,7 @@ To save the notebook do one of the following.
 - Click **File** > **Save**
 - Click **File** > **Save As...**
 - Click **File** > **Save All** 
-- In the command palete, enter **File: Save** 
+- In the command palette, enter **File: Save** 
 
 ### Pyspark3/PySpark kernel
 

@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "administrators [Master Data Services], creating"
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

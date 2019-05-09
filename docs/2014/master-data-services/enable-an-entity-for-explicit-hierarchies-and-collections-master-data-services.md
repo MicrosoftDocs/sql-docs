@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "entities [Master Data Services], enabling for collections"
   - "entities [Master Data Services], enabling for explicit hierarchies"
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

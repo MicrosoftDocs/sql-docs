@@ -1,7 +1,7 @@
 ---
 title: Transparent Data Encryption (TDE) | Microsoft Docs
 ms.custom: ""
-ms.date: 04/23/2019
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -57,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The following illustration shows the architecture of TDE encryption. Only the database level items (the database encryption key and ALTER DATABASE portions are user-configurable when using TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
- ![Displays the hierarchy described in the topic.](../../../relational-databases/security/encryption/media/tde-architecture.gif "Displays the hierarchy described in the topic.")  
+ ![Displays the hierarchy described in the topic.](../../../relational-databases/security/encryption/media/tde-architecture.png "Displays the hierarchy described in the topic.")  
   
 ## Using Transparent Data Encryption  
  To use TDE, follow these steps.  

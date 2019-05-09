@@ -8677,41 +8677,43 @@
         href: ../ssdt/dac-framework-compatibility.md
   - name: SQL Server Management Studio (SSMS)
     items:
+    - name: Download SSMS
+      href: ../ssms/download-sql-server-management-studio-ssms.md
     - name: Overview
       items:
       - name: SQL Server Management Studio (SSMS)
         href: ../ssms/sql-server-management-studio-ssms.md
+      - name: Install non-English SSMS
+        href: ../ssms/install-other-languages.md
+      - name: SSMS Release Notes
+        href: ../ssms/release-notes-ssms.md
     - name: Quickstarts
       items:
       - name: Connect & Query SQL Server
         href: ../ssms/tutorials/connect-query-sql-server.md
     - name: Tutorials
       items: 
-      - name: Scripting Objects in SSMS
-        href: ../ssms/tutorials/scripting-ssms.md
-      - name: Using Templates in SSMS
-        href: ../ssms/tutorials/templates-ssms.md
+
     - name: Concepts
       items:
         - name: SSMS Configuration
           href: ../ssms/tutorials/ssms-configuration.md
-        - name: SSMS Release Notes
-          href: ../ssms/release-notes-ssms.md
-        - name: SSMS Support Policy
-          href: ../ssms/support-policy.md
         - name: Tips & Tricks for using SSMS
           href: ../ssms/tutorials/ssms-tricks.md
     - name: How to
       items:
-        - name: Download SSMS
-          href: ../ssms/download-sql-server-management-studio-ssms.md
-        - name: Install non-English SSMS
-          href: ../ssms/install-other-languages.md
+        - name: Scripting Objects in SSMS
+          href: ../ssms/tutorials/scripting-ssms.md
+        - name: Using Templates in SSMS
+          href: ../ssms/tutorials/templates-ssms.md
     - name: Reference
       items:
         - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md 
     - name: Resources
+      items: 
+      - name: SSMS Support Policy
+        href: ../ssms/support-policy.md
       items:
     - name: General management
       items:

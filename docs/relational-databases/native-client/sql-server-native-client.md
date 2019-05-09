@@ -18,12 +18,12 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 SNAC, or SQL Server Native Client, is a term that has been used interchangeably to refer to ODBC and OLE DB drivers for SQL Server.
 
-**NOTE:**  It is not recommended to use this driver for new development. The new OLE DB provider is called the [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features going forward.
+> [!IMPORTANT] 
+> The SQL Server Native Client (SQLNCLI) remains deprecated and it is not recommended to use it for new development work. Instead, use the new [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) which will be updated with the most recent server features.
 
-
-**For more information and to download the SNAC or ODBC Drivers, visit [SNAC lifecycle explained](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).**
-
-For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver for SQL Server on Windows](https://msdn.microsoft.com/library/jj730314(v=sql.110).aspx).  See also, [Introducing the new Microsoft ODBC Drivers for SQL Server](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/), and [ODBC Driver 13.1 for SQL Server released](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/).  
+> [!NOTE]
+> For more information and to download the SNAC or ODBC Drivers, see the [SNAC lifecycle explained blog post](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
+> For more information on ODBC Driver for SQL Server, see [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
  Information on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client features released with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], the last available version of SQL Server native Client:
 

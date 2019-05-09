@@ -14200,6 +14200,26 @@
             "redirect_url": "/sql/analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports",
             "redirect_document_id": true
         },
+
+        {
+            "source_path": "docs/analysis-services/data-mining-programming.md",
+            "redirect_url": "/sql/analysis-services/data-mining/data-mining-programming",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/data-mining-programming-ole-db.md",
+            "redirect_url": "/sql/analysis-services/data-mining/data-mining-programming-ole-db",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "docs/analysis-services/data-mining-tutorials-analysis-services.md",
+            "redirect_url": "/sql/analysis-services/data-mining/data-mining-tutorials-analysis-services",
+            "redirect_document_id": true
+        },
+
+
+
+
         {
             "source_path": "docs/azure-data-studio/dashboards.md",
             "redirect_url": "/sql/azure-data-studio/insight-widgets",

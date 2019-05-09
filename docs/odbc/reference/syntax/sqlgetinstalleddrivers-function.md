@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLGetInstalledDrivers(  
      LPSTR   lpszBuf,  

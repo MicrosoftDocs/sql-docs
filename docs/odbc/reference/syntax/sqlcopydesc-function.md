@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLCopyDesc(  
      SQLHDESC     SourceDescHandle,  
@@ -100,7 +100,7 @@ SQLRETURN SQLCopyDesc(
 ### Code Example  
  In the following example, descriptor operations are used to copy the fields of the PartsSource table into the PartsCopy table. The contents of the PartsSource table are fetched into rowset buffers in *hstmt0*. These values are used as parameters of an INSERT statement on *hstmt1* to populate the columns of the PartsCopy table. To do so, the fields of the IRD of *hstmt0* are copied to the fields of the IPD of *hstmt1*, and the fields of the ARD of *hstmt0* are copied to the fields of the APD of *hstmt1*. Use **SQLSetDescField** to set the IPD's SQL_DESC_PARAMETER_TYPE attribute to SQL_PARAM_INPUT when you copy IRD fields from a statement with output parameters to IPD fields that need to be input parameters.  
   
-```  
+```cpp  
 #define ROWS 100  
 #define DESC_LEN 50  
 #define SQL_SUCCEEDED(rc) (rc == SQL_SUCCESS || rc == SQL_SUCCESS_WITH_INFO)  

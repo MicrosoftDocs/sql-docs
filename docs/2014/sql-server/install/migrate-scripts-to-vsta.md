@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "Script task [Integration Services], converting scripts"
   - "SSIS Script component, converting scripts"
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

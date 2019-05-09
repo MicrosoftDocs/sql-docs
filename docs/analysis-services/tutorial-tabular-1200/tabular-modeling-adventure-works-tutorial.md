@@ -92,7 +92,7 @@ This tutorial also includes Supplemental Lessons. Topics in this section are not
 |[Configure Reporting Properties for Power View Reports](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30 minutes| 
 
   
-## Next step  
+## Next steps  
 To begin the tutorial, continue to the first lesson: [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
   
   

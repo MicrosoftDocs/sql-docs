@@ -20,6 +20,9 @@ ms.author: maggies
   An important part of report server configuration is creating a backup copy of the symmetric key used for encrypting sensitive information. A backup copy of the key is required for many routine operations, and enables you to reuse an existing report server database in a new installation.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
  It is necessary to restore the backup copy of the encryption key when any of the following events occur:  
   
@@ -39,11 +42,15 @@ ms.author: maggies
  Backing up the symmetric key is a process that writes the key to a file that you specify, and then scrambles the key using a password that you provide. The symmetric key can never be stored in an unencrypted state so you must provide a password to encrypt the key when you save it to disk. After the file is created, you must store it in a secure location **and remember the password** that is used to unlock the file. To backup the symmetric key, you can use the following tools:  
   
  **Native mode:** Either the Reporting Services Configuration Manager or the **rskeymgmt** utility.  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **SharePoint mode:** SharePoint Central Administration pages or PowerShell.  
   
 ##  <a name="bkmk_backup_sharepoint"></a> Backup SharePoint Mode Report Servers  
  For SharePoint mode report servers you can either use PowerShell commands or use the management pages for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For more information, see the "Key Management" section of [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+
+::: moniker-end
   
 ##  <a name="bkmk_backup_configuration_manager"></a> Back up encryption keys -Reporting Services Configuration Manager (Native Mode)  
   

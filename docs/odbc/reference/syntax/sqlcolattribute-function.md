@@ -33,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLColAttribute (  
       SQLHSTMT        StatementHandle,  
@@ -186,7 +186,7 @@ SQLRETURN SQLColAttribute (
 ## Example  
  The following sample code does not free handles and connections. See [SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md), [Sample ODBC Program](../../../odbc/reference/sample-odbc-program.md), and [SQLFreeStmt Function](../../../odbc/reference/syntax/sqlfreestmt-function.md) for code samples to free handles and statements.  
   
-```  
+```cpp  
 // SQLColAttibute.cpp  
 // compile with: user32.lib odbc32.lib  
   

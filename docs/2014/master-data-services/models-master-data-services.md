@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "models [Master Data Services], about models"
   - "models [Master Data Services]"
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

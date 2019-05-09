@@ -10,7 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.domainproperties.f1"
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

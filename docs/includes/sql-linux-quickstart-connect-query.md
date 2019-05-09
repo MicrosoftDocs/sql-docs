@@ -5,7 +5,7 @@ The following steps use **sqlcmd** to locally connect to your new SQL Server ins
 1. Run **sqlcmd** with parameters for your SQL Server name (-S), the user name (-U), and the password (-P). In this tutorial, you are connecting locally, so the server name is `localhost`. The user name is `SA` and the password is the one you provided for the SA account during setup.
 
    ```bash
-   sqlcmd -S localhost -U SA -P '<YourPassword>'
+   sqlcmd -S 127.0.0.1 -U SA -P '<YourPassword>'
    ```
 
    > [!TIP]

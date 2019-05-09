@@ -40,7 +40,7 @@ Imports a data file into a database table or view in a user-specified format in 
   
 ```
 BULK INSERT   
-   [ database_name . [ schema_name ] . | schema_name . ] [ table_name | view_name ]   
+   { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'   
      [ WITH   
     (   

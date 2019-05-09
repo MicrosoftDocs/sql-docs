@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "explicit hierarchies, changing name"
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

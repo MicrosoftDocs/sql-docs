@@ -55,7 +55,7 @@ These sources will keep you up to date on new features in SQL Server Reporting S
 
 Reporting Services is associated with "traditional" paginated reports, ideal for fixed-layout documents optimized for printing, such as PDF and Word files.
 
-That core BI workload still exists today, so we've modernized it. Now you can create modern-looking reports with updated new features, using [The web portal of a report server (SSRS Native Mode)](web-portal-ssrs-native-mode.md) or Report Designer in [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
+That core BI workload still exists today, so we've modernized it. Now you can create modern-looking reports with updated new features, using Report Builder, or Report Designer in [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
 * We updated all the default styles and color palettes, so by default you create reports with a new minimalist modern style.
 * We updated the Parameter pane, so you can arrange parameters however you want.
@@ -84,8 +84,8 @@ The new web portal is a complete rewrite of Report Manager. Now it's a single-pa
 
 The content on the web portal is organized by type:
 
-* Reporting Services
-* mobile and paginated reports
+* paginated reports
+* mobile reports 
 * KPIs
 * Excel workbooks
 * shared datasets
@@ -95,13 +95,17 @@ You can store and manage them securely here, in the traditional folder hierarchy
 
 And you can still schedule report processing, access reports on demand, and subscribe to published reports in the new web portal.
 
-More about the [Web portal (SSRS Native Mode)](../reporting-services/web-portal-ssrs-native-mode.md).
+More about the [Web portal](../reporting-services/web-portal-ssrs-native-mode.md).
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 ## Reporting Services in SharePoint integrated mode
 
 You publish reports to Reporting Services in SharePoint integrated mode. You can schedule report processing, access reports on demand, subscribe to published reports, and export reports to other applications such as Microsoft Excel. Create data alerts on reports published to a SharePoint site and receive email messages when report data changes.  
 
 More about [Reporting Services Report Server in SharePoint integrated mode](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md).
+
+::: moniker-end
 
 ## [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] programming features
 

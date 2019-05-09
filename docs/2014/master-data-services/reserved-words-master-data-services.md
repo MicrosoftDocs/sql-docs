@@ -10,7 +10,7 @@ helpviewer_keywords:
   - "reserved words [Master Data Services]"
   - "Master Data Services, reserved words"
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

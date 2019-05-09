@@ -29,7 +29,7 @@ NOTE: Discussions about SQL Data Warehouse in this article apply to both SQL Dat
   
 ```  
 -- Create a new table. 
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
       { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
     )  
@@ -159,6 +159,9 @@ Creates one or more table partitions. These partitions are horizontal table slic
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
+
+>[!NOTE]
+>See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) for more details.
 
 `datetimeoffset` [ ( *n* ) ]  
  The default value for *n* is 7.  

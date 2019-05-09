@@ -10,7 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.mds.configmanager.dbpg.f1"
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

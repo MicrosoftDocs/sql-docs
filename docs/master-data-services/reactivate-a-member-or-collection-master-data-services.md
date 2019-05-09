@@ -15,7 +15,7 @@ helpviewer_keywords:
   - "reactivating collections [Master Data Services]"
   - "leaf members [Master Data Services], reactivating"
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

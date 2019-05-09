@@ -8677,14 +8677,12 @@
         href: ../ssdt/dac-framework-compatibility.md
   - name: SQL Server Management Studio (SSMS)
     items:
-    - name: Download SSMS
-      href: ../ssms/download-sql-server-management-studio-ssms.md
     - name: Overview
       items:
       - name: SQL Server Management Studio (SSMS)
         href: ../ssms/sql-server-management-studio-ssms.md
-      - name: Install non-English SSMS
-        href: ../ssms/install-other-languages.md
+      - name: Download SSMS
+        href: ../ssms/download-sql-server-management-studio-ssms.md
       - name: SSMS Release Notes
         href: ../ssms/release-notes-ssms.md
     - name: Quickstarts
@@ -8725,6 +8723,8 @@
           href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
     - name: How to
       items:
+      - name: Install non-English SSMS
+        href: ../ssms/install-other-languages.md
       - name: Scripting Objects in SSMS
         href: ../ssms/tutorials/scripting-ssms.md
       - name: Using Templates in SSMS

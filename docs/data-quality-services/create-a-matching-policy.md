@@ -12,7 +12,7 @@ f1_keywords:
   - "sql13.dqs.kb.kbmatchingpolicy.f1"
   - "sql13.dqs.kb.kbmatchingresults.f1"
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

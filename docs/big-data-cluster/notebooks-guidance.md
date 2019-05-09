@@ -5,7 +5,7 @@ description: This article explains how to run Jupyter Notebooks in Azure Data St
 author: achatter
 ms.author: jroth 
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -141,7 +141,13 @@ If you want to clear the results of all the executed cells in the Notebook,then 
 
 ### Save
 
-You can save the Notebook by **Ctrl+S** or clicking the **File > Save**, **File > Save As...** and **File > Save All** commands from the File menu and **File: Save** commands entered in the command palette.
+To save the notebook do one of the following.
+
+- Select Ctrl+S
+- Click **File** > **Save**
+- Click **File** > **Save As...**
+- Click **File** > **Save All** 
+- In the command palette, enter **File: Save** 
 
 ### Pyspark3/PySpark kernel
 

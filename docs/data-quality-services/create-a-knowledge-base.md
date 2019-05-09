@@ -11,7 +11,7 @@ f1_keywords:
   - "sql13.dqs.kb.selectkb.f1"
   - "sql13.dqs.kb.newkb.f1"
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

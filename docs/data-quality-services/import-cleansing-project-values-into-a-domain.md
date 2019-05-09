@@ -10,7 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.kb.importprojectvalues.f1"
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

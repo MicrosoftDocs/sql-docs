@@ -29,7 +29,7 @@ NOTE: Discussions about SQL Data Warehouse in this article apply to both SQL Dat
   
 ```  
 -- Create a new table. 
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
       { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
     )  

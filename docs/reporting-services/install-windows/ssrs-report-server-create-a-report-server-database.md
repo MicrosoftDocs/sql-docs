@@ -20,7 +20,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native 
 
 The databases are created together and bound by name. With a default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, the databases are named **reportserver** and **reportservertempdb**. Collectively, the two databases are called the **report server database** or **report server catalog**.
 
-SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint mode** includes a third database that's used for data alerting metadata. The three databases are created for each SSRS service application. The database names by default include a GUID that represents the service application. The following are example names of the three SharePoint mode databases:
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint mode** includes a third database that's used for data alerting metadata. The three databases are created for each SSRS service application. The database names by default include a GUID that represents the service application. 
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
+
+The following are example names of the three SharePoint mode databases:
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -41,6 +46,8 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 - **Automatic**. Use the SQL Server setup wizard if you choose the default configuration option for installation. In the SQL Server Installation Wizard, this option is **Install and configure** on the **Report Server Installation Options** page. If you choose the **Install only** option, you must use SQL Server Reporting Services Configuration Manager to create the database.  
   
 - **Manual**. Use SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Create the report server database manually if you use a remote [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to host the database. For more information, see [Create a Native Mode Report Server Database](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### SharePoint mode 
 The **Report Server Installation Options** page has only one option for SharePoint mode, **Install Only**. This option installs all the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] files and the SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] shared service. The next step is to create at least one SSRS service application in one of the following ways:  
@@ -48,6 +55,8 @@ The **Report Server Installation Options** page has only one option for SharePoi
 - Go to Central Administration in SharePoint Server to create an SSRS service application. For more information, see the **create a service application** section of [Install the first Report Server in SharePoint mode](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 - Use SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlets to create a service application and the report server databases. For more information, see the sample for creating service applications in the topic [PowerShell cmdlets for Reporting Services SharePoint mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+
+::: moniker-end
   
 ## Database server version requirements
 

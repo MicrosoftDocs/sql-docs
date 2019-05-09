@@ -160,6 +160,9 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 
+>[!NOTE]
+>See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) for more details.
+
 `datetimeoffset` [ ( *n* ) ]  
  The default value for *n* is 7.  
   

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: ""
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

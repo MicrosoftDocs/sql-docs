@@ -22,13 +22,17 @@ ms.author: maggies
 ```  
 https://myrshost/ReportServer?/myreport&rs:Format=PDF  
 ```  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  And, from a SharePoint integrated mode report server:  
   
 ```  
 https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
 ```  
-  
+ 
+::: moniker-end
+ 
  For example the following  URL command in your browser exports a PPTX report from a named instance of the report server:  
   
 ```  

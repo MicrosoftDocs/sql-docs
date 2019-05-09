@@ -12,7 +12,7 @@ f1_keywords:
   - "sql13.dqs.administration.configuration.createDirectRDS.f1"
   - "sql13.dqs.admin.config.rds.f1"
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

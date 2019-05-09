@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "e-mail [Master Data Services], configuring"
   - "notifications [Master Data Services], configuring notifications"
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

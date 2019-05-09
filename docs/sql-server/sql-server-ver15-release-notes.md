@@ -128,16 +128,18 @@ Limited support may be found at one of the following locations:
 
   1. Prepare to run in the specific app pod. To do this, in the following script, replace `[namespace]` and `[podname]` for your environment. Then run the script.
 
-    ```bash
-    kubectl -n [namespace] exec [podname] -it  -- /bin/bash
-    ```
+     ```bash
+     kubectl -n [namespace] exec [podname] -it  -- /bin/bash
+     ```
 
   1. Change the `memoryTimeout` and `diskTimeout`. Update the following script. Replace `[mleap_bundle]` with the name of the MLeap bundle zip file specified in the `spec.yaml` file. Then run the script.
 
-    ```bash
-    curl -X DELETE -v -H "Content-Type: application/json" http://localhost:8080/models/app
-    curl -v -XPOST -H "content-type: application/json" -d '{"modelName":"app","uri":"file:/var/opt/app/[mleap bundle].zip","config":{"memoryTimeout":21474835000,"diskTimeout":21474835000}}' http://localhost:8080/models
-    ```
+      ```bash
+      curl -X DELETE -v -H "Content-Type: application/json" http://localhost:8080/models/app
+      curl -v -XPOST -H "content-type: application/json" -d '{"modelName":"app","uri":"file:/var/opt/app/[mleap  bundle].zip","config":{"memoryTimeout":21474835000,"diskTimeout":21474835000}}' http://localhost:8080/models
+      ```
+
+  1. Verify numbering
 
 - **Applies to** CTP 2.5 and before.
 

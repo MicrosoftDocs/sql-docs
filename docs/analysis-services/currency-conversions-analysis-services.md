@@ -1,5 +1,5 @@
 ---
-title: "Currency Conversions (Analysis Services) | Microsoft Docs"
+title: "Currency Conversions in Analysis Services | Microsoft Docs"
 ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: analysis-services
@@ -154,7 +154,7 @@ The values of this attribute must be used in all columns that should contain a c
 
  Using the Business Intelligence Wizard, you can define as many currency conversions as needed for your business intelligence solution. You can either overwrite an existing currency conversion or append a new currency conversion to the MDX script for a cube. Multiple currency conversions defined in a single cube provide flexibility in business intelligence applications that have complex reporting requirements, such as financial reporting applications that support multiple, separate conversion requirements for international reporting.  
   
-### Currency conversion in Multidimensional models by using Business Intelligence Wizard  
+### Currency conversion in multidimensional models by using Business Intelligence Wizard  
  
 The Business Intelligence Wizard identifies each currency conversion by framing the script commands for the currency conversion in the following comments:  
   

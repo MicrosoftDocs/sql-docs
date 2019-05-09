@@ -8697,8 +8697,6 @@
           href: https://docs.microsoft.com/azure/sql-database/sql-database-design-first-database
     - name: Concepts
       items:
-        - name: SSMS Configuration
-          href: ../ssms/tutorials/ssms-configuration.md
         - name: Tips & Tricks for using SSMS
           href: ../ssms/tutorials/ssms-tricks.md
     - name: How to
@@ -8707,17 +8705,38 @@
           href: ../ssms/tutorials/scripting-ssms.md
         - name: Using Templates in SSMS
           href: ../ssms/tutorials/templates-ssms.md
+        - name: SSMS Configuration
+          href: ../ssms/tutorials/ssms-configuration.md
     - name: Reference
       items:
         - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+        - name: SQL Server PowerShell
+          href: ../powershell/sql-server-powershell.md
+        - name: SQL Server Management Objects (SMO)
+          href: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md
         - name: Transact-SQL Reference (Database Engine)
-          href: ../t-sql/language-reference.md  
+          href: ../t-sql/language-reference.md
     - name: Resources
       items: 
       - name: SSMS Support Policy
         href: ../ssms/support-policy.md
-      items:
+      - name: Support options for business users
+        href: https://support.microsoft.com/gp/support-options-for-business
+      - name: Contact Microsoft
+        href: https://support.microsoft.com/gp/contactus81?Audience=Commercial
+      - name: All the ways to get help
+        href: https://docs.microsoft.com/sql/sql-server/sql-server-get-help
+      - name: UserVoice - Suggestion to improve SQL Server?
+        href: https://feedback.azure.com/forums/908035-sql-server
+      - name: Setup and Upgrade -  MSDN Forums
+        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc
+      - name: Transact-SQL - MSDN Forums
+        href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql
+      - name: Stack Overflow
+        href: https://stackoverflow.com/questions/tagged/sql-server
+      - name: Microsoft SQL Server License Terms and Information
+        href: https://www.microsoft.com/download/details.aspx?id=39299
     - name: General management
       items:
       - name: Introduction to SSMS for BI

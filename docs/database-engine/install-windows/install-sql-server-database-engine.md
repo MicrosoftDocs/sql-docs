@@ -31,7 +31,7 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   Replication - is an optional component  
+-   [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md) - is an optional component  
 
 -   [Machine Learning Services (In-Database) with R and Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - is an optional component
 
@@ -41,6 +41,9 @@ The following features are installed when you select **[!INCLUDE[ssNoVersion](..
   
     > [!NOTE]  
     >  In this release, selecting the **Data Quality Services** check box in setup does not install the Data Quality Services (DQS) server. You will have to perform additional steps post installation to install DQS server. For more information, see [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
+    
+- [Polybase Query Service for External Data](../../relational-databases/polybase/polybase-guide.md) - is an optional component 
+
   
  The following additional features are options for many typical user scenarios:  
   

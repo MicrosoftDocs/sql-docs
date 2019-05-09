@@ -8693,7 +8693,8 @@
         href: ../ssms/tutorials/connect-query-sql-server.md
     - name: Tutorials
       items: 
-
+        - name: Design a relational database in a single database within Azure SQL Database using SSMS
+          href: https://docs.microsoft.com/azure/sql-database/sql-database-design-first-database
     - name: Concepts
       items:
         - name: SSMS Configuration
@@ -8709,7 +8710,9 @@
     - name: Reference
       items:
         - name: SQL Server Management Studio
-          href: ../ssms/tutorials/tutorial-sql-server-management-studio.md 
+          href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
+        - name: Transact-SQL Reference (Database Engine)
+          href: ../t-sql/language-reference.md  
     - name: Resources
       items: 
       - name: SSMS Support Policy

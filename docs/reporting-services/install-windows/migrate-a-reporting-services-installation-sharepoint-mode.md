@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)

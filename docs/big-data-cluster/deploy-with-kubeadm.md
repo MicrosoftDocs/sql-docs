@@ -75,7 +75,7 @@ On each machine, there are several required prerequisites. In a bash terminal, r
 
 ## Configure the Kubernetes master
 
-After running the previous commands on each machine, choose one of the machines to be your Kubernetes master. Then fun the following commands on that machine.
+After running the previous commands on each machine, choose one of the machines to be your Kubernetes master. Then run the following commands on that machine.
 
 1. First, create an rbac.yaml file in your current directory with the following command. 
 

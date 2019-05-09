@@ -1,6 +1,6 @@
 ---
 title: "Linux and macOS Installation Tutorial for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
-ms.date: "04/29/2019"
+ms.date: "05/09/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
@@ -104,8 +104,8 @@ exit
 An issue in PECL may prevent correct installation of the latest version of the drivers even if you have upgraded GCC. To install, download the packages and compile manually (similar steps for pdo_sqlsrv):
 ```
 pecl download sqlsrv
-tar xvzf sqlsrv-5.6.0.tgz
-cd sqlsrv-5.6.0/
+tar xvzf sqlsrv-5.6.1.tgz
+cd sqlsrv-5.6.1/
 phpize
 ./configure --with-php-config=/usr/bin/php-config
 make

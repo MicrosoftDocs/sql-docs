@@ -48,7 +48,7 @@ Creates a new SQL graph table as either a `NODE` or an `EDGE` table.
   
 ```  
 CREATE TABLE   
-    [ database_name . [ schema_name ] . | schema_name . ] table_name   
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )   
     AS [ NODE | EDGE ]
 [ ; ]  

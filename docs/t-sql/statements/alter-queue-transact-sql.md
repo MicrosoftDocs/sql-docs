@@ -41,10 +41,7 @@ ALTER QUEUE <object>
 [ ; ]  
   
 <object> : :=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        queue_name  
-}   
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
   
 <queue_settings> : :=  
 WITH  
@@ -67,10 +64,7 @@ WITH
    | MOVE TO { file_group | "default" }  
   
 <procedure> : :=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        stored_procedure_name  
-}  
+{ database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }
   
 <queue_rebuild_options> : :=  
 {  

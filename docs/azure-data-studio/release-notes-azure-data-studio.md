@@ -10,12 +10,27 @@ ms.author: "maghan"
 manager: craigg
 ms.reviewer: "alayu; sstein"
 ms.custom: "seodec18"
-ms.date: "04/19/2019"
+ms.date: "05/08/2019"
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## May 2019
+
+May 8, 2019 &nbsp; / &nbsp; version: 1.7.0 
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Release of Schema Compare extension | Schema Compare is a well-known feature in SQL Server Data Tools (SSDT), and its primary use case is to compare and visualize the differences between databases and .dacpac files and to execute actions to make them the same. |
+| Moved Task view to Output Window | Users can now view the status of long running tasks like Backup, Restore, and Schema Compare in the Task view in Output window
+| Added Welcome page | &bull; &nbsp; Links to common actions like New Query, New File, New Notebook <br/>&bull; &nbsp; Links to documentation and Github |
+| SQL Notebook Improvements | &bull; &nbsp; Markdown rendering improvements, including better support for notes and tables <br/>&bull; &nbsp; Usability improvements to the toolbar <br/>&bull; &nbsp; Markdown links for trusted notebooks no longer require Cmd/Ctrl + click and can be clicked directly <br/>&bull; &nbsp; Improvements in cleaning up Jupyter processes after closing notebooks and reducing errors when starting multiple notebooks concurrently <br/>&bull; &nbsp; Improvements to SQL notebook connections to ensure errors do not occur when running 2 notebooks against the same database <br/>&bull; &nbsp; Improvements to notebook auto-scrolling to the currently executing cell when clicking the Run Cells button from the toolbar <br/>&bull; &nbsp; General stability and performance improvements |
+| Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## April 2019
 

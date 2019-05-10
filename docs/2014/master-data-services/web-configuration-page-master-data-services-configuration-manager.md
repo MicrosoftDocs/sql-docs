@@ -9,7 +9,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.mds.configmanager.webconfigpg.f1"
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

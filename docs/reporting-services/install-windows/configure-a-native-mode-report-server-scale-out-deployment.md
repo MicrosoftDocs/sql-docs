@@ -23,6 +23,9 @@ Reporting Services native mode supports a scale-out deployment model that allows
 For Power BI Report Server, you need to configure client affinity (sometimes called sticky sessions) on the load balancer for any scale-out environment, to ensure proper performance.  
   
 For SQL Server 2016 Reporting Services and earlier, SharePoint mode report servers utilize the SharePoint products infrastructure for scale-out. SharePoint mode scale-out is performed by adding more SharePoint mode report servers to the SharePoint farm. For information on scale-out in SharePoint mode, see [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
  
   A *scale-out deployment* is used in the following scenarios:  
   

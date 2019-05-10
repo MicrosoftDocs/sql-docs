@@ -152,7 +152,7 @@ manager: craigg
 
 ## <a name="adr"></a> Accelerated database recovery
 
-C introduces [Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) for SQL Server on premises. Accelerated database recovery greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process. [Database recovery](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) is the process SQL Server uses for each database to start at a transactionally consistent - or clean - state. A database, with accelerated database recovery enabled, completes recovery significantly faster after a fail over or other non-clean shutdown. 
+SQL Server 2019 preview CTP 2.3 introduces [Accelerated database recovery](/azure/sql-database/sql-database-accelerated-database-recovery/) for SQL Server on premises. Accelerated database recovery greatly improves database availability, especially in the presence of long running transactions, by redesigning the SQL Server database engine recovery process. [Database recovery](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) is the process SQL Server uses for each database to start at a transactionally consistent - or clean - state. A database, with accelerated database recovery enabled, completes recovery significantly faster after a fail over or other non-clean shutdown. 
 
 You can enable accelerated database recovery per-database on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 or later using the following syntax:
 

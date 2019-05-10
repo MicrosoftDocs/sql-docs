@@ -31,12 +31,42 @@ You cannot use the information in this quickstart to deploy an SSIS package to S
 
 To deploy the project to Azure SQL Database, get the connection information you need to connect to the SSIS Catalog database (SSISDB). You need the fully qualified server name and login information in the procedures that follow.
 
-1. Log in to the [Azure portal](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 2. Select **SQL Databases** from the left-hand menu, and then select the SSISDB database on the **SQL databases** page. 
 3. On the **Overview** page for your database, review the fully qualified server name. To see the **Click to copy** option, hover over the server name. 
 4. If you forget your Azure SQL Database server login information, navigate to the SQL Database server page to view the server admin name. You can reset the password if necessary.
 5. Click **Show database connection strings**.
 6. Review the complete **ADO.NET** connection string.
+
+## SSIS PowerShell Provider
+Provide appropriate values for the variables at the top of the following script, and then run the script to deploy the SSIS project.
+
+> [!NOTE]
+> The following example uses Windows Authentication to deploy to a SQL Server on premises. Use the `New-PSDive` cmdlet to establish a connection using SQL Server authentication. If you're connecting to an Azure SQL Database server, you can't use Windows authentication.
+
+```powershell
+# Variables
+$TargetInstanceName = "localhost\default"
+$TargetFolderName = "Project1Folder"
+$ProjectFilePath = "C:\Projects\Integration Services Project1\Integration Services Project1\bin\Development\Integration Services Project1.ispac"
+$ProjectName = "Integration Services Project1"
+
+# Get the Integration Services catalog
+$catalog = Get-Item SQLSERVER:\SSIS\$TargetInstanceName\Catalogs\SSISDB\
+
+# Create the target folder
+New-Object "Microsoft.SqlServer.Management.IntegrationServices.CatalogFolder" ($catalog, 
+$TargetFolderName,"Folder description") -OutVariable folder
+$folder.Create()
+
+# Read the project file and deploy it
+[byte[]] $projectFile = [System.IO.File]::ReadAllBytes($ProjectFilePath)
+$folder.DeployProject($ProjectName, $projectFile)
+
+# Verify packages were deployed.
+dir "$($catalog.PSPath)\Folders\$TargetFolderName\Projects\$ProjectName\Packages" | 
+SELECT Name, DisplayName, PackageId
+```
 
 ## PowerShell script
 Provide appropriate values for the variables at the top of the following script, and then run the script to deploy the SSIS project.

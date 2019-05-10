@@ -90,7 +90,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  For more information about processing HRESULT Return Codes, see [OLE Automation Return Codes and Error Information](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role.  
+ Requires membership in the **sysadmin** fixed server role or execute permission directly on this Stored Procedure. `Ole Automation Procedures` configuration must be **enabled** to use any system procedure related to OLE Automation.  
   
 ## Examples  
  The following example displays OLE Automation error information.  

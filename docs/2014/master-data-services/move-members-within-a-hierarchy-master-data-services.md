@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "derived hierarchies, moving members"
   - "members [Master Data Services], moving"
 ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

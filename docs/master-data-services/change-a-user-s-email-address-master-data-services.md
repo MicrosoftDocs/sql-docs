@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "users [Master Data Services], changing e-mail address"
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

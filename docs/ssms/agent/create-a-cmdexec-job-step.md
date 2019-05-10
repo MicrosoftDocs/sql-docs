@@ -85,7 +85,7 @@ For detailed information, see [Implement SQL Server Agent Security](../../ssms/a
         @job_name = N'Weekly Sales Data Backup',  
         @step_name = N'Set database to read only',  
         @subsystem = N'CMDEXEC',  
-        @command = C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
+        @command = 'C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
         @retry_attempts = 5,  
         @retry_interval = 5 ;  
     GO  

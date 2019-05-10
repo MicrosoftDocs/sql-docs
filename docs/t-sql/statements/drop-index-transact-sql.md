@@ -64,10 +64,7 @@ DROP INDEX [ IF EXISTS ]
     [ owner_name. ] table_or_view_name.index_name  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
   
 <drop_clustered_index_option> ::=  
 {  
@@ -94,16 +91,13 @@ DROP INDEX
     index_name ON <object>  
   
 <object> ::=   
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] table_name  
+DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   

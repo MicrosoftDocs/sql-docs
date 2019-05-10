@@ -206,11 +206,12 @@ struct DataBinding {
 void printStatementResult(SQLHSTMT hstmt) {  
    int bufferSize = 1024, i;  
    SQLRETURN retCode;  
-   SQLSMALLINT numColumn = 0, bufferLenUsed;  
+   SQLSMALLINT numColumn = 0, bufferLenUsed;
+   
+   retCode = SQLNumResultCols(hstmt, &numColumn);  
+   
    SQLPOINTER* columnLabels = (SQLPOINTER *)malloc( numColumn * sizeof(SQLPOINTER*) );  
    struct DataBinding* columnData = (struct DataBinding*)malloc( numColumn * sizeof(struct DataBinding) );  
-  
-   retCode = SQLNumResultCols(hstmt, &numColumn);  
   
    printf( "Columns from that table:\n" );  
    for ( i = 0 ; i < numColumn ; i++ ) {  

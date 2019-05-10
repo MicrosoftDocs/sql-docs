@@ -78,7 +78,11 @@ The following is the current list of browsers supported for the web portal.
 
  **(+)** Latest publicly released version
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  If you are using a SharePoint product that is integrated with [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], see  [Plan browser support in SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+
+::: moniker-end
 
 ### Authentication requirements
 
@@ -138,7 +142,11 @@ The following is the current list of browsers supported for the web portal.
 
  **(+)** Latest publicly released version
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  For more information on the SharePoint 2016 browser support, see [Plan browser support in SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+
+::: moniker-end
 
 ## Next steps
 

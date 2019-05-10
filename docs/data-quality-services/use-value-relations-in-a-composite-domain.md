@@ -10,7 +10,7 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql13.dqs.dm.cdvaluerelations.f1"
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

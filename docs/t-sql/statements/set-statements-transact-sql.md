@@ -63,7 +63,7 @@ For information about setting local variables with the SET statement, see [SET @
 - If a SET statement uses ON and OFF, you can specify either one for multiple SET options.
   
     > [!NOTE]  
-    >  This doesn't apply to the statistics related SET options.  
+    >  This doesn't apply to the statistics related SET options.
   
      For example, `SET QUOTED_IDENTIFIER, ANSI_NULLS ON` sets both QUOTED_IDENTIFIER and ANSI_NULLS to ON.  
   

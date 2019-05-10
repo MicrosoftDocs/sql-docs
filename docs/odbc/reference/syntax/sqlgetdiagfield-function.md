@@ -32,6 +32,7 @@ manager: craigg
 ## Syntax  
   
 ```cpp
+
 SQLRETURN SQLGetDiagField(  
      SQLSMALLINT     HandleType,  
      SQLHANDLE       Handle,  

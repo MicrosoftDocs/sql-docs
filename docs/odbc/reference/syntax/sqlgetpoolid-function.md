@@ -23,7 +23,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLGetPoolID (  
                 SQLHDBC_INFO_TOKEN    hDbcInfoToken,  
                 POOLID *              pPoolID );  

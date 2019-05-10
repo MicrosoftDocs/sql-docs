@@ -9,6 +9,7 @@ ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Native to SharePoint Migration (SSRS)
 

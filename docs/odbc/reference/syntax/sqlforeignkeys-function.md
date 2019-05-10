@@ -36,7 +36,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLForeignKeys(  
      SQLHSTMT       StatementHandle,  
@@ -213,7 +213,7 @@ SQLRETURN SQLForeignKeys(
 |-------------------|--------------------|-------------------|--------------------|--------------|  
 |CUSTOMERS|CUSTID|ORDERS|CUSTID|1|  
   
-```  
+```cpp  
 #define TAB_LEN SQL_MAX_TABLE_NAME_LEN + 1  
 #define COL_LEN SQL_MAX_COLUMN_NAME_LEN + 1  
   

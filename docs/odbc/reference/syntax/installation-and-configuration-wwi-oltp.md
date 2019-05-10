@@ -23,7 +23,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN SQLSetDriverConnectInfo(  
                 SQLHDBC_INFO_TOKEN   hDbcInfoToken,  
                 WCHAR *              InConnectionString,  

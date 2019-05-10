@@ -10,7 +10,7 @@ ms.topic: quickstart
 keywords: 
   - "learn sql"
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

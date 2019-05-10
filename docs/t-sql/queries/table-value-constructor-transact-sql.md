@@ -1,7 +1,7 @@
 ---
 title: "Table Value Constructor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/15/2017"
+ms.date: "05/10/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -22,7 +22,7 @@ manager: craigg
 # Table Value Constructor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Specifies a set of row value expressions to be constructed into a table. The [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor allows multiple rows of data to be specified in a single DML statement. The table value constructor can be specified in the VALUES clause of the INSERT statement, in the USING \<source table> clause of the MERGE statement, and in the definition of a derived table in the FROM clause.  
+  Specifies a set of row value expressions to be constructed into a table. The [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor allows multiple rows of data to be specified in a single DML statement. It can be specified either as the VALUES clause of an INSERT ... VALUES statement, or as a derived table in either the USING clause of the MERGE statement or the FROM clause.
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,13 +52,15 @@ VALUES ( <row value expression list> ) [ ,...n ]
  Is a constant, a variable, or an expression. The expression cannot contain an EXECUTE statement.  
   
 ## Limitations and Restrictions  
- Table value constructors can be used in one of two ways: directly in the VALUES list of an INSERT ... VALUES statement, or as a derived table anywhere that derived tables are allowed. Error 10738 is returned if the number of rows exceeds the maximum. To insert more rows than the limit allows, use one of the following methods:  
+ When used as a derived table, there is no limit to the number of rows.  
+ 
+ When used as the VALUES clause of an INSERT ... VALUES statement, there is a limit of 1000 rows. Error 10738 is returned if the number of rows exceeds the maximum. To insert more than 1000 rows, use one of the following methods:  
   
--   Create multiple INSERT statements  
+- Create multiple INSERT statements  
   
--   Use a derived table  
+- Use a derived table  
   
--   Bulk import the data by using the **bcp** utility or the BULK INSERT statement  
+- Bulk import the data by using the [**bcp** utility](../../tools/bcp-utility.md), the .NET [SqlBulkCopy class](../../../dotnet/api/system.data.sqlclient.sqlbulkcopy.md), [OPENROWSET (BULK ...)](../../t-sql/functions/openrowset-transact-sql.md), or the [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) statement  
   
  Only single scalar values are allowed as a row value expression. A subquery that involves multiple columns is not allowed as a row value expression. For example, the following code results in a syntax error because the third row value expression list contains a subquery with multiple columns.  
   
@@ -113,7 +115,8 @@ INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));
 USE AdventureWorks2012;  
 GO  
 INSERT INTO Production.UnitMeasure  
-VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923'), (N'Y3', N'Cubic Yards', '20080923');  
+VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923'),
+       (N'Y3', N'Cubic Yards', '20080923');  
 GO  
   
 ```  
@@ -176,6 +179,19 @@ GROUP BY Change;
   
 ```  
   
+### E. Inserting more than 1000 rows
+  The following example demonstrates using the table value constructor as a derived table. This allows for inserting more than 1000 rows from a single table value constructor.
+  
+```  
+CREATE TABLE dbo.Test ([Value] int);  
+  
+INSERT INTO dbo.Test ([Value])  
+  SELECT drvd.[NewVal]
+  FROM   (VALUES (0), (1), (2), (3), ..., (5000)) drvd([NewVal]);
+
+```  
+
+
 ## See Also  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   

@@ -23,7 +23,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLRateConnection(  
                 SQLHDBC_INFO_TOKEN   hRequest,  
                 SQLHDBC              hCandidateConnection,  

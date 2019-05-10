@@ -34,7 +34,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLInstallDriverEx(  
      LPCSTR    lpszDriver,  

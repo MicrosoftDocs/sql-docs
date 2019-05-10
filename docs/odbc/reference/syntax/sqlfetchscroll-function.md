@@ -32,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLFetchScroll(  
       SQLHSTMT      StatementHandle,  
@@ -253,7 +253,7 @@ SQLRETURN SQLFetchScroll(
   
  For example:  
   
-```  
+```cpp  
 // Fetch the next rowset.  
 SQLFetchScroll(hstmt, SQL_FETCH_NEXT, 0);  
 // Delete third row of the rowset. Does not modify the rowset buffers.  

@@ -33,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeHandle(  
      SQLSMALLINT   HandleType,  
@@ -115,7 +115,7 @@ SQLRETURN SQLFreeHandle(
   
 ### Code  
   
-```  
+```cpp  
 // SQLFreeHandle.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

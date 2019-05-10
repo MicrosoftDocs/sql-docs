@@ -402,7 +402,7 @@ The MaxDOP setting only applies to SQL Server 2019 and greater
 ## Database Engine Configuration - MaxDOP
 Max degree of parallelism (MaxDOP) determines the maximum number of cores that a single query can utilize. SQL Server 2019 introduces configuring this option during installation, and automatically detects the recommended MaxDOP setting for the server based on the number of cores. The default maximum value is 8.  
 
-You can manually configure this setting here, and you can modify this setting after installation. For more information, see [Max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
+You can manually configure this setting here, and you can modify this setting after installation. For more information, see [Max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 ::: moniker-end
 
 

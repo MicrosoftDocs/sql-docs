@@ -8695,8 +8695,6 @@
          href: https://docs.microsoft.com/azure/sql-database/sql-database-design-first-database
     - name: Concepts
       items:
-      - name: Code Outlining
-        href: ../ssms/scripting/code-outlining.md
       - name: General management
         items:
         - name: Introduction to SSMS for BI

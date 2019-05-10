@@ -39,7 +39,7 @@ ALTER INDEX index_name
     [WITH ( <index_options> )]  
   
 <table_object> ::=   
-{ [database_name. [schema_name ] . | schema_name. ] table_name }  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }  
 <promoted_node_path_action_list> ::=   
 <promoted_node_path_action_item> [, <promoted_node_path_action_list>]  
   

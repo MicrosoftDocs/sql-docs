@@ -1,7 +1,7 @@
 ---
 title: Transparent Data Encryption (TDE) | Microsoft Docs
 ms.custom: ""
-ms.date: 04/23/2019
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -57,7 +57,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  The following illustration shows the architecture of TDE encryption. Only the database level items (the database encryption key and ALTER DATABASE portions are user-configurable when using TDE on [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
- ![Displays the hierarchy described in the topic.](../../../relational-databases/security/encryption/media/tde-architecture.gif "Displays the hierarchy described in the topic.")  
+ ![Displays the hierarchy described in the topic.](../../../relational-databases/security/encryption/media/tde-architecture.png "Displays the hierarchy described in the topic.")  
   
 ## Using Transparent Data Encryption  
  To use TDE, follow these steps.  
@@ -98,7 +98,7 @@ GO
 >  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ## Commands and Functions  
- The TDE certificates must be encrypted by the database master key to be accepted by the following statements. If they are encrypted by password only, the statements will reject them as encryptors.  
+ The TDE certificates must be encrypted by the database master key to be accepted by the following statements. If they're encrypted by password only, the statements will reject them as encryptors.  
   
 > [!IMPORTANT]  
 >  Altering the certificates to be password-protected after they are used by TDE will cause the database to become inaccessible after a restart.  
@@ -225,7 +225,7 @@ GO
 
 ## Transparent Data Encryption (TDE) scan
 
-In order to enable Transparent Data Encryption (TDE) on a database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must perform an encryption scan which reads each page from the data file(s) into the buffer pool, and then writes the encrypted pages back out to disk. To provide the user with more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduces TDE scan - suspend and resume syntax so that you can pause the scan while the workload on the system is heavy, or during business-critical hours, and then resume the scan later.
+In order to enable Transparent Data Encryption (TDE) on a database, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] must perform an encryption scan that reads each page from the data file(s) into the buffer pool, and then writes the encrypted pages back out to disk. To provide the user with more control over the encryption scan, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] introduces TDE scan - suspend and resume syntax so that you can pause the scan while the workload on the system is heavy, or during business-critical hours, and then resume the scan later.
 
 Use the following syntax to pause the TDE encryption scan:
 
@@ -239,10 +239,10 @@ Similarly, the following syntax resumes the TDE encryption scan:
 ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
-To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view. There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is restarted while the encryption scan is in a suspended state, a message will be logged in the errorlog on startup indicating that there is an existing scan which has been paused.
+To show the current state of the encryption scan, `encryption_scan_state` has been added to the `sys.dm_database_encryption_keys` dynamic management view. There is also a new column called `encryption_scan_modify_date` which will contain the date and time of the last encryption scan state change. Also note that if the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance is restarted while the encryption scan is in a suspended state, a message will be logged in the error log on startup indicating that there is an existing scan that has been paused.
   
 ## Transparent Data Encryption and Buffer Pool Extension  
- Files related to buffer pool extension (BPE) are not encrypted when database is encrypted using TDE. You must use file system level encryption tools like Bitlocker or EFS for BPE related files.  
+ Files related to buffer pool extension (BPE) are not encrypted when database is encrypted using TDE. You must use file system level encryption tools like BitLocker or EFS for BPE related files.  
   
 ## Transparent Data Encryption and In-Memory OLTP  
  TDE can be enabled on a database that has In-Memory OLTP objects. In [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] and [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] In-Memory OLTP log records and data are encrypted if TDE is enabled. In [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] In-Memory OLTP log records are encrypted if TDE is enabled, but files in the MEMORY_OPTIMIZED_DATA filegroup are not encrypted.  

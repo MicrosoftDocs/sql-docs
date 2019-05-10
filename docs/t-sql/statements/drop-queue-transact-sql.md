@@ -38,10 +38,7 @@ DROP QUEUE <object>
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
 ## Arguments  

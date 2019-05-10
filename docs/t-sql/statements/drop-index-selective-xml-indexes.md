@@ -30,10 +30,7 @@ DROP INDEX index_name ON <object>
     [ WITH ( <drop_index_option> [ ,...n ] ) ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-        table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
   
 <drop_index_option> ::=  
 {  

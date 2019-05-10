@@ -40,8 +40,7 @@ Removes all rows from a table or specified partitions of a table, without loggin
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
-    [ { database_name .[ schema_name ] . | schema_name . } ]  
-    table_name  
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( PARTITIONS ( { <partition_number_expression> | <range> }   
     [ , ...n ] ) ) ]  
 [ ; ]  
@@ -53,7 +52,7 @@ TRUNCATE TABLE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
+TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   

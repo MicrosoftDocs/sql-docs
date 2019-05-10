@@ -1,7 +1,7 @@
 ---
 title: "View or Change the Recovery Model of a Database (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/05/2016"
+ms.date: "05/10/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -27,7 +27,7 @@ manager: craigg
   
   A *recovery model* is a database property that controls how transactions are logged, whether the transaction log requires (and allows) backing up, and what kinds of restore operations are available. Three recovery models exist: simple, full, and bulk-logged. Typically, a database uses the full recovery model or simple recovery model. A database can be switched to another recovery model at any time. The **model** database sets the default recovery model of new databases.  
   
-  For a more in depth explanation of [recovery models](recovery-models-sql-server.md), see [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) provided by the folks at [MSSQLTips!](https://www.mssqltips.com/)
+  For a more in depth explanation, see [recovery models](recovery-models-sql-server.md).
   
   
 ##  <a name="BeforeYouBegin"></a> Before you begin  

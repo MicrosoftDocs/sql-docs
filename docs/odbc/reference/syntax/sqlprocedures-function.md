@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLProcedures(  
      SQLHSTMT       StatementHandle,  

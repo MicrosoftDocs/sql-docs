@@ -19,7 +19,7 @@ Follow the steps in this article to install SQL Server Integration Services (`ms
 
 Install SQL Server Integration Servers for your platform:
 
-- [Ubuntu](#ubuntu)
+- [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
 ## <a name="ubuntu"></a> Install SSIS on Ubuntu

@@ -91,8 +91,7 @@ INSERT
 INSERT   
 {  
     [BULK]  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-    [ table_name | view_name ]  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
     ( <column_definition> )  
     [ WITH (  
         [ [ , ] CHECK_CONSTRAINTS ]  
@@ -118,7 +117,7 @@ INSERT
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
-INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name   
+INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     {   
       VALUES ( { NULL | expression } )  

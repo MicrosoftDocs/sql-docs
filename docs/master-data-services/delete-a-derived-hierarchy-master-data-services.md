@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "deleting derived hierarchies [Master Data Services]"
   - "derived hierarchies, deleting"
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

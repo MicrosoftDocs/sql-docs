@@ -11,7 +11,7 @@ helpviewer_keywords:
   - "derived hierarchies, creating"
   - "creating derived hierarchies [Master Data Services]"
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

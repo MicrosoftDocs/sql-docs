@@ -140,7 +140,7 @@ The following item is for SQL Server 2016-2017
   
      Use the Server Configuration - Collation page to specify non-default collations for the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [Collations and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-15. Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Server Configuration tab to specify the following:  
+15. Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Server Configuration** tab to specify the following:  
   
     -   Security Mode - Select Windows Authentication or Mixed Mode Authentication for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If you select Mixed Mode Authentication, you must provide a strong password for the built-in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system administrator account.  
   
@@ -148,18 +148,20 @@ The following item is for SQL Server 2016-2017
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrators - You must specify at least one system administrator for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. To add the account under which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Data Directories page to specify non-default installation directories. To install to default directories, click **Next**.  
+     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - Data Directories** tab to specify non-default installation directories. To install to default directories, click **Next**.  
   
     > [!IMPORTANT]  
     > If you specify non-default installation directories, ensure that the installation folders are unique to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. None of the directories in this dialog box should be shared with directories from other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      For more information, see [Database Engine Configuration - Data Directories](../../sql-server/install/instance-configuration.md#datadir). 
 
-     Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - TempDB page to configure file size, number of files, non-default installation directories, and file-growth settings for TempDB. For more information see [Database Engine Configuration - TempDB](../../sql-server/install/instance-configuration.md#tempdb).  
+     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - TempDB** tab to configure file size, number of files, non-default installation directories, and file-growth settings for TempDB. For more information see [Database Engine Configuration - TempDB](../../sql-server/install/instance-configuration.md#tempdb).  
 
-     Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP page to specify your max degree of parallelism. This setting determines how many processors a single statement can use, and the recommended value is automatically calculated during installation. The default maximum is 8. For more information, see [Max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+     ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP** tab to specify your max degree of parallelism. This setting determines how many processors a single statement can use, and the recommended value is automatically calculated during installation. The default maximum is 8. For more information, see [Max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+     ::: moniker-end
 
-     Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - FILESTREAM page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Filestream](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream).  
+     Use the **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - FILESTREAM** tab to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Filestream](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream).  
   
   
 16. Use the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Configuration - Account Provisioning page to specify the server mode and the users or accounts that will have administrator permissions for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Server mode determines which memory and storage subsystems are used on the server. Different solution types run in different server modes. If you plan to run multidimensional cube databases on the server, choose the default option, Multidimensional and Data Mining server mode. Regarding administrator permissions, you must specify at least one system administrator for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. To add the account under which SQL Server Setup is running, click **Add Current User**. To add or remove accounts from the list of system administrators, click **Add** or **Remove**, and then edit the list of users, groups, or computers that will have administrator privileges for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information about server mode and administrator permissions, see [Analysis Services Configuration - Account Provisioning](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning).  

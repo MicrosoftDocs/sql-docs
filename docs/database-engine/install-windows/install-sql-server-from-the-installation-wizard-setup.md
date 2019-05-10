@@ -161,7 +161,7 @@ The following item is for SQL Server 2016-2017
 The following page is only available with SQL Server 2019 and greater
 -->
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-   Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP page to specify your max degree of parallelism. This setting determines how many processors a single query can use, and the recommended value is automatically calculated during installation. The default maximum is 8. For more information, see [Max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)
+   Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - MaxDOP page to specify your max degree of parallelism. This setting determines how many processors a single statement can use, and the recommended value is automatically calculated during installation. The default maximum is 8. For more information, see [Max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 ::: moniker-end
 
    Use the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuration - FILESTREAM page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - Filestream](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream).  

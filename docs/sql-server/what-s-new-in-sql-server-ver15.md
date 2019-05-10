@@ -52,6 +52,13 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |:---|:---|
 | &nbsp; | &nbsp; |
 
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| New feature or update | Details |
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] supports Azure SQL Database Managed Instance. | Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb). ]
+|:---|:---|
+| &nbsp; | &nbsp; |
+
 ## CTP 2.5 April 2019
 
 ### Big data clusters

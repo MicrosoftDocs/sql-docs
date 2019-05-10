@@ -120,6 +120,32 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.5.
 
+### Big data cluster: MLeap runtime deployed through AppDeploy timeout
+
+- **Issue and customer impact**: Applications using the MLeap runtime deployed through AppDeploy time out after 15 minutes.
+
+- **Workaround**: Open a command line to the app pod:
+
+  1. Prepare to run in the specific app pod. To do this, in the following script, replace `[namespace]` and `[podname]` for your environment. Then run the script.
+
+     ```bash
+     kubectl -n [namespace] exec [podname] -it  -- /bin/bash
+     ```
+
+  1. Delete the application content type. Run the following script.
+
+     ```bash
+     curl -X DELETE -v -H "Content-Type: application/json" http://localhost:8080/models/app
+     ```
+
+  1. Recreate the application content type. Set the `memoryTimeout` and `diskTimeout`. To do this, update the following script. Replace `[mleap_bundle]` with the name of the MLeap bundle zip file specified in the `spec.yaml` file. Then run the script.
+
+     ```bash
+     curl -v -XPOST -H "content-type: application/json" -d '{"modelName":"app","uri":"file:/var/opt/app/[mleap  bundle].zip","config":{"memoryTimeout":21474835000,"diskTimeout":21474835000}}' http://localhost:8080/models
+     ```
+
+- **Applies to** CTP 2.5 and before.
+
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

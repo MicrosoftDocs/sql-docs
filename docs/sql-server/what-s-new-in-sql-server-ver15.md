@@ -28,7 +28,7 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## CTP 3.0
+## CTP 3.0 May 2019
 
 Community technology preview (CTP) 3.0 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
 
@@ -50,6 +50,13 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+| &nbsp; | &nbsp; |
+
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| New feature or update | Details |
+|:---|:---|
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] supports Azure SQL Database managed instance databases.| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).
 | &nbsp; | &nbsp; |
 
 ## CTP 2.5 April 2019

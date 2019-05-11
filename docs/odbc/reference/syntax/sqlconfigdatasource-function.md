@@ -32,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLConfigDataSource(  
      HWND     hwndParent,  

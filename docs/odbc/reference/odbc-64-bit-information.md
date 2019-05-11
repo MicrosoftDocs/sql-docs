@@ -28,7 +28,7 @@ Beginning with Windows Server 2003, Microsoft operating systems have supported t
 ## Function Declaration Changes  
  The following function signatures have changed for 64-bit programming. The items in bold text are the specific parameters that are different.  
   
-```c
+```cpp
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -120,7 +120,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  The definition of SQLSETPOSIROW has changed for both 32-bit and 64-bit compilers:  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -130,7 +130,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  The definitions of SQLLEN and SQLULEN have changed for 64-bit compilers:  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -142,7 +142,7 @@ typedef UINT64 SQLULEN;
   
  Although SQL_C_BOOKMARK is deprecated in ODBC 3.0, for 64-bit compilers on 2.0 clients, this value has changed:  
   
-```c
+```cpp
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -152,7 +152,7 @@ typedef UINT64 SQLULEN;
   
  The BOOKMARK type is defined differently in the newer headers:  
   
-```c
+```cpp
 typedef SQLULEN BOOKMARK;  
 ```  
   

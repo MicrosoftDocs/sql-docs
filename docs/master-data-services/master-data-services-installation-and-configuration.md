@@ -132,7 +132,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
     >
     >- Azure Active Directory Integrated Authentication: **Current User – Active Directory Integrated**
     >- SQL Server Authentication: **SQL Server Account**.
-    > 
+    >
     >In Azure SQL Database managed instance, the user must be a member of the `sysadmin` fixed server role.
 
     > [!NOTE]  

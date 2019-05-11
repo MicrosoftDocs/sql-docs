@@ -70,7 +70,7 @@ Provides the connectivity protocol and path to the external data source.
 | Cloudera or Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+), PDW                     |
 | Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), PDW, SQL DW             |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                      |
-| Azure Data Lake Store Gen 2 | `abfs`          | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
+| Azure Data Lake Store Gen 2 | `abfss`          | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
 | SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                          |
 | Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
@@ -427,7 +427,7 @@ WITH
 
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
-(    LOCATION   = 'abfs://2013@newyorktaxidataset.dfs.core.windows.net'
+(    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
 ,    CREDENTIAL = ADLS_credential
 ,    TYPE       = HADOOP
 )

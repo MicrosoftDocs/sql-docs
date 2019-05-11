@@ -29,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLCancelHandle(  
       SQLSMALLINT  HandleType,  

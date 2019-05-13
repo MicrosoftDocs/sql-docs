@@ -23,7 +23,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLSetConnectInfo(  
                 SQLHDBC_INFO_TOKEN   TokenHandle,  
                 WCHAR *              ServerName,  

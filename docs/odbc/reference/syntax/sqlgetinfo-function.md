@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetInfo(  
      SQLHDBC         ConnectionHandle,  
@@ -1799,7 +1799,7 @@ SQLRETURN SQLGetInfo(
   
  For another example of using **SQLGetInfo**, see [SQLTables Function](../../../odbc/reference/syntax/sqltables-function.md).  
   
-```  
+```cpp  
 SQLUINTEGER fFuncs;  
   
 SQLGetInfo(hdbc,   

@@ -4,7 +4,7 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 03/01/2017

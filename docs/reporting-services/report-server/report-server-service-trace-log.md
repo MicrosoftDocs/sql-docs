@@ -1,7 +1,7 @@
 ---
 title: "Report Server Service Trace Log"
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT

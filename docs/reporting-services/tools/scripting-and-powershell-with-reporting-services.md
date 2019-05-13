@@ -2,7 +2,7 @@
 title: "Scripting and PowerShell with Reporting Services | Microsoft Docs"
 ms.date: 09/14/2015
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 

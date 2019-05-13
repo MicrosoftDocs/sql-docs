@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetFunctions(  
      SQLHDBC           ConnectionHandle,  
@@ -142,7 +142,7 @@ SQLRETURN SQLGetFunctions(
 ## Code Example  
  The following three examples show how an application uses **SQLGetFunctions** to determine if a driver supports **SQLTables**, **SQLColumns**, and **SQLStatistics**. If the driver does not support these functions, the application disconnects from the driver. The first example calls **SQLGetFunctions** once for each function.  
   
-```  
+```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
   
@@ -165,7 +165,7 @@ SQLDisconnect(hdbc);
   
  In the second example, an ODBC 3.x application calls **SQLGetFunctions** and passes it an array in which **SQLGetFunctions** returns information about all ODBC 3.x and earlier functions.  
   
-```  
+```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
 SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];  
   
@@ -187,7 +187,7 @@ SQLDisconnect(hdbc);
   
  The third example is an ODBC 2.x application calls **SQLGetFunctions** and passes it an array of 100 elements in which **SQLGetFunctions** returns information about all ODBC 2.x and earlier functions.  
   
-```  
+```cpp  
 #define FUNCTIONS 100  
   
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  

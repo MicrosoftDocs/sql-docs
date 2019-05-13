@@ -725,12 +725,13 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
+
 ## Arguments
 
-*database_name*      
+*database_name*
 Is the name of the database to be modified.
 
-CURRENT     
+CURRENT
 Designates that the current database in use should be altered.
 
 ## Remarks
@@ -791,16 +792,24 @@ ALTER DATABASE WideWorldImporters
 
 ## Overview: Azure SQL Data Warehouse
 
-Modifies the name, maximum size, or service objective for a database.
+In Azure SQL Dta Warehouse, 'ALTER DATABASE' modifies the name, maximum size, or service objective for a database.
+
+Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
+
+[ALTER DATABASE SET Options](../../t-sql/statements/alter-database-transact-sql-set-options.md)
+Provides the syntax and related information for changing the attributes of a database by using the SET options of ALTER DATABASE.
 
 ## Syntax
 
-```
-ALTER DATABASE database_name
-
+```console
+ALTER DATABASE { database_name | CURRENT }
+{
   MODIFY NAME = new_database_name
 | MODIFY ( <edition_option> [, ... n] )
-  
+| SET <option_spec> [ ,...n ] [ WITH <termination> ]
+}
+[;]
+
 <edition_option> ::=
       MAXSIZE = {
             250 | 500 | 750 | 1024 | 5120 | 10240 | 20480
@@ -818,13 +827,13 @@ ALTER DATABASE database_name
 
 ## Arguments
 
-*database_name*     
+*database_name*
 Specifies the name of the database to be modified.
 
-MODIFY NAME = *new_database_name*    
+MODIFY NAME = *new_database_name*
 Renames the database with the name specified as *new_database_name*.
 
-MAXSIZE    
+MAXSIZE
 The default is 245,760 GB (240 TB).
 
 **Applies to:** Optimized for Compute Gen1
@@ -835,7 +844,7 @@ The maximum allowable size for the database. The database cannot grow beyond MAX
 
 The maximum allowable size for rowstore data in the database. Data stored in rowstore tables, a columnstore index's deltastore, or a nonclustered index on a clustered columnstore index cannot grow beyond MAXSIZE. Data compressed into columnstore format does not have a size limit and is not constrained by MAXSIZE.
 
-SERVICE_OBJECTIVE      
+SERVICE_OBJECTIVE
 Specifies the performance level. For more information about service objectives for SQL Data Warehouse, see [Data Warehouse Units (DWUs)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## Permissions

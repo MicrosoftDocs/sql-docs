@@ -26,7 +26,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLDriverToDataSource(  
      UDWORD     fOption,  

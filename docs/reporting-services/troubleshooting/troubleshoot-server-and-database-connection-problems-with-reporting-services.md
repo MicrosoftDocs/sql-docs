@@ -2,7 +2,7 @@
 title: "Troubleshoot Server and Database Connection Problems with Reporting Services | Microsoft Docs"
 ms.date: 02/28/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting
 
 

@@ -2,7 +2,7 @@
 title: "Report Parameters (Report Builder and Report Designer) | Microsoft Docs"
 description: This topic describes the common uses for Reporting Services report parameters, the properties you can set, and much more.
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 ms.custom: seodec18
 ms.topic: conceptual

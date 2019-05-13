@@ -166,6 +166,19 @@ Creates one or more table partitions. These partitions are horizontal table slic
 
 Clustered columnstore index is the default for creating tables in Azure SQL Data Warehouse.  The ORDER specification defaults to COMPOUND keys.  Sorting will always be ascending order. If no ORDER clause is specified, columnstore will not be sorted.
 
+During preview, you can run this query to check the column(s) with ORDER enabled.  A catalog view will be provided later to provide this information and the column ordinal if multiple columns are specified in ORDER.
+
+```sql
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+FROM sys.objects o 
+INNER JOIN sys.columns c ON o.object_id = c.object_id 
+INNER JOIN sys.partitions p ON o.object_id = p.object_id   
+INNER JOIN sys.column_store_segments s 
+    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
+WHERE o.name = 't1' and c.name = 'col1' 
+ORDER BY c.name, s.min_data_id, s.segment_id;
+```
+
 ### <a name="DataTypes"></a> Data type
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).

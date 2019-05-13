@@ -169,7 +169,7 @@
         href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
       - name: 4 - Predictions
         href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
-- name: Samples >>
+- name: Samples >
   href: https://github.com/Microsoft/sql-server-samples
 - name: Solutions
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md

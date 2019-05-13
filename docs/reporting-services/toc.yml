@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: What is SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
@@ -1390,7 +1390,7 @@
     href: ../relational-databases/system-catalog-views/sys-edge-constraints-transact-sql.md
   - name: Tuning Recommendations
     href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
-  - name: Enum SQL Agent Subsystems 
+  - name: Enum SQL Agent Subsystems
     href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
   - name: Delete Principal Profile
     href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
@@ -1592,7 +1592,7 @@
   items:
   - name: REST API
     href: ../reporting-services/developer/rest-api.md
-  - name: REST API samples +
+  - name: REST API samples >
     href: https://github.com/Microsoft/Reporting-Services
   - name: Integrating Reporting Services into Applications
     href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md

@@ -32,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLCancel(  
      SQLHSTMT     StatementHandle);  

@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 int SQLGetPrivateProfileString(  
      LPCSTR   lpszSection,  

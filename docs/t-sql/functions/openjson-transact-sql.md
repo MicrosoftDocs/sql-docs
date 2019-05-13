@@ -212,7 +212,7 @@ WITH (
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
   
-## Return Value
+## Return value
 The columns that the OPENJSON function returns depend on the WITH option.  
   
 1. When you call OPENJSON with the default schema - that is, when you don't specify an explicit schema in the WITH clause - the function returns a table with the following columns:  
@@ -260,7 +260,7 @@ Column names in *with_clause* are matched with keys in the JSON text. If you spe
   
 ### Example 1 - Convert a JSON array to a temporary table
 
-The following example provides a list of identifiers as a JSON array of numbers. The query converts the JSON array to a table of identifiers and filters all products with the specified ids.  
+The following example provides a list of identifiers as a JSON array of numbers. The query converts the JSON array to a table of identifiers and filters all products with the specified IDs.  
   
 ```sql  
 DECLARE @pSearchOptions NVARCHAR(4000) = N'[1,2,3,4]'
@@ -359,13 +359,13 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH (id int,  
+  WITH id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
-## See Also
+## See also
 
  [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   

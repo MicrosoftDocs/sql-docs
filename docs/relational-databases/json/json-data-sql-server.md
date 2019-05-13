@@ -121,7 +121,7 @@ FROM OPENJSON(@json)
   
 **Results**  
   
-|id|firstName|lastName|age|dateOfBirth|  
+|ID|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
@@ -150,7 +150,7 @@ N'[
    
 SELECT *  
 FROM OPENJSON(@json)  
-  WITH (id int 'strict $.id',  
+  WITH id int 'strict $.id',  
         firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
         age int, dateOfBirth datetime2 '$.dob',
 	skills nvarchar(max) '$.info.skills' as json) 
@@ -162,7 +162,7 @@ The result of this query is shown in the following table:
 
 **Results**  
   
-|id|firstName|lastName|age|dateOfBirth|skill|  
+|ID|firstName|lastName|age|dateOfBirth|skill|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
 |5|Jane|Smith||2005-11-04T12:00:00|SQL| 
@@ -331,11 +331,11 @@ If you have a web service that takes data from the database layer and returns it
   
 For example, you might want to generate JSON output that's compliant with the OData specification. The web service expects a request and response in the following format: 
   
--   Request: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+- Request: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   Response: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+- Response: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
-This OData URL represents a request for the ProductID and ProductName columns for the product with `id` 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
+This OData URL represents a request for the ProductID and ProductName columns for the product with `ID` 1. You can use **FOR JSON** to format the output as expected in SQL Server.  
   
 ```sql  
 SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'

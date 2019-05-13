@@ -50,7 +50,7 @@ In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and in [!INCLUDE[ssSDS
   
  If the format of *path* isn't valid, **JSON_VALUE** returns an error .  
   
-## Return Value
+## Return value
 
  Returns a single text value of type nvarchar(4000). The collation of the returned value is the same as the collation of the input expression.  
   
@@ -140,8 +140,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## See Also
+## See also
  [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
   

@@ -55,7 +55,7 @@ The default value for *path* is '$'. As a result, if you don't provide a value f
 
 If the format of *path* isn't valid, **JSON_QUERY** returns an error.  
   
-## Return Value
+## Return value
 
  Returns a JSON fragment of type nvarchar(max). The collation of the returned value is the same as the collation of the input expression.  
   
@@ -128,7 +128,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## See Also
+## See also
 
  [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

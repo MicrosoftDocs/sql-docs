@@ -33,6 +33,6 @@ Use the functions described on the pages in this section to validate or change J
 
 ## See Also
 
- [Validate, Query, and Change JSON Data with Built-in Functions &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)</br>
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)</br>
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+ - [Validate, Query, and Change JSON Data with Built-in Functions &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
+ - [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)
+ - [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

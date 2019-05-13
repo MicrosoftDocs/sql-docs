@@ -2,7 +2,7 @@
 title: "URL Access Parameter Reference | Microsoft Docs"
 ms.date: 09/09/2015
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 

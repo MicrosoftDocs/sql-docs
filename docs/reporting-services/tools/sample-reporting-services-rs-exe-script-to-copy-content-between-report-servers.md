@@ -2,7 +2,7 @@
 title: "Sample Reporting Services rs.exe Script to Copy Content between Report Servers | Microsoft Docs"
 ms.date: 03/26/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 

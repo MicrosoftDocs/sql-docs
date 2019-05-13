@@ -2,7 +2,7 @@
 title: "Connect to a Report Server in Management Studio | Microsoft Docs"
 ms.date: 05/07/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 

@@ -15,7 +15,7 @@ manager: craigg
 # Hybrid buffer pool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Hybrid buffer pool allows the database engine to directly access data pages in database files stored in persistent memory (PMEM) devices. This feature is introduced in [!INCLUDE[sqlv15](../includes/ssqlv15-md.md)].
+Hybrid buffer pool allows the database engine to directly access data pages in database files stored in persistent memory (PMEM) devices. This feature is introduced in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
 In a traditional system without persistent memory, SQL Server caches data pages in the buffer pool. With hybrid buffer pool, SQL Server skips performing a copy of the page into the DRAM-based portion of the buffer pool, and instead references the page directly on the database file on a PMEM device. Access to data files in PMEM for hybrid buffer pool is performed using memory-mapped I/O, also known as enlightenment.
 

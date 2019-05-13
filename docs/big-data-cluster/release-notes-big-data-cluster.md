@@ -56,8 +56,14 @@ The following sections describe the known issues and limitations with this relea
    ```sql
    -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+   END
 
    -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
@@ -73,7 +79,7 @@ The following sections describe the known issues and limitations with this relea
        WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
      ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
+       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
    END
    ```
 
@@ -157,8 +163,14 @@ The following sections describe the known issues and limitations with this relea
    ```sql
    -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+   END
 
    -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
@@ -174,7 +186,7 @@ The following sections describe the known issues and limitations with this relea
        WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
      ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
+       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
    END
    ```
 
@@ -301,8 +313,14 @@ A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API
    ```sql
    -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+   END
 
    -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
@@ -318,7 +336,7 @@ A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API
        WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
      ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
+       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
    END
    ```
 

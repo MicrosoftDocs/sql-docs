@@ -19,7 +19,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ## Summary
-On May 25, 2018, a European privacy law took effect that sets a new global bar for privacy rights, security, and compliance. The General Data Protection Regulation, or GDPR, is about respecting the privacy rights of individuals and allowing for view, access and portability of personal data.  The law establishes strict global privacy requirements governing how personal data is processed and protected, while assigning data ownership to the individual. 
+On May 25, 2018, a European privacy law took effect that sets a new global bar for individual privacy rights and the security and compliance obligations of organizations processing and storing personal data. The General Data Protection Regulation, or GDPR, is about respecting the privacy rights of individuals and allowing for view, access and portability of personal data.  The law establishes strict global privacy requirements governing how personal data is processed and protected, while assigning data ownership to the individual. 
 
 Microsoft SQL customers who are subject to the GDPR, whether managing cloud-based or on-premises databases or both, are looking towards implementing stricter data security practices and taking advantage of the security features available. This means that many customers will need to review or modify their database management and data handling procedures, especially focusing on the security of data stored and processed in database systems.
 

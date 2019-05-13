@@ -50,6 +50,7 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+|New DDL syntax to control hybrid buffer pool. A trace flag is no longer required to enable hybrid buffer pool.|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
 | &nbsp; | &nbsp; |
 
 ### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]

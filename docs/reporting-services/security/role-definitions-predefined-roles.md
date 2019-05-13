@@ -2,7 +2,7 @@
 title: "Predefined Roles | Microsoft Docs"
 ms.date: 10/22/2015
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 

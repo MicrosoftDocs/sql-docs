@@ -3,7 +3,7 @@ title: "What is SQL Server Reporting Services (SSRS) | Microsoft Docs"
 description: "Learn about tools and services for mobile and paginated Reporting Services reports on premises."
 ms.date: 05/06/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Build a Query in the Relational Query Designer (Report Builder and SSRS"
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT

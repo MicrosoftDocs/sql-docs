@@ -2,7 +2,7 @@
 title: "Configure a Native Mode Report Server for Local Administration (SSRS) | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 

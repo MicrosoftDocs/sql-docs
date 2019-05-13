@@ -2,7 +2,7 @@
 title: "Exporting to Microsoft Word (Report Builder and SSRS) | Microsoft Docs"
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 description: The Word rendering extension renders paginated reports to the  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] format (.docx). The format is Office Open XML.
 ms.custom: seodec18

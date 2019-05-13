@@ -2,7 +2,7 @@
 title: "SharePoint List Connection Type (SSRS) | Microsoft Docs"
 ms.date: 05/10/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-data
 
 

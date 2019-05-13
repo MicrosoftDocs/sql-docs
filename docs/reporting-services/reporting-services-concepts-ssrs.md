@@ -2,7 +2,7 @@
 title: "Reporting Services Concepts (SSRS) | Microsoft Docs"
 ms.date: 10/25/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 

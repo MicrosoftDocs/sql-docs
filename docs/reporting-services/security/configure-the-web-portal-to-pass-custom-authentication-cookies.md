@@ -2,7 +2,7 @@
 title: "Configure the Web Portal to Pass Custom Authentication Cookies | Microsoft Docs"
 ms.date: 04/18/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 

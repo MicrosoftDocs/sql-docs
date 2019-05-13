@@ -2,7 +2,7 @@
 title: "Report Builder in SQL Server | Microsoft Docs"
 ms.date: 11/29/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 

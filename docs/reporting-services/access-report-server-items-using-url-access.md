@@ -2,7 +2,7 @@
 title: "Access Report Server Items Using URL Access | Microsoft Docs"
 ms.date: 05/08/2019
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 

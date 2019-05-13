@@ -28,7 +28,7 @@ Microsoft SQL-based technologies offer many built-in security capabilities that 
   
 **Writer:** Alice Kupcik
 
-**Technical Reviewers:** Conor Cunningham; Joachim Hammer; Ronit Reger;  
+**Technical Reviewers:**  Conor Cunningham; Joachim Hammer; Wolfgang Peter; Ronit Reger 
   
 **Published:** October, 2018  
   

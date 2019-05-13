@@ -99,8 +99,8 @@ IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool'
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
 BEGIN
-    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-    WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   CREATE EXTERNAL DATA SOURCE SqlStoragePool
+   WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
 END
 GO
 ```

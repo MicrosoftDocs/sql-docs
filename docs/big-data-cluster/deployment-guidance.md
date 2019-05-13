@@ -155,7 +155,7 @@ export DOCKER_REGISTRY=private-repo.microsoft.com
 export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
-export DOCKER_IMAGE_TAG=ctp2.5
+export DOCKER_IMAGE_TAG=ctp3.0
 ```
 
 ```PowerShell
@@ -167,7 +167,7 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
-SET DOCKER_IMAGE_TAG=ctp2.5
+SET DOCKER_IMAGE_TAG=ctp3.0
 ```
 
 Upon setting the environment variables, you must run `mssqlctl cluster create` to trigger the deployment. This example uses the cluster configuration file created above:
@@ -181,7 +181,7 @@ Please note the following guidelines:
 - At this time, credentials for the private Docker registry will be provided to you upon triaging your [Early Adoption Program registration](https://aka.ms/eapsignup). Early Adoption Program registration is required to test SQL Server big data clusters.
 - Make sure you wrap the passwords in double quotes if it contains any special characters. You can set the **MSSQL_SA_PASSWORD** to whatever you like, but make sure the password is sufficiently complex and don't use the `!`, `&` or `'` characters. Note that double quotes delimiters work only in bash commands.
 - The **SA** login is a system administrator on the SQL Server master instance that gets created during setup. After creating your SQL Server container, the **MSSQL_SA_PASSWORD** environment variable you specified is discoverable by running echo $MSSQL_SA_PASSWORD in the container. For security purposes, change your SA password as per best practices documented [here](../linux/quickstart-install-connect-docker.md#sapassword).
-- The **DOCKER_IMAGE_TAG** in this example controls which release you are installing. In this example, it is the CTP 2.5 release.
+- The **DOCKER_IMAGE_TAG** in this example controls which release you are installing. In this example, it is the CTP 3.0 release.
 
 ## <a id="unattended"></a> Unattended install
 

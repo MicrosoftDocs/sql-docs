@@ -46,7 +46,7 @@ Currently, the only way to upgrade a big data cluster to a new release is to man
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
-1. Install the latest version of **mssqlctl**. The following commands install **mssqlctl** for CTP 2.5:
+1. Install the latest version of **mssqlctl**. The following commands install **mssqlctl** for CTP 3.0:
 
    **Windows:**
 

@@ -68,7 +68,7 @@
       - name: Upgrade to a new release
         href: ../big-data-cluster/deployment-upgrade.md
       - name: Customize deployments
-        href: ../big-data-cluster/deployment-custom-configuration.md 
+        href: ../big-data-cluster/deployment-custom-configuration.md
       - name: Configure storage
         href: ../big-data-cluster/concept-data-persistence.md
       - name: Offline deployments
@@ -106,7 +106,7 @@
     - name: Data virtualization
       items:
       - name: Relational data
-        items: 
+        items:
         - name: Virtualize relational data
           href: ../relational-databases/polybase/data-virtualization.md
         - name: Query Oracle data
@@ -118,11 +118,11 @@
         - name: Query HDFS data
           href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
         - name: HDFS tiering
-          href: ../big-data-cluster/hdfs-tiering.md 
+          href: ../big-data-cluster/hdfs-tiering.md
         - name: Mount ADLS Gen2 for HDFS tiering
           href: ../big-data-cluster/hdfs-tiering-mount-adlsgen2.md
         - name: Mount S3 for HDFS tiering
-          href: ../big-data-cluster/hdfs-tiering-mount-s3.md 
+          href: ../big-data-cluster/hdfs-tiering-mount-s3.md
     - name: Data ingestion
       items:
       - name: Load data with curl
@@ -293,7 +293,7 @@
         - name: Use marked transactions to recover related databases
           href: ../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md
         - name: Offline & of a filegroup
-          href:  ../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
+          href: ../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
         - name: Restore pages
           href: ../relational-databases/backup-restore/restore-pages-sql-server.md
         - name: Without restoring data
@@ -491,7 +491,7 @@
           href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
         - name: PowerShell
           href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
-        - name: Azure virtual machines +
+        - name: Azure virtual machines >
           href: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
     - name: How-to
       href: ../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
@@ -928,7 +928,7 @@
           href: ../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md
         - name: Connect clients
           href: ../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md
-        - name:  Warning thresholds on performance
+        - name: Warning thresholds on performance
           href: ../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
         - name: Change transaction safety
           href: ../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
@@ -1301,7 +1301,7 @@
         href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
       - name: Manage
         href: ../relational-databases/blob/manage-filetables.md
-      - name:  Schema
+      - name: Schema
         href: ../relational-databases/blob/filetable-schema.md
       - name: Interoperability
         href: ../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md
@@ -1946,9 +1946,9 @@
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Development
   items:
-  - name: Programming interaction ++
+  - name: Code a client program >>
+    displayName: ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby
     href: ../connect/index.md
-    displayName: Connectivity, Connect, Connection
   - name: Data tier applications
     href: ../relational-databases/data-tier-applications/data-tier-applications.md
     items:
@@ -2015,7 +2015,7 @@
         items:
         - name: Requirements
           href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md
-        - name:  Invoking Functions
+        - name: Invoking Functions
           href: ../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md
     - name: User-Defined Types
       href: ../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
@@ -2097,7 +2097,7 @@
         href: ../relational-databases/clr-integration/assemblies-getting-information.md
       - name: Implement
         href: ../relational-databases/clr-integration/assemblies-implementing.md
-      - name:  Properties
+      - name: Properties
         href: ../relational-databases/clr-integration/assemblies-properties.md
     - name: Integration
       href: ../relational-databases/clr-integration/clr-integration-overview.md
@@ -2384,7 +2384,7 @@
       items:
       - name: Finding more information
         href: ../relational-databases/native-client/finding-more-sql-server-native-client-information.md
-      - name:  Programming
+      - name: Programming
         href: ../relational-databases/native-client/sql-server-native-client-programming.md
       - name: System Requirements for SQL Server Native Client
         href: ../relational-databases/native-client/system-requirements-for-sql-server-native-client.md
@@ -3961,7 +3961,7 @@
       - name: Working with Server Events
         href: ../relational-databases/wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
 - name: Internals & Architecture
-  href:  ../relational-databases/sql-server-guides.md
+  href: ../relational-databases/sql-server-guides.md
   items:
   - name: Ghost record cleanup process
     href: ../relational-databases/ghost-record-cleanup-process-guide.md
@@ -4432,12 +4432,12 @@
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrate & load data
   items:
-  - name: SQL Server Integration Services (SSIS) ++
+  - name: SQL Server Integration Services (SSIS) >>
     href: ../integration-services/index.md
   - name: Bulk Copy Utility (bcp)
     href: ../tools/bcp-utility.md
-  - name: Azure Migration Services +
-    displayName: DMS, Data Migration Service
+  - name: Azure Migration Services >
+    displayName: DMS, Data Migration Service, Azure Data Migration Service
     href: /azure/dms/dms-overview
   - name: Data Quality Services (DQS)
     items:
@@ -4965,7 +4965,7 @@
         items:
         - name: Memory-Optimized Table Subscribers
           href: ../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
-        - name: Replication to SQL Database +
+        - name: Replication to SQL Database >
           href: /azure/sql-database/replication-to-sql-database
         - name: Republish Data
           href: ../relational-databases/replication/republish-data.md
@@ -5593,13 +5593,13 @@
           href: ../sql-server/stretch-database/extended-events-for-stretch-database.md
     - name: Resources
       items:
-      - name: Pricing +
+      - name: Pricing >
         href: https://azure.microsoft.com/pricing/details/sql-server-stretch-database/
-      - name: Blog +
+      - name: Blog >
         href: https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/
-      - name: Service updates +
+      - name: Service updates >
         href: https://azure.microsoft.com/updates/?product=sql-server-stretch-database
-      - name: Videos +
+      - name: Videos >
         href: https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database
   - name: Database Experimentation Wizard
     href: ../dea/database-experimentation-assistant-overview.md
@@ -6556,7 +6556,7 @@
           items:
           - name: General Page
             href: ../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md
-          - name:  Dependent Policies Page
+          - name: Dependent Policies Page
             href: ../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md
           - name: Dependent Conditions Page
             href: ../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md
@@ -6796,7 +6796,7 @@
           href: ../relational-databases/performance-monitor/monitor-disk-usage.md
         - name: Monitor CPU Usage
           href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
-        - name: Monitor Memory Usage 
+        - name: Monitor Memory Usage
           href: ../relational-databases/performance-monitor/monitor-memory-usage.md
         - name: Create a SQL Server Database Alert
           href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md
@@ -6921,7 +6921,7 @@
       - name: Automatic Tuning
         href: ../relational-databases/automatic-tuning/automatic-tuning.md
       - name: Cardinality estimation
-        href: ../relational-databases/performance/cardinality-estimation-sql-server.md 
+        href: ../relational-databases/performance/cardinality-estimation-sql-server.md
       - name: Considerations for Using Test Servers
         href: ../relational-databases/performance/considerations-for-using-test-servers.md
       - name: Intelligent Query Processing
@@ -6997,7 +6997,7 @@
             href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
           - name: Assess benefits
             href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
-          - name: Evaluate with PowerShell 
+          - name: Evaluate with PowerShell
             href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
           - name: Memory-optimization advisor
             href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
@@ -7310,15 +7310,15 @@
         href: ../relational-databases/polybase/polybase-type-mapping.md
     - name: Resources
       items:
-      - name: DBA Stack Exchange +
+      - name: DBA Stack Exchange >
         href: https://dba.stackexchange.com/questions/tagged/sql-server
-      - name: Stack Overflow +
+      - name: Stack Overflow >
         href: https://stackoverflow.com/questions/tagged/sql-server
-      - name: MSDN Forums +
+      - name: MSDN Forums >
         href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
-      - name: Submit feedback +
+      - name: Submit feedback >
         href: https://feedback.azure.com/forums/908035-sql-server
-      - name: Reddit +
+      - name: Reddit >
         href: https://www.reddit.com/r/SQLServer
   - name: Linked servers
     href: ../relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7414,16 +7414,17 @@
       href: ../relational-databases/synonyms/create-synonyms.md
 - name: Reporting & Analytics
   items:
-  - name: Advanced Analytics & Machine learning ++
+  - name: Advanced Analytics & Machine learning >>
     href: ../advanced-analytics/index.md
-  - name: Analytics Platform System ++
+  - name: Analytics Platform System >>
     displayName: APS, PDW, Parallel Data Warehouse
     href: ../analytics-platform-system/index.md
-  - name: SQL Server Analysis Services (SSAS) ++
+  - name: SQL Server Analysis Services (SSAS) >>
     href: ../analysis-services/index.md
-  - name: SQL Server Reporting Services (SSRS) ++
+  - name: SQL Server Reporting Services (SSRS) >>
     href: ../reporting-services/index.md
   - name: Master Data Services
+    displayName: MDS
     href: ../master-data-services/master-data-services-overview-mds.md
     items:
     - name: Getting started
@@ -7951,11 +7952,11 @@
       items:
       - name: SQL Server connector with encryption
         href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
-      - name: Bring your own key +
+      - name: Bring your own key >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
-      - name: Rotate TDE BYOK keys +
+      - name: Rotate TDE BYOK keys >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
-      - name: Remove TDE protector +
+      - name: Remove TDE protector >
         href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
       - name: EKM using Azure Key Vault
         href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
@@ -8024,10 +8025,10 @@
         href: ../relational-databases/security/encryption/encryption-hierarchy.md
       - name: Transparent Data Encryption (TDE)
         href: ../relational-databases/security/encryption/transparent-data-encryption.md
-      - name: TDE with Azure SQL Database +
+      - name: TDE with Azure SQL Database >
         href: /azure/sql-database/transparent-data-encryption-azure-sql
         items:
-        - name: Bring your own key +
+        - name: Bring your own key >
           href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
       - name: Always Encrypted
         href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
@@ -8153,13 +8154,13 @@
         href: ../azure-data-studio/extensibility-apis.md
     - name: Resources
       items:
-      - name: Azure Data Studio GitHub repo +
+      - name: Azure Data Studio GitHub repo >
         href: https://www.github.com/Microsoft/azuredatastudio
-      - name: SQL Server Blog +
+      - name: SQL Server Blog >
         href: https://blogs.technet.microsoft.com/dataplatforminsider/
       - name: FAQ
         href: ../azure-data-studio/faq.md
-      - name: Report issues & make suggestions +
+      - name: Report issues & make suggestions >
         href: https://github.com/microsoft/azuredatastudio/issues
   - name: Command prompt utilities
     href: ../tools/command-prompt-utility-reference-database-engine.md
@@ -9043,7 +9044,7 @@
           items:
           - name: Manage Job Categories
             href: ../ssms/agent/job-categories-manage-job-categories.md
-          - name:  New Job Category
+          - name: New Job Category
             href: ../ssms/agent/job-categories-properties-new-job-category.md
         - name: Job Properties
           items:
@@ -10040,7 +10041,7 @@
       href: ../linux/quickstart-install-connect-ubuntu.md
     - name: Run & Connect - Docker
       href: ../linux/quickstart-install-connect-docker.md
-    - name: Provision a SQL VM in Azure +
+    - name: Provision a SQL VM in Azure >
       href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
     - name: Run & Connect - Cloud
       href: ../linux/quickstart-install-connect-clouds.md
@@ -10254,63 +10255,63 @@
     items:
     - name: Troubleshoot
       href: ../linux/sql-server-linux-troubleshooting-guide.md
-    - name: How to License
+    - name: How to License >
       href: https://www.microsoft.com/sql-server/sql-server-2017-pricing
-    - name: DBA Stack Exchange +
+    - name: DBA Stack Exchange >
       href: https://dba.stackexchange.com/questions/tagged/sql-server
-    - name: Stack Overflow +
+    - name: Stack Overflow >
       href: https://stackoverflow.com/questions/tagged/sql-server  # Note: this S.O. https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
-    - name: MSDN Forums +
+    - name: MSDN Forums >
       href: https://social.msdn.microsoft.com/Forums/home
-    - name: Submit feedback +
+    - name: Submit feedback >
       href: https://feedback.azure.com/forums/908035-sql-server
-    - name: Reddit +
+    - name: Reddit >
       href: https://www.reddit.com/r/SQLServer  # Note: this Reddit https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
 - name: SQL on Azure
   items:
-  - name: Azure SQL Database +
+  - name: Azure SQL Database >
     href: /azure/sql-database/
-  - name: Azure SQL Data Warehouse +
+  - name: Azure SQL Data Warehouse >
     href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is  # Would 'index.md' be better?
-  - name: SQL Server on an Azure VM +
+  - name: SQL Server on an Azure VM >
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Resources
   items:
   - name: Learn
     items:
-    - name: Microsoft Virtual Academy +
+    - name: Microsoft Virtual Academy >
       href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
-    - name: SQL on Channel 9 +
+    - name: SQL on Channel 9 >
       href: https://channel9.msdn.com/Search
   - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
     items:
-    - name: SQL Server +
+    - name: SQL Server >
       href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: SQL Server Database Engine +
+    - name: SQL Server Database Engine >
       href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
-    - name: SQL Server Security +
+    - name: SQL Server Security >
       href: https://blogs.msdn.microsoft.com/sqlsecurity/
-    - name: SQL Server Data Tools +
+    - name: SQL Server Data Tools >
       href: https://blogs.msdn.microsoft.com/ssdt/
   - name: Feedback & help
     items:
     - name: Get help
       href: ../sql-server/sql-server-get-help.md
-    - name: Feedback for SQL Docs +
+    - name: Feedback for SQL Docs >
       href: https://aka.ms/sqldocsfeedback
-    - name: Feedback for SQL Server (UserVoice) +
+    - name: Feedback for SQL Server (UserVoice) >
       href: https://feedback.azure.com/forums/908035-sql-server
-    - name: SQL Docs Survey +
+    - name: SQL Docs Survey >
       href: https://aka.ms/sqldocsurvey
     - name: Contribute to SQL Documentation!
       href: ../sql-server/sql-server-docs-contribute.md
-    - name: DBA Stack Exchange +
+    - name: DBA Stack Exchange >
       href: https://dba.stackexchange.com/questions/tagged/sql-server
-    - name: Stack Overflow +
+    - name: Stack Overflow >
       href: https://stackoverflow.com/questions/tagged/sql-server
-    - name: MSDN Forums +
+    - name: MSDN Forums >
       href: https://social.msdn.microsoft.com/Forums/home
-    - name: Reddit +
+    - name: Reddit >
       href: https://www.reddit.com/r/SQLServer
   - name: Partners
     items:
@@ -10328,14 +10329,14 @@
   items:
   - name: SQL Docs include files
     href: ../sql-server/applies-to-includes.md
-  - name: Archived Content (SQL 2005 - 2012) +
-    displayName: 2005, 2008, 2008 r2, 2012
+  - name: Archived Content (SQL 2005 - 2012) >
+    displayName: 2005, 2008, 2008 r2, 2012, previous-versions
     href: https://docs.microsoft.com/previous-versions/sql/
   - name: Database samples
     items:
     - name: Samples Overview
       href: ../samples/sql-samples-where-are.md
-    - name: All Github Samples +
+    - name: All Github Samples >
       href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
     - name: AdventureWorks
       items:
@@ -12842,7 +12843,7 @@
       - name: managed_backup.fn_backup_instance_config
         href: ../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md
     - name: Queries & Extended events
-      items:      
+      items:
       - name: sys.fn_get_sql
         href: ../relational-databases/system-functions/sys-fn-get-sql-transact-sql.md
       - name: sys.fn_MSxe_read_event_stream

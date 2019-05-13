@@ -30,11 +30,10 @@ NOTE: Discussions about SQL Data Warehouse in this article apply to both SQL Dat
 ## Syntax
   
 ```  
--- Create a new table. 
+-- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
-      { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
-
+      { column_name <data_type>  [ <column_options> ] } [ ,...n ]
     )  
     [ WITH ( <table_option> [ ,...n ] ) ]  
 [;]  
@@ -46,7 +45,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        CLUSTRERED COLUMN STORE iNDEX (cci)> (Preview)
+        <cci_option> --default for Azure SQL Data Warehouse
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -60,7 +59,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
   
-<data type> ::=   
+<data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
     | datetime  

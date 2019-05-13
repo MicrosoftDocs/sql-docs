@@ -14,48 +14,53 @@ manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Creates a new table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- 
+
 To understand tables and how to use them, see [Tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/).
 
-NOTE: Discussions about SQL Data Warehouse in this article apply to both SQL Data Warehouse and Parallel Data Warehouse unless otherwise noted. 
- 
+> [!NOTE]
+>  Discussions about SQL Data Warehouse in this article apply to both SQL Data Warehouse and Parallel Data Warehouse unless otherwise noted.
+
  ![Article link icon](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-<a name="Syntax"></a>   
-## Syntax  
+<a name="Syntax"></a>
+
+## Syntax
   
 ```  
--- Create a new table. 
+-- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
-      { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
+      { column_name <data_type>  [ <column_options> ] } [ ,...n ]
     )  
     [ WITH ( <table_option> [ ,...n ] ) ]  
 [;]  
-   
+
 <column_options> ::=
     [ COLLATE Windows_collation_name ]  
     [ NULL | NOT NULL ] -- default is NULL  
     [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression  ]
   
-<table_option> ::= 
-    {   
-        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
-      | HEAP --default for Parallel Data Warehouse   
-      | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC 
+<table_option> ::=
+    {
+        <cci_option> --default for Azure SQL Data Warehouse
+      | HEAP --default for Parallel Data Warehouse
+      | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
-    { 
-        DISTRIBUTION = HASH ( distribution_column_name ) 
+    {
+        DISTRIBUTION = HASH ( distribution_column_name )
       | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
-    }   
+    }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
-        FOR VALUES ( [ boundary_value [,...n] ] ) )  
+        FOR VALUES ( [ boundary_value [,...n] ] ) )
+
+<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
   
-<data type> ::=   
+<data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
     | datetime  
@@ -82,8 +87,9 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | uniqueidentifier  
 ```  
 
-<a name="Arguments"></a>   
-## Arguments  
+<a name="Arguments"></a>
+## Arguments
+
  *database_name*  
  The name of the database that will contain the new table. The default is the current database.  
   
@@ -92,10 +98,10 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
  *table_name*  
  The name of the new table. To create a local temporary table, precede the table name with #.  For explanations and guidance on temporary tables, see [Temporary tables in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/). 
- 
+
  *column_name*  
  The name of a table column.
-   
+
 ### <a name="ColumnOptions"></a> Column options
 
  `COLLATE` *Windows_collation_name*  
@@ -112,32 +118,34 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  | *constraint_name* | The optional name for the constraint. The constraint name is unique within the database. The name can be reused in other databases. |
  | *constant_expression* | The default value for the column. The expression must be a literal value or a constant. For example, these constant expressions are allowed: `'CA'`, `4`. These constant expressions aren't allowed: `2+3`, `CURRENT_TIMESTAMP`. |
   
-
 ### <a name="TableOptions"></a> Table structure options
+
 For guidance on choosing the type of table, see [Indexing tables in Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
- `CLUSTERED COLUMNSTORE INDEX`  
-Stores the table as a clustered columnstore index. The clustered columnstore index applies to all of the table data. This behavior is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
+ `CLUSTERED COLUMNSTORE INDEX` 
  
- `HEAP`   
+Stores the table as a clustered columnstore index. The clustered columnstore index applies to all of the table data. This behavior is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+ 
+ `HEAP`
   Stores the table as a heap. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
  `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
  Stores the table as a clustered index with one or more key columns. This behavior stores the data by row. Use *index_column_name* to specify the name of one or more key columns in the index.  For more information, see Rowstore Tables in the General Remarks.
  
- `LOCATION = USER_DB`   
+ `LOCATION = USER_DB`
  This option is deprecated. It's syntactically accepted, but no longer required and no longer affects behavior.   
   
 ### <a name="TableDistributionOptions"></a> Table distribution options
+
 To understand how to choose the best distribution method and use distributed tables, see [Distributing tables in Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
-`DISTRIBUTION = HASH` ( *distribution_column_name* )   
+`DISTRIBUTION = HASH` ( *distribution_column_name* )
 Assigns each row to one distribution by hashing the value stored in *distribution_column_name*. The algorithm is deterministic, which means it always hashes the same value to the same distribution.  The distribution column should be defined as NOT NULL because all rows that have NULL are assigned to the same distribution.
 
-`DISTRIBUTION = ROUND_ROBIN`   
+`DISTRIBUTION = ROUND_ROBIN`
 Distributes the rows evenly across all the distributions in a round-robin fashion. This behavior is the default for [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
-`DISTRIBUTION = REPLICATE`    
+`DISTRIBUTION = REPLICATE`
 Stores one copy of the table on each Compute node. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] the table is stored on a distribution database on each Compute node. For [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the table is stored in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filegroup that spans the Compute node. This behavior is the default for [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Table partition options
@@ -145,17 +153,35 @@ For guidance on using table partitions, see [Partitioning tables in SQL Data War
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 Creates one or more table partitions. These partitions are horizontal table slices that allow you to apply operations to subsets of rows regardless of whether the table is stored as a heap, clustered index, or clustered columnstore index. Unlike the distribution column, table partitions don't determine the distribution where each row is stored. Instead, table partitions determine how the rows are grouped and stored within each distribution.  
- 
+
 | Argument | Explanation |
 | -------- | ----------- |
 |*partition_column_name*| Specifies the column that [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will use to partition the rows. This column can be any data type. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sorts the partition column values in ascending order. The low-to-high ordering goes from `LEFT` to `RIGHT` in the `RANGE` specification. |  
 | `RANGE LEFT` | Specifies the boundary value belongs to the partition on the left (lower values). The default is LEFT. |
 | `RANGE RIGHT` | Specifies the boundary value belongs to the partition on the right (higher values). | 
 | `FOR VALUES` ( *boundary_value* [,...*n*] ) | Specifies the boundary values for the partition. *boundary_value* is a constant expression. It can't be NULL. It must either match or be implicitly convertible to the data type of *partition_column_name*. It can't be truncated during implicit conversion so that the size and scale of the value don't match the data type of *partition_column_name*<br></br><br></br>If you specify the `PARTITION` clause, but don't specify a boundary value, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will create a partitioned table with one partition. If applicable, you can split the table into two partitions at a later time.<br></br><br></br>If you specify one boundary value, the resulting table has two partitions; one for the values lower than the boundary value and one for the values higher than the boundary value. If you move a partition into a non-partitioned table, the non-partitioned table will receive the data, but will not have the partition boundaries in its metadata.| 
- 
+
  See [Create a partitioned table](#PartitionedTable) in the Examples section.
 
-### <a name="DataTypes"></a> Data types
+### Ordered Clustered columnstore index option (Preview)
+
+Clustered columnstore index is the default for creating tables in Azure SQL Data Warehouse.  The ORDER specification defaults to COMPOUND keys.  Sorting will always be ascending order. If no ORDER clause is specified, columnstore will not be sorted.
+
+During preview, you can run this query to check the column(s) with ORDER enabled.  A catalog view will be provided later to provide this information and the column ordinal if multiple columns are specified in ORDER.
+
+```sql
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+FROM sys.objects o 
+INNER JOIN sys.columns c ON o.object_id = c.object_id 
+INNER JOIN sys.partitions p ON o.object_id = p.object_id   
+INNER JOIN sys.column_store_segments s 
+    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
+WHERE o.name = 't1' and c.name = 'col1' 
+ORDER BY c.name, s.min_data_id, s.segment_id;
+```
+
+### <a name="DataTypes"></a> Data type
+
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supports the most commonly used data types. Below is a list of the supported data types along with their details and storage bytes. To better understand data types and how to use them, see [Data types for tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
 For a table of data type conversions, see the Implicit Conversions section, of [CAST and CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
@@ -289,11 +315,12 @@ Each distribution contains all table partitions. For example, if there are 60 di
 
 We recommend using fewer table partitions to ensure each columnstore index has enough rows to take advantage of the benefits of columnstore indexes. For more information, see [Partitioning tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) and [Indexing tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
-  
- ### Rowstore table (heap or clustered index)  
- A rowstore table is a table stored in row-by-row order. It's a heap or clustered index. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] creates all rowstore tables with page compression; this behavior isn't user-configurable.   
- 
- ### Columnstore table (columnstore index)
+### Rowstore table (heap or clustered index)
+
+A rowstore table is a table stored in row-by-row order. It's a heap or clustered index. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] creates all rowstore tables with page compression; this behavior isn't user-configurable.
+
+### Columnstore table (columnstore index)
+
 A columnstore table is a table stored in column-by-column order. The columnstore index is the technology that manages data stored in a columnstore table.  The clustered columnstore index doesn't affect how data are distributed, rather, it affects how the data are stored within each distribution.
 
 To change a rowstore table to a columnstore table, drop all existing indexes on the table and create a clustered columnstore index. For an example, see [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
@@ -302,20 +329,22 @@ For more information, see these articles:
 - [Columnstore indexes versioned feature summary](https://msdn.microsoft.com/library/dn934994/)
 - [Indexing tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Columnstore Indexes Guide](~/relational-databases/indexes/columnstore-indexes-overview.md) 
- 
+
 <a name="LimitationsRestrictions"></a>  
 ## Limitations and Restrictions  
  You can't define a DEFAULT constraint on a distribution column.  
   
- ### Partitions
- When using partitions, the partition column can't have a Unicode-only collation. For example, the following statement fails.  
+### Partitions
+When using partitions, the partition column can't have a Unicode-only collation. For example, the following statement fails.  
   
- `CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))`  
+ ```sql
+CREATE TABLE t1 ( c1 varchar(20) COLLATE Divehi_90_CI_AS_KS_WS) WITH (PARTITION (c1 RANGE FOR VALUES (N'')))
+```  
  
  If *boundary_value* is a literal value that must be implicitly converted to the data type in *partition_column_name*, a discrepancy will occur. The literal value is displayed through the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] system views, but the converted value is used for [!INCLUDE[tsql](../../includes/tsql-md.md)] operations. 
- 
-  
- ### Temporary tables
+
+### Temporary tables
+
  Global temporary tables that begin with ## aren't supported.  
   
  Local temporary tables have the following limitations and restrictions:  
@@ -338,38 +367,48 @@ For more information, see these articles:
 ### <a name="ColumnCollation"></a> A. Specify a column collation 
  In the following example, the table `MyTable` is created with two different column collations. By default, the column, `mycolumn1`, has the default collation Latin1_General_100_CI_AS_KS_WS. The column, `mycolumn2` has the collation Frisian_100_CS_AS.  
   
-```  
+```sql
 CREATE TABLE MyTable   
   (  
     mycolumnnn1 nvarchar,  
     mycolumn2 nvarchar COLLATE Frisian_100_CS_AS )  
 WITH ( CLUSTERED COLUMNSTORE INDEX )  
 ;  
-  
 ```  
   
-### <a name="DefaultConstraint"></a> B. Specify a DEFAULT constraint for a column  
+### <a name="DefaultConstraint"></a> B. Specify a DEFAULT constraint for a column
+
  The following example shows the syntax to specify a default value for a column. The colA column has a default constraint named constraint_colA  and a default value of 0.  
   
-```  
-  
-CREATE TABLE MyTable   
+```sql
+CREATE TABLE MyTable
   (  
     colA int CONSTRAINT constraint_colA DEFAULT 0,  
-    colB nvarchar COLLATE Frisian_100_CS_AS   
+    colB nvarchar COLLATE Frisian_100_CS_AS
   )  
 WITH ( CLUSTERED COLUMNSTORE INDEX )  
 ;  
-```  
+```
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> C. Create an ordered clustered columnstore index
+
+The following example shows how to create an ordered clustered columnstore index. The index is ordered on SHIPDATE.
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
 
 <a name="ExamplesTemporaryTables"></a> 
 ## Examples for temporary tables
 
 ### <a name="TemporaryTable"></a> C. Create a local temporary table  
- The following example creates a local temporary table named #myTable. The table is specified with a three-part name, which starts with a #.   
+ The following example creates a local temporary table named #myTable. The table is specified with a three-part name, which starts with a #.
   
-```  
-CREATE TABLE AdventureWorks.dbo.#myTable   
+```sql
+CREATE TABLE AdventureWorks.dbo.#myTable
   (  
    id int NOT NULL,  
    lastName varchar(20),  
@@ -378,7 +417,7 @@ CREATE TABLE AdventureWorks.dbo.#myTable
 WITH  
   (   
     DISTRIBUTION = HASH (id),  
-    CLUSTERED COLUMNSTORE INDEX   
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```
@@ -391,17 +430,16 @@ WITH
   
  The clustered columnstore index doesn't affect how the data is distributed; data is always distributed by row. The clustered columnstore index affects how the data is stored within each distribution.  
   
-```  
-  
-CREATE TABLE MyTable   
+```sql
+  CREATE TABLE MyTable
   (  
     colA int CONSTRAINT constraint_colA DEFAULT 0,  
-    colB nvarchar COLLATE Frisian_100_CS_AS   
+    colB nvarchar COLLATE Frisian_100_CS_AS
   )  
 WITH   
   (   
     DISTRIBUTION = HASH ( colB ),  
-    CLUSTERED COLUMNSTORE INDEX   
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```  
@@ -412,8 +450,8 @@ WITH
 ### <a name="RoundRobin"></a> E. Create a ROUND_ROBIN table  
  The following example creates a ROUND_ROBIN table with three columns and without partitions. The data is spread across all distributions. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -422,11 +460,12 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. Create a hash-distributed table  
+### <a name="HashDistributed"></a> F. Create a hash-distributed table
+
  The following example creates the same table as the previous example. However, for this table, rows are distributed (on the `id` column) instead of randomly spread like a ROUND_ROBIN table. The table is created with a CLUSTERED COLUMNSTORE INDEX, which gives better performance and data compression than a heap or rowstore clustered index.  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -442,8 +481,8 @@ WITH
 ### <a name="Replicated"></a> G. Create a replicated table  
  The following example creates a replicated table similar to the previous examples. Replicated tables are copied in full to each Compute node. With this copy on each Compute node, data movement is reduced for queries. This example is created with a CLUSTERED INDEX, which gives better data compression than a heap. A heap may not contain enough rows to achieve good CLUSTERED COLUMNSTORE INDEX compression.  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
@@ -451,7 +490,7 @@ CREATE TABLE myTable
   )  
 WITH  
   (   
-    DISTRIBUTION = REPLICATE,   
+    DISTRIBUTION = REPLICATE,
     CLUSTERED INDEX (lastName)  
   );  
 ```  
@@ -459,65 +498,68 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## Examples for table partitions
 
-###  <a name="PartitionedTable"></a> H. Create a partitioned table  
+###  <a name="PartitionedTable"></a> H. Create a partitioned table
+
  The following example creates the same table as shown in example A, with the addition of RANGE LEFT partitioning on the `id` column. It specifies four partition boundary values, which results in five partitions.  
   
-```  
-CREATE TABLE myTable   
+```sql
+CREATE TABLE myTable
   (  
     id int NOT NULL,  
     lastName varchar(20),  
     zipCode int)  
-WITH   
-  (   
+WITH
+  (
   
     PARTITION ( id RANGE LEFT FOR VALUES (10, 20, 30, 40 )),  
-    CLUSTERED COLUMNSTORE INDEX      
+    CLUSTERED COLUMNSTORE INDEX
   )  
 ;  
 ```  
   
  In this example, data will be sorted into the following partitions:  
   
--   Partition 1: col <= 10   
--   Partition 2: 10 < col <= 20   
--   Partition 3: 20 < col <= 30   
--   Partition 4: 30 < col <= 40   
--   Partition 5: 40 < col  
+- Partition 1: col <= 10
+- Partition 2: 10 < col <= 20
+- Partition 3: 20 < col <= 30
+- Partition 4: 30 < col <= 40
+- Partition 5: 40 < col  
   
  If this same table was partitioned RANGE RIGHT instead of RANGE LEFT (default), the data will be sorted into the following partitions:  
   
--   Partition 1: col < 10  
--   Partition 2: 10 <= col < 20   
--   Partition 3: 20 <= col < 30    
--   Partition 4: 30 <= col < 40   
--   Partition 5: 40 <= col  
+- Partition 1: col < 10  
+- Partition 2: 10 <= col < 20
+- Partition 3: 20 <= col < 30
+- Partition 4: 30 <= col < 40
+- Partition 5: 40 <= col  
   
-### <a name="OnePartition"></a> I. Create a partitioned table with one partition  
+### <a name="OnePartition"></a> I. Create a partitioned table with one partition
+
  The following example creates a partitioned table with one partition. It doesn't specify any boundary value, which results in one partition.  
   
-```  
+```sql
 CREATE TABLE myTable (  
     id int NOT NULL,  
     lastName varchar(20),  
     zipCode int)  
-WITH   
-    (   
+WITH
+    (
       PARTITION ( id RANGE LEFT FOR VALUES ( )),  
       CLUSTERED COLUMNSTORE INDEX  
     )  
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. Create a table with date partitioning  
+### <a name="DatePartition"></a> J. Create a table with date partitioning
+
  The following example creates a new table named `myTable`, with partitioning on a `date` column. By using RANGE RIGHT and dates for the boundary values, it puts a month of data in each partition.  
   
-```  
+```sql
 CREATE TABLE myTable (  
-    l_orderkey      bigint,       
-    l_partkey       bigint,                                             
-    l_suppkey       bigint,                                           
-    l_linenumber    bigint,        
+    l_orderkey      bigint,
+    l_partkey       bigint,
+    l_suppkey       bigint,
+    l_linenumber    bigint,
     l_quantity      decimal(15,2),  
     l_extendedprice decimal(15,2),  
     l_discount      decimal(15,2),  
@@ -530,11 +572,11 @@ CREATE TABLE myTable (
     l_shipinstruct  char(25),  
     l_shipmode      char(10),  
     l_comment       varchar(44))  
-WITH   
-  (   
+WITH
+  (
     DISTRIBUTION = HASH (l_orderkey),  
     CLUSTERED COLUMNSTORE INDEX,  
-    PARTITION ( l_shipdate  RANGE RIGHT FOR VALUES   
+    PARTITION ( l_shipdate  RANGE RIGHT FOR VALUES
       (  
         '1992-01-01','1992-02-01','1992-03-01','1992-04-01','1992-05-01',
         '1992-06-01','1992-07-01','1992-08-01','1992-09-01','1992-10-01',
@@ -548,8 +590,8 @@ WITH
   );  
 ```  
   
-<a name="SeeAlso"></a>    
-## See also 
+<a name="SeeAlso"></a>
+## See also
  
  [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   

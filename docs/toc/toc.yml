@@ -5315,7 +5315,7 @@
           - name: Merge Subscriptions
             href: ../relational-databases/replication/subscription-validation-options-merge-subscriptions.md
         - name: Reinitialize subscriptions
-          itmes:
+          items:
           - name: All Subscriptions
             href: ../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md
           - name: One Subscription
@@ -9045,8 +9045,8 @@
             href: ../ssms/agent/job-categories-manage-job-categories.md
           - name:  New Job Category
             href: ../ssms/agent/job-categories-properties-new-job-category.md
-          - name: Job Properties
-            items:
+        - name: Job Properties
+          items:
           - name: Jobs That Reference a Schedule
             href: ../ssms/agent/jobs-that-reference-a-schedule.md
           - name: Alerts Page
@@ -17118,6 +17118,8 @@
           href: ../t-sql/statements/set-quoted-identifier-transact-sql.md
         - name: REMOTE_PROC_TRANSACTIONS
           href: ../t-sql/statements/set-remote-proc-transactions-transact-sql.md
+        - name: RESULT SET CACHING
+          href: ../t-sql/statements/set-result-set-caching-transact-sql.md
         - name: ROWCOUNT
           href: ../t-sql/statements/set-rowcount-transact-sql.md
         - name: SHOWPLAN_ALL

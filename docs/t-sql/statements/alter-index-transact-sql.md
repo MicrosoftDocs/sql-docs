@@ -167,8 +167,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## Arguments  
+```
+
+## Arguments
+
  *index_name*  
  Is the name of the index. Index names must be unique within a table or view but do not have to be unique within a database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

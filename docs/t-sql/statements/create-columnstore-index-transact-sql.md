@@ -65,7 +65,8 @@ Learn more:
 CREATE CLUSTERED COLUMNSTORE INDEX index_name  
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]  
+    [ ON <on_option> ] 
+    [ORDER (column [,…n])]  --(Preview) 
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  
@@ -154,6 +155,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
        WITH (MAXDOP = 2);
 ```
+
    For more information, see [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), and [Configure Parallel Index Operations](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
 ###### COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  

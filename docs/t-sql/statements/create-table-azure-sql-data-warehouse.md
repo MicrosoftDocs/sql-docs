@@ -18,7 +18,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Creates a new table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- 
+
 To understand tables and how to use them, see [Tables in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/).
 
 NOTE: Discussions about SQL Data Warehouse in this article apply to both SQL Data Warehouse and Parallel Data Warehouse unless otherwise noted.

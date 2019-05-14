@@ -16,14 +16,7 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 zone_pivot_groups: cs1-command-shell
 ---
 
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-# Quickstart: Run SQL Server 2017 container images with Docker
-::: moniker-end
-<!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
-# Quickstart: Run SQL Server 2019 container images with Docker
-::: moniker-end
+# Quickstart: Run SQL Server container images with Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

@@ -18,7 +18,7 @@ manager: craigg
 # Troubleshoot Connecting to the SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article lists troubleshooting techniques to use when you cannot connect to an instance of the SQL Server Database Engine on a single server. 
+This article lists troubleshooting techniques to use when you cannot connect to an instance of the SQL Server Database Engine on a single server.
 
 >[!NOTE]
 >For other scenarios, see:

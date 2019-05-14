@@ -49,24 +49,24 @@ Review the following list before adding users to a native mode report server.
 
 1. Start the [web portal](../web-portal-ssrs-native-mode.md).
 
-2. Select the *gear icon* in the upper right.
+2. Select the **Gear** icon in the upper right and then select **Site Settings** from the dropdown menu.
 
-3. Select **Site Settings**.
+    ![Report server web portal gear icon and dropdown menu](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-4. Select **Security**.
+3. Select **Security**.
 
-5. Select **Add group or user**.
+4. Select **Add group or user**.
 
-6. In **Group or user**, enter a Windows domain user or group account in this format: \<domain>\\<account\>.
+5. In **Group or user**, enter a Windows domain user or group account in this format: \<domain>\\<account\>.
 
     > [!NOTE]
     > If you are using forms authentication or custom security, specify the user or group account in the format that is correct for your deployment.
 
-7. Select a system role, and then select **OK**.
+6. Select a system role, and then select **OK**.
 
     Roles are cumulative, so if you select both System Administrator and System User, a user or group will be able to perform the tasks in both roles.
 
-8. Repeat to create assignments for additional users or groups.
+7. Repeat to create assignments for additional users or groups.
 
 ### To add a user or group to an item role
 

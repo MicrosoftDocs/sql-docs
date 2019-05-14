@@ -1,16 +1,14 @@
 ---
 title: "Release notes (OLE DB Driver for SQL Server) | Microsoft Docs"
-ms.date: "02/13/2019"
+ms.date: "05/13/2019"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
-## author: David-Engel
-## ms.author: v-daveng
 author: mateusz-kmiecik
 ms.author: v-makmie
 ---
-# Release notes for the Microsoft OLE DB Driver, for SQL Server
+# Release notes for the Microsoft OLE DB Driver for SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -25,14 +23,18 @@ See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
 
-## 18.2.1
+## 18.2.2
 
-<!--
-USE THE TABLE FORMAT!
-Hello, from now on, please use the table-based format standard for all new Release Notes content.
-See section "## 18.2.1" for a live example in this article.
-Thank you. For questions, contact GeneMi. (2019/03/16)
--->
+May 2019
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed non-interactive Azure Active Directory authentication in multithreaded apartment (MTA). | The OLE DB Driver 18.2.1 incorrectly tries to change the COM concurrency model on an apartment that was previously initialized as multithreaded (MTA). As a result, in an application that makes more than one subsequent call to [CoInitialize](https://go.microsoft.com/fwlink/?linkid=2092520) or [CoInitializeEx](https://go.microsoft.com/fwlink/?linkid=2092521) prior to calling the [IDBInitialize::Initialize](https://go.microsoft.com/fwlink/?linkid=2092522) interface, the driver fails to connect when using any of the Azure Active Directory authentication modes. |
+| &nbsp; | &nbsp; |
+
+## 18.2.1
 
 February 2019
 

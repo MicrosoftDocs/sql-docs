@@ -22,9 +22,11 @@ This article lists troubleshooting techniques to use when you cannot connect to 
 
 These instructions are particularly useful when troubleshooting the "**Connect to Server**" error, which can be `Error Number: 11001 (or 53), Severity: 20, State: 0`, and error messages such as:
 
-- `A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections.`
-- `(provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) (Microsoft SQL Server, Error: 53)`
-- `(provider: TCP Provider, error: 0 - No such host is known.) (Microsoft SQL Server, Error: 11001)`
+> `A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections.`
+
+> `(provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) (Microsoft SQL Server, Error: 53)`
+
+> `(provider: TCP Provider, error: 0 - No such host is known.) (Microsoft SQL Server, Error: 11001)`
 
 This error usually means that the SQL Server computer can't be found or that the TCP port number is either not known, or is not the correct port number, or is blocked by a firewall.
 
@@ -60,11 +62,11 @@ First you must gather basic information about the database engine.
 
 3. Get the TCP port number used by SQL Server. In most cases you are connecting to the Database Engine from another computer using the TCP protocol.
     1. Using SQL Server Management Studio on the computer running SQL Server, connect to the instance of SQL Server. In Object Explorer, expand **Management**, expand **SQL Server Logs**, and then double-click the current log.
-    2. In the Log Viewer, click the **Filter** button on the toolbar. In the **Message contains text** box, type **server is listening on**, click **Apply filter**, and then click **OK**.
-    3. A message similar to **Server is listening on [ 'any' \<ipv4> 1433]** should be listed. This message indicates that this instance of SQL Server is listening on all the IP addresses on this computer (for IP version 4) and is listening to TCP port 1433. (TCP port 1433 is usually the port used by the Database Engine. Only one instance of SQL Server can use a port, so if there is more than one instance of SQL Server installed, some instances must use other port numbers.) Make a note of the port number used by the instance of [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] that you are trying to connect to. 
+    2. In the Log Viewer, click the **Filter** button on the toolbar. In the **Message contains text** box, type `server is listening on`, click **Apply filter**, and then click **OK**.
+    3. A message similar to `Server is listening on [ 'any' <ipv4> 1433]` should be listed. This message indicates that this instance of SQL Server is listening on all the IP addresses on this computer (for IP version 4) and is listening to TCP port 1433. (TCP port 1433 is usually the port used by the Database Engine. Only one instance of SQL Server can use a port, so if there is more than one instance of SQL Server installed, some instances must use other port numbers.) Make a note of the port number used by the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance that you are trying to connect to. 
 
     > [!NOTE] 
-    > IP address 127.0.0.1 is probably listed. It is called the loopback adapter address and can only be connected to from processes on the same computer. It can be useful for troubleshooting, but you can't use it to connect from another computer.
+    > `IP address 127.0.0.1` is probably listed. It is called the loopback adapter address. Only processes on the same computer can use it to connect. It can be useful for troubleshooting, but you can't use it to connect from another computer.
 
 ## Enable Protocols
 

@@ -44,14 +44,16 @@ This error usually means that the SQL Server computer can't be found or that the
 First you must gather basic information about the database engine.
 
 1. Confirm the instance of the SQL Server Database Engine is installed and running.
+
     1. Logon to the computer hosting the instance of SQL Server.
-    2. Start SQL Server Configuration Manager. 
+    2. Start SQL Server Configuration Manager.
 
       > Configuration Manager is automatically installed on the computer when SQL Server is installed. Instructions on starting Configuration Manager vary slightly by version of SQL Server and Windows. For help starting Configuration Manager, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).)
+
     1. Using Configuration Manager:
 
       > 1. In the left pane select **SQL Server Services**.
-      > 2. In the right-pane confirm that the instance of the Database Engine is present and running.
+      > 1. In the right-pane confirm that the instance of the Database Engine is present and running.
       >
       > An instance named **SQL Server (MSSQLSERVER)** is a default (unnamed) instance. There can only be one default instance.
       >
@@ -59,8 +61,8 @@ First you must gather basic information about the database engine.
       >
       > SQL Server Express uses the name **SQL Server (SQLEXPRESS)** as the instance name unless someone named it something else during installation.
 
-    4. Make a note of the name of the instance that you are trying to connect to. Also, confirm that the instance is running, by looking for the green arrow. If the instance has a red square, right-click the instance and then click **Start**. It should turn green.
-    5. If you are attempting to connect to a named instance, make sure the SQL Server Browser service is running.
+    1. Make a note of the name of the instance that you are trying to connect to. Also, confirm that the instance is running. The instance is running if Configuration Manager displays a green arrow next to the name of the instance. If the instance has a red square, right-click the instance and then click **Start**. The server instance starts, and the indicator becomes a green arrow.
+    1. If you are attempting to connect to a named instance, make sure the SQL Server Browser service is running.
 
 2. Get the IP Address of the computer hosting the instance of SQL Server.
     1. On the Start menu, click **Run**. In the **Run** window type **cmd**, and then click **OK**.

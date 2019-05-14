@@ -1,7 +1,7 @@
 ---
 title: "Work with JSON data in SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/19/2018"
+ms.date: "05/14/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: 
@@ -150,7 +150,7 @@ N'[
    
 SELECT *  
 FROM OPENJSON(@json)  
-  WITH id int 'strict $.id',  
+  WITH (id int 'strict $.id',  
         firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
         age int, dateOfBirth datetime2 '$.dob',
 	skills nvarchar(max) '$.info.skills' as json) 

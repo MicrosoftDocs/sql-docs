@@ -256,8 +256,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     Added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      The value is in miliseconds. This data can be used to diagnose performance issues. The time needed to retrieve images from an external webserver may slow the overall report execution.  
   
     ```  
@@ -269,8 +267,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **Connections**  
-  
-     Added in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      A multi-leveled structure  
   
@@ -318,9 +314,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  The following table describes the data that is captured in the report execution log  
   
 |Column|Description|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|Name of the report server instance that handled the request.|  
-|ReportPath|The path structure to the report.  For example a report named "test" which is the in root folder in Report Manager, would have a ReportPath of "/test".<br /><br /> A report named "test" that is saved in the folder "samples" on Report Manager , will have a ReportPath of "/Samples/test/"|  
+|ReportPath|The path structure to the report. A repost saved in the root folder as "test", has a ReportPath of "/test".<br /><br /> A report named "test" that is saved in the folder "samples", would have a ReportPath of "/Samples/test/"|  
 |UserName|User identifier.|  
 |ExecutionID||  
 |RequestType|Request type (either user or system).|  

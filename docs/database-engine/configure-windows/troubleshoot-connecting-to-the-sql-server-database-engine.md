@@ -47,7 +47,7 @@ First you must gather basic information about the database engine.
     1. Logon to the computer hosting the instance of SQL Server.
     2. Start SQL Server Configuration Manager. 
 
-      Configuration Manager is automatically installed on the computer when SQL Server is installed. Instructions on starting Configuration Manager vary slightly by version of SQL Server and Windows. For help starting Configuration Manager, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).)
+      > Configuration Manager is automatically installed on the computer when SQL Server is installed. Instructions on starting Configuration Manager vary slightly by version of SQL Server and Windows. For help starting Configuration Manager, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).)
     1. Using Configuration Manager:
       > 1. In the left pane select **SQL Server Services**.
       > 2. In the right-pane confirm that the instance of the Database Engine is present and running. 

@@ -1,9 +1,9 @@
 ---
 title: "Row-Level Security | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/06/2018"
+ms.date: "05/14/2019"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
 ms.technology: "security"
 ms.topic: conceptual
@@ -276,7 +276,7 @@ WITH (STATE = OFF);
   
 ###  <a name="MidTier"></a> B. Scenario for users who connect to the database through a middle-tier application  
 > [!NOTE]
-> This example isn't applicable to Azure SQL Data Warehouse since both SESSION_CONTEXT and block predicates aren't currently supported.
+> In this example block predicates functionality isn't currently supported for Azure SQL Data Warehouse, hence inserting rows for the wrong user ID isn't blocked with Azure SQL Data Warehouse.
 
 This example shows how a middle-tier application can implement connection filtering, where application users (or tenants) share the same [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user (the application). The application sets the current application user ID in [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) after connecting to the database, and then security policies transparently filter rows that shouldn't be visible to this ID, and also block the user from inserting rows for the wrong user ID. No other app changes are necessary.  
   

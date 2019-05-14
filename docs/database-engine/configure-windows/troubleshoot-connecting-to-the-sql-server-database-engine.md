@@ -22,7 +22,7 @@ This article lists troubleshooting techniques to use when you cannot connect to 
 
 >[!NOTE]
 >For other scenarios, see:
->- [Connect to an availability group listener](../availability-groups/windows/listeners-client-connectivity-application-failover.md)
+>- [Availability group listener](../availability-groups/windows/listeners-client-connectivity-application-failover.md)
 >- [Failover cluster instances](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
 These steps are not in the order of the most likely problems which you probably already tried. These steps are in order of the most basic problems to more complex problems. These steps assume that you are connecting to SQL Server from another computer by using the TCP/IP protocol, which is the most common situation. These steps are written for SQL Server 2016 with both the SQL Server and the client applications running Windows 10, however the steps generally apply to other versions of SQL Server and other operating systems with only slight modifications.

@@ -107,8 +107,8 @@ Connecting to SQL Server by using TCP/IP requires that Windows can establish the
 1. On the Start menu, click **Run**. In the **Run** window type **cmd**, and then click **OK**. 
 2. In the command prompt window, type `ping <ip address>` and then the IP address of the computer that is running SQL Server. For example:
 
-  * IPv4: `ping 192.168.1.101`
-  * IPv6: `ping fe80::d51d:5ab5:6f09:8f48%11`
+   * IPv4: `ping 192.168.1.101`
+   * IPv6: `ping fe80::d51d:5ab5:6f09:8f48%11`
 
 1. If your network is properly configured, `ping` returns `Reply from <IP address>` followed by some additional information. If `ping` returns `Destination host unreachable` or `Request timed out`, then TCP/IP is not correctly configured. Errors at this point could indicate a problem with the client computer, the server computer, or something about the network such as a router. To troubleshoot network problems, see[Advanced troubleshooting for TCP/IP issues](/windows/client-management/troubleshoot-tcpip).
 1. Next, if the ping test succeeded using the IP address, test that the computer name can be resolved to the TCP/IP address. On the client computer, in the command prompt window, type `ping` and then the computer name of the computer that is running SQL Server. For example, `ping newofficepc` 

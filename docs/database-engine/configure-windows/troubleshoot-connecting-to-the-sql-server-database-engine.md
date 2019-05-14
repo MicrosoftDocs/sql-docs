@@ -152,7 +152,8 @@ This procedure uses SQL Server Management Studio. If you do not have Management 
 
 ## <a name = "openport"></a>Opening a Port in the Firewall
 
-Beginning many years ago with Windows XP Service Pack 2, the Windows firewall is turned on and will block connections from another computer. To connect using TCP/IP from another computer, on the SQL Server computer you must configure the firewall to allow connections to the TCP port used by the Database Engine. As mentioned earlier, the default instance is usually listening on TCP port 1433. If you have named instances or if you changed the default, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP port may be listening on another port. See [Get the SQL Server instance TCP port](#getTCP), near the beginning of this article. 
+By default, the Windows firewall is turned on and will block connections from another computer. To connect using TCP/IP from another computer, on the SQL Server computer you must configure the firewall to allow connections to the TCP port used by the Database Engine. The default instance is listening on TCP port 1433, by default. If you have named instances or if you changed the default instance port, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP port may be listening on another port. See [Get the SQL Server instance TCP port](#getTCP).
+
 If you are connecting to a named instance or a port other than TCP port 1433, you must also open the UDP port 1434 for the SQL Server Browser service. For step by step instruction on opening a port in the Windows firewall, see [Configure a Windows Firewall for Database Engine Access](configure-a-windows-firewall-for-database-engine-access.md).
 
 ## Testing the Connection

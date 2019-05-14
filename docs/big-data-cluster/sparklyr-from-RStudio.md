@@ -31,7 +31,7 @@ Install and configure **RStudio Desktop** with the following steps:
 
 1. After installation completes, run the following commands inside of RStudio Desktop to install the required packages:
 
-   ```RStudio Desktop
+   ```RStudioDesktop
    install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")

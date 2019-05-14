@@ -62,7 +62,7 @@ To verify that the instance is running, in Configuration Manager look at the sym
 
 If the instance is stopped, right-click the instance and then click **Start**. The server instance starts, and the indicator becomes a green arrow.
 
-To connect to a named instance, SQL Server Browser service must be running. In Configuration Manager, locate **SQL Server Browser** service and verify that it is running. SQL Server Browser service is not required for default instances.
+<a name = "startbrowser"></a>To connect to a named instance, SQL Server Browser service must be running. In Configuration Manager, locate **SQL Server Browser** service and verify that it is running. If it is not running, start it. SQL Server Browser service is not required for default instances.
 
 ## Get the IP address of the server
 
@@ -143,7 +143,7 @@ This procedure uses SQL Server Management Studio. If you do not have Management 
 
 1. If your goal is to connect with an account other than an administrator account, once you can connect as an administrator, try the connection again using the Windows Authentication login or the SQL Server Authentication login that the client application will be using.
 
-## Opening a Port in the Firewall
+## <a name = "openport"></a>Opening a Port in the Firewall
 
 Beginning many years ago with Windows XP Service Pack 2, the Windows firewall is turned on and will block connections from another computer. To connect using TCP/IP from another computer, on the SQL Server computer you must configure the firewall to allow connections to the TCP port used by the Database Engine. As mentioned earlier, the default instance is usually listening on TCP port 1433. If you have named instances or if you changed the default, the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP port may be listening on another port. See [Get the SQL Server instance TCP port](#getTCP), near the beginning of this article. 
 If you are connecting to a named instance or a port other than TCP port 1433, you must also open the UDP port 1434 for the SQL Server Browser service. For step by step instruction on opening a port in the Windows firewall, see [Configure a Windows Firewall for Database Engine Access](configure-a-windows-firewall-for-database-engine-access.md).
@@ -166,16 +166,16 @@ Once you can connect using TCP on the same computer, it's time to try connecting
 
 Both of these problems are related to the SQL Server Browser service, which provides the port number to the client. The solutions are:
 
-  * Start the SQL Server Browser service. Go back to the section **Gathering Information about the Instance of SQL Server**, section 1.d.
-  * The SQL Server Browser service is being blocked by the firewall. Open UDP port 1434 in the firewall. Go back to the section **Opening a Port in the Firewall**. (Make sure you are opening a UDP port, not a TCP port. Those are different things.)
+  * Start the SQL Server Browser service. See the instructions to [start browser in SQL Server Configuration Manager](#startbrowser).
+  * The SQL Server Browser service is being blocked by the firewall. Open UDP port 1434 in the firewall. Go back to the section [Opening a Port in the Firewall](#opening-a-port-in-the-firewall). Make sure you are opening a UDP port, not a TCP port.
   * The UDP port 1434 information is being blocked by a router. UDP communication (user datagram protocol) is not designed to pass through routers. This keeps the network from getting filled with low-priority traffic. You might be able to configure your router to forward UDP traffic, or you can decide to always provide the port number when you connect.
   * If the client computer is using Windows 7 or Windows Server 2008, (or a more recent operating system,) the UDP traffic might be dropped by the client operating system because the response from the server is returned from a different IP address than was queried. This is a security feature blocking "loose source mapping." For more information, see the **Multiple Server IP Addresses** section of the Books Online topic [Troubleshooting: Timeout Expired](http://msdn.microsoft.com/library/ms190181.aspx). This is an article from SQL Server 2008 R2, but the principals still apply. You might be able to configure the client to use the correct IP address, or you can decide to always provide the port number when you connect.
-     
-3. Once you can connect using the IP address  (or IP address and instance name for a named instance), attempt to connect using the computer name (or computer name and instance name for a named instance). Put `tcp:` in front of the computer name to force a TCP/IP connection. For example, for the default instance on a computer named `ACCNT27`, use `tcp:ACCNT27` For a named instance called `PAYROLL`, on that computer use `tcp:ACCNT27\PAYROLL` If you can connect using the IP address but not using the computer name, then you have a name resolution problem. Go back to the section **Testing TCP/IP Connectivity**, section 4.
+
+3. Once you can connect using the IP address (or IP address and instance name for a named instance), attempt to connect using the computer name (or computer name and instance name for a named instance). Put `tcp:` in front of the computer name to force a TCP/IP connection. For example, for the default instance on a computer named `ACCNT27`, use `tcp:ACCNT27` For a named instance called `PAYROLL`, on that computer use `tcp:ACCNT27\PAYROLL` If you can connect using the IP address but not using the computer name, then you have a name resolution problem. Go back to the section **Testing TCP/IP Connectivity**, section 4.
 
 4. Once you can connect using the computer name forcing TCP, attempt connecting using the computer name but not forcing TCP. For example, for a default instance use just the computer name such as `CCNT27` For a named instance use the computer name and instance name like `ACCNT27\PAYROLL` If you could connect while forcing TCP, but not without forcing TCP, then the client is probably using another protocol (such as named pipes).
 
     1. On the client computer, using SQL Server Configuration Manager, in the left-pane expand **SQL Native Client** *version* **Configuration**, and then select **Client Protocols**.
     2. On the right-pane, Make sure TCP/IP is enabled. If TCP/IP is disabled, right-click **TCP/IP** and then click **Enable**.
-    3. Make sure that the protocol order for TCP/IP is a smaller number that the named pipes (or VIA on older versions) protocols. Generally you should leave Shared Memory as order 1 and TCP/IP as order 2. Shared memory is only used when the client and SQL Server are running on the same computer. All enabled protocols are tried in order until one succeeds, except that shared memory is skipped when the connection is not to the same computer. 
+    3. Make sure that the protocol order for TCP/IP is a smaller number that the named pipes (or VIA on older versions) protocols. Generally you should leave Shared Memory as order 1 and TCP/IP as order 2. Shared memory is only used when the client and SQL Server are running on the same computer. All enabled protocols are tried in order until one succeeds, except that shared memory is skipped when the connection is not to the same computer.
 

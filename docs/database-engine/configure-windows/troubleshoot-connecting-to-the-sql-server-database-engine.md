@@ -98,43 +98,50 @@ In some installations of SQL Server, connecting to the Database Engine from anot
 
 Connecting to SQL Server by using TCP/IP requires that Windows can establish the connection. Use the `ping` tool to test TCP.
 1. On the Start menu, click **Run**. In the **Run** window type **cmd**, and then click **OK**. 
-2. In the command prompt window, type `ping` and then the IP address of the computer that is running SQL Server. For example, `ping 192.168.1.101` using an IPv4 address, or `ping fe80::d51d:5ab5:6f09:8f48%11` using an IPv6 address. (You must replace the numbers after ping with the IP addresses on your computer which you gathered earlier.) 
-3. If your network is properly configured, you will receive a response such as `Reply from <IP address>` followed by some additional information. If you receive an error such as `Destination host unreachable.` or `Request timed out.` then TCP/IP is not correctly configured. (Check that the IP address was correct and was correctly typed.) Errors at this point could indicate a problem with the client computer, the server computer, or something about the network such as a router. The internet has many resources for troubleshooting TCP/IP. A reasonable place to start, is this article from 2006, [How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790).
-4. Next, if the ping test succeeded using the IP address, test that the computer name can be resolved to the TCP/IP address. On the client computer, in the command prompt window, type `ping` and then the computer name of the computer that is running SQL Server. For example, `ping newofficepc` 
-5. If you could ping the ip address, but now receive an error such as `Destination host unreachable.` or `Request timed out.` you might have old (stale) name resolution information cached on the client computer. Type `ipconfig /flushdns` to clear the DNS (Dynamic Name Resolution) cache. Then ping the computer by name again. With the DNS cache empty, the client computer will check for the newest information about the IP address for the server computer. 
-6. If your network is properly configured, you will receive a response such as `Reply from <IP address>` followed by some additional information. If you can successfully ping the server computer by IP address but receive an error such as `Destination host unreachable.` or `Request timed out.` when pinging by computer name, then name resolution is not correctly configured. (For more information, see the 2006 article previously referenced, [How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790).) Successful name resolution is not required to connect to SQL Server, but if the computer name cannot be resolved to an IP address, then connections must be made specifying the IP address. Name resolution can be fixed later.
+2. In the command prompt window, type `ping <ip address>` and then the IP address of the computer that is running SQL Server. For example:
+
+  * IPv4: `ping 192.168.1.101`
+  * IPv6: `ping fe80::d51d:5ab5:6f09:8f48%11`
+
+1. If your network is properly configured, you will receive a response such as `Reply from <IP address>` followed by some additional information. If you receive an error such as `Destination host unreachable.` or `Request timed out.` then TCP/IP is not correctly configured. (Check that the IP address was correct and was correctly typed.) Errors at this point could indicate a problem with the client computer, the server computer, or something about the network such as a router. The internet has many resources for troubleshooting TCP/IP. A reasonable place to start, is this article from 2006, [How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790).
+1. Next, if the ping test succeeded using the IP address, test that the computer name can be resolved to the TCP/IP address. On the client computer, in the command prompt window, type `ping` and then the computer name of the computer that is running SQL Server. For example, `ping newofficepc` 
+1. If you could ping the IP address, but now receive an error such as `Destination host unreachable.` or `Request timed out.` you might have old (stale) name resolution information cached on the client computer. Type `ipconfig /flushdns` to clear the DNS (Dynamic Name Resolution) cache. Then ping the computer by name again. With the DNS cache empty, the client computer will check for the newest information about the IP address for the server computer. 
+1. If your network is properly configured, you will receive a response such as `Reply from <IP address>` followed by some additional information. If you can successfully ping the server computer by IP address but receive an error such as `Destination host unreachable.` or `Request timed out.` when pinging by computer name, then name resolution is not correctly configured. (For more information, see the 2006 article previously referenced, [How to Troubleshoot Basic TCP/IP Problems](http://support.microsoft.com/kb/169790).) Successful name resolution is not required to connect to SQL Server, but if the computer name cannot be resolved to an IP address, then connections must be made specifying the IP address. Name resolution can be fixed later.
 
 ## Testing a Local Connection
 
 Before troubleshooting a connection problem from another computer, first test your ability to connect from a client application installed locally on the computer that is running SQL Server. Connecting locally avoids issues with networks and firewalls. 
 This procedure uses SQL Server Management Studio. If you do not have Management Studio installed, see [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). If you are not able to install Management Studio, you can test the connection using the `sqlcmd.exe` utility. `sqlcmd.exe` is installed with the Database Engine. For information about `sqlcmd.exe`, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).)
+
 1. Sign in to the computer where SQL Server is installed, using a login that has permission to access SQL Server. (During installation, SQL Server requires at least one login to be specified as a SQL Server Administrator. If you do not know an administrator, see [Connect to SQL Server When System Administrators Are Locked Out](connect-to-sql-server-when-system-administrators-are-locked-out.md).)
-2.  On the Start page, type **SQL Server Management Studio**, or on older versions of Windows on the Start menu, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Management Studio**.
+2. On the Start page, type **SQL Server Management Studio**, or on older versions of Windows on the Start menu, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Management Studio**.
 3. In the **Connect to Server** dialog box, in the **Server** type box, select **Database Engine**. In the **Authentication** box, select **Windows Authentication**. In the **Server name** box, type one of the following connection types:
 
-|Connecting to|Type|Example|
-|:-----------------|:---------------|:-----------------|
-|Default instance|`<computer name>`|`ACCNT27`|
-|Named Instance|`<computer name\instance name>`|`ACCNT27\PAYROLL`|
+   |Connecting to|Type|Example|
+   |:-----------------|:---------------|:-----------------|
+   |Default instance|`<computer name>`|`ACCNT27`|
+   |Named Instance|`<computer name\instance name>`|`ACCNT27\PAYROLL`|
 
-> [!NOTE]
->  When connecting to a SQL Server from a client application on the same computer, the shared memory protocol is used. Shared memory is a type of local named pipe, so sometimes errors regarding pipes are encountered.
+   > [!NOTE]
+   > When connecting to a SQL Server from a client application on the same computer, the shared memory protocol is used. Shared memory is a type of local named pipe, so sometimes errors regarding pipes are encountered.
 
-If you receive an error at this point, you will have to resolve it before proceeding. There are many possible things that could be a problem. Your login might not be authorized to connect. Your default database might be missing.
+   If you receive an error at this point, you will have to resolve it before proceeding. There are many possible things that could be a problem. Your login might not be authorized to connect. Your default database might be missing.
 
-> [!NOTE]
->    Some error messages passed to the client intentionally do not give enough information to troubleshoot the problem. This is a security feature to avoid providing an attacker with information about SQL Server. To view the complete information about the error, look in the SQL Server error log. The details are provided there. If you are receiving error **18456 Login failed for user**, Books Online topic [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contains additional information about error codes. And Aaron Bertrand's blog has a very extensive list of error codes at [Troubleshooting Error 18456](http://sqlblog.org/2011/01/14/troubleshooting-error-18456). You can view the error log with SSMS (if you can connect), in the Management section of the Object Explorer. Otherwise, you can view the error log with the Windows Notepad program. The default location varies with your version and can be changed during setup. The default location for [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`. 
+   > [!NOTE]
+   > Some error messages passed to the client intentionally do not give enough information to troubleshoot the problem. This is a security feature to avoid providing an attacker with information about SQL Server. To view the complete information about the error, look in the SQL Server error log. The details are provided there. 
 
-4.  If you can connect using shared memory, test connecting using TCP. You can force a TCP connection by specifying **tcp:** before the name. For example:
+1. If you receive error `18456 Login failed for user`, Books Online topic [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contains additional information about error codes. And Aaron Bertrand's blog has a very extensive list of error codes at [Troubleshooting Error 18456](http://sqlblog.org/2011/01/14/troubleshooting-error-18456). You can view the error log with SSMS (if you can connect), in the Management section of the Object Explorer. Otherwise, you can view the error log with the Windows Notepad program. The default location varies with your version and can be changed during setup. The default location for [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] is `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`. 
 
-|Connecting to:|Type:|Example:|
-|-----------------|---------------|-----------------|
-|Default instance|`tcp:<computer name>`|`tcp:ACCNT27`|
-|Named Instance|`tcp:<computer name/instance name>`|`tcp:ACCNT27\PAYROLL`|
-  
-If you can connect with shared memory but not TCP, then you must fix the TCP problem. The most likely issue is that TCP is not enabled. To enable TCP, See the [Enable Protocols](#enableprotocols) steps above.
+1. If you can connect using shared memory, test connecting using TCP. You can force a TCP connection by specifying `tcp:` before the name. For example:
 
-5.  If your goal is to connect with an account other than an administrator account, once you can connect as an administrator, try the connection again using the Windows Authentication login or the SQL Server Authentication login that the client application will be using.
+   |Connecting to:|Type:|Example:|
+   |-----------------|---------------|-----------------|
+   |Default instance|`tcp:<computer name>`|`tcp:ACCNT27`|
+   |Named Instance|`tcp:<computer name/instance name>`|`tcp:ACCNT27\PAYROLL`|
+
+1. If you can connect with shared memory but not TCP, then you must fix the TCP problem. The most likely issue is that TCP is not enabled. To enable TCP, See the [Enable Protocols](#enableprotocols) steps above.
+
+1. If your goal is to connect with an account other than an administrator account, once you can connect as an administrator, try the connection again using the Windows Authentication login or the SQL Server Authentication login that the client application will be using.
 
 ## Opening a Port in the Firewall
 

@@ -1,9 +1,9 @@
 ---
-title: Use Insight widgets to monitor servers and databases
+title: Use Insight widgets in Azure Data Studio to monitor servers and databases
 titleSuffix: Azure Data Studio
 description: Learn about insight widgets in Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.custom: seodec18, sqlfreshmay19
+ms.date: "05/14/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -14,9 +14,9 @@ manager: craigg
 ---
 # Manage servers and databases with Insight widgets in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Insight widgets take the Transact-SQL (T-SQL) queries you use to monitor servers & databases and turns them into insightful visualizations. 
+Insight widgets take the Transact-SQL (T-SQL) queries you use to monitor servers & databases and turns them into insightful visualizations.
 
-Insights are customizable charts and graphs that you add to server and database monitoring dashboards. View at-a-glance insights of your servers and databases, then drill into more details, and launch management actions that you define. 
+Insights are customizable charts and graphs that you add to server and database monitoring dashboards. View at-a-glance insights of your servers and databases, then drill into more details, and launch management actions that you define.
 
 You can build awesome server and database management dashboards similar to the following example:
 
@@ -27,11 +27,11 @@ To jump in and start creating different types of insight widgets, check out the 
 
 - [Build a custom insight widget](tutorial-build-custom-insight-sql-server.md)
 - *Enable built-in insight widgets*
-   - [Enable the performance monitoring insight](tutorial-qds-sql-server.md)
-   - [Enable the table space usage insight](tutorial-table-space-sql-server.md)
+  - [Enable the performance monitoring insight](tutorial-qds-sql-server.md)
+  - [Enable the table space usage insight](tutorial-table-space-sql-server.md)
 
 
-## SQL Queries 
+## SQL Queries
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] tries to avoid introducing yet another language or heavy user interface so it tries to use T-SQL as much as possible with minimal JSON configuration. Configuring insight widgets with T-SQL leverages the countless number of existing sources of useful T-SQL queries that can be turned into insightful widgets.
 

@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: What is Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Azure Data Studio is a free, light-weight tool, that runs on Windows, macOS, and Linux, for managing SQL Server, Azure SQL Database, and Azure SQL Data Warehouse. 
 ms.prod: sql
@@ -9,8 +9,8 @@ author: "markingmyname"
 ms.author: "maghan"
 manager: craigg
 ms.reviewer: "alayu; sstein"
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.custom: "seodec18, sqlfreshmay19"
+ms.date: "05/14/2019"
 ---
 
 # What is Azure Data Studio?
@@ -155,9 +155,8 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 |Vulnerability Assessment||Yes|
 |XEvent Management||Yes|
 
-
-
 ## Next steps
+
 - [Download and Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)

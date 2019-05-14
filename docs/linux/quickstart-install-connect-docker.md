@@ -38,7 +38,7 @@ In this quickstart, you use Docker to pull and run the SQL Server 2019 preview c
 > This quickstart creates SQL Server 2019 preview containers. If you prefer to create SQL Server 2017 containers, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017).
 ::: moniker-end
 
-This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quick start specifically focuses on using the SQL Server on **linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
+This image consists of SQL Server running on Linux based on Ubuntu 16.04. It can be used with the Docker Engine 1.8+ on Linux or on Docker for Mac/Windows. This quickstart specifically focuses on using the SQL Server on **linux** image. The Windows image is not covered, but you can learn more about it on the [mssql-server-windows-developer Docker Hub page](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## <a id="requirements"></a> Prerequisites
 

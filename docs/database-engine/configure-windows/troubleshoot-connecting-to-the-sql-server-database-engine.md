@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot Connecting to the SQL Server Database Engine | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/13/2019"
+ms.custom: sqlfreshmay19
+ms.date: "05/15/2019"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

@@ -15,7 +15,15 @@ ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions"
 zone_pivot_groups: cs1-command-shell
 ---
-# Quickstart: Run SQL Server container images with Docker
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+# Quickstart: Run SQL Server 2017 container images with Docker
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+# Quickstart: Run SQL Server 2019 container images with Docker
+::: moniker-end
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

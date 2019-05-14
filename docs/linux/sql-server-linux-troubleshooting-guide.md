@@ -21,7 +21,9 @@ This document describes how to troubleshoot Microsoft SQL Server running on Linu
 > For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Troubleshoot connection failures
-If you are having difficulty connecting to your Linux SQL Server, there are a few things to check. 
+If you are having difficulty connecting to your Linux SQL Server, there are a few things to check.
+
+- If you are unable to connect locally using **localhost**, try using the IP address 127.0.0.1 instead. It is possible that **localhost** is not properly mapped to this address.
 
 - Verify that the server name or IP address is reachable from your client machine.
 

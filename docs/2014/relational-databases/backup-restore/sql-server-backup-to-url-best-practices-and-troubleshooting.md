@@ -119,7 +119,7 @@ manager: craigg
   
      BACKUP DATABASE is terminating abnormally.  
   
--   BackupIoRequest::ReportIoError: write failure on backup device http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.  
+-   BackupIoRequest::ReportIoError: write failure on backup device 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.  
   
  If you turn on the verbose logging using the trace flag 3051 you may also see the following message in the logs:  
   

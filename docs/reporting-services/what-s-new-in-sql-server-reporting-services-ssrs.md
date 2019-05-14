@@ -102,10 +102,10 @@ For more information, see [Working with KPIs in the web portal](https://msdn.mic
 
 Reporting Services mobile reports are dedicated reports optimized for a wide variety of form factors and provide an optimal experience for users accessing reports on mobile devices. Mobile reports feature an assortment of visualizations, from time, category, and comparison charts, to tree maps and custom maps. Connect your mobile reports to a range of data sources, including on-premises SQL Server Analysis Services multidimensional and tabular data. You can place fields for mobile reports on a design surface with adjusting grid rows and columns. The flexible mobile report elements automatically scale to fit any screen size. You save the mobile reports to a Reporting Service server, and can view and interact with them in a browser, or the Power BI mobile app. Devices supported include:
 
-    - iPads
-    - iPhones
-    - Android phones
-    - or any Windows 10 device
+- iPad
+- iPhones
+- Android phones
+- or any Windows 10 device
 
 #### Mobile Report Publisher  
 

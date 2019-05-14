@@ -51,6 +51,8 @@ any changes to one section should be duplicated in the other-->
 
 ## <a id="pullandrun2017"></a> Pull and run the container image
 
+Before starting the following steps, make sure that you have selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
+
 1. Pull the SQL Server 2017 Linux container image from Microsoft Container Registry.
 
    ::: zone pivot="cs1-bash"
@@ -61,6 +63,12 @@ any changes to one section should be duplicated in the other-->
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
+   docker pull mcr.microsoft.com/mssql/server:2017-latest
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
    docker pull mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
@@ -85,6 +93,14 @@ any changes to one section should be duplicated in the other-->
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+      -p 1433:1433 --name sql1 `
+      -d mcr.microsoft.com/mssql/server:2017-latest
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2017-latest
@@ -122,6 +138,12 @@ any changes to one section should be duplicated in the other-->
    ```
    ::: zone-end
 
+   ::: zone pivot="cs1-cmd"
+   ```cmd
+   docker ps -a
+   ```
+   ::: zone-end
+
    You should see output similar to the following screenshot:
 
    ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
@@ -147,6 +169,8 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 ## <a id="pullandrun2019"></a> Pull and run the container image
 
+Before starting the following steps, make sure that you have selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
+
 1. Pull the SQL Server 2019 preview Linux container image from Docker Hub.
 
    ::: zone pivot="cs1-bash"
@@ -157,6 +181,12 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
    docker pull mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
    ```
    ::: zone-end
@@ -180,6 +210,14 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+      -p 1433:1433 --name sql1 `
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
@@ -212,6 +250,12 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
+   docker ps -a
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
    docker ps -a
    ```
    ::: zone-end
@@ -262,6 +306,14 @@ The **SA** account is a system administrator on the SQL Server instance that get
    ```
    ::: zone-end
 
+   ::: zone pivot="cs1-cmd"
+   ```cmd
+   docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
+      -S localhost -U SA -P "<YourStrong!Passw0rd>" `
+      -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+   ```
+   ::: zone-end
+
 ## Connect to SQL Server
 
 The following steps use the SQL Server command-line tool, **sqlcmd**, inside the container to connect to SQL Server.
@@ -276,6 +328,12 @@ The following steps use the SQL Server command-line tool, **sqlcmd**, inside the
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
+   docker exec -it sql1 "bash"
+   ```
+   ::: zone-end
+
+   ::: zone pivot="cs1-cmd"
+   ```cmd
    docker exec -it sql1 "bash"
    ```
    ::: zone-end
@@ -393,6 +451,12 @@ The following steps use **sqlcmd** outside of your container to connect to SQL S
    ```
    ::: zone-end
 
+   ::: zone pivot="cs1-cmd"
+   ```cmd
+   sqlcmd -S 10.3.2.4,1433 -U SA -P "<YourNewStrong!Passw0rd>"
+   ```
+   ::: zone-end
+
 3. Run Transact-SQL commands. When finished, type `QUIT`.
 
 Other common tools to connect to SQL Server include:
@@ -406,19 +470,26 @@ Other common tools to connect to SQL Server include:
 
 If you want to remove the SQL Server container used in this tutorial, run the following commands:
 
-   ::: zone pivot="cs1-bash"
-   ```bash
+::: zone pivot="cs1-bash"
+```bash
 sudo docker stop sql1
 sudo docker rm sql1
-   ```
-   ::: zone-end
+```
+::: zone-end
 
-   ::: zone pivot="cs1-powershell"
-   ```PowerShell
+::: zone pivot="cs1-powershell"
+```PowerShell
 docker stop sql1
 docker rm sql1
-   ```
-   ::: zone-end
+```
+::: zone-end
+
+::: zone pivot="cs1-cmd"
+```cmd
+docker stop sql1
+docker rm sql1
+```
+::: zone-end
 
 > [!WARNING]
 > Stopping and removing a container permanently deletes any SQL Server data in the container. If you need to preserve your data, [create and copy a backup file out of the container](tutorial-restore-backup-in-sql-server-container.md) or use a [container data persistence technique](sql-server-linux-configure-docker.md#persist).

@@ -1,6 +1,6 @@
 ---
 title: "URL Access Parameter Reference | Microsoft Docs"
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -31,7 +31,7 @@ ms.author: maggies
 -   [Report Viewer Web Part Commands (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML Viewer Commands (rc:)  
- HTML Viewer commands are used to target the HTML Viewer (for example, from Report Manager) and are prefixed with *rc:*:  
+ - HTML Viewer commands are used to target the HTML Viewer, and are prefixed with *rc:*:
   
 -   *Toolbar* :  
                   Shows or hides the toolbar. If the value of this parameter is **false**, all remaining options are ignored. If you omit this parameter, the toolbar is automatically displayed for rendering formats that support it. The default of this parameter is **true**.  

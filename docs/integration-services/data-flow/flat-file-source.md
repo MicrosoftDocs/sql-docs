@@ -23,6 +23,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Flat File Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Flat File source reads data from a text file. The text file can be in delimited, fixed width, or mixed format.  
   
 -   Delimited format uses column and row delimiters to define columns and rows.  

@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # &amp;&amp; (Logical AND) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Performs a logical AND operation. The expression evaluates to TRUE if all conditions are TRUE.  
   
 ## Syntax  

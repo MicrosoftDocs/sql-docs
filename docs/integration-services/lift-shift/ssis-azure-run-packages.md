@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Run SQL Server Integration Services (SSIS) packages deployed in Azure
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 You can run SSIS packages deployed to the SSISDB Catalog on an Azure SQL Database server by choosing one of the methods described in this article. You can run a package directly, or run a package as part of an Azure Data Factory pipeline. For an overview about SSIS on Azure, see [Deploy and run SSIS packages in Azure](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Run a package directly

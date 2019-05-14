@@ -14,6 +14,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Preview Data Dialog Box (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After you specify the data that you want to copy, you can optionally click **Preview** to open the **Preview Data** dialog box. On this page, you can preview up to 200 rows of sample data from your data source. This confirms that the wizard is going to copy the data that you want to copy.
   
 ## Screen shot of the Preview Data page 

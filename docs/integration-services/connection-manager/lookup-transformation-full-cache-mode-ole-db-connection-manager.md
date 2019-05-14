@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Lookup Transformation Full Cache Mode - OLE DB Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can configure the Lookup transformation to use full cache mode and an OLE DB connection manager. In the full cache mode, the reference dataset is loaded into cache before the Lookup transformation runs.  
   
  The Lookup transformation performs lookups by joining data in input columns from a connected data source with columns in a reference dataset. For more information, see [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  

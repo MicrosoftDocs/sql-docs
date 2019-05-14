@@ -14,6 +14,10 @@ ms.reviewer: "douglasl"
 manager: craigg
 ---
 # Walkthrough: Set up Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Set up [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out by completing the following tasks. 
 
 > [!TIP]

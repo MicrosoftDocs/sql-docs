@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # ODBC Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The ODBC source extracts data from ODBC-supported database by using a database table, a view, or an SQL statement.  
   
  The ODBC source has the following data access modes for extracting data:  

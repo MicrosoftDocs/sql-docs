@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Edit the Table Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use this dialog box to edit the specific columns from the selected table where changes are being captured. You can also edit the **Security Role** and **Capture Instance** information.  
   
 ### To edit the columns to include in the CDC instance  

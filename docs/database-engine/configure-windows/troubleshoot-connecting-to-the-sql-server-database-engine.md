@@ -43,7 +43,7 @@ This error usually means that the SQL Server computer can't be found or that the
 
 Verify the server name from [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-Configuration Manager is automatically installed on the computer when SQL Server is installed. Instructions on starting Configuration Manager vary slightly by version of SQL Server and Windows. For help starting Configuration Manager, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).)
+Configuration Manager is automatically installed on the computer when SQL Server is installed. Instructions on starting Configuration Manager vary slightly by version of SQL Server and Windows. For version specific details, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).)
 
 1. Sign in to the computer hosting the instance of SQL Server.
 1. Start SQL Server Configuration Manager.

@@ -19,11 +19,11 @@ ms.author: maggies
 ---
 # Create and Manage Role Assignments
 
-A *role assignment* is a security policy that determines a user's or group's permissions. Permissions decide whether the user or group can access a specific report server item or do a task. A role assignment consists of a single user or group account name and one or more role definitions.
+A *role assignment* is a security policy that determines a user's or group's permissions. Permissions decide whether the user or group can access or modify a specific report server item, or do a task. A role assignment consists of a single user or group account name and one or more role definitions.
 
 Role assignments are scoped to the *item level* or *system level*.
 
-- An item-level role assignment is created in the context of a specific item or branch of the folder hierarchy on the report server. You navigate to a specific folder or item to create a role assignment for it.
+- An item-level role assignment is created for a specific item or branch of the folder hierarchy on the report server. You navigate to a specific folder or item to create a role assignment for it.
 
 - System-level role assignments give selected users the capability to do tasks that affect the report server site as a whole. These tasks include:
   - Creating shared schedules
@@ -35,27 +35,23 @@ System-level security doesn't convey access to items in the report server folder
 
 ## Creating an Item-level Role Assignment
 
-To create or manage role assignments, access the web portal. Open the **Security property** page of the item that you want to secure.
-
-You can create a separate role assignment for each user or group account that requires access to the report server. If the account is on a domain other than the one that contains the report server, include the domain name. After you specify an account, you choose one or more role definitions. The role definitions are additive. The combined set of all tasks from all definitions is supported in the assignment for a particular user or group.
+From here, you can create a separate role assignment for each user or group account that requires access to the report server. If the account is on a domain other than the one that contains the report server, include the domain name. After you specify an account, you choose one or more role definitions. The role definitions are additive. The combined set of all tasks from all definitions is supported in the assignment for a particular user or group.
 
 To enable widespread access, you choose an item that is high in the folder hierarchy (for example, the root folder Home). Later, you can create role assignments to lock down specific areas of the folder hierarchy.
 
 You must be a member of the local Administrator's group on the report server computer to create a role assignment. You can delegate that responsibility by assigning other users to the **Content Manager** role.
 
-For more information, see [Grant User Access to a Report Server](../../reporting-services/security/grant-user-access-to-a-report-server.md)
+To create or manage role assignments, or for more information, see [Grant User Access to a Report Server](../../reporting-services/security/grant-user-access-to-a-report-server.md)
   
 ## Creating a System-level Role Assignment
 
-To create or manage a system-level role assignment, access the web portal and open the Site Settings page.
+System-level and item-level role assignments go together. You create a system-level role assignment for each user or group, that has an item-level role assignment.
 
-System-level and item-level role assignments go together. You must create a system-level role assignment for each user or group, that has an item-level role assignment.
+System-level role assignments include a wide range of permissions, but they don't include permissions that are part of an item-level role assignment.
 
-System-level role assignments include a wide range of permissions, but they don't include permissions that are part of an item-level role assignment. 
+In contrast with system permissions on a computer, system roles in reporting servers don't convey overarching permissions that include all possible tasks. Instead, system-level role assignments are simply a set of tasks that are scoped to the report server site. System role assignments determine whether users can view application properties (such as the image or title of the Home page), view or manage shared schedules, or use Report Builder.
 
-In contrast with system permissions on a computer, system roles in reporting servers don't convey overarching permissions that include the full set of all possible tasks. Instead, system-level role assignments are simply a set of tasks that are scoped to the report server site. System role assignments determine whether users can view application properties (such as the image or title of the Home page), view or manage shared schedules, or use Report Builder.
-
-For more information, see [Grant User Access to a Report Server](../../reporting-services/security/grant-user-access-to-a-report-server.md) and [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md).  
+To create or manage a system-level role assignment or for more information, see [Grant User Access to a Report Server](../../reporting-services/security/grant-user-access-to-a-report-server.md) and [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md).  
 
 ## Modifying a Role Assignment
 

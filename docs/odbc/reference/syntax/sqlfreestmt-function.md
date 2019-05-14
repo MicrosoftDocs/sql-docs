@@ -30,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeStmt(  
      SQLHSTMT       StatementHandle,  
@@ -77,7 +77,7 @@ SQLRETURN SQLFreeStmt(
 ## Example  
  It is a good programming practice to free handles. However, for simplicity, the following sample does not include code that frees allocated handles. For an example of how to free handles, see [SQLFreeHandle Function](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
-```  
+```cpp  
 // SQLFreeStmt.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

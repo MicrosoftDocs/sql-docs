@@ -1,6 +1,6 @@
 ﻿---
-title: "Analysis Services Adventure Works tutorial (1400) | Microsoft Docs"
-ms.date: 03/08/2019
+title: "Analysis Services Adventure Works Internet Sales tutorial (1400) | Microsoft Docs"
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
-# Tabular modeling (1400 compatibility level)
+# Adventure Works Internet Sales tutorial (1400)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
@@ -41,7 +41,7 @@ To complete this tutorial, you need:
   
 -   An Azure Analysis Services server or a SQL Server 2017 Analysis Services server in Tabular mode. Sign up for a free [Azure Analysis Services trial](https://azure.microsoft.com/services/analysis-services/) and [create a server](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server) or download a free [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
--   An [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) with the **sample AdventureWorksDW database**, or an on-premises SQL Server Data Warehouse with an [AdventureWorksDW sample database](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). When installing an AdventureWorksDW database to an on-premises SQL Server Data Warehouse, use the sample datbase version that corresponds with your server version. 
+-   An [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) with the **sample AdventureWorksDW database**, or an on-premises SQL Server Data Warehouse with an [AdventureWorksDW sample database](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). When installing an AdventureWorksDW database to an on-premises SQL Server Data Warehouse, use the sample database version that corresponds with your server version. 
 
     **Important:** If you install the sample database to an on-premises SQL Server Data Warehouse, and deploy your model to an Azure Analysis Services server, an [On-premises data gateway](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) is required.
 

@@ -23,7 +23,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN  SQLSetConnectAttrForDbcInfo(  
                 SQLHDBC_INFO_TOKEN    hDbcInfoToken,  
                 SQLINTEGER            Attribute,  

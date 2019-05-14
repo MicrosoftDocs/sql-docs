@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 
 - name: SQL Server Integration Services
@@ -1785,11 +1785,11 @@
         href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: Resources
   items:
-  - name: Get help in the SSIS forum +
+  - name: Get help in the SSIS forum >
     href: https://social.msdn.microsoft.com/Forums/en-US/home
-  - name: Get help on Stack Overflow +
+  - name: Get help on Stack Overflow >
     href: https://stackoverflow.com/questions/tagged/ssis
-  - name: Follow the SSIS team blog +
+  - name: Follow the SSIS team blog >
     href: https://blogs.msdn.microsoft.com/ssis/
-  - name: Report issues & request features +
+  - name: Report issues & request features >
     href: https://feedback.azure.com/forums/908035-sql-server

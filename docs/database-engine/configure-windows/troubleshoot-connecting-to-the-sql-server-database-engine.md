@@ -39,43 +39,53 @@ This error usually means that the SQL Server computer can't be found or that the
 * This topic does not include information about Kerberos errors. For help, see [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
 * This topic does not include information about SQL Azure Connectivity. For help, see [Troubleshooting connectivity issues with Microsoft Azure SQL Database](https://support.microsoft.com/help/10085/troubleshooting-connectivity-issues-with-microsoft-azure-sql-database). 
 
-## Gathering Information about the Instance of SQL Server
+## Get instance name name from Configuration Manger
 
-First you must gather basic information about the database engine.
+Verify the server name from [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).
 
-1. Confirm the instance of the SQL Server Database Engine is installed and running.
+>[!NOTE] Configuration Manager is automatically installed on the computer when SQL Server is installed. Instructions on starting Configuration Manager vary slightly by version of SQL Server and Windows. For help starting Configuration Manager, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).)
 
-    1. Logon to the computer hosting the instance of SQL Server.
-    2. Start SQL Server Configuration Manager.
 
-      > Configuration Manager is automatically installed on the computer when SQL Server is installed. Instructions on starting Configuration Manager vary slightly by version of SQL Server and Windows. For help starting Configuration Manager, see [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).)
+1. Logon to the computer hosting the instance of SQL Server.
+1. Start SQL Server Configuration Manager.
+1. In the left pane select **SQL Server Services**.
+1. In the right-pane verify the name of the instance of the database engine.
 
-    1. Using Configuration Manager:
+    * `SQL SERVER (MSSQLSERVER)` denotes a default instance of SQL Server. The name of the default instance is `<computer name>`.
+    * `SQL SERVER (<instance name>)` denotes a named instance of SQL Server. The name of the name instance is `<computer name>\<instance name>`
 
-      > 1. In the left pane select **SQL Server Services**.
-      > 1. In the right-pane confirm that the instance of the Database Engine is present and running.
-      >
-      > An instance named **SQL Server (MSSQLSERVER)** is a default (unnamed) instance. There can only be one default instance.
-      >
-      > Other (named) instances will have their names listed between the parentheses.
-      >
-      > SQL Server Express uses the name **SQL Server (SQLEXPRESS)** as the instance name unless someone named it something else during installation.
+## Verify - the instance is running
 
-    1. Make a note of the name of the instance that you are trying to connect to. Also, confirm that the instance is running. The instance is running if Configuration Manager displays a green arrow next to the name of the instance. If the instance has a red square, right-click the instance and then click **Start**. The server instance starts, and the indicator becomes a green arrow.
-    1. If you are attempting to connect to a named instance, make sure the SQL Server Browser service is running.
+To verify that the instance is running, in Configuration Manager look at the symbol by the SQL Server instance.
 
-2. Get the IP Address of the computer hosting the instance of SQL Server.
-    1. On the Start menu, click **Run**. In the **Run** window type **cmd**, and then click **OK**.
-    2. In the command prompt window, type **ipconfig** and then press enter. Make a note of the **IPv4** Address and the **IPv6** Address. 
-      SQL Server can connect using the either IP version 4 protocol or IP version 6 protocol. Your network could allow either or both. Most people start by troubleshooting the **IPv4** address. It's shorter and easier to type.)
+* A green arrow indicates that the instance is running.
+* A red square indicates that the instances is stopped.
 
-3. Get the TCP port number used by SQL Server. In most cases you are connecting to the Database Engine from another computer using the TCP protocol.
-    1. Using SQL Server Management Studio on the computer running SQL Server, connect to the instance of SQL Server. In Object Explorer, expand **Management**, expand **SQL Server Logs**, and then double-click the current log.
-    2. In the Log Viewer, click the **Filter** button on the toolbar. In the **Message contains text** box, type `server is listening on`, click **Apply filter**, and then click **OK**.
-    3. A message similar to `Server is listening on [ 'any' <ipv4> 1433]` should be listed. This message indicates that this instance of SQL Server is listening on all the IP addresses on this computer (for IP version 4) and is listening to TCP port 1433. (TCP port 1433 is usually the port used by the Database Engine. Only one instance of SQL Server can use a port, so if there is more than one instance of SQL Server installed, some instances must use other port numbers.) Make a note of the port number used by the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance that you are trying to connect to. 
+If the instance is stopped, right-click the instance and then click **Start**. The server instance starts, and the indicator becomes a green arrow.
 
-    > [!NOTE] 
-    > `IP address 127.0.0.1` is probably listed. It is called the loopback adapter address. Only processes on the same computer can use it to connect. It can be useful for troubleshooting, but you can't use it to connect from another computer.
+To connect to a named instance, SQL Server Browser service must be running. In Configuration Manager, locate **SQL Server Browser** service and verify that it is running. SQL Server Browser service is not required for default instances.
+
+## Get the IP address of the server
+
+Get the IP Address of the computer hosting the instance of SQL Server.
+
+1. On the Start menu, click **Run**. In the **Run** window type **cmd**, and then click **OK**.
+1. In the command prompt window, type **ipconfig** and then press enter. Make a note of the **IPv4** Address and the **IPv6** Address. 
+
+  >SQL Server can connect using the either IP version 4 protocol or IP version 6 protocol. Your network could allow either or both. Most people start by troubleshooting the **IPv4** address. It's shorter and easier to type.)
+
+## Get the TCP port number used by SQL Server. 
+
+In most cases you are connecting to the Database Engine from another computer using the TCP protocol.
+
+1. Using SQL Server Management Studio on the computer running SQL Server, connect to the instance of SQL Server. In Object Explorer, expand **Management**, expand **SQL Server Logs**, and then double-click the current log.
+2. In the Log Viewer, click the **Filter** button on the toolbar. In the **Message contains text** box, type `server is listening on`, click **Apply filter**, and then click **OK**.
+3. A message similar to `Server is listening on [ 'any' <ipv4> 1433]` should be listed. 
+
+  This message indicates that this instance of SQL Server is listening on all the IP addresses on this computer (for IP version 4) and is listening to TCP port 1433. (TCP port 1433 is usually the port used by the Database Engine. Only one instance of SQL Server can use a port, so if there is more than one instance of SQL Server installed, some instances must use other port numbers.) Make a note of the port number used by the [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] instance that you are trying to connect to.
+
+  > [!NOTE]
+  > `IP address 127.0.0.1` is probably listed. It is called the loopback adapter address. Only processes on the same computer can use it to connect. It can be useful for troubleshooting, but you can't use it to connect from another computer.
 
 ## Enable Protocols
 

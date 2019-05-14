@@ -9,6 +9,8 @@ groups:
     title: Bash
   - id: cs1-powershell
     title: PowerShell
+  - id: cs1-cmd
+    title: Cmd
 - id: ld2-linux-distribution
   title: Linux distribution
   prompt: Choose your Linux distribution

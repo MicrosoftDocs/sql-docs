@@ -1,7 +1,7 @@
 ---
 title: "CREATE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/07/2019"
+ms.date: "05/14/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -225,7 +225,7 @@ For indexed views, nonclustered indexes can be created only on a view that has a
 If not otherwise specified, the default index type is NONCLUSTERED.
 
 *index_name*
- Is the name of the index. Index names must be unique within a table or view but do not have to be unique within a database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).
+ Is the name of the index. Index names must be unique within a table or view, but do not have to be unique within a database. Index names must follow the rules of [identifiers](../../relational-databases/databases/database-identifiers.md).
 
 *column*
  Is the column or columns on which the index is based. Specify two or more column names to create a composite index on the combined values in the specified columns. List the columns to be included in the composite index, in sort-priority order, inside the parentheses after *table_or_view_name*.

@@ -224,6 +224,7 @@
       - name: Azure blob storage
         href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       - name: Interoperability & Coexistence
+        href: ../relational-databases/backup-restore/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
     - name: How-to
       items:
       - name: Backup to Azure

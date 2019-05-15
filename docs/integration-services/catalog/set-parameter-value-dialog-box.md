@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Set Parameter Value Dialog Box
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Set Parameter Value** dialog box to set values for parameters and connection manager properties, for projects and packages.  
   
  **What do you want to do?**  

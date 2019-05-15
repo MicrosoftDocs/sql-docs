@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Define a State Variable
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This procedure describes how to define a package variable where the CDC state is stored.  
   
  The CDC state variable is loaded, initialized, and updated by the CDC Control task and is used by the CDC Source data flow component to determine the current processing range for change records. The CDC state variable can be defined on any container common to the CDC Control task and the CDC source. This may be at the package level but may also be on other containers such as a loop container.  

@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Select Oracle Tables and Columns
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Select Oracle Tables and Columns page to select the tables from the Oracle source database where changes are captured. This page has the following elements:  
   
 ## Options  

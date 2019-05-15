@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Load-Balancing Packages on Remote Servers by Using SQL Server Agent
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When many packages have to be run, it is convenient to use other servers that are available. This method of using other servers to run packages when the packages are all under the control of one parent package is called load balancing. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], load balancing is a manual procedure that must be architected by the owners of the packages. Load balancing is not performed automatically by the servers. Also, the packages that are run on the remote servers must be whole packages, not individual tasks in other packages.  
   
  Load balancing is useful in the following scenarios:  

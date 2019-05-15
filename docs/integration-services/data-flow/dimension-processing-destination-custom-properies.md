@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Dimension Processing Destination Custom Properies
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Dimension Processing destination has both custom properties and the properties common to all data flow components.  
   
  The following table describes the custom properties of the Dimension Processing destination. All properties are read/write.  

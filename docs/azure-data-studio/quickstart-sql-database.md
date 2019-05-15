@@ -2,8 +2,8 @@
 title: "Quickstart: Connect and query an Azure SQL database"
 titleSuffix: Azure Data Studio
 description: This quickstart shows how to use Azure Data Studio to connect to a SQL database and run a query
-ms.custom: "seodec18"
-ms.date: "12/21/2018"
+ms.custom: seodec18, sqlfreshmay19
+ms.date: "05/14/2019"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: "alayu; sstein"
@@ -33,7 +33,7 @@ If you don't have an Azure SQL server, complete one of the following Azure SQL D
 
 Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to establish a connection to your Azure SQL Database server.
 
-1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** page should open. If you don't see the **Connection** page, select **Add Connection**, or the **New Connection** icon in the **SERVERS** sidebar:
+1. The first time you run [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Welcome** page should open. If you don't see the **Welcome** page, select **Help** > **Welcome**. Select **New Connection** to open the **Connection** pane:
    
    ![New Connection Icon](media/quickstart-sql-database/new-connection-icon.png)
 

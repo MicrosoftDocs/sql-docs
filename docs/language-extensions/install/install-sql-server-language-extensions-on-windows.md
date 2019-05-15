@@ -225,6 +225,15 @@ To ensure that language extensions jobs are prioritized and resourced appropriat
 
 If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources. 
 
+## Limitations in CTP 3.0
+
+* The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
+
+* Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
+
+* Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
+
+* Partitioning using the sp_execute_external_script parameter @input_data_1_partition_by_columns is not supported in this CTP.
 
 ## Next steps
 

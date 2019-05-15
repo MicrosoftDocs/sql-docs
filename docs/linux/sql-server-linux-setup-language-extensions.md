@@ -77,7 +77,7 @@ On an internet-connected device, packages are downloaded and installed independe
 
 | Package name | Applies-to | Description |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All | Extensibility framework used to run Java code. |
+|mssql-server-extensibility  | All languages | Extensibility framework used to run Java code. |
 |mssql-server-extensibility-java | Java | Java extension for loading a Java execution environment. There are no additional libraries or packages for Java. |
 
 <a name="RHEL"></a>
@@ -170,14 +170,14 @@ sudo zypper install mssql-server-extensibility-java
    systemctl restart mssql-server.service
    ```
 
-5. Enable external script execution using Azure Data Studio or another tool like SQL Server Management Studio (Windows only) that runs Transact-SQL. 
+5. Enable external script execution using Azure Data Studio or another tool like SQL Server Management Studio (Windows only) that runs Transact-SQL.
 
    ```bash
-   EXEC sp_configure 'external scripts enabled', 1 
-   RECONFIGURE WITH OVERRIDE 
+   EXEC sp_configure 'external scripts enabled', 1
+   RECONFIGURE WITH OVERRIDE
    ```
 
-6. Restart the Launchpad service again.
+6. Restart the `mssql-launchpadd` service again.
 
 ## Verify installation
 
@@ -187,7 +187,7 @@ To validate installation, run a T-SQL script that executes a system stored proce
 
 <a name="install-all"></a>
 
-## Chained "combo" install
+## Full install of SQL Server and Language Extensions
 
 You can install and configure the database engine and Machine Learning Services in one procedure by appending Java packages and parameters on a command that installs the database engine.
 
@@ -218,6 +218,7 @@ You can install and configure the database engine and Machine Learning Services 
 Using the [unattended install](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended) for the Database Engine, add the packages for mssql-server-extensibility-java.
 
 <a name="offline-install"></a>
+
 
 ## Offline installation
 

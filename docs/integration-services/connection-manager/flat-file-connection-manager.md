@@ -25,6 +25,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Flat File Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   A Flat File connection manager enables a package to access data in a flat file. For example, the Flat File source and destination can use Flat File connection managers to extract and load data.  
   
  The Flat File connection manager can access only one file. To reference multiple files, use a Multiple Flat Files connection manager instead of a Flat File connection manager. For more information, see [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  

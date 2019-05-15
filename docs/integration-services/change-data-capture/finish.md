@@ -14,7 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ---
-# Finish
+# Finish 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **Finish** page summarizes the wizard process. Click **Finish** to close the wizard and generate all of the tables you defined in the Create CDC Instance wizard.  
   
 ## See Also  

@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Finish the Slowly Changing Dimension Wizard
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Finish the Slowly Changing Dimension Wizard** dialog box to verify your choices before the wizard builds support for slowly changing dimensions.  
   
  To learn more about this wizard, see [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  

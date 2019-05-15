@@ -12,7 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ---
-# catalog.executables
+# catalog.executables 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   This view displays a row for each executable in the specified execution.  

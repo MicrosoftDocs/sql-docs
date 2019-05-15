@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Generate and Run the Supplemental Logging Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the Set up Tables for Capturing Changes page to run a script on the Oracle source database that will set up supplemental logging.  
   
  **To run the supplemental logging scripts**  

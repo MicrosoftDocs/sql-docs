@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # | (Bitwise Inclusive OR) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Performs a bitwise OR operation of two integer values. It compares each bit of its first operand to the corresponding bit of its second operand. If either bit is 1, the corresponding result bit is set to 1. Otherwise, the corresponding result bit is set to zero (0).  
   
  Both conditions must be a signed integer data type or both conditions must be an unsigned integer data type.  

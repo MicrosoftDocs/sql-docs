@@ -17,6 +17,10 @@ manager: craigg
 ---
 # Azure Data Lake Store File System Task
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 The Azure Data Lake Store File System Task lets users perform various file system operations on [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
 The Azure Data Lake Store File System Task is a component of the [SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).

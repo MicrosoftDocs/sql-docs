@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # OLE DB Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Source Custom Properties**  
   
  The OLE DB source has both custom properties and the properties common to all data flow components.  

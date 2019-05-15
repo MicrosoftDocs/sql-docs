@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Welcome to the Slowly Changing Dimension Wizard
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Slowly Changing Dimension Wizard** to configure the loading of data into various types of slowly changing dimensions.  
   
  To learn more about this wizard, see [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  

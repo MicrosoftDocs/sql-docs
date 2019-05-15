@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Extend a Dataset by Using the Merge Join Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   To add and configure a Merge Join transformation, the package must already include at least one Data Flow task and two data flow components that provide inputs to the Merge Join transformation.  
   
  The Merge Join transformation requires two sorted inputs. For more information, see [Sort Data for the Merge and Merge Join Transformations](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  

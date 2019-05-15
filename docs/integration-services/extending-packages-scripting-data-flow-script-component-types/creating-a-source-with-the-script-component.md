@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Creating a Source with the Script Component
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You use a source component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to load data from a data source to pass on to downstream transformations and destinations. Ordinarily you connect to the data source through an existing connection manager.  
   
  For an overview of the Script component, see [Extending the Data Flow with the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  

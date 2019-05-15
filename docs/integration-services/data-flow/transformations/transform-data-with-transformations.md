@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Transform Data with Transformations
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes three types of data flow components: sources, transformations, and destinations.  
   
  The following diagram shows a simple data flow that has a source, two transformations, and a destination.  

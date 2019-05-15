@@ -1,6 +1,6 @@
 ---
 title: "Configure SSL Connections on a Native Mode Report Server | Microsoft Docs"
-ms.date: 03/20/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: security
@@ -22,7 +22,7 @@ ms.author: maggies
  Because Internet Information Services (IIS) also uses HTTP SSL, there are significant interoperability issues that you must account for if you run IIS and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer. Be sure to review the Interoperability Issues with IIS section for guidance on how to address these issues.  
   
 ## Server Certificate Requirements  
- You must have a server certificate installed on the computer (client certificates are not supported). Reporting Services does not provide functionality for requesting, generating, downloading, or installing a certificate. [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] provides a Certificates snap-in that you can use to request a certificate from a trusted certificate authority.  
+ You must have a server certificate installed on the computer (client certificates are not supported). Reporting Services does not provide functionality for requesting, generating, downloading, or installing a certificate. Windows Server 2012 qnd later provide a Certificates snap-in that you can use to request a certificate from a trusted certificate authority.  
   
  For testing purposes, you can generate a certificate locally. If you use the **MakeCert** utility and the sample command as a template, be sure to specify your server name as the host and remove all line breaks before running the command. If you run the command in a DOS window, you might need to increase the buffer size of the window to accommodate the entire command.  
   
@@ -40,15 +40,15 @@ ms.author: maggies
 ## Bind SSL to a Reporting Services URL Reservation  
  The following steps do not include instructions for requesting, generating, downloading, or installing a certificate. You must have a certificate installed and available to use. The certificate properties that you specify, the certificate authority you obtain it from, and the tools and utilities you use to request and install the certificate are up to you.  
   
- You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to bind the certificate. If the certificate is installed correctly in the local computer store, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool will detect it and display it in the **SSL Certificates** list on the **Web Service URL** and **Report Manager URL** pages.  
+ You can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool to bind the certificate. If the certificate is installed correctly in the local computer store, the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool will detect it and display it in the **SSL Certificates** list on the **Web Service URL** and **Web Portal URL** pages.  
   
 ### To configure a report server URL for SSL  
   
 1.  Start the Reporting Services Configuration tool and connect to the report server.  
   
-2.  Click **Web Service URL**.  
+2.  Select **Web Service URL**.  
   
-3.  Expand the list of SSL Certificates. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detects server authentication certificates in the local store. If you installed a certificate and you do not see it in the list, you might need to restart the service. You can use the **Stop** and **Start** buttons on the **Report Server Status** page in the Reporting Services Configuration tool to restart the service.  
+3.  Expand the list of SSL Certificates. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detects server authentication certificates in the local store. If you installed a certificate and you do not see it in the list, you might need to restart the service. You can use the **Stop** and **Start** buttons on the **Report Server Status** page in the Reporting Services Configuration tool to restart the service (top page).  
   
 4.  Select the certificate.  
   
@@ -58,13 +58,13 @@ ms.author: maggies
   
  Report server database configuration is a requirement for testing the URL. If you have not yet created the report server database, do so before testing the URL.  
   
- URL reservations for Report Manager and the Report Server Web service are configured independently. If you want to also configure Report Manager access through an SSL-encrypted channel, continue with the following steps:  
+ URL reservations for Web Portal URL and the Report Server Web Services URL are configured independently. If you want to also configure WEb Portal access through an SSL-encrypted channel, continue with the following steps:  
   
-1.  Click **Report Manager URL**.  
+1.  Click **Web Portal URL**.  
   
 2.  Click **Advanced**.  
   
-3.  In **Multiple SSL Identities for Report Manager**, click **Add**.  
+3.  In **Multiple HTTPS Identities for the currently Reporting Service feature**, click **Add**.  
   
 4.  Select the certificate, click **OK**, and then click **Apply**.  
   
@@ -80,7 +80,7 @@ ms.author: maggies
   
  If you remove SSL bindings for [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] using the Reporting Services Configuration Manager, SSL may no longer work for Web sites on a server that is running Internet Information Services (IIS) or on another HTTP.SYS server. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager removes the following registry key. When this registry key is removed, the SSL binding for IIS is also removed. Without this binding, SSL is not provided for the HTTPS protocol. To diagnose this issue, use IIS Manager or the HTTPCFG.exe command line utility.To resolve the issue, restore the SSL binding for your web sites using IIS Manager.To prevent this issue in the future, use IIS manger to remove the SSL bindings and then use IIS Manager to restore the binding for the desired Web sites. For more information, see the knowledge base article [SSL no longer works after you remove an SSL binding (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
-## See Also  
+## See also  
  [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Configure and Administer a Report Server &#40;SSRS Native Mode&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

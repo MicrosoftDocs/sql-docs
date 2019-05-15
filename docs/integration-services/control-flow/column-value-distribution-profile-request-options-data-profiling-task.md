@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Column Value Distribution Profile Request Options (Data Profiling Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Column Value Distribution Profile Request** selected in the requests pane. A Column Value Distribution profile reports all the distinct values in the selected column and the percentage of rows in the table that each value represents. The profile can also report values that represent more than a specified percentage of rows in the table. This profile can help you identify problems in your data such as an incorrect number of distinct values in a column. For example, you profile a United States state column and discover more than 50 distinct values.  
   
 > [!NOTE]  
@@ -76,7 +80,7 @@ manager: craigg
 |Value|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Specifies whether the comparison distinguishes between uppercase and lowercase letters. If this option is set, the string comparison ignores case. For example, "ABC" becomes the same as "abc".|  
-|**IgnoreNonSpace**|Specifies whether the comparison distinguishes between spacing characters and diacritics. If this option is set, the comparison ignores diacritics. For example, "å" is equal to "a".|  
+|**IgnoreNonSpace**|Specifies whether the comparison distinguishes between spacing characters and diacritics. If this option is set, the comparison ignores diacritics. For example, "Ã¥" is equal to "a".|  
 |**IgnoreKanaType**|Specifies whether the comparison distinguishes between the two types of Japanese kana characters: hiragana and katakana. If this option is set, the string comparison ignores kana type.|  
 |**IgnoreWidth**|Specifies whether the comparison distinguishes between a single-byte character and the same character when it is represented as a double-byte character. If this option is set, the string comparison treats single-byte and double-byte representations of the same character as identical.|  
   

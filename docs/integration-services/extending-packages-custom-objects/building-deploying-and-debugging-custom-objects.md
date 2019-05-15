@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Building, Deploying, and Debugging Custom Objects
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   After you have written the code for a custom object for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you must build the assembly, deploy it, and integrate it into [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer to make it available for use in packages, and test and debug it.  
   
 ##  <a name="top"></a> Steps in Building, Deploying, and Debugging a Custom Object for Integration Services  

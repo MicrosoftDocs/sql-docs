@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Working with Data Types in the Data Flow
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When developing a custom data flow component in Integration Services, you work constantly with data types, copying data into and out of data flow buffers and transforming values. The information in this topic helps you to choose the correct [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] data types, and to use the correct methods when working with them.  
   
 ## Inserting Data into the Data Flow  

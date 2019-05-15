@@ -20,6 +20,10 @@ manager: craigg
 
 # Azure Data Lake Analytics connection manager
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 A SQL Server Integration Services (SSIS) package can use the Azure Data Lake Analytics connection manager to connect to a Data Lake Analytics account with one of the two following authentication types:
 -   Azure Active Directory (Azure AD) User Identity
 -   Azure AD Service Identity 

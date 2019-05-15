@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Walkthrough: Publish an SSIS Package as a SQL View
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This walkthrough provides detailed steps to publish an SSIS package as a SQL view in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ## Prerequisites  

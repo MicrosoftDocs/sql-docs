@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # FTP Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The FTP task downloads and uploads data files and manages directories on servers. For example, a package can download data files from a remote server or an Internet location as part of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package workflow. You can use the FTP task for the following purposes:  
   
 -   Copying directories and data files from one directory to another, before or after moving data, and applying transformations to the data.  

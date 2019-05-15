@@ -61,8 +61,8 @@ The following example returns a table listing the table name, column name, label
 
 ```sql
 SELECT
-    sys.all_objects.name AS TableName, sys.all_columns.name As ColumnName,
-    [Label], Label_ID, Information_Type, Information_Type_ID
+    sys.all_objects.name AS [TableName], sys.all_columns.name As [ColumnName],
+    [Label], [Label_ID], [Information_Type], [Information_Type_ID]
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id

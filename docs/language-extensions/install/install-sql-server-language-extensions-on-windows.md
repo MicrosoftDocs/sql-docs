@@ -118,22 +118,22 @@ For local installations, you must run Setup as an administrator. If you install 
 
 If you did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 
-### SQLRUserGroup permissions
+1. Give SQLRUserGroup permissions
 
-For a named instance,  append the instance name to SQLRUsergroup (for example, `SQLRUsergroupINSTANCENAME`).
+    For a named instance,  append the instance name to SQLRUsergroup (for example, `SQLRUsergroupINSTANCENAME`).
 
-```cmd
-icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
-```
+    ```cmd
+    icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+    ```
+    
+    You can skip this step if you installed the JDK/JRE in the default folder under program files on Windows.
 
-You can skip this step if you installed the JDK/JRE in the default folder under program files on Windows.
+2. Give AppContainer permissions
 
-### AppContainer permissions
-
-```cmd
-icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
-```
-
+    ```cmd
+    icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+    ```
+    
 ## Enable script execution
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
@@ -224,6 +224,7 @@ To ensure that language extensions jobs are prioritized and resourced appropriat
 - To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Modify the user account pool for machine learning](../administration/modify-user-account-pool.md).
 
 If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources. 
+
 
 ## Next steps
 

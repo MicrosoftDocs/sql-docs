@@ -354,6 +354,7 @@
         - name: Removed defunct filegroups
           href: ../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md
         - name: Manage suspect_pages table
+          href: ../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md
     - name: Concepts
       items:
       - name: Azure

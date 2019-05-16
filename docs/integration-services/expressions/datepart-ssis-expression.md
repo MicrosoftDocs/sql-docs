@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # DATEPART (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns an integer representing a datepart of a date.  
   
 ## Syntax  

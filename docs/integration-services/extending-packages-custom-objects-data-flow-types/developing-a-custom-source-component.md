@@ -24,6 +24,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Developing a Custom Source Component
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] gives developers the ability to write source components that can connect to custom data sources and supply data from those sources to other components in a data flow task. The ability to create custom sources is valuable when you must connect to data sources that cannot be accessed by using one of the existing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sources.  
   
  Source components have one or more outputs and zero inputs. At design time, source components are used to create and configure connections, read column metadata from the external data source, and configure the source's output columns based on the external data source. During execution they connect to the external data source and add rows to an output buffer. The data flow task then provides this buffer of data rows to downstream components.  

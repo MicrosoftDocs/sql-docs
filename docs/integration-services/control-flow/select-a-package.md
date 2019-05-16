@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Select a Package
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Select a Package** dialog box to specify the package from which the Message Queue task can receive messages.  
   
 ## Static Options  

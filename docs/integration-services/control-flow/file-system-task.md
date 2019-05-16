@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # File System Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The File System task performs operations on files and directories in the file system. For example, by using the File System task, a package can create, move, or delete directories and files. You can also use the File System task to set attributes on files and directories. For example, the File System task can make files hidden or read-only.  
   
  All File System task operations use a source, which can be a file or a directory. For example, the file that the task copies or the directory it deletes is a source. The source can be specified by using a File connection manager that points to the directory or file or by providing the name of a variable that contains the source path. For more information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md) and [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md).  

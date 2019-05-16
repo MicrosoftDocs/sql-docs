@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Generating Dump Files for Package Execution
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. The information in these files can help you with troubleshooting package execution issues.  
   
 > **NOTE!** Debug dump files might contain sensitive information. To help protect sensitive information, you can use an access control list (ACL) to restrict access to the files, or copy the files to a folder that has restricted access. For example, before you send your debug files to [!INCLUDE[msCoName](../../includes/msconame-md.md)] support services, we recommend that you remove any sensitive or confidential information.  

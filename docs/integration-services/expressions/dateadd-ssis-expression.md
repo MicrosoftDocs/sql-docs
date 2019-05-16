@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # DATEADD (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns a new DT_DBTIMESTAMP value after adding a number that represents a date or time interval to the specified datepart in a date. The number parameter must evaluate to an integer, and the date parameter must evaluate to a valid date.  
   
 ## Syntax  

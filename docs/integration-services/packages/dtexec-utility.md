@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # dtexec Utility
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The **dtexec** command prompt utility is used to configure and execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. The **dtexec** utility provides access to all the package configuration and execution features, such as parameters, connections, properties, variables, logging, and progress indicators. The **dtexec** utility lets you load packages from these sources: the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, an .ispac project file, a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system.  
   
 > **NOTE:** When you use the current version of the **dtexec** utility to run a package created by an earlier version of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the utility temporarily upgrades the package to the current package format. However, you cannot use the **dtexec** utility to save the upgraded package. For more information about how to permanently upgrade a package to the current version, see [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  

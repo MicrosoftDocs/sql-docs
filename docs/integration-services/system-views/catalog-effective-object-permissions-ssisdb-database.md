@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # catalog.effective_object_permissions (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays the effective permissions for the current principal for all objects in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

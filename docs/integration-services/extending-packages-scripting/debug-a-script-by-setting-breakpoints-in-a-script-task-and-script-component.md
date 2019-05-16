@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This procedure describes how to set breakpoints in the scripts that are used in the Script task and Script component.  
   
  After you set breakpoints in the script, the **Set Breakpoints - \<object name>** dialog box lists the breakpoints, along with the built-in breakpoints.  

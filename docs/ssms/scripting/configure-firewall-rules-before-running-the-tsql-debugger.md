@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ports [SQL Server], Transact-SQL debugger"
   - "TCP/IP [SQL Server], port numbers"
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

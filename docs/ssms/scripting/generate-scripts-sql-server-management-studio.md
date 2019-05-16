@@ -8,8 +8,8 @@ ms.technology: scripting
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 ms.reviewer: "mathoma" 
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"

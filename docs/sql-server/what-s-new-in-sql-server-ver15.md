@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 04/23/2019
+ms.date: 05/16/2019
 ms.prod: "sql-server-2019"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -65,6 +65,13 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 |:---|:---|
 |[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] supports Azure SQL Database managed instance databases.| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).
 | &nbsp; | &nbsp; |
+
+### Analysis Services
+
+| New feature or update | Details |
+|:---|:---|
+|MDX query support for tabular models with calculation groups. |This release removes an earlier limitation in [calculation groups](#calc-ctp24). |
+|Dynamic formatting of measures using calculation groups. |This feature allows you to conditionally change format strings for measures with [calculation groups](#calc-ctp24). For example, with currency conversion, a measure can be displayed using different foreign currency formats.|
 
 ## CTP 2.5 April 2019
 

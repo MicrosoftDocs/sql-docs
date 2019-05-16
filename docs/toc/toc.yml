@@ -9276,8 +9276,8 @@
                 href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
       - name: Troubleshoot
         items:
-      - name: Get Full Memory Dump
-        href: ../ssms/troubleshoot/get-full-memory-dump.md
+        - name: Get Full Memory Dump
+          href: ../ssms/troubleshoot/get-full-memory-dump.md
     - name: References
       items:
       - name: The SSMS Environment

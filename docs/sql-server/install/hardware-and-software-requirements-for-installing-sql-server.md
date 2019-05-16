@@ -167,29 +167,29 @@ For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent
 
 | Windows                   | Enterprise | Developer | Standard | Web | Express |  
 | :------------------------ | :--------- | :-------- | :------- | :-- | :------ | 
-| Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2016 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2012 R2 Datacenter |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2012 R2 Standard   |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2012 R2 Essentials |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2012 R2 Foundation |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2012 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   | 
-| 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   | 
-| 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   | 
-| 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   | 
-| 10 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   | 
-| 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   | 
-| 8.1 Pro                   |    No      |    Yes    |    Yes   | No  |   Yes   |
-| 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   | 
-| 8 Pro                     |    No      |    Yes    |    Yes   | No  |   Yes   | 
-| 8                         |    No      |    Yes    |    Yes   | No  |   Yes   |  
+| Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2016 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Datacenter |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Standard   |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Essentials |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 R2 Foundation |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows Server 2012 Foundation    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
+| Windows 10 IoT Enterprise         |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Enterprise             |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Professional           |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 10 Home                   |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8.1 Pro                   |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8.1 Enterprise            |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8 Pro                     |    No      |    Yes    |    Yes   | No  |   Yes   |
+| Windows 8                         |    No      |    Yes    |    Yes   | No  |   Yes   | 
 | &nbsp; | &nbsp; |
 
 

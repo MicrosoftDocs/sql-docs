@@ -16,7 +16,7 @@ ms.date: 05/17/2019
 
 # Get Full Memory Dump
 
-[!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md])
+[!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 In this article, you learn how to capture diagnostic information to troubleshoot a crash or a hang that you experienced from SQL Server Management Studio (SSMS).
 

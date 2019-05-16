@@ -1,6 +1,6 @@
 ---
 title: "Compatibility level for tabular models in Analysis Services | Microsoft Docs"
-ms.date: 05/07/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -15,7 +15,7 @@ manager: kfile
 
   The *compatibility level* refers to release-specific behaviors in the Analysis Services engine. For example, DirectQuery and tabular object metadata have different implementations depending on the compatibility level. In-general, you should choose the latest compatibility level supported by your servers.
 
-  **The latest compatibility level is 1400** 
+  **The latest supported compatibility level is 1400** 
   
 Major features in the 1400 compatibility level include:
 
@@ -32,8 +32,9 @@ Major features in the 1400 compatibility level include:
 |||  
 |-|-|- 
 |**Compatibility level**|**Server version**| 
-|1400|Azure Analysis Services, SQL Server 2017 |  
-|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1470|SQL Server 2019 (CTP 2.3 and higher) | 
+|1400|Azure Analysis Services, SQL Server 2019, SQL Server 2017 |  
+|1200|Azure Analysis Services, SQL Server 2019, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 

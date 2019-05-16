@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Running and Managing Packages Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   If you need manage and run [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. In this approach, you have a range of options:  
   
 -   Load and run an existing package without modification.  

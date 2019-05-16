@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Edit the Advanced Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Advanced** tab to add special properties to the CDC instance.  
   
 #### To add advanced properties to the CDC instance  

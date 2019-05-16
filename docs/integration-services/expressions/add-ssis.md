@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # + (Add) (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Adds two numeric expressions.  
   
 ## Syntax  

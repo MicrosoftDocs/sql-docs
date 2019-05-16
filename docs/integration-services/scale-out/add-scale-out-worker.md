@@ -14,6 +14,10 @@ manager: craigg
 ---
 # Add a Scale Out Worker with Scale Out Manager
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 Integration Services Scale Out Manager simplifies the process of adding a Scale Out Worker to your existing Scale Out environment. 
 
 Follow these steps to add a Scale Out Worker to your Scale Out topology:

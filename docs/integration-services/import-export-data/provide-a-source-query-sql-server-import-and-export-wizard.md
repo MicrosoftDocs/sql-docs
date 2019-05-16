@@ -14,6 +14,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Provide a Source Query (SQL Server Import and Export Wizard)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 If you specified that you want to provide a query to select the data to copy, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Provide a Source Query**. On this page, you write and test the SQL query that selects the data to copy from the data source to the destination. You can also paste the text of a saved query, or load the query text from a file.
 
 ## Screen shot of the Source Query page  

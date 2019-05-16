@@ -17,6 +17,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Starting in SQL Server 2019, Language Extensions and Java support is provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
+> [!NOTE]
+> This article is for installation of SQL Server Language Extensions on Windows. For Linux, see [Install SQL Server 2019 Language Extensions (Java) on Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions.md)
+
 <a name="prerequisites"></a> 
 
 ## Pre-install checklist
@@ -25,7 +28,7 @@ Starting in SQL Server 2019, Language Extensions and Java support is provided. T
 
 + A database engine instance is required. You cannot install just the Language Extensions features, although you can add them incrementally to an existing instance.
 
-+ For business continuity, [Always On Availabilty Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Language Extensions. You have to install language extensions, and configure packages, on each node.
++ For business continuity, [Always On Availability Groups](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) are supported for Language Extensions. You have to install language extensions, and configure packages, on each node.
 
 + Installing Language Extensions is supported on a failover cluster in SQL Server 2019.
 
@@ -54,7 +57,7 @@ On Windows, we recommend installing the JDK under the default `/Program Files/` 
 
 ## Get the installation media
 
-The preview version of SQL Server 2019 is available at the [SQL Server 2019 install site](https://www.microsoft.com/en-us/sql-server/sql-server-2019#Install).
+The preview version of SQL Server 2019 is available at the [SQL Server 2019 install site](https://www.microsoft.com/sql-server/sql-server-2019#Install).
 
 <!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
@@ -98,7 +101,7 @@ For local installations, you must run Setup as an administrator. If you install 
 
 1. Find and copy the JRE home path (for example, `C:\Program Files\Zulu\zulu-8\jre\`).
 
-    Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the jre folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
+    Depending on your preferred Java distribution, your location of the JDK or JRE might be different than the example path above. Even if you have a JDK installed, you often times will get a JRE sub folder as part of that installation, so point to the JRE folder in that case. The Java extension will attempt to load the `jvm.dll` from the path `%JRE_HOME%\bin\server`.
 
 2. In Control Panel, open **System and Security**, open **System**, and click **Advanced System Properties**.
 

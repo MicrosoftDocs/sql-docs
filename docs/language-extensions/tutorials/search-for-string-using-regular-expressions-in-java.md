@@ -176,7 +176,7 @@ public class RegexSample extends AbstractSqlServerExtensionExecutor {
 }
 ```
 
-## 3 Compile and create .jar file
+## 3 - Compile and create .jar file
 
 We recommend that you package your classes and dependencies into .jar files. Most Java IDEs like Eclipse or IntelliJ support generating jar files when you build/compile the project. In this sample, we have named the jar file **regex.jar**.
 

@@ -2391,8 +2391,6 @@
       items:
       - name: Install Language Extensions on Windows
         href: ../language-extensions/install/install-sql-server-language-extensions-on-windows.md
-      - name: Install Language Extensions on Linux
-        href: ../linux/sql-server-linux-setup-language-extensions.md
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java

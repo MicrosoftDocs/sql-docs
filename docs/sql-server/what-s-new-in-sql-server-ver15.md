@@ -20,23 +20,15 @@ The article summarizes the features in each release and points to more details f
 
 For more information and known issues, see the [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Notes](sql-server-ver15-release-notes.md).
 
-**Try [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!**
-
-- [![Download from Evaluation Center](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Download [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] to install on Windows](https://go.microsoft.com/fwlink/?LinkID=862101).
-- Install on Linux for [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md), and [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
-- [Run on [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] on Docker](../linux/quickstart-install-connect-docker.md).
-
 **Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
 ## CTP 3.0 May 2019
 
 Community technology preview (CTP) 3.0 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
 
-CTP 3.0 supports:
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
-- Side-by-side installation. You can install instances of SQL Server 2019 CTP 3.0 on servers that are also running previous supported versions of SQL Server.
-- Upgrade from one build to another. You can upgrade an instance of SQL Server from a previous supported release of SQL Server to SQL Server 2019 CTP 3.0.
-- Production support. Customers in early adopter programs can run SQL Server 2019 CTP 3.0 in production environments.
+For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
 
 In addition, the following features are added or enhanced for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0.
 

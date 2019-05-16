@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: SQL Server Management Studio (SSMS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/30/2017"
+ms.custom: sqlfreshmay19
+ms.date: "05/14/2019"
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.reviewer: ""
@@ -28,7 +28,7 @@ ms.reviewer: "sstein"
 # Tutorials for SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-The SQL Server Management Studio (SSMS) tutorial introduces you to the integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presents a graphical interface for configuring, monitoring, and administering instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also allows you to deploy, monitor, and upgrade the data-tier components used by your applications, such as databases. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] also provides [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, and XML language editors for editing and debugging scripts.  
+SQL Server Management Studio (SSMS) tutorials introduce you to the integrated environment for managing your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presents a graphical interface for configuring, monitoring, and administering Azure SQL Database, Azure SQL Database managed instance, Azure SQL Data Warehouse, and instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It also allows you to deploy, monitor, and upgrade the data-tier components used by your applications, such as databases. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] also provides [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, and XML language editors for editing and debugging scripts.  
   
 ## What You Will Learn  
 
@@ -36,9 +36,9 @@ These tutorials will help you understand the presentation of information in SSMS
   
 The best way to get acquainted with SSMS is through hands-on practice. These tutorials will familiarize you with the various features available within SSMS.  These tutorials will teach you how to manage the components of SSMS and how to find the features that you use regularly.  
 
-Here is what the tutorials cover: 
+Here is what the tutorials cover:
 
-  
+
 - [Tutorial: Connect & Query SQL Server using SSMS](connect-query-sql-server.md)
 
     In this Tutorial, you learn how to connect to your SQL Server instance. You will also learn some basic Transact-SQL (T-SQL) commands to create and then query a new database. 
@@ -49,7 +49,7 @@ Here is what the tutorials cover:
 
 - [Tutorial: Using Templates in SSMS](templates-ssms.md)
    
-    In this Tutorial, you learn how to work with the pre-built Templates within SSMS. The templates are a little-known feature that store a number of Transact-SQL code snippets for various database administration tasks. 
+    In this Tutorial, you learn how to work with the pre-built Templates within SSMS. The templates are a little-known feature that stores a number of Transact-SQL code snippets for various database administration tasks. 
 
 - [Tutorial: SSMS Configuration](ssms-configuration.md)
 
@@ -58,7 +58,7 @@ Here is what the tutorials cover:
 
 - [Tutorial: Additional Tips and Tricks for using SSMS](ssms-tricks.md)
 
-    In this Tutorial, you will learn additional tips and tricks for using SSMS. The Tutorial includes the following:
+    In this Tutorial, you learn additional tips and tricks for using SSMS. The Tutorial includes the following:
     - Commenting and uncommenting text
     - Indenting text
     - Filtering Objects in Object Explorer

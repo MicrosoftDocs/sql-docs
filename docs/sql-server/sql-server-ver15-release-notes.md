@@ -110,15 +110,31 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.4, CTP 2.3.
 
-### SQL Server Integration Services (SSIS)
+### Big data cluster: MLeap runtime deployed through AppDeploy timeout
 
-- **Issue / customer impact**: The `SQL Server Destination` in an SSIS Package reports the following error when connecting to a database on [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.5.
+- **Issue and customer impact**: Applications using the MLeap runtime deployed through AppDeploy time out after 15 minutes.
 
-  `SSIS Error Code DTS_E_OLEDBERROR.  An OLE DB error has occurred. Error code: 0x80040E14. An OLE DB record is available.  Source: "Microsoft OLE DB Driver for SQL Server"  Hresult: 0x80040E14  Description: "Cannot fetch a row from OLE DB provider "BULK" for linked server "(null)".`
+- **Workaround**: Open a command line to the app pod:
 
-  `An OLE DB record is available.  Source: "Microsoft OLE DB Driver for SQL Server"  Hresult: 0x80040E14  Description: "The OLE DB provider "BULK" for linked server "(null)" reported an error. The provider did not give any information about the error."`
+  1. Prepare to run in the specific app pod. To do this, in the following script, replace `[namespace]` and `[podname]` for your environment. Then run the script.
 
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP3.0.
+     ```bash
+     kubectl -n [namespace] exec [podname] -it  -- /bin/bash
+     ```
+
+  1. Delete the application content type. Run the following script.
+
+     ```bash
+     curl -X DELETE -v -H "Content-Type: application/json" http://localhost:8080/models/app
+     ```
+
+  1. Recreate the application content type. Set the `memoryTimeout` and `diskTimeout`. To do this, update the following script. Replace `[mleap_bundle]` with the name of the MLeap bundle zip file specified in the `spec.yaml` file. Then run the script.
+
+     ```bash
+     curl -v -XPOST -H "content-type: application/json" -d '{"modelName":"app","uri":"file:/var/opt/app/[mleap  bundle].zip","config":{"memoryTimeout":21474835000,"diskTimeout":21474835000}}' http://localhost:8080/models
+     ```
+
+- **Applies to** CTP 2.5 and before.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -17,6 +17,10 @@ ms.author: janinez
 manager: craigg
 ---
 # () (Parentheses) (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Identifies the evaluation order of expressions. Expressions enclosed in parentheses have the highest evaluation precedence. Nested expressions enclosed in parentheses are evaluated in inner-to-outer order.  
   
  Parentheses are also used to make complex expressions easier to understand.  

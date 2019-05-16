@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Make Changes to the Tables Selected for Capturing Changes
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In this dialog box, you can select specific columns from the selected table to capture changes from. You can also edit the **Security Role** and **Capture Instance** information.  
   
  You can make the following changes to the tables you selected for capturing changes in this dialog box.  

@@ -28,7 +28,7 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 **Use the [latest tools](#tools) for the best experience with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## CTP 3.0
+## CTP 3.0 May 2019
 
 Community technology preview (CTP) 3.0 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
 
@@ -44,12 +44,26 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+| **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
+| Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
+| Updates to Spark mLeap samples | For more information, see [Export Spark machine learning models with MLeap](../big-data-cluster/export-model-with-spark-mleap.md). |
 | &nbsp; | &nbsp; |
 
 ### Database engine
 
 | New feature or update | Details |
 |:---|:---|
+|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See Register external language. |
+|More supported data types for Java.|See Java and SQL Server supported data type.|
+|SQL Server Java programming language extension|The Microsoft Extensibility SDK for Java for Microsoft SQL Server is now open sourced and available on [GitHub](http://aka.ms/mssql-java-lang-extension). |
+|New DDL syntax to control hybrid buffer pool. A trace flag is no longer required to enable hybrid buffer pool.|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
+| &nbsp; | &nbsp; |
+
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| New feature or update | Details |
+|:---|:---|
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] supports Azure SQL Database managed instance databases.| Host [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] on a managed instance. See [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] installation and configuration](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).
 | &nbsp; | &nbsp; |
 
 ## CTP 2.5 April 2019

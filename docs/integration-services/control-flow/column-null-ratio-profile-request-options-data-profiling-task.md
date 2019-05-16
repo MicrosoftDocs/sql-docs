@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Column Null Ratio Profile Request Options (Data Profiling Task)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Column Null Ratio Request** selected in the requests pane. A Column Null Ratio profile reports the percentage of null values in the selected column. This profile can help you identify problems in your data such as an unexpectedly high ratio of null values in a column. For example, a Column Null Ratio profile can profile a ZIP Code/Postal Code column and discover an unacceptably high percentage of missing postal codes.  
   
 > [!NOTE]  

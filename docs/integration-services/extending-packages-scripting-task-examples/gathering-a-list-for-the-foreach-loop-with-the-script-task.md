@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Gathering a List for the ForEach Loop with the Script Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Foreach from Variable Enumerator enumerates over the items in a list that is passed to it in a variable and performs the same tasks on each item. You can use custom code in a Script task to populate a list for this purpose. For more information about the enumerator, see [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
   
 > [!NOTE]  

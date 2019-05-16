@@ -26,6 +26,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Lookup Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Lookup transformation performs lookups by joining data in input columns with columns in a reference dataset. You use the lookup to access additional information in a related table that is based on values in common columns.  
   
  The reference dataset can be a cache file, an existing table or view, a new table, or the result of an SQL query. The Lookup transformation uses either an OLE DB connection manager or a Cache connection manager to connect to the reference dataset. For more information, see [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) and [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  

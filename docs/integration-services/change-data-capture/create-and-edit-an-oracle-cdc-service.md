@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Create and Edit an Oracle CDC Service
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You create and edit a new Oracle CDC Windows Service from the CDC Service Configuration Console.  
   
  To create a new Oracle CDC Windows service, select **Local CDC Services** from the left pane, then click **New Service** from the **Actions** pane. You can also right-click **Local CDC Services** and select **New Service**. The New Oracle CDC Windows Service dialog box opens.  

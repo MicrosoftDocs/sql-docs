@@ -2,7 +2,7 @@
 title: "Tutorial: How to Locate and Start Reporting Services Tools (SSRS) | Microsoft Docs"
 ms.date: 12/07/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 description: This tutorial introduces the tools used to configure a report server, manage report server content and operations, and create and publish paginated and mobile Reporting Services reports.
 ms.custom: seodec18

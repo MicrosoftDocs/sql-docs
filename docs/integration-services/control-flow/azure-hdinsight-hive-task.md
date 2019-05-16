@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Azure HDInsight Hive Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Use the **Azure HDInsight Hive Task** to run Hive script on an Azure HDInsight cluster.
      
 To add an **Azure HDInsight Hive Task**, drag-drop it to the SSIS Designer, and double-click or right-click and click **Edit** to see the following **Azure HDInsight Hive Task Editor** dialog box.  

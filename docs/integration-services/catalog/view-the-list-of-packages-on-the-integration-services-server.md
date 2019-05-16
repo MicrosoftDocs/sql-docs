@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # View the List of Packages on the Integration Services Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can view the list of packages that are stored on the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server in one of two ways.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] access  

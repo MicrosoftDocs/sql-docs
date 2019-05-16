@@ -94,14 +94,12 @@ GO
 -- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
   CREATE EXTERNAL DATA SOURCE SqlDataPool
-  WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+  WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
 
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-BEGIN
-    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-    WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-END
+   CREATE EXTERNAL DATA SOURCE SqlStoragePool
+   WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
 GO
 ```
 

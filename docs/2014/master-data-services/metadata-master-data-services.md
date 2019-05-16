@@ -13,7 +13,7 @@ helpviewer_keywords:
   - "metadata [Master Data Services]"
   - "user-defined metadata [Master Data Services]"
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ---

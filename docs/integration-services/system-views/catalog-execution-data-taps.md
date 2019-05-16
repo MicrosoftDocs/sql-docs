@@ -12,7 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ---
-# catalog.execution_data_taps
+# catalog.execution_data_taps 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Displays information for each data tap defined in an execution.  

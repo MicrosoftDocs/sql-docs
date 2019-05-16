@@ -42,11 +42,9 @@ In this article, you learn how to capture diagnostic information to troubleshoot
 
 8. Copy the following files into the same folder:
 
-    <li> "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
-
-    <li> "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
-
-    <li> "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. Zip up the folder
 
@@ -76,10 +74,8 @@ To capture diagnostic information to troubleshoot an OutOfMemoryException from S
 
 8. Copy the following files into the same folder:
 
-    <li>"C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
-
-    <li>"C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
-
-    <li>"C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
+    * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. Zip up the folder

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "text printing [SQL Server Management Studio]"
   - "printing code and text"
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

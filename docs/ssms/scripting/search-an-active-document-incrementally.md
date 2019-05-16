@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], incremental search"
   - "incremental searches [SQL Server Management Studio]"
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

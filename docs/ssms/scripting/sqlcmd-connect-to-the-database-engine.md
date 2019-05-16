@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "VIA"
   - "client protocols [SQL Server]"
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

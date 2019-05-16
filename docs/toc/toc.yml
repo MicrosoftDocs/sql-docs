@@ -2397,6 +2397,10 @@
       items:
       - name: Search for string using RegEx in Java
         href: ../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
+    - name: Concepts
+      items:
+      - name: Extensibility framework
+        href: ../language-extensions/concepts/extensibility-framework.md
     - name: How-to guides
       items:
       - name: Call Java from SQL Server

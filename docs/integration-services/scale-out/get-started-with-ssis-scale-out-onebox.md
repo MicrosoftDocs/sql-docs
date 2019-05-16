@@ -14,6 +14,10 @@ ms.reviewer: "douglasl"
 manager: craigg
 ---
 # Get started with Integration Services (SSIS) Scale Out on a single computer
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 This section provides guidance for setting up Integration Services Scale Out in a single-computer environment with the default settings.
 
 ## 1. Install SQL Server features

@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Look Up Process Chain
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Look Up Process Chain** dialog box to look up a process chain that is defined in the SAP Netweaver BW system. When the list of available process chains appears, select the chain that you want, and the source will populate the associated options with the required values.  
   
  The SAP BW source of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW uses the **Look Up Process Chain** dialog box. To learn more about the SAP BW source, see [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md).  

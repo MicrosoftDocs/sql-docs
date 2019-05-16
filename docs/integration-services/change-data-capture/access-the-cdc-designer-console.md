@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Access the CDC Designer Console
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can access the CDC Designer Console from the computer where you installed the console. For more information about installation, see Installation.  
   
  When you open the CDC Designer Console, the Connect to SQL Server dialog box opens.  

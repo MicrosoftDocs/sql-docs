@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # catalog.get_parameter_values (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Resolves and retrieves the default parameter values from a project and corresponding packages in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  

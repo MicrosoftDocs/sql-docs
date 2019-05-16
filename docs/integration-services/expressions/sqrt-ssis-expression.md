@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # SQRT (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the square root of a numeric expression.  
   
 ## Syntax  

@@ -30,6 +30,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Package Management (SSIS Service)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Package management includes monitoring, managing, importing and exporting packages.  
  
  ## Package Store  

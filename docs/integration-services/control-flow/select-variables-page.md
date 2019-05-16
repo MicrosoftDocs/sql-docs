@@ -18,6 +18,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Select Variables Page
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Select variables** dialog box to select one or more variables for the **ReadOnlyVariables** and **ReadWriteVariables** properties when you configure a Script task or a Script component.  
   
  To open the **Select Variables** dialog box, on the **Script** page of the **Script Transformation Editor** dialog box, under **Custom Properties**, locate either the **ReadOnlyVariables** or **ReadWriteVariables** property, and then click the ellipsis (...) button associated with that property.  

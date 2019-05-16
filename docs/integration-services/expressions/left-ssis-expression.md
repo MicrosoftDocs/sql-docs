@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # LEFT (SSIS Expression)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Returns the specified number of characters from the leftmost portion of the given character expression.  
   
 ## Syntax  

@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Add or Change a Property Expression
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You can create property expressions for packages, tasks, Foreach Loop containers, For Loop containers, Sequence containers, event handlers, package and project level connection managers, and log providers.  
   
  To create or change property expressions, you can use either the **Property Expressions Editor** or **Expression Builder**. The **Property Expressions Editor** can be accessed from either the custom editors that are available for tasks and containers, or from the **Properties** window. **Expression Builder** can be accessed from inside the **Property Expressions Editor**. While you can write expressions in either the **Property Expressions Editor** or **Expression Builder**, **Expression Builder** provides a graphical set of tools that makes it simple to build complex expressions.  

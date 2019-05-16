@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Azure HDInsight Pig Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Use the **Azure HDInsight Pig Task** to run Pig script on an Azure HDInsight cluster.
      
 To add an **Azure HDInsight Pig Task**, drag-drop it to the SSIS Designer, and double-click or right-click and click **Edit** to see the following **Azure HDInsight Pig Task Editor** dialog box.  

@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # How to Edit the CDC Instance Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This procedure describes how to use the CDC Designer Console to edit the configuration properties for a CDC instance.  
   
 ### To edit the CDC instance configuration properties  

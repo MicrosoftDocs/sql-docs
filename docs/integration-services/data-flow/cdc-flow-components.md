@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # CDC Flow Components
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] help SSIS developers work with CDC and reduce the complexity of CDC packages.  
   
  The SSIS CDC components are designed to work with the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC feature where the source tables are either the same [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database or an Oracle database (when using the Oracle CDC Service for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Partitioned tables are supported.  
@@ -34,7 +38,7 @@ manager: craigg
 ## Installation  
  This section describes the installation procedures for the CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- The CDC Components for SSIS are packaged with the Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server®. This download is part of the SQL Server Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ The CDC Components for SSIS are packaged with the MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ®. This download is part of the SQL Server Feature Pack. Download components of the Feature Pack from the [SQL Server 2016 Feature Pack web page](https://go.microsoft.com/fwlink/?LinkId=746297).  
   
 ### Version Support
 

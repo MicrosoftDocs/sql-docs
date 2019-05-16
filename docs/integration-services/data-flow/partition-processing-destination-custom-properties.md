@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Partition Processing Destination Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The Partition Processing destination has both custom properties and the properties common to all data flow components.  
   
  The following table describes the custom properties of the Partition Processing destination. All properties are read/write.  

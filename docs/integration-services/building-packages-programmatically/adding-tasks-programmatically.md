@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Adding Tasks Programmatically
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Tasks can be added to the following types of objects in the run-time engine:  
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.Package>  

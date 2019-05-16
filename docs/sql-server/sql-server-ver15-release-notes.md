@@ -110,16 +110,6 @@ Limited support may be found at one of the following locations:
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]  CTP 2.4, CTP 2.3.
 
-### SQL Server Integration Services (SSIS)
-
-- **Issue / customer impact**: The `SQL Server Destination` in an SSIS Package reports the following error when connecting to a database on [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.5.
-
-  `SSIS Error Code DTS_E_OLEDBERROR.  An OLE DB error has occurred. Error code: 0x80040E14. An OLE DB record is available.  Source: "Microsoft OLE DB Driver for SQL Server"  Hresult: 0x80040E14  Description: "Cannot fetch a row from OLE DB provider "BULK" for linked server "(null)".`
-
-  `An OLE DB record is available.  Source: "Microsoft OLE DB Driver for SQL Server"  Hresult: 0x80040E14  Description: "The OLE DB provider "BULK" for linked server "(null)" reported an error. The provider did not give any information about the error."`
-
-- **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP3.0.
-
 ### Big data cluster: MLeap runtime deployed through AppDeploy timeout
 
 - **Issue and customer impact**: Applications using the MLeap runtime deployed through AppDeploy time out after 15 minutes.

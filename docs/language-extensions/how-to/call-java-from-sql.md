@@ -14,35 +14,39 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # How to call Java from SQL Server
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-When using [SQL Server Language Extensions](../language-extensions-overview.md), the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. Permissions on the database apply to Java code execution.
+[SQL Server Language Extensions](../language-extensions-overview.md) uses the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure as the interface to call the Java runtime. 
 
-This how-to article explains implementation details for Java classes and methods that execute on SQL Server. Once you are familiar with these details, review the [Java tutorial](../tutorials/search-for-string-using-regular-expressions-in-java.md) as your next step.
+This how-to article explains implementation details for Java classes and methods that execute on SQL Server.
+
+## Where to place Java classes
 
 There are two methods for calling Java classes in SQL Server:
 
-1. Place .class or .jar files in your [Java classpath](#classpath). This is available for both Windows and Linux.
+1. Place **.class** or **.jar** files in your [Java classpath](#classpath). 
 
-2. Upload compiled classes in a .jar file and other dependencies into the database using the [external library](#external-library) DDL. This option is available for Windows and Linux from CTP 2.4.
+2. Upload compiled classes in a **.jar** file and other dependencies into the database using the [external library](#external-library) DDL. 
 
 > [!NOTE]
-> As a general recommendation, use .jar files and not individual .class files. This is common practice in Java and will make the overall experience easier. See also, [How to create a jar file from class files](create-a-java-jar-file-from-class-files.md).
+> As a general recommendation, use **.jar** files and not individual **.class** files. This is common practice in Java and will make the overall experience easier. See also, [How to create a jar file from class files](create-a-java-jar-file-from-class-files.md).
 
 <a name="classpath"></a>
 
-## Classpath
+## Use Classpath
 
 ### Basic principles
 
-* Compiled custom Java classes must exist in .class files or .jar files in your Java classpath. The [CLASSPATH parameter](#set-classpath) provides the path to the compiled Java files. 
+The folowing are some basic principles when executing Java on SQL Server.
 
-* The Java method you are calling must be provided in the "script" parameter on the stored procedure.
+* Compiled custom Java classes must exist in **.class** files or **.jar** files in your Java classpath. The [CLASSPATH parameter](#set-classpath) provides the path to the compiled Java files. 
 
-* If the class belongs to a package, the "packageName" needs to be provided.
+* The Java method you are calling must be provided in the **script** parameter on the stored procedure.
 
-* "params" is used to pass parameters to a Java class. Calling a method that requires arguments is not supported, which makes parameters the only way to pass argument values to your method. 
+* If the class belongs to a package, the **packageName** must be provided.
+
+* **params** is used to pass parameters to a Java class. Calling a method that requires arguments is not supported. Therefore, parameters the only way to pass argument values to your method. 
 
 > [!Note]
-> This note restates supported and unsupported operations specific to Java in CTP 2.x.
+> This note restates supported and unsupported operations specific to Java in CTP 3.0.
 > * On the stored procedure, input parameters are supported. Output parameters are not.
 > * Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported.
 > * Partitioning using @input_data_1_partition_by_columns is not supported.
@@ -50,7 +54,7 @@ There are two methods for calling Java classes in SQL Server:
 
 ### Call Java class
 
-Applicable to both Windows and Linux, the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an sp_execute_external_script using the Java extension, and parameters for specifying path, script, and your custom code.
+The [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure is the interface used to call the Java runtime. The following example shows an `sp_execute_external_script` using the Java extension, and parameters for specifying path, script, and your custom code.
 
 > [!NOTE]
 > Note that you don't need to define which method to call. By default, a method called **execute** is called. This means that you need to follow the SDK and implement an execute method in your Java class.
@@ -72,18 +76,19 @@ EXEC sp_execute_external_script
 
 Once you have compiled your Java class or classes and created a jar file in your Java classpath, you have two options for providing the classpath to the SQL Server Java extension:
 
-**Option 1: Use external libraries**
-The easiest option is to make SQL Server automatically find your classes by creating external libraries and pointing the library to a jar. [Use external libraries for Java](#external-library)
+1. Option 1: Use external libraries
 
-**Option 2: Register a system environment variable**
+    The easiest option is to make SQL Server automatically find your classes by creating external libraries and pointing the library to a jar. [Use external libraries for Java](#external-library)
 
-Just as you created a system environment variable for the Java runtime , you can create a system environment variable and provide the paths to your jar file that contains the classes. To do this, you need to create a system environment variable called "CLASSPATH".
+2. Register a system environment variable
+
+    Just as you created a system environment variable for the Java runtime , you can create a system environment variable and provide the paths to your jar file that contains the classes. To do this, you need to create a system environment variable called "CLASSPATH".
 
 <a name="external-library"></a>
 
-## External library
+## Use external library
 
-In SQL Server 2019 CTP 2.4, you can use external libraries for the Java language on Windows and Linux. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+In SQL Server 2019 CTP 3.0, you can use external libraries for the Java language on Windows and Linux. You can compile your classes into a .jar file and upload the .jar file and other dependencies into the database using the [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 Example of how to upload a .jar file with external library:
 
@@ -107,3 +112,7 @@ with result sets ((column1 int))
 ```
 
 For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+## Next steps
+
++ [Tutorial: Search for a string using regular expressions in Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)

@@ -63,3 +63,7 @@ The following SQL and Java data types are currently supported for input paramete
 | char(n) | String | Only UTF8 Strings supported | |
 | varchar(n) | String | Only UTF8 Strings supported | |
 | varchar(max) | String | Only UTF8 Strings supported | |
+
+## Next steps
+
++ [How to call Java in SQL Server](../how-to/call-java-from-sql.md)

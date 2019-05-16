@@ -62,7 +62,7 @@ ms.author: maggies
 |Tool|Tasks|  
 |----------|-----------|  
 |Management Studio - Used to view, modify, create, and delete role definitions.|[Create, Delete, or Modify a Role &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|the web portal - Used to assign users and groups to roles.|[Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Modify or Delete a Role Assignment &#40;SSRS Web Portal&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|The web portal - Used to assign users and groups to roles.|[Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Modify or Delete a Role Assignment](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## See also  
  [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   

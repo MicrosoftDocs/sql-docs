@@ -1,6 +1,6 @@
 ---
 title: "Caching Reports (SSRS) | Microsoft Docs"
-ms.date: 05/14/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-server
@@ -67,7 +67,7 @@ ms.author: maggies
  [Set Processing Options &#40;Reporting Services in SharePoint Integrated Mode&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Reporting Services Concepts &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Preload the Cache &#40;Web Portal&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Preload the Cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [Cache Shared Datasets &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
   

@@ -1,5 +1,5 @@
 ---
-title: "Preload the Cache (Web Portal) | Microsoft Docs"
+title: "Preload the Cache | Microsoft Docs"
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -14,7 +14,7 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ---
-# Preload the Cache (Web Portal)
+# Preload the Cache  
   You can preload the cache for a shared dataset by creating a cache refresh plan for the shared dataset.  
   
  You can preload the cache for a report in two ways:  
@@ -33,15 +33,34 @@ ms.author: maggies
   
 ### To preload the cache by creating a cache refresh plan  
   
-1.  Start [The web portal of a report server  &#40;SSRS Native Mode&#41;](../../reporting-services/web-portal-ssrs-native-mode.md).  
+1.  Start [The web portal of a report server](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
-2.  Navigate to the **Contents** page, and then navigate to the item that you want to cache.  
+2.  Select **Browse** to navigate the folder hierarchy and locate the item that you want to cache.  
   
-3.  Hover over the item, select the drop-down list > **Manage**.  
+3.  Select the ellipsis in the top right corner of the item and select **Manage** from the drop-down menu.  
   
-4.  Select the **Cache Refresh Options** tab.  
+4.  Select the **Caching** tab in the vertical menu on the left.  
   
-5.  On the toolbar, select **New Cache Refresh Plan**.  
+5.  Select the **Cache copies of this dataset and use them when available** radio button at the top. In the **Cache expiration** section below, select one if the following radio buttons:
+
+    1. **Cache expires after x minutes** (enter the desired number of minutes for x).
+    2. **Cache expires on a schedule** and select one of the two choices below it:
+        1. **Shared schedule** radio button, and then select a schedule from the **Select a shared schedule** dropdown textbox.
+        2. **Report-specific schedule** radio button, then click the **Edit schedule** link if necessary to display the *Schedule details* page. On this page you can select:
+           1. The type of schedule:
+              - Hour
+              - Day
+              - Week
+              - Month - which month(s), with a choice of:
+                 1. **On week of the month** 
+                    1. Select (1st, 2nd, 3rd, 4th or Last) from the dropdown box, and 
+                    2. **On day of the week** to run it: select one or more of the checkboxes (Sun, Mon, Tue, Wed,    Thu, Fri, Sat).
+                 2. **On calendar day(s)** -  Enter the actual day number of the month separated by commas or a      range of days separated by a dash, or any combination of both (e.g. 1,3-5).  
+              - Once  - a single occurrence
+           2. Time of the day
+           3. The start and end dates of the schedule.
+  
+6. **New Cache Refresh Plan**.  
   
     > [!NOTE]  
     > If the item does not have caching enabled, you will be prompted to enable caching. To enable caching, select **OK**.  
@@ -60,7 +79,7 @@ ms.author: maggies
   
 ### To preload the cache with a user-specific report by using a data-driven subscription  
   
-1.  Start [The web portal of a report server  &#40;SSRS Native Mode&#41;](../../reporting-services/web-portal-ssrs-native-mode.md)
+1.  Start ["The web portal of a report server"](../../reporting-services/web-portal-ssrs-native-mode.md)
   
 2.  Navigate to the **Contents** page, and then navigate to the report you want to create a subscription for.  
   
@@ -97,7 +116,7 @@ ms.author: maggies
      Or, to create a custom schedule, select **On a schedule created for this subscription** and then select **Next**. Configure the schedule and then select **Finish**.  
   
     > [!NOTE]  
-    > In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see [The web portal of a report server  &#40;SSRS Native Mode&#41;](../../reporting-services/web-portal-ssrs-native-mode.md).  
+    > In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see ["the web portal of a report server"](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 14. Configure the Execution options for the report as follows. On the report page, select the **Properties** tab.  
   
@@ -119,5 +138,5 @@ ms.author: maggies
  [Performance, Snapshots, Caching &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   
  [Set Report Processing Properties](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Working with shared datasets &#40;web portal&#41;](../../reporting-services/work-with-shared-datasets-web-portal.md)
+ [Working with shared datasets](../../reporting-services/work-with-shared-datasets-web-portal.md)
   

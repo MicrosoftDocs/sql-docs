@@ -58,7 +58,7 @@ ms.author: maggies
   
  Report server database configuration is a requirement for testing the URL. If you have not yet created the report server database, do so before testing the URL.  
   
- URL reservations for Web Portal URL and the Report Server Web Services URL are configured independently. If you want to also configure WEb Portal access through an SSL-encrypted channel, continue with the following steps:  
+ URL reservations for Web Portal URL and the Report Server Web Services URL are configured independently. If you want to also configure the web portal access through an SSL-encrypted channel, continue with the following steps:  
   
 1.  Click **Web Portal URL**.  
   

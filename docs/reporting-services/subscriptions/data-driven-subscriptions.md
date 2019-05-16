@@ -48,7 +48,7 @@ ms.author: maggies
 |[Create, Modify, and Delete Data-Driven Subscriptions](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)|Explains how to create, modify, or delete a data-driven subscription.|  
 |[Use an External Data Source for Subscriber Data &#40;Data-Driven Subscription&#41;](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Provides information about the data sources that you can use for a data-driven subscription.|  
 |[Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)|Provides step-by-step instruction for learning how to create a data-driven subscription.|  
-|[Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)|Describes how to use the Null Delivery Provider with a data-driven subscription to pre-load the cache.|  
+|[Caching Reports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)|Describes how to use the Null Delivery Provider with a data-driven subscription to preload the cache.|  
   
 ## See also  
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   

@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint conditions"
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

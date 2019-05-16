@@ -73,7 +73,7 @@ EXEC sp_execute_external_script
 Once you have compiled your Java class or classes and created a jar file in your Java classpath, you have two options for providing the classpath to the SQL Server Java extension:
 
 **Option 1: Use external libraries**
-The easiest option is to make SQL Server automatically find your classes by creating external libraries and pointing the library to a jar. [Use external libraries for Java](howto-call-java-from-sql.md#external-library)
+The easiest option is to make SQL Server automatically find your classes by creating external libraries and pointing the library to a jar. [Use external libraries for Java](#external-library)
 
 **Option 2: Register a system environment variable**
 

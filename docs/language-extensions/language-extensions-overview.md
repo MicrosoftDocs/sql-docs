@@ -33,7 +33,7 @@ This provides multiple advantages:
 ### Step 1: Install the software
 
 + [SQL Server Language Extensions on Windows](install/install-sql-server-language-extensions-on-windows.md)
-+ [SQL Server Language Extensions on Linux](install/install-sql-server-language-extensions-on-linux.md)
++ [SQL Server Language Extensions on Linux](../linux/sql-server-linux-setup-language-extensions.md)
 
 ### Step 2: Configure a development tool
 
@@ -51,9 +51,8 @@ Developers typically write code on their own laptop or development workstation. 
 
 Execute Java code from within T-SQL script:
 
-+ [Quickstart: Run Java on SQL Server](quickstarts/run-java-on-sql-server.md)
-+ [Tutorial: Regular expressions with Java](tutorials/java-regular-expressions.md)
++ [Tutorial: Regular expressions with Java](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
 ## Next steps
 
-+ Install [SQL Server Language Extensions on Windows](install/install-sql-server-language-extensions-on-windows.md) or [on Linux](install/install-sql-server-language-extensions-on-linux.md)
++ Install [SQL Server Language Extensions on Windows](install/install-sql-server-language-extensions-on-windows.md) or [on Linux](../linux/sql-server-linux-setup-language-extensions.md)

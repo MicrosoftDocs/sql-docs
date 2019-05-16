@@ -221,8 +221,6 @@ To ensure that language extensions jobs are prioritized and resourced appropriat
   
 - To change the amount of memory reserved for the database, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-- To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Modify the user account pool for machine learning](../administration/modify-user-account-pool.md).
-
 If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources. 
 
 ## Limitations in CTP 3.0
@@ -237,7 +235,6 @@ If you are using Standard Edition and do not have Resource Governor, you can use
 
 ## Next steps
 
-Java developers can get started with some simple examples, and learn the basics of how Java works with SQL Server. For your next step, see the following links:
+Java developers can get started with some simple examples, and learn the basics of how Java works with SQL Server. For your next step, see the following link:
 
-+ [Quickstart: Run Java on SQL Server](quickstarts/run-java-on-sql-server.md)
-+ [Tutorial: Regular expressions with Java](tutorials/java-regular-expressions.md)
++ [Tutorial: Regular expressions with Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)

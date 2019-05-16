@@ -100,3 +100,7 @@ Communication protocols among components and data platforms are described in thi
 + **Other protocols**
 
   Processes that might need to work in "chunks" or transfer data back to a remote client can also use the [XDF file format](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Actual data transfer is via encoded blobs.
+
+## Next steps
+
++ [What is Language Extensions?](../language-extensions-overview.md)

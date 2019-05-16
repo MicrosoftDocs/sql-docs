@@ -44,6 +44,9 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+| **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
+| Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
+| Updates to Spark mLeap samples | For more information, see [Export Spark machine learning models with MLeap](../big-data-cluster/export-model-with-spark-mleap.md). |
 | &nbsp; | &nbsp; |
 
 ### Database engine

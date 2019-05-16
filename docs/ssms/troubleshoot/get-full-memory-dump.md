@@ -52,7 +52,7 @@ To capture diagnostic information to troubleshoot, follow the steps below.
 
 ## OutOfMemoryException
 
-You can also get the Full Memory Dump of SSMS when it throws an OutOfMemoryException (this can be any managed exception).
+You can also get the Full Memory Dump of SSMS when it throws an OutOfMemoryException (can be any managed exception).
 
 To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, Follow the steps below.
 

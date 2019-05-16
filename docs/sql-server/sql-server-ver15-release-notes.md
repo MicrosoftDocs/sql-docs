@@ -47,6 +47,19 @@ Support for CTP releases is described in `license_Eval.rtf` with your installati
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
+### Features excluded from support
+
+- **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] excludes support for the following components, features, and scenarios:
+  - SQL Sever Analysis Services
+  - SQL Server Reporting Services
+  - Always On availability groups on Kubernetes
+  - Accelerated database recovery
+  - Memory optimized tempdb
+
+- **Workaround**: None. Exclusion applies to all customers, including participants in SQL Early Adopter Program.
+
+- **Applies to**: CTP 3.0
+
 ### Updated compiler
 
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is built with an updated compiler. CTP 2.1 had a known issue where results for floating point and other conversion scenarios may have returned a different value than previous versions because of the updated compiler. CTP 2.2 includes work to ensure that the affected scenarios return the same results as previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As of CTP 3.0 release we do not know any remaining issues. Please report any result anomalies compared to [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](http://aka.ms/sqlfeedback) immediately.

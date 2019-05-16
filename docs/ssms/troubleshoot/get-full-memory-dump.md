@@ -1,6 +1,6 @@
 ---
 title: Get Full Memory Dump to troubleshoot SQL Server Management Studio (SSMS)
-Description: Troubleshooting a SSMS hang or crash by collecting a full memory dump
+Description: Troubleshooting an SSMS hang or crash by collecting a full memory dump
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -16,9 +16,9 @@ ms.date: 05/17/2019
 
 # Get Full Memory Dump
 
-[!INCLUDE[appliesto](../../includes/appliesto-ss-asdb-asdw-xxx-md.md])
+[!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md])
 
-In this article you learn how to capture diagnostic information to troubleshoot a crash or a hang that you experienced from SQL Server Management Studio (SSMS).
+In this article, you learn how to capture diagnostic information to troubleshoot a crash or a hang that you experienced from SQL Server Management Studio (SSMS).
 
 1. Download [ProcDump](https://technet.microsoft.com/en-us/sysinternals/dd996900.aspx)
 
@@ -36,7 +36,7 @@ In this article you learn how to capture diagnostic information to troubleshoot 
 
 5. Reproduce the issue
 
-6. Text should appear in the cmd prompt about writing the dump file, wait for that to finish
+6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish
 
 7. Create a new folder and copy the *.dmp file that is written out to that folder
 
@@ -52,7 +52,7 @@ In this article you learn how to capture diagnostic information to troubleshoot 
 
 ## Get Full Memory Dump of SSMS when it throws an OutOfMemoryException (can be any managed exception)
 
-To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, please follow the steps as below:
+To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, Follow the steps as below:
 
 1. Download [ProcDump](https://technet.microsoft.com/en-us/sysinternals/dd996900.aspx)
 
@@ -70,7 +70,7 @@ To capture diagnostic information to troubleshoot an OutOfMemoryException from S
 
 5. Repro the issue
 
-6. Text should appear in the cmd prompt about writing the dump file, wait for that to finish
+6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish
 
 7. Create a new folder and copy the *.dmp file that is written out to that folder
 

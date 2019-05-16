@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Persisting Custom Objects
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   You do not need to implement custom persistence for the custom objects that you create as long as their properties use only simple data types such as **integer** and **string**. The default implementation of persistence saves the metadata for your object along with the values of all its properties.  
   
  However, if your object has properties that use complex data types, or if you want to perform custom processing on property values as they are loaded and saved, you can implement the <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> interface and its <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> and <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A> methods. In these methods you load from (or save to) the XML definition of the package an XML fragment that contains the properties of your object and their current values. The format of this XML fragment is not defined; it must only be well-formed XML.  

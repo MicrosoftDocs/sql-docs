@@ -15,6 +15,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Edit Tables
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use the **Tables** tab to make changes to the tables and columns that you selected from the Oracle source database. This tab has the following elements:  
   
  **Table list**  

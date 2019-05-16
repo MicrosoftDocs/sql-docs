@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # How to Manage a CDC Service from the CDC Designer Console
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This procedure describes how to use the CDC Designer Console to manage a CDC service.  
   
 ### To manage a CDC service from the CDC Designer Console  

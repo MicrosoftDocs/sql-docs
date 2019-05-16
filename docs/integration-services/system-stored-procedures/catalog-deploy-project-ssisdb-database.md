@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # catalog.deploy_project (SSISDB Database)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Deploys a project to a folder in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog or updates an existing project that has been deployed previously.  

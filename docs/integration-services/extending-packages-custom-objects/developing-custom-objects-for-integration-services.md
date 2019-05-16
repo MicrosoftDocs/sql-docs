@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Developing Custom Objects for Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   When the control flow and data flow objects that are included with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] do not completely meet your requirements, you can develop many types of custom objects on your own including:  
   
 -   **Custom tasks**.  

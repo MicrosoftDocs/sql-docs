@@ -13,6 +13,10 @@ ms.author: janinez
 manager: craigg
 ---
 # OData Source Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 When you right-click **OData Source** in the data flow and click **Properties**, you see properties for the **OData Source** component in the **Properties** window.  
 
 ## Properties 

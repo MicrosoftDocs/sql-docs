@@ -8,8 +8,8 @@ helpviewer_keywords:
   - "IntelliSense [SQL Server], delimiter highlighting"
   - "IntelliSense [SQL Server], syntax pair matching"
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

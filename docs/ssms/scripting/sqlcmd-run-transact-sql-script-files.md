@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "transact sql scripts"
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

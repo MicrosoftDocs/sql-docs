@@ -8692,7 +8692,7 @@
         href: ../ssms/install-other-languages.md
       - name: SSMS Support Policy
         href: ../ssms/support-policy.md
-    - name: "Tutorials: SQL Server Management Studio"
+    - name: SQL Server Management Studio
       href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
       items:
       - name: Connect & Query SQL Server using SSMS
@@ -9274,6 +9274,10 @@
               items:
               - name: Objects Supported by the Generate Scripts Wizard
                 href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+    - name: Troubleshoot
+      items:
+      - name: Get Full Memory Dump
+        href: ../ssms/troubleshoot/get-full-memory-dump.md
     - name: References
       items:
       - name: The SSMS Environment

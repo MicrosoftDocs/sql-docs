@@ -5,18 +5,21 @@ description: Language extensions installation steps for SQL Server 2019 in Windo
 author: dphansen
 ms.author: davidph 
 manager: cgronlun
-ms.date: 05/06/2019
+ms.date: 05/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server Machine Learning Services on Windows
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Starting in SQL Server 2019, Language Extensions and Java support is provided. This article explains how to install the Language Extensions component by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 
-## <a name="bkmk_prereqs"> </a> Pre-install checklist
+<a name="prerequisites"></a> 
+
+## Pre-install checklist
 
 + SQL Server 2019 Setup is required if you want to install support for Language Extensions.
 
@@ -31,67 +34,67 @@ Starting in SQL Server 2019, Language Extensions and Java support is provided. T
 > [!IMPORTANT]
 > After setup is complete, be sure to complete the post-configuration steps described in this article. These steps include enabling SQL Server to use external code, and adding accounts required for SQL Server to run Java code on your behalf. Configuration changes generally require a restart of the instance, or a restart of the Launchpad service.
 
+<a name="java-prerequisite"></a>
+
+## Java JRE or JDK prerequisite
+
+Java 8 is currently the supported version. Newer versions, like Java 11, should with the language extension but is currently not supported. The Java Runtime Environment (JRE) is the minimum requirement, but JDK is useful if you need the Java compiler and development packages. Because the JDK is all inclusive, if you install the JDK, the JRE is not necessary.
+
+You can use your preferred Java 8 distribution. Below are two suggested distributions:
+
+| Distribution | Java version | Operating systems | JDK | JRE |
+|-|-|-|-|-|
+| [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows and Linux | Yes | No |
+| [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows and Linux | Yes | Yes |
+
+On Windows, we recommend installing the JDK under the default `/Program Files/` folder if possible. Otherwise, extra configuration is required to grant permissions to executables. For more information, see the [grant permissions (Windows)](#perms-nonwindows) section in this document.
+
+> [!Note]
+> Given that Java is backwards compatible, earlier versions might work, but the supported and tested version for this early CTP release is Java 8. 
+
 ## Get the installation media
 
-[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
+The preview version of SQL Server 2019 is available at the [SQL Server 2019 install site](https://www.microsoft.com/en-us/sql-server/sql-server-2019#Install).
 
+<!-- We can use this include statement, once SQL Server 2019 is in GA
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
+-->
 ## Run Setup
 
 For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.
 
-1. Start the setup wizard for SQL Server 2019. 
-  
-2. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+1. Ensure a supported version of Java is installed. For more information, see the [Java prerequisites](#java-prerequisite).
 
-<!--   ![New SQL Server stand-alone installation](media/2019setup-installation-page-mlsvcs.PNG) -->
-   
-3. On the **Feature Selection** page, select these options:
+3. Start the setup wizard for SQL Server 2019. 
   
-    -   **Database Engine Services**
+4. On the **Installation** tab, select **New SQL Server stand-alone installation or add features to an existing installation**.
+
+4. On the **Feature Selection** page, select these options:
   
-         To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
+    - **Database Engine Services**
   
-    -   **Machine Learning Services and Language Extensions**
+        To use Language Extensions with SQL Server, you must install an instance of the database engine. You can use either a default or a named instance.
   
-         This option installs the Language Extensions component that support Java code execution.
-
-    -   **Java**
-
-        Check this option to add the Microsoft R packages, interpreter, and open-source R. 
-
-    -   **Python**
-
-        Check this option to add the Microsoft Python packages, the Python 3.5 executable, and select libraries from the Anaconda distribution.
-        
-<!--        ![Feature options for Language Extensions](media/2019setup-features-page-language-extensions.png "Setup options for Python") -->
-
-<!-- Not sure if we have a concent page yet...
-
-4. On the **Consent to Install R** page, select **Accept**. This license agreement covers Microsoft R Open, which includes a distribution of the open-source R base packages and tools, together with enhanced R packages and connectivity providers from the Microsoft development team.
-
-5. On the **Consent to Install Python** page, select **Accept**. The Python open-source licensing agreement also covers Anaconda and related tools, plus some new Python libraries from the Microsoft development team.
-     
-     ![Agreement to Python license](media/2017setup-python-license.png "License agreement for Python")
+    - **Machine Learning Services and Language Extensions**
   
-    > [!NOTE]
-    >  If the computer you are using does not have internet access, you can pause setup at this point to download the installers separately. For more information, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md).
-  
-     Select **Accept**, wait until the **Next** button becomes active, and then select **Next**.
--->
-  
-6. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
+        This option installs the Language Extensions component that support Java code execution.
+
+        You can omit R and Python if you wish.
+
+        ![Feature options for Language Extensions](../media/sql2019-install-language-extensions.png) 
+
+5. On the **Ready to Install** page, verify that these selections are included, and select **Install**.
   
     + Database Engine Services
-    + Machine Learning Services and Language Extensions
-    + Java
+    + Machine Learning Services (in-database)
 
     Note of the location of the folder under the path `..\Setup Bootstrap\Log` where the configuration files are stored. When setup is complete, you can review the installed components in the Summary file.
 
-7. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+6. After setup is complete, if you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For more information, see [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 ## Add the JRE_HOME variable
 
-JRE_HOME is a system environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
+`JRE_HOME` is a system environment variable that specifies the location of the Java interpreter. In this step, create a system environment variable for it on Windows.
 
 1. Find and copy the JRE home path (for example, `C:\Program Files\Zulu\zulu-8\jre\`).
 
@@ -115,22 +118,22 @@ JRE_HOME is a system environment variable that specifies the location of the Jav
 
 If you did not install the JDK or JRE under program files, you need to perform the following steps. Run the **icacls** commands from an *elevated* line to grant access to the **SQLRUsergroup** and SQL Server service accounts (in **ALL_APPLICATION_PACKAGES**) for accessing the JRE. The commands will recursively grant access to all files and folders under the given directory path.
 
-### SQLRUserGroup permissions
+1. Give SQLRUserGroup permissions
 
-For a named instance,  append the instance name to SQLRUsergroup (for example, `SQLRUsergroupINSTANCENAME`).
+    For a named instance,  append the instance name to SQLRUsergroup (for example, `SQLRUsergroupINSTANCENAME`).
 
-```cmd
-icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
-```
+    ```cmd
+    icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+    ```
+    
+    You can skip this step if you installed the JDK/JRE in the default folder under program files on Windows.
 
-You can skip this step if you installed the JDK/JRE in the default folder under program files on Windows.
+2. Give AppContainer permissions
 
-### AppContainer permissions
-
-```cmd
-icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
-```
-
+    ```cmd
+    icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+    ```
+    
 ## Enable script execution
 
 1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
@@ -171,7 +174,7 @@ Check the installation status of the instance in the setup logs.
 
 Use the following steps to verify that all components used to launch external script are running.
 
-1. In SQL Server Management Studio, open a new query window, and run the following command:
+1. In SQL Server Management Studio or Azure Data Studio, open a new query window, and run the following statement:
     
     ```sql
     EXEC sp_configure  'external scripts enabled'
@@ -179,82 +182,11 @@ Use the following steps to verify that all components used to launch external sc
 
     The **run_value** should now be set to 1.
     
-2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has R or Python installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
+2. Open the **Services** panel or SQL Server Configuration Manager, and verify **SQL Server Launchpad service** is running. You should have one service for every database engine instance that has language extensions installed. For more information about the service, see [Extensibility framework](../concepts/extensibility-framework.md). 
    
-3. If Launchpad is running, you should be able to run simple R and Python scripts to verify that external scripting runtimes can communicate with SQL Server.
-
-   Open a new **Query** window in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], and then run a script such as the following:
-    
-    + For R
-    
-    ```sql
-    EXEC sp_execute_external_script  @language =N'R',
-    @script=N'
-    OutputDataSet <- InputDataSet;
-    ',
-    @input_data_1 =N'SELECT 1 AS hello'
-    WITH RESULT SETS (([hello] int not null));
-    GO
-    ```
-
-    + For Python
-    
-    ```sql
-    EXEC sp_execute_external_script  @language =N'Python',
-    @script=N'
-    OutputDataSet = InputDataSet;
-    ',
-    @input_data_1 =N'SELECT 1 AS hello'
-    WITH RESULT SETS (([hello] int not null));
-    GO
-    ```
-
- **Results**
-
-    The script can take a little while to run, the first time the external script runtime is loaded. The results should be something like this:
-
-    | hello |
-    |----|
-    | 1|
-
-
-<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
-Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
-due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
-I will inform HeidiSteen  [GeneMi, 2019/01/17]
--->
-
-
-> [!NOTE]
-> Columns or headings used in the Python script are not returned, by design. To add column names for your output, you must specify the schema for the return data set. Do this by using the WITH RESULTS parameter of the stored procedure, naming the columns and specifying the SQL data type.
-> 
-> For example, you can add the following line to generate an arbitrary column name: `WITH RESULT SETS ((Col1 AS int))`
-
-<a name="apply-cu"></a>
-
-## Apply updates
-
-We recommend that you apply the latest cumulative update to both the database engine and machine learning components.
-
-On internet-connected devices, cumulative updates are typically applied through Windows Update, but you can also use the steps below for controlled updates. When you apply the update for the database engine, Setup pulls cumulative updates for any R or Python features you installed on the same instance. 
-
-On disconnected servers, extra steps are required. For more information, see [Install on computers with no internet access > Apply cumulative updates](sql-ml-component-install-without-internet-access.md#apply-cu).
-
-1. Start with a baseline instance already installed: SQL Server 2017 initial release
-
-2. Go to the cumulative update list: [SQL Server 2017 updates](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. Select the latest cumulative update. An executable is downloaded and extracted automatically.
-
-4. Run Setup. Accept the licensing terms, and on the Feature selection page, review the features for which cumulative updates are applied. You should see every feature installed for the current instance, including machine learning features. Setup downloads the CAB files necessary to update all features.
-
-  ![Summary of installed features](media/cumulative-update-feature-selection.png)
-
-5. Continue through the wizard, accepting the licensing terms for R and Python distributions. 
-
 ## Additional configuration
 
-If the external script verification step was successful, you can run R or Python commands from SQL Server Management Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
+If the verification step was successful, you can run Java Code from SQL Server Management Studio, Azure Data Studio, Visual Studio Code, or any other client that can send T-SQL statements to the server.
 
 If you got an error when running the command, review the additional configuration steps in this section. You might need to make additional appropriate configurations to the service or database.
 
@@ -277,45 +209,32 @@ On the database, you might need the following configuration updates:
 
 ## Suggested optimizations
 
-Now that you have everything working, you might also want to optimize the server to support machine learning, or install pretrained models.
+Now that you have everything working, you might also want to optimize the server to support language extensions.
 
-### Add more worker accounts
+### Optimize the server for language extensions
 
-If you expect many users to be running scripts concurrently, you can increase the number of worker accounts that are assigned to the Launchpad service. For more information, see [Modify the user account pool for SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
+The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services that are supported by the database engine, which might include extract, transform, and load (ETL) processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. Therefore, under the default settings, you might find that resources for language extensions are sometimes restricted or throttled, particularly in memory-intensive operations.
 
-### Optimize the server for script execution
-
-The default settings for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup are intended to optimize the balance of the server for a variety of services that are supported by the database engine, which might include extract, transform, and load (ETL) processes, reporting, auditing, and applications that use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data. Therefore, under the default settings, you might find that resources for machine learning are sometimes restricted or throttled, particularly in memory-intensive operations.
-
-To ensure that machine learning jobs are prioritized and resourced appropriately, we recommend that you use SQL Server Resource Governor to configure an external resource pool. You might also want to change the amount of memory that's allocated to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine, or increase the number of accounts that run under the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+To ensure that language extensions jobs are prioritized and resourced appropriately, we recommend that you use SQL Server Resource Governor to configure an external resource pool. You might also want to change the amount of memory that's allocated to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine, or increase the number of accounts that run under the [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
 
 - To configure a resource pool for managing external resources, see [Create an external resource pool](../../t-sql/statements/create-external-resource-pool-transact-sql.md).
   
 - To change the amount of memory reserved for the database, see [Server memory configuration options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
   
-- To change the number of R accounts that can be started by [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], see [Modify the user account pool for machine learning](../administration/modify-user-account-pool.md).
+If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources. 
 
-If you are using Standard Edition and do not have Resource Governor, you can use Dynamic Management Views (DMVs) and Extended Events, as well as Windows event monitoring, to help manage the server resources. For more information, see [Monitoring and managing R Services](../r/managing-and-monitoring-r-solutions.md) and [Monitoring and managing Python Services](../python/managing-and-monitoring-python-solutions.md).
+## Limitations in CTP 3.0
 
-### Install additional R packages
+* The number of values in input and output buffers cannot exceed `MAX_INT (2^31-1)` since that is the maximum number of elements that can be allocated in an array in Java.
 
-The R solutions you create for SQL Server can call basic R functions, functions from the proprietary packages installed with SQL Server, and third-party R packages compatible with the version of open-source R installed by SQL Server.
+* Output parameters in [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) are not supported in this version.
 
-Packages that you want to use from SQL Server must be installed in the default library that is used by the instance. If you have a separate installation of R on the computer, or if you installed packages to user libraries, you won't be able to use those packages from T-SQL.
+* Streaming using the sp_execute_external_script parameter @r_rowsPerRead is not supported in this CTP.
 
-The process for installing and managing R packages is different in SQL Server 2016 and SQL Server 2017. In SQL Server 2016, a database administrator must install R packages that users need. In SQL Server 2017, you can set up user groups to share packages on a per-database level, or configure database roles to enable users to install their own packages. For more information, see [Install new R packages in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
-
+* Partitioning using the sp_execute_external_script parameter @input_data_1_partition_by_columns is not supported in this CTP.
 
 ## Next steps
 
-R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
+Java developers can get started with some simple examples, and learn the basics of how Java works with SQL Server. For your next step, see the following link:
 
-+ [Tutorial: Run R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: In-database analytics for R developers](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-
-Python developers can learn how to use Python with SQL Server by following these tutorials:
-
-+ [Tutorial: Run Python in T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: In-database analytics for Python developers](../tutorials/sqldev-in-database-python-for-sql-developers.md)
-
-To view examples of machine learning that are based on real-world scenarios, see [Machine learning tutorials](../tutorials/machine-learning-services-tutorials.md).
++ [Tutorial: Regular expressions with Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)

@@ -1,40 +1,28 @@
 ---
-title: Java sample and tutorial for SQL Server 2019 - SQL Server Machine Learning Services
-description: Run Java sample code on SQL Server 2019 to learn steps for using the Java language extension with SQL Server data.
-ms.prod: sql
-ms.technology: machine-learning
-
-ms.date: 04/23/2019
-ms.topic: conceptual
-author: nelgson
-ms.author: negust
-ms.reviewer: dphansen
+title: 'Tutorial: Search for a string using regular expressions in Java'
+titleSuffix: SQL Server Language Extensions
+description: This tutorial shows you how to use SQL Server Language Extensions and run Java code that search a string with regular expressions.
+author: dphansen
+ms.author: davidph 
 manager: cgronlun
+ms.date: 05/15/2019
+ms.topic: conceptual
+ms.prod: sql
+ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
+# Tutorial: Search for a string using regular expressions in Java
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-# SQL Server Regex Java Sample
+This tutorial shows you how to use [SQL Server Language Extensions](../language-extensions-overview.md) and create a Java class that receives two columns (ID and text) from SQL Server and a regular expression as an input parameter. The class returns two columns back to SQL Server (ID and text).
 
-This example demonstrates a Java class that receives two columns (ID and text) from SQL Server, and also takes a regular expression as an input parameter. The class returns two columns back to SQL Server (ID and text).
-
-For a given text in the text column sent to the Java class, the code checks if the given regular expression is fulfilled, and returns that text together with the original ID. 
+For a given text in the text column sent to the Java class, the code checks if the given regular expression is fulfilled, and returns that text together with the original ID.
 
 This particular sample uses a regular expression that checks if a text contains the word "Java" or "java".
 
-## Microsoft Extensibility SDK for Java for Microsoft SQL Server
-
- In CTP 2.5, we are changing the way you implement Java code that uses the Java language extension to communicate with SQL Server. This will provide a better developer experience when interacting with SQL Server from Java.
-
-You should think about the SDK as a helper interface, that will make it easier to implement Java code running against SQL Server.
-
-> [!NOTE]
-> The introduction of the SDK is a big change from previous CTPs. Any previous samples you had working will need to be updated to use the SDK.
-
-For more information, see the [SDK documentation](java-sdk.md).
-
 ## Prerequisites
 
-+ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/sql-machine-learning-services-windows-install.md) or [on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup). For more information on system configuration, see [Java language extension in SQL Server 2019](extension-java.md). For more information about coding requirements, see [How to call Java in SQL Server](howto-call-java-from-sql.md).
++ SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/install-sql-server-language-extensions-on-windows.md) or [on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions). For more information, see [Language Extension in SQL Server 2019](../language-extensions-overview.md). For more information about coding requirements, see [How to call Java in SQL Server](../how-to/call-java-from-sql.md).
 
 + SQL Server Management Studio or Azure Data Studio for running T-SQL.
 
@@ -84,7 +72,7 @@ This main class is importing the SDK, which means that the jar file downloaded i
 
 > [!NOTE]
 > Note that this class imports the Java extension SDK package.
-See the article about the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](java-sdk.md) for more details.
+See the article about the Microsoft Extensibility SDK for Java for Microsoft SQL Server for more details.
 
 ```java
 package pkg;
@@ -192,7 +180,7 @@ public class RegexSample extends AbstractSqlServerExtensionExecutor {
 
 We recommend that you package your classes and dependencies into .jar files. Most Java IDEs like Eclipse or IntelliJ support generating jar files when you build/compile the project. In this sample, we have named the jar file **regex.jar**.
 
-If you are manually creating a .jar file, you can follow the steps, see [How to create a jar file](extension-java.md#create-jar).
+If you are manually creating a .jar file, you can follow the steps, see [How to create a jar file](../how-to/create-a-java-jar-file-from-class-files.md).
 
 > [!NOTE]
 > This sample is using packages, which means that the package "pkg" given at the top of the class makes sure the compiled code is saved in a sub folder called "pkg". This is automatically taken care of if you use an IDE, but if you are manually compiling classes using **javac**, you will need to place the compiled code in the pkg sub folder manually.
@@ -229,7 +217,7 @@ GO
 
 This step is not needed if you use external libraries. The recommended way of working is to create an external library from you jar.
 
-If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions [here](extension-java.md).
+If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions in  the [installation guide](../install/install-sql-server-language-extensions-on-windows.md).
 
 ### On Linux
 
@@ -300,7 +288,6 @@ After executing the call, you should get a result set with two of the rows.
 
 ## Next steps
 
-+ [Microsoft Extensibility SDK for Java for Microsoft SQL Server](java-sdk.md)
-+ [How to call Java in SQL Server](howto-call-java-from-sql.md)
-+ [Java extensions in SQL Server](extension-java.md)
-+ [Java and SQL Server data types](java-sql-datatypes.md)
++ [How to call Java in SQL Server](../how-to/call-java-from-sql.md)
++ [Java extensions in SQL Server](../language-extensions-overview.md)
++ [Java and SQL Server data types](../how-to/java-to-sql-data-types.md)

@@ -24,7 +24,7 @@ This particular sample uses a regular expression that checks if a text contains 
 
 + SQL Server 2019 Database Engine instance with the extensibility framework and Java programming extension [on Windows](../install/install-sql-server-language-extensions-on-windows.md) or [on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions). For more information, see [Language Extension in SQL Server 2019](../language-extensions-overview.md). For more information about coding requirements, see [How to call Java in SQL Server](../how-to/call-java-from-sql.md).
 
-+ SQL Server Management Studio or Azure Data Studio for running T-SQL.
++ SQL Server Management Studio or Azure Data Studio for executing T-SQL.
 
 + Java SE Development Kit (JDK) 8 or JRE 8 on Windows or Linux.
 
@@ -32,9 +32,9 @@ This particular sample uses a regular expression that checks if a text contains 
 
 Command-line compilation using **javac** is sufficient for this tutorial.
 
-## 1 - Create sample data in a SQL Server table
+## Create sample data in a SQL Server table
 
-First, create and populate a *testdata* table with **ID** and **text** columns. Connect to SQL Server and run the following script to create a table:
+First, create a new database and populate a **testdata** table with **ID** and **text** columns. 
 
 ```sql
 CREATE DATABASE javatest
@@ -42,16 +42,10 @@ GO
 USE javatest
 GO
 
--- Create table for test data
-DROP TABLE IF exists testdata;
-GO
-
-CREATE TABLE testdata(
-id int NOT NULL,
-"text" nvarchar(100) NOT NULL)
-GO
-
-TRUNCATE TABLE testdata
+CREATE TABLE testdata (
+    id int NOT NULL,
+    "text" nvarchar(100) NOT NULL
+)
 GO
 
 -- Insert data into test table
@@ -59,20 +53,13 @@ INSERT INTO testdata(id, "text") VALUES (1, 'This sentence contains java')
 INSERT INTO testdata(id, "text") VALUES (2, 'This sentence does not')
 INSERT INTO testdata(id, "text") VALUES (3, 'I love Java!')
 GO
-Select * FROM testdata
 ```
 
-## 2 - Class RegexSample.java
+## Create the main class
 
-Start by creating the main class.
-
-In this step, create a class called **RegexSample.java** and copy the following Java code into that file.
+In this step, create a class file called **RegexSample.java** and copy the following Java code into that file.
 
 This main class is importing the SDK, which means that the jar file downloaded in step1 needs to be discoverable from this class.
-
-> [!NOTE]
-> Note that this class imports the Java extension SDK package.
-See the article about the Microsoft Extensibility SDK for Java for Microsoft SQL Server for more details.
 
 ```java
 package pkg;
@@ -176,46 +163,45 @@ public class RegexSample extends AbstractSqlServerExtensionExecutor {
 }
 ```
 
-## 3 - Compile and create .jar file
+## Compile and create a .jar file
 
-We recommend that you package your classes and dependencies into .jar files. Most Java IDEs like Eclipse or IntelliJ support generating jar files when you build/compile the project. In this sample, we have named the jar file **regex.jar**.
+Package your classes and dependencies into a `.jar` files. Most Java IDEs (for example, Eclipse or IntelliJ) support generating `.jar` files when you build or compile the project. Name the `.jar` file **regex.jar**.
 
-If you are manually creating a .jar file, you can follow the steps, see [How to create a jar file](../how-to/create-a-java-jar-file-from-class-files.md).
+If you are not using a Java IDE, you can manually create a `.jar` file. For more information, see [How to create a Java jar file from class files](../how-to/create-a-java-jar-file-from-class-files.md).
 
 > [!NOTE]
-> This sample is using packages, which means that the package "pkg" given at the top of the class makes sure the compiled code is saved in a sub folder called "pkg". This is automatically taken care of if you use an IDE, but if you are manually compiling classes using **javac**, you will need to place the compiled code in the pkg sub folder manually.
+> This tutorial uses packages. The `package pkg;` line at the top of the class ensures that the compiled code is saved in a sub folder called **pkg**. If you use an IDE, the compiled code is automatic saved in this folder. If you use **javac** to manual compile the classes, you need to place the compiled code in the **pkg** folder.
 
-## 4 - Create external libraries
+## Create external libraries
 
-By creating an external library, SQL Server will automatically have access to the jar files and you do not need to set any special permissions to the classpath.
+Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) to create an external library. SQL Server will have access to the `.jar` files and you do not need to set any special permissions to the **classpath**.
 
-In this sample, you will need to create two external libraries. One for the SDK, and one for the Regex Java sample.
+In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
-1.  Download [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension) mssql-java-lang-extension.jar.
+1. Download the [Microsoft Extensibility SDK for Java for Microsoft SQL Server](http://aka.ms/mssql-java-lang-extension) **mssql-java-lang-extension.jar**.
 
-1. Create external library for the sdk
+2. Create an external library for the SDK.
 
-```sql
--- Create external library for the SDK
-CREATE EXTERNAL LIBRARY sdk
-FROM (CONTENT = '<path>/mssql-java-lang-extension.jar')
-WITH (LANGUAGE = 'Java');
-GO
-```
+    ```sql
+    CREATE EXTERNAL LIBRARY sdk
+    FROM (CONTENT = '<path>/mssql-java-lang-extension.jar')
+    WITH (LANGUAGE = 'Java');
+    GO
+    ```
 
-3. Create external library for the regex sample
+3. Create an external library for the RegEx code.
 
-```sql
--- Create external library for the regex sample
-CREATE EXTERNAL LIBRARY regex
-FROM (CONTENT = '<path>/regex.jar')
-WITH (LANGUAGE = 'Java');
-GO
-```
+    ```sql
+    CREATE EXTERNAL LIBRARY regex
+    FROM (CONTENT = '<path>/regex.jar')
+    WITH (LANGUAGE = 'Java');
+    GO
+    ```
 
-## 5 - Set permissions (Skip if you performed step 4)
+## Set permissions
 
-This step is not needed if you use external libraries. The recommended way of working is to create an external library from you jar.
+> [!NOTE]
+> Skip this step, if you use external libraries in the previous step. The recommended way is to create an external library from your `.jar` file.
 
 If you don't want to use external libraries, you will need to set the necessary permissions. Script execution only succeeds if the process identities have access to your code. You can find more information about setting permissions in  the [installation guide](../install/install-sql-server-language-extensions-on-windows.md).
 
@@ -242,7 +228,7 @@ Make sure both security identities have 'Read and Execute' permissions on the fo
 
 <a name="call-method"></a>
 
-## 2 - Call the Java class
+## Call the Java class
 
 To call the Java code from SQL Server, we will create a stored procedure that calls sp_execute_external_script. In the "script" parameter, we will define which [package].[class] we want to call. In this sample, the class belongs to a package called **pkg** and a class file called **RegexSample.java**.
 

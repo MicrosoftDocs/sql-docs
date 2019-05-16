@@ -20,11 +20,13 @@ ms.date: 05/17/2019
 
 In this article, you learn how to capture diagnostic information to troubleshoot a crash or a hang that you experienced from SQL Server Management Studio (SSMS).
 
-1. Download [ProcDump](https://technet.microsoft.com/en-us/sysinternals/dd996900.aspx)
+To capture diagnostic information to troubleshoot, follow the steps below.
 
-2. Unzip the download into a folder
+1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
 
-3. Open Command Prompt and run the following command:
+2. Unzip the download into a folder.
+
+3. Open Command Prompt and run the following command.
 
     ```cmd
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
@@ -32,31 +34,33 @@ In this article, you learn how to capture diagnostic information to troubleshoot
 
     It should prompt you to accept a license agreement, select **Agree**.
 
-4. Start SQL Server Management Studio (SSMS) if not started already
+4. Start SQL Server Management Studio (SSMS) if not started already.
 
-5. Reproduce the issue
+5. Reproduce your issue.
 
-6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish
+6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish.
 
-7. Create a new folder and copy the *.dmp file that is written out to that folder
+7. Create a new folder and copy the *.dmp file that is written out to that folder.
 
-8. Copy the following files into the same folder:
+8. Copy the following files into the same folder.
 
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
-9. Zip up the folder
+9. Zip up the folder.
 
-## Get Full Memory Dump of SSMS when it throws an OutOfMemoryException (can be any managed exception)
+## OutOfMemoryException
 
-To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, Follow the steps as below:
+You can also get the Full Memory Dump of SSMS when it throws an OutOfMemoryException (this can be any managed exception).
 
-1. Download [ProcDump](https://technet.microsoft.com/en-us/sysinternals/dd996900.aspx)
+To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, Follow the steps below.
 
-2. Unzip the download into a folder
+1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
 
-3. Open Command Prompt and run the following command:
+2. Unzip the download into a folder.
+
+3. Open Command Prompt and run the following command.
 
     ```cmd
     <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
@@ -64,18 +68,22 @@ To capture diagnostic information to troubleshoot an OutOfMemoryException from S
 
     It should prompt you to accept a license agreement, select **Agree**.
 
-4. Start SQL Server Management Studio if not started already
+4. Start SQL Server Management Studio if not started already.
 
-5. Repro the issue
+5. Repro the issue.
 
-6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish
+6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish.
 
-7. Create a new folder and copy the *.dmp file that is written out to that folder
+7. Create a new folder and copy the *.dmp file that is written out to that folder.
 
-8. Copy the following files into the same folder:
+8. Copy the following files into the same folder.
 
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
-9. Zip up the folder
+9. Zip up the folder.
+
+## Next steps
+
+[SQL Server Management Studio](../sql-server-management-studio-ssms.md)

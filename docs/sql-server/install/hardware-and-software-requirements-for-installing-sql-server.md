@@ -165,8 +165,8 @@ For more information on installing [!INCLUDE[ssCurrent](../../includes/sscurrent
  The following table shows the operating system requirements for the [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
   
 
-| Windows                   | Enterprise | Developer | Standard | Web | Express |  
-| :------------------------ | :--------- | :-------- | :------- | :-- | :------ | 
+| SQL Server edition:               | Enterprise | Developer | Standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Standard      |    Yes     |    Yes    |    Yes   | Yes |   Yes   |
 | Windows Server 2019 Essentials    |    Yes     |    Yes    |    Yes   | Yes |   Yes   |

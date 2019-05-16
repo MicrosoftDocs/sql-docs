@@ -286,5 +286,4 @@ There is parity between Linux and Windows for [Resource governance](../t-sql/sta
 
 Java developers can get started with some simple examples, and learn the basics of how Java works with SQL Server. For your next step, see the following links:
 
-+ [Quickstart: Run Java on SQL Server](../language-extensions/quickstarts/run-java-on-sql-server.md)
-+ [Tutorial: Regular expressions with Java](../language-extensions/tutorials/java-regular-expressions.md)
++ [Tutorial: Regular expressions with Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

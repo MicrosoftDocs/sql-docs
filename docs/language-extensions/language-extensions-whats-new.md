@@ -25,7 +25,7 @@ This release adds the support for Language Extensions in SQL Server. For more in
 | CTP 2.5 | New Microsoft Extensibility SDK for Java. |
 | CTP 2.4 | Linux support for [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md). |
 | | The environment variable that specifies the location of the Java interpreter has changed from `JAVA_HOME` to `JRE_HOME`. |
-| CTP 2.3 | New supported [Java data types](how-to/java-sql-data-types.md). |
+| CTP 2.3 | New supported [Java data types](how-to/java-to-sql-data-types.md). |
 | | On Windows only, Java code can be accessed in an external library using the [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) statement. Equivalent functionality will be available on Linux in an upcoming CTP. Learn more: [How to call Java from SQL Server](how-to/call-java-from-sql.md). |
 | CTP 2.2 | No changes. |
 | CTP 2.1 | No changes. |

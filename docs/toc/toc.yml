@@ -2396,7 +2396,7 @@
     - name: Tutorials
       items:
       - name: Search for string using RegEx in Java
-        href: ../language-extensions/how-to/search-for-string-using-regular-expressions-in-java.md
+        href: ../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
     - name: How-to guides
       items:
       - name: Call Java from SQL Server

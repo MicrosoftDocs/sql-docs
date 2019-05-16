@@ -29,3 +29,7 @@ Make sure the path to `jar.exe` is part of the system path variable. Alternative
 ```cmd
 C:\Users\MyUser\Desktop\jdk1.8.0_201\bin\jar -cf <MyJar.jar> *.class
 ```
+
+## Next steps
+
++ [How to call Java in SQL Server](../how-to/call-java-from-sql.md)

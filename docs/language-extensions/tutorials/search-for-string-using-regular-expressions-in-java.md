@@ -32,13 +32,14 @@ This particular sample uses a regular expression that checks if a text contains 
 
 Command-line compilation using **javac** is sufficient for this tutorial.
 
-## Create sample data in a SQL Server table
+## Create sample data
 
-First, create a new database and populate a **testdata** table with **ID** and **text** columns. 
+First, create a new database and populate a **testdata** table with **ID** and **text** columns.
 
 ```sql
 CREATE DATABASE javatest
 GO
+
 USE javatest
 GO
 
@@ -174,7 +175,7 @@ If you are not using a Java IDE, you can manually create a `.jar` file. For more
 
 ## Create external libraries
 
-Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) to create an external library. SQL Server will have access to the `.jar` files and you do not need to set any special permissions to the **classpath**.
+Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) to create an external library for your `.jar` files. SQL Server will have access to the `.jar` files and you do not need to set any special permissions to the **classpath**.
 
 In this sample, you will create two external libraries. One for the SDK and one for the RegEx Java code.
 
@@ -211,35 +212,34 @@ Grant read/execute permissions on the classpath to the **mssql_satellite** user.
 
 ### On Windows
 
-Grant 'Read and Execute' permissions to **SQLRUserGroup** and the **All application packages** SID on the folder containing your compiled Java code. 
+Grant 'Read and Execute' permissions to **SQLRUserGroup** and the **All application packages** SID on the folder containing your compiled Java code.
 
-The entire tree must have permissions, from root parent to the last sub folder. 
- 
-1. Right-click the folder (for example, 'C:\myJavaCode'), choose **Properties** > **Security**.
+The entire tree must have permissions, from root parent to the last sub folder.
+
+1. Right-click the folder (for example, `C:\myJavaCode`) and choose **Properties** > **Security**.
 2. Click **Edit**.
 3. Click **Add**.
 4. In **Select Users, Computer, Service Accounts, or Groups**:
-   + Click **Object Types** and make sure *Built-in security principles* and *Groups* are selected.
-   + Click **Locations** to select the local computer name at the top of the list.
-5. Enter **SQLRUserGroup**, check the name, and then click OK to add the group.
-6. Enter **ALL APPLICATION PACKAGES**, check the name, and then click OK to add. If the name doesn't resolve, revisit the Locations step. The SID is local to your machine.
+   1. Click **Object Types** and make sure *Built-in security principles* and *Groups* are selected.
+   2. Click **Locations** to select the local computer name at the top of the list.
+5. Enter **SQLRUserGroup**, check the name, and click OK to add the group.
+6. Enter **ALL APPLICATION PACKAGES**, check the name, and click OK to add. 
+    If the name doesn't resolve, revisit the Locations step. The SID is local to your machine.
 
-Make sure both security identities have 'Read and Execute' permissions on the folder and "pkg" sub folder.
+Make sure both security identities have **Read and Execute** permissions on the folder and the **pkg** sub folder.
 
 <a name="call-method"></a>
 
 ## Call the Java class
 
-To call the Java code from SQL Server, we will create a stored procedure that calls sp_execute_external_script. In the "script" parameter, we will define which [package].[class] we want to call. In this sample, the class belongs to a package called **pkg** and a class file called **RegexSample.java**.
+Create a stored procedure that calls `sp_execute_external_script` to call the Java code from SQL Server. In the **script** parameter, define which `package.class` you want to call. In the code below, the class belongs to a package called **pkg** and a class file called **RegexSample.java**.
 
 > [!NOTE]
->We are not defining which method to call. By default, the **execute** method will be called. This means that you need to follow the SDK interface and implement an execute method in your Java class, if you want to be able to call the class from SQL Server.
+> The code is not defining which method to call. By default, the **execute** method will be called. This means that you need to follow the SDK interface and implement an execute method in your Java class, if you want to be able to call the class from SQL Server.
+
+The stored procedure takes an input query (input dataset) and a regular expression and returns the rows that fulfilled the given regular expression. It uses a regular expression `[Jj]ava` that checks if a text contains the word **Java** or **java**.
 
 ```sql
-/*
-This stored procedure takes an input query (input dataset) and a regular expression and returns the rows that fulfilled the given regular expression. This sample uses a regular expression that checks if a text contains the word "Java" or "java" ([Jj]ava) 
-*/
-
 CREATE OR ALTER PROCEDURE [dbo].[java_regex] @expr nvarchar(200), @query nvarchar(400)
 AS
 BEGIN
@@ -268,9 +268,9 @@ After executing the call, you should get a result set with two of the rows.
 
 ### If you get an error
 
-+ When you compile your classes, the "pkg" sub folder should contain the compiled code for all three classes.
++ When you compile your classes, the **pkg** sub folder should contain the compiled code for all three classes.
 
-+ Finally, if you are not using external libraries, check permissions on *each* folder, from root to "pkg" sub folder, to ensure that the security identities running the external process have permission to read and execute your code.
++ If you are not using external libraries, check permissions on *each* folder, from the **root** to **pkg** sub folder, to ensure that the security identities running the external process have permission to read and execute your code.
 
 ## Next steps
 

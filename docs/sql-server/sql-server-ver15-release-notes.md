@@ -17,17 +17,17 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
-
 ## CTP 3.0
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 is available only as Evaluation Edition. No other editions are available. 
 
-Support for CTP releases is described in `license_Eval.rtf` with your installation media.
+Complete details about support and licensing for CTP releases are in `license_Eval.rtf` with your installation media.
 
-### Documentation (CTP 3.0)
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
+
+## Documentation (CTP 3.0)
 
 - **Issue and customer impact**: Documentation for SQL Server 2019 (15.x) is limited and content is included with the [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] documentation set. Content in articles that is specific to SQL Server 2019 (15.x) is noted with **Applies to**.
 
@@ -35,7 +35,7 @@ Support for CTP releases is described in `license_Eval.rtf` with your installati
 
 - **Issue and customer impact**: No offline content is available for SQL Server 2019 (15.x).
 
-### Hardware and software requirements (CTP 3.0)
+## Hardware and software requirements (CTP 3.0)
 
 - **Issue and customer impact**: Hardware and software requirements are still being reviewed and not final for the product release.
 
@@ -47,7 +47,7 @@ Support for CTP releases is described in `license_Eval.rtf` with your installati
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
-### Features excluded from support
+## Features excluded from support
 
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] excludes support for the following components, features, and scenarios:
   - SQL Sever Analysis Services
@@ -60,7 +60,7 @@ Support for CTP releases is described in `license_Eval.rtf` with your installati
 
 - **Applies to**: CTP 3.0
 
-### Updated compiler
+## Updated compiler
 
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] is built with an updated compiler. CTP 2.1 had a known issue where results for floating point and other conversion scenarios may have returned a different value than previous versions because of the updated compiler. CTP 2.2 includes work to ensure that the affected scenarios return the same results as previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. As of CTP 3.0 release we do not know any remaining issues. Please report any result anomalies compared to [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] to [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] team](http://aka.ms/sqlfeedback) immediately.
 
@@ -68,11 +68,10 @@ Support for CTP releases is described in `license_Eval.rtf` with your installati
 
 - **Applies to**: SQL Server 2019 CTP 3.0, CTP 2.5,CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
-### UTF-8 collations
+## UTF-8 collations
 
 - **Issue and customer impact**: UTF-8 enabled collations cannot be used with some other [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features. UTF-8 is not supported when the following [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] features are in use:
 
-  - Linked Server (up to CTP 2.5 only)
   - In-memory OLTP
   - External Table for PolyBase
   - Always Encrypted
@@ -84,7 +83,7 @@ Support for CTP releases is described in `license_Eval.rtf` with your installati
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
-### SQL Graph
+## SQL Graph
 
 - **Issue and customer impact**: Tools that are dependent on DacFx like import-export, will not work for the new graph features - Edge Constraints or Merge DML. Scripting in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] may not work.
 
@@ -92,7 +91,7 @@ Support for CTP releases is described in `license_Eval.rtf` with your installati
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
 
-### Always Encrypted with secure enclaves
+## Always Encrypted with secure enclaves
 
 - **Issue and customer impact**: Rich computations are pending several performance optimizations, include limited functionality (no indexing, etc.), and are currently disabled by default.
 
@@ -100,7 +99,7 @@ Support for CTP releases is described in `license_Eval.rtf` with your installati
 
 - **Applies to**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
 
-### System Dynamic Management Views
+## System Dynamic Management Views
 
 - **Issue and customer impact**: The system table-valued function [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) returns random values in the `dependency` column.
 

@@ -31,7 +31,7 @@ This function uses a symmetric key to decrypt data.
   
 ## Syntax  
   
-```  
+```sql
   
 DecryptByKey ( { 'ciphertext' | @ciphertext }   
     [ , add_authenticator, { authenticator | @authenticator } ] )  
@@ -71,7 +71,7 @@ The symmetric key must already be open in the current session. See [OPEN SYMMETR
 ### A. Decrypting by using a symmetric key  
 This example decrypts ciphertext with a symmetric key.  
   
-```  
+```sql  
 -- First, open the symmetric key with which to decrypt the data.  
 OPEN SYMMETRIC KEY SSN_Key_01  
    DECRYPTION BY CERTIFICATE HumanResources037;  
@@ -91,7 +91,7 @@ GO
 ### B. Decrypting by using a symmetric key and an authenticating hash  
 This example decrypts data originally encrypted together with an authenticator.  
   
-```  
+```sql  
 -- First, open the symmetric key with which to decrypt the data  
 OPEN SYMMETRIC KEY CreditCards_Key11  
    DECRYPTION BY CERTIFICATE Sales09;  

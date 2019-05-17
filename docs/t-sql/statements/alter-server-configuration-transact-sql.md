@@ -44,6 +44,7 @@ SET <optionspec>
    | <hadr_cluster_context>  
    | <buffer_pool_extension>  
    | <soft_numa>  
+   | <memory_optimized>
 }  
   
 <process_affinity> ::=   
@@ -92,8 +93,17 @@ SET <optionspec>
         { size [ KB | MB | GB ] }  
   
 <soft_numa> ::=  
-    SET SOFTNUMA  
+    SOFTNUMA  
     { ON | OFF }  
+
+<memory-optimized> ::=   
+   MEMORY_OPTIMIZED   
+   {   
+     ON 
+   | OFF
+   | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
+   | [ HYBRID_BUFFER_POOL = { ON | OFF }
+   }  
 ```  
   
 ## Arguments  
@@ -239,7 +249,33 @@ Disables automatic software partitioning of large NUMA hardware nodes into small
 > 4) Start the instance of SQL Server Agent.  
   
 **More Information:** If you run the ALTER SERVER CONFIGURATION with SET SOFTNUMA command before the SQL Server service restarts, then when the SQL Server Agent service stops, it runs a T-SQL RECONFIGURE command that reverts the SOFTNUMA settings back to what they were before the ALTER SERVER CONFIGURATION. 
-  
+
+**\<memory_optimized> ::=**
+
+**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later
+
+ON 
+
+Enables all instance-level features that are part of the In-Memory Database feature family. This currently includes memory-optimized tempdb metadata  [link] and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
+
+OFF
+
+Disables all instance-level features thta are part of the In-Memory Database feature family. Requires a restart to take effect.
+
+TEMPDB_METADATA = ON | OFF
+
+Enables or disables memory-optimized tempdb metadata only. Requires a restart to take effect. 
+
+RESOURCE_POOL='resource_pool_name'
+
+When combined with TEMPDB_METADATA = ON, specifies the user-defined resource pool that should be used for tempdb. If not specified, tempdb will use the default pool. The pool must already exist. If the pool is not available when the service is restarted, tempdb will use the default pool.
+
+
+HYBRID_BUFFER_POOL = ON | OFF
+
+Enables or disables hybrid buffer pool at the instance level. Requires a restart to take effect.
+
+
 ## General Remarks  
 This statement doesn't require a restart of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unless explicitly stated otherwise. If it's a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance, it doesn't require a restart of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster resource.  
   

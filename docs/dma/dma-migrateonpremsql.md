@@ -21,7 +21,7 @@ manager: craigg
 
 The Data Migration Assistant provides seamless assessments of SQL Server on-premises and upgrades to later versions of SQL Server or migrations to SQL Server on Azure VMs or Azure SQL Database.
 
-This article provides step-by-step instructions for upgrading SQL Server on-premises to later version of SQL Server or to SQL Server on Azure VMs by using the Data Migration Assistant.
+This article provides step-by-step instructions for upgrading SQL Server on-premises to later versions of SQL Server or to SQL Server on Azure VMs by using the Data Migration Assistant.
 
 ## Create a new migration project
 

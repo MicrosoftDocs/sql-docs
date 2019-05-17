@@ -30,14 +30,14 @@ The v4.3 release of DMA provides support for:
 * Assessment of T-SQL queries in job activity steps and providing appropriate recommendations
 * Extended events assessments (Public Preview).
 
-In addition, this release of DMA provides improved performance for handling large number of schema objects in databases, as well as bug fixes related to:
+In addition, this release of DMA provides improved performance for handling a large number of schema objects in databases, as well as bug fixes related to:
 
 * Procedures compiled with native compilation, in some cases.
 * Complicated database schemas.
 
 ## DMA v4.2
 
-The v4.2 release of DMA provides command line support for target readiness assessment for one or more server instances when migrating from on-premises SQL Server to Azure SQL Database Managed Instance. Customers can now use DMA command line to collect metadata about their database schema, detect the blockers, and partially supported or unsupported features that affect migration to Azure SQL Database Managed Instance. The results can then be rendered using the Power BI template provided.
+The v4.2 release of DMA provides command line support for target readiness assessment for one or more server instances when migrating from on-premises SQL Server to an Azure SQL Database managed instance. Customers can now use the DMA command line to collect metadata about their database schema, detect the blockers, and learn about partially supported or unsupported features that affect migration to an Azure SQL Database managed instance. The results can then be rendered using the Power BI template provided.
 
 ## DMA v4.1
 
@@ -154,7 +154,7 @@ The v1.0 release of DMA is the initial release, and it provides for:
   * Breaking changes
   * Behavior changes
   * Deprecated features
-* Discovery of new features in the target SQL Server platform that the database can benefit from an upgrade. Any findings are described as feature recommendations, and they're categorized into the following areas:
+* Discovery of new features in the target SQL Server platform that the database can benefit from after an upgrade. Any findings are described as feature recommendations, and they're categorized into the following areas:
   * Performance
   * Security
   * Storage

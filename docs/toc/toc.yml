@@ -11641,12 +11641,6 @@
         href: ../relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql.md
       - name: sys.server_event_session_targets
         href: ../relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql.md
-    - name: External Language
-      items:
-      - name: sys.external_language_files
-        href: ../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md
-      - name: sys.external_languages
-        href: ../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md
     - name: External Operations
       href: ../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md
       items:
@@ -11744,6 +11738,10 @@
         href: ../relational-databases/system-catalog-views/sys-event-notification-event-types-transact-sql.md
       - name: sys.extended_procedures
         href: ../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md
+      - name: sys.external_language_files
+        href: ../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md
+      - name: sys.external_languages
+        href: ../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md
       - name: sys.external_libraries
         href: ../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md
       - name: sys.external_library_files

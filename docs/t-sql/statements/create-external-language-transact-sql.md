@@ -85,6 +85,7 @@ The full file path to the .zip or tar.gz file containing the extensions code. Th
 **content_bits**
 
 Specifies the content of the language as a hex literal, similar to assemblies.
+
 This option is useful if you need to create a language or alter an existing language (and have the required permissions to do so), but the file system on the server is restricted and you cannot copy the library files to a location that the server can access.
 
 **external_lang_file_name**

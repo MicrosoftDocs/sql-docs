@@ -171,7 +171,7 @@ Package your classes and dependencies into a `.jar` files. Most Java IDEs (for e
 If you are not using a Java IDE, you can manually create a `.jar` file. For more information, see [How to create a Java jar file from class files](../how-to/create-a-java-jar-file-from-class-files.md).
 
 > [!NOTE]
-> This tutorial uses packages. The `package pkg;` line at the top of the class ensures that the compiled code is saved in a sub folder called **pkg**. If you use an IDE, the compiled code is automatic saved in this folder. If you use **javac** to manual compile the classes, you need to place the compiled code in the **pkg** folder.
+> This tutorial uses packages. The `package pkg;` line at the top of the class ensures that the compiled code is saved in a sub folder called **pkg**. If you use an IDE, the compiled code is automatically saved in this folder. If you use **javac** to manually compile the classes, you need to place the compiled code in the **pkg** folder.
 
 ## Create external libraries
 

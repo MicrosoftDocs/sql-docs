@@ -2379,6 +2379,34 @@
         href: ../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md
       - name: Use output
         href: ../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md
+  - name: Language Extensions
+    items:
+    - name: Overview
+      items:
+      - name: What is Language Extensions?
+        href: ../language-extensions/language-extensions-overview.md
+      - name: What's new?
+        href: ../language-extensions/language-extensions-whats-new.md
+    - name: Install
+      items:
+      - name: Install Language Extensions on Windows
+        href: ../language-extensions/install/install-sql-server-language-extensions-on-windows.md
+    - name: Tutorials
+      items:
+      - name: Search for string using RegEx in Java
+        href: ../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
+    - name: Concepts
+      items:
+      - name: Extensibility framework
+        href: ../language-extensions/concepts/extensibility-framework.md
+    - name: How-to guides
+      items:
+      - name: Call Java from SQL Server
+        href: ../language-extensions/how-to/call-java-from-sql.md
+      - name: Java to SQL data types
+        href: ../language-extensions/how-to/java-to-sql-data-types.md
+      - name: Create a Java jar file
+        href: ../language-extensions/how-to/create-a-java-jar-file-from-class-files.md
   - name: SQL Server Native Client
     href: ../relational-databases/native-client/sql-server-native-client.md
     items:
@@ -10096,6 +10124,8 @@
         href: ../linux/sql-server-linux-setup-ssis.md
       - name: Install SQL Server Machine Learning Services
         href: ../linux/sql-server-linux-setup-machine-learning.md
+      - name: Install SQL Server Language Extensions
+        href: ../linux/sql-server-linux-setup-language-extensions.md
       - name: Configure repositories
         href: ../linux/sql-server-linux-change-repo.md
     - name: Configure

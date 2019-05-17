@@ -215,7 +215,7 @@ GO
 
 To execute Java code, a user needs to be granted external script execution on that specific language.
 
-For more information, see [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md).
+For more information, see [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
 ## Create external libraries
 

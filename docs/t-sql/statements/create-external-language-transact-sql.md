@@ -1,5 +1,5 @@
 ---
-title: CREATE EXTERNAL LANGUAGE (Transact-SQL) | Microsoft Docs
+title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
 ms.date: 05/16/2019
 ms.prod: sql
@@ -18,9 +18,9 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Registers external language extensions in the database from the specified file path or byte stream. This statement serves as a generic mechanism for the database administrator to register new external language extensions on any OS platform supported by SQL Server.
 
-[!NOTE] Please note that R and Python are reserved names, and no external language can be created with those specific names.
+> [!NOTE] **R** and **Python** are reserved names and no external language can be created with those specific names.
 
-## Syntax for SQL Server 2019
+## Syntax
 
 ```text
 CREATE EXTERNAL LANGUAGE language_name  
@@ -31,14 +31,14 @@ WITH (<option_spec>)
 
 <file_spec> ::=  
 {
-(CONTENT = {<external_lang_specifier> | <content_bits>,
-FILE_NAME = <external_lang_file_name>}
-[, PLATFORM = <platform> ]
-[, PARAMETERS = <external_lang_parameters> ]
-[, ENVIRONMENT_VARIABLES = <external_lang_env_variables> )
+    ( CONTENT = { <external_lang_specifier> | <content_bits>,
+    FILE_NAME = <external_lang_file_name>
+    [ , PLATFORM = <platform> ]
+    [ , PARAMETERS = <external_lang_parameters> ]
+    [ , ENVIRONMENT_VARIABLES = <external_lang_env_variables> )
 }
 
-< external_lang_specifier > :: =  
+<external_lang_specifier> :: =  
 {
     '[file_path\]os_file_name'  
 }
@@ -46,10 +46,10 @@ FILE_NAME = <external_lang_file_name>}
 <content_bits> :: =  
 {
     varbinary_literal
-    |varbinary_expression
+    | varbinary_expression
 }
 
-< external_lang_file_name > :: =  
+<external_lang_file_name> :: =  
 'extension_file_name'
 
 
@@ -59,9 +59,8 @@ FILE_NAME = <external_lang_file_name>}
   | LINUX
 }
 
-< external_lang_parameters > :: =  
+<external_lang_parameters> :: =  
 'extension_specific_parameters'
-
 ```
 
 ### Arguments
@@ -105,7 +104,7 @@ This parameter is needed for hybrid OS scenarios. In a hybrid architecture, the 
 
 ## Remarks
 
-In CTP 3.0, PARAMETERS and ENVIRONMENT_VARIABLES are not supported.
+In CTP 3.0, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
 
 ## Permissions
 
@@ -119,7 +118,7 @@ In SQL Server 2019, we are introducing EXECUTE EXTERNAL SCRIPT permissions, so t
 
 This means that non-**dbo** users need to be granted permission to execute a specific language:
 
-```text
+```sql
 GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::language_name 
 TO database_principal_name;
 ```
@@ -140,8 +139,7 @@ FROM (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-
-### A. Create an external language for both Windows and Linux
+### B. Create an external language for both Windows and Linux
 
 You can specify up to two `<file_spec>`, one for Windows and one for Linux.
 

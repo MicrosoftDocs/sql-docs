@@ -1,5 +1,5 @@
 ---
-title: "sys.external_languages (Transact-SQL) | Microsoft Docs"
+title: "sys.external_languages (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/16/2019
 ms.prod: sql
@@ -25,7 +25,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # sys.external_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This catalog view provides a list of the external languages in the database. Please note that R and Python are reserved names, and no external language can be created with those specific names.
+This catalog view provides a list of the external languages in the database. **R** and **Python** are reserved names and no external language can be created with those specific names.
 
 ## sys.external_languages
 

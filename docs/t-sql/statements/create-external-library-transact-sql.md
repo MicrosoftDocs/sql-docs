@@ -1,5 +1,5 @@
 ---
-title: "CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
+title: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/16/2019
 ms.prod: sql
@@ -27,7 +27,7 @@ monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linu
 Uploads R, Python, or Java package files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> In SQL Server 2017, R language and Windows platform are supported. R, Python, and Java on the Windows and Linux platforms are supported in SQL Server 2019 CTP 2.4.
+> In SQL Server 2017, R language and Windows platform are supported. R, Python, and external languages on the Windows and Linux platforms are supported in SQL Server 2019 CTP 3.0.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## Syntax for SQL Server 2019
@@ -47,8 +47,7 @@ WITH ( LANGUAGE = <language> )
 
 <client_library_specifier> :: = 
 {
-     '[file_path\]manifest_file_name'  
-    
+    '[file_path\]manifest_file_name'  
 } 
 
 <library_bits> :: =  
@@ -90,7 +89,6 @@ WITH ( LANGUAGE = 'R' )
 
 <client_library_specifier> :: = 
 {
-      
     '[file_path\]manifest_file_name'
 } 
 
@@ -148,7 +146,7 @@ In SQL Server 2019, Windows and Linux are the supported platforms.
 
 **language**
 
-Specifies the language of the package. The value can be `R`, `Python`, or `Java`.
+Specifies the language of the package. The value can be `R`, `Python`, or the name of a [created external language](create-external-language-transact-sql.md).
 ::: moniker-end
 
 ## Remarks
@@ -172,7 +170,7 @@ Libraries uploaded to the instance can be either public or private. If the libra
 Requires the `CREATE EXTERNAL LIBRARY` permission. By default, any user who has **dbo** who is a member of the **db_owner** role has permissions to create an external library. For all other users, you must explicitly give them permission using a [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) statement, specifying CREATE EXTERNAL LIBRARY as the privilege.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In SQL Server 2019, another level of permission is introduced. This means that in addition to 'CREATE EXTERNAL LIBRARY' permission, the user also needs references permission on an external language in order to create external libraries for that external language.
+In SQL Server 2019, in addition to 'CREATE EXTERNAL LIBRARY' permission, the user also needs references permission on an external language in order to create external libraries for that external language.
 
 ```sql
 GRANT REFERENCES ON EXTERNAL LANGUAGE::Java to user

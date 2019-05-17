@@ -17,7 +17,7 @@ monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP) releases. For related information, see:
 - [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## <a name = "release-notes"></a>CTP 3.0
+## CTP 3.0
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 is the latest public release of [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
@@ -47,7 +47,7 @@ Complete details about support and licensing for CTP releases are in `license_Ev
     - Microsoft .NET Framework 4.6.2. Available from [Download Center](https://www.microsoft.com/download/details.aspx?id=53344).
     - For Linux, refer to [Linux - supported platforms](../linux/sql-server-linux-setup.md#supportedplatforms)
 
-## Features excluded from support
+## <a name = "release-notes"></a>Features excluded from support
 
 - **Issue and customer impact**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] excludes support for the following components, features, and scenarios:
   - SQL Sever Analysis Services

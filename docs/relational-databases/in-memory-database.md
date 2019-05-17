@@ -42,7 +42,7 @@ Hybrid Buffer Pool [hybrid buffer pool](../database-engine/configure-windows/hyb
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In-Memory OLTP [in-memory oltp](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) is the premier technology available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios.
+In-Memory OLTP [in-memory oltp](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) is the premier technology available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios.
 
 **Applies to:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

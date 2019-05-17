@@ -416,7 +416,8 @@ from openrowset('MSDASQL'
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database does not support reading from Windows files.
+> - The ODBC driver should be 64-bit. Open the **Drivers** tab of the OBDC Data Sources app to verify this. There is 32-bit "Microsoft Text Driver (*.txt, *.csv)" that will not work with a 64-bit version of sqlservr.exe. 
+> - Azure SQL Database does not support reading from Windows files.
 
 
 ### I. Accessing data from a file stored on Azure Blob storage   

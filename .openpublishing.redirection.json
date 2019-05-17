@@ -276,6 +276,31 @@
             "redirect_document_id": false
         },   
         {
+            "source_path": "docs/advanced-analytics/java/extension-java.md",
+            "redirect_url": "/sql/language-extensions/language-extensions-overview",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "docs/advanced-analytics/java/howto-call-java-from-sql.md",
+            "redirect_url": "/sql/language-extensions/how-to/call-java-from-sql",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "docs/advanced-analytics/java/java-first-sample.md",
+            "redirect_url": "/sql/language-extensions/tutorials/search-for-string-using-regular-expressions-in-java",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "docs/advanced-analytics/java/java-sdk.md",
+            "redirect_url": "/sql/language-extensions/language-extensions-overview",
+            "redirect_document_id": false
+        },   
+        {
+            "source_path": "docs/advanced-analytics/java/java-sql-datatypes.md",
+            "redirect_url": "/sql/language-extensions/how-to/java-to-sql-data-types",
+            "redirect_document_id": false
+        },   
+        {
             "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
             "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
             "redirect_document_id": false

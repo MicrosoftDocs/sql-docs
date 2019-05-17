@@ -21,7 +21,7 @@ manager: amitban
 # sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-Returns the equivalent of the last known actual execution plan for a previously cached query plan. 
+Returns the equivalent of the last known actual execution plan for a previously cached query plan.
 
 ## Syntax
 

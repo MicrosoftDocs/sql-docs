@@ -29,8 +29,12 @@ manager: craigg
 ---
 # ssbdiagnose Utility (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The **ssbdiagnose** utility reports issues in [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations or the configuration of [!INCLUDE[ssSB](../../includes/sssb-md.md)] services. Configuration checks can be made for either two services or a single service. Issues are reported either in the command prompt window as human-readable text, or as formatted XML that can be redirected to a file or another program.  
-  
+  The **ssbdiagnose** utility reports issues in [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations or the configuration of [!INCLUDE[ssSB](../../includes/sssb-md.md)] services. Configuration checks can be made for either two services or a single service. Issues are reported either in the command prompt window as human-readable text, or as formatted XML that can be redirected to a file or another program.
+
+> [!NOTE]
+> The ssbdiagnose utility is no longer installed with the latest version of SQL Server Management Studio (SSMS) 18.0. To install the latest version of ssbdiagnose, install [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791).
+> The need to install a previous release of SSMS to get the latest ssbdiagnose will be remedied in a future release. SSMS 18.x runs side-by-side with 17.x versions so both can be installed on the same computer.
+
 ## Syntax  
   
 ```  

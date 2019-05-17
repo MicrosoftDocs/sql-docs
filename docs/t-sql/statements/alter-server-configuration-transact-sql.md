@@ -255,24 +255,19 @@ Disables automatic software partitioning of large NUMA hardware nodes into small
 **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later
 
 ON 
-
-Enables all instance-level features that are part of the [In-Memory Database](../../relational-databases/in-memory-database.md) feature family. This currently includes [memory-optimized tempdb metadata](../../relational-databases/databases/tempdb-database#how-to-monitor-tempdb-use) and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
+Enables all instance-level features that are part of the In-Memory Database [add link] feature family. This currently includes memory-optimized tempdb metadata [add link] and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
 
 OFF
-
 Disables all instance-level features that are part of the In-Memory Database feature family. Requires a restart to take effect.
 
 TEMPDB_METADATA = ON | OFF
-
 Enables or disables memory-optimized tempdb metadata only. Requires a restart to take effect. 
 
 RESOURCE_POOL='resource_pool_name'
-
 When combined with TEMPDB_METADATA = ON, specifies the user-defined resource pool that should be used for tempdb. If not specified, tempdb will use the default pool. The pool must already exist. If the pool is not available when the service is restarted, tempdb will use the default pool.
 
 
 HYBRID_BUFFER_POOL = ON | OFF
-
 Enables or disables hybrid buffer pool at the instance level. Requires a restart to take effect.
 
 

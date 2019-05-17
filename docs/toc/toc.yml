@@ -11620,6 +11620,12 @@
         href: ../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md
       - name: sys.external_file_formats
         href: ../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md
+    - name: External Language
+      items:
+      - name: sys.external_language_files
+        href: ../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md
+      - name: sys.external_languages
+        href: ../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md
     - name: Filestream & FileTable
       href: ../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md
       items:

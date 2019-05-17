@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 05/15/2019
+ms.date: 05/17/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -78,11 +78,13 @@ Specifies the name of the user or role that owns the external language. If not s
 Specifies the content of the language extension.Only one filespec is allowed for a specific language, per platform. 
 
 **external_lang_specifier**
+
 The full file path to the .zip or tar.gz file containing the extensions code. This content can either be a path to a .zip file (on Windows) or tar.gz (on Linux).
 
 **content_bits**
 
-This option is useful if you have the required permission to alter a library, but file access on the server is restricted and you cannot save the contents to a path the server can access. Instead, you can pass the language contents as a variable in binary format.
+Specifies the content of the language as a hex literal, similar to assemblies.
+This option is useful if you need to create a language or alter an existing language (and have the required permissions to do so), but the file system on the server is restricted and you cannot copy the library files to a location that the server can access.
 
 **external_lang_file_name**
 
@@ -90,11 +92,11 @@ Name of the extension .dll or .so file. This is required to identify the correct
 
 **external_lang_parameters**
 
-This provides a possibility to give a set of parameters to the external language runtime.
+This provides a possibility to give a set of parameters to the external language runtime. Parameter values are provided to the external runtime after the external process has started. Environment variables however, are accessible to the language extension prior to the external process startup.
 
 **external_lang_env_variables**
 
-This provides a possibility to give a set of environment variables to the external language runtime. One of these properties can be the path to the home of the runtime. For example Java home.
+This provides a possibility to give a set of environment variables to the external language runtime prior to the external process startup. An example of an environment variable is for example the home directory of the runtime itself. For example: JRE_HOME.
 
 **platform**
 

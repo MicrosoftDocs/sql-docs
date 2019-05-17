@@ -5,7 +5,7 @@ description: Learn about SQL Server 2019 language extensions (preview) that run 
 author: dphansen
 ms.author: davidph 
 manager: cgronlun
-ms.date: 05/06/2019
+ms.date: 05/15/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
@@ -18,7 +18,7 @@ Language Extensions is a feature of SQL Server used for executing external code.
 
 ## What you can do with Language Extensions
 
-Language Extensions uses the extensibility framework for executing external code. In SQL Server 2019, Java is supported. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution. This means that you can execute code where the data resides, eliminating the need to pull data across the network.
+Language Extensions uses the extensibility framework for executing external code. Code execution is isolated from the core engine processes, but fully integrated with SQL Server query execution. This means that you can execute code where the data resides, eliminating the need to pull data across the network.
 
 Language extensions uses the system stored procedure [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) as the interface for executing pre-compiled Java code.
 

@@ -256,7 +256,7 @@ Disables automatic software partitioning of large NUMA hardware nodes into small
 
 ON 
 
-Enables all instance-level features that are part of the In-Memory Database feature family. This currently includes memory-optimized tempdb metadata  [link] and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
+Enables all instance-level features that are part of the In-Memory Database feature family. This currently includes [memory-optimized tempdb metadata](../../relational-databases/databases/tempdb-database#how-to-monitor-tempdb-use) and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
 
 OFF
 

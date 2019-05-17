@@ -90,5 +90,7 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 ## Best Practices for hybrid buffer pool
 
 When formatting your PMEM device on Windows use the largest allocation unit size available for NTFS or ReFS (2MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
-If the server scoped setting for Hybrid buffer pool is set to disabled, Hybrid buffer pool will not be used by any user database. 
+
+If the server scoped setting for Hybrid buffer pool is set to disabled, Hybrid buffer pool will not be used by any user database.
+
 If the server scoped setting for Hybrid Buffer is enabled, you can disable Hybrid buffer pool usage for individual user databases by following the steps to disable Hybrid buffer pool at the database scoped level for those user databases.

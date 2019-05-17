@@ -37,7 +37,6 @@ File system access is typically restricted on the server, and even if you have a
 Before installing new packages, consider whether the capabilities enabled by a given package are suitable in a SQL Server environment. On a hardened SQL Server environment, you might want to avoid the following:
 
 + Packages that require network access
-+ Packages that require Java or other frameworks not typically used in a SQL Server environment
 + Packages that require elevated file system access
 + Package is used for web development or other tasks that don't benefit by running inside SQL Server
 

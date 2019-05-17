@@ -5,7 +5,7 @@ description: This tutorial shows you how to use SQL Server Language Extensions a
 author: dphansen
 ms.author: davidph 
 manager: cgronlun
-ms.date: 05/15/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions

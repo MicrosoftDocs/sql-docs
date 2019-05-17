@@ -1,6 +1,6 @@
 ## Support
 
-CTP 3.0 is preview software. It is not publicly supported for operations. Customers who are in the [SQL Early Adopter Program](http://aka.ms/sqleap), may have support to run SQL Server 2019 CTP 3.0 by special agreement, in consultation with Microsoft. For CTP 3.0 this support includes:
+CTP 3.0 is preview software. It is not publicly supported for operations. Customers who are in the [SQL Early Adopter Program](http://aka.ms/sqleap), may have support to run SQL Server 2019 CTP 3.0 by special agreement, in consultation with Microsoft. For CTP 3.0, this support includes:
 
 - Side-by-side installation. SQL Server 2019 CTP 3.0 supports side-by-side installation with instances of SQL Server 2012 through SQL Server 2017, or other instances SQL Server 2019 CTP 3.0.
    >[!NOTE]

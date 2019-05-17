@@ -1,6 +1,6 @@
 ---
 title: "What's new in SQL Server 2019 | Microsoft Docs"
-ms.date: 05/16/2019
+ms.date: 05/22/2019
 ms.prod: "sql-server-2019"
 ms.reviewer: ""
 ms.technology: release-landing

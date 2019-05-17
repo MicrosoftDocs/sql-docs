@@ -32,7 +32,7 @@ WITH (<option_spec>)
 <file_spec> ::=  
 {
     ( CONTENT = { <external_lang_specifier> | <content_bits>,
-    FILE_NAME = <external_lang_file_name> }
+    FILE_NAME = <external_lang_file_name>
     [ , PLATFORM = <platform> ]
     [ , PARAMETERS = <external_lang_parameters> ]
     [ , ENVIRONMENT_VARIABLES = <external_lang_env_variables> )

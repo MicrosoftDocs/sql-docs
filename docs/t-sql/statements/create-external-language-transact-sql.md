@@ -18,7 +18,8 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Registers external language extensions in the database from the specified file path or byte stream. This statement serves as a generic mechanism for the database administrator to register new external language extensions on any OS platform supported by SQL Server.
 
-> [!NOTE] **R** and **Python** are reserved names and no external language can be created with those specific names.
+> [!NOTE]
+> **R** and **Python** are reserved names and no external language can be created with those specific names.
 
 ## Syntax
 

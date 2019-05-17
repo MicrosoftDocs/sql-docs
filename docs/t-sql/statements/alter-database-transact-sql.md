@@ -86,8 +86,6 @@ ALTER DATABASE { database_name | CURRENT }
   | COLLATE collation_name
   | <file_and_filegroup_options>
   | SET <option_spec> [ ,...n ] [ WITH <termination> ]
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
-  
 }
 [;]
 
@@ -98,28 +96,30 @@ ALTER DATABASE { database_name | CURRENT }
   <filegroup_updatability_option>::=
 
 <option_spec>::=
-  <auto_option> ::=
-  <change_tracking_option> ::=
-  <cursor_option> ::=
-  <database_mirroring_option> ::=
-  <date_correlation_optimization_option> ::=
-  <db_encryption_option> ::=
-  <db_state_option> ::=
-  <db_update_option> ::=
-  <db_user_access_option> ::=<delayed_durability_option> ::=<external_access_option> ::=
-  <FILESTREAM_options> ::=
-  <HADR_options> ::=
-  <parameterization_option> ::=
-  <query_store_options> ::=
-  <recovery_option> ::=
-  <service_broker_option> ::=
-  <snapshot_option> ::=
-  <sql_option> ::=
-  <termination> ::=
-| <temporal_history_retention> ::=
-
-<compatibility_level>
-   { 140 | 130 | 120 | 110 | 100 | 90 }
+{
+  | <auto_option>
+  | <change_tracking_option>
+  | <cursor_option>
+  | <database_mirroring_option>
+  | <date_correlation_optimization_option>
+  | <db_encryption_option>
+  | <db_state_option>
+  | <db_update_option>
+  | <db_user_access_option><delayed_durability_option>
+  | <external_access_option>
+  | <FILESTREAM_options>
+  | <HADR_options>
+  | <parameterization_option>
+  | <query_store_options>
+  | <recovery_option>
+  | <service_broker_option>
+  | <snapshot_option>
+  | <sql_option>
+  | <termination>
+  | <temporal_history_retention>
+  | <compatibility_level>
+      { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
+}
 ```
 
 ## Arguments
@@ -308,7 +308,6 @@ ALTER DATABASE { database_name | CURRENT }
     MODIFY NAME = new_database_name
   | MODIFY ( <edition_options> [, ... n] )
   | SET { <option_spec> [ ,... n ] WITH <termination>}
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
   | ADD SECONDARY ON SERVER <partner_server_name>
     [WITH ( <add-secondary-option>::=[, ... n] ) ]
   | REMOVE SECONDARY ON SERVER <partner_server_name>
@@ -353,21 +352,25 @@ ALTER DATABASE { database_name | CURRENT }
       }
 
 <option_spec> ::=
-    <auto_option> ::=
-  | <change_tracking_option> ::=
-  | <cursor_option> ::=
-  | <db_encryption_option> ::=
-  | <db_update_option> ::=
-  | <db_user_access_option> ::=
-  | <delayed_durability_option> ::=
-  | <parameterization_option> ::=
-  | <query_store_options> ::=
-  | <snapshot_option> ::=
-  | <sql_option> ::=
-  | <target_recovery_time_option> ::=
-  | <termination> ::=
-  | <temporal_history_retention> ::=
+{
+    <auto_option>
+  | <change_tracking_option>
+  | <cursor_option>
+  | <db_encryption_option>
+  | <db_update_option>
+  | <db_user_access_option>
+  | <delayed_durability_option>
+  | <parameterization_option>
+  | <query_store_options>
+  | <snapshot_option>
+  | <sql_option>
+  | <target_recovery_time_option>
+  | <termination>
+  | <temporal_history_retention>
+  | <compatibility_level>
+    { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
+}
 ```
 
 ## Arguments
@@ -710,7 +713,6 @@ ALTER DATABASE { database_name | CURRENT }
   | COLLATE collation_name
   | <file_and_filegroup_options>  
   | SET <option_spec> [ ,...n ]  
-  | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }
 }  
 [;]
 
@@ -721,19 +723,23 @@ ALTER DATABASE { database_name | CURRENT }
   <filegroup_updatability_option>::=  
 
 <option_spec> ::=
-    <auto_option> ::=
-  | <change_tracking_option> ::=
-  | <cursor_option> ::=
-  | <db_encryption_option> ::=  
-  | <db_update_option> ::=
-  | <db_user_access_option> ::=
-  | <delayed_durability_option> ::=
-  | <parameterization_option> ::=
-  | <query_store_options> ::=
-  | <snapshot_option> ::=
-  | <sql_option> ::=
-  | <target_recovery_time_option> ::=
-  | <temporal_history_retention> ::=
+{
+    <auto_option>
+  | <change_tracking_option>
+  | <cursor_option>
+  | <db_encryption_option>  
+  | <db_update_option>
+  | <db_user_access_option>
+  | <delayed_durability_option>
+  | <parameterization_option>
+  | <query_store_options>
+  | <snapshot_option>
+  | <sql_option>
+  | <target_recovery_time_option>
+  | <temporal_history_retention>
+  | <compatibility_level>
+      { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
+
 }  
 
 ```

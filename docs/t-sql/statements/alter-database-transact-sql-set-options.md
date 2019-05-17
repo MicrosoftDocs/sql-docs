@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as automatic tuning, encryption, query store in a SQL Server and Azure SQL Database
 ms.custom: ""
-ms.date: 03/27/2019
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -96,6 +96,7 @@ SET
   | <sql_option>
   | <target_recovery_time_option>
   | <termination>
+  | <temporal_history_retention>
 }
 ;
 
@@ -265,6 +266,7 @@ SET
   | ROLLBACK IMMEDIATE
   | NO_WAIT
 }
+<temporal_history_retention>::=TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```
 
 ## Arguments

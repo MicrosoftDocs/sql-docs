@@ -173,6 +173,50 @@ If you are not using a Java IDE, you can manually create a `.jar` file. For more
 > [!NOTE]
 > This tutorial uses packages. The `package pkg;` line at the top of the class ensures that the compiled code is saved in a sub folder called **pkg**. If you use an IDE, the compiled code is automatically saved in this folder. If you use **javac** to manually compile the classes, you need to place the compiled code in the **pkg** folder.
 
+## Create external language
+
+In CTP 3.0, you need to create an external language in the database. This is a database scoped object, which means that external languages like Java need to be created for each database you want to use it in.
+
+### Create external language on Windows
+
+If you are using Windows, follow the steps below to create an external language.
+
+1. Create a .zip file containing the extension.
+
+    As part of the SQL Server setup on Windows, the extension .dll file is installed in this location: `[SQL Server install path]\MSSQL\Binn\javaextension.dll`.
+
+    Compress the javaextension.dll into a .zip file. For example: **javaextension.zip**.
+
+2. Create an external language Java from the .zip file:
+
+    ```sql
+    CREATE EXTERNAL LANGUAGE Java
+    FROM
+    (CONTENT = N'[Path to .zip file]\javaextension.zip', FILE_NAME = 'javaextension.dll', PLATFORM = WINDOWS)
+    GO
+    ```
+
+### Create external language on Linux
+
+If you are using Windows, follow the steps below to create an external language.
+
+On Linux, you don't need to manually create a .tar.gz file. As part of setup, there is already generated a .tar.gz file under the following path:
+`/opt/mssql/lib/extensibility/java-lang-extension.tar.gz`.
+
+To create an external language Java, run the following T-SQL statement on Linux:
+
+```sql
+CREATE EXTERNAL LANGUAGE Java
+FROM (CONTENT = N'/opt/mssql/lib/extensibility/java-lang-extension.tar.gz', file_name = 'javaextension.so', PLATFORM = LINUX);
+GO
+```
+
+### Permissions to execute external language
+
+To execute Java code, a user needs to be granted external script execution on that specific language.
+
+For more information, see [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md).
+
 ## Create external libraries
 
 Use [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) to create an external library for your `.jar` files. SQL Server will have access to the `.jar` files and you do not need to set any special permissions to the **classpath**.

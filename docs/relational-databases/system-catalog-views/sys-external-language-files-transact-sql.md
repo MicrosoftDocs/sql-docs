@@ -25,7 +25,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 # sys.external_language_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-This catalog view provides a list of the external language extension files in the database. Please note that R and Python are reserved names, and no external language can be created with those specific names.
+This catalog view provides a list of the external language extension files in the database. Please note that R and Python are reserved names and no external language can be created with those specific names.
 
 When an external language is created from a file_spec, the extension itself and its properties are listed in this view. This view will contain one entry per language, per OS.
 
@@ -45,6 +45,5 @@ The catalog view sys.external_language_files lists a row for each external langu
 
 ## See also  
 
-+ [sys.external_languages]
-(sys-external-language-files-transact-sql.md)  
++ [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [CREATE EXTERNAL LANGUAGE](../../t-sql/statements/create-external-language-transact-sql.md)  

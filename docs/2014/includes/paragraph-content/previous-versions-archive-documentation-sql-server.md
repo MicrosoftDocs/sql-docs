@@ -1,7 +1,7 @@
 
 We accumulate and retain documentation for very old versions of SQL Server in a set of archive webpages. The archived webpages are not processed by search engines, such as Bing.com and Google.com. But you can see these archives at our Docs _previous-versions/_ address:
 
-- [https://docs.microsoft.com/previous-versions/sql/](https://docs.microsoft.com/previous-versions/sql/).
+- [https://docs.microsoft.com/previous-versions/sql/](https://docs.microsoft.com/previous-versions/sql/)
 
 These archives include the documentation for at least the following older versions:
 

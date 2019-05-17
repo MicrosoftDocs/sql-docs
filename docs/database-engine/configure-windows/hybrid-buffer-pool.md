@@ -25,7 +25,7 @@ The hybrid buffer pool feature is available for both Windows and Linux. The PMEM
 
 For more on Windows Server support for PMEM, also referred to as Storage Class Memory (SCM) see [deploy persistent memory on Windows Server](/windows-server/storage/storage-spaces/deploy-pmem/).
 
-For more on configuring SQL Server on Linux for PMEM devices see [deploy persistent memory](../linux/sql-server-linux-configure-pmem.md)).
+For more on configuring SQL Server on Linux for PMEM devices see [deploy persistent memory](../../linux/sql-server-linux-configure-pmem.md)).
 
 ## Enable hybrid buffer pool
 

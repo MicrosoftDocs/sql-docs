@@ -256,11 +256,11 @@ Disables automatic software partitioning of large NUMA hardware nodes into small
 
 ON 
 
-Enables all instance-level features that are part of the In-Memory Database feature family. This currently includes [memory-optimized tempdb metadata](../../relational-databases/databases/tempdb-database#how-to-monitor-tempdb-use) and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
+Enables all instance-level features that are part of the [In-Memory Database](../../relational-databases/in-memory-database.md) feature family. This currently includes [memory-optimized tempdb metadata](../../relational-databases/databases/tempdb-database#how-to-monitor-tempdb-use) and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
 
 OFF
 
-Disables all instance-level features thta are part of the In-Memory Database feature family. Requires a restart to take effect.
+Disables all instance-level features that are part of the In-Memory Database feature family. Requires a restart to take effect.
 
 TEMPDB_METADATA = ON | OFF
 

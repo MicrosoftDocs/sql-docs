@@ -1,5 +1,5 @@
 ---
-title: ALTER EXTERNAL LANGUAGE (Transact-SQL) | Microsoft Docs
+title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
 ms.date: 05/15/2019
 ms.prod: sql
@@ -18,28 +18,28 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 
 Modifies the content in an existing external language extension in the database.
 
-## Syntax for SQL Server 2019
+## Syntax
 
 ```text
 ALTER EXTERNAL LANGUAGE language_name  
 [ AUTHORIZATION owner_name ]
 {
-SET <file_spec>
-|ADD <file_spec>
-|REMOVE <file_spec>
+    SET <file_spec>
+    | ADD <file_spec>
+    | REMOVE <file_spec>
 }
 [ ; ]  
 
 <file_spec> ::=  
 {
-(CONTENT = {<external_lang_specifier> | <content_bits>,
-FILE_NAME = <external_lang_file_name>}
-[, PLATFORM = <platform> ]
-[, PARAMETERS = <external_lang_parameters> ]
-[, ENVIRONMENT_VARIABLES = <external_lang_env_variables> )
+    ( CONTENT = {<external_lang_specifier> | <content_bits>,
+    FILE_NAME = <external_lang_file_name>
+    [, PLATFORM = <platform> ]
+    [, PARAMETERS = <external_lang_parameters> ]
+    [, ENVIRONMENT_VARIABLES = <external_lang_env_variables> ] )
 }
 
-< external_lang_specifier > :: =  
+<external_lang_specifier> :: =  
 {
     '[file_path\]os_file_name'  
 }
@@ -47,22 +47,20 @@ FILE_NAME = <external_lang_file_name>}
 <content_bits> :: =  
 {
     varbinary_literal
-   |varbinary_expression
+   | varbinary_expression
 }
 
-< external_lang_file_name > :: =  
+<external_lang_file_name> :: =  
 'extension_file_name'
-
 
 <platform> :: =
 {
    WINDOWS
-  |LINUX
+  | LINUX
 }
 
 < external_lang_parameters > :: =  
 'extension_specific_parameters'
-
 ```
 
 ### Arguments
@@ -104,7 +102,7 @@ This parameter is needed for hybrid OS scenarios. In a hybrid architecture, the 
 
 ## Remarks
 
-In CTP 3.0, PARAMETERS and ENVIRONMENT_VARIABLES are not supported.
+In CTP 3.0, **PARAMETERS** and **ENVIRONMENT_VARIABLES** are not supported.
 
 ## Permissions
 

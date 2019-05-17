@@ -255,7 +255,7 @@ Disables automatic software partitioning of large NUMA hardware nodes into small
 **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later
 
 ON <br>
-Enables all instance-level features that are part of the In-Memory Database [add link] feature family. This currently includes memory-optimized tempdb metadata [add link] and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
+Enables all instance-level features that are part of the [In-Memory Database](../../relational-database/in-memory-database.md) feature family. This currently includes [memory-optimized tempdb metadata](../../relational-databases/databases/tempdb-database#memory-optimized-tempdb-metadata) and [hybrid buffer pool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Requires a restart to take effect.
 
 OFF <br>
 Disables all instance-level features that are part of the In-Memory Database feature family. Requires a restart to take effect.

@@ -1,5 +1,5 @@
 ---
-title: ALTER EXTERNAL LANGUAGE (Transact-SQL) | Microsoft Docs
+title: DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
 ms.date: 05/16/2019
 ms.prod: sql
@@ -19,8 +19,8 @@ Deletes an existing external language.
 
 ## Syntax
 
-```sql
-DROP EXTERNAL LANGUAGE language_name
+```text
+DROP EXTERNAL LANGUAGE <language_name>
 ```
 
 ### Arguments
@@ -46,13 +46,15 @@ Before an external language can be deleted, all external libraries for the speci
 
 ## Examples
 
-Create an external language Java, and delete it using the DROP EXTERNAL LANGUAGE statement.
+Create an external language **Java**:
 
 ```sql
 CREATE EXTERNAL LANGUAGE Java 
 FROM (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
+
+Drop the external language:
 
 ```sql
 DROP EXTERNAL LANGUAGE Java;

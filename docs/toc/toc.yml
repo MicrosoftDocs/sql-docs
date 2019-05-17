@@ -4175,6 +4175,8 @@
       href: ../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md
     - name: Enable the Lock Pages in Memory Option
       href: ../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md
+    - name: In-Memory Database
+      href: ../relational-databases/in-memory-database.md
     - name: Hybrid Buffer Pool
       href: ../database-engine/configure-windows/hybrid-buffer-pool.md
     - name: Change Server Authentication Mode

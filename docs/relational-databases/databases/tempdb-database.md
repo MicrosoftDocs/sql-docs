@@ -210,6 +210,43 @@ For more information on performance improvements in tempdb, see the following bl
 
 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
+## Memory-Optimized TempDB Metadata
+
+TempDB metadata contention has historically been a bottleneck to scalability for many workloads running on SQL Server. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], the system tables involved in managing temp table metadata can be moved into latch-free non-durable memory-optimized tables. In order to opt-in to this new feature, use the following script:
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+```
+
+This configuration change requires a restart of the service to take effect.
+
+There are some limitations with this implementation that are important to note:
+
+1. Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of tempdb, a restart is required to either enable or disable the feature.
+2. A single transaction may not access memory-optimized tables in more than one database.  This means that any transactions that involve a memory-optimized table in a user database will not be able to access TempDB system views in the same transaction.  If you attempt to access TempDB system views in the same transaction as a memory-optimized table in a user database, you will receive the following error:
+    ```
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+    ```
+    Example:
+    ```
+    BEGIN TRAN
+    SELECT *
+    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on Tempdb
+    INSERT INTO <user database>.<schema>.<mem-optimized table>
+    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
+    COMMIT TRAN
+    ```
+3. Queries against memory-optimized tables do not support locking and isolation hints, so queries against memory-optimized TempDB catalog views will not honor locking and isolation hints. As with other system catalog views in SQL Server, all transactions against system views will be in READ COMMITTED (or in this case READ COMMITTED SNAPSHOT) isolation.
+4. There may be some issues with columnstore indexes on temporary tables when memory-optimized tempdb metadata is enabled. For this preview release, it is best to avoid columnstore indexes on temporary tables when using memory-optimized tempdb metadata.
+
+> [!NOTE] 
+> These limitations only apply when referencing TempDB system views, you will be able to create a temp table in the same transaction as you access a memory-optimized table in a user database if desired.
+
+You can verify whether or not TempDB is memory-optimized by using the following T-SQL command:
+```
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
+```
+
 ## Capacity Planning for tempdb in SQL Server
 
 Determining the appropriate size for tempdb in a SQL Server production environment depends on many factors. As described previously in this article, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:

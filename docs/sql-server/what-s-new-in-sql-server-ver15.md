@@ -26,7 +26,7 @@ For more information and known issues, see the [[!INCLUDE[sql-server-2019](../in
 
 Community technology preview (CTP) 3.0 is the latest public release of [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. This release includes improvements from previous CTP releases to fix bugs, improve security, and optimize performance.
 
-[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
+[!INCLUDE[ctp-support-exclusion](../inclu    des/ctp-support-exclusion.md)]
 
 For specific features excluded from support, see the [release notes](sql-server-ver15-release-notes.md).
 
@@ -46,8 +46,8 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 | New feature or update | Details |
 |:---|:---|
 |SQL Server extensibility - Java extension|The Microsoft Extensibility SDK for Java for Microsoft SQL Server is now open sourced and available on [GitHub](http://aka.ms/mssql-java-lang-extension). |
-|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See Register external language. |
-|More supported data types for Java|See Java and SQL Server supported data types.|
+|Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
+|More supported data types for Java|See [Java data types](how-to/java-to-sql-data-types.md).|
 |Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
 |New DDL syntax to control the hybrid buffer pool. A trace flag is no longer required to enable the hybrid buffer pool.|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
 |Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |

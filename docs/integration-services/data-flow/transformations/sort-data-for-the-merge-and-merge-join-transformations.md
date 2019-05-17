@@ -16,6 +16,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Sort Data for the Merge and Merge Join Transformations
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], the Merge and Merge Join transformations require sorted data for their inputs. The input data must be sorted physically, and sort options must be set on the outputs and the output columns in the source or in the upstream transformation. If the sort options indicate that the data is sorted, but the data is not actually sorted, the results of the merge or merge join operation are unpredictable.  
   
 ## Sorting the Data  

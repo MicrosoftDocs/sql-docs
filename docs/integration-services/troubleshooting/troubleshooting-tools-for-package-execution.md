@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Troubleshooting Tools for Package Execution
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot packages when you execute them after they have been completed and deployed.  
   
  At design time, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] provides breakpoints to pause package execution, the Progress window, and data viewers to watch your data as it passes through the data flow. However, these features are not available when you are running packages that have been deployed. The main techniques for troubleshooting deployed packages are as follows:  

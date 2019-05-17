@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "snippets [Transact-SQL], completing"
   - "Transact-SQL snippets, completing"
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

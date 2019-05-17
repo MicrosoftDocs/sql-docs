@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses reserved keywords for defining, manipulating, and accessing databases. Reserved keywords are part of the grammar of the [!INCLUDE[tsql](../../includes/tsql-md.md)] language that is used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to parse and understand [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and batches. Although it is syntactically possible to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserved keywords as identifiers and object names in [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, you can do this only by using delimited identifiers.  
   
- The following table lists [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and SQL Data Warehouse reserved keywords.  
+ The following table lists [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL Data Warehouse reserved keywords.  
   
 ||||  
 |-|-|-|  
@@ -93,11 +93,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-The following table lists reserved keywords that are exclusive to **SQL Data Warehouse**.
+The following table lists reserved keywords that are exclusive to **Azure SQL Data Warehouse**.
 
 |||
 |-|-|
-|**Label**||
+|**LABEL**||
   
  Additionally, the ISO standard defines a list of reserved keywords. Avoid using ISO reserved keywords for object names and identifiers. The ODBC reserved keyword list, shown in the following table, is the same as the ISO reserved keyword list.  
   

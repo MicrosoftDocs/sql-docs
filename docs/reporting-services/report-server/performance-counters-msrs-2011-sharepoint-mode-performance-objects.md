@@ -2,7 +2,7 @@
 title: "Performance Counters MSRS 2011 SharePoint Mode Performance Objects | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server
 
 

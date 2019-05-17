@@ -2,7 +2,7 @@
 title: "Access the Reporting Services WMI Provider | Microsoft Docs"
 ms.date: 11/02/2016
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: tools
 
 

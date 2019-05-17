@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 
 - name: About SQL Server Analysis Services
@@ -34,7 +34,7 @@
   items:
   - name: Analysis Services tutorials overview
     href: ../analysis-services/analysis-services-tutorials-ssas.md
-  - name: Tabular modeling
+  - name: Tabular models
     items:
     - name: Internet Sales tutorial (1400)
       items:
@@ -106,14 +106,15 @@
         href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
       - name: Supplemental Lesson - Configure reporting properties for Power View reports
         href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
-  - name: Multidimensional modeling
-    href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
+  - name: Multidimensional models
     items:
+    - name: Adventure works tutorial
+      href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
     - name: Tutorial scenario
       href: ../analysis-services/multidimensional-tutorial/analysis-services-tutorial-scenario.md
     - name: Install sample data and projects for the Analysis Services Multidimensional modeling tutorial
       href: ../analysis-services/multidimensional-tutorial/install-sample-data-and-projects.md
-    - name: "Lesson 1: Defining a data source view within an Analysis Services project"
+    - name: Lesson 1 - Defining a data source view within an Analysis Services project
       href: ../analysis-services/multidimensional-tutorial/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
       items:
       - name: Lesson 1-1 - Creating an Analysis Services project
@@ -124,7 +125,7 @@
         href: ../analysis-services/multidimensional-tutorial/lesson-1-3-defining-a-data-source-view.md
       - name: Lesson 1-4 - Modifying default table names
         href: ../analysis-services/multidimensional-tutorial/lesson-1-4-modifying-default-table-names.md
-    - name: "Lesson 2: Defining and deploying a cube"
+    - name: Lesson 2 - Defining and deploying a cube
       href: ../analysis-services/multidimensional-tutorial/lesson-2-defining-and-deploying-a-cube.md
       items:
       - name: Lesson 2-1 - Defining a dimension
@@ -139,7 +140,7 @@
         href: ../analysis-services/multidimensional-tutorial/lesson-2-5-deploying-an-analysis-services-project.md
       - name: Lesson 2-6 - Browsing the cube
         href: ../analysis-services/multidimensional-tutorial/lesson-2-6-browsing-the-cube.md
-    - name: "Lesson 3: Modifying measures, attributes and hierarchies"
+    - name: Lesson 3 - Modifying measures, attributes and hierarchies
       href: ../analysis-services/multidimensional-tutorial/lesson-3-modifying-measures-attributes-and-hierarchies.md
       items:
       - name: Lesson 3-1 - Modifying measures
@@ -152,7 +153,7 @@
         href: ../analysis-services/multidimensional-tutorial/lesson-3-4-modifying-the-date-dimension.md
       - name: Lesson 3-5 - Browsing the deployed cube
         href: ../analysis-services/multidimensional-tutorial/lesson-3-5-browsing-the-deployed-cube.md
-    - name: "Lesson 4: Defining advanced attribute and dimension properties"
+    - name: Lesson 4 - Defining advanced attribute and dimension properties
       href: ../analysis-services/multidimensional-tutorial/lesson-4-defining-advanced-attribute-and-dimension-properties.md
       items:
       - name: Lesson 4-1 - Using a modified version of the Analysis Services tutorial project
@@ -169,7 +170,7 @@
         href: ../analysis-services/multidimensional-tutorial/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
       - name: Lesson 4-7 - Defining the unknown member and null processing properties
         href: ../analysis-services/multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-    - name: "Lesson 5: Defining relationships between dimensions and measure groups"
+    - name: Lesson 5 - Defining relationships between dimensions and measure groups
       href: ../analysis-services/multidimensional-tutorial/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
       items:
       - name: Lesson 5-1 - Defining a referenced relationship
@@ -180,31 +181,31 @@
         href: ../analysis-services/multidimensional-tutorial/lesson-5-3-defining-a-many-to-many-relationship.md
       - name: Lesson 5-4 - Defining dimension granularity within a measure group
         href: ../analysis-services/multidimensional-tutorial/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-    - name: "Lesson 6: Defining calculations"
+    - name: Lesson 6 - Defining calculations
       href: ../analysis-services/multidimensional-tutorial/lesson-6-defining-calculations.md
       items:
       - name: Lesson 6-1 - Defining calculated members
         href: ../analysis-services/multidimensional-tutorial/lesson-6-1-defining-calculated-members.md
       - name: Lesson 6-2 - Defining named sets
         href: ../analysis-services/multidimensional-tutorial/lesson-6-2-defining-named-sets.md
-    - name: "Lesson 7: Defining Key Performance Indicators (KPIs)"
+    - name: Lesson 7 - Defining Key Performance Indicators (KPIs)
       href: ../analysis-services/multidimensional-tutorial/lesson-7-defining-key-performance-indicators-kpis.md
       items:
       - name: Lesson 7-1 - Defining and browsing KPIs
         href: ../analysis-services/multidimensional-tutorial/lesson-7-1-defining-and-browsing-kpis.md
-    - name: "Lesson 8: Defining actions"
+    - name: Lesson 8 - Defining actions
       href: ../analysis-services/multidimensional-tutorial/lesson-8-defining-actions.md
       items:
       - name: Lesson 8-1 - Defining and using a drillthrough action
         href: ../analysis-services/multidimensional-tutorial/lesson-8-1-defining-and-using-a-drillthrough-action.md
-    - name: "Lesson 9: Defining perspectives and translations"
+    - name: Lesson 9 - Defining perspectives and translations
       href: ../analysis-services/multidimensional-tutorial/lesson-9-defining-perspectives-and-translations.md
       items:
       - name: Lesson 9-1 - Defining and browsing perspectives
         href: ../analysis-services/multidimensional-tutorial/lesson-9-1-defining-and-browsing-perspectives.md
       - name: Lesson 9-2 - Defining and browsing translations
         href: ../analysis-services/multidimensional-tutorial/lesson-9-2-defining-and-browsing-translations.md
-    - name: "Lesson 10: Defining administrative roles"
+    - name: Lesson 10 - Defining administrative roles
       href: ../analysis-services/multidimensional-tutorial/lesson-10-defining-administrative-roles.md
       items:
       - name: Lesson 10 - Granting process database permissions
@@ -220,7 +221,7 @@
     - name: Install Analysis Services in Power Pivot Mode
       href: ../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
       items:
-      - name: Verify a Power Pivot for SharePoint Installation
+      - name: Verify a Power Pivot for SharePoint installation
         href: ../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
       - name: Example of a Minimum-Privilege Configuration for Power Pivot for SharePoint 2016
         href: ../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2016.md
@@ -264,7 +265,7 @@
         href: ../analysis-services/instances/register-an-analysis-services-instance-in-a-server-group.md
       - name: Determine the Server Mode
         href: ../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md
-      - name: Rename an Analysis Services Instance
+      - name: Rename an Analysis Services instance
         href: ../analysis-services/instances/rename-an-analysis-services-instance.md
   - name: Tabular modeling
     items:
@@ -272,7 +273,7 @@
       href: ../analysis-services/tabular-models/tabular-models-ssas.md
     - name: Compatibility level
       href: ../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md
-    - name: Create Tabular Models
+    - name: Create tabular models
       items:
       - name: Tabular model designer
         href: ../analysis-services/tabular-models/tabular-model-designer-ssas.md
@@ -824,13 +825,13 @@
         href: ../analysis-services/multidimensional-models/create-a-report-data-source.md
       - name: Create a Power View Report
         href: ../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md
-      - name: ADOMD.NET Server Functionality +
+      - name: ADOMD.NET Server Functionality >
         href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
-      - name: ADOMD.NET Server Object Architecture +
+      - name: ADOMD.NET Server Object Architecture >
         href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
-      - name: ADOMD.NET Server Programming +
+      - name: ADOMD.NET Server Programming >
         href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
-      - name: User Defined Functions and Stored Procedures +
+      - name: User Defined Functions and Stored Procedures >
         href: /bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
     - name: Assemblies Management
       href: ../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md
@@ -1379,7 +1380,7 @@
         href: ../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
       - name: Performance counters
         href: ../analysis-services/instances/performance-counters-ssas.md
-      - name: Trace-events +
+      - name: Trace-events >
         href: /bi-reference/trace-events/analysis-services-trace-events
       - name: Log operations
         href: ../analysis-services/instances/log-operations-in-analysis-services.md
@@ -1396,7 +1397,7 @@
     - name: Use Analysis Services templates in SSMS
       href: ../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md
     - name: Automate Analysis Services administrative tasks with SSIS
-      href: ../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md          
+      href: ../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md
   - name: Connect
     items:
     - name: Connect to servers overview
@@ -1427,11 +1428,11 @@
       items:
       - name: Tabular model programming for compatibility level 1200 and higher
         href: ../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
-      - name: Tabular Model Scripting Language (TMSL) +
+      - name: Tabular Model Scripting Language (TMSL) >
         href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-      - name: Tabular Object Model (TOM) +
+      - name: Tabular Object Model (TOM) >
         href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-      - name: Analysis Management Objects (AMO) +
+      - name: Analysis Management Objects (AMO) >
         href: /bi-reference/amo/amo-classes-introduction
     - name: Tabular 1103 and lower
       items:
@@ -1444,7 +1445,7 @@
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
         - name: CSDLBI Concepts
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
-        - name: Conceptual Schema Definition Language (CSDL) Reference +
+        - name: Conceptual Schema Definition Language (CSDL) Reference >
           href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
       - name: Representation
         items:
@@ -1478,13 +1479,13 @@
     items:
     - name: Multidimensional model programming
       href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
-    - name: Analysis Management Objects (AMO) +
+    - name: Analysis Management Objects (AMO) >
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
     - name: Analysis Services Scripting Language (ASSL)
       items:
       - name: Developing with Analysis Services Scripting Language (ASSL)
         href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
-      - name: Analysis Services Scripting Language (ASSL for XMLA) Reference
+      - name: Analysis Services Scripting Language (ASSL for XMLA) Reference >
         href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
       - name: ASSL Objects and Object Characteristics
         href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
@@ -1524,11 +1525,11 @@
         href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
       - name: ASSL XML Conventions
         href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-    - name: XML for Analysis (XMLA) reference +
+    - name: XML for Analysis (XMLA) reference >
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
     - name: ADOMD.NET
       items:
-      - name: ADOMD.NET reference +
+      - name: ADOMD.NET reference >
         href: /bi-reference/adomd/developing-with-adomd-net
       - name: ADOMD.NET Server programming
         href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
@@ -1755,11 +1756,11 @@
     items:
     - name: Data Mining programming
       href: ../analysis-services/data-mining/data-mining-programming.md
-    - name: Analysis Management Objects (AMO) +
+    - name: Analysis Management Objects (AMO) >
       href: /bi-reference/amo/amo-classes-introduction
-    - name: ADOMD.NET +
+    - name: ADOMD.NET >
       href: /bi-reference/adomd/developing-with-adomd-net
-    - name: XML for Analysis (XMLA) +
+    - name: XML for Analysis (XMLA) >
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
     - name: OLE DB for Data Mining
       href: ../analysis-services/data-mining/data-mining-programming-ole-db.md
@@ -1773,27 +1774,27 @@
     href: ../analysis-services/powershell/analysis-services-powershell-reference.md
   - name: PowerShell for Power Pivot for SharePoint
     href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-  - name: Data Analysis Expressions (DAX)
+  - name: Data Analysis Expressions (DAX) >
     href: /dax/data-analysis-expressions-dax-reference   # https://msdn.microsoft.com/library/gg413422.aspx
-  - name: Power Query M
+  - name: Power Query M >
     href: /powerquery-m/power-query-m-reference   # https://msdn.microsoft.com/library/mt211003.aspx
-  - name: Tabular Model Scripting Language (TMSL)
+  - name: Tabular Model Scripting Language (TMSL) >
     href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-  - name: Tabular Object Model (TOM)
+  - name: Tabular Object Model (TOM) >
     href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-  - name: Analysis Management Objects (AMO)
+  - name: Analysis Management Objects (AMO) >
     href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-  - name: Conceptual Schema Definition Language (CSDL)
+  - name: Conceptual Schema Definition Language (CSDL) >
     href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-  - name: XML for Analysis (XMLA)
+  - name: XML for Analysis (XMLA) >
     href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-  - name: ADOMD.NET
+  - name: ADOMD.NET >
     href: /bi-reference/adomd/developing-with-adomd-net
-  - name: Analysis Services Scripting Language (ASSL for XMLA)
+  - name: Analysis Services Scripting Language (ASSL for XMLA) >
     href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
-  - name: Schema rowsets
+  - name: Schema rowsets >
     href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
-  - name: Trace events
+  - name: Trace events >
     href: /bi-reference/trace-events/analysis-services-trace-events
   - name: Data Mining Extensions (DMX) Reference
     href: ../dmx/data-mining-extensions-dmx-reference.md
@@ -2004,7 +2005,7 @@
       href: ../dmx/dmx-tutorials-analysis-services-data-mining.md
   - name: Multidimensional Expressions (MDX)
     href: ../mdx/analysis-services-language-reference.md
-    items: 
+    items:
     - name: Multidimensional Expressions (MDX) Reference
       href: ../mdx/multidimensional-expressions-mdx-reference.md
       items:
@@ -2163,7 +2164,7 @@
             href: ../mdx/comment-mdx-double-slash.md
           - name: ": (Range)"
             href: ../mdx/range-mdx.md
-          - name: + (Add)"
+          - name: "+ (Add)"
             href: ../mdx/add-mdx.md
           - name: "+ (Positive)"
             href: ../mdx/positive-mdx.md

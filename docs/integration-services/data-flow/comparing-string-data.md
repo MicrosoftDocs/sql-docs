@@ -19,6 +19,10 @@ ms.author: janinez
 manager: craigg
 ---
 # Comparing String Data
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   String comparisons are an important part of many of the transformations performed by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and string comparisons are also used in the evaluation of expressions in variables and property expressions. For example, the Sort transformation compares values in a dataset to sort data in ascending or descending order.  
   
 ## Configuring Transformations for String Comparisons  
@@ -58,7 +62,7 @@ manager: craigg
  You can also specify a locale for a Flat File connection manager and a Multiple Flat Files connection manager.  
   
 ## Setting Comparison Options  
- The locale provides the basic rules for comparing string data. For example, the locale specifies the sort position of each letter in the alphabet. However, these rules may not be sufficient for the comparisons that some transformations perform, and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports a set of advanced comparison options that go beyond the comparison rules of a locale. These comparison options are set at the column level. For example, one of the comparison options lets you ignore nonspacing characters. The effect of this option is to ignore diacritics such as the accent, which makes "a" and "á" identical for comparison purposes.  
+ The locale provides the basic rules for comparing string data. For example, the locale specifies the sort position of each letter in the alphabet. However, these rules may not be sufficient for the comparisons that some transformations perform, and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supports a set of advanced comparison options that go beyond the comparison rules of a locale. These comparison options are set at the column level. For example, one of the comparison options lets you ignore nonspacing characters. The effect of this option is to ignore diacritics such as the accent, which makes "a" and "Ã¡" identical for comparison purposes.  
   
  The following table describes the comparison options and a sort style.  
   
@@ -67,7 +71,7 @@ manager: craigg
 |Ignore case|Specifies whether the comparison distinguishes between uppercase and lowercase letters. If this option is set, the string comparison ignores case. For example, "ABC" becomes the same as "abc".|  
 |Ignore kana type|Specifies whether the comparison distinguishes between the two types of Japanese kana characters: hiragana and katakana. If this option is set, the string comparison ignores kana type.|  
 |Ignore character width|Specifies whether the comparison distinguishes between a single-byte character and the same character when it is represented as a double-byte character. If this option is set, the string comparison treats single-byte and double-byte representations of the same character as identical.|  
-|Ignore nonspacing characters|Specifies whether the comparison distinguishes between spacing characters and diacritics. If this option is set, the comparison ignores diacritics. For example, "å" is equal to "a".|  
+|Ignore nonspacing characters|Specifies whether the comparison distinguishes between spacing characters and diacritics. If this option is set, the comparison ignores diacritics. For example, "Ã¥" is equal to "a".|  
 |Ignore symbols|Specifies whether the comparison distinguishes between letter characters and symbols such as white-space characters, punctuation, currency symbols, and mathematical symbols. If this option is set, the string comparison ignores symbols. For example, " New York" becomes the same as "New York" and "*ABC" is the same as "ABC"'.|  
 |Sort punctuation as symbols|Specifies whether the comparison sorts all punctuation symbols, except the hyphen and apostrophe, before the alphanumeric characters. For example, if this option is set, ".ABC" sorts before "ABC".|  
   

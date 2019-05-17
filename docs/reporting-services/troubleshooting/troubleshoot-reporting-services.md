@@ -2,7 +2,7 @@
 title: "Troubleshoot Reporting Services | Microsoft Docs"
 ms.date: 01/17/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: troubleshooting
 ms.technology:
 

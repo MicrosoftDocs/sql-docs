@@ -1,7 +1,7 @@
 ---
 title: "XML Data Type and Columns (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/17/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,6 +13,7 @@ ms.author: genemi
 manager: craigg
 ---
 # XML Data Type and Columns (SQL Server)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   This topic discusses the advantages and the limitations of the **xml** data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and helps you to choose how to store XML data.  
   
@@ -169,6 +170,8 @@ manager: craigg
 -   It cannot be used as a parameter to any scalar, built-in functions other than ISNULL, COALESCE, and DATALENGTH.  
   
 -   It cannot be used as a key column in an index. However, it can be included as data in a clustered index or explicitly added to a nonclustered index by using the INCLUDE keyword when the nonclustered index is created.  
+
+- XML elements can be nested up to 128 levels.
   
 ## See Also  
  [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 05/16/2019
+ms.date: 05/17/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -84,7 +84,7 @@ The full file path to the .zip or tar.gz file containing the extensions code. Th
 
 **content_bits**
 
-Specifies the content of the languagee as a hex literal, similar to assemblies.
+Specifies the content of the language as a hex literal, similar to assemblies.
 This option is useful if you need to create a language or alter an existing language (and have the required permissions to do so), but the file system on the server is restricted and you cannot copy the library files to a location that the server can access.
 
 **external_lang_file_name**
@@ -93,11 +93,11 @@ Name of the extension .dll or .so file. This is required to identify the correct
 
 **external_lang_parameters**
 
-This provides a possibility to give a set of parameters to the external language runtime.
+This provides a possibility to give a set of parameters to the external language runtime. Parameter values are provided to the external runtime after the external process has started. Environment variables however, are accessible to the language extension prior to the external process startup.
 
 **external_lang_env_variables**
 
-This provides a possibility to give a set of environment variables to the external language runtime. One of these properties can be the path to the home of the runtime. For example Java home.
+This provides a possibility to give a set of environment variables to the external language runtime prior to the external process startup. An example of an environment variable is for example the home directory of the runtime itself. For example: JRE_HOME.
 
 **platform**
 

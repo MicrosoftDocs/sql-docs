@@ -45,13 +45,13 @@ In addition, the following features are added or enhanced for [!INCLUDE[sql-serv
 
 | New feature or update | Details |
 |:---|:---|
+|SQL Server extensibility - Java extension|The Microsoft Extensibility SDK for Java for Microsoft SQL Server is now open sourced and available on [GitHub](http://aka.ms/mssql-java-lang-extension). |
 |Register external languages|New DDL, `CREATE EXTERNAL LANGUAGE`, registers external languages, like Java, in SQL Server. See Register external language. |
-|More supported data types for Java.|See Java and SQL Server supported data type.|
-|SQL Server Java programming language extension|The Microsoft Extensibility SDK for Java for Microsoft SQL Server is now open sourced and available on [GitHub](http://aka.ms/mssql-java-lang-extension). |
-|New DDL syntax to control hybrid buffer pool. A trace flag is no longer required to enable hybrid buffer pool.|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
-|New Query Store Operation Mode is added (Custom).|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
-|Adds support to use UTF-8 character encoding with Linked Servers. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
-|Extended information on DOP and memory grants for query plans returned by DMF `sys.dm_exec_query_plan_stats`. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+|More supported data types for Java|See Java and SQL Server supported data types.|
+|Custom capture policy for the Query Store|When enabled, additional Query Store configurations are available under a new Query Store Capture Policy setting, to fine tune data collection in a specific server. For more information, see [ALTER DATABASE SET Options](../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|New DDL syntax to control the hybrid buffer pool. A trace flag is no longer required to enable the hybrid buffer pool.|With [hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md), database pages sitting on database files placed on a persistent memory (PMEM) device will be directly accessed when required.|
+|Linked Servers support UTF-8 character encoding. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|`sys.dm_exec_query_plan_stats` returns more information about degree of parallelism and memory grants for query plans. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
 
 ><sup>1</sup>

@@ -60,7 +60,7 @@ After the assessment is complete, use our [Azure Database Migration Service](htt
 The v4.0 release of DMA introduces the Azure SQL Database SKU recommendations feature, which allows users to identify the minimum recommended Azure SQL Database SKU based on performance counters collected from the computer(s) hosting your databases. This feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to provision all your databases to Azure in bulk.
 
 > [!NOTE]
-> This functionality is currently be available only via the Command Line Interface (CLI). Support for this feature via the DMA user interface is planned for delivery later this year.
+> This functionality is currently be available only via the Command Line Interface (CLI).
 
 For additional detail, see the article [Identify the right Azure SQL Database SKU for your on-premises database](dma-sku-recommend-sql-db.md).
 

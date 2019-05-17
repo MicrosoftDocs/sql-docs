@@ -198,8 +198,6 @@ If you are using Windows, follow the steps below to create an external language 
 
 ### Create external language on Linux
 
-If you are using Windows, follow the steps above to create an external language.
-
 On Linux, you don't need to manually create a **.tar.gz** file. As part of setup, there is already generated a **.tar.gz** file under the following path:
 `/opt/mssql/lib/extensibility/java-lang-extension.tar.gz`.
 

@@ -1,5 +1,5 @@
 ---
-title: "sys.external_language_files (Transact-SQL) | Microsoft Docs"
+title: "sys.external_language_files (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/16/2019
 ms.prod: sql

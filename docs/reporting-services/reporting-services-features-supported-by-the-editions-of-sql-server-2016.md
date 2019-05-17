@@ -1,7 +1,7 @@
 ---
 title: SQL Server Reporting Services features supported by its editions
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT

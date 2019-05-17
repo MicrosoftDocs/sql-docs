@@ -292,7 +292,9 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../
 |[Setting diagnostic log options](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[Setting failover cluster properties](#Failover)|HealthCheckTimeout|  
 |[Changing the cluster context of an availability replica](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[Setting the buffer pool extension](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[Setting the buffer pool extension](#BufferPoolExtension)|BUFFER POOL EXTENSION| 
+|[Setting In-Memory Database options](#MemoryOptimized)|MEMORY_OPTIMIZED|
+
   
 ###  <a name="Affinity"></a> Setting process affinity  
 The examples in this section show how to set process affinity to CPUs and NUMA nodes. The examples assume that the server contains 256 CPUs that are arranged into four groups of 16 NUMA nodes each. Threads aren't assigned to any NUMA node or CPU.  
@@ -430,7 +432,7 @@ GO
   
 ```  
 
-### Setting In-Memory Database Options
+### <a name="MemoryOptimized"></a> Setting In-Memory Database Options
 
 **Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later
 

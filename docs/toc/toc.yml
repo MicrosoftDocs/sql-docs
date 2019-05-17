@@ -16502,6 +16502,8 @@
           href: ../t-sql/statements/alter-event-session-transact-sql.md
         - name: EXTERNAL DATA SOURCE
           href: ../t-sql/statements/alter-external-data-source-transact-sql.md
+        - name: EXTERNAL LANGUAGE
+          href: ../t-sql/statements/alter-external-language-transact-sql.md
         - name: EXTERNAL LIBRARY
           href: ../t-sql/statements/alter-external-library-transact-sql.md
         - name: EXTERNAL RESOURCE POOL
@@ -16662,6 +16664,8 @@
           href: ../t-sql/statements/create-event-session-transact-sql.md
         - name: EXTERNAL DATA SOURCE
           href: ../t-sql/statements/create-external-data-source-transact-sql.md
+        - name: EXTERNAL LANGUAGE
+          href: ../t-sql/statements/create-external-language-transact-sql.md
         - name: EXTERNAL LIBRARY
           href: ../t-sql/statements/create-external-library-transact-sql.md
         - name: EXTERNAL FILE FORMAT
@@ -16816,6 +16820,8 @@
           href: ../t-sql/statements/drop-external-data-source-transact-sql.md
         - name: EXTERNAL FILE FORMAT
           href: ../t-sql/statements/drop-external-file-format-transact-sql.md
+        - name: EXTERNAL LANGUAGE
+          href: ../t-sql/statements/drop-external-language-transact-sql.md
         - name: EXTERNAL LIBRARY
           href: ../t-sql/statements/drop-external-library-transact-sql.md
         - name: EXTERNAL RESOURCE POOL

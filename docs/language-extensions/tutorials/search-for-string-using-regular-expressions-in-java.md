@@ -192,7 +192,7 @@ If you are using Windows, follow the steps below to create an external language.
     ```sql
     CREATE EXTERNAL LANGUAGE Java
     FROM
-    (CONTENT = N'[Path to .zip file]\javaextension.zip', FILE_NAME = 'javaextension.dll', PLATFORM = WINDOWS)
+    (CONTENT = N'[Path to .zip file]\javaextension.zip', FILE_NAME = 'javaextension.dll')
     GO
     ```
 
@@ -207,7 +207,7 @@ To create an external language Java, run the following T-SQL statement on Linux:
 
 ```sql
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'/opt/mssql/lib/extensibility/java-lang-extension.tar.gz', file_name = 'javaextension.so', PLATFORM = LINUX);
+FROM (CONTENT = N'/opt/mssql/lib/extensibility/java-lang-extension.tar.gz', file_name = 'javaextension.so');
 GO
 ```
 

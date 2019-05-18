@@ -5,7 +5,7 @@ description: External code support for the SQL Server database engine, with dual
 author: dphansen
 ms.author: davidph 
 manager: cgronlun
-ms.date: 05/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions

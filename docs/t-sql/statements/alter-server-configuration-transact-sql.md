@@ -1,7 +1,7 @@
 ---
 title: "ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/01/2017"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""

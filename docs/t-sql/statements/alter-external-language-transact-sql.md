@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
-ms.date: 05/17/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql

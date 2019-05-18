@@ -1,6 +1,6 @@
 ---
 title: "Tutorial: How to Locate and Start Reporting Services Tools (SSRS) | Microsoft Docs"
-ms.date: 12/07/2018
+ms.date: 05/15/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools
@@ -83,7 +83,7 @@ ms.author: maggies
 4.  If you run the Web Portal on the local report server, see [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component servers. For more information, see [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be).  
+ Report server administrators can use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] to manage a report server alongside other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component servers. For more information, see the [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio) tutorial.  
   
 ### To Start SQL Server Management Studio  
   

@@ -49,7 +49,9 @@ PATINDEX ( '%pattern%' , expression )
   
 ## Remarks  
  If either *pattern* or *expression* is NULL, PATINDEX returns NULL.  
-  
+ 
+ The starting position returned is 1-based, not 0-based.
+ 
  PATINDEX performs comparisons based on the collation of the input. To perform a comparison in a specified collation, you can use COLLATE to apply an explicit collation to the input.  
   
 ## Supplementary Characters (Surrogate Pairs)  

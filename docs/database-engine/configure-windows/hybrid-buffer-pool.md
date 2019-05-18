@@ -1,7 +1,7 @@
 ---
 title: "Hybrid Buffer Pool | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/17/2019"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""

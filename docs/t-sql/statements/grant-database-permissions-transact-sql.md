@@ -1,7 +1,7 @@
 ---
 title: "GRANT Database Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/16/2019"
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

@@ -5,7 +5,7 @@ description: Language extensions installation steps for SQL Server 2019 in Windo
 author: dphansen
 ms.author: davidph 
 manager: cgronlun
-ms.date: 05/14/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions

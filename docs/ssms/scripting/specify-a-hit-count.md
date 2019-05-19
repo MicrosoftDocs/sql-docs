@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint hit count"
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

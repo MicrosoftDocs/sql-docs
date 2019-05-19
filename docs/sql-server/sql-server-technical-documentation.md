@@ -33,6 +33,8 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 SQL Server is a central part of the Microsoft data platform. SQL Server is an industry leader in operational database management systems (ODBMS). This documentation helps you install, configure, and use SQL Server on Windows. The content includes end-to-end examples, code samples, and videos. For SQL Server language topics, see [Language Reference](../t-sql/language-reference.md).
 ::: moniker-end
 
+SQL Server 2014, and older versions including SQL Server 2005, have documentation available [here](#previous-versions-gm66).
+
 <!-- Moniker assignments nicely designed so that exactly 1 of these next 3 little WhatsNew tables will be displayed
  at any one time, regardless of user's moniker choice.
 -->
@@ -131,6 +133,10 @@ SQL Server is a central part of the Microsoft data platform. SQL Server is an in
 - [Wide World Importers sample database](https://docs.microsoft.com/sql/samples/wide-world-importers-what-is)
 - [AdventureWorks sample databases and scripts for SQL Server 2016](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [SQL Server samples on GitHub](https://github.com/Microsoft/sql-server-samples)
+
+## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005
+
+[!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Transact-SQL snippets, code"
   - "snippets [Transact-SQL], how to insert"
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -33,98 +33,117 @@ ms.author: maggies
   
 ### To preload the cache by creating a cache refresh plan  
   
-1.  Start [The web portal of a report server](../../reporting-services/web-portal-ssrs-native-mode.md).  
+1. Start ["The web portal of a report server"](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
-2.  Select **Browse** to navigate the folder hierarchy and locate the item that you want to cache.  
+2. Select **Browse** from the Home screen and navigate the folder hierarchy to locate the item that you want to cache.  
   
-3.  Select the ellipsis in the top right corner of the item and select **Manage** from the drop-down menu.  
+3. Select the ellipsis in the top right corner of the item and select **Manage** from the drop-down menu.  
   
-4.  Select the **Caching** tab in the vertical menu on the left.  
+4. Select the **Caching** tab in the vertical menu on the left.  
   
-5.  Select the **Cache copies of this dataset and use them when available** radio button at the top. In the **Cache expiration** section below, select one if the following radio buttons:
+5. To activate caching for a dataset, select the **Cache copies of this dataset and use them when available** radio button. The  **Cache expiration** section then appears beneath it. Select one of the following radio buttons:
 
     1. **Cache expires after x minutes** (enter the desired number of minutes for x).
-    2. **Cache expires on a schedule** and select one of the two choices below it:
-        1. **Shared schedule** radio button, and then select a schedule from the **Select a shared schedule** dropdown textbox.
-        2. **Report-specific schedule** radio button, then click the **Edit schedule** link if necessary to display the *Schedule details* page. On this page you can select:
-           1. The type of schedule:
-              - Hour
-              - Day
-              - Week
-              - Month - which month(s), with a choice of:
-                 1. **On week of the month** 
-                    1. Select (1st, 2nd, 3rd, 4th or Last) from the dropdown box, and 
-                    2. **On day of the week** to run it: select one or more of the checkboxes (Sun, Mon, Tue, Wed,    Thu, Fri, Sat).
-                 2. **On calendar day(s)** -  Enter the actual day number of the month separated by commas or a      range of days separated by a dash, or any combination of both (e.g. 1,3-5).  
-              - Once  - a single occurrence
-           2. Time of the day
-           3. The start and end dates of the schedule.
+    2. **Cache expires on a schedule**.  Reporting Services provides shared schedules and report-specific schedules to help you control processing, consistent content, and the performance of report distribution. For more information, see [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). You have several options on how to create a schedule, in this case for cache expiration:  
+    Select one of the two scheduling choices below:
+       1. **Shared schedule** radio button, and then select a schedule from the **Select a shared schedule** dropdown textbox. For more information, see [Schedules](../../reporting-services/subscriptions/schedules.md "Schedules").
+       2. **Report-specific schedule** radio button, then select the **Edit schedule** link if necessary to display the *Schedule details* page.  
+
+          ![The web portal cache expiration schedule details page for datasets](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Dataset cache schedule details page")
+
+       On this page you can select:
+       1. The type of schedule:
+           - **Hour** - run the schedule every: specify hours and minutes and the start time.
+           - **Day** - select one of the three choices below:  
+              1. **On the following days**: (Sun, Mon, Tue, Wed, Thu, Fri, Sat).
+              2. **Every weekday**
+              3. **Repeat after this number of days** - specify a number.  
+           - **Week** - specify both of the following two items:
+              1. **Repeat after this number of weeks** - specify a number.  
+              2. **On days** - pick the days of the week to run it.  
+           - **Month** - which month(s), with a choice of:
+              1. **On week of the month**,  
+                 1. Select (1st, 2nd, 3rd, 4th or Last) from the dropdown box.  
+                 2. **On day of the week** to run it. Select one or more of the check boxes (Sun, Mon, Tue, Wed, Thu, Fri, Sat).  
+                 3. **On calendar day(s)** -  Enter the actual day number of the month separated  by commas, or a range of days separated by a dash, or any combination of both  (e.g. 1,3-5).  
+           - **Once** - a single occurrence.  
+       2. **Start time** - the time of the day for the schedule to start.  
+       3. **Start and end dates** - Specify the start date and optionally the end date of the schedule.
+       4. Select **Apply** to save the schedule.  
+          > [!NOTE]
+          > If the item does not have caching enabled, you will be prompted to enable caching. To enable caching, select **OK**.
+       5. Select **Create cache refresh plan** to create / save the cache plan.  
+       The **Cache Refresh Plans** page opens on the screen. From here you can:
+           - Add a new cache refresh plan.
+           - Create a new cache refresh plan from an existing plan.
+           - Refresh the cache refresh plans page.
+           - Delete a plan.
+           - Search for a plan by name.
+
+          If no cache refresh plans have been saved yet, the list will be empty, and the "Add" choice will be the only available option. Select **+ New cache refresh plan** to add a new one, and the **New Cache Refresh Plan** page is displayed.  
+          1. Type a **Description** in the first text box to name the refresh plan.  
+          2. Select one of the following radio buttons in the **Refresh the cache on the following schedule**  
+             1. **Shared schedule** - select a shared schedule from the adjacent dropdown box. 
+             2. **Report-specific schedule** - Edit the schedule as in step 2.2 above by selecting the **Edit schedule** link if desired to display the *Schedule details* page. 
+          3. Select **Create cache refresh plan** to save the plan if adding, or **Apply** if editing the plan.  
+      You are returned to the updated **Cache Refresh Plans** page.
   
-6. **New Cache Refresh Plan**.  
+### To preload the cache with a user-specific report by using a data-driven subscription
+
+1. Start [the web portal of a report server](../reporting-services/web-portal-ssrs-native-mode.md "The web portal of a report server" ).
+2. Select **Browse** from the Home screen and navigate the folder hierarchy to locate the report you want to subscribe to.  
+3. Right-click the report, select **Subscribe** from the dropdown menu. The **New Subscriptions** page is displayed.  
+4. Enter a description for the subscription in the **Description** text box.  
+5. The **Type of subscription** radio buttons display two options:  
+   1. **Standard subscription** - to generate and deliver one report
+   2. **Data-driven subscription** - to generate and deliver one report for each row in a dataset. This is the option you want to select to preload the cache.
+6. In the **Schedule** section, select one of the following radio buttons:
+   1. **Shared schedule** - select a shared schedule from the dropdown box.  
+   2. **Report-specific schedule** - Edit the schedule as in step 2.2 above by selecting the **Edit schedule** link if desired to display the *Schedule details* page.  
+7. The **Destination** section displays the following choices in a dropdown box:
+    - **Windows File Share**
+    - **E-Mail**
+    - **Null Delivery Provider** - for this task, select Null delivery provider.  
+8. In the **Dataset** section, edit or create a dataset for this report subscription by selecting the **Edit dataset** button.  
+9. On the **Edit Dataset** page in the **data source** section, you choose the data source that contains the report parameter values and delivery options. Your choices are:  
+   - **A shared data source** - select the ellipsis and select a shared data source from the *Shared Data Souce* folder.
+   - **A custom data source** - most likely this is the option you will have to choose, unless you have already set the steps below as a shared data source.
+         1. Specify the connection type, connection string, and credentials for accessing the data source that contains subscriber data. The following example illustrates a connection string used to connect to a SQL Server database named Subscribers.  
   
-    > [!NOTE]  
-    > If the item does not have caching enabled, you will be prompted to enable caching. To enable caching, select **OK**.  
+          ```  
+          data source=<servername>; initial catalog=Subscribers  
+          ```
   
-     The **Cache Refresh Plan** page opens.  
+10. In the **Query** section - specify the query that retrieves the desired subscriber data.  For example:  
   
-6.  Optionally type a description for the refresh plan.  
+    ```T-SQL  
+    Select * from RptSubscribers  
+    ```
   
-7.  For a shared schedule, select **Shared schedule**, and then select the name of the schedule to use.  
+    Optionally increase the time-out period for queries that take a long time to process.  
   
-     For a custom schedule, select **Item-specific schedule** > **Configure**.  
+11. Select **Validate**. The query must be validated before you continue. When the **Validation successful** message appears, a list of Dataset fields will be  displayed below the **Validate** button. Select **Apply** to create the custom data source.  
   
-8.  Configure the schedule.  
+12. You are returned to the **New Subscription** page.  In the **Report Parameters** section,  specify report parameter values for the report parameters displayed if any.  
+
+13. Select **Create subscription**.  
   
-9. Select **OK** to save the schedule.
-  
-### To preload the cache with a user-specific report by using a data-driven subscription  
-  
-1.  Start ["The web portal of a report server"](../../reporting-services/web-portal-ssrs-native-mode.md)
-  
-2.  Navigate to the **Contents** page, and then navigate to the report you want to create a subscription for.  
-  
-3.  Right-click the report, select the **Subscriptions** tab > **New Data-Driven Subscription**.  
-  
-4.  Optionally type a description for the subscription.  
-  
-5.  From the **Specify how recipients are notified** list, select **Null Delivery Provider**.  
-  
-6.  Specify a data source type and then select **Next** to configure the data source.  
-  
-7.  Specify the connection type, connection string, and credentials for accessing the data source that contains subscriber data. The following example illustrates a connection string used to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database called Subscribers:  
-  
-    ```  
-    data source=<servername>; initial catalog=Subscribers  
-    ```  
-  
-8.  Select **Next**.  
-  
-9. Specify the query or command that retrieves subscriber data. Optionally increase the time-out period for queries that take a long time to process. For example:  
-  
-    ```  
-    Select * from UserInfo  
-    ```  
-  
-10. Select **Validate**. The query must be validated before you continue. When the **Query validated successfully** message appears, select **Next**.  
-  
-11. Because you cannot configure delivery extension settings for the null delivery provider, select **Next**.  
-  
-12. Specify report parameter values for the subscription, and select **Next**.  
-  
-13. Specify when the subscription is processed. Do not choose **When the report data is updated on the report server**. That setting is for snapshots only. If want to use a pre-existing schedule, select **On a shared schedule**.  
+14. The **Subscriptions** page is displayed showing your new Data-driven subscription. From this page, you can enable the subscription when you are ready by selecting the checkbox to the left of it, and selecting the **Enable** button. ![subscriptions page enable button](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "The enable button on the subscriptions page")
+
+15. Specify when the subscription is processed. Do not choose **When the report data is updated on the report server**. That setting is for snapshots only. If want to use a pre-existing schedule, select **On a shared schedule**.  
   
      Or, to create a custom schedule, select **On a schedule created for this subscription** and then select **Next**. Configure the schedule and then select **Finish**.  
   
     > [!NOTE]  
-    > In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see ["the web portal of a report server"](../../reporting-services/web-portal-ssrs-native-mode.md).  
+    > In order for the subscribers to receive the newest report, the schedule that you configure should be consistent with the report delivery schedule that you have defined for the subscribers. For more information, see **[The web portal of a report server](../../reporting-services/web-portal-ssrs-native-mode.mdn "The web portal of a report server")**.  
   
-14. Configure the Execution options for the report as follows. On the report page, select the **Properties** tab.  
+16. Configure the Execution options for the report as follows. On the report page, select the **Properties** tab.  
   
-15. In the left frame, select the **Execution** tab.  
+17. In the left frame, select the **Execution** tab.  
   
-16. On the page, select **Render this report with the most recent data**.  
+18. On the page, select **Render this report with the most recent data**.  
   
-17. Choose one of the following two cache options and configure the expiration as follows:  
+19. Choose one of the following two cache options and configure the expiration as follows:  
   
     -   To make the cached copy expire after a particular time period, select **Cache a temporary copy of the report. Expire copy of report after a number of minutes.** Type the number of minutes for report expiration.  
   

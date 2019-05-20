@@ -22,11 +22,11 @@ The following article provides reference for the **cluster** commands in the **m
 | --- | --- |
 [mssqlctl cluster create](#mssqlctl-cluster-create) | Create cluster.
 [mssqlctl cluster delete](#mssqlctl-cluster-delete) | Delete cluster.
-[mssqlctl cluster config](cluster-config.md) | Cluster configuration commands.
-[mssqlctl cluster endpoint](cluster-endpoint.md) | Endpoint commands.
-[mssqlctl cluster status](cluster-status.md) | Status commands.
-[mssqlctl cluster debug](cluster-debug.md) | Debug commands.
-[mssqlctl cluster storage-pool](cluster-storage-pool.md) | Manage cluster storage-pools.
+[mssqlctl cluster config](reference-mssqlctl-cluster-config.md) | Cluster configuration commands.
+[mssqlctl cluster endpoint](reference-mssqlctl-cluster-endpoint.md) | Endpoint commands.
+[mssqlctl cluster status](reference-mssqlctl-cluster-status.md) | Status commands.
+[mssqlctl cluster debug](reference-mssqlctl-cluster-debug.md) | Debug commands.
+[mssqlctl cluster storage-pool](reference-mssqlctl-cluster-storage-pool.md) | Manage cluster storage-pools.
 ## mssqlctl cluster create
 Create a SQL Server Big Data Cluster - kube config is required on your system along with the following environment variables ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'DOCKER_USERNAME', 'DOCKER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
 ```bash

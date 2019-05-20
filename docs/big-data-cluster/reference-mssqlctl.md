@@ -20,8 +20,8 @@ The following article provides reference for the **mssqlctl** tool for [SQL Serv
 ## Commands
 |     |     |
 | --- | --- |
-|[mssqlctl app](app.md) | Create, delete, run, and manage applications. |
-|[mssqlctl cluster](cluster.md) | Select, manage, and operate clusters. |
+|[mssqlctl app](reference-mssqlctl-app.md) | Create, delete, run, and manage applications. |
+|[mssqlctl cluster](reference-mssqlctl-cluster.md) | Select, manage, and operate clusters. |
 [mssqlctl login](#mssqlctl-login) | Log in to the cluster's controller endpoint.
 [mssqlctl logout](#mssqlctl-logout) | Log out of cluster.
 ## mssqlctl login

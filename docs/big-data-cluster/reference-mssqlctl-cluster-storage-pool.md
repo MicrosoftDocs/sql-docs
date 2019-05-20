@@ -20,7 +20,7 @@ The following article provides reference for the **cluster storage-pool** comman
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl cluster storage-pool mount](cluster-storage-pool-mount.md) | Manage mounting of remote stores in HDFS.
+[mssqlctl cluster storage-pool mount](reference-mssqlctl-cluster-storage-pool-mount.md) | Manage mounting of remote stores in HDFS.
 
 ## Next steps
 

@@ -20,7 +20,7 @@ The following article provides reference for the **app** commands in the **mssql
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl app template](app-template.md) | Templates.
+[mssqlctl app template](reference-mssqlctl-app-template.md) | Templates.
 [mssqlctl app init](#mssqlctl-app-init) | Kickstart new application skeleton.
 [mssqlctl app create](#mssqlctl-app-create) | Create application.
 [mssqlctl app update](#mssqlctl-app-update) | Update application.

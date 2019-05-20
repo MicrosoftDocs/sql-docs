@@ -23,7 +23,7 @@ The following article provides reference for the **cluster config** commands in 
 [mssqlctl cluster config show](#mssqlctl-cluster-config-show) | Gets the SQL Server Big Data Cluster's current configuration.
 [mssqlctl cluster config init](#mssqlctl-cluster-config-init) | Initializes a cluster configuration profile that can be used with cluster create.
 [mssqlctl cluster config list](#mssqlctl-cluster-config-list) | Lists available configuration file choices.
-[mssqlctl cluster config section](cluster-config-section.md) | Commands for working with individual sections of the cluster configuration file.
+[mssqlctl cluster config section](reference-mssqlctl-cluster-config-section.md) | Commands for working with individual sections of the cluster configuration file.
 ## mssqlctl cluster config show
 Gets the SQL Server Big Data Cluster's current configuration file and outputs it to the target file or pretty prints it to the console.
 ```bash

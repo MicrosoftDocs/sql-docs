@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STContains method (geography)"
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STContains  (geography Data Type)

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EnvelopeAggregate method (geography)"
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # EnvelopeAggregate (geography Data Type)

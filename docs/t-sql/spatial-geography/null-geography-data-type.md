@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "Null (geography Data Type)"
   - "Null method"
 ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Null (geography Data Type)

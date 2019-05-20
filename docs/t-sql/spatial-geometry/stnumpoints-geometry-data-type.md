@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumPoints (geometry Data Type)"
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STNumPoints (geometry Data Type)

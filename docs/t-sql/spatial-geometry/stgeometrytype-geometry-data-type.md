@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryType (geometry Data Type)"
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STGeometryType (geometry Data Type)

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Reduce method"
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Reduce (geography Data Type )

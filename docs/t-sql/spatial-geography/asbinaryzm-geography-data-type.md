@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "AsBinaryZM, geography"
   - "AsBinaryZM"
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # AsBinaryZM (geography Data Type)

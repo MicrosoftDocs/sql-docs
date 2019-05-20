@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IsValidDetailed geography"
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # IsValidDetailed (geography Data Type)

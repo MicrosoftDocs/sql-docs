@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STBoundary (geometry Data Type)"
 ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STBoundary (geometry Data Type)

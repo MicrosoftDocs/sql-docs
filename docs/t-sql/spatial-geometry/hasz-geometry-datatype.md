@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "HasZ geometry"
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # HasZ (geometry DataType)

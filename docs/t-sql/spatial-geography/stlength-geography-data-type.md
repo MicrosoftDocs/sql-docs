@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STLength method"
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STLength (geography Data Type)

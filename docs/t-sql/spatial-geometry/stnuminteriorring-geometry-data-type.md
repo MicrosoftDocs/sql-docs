@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumInteriorRing (geometry Data Type)"
 ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STNumInteriorRing (geometry Data Type)

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDimension method"
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STDimension (geography Data Type)

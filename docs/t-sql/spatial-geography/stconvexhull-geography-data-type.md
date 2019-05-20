@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STConvexHull method (geography)"
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STConvexHull (geography Data Type)

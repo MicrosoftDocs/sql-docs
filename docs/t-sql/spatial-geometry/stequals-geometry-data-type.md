@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STEquals (geometry Data Type)"
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STEquals (geometry Data Type)

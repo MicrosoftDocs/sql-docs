@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointFromText (geometry Data Type)"
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STPointFromText (geometry Data Type)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Parse method"
   - "Parse (geography Data Type)"
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Parse (geography Data Type)

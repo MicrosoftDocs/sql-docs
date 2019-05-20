@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ORIGINAL_LOGIN function"
   - "names [SQL Server], logins"
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ORIGINAL_LOGIN (Transact-SQL)

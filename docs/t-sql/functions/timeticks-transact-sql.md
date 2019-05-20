@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "time [SQL Server], ticks"
   - "number of microseconds per tick"
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # &#x40;&#x40;TIMETICKS (Transact-SQL)

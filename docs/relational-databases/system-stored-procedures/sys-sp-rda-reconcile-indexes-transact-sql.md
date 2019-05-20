@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_indexes stored procedure"
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sys.sp_rda_reconcile_indexes (Transact-SQL)

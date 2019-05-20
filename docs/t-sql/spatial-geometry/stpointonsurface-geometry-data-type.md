@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointOnSurface (geometry Data Type)"
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STPointOnSurface (geometry Data Type)

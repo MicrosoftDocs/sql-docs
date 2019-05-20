@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STEnvelope (geometry Data Type)"
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STEnvelope (geometry Data Type)

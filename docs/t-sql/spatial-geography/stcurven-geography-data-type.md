@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STCurveN method (geography)"
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STCurveN (geography Data Type)

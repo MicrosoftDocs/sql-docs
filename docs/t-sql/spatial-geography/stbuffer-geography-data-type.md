@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STBuffer (geography Data Type)"
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STBuffer (geography Data Type)

@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Point geometry subtype [SQL Server]"
   - "geometry data type [SQL Server], spatial data"
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

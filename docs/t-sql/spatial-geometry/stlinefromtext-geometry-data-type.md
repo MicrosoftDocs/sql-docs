@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STLineFromText (geometry Data Type)"
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STLineFromText (geometry Data Type)

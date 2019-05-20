@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "EnvelopeCenter method"
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # EnvelopeCenter (geography Data Type)

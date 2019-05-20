@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Z method"
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Z (geography Data Type)

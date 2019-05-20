@@ -3,7 +3,6 @@ title: "sys.dm_fts_parser (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,8 +16,9 @@ helpviewer_keywords:
   - "sys.dm_fts_parser dynamic management function"
   - "troubleshooting [SQL Server], full-text search"
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-author: "douglaslMS"
-ms.author: "douglasl"
+auauthor: pmasl 
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # sys.dm_fts_parser (Transact-SQL)

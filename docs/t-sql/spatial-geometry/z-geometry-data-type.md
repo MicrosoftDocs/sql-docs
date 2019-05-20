@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Z (geometry Data Type)"
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Z (geometry Data Type)

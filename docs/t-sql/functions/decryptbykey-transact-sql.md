@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "decryption [SQL Server], symmetric keys"
   - "DECRYPTBYKEY function"
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # DECRYPTBYKEY (Transact-SQL)

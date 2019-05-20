@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDifference (geography Data Type)"
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STDifference (geography Data Type)

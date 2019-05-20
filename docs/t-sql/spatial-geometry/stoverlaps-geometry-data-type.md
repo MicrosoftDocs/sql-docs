@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STOverlaps (geometry Data Type)"
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STOverlaps (geometry Data Type)

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STStartPoint method"
 ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STStartPoint (geography Data Type)

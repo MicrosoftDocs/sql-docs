@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "OGC Methods on Geometry Instances [SQL Server]"
 ms.assetid: c0c0f441-bf33-410c-9df0-544e3d05b944
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

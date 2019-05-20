@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Extended Methods on Geometry Instances [SQLServer]"
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Extended Methods on Geometry Instances

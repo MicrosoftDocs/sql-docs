@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "SIGNBYCERT function"
   - "cryptography [SQL Server], certificates"
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SIGNBYCERT (Transact-SQL)

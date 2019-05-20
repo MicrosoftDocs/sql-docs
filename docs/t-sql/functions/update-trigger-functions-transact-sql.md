@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "verifying column updates"
   - "checking column updates"
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # UPDATE - Trigger Functions (Transact-SQL)

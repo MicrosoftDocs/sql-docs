@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "@@TEXTSIZE function"
   - "text size returned [SQL Server]"
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # &#x40;&#x40;TEXTSIZE (Transact-SQL)

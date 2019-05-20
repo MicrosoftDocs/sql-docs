@@ -68,7 +68,7 @@ SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result
 ```  
 Result  
 ---------------------------  
-2011-01-01 00:00:00  
+2010-12-31 23:59:00  
   
 (1 row(s) affected)  
 ```  

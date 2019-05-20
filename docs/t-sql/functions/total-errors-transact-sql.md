@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "write errors [SQL Server]"
   - "read/write errors"
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # &#x40;&#x40;TOTAL_ERRORS (Transact-SQL)

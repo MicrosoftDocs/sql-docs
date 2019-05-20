@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
   - "clear text signing"
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SIGNBYASYMKEY (Transact-SQL)

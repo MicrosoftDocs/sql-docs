@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "current configuration information"
   - "configuration functions [SQL Server]"
 ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # Configuration Functions (Transact-SQL)

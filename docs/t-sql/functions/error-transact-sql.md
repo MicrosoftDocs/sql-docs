@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "errors [SQL Server], Transact-SQL"
   - "error numbers [SQL Server]"
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

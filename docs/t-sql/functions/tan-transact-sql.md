@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "TAN function"
   - "tangent"
 ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

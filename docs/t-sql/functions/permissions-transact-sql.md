@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "testing permissions"
   - "PERMISSIONS function"
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # PERMISSIONS (Transact-SQL)

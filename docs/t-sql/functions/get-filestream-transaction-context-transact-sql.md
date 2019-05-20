@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]"
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)

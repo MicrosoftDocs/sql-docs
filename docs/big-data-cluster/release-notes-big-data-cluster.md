@@ -20,7 +20,7 @@ This article lists the updates and know issues for the most recent releases of S
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a id="ctp25"></a> CTP 3.0 (May)
+## <a id="ctp30"></a> CTP 3.0 (May)
 
 The following sections describe the new features and known issues for big data clusters in SQL Server 2019 CTP 3.0.
 
@@ -28,11 +28,31 @@ The following sections describe the new features and known issues for big data c
 
 | New feature or update | Details |
 |:---|:---|
-| | |
+| **mssqlctl** updates | Several **mssqlctl** [command and parameter updates](../big-data-cluster/reference-mssqlctl.md). This includes an update to the **mssqlctl login** command, which now targets the controller username and endpoint. |
+| Storage enhancements | Support for different storage configurations for logs and data. Also, the number of persistent volume claims for a big data cluster has been reduced. |
+| Multiple compute pool instances | Support for multiple compute pool instances. |
 
 ### Known issues
 
 The following sections describe the known issues and limitations with this release.
+
+#### HDFS
+
+- Azure Data Studio returns an error when you attempt to create a new folder in HDFS. To enable this functionality, install the insiders build of Azure Data Studio:
+  
+   - [Windows User Installer - **Insiders build**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/insider)
+   - [Windows System Installer - **Insiders build**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/insider)
+   - [Windows ZIP - **Insiders build**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/insider)
+   - [macOS ZIP - **Insiders build**](https://azuredatastudio-update.azurewebsites.net/latest/darwin/insider)
+   - [Linux TAR.GZ - **Insiders build**](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/insider)
+
+- If you right-click on a file in HDFS to preview it, you might see the following error:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Currently there is no way to preview files larger than 30 MB in Azure Data Studio.
+
+- Configuration changes to HDFS that involve changes to hdfs-site.xml are not supported.
 
 #### Deployment
 
@@ -53,11 +73,20 @@ The following sections describe the known issues and limitations with this relea
 
 - Big data cluster deployment no longer creates the **SqlDataPool** and **SqlStoragePool** external data sources. You can create these data sources manually to support data virtualization to the data pool and storage pool.
 
+   > [!NOTE]
+   > The URI for creating these external data sources is different between CTPs. Please see the Transact-SQL commands below to see how to create them 
+
    ```sql
    -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
    BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
        CREATE EXTERNAL DATA SOURCE SqlDataPool
        WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
      ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
@@ -104,16 +133,6 @@ The following sections describe the known issues and limitations with this relea
 - If you have Jupyter already installed and a separate Python on Windows, Spark notebooks might fail. To work around this issue, upgrade Jupyter to the latest version.
 
 - In a notebook, if you click the **Add Text** command, the text cell is added in preview mode rather than edit mode. You can click on the preview icon to toggle to edit mode and edit the cell.
-
-#### HDFS
-
-- If you right-click on a file in HDFS to preview it, you might see the following error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Currently there is no way to preview files larger than 30 MB in Azure Data Studio.
-
-- Configuration changes to HDFS that involve changes to hdfs-site.xml are not supported.
 
 #### Security
 
@@ -164,7 +183,13 @@ The following sections describe the known issues and limitations with this relea
    -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
    BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
        CREATE EXTERNAL DATA SOURCE SqlDataPool
        WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
      ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'
@@ -314,7 +339,13 @@ A new Python Kubernetes client (version 9.0.0) changed the delete namespaces API
    -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
    BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
        CREATE EXTERNAL DATA SOURCE SqlDataPool
        WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
      ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP3.0'

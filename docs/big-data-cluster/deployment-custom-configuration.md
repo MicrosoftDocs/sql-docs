@@ -114,9 +114,6 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
 ```
 
-> [!IMPORTANT]
-> In this release, you cannot change the number of instances in the compute pool.
-
 ## <a id="storage"></a> Configure storage
 
 You can also change the storage class and characteristics that are used for each pool. The following example assigns a custom storage class to the storage pool:

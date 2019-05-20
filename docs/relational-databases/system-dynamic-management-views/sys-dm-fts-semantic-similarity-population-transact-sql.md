@@ -3,7 +3,6 @@ title: "sys.dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Doc
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -16,8 +15,9 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_fts_semantic_similarity_population dynamic management view"
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-author: "douglaslMS"
-ms.author: "douglasl"
+author: pmasl 
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 ---
 # sys.dm_fts_semantic_similarity_population (Transact-SQL)

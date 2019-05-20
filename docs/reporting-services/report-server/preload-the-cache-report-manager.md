@@ -90,7 +90,7 @@ ms.author: maggies
   
 ## To preload the cache with a user-specific report by using a data-driven subscription
 
-1. Start the [web portal of a report server](../reporting-services/web-portal-ssrs-native-mode.md "The web portal of a report server" ).
+1. Start the [web portal of a report services](../../reporting-services/web-portal-ssrs-native-mode.md "The web portal of a report server").
 2. Select **Browse** from the Home screen and navigate the folder hierarchy to locate the report you want to subscribe to.  
 3. Right-click the report, select **Subscribe** from the dropdown menu. The **New Subscriptions** page is displayed.  
 4. Enter a description for the subscription in the **Description** text box.  
@@ -150,7 +150,7 @@ ms.author: maggies
     -   To make the cached copy expire on a schedule, select **Cache a temporary copy of the report. Expire copy of report on the following schedule.** Select **Configure**, or select a shared schedule to set a schedule for report expiration.  
   
 18. Select **Apply**.  
-  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 ## See also 
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Create a Data-Driven Subscription &#40;SSRS Tutorial&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   

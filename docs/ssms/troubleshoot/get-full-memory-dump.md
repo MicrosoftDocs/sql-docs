@@ -84,6 +84,15 @@ To capture diagnostic information to troubleshoot an OutOfMemoryException from S
 
 9. Zip up the folder.
 
+## Share the information
+
+1. To share the information with the SSMS Team, please log the issue at https://aka.ms/sqlfeedback.
+
+2. Then share the memory dump file collected to OneDrive (or equivalent) where the file can be collected.
+
+    > [IImportant]
+    > Memory dump files may contain sensitive information.
+
 ## Next steps
 
 [SQL Server Management Studio](../sql-server-management-studio-ssms.md)

@@ -46,7 +46,7 @@ manager: craigg
   
 - Compatibility level 90 is discontinued. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
-- ActiveX subsytem is discontinued. Use command line or PowerShell scripts instead.
+- ActiveX subsystem is discontinued. Use command line or PowerShell scripts instead.
   
 ## Previous Versions  
   

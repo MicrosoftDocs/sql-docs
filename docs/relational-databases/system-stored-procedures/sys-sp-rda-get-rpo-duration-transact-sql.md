@@ -14,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_get_rpo_duration stored procedure"
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # sys.sp_rda_get_rpo_duration (Transact-SQL)

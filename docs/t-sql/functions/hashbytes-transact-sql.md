@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "hash input"
   - "HASHBYTES"
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

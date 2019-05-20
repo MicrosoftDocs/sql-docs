@@ -30,8 +30,8 @@ helpviewer_keywords:
   - "default database"
   - "LOGINPROPERTY function"
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # LOGINPROPERTY (Transact-SQL)

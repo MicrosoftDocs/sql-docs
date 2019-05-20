@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "expressions [SQL Server], part returned"
   - "characters [SQL Server], returning part of"
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

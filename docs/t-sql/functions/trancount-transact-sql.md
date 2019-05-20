@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "connections [SQL Server], active transactions"
   - "active transactions"
 ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

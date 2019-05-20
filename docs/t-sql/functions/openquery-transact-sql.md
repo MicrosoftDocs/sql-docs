@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "pass-through queries [SQL Server]"
   - "INSERT statement [SQL Server], OPENQUERY function"
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # OPENQUERY (Transact-SQL)

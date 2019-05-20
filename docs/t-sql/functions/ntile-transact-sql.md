@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "row distribution [SQL Server]"
   - "NTILE function"
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

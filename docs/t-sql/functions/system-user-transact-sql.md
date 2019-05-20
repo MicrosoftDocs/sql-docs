@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "system usernames [SQL Server]"
   - "users [SQL Server], names"
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

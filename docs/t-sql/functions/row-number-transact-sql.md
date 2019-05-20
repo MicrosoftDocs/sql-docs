@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "row numbers [SQL Server]"
   - "sequential row numbers [SQL Server]"
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

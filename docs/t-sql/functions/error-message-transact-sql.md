@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "TRY...CATCH [SQL Server]"
   - "CATCH block"
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

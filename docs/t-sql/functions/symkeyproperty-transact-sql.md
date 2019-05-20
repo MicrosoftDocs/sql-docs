@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "SYMKEYPROPERTY"
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # SYMKEYPROPERTY (Transact-SQL)

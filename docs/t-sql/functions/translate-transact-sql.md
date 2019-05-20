@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "TRANSLATE function"
 ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

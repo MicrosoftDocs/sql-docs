@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "full globe"
   - "STGeomFromText method"
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STGeomFromText (geography Data Type)

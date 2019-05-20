@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STX (geometry Data Type)"
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STX (geometry Data Type)

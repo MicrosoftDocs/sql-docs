@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STDistance method"
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STDistance (geography Data Type)

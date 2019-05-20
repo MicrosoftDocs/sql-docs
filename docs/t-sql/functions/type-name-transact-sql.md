@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "data types [SQL Server], names"
   - "TYPE_NAME function"
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ORIGINAL_DB_NAME function"
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ORIGINAL_DB_NAME (Transact-SQL)

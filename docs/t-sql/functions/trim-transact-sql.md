@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "TRIM function"
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: "= azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

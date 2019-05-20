@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "expressions [SQL Server], statistical variance"
   - "VAR function [Transact-SQL]"
 ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

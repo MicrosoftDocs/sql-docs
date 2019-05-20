@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "displaying source text"
   - "OBJECT_DEFINITION function"
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # OBJECT_DEFINITION (Transact-SQL)

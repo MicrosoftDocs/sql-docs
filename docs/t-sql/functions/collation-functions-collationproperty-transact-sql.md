@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "collations [SQL Server], properties"
   - "COLLATIONPROPERTY function"
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

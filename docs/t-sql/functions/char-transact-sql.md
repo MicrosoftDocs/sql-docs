@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "line feed"
   - "printing ASCII values"
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

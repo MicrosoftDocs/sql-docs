@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "string functions"
   - "strings [SQL Server]"
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "lowercase characters"
   - "converting uppercase to lowercase characters"
 ms.assetid: 1783352b-6852-4658-9d94-51963c59b9bf
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

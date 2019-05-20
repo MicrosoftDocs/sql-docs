@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "system statistical functions [SQL Server]"
   - "functions [SQL Server], statistical"
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # System Statistical Functions (Transact-SQL)

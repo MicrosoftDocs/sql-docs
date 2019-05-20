@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], certificates"
   - "ENCRYPTBYCERT function"
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ---
 # ENCRYPTBYCERT (Transact-SQL)

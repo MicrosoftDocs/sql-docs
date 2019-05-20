@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "COT function"
   - "cotangent"
 ms.assetid: c87a9dac-e398-4125-80c3-7df3c2ce6b63
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

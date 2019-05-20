@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "options [SQL Server], date"
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---

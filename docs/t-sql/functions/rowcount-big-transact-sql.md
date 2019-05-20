@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "statements [SQL Server], last statement"
   - "counting rows"
 ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # ROWCOUNT_BIG (Transact-SQL)

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "$PARTITION function"
   - "partitions [SQL Server], numbers"
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ---
 # $PARTITION (Transact-SQL)

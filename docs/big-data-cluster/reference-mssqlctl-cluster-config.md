@@ -5,7 +5,7 @@ description: Reference article for mssqlctl cluster commands.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -20,22 +20,26 @@ The following article provides reference for the **cluster config** commands in 
 ## Commands
 |     |     |
 | --- | --- |
-[mssqlctl cluster config get](#mssqlctl-cluster-config-get) | Get cluster config - kube config is required on your system.
-[mssqlctl cluster config init](#mssqlctl-cluster-config-init) | Initializes a cluster configuration.
+[mssqlctl cluster config show](#mssqlctl-cluster-config-show) | Gets the SQL Server Big Data Cluster's current configuration.
+[mssqlctl cluster config init](#mssqlctl-cluster-config-init) | Initializes a cluster configuration profile that can be used with cluster create.
 [mssqlctl cluster config list](#mssqlctl-cluster-config-list) | Lists available configuration file choices.
-[mssqlctl cluster config section](reference-mssqlctl-cluster-config-section.md) | Commands for working with individual sections of the configuration file.
-## mssqlctl cluster config get
-Gets the SQL Server Big Data Cluster's current configuration file.
+[mssqlctl cluster config section](reference-mssqlctl-cluster-config-section.md) | Commands for working with individual sections of the cluster configuration file.
+## mssqlctl cluster config show
+Gets the SQL Server Big Data Cluster's current configuration file and outputs it to the target file or pretty prints it to the console.
 ```bash
-mssqlctl cluster config get --name -n 
-                            [--output-file -f]
+mssqlctl cluster config show [--target -t] 
+                             [--force -f]
 ```
-### Required Parameters
-#### `--name -n`
-Cluster name, used for kubernetes namespace.
+### Examples
+Show the cluster config in your console
+```bash
+mssqlctl cluster config show
+```
 ### Optional Parameters
-#### `--output-file -f`
+#### `--target -t`
 Output file to store the result in. Default: directed to stdout.
+#### `--force -f`
+Force overwrite of the target file.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -48,16 +52,28 @@ JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for mor
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## mssqlctl cluster config init
-Initializes a cluster configuration file for the user based on the specified default type.
+Initializes a cluster configuration  profile that can be used with cluster create. The specific source of the configuration profile can be specified in the arguments from 3 choices.
 ```bash
 mssqlctl cluster config init [--target -t] 
-                             [--src -s]
+                             [--src -s]  
+                             [--force -f]
+```
+### Examples
+Guided cluster config init experience - you will receive prompts for needed values.
+```bash
+mssqlctl cluster config init
+```
+Cluster config init with arguments, creates a configuration profile of aks-dev-test in ./custom.json.
+```bash
+mssqlctl cluster config init --src aks-dev-test.json --target custom.json
 ```
 ### Optional Parameters
 #### `--target -t`
-File path of where you would like the config file placed, defaults to cwd with custom-config.json.
+File path of where you would like the config profile placed, defaults to cwd with custom-config.json.
 #### `--src -s`
-Config source: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
+Config profile source: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
+#### `--force -f`
+Force overwrite of the target file.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.
@@ -72,11 +88,20 @@ Increase logging verbosity. Use --debug for full debug logs.
 ## mssqlctl cluster config list
 Lists available configuration file choices for use in cluster config init
 ```bash
-mssqlctl cluster config list [--config-file -f] 
+mssqlctl cluster config list [--config-file -c] 
                              
 ```
+### Examples
+Shows all available configuration profile names.
+```bash
+mssqlctl cluster config list
+```
+Shows json of a specific configuration profile.
+```bash
+mssqlctl cluster config list --config-file aks-dev-test.json
+```
 ### Optional Parameters
-#### `--config-file -f`
+#### `--config-file -c`
 Default config file: ['aks-dev-test.json', 'kubeadm-dev-test.json', 'minikube-dev-test.json']
 ### Global Arguments
 #### `--debug`

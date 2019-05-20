@@ -205,11 +205,15 @@
           href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
         - name: mssqlctl cluster debug
           href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+        - name: mssqlctl cluster endpoint
+          href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
+        - name: mssqlctl cluster status
+          href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
       - name: Storage
         items:
-        - name: mssqlctl storage
+        - name: mssqlctl cluster storage-pool
           href: ../big-data-cluster/reference-mssqlctl-storage.md
-        - name: mssqlctl storage mount
+        - name: mssqlctl cluster storage-pool mount
           href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Business continuity
   items:

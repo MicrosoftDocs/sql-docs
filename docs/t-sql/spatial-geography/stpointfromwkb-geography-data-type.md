@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointFromWKB method"
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STPointFromWKB (geography Data Type)

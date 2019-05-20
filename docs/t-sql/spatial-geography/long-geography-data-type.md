@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Long method"
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Long (geography Data Type)

@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STCrosses (geometry Data Type)"
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STCrosses (geometry Data Type)

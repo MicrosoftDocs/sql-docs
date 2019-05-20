@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STContains (geometry Data Type)"
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STContains (geometry Data Type)

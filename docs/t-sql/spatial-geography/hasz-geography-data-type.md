@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "HasZ geography"
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # HasZ (geography Data Type)

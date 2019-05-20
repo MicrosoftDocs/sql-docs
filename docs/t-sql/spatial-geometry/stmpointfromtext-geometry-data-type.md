@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPointFromText (geometry Data Type)"
 ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STMPointFromText (geometry Data Type)

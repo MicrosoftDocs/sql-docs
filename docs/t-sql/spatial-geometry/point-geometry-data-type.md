@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Point (geometry Data Type)"
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # Point (geometry Data Type)

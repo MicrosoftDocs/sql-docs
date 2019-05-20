@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CurveToLineWithTolerance method (geography)"
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # CurveToLineWithTolerance (geography Data Type)

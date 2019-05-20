@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STIntersection method"
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STIntersection (geography Data Type)

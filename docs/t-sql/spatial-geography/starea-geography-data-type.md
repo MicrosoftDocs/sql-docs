@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "STArea method"
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
-author: "douglaslMS"
-ms.author: "douglasl"
+author: MladjoA
+ms.author: mlandzic 
 manager: craigg
 ---
 # STArea (geography Data Type)
